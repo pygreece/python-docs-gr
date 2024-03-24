@@ -22,3 +22,6 @@ Greek Translation of the Python Documentation
 
 Υποβάλλοντας την εργασία σας στο PSF για να συμπεριληφθεί στον οδηγό χρήσης της Python,
 συμφωνείτε με αυτό το έγγραφο.
+
+Το πρωτότυπο κείμενο του παραπάνου συμφωνητικού στα Αγγλικά βρίσκεται στο
+[PEP545](https://peps.python.org/pep-0545/#setup-the-documentation-contribution-agreement).
