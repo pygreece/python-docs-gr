@@ -138,4 +138,4 @@ Closes #<αριθμός issue>
 
 - Τελευταίο αλλά όχι λιγότερο σημαντικό, διασκεδάστε και βασιστείτε στη βοήθεια όλων. Περιμένουμε τα μηνύματα σας στο discord, εδώ ή στο linkedin. Ευχαριστούμε!
 
-- Για τους contributors που χρησιμοποιούν το vscode ως IDE ένα πολύ χρήσιμο add-on για τα `.po` αρχεία είναι το `gettext`. extension.
+- Για τους contributors που χρησιμοποιούν το vscode ως IDE ένα πολύ χρήσιμο add-on για τα `.po` αρχεία είναι το [`gettext` extension](https://marketplace.visualstudio.com/items?itemName=mrorz.language-gettext).
