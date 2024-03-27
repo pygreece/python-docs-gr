@@ -42,7 +42,7 @@ git remote add upstream https://github.com/pygreece/python-docs-gr.git
 
 ```bash
 python -m venv env
-source env/bin/activate   # macOS y Linux
+source env/bin/activate   # macOS or Linux
 env\Scripts\activate.bat  # Windows
 ```
 
