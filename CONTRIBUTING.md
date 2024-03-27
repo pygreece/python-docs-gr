@@ -18,7 +18,7 @@ Eυχαριστούμε πολύ για το ενδιαφέρον σας να σ
 
 1. Για να υποβάλετε μια μετάφραση, πρέπει να έχετε ένα fork του repository , κάνοντας κλικ στο κουμπί με την κόκκινη γραμμή από κάτω (για περισσότερες πληροφορίες δείτε [εδώ](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)):
 
-![fork](https://github.com/pygreece/python-docs-gr/blob/3.12/public/assets/fork_image.jpg?raw=true)
+![fork](https://github.com/pygreece/python-docs-gr/blob/main/public/assets/fork_image.jpg?raw=true)
 
 2. Κάντε clone το repository που μόλις δημιουργήσατε:
 
