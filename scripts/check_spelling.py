@@ -37,8 +37,7 @@ def check_spell(po_files=None):
     output_filename = tempfile.mktemp(suffix="_merged_dict.txt")
     with open(output_filename, "w") as f:
         for e in entries:
-            f.write(e)
-            f.write("\n")
+            f.write(f"{e}\n")
 
     # Run pospell either against all files or the file given on the command line
     if not po_files:
