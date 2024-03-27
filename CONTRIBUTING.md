@@ -35,7 +35,7 @@ cd python-docs-gr/
 4. Προσθέστε το επίσημο repository ως upstream:
 
 ```bash
-git remote add upstream https://github.com/pygreece/python-docs-gr.git
+git remote add upstream git@github.com:pygreece/python-docs-gr.git
 ```
 
 5. [Προαιρετικό βήμα] Δημιουργείστε ένα virtual environment και κάντε activate:
