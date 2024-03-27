@@ -12,13 +12,13 @@ assignees: ""
 
 <!--
     Αφαιρέστε το σύμβολο του σχολίου για τον τύπο που θέλετε και διαγράψτε τα υπόλοιπα.
-    Π.χ το `/type translation θα γινει απλά: /type translation
+    Π.χ το `<!-- /type translation..` θα γινει απλά: `/type translation`
 -->
 
-> /type cicd
-> /type translation
-> /type documentation
-> /type test-automation
+<!-- /type cicd -->
+<!-- /type translation -->
+<!--/type documentation -->
+<!-- /type test-automation -->
 
 ## Περιγραφή του task
 
