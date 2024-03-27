@@ -34,18 +34,18 @@ def check_spell(po_files=None):
             )
 
     # Write merged dictionary file
-    output_filename = tempfile.mktemp(suffix="_merged_dict.txt")
-    with open(output_filename, "w") as f:
-        for e in entries:
-            f.write(f"{e}\n")
+    with tempfile.NamedTemporaryFile(suffix="_merged_dict.txt") as output_filename:
+        with open(output_filename, "w") as f:
+            for e in entries:
+                f.write(f"{e}\n")
 
-    # Run pospell either against all files or the file given on the command line
-    if not po_files:
-        po_files = Path(".").glob("*/*.po")
+        # Run pospell either against all files or the file given on the command line
+        if not po_files:
+            po_files = Path(".").glob("*/*.po")
 
-    detected_errors = pospell.spell_check(
-        po_files, personal_dict=output_filename, language="el_EL"
-    )
+        detected_errors = pospell.spell_check(
+            po_files, personal_dict=output_filename, language="el_EL"
+        )
     return detected_errors
 
 
