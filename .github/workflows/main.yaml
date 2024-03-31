@@ -66,4 +66,4 @@ jobs:
         run: powrap --check --quiet ${{ steps.po-files-to-check.outputs.po_files_to_check }}
       - name: Pospell
         if: steps.po-files-to-check.outputs.any_po_files_to_check == 'true'
-        run: python scripts/check_spell.py ${{ steps.po-files-to-check.outputs.po_files_to_check }}
+        run: python scripts/check_spelling.py ${{ steps.po-files-to-check.outputs.po_files_to_check }}
