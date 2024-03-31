@@ -1,45 +1,40 @@
 #!/usr/bin/env python3
 #
 # This script aims to create all issues require to translate a
-# specific Python version docs. The flow of the script is very simple.
+# specific Python version docs. The flow of the script is very simple:
+#
+# 1. A list with all the repo's filenames ending in ".po" will be created.
+# 2. All already existing issues will be fetched from github.
+# 3. If a filename has already an issue for this specific python version,
+#    will be excluded.
+# 4. All required labels and milestones will be fetched from github.
+# 5. If the filename is inside a required dir will get the mvp milestone.
+#    Otherwise it will get the additional one.
+# 6. An issue will be created in github.
 #
 # User input:
 #
+# (required) GITHUB_TOKEN: fine-grained token which is owned by the pygreece
+# organization.
 # (optional) GITHUB_ADDITIONAL_MILESTONE: the id of the milestone for additional
-# files this version. Default value is 3
+# files of this version. Default value is 3.
+# (optional) GITHUB_MVP_MILESTONE: the id of the milestone for required translated
+# files of this version. Default is 2.
+# (optional) GITHUB_REPO: the github repo of the greek python translation. Default
+# is pygreece/python-docs-gr.
+# (optional) PYTHON_VERSION: the python version that all the issues created will
+# scope.
 #
-# (optional) GITHUB_MVP_MILESTONE:
-GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")
-GITHUB_SEVERITY_MAJOR_LABEL = "severity/major"
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-PYTHON_VERSION = os.getenv("PYTHON_VERSION", "3.12")
-REQUIRED_DIRS = ["tutorial/", "library/stdtypes", "library/functions"]
+# Installation:
+#
+# In order to install all requirements.txt on the root folder run:
+# pip install -r requirements.txt
+#
+# Run:
+#
+# In order to run the script run:
+# GITHUB_TOKEN=<your-token> (all other inputs) python scripts/create_issues.py
 
-#
-# Env setup:
-# The script creates all the temporary directories and exports
-# the GNUPGHOME environment variable in order to avoid creating
-# issues to the operating system which is hosting the process.
-# It also updates the ownership and mode of these directories
-# in order to be able to clean them afterwards
-#
-# Master-key/Sub-keys generation:
-# Following the environment setup the script will try to
-# create the pubring.kbx file and with this the master key
-# of the user. After the master key generation inside the custom homedir
-# we are going to create three (3) sub keys for the newly
-# created key. Those keys have specific usage and this is
-# sign (signing) | encr (encryption) | auth (authentication)
-#
-# Card (YubiKey Reset & Re-configure)
-# With --card-edit command and the usage of pexpect we are reseting
-# and reconfiguring the card with the created master and sub keys.
-# Moreover, the script applies a factory-reset command and then
-# It imports the keys and the given input to the card
-#
-# Revocation certificate/ssh key/public key export:
-# As a last step it generates the revocation certificate,
-# and exportd the ssh_key and public key for the user
 import os
 from pathlib import Path
 
