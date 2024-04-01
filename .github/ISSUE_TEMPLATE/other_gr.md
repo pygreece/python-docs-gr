@@ -1,5 +1,5 @@
 ---
-name: 🔧 other task
+name: 🔧 Other task (EN)
 about: Άλλη εργασία
 title: ""
 labels: ""

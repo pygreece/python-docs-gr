@@ -1,5 +1,5 @@
 ---
-name: 💡 Feature request
+name: 💡 Feature request (EL)
 about: Προτείνετε μία νέα λειτουργία
 title: ""
 labels: ""
