@@ -22,7 +22,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
       - name: Configure dpkg/apt
         uses: abbbi/github-actions-tune@81fb919e588c20b7ab52b2cac097d2efd765c714 # v1
