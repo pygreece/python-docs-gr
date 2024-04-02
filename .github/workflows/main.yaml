@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "po_files_to_check=$PO_FILES_TO_CHECK" >> $GITHUB_OUTPUT
           echo "any_po_files_to_check=`test -n \"$PO_FILES_TO_CHECK\" && echo true || echo false`" >> $GITHUB_OUTPUT
-      - name: Muestra outputs de steps anteriores para debugueo
+      - name: Show outputs of the previous steps for debuging purposes
         env:
           CHANGED_PO_FILES: ${{ toJson(steps.changed-po-files) }}
           PO_FILES_TO_CHECK: ${{ toJson(steps.po-files-to-check) }}
