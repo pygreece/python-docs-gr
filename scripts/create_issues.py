@@ -49,7 +49,7 @@ logging.basicConfig(
 )
 
 GITHUB_ADDITIONAL_MILESTONE = int(os.getenv("GITHUB_ADDITIONAL_MILESTONE", 3))
-GITHUB_MVP_MILESTONE = int(os.getenv("GITHUB_ADDITIONAL_MILESTONE", 2))
+GITHUB_MVP_MILESTONE = int(os.getenv("GITHUB_MVP_MILESTONE", 2))
 GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")
 GITHUB_SEVERITY_MAJOR_LABEL = "severity/major"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
