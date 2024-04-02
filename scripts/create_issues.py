@@ -79,18 +79,14 @@ def filter_already_parsed_filenames(
     """
     filtered_filenames = []
     for filename in filenames:
-        issue_already_exists = False
-
         for issue in gh_issues:
             # check if filename is in title AND that the issue is for the same python version
             if filename in issue.title and PYTHON_VERSION in issue.title:
                 logging.info(
                     f"Skipping {filename}. There is a similar issue already created at {issue.html_url}"
                 )
-                issue_already_exists = True
                 break
-
-        if not issue_already_exists:
+        else:
             filtered_filenames.append(filename)
 
     logging.info(f"found {len(filtered_filenames)} filenames without issue")
