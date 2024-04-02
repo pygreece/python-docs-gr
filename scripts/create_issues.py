@@ -40,15 +40,21 @@ from pathlib import Path
 
 from github import Github
 from github.Issue import Issue
-import logging
-
-logging.basicConfig(
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%d-%b-%y %H:%M:%S",
-    level=logging.INFO,
-)
 
 GITHUB_ADDITIONAL_MILESTONE = int(os.getenv("GITHUB_ADDITIONAL_MILESTONE", 3))
+GITHUB_ISSUE_BODY = """/type translation
+
+## Περιγραφή της εργασίας μετάφρασης
+
+Το αρχείο αυτό θα πρέπει να μεταφραστεί στο 100%.
+
+Η μετεφρασμένη έκδοση του αρχείου θα είναι διαθέσιμη στο https://docs.python.org/el/{python_version}/{urlfile}.
+Μέχρι τότε, θα φαίνεται η Αγγλική έκδοσης της σελίδας.
+
+Παρακαλούμε, σχολιάστε μέσα στο issue εάν θέλετε αυτό το αρχείο να ανατεθεί σε σας. Ένα μέλος της διαχειριστικής ομάδας θα σας το αναθέσει το συντομότερο δυνατό, ώστε να μπορέσεται να το δουλέψετε.
+
+Θυμηθείτε να ακουληθείσεται τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-gr/blob/main/CONTRIBUTING.md)
+"""
 GITHUB_MVP_MILESTONE = int(os.getenv("GITHUB_MVP_MILESTONE", 2))
 GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")
 GITHUB_SEVERITY_MAJOR_LABEL = "severity/major"
@@ -66,7 +72,7 @@ def get_filenames() -> list[str]:
             if name.endswith(".po"):
                 filenames.append(os.path.join(path, name).replace(f"{base_path}/", ""))
 
-    logging.info(f"found {len(filenames)} filenames ending with .po")
+    print(f"found {len(filenames)} filenames ending with .po")
     return filenames
 
 
@@ -82,14 +88,14 @@ def filter_already_parsed_filenames(
         for issue in gh_issues:
             # check if filename is in title AND that the issue is for the same python version
             if filename in issue.title and PYTHON_VERSION in issue.title:
-                logging.info(
+                print(
                     f"Skipping {filename}. There is a similar issue already created at {issue.html_url}"
                 )
                 break
         else:
             filtered_filenames.append(filename)
 
-    logging.info(f"found {len(filtered_filenames)} filenames without issue")
+    print(f"found {len(filtered_filenames)} filenames without issue")
     return filtered_filenames
 
 
@@ -124,23 +130,13 @@ def main() -> None:
         # create github issue for this file
         issue = repo.create_issue(
             title=title,
-            body=f"""/type translation
-
-## Περιγραφή της εργασίας μετάφρασης
-
-Το αρχείο αυτό θα πρέπει να μεταφραστεί στο 100%.
-
-Η μετεφρασμένη έκδοση του αρχείου θα είναι διαθέσιμη στο https://docs.python.org/el/3.12/{urlfile}.
-Μέχρι τότε, θα φαίνεται η Αγγλική έκδοσης της σελίδας.
-
-Παρακαλούμε, σχολιάστε μέσα στο issue εάν θέλετε αυτό το αρχείο να ανατεθεί σε σας. Ένα μέλος της διαχειριστικής ομάδας θα σας το αναθέσει το συντομότερο δυνατό, ώστε να μπορέσεται να το δουλέψετε.
-
-Θυμηθείτε να ακουληθείσεται τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-gr/blob/main/CONTRIBUTING.md)
-""",
+            body=GITHUB_ISSUE_BODY.format(
+                python_version=PYTHON_VERSION, urlfile=urlfile
+            ),
             milestone=milestone,
             labels=[gh_severity_major_label],
         )
-        logging.info(f'Issue "{title}" created at {issue.html_url}')
+        print(f'Issue "{title}" created at {issue.html_url}')
 
 
 if __name__ == "__main__":
