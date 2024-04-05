@@ -60,7 +60,11 @@ GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")
 GITHUB_SEVERITY_MAJOR_LABEL = "severity/major"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 PYTHON_VERSION = os.getenv("PYTHON_VERSION", "3.12")
-REQUIRED_DIRS = ["tutorial/", "library/stdtypes", "library/functions"]
+REQUIRED_DIRS = [
+    "tutorial/",
+    "library/stdtypes.po",
+    "library/functions.po",
+]
 
 
 def get_filenames() -> list[str]:
@@ -68,6 +72,10 @@ def get_filenames() -> list[str]:
     current_path = Path.cwd()
     base_path = os.getcwd()
     for path, _, files in os.walk(current_path):
+
+        if "venv" in path:
+            continue
+
         for name in files:
             if name.endswith(".po"):
                 filenames.append(os.path.join(path, name).replace(f"{base_path}/", ""))
