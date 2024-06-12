@@ -9,16 +9,18 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-06-12 09:11+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: tutorial/modules.rst:5
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 #: tutorial/modules.rst:7
 msgid ""
@@ -31,6 +33,15 @@ msgid ""
 "You may also want to use a handy function that you've written in several "
 "programs without copying its definition into each program."
 msgstr ""
+"Εάν βγείτε από τον interpreter της Python και μπείτε ξανά, οι ορισμοί που "
+"έχετε κάνει (συναρτήσεις και μεταβλητές) χάνονται.  Επομένως, εάν θέλετε να "
+"γράψετε ένα κάπως μεγαλύτερο πρόγραμμα, είναι προτιμότερο να χρησιμοποιήσετε "
+"έναν επεξεργαστή κειμένου για να προετοιμάσετε την εισαγωγή για τον "
+"interpreter και την εκτέλεση του με αυτό το αρχείο ως input.  Αυτό είναι "
+"γνωστό ως δημιουργία *script*.  Καθώς το πρόγραμμα σας μεγαλώνει, μπορεί να "
+"θέλετε να το χωρίσετε σε πολλά αρχεία για ευκολότερη συντήρηση.  Μπορεί "
+"επίσης να θέλετε να χρησιμοποιήσετε μια εύχρηστη συνάρτηση που έχετε γράψει "
+"σε πολλά προγράμματα χωρίς να αντιγράψετε τον ορισμό της σε κάθε πρόγραμμα."
 
 #: tutorial/modules.rst:16
 msgid ""
@@ -40,6 +51,12 @@ msgid ""
 "modules or into the *main* module (the collection of variables that you have "
 "access to in a script executed at the top level and in calculator mode)."
 msgstr ""
+"Για να το υποστηρίξει αυτό, η Python έχει έναν τρόπο να βάζει ορισμούς σε "
+"ένα αρχείο και να τους χρησιμοποιεί σε ένα script ή σε ένα διαδραστικό "
+"instance του interpreter.  Ένα τέτοιο αρχείο ονομάζεται *module*∙ ορισμοί "
+"από μια ενότητα μπορούν να *εισαχθούν* σε άλλα modules ή στο *κύριο* module "
+"(η συλλογή των μεταβλητών στις οποίες έχετε πρόσβαση σε ένα script που "
+"εκτελείται στον ανώτερο επίπεδο και σε λειτουργία αριθμομηχανής)."
 
 #: tutorial/modules.rst:22
 msgid ""
@@ -50,12 +67,21 @@ msgid ""
 "to create a file called :file:`fibo.py` in the current directory with the "
 "following contents::"
 msgstr ""
+"Ένα module είναι ένα αρχείο που περιέχει ορισμούς και δηλώσεις Python.  Το "
+"όνομα αρχείου είναι το όνομα του module με το επίθημα :file:`.py`.  Μέσε σε "
+"ένα module, το όνομα του module (ως συμβολοσειρά) είναι διαθέσιμο ως τιμή "
+"της global μεταβλητής ``__name__``.  Για παράδειγμα, χρησιμοποιήστε το "
+"αγαπημένος σας πρόγραμμα επεξεργασίας κειμένου για να δημιουργήσετε ένα "
+"αρχείο που ονομάζεται :file:`fibo.py` στον τρέχοντα κατάλογο με τα ακόλουθα "
+"περιεχόμενα::"
 
 #: tutorial/modules.rst:45
 msgid ""
 "Now enter the Python interpreter and import this module with the following "
 "command::"
 msgstr ""
+"Τώρα εισάγετε τον Python interpreter και εισάγετε αυτό το module με την "
+"ακόλουθη εντολή::"
 
 #: tutorial/modules.rst:50
 msgid ""
@@ -64,15 +90,22 @@ msgid ""
 "it only adds the module name ``fibo`` there. Using the module name you can "
 "access the functions::"
 msgstr ""
+"Αυτό δεν προσθέτει τα ονόματα των συναρτήσεων που ορίζονται στο ``fibo``  "
+"απευθείας στον τρέχοντα :term:`namespace` (βλ. :ref:`tut-scopes` για "
+"περισσότερες λεπτομέρειες): προσθέτει μόνο το όνομα του module ``fibo`` "
+"εκεί. Χρησιμοποιώντας το όνομα του module μπορείτε να αποκτήσετε πρόσβαση "
+"στις λειτουργίες::"
 
 #: tutorial/modules.rst:62
 msgid ""
 "If you intend to use a function often you can assign it to a local name::"
 msgstr ""
+"Εάν σκοπεύετε να χρησιμοποιείτε συχνά μια συνάρτηση, μπορείτε να την "
+"αντιστοιχίσετε σε ένα τοπικό όνομα::"
 
 #: tutorial/modules.rst:72
 msgid "More on Modules"
-msgstr ""
+msgstr "Περισσότερα για τα Modules"
 
 #: tutorial/modules.rst:74
 msgid ""
@@ -81,6 +114,11 @@ msgid ""
 "only the *first* time the module name is encountered in an import statement. "
 "[#]_ (They are also run if the file is executed as a script.)"
 msgstr ""
+"Ένα module μπορεί να περιέχει εκτελέσιμες δηλώσεις καθώς και ορισμούς "
+"συναρτήσεων. Αυτές οι δηλώσεις προορίζονται για την προετοιμασία του module. "
+"Εκτελούνται μόνο την *πρώτη* φορά που εμφανίζεται το όνομα του module σε μια "
+"δήλωση εισαγωγής. [#]_ (Εκτελούνται επίσης εάν το αρχείο εκτελείται ως "
+"script.)"
 
 #: tutorial/modules.rst:79
 msgid ""
@@ -91,6 +129,13 @@ msgid ""
 "know what you are doing you can touch a module's global variables with the "
 "same notation used to refer to its functions, ``modname.itemname``."
 msgstr ""
+"Κάθε module έχει τον δικό της ιδιωτικό namespace, ο οποίος χρησιμοποιείται "
+"ως global namespace από όλες τις συναρτήσεις που ορίζονται στο module. Έτσι, "
+"ο συντάκτης μιας ενότητας μπορεί να χρησιμοποιήσει global μεταβλητές στο "
+"module χωρίς να ανησυχεί για τυχαία conflicts με τις global μεταβλητές του "
+"χρήστη. Από την άλλη πλευρά, εάν ξέρετε τι κάνετε, μπορείτε να αγγίξετε τις "
+"global μεταβλητές ενός module με το ίδιο notation που χρησιμοποιείται για να "
+"αναφέρεται στις συναρτήσεις, ``modname.itemname``."
 
 #: tutorial/modules.rst:86
 msgid ""
@@ -100,22 +145,35 @@ msgid ""
 "a module (outside any functions or classes), are added to the module's "
 "global namespace."
 msgstr ""
+"Τα modules μπορούν να εισάγουν άλλα modules.  Είναι σύνηθες, αλλά δεν "
+"απαιτείται να τοποθετούνται όλες οι δηλώσεις :keyword:`import` στην αρχή "
+"μιας ενότητα (ή σεναρίου, για αυτό το θέμα).  Τα ονόματα των modules που "
+"εισάγονται, εάν τοποθετούνται στο ανώτερο επίπεδο του ένα module (εκτός "
+"οποιωνδήποτε συναρτήσεων ή κλάσεων), προστίθενται στον global namespace του "
+"module."
 
 #: tutorial/modules.rst:91
 msgid ""
 "There is a variant of the :keyword:`import` statement that imports names "
 "from a module directly into the importing module's namespace.  For example::"
 msgstr ""
+"Υπάρχει μια παραλλαγή της δήλωσης :keyword:`import` που εισάγει ονόματα από "
+"ένα module απευθείας στον χώρο στα importing module's namespace.  Για "
+"παράδειγμα::"
 
 #: tutorial/modules.rst:98
 msgid ""
 "This does not introduce the module name from which the imports are taken in "
 "the local namespace (so in the example, ``fibo`` is not defined)."
 msgstr ""
+"Αυτό δεν εισάγει το όνομα ενός module από το οποίο λαμβάνονται οι εισαγωγές "
+"στο τοπικό namespace (αρά στο παράδειγμα, το ``fibo`` δεν ορίζεται)."
 
 #: tutorial/modules.rst:101
 msgid "There is even a variant to import all names that a module defines::"
 msgstr ""
+"Υπάρχει ακόμη και μια παραλλαγή για την εισαγωγή όλων των ονομάτων που "
+"ορίζει μια ενότητα::"
 
 #: tutorial/modules.rst:107
 msgid ""
@@ -124,6 +182,11 @@ msgid ""
 "an unknown set of names into the interpreter, possibly hiding some things "
 "you have already defined."
 msgstr ""
+"Αυτό εισάγει όλα τα ονόματα εκτός από αυτά που ξεκινούν με κάτω παύλα "
+"(``_``). Στις περισσότερες περιπτώσεις, οι προγραμματιστές Python δεν "
+"χρησιμοποιούν αυτήν την δυνατότητα , καθώς εισάγει ένα άγνωστο σύνολο "
+"ονομάτων στον interpreter, κρύβοντας πιθανώς κάποια πράγματα που έχετε ήδη "
+"ορίσει."
 
 #: tutorial/modules.rst:112
 msgid ""
@@ -131,23 +194,33 @@ msgid ""
 "package is frowned upon, since it often causes poorly readable code. "
 "However, it is okay to use it to save typing in interactive sessions."
 msgstr ""
+"Λάβετε υπόψη ότι γενικά η πρακτική της εισαγωγής ``*`` από ένα module ή ένα "
+"πακέτο αποδοκιμάζεται, καθώς προκαλεί συχνά κακώς αναγνώσιμο κώδικα. Ωστόσο, "
+"είναι εντάξει να τον χρησιμοποιήσετε για να αποθηκεύσετε την πληκτρολόγηση "
+"σε διαδραστικές περιόδους σύνδεσης."
 
 #: tutorial/modules.rst:116
 msgid ""
 "If the module name is followed by :keyword:`!as`, then the name following :"
 "keyword:`!as` is bound directly to the imported module."
 msgstr ""
+"Εάν το όνομα του module ακολουθείται από :keyword:`!as`, τότε το όνομα που "
+"ακολουθεί :keyword:`!as` συνδέεται απευθείας με το εισαγόμενο module."
 
 #: tutorial/modules.rst:125
 msgid ""
 "This is effectively importing the module in the same way that ``import "
 "fibo`` will do, with the only difference of it being available as ``fib``."
 msgstr ""
+"Αυτό ουσιαστικά εισάγει το module με τον ίδιο τρόπο που θα κάνει το ``import "
+"fibo`` , με τη μόνη διαφορά ότι είναι διαθέσιμο ως ``fib``."
 
 #: tutorial/modules.rst:128
 msgid ""
 "It can also be used when utilising :keyword:`from` with similar effects::"
 msgstr ""
+"Μπορεί επίσης να χρησιμοποιηθεί όταν χρησιμοποιείτε :keyword:`from` με "
+"παρόμοια εφέ::"
 
 #: tutorial/modules.rst:137
 msgid ""
@@ -157,14 +230,19 @@ msgid ""
 "use :func:`importlib.reload`, e.g. ``import importlib; importlib."
 "reload(modulename)``."
 msgstr ""
+"Για λόγους αποτελεσματικότητας, κάθε module εισάγεται μόνο μία φορά ανά "
+"περίοδο λειτουργίες του interpreter.  Επομένως, εάν αλλάξετε τα modules σας, "
+"πρέπει να επανεκκινήσετε τον διερμηνέα -- ή, εάν είναι μόνο ένα module που "
+"θέλετε να δοκιμάσετε διαδραστικά, χρησιμοποιήστε το :func:`importlib."
+"reload`, π.χ. ``import importlib; importlib.reload(modulename)``."
 
 #: tutorial/modules.rst:147
 msgid "Executing modules as scripts"
-msgstr ""
+msgstr "Εκτέλεση modules ως scripts"
 
 #: tutorial/modules.rst:149
 msgid "When you run a Python module with ::"
-msgstr ""
+msgstr "Όταν εκτελείτε ένα Python module με::"
 
 #: tutorial/modules.rst:153
 msgid ""
@@ -172,6 +250,9 @@ msgid ""
 "with the ``__name__`` set to ``\"__main__\"``.  That means that by adding "
 "this code at the end of your module::"
 msgstr ""
+"ο κώδικας στο module θα εκτελεστεί, ακριβώς σαν να τον εισαγάγετε, αλλά με "
+"το ``name`` να έχει οριστεί σε ``\"__main__\"``.  Αυτό σημαίνει ότι "
+"προσθέτοντας αυτόν τον κώδικα στο τέλος του module σας::"
 
 #: tutorial/modules.rst:161
 msgid ""
@@ -179,10 +260,13 @@ msgid ""
 "because the code that parses the command line only runs if the module is "
 "executed as the \"main\" file:"
 msgstr ""
+"μπορείτε να κάνετε το αρχείο χρησιμοποιήσιμο ως script καθώς και ως module "
+"που μπορεί να εισαχθεί, επειδή ο κώδικας που αναλύει την γραμμή εντολών "
+"εκτελείται μόνο εάν το module εκτελείται ως το \"main\" αρχείο:"
 
 #: tutorial/modules.rst:170
 msgid "If the module is imported, the code is not run::"
-msgstr ""
+msgstr "Εάν το module έχει εισαχθεί, ο κώδικας δεν εκτελείται::"
 
 #: tutorial/modules.rst:175
 msgid ""
@@ -190,10 +274,13 @@ msgid ""
 "module, or for testing purposes (running the module as a script executes a "
 "test suite)."
 msgstr ""
+"Αυτό χρησιμοποιείται συχνά είτε για την παροχή ενός βολικού user interface "
+"σε ένα module, είτε για σκοπούς δοκιμής (η εκτέλεση του module ως script "
+"εκτελεί μια δοκιμαστική σουίτα)."
 
 #: tutorial/modules.rst:182
 msgid "The Module Search Path"
-msgstr ""
+msgstr "Το Search Path του Module"
 
 #: tutorial/modules.rst:186
 msgid ""
@@ -203,28 +290,41 @@ msgid ""
 "file:`spam.py` in a list of directories given by the variable :data:`sys."
 "path`.  :data:`sys.path` is initialized from these locations:"
 msgstr ""
+"Όταν εισάγετε ένα module με το όνομα :mod:`!spam`, ο interprete αναζητά "
+"πρώτα ένα ενσωματωμένο module με αυτό το όνομα. Αυτά τα ονόματα των module "
+"παρατίθενται στο :data:`sys.builtin_module_names`. Εάν δεν βρεθεί, τότε "
+"αναζητά ένα αρχείο με το όνομα :file:`spam.py` σε μια λίστα καταλόγων που "
+"δίνονται από τη μεταβλητή :data:`sys.path`.  Το :data:`sys.path` "
+"αρχικοποιείται από αυτές τις θέσεις:"
 
 #: tutorial/modules.rst:192
 msgid ""
 "The directory containing the input script (or the current directory when no "
 "file is specified)."
 msgstr ""
+"Ο κατάλογος που περιέχει το input script (ή τον τρέχοντα κατάλογο όταν δεν "
+"έχει καθοριστεί αρχείο)."
 
 #: tutorial/modules.rst:194
 msgid ""
 ":envvar:`PYTHONPATH` (a list of directory names, with the same syntax as the "
 "shell variable :envvar:`PATH`)."
 msgstr ""
+":envvar:`PYTHONPATH` (μια λίστα ονομάτων καταλόγου, με την ίδια σύνταξη με "
+"τη μεταβλητή του shel :envvar:`PATH`)."
 
 #: tutorial/modules.rst:196
 msgid ""
 "The installation-dependent default (by convention including a ``site-"
 "packages`` directory, handled by the :mod:`site` module)."
 msgstr ""
+"Η προεπιλογή που εξαρτάται από την εγκατάσταση (κατά σύμβαση, "
+"συμπεριλαμβανομένου ενός καταλόγου ``site-packages``, που χειρίζεται το "
+"module :mod:`site`."
 
 #: tutorial/modules.rst:199
 msgid "More details are at :ref:`sys-path-init`."
-msgstr ""
+msgstr "Περισσότερες λεπτομέρειες βρίσκονται στο :ref:`sys-path-init`."
 
 #: tutorial/modules.rst:202
 msgid ""
@@ -232,6 +332,10 @@ msgid ""
 "script is calculated after the symlink is followed. In other words the "
 "directory containing the symlink is **not** added to the module search path."
 msgstr ""
+"Στα συστήματα αρχείων που υποστηρίζουν symlinks, ο κατάλογο που περιέχει το "
+"input script υπολογίζεται αφού ακολουθηθεί το symlink. Με άλλα λόγια, ο "
+"κατάλογος που περιέχει το symlink **δεν** προστίθεται στη διαδρομή "
+"αναζήτησης του module."
 
 #: tutorial/modules.rst:206
 msgid ""
@@ -242,10 +346,17 @@ msgid ""
 "library directory. This is an error unless the replacement is intended.  See "
 "section :ref:`tut-standardmodules` for more information."
 msgstr ""
+"Μετά την προετοιμασία, τα προγράμματα Python μπορούν να τροποποιήσουν το :"
+"data:`sys.path`.  Ο κατάλογος που περιέχει το script που εκτελείται "
+"τοποθετείται στην αρχή της διαδρομής αναζήτησης , μπροστά από την τυπική "
+"διαδρομή της βιβλιοθήκης. Αυτό σημαίνει ότι τα scripts σε αυτόν τον κατάλογο "
+"θα είναι φορτωμένα αντί για τα modules με το ίδιο όνομα στον κατάλογο μιας "
+"βιβλιοθήκης. Αυτό είναι ένα σφάλμα, εκτός εάν προορίζεται η αντικατάσταση.  "
+"Βλ. την ενότητα :ref:`tut-standardmodules` για περισσότερες πληροφορίες."
 
 #: tutorial/modules.rst:219
 msgid "\"Compiled\" Python files"
-msgstr ""
+msgstr "\"Compiled\" Python αρχεία"
 
 #: tutorial/modules.rst:221
 msgid ""
@@ -257,6 +368,14 @@ msgid ""
 "spam.cpython-33.pyc``.  This naming convention allows compiled modules from "
 "different releases and different versions of Python to coexist."
 msgstr ""
+"Για να επιταχύνει τη φόρτωση modules, η Python κάνει cache την compiled "
+"έκδοση κάθε module στον κατάλογο ``__pycache__`` κάτω από το όνομα :file:"
+"`module.{version}.pyc`, όπου η έκδοση κωδικοποιεί τη μορφή του compiled "
+"αρχείου∙ γενικά περιέχει τον αριθμό έκδοσης της Python.  Για παράδειγμα, "
+"στην έκδοση CPython 3.3 η compiled έκδοση του spam.py θα αποθηκευτεί ως "
+"``__pycache__/spam.cpython-33.pyc``.  Αυτή η σύμβαση ονομασίας, επιτρέπει σε "
+"compiled modules από διαφορετικές εκδόσεις και διαφορετικές εκδόσεις της "
+"Python να συνυπάρχουν."
 
 #: tutorial/modules.rst:229
 msgid ""
@@ -266,6 +385,11 @@ msgid ""
 "independent, so the same library can be shared among systems with different "
 "architectures."
 msgstr ""
+"Η Python ελέγχει την ημερομηνία τροποποίησης του πηγαίου έναντι της compiled "
+"έκδοσης για να δει εάν είναι ξεπερασμένη και χρειάζεται να γίνει compile "
+"ξανά.  Αυτή είναι μια εντελώς αυτόματη διαδικασία.  Επίσης, τα compiled "
+"modules είναι ανεξάρτητες από πλατφόρμα, επομένως η ίδια βιβλιοθήκη μπορεί "
+"να κοινοποιηθεί ανάμεσα σε συστήματα με διαφορετικές αρχιτεκτονικές."
 
 #: tutorial/modules.rst:234
 msgid ""
@@ -276,10 +400,16 @@ msgid ""
 "distribution, the compiled module must be in the source directory, and there "
 "must not be a source module."
 msgstr ""
+"Η Python δεν ελέγχει την cache σε δύο περιπτώσεις.  Πρώτον, πάντα κάνει "
+"compile ξανά και δεν αποθηκεύει το αποτέλεσμα για το module που φορτώνεται "
+"απευθείας από τη γραμμή εντολών.  Δεύτερον, δεν ελέγχει τη μνήμη cache εάν "
+"δεν υπάρχει το source module.  Για να υποστηρίξετε μια διανομή χωρίς πηγαίο "
+"(compiled μόνο), το compiled module πρέπει να βρίσκεται στον source κατάλογο "
+"και δεν πρέπει να υπάρχει source module."
 
 #: tutorial/modules.rst:241
 msgid "Some tips for experts:"
-msgstr ""
+msgstr "Μερικές συμβουλές για ειδικούς:"
 
 #: tutorial/modules.rst:243
 msgid ""
@@ -291,6 +421,15 @@ msgid ""
 "have an ``opt-`` tag and are usually smaller.  Future releases may change "
 "the effects of optimization."
 msgstr ""
+"Μπορείτε να χρησιμοποιήσετε τους switches :option:`-O` ή :option:`-OO` στην "
+"εντολή Python για να μειώσετε το μέγεθος ενός compiled module.  Το ``-O`` "
+"switch αφαιρεί τις assert statements, το ``-OO`` switch αφαιρεί τόσο τα "
+"assert statements όσο και τις __doc__ συμβολοσειρές . Εφόσον ορισμένα "
+"προγράμματα μπορεί να βασίζονται στην ύπαρξη αυτών των διαθέσιμων, θα πρέπει "
+"να χρησιμοποιήσετε αυτήν την επιλογή μόνο εάν γνωρίζετε τι κάνετε.  "
+"\"Optimized\" modules έχουν ένα ``opt-`` tag και είναι συνήθως μικρότερες.  "
+"Οι μελλοντικές εκδόσεις μπορεί να αλλάξουν τα αποτελέσματα της "
+"βελτιστοποίησης."
 
 #: tutorial/modules.rst:251
 msgid ""
@@ -298,22 +437,30 @@ msgid ""
 "when it is read from a ``.py`` file; the only thing that's faster about ``."
 "pyc`` files is the speed with which they are loaded."
 msgstr ""
+"Ένα πρόγραμμα δεν εκτελείται πιο γρήγορα όταν διαβάζεται από ένα αρχείο ``."
+"pyc`` από ό,τι όταν διαβάζεται από ένα αρχείο ``.py``∙ το μόνο πράγμα που "
+"είναι πιο γρήγορο από τα αρχεία ``.pyc`` είναι η ταχύτητα με την οποία "
+"φορτώνονται."
 
 #: tutorial/modules.rst:255
 msgid ""
 "The module :mod:`compileall` can create .pyc files for all modules in a "
 "directory."
 msgstr ""
+"Το module :mod:`compileall` μπορεί να δημιουργήσει αρχεία .pyc για όλα τα "
+"modules σε ένα κατάλογο."
 
 #: tutorial/modules.rst:258
 msgid ""
 "There is more detail on this process, including a flow chart of the "
 "decisions, in :pep:`3147`."
 msgstr ""
+"Υπάρχουν περισσότερες λεπτομέρειες σχετικά με αυτή τη διαδικασία, "
+"συμπεριλαμβανομένου ενός διαγράμματος ροής των αποφάσεων, στο :pep:`3147`."
 
 #: tutorial/modules.rst:265
 msgid "Standard Modules"
-msgstr ""
+msgstr "Standard Modules"
 
 #: tutorial/modules.rst:269
 msgid ""
@@ -329,12 +476,27 @@ msgid ""
 "into every Python interpreter.  The variables ``sys.ps1`` and ``sys.ps2`` "
 "define the strings used as primary and secondary prompts::"
 msgstr ""
+"Η Python συνοδεύεται από μια βιβλιοθήκη standard modules, η οποία "
+"περιγράφεται σε ένα ξεχωριστό έγγραφο, την Αναφορά Βιβλιοθήκης Python "
+"(\"Library Reference\" hereafter).  Ορισμένα modules είναι ενσωματωμένα στον "
+"interpreter∙ αυτές παρέχουν πρόσβαση σε λειτουργίες που δεν αποτελούν μέρος "
+"του πυρήνα της γλώσσας, αλλά εντούτοις είναι ενσωματωμένα, είτε για "
+"αποτελεσματικότητα είτε για την παροχή πρόσβασης σε πρωτόγονα στοιχεία του "
+"λειτουργικού συστήματος όπως οι κλήσεις συστήματος.  Το σύνολο τέτοιων "
+"modules είναι μια επιλογή διαμόρφωσης που εξαρτάται επίσης από την "
+"υποκείμενη πλατφόρμα.  Για παράδειγμα, το module :mod:`winreg` παρέχεται "
+"μόνο σε συστήματα Windows.  Ένα συγκεκριμένο module που αξίζει κάποια "
+"προσοχή είναι το :mod:`sys`, το οποίο είναι ενσωματωμένο στον interpreter "
+"της Python.  Οι μεταβλητές ``sys.ps1`` και ``sys.ps2`` ορίζουν τις "
+"συμβολοσειρές που χρησιμοποιούνται ως κύρια και δευτερεύοντα prompts::"
 
 #: tutorial/modules.rst:292
 msgid ""
 "These two variables are only defined if the interpreter is in interactive "
 "mode."
 msgstr ""
+"Αυτές οι δύο μεταβλητές ορίζονται μόνο εάν ο interpreter βρίσκεται σε "
+"διαδραστική λειτουργία."
 
 #: tutorial/modules.rst:294
 msgid ""
@@ -344,26 +506,38 @@ msgid ""
 "default if :envvar:`PYTHONPATH` is not set.  You can modify it using "
 "standard list operations::"
 msgstr ""
+"Η μεταβλητή ``sys.path`` είναι μια λίστα συμβολοσειρών που καθορίζει τη "
+"διαδρομή αναζήτησης του διερμηνέα για modules. Αρχικοποιείται σε μια "
+"προεπιλεγμένη διαδρομή που λαμβάνεται από τη μεταβλητή περιβάλλοντος :envvar:"
+"`PYTHONPATH`, ή από μια ενσωματωμένη προεπιλογή εάν το :envvar:`PYTHONPATH` "
+"δεν έχει οριστεί.  Μπορείτε να το τροποποιήσετε χρησιμοποιώντας τυπικές "
+"λειτουργίες λίστας::"
 
 #: tutorial/modules.rst:307
 msgid "The :func:`dir` Function"
-msgstr ""
+msgstr "Η συνάρτηση :func:`dir`"
 
 #: tutorial/modules.rst:309
 msgid ""
 "The built-in function :func:`dir` is used to find out which names a module "
 "defines.  It returns a sorted list of strings::"
 msgstr ""
+"Η ενσωματωμένη συνάρτηση :func:`dir` χρησιμοποιείται για να ανακαλύψει ποια "
+"ονόματα ορίζει ένα module.  Επιστρέφει μια ταξινομημένη λίστα συμβολοσειρών::"
 
 #: tutorial/modules.rst:338
 msgid ""
 "Without arguments, :func:`dir` lists the names you have defined currently::"
 msgstr ""
+"Χωρίς ορίσματα, η :func:`dir` παραθέτει τα ονόματα που έχετε ορίσει αυτήν τη "
+"στιγμή::"
 
 #: tutorial/modules.rst:346
 msgid ""
 "Note that it lists all types of names: variables, modules, functions, etc."
 msgstr ""
+"Λάβετε υπόψη ότι παραθέτει όλους τους τύπους ονομάτων: μεταβλητές, modules, "
+"συναρτήσεις, κ.λπ."
 
 #: tutorial/modules.rst:350
 msgid ""
@@ -371,10 +545,13 @@ msgid ""
 "you want a list of those, they are defined in the standard module :mod:"
 "`builtins`::"
 msgstr ""
+"Η :func:`dir` δεν παραθέτει τα ονόματα των ενσωματωμένων συναρτήσεων και "
+"μεταβλητών.  Εάν θέλετε μια λίστα από αυτές, ορίζονται στην τυπική ενότητα :"
+"mod:`builtins`::"
 
 #: tutorial/modules.rst:389
 msgid "Packages"
-msgstr ""
+msgstr "Πακέτα"
 
 #: tutorial/modules.rst:391
 msgid ""
@@ -386,6 +563,14 @@ msgid ""
 "saves the authors of multi-module packages like NumPy or Pillow from having "
 "to worry about each other's module names."
 msgstr ""
+"Τα πακέτα είναι ένας τρόπος δόμησης του namespace του module χρησιμοποιώντας "
+"\"dotted module names\".  Για παράδειγμα, το όνομα του module :mod:`!A.B` "
+"υποδηλώνει ένα submodule με όνομα ``B`` σε ένα πακέτο με όνομα ``A``.  "
+"Ακριβώς όπως η χρήση των modules σώζει τους δημιουργούς διαφορετικών modules "
+"να ανησυχούν ο ένας για τα καθολικά ονόματα μεταβλητών του άλλου, η χρήση "
+"dotted module ονομάτων σώζει τους δημιουργούς των multi-module πακέτων όπως "
+"το NumbPY ή το Pillow από το να χρειάζεται να ανησυχούν ο ένας για τα module "
+"ονόματα του άλλου."
 
 #: tutorial/modules.rst:399
 msgid ""
@@ -401,12 +586,26 @@ msgid ""
 "operations.  Here's a possible structure for your package (expressed in "
 "terms of a hierarchical filesystem):"
 msgstr ""
+"Ας υποθέσουμε ότι θέλετε να σχεδιάσετε μια συλλογή από module (ένα "
+"\"πακέτο\") για τον ομοιόμορφο χειρισμό αρχείων ήχου και δεδομένων ήχου.  "
+"Υπάρχουν πολλές διαφορετικές μορφές αρχείων ήχου (που συνήθως αναγνωρίζονται "
+"από την επέκτασή τους, για παράδειγμα: :file:`.wav`, :file:`.aiff`, :file:`."
+"au`), επομένως μπορεί να χρειαστεί να δημιουργήσετε και να διατηρήσετε μια "
+"αυξανόμενη συλλογή λειτουργιών για τη μετατροπή μεταξύ των διαφόρων μορφών "
+"αρχείων. Υπάρχουν επίσης πολλές διαφορετικές λειτουργίες που μπορεί να "
+"θέλετε να εκτελέσετε σε δεδομένα ήχου (όπως μίξη, προσθήκη ηχούς, εφαρμογή "
+"μιας λειτουργίας ισοσταθμιστή, δημιουργία τεχνητού στερεοφωνικού εφέ), "
+"επομένως επιπλέον θα γράφετε μια ατελείωτη ροή από modules για να εκτελέσετε "
+"αυτές τις λειτουργίες.  Ακολουθεί μια πιθανή δομή για το πακέτο σας (που "
+"εκφράζεται ως ιεραρχικό σύστημα αρχείων):"
 
 #: tutorial/modules.rst:436
 msgid ""
 "When importing the package, Python searches through the directories on ``sys."
 "path`` looking for the package subdirectory."
 msgstr ""
+"Κατά την εισαγωγή του πακέτου, η Python πραγματοποιεί αναζήτηση στους "
+"καταλόγους στο ``sys.path`` αναζητώντας τον υποκατάλογο του πακέτου."
 
 #: tutorial/modules.rst:439
 msgid ""
@@ -418,40 +617,59 @@ msgid ""
 "can just be an empty file, but it can also execute initialization code for "
 "the package or set the ``__all__`` variable, described later."
 msgstr ""
+"Τα :file:`__init__.py` αρχεία απαιτούνται για να κάνει την Python να "
+"αντιμετωπίζει του καταλόγου που περιέχουν το αρχείο ως πακέτα (εκτός εάν "
+"χρησιμοποιεί ένα :term:`namespace package`, ένα σχετικά προηγμένο "
+"χαρακτηριστικό). Αυτό αποτρέπει τους καταλόγους με κοινό όνομα, όπως π.χ. ως "
+"``string``, από την ακούσια απόκρυψη έγκυρων modules που εμφανίζονται "
+"αργότερα στο path αναζήτησης του module. Στην απλούστερη περίπτωση, το :file:"
+"`__init__.py` μπορεί απλώς να είναι κενό αρχείο, αλλά μπορεί επίσης να "
+"εκτελέσει initializion κώδικα για το πακέτο ή να ορίσει την μεταβλητή "
+"``__all__``, που περιγράφεται αργότερα."
 
 #: tutorial/modules.rst:447
 msgid ""
 "Users of the package can import individual modules from the package, for "
 "example::"
 msgstr ""
+"Οι χρήστες του πακέτου μπορούν να εισάγουν μεμονωμένα module από το πακέτο, "
+"για παράδειγμα::"
 
 #: tutorial/modules.rst:452
 msgid ""
 "This loads the submodule :mod:`!sound.effects.echo`.  It must be referenced "
 "with its full name. ::"
 msgstr ""
+"Αυτό φορτώνει το submodule :mod:`!sound.effects.echo`.  Πρέπει να αναφέρεται "
+"με το πλήρες όνομά του. ::"
 
 #: tutorial/modules.rst:457
 msgid "An alternative way of importing the submodule is::"
-msgstr ""
+msgstr "Ένα εναλλακτικός τρόπος για την εισαγωγή του submodule είναι::"
 
 #: tutorial/modules.rst:461
 msgid ""
 "This also loads the submodule :mod:`!echo`, and makes it available without "
 "its package prefix, so it can be used as follows::"
 msgstr ""
+"Αυτό φορτώνει επίσης το submodule :mod:`!echo`, και την καθιστά διαθέσιμη "
+"χωρίς το πρόθεμα πακέτου, ώστε να μπορεί να χρησιμοποιηθεί ως εξής::"
 
 #: tutorial/modules.rst:466
 msgid ""
 "Yet another variation is to import the desired function or variable "
 "directly::"
 msgstr ""
+"Μια άλλη παραλλαγή είναι η απευθείας εισαγωγή της επιθυμητής συνάρτησης ή "
+"μεταβλητής::"
 
 #: tutorial/modules.rst:470
 msgid ""
 "Again, this loads the submodule :mod:`!echo`, but this makes its function :"
 "func:`!echofilter` directly available::"
 msgstr ""
+"Και πάλι, αυτό φορτώνει το submodule :mod:`!echo`, αλλά αυτό κάνει τη "
+"συνάρτηση της :func:`!echofilter` άμεσα διαθέσιμη::"
 
 #: tutorial/modules.rst:475
 msgid ""
@@ -462,6 +680,12 @@ msgid ""
 "module and attempts to load it.  If it fails to find it, an :exc:"
 "`ImportError` exception is raised."
 msgstr ""
+"Λάβετε υπόψη ότι όταν χρησιμοποιείτε ``from package import item``, το "
+"στοιχείο μπορεί να είναι είτε submodule (ή υποπακέτο) του πακέτου ή κάποιο "
+"άλλο όνομα που ορίζεται στο πακέτο, όπως μια συνάρτηση, κλάση ή μεταβλητή. Η "
+"``import`` δήλωση ελέγχει πρώτα εάν το στοιχείο έχει οριστεί στο πακέτο, εάν "
+"όχι, υποθέτει ότι είναι ένα module και επιχειρεί να το φορτώσει , αν δεν το "
+"βρει δημιουργεί η εξαίρεση :exc:`ImportError`."
 
 #: tutorial/modules.rst:482
 msgid ""
@@ -470,10 +694,15 @@ msgid ""
 "a package but can't be a class or function or variable defined in the "
 "previous item."
 msgstr ""
+"Αντίθετα, όταν χρησιμοποιείται σύνταξη όπως ``import item.subitem."
+"subsubitem``, κάθε στοιχείο εκτός από αυτό το τελευταίο πρέπει να είναι "
+"πακέτο∙ το τελευταίο στοιχείο μπορεί να είναι ένα module ή ένα πακέτο αλλά "
+"δεν μπορεί να είναι μια κλάση ή συνάρτηση ή μεταβλητή που ορίζεται από "
+"προηγούμενο στοιχείο."
 
 #: tutorial/modules.rst:491
 msgid "Importing \\* From a Package"
-msgstr ""
+msgstr "Εισάγοντας \\* από ένα Πακέτο"
 
 #: tutorial/modules.rst:495
 msgid ""
@@ -483,6 +712,12 @@ msgid ""
 "could take a long time and importing sub-modules might have unwanted side-"
 "effects that should only happen when the sub-module is explicitly imported."
 msgstr ""
+"Τώρα τι συμβαίνει όταν ο χρήστης γράφει ``from sound.effects import *``;  "
+"Ιδανικά, θα ήλπιζε κανείς ότι αυτό θα βγει με κάποιο τρόπο στο σύστημα "
+"αρχείων, θα βρει κάποια submodules που υπάρχουν το πακέτο, και θα τα εισάγει "
+"όλα σε αυτό.  Αυτό θα μπορούσε να πάρει πολύ χρόνο και η εισαγωγή submodules "
+"μπορεί να έχει ανεπιθύμητες παρενέργειες που θα έπρεπε να συμβούν όταν το "
+"submodule εισάγεται ρητά."
 
 #: tutorial/modules.rst:501
 msgid ""
@@ -496,12 +731,25 @@ msgid ""
 "importing \\* from their package.  For example, the file :file:`sound/"
 "effects/__init__.py` could contain the following code::"
 msgstr ""
+"Η μόνη λύση είναι να παρέχει ο συντάκτης του πακέτου ένα ρητό ευρετήριο του "
+"πακέτου.  Η δήλωση :keyword:`import` χρησιμοποιεί την ακόλουθη σύμβαση: εάν "
+"ο κώδικας :file:`__init__.py` του πακέτου ορίζει μια λίστα με το όνομα "
+"``__all__``, θεωρείται ότι είναι η λίστα με τα ονόματα των modules που θα "
+"πρέπει να εισαχθούν όταν συναντήσετε ``from package import *``.  Είναι στην "
+"διακριτή ευχέρεια του συντάκτη του πακέτου να διατηρεί αυτή τη λίστα "
+"ενημερωμένη, όταν κυκλοφορήσει μια νέα έκδοση του πακέτου.  Οι συντάκτες του "
+"πακέτου ενδέχεται επίσης να αποφασίσουν να μην το υποστηρίξουν, εάν δεν "
+"βλέπουν ότι χρησιμοποιείται η εισαγωγή του \\* από το πακέτο τους.  Για "
+"παράδειγμα το αρχείο :file:`sound/effects/__init__.py` θα μπορούσε να "
+"περιέχει τον ακόλουθο κώδικα::"
 
 #: tutorial/modules.rst:513
 msgid ""
 "This would mean that ``from sound.effects import *`` would import the three "
 "named submodules of the :mod:`!sound.effects` package."
 msgstr ""
+"Αυτό θα σήμαινε ότι ``from sound.effects import *`` θα εισαγάγει τα τρία "
+"submodules με το όνομα του πακέτου :mod:`!sound.effects`."
 
 #: tutorial/modules.rst:516
 msgid ""
@@ -512,6 +760,12 @@ msgid ""
 "submodule, because it is shadowed by the locally defined ``reverse`` "
 "function::"
 msgstr ""
+"Λάβετε υπόψη ότι τα submodules ενδέχεται να σκιάζονται από τοπικά "
+"καθορισμένα ονόματα. Για παράδειγμα, εάν προσθέσατε μια ``reverse`` "
+"συνάρτηση στο αρχείο :file:`sound/effects/__init__.py`, το ``from sound."
+"effects import *`` θα εισαγάγει μόνο τα δύο submodules ``echo`` και "
+"``surround``, αλλά *όχι* το submodule ``reverse``, επειδή επισκιάζεται από "
+"την τοπικά καθορισμένη συνάρτηση ``reverse``::"
 
 #: tutorial/modules.rst:532
 msgid ""
@@ -525,6 +779,15 @@ msgid ""
 "were explicitly loaded by previous :keyword:`import` statements.  Consider "
 "this code::"
 msgstr ""
+"Εάν δεν έχει οριστεί το ``__all__``, η δήλωση ``from sound.effects import "
+"*`` *δεν* εισάγει όλα τα submodules από το πακέτο :mod:`!sound.effects` στο "
+"τρέχων namespace∙ διασφαλίζει μόνο ότι το πακέτο :mod:`!sound.effects` έχει "
+"εισαχθεί (ενδεχομένως να εκτελείται οποιοσδήποτε κωδικός προετοιμασίας στο "
+"στο :file:`__init__.py`) και στη συνέχεια εισάγει οποιαδήποτε ονόματα "
+"ορίζονται στο πακέτο. Αυτό περιλαμβάνει τυχόν ονόματα που ορίζονται (και "
+"submodules που έχουν φορτωθεί ρητά) από το :file:`__init__.py`.  "
+"Περιλαμβάνει επίσης τυχόν submodules του πακέτου που φορτώθηκαν ρητά από "
+"προηγούμενες δηλώσεις :keyword:`import`.  Σκεφτείτε αυτόν τον κώδικα::"
 
 #: tutorial/modules.rst:545
 msgid ""
@@ -533,6 +796,10 @@ msgid ""
 "effects` package when the ``from...import`` statement is executed.  (This "
 "also works when ``__all__`` is defined.)"
 msgstr ""
+"Σε αυτό το παράδειγμα, τα modules :mod:`!echo` και :mod:`!surround` "
+"εισάγονται στο τρέχον namespace επειδή ορίζονται στο πακέτο :mod:`!sound."
+"effects`όταν η δήλωση ``from...import`` εκτελείται.  (Αυτό λειτουργεί επίσης "
+"όταν ορίζεται το ``__all__``)."
 
 #: tutorial/modules.rst:550
 msgid ""
@@ -540,6 +807,9 @@ msgid ""
 "certain patterns when you use ``import *``, it is still considered bad "
 "practice in production code."
 msgstr ""
+"Αν και ορισμένα modules έχουν σχεδιαστεί για να εξάγουν μόνο ονόματα που "
+"ακολουθούν ορισμένα μοτίβα όταν χρησιμοποιείτε το ``import *``, εξακολουθεί "
+"να θεωρείται κακή πρακτική στον κώδικα παραγωγής."
 
 #: tutorial/modules.rst:554
 msgid ""
@@ -548,10 +818,14 @@ msgid ""
 "importing module needs to use submodules with the same name from different "
 "packages."
 msgstr ""
+"Θυμηθείτε, δεν υπάρχει τίποτα κακό με τη χρήση του ``from package import "
+"specific_submodule``!  Στην πραγματικότητα, αυτή είναι η προτεινόμενη "
+"σημείωση, εκτός εάν το module εισαγωγής χρειάζεται να χρησιμοποιήσει "
+"submodules με το ίδιο όνομα από διαφορετικά πακέτα."
 
 #: tutorial/modules.rst:563
 msgid "Intra-package References"
-msgstr ""
+msgstr "Intra-package αναφορές"
 
 #: tutorial/modules.rst:565
 msgid ""
@@ -561,6 +835,12 @@ msgid ""
 "vocoder` needs to use the :mod:`!echo` module in the :mod:`!sound.effects` "
 "package, it can use ``from sound.effects import echo``."
 msgstr ""
+"Όταν τα πακέτα είναι δομημένα σε υποπακέτα (όπως με το πακέτο :mod:`!sound` "
+"στο παράδειγμα), μπορείτε να χρησιμοποιήσετε απόλυτες εισαγωγές για να "
+"αναφερθείτε σε submodules αδερφών πακέτων.  Για παράδειγμα, εάν το module :"
+"mod:`!sound.filters.vocoder` πρέπει να χρησιμοποιήσει το module :mod:`!echo` "
+"στο πακέτο :mod:`!sound.effects` , μπορεί να χρησιμοποιήσει το ``from sound."
+"effects import echo``."
 
 #: tutorial/modules.rst:571
 msgid ""
@@ -569,6 +849,11 @@ msgid ""
 "current and parent packages involved in the relative import.  From the :mod:"
 "`!surround` module for example, you might use::"
 msgstr ""
+"Μπορείτε επίσης να γράψετε σχετικές εισαγωγές, με τη φόρμα ``from module "
+"import name`` της δήλωσης εισαγωγής.  Αυτές οι εισαγωγές χρησιμοποιούν "
+"leading dots για να υποδείξουν τα τρέχοντα και γονικά πακέτα που εμπλέκονται "
+"στη σχετική εισαγωγή.  Από το :mod:`!surround` module για παράδειγμα, μπορεί "
+"να χρησιμοποιήσετε::"
 
 #: tutorial/modules.rst:580
 msgid ""
@@ -577,10 +862,14 @@ msgid ""
 "intended for use as the main module of a Python application must always use "
 "absolute imports."
 msgstr ""
+"Λάβετε υπόψη ότι οι σχετικές εισαγωγές βασίζονται στο όνομα του τρέχοντος "
+"module.  Επειδή το όνομα του κύριου module είναι πάντα ``\"__main__\"``, τα "
+"modules που προορίζονται για χρήση ως κύριο module μιας εφαρμογής Python "
+"πρέπει πάντα να χρησιμοποιούν απόλυτες εισαγωγές."
 
 #: tutorial/modules.rst:586
 msgid "Packages in Multiple Directories"
-msgstr ""
+msgstr "Πακέτα σε Πολλαπλούς Καταλόγους"
 
 #: tutorial/modules.rst:588
 msgid ""
@@ -590,16 +879,24 @@ msgid ""
 "This variable can be modified; doing so affects future searches for modules "
 "and subpackages contained in the package."
 msgstr ""
+"Τα πακέτα υποστηρίζουν ένα ακόμη ειδικό χαρακτηριστικό, :attr:`__path__`.  "
+"Αυτό έχει αρχικοποιηθεί ώστε να είναι μια λίστα που περιέχει το όνομα του "
+"καταλόγου που το :file:`__init__.py` του πακέτου πριν από την εκτέλεση του "
+"κώδικα σε αυτό το αρχείο.  Αυτή η μεταβλητή μπορεί να τροποποιηθεί, αυτό "
+"επηρεάζει τις μελλοντικές αναζητήσεις για modules και υποπακέτα που "
+"περιέχονται στο πακέτο."
 
 #: tutorial/modules.rst:594
 msgid ""
 "While this feature is not often needed, it can be used to extend the set of "
 "modules found in a package."
 msgstr ""
+"Ενώ αυτή η δυνατότητα δεν χρειάζεται συχνά, μπορεί να χρησιμοποιηθεί για την "
+"επέκταση του συνόλου των modules που βρίσκονται σε ένα πακέτο."
 
 #: tutorial/modules.rst:599
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: tutorial/modules.rst:600
 msgid ""
@@ -607,28 +904,30 @@ msgid ""
 "execution of a module-level function definition adds the function name to "
 "the module's global namespace."
 msgstr ""
+"Στην πραγματικότητα, οι ορισμοί συναρτήσεων είναι επίσης 'statements' που "
+"'εκτελούνται'∙ η εκτέλεση ενός ορισμού συνάρτησης σε επίπεδο module "
+"προσθέτει το όνομα της συνάρτησης στον καθολικό namespace του module."
 
-#: tutorial/modules.rst:267
-#: tutorial/modules.rst:348
+#: tutorial/modules.rst:267 tutorial/modules.rst:348
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: tutorial/modules.rst:184
 msgid "search"
-msgstr ""
+msgstr "αναζήτηση"
 
 #: tutorial/modules.rst:184
 msgid "path"
-msgstr ""
+msgstr "path"
 
 #: tutorial/modules.rst:267
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
 #: tutorial/modules.rst:348
 msgid "builtins"
-msgstr ""
+msgstr "builtins"
 
 #: tutorial/modules.rst:493
 msgid "__all__"
-msgstr ""
+msgstr "__all__"
