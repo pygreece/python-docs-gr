@@ -43,10 +43,10 @@ jobs:
       - name: Get list with updated .po archives (PR-only)
         if: github.event_name == 'pull_request'
         id: changed-po-files
-        uses: tj-actions/changed-files@2d756ea4c53f7f6b397767d8723b3a10a9f35bf2 # v44
+        uses: tj-actions/changed-files@eaf854ef0c266753e1abec356dcf17d92695b251 # v44.5.3
         with:
-          files: |
-            **/*.po
+          files: "**/*.po"
+          exclude_submodules: true
       - name: Create list with .po files to check
         id: po-files-to-check
         env:
