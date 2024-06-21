@@ -1,0 +1,9 @@
+repos:
+  - repo: https://github.com/JulienPalard/powrap
+    rev: v1.0.0
+    hooks:
+      - id: powrap
+  - repo: https://github.com/sphinx-contrib/sphinx-lint
+    rev: v0.9.1
+    hooks:
+      - id: sphinx-lint
