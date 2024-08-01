@@ -252,8 +252,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:176
-#: library/asyncio-eventloop.rst:1242
+#: library/asyncio-eventloop.rst:176 library/asyncio-eventloop.rst:1242
 #: library/asyncio-eventloop.rst:1660
 msgid "Example::"
 msgstr ""
@@ -342,8 +341,7 @@ msgid ""
 "section of the documentation."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:246
-#: library/asyncio-eventloop.rst:296
+#: library/asyncio-eventloop.rst:246 library/asyncio-eventloop.rst:296
 #: library/asyncio-eventloop.rst:316
 msgid ""
 "The *context* keyword-only parameter was added. See :pep:`567` for more "
@@ -378,8 +376,7 @@ msgid ""
 "(can be either an int or a float)."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:281
-#: library/asyncio-eventloop.rst:313
+#: library/asyncio-eventloop.rst:281 library/asyncio-eventloop.rst:313
 msgid ""
 "An instance of :class:`asyncio.TimerHandle` is returned which can be used to "
 "cancel the callback."
@@ -531,8 +528,7 @@ msgstr ""
 msgid "The socket type will be :py:const:`~socket.SOCK_STREAM`."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:412
-#: library/asyncio-eventloop.rst:1156
+#: library/asyncio-eventloop.rst:412 library/asyncio-eventloop.rst:1156
 #: library/asyncio-eventloop.rst:1172
 msgid ""
 "*protocol_factory* must be a callable returning an :ref:`asyncio protocol "
@@ -576,8 +572,7 @@ msgid ""
 "The created transport is an implementation-dependent bidirectional stream."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:434
-#: library/asyncio-eventloop.rst:566
+#: library/asyncio-eventloop.rst:434 library/asyncio-eventloop.rst:566
 msgid "Other arguments:"
 msgstr ""
 
@@ -642,8 +637,7 @@ msgid ""
 "*interleave* and *local_addr* should be specified."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:482
-#: library/asyncio-eventloop.rst:597
+#: library/asyncio-eventloop.rst:482 library/asyncio-eventloop.rst:597
 #: library/asyncio-eventloop.rst:825
 msgid ""
 "The *sock* argument transfers ownership of the socket to the transport "
@@ -658,18 +652,15 @@ msgid ""
 "``getaddrinfo()``, similarly to *host* and *port*."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:490
-#: library/asyncio-eventloop.rst:919
+#: library/asyncio-eventloop.rst:490 library/asyncio-eventloop.rst:919
 msgid ""
 "*ssl_handshake_timeout* is (for a TLS connection) the time in seconds to "
 "wait for the TLS handshake to complete before aborting the connection. "
 "``60.0`` seconds if ``None`` (default)."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:494
-#: library/asyncio-eventloop.rst:742
-#: library/asyncio-eventloop.rst:836
-#: library/asyncio-eventloop.rst:923
+#: library/asyncio-eventloop.rst:494 library/asyncio-eventloop.rst:742
+#: library/asyncio-eventloop.rst:836 library/asyncio-eventloop.rst:923
 msgid ""
 "*ssl_shutdown_timeout* is the time in seconds to wait for the SSL shutdown "
 "to complete before aborting the connection. ``30.0`` seconds if ``None`` "
@@ -686,8 +677,7 @@ msgid ""
 "(even if there is only one)."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:508
-#: library/asyncio-eventloop.rst:754
+#: library/asyncio-eventloop.rst:508 library/asyncio-eventloop.rst:754
 msgid "Added support for SSL/TLS in :class:`ProactorEventLoop`."
 msgstr ""
 
@@ -697,8 +687,7 @@ msgid ""
 "by default for all TCP connections."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:517
-#: library/asyncio-eventloop.rst:846
+#: library/asyncio-eventloop.rst:517 library/asyncio-eventloop.rst:846
 msgid "Added the *ssl_handshake_timeout* parameter."
 msgstr ""
 
@@ -721,12 +710,9 @@ msgstr ""
 msgid "For more information: https://datatracker.ietf.org/doc/html/rfc6555"
 msgstr ""
 
-#: library/asyncio-eventloop.rst:536
-#: library/asyncio-eventloop.rst:660
-#: library/asyncio-eventloop.rst:768
-#: library/asyncio-eventloop.rst:803
-#: library/asyncio-eventloop.rst:850
-#: library/asyncio-eventloop.rst:931
+#: library/asyncio-eventloop.rst:536 library/asyncio-eventloop.rst:660
+#: library/asyncio-eventloop.rst:768 library/asyncio-eventloop.rst:803
+#: library/asyncio-eventloop.rst:850 library/asyncio-eventloop.rst:931
 msgid "Added the *ssl_shutdown_timeout* parameter."
 msgstr ""
 
@@ -756,16 +742,14 @@ msgstr ""
 msgid "The socket type will be :py:const:`~socket.SOCK_DGRAM`."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:561
-#: library/asyncio-eventloop.rst:685
+#: library/asyncio-eventloop.rst:561 library/asyncio-eventloop.rst:685
 #: library/asyncio-eventloop.rst:817
 msgid ""
 "*protocol_factory* must be a callable returning a :ref:`protocol <asyncio-"
 "protocol>` implementation."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:564
-#: library/asyncio-eventloop.rst:642
+#: library/asyncio-eventloop.rst:564 library/asyncio-eventloop.rst:642
 msgid "A tuple of ``(transport, protocol)`` is returned on success."
 msgstr ""
 
@@ -881,8 +865,7 @@ msgid ""
 "information about arguments to this method."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:652
-#: library/asyncio-eventloop.rst:794
+#: library/asyncio-eventloop.rst:652 library/asyncio-eventloop.rst:794
 #: library/asyncio-eventloop.rst:1225
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ""
@@ -1061,8 +1044,7 @@ msgid ""
 "asyncio but that use asyncio to handle them."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:815
-#: library/asyncio-eventloop.rst:905
+#: library/asyncio-eventloop.rst:815 library/asyncio-eventloop.rst:905
 msgid "Parameters:"
 msgstr ""
 
@@ -1106,8 +1088,7 @@ msgstr ""
 msgid "*file* must be a regular file object opened in binary mode."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:866
-#: library/asyncio-eventloop.rst:1111
+#: library/asyncio-eventloop.rst:866 library/asyncio-eventloop.rst:1111
 msgid ""
 "*offset* tells from where to start reading the file. If specified, *count* "
 "is the total number of bytes to transmit as opposed to sending the file "
@@ -1202,8 +1183,7 @@ msgid ""
 "*callback* with the specified arguments once *fd* is available for writing."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:955
-#: library/asyncio-eventloop.rst:1212
+#: library/asyncio-eventloop.rst:955 library/asyncio-eventloop.rst:1212
 msgid ""
 "Use :func:`functools.partial` :ref:`to pass keyword arguments <asyncio-pass-"
 "keywords>` to *callback*."
@@ -1244,14 +1224,10 @@ msgstr ""
 msgid "Return the received data as a bytes object."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:984
-#: library/asyncio-eventloop.rst:998
-#: library/asyncio-eventloop.rst:1009
-#: library/asyncio-eventloop.rst:1021
-#: library/asyncio-eventloop.rst:1036
-#: library/asyncio-eventloop.rst:1051
-#: library/asyncio-eventloop.rst:1061
-#: library/asyncio-eventloop.rst:1087
+#: library/asyncio-eventloop.rst:984 library/asyncio-eventloop.rst:998
+#: library/asyncio-eventloop.rst:1009 library/asyncio-eventloop.rst:1021
+#: library/asyncio-eventloop.rst:1036 library/asyncio-eventloop.rst:1051
+#: library/asyncio-eventloop.rst:1061 library/asyncio-eventloop.rst:1087
 #: library/asyncio-eventloop.rst:1125
 msgid "*sock* must be a non-blocking socket."
 msgstr ""
@@ -1308,8 +1284,7 @@ msgid ""
 "the connection."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1038
-#: library/asyncio-eventloop.rst:1089
+#: library/asyncio-eventloop.rst:1038 library/asyncio-eventloop.rst:1089
 msgid ""
 "Even though the method was always documented as a coroutine method, before "
 "Python 3.7 it returned a :class:`Future`. Since Python 3.7, this is an "
@@ -1440,8 +1415,7 @@ msgid ""
 "*protocol_factory*."
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1165
-#: library/asyncio-eventloop.rst:1181
+#: library/asyncio-eventloop.rst:1165 library/asyncio-eventloop.rst:1181
 msgid ""
 "With :class:`SelectorEventLoop` event loop, the *pipe* is set to non-"
 "blocking mode."
@@ -1785,8 +1759,7 @@ msgstr ""
 msgid "*stdin* can be any of these:"
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1460
-#: library/asyncio-eventloop.rst:1471
+#: library/asyncio-eventloop.rst:1460 library/asyncio-eventloop.rst:1471
 #: library/asyncio-eventloop.rst:1481
 msgid "a file-like object"
 msgstr ""
@@ -1797,24 +1770,21 @@ msgid ""
 "with :meth:`os.pipe()`"
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1462
-#: library/asyncio-eventloop.rst:1472
+#: library/asyncio-eventloop.rst:1462 library/asyncio-eventloop.rst:1472
 #: library/asyncio-eventloop.rst:1482
 msgid ""
 "the :const:`subprocess.PIPE` constant (default) which will create a new pipe "
 "and connect it,"
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1464
-#: library/asyncio-eventloop.rst:1474
+#: library/asyncio-eventloop.rst:1464 library/asyncio-eventloop.rst:1474
 #: library/asyncio-eventloop.rst:1484
 msgid ""
 "the value ``None`` which will make the subprocess inherit the file "
 "descriptor from this process"
 msgstr ""
 
-#: library/asyncio-eventloop.rst:1466
-#: library/asyncio-eventloop.rst:1476
+#: library/asyncio-eventloop.rst:1466 library/asyncio-eventloop.rst:1476
 #: library/asyncio-eventloop.rst:1486
 msgid ""
 "the :const:`subprocess.DEVNULL` constant which indicates that the special :"
