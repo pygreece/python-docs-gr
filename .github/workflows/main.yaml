@@ -31,7 +31,7 @@ jobs:
       - name: Install system deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y hunspell hunspell-el gettext language-pack-el locales-all
+          sudo apt-get install -y hunspell hunspell-el hunspell-en-us gettext language-pack-el language-pack-en locales-all
       - name: Install python deps
         run: |
           python -m pip install -r requirements.txt
