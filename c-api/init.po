@@ -681,17 +681,13 @@ msgid ""
 "not modify its value."
 msgstr ""
 
-#: c-api/init.rst:520
-#: c-api/init.rst:580
-#: c-api/init.rst:827
+#: c-api/init.rst:520 c-api/init.rst:580 c-api/init.rst:827
 msgid ""
 "This function should not be called before :c:func:`Py_Initialize`, otherwise "
 "it returns ``NULL``."
 msgstr ""
 
-#: c-api/init.rst:523
-#: c-api/init.rst:583
-#: c-api/init.rst:830
+#: c-api/init.rst:523 c-api/init.rst:583 c-api/init.rst:830
 msgid "It now returns ``NULL`` if called before :c:func:`Py_Initialize`."
 msgstr ""
 
@@ -803,8 +799,7 @@ msgid ""
 "required after calling :c:func:`Py_Initialize`."
 msgstr ""
 
-#: c-api/init.rst:753
-#: c-api/init.rst:815
+#: c-api/init.rst:753 c-api/init.rst:815
 msgid ""
 "Use :c:func:`Py_DecodeLocale` to decode a bytes string to get a :c:expr:"
 "`wchar_*` string."
@@ -1246,8 +1241,7 @@ msgid ""
 "ensues."
 msgstr ""
 
-#: c-api/init.rst:1133
-#: c-api/init.rst:1415
+#: c-api/init.rst:1133 c-api/init.rst:1415
 msgid ""
 "Calling this function from a thread when the runtime is finalizing will "
 "terminate the thread, even if the thread was not created by Python. You can "
@@ -1466,8 +1460,7 @@ msgstr ""
 msgid "See also :c:func:`PyEval_GetFrame`."
 msgstr ""
 
-#: c-api/init.rst:1288
-#: c-api/init.rst:1297
+#: c-api/init.rst:1288 c-api/init.rst:1297
 msgid "*tstate* must not be ``NULL``."
 msgstr ""
 
@@ -2111,8 +2104,7 @@ msgstr ""
 msgid ":c:data:`PyTrace_CALL`"
 msgstr ""
 
-#: c-api/init.rst:1871
-#: c-api/init.rst:1882
+#: c-api/init.rst:1871 c-api/init.rst:1882
 msgid "Always :c:data:`Py_None`."
 msgstr ""
 
@@ -2141,8 +2133,7 @@ msgstr ""
 msgid ":c:data:`PyTrace_C_CALL`"
 msgstr ""
 
-#: c-api/init.rst:1878
-#: c-api/init.rst:1880
+#: c-api/init.rst:1878 c-api/init.rst:1880
 msgid "Function object being called."
 msgstr ""
 
@@ -2233,8 +2224,7 @@ msgstr ""
 msgid "See also the :func:`sys.setprofile` function."
 msgstr ""
 
-#: c-api/init.rst:1963
-#: c-api/init.rst:1989
+#: c-api/init.rst:1963 c-api/init.rst:1989
 msgid "The caller must hold the :term:`GIL`."
 msgstr ""
 
@@ -2489,8 +2479,7 @@ msgid ""
 "not be used in new code."
 msgstr ""
 
-#: c-api/init.rst:495
-#: c-api/init.rst:570
+#: c-api/init.rst:495 c-api/init.rst:570
 msgid "Py_SetProgramName()"
 msgstr ""
 
@@ -2502,39 +2491,31 @@ msgstr ""
 msgid "modules (in module sys)"
 msgstr ""
 
-#: c-api/init.rst:589
-#: c-api/init.rst:615
+#: c-api/init.rst:589 c-api/init.rst:615
 msgid "path (in module sys)"
 msgstr ""
 
-#: c-api/init.rst:589
-#: c-api/init.rst:1056
-#: c-api/init.rst:1682
+#: c-api/init.rst:589 c-api/init.rst:1056 c-api/init.rst:1682
 msgid "module"
 msgstr ""
 
-#: c-api/init.rst:1587
-#: c-api/init.rst:1682
+#: c-api/init.rst:1587 c-api/init.rst:1682
 msgid "builtins"
 msgstr ""
 
-#: c-api/init.rst:1587
-#: c-api/init.rst:1682
+#: c-api/init.rst:1587 c-api/init.rst:1682
 msgid "__main__"
 msgstr ""
 
-#: c-api/init.rst:1587
-#: c-api/init.rst:1682
+#: c-api/init.rst:1587 c-api/init.rst:1682
 msgid "sys"
 msgstr ""
 
-#: c-api/init.rst:589
-#: c-api/init.rst:615
+#: c-api/init.rst:589 c-api/init.rst:615
 msgid "search"
 msgstr ""
 
-#: c-api/init.rst:589
-#: c-api/init.rst:615
+#: c-api/init.rst:589 c-api/init.rst:615
 msgid "path"
 msgstr ""
 
@@ -2546,8 +2527,7 @@ msgstr ""
 msgid "PySys_SetArgvEx (C function)"
 msgstr ""
 
-#: c-api/init.rst:1647
-#: c-api/init.rst:1700
+#: c-api/init.rst:1647 c-api/init.rst:1700
 msgid "Py_FinalizeEx (C function)"
 msgstr ""
 
@@ -2555,8 +2535,7 @@ msgstr ""
 msgid "Py_Initialize()"
 msgstr ""
 
-#: c-api/init.rst:467
-#: c-api/init.rst:723
+#: c-api/init.rst:467 c-api/init.rst:723
 msgid "main()"
 msgstr ""
 
@@ -2584,8 +2563,7 @@ msgstr ""
 msgid "Py_SetPath()"
 msgstr ""
 
-#: c-api/init.rst:700
-#: c-api/init.rst:714
+#: c-api/init.rst:700 c-api/init.rst:714
 msgid "version (in module sys)"
 msgstr ""
 

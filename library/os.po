@@ -282,45 +282,18 @@ msgid ""
 "Return the filename corresponding to the controlling terminal of the process."
 msgstr ""
 
-#: library/os.rst:358
-#: library/os.rst:389
-#: library/os.rst:434
-#: library/os.rst:480
-#: library/os.rst:512
-#: library/os.rst:545
-#: library/os.rst:586
-#: library/os.rst:602
-#: library/os.rst:661
-#: library/os.rst:687
-#: library/os.rst:703
-#: library/os.rst:719
-#: library/os.rst:735
-#: library/os.rst:1345
-#: library/os.rst:1608
-#: library/os.rst:1637
-#: library/os.rst:2110
-#: library/os.rst:2433
-#: library/os.rst:4036
-#: library/os.rst:4050
-#: library/os.rst:4064
-#: library/os.rst:4078
-#: library/os.rst:4094
-#: library/os.rst:4108
-#: library/os.rst:4125
-#: library/os.rst:4140
-#: library/os.rst:4223
-#: library/os.rst:4270
-#: library/os.rst:4427
-#: library/os.rst:4713
-#: library/os.rst:4808
-#: library/os.rst:4839
-#: library/os.rst:4865
-#: library/os.rst:4890
-#: library/os.rst:4909
-#: library/os.rst:4973
-#: library/os.rst:4996
-#: library/os.rst:5012
-#: library/os.rst:5030
+#: library/os.rst:358 library/os.rst:389 library/os.rst:434 library/os.rst:480
+#: library/os.rst:512 library/os.rst:545 library/os.rst:586 library/os.rst:602
+#: library/os.rst:661 library/os.rst:687 library/os.rst:703 library/os.rst:719
+#: library/os.rst:735 library/os.rst:1345 library/os.rst:1608
+#: library/os.rst:1637 library/os.rst:2110 library/os.rst:2433
+#: library/os.rst:4036 library/os.rst:4050 library/os.rst:4064
+#: library/os.rst:4078 library/os.rst:4094 library/os.rst:4108
+#: library/os.rst:4125 library/os.rst:4140 library/os.rst:4223
+#: library/os.rst:4270 library/os.rst:4427 library/os.rst:4713
+#: library/os.rst:4808 library/os.rst:4839 library/os.rst:4865
+#: library/os.rst:4890 library/os.rst:4909 library/os.rst:4973
+#: library/os.rst:4996 library/os.rst:5012 library/os.rst:5030
 #: library/os.rst:5039
 msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
 msgstr ""
@@ -476,12 +449,8 @@ msgid ""
 "like to use a different encoding."
 msgstr ""
 
-#: library/os.rst:1086
-#: library/os.rst:1110
-#: library/os.rst:1649
-#: library/os.rst:2533
-#: library/os.rst:3412
-#: library/os.rst:4564
+#: library/os.rst:1086 library/os.rst:1110 library/os.rst:1649
+#: library/os.rst:2533 library/os.rst:3412 library/os.rst:4564
 #: library/os.rst:4692
 msgid ":ref:`Availability <availability>`: Unix, Windows."
 msgstr ""
@@ -501,21 +470,11 @@ msgid ""
 "``True``."
 msgstr ""
 
-#: library/os.rst:376
-#: library/os.rst:787
-#: library/os.rst:1019
-#: library/os.rst:1053
-#: library/os.rst:1138
-#: library/os.rst:1396
-#: library/os.rst:1424
-#: library/os.rst:1708
-#: library/os.rst:1770
-#: library/os.rst:2124
-#: library/os.rst:2499
-#: library/os.rst:3241
-#: library/os.rst:3631
-#: library/os.rst:5196
-#: library/os.rst:5227
+#: library/os.rst:376 library/os.rst:787 library/os.rst:1019
+#: library/os.rst:1053 library/os.rst:1138 library/os.rst:1396
+#: library/os.rst:1424 library/os.rst:1708 library/os.rst:1770
+#: library/os.rst:2124 library/os.rst:2499 library/os.rst:3241
+#: library/os.rst:3631 library/os.rst:5196 library/os.rst:5227
 #: library/os.rst:5236
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ""
@@ -542,8 +501,7 @@ msgstr ""
 msgid "Return the real group id of the current process."
 msgstr ""
 
-#: library/os.rst:451
-#: library/os.rst:758
+#: library/os.rst:451 library/os.rst:758
 msgid ""
 "The function is a stub on Emscripten and WASI, see :ref:`wasm-availability` "
 "for more information."
@@ -588,9 +546,7 @@ msgid ""
 "getpwuid(os.getuid())[0]`` to get the login name of the current real user id."
 msgstr ""
 
-#: library/os.rst:462
-#: library/os.rst:4247
-#: library/os.rst:4669
+#: library/os.rst:462 library/os.rst:4247 library/os.rst:4669
 #: library/os.rst:4957
 msgid ""
 ":ref:`Availability <availability>`: Unix, Windows, not Emscripten, not WASI."
@@ -1115,16 +1071,13 @@ msgid ""
 "this is equivalent to ``os.chmod(fd, mode)``."
 msgstr ""
 
-#: library/os.rst:2069
-#: library/os.rst:2166
+#: library/os.rst:2069 library/os.rst:2166
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.chmod`` with arguments "
 "``path``, ``mode``, ``dir_fd``."
 msgstr ""
 
-#: library/os.rst:1021
-#: library/os.rst:1651
-#: library/os.rst:2095
+#: library/os.rst:1021 library/os.rst:1651 library/os.rst:2095
 #: library/os.rst:3377
 msgid ""
 "The function is limited on Emscripten and WASI, see :ref:`wasm-availability` "
@@ -1138,8 +1091,7 @@ msgid ""
 "`chown`.  As of Python 3.3, this is equivalent to ``os.chown(fd, uid, gid)``."
 msgstr ""
 
-#: library/os.rst:2091
-#: library/os.rst:2179
+#: library/os.rst:2091 library/os.rst:2179
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.chown`` with arguments "
 "``path``, ``uid``, ``gid``, ``dir_fd``."
@@ -1420,37 +1372,23 @@ msgid ""
 "a file descriptor in a file object, use :func:`fdopen`."
 msgstr ""
 
-#: library/os.rst:2331
-#: library/os.rst:2435
-#: library/os.rst:2538
-#: library/os.rst:2675
-#: library/os.rst:3432
+#: library/os.rst:2331 library/os.rst:2435 library/os.rst:2538
+#: library/os.rst:2675 library/os.rst:3432
 msgid "Added the *dir_fd* parameter."
 msgstr ""
 
-#: library/os.rst:1576
-#: library/os.rst:4790
+#: library/os.rst:1576 library/os.rst:4790
 msgid ""
 "If the system call is interrupted and the signal handler does not raise an "
 "exception, the function now retries the system call instead of raising an :"
 "exc:`InterruptedError` exception (see :pep:`475` for the rationale)."
 msgstr ""
 
-#: library/os.rst:1963
-#: library/os.rst:2026
-#: library/os.rst:2112
-#: library/os.rst:2170
-#: library/os.rst:2242
-#: library/os.rst:2370
-#: library/os.rst:2438
-#: library/os.rst:2501
-#: library/os.rst:2590
-#: library/os.rst:2968
-#: library/os.rst:3419
-#: library/os.rst:3475
-#: library/os.rst:3635
-#: library/os.rst:3999
-#: library/os.rst:4552
+#: library/os.rst:1963 library/os.rst:2026 library/os.rst:2112
+#: library/os.rst:2170 library/os.rst:2242 library/os.rst:2370
+#: library/os.rst:2438 library/os.rst:2501 library/os.rst:2590
+#: library/os.rst:2968 library/os.rst:3419 library/os.rst:3475
+#: library/os.rst:3635 library/os.rst:3999 library/os.rst:4552
 msgid "Accepts a :term:`path-like object`."
 msgstr ""
 
@@ -1596,8 +1534,7 @@ msgid ""
 "total capacity of all the objects."
 msgstr ""
 
-#: library/os.rst:1515
-#: library/os.rst:1767
+#: library/os.rst:1515 library/os.rst:1767
 msgid ""
 "The operating system may set a limit (:func:`sysconf` value "
 "``'SC_IOV_MAX'``) on the number of buffers that can be used."
@@ -1989,9 +1926,7 @@ msgstr ""
 msgid "Get the \"inheritable\" flag of the specified handle (a boolean)."
 msgstr ""
 
-#: library/os.rst:1855
-#: library/os.rst:4587
-#: library/os.rst:4632
+#: library/os.rst:1855 library/os.rst:4587 library/os.rst:4632
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ""
 
@@ -2306,8 +2241,7 @@ msgstr ""
 msgid ":const:`stat.S_IXOTH`"
 msgstr ""
 
-#: library/os.rst:2084
-#: library/os.rst:3465
+#: library/os.rst:2084 library/os.rst:3465
 msgid ""
 "This function can support :ref:`specifying a file descriptor <path_fd>`, :"
 "ref:`paths relative to directory descriptors <dir_fd>` and :ref:`not "
@@ -2432,8 +2366,7 @@ msgstr ""
 msgid "Added the *src_dir_fd*, *dst_dir_fd*, and *follow_symlinks* parameters."
 msgstr ""
 
-#: library/os.rst:2622
-#: library/os.rst:3387
+#: library/os.rst:2622 library/os.rst:3387
 msgid "Accepts a :term:`path-like object` for *src* and *dst*."
 msgstr ""
 
@@ -2506,8 +2439,7 @@ msgid ""
 "arguments."
 msgstr ""
 
-#: library/os.rst:2284
-#: library/os.rst:2304
+#: library/os.rst:2284 library/os.rst:2304
 msgid ":ref:`Availability <availability>`: Windows"
 msgstr ""
 
@@ -2584,16 +2516,13 @@ msgid ""
 "follow_symlinks=False)``."
 msgstr ""
 
-#: library/os.rst:2359
-#: library/os.rst:2452
-#: library/os.rst:2526
+#: library/os.rst:2359 library/os.rst:2452 library/os.rst:2526
 msgid ""
 "This function can also support :ref:`paths relative to directory descriptors "
 "<dir_fd>`."
 msgstr ""
 
-#: library/os.rst:2535
-#: library/os.rst:3380
+#: library/os.rst:2535 library/os.rst:3380
 msgid "Added support for Windows 6.0 (Vista) symbolic links."
 msgstr ""
 
@@ -2740,8 +2669,7 @@ msgid ""
 "included in that mapping, passing an integer for *name* is also accepted."
 msgstr ""
 
-#: library/os.rst:3239
-#: library/os.rst:3408
+#: library/os.rst:3239 library/os.rst:3408
 msgid ""
 "This function can support :ref:`specifying a file descriptor <path_fd>`."
 msgstr ""
@@ -2797,8 +2725,7 @@ msgid ""
 "does not exist, a :exc:`FileNotFoundError` is raised."
 msgstr ""
 
-#: library/os.rst:2670
-#: library/os.rst:3359
+#: library/os.rst:2670 library/os.rst:3359
 msgid ""
 "This function can support :ref:`paths relative to directory descriptors "
 "<dir_fd>`."
@@ -2816,8 +2743,7 @@ msgstr ""
 msgid "This function is semantically identical to :func:`unlink`."
 msgstr ""
 
-#: library/os.rst:2588
-#: library/os.rst:3430
+#: library/os.rst:2588 library/os.rst:3430
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.remove`` with arguments "
 "``path``, ``dir_fd``."
@@ -2872,8 +2798,7 @@ msgid ""
 "`replace`."
 msgstr ""
 
-#: library/os.rst:2638
-#: library/os.rst:2655
+#: library/os.rst:2638 library/os.rst:2655
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.rename`` with arguments "
 "``src``, ``dst``, ``src_dir_fd``, ``dst_dir_fd``."
@@ -3254,9 +3179,7 @@ msgid ""
 "``follow_symlinks=False``, or use :func:`lstat`."
 msgstr ""
 
-#: library/os.rst:3798
-#: library/os.rst:3830
-#: library/os.rst:3850
+#: library/os.rst:3798 library/os.rst:3830 library/os.rst:3850
 msgid ""
 "This function can support :ref:`specifying a file descriptor <path_fd>` and :"
 "ref:`not following symlinks <follow_symlinks>`."
@@ -4075,8 +3998,7 @@ msgid ""
 "unsigned int. The function does not verify that *fd* is an :func:`eventfd`."
 msgstr ""
 
-#: library/os.rst:3753
-#: library/os.rst:3770
+#: library/os.rst:3753 library/os.rst:3770
 msgid ":ref:`Availability <availability>`: Linux >= 2.6.27"
 msgstr ""
 
@@ -4127,8 +4049,7 @@ msgid ""
 "``path``, ``attribute``."
 msgstr ""
 
-#: library/os.rst:3835
-#: library/os.rst:3860
+#: library/os.rst:3835 library/os.rst:3860
 msgid "Accepts a :term:`path-like object` for *path* and *attribute*."
 msgstr ""
 
@@ -5931,8 +5852,7 @@ msgid ""
 "random`` pool instead of the ``/dev/urandom`` pool."
 msgstr ""
 
-#: library/os.rst:529
-#: library/os.rst:731
+#: library/os.rst:529 library/os.rst:731
 msgid "user"
 msgstr ""
 
@@ -5940,10 +5860,7 @@ msgstr ""
 msgid "effective id"
 msgstr ""
 
-#: library/os.rst:438
-#: library/os.rst:456
-#: library/os.rst:666
-#: library/os.rst:4255
+#: library/os.rst:438 library/os.rst:456 library/os.rst:666 library/os.rst:4255
 msgid "process"
 msgstr ""
 
@@ -5995,9 +5912,7 @@ msgstr ""
 msgid "pty"
 msgstr ""
 
-#: library/os.rst:2376
-#: library/os.rst:3481
-#: library/os.rst:3580
+#: library/os.rst:2376 library/os.rst:3481 library/os.rst:3580
 msgid "directory"
 msgstr ""
 
@@ -6041,9 +5956,7 @@ msgstr ""
 msgid ". (dot)"
 msgstr ""
 
-#: library/os.rst:5255
-#: library/os.rst:5274
-#: library/os.rst:5283
+#: library/os.rst:5255 library/os.rst:5274 library/os.rst:5283
 msgid "in pathnames"
 msgstr ""
 
