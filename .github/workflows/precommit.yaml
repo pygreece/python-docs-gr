@@ -1,0 +1,26 @@
+name: Run pre-commit
+
+on:
+  push:
+    branches:
+      - 3.*
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: Run pre-commit.ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: "true"
+          fetch-depth: 2
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: "pip"
+      - uses: pre-commit/action@v3.0.1
+      - uses: pre-commit-ci/lite-action@v1.0.2
+        if: always()

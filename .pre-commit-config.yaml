@@ -2,13 +2,26 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
+      - id: file-contents-sorter
+        files: "dictionaries/main.txt"
+        args: ["--unique"]
       - id: trailing-whitespace
       - id: check-yaml
       - id: end-of-file-fixer
+
   - repo: https://github.com/JulienPalard/powrap
     rev: v1.0.1
     hooks:
       - id: powrap
+
+  - repo: https://git.afpy.org/AFPy/pospell.git
+    rev: v1.3
+    hooks:
+      - id: pospell
+        args:
+          - "--language=el_GR"
+          - "--personal-dict=dictionaries/main.txt"
+
   - repo: https://github.com/sphinx-contrib/sphinx-lint
     rev: v0.9.1
     hooks:
