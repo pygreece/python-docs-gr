@@ -21,6 +21,10 @@ jobs:
         with:
           python-version: "3.x"
           cache: "pip"
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hunspell hunspell-el gettext language-pack-el locales-all
       - uses: pre-commit/action@v3.0.1
       - uses: pre-commit-ci/lite-action@v1.0.2
         if: always()
