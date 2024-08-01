@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/python-docs-gr/badge/?version=latest)](https://python-docs-gr.readthedocs.io/el/latest/?badge=latest)
+
 # python-docs-gr
 Η ελληνική μετάφραση των επίσημων εγγράφων της Python.
 
