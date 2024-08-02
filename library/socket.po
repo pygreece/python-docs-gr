@@ -109,8 +109,7 @@ msgid ""
 "Previously, :const:`AF_UNIX` socket paths were assumed to use UTF-8 encoding."
 msgstr ""
 
-#: library/socket.rst:1148
-#: library/socket.rst:1950
+#: library/socket.rst:1148 library/socket.rst:1950
 msgid "Writable :term:`bytes-like object` is now accepted."
 msgstr ""
 
@@ -284,8 +283,7 @@ msgstr ""
 msgid "*feat* and *mask* are unsigned 32bit integers."
 msgstr ""
 
-#: library/socket.rst:589
-#: library/socket.rst:1872
+#: library/socket.rst:589 library/socket.rst:1872
 msgid ":ref:`Availability <availability>`: Linux >= 2.6.38."
 msgstr ""
 
@@ -507,8 +505,7 @@ msgid ""
 "description of *h_errno*, as returned by the :c:func:`hstrerror` C function."
 msgstr ""
 
-#: library/socket.rst:317
-#: library/socket.rst:330
+#: library/socket.rst:317 library/socket.rst:330
 msgid "This class was made a subclass of :exc:`OSError`."
 msgstr ""
 
@@ -649,8 +646,7 @@ msgid ""
 "``IP_DROP_SOURCE_MEMBERSHIP``."
 msgstr ""
 
-#: library/socket.rst:534
-#: library/socket.rst:558
+#: library/socket.rst:534 library/socket.rst:558
 msgid ""
 "Many constants of these forms, documented in the Linux documentation, are "
 "also defined in the socket module."
@@ -831,8 +827,7 @@ msgstr ""
 msgid "Constants for Windows Hyper-V sockets for host/guest communications."
 msgstr ""
 
-#: library/socket.rst:886
-#: library/socket.rst:1978
+#: library/socket.rst:886 library/socket.rst:1978
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ""
 
@@ -883,8 +878,7 @@ msgid ""
 "This may help close a detached socket using :meth:`socket.close()`."
 msgstr ""
 
-#: library/socket.rst:875
-#: library/socket.rst:1476
+#: library/socket.rst:875 library/socket.rst:1476
 msgid "The newly created socket is :ref:`non-inheritable <fd_inheritance>`."
 msgstr ""
 
@@ -1170,14 +1164,9 @@ msgid ""
 "argument ``hostname``."
 msgstr ""
 
-#: library/socket.rst:998
-#: library/socket.rst:1026
-#: library/socket.rst:1054
-#: library/socket.rst:1076
-#: library/socket.rst:1447
-#: library/socket.rst:1481
-#: library/socket.rst:1573
-#: library/socket.rst:1966
+#: library/socket.rst:998 library/socket.rst:1026 library/socket.rst:1054
+#: library/socket.rst:1076 library/socket.rst:1447 library/socket.rst:1481
+#: library/socket.rst:1573 library/socket.rst:1966
 msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ""
 
@@ -1424,8 +1413,7 @@ msgstr ""
 msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
 msgstr ""
 
-#: library/socket.rst:1704
-#: library/socket.rst:1856
+#: library/socket.rst:1704 library/socket.rst:1856
 msgid "Most Unix platforms."
 msgstr ""
 
@@ -1477,8 +1465,7 @@ msgid ""
 "argument ``name``."
 msgstr ""
 
-#: library/socket.rst:1702
-#: library/socket.rst:1746
+#: library/socket.rst:1702 library/socket.rst:1746
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ""
 
@@ -1488,15 +1475,12 @@ msgid ""
 "tuples. :exc:`OSError` if the system call fails."
 msgstr ""
 
-#: library/socket.rst:1301
-#: library/socket.rst:1335
-#: library/socket.rst:1349
+#: library/socket.rst:1301 library/socket.rst:1335 library/socket.rst:1349
 msgid ""
 ":ref:`Availability <availability>`: Unix, Windows, not Emscripten, not WASI."
 msgstr ""
 
-#: library/socket.rst:1305
-#: library/socket.rst:1322
+#: library/socket.rst:1305 library/socket.rst:1322
 msgid "Windows support was added."
 msgstr ""
 
@@ -1597,9 +1581,7 @@ msgstr ""
 msgid "The socket is now non-inheritable."
 msgstr ""
 
-#: library/socket.rst:1617
-#: library/socket.rst:1708
-#: library/socket.rst:1800
+#: library/socket.rst:1617 library/socket.rst:1708 library/socket.rst:1800
 #: library/socket.rst:1862
 msgid ""
 "If the system call is interrupted and the signal handler does not raise an "

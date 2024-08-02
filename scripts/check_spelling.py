@@ -3,6 +3,7 @@ Script to check the spelling of one, many or all .po files based
 on the custom dictionaries under the 'dictionaries/' directory.
 """
 
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -37,7 +38,10 @@ def check_spell(po_files=None):
     with tempfile.NamedTemporaryFile(suffix="_merged_dict.txt") as named_tmp_file:
         for e in entries:
             named_tmp_file.write(f"{e}\n".encode())
-            named_tmp_file.flush()
+
+        named_tmp_file.flush()
+        os.fsync(named_tmp_file.fileno())
+
         named_tmp_file.seek(0)
 
         # Run pospell either against all files or the file given on the command line
