@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/python-docs-gr/badge/?version=latest)](https://python-docs-gr.readthedocs.io/el/latest/?badge=latest)
+
 # python-docs-gr
 Η ελληνική μετάφραση των επίσημων εγγράφων της Python.
 
@@ -6,7 +8,7 @@
 ΣΗΜΕΙΩΣΗ ΓΙΑ ΤΗΝ ΑΔΕΙΑ ΧΡΗΣΗΣ ΤΩΝ ΜΕΤΑΦΡΑΣΕΩΝ
 
 Ο οδηγός χρήσης της Python συντηρείται από ένα παγκόσμιο δίκτυο
-εθελοντών. 
+εθελοντών.
 
 Αυτό το έργο πρότζεκτ αποτελεί μια συνεργασία ανάμεσα σε εθελοντές μεταφραστές και
 της ομάδας python-docs-gr. Το παρόν έγγραφο καθορίζει τα δικαιώματα και τις ευθύνες
