@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 2c9f875913ee60ca25ce70243dc24d5b6415598c # v4.6.0
+    hooks:
+      - id: file-contents-sorter
+        files: "dictionaries/main.txt"
+        args: ["--unique"]
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: end-of-file-fixer
+
+  - repo: https://git.afpy.org/AFPy/powrap
+    rev: df2a0a54804a6146cc9fbffb77464d4b5fe24f41 # v1.0.1
+    hooks:
+      - id: powrap
+
+  - repo: https://git.afpy.org/AFPy/pospell
+    rev: 8b753bde26fe612ba397a4b4aafa7a0560402805 # v1.3
+    hooks:
+      - id: pospell
+        args:
+          - "--language=el_GR"
+          - "--personal-dict=dictionaries/main.txt"
+
+  - repo: https://github.com/sphinx-contrib/sphinx-lint
+    rev: ce6d7aeab24d60b6119dbad180540bf3c9ff31da # v0.9.1
+    hooks:
+      - id: sphinx-lint
