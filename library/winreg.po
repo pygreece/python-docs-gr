@@ -70,8 +70,7 @@ msgstr ""
 msgid "*key* is the predefined handle to connect to."
 msgstr ""
 
-#: library/winreg.rst:77
-#: library/winreg.rst:109
+#: library/winreg.rst:77 library/winreg.rst:109
 msgid ""
 "The return value is the handle of the opened key. If the function fails, an :"
 "exc:`OSError` exception is raised."
@@ -83,9 +82,7 @@ msgid ""
 "arguments ``computer_name``, ``key``."
 msgstr ""
 
-#: library/winreg.rst:84
-#: library/winreg.rst:139
-#: library/winreg.rst:203
+#: library/winreg.rst:84 library/winreg.rst:139 library/winreg.rst:203
 #: library/winreg.rst:329
 msgid "See :ref:`above <exception-changed>`."
 msgstr ""
@@ -96,15 +93,9 @@ msgid ""
 "object>`."
 msgstr ""
 
-#: library/winreg.rst:93
-#: library/winreg.rst:147
-#: library/winreg.rst:192
-#: library/winreg.rst:260
-#: library/winreg.rst:337
-#: library/winreg.rst:383
-#: library/winreg.rst:432
-#: library/winreg.rst:491
-#: library/winreg.rst:523
+#: library/winreg.rst:93 library/winreg.rst:147 library/winreg.rst:192
+#: library/winreg.rst:260 library/winreg.rst:337 library/winreg.rst:383
+#: library/winreg.rst:432 library/winreg.rst:491 library/winreg.rst:523
 msgid ""
 "*key* is an already open key, or one of the predefined :ref:`HKEY_* "
 "constants <hkey-constants>`."
@@ -130,8 +121,7 @@ msgid ""
 "arguments ``key``, ``sub_key``, ``access``."
 msgstr ""
 
-#: library/winreg.rst:114
-#: library/winreg.rst:324
+#: library/winreg.rst:114 library/winreg.rst:324
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``winreg.OpenKey/result`` with "
 "argument ``key``."
@@ -250,18 +240,15 @@ msgstr ""
 msgid "The result is a tuple of 3 items:"
 msgstr ""
 
-#: library/winreg.rst:343
-#: library/winreg.rst:391
+#: library/winreg.rst:343 library/winreg.rst:391
 msgid "Index"
 msgstr ""
 
-#: library/winreg.rst:343
-#: library/winreg.rst:391
+#: library/winreg.rst:343 library/winreg.rst:391
 msgid "Meaning"
 msgstr ""
 
-#: library/winreg.rst:345
-#: library/winreg.rst:393
+#: library/winreg.rst:345 library/winreg.rst:393
 msgid "``0``"
 msgstr ""
 
@@ -269,8 +256,7 @@ msgstr ""
 msgid "A string that identifies the value name"
 msgstr ""
 
-#: library/winreg.rst:348
-#: library/winreg.rst:395
+#: library/winreg.rst:348 library/winreg.rst:395
 msgid "``1``"
 msgstr ""
 
@@ -600,8 +586,7 @@ msgid ""
 "operating system."
 msgstr ""
 
-#: library/winreg.rst:511
-#: library/winreg.rst:528
+#: library/winreg.rst:511 library/winreg.rst:528
 msgid ""
 "Will generally raise :exc:`NotImplementedError` if executed on a 32-bit "
 "operating system."

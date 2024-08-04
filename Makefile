@@ -23,9 +23,10 @@
 # .po files.
 CPYTHON_CURRENT_COMMIT := 9cbde7c6ce6f7b93301a37f03dfa0c0d45e00a39
 
-CPYTHON_PATH := /home/tpetkos/github.com/python/cpython/
+CPYTHON_PATH := ./cpython
 
-LANGUAGE := gr
+LANGUAGE := el
+TRANSLATION_BRANCH := main
 BRANCH := 3.12
 
 EXCLUDED := whatsnew/ c-api/
@@ -36,7 +37,7 @@ UPSTREAM := https://github.com/python/cpython
 
 PYTHON := $(shell which python3)
 MODE := html
-POSPELL_TMP_DIR := .pospell/
+POSPELL_TMP_DIR := .pospell
 JOBS := auto
 
 # Detect OS
@@ -58,7 +59,6 @@ endif
 
 .PHONY: all
 all: ensure_prerequisites
-	git -C $(CPYTHON_PATH) checkout $(CPYTHON_CURRENT_COMMIT)
 	mkdir -p locales/$(LANGUAGE)/LC_MESSAGES/
 	$(CP_CMD) -u --parents *.po */*.po locales/$(LANGUAGE)/LC_MESSAGES/
 	$(MAKE) -C $(CPYTHON_PATH)/Doc/     \
@@ -70,7 +70,6 @@ all: ensure_prerequisites
 	  -D latex_elements.inputenc=       \
 	  -D latex_elements.fontenc='       \
 	  $(MODE)
-	git -C $(CPYTHON_PATH) checkout -
 	@echo "Build success, open file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html or run 'make serve' to see them."
 
 
@@ -83,10 +82,7 @@ ensure_prerequisites:
 	@if ! [ -d $(CPYTHON_PATH) ]; then \
 	    echo "Building the translation requires a cpython clone."; \
 	    echo "Please provide the path to a clone using the CPYTHON_PATH variable."; \
-	    echo "(Currently CPYTHON_PATH is $(CPYTHON_PATH)."; \
-	    echo "So you may want to run:"; \
-	    echo ""; \
-	    echo "  git clone $(UPSTREAM) $(CPYTHON_PATH)"; \
+	    echo "(Currently CPYTHON_PATH is $(CPYTHON_PATH).)"; \
 	    exit 1; \
 	fi
 	@if [ -n "$$(git -C $(CPYTHON_PATH) status --porcelain)" ]; then \
@@ -95,16 +91,16 @@ ensure_prerequisites:
 	    exit 1; \
 	fi
 	@if ! (blurb help >/dev/null 2>&1 && sphinx-build --version >/dev/null 2>&1); then \
-	    git -C $(CPYTHON_PATH) checkout $(BRANCH); \
 	    echo "You're missing dependencies, please enable a venv and install:"; \
 	    echo ""; \
-	    echo "  python -m pip install -r requirements.txt -r $(CPYTHON_PATH)/Doc/requirements.txt"; \
+	    echo "  python -m pip install -r requirements.txt"; \
 	    exit 1; \
 	fi
 
+
 .PHONY: serve
 serve:
-	$(MAKE) -C $(CPYTHON_PATH)/Doc/ serve
+	$(PYTHON) -c "import os, webbrowser; webbrowser.open('file://' + os.path.realpath('cpython/Doc/build/html/index.html'))"
 
 
 .PHONY: progress
@@ -123,7 +119,7 @@ wrap: ensure_prerequisites
 	@echo "Verify wrapping"
 	powrap --check --quiet *.po **/*.po
 
-SRCS = $(shell git diff --name-only $(BRANCH) | grep '.po$$')
+SRCS = $(shell git diff --name-only $(TRANSLATION_BRANCH) | grep '.po$$')
 # foo/bar.po => $(POSPELL_TMP_DIR)/foo/bar.po.out
 DESTS = $(addprefix $(POSPELL_TMP_DIR)/,$(addsuffix .out,$(SRCS)))
 
