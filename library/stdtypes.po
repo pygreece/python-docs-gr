@@ -8,29 +8,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
+"POT-Creation-Date: 2024-08-05 12:51+0000\n"
+"PO-Revision-Date: 2024-08-05 12:51+0000\n"
+"Last-Translator: Theofanis Petkos <thepetk@gmail.com>Language-Team: PyGreece "
+"<pygreece@gmail.com>MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/stdtypes.rst:8
 msgid "Built-in Types"
-msgstr ""
+msgstr "Τύποι Built-in"
 
 #: library/stdtypes.rst:10
 msgid ""
 "The following sections describe the standard types that are built into the "
 "interpreter."
 msgstr ""
+"Οι παρακάτω κατηγορίες περιγράφουν τους standard τύπους που είναι "
+"ενσωματωμένοι (built) μέσα στον interpreter."
 
 #: library/stdtypes.rst:15
 msgid ""
 "The principal built-in types are numerics, sequences, mappings, classes, "
 "instances and exceptions."
 msgstr ""
+"Οι κύριοι ενσωματωμένοι (built) τύποι είναι αριθμοί, ακολουθίες, "
+"αντιστοιχίσεις (mappings), κλάσεις, instances και exceptions."
 
 #: library/stdtypes.rst:18
 msgid ""
@@ -38,6 +41,10 @@ msgid ""
 "rearrange their members in place, and don't return a specific item, never "
 "return the collection instance itself but ``None``."
 msgstr ""
+"Ορισμένες collection κλάσεις είναι μεταβλητές (mutable). Οι μέθοδοι που "
+"προσθέτουν, αφαιρούν ή αναδιατάσσουν τα μέλη τους και δεν επιστρέφουν ένα "
+"συγκεκριμένο αντικείμενο, ποτέ δεν επιστρέφουν το ίδιο collection instance "
+"αλλά ``None``."
 
 #: library/stdtypes.rst:22
 msgid ""
@@ -47,16 +54,25 @@ msgid ""
 "slightly different :func:`str` function).  The latter function is implicitly "
 "used when an object is written by the :func:`print` function."
 msgstr ""
+"Ορισμένες λειτουργίες υποστηρίζονται από διάφορους τύπους αντικειμένων· "
+"ειδικότερα, σχεδόν όλα τα αντικείμενα μπορούν να συγκριθούν ως προς την "
+"ισότητα, να ελεγχθούν για την έγκυρη τιμή και να μετατραπούν σε συμβολοσειρά "
+"(με τη συνάρτηση :func:`repr` ή την ελαφρώς διαφορετική συνάρτηση :func:"
+"`str`). Η τελευταία συνάρτηση χρησιμοποιείται έμμεσα όταν ένα αντικείμενο "
+"γράφεται από τη συνάρτηση :func:`print`."
 
 #: library/stdtypes.rst:32
 msgid "Truth Value Testing"
-msgstr ""
+msgstr "Έλεγχος Έγκυρης Τιμής"
 
 #: library/stdtypes.rst:41
 msgid ""
 "Any object can be tested for truth value, for use in an :keyword:`if` or :"
 "keyword:`while` condition or as operand of the Boolean operations below."
 msgstr ""
+"Οποιοδήποτε αντικείμενο μπορεί να ελεγχθεί ως προς την εγκυρότητα της τιμής "
+"του, για χρήση σε :keyword:`if` :keyword:`while` συνθήκη ή ως τελεστής των "
+"λογικών πράξεων παρακάτω."
 
 #: library/stdtypes.rst:46
 msgid ""
@@ -65,22 +81,31 @@ msgid ""
 "__len__` method that returns zero, when called with the object. [1]_  Here "
 "are most of the built-in objects considered false:"
 msgstr ""
+"Ως προεπιλογή, ένα αντικείμενο θεωρείται true εκτός εάν η κλάση του ορίζει "
+"μία :meth:`~object.__bool__` μέθοδο που επιστρέφει ``False`` ή μία :meth:"
+"`~object.__len__` μέθοδο που επιστρέφει μηδέν, όταν καλείται με το "
+"αντικείμενο. [1]_ Εδώ τα περισσότερα από τα ενσωματωμένα (built-in) "
+"αντικείμενα θεωρούνται false:"
 
 #: library/stdtypes.rst:56
 msgid "constants defined to be false: ``None`` and ``False``"
-msgstr ""
+msgstr "σταθερές που έχουν οριστεί ως false: ``None`` και ``False``"
 
 #: library/stdtypes.rst:58
 msgid ""
 "zero of any numeric type: ``0``, ``0.0``, ``0j``, ``Decimal(0)``, "
 "``Fraction(0, 1)``"
 msgstr ""
+"μηδέν οποιουδήποτε αριθμητικού τύπου: ``0``, ``0,0``, ``0j``, "
+"``Decimanl(0)``, ``Fraction(0, 1)``"
 
 #: library/stdtypes.rst:61
 msgid ""
 "empty sequences and collections: ``''``, ``()``, ``[]``, ``{}``, ``set()``, "
 "``range(0)``"
 msgstr ""
+"κενές ακολουθίες και collections: ``''``, ``()``, ``[]``, ``{}``, ``set()``, "
+"``range(0)``"
 
 #: library/stdtypes.rst:70
 msgid ""
@@ -89,90 +114,101 @@ msgid ""
 "otherwise stated. (Important exception: the Boolean operations ``or`` and "
 "``and`` always return one of their operands.)"
 msgstr ""
+"Οι πράξεις και οι ενσωματωμένες (built-in) συναρτήσεις που έχουν αποτέλεσμα "
+"Boolean πάντα επιστρέφουν``0`` ή ``False`` για false και ``1`` ή ``True`` "
+"για true, εκτός εάν δηλώνεται διαφορετικά. (Σημαντική εξαίρεση: οι πράξεις "
+"Boolean ``or`` και ``and`` επιστρέφουν πάντα έναν από τους τελεστές τους.)"
 
 #: library/stdtypes.rst:79
 msgid "Boolean Operations --- :keyword:`!and`, :keyword:`!or`, :keyword:`!not`"
-msgstr ""
+msgstr "Boolean Πράξεις ---  :keyword:`!and`, :keyword:`!or`, :keyword:`!not`"
 
 #: library/stdtypes.rst:83
 msgid "These are the Boolean operations, ordered by ascending priority:"
-msgstr ""
+msgstr "Αυτές είναι οι Boolean πράξεις, ταξινομημένες βάσει προτεραιότητας:"
 
 #: library/stdtypes.rst:144 library/stdtypes.rst:366 library/stdtypes.rst:965
 #: library/stdtypes.rst:1170
 msgid "Operation"
-msgstr ""
+msgstr "Πράξη"
 
 #: library/stdtypes.rst:276 library/stdtypes.rst:416 library/stdtypes.rst:1170
 msgid "Result"
-msgstr ""
+msgstr "Αποτέλεσμα"
 
 #: library/stdtypes.rst:276 library/stdtypes.rst:965 library/stdtypes.rst:2419
 #: library/stdtypes.rst:3637
 msgid "Notes"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: library/stdtypes.rst:88
 msgid "``x or y``"
-msgstr ""
+msgstr "``x or y``"
 
 #: library/stdtypes.rst:88
 msgid "if *x* is true, then *x*, else *y*"
-msgstr ""
+msgstr "Αν το *x* είναι true, τότε *x*, αλλιώς *y*"
 
 #: library/stdtypes.rst:967 library/stdtypes.rst:1181 library/stdtypes.rst:3643
 msgid "\\(1)"
-msgstr ""
+msgstr "\\(1)"
 
 #: library/stdtypes.rst:91
 msgid "``x and y``"
-msgstr ""
+msgstr "``x and y``"
 
 #: library/stdtypes.rst:91
 msgid "if *x* is false, then *x*, else *y*"
-msgstr ""
+msgstr "Αν το *x* είναι false, τότε *x*, αλλιώς *y*"
 
 #: library/stdtypes.rst:289 library/stdtypes.rst:1209 library/stdtypes.rst:2431
 #: library/stdtypes.rst:3649
 msgid "\\(2)"
-msgstr ""
+msgstr "\\(2)"
 
 #: library/stdtypes.rst:94
 msgid "``not x``"
-msgstr ""
+msgstr "``not x``"
 
 #: library/stdtypes.rst:94
 msgid "if *x* is false, then ``True``, else ``False``"
-msgstr ""
+msgstr "if *x* είναι false, τότε ``True``, αλλιώς ``False``"
 
 #: library/stdtypes.rst:979 library/stdtypes.rst:2433 library/stdtypes.rst:2437
 #: library/stdtypes.rst:3651 library/stdtypes.rst:3655
 #: library/stdtypes.rst:3657
 msgid "\\(3)"
-msgstr ""
+msgstr "\\(3)"
 
 #: library/stdtypes.rst:320 library/stdtypes.rst:1016 library/stdtypes.rst:2465
 #: library/stdtypes.rst:3687
 msgid "Notes:"
-msgstr ""
+msgstr "Σημειώσεις:"
 
 #: library/stdtypes.rst:106
 msgid ""
 "This is a short-circuit operator, so it only evaluates the second argument "
 "if the first one is false."
 msgstr ""
+"Αυτός είναι ένας τελεστής μικρού κυκλώματος, επομένως αξιολογεί μόνο το "
+"δεύτερο όρισμα αν το πρώτο είναι false."
 
 #: library/stdtypes.rst:110
 msgid ""
 "This is a short-circuit operator, so it only evaluates the second argument "
 "if the first one is true."
 msgstr ""
+"Αυτός είναι ένας τελεστής μικρού κυκλώματος, επομένως αξιολογεί μόνο το "
+"δεύτερο όρισμα αν το πρώτο είναι true."
 
 #: library/stdtypes.rst:114
 msgid ""
 "``not`` has a lower priority than non-Boolean operators, so ``not a == b`` "
 "is interpreted as ``not (a == b)``, and ``a == not b`` is a syntax error."
 msgstr ""
+"To ``not`` έχει χαμηλότερη προτεραιότητα από τους non-Bolean τελεστές, οπότε "
+"το ``not a == b`` μεταφράζεται σαν ``not (a==b)``, και το ``a == not b`` "
+"είναι συντακτικό σφάλμα."
 
 #: library/stdtypes.rst:121
 msgid "Comparisons"
@@ -186,79 +222,85 @@ msgid ""
 "< y and y <= z``, except that *y* is evaluated only once (but in both cases "
 "*z* is not evaluated at all when ``x < y`` is found to be false)."
 msgstr ""
+"Υπάρχουν οκτώ πράξεις σύγκρισης στην Python. Όλες έχουν την ίδια "
+"προτεραιότητα (η οποία είναι υψηλότερη από αυτή των πράξεων Boolean). Οι "
+"συγκρίσεις μπορεί να αλυσοδεθούν αυθαίρετα· για παράδειγμα, το ``x < y <= "
+"z`` ισοδυναμεί με ``x < y και y <= z``, εκτός από το ότι το *y* αξιολογείται "
+"μόνο μία φορά (αλλά και στις δύο περιπτώσεις το *z* δεν αξιολογείται καθόλου "
+"όταν το ``x < y`` είναι false)."
 
 #: library/stdtypes.rst:141
 msgid "This table summarizes the comparison operations:"
-msgstr ""
+msgstr "Αυτός ο πίνακας συνοψίζει τις πράξεις σύγκρισης:"
 
 #: library/stdtypes.rst:2396 library/stdtypes.rst:3614
 #: library/stdtypes.rst:3637
 msgid "Meaning"
-msgstr ""
+msgstr "Έννοια"
 
 #: library/stdtypes.rst:146
 msgid "``<``"
-msgstr ""
+msgstr "``<``"
 
 #: library/stdtypes.rst:146
 msgid "strictly less than"
-msgstr ""
+msgstr "αυστηρά μικρότερο από"
 
 #: library/stdtypes.rst:148
 msgid "``<=``"
-msgstr ""
+msgstr "``<=``"
 
 #: library/stdtypes.rst:148
 msgid "less than or equal"
-msgstr ""
+msgstr "μικρότερο από ή ίσο"
 
 #: library/stdtypes.rst:150
 msgid "``>``"
-msgstr ""
+msgstr "``>``"
 
 #: library/stdtypes.rst:150
 msgid "strictly greater than"
-msgstr ""
+msgstr "αυστηρά μεγαλύτερο από"
 
 #: library/stdtypes.rst:152
 msgid "``>=``"
-msgstr ""
+msgstr "``>=``"
 
 #: library/stdtypes.rst:152
 msgid "greater than or equal"
-msgstr ""
+msgstr "μεγαλύτερο από ή ίσο"
 
 #: library/stdtypes.rst:154
 msgid "``==``"
-msgstr ""
+msgstr "``==``"
 
 #: library/stdtypes.rst:154
 msgid "equal"
-msgstr ""
+msgstr "ίσο"
 
 #: library/stdtypes.rst:156
 msgid "``!=``"
-msgstr ""
+msgstr "``!=``"
 
 #: library/stdtypes.rst:156
 msgid "not equal"
-msgstr ""
+msgstr "διάφορο"
 
 #: library/stdtypes.rst:158
 msgid "``is``"
-msgstr ""
+msgstr "``is``"
 
 #: library/stdtypes.rst:158
 msgid "object identity"
-msgstr ""
+msgstr "ταυτότητα αντικειμένου"
 
 #: library/stdtypes.rst:160
 msgid "``is not``"
-msgstr ""
+msgstr "``is not``"
 
 #: library/stdtypes.rst:160
 msgid "negated object identity"
-msgstr ""
+msgstr "αρνητική ταυτότητα αντικειμένου"
 
 #: library/stdtypes.rst:167
 msgid ""
@@ -269,12 +311,20 @@ msgid ""
 "example, they raise a :exc:`TypeError` exception when one of the arguments "
 "is a complex number."
 msgstr ""
+"Αντικείμενα διαφορετικών τύπων, εκτός από διαφορετικούς αριθμητικούς τύπους, "
+"δεν συγκρίνονται ποτέ ως ίσα. Ο τελεστής ``==`` ορίζεται πάντα αλλά για "
+"ορισμένους τύπους αντικειμένων (για παράδειγμα, αντικείμενα κλάσης) "
+"ισοδυναμεί με :keyword:`is`. Οι τελεστές ``<``, ``<=``, ``>`` και ``>=`` "
+"ορίζονται μόνο όπου έχουν νόημα· για παράδειγμα, δημιουργούν μια εξαίρεση :"
+"exc:`TypeError` όταν ένα από τα ορίσματα είναι μιγαδικός αριθμός."
 
 #: library/stdtypes.rst:181
 msgid ""
 "Non-identical instances of a class normally compare as non-equal unless the "
 "class defines the :meth:`~object.__eq__` method."
 msgstr ""
+"Μη πανομοιότυπα instances μιας κλάσης συνήθως συγκρίνονται ως μη ίσα εκτός "
+"εάν το η κλάση ορίζει τη μέθοδο :meth:`~object.__eq__`."
 
 #: library/stdtypes.rst:184
 msgid ""
@@ -285,6 +335,12 @@ msgid ""
 "meth:`~object.__eq__` are sufficient, if you want the conventional meanings "
 "of the comparison operators)."
 msgstr ""
+"Τα instances μιας κλάσης δεν μπορούν να ταξινομηθούν σε σχέση με άλλα "
+"instances της ίδιας κλάσης, ή άλλοι τύπους του αντικειμένου, εκτός εάν η "
+"κλάση ορίζει αρκετές τις μεθόδους :meth:`~object.__lt__`, :meth:`~object."
+"__le__`, :meth:`~object.__gt__`, και :meth:`~object.__ge__` (γενικά, :meth:"
+"`~object.__lt__` και :meth:`~object.__eq__` είναι αρκετά, αν θέλετε τις "
+"συμβατικές έννοιες των τελεστών σύγκρισης)."
 
 #: library/stdtypes.rst:191
 msgid ""
@@ -292,6 +348,9 @@ msgid ""
 "customized; also they can be applied to any two objects and never raise an "
 "exception."
 msgstr ""
+"Η συμπεριφορά των τελεστών :keyword:`is` και :keyword:`is not` δεν μπορεί να "
+"είναι προσαρμοσμένη· επίσης, μπορούν να εφαρμοστούν σε οποιαδήποτε δύο "
+"αντικείμενα και ποτέ να μην δημιουργήσουν μία εξαίρεση."
 
 #: library/stdtypes.rst:199
 msgid ""
@@ -299,10 +358,13 @@ msgid ""
 "keyword:`not in`, are supported by types that are :term:`iterable` or "
 "implement the :meth:`~object.__contains__` method."
 msgstr ""
+"Δύο ακόμη πράξεις με την ίδια συντακτική προτεραιότητα, :keyword:`in` και :"
+"keyword:`not in`, υποστηρίζονται από τύπους που είναι :term:`Iterable` ή "
+"κάνουν implement τη μέθοδο :meth:`~object.__contains__`."
 
 #: library/stdtypes.rst:206
 msgid "Numeric Types --- :class:`int`, :class:`float`, :class:`complex`"
-msgstr ""
+msgstr "Αριμθητικοί Τύποι --- :class:`int`, :class:`float`, :class:`complex`"
 
 #: library/stdtypes.rst:216
 msgid ""
@@ -318,6 +380,20 @@ msgid ""
 "numeric types :mod:`fractions.Fraction`, for rationals, and :mod:`decimal."
 "Decimal`, for floating-point numbers with user-definable precision.)"
 msgstr ""
+"Υπάρχουν τρεις διαφορετικοί αριθμητικοί τύποι: :dfn:`integers`, :dfn:"
+"`floating point numbers` και :dfn:`complex numbers`. Επιπλέον, τα Booleans "
+"είναι υπό-τύπος ακεραίων (integers). Οι ακέραιοι αριθμοί έχουν απεριόριστη "
+"ακρίβεια. Οι Αριθμοί κινητής υποδιαστολής (floating point numbers) συνήθως "
+"υλοποιούνται χρησιμοποιώντας το :c:expr:`double` στη C· πληροφορίες σχετικά "
+"με την ακρίβεια και την εσωτερική αναπαράσταση αριθμών κινητής υποδιαστολής "
+"για το μηχάνημα στο οποίο εκτελείται το πρόγραμμά σας είναι διαθέσιμο στο :"
+"data:`sys.float_info`. Οι μιγαδικοί αριθμοί (complex numbers) έχουν ένα "
+"πραγματικό και φανταστικό μέρος, κάθε ένα από τα οποία ένας αριθμός κινητής "
+"υποδιαστολής. Για να εξαγάγετε αυτά τα μέρη από έναν μιγαδικό αριθμό *z*, "
+"χρησιμοποιήστε ``z.real`` και ``z.imag``. (Η standard βιβλιοθήκη "
+"περιλαμβάνει τους πρόσθετους αριθμητικούς τύπους :mod:`fractions.Fraction`, "
+"για ορθολογικούς, και :mod:`decimal.Decimal`, για αριθμούς κινητής "
+"υποδιαστολής με ακρίβεια που ορίζει ο χρήστης.)"
 
 #: library/stdtypes.rst:238
 msgid ""
@@ -329,6 +405,15 @@ msgid ""
 "with a zero real part) which you can add to an integer or float to get a "
 "complex number with real and imaginary parts."
 msgstr ""
+"Οι αριθμοί δημιουργούνται με αριθμητικά γράμματα ή ως αποτέλεσμα "
+"ενσωματωμένων (built-in) συναρτήσεις και τελεστές. Ακέραιοι αριθμοί "
+"(συμπεριλαμβανομένων του εξαδικού, του οκταδικού και των δυαδικοί αριθμών) "
+"αποδίδουν ακέραιους αριθμούς. Αριθμητικά που περιέχουν δεκαδικό  ή εκθέτη "
+"παράγουν αριθμούς κινητής υποδιαστολής. Η προσάρτηση του ``'j'`` ή του "
+"``'J'`` σε ένα αριθμητικό παράγει έναν φανταστικό αριθμό (έναν μιγαδικό "
+"αριθμό με μηδενικό πραγματικό μέρος) το οποίο μπορείτε να προσθέσετε σε έναν "
+"ακέραιο ή κινητής υποδιαστολής για να πάρετε έναν μιγαδικό αριθμό με "
+"πραγματικό και φανταστικό μέρος."
 
 #: library/stdtypes.rst:263
 msgid ""
@@ -339,193 +424,206 @@ msgid ""
 "of different types behaves as though the exact values of those numbers were "
 "being compared. [2]_"
 msgstr ""
+"Η Python υποστηρίζει πλήρως τα μικτά αριθμητικά: όταν ένας δυαδικός "
+"αριθμητικός τελεστής έχει τελεστές διαφορετικών αριθμητικών τύπων, ο "
+"τελεστής με το \"στενότερο\" τύπο διευρύνεται σε αυτόν του άλλου, όπου ένας "
+"ακέραιος αριθμός είναι στενότερος από ένα με κινητή υποδιαστολή, που είναι "
+"στενότερο από ένα μιγαδικό. Η σύγκριση μεταξύ αριθμών διαφορετικών τύπων "
+"συμπεριφέρεται σαν να ήταν οι ακριβείς τιμές αυτών των αριθμών σε σύγκριση. "
+"[2]_"
 
 #: library/stdtypes.rst:269
 msgid ""
 "The constructors :func:`int`, :func:`float`, and :func:`complex` can be used "
 "to produce numbers of a specific type."
 msgstr ""
+"Μπορούν να χρησιμοποιηθούν οι κατασκευαστές :func:`int`, :func:`float` και :"
+"func:`complex` να παράγουν αριθμούς συγκεκριμένου τύπου."
 
 #: library/stdtypes.rst:272
 msgid ""
 "All numeric types (except complex) support the following operations (for "
 "priorities of the operations, see :ref:`operator-summary`):"
 msgstr ""
+"Όλοι οι αριθμητικοί τύποι (εκτός των μιγαδικών) υποστηρίζουν τις ακόλουθες "
+"πράξεις (για προτεραιότητες των πράξεων, βλέπε :ref:`operator-summary`):"
 
 #: library/stdtypes.rst:276
 msgid "Full documentation"
-msgstr ""
+msgstr "Ολόκληρη τεκμηρίωση"
 
 #: library/stdtypes.rst:278
 msgid "``x + y``"
-msgstr ""
+msgstr "``x + y``"
 
 #: library/stdtypes.rst:278
 msgid "sum of *x* and *y*"
-msgstr ""
+msgstr "άθροισμα του *x* και *y*"
 
 #: library/stdtypes.rst:280
 msgid "``x - y``"
-msgstr ""
+msgstr "``x - y``"
 
 #: library/stdtypes.rst:280
 msgid "difference of *x* and *y*"
-msgstr ""
+msgstr "διαφορά του *x* και *y*"
 
 #: library/stdtypes.rst:282
 msgid "``x * y``"
-msgstr ""
+msgstr "``x * y``"
 
 #: library/stdtypes.rst:282
 msgid "product of *x* and *y*"
-msgstr ""
+msgstr "γινόμενο των *x* και *y*"
 
 #: library/stdtypes.rst:284
 msgid "``x / y``"
-msgstr ""
+msgstr "``x / y``"
 
 #: library/stdtypes.rst:284
 msgid "quotient of *x* and *y*"
-msgstr ""
+msgstr "πηλίκο των *x* και *y*"
 
 #: library/stdtypes.rst:286
 msgid "``x // y``"
-msgstr ""
+msgstr "``x // y``"
 
 #: library/stdtypes.rst:286
 msgid "floored quotient of *x* and *y*"
-msgstr ""
+msgstr "ακέραιο μέρος του πηλίκου των *x* και *y*"
 
 #: library/stdtypes.rst:286
 msgid "\\(1)\\(2)"
-msgstr ""
+msgstr "\\(1)\\(2)"
 
 #: library/stdtypes.rst:289
 msgid "``x % y``"
-msgstr ""
+msgstr "``x % y``"
 
 #: library/stdtypes.rst:289
 msgid "remainder of ``x / y``"
-msgstr ""
+msgstr "υπόλοιπο του ``x / y``"
 
 #: library/stdtypes.rst:291
 msgid "``-x``"
-msgstr ""
+msgstr "``-x``"
 
 #: library/stdtypes.rst:291
 msgid "*x* negated"
-msgstr ""
+msgstr "*x* αρνητικό"
 
 #: library/stdtypes.rst:293
 msgid "``+x``"
-msgstr ""
+msgstr "``+x``"
 
 #: library/stdtypes.rst:293
 msgid "*x* unchanged"
-msgstr ""
+msgstr "*x* αμετάβλητο"
 
 #: library/stdtypes.rst:295
 msgid "``abs(x)``"
-msgstr ""
+msgstr "``abs(x)``"
 
 #: library/stdtypes.rst:295
 msgid "absolute value or magnitude of *x*"
-msgstr ""
+msgstr "απόλυτη τιμή ή μέγεθος του *x*"
 
 #: library/stdtypes.rst:295
 msgid ":func:`abs`"
-msgstr ""
+msgstr ":func:`abs`"
 
 #: library/stdtypes.rst:298
 msgid "``int(x)``"
-msgstr ""
+msgstr "``int(x)``"
 
 #: library/stdtypes.rst:298
 msgid "*x* converted to integer"
-msgstr ""
+msgstr "μετατροπή του *x* σε ακέραιο"
 
 #: library/stdtypes.rst:298
 msgid "\\(3)\\(6)"
-msgstr ""
+msgstr "\\(3)\\(6)"
 
 #: library/stdtypes.rst:298
 msgid ":func:`int`"
-msgstr ""
+msgstr ":func:`int`"
 
 #: library/stdtypes.rst:300
 msgid "``float(x)``"
-msgstr ""
+msgstr "``float(x)``"
 
 #: library/stdtypes.rst:300
 msgid "*x* converted to floating point"
-msgstr ""
+msgstr "μετατροπή του *x* σε κινητής υποδιαστολής"
 
 #: library/stdtypes.rst:300
 msgid "\\(4)\\(6)"
-msgstr ""
+msgstr "\\(4)\\(6)"
 
 #: library/stdtypes.rst:300
 msgid ":func:`float`"
-msgstr ""
+msgstr ":func:`float`"
 
 #: library/stdtypes.rst:302
 msgid "``complex(re, im)``"
-msgstr ""
+msgstr "``complex(re, im)``"
 
 #: library/stdtypes.rst:302
 msgid ""
 "a complex number with real part *re*, imaginary part *im*. *im* defaults to "
 "zero."
 msgstr ""
+"ένας μιγαδικός αριθμός με πραγματικό μέρος *re*, φανταστικό μέρος *im*. Το "
+"*im* μετατρέπεται αυτόματα σε μηδέν."
 
 #: library/stdtypes.rst:1202 library/stdtypes.rst:3674
 msgid "\\(6)"
-msgstr ""
+msgstr "\\(6)"
 
 #: library/stdtypes.rst:302
 msgid ":func:`complex`"
-msgstr ""
+msgstr ":func:`complex`"
 
 #: library/stdtypes.rst:306
 msgid "``c.conjugate()``"
-msgstr ""
+msgstr "``c.conjugate()``"
 
 #: library/stdtypes.rst:306
 msgid "conjugate of the complex number *c*"
-msgstr ""
+msgstr "συζυγές του μιγαδικού αριθμού *c*"
 
 #: library/stdtypes.rst:309
 msgid "``divmod(x, y)``"
-msgstr ""
+msgstr "``divmod(x, y)``"
 
 #: library/stdtypes.rst:309
 msgid "the pair ``(x // y, x % y)``"
-msgstr ""
+msgstr "το ζευγάρι ``(x // y, x % y)``"
 
 #: library/stdtypes.rst:309
 msgid ":func:`divmod`"
-msgstr ""
+msgstr ":func:`divmod`"
 
 #: library/stdtypes.rst:311
 msgid "``pow(x, y)``"
-msgstr ""
+msgstr "``pow(x, y)``"
 
 #: library/stdtypes.rst:313
 msgid "*x* to the power *y*"
-msgstr ""
+msgstr "*x* σε δύναμη του *y*"
 
 #: library/stdtypes.rst:313 library/stdtypes.rst:1194 library/stdtypes.rst:2455
 #: library/stdtypes.rst:3670 library/stdtypes.rst:3677
 msgid "\\(5)"
-msgstr ""
+msgstr "\\(5)"
 
 #: library/stdtypes.rst:311
 msgid ":func:`pow`"
-msgstr ""
+msgstr ":func:`pow`"
 
 #: library/stdtypes.rst:313
 msgid "``x ** y``"
-msgstr ""
+msgstr "``x ** y``"
 
 #: library/stdtypes.rst:323
 msgid ""
