@@ -338,8 +338,7 @@ msgid ""
 "`Array`.  For example, the following code ::"
 msgstr ""
 
-#: library/multiprocessing.rst:344
-#: library/multiprocessing.rst:390
+#: library/multiprocessing.rst:344 library/multiprocessing.rst:390
 msgid "will print ::"
 msgstr ""
 
@@ -1423,8 +1422,7 @@ msgid ""
 "BoundedSemaphore`."
 msgstr ""
 
-#: library/multiprocessing.rst:1309
-#: library/multiprocessing.rst:1447
+#: library/multiprocessing.rst:1309 library/multiprocessing.rst:1447
 msgid ""
 "A solitary difference from its close analog exists: its ``acquire`` method's "
 "first argument is named *block*, as is consistent with :meth:`Lock.acquire`."
@@ -1446,8 +1444,7 @@ msgid ""
 "object from :mod:`multiprocessing`."
 msgstr ""
 
-#: library/multiprocessing.rst:1323
-#: library/multiprocessing.rst:1872
+#: library/multiprocessing.rst:1323 library/multiprocessing.rst:1872
 msgid "The :meth:`~threading.Condition.wait_for` method was added."
 msgstr ""
 
@@ -1479,8 +1476,7 @@ msgid ""
 "used in :keyword:`with` statements."
 msgstr ""
 
-#: library/multiprocessing.rst:1350
-#: library/multiprocessing.rst:1401
+#: library/multiprocessing.rst:1350 library/multiprocessing.rst:1401
 msgid "Acquire a lock, blocking or non-blocking."
 msgstr ""
 
@@ -1648,8 +1644,7 @@ msgid ""
 "itself can be accessed via the *value* attribute of a :class:`Value`."
 msgstr ""
 
-#: library/multiprocessing.rst:1487
-#: library/multiprocessing.rst:1574
+#: library/multiprocessing.rst:1487 library/multiprocessing.rst:1574
 msgid ""
 "*typecode_or_type* determines the type of the returned object: it is either "
 "a ctypes type or a one character typecode of the kind used by the :mod:"
@@ -1679,8 +1674,7 @@ msgid ""
 "instead do ::"
 msgstr ""
 
-#: library/multiprocessing.rst:1510
-#: library/multiprocessing.rst:1600
+#: library/multiprocessing.rst:1510 library/multiprocessing.rst:1600
 #: library/multiprocessing.rst:1615
 msgid "Note that *lock* is a keyword-only argument."
 msgstr ""
@@ -1787,8 +1781,7 @@ msgid ""
 "array."
 msgstr ""
 
-#: library/multiprocessing.rst:1592
-#: library/multiprocessing.rst:1608
+#: library/multiprocessing.rst:1592 library/multiprocessing.rst:1608
 msgid ""
 "If *lock* is ``True`` (the default) then a new lock object is created to "
 "synchronize access to the value.  If *lock* is a :class:`~multiprocessing."
@@ -2410,8 +2403,7 @@ msgid ""
 "``None`` then the number returned by :func:`os.cpu_count` is used."
 msgstr ""
 
-#: library/multiprocessing.rst:2218
-#: library/multiprocessing.rst:2779
+#: library/multiprocessing.rst:2218 library/multiprocessing.rst:2779
 msgid ""
 "If *initializer* is not ``None`` then each worker process will call "
 "``initializer(*initargs)`` when it starts."
@@ -2487,8 +2479,7 @@ msgid ""
 "`~multiprocessing.pool.AsyncResult` object."
 msgstr ""
 
-#: library/multiprocessing.rst:2273
-#: library/multiprocessing.rst:2304
+#: library/multiprocessing.rst:2273 library/multiprocessing.rst:2304
 msgid ""
 "If *callback* is specified then it should be a callable which accepts a "
 "single argument.  When the result becomes ready *callback* is applied to it, "
@@ -2496,16 +2487,14 @@ msgid ""
 "applied instead."
 msgstr ""
 
-#: library/multiprocessing.rst:2278
-#: library/multiprocessing.rst:2309
+#: library/multiprocessing.rst:2278 library/multiprocessing.rst:2309
 msgid ""
 "If *error_callback* is specified then it should be a callable which accepts "
 "a single argument.  If the target function fails, then the *error_callback* "
 "is called with the exception instance."
 msgstr ""
 
-#: library/multiprocessing.rst:2282
-#: library/multiprocessing.rst:2313
+#: library/multiprocessing.rst:2282 library/multiprocessing.rst:2313
 msgid ""
 "Callbacks should complete immediately since otherwise the thread which "
 "handles the results will get blocked."
@@ -2704,8 +2693,7 @@ msgid ""
 "*address*. (See :ref:`multiprocessing-address-formats`)"
 msgstr ""
 
-#: library/multiprocessing.rst:2475
-#: library/multiprocessing.rst:2510
+#: library/multiprocessing.rst:2475 library/multiprocessing.rst:2510
 msgid ""
 "If *authkey* is given and not None, it should be a byte string and will be "
 "used as the secret key for an HMAC-based authentication challenge. No "
