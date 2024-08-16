@@ -128,7 +128,8 @@ msgstr ""
 
 #: library/stdtypes.rst:83
 msgid "These are the Boolean operations, ordered by ascending priority:"
-msgstr "Αυτές είναι οι λογικές (Boolean) πράξεις, ταξινομημένες βάσει προτεραιότητας:"
+msgstr ""
+"Αυτές είναι οι λογικές (Boolean) πράξεις, ταξινομημένες βάσει προτεραιότητας:"
 
 #: library/stdtypes.rst:144 library/stdtypes.rst:366 library/stdtypes.rst:965
 #: library/stdtypes.rst:1170
@@ -209,14 +210,13 @@ msgid ""
 "``not`` has a lower priority than non-Boolean operators, so ``not a == b`` "
 "is interpreted as ``not (a == b)``, and ``a == not b`` is a syntax error."
 msgstr ""
-"To ``not`` έχει χαμηλότερη προτεραιότητα από τους μη λογικούς (non-Boοlean) τελεστές, οπότε "
-"το ``not a == b`` μεταφράζεται σαν ``not (a==b)``, και το ``a == not b`` "
-"είναι συντακτικό σφάλμα."
+"To ``not`` έχει χαμηλότερη προτεραιότητα από τους μη λογικούς (non-Boοlean) "
+"τελεστές, οπότε το ``not a == b`` μεταφράζεται σαν ``not (a==b)``, και το "
+"``a == not b`` είναι συντακτικό σφάλμα."
 
 #: library/stdtypes.rst:121
 msgid "Comparisons"
 msgstr "Συγκρίσεις"
-msgstr ""
 
 #: library/stdtypes.rst:135
 msgid ""
@@ -227,11 +227,11 @@ msgid ""
 "*z* is not evaluated at all when ``x < y`` is found to be false)."
 msgstr ""
 "Υπάρχουν οκτώ πράξεις σύγκρισης στην Python. Όλες έχουν την ίδια "
-"προτεραιότητα (η οποία είναι υψηλότερη από αυτή των λογικών (Boolean) πράξεων). Οι "
-"συγκρίσεις μπορεί να αλυσοδεθούν αυθαίρετα· για παράδειγμα, το ``x < y <= "
-"z`` ισοδυναμεί με ``x < y και y <= z``, εκτός από το ότι το *y* αξιολογείται "
-"μόνο μία φορά (αλλά και στις δύο περιπτώσεις το *z* δεν αξιολογείται καθόλου "
-"όταν το ``x < y`` είναι false)."
+"προτεραιότητα (η οποία είναι υψηλότερη από αυτή των λογικών (Boolean) "
+"πράξεων). Οι συγκρίσεις μπορεί να αλυσοδεθούν αυθαίρετα· για παράδειγμα, το "
+"``x < y <= z`` ισοδυναμεί με ``x < y και y <= z``, εκτός από το ότι το *y* "
+"αξιολογείται μόνο μία φορά (αλλά και στις δύο περιπτώσεις το *z* δεν "
+"αξιολογείται καθόλου όταν το ``x < y`` είναι false)."
 
 #: library/stdtypes.rst:141
 msgid "This table summarizes the comparison operations:"
@@ -638,12 +638,21 @@ msgid ""
 "always rounded towards minus infinity: ``1//2`` is ``0``, ``(-1)//2`` is "
 "``-1``, ``1//(-2)`` is ``-1``, and ``(-1)//(-2)`` is ``0``."
 msgstr ""
+"Αναφέρεται επίσης ως διαίρεση ακέραιου αριθμού. Για τελεστές τύπου :class:"
+"`int`, το αποτέλεσμα έχει τύπο :class:`int`. Για τελεστές τύπου :class:"
+"`float`, το αποτέλεσμα έχει τύπο :class:`float`. Γενικά, το αποτέλεσμα είναι "
+"ένας ολόκληρος ακέραιος αριθμός, αν και ο τύπος του αποτελέσματος δεν είναι "
+"απαραίτητα :class:`int`. Το αποτέλεσμα είναι πάντα στρογγυλεμένο προς το "
+"μείον άπειρο: ``1//2`` είναι ``0``, ``(-1)//2`` είναι ``-1``, ``1//(-2)`` "
+"είναι ``-1``, και ``(-1)//(-2)`` είναι ``0``."
 
 #: library/stdtypes.rst:331
 msgid ""
 "Not for complex numbers.  Instead convert to floats using :func:`abs` if "
 "appropriate."
 msgstr ""
+"Όχι για μιγαδικούς αριθμούς. Αντίθετα μετατρέψτε σε float χρησιμοποιώντας :"
+"func:`abs` εάν είναι εφαρμόσιμο."
 
 #: library/stdtypes.rst:342
 msgid ""
@@ -651,24 +660,35 @@ msgid ""
 "fractional part. See functions :func:`math.floor` and :func:`math.ceil` for "
 "alternative conversions."
 msgstr ""
+"Η μετατροπή από :class:`float` σε :class:`int` περικόπτει, απορρίπτοντας το "
+"κλασματικό μέρος. Δείτε τις συναρτήσεις :func:`math.floor` και :func:`math."
+"ceil` για εναλλακτικές μετατροπές."
 
 #: library/stdtypes.rst:347
 msgid ""
 "float also accepts the strings \"nan\" and \"inf\" with an optional prefix "
 "\"+\" or \"-\" for Not a Number (NaN) and positive or negative infinity."
 msgstr ""
+"Το float δέχεται επίσης τις συμβολοσειρές \"nan\" και \"inf\" με ένα "
+"προαιρετικό πρόθεμα \"+\" ή \"-\" για το Not a Number (NaN - Όχι αριθμός) "
+"και θετικό ή αρνητικό άπειρο."
 
 #: library/stdtypes.rst:351
 msgid ""
 "Python defines ``pow(0, 0)`` and ``0 ** 0`` to be ``1``, as is common for "
 "programming languages."
 msgstr ""
+"Η Python ορίζει το ``pow(0, 0)`` και το ``0 ** 0`` ως ``1``, όπως "
+"συνηθίζεται για τις γλώσσες προγραμματισμού."
 
 #: library/stdtypes.rst:355
 msgid ""
 "The numeric literals accepted include the digits ``0`` to ``9`` or any "
 "Unicode equivalent (code points with the ``Nd`` property)."
 msgstr ""
+"Τα αριθμητικά κυριολεκτικά (numeric literals) που γίνονται δεκτά "
+"περιλαμβάνουν τα ψηφία ``0`` έως ``9`` ή οποιοδήποτε ισοδύναμο Unicode "
+"(σημεία κώδικα με την ιδιότητα ``Nd``)."
 
 #: library/stdtypes.rst:358
 msgid ""
@@ -676,56 +696,65 @@ msgid ""
 "DerivedNumericType.txt>`_ for a complete list of code points with the ``Nd`` "
 "property."
 msgstr ""
+"Δείτε το `Thε Unicode Standard <https://unicode.org/Public/UNIDATA/extracted/"
+"DerivedNumericType.txt>`_ για μια πλήρη λίστα σημείων κώδικα με το ``Nd`` "
+"property."
 
 #: library/stdtypes.rst:362
 msgid ""
 "All :class:`numbers.Real` types (:class:`int` and :class:`float`) also "
 "include the following operations:"
 msgstr ""
+"Όλοι οι τύποι :class:`numbers.Real` (:class:`int` και :class:`float`) επίσης "
+"περιλαμβάνουν τις ακόλουθες λειτουργίες:"
 
 #: library/stdtypes.rst:368
 msgid ":func:`math.trunc(\\ x) <math.trunc>`"
-msgstr ""
+msgstr ":func:`math.trunc(\\ x) <math.trunc>`"
 
 #: library/stdtypes.rst:368
 msgid "*x* truncated to :class:`~numbers.Integral`"
-msgstr ""
+msgstr "*x* μετατρέπεται σε :class:`~numbers.Integral`"
 
 #: library/stdtypes.rst:371
 msgid ":func:`round(x[, n]) <round>`"
-msgstr ""
+msgstr ":func:`round(x[, n]) <round>`"
 
 #: library/stdtypes.rst:371
 msgid ""
 "*x* rounded to *n* digits, rounding half to even. If *n* is omitted, it "
 "defaults to 0."
 msgstr ""
+"*x* στρογγυλοποιημένο σε *n* ψηφία, στρογγυλοποιώντας το μισό σε ζυγό. Εάν "
+"το *n* παραλειφθεί, το default του είναι το 0."
 
 #: library/stdtypes.rst:375
 msgid ":func:`math.floor(\\ x) <math.floor>`"
-msgstr ""
+msgstr ":func:`math.floor(\\ x) <math.floor>`"
 
 #: library/stdtypes.rst:375
 msgid "the greatest :class:`~numbers.Integral` <= *x*"
-msgstr ""
+msgstr "το μεγαλύτερο :class:`~numbers.Integral` <= *x*"
 
 #: library/stdtypes.rst:378
 msgid ":func:`math.ceil(x) <math.ceil>`"
-msgstr ""
+msgstr ":func:`math.ceil(x) <math.ceil>`"
 
 #: library/stdtypes.rst:378
 msgid "the least :class:`~numbers.Integral` >= *x*"
-msgstr ""
+msgstr "το μικρότερο :class:`~numbers.Integral` >= *x*"
 
 #: library/stdtypes.rst:382
 msgid ""
 "For additional numeric operations see the :mod:`math` and :mod:`cmath` "
 "modules."
 msgstr ""
+"Για περαιτέρω αριθμητικές πράξεις δείτε τα modules :mod:`math` και :mod:"
+"`cmath`."
 
 #: library/stdtypes.rst:391
 msgid "Bitwise Operations on Integer Types"
-msgstr ""
+msgstr "Bitwise Πράξεις σε Ακέραιους Τύπους"
 
 #: library/stdtypes.rst:405
 msgid ""
@@ -733,6 +762,9 @@ msgid ""
 "operations is calculated as though carried out in two's complement with an "
 "infinite number of sign bits."
 msgstr ""
+"Οι πράξεις bitwise έχουν νόημα μόνο για ακέραιους αριθμούς. Το αποτέλεσμα "
+"των bitwise πράξεων υπολογίζεται σαν να εκτελείται σε συμπλήρωμα ως προς δύο "
+"με άπειρο αριθμό bits πρόσημου."
 
 #: library/stdtypes.rst:409
 msgid ""
@@ -741,86 +773,98 @@ msgid ""
 "``~`` has the same priority as the other unary numeric operations (``+`` and "
 "``-``)."
 msgstr ""
+"Οι προτεραιότητες των δυαδικών πράξεων bitwise είναι όλες χαμηλότερες από "
+"τις αριθμητικές πράξεις και υψηλότερες από τις συγκρίσεις· η μοναδιαία πράξη "
+"``~`` έχει την ίδια προτεραιότητα με τις άλλες μοναδιαίες αριθμητικές "
+"πράξεις (``+`` και ``-``)."
 
 #: library/stdtypes.rst:413
 msgid "This table lists the bitwise operations sorted in ascending priority:"
 msgstr ""
+"Αυτός ο πίνακας παραθέτει όλες τις bitwise πράξεις ταξινομημένες σε αύξουσα "
+"σειρά:"
 
 #: library/stdtypes.rst:418
 msgid "``x | y``"
-msgstr ""
+msgstr "``x | y``"
 
 #: library/stdtypes.rst:418
 msgid "bitwise :dfn:`or` of *x* and *y*"
-msgstr ""
+msgstr "bitwise :dfn:`or` των *x* και *y*"
 
 #: library/stdtypes.rst:421 library/stdtypes.rst:1215 library/stdtypes.rst:2445
 #: library/stdtypes.rst:3663
 msgid "\\(4)"
-msgstr ""
+msgstr "\\(4)"
 
 #: library/stdtypes.rst:421
 msgid "``x ^ y``"
-msgstr ""
+msgstr "``x ^ y``"
 
 #: library/stdtypes.rst:421
 msgid "bitwise :dfn:`exclusive or` of *x* and *y*"
-msgstr ""
+msgstr "bitwise :dfn:`exclusive or` των *x* και *y*"
 
 #: library/stdtypes.rst:424
 msgid "``x & y``"
-msgstr ""
+msgstr "``x & y``"
 
 #: library/stdtypes.rst:424
 msgid "bitwise :dfn:`and` of *x* and *y*"
-msgstr ""
+msgstr "bitwise :dfn:`and` των *x* και *y*"
 
 #: library/stdtypes.rst:427
 msgid "``x << n``"
-msgstr ""
+msgstr "``x << n``"
 
 #: library/stdtypes.rst:427
 msgid "*x* shifted left by *n* bits"
-msgstr ""
+msgstr "*x* ολισθημένο (shifted) αριστερά κατά *n* bits"
 
 #: library/stdtypes.rst:427
 msgid "(1)(2)"
-msgstr ""
+msgstr "(1)(2)"
 
 #: library/stdtypes.rst:429
 msgid "``x >> n``"
-msgstr ""
+msgstr "``x >> n``"
 
 #: library/stdtypes.rst:429
 msgid "*x* shifted right by *n* bits"
-msgstr ""
+msgstr "*x* ολισθημένο (shifted) δεξιά κατά *n* bits"
 
 #: library/stdtypes.rst:429
 msgid "(1)(3)"
-msgstr ""
+msgstr "(1)(3)"
 
 #: library/stdtypes.rst:431
 msgid "``~x``"
-msgstr ""
+msgstr "``~x``"
 
 #: library/stdtypes.rst:431
 msgid "the bits of *x* inverted"
-msgstr ""
+msgstr "τα bits του *x* αντιστραμμένα"
 
 #: library/stdtypes.rst:437
 msgid ""
 "Negative shift counts are illegal and cause a :exc:`ValueError` to be raised."
 msgstr ""
+"Οι μετρήσεις αρνητικών ολισθήσεων (negative shift) είναι άκυρες και κάνουν "
+"raise :exc:`ValueError`."
 
 #: library/stdtypes.rst:440
 msgid ""
 "A left shift by *n* bits is equivalent to multiplication by ``pow(2, n)``."
 msgstr ""
+"Μια αριστερή ολίσθηση (shift) κατά *n* bits ισοδυναμεί με πολλαπλασιασμό με "
+"``pow(2, n)``."
 
 #: library/stdtypes.rst:443
 msgid ""
 "A right shift by *n* bits is equivalent to floor division by ``pow(2, n)``."
 msgstr ""
+"Μια δεξιά ολίσθηση (shift) κατά *n* bits ισοδυναμεί με διαίρεση πατώματος με "
+"``pow(2, n)``."
 
 #: library/stdtypes.rst:446
 msgid ""
@@ -829,22 +873,31 @@ msgid ""
 "bit_length(), y.bit_length())`` or more) is sufficient to get the same "
 "result as if there were an infinite number of sign bits."
 msgstr ""
+"Η εκτέλεση αυτών των υπολογισμών με τουλάχιστον ένα επιπλέον bit επέκτασης "
+"πρόσημου σε μια αναπαράσταση ενός πεπερασμένου συμπληρώματος ως προς δύο "
+"(ένα ωφέλιμο bit-width ``1 + max(x.bit_length(), y.bit_length())`` ή "
+"περισσότερο) είναι αρκετό για να πάρει το ίδιο αποτέλεσμα σαν να υπήρχε ένας "
+"άπειρος αριθμός bits πρόσημου."
 
 #: library/stdtypes.rst:453
 msgid "Additional Methods on Integer Types"
-msgstr ""
+msgstr "Περαιτέρω Μέθοδοι των Ακέραιων Τύπων"
 
 #: library/stdtypes.rst:455
 msgid ""
 "The int type implements the :class:`numbers.Integral` :term:`abstract base "
 "class`. In addition, it provides a few more methods:"
 msgstr ""
+"Ο τύπος int υλοποιεί την :class:`numbers.Integral` :term:`abstract base "
+"class`. Επιπλέον, παρέχει μερικές ακόμη μεθόδους:"
 
 #: library/stdtypes.rst:460
 msgid ""
 "Return the number of bits necessary to represent an integer in binary, "
 "excluding the sign and leading zeros::"
 msgstr ""
+"Επιστρέφει τον αριθμό των bits που είναι απαραίτητος για να αναπαραστήσει "
+"έναν ακέραιο σε δυαδικό, αποκλείοντας το πρόσημο και τα αρχικά μηδέν::"
 
 #: library/stdtypes.rst:469
 msgid ""
@@ -854,20 +907,28 @@ msgid ""
 "logarithm, then ``k = 1 + int(log(abs(x), 2))``. If ``x`` is zero, then ``x."
 "bit_length()`` returns ``0``."
 msgstr ""
+"Πιο συγκεκριμένα, εάν το ``x`` είναι μη μηδενικό, τότε το ``x.bit_length()`` "
+"είναι μοναδικός θετικός αριθμός ``k`` έτσι ώστε ``2**(k-1) <= abs(x) < "
+"2**k``. Ισοδύναμα, όταν το ``abs(x)`` είναι αρκετά μικρό για να έχει ένα "
+"σωστά στρογγυλοποιημένο λογάριθμο, τότε ``k = 1 + int(log(abs(x), 2))``. Εάν "
+"το ``x`` είναι μηδέν, τότε το ``x.bit_length()`` επιστρέφει ``0``."
 
 #: library/stdtypes.rst:498 library/stdtypes.rst:587
 msgid "Equivalent to::"
-msgstr ""
+msgstr "Ισοδύναμο με::"
 
 #: library/stdtypes.rst:486
 msgid ""
 "Return the number of ones in the binary representation of the absolute value "
 "of the integer. This is also known as the population count. Example::"
 msgstr ""
+"Επιστρέφει τον αριθμό των μονάδων στην δυαδική αναπαράσταση της απόλυτης "
+"τιμής του ακεραίου. Αυτό είναι επίσης γνωστό ως το μέτρημα πληθυσμού "
+"(population count). Παράδειγμα::"
 
 #: library/stdtypes.rst:507
 msgid "Return an array of bytes representing an integer."
-msgstr ""
+msgstr "Επιστρέφει ένα πίνακα από bytes που αναπαριστούν έναν ακέραιο."
 
 #: library/stdtypes.rst:519
 msgid ""
@@ -875,6 +936,9 @@ msgid ""
 "`OverflowError` is raised if the integer is not representable with the given "
 "number of bytes."
 msgstr ""
+"Ο ακέραιος αναπαρίσταται χρησιμοποιώντας *length* bytes και η προεπιλεγμένη "
+"του τιμή (default) είναι 1.  Ένα :exc:`OverflowError` γίνεται raise αν ο "
+"ακέραιος αριθμός δεν δύναται να αναπαρασταθεί με τον αριθμό bytes που δόθηκε."
 
 #: library/stdtypes.rst:523
 msgid ""
@@ -883,6 +947,12 @@ msgid ""
 "most significant byte is at the beginning of the byte array.  If *byteorder* "
 "is ``\"little\"``, the most significant byte is at the end of the byte array."
 msgstr ""
+"Το όρισμα *byteorder* καθορίζει τη σειρά των byte που χρησιμοποιούνται για "
+"την αναπαράσταση του ακέραιου αριθμού, και έχουν προεπιλεγμένη τιμή "
+"(default) ``\"big\"``. Εάν το *byteorder* είναι ``\"big\"``, το πιο "
+"σημαντικό byte βρίσκεται στην αρχή του πίνακα των bytes. Εάν το *byteorder* "
+"είναι ``\"little\"``, το πιο σημαντικό byte βρίσκεται στο τέλος του πίνακα "
+"των bytes."
 
 #: library/stdtypes.rst:529
 msgid ""
@@ -891,32 +961,46 @@ msgid ""
 "given, an :exc:`OverflowError` is raised. The default value for *signed* is "
 "``False``."
 msgstr ""
+"Το όρισμα *signed* καθορίζει εάν το συμπλήρωμα ως προς δύο χρησιμοποιείται "
+"για να αντιπροσωπεύσει τον ακέραιο. Εάν το *signed* είναι ``False`` και έχει "
+"δοθεί ένας αρνητικός ακέραιος, γίνεται raise ένα :exc:`OverflowError`. Η "
+"προεπιλεγμένη τιμή (default) για το *signed* είναι ``False``."
 
 #: library/stdtypes.rst:534
 msgid ""
 "The default values can be used to conveniently turn an integer into a single "
 "byte object::"
 msgstr ""
+"Οι προεπιλεγμένες τιμές (defaults) μπορούν να χρησιμοποιηθούν για να "
+"μετατρέψουν βολικά έναν ακέραιο σε ένα μόνο byte αντικείμενο::"
 
 #: library/stdtypes.rst:540
 msgid ""
 "However, when using the default arguments, don't try to convert a value "
 "greater than 255 or you'll get an :exc:`OverflowError`."
 msgstr ""
+"Ωστόσο, όταν χρησιμοποιείτε προεπιλεγμένα ορίσματα, μην προσπαθήσετε να "
+"μετατρέψετε μια τιμή μεγαλύτερη από 255 ή διαφορετικά θα λάβετε ένα :exc:"
+"`OverflowError`."
 
 #: library/stdtypes.rst:556
 msgid "Added default argument values for ``length`` and ``byteorder``."
 msgstr ""
+"Προστιθέμενες προεπιλεγμένες τιμές (defaults) ορίσματος για ``length`` και "
+"``byteorder``."
 
 #: library/stdtypes.rst:561
 msgid "Return the integer represented by the given array of bytes."
 msgstr ""
+"Επιστρέφει έναν ακέραιο που αναπαρίσταται από τον δοσμένο πίνακα των bytes."
 
 #: library/stdtypes.rst:574
 msgid ""
 "The argument *bytes* must either be a :term:`bytes-like object` or an "
 "iterable producing bytes."
 msgstr ""
+"Το όρισμα *bytes* πρέπει είτε να είναι ένα :term:`bytes-like object` είτε "
+"ένα iterable που παράγει bytes."
 
 #: library/stdtypes.rst:577
 msgid ""
@@ -927,6 +1011,13 @@ msgid ""
 "array.  To request the native byte order of the host system, use :data:`sys."
 "byteorder` as the byte order value."
 msgstr ""
+"Το όρισμα *byteorder* καθορίζει τη σειρά byte που χρησιμοποιείται για την "
+"αναπαράσταση του ακέραιου αριθμού, και η προεπιλεγμένη τιμή (default) είναι "
+"``\"big\"``. Εάν το *byteorder* είναι ``\"big\"``, το το πιο σημαντικό byte "
+"βρίσκεται στην αρχή του πίνακα των bytes. Εάν το *byteorder* είναι "
+"``\"little\"``, το πιο σημαντικό byte βρίσκεται στο τέλος του πίνακα των "
+"bytes. Για να ζητήσετε την εγγενή σειρά των bytes του host συστήματος, "
+"χρησιμοποιήστε το :data:`sys.byteorder` ως τιμή της σειράς byte."
 
 #: library/stdtypes.rst:584
 msgid ""
