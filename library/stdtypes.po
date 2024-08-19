@@ -1024,10 +1024,13 @@ msgid ""
 "The *signed* argument indicates whether two's complement is used to "
 "represent the integer."
 msgstr ""
+"Το όρισμα *signed* υποδεικνύει εάν το συμπλήρωμα ως προς δύο χρησιμοποιείται "
+"για να αντιπροσωπεύσει τον ακέραιο."
 
 #: library/stdtypes.rst:604
 msgid "Added default argument value for ``byteorder``."
 msgstr ""
+"Προστιθέμενη προεπιλεγμένη τιμή (default) ορίσματος για το ``byteorder``."
 
 #: library/stdtypes.rst:609
 msgid ""
@@ -1035,22 +1038,31 @@ msgid ""
 "has a positive denominator.  The integer ratio of integers (whole numbers) "
 "is always the integer as the numerator and ``1`` as the denominator."
 msgstr ""
+"Επιστρέφει ένα ζεύγος ακεραίων των οποίων η αναλογία είναι ίση με τον αρχικό "
+"ακέραιο και έχει θετικό παρονομαστή. Ο ακέραιος λόγος ακεραίων (ολόκληρων "
+"αριθμών) είναι πάντα ο ακέραιος αριθμός ως αριθμητής και το ``1`` ως "
+"παρονομαστής."
 
 #: library/stdtypes.rst:618
 msgid ""
 "Returns ``True``. Exists for duck type compatibility with :meth:`float."
 "is_integer`."
 msgstr ""
+"Επιστρέφει ``True``. Υπάρχει για συμβατότητα τύπου duck με :meth:`float."
+"is_integer`."
 
 #: library/stdtypes.rst:623
 msgid "Additional Methods on Float"
-msgstr ""
+msgstr "Περαιτέρω Μέθοδοι για Float"
 
 #: library/stdtypes.rst:625
 msgid ""
 "The float type implements the :class:`numbers.Real` :term:`abstract base "
 "class`. float also has the following additional methods."
 msgstr ""
+"Ο τύπος float (κινητής υποδιαστολής) υλοποιεί την :class:`numbers.Real` :"
+"term:`abstract base class`. Ο float έχει επίσης τις ακόλουθες πρόσθετες "
+"μεθόδους."
 
 #: library/stdtypes.rst:630
 msgid ""
@@ -1058,12 +1070,18 @@ msgid ""
 "float. The ratio is in lowest terms and has a positive denominator.  Raises :"
 "exc:`OverflowError` on infinities and a :exc:`ValueError` on NaNs."
 msgstr ""
+"Επιστρέφει ένα ζεύγος ακεραίων των οποίων η αναλογία είναι ακριβώς ίση με το "
+"αρχικό float. Ο λόγος είναι στο χαμηλότερο επίπεδο και έχει θετικό "
+"παρονομαστή. Κάνει raise :exc:`OverflowError` στα άπειρα και ένα :exc:"
+"`ValueError` για NaNs."
 
 #: library/stdtypes.rst:637
 msgid ""
 "Return ``True`` if the float instance is finite with integral value, and "
 "``False`` otherwise::"
 msgstr ""
+"Επιστρέφει ``True`` εάν το float instance είναι πεπερασμένο με ακέραια τιμή "
+"και ``False`` διαφορετικά::"
 
 #: library/stdtypes.rst:645
 msgid ""
@@ -1074,6 +1092,13 @@ msgid ""
 "of floating-point numbers.  This can be useful when debugging, and in "
 "numerical work."
 msgstr ""
+"Δύο μέθοδοι υποστηρίζουν τη μετατροπή από και προς δεκαεξαδικές "
+"συμβολοσειρές. Αφού τα floats της Python αποθηκεύονται εσωτερικά ως δυαδικοί "
+"αριθμοί, η μετατροπή ενός float προς ή από μια *δεκαδική* συμβολοσειρά "
+"συνήθως περιλαμβάνει ένα μικρό σφάλμα στρογγυλοποίησης. Αντιθέτως, οι "
+"δεκαεξαδικές συμβολοσειρές επιτρέπουν ακριβή αναπαράσταση και "
+"συγκεκριμενοποίηση των αριθμών κινητής υποδιαστολής. Αυτό μπορεί να είναι "
+"χρήσιμο κατά το debugging και στην αριθμητική."
 
 #: library/stdtypes.rst:656
 msgid ""
@@ -1081,22 +1106,31 @@ msgid ""
 "For finite floating-point numbers, this representation will always include a "
 "leading ``0x`` and a trailing ``p`` and exponent."
 msgstr ""
+"Επιστρέφει μια αναπαράσταση ενός αριθμού κινητής υποδιαστολής ως δεκαεξαδική "
+"συμβολοσειρά.  Για πεπερασμένους αριθμούς κινητής υποδιαστολής, αυτή η "
+"αναπαράσταση θα περιλαμβάνει πάντα ένα προπορευόμενο ``0x`` και ένα "
+"τελευταίο ``p`` και εκθέτη."
 
 #: library/stdtypes.rst:664
 msgid ""
 "Class method to return the float represented by a hexadecimal string *s*.  "
 "The string *s* may have leading and trailing whitespace."
 msgstr ""
+"Μέθοδος κλάσης για την επιστροφή του float που αντιπροσωπεύεται από μια "
+"δεκαεξαδική συμβολοσειρά *s*.  Η συμβολοσειρά *s* μπορεί να έχει κενό "
+"διάστημα που στην αρχή ή το τέλος."
 
 #: library/stdtypes.rst:669
 msgid ""
 "Note that :meth:`float.hex` is an instance method, while :meth:`float."
 "fromhex` is a class method."
 msgstr ""
+"Σημειώστε ότι το :meth:`float.hex` είναι ένα instance method, ενώ το :meth:"
+"`float.fromhex` είναι μια μέθοδος κλάσης."
 
 #: library/stdtypes.rst:672
 msgid "A hexadecimal string takes the form::"
-msgstr ""
+msgstr "Μια δεκαεξαδική συμβολοσειρά έχει τη μορφή::"
 
 #: library/stdtypes.rst:676
 msgid ""
@@ -1111,6 +1145,17 @@ msgid ""
 "by C's ``%a`` format character or Java's ``Double.toHexString`` are accepted "
 "by :meth:`float.fromhex`."
 msgstr ""
+"όπου το προαιρετικό ``sign`` μπορεί να είναι είτε ``+`` ή ``-``, ``integer`` "
+"και ``fraction`` είναι συμβολοσειρές δεκαεξαδικών ψηφίων και ο ``exponent`` "
+"(εκθέτης) είναι ένας δεκαδικός ακέραιος με προαιρετικό πρόσημο. Τα πεζά ή "
+"κεφαλαία δεν είναι σημαντικά και πρέπει να υπάρχει τουλάχιστον ένα "
+"δεκαεξαδικό ψηφίο είτε στον ακέραιο είτε στο κλάσμα. Αυτή η σύνταξη είναι "
+"παρόμοια με τη σύνταξη που καθορίζεται στην ενότητα 6.4.4.2 του προτύπου "
+"C99, καθώς και στη σύνταξη που χρησιμοποιείται στην Java 1.5 και μετά. "
+"Ιδιαίτερα, η έξοδος του :meth:`float.hex` μπορεί να χρησιμοποιηθεί ως "
+"δεκαεξαδικό Κυριολεκτική κινητής υποδιαστολής σε κώδικα C ή Java, και "
+"παράχθηκαν δεκαεξαδικές συμβολοσειρές με τον χαρακτήρα μορφής ``%a`` της C ή "
+"το `Double.toHexString` της Java είναι αποδεκτά από το :meth:`float.fromhex`."
 
 #: library/stdtypes.rst:689
 msgid ""
@@ -1119,16 +1164,23 @@ msgid ""
 "example, the hexadecimal string ``0x3.a7p10`` represents the floating-point "
 "number ``(3 + 10./16 + 7./16**2) * 2.0**10``, or ``3740.0``::"
 msgstr ""
+"Σημειώστε ότι ο εκθέτης είναι γραμμένος με δεκαδικό και όχι δεκαεξαδικό και "
+"ότι δίνει τη δύναμη του 2 με την οποία πολλαπλασιάζεται ο συντελεστής. Για "
+"παράδειγμα, η δεκαεξαδική συμβολοσειρά ``0x3.a7p10`` αντιπροσωπεύει τον "
+"αριθμό κινητής υποδιαστολής ``(3 + 10./16 + 7./16**2) * 2,0**10``, ή "
+"``3740,0``::"
 
 #: library/stdtypes.rst:699
 msgid ""
 "Applying the reverse conversion to ``3740.0`` gives a different hexadecimal "
 "string representing the same number::"
 msgstr ""
+"Η εφαρμογή της αντίστροφης μετατροπής σε ``3740.0`` δίνει μία διαφορετική "
+"δεκαεξαδική συμβολοσειρά που αντιπροσωπεύει τον ίδιο αριθμό::"
 
 #: library/stdtypes.rst:709
 msgid "Hashing of numeric types"
-msgstr ""
+msgstr "Κατακερματισμός των αριθμητικών τύπων"
 
 #: library/stdtypes.rst:711
 msgid ""
@@ -1145,16 +1197,32 @@ msgid ""
 "value of ``P`` is made available to Python as the :attr:`~sys.hash_info."
 "modulus` attribute of :data:`sys.hash_info`."
 msgstr ""
+"Για αριθμούς ``x`` και ``y``, πιθανώς διαφορετικών τύπων, είναι "
+"προαπαιτούμενο ότι ``hash(x) == hash(y)`` όποτε ``x == y`` (δείτε την "
+"τεκμηρίωση για την μέθοδο :meth:`~object.__hash__` για περισσότερες "
+"λεπτομέρειες). Για την ευκολότερη εφαρμογή και αποτελεσματικότητα σε ένα "
+"εύρος αριθμητικών τύπων (συμπεριλαμβανομένων:class:`int`, :class:`float`, :"
+"class:`decimal.Decimal` και :class:`fractions.Fracion`) o κατακερματισμός "
+"της Python για αριθμητικούς τύπους βασίζεται σε μία μόνο μαθηματική "
+"συνάρτηση που ορίζεται για οποιονδήποτε ρητό αριθμό, και ως εκ τούτου ισχύει "
+"για όλα τα instances :class:`int` και :class:`fractions.Fraction` και όλα "
+"πεπερασμένα instances :class:`float` και :class:`decimal.Decimal`. "
+"Ουσιαστικά, αυτή η συνάρτηση δίνεται από το modulo μείωσης ``P`` για ένα "
+"σταθερό πρώτο ``P``. Η τιμή του ``P`` διατίθεται στην Python ως :attr:`~sys."
+"hash_info.modulus` atrribute του :data:`sys.hash_info`."
 
 #: library/stdtypes.rst:726
 msgid ""
 "Currently, the prime used is ``P = 2**31 - 1`` on machines with 32-bit C "
 "longs and ``P = 2**61 - 1`` on machines with 64-bit C longs."
 msgstr ""
+"Αυτή τη στιγμή, ο πρώτος που χρησιμοποιείται είναι ``P = 2**31 - 1`` σε "
+"μηχανήματα με μήκους 32-bit C και ``P = 2**61 - 1`` σε μηχανήματα με μήκους "
+"64-bit C."
 
 #: library/stdtypes.rst:729
 msgid "Here are the rules in detail:"
-msgstr ""
+msgstr "Εδώ οι κανόνες λεπτομερώς:"
 
 #: library/stdtypes.rst:731
 msgid ""
@@ -1162,6 +1230,9 @@ msgid ""
 "by ``P``, define ``hash(x)`` as ``m * invmod(n, P) % P``, where ``invmod(n, "
 "P)`` gives the inverse of ``n`` modulo ``P``."
 msgstr ""
+"Αν το ``x = m / n`` είναι ένας μη αρνητικός ρητός αριθμός και το ``n`` δεν "
+"διαιρείται από ``P``, ορίστε το ``hash(x)`` ως ``m * invmod(n, P) % P``, "
+"όπου το ``invmod(n, P)`` μας δίνει το αντίστροφο του modulo ``n`` ``P``."
 
 #: library/stdtypes.rst:735
 msgid ""
@@ -1170,6 +1241,10 @@ msgid ""
 "above doesn't apply; in this case define ``hash(x)`` to be the constant "
 "value ``sys.hash_info.inf``."
 msgstr ""
+"Αν το ``x = m / n`` είναι ένας μη αρνητικός ρητός αριθμός και το ``n`` "
+"διαιρείται με το ``P`` (αλλά το ``m`` όχι) τότε το ``n`` δεν έχει αντίστροφο "
+"modulo ``P`` και ο κανόνας παραπάνω δεν ισχύει. Σε αυτήν την περίπτωση "
+"ορίστε το ``hash(x)`` ως σταθερή τιμή ``sys.hash_info.inf``."
 
 #: library/stdtypes.rst:740
 msgid ""
