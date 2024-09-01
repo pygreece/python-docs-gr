@@ -1760,6 +1760,11 @@ msgid ""
 "(with no space in between), have leading zeros, be surrounded by whitespace, "
 "and have single underscores interspersed between digits."
 msgstr ""
+"Εάν το *x* δεν είναι ένα αριθμός ή εάν το *base* δίνεται, τότε το *x* πρέπει να είναι μια "
+"συμβολοσειρά, η :class:`bytes`, ή :class:`bytearray` οντότητα αντιπροσωπεύουν έναν "
+"ακέραιο στην ρίζα του *base*. Προαιρετικα, η συμβολοσειρά μπορεί να προηγηθεί από ``+`` ή ``-`` "
+"(χωρίς κενά ενδιάμεσα), προηγούνται από δυναμικά, περιβάλλονται από κενό διάστημα και έχουν μονά "
+"underscores μεταξύ των ψηφίων."
 
 #: library/functions.rst:911
 msgid ""
@@ -1774,10 +1779,19 @@ msgid ""
 "prefix. Base 0 also disallows leading zeros: ``int('010', 0)`` is not legal, "
 "while ``int('010')`` and ``int('010', 8)`` are."
 msgstr ""
+"Μια συμβολοσειρά ακέραιου αριθμού βάσης n περιέχει ψηφία, καθένα από τα οποία αντιπροσωπεύει "
+"μια τιμή από το 0 έως το n-1. Οι τιμές 0--9 μπορούν να αναπαρασταθούν με οποιοδήποτε δεκαδικό "
+"ψηφίο Unicode. Οι τιμές 10--35 μπορούν να αναπαρασταθούν με ``a`` ως το ``z`` (ή ``A`` ως το ``Z``). "
+"Η προεπιλεγμένη *base* είναι 10. Οι επιτρεπόμενες βάσεις είναι 0 και 2-36. Οι συμβολοσειρές βάσης -2, "
+"-8 και -16 μπορούν προαιρετικά να έχουν το πρόθεμα ``0b``/``0B``, ``0o``/``0O``, ή "
+"``0x``/``0X``, όπως και με ακέραιους αριθμούς στον κώδικα.  Για την βάση 0, η συμβολοσειρά ερμηνεύεται "
+"με παρόμοιο τρόπο με έναν :ref:`integer literal in code <integers>`, στο ότι η πραγματική βάση είναι "
+"2, 8, 10 ή 16 όπως προσδιορίζεται από το πρόθεμα. Η βάση 0 δεν επιτρέπει επίσης τα μηδενικά στην αρχή "
+": ``int('010', 0)`` δεν είναι νόμιμο, ενώ το ``int('010')`` και ``int('010', 8)`` είναι."
 
 #: library/functions.rst:922
 msgid "The integer type is described in :ref:`typesnumeric`."
-msgstr ""
+msgstr "Ο ακέραιος τύπος περιγράφεται στο :ref:`typesnumeric`."
 
 #: library/functions.rst:924
 msgid ""
@@ -1786,16 +1800,21 @@ msgid ""
 "obtain an integer for the base.  Previous versions used :meth:`base.__int__ "
 "<object.__int__>` instead of :meth:`base.__index__ <object.__index__>`."
 msgstr ""
+"Εάν το *base* δεν είναι μια οντότητα της :class:`int` και το *base* αντικείμενο έχει μια μέθοδο "
+":meth:`base.__index__ <object.__index__>`, αυτή η μέθοδος καλείται για να αποκτήσει τον ακέραιο "
+"της βάση.  Προηγούμενες εκδόσεις χρησιμοποιούσαν την :meth:`base.__int__ "
+"<object.__int__>` αντί της :meth:`base.__index__ <object.__index__>`."
 
 #: library/functions.rst:937
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__int__` is not "
 "defined."
 msgstr ""
+"Επιστρέφει πίσω στη :meth:`~object.__index__` αν η :meth:`~object.__int__` δεν έχει οριστεί."
 
 #: library/functions.rst:940
 msgid "The delegation to :meth:`~object.__trunc__` is deprecated."
-msgstr ""
+msgstr "Η ανάθεση στη meth:`~object.__trunc__` έχει καταργηθεί."
 
 #: library/functions.rst:943
 msgid ""
@@ -1806,6 +1825,12 @@ msgid ""
 "ref:`integer string conversion length limitation <int_max_str_digits>` "
 "documentation."
 msgstr ""
+"Οι είσοδοι συμβολοσειράς και οι αναπαραστάσεις συμβολοσειρών :class:`int` μπορούν να περιοριστούν "
+"για να αποφευχθούν επιθέσεις άρνησης υπηρεσίας. Μια :exc:`ValueError` εγείρεται όταν γίνεται "
+"υπέρβαση του ορίου κατά τη μετατροπή μιας συμβολοσειράς *x* σε μια :class:`int` ή κατά τη "
+"μετατροπή ενός :class:`int` σε συμβολοσειρά θα υπερβεί το όριο. Δείτε την τεκμηρίωση "
+":ref:`integer string conversion length limitation <int_max_str_digits>`."
+
 
 #: library/functions.rst:953
 msgid ""
@@ -1819,10 +1844,19 @@ msgid ""
 "exc:`TypeError` exception is raised. :exc:`TypeError` may not be raised for "
 "an invalid type if an earlier check succeeds."
 msgstr ""
+"Επιστεφεί ``True`` εάν το όρισμα *object* είναι μια οντότητα του ορίσματος *classinfo* "
+", ή μιας (άμεσης, έμμεσης ή :term:`virtual <abstract base "
+"class>`) υποκλάσης αυτού.  Εάν το *object* δεν είναι ένα αντικείμενο του δεδομένου τύπου, "
+"η συνάρτηση θα επιστρέφει πάντα ``False``. Εάν το *classinfo* είναι μια πλειάδα τύπου "
+"αντικειμένων (ή αναδρομικά, άλλες τέτοιες πλειάδες) ή μια :ref:`types-union` πολλαπλών τύπων, "
+"επιστρέφει ``True`` εάν το *object* είανι μια οντότητα οποιουδήποτε από τους τύπους. Εάν το "
+"*classinfo* δεν είναι ένα τύπος ή μια πλειάδα τύπων και τέτοιες πλειάδες, δημιουργείται μια "
+"εξαίρεση :exc:`TypeError`. Η :exc:`TypeError` δεν μπορεί να δημιουργηθεί για μη έγκυρο τύπο, εάν "
+"ένας προηγούμενος έλεγχος είναι επιτυχής."
 
 #: library/functions.rst:978
 msgid "*classinfo* can be a :ref:`types-union`."
-msgstr ""
+msgstr "Το *classinfo* μπορεί να είναι ένα :ref:`types-union`."
 
 #: library/functions.rst:970
 msgid ""
@@ -1833,6 +1867,12 @@ msgid ""
 "return ``True`` if *class* is a subclass of any entry in *classinfo*.  In "
 "any other case, a :exc:`TypeError` exception is raised."
 msgstr ""
+"Επιστρέφετε ``True`` εάν η *class* είναι μια υποκλάση (άμεση, έμμεση, ή :term:"
+"`virtual <abstract base class>`) του *classinfo*.  Μια κλάση θεωρείται υποκλάση του "
+"ευατού της. Το *classinfo* μπορεί να είναι μια πλειάδα αντικειμένων κλάσης (ή αναδρομικά, "
+"άλλες τέτοιες πλειάδες) ή μια :ref:`types-union`, οπότε επιστρέφετε ``True`` εάν η "
+"*class* είναι υποκλάση οποιασδήποτε καταχώρησης στο *classinfo*.  Σε οποιαδήποτε άλλη "
+"περίπτωση, δημιουργείται μια εξαίρεση :exc:`TypeError`."
 
 #: library/functions.rst:985
 msgid ""
@@ -1849,10 +1889,19 @@ msgid ""
 "*sentinel*, :exc:`StopIteration` will be raised, otherwise the value will be "
 "returned."
 msgstr ""
+"Επιστρέφετε ένα αντικείμενο :term:`iterator`.  Το πρώτο όρισμα ερμηνεύεται πολύ διαφορετικά "
+"ανάλογα με την παρουσία του δεύτερου ορίσματος. Χωρίς δεύτερο όρισμα, το *object* πρέπει να είναι "
+"ένα αντικείμενο συλλογής που να υποστηρίζει το πρωτόκολλο :term:`iterable` (η μέθοδος :meth:`~object.__iter__`), "
+"ή πρέπει να υποστηρίζει το πρωτόκολλο ακολουθίας (η μέθοδος :meth:`~object.__getitem__` με ακέραια ορίσματα που ξεκινούν "
+"από ``0``).  Εάν δεν υποστηρίζει κανένα από αυτά τα πρωτόκολλα, εγείρει μια :exc:`TypeError`. Εάν δοθεί "
+"το δεύτερο όρισμα *sentinel*, τότε το *object* πρέπει να είναι ένα callable αντικείμενο.  Ο iterator "
+"που δημιουργήθηκε σε αυτή την περίπτωση θα καλέσει το *object* χωρίς ορίσματα για κάθε κλήση στη μέθοδο "
+":meth:`~iterator.__next__`∙ εάν η τιμή που επιστρέφετια είναι ίση με *sentinel*, θα δημιουργηθεί το "
+":exc:`StopIteration`, διαφορετικά θα επιστραφεί η τιμή."
 
 #: library/functions.rst:999
 msgid "See also :ref:`typeiter`."
-msgstr ""
+msgstr "Δείτε επίσης :ref:`typeiter`."
 
 #: library/functions.rst:1001
 msgid ""
@@ -1860,6 +1909,9 @@ msgid ""
 "block-reader. For example, reading fixed-width blocks from a binary database "
 "file until the end of file is reached::"
 msgstr ""
+"Μια χρήσιμη εφαρμογή της δεύτερης μορφής του :func:`iter` είναι η κατασκευή ενός "
+"block-reader. Για παράδειγμα, η ανάγνωση μπλοκ σταθερού πλάτους από ένα δυαδικό αρχείο "
+"βάσης δεδομένων μέχρι να φτάσει στο τέλος του αρχείου::"
 
 #: library/functions.rst:1013
 msgid ""
@@ -1867,18 +1919,25 @@ msgid ""
 "sequence (such as a string, bytes, tuple, list, or range) or a collection "
 "(such as a dictionary, set, or frozen set)."
 msgstr ""
+"Επιστρέφει το μήκος (τον αριθμό των ειδών-περιεχομένων) ενός αντικειμένου.  Το όρισμα μπορεί να "
+"είναι μια ακολουθία (όπως μια συμβολοσειρά, bytes, πλειάδα, λίστα, ή εύρος) ή μια συλλογή "
+"(όπως ένα λεξικό, ένα σετ, ή ένα παγωμένο σετ)."
 
 #: library/functions.rst:1019
 msgid ""
 "``len`` raises :exc:`OverflowError` on lengths larger than :data:`sys."
 "maxsize`, such as :class:`range(2 ** 100) <range>`."
 msgstr ""
+"Το ``len`` εγείρει μια :exc:`OverflowError` σε μήκη τα οποία είναι μεγαλύτερα από "
+":data:`sys.maxsize`, όπως :class:`range(2 ** 100) <range>`."
 
 #: library/functions.rst:1028
 msgid ""
 "Rather than being a function, :class:`list` is actually a mutable sequence "
 "type, as documented in :ref:`typesseq-list` and :ref:`typesseq`."
 msgstr ""
+"Αντί να είναι συνάρτηση, το :class:`list` είναι στην πραγματικότητα ένας μεταβλητός τύπος " 
+"ακολουθίας, όπως τεκμηριώνεται στα :ref:`typesseq-list` και :ref:`typesseq`."
 
 #: library/functions.rst:1034
 msgid ""
@@ -1887,12 +1946,18 @@ msgid ""
 "blocks, but not in class blocks. Note that at the module level, :func:"
 "`locals` and :func:`globals` are the same dictionary."
 msgstr ""
+"Ενημέρωση και επιστροφή ενός λεξικού που αντιπροσωπεύει τον τρέχονται πίνακα τοπικών "
+"συμωόλων. Οι ελεύθερες μεταβλητές επιστρέφονται από :func:`locals` όταν καλείται σε μπλοκ "
+"συναρτήσεων, αλλά όχι σε μπλοκ κλάσεων. Σημειώστε ότι σε επίπεδο module, οι :func:`locals` και :func:`globals` "
+"είναι το ίδιο λεξικό."
 
 #: library/functions.rst:1040
 msgid ""
 "The contents of this dictionary should not be modified; changes may not "
 "affect the values of local and free variables used by the interpreter."
 msgstr ""
+"Τα περιεχόμενα αυτού του λεξικού δεν πρέπει να τροποποιηθούν∙ οι αλλαγές ενδέχεται να μην "
+"επηρεάσουν τις τιμές των τοπικών και ελεύθερων μεταβλητών που χρησιμοποιούντια από τον διερμηνέα."
 
 #: library/functions.rst:1045
 msgid ""
@@ -1903,12 +1968,20 @@ msgid ""
 "the shortest iterable is exhausted.  For cases where the function inputs are "
 "already arranged into argument tuples, see :func:`itertools.starmap`\\."
 msgstr ""
+"Επιστρέφει έναν iterator που εφαρμόζει *συνάρτηση* σε κάθε στοιχείο του "
+"*iterable*, δίνοντας τα αποτελέσματα.  Εάν περάσουν επιπλέον ορίσματα *iterables*, "
+"η *συνάρτηση* πρέπει να λάβει τόσα ορίσματα και να εφαρμόζεται στα στοιχεία από όλα τα "
+"iterables παράλληλα.  Με πολλαπλούς iterables, ο iterator σταματά όταν εξαντληθεί ο συντομότερος "
+"iterable.  Για περιπτώσεις όπου οι είσοδοι συνάρτησης είναι ήδη διατεταγμένες σε πλειάδες ορισμάτων, "
+"βλέπε :func:`itertools.starmap`\\."
 
 #: library/functions.rst:1057
 msgid ""
 "Return the largest item in an iterable or the largest of two or more "
 "arguments."
 msgstr ""
+"Επιστρέφει το μεγαλύτερο στοιχείο σε ένα iterable ή το μεγαλύτερο από δύο "
+"ή περισσότερα ορίσματα."
 
 #: library/functions.rst:1060
 msgid ""
@@ -1916,6 +1989,9 @@ msgid ""
 "The largest item in the iterable is returned.  If two or more positional "
 "arguments are provided, the largest of the positional arguments is returned."
 msgstr ""
+"Εάν παρέχεται ένα όρισμα θέσης, θα πρέπει να είναι ένα :term:`iterable`. "
+"Επιστρέφεται το μεταλύτερο στοιχείο στο iterable.  Εάν παρέχονται δύο ή περισσότερα "
+"ορίσματα θέσης, επιστρέφεται το μεγαλύτερο από τα ορίσματα θέσης."
 
 #: library/functions.rst:1103
 msgid ""
@@ -1925,6 +2001,11 @@ msgid ""
 "empty. If the iterable is empty and *default* is not provided, a :exc:"
 "`ValueError` is raised."
 msgstr ""
+"Υπάρχουν δύο προαιρετικά ορίσματα τύπου λέξη-κλειδί. Το όρισμα *κλειδί* καθορίζει μια "
+"συνάρτηση ταξινόμησης ενός ορίσματος όπως αυτή χρησιμοποιείται για το :meth:`list.sort`. "
+"Το όρισμα *default* καθορίζει ένα αντικείμενο που θα επιστρέψει εάν ο iterable που παρέχεται είναι "
+"κενό. Εάν το iterable είναι κενό και το *default* δεν παρέχεται, εγείρει μια "
+":exc:`ValueError`."
 
 #: library/functions.rst:1071
 msgid ""
@@ -1933,26 +2014,34 @@ msgid ""
 "such as ``sorted(iterable, key=keyfunc, reverse=True)[0]`` and ``heapq."
 "nlargest(1, iterable, key=keyfunc)``."
 msgstr ""
+"Εάν πολλά στοιχεία είναι μέγιστα, η συνάρτηση επιστρέφει το πρώτο που συναντήθηκε.  Αυτό "
+"είναι σύμφωνο με άλλα εργαλεία διατήρησης σταθερότητας ταξινόμησης όπως "
+"``sorted(iterable, key=keyfunc, reverse=True)[0]`` και ``heapq."
+"nlargest(1, iterable, key=keyfunc)``.""
 
 #: library/functions.rst:1114
 msgid "Added the *default* keyword-only parameter."
-msgstr ""
+msgstr "Προστέθηκες η παράμετρος μόνο λέξη-κλειδί *default*."
 
 #: library/functions.rst:1117
 msgid "The *key* can be ``None``."
-msgstr ""
+msgstr "Το *key* μπορεί να είναι ``None``."
 
 #: library/functions.rst:1087
 msgid ""
 "Return a \"memory view\" object created from the given argument.  See :ref:"
 "`typememoryview` for more information."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο \"memory view\" που δημιουργήθηκε από το συγκεκριμένο όρισμα.  Βλέπε "
+":ref:`typememoryview` για περισσότερες λεπτομέρειες."
 
 #: library/functions.rst:1095
 msgid ""
 "Return the smallest item in an iterable or the smallest of two or more "
 "arguments."
 msgstr ""
+"Επιστρέφει το μικρότερο στοιχείο σε έναν iterable ή το μικρότερο από δύο ή περισσότερα "
+"ορίσματα."
 
 #: library/functions.rst:1098
 msgid ""
@@ -1960,6 +2049,9 @@ msgid ""
 "The smallest item in the iterable is returned.  If two or more positional "
 "arguments are provided, the smallest of the positional arguments is returned."
 msgstr ""
+"Εάν παρέχεται ένα όρισμα θέσης, θα πρέπει να είναι ένα :term:`iterable`. "
+"Επιστρέφει το μικρότερο στοιχείο στον iterable.  Εάν παρέχονται δύο ή περισσότερα ορίσματα "
+"θέσης, επιστρέφεται το μικρότερο από τα ορίσματα θέσης."
 
 #: library/functions.rst:1109
 msgid ""
@@ -1968,6 +2060,10 @@ msgid ""
 "such as ``sorted(iterable, key=keyfunc)[0]`` and ``heapq.nsmallest(1, "
 "iterable, key=keyfunc)``."
 msgstr ""
+"Εάν πολλά στοιχεία είναι ελάχιστα, η συνάρτηση επιστρέφει το πρώτο που συναντήθηκε.  "
+"Αυτό είναι σύμφωνο με άλλα εργαλεία διατήρησης σταθερότητας ταξινόμησης, όπως "
+"``sorted(iterable, key=keyfunc)[0]`` και ``heapq.nsmallest(1, "
+"iterable, key=keyfunc)``."
 
 #: library/functions.rst:1124
 msgid ""
@@ -1975,6 +2071,9 @@ msgid ""
 "`~iterator.__next__` method.  If *default* is given, it is returned if the "
 "iterator is exhausted, otherwise :exc:`StopIteration` is raised."
 msgstr ""
+"Ανάκτηση του επόμενου στοιχείο από το :term:`iterator` καλώντας τη μέθοδο :meth:"
+"`~iterator.__next__`.  Εάν δοθεί *default*, επιστρέφεται εάν ο iterator έχει εξαντληθεί, "
+"διαφορετικά εγείρεται μια :exc:`StopIteration`."
 
 #: library/functions.rst:1131
 msgid ""
@@ -1982,12 +2081,18 @@ msgid ""
 "It has methods that are common to all instances of Python classes.  This "
 "function does not accept any arguments."
 msgstr ""
+"Επιστρέφει ένα νέο αντικείμενο χωρίς χαρακτηριστικά.  Το :class:`object` είναι μια βάση για "
+"όλες τις κλάσεις. Έχει μεθόδους που είναι κοινές σε όλες τις περιπτώσεις κλάσεων Python.  Αυτή "
+"η συνάρτηση δεν δέχεται ορίσματα."
 
 #: library/functions.rst:1137
 msgid ""
 ":class:`object` does *not* have a :attr:`~object.__dict__`, so you can't "
 "assign arbitrary attributes to an instance of the :class:`object` class."
 msgstr ""
+"Το :class:`object` *δεν* έχει :attr:`~object.__dict__` επομένως δεν "
+"μπορείτε να εκχωρήσετε αυθαίρετα χαρακτηριστικά σε μια οντότητα της κλάσης "
+":class:`object`."
 
 #: library/functions.rst:1143
 msgid ""
@@ -1996,12 +2101,18 @@ msgid ""
 "object, it has to define an :meth:`~object.__index__` method that returns an "
 "integer. For example:"
 msgstr ""
+"Μετατρέπει έναν ακέραιο αριθμό σε μια οκταδική συμβολοσειρά με πρόθεμα \"0o\". Το αποτέλεσμα "
+"είναι μια έγκυρη έκφραση Python. Εάν το *x*  δεν είναι ένα αντικείμενο Python :class:`int`, "
+"πρέπει να ορίσει μια μέθοδο :meth:`~object.__index__` που επιστρέφει έναν ακέραιο αριθμό. "
+"Για παράδειγμα:"
 
 #: library/functions.rst:1153
 msgid ""
 "If you want to convert an integer number to an octal string either with the "
 "prefix \"0o\" or not, you can use either of the following ways."
 msgstr ""
+"Εάν θέλετε να μετατρέψετε έναν ακέραιο αριθμό σε οκταδική συμβολοσειρά είτε με το πρόθεμα "
+"\"0o\" είτε όχι, μπορείτε να χρησιμοποιήσετε έναν από τους παρακάτω τρόπους."
 
 #: library/functions.rst:1170
 msgid ""
@@ -2009,6 +2120,9 @@ msgid ""
 "cannot be opened, an :exc:`OSError` is raised. See :ref:`tut-files` for more "
 "examples of how to use this function."
 msgstr ""
+"Ανοίγιε το *αρχείο* και επιστρέφει ένα αντίστοιχεο :term:`file object`. Εάν το αρχείο "
+"δνε μπορεί να ανοίξει, εμφανίζεται ένα :exc:`OSError`. Δείτε το :ref:`tut-files` για περισσότερα "
+"παραδείγματα χρήσης αυτής της συνάρτησης."
 
 #: library/functions.rst:1174
 msgid ""
@@ -2018,6 +2132,11 @@ msgid ""
 "given, it is closed when the returned I/O object is closed unless *closefd* "
 "is set to ``False``.)"
 msgstr ""
+"Το *αρχείο* είναι ένα :term:`path-like object` που δίνει το όνομα διαδρομής (απόλυτο ή σε "
+"σχέση με τον τρέχονται κατάλογο εργασίας) του αρχείου που θα ανοίξει ή ένας ακέραιος file descriptor "
+"του αρχείου που πρόκεται να αναδιπλωθεί.  (Εάν δίνεται ένας file descriptor, κλείνει όταν "
+"το επιστρεφόμενο αντικείμενο I/O είναι κλειστό εκτός εάν *closefd*  έχει οριστεί ως ``False``.)"
+
 
 #: library/functions.rst:1180
 msgid ""
@@ -2032,70 +2151,79 @@ msgid ""
 "reading and writing raw bytes use binary mode and leave *encoding* "
 "unspecified.)  The available modes are:"
 msgstr ""
+"Το *mode* είναι μια προαιρειτκή συμβολοσειρά που καθορίζει τη λειτουργία στην οποία ανοίγει το αρχείο.  "
+"Από προεπιλογή είναι ``'r'`` που σημαίνει ανοιχτό γι αναάγνωση σε λειτουργία κειμένου. "
+"Άλλες κοινές τιμές είναι ``'w'`` για εγγραφή (περικοπή του αρχείου εάν υπάρχει ήδη), ``'x'`` "
+"για αποκλειστική δημιουργία και ``'a'`` για προσθήκη (κάτι που σε *μερικά* συστήματα Unix, σημαίνει ότι "
+"*όλες* οι εγγραφές προσαρτώνται στο τέλος του αρχείου ανεξάρτητα από την τρέχουσα θέση αναζήτησης).  Στη "
+"λειτουργία κειμένου, εάν δεν έχει καθοριστεί το *encoding*, η κωδικοποιήση που χρησιμοποιείται εξαρτάται από την "
+"πλατφόρμα: :func:`locale.getencoding()` καλείται για να ληφθεί η τρέχουσα κωδικοποιήση τοπικών ρυθμίσεων. (Για "
+"την ανάγνωση και την εγγραφή ακατέργαστων bytes χρηισιμοποιείται δυαδική λειτουργία και αφήνουν το *encoding* "
+"απροσδιόριστο.)  Οι διαθέσιμες λειτουργίες είναι:"
 
 #: library/functions.rst:1197
 msgid "Character"
-msgstr ""
+msgstr "Χαρακτήρας"
 
 #: library/functions.rst:1197
 msgid "Meaning"
-msgstr ""
+msgstr "Έννοια"
 
 #: library/functions.rst:1199
 msgid "``'r'``"
-msgstr ""
+msgstr "``'r'``"
 
 #: library/functions.rst:1199
 msgid "open for reading (default)"
-msgstr ""
+msgstr "άνοιγμα για ανάγνωση (προεπιλογή)"
 
 #: library/functions.rst:1200
 msgid "``'w'``"
-msgstr ""
+msgstr "``'w'``"
 
 #: library/functions.rst:1200
 msgid "open for writing, truncating the file first"
-msgstr ""
+msgstr "άνοιγμα για εγγραφή, περικόπτοντας πρώτα το αρχείο"
 
 #: library/functions.rst:1201
 msgid "``'x'``"
-msgstr ""
+msgstr "``'x'``"
 
 #: library/functions.rst:1201
 msgid "open for exclusive creation, failing if the file already exists"
-msgstr ""
+msgstr "άνοιγμα για αποκλειστική δημιουργία, αποτυγχάνοντας εάν το αρχείο υπάρχει ήδη."
 
 #: library/functions.rst:1202
 msgid "``'a'``"
-msgstr ""
+msgstr "``'a'``"
 
 #: library/functions.rst:1202
 msgid "open for writing, appending to the end of file if it exists"
-msgstr ""
+msgstr "άνοιγμα για εγγραφή, προσαρτείται στο τέλος του αρχείου εάν υπάρχει"
 
 #: library/functions.rst:1203
 msgid "``'b'``"
-msgstr ""
+msgstr "``'b'``"
 
 #: library/functions.rst:1347
 msgid "binary mode"
-msgstr ""
+msgstr "δυαδική λειτουργία"
 
 #: library/functions.rst:1204
 msgid "``'t'``"
-msgstr ""
+msgstr "``'t'``"
 
 #: library/functions.rst:1204
 msgid "text mode (default)"
-msgstr ""
+msgstr "λειτουργία κειμένου (προεπιλογή)"
 
 #: library/functions.rst:1205
 msgid "``'+'``"
-msgstr ""
+msgstr "``'+'``"
 
 #: library/functions.rst:1205
 msgid "open for updating (reading and writing)"
-msgstr ""
+msgstr "άνοιγμα για ενημέρωση (ανάγνωση και εγγραφή)"
 
 #: library/functions.rst:1208
 msgid ""
@@ -2103,6 +2231,9 @@ msgid ""
 "Modes ``'w+'`` and ``'w+b'`` open and truncate the file.  Modes ``'r+'`` and "
 "``'r+b'`` open the file with no truncation."
 msgstr ""
+"Η προπιλεγμένη λειτουργία είναι ``'r'`` (ανοίγει για ανάγνωση κειμένου, συνώνυμο του ``'rt'``). "
+"Οι λειτουργίες ``'w+'`` και ``'w+b'`` ανοίγει και περικόβει το αρχείο.  Οι λειτουργίες ``'r+'`` and "
+"``'r+b'`` ανοίγουν το αρχείο χωρίς περικοπή."
 
 #: library/functions.rst:1212
 msgid ""
@@ -2114,6 +2245,13 @@ msgid ""
 "having been first decoded using a platform-dependent encoding or using the "
 "specified *encoding* if given."
 msgstr ""
+"Όπως αναφέρεται στο :ref:`io-overview`, η Python κάνει διάκριση μεταξύ δυαδικού και κειμένου I/O.  "
+"Τα αρχεία που ανοίγουν σε δυαδική λειτουργία (συμπεριλαμβανομένου του ``'b'`` στο όρισμα *mode*) "
+"επιστρέφουν τα περιεχόμενα ως :class:`bytes` αντικείμενα χωρίς αποκωδικοποίηση.  "
+"Στη λειτουργία κειμένου (η προεπιλογή, ή όταν το ``'t'`` περιλαμβάνεται στο όρισμα *mode*), "
+"τα περιεχόμενα του αρχείου επιστρέφονται ως :class:`str`, τα bytes έχουν πρώτα αποκωδικοποιηθεί "
+"χρησιμοποιώντας μια εξαρτώμενη από πλατφόρμα κωδικοποίηση ή χρήση της καθορισμένης *κωδικοποίησης* "
+"εάν δίνεται."
 
 #: library/functions.rst:1222
 msgid ""
@@ -2121,6 +2259,9 @@ msgid ""
 "files; all the processing is done by Python itself, and is therefore "
 "platform-independent."
 msgstr ""
+"Η Python δεν εξαρτάται από την έννοια των αρχείων κειμένου του υποκείμενου λειτουργικού "
+"συστήματος∙ όλη η επεξεργασία γίνεται από την ίδια την Python και επομένως είναι ανεξάρτητη "
+"από την πλατφόρμα."
 
 #: library/functions.rst:1226
 msgid ""
@@ -2134,6 +2275,16 @@ msgid ""
 "``write_through`` flag for :func:`io.TextIOWrapper.reconfigure`. When no "
 "*buffering* argument is given, the default buffering policy works as follows:"
 msgstr ""
+"To *buffering* είναι ένας προαιρετικός ακέραιος που χρησιμοποιείται για το ορισμό της "
+"πολιτικής αποθήκευσης στην προσωρινή μνήμη.  Περνάει το 0 για να απενεργοποιήσετε την προσωρινή "
+"μνήμη (επιτρέπεται μόνο σε δυαδική λειτουργία), το 1 για να επιλέξετε προσωρινή αποθήκευση "
+"γραμμής (μπορεί να χρησιμοποιηθεί μόνο όταν γράφετε σε λειτουργία κειμένου) και έναν ακέραιο "
+"> 1 για να υποδείξει το μέγεθος σε byte μιας προσωρινής μνήμης τμημάτων σταθερού μεγέθους. Λάβετε "
+"υπόψη ότι ο καθορισμός ενός μεγέθους buffer με αυτόν τον τρόπο ισχύει για I/O με δυαδική προσωρινή "
+"μνήμη, αλλά το ``TextIOWrapper`` (δηλαδή, τα αρχεία που ανοίγουν με ``mode='r+'``) θα έχουνε άλλη "
+"αποθήκευση. Για να απενεργοποιήσετε την προσωρινή αποθήκευση στο ``TextIOWrapper``, εξετάστε το "
+"ενδεχόμενο να χρησιμοποιήσετε ένα ``write_through`` flag για :func:`io.TextIOWrapper.reconfigure`. "
+"Όταν δεν δίνεται όρισμα *buffering*, η προεπιλεγμένη πολιτική προσωρινής αποθήκευσης λειτουργεί ως εξής:"
 
 #: library/functions.rst:1236
 msgid ""
@@ -2142,6 +2293,10 @@ msgid ""
 "size\" and falling back on :const:`io.DEFAULT_BUFFER_SIZE`.  On many "
 "systems, the buffer will typically be 4096 or 8192 bytes long."
 msgstr ""
+"Τα δυαδικά αρχεία αποθηκεύονται στην προσωρινή μνήμη σε κομμάτια σταθερού μεγέθους∙ το μέγεθος "
+"του buffer επιλέγεται χρησιμοποιώντας μια ευρετική που προσπαθεί να προσδιορίσει το \"μέγεθος του "
+"μπλοκ\" της υποκείμενης συσκευής και επανέρχεται σε :const:`io.DEFAULT_BUFFER_SIZE`.  Σε πολλά "
+"συστήματα, η προσωρινή μνήμη θα έχει συνήθως μήκος 4096 ή 8192 bytes."
 
 #: library/functions.rst:1241
 msgid ""
@@ -2149,6 +2304,9 @@ msgid ""
 "returns ``True``) use line buffering.  Other text files use the policy "
 "described above for binary files."
 msgstr ""
+"\"Διαδραστικά\" αρχεία κειμένου (αρχεία για τα οποία το :meth:`~io.IOBase.isatty` "
+"επιστρέφει ``True``) χρησιμοποιούν αποθήκευση γραμμής.  Άλλα αρχεία κειμένου "
+"χρησιμοποιούν την πολιτική που περιγράφεται παραπάνω για δυαδικά αρχεία."
 
 #: library/functions.rst:1245
 msgid ""
@@ -2158,6 +2316,12 @@ msgid ""
 "encoding` supported by Python can be used. See the :mod:`codecs` module for "
 "the list of supported encodings."
 msgstr ""
+"Το *encoding* είναι το όνομα της κωδικοποίησης που χρησιμοποιείται για την "
+"αποκωδικοποίηση ή την κωδικοποίηση του αρχείου. Θα πρέπει να χρησιμοποιείται μόνο "
+"σε λειτουργία κειμένου.  Η προεπιλεγμένη κωδικοποίηση εξαρτάται από την πλατφόρμα "
+"(ό,τι επιστρέφει η :func:`locale.getencoding`), αλλά οποιοδήποτε :term:`text "
+"encoding` που υποστηρίζεται από την Python. Δείτε το module :mod:`codecs` για τη "
+"λίστα των υποστηριζόμενων κωδικοποιήσεων."
 
 #: library/functions.rst:1251
 msgid ""
@@ -2167,24 +2331,35 @@ msgid ""
 "though any error handling name that has been registered with :func:`codecs."
 "register_error` is also valid.  The standard names include:"
 msgstr ""
+"Το *errors* είναι μια προαιρετική συμβολοσειρά που καθορίζει τον τρόπο χειρισμού "
+"των σφαλμάτων κωδικοποίησης και αποκωδικοποίησης-αυτό δεν μπορεί να χρησιμοποιηθεί σε "
+"δυαδική λειτουργία. Διατίθεται μια ποικιλία τυπικών εργαλείων χειρισμού σφαλμάτων "
+"(παρατίθενται στην ενότητα :ref:`error-handlers`), αν και οποιοδήποτε όνομα χειρισμού σφαλμάτων έχει "
+"καταχωρηθεί με το :func:`codecs.register_error` είναι επίσης έγκυρο.  Τα τυπικά ονόματα περιλαμβάνουν:"
 
 #: library/functions.rst:1259
 msgid ""
 "``'strict'`` to raise a :exc:`ValueError` exception if there is an encoding "
 "error.  The default value of ``None`` has the same effect."
 msgstr ""
+"Το ``'strict'`` για να δημιουργήσει μια εξαίρεση :exc:`ValueError` εάν υπάρχει σφάλμα "
+"κωδικοποίησης.  Η προεπιλεγμένη τιμή του ``None`` έχει το ίδιο αποτέλεσμα."
 
 #: library/functions.rst:1263
 msgid ""
 "``'ignore'`` ignores errors.  Note that ignoring encoding errors can lead to "
 "data loss."
 msgstr ""
+"Το ``'ignore'`` αγνοεί τα σφάλματα.  Σημείωστε ότι η παράβλεψη σφαλμάτων κωδικοποίησης "
+"μπορεί να οδηγήσει σε απώλεια δεδομένων."
 
 #: library/functions.rst:1266
 msgid ""
 "``'replace'`` causes a replacement marker (such as ``'?'``) to be inserted "
 "where there is malformed data."
 msgstr ""
+"Το ``'replace'`` προκαλεί την εισαγωγή ενός δείκτη αντικατάστασης (όπως ``'?'``) όταν υπάρχουν "
+"δεδομένα με λανθασμένη μορφή."
 
 #: library/functions.rst:1269
 msgid ""
@@ -2194,6 +2369,11 @@ msgid ""
 "handler is used when writing data.  This is useful for processing files in "
 "an unknown encoding."
 msgstr ""
+"Το ``'surrogateescape'`` θα αντιπροσωπεύει τυχόν λανθασμένα byte ως μονάδες χαμηλού "
+"υποκατάστατου κωδικού που κυμαίνονται από U+DC80 έως U+DCFF. Αυτές οι μονάδες υποκατάστατου "
+"κωδικού θα μετατραπούν στη συνέχεια στα ίδια byte όταν ο χειριστής σφαλμάτων ``surrogateescape`` "
+"χρησιμοποιείται κατά την εγγραφή δεδομένων.  Αυτό είναι χρήσιμο για την επεξεργασία αρχείων σε "
+"άγνωστη κωδικοποίηση."
 
 #: library/functions.rst:1276
 msgid ""
@@ -2201,18 +2381,25 @@ msgid ""
 "not supported by the encoding are replaced with the appropriate XML "
 "character reference :samp:`&#{nnn};`."
 msgstr ""
+"Το ``'xmlcharrefreplace'`` υποστηρίζεται μόνο κατά την εγγραφή σε αρχείο. Οι χαρακτήρες που δεν "
+"υποστηρίζονται από την κωδικοποίηση αντικαθίστανται με την κατάλληλη αναφορά χαρακτήρων "
+"XML :samp:`&#{nnn};`."
 
 #: library/functions.rst:1280
 msgid ""
 "``'backslashreplace'`` replaces malformed data by Python's backslashed "
 "escape sequences."
 msgstr ""
+"Το ``'backslashreplace'`` αντικαθιστά δεδομένα με λανθασμένη μορφή από τις ακολουθίες "
+"διαφυγής με ανάστροφης καθέτου Python."
 
 #: library/functions.rst:1283
 msgid ""
 "``'namereplace'`` (also only supported when writing) replaces unsupported "
 "characters with ``\\N{...}`` escape sequences."
 msgstr ""
+"Το ``'namereplace'`` (υποστηρίζεται επίσης μόνο κατά τη σύνταξη) αντικαθιστά τους μη υποστηριζόμενους "
+"χαρακτήρες με ακολουθίες διαφυγής ``\\N{...}``."
 
 #: library/functions.rst:1291
 msgid ""
@@ -2220,6 +2407,8 @@ msgid ""
 "be ``None``, ``''``, ``'\\n'``, ``'\\r'``, and ``'\\r\\n'``.  It works as "
 "follows:"
 msgstr ""
+"Το *newline* καθόρίζει τον τρόπο ανάλυσης χαρακτήρων νέας γραμμής από τη ροή. Μπορεί να είναι και "
+"``None``, ``''``, ``'\\n'``, ``'\\r'``, και ``'\\r\\n'``.  Λειτουργεί ως εξής:"
 
 #: library/functions.rst:1295
 msgid ""
@@ -2231,6 +2420,13 @@ msgid ""
 "has any of the other legal values, input lines are only terminated by the "
 "given string, and the line ending is returned to the caller untranslated."
 msgstr ""
+"Κατά την ανάγνωση εισόδου από την ροή, εάν το *newline* είναι ``None``, η καθολική "
+"λειτουργία νεών γραμμών είναι ενεργοποιημένη.  Οι γραμμές στην είσοδο μπορούν να "
+"τελειώνουν σε ``'\\n'``, ``'\\r'``, ή ``'\\r\\n'``, και αυτά μεταφράζονται σε ``'\\n'`` "
+"πριν επιστραφούν στον καλούντα.  Εάν είναι ``''``, η καθολική λειτουργία νέων γραμμών " 
+"είναι ενεργοποιημένη, αλλά οι καταλήξεις γραμμών επιστρέφονται στον καλούντα αμετάφραστα.  Εάν "
+"έχει κάποια από τις άλλες νόμιμες τιμές, οι γραμμές εισόδου τερματίζονται μόνο από τη δεδομένη "
+"συμβολοσειρά και η κατάληξη γραμμής επιστρέφεται στον καλούντα αμετάφραστη."
 
 #: library/functions.rst:1303
 msgid ""
@@ -2240,6 +2436,11 @@ msgid ""
 "takes place.  If *newline* is any of the other legal values, any ``'\\n'`` "
 "characters written are translated to the given string."
 msgstr ""
+"Κατά την εγγραφή εξόδου στη ροή, εάν το *newline* είναι ``None``, τυχόν χαρακτήρες "
+"``'\\n'`` μεταφράζονται στο διαχωριστικό προεπιλεγμένων γραμμών του συστήματος, :"
+"data:`os.linesep`.  Εάν το *newline* είναι ``''`` ή ``'\\n'``, δεν πραγματοποιείται "
+"μετάφραση εάν το *newline* είναι οποιαδήποτε από τις άλλες νόμιμες τιμές, γράφονται "
+"οποιοιδήποτε χαρακτήρες ``'\\n'`` μεταφράζονται στη δεδομένη συμβολοσειρά."
 
 #: library/functions.rst:1309
 msgid ""
@@ -2248,6 +2449,9 @@ msgid ""
 "closed.  If a filename is given *closefd* must be ``True`` (the default); "
 "otherwise, an error will be raised."
 msgstr ""
+"Εάν το *closefd* είναι ``False`` και έχει δοθεί ένας descriptor αρχείου αντί για ένα όνομα αρχείου, "
+"ο υποκειμενικός descriptor αρχείου θα παραμείνει ανοιχτός όταν το αρχείο κλείσει.  Εάν δοθεί ένα όνομα "
+"αρχείου το *closefd* πρέπει να είναι ``True`` (η προεπιλογή)∙ διαφορετικά, θα δημιουργηθεί σφάλμα."
 
 #: library/functions.rst:1314
 msgid ""
@@ -2257,16 +2461,23 @@ msgid ""
 "descriptor (passing :mod:`os.open` as *opener* results in functionality "
 "similar to passing ``None``)."
 msgstr ""
+"Ένα προσαρμοσμένο πρόγραμμα ανοίγματος μπορεί να χρησιμοποιηθεί μεταβιβάζοντας ένα callable ως "
+"*opener*. Ο υποκείμενο descriptor αρχείου για το αντικείμενο αρχείου λαμβάνεται στη συνέχειας καλώντας "
+"το *opener* με (*file*, *flags*).  Το *opener* πρέπει να επιστρέψει ένα open descriptor αρχείου "
+"(περνώντας :mod:`os.open` ως *opener* έχει ως αποτέλεμσα λειτουργικότητα παρόμοια με το να περάσουμε "
+"το ``None``)."
 
 #: library/functions.rst:1320
 msgid "The newly created file is :ref:`non-inheritable <fd_inheritance>`."
-msgstr ""
+msgstr "Το νέο δημιουργημένο αρχείο είναι :ref:`non-inheritable <fd_inheritance>`."
 
 #: library/functions.rst:1322
 msgid ""
 "The following example uses the :ref:`dir_fd <dir_fd>` parameter of the :func:"
 "`os.open` function to open a file relative to a given directory::"
 msgstr ""
+"Το παρακάτω παράδειγμα χρησιμοποιεί την παράμετρο :ref:`dir_fd <dir_fd>` της συνάρτησης "
+":func:`os.open` για να ανοίξει ένα αρχείο σε σχέση με έναν δεδομένο κατάλογο::"
 
 #: library/functions.rst:1335
 msgid ""
@@ -2282,6 +2493,15 @@ msgid ""
 "disabled, the raw stream, a subclass of :class:`io.RawIOBase`, :class:`io."
 "FileIO`, is returned."
 msgstr ""
+"Ό τύπος του :term:`file object` που επιστρέφεται από τη συνάρτηση :func:`open` εξαρτάται από τη λειτουργία.  "
+"Όταν το :func:`open` χρησιμοποιείται για το άνοιγμα ενός αρχείου σε λειτουργία κειμένου (``'w'``, ``'r'``, ``'wt'``, "
+"``'rt'``, κ.λπ.), επιστρέφει μια υποκλάση του :class:`io.TextIOBase` (specifically :class:`io.TextIOWrapper`).  "
+"Όταν χρησιμοποιείται για το άνοιγμα ενός αρχείου σε δυαδική λειτουργία με προσωρινή αποθήκευση, η κλάση που "
+"επιστρέφεται είναι μια υποκλάση του :class:`io.BufferedIOBase`.  Η ακριβής κλάση ποικίλλει: σε λειτουργία "
+"δυαδικής ανάγνωσης, επιστρέφει ένα :class:`io.BufferedReader`∙ σε δυαδικές καταστάσεις εγγραφής και δυαδικής "
+"προσθήκης, επιστρέφει ένα :class:`io.BufferedWriter`, και στη λειτουργία ανάγνωσης/εγγραφής, επιστρέφει ένα "
+":class:`io.BufferedRandom`.  Όταν η προσωρινή αποθήκευση είναι απενεργοποιημένη, επιστρέφεται, η ακατέργαστη ροή "
+", μια υποκλάση :class:`io.RawIOBase`, :class:`io.FileIO`. "
 
 #: library/functions.rst:1356
 msgid ""
@@ -2289,26 +2509,32 @@ msgid ""
 "(where :func:`open` is declared), :mod:`os`, :mod:`os.path`, :mod:"
 "`tempfile`, and :mod:`shutil`."
 msgstr ""
+"Δείτε επίσης τις ενότητες διαχείρισης αρχείων, όπως :mod:`fileinput`, :mod:`io` "
+"(όπου ορίζεται η :func:`open`), :mod:`os`, :mod:`os.path`, :mod:"
+"`tempfile`, και :mod:`shutil`."
 
 #: library/functions.rst:1360
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``open`` with arguments ``file``, "
 "``mode``, ``flags``."
 msgstr ""
+"Εγείρει ένα :ref:`auditing event <auditing>` ``open`` με ορίσματα ``file``, ``mode``, ``flags``."
 
 #: library/functions.rst:1362
 msgid ""
 "The ``mode`` and ``flags`` arguments may have been modified or inferred from "
 "the original call."
 msgstr ""
+"Τα ορίσματα ``mode`` και ``flags`` μπορεί να έχουν τροποποιηθεί ή να έχουν συναχθεί από την αρχική "
+"κλήση."
 
 #: library/functions.rst:1367
 msgid "The *opener* parameter was added."
-msgstr ""
+msgstr "Προστέθηκε η παράμετρος *opener*."
 
 #: library/functions.rst:1368
 msgid "The ``'x'`` mode was added."
-msgstr ""
+msgstr "Προστέθηκε η λειτουργία ``'x'``."
 
 #: library/functions.rst:1369
 msgid ":exc:`IOError` used to be raised, it is now an alias of :exc:`OSError`."
@@ -3096,22 +3322,27 @@ msgid ""
 "For example, the statement ``import spam`` results in bytecode resembling "
 "the following code::"
 msgstr ""
+"Για παράδειγμα, η δήλωση ``import spam`` καταλήγει σε bytecode που μοιάζει με τον ακόλουθο κώδικα::"
 
 #: library/functions.rst:2066
 msgid "The statement ``import spam.ham`` results in this call::"
-msgstr ""
+msgstr "Η δήλωση ``import spam.ham`` καταλήγει σε αυτήν την κλήση::"
 
 #: library/functions.rst:2070
 msgid ""
 "Note how :func:`__import__` returns the toplevel module here because this is "
 "the object that is bound to a name by the :keyword:`import` statement."
 msgstr ""
+"Σημειώστε πως το :func:`__import__` επιστρέφει το ανωτάτου επιπέδου moduel εδώ, επειδή αυτό είναι "
+"το αντικείμενο που συνδέεται με ένα όνομα με τη δήλωση :keyword:`import`."
 
 #: library/functions.rst:2073
 msgid ""
 "On the other hand, the statement ``from spam.ham import eggs, sausage as "
 "saus`` results in ::"
 msgstr ""
+"Από την άλλη πλευρά, η δήλωση ``from spam.ham import eggs, sausage as "
+"saus`` καταλήγει σε ::"
 
 #: library/functions.rst:2080
 msgid ""
@@ -3119,28 +3350,36 @@ msgid ""
 "this object, the names to import are retrieved and assigned to their "
 "respective names."
 msgstr ""
+"Εδώ, το moduel ``spam.ham`` επιστρέφεται από τη :func:`__import__`.  Από αυτό το "
+"αντικείμενο, τα ονόματα προς εισαγωγή ανακτώνται και εκχωρούνται στα αντίστοιχα ονόματά τους."
 
 #: library/functions.rst:2084
 msgid ""
 "If you simply want to import a module (potentially within a package) by "
 "name, use :func:`importlib.import_module`."
 msgstr ""
+"Εάν θέλετε απολώς να εισάγετε ένα module (ενδεχομένως μέσα σε ένα πακέτο) με το όνομα, "
+"χρησιμοποιήστε το :func:`importlib.import_module`."
 
 #: library/functions.rst:2087
 msgid ""
 "Negative values for *level* are no longer supported (which also changes the "
 "default value to 0)."
 msgstr ""
+"Αρντικές τιμές για το *level* δεν υποστηρίζονται πλέον (το οποίο επίσης αλλάζει την "
+"προεπιλεγμένη τιμή σε 0)."
 
 #: library/functions.rst:2091
 msgid ""
 "When the command line options :option:`-E` or :option:`-I` are being used, "
 "the environment variable :envvar:`PYTHONCASEOK` is now ignored."
 msgstr ""
+"Όταν χρησιμοποιούνται επιλογές της γραμμής εντολών :option:`-E` ή :option:`-I`, "
+"τότε η μεταβλητή περιβάλλοντος :envvar:`PYTHONCASEOK` δεν λαμβάνεται υπόψι."
 
 #: library/functions.rst:2096
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: library/functions.rst:2097
 msgid ""
@@ -3148,111 +3387,114 @@ msgid ""
 "you are reading the code from a file, make sure to use newline conversion "
 "mode to convert Windows or Mac-style newlines."
 msgstr ""
+"Λάβετε υπόψη ότι ο αναλυτής δέχεται μόνο τη σύμβαση τέλους γραμμής τύπου Unix. Εάν διαβάζετε τον κώδικα "
+"από ένα αρχείο βεβαιωθείτε ότι χρησιμοποιείτε την λειτουργίά μετατροπής νέας γραμμής για την μετατροπή νέων "
+"γραμμών σε στυλ Windows ή Mac."
 
 #: library/functions.rst:153
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: library/functions.rst:1870
 msgid "type"
-msgstr ""
+msgstr "τύπος"
 
 #: library/functions.rst:576
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένη συνάρτηση"
 
 #: library/functions.rst:576
 msgid "exec"
-msgstr ""
+msgstr "exec"
 
 #: library/functions.rst:653
 msgid "NaN"
-msgstr ""
+msgstr "NaN"
 
 #: library/functions.rst:653
 msgid "Infinity"
-msgstr ""
+msgstr "Άπειρο"
 
 #: library/functions.rst:717
 msgid "__format__"
-msgstr ""
+msgstr "__format__"
 
 #: library/functions.rst:1754
 msgid "string"
-msgstr ""
+msgstr "συμβολοσειρά"
 
 #: library/functions.rst:717
 msgid "format() (built-in function)"
-msgstr ""
+msgstr "format() (ενσωματωμένη συνάρτηση)"
 
 #: library/functions.rst:1165
 msgid "file object"
-msgstr ""
+msgstr "αντικείμενο αρχείου"
 
 #: library/functions.rst:1286
 msgid "open() built-in function"
-msgstr ""
+msgstr "open() ενσωματωμένη συνάρτηση"
 
 #: library/functions.rst:1193
 msgid "file"
-msgstr ""
+msgstr "αρχείο"
 
 #: library/functions.rst:1193
 msgid "modes"
-msgstr ""
+msgstr "λειτουργίες"
 
 #: library/functions.rst:1286
 msgid "universal newlines"
-msgstr ""
+msgstr "καθολικές νέες γραμμές"
 
 #: library/functions.rst:1347
 msgid "line-buffered I/O"
-msgstr ""
+msgstr "I/O με buffer γραμμής"
 
 #: library/functions.rst:1347
 msgid "unbuffered I/O"
-msgstr ""
+msgstr "unbuffered I/O"
 
 #: library/functions.rst:1347
 msgid "buffer size, I/O"
-msgstr ""
+msgstr "μέγεθος bugger, I/O"
 
 #: library/functions.rst:1347
 msgid "I/O control"
-msgstr ""
+msgstr "Έλεγχος I/O"
 
 #: library/functions.rst:1347
 msgid "buffering"
-msgstr ""
+msgstr "buffering"
 
 #: library/functions.rst:1347
 msgid "text mode"
-msgstr ""
+msgstr "λειτουργία κειμένου"
 
 #: library/functions.rst:2025
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: library/functions.rst:1347
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
 #: library/functions.rst:1754
 msgid "str() (built-in function)"
-msgstr ""
+msgstr "str() (ενσωματωμένη συνάρτηση)"
 
 #: library/functions.rst:1870
 msgid "object"
-msgstr ""
+msgstr "αντικείμενο"
 
 #: library/functions.rst:2025
 msgid "statement"
-msgstr ""
+msgstr "δήλωση"
 
 #: library/functions.rst:2025
 msgid "import"
-msgstr ""
+msgstr "import"
 
 #: library/functions.rst:2025
 msgid "builtins"
-msgstr ""
+msgstr "builtins"
