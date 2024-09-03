@@ -1251,6 +1251,8 @@ msgid ""
 "If ``x = m / n`` is a negative rational number define ``hash(x)`` as ``-"
 "hash(-x)``.  If the resulting hash is ``-1``, replace it with ``-2``."
 msgstr ""
+"Αν ``x = m / n`` είναι ένας αρνητικός ρητός αριθμός τότε το ``hash(x)`` ορίζεται ως ``-"
+"hash(-x)``.  Αν το hash που προκύπτει είναι ``-1``, αντικαθίσταται με ``-2``."
 
 #: library/stdtypes.rst:744
 msgid ""
@@ -1258,6 +1260,9 @@ msgid ""
 "used as hash values for positive infinity or negative infinity "
 "(respectively)."
 msgstr ""
+"Οι συγκεκριμένες τιμές των ``sys.hash_info.inf`` και ``-sys.hash_info.inf`` "
+"χρησιμοποιούνται ως τιμές κατακερματισμού για το θετικό άπειρο ή το αρνητικό άπειρο "
+"(αντίστοιχα)."
 
 #: library/stdtypes.rst:748
 msgid ""
@@ -1267,6 +1272,11 @@ msgid ""
 "lies in ``range(-2**(sys.hash_info.width - 1), 2**(sys.hash_info.width - "
 "1))``.  Again, if the result is ``-1``, it's replaced with ``-2``."
 msgstr ""
+"Για έναν :class:`complex` αριθμό ``z``, οι τιμές κατακερματισμού των πραγματικών και "
+"φανταστικών μερών συνδυάζονται με τον υπολογισμό ``hash(z.real) + sys.hash_info."
+"imag * hash(z.imag)``, μειωμένο modulo ``2**sys.hash_info.width`` έτσι ώστε να "
+"βρίσκεται στο ``range(-2**(sys.hash_info.width - 1), 2**(sys.hash_info.width - "
+"1))``.  Και πάλι, αν το αποτέλεσμα είναι ``-1``, αντικαθίσταται με ``-2``."
 
 #: library/stdtypes.rst:756
 msgid ""
@@ -1274,22 +1284,29 @@ msgid ""
 "the built-in hash, for computing the hash of a rational number, :class:"
 "`float`, or :class:`complex`::"
 msgstr ""
+"Για να αποσαφηνίσουμε τους παραπάνω κανόνες, εδώ είναι ένα παράδειγμα κώδικα της Python, ισοδύναμο με "
+"το built-in hash, για τον υπολογισμό του hash ενός ρητού αριθμού, :class:"
+"`float`, ή :class:`complex`:"
 
 #: library/stdtypes.rst:812
 msgid "Boolean Type - :class:`bool`"
-msgstr ""
+msgstr "Τύπος Boolean - :class`bool`"
 
 #: library/stdtypes.rst:814
 msgid ""
 "Booleans represent truth values. The :class:`bool` type has exactly two "
 "constant instances: ``True`` and ``False``."
 msgstr ""
+"Οι Booleans αντιπροσωπεύουν τιμές αλήθειας. Ο τύπος :class:`bool` έχει ακριβώς δύο "
+"σταθερές τιμές: ``True`` και ``False``."
 
 #: library/stdtypes.rst:822
 msgid ""
 "The built-in function :func:`bool`  converts any value to a boolean, if the "
 "value can be interpreted as a truth value (see section :ref:`truth` above)."
 msgstr ""
+"Η ενσωματωμένη συνάρτηση :func:`bool` μετατρέπει οποιαδήποτε τιμή σε boolean, αν η "
+"τιμή μπορεί να ερμηνευτεί ως τιμή αλήθειας (βλέπε παραπάνω ενότητα :ref:`truth`)."
 
 #: library/stdtypes.rst:825
 msgid ""
@@ -1299,12 +1316,19 @@ msgid ""
 "\"and\", \"or\", \"xor\". However, the logical operators ``and``, ``or`` and "
 "``!=`` should be preferred over ``&``, ``|`` and ``^``."
 msgstr ""
+"Για λογικές πράξεις, χρησιμοποιήστε τους τελεστές :ref:`boolean <boolean>` ``and``, "
+"``or`` και ``not``. Κατά την εφαρμογή των bitwise τελεστών ``&``, ``|``, ``^`` "
+"σε δύο booleans, επιστρέφουν ένα bool ισοδύναμο με τις λογικές πράξεις "
+"\«and\», \«or\», \«xor\». Ωστόσο, οι λογικοί τελεστές ``and``, ``or`` και "
+"``!=`` θα πρέπει να προτιμώνται έναντι των ``&``, ``|`` και ``^``."
 
 #: library/stdtypes.rst:834
 msgid ""
 "The use of the bitwise inversion operator ``~`` is deprecated and will raise "
 "an error in Python 3.14."
 msgstr ""
+"Η χρήση του bitwise inversion τελεστή ``~`` είναι ξεπερασμένη και κάνει raise "
+"ένα σφάλμα στην Python 3.14."
 
 #: library/stdtypes.rst:837
 msgid ""
@@ -1313,10 +1337,14 @@ msgid ""
 "1, respectively. However, relying on this is discouraged; explicitly convert "
 "using :func:`int` instead."
 msgstr ""
+"Η :class:`bool` είναι υποκλάση της :class:`int` (βλέπε :ref:`typesnumeric`). Σε "
+"πολλά αριθμητικά περιβάλλοντα, τα ``False`` και ``True`` συμπεριφέρονται όπως οι ακέραιοι αριθμοί 0 και "
+"1, αντίστοιχα. Ωστόσο, δεν συνιστάται να βασίζεστε σε αυτό· μετατρέψτε "
+"χρησιμοποιώντας το :func:`int` αντ' αυτού."
 
 #: library/stdtypes.rst:845
 msgid "Iterator Types"
-msgstr ""
+msgstr "Τύποι Iterator"
 
 #: library/stdtypes.rst:853
 msgid ""
@@ -1325,12 +1353,18 @@ msgid ""
 "support iteration.  Sequences, described below in more detail, always "
 "support the iteration methods."
 msgstr ""
+"Η Python υποστηρίζει την έννοια της επανάληψης σε containers.  Αυτό υλοποιείται "
+"χρησιμοποιώντας δύο διαφορετικές μεθόδους· αυτές χρησιμοποιούνται για να επιτρέψουν σε κλάσεις που ορίζονται από το χρήστη να "
+"να υποστηρίζουν την επανάληψη.  Οι ακολουθίες (sequences), που περιγράφονται παρακάτω με περισσότερες λεπτομέρειες, πάντα "
+"υποστηρίζουν τις μεθόδους επανάληψης."
 
 #: library/stdtypes.rst:858
 msgid ""
 "One method needs to be defined for container objects to provide :term:"
 "`iterable` support:"
 msgstr ""
+"Μια μέθοδος πρέπει να οριστεί για τα container αντικείμενα ώστε να παρέχει :term:"
+"`iterable` υποστήριξη:"
 
 #: library/stdtypes.rst:865
 msgid ""
@@ -1343,12 +1377,22 @@ msgid ""
 "member:`~PyTypeObject.tp_iter` slot of the type structure for Python objects "
 "in the Python/C API."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο :term:`iterator`.  Το αντικείμενο απαιτείται να υποστηρίζει το "
+"πρωτόκολλο επαναλήψεων που περιγράφεται παρακάτω.  Εάν ένας container υποστηρίζει διαφορετικούς τύπους "
+"της επανάληψης, μπορούν να παρασχεθούν πρόσθετες μέθοδοι για να ζητηθούν συγκεκριμένοι "
+"iterators για αυτούς τους τύπους επανάληψης.  (Ένα παράδειγμα αντικειμένου που υποστηρίζει "
+"πολλαπλές μορφές επανάληψης θα ήταν μια δενδρική δομή που υποστηρίζει και αμφότερες τις "
+"breadth-first και depth-first μορφές).  Αυτή η μέθοδος αντιστοιχεί στη μέθοδο :c:"
+"member:`~PyTypeObject.tp_iter` της δομής τύπου για αντικείμενα Python "
+"στο API της Python/C."
 
 #: library/stdtypes.rst:874
 msgid ""
 "The iterator objects themselves are required to support the following two "
 "methods, which together form the :dfn:`iterator protocol`:"
 msgstr ""
+"Τα ίδια τα αντικείμενα επαναλήψεων απαιτείται να υποστηρίζουν τις ακόλουθες δύο "
+"μεθόδους, οι οποίες από κοινού αποτελούν το :dfn:`iterator protocol`:"
 
 #: library/stdtypes.rst:880
 msgid ""
