@@ -1251,8 +1251,9 @@ msgid ""
 "If ``x = m / n`` is a negative rational number define ``hash(x)`` as ``-"
 "hash(-x)``.  If the resulting hash is ``-1``, replace it with ``-2``."
 msgstr ""
-"Αν ``x = m / n`` είναι ένας αρνητικός ρητός αριθμός τότε το ``hash(x)`` ορίζεται ως ``-"
-"hash(-x)``.  Αν το hash που προκύπτει είναι ``-1``, αντικαθίσταται με ``-2``."
+"Αν ``x = m / n`` είναι ένας αρνητικός ρητός αριθμός τότε το ``hash(x)`` "
+"ορίζεται ως ``-hash(-x)``.  Αν το hash που προκύπτει είναι ``-1``, "
+"αντικαθίσταται με ``-2``."
 
 #: library/stdtypes.rst:744
 msgid ""
@@ -1261,8 +1262,8 @@ msgid ""
 "(respectively)."
 msgstr ""
 "Οι συγκεκριμένες τιμές των ``sys.hash_info.inf`` και ``-sys.hash_info.inf`` "
-"χρησιμοποιούνται ως τιμές κατακερματισμού για το θετικό άπειρο ή το αρνητικό άπειρο "
-"(αντίστοιχα)."
+"χρησιμοποιούνται ως τιμές κατακερματισμού για το θετικό άπειρο ή το αρνητικό "
+"άπειρο (αντίστοιχα)."
 
 #: library/stdtypes.rst:748
 msgid ""
@@ -1272,11 +1273,12 @@ msgid ""
 "lies in ``range(-2**(sys.hash_info.width - 1), 2**(sys.hash_info.width - "
 "1))``.  Again, if the result is ``-1``, it's replaced with ``-2``."
 msgstr ""
-"Για έναν :class:`complex` αριθμό ``z``, οι τιμές κατακερματισμού των πραγματικών και "
-"φανταστικών μερών συνδυάζονται με τον υπολογισμό ``hash(z.real) + sys.hash_info."
-"imag * hash(z.imag)``, μειωμένο modulo ``2**sys.hash_info.width`` έτσι ώστε να "
-"βρίσκεται στο ``range(-2**(sys.hash_info.width - 1), 2**(sys.hash_info.width - "
-"1))``.  Και πάλι, αν το αποτέλεσμα είναι ``-1``, αντικαθίσταται με ``-2``."
+"Για έναν :class:`complex` αριθμό ``z``, οι τιμές κατακερματισμού των "
+"πραγματικών και φανταστικών μερών συνδυάζονται με τον υπολογισμό ``hash(z."
+"real) + sys.hash_info.imag * hash(z.imag)``, μειωμένο modulo ``2**sys."
+"hash_info.width`` έτσι ώστε να βρίσκεται στο ``range(-2**(sys.hash_info."
+"width - 1), 2**(sys.hash_info.width - 1))``.  Και πάλι, αν το αποτέλεσμα "
+"είναι ``-1``, αντικαθίσταται με ``-2``."
 
 #: library/stdtypes.rst:756
 msgid ""
@@ -1284,9 +1286,9 @@ msgid ""
 "the built-in hash, for computing the hash of a rational number, :class:"
 "`float`, or :class:`complex`::"
 msgstr ""
-"Για να αποσαφηνίσουμε τους παραπάνω κανόνες, εδώ είναι ένα παράδειγμα κώδικα της Python, ισοδύναμο με "
-"το built-in hash, για τον υπολογισμό του hash ενός ρητού αριθμού, :class:"
-"`float`, ή :class:`complex`:"
+"Για να αποσαφηνίσουμε τους παραπάνω κανόνες, εδώ είναι ένα παράδειγμα κώδικα "
+"της Python, ισοδύναμο με το built-in hash, για τον υπολογισμό του hash ενός "
+"ρητού αριθμού, :class:`float`, ή :class:`complex`:"
 
 #: library/stdtypes.rst:812
 msgid "Boolean Type - :class:`bool`"
@@ -1297,16 +1299,17 @@ msgid ""
 "Booleans represent truth values. The :class:`bool` type has exactly two "
 "constant instances: ``True`` and ``False``."
 msgstr ""
-"Οι Booleans αντιπροσωπεύουν τιμές αλήθειας. Ο τύπος :class:`bool` έχει ακριβώς δύο "
-"σταθερές τιμές: ``True`` και ``False``."
+"Οι Booleans αντιπροσωπεύουν τιμές αλήθειας. Ο τύπος :class:`bool` έχει "
+"ακριβώς δύο σταθερές τιμές: ``True`` και ``False``."
 
 #: library/stdtypes.rst:822
 msgid ""
 "The built-in function :func:`bool`  converts any value to a boolean, if the "
 "value can be interpreted as a truth value (see section :ref:`truth` above)."
 msgstr ""
-"Η ενσωματωμένη συνάρτηση :func:`bool` μετατρέπει οποιαδήποτε τιμή σε boolean, αν η "
-"τιμή μπορεί να ερμηνευτεί ως τιμή αλήθειας (βλέπε παραπάνω ενότητα :ref:`truth`)."
+"Η ενσωματωμένη συνάρτηση :func:`bool` μετατρέπει οποιαδήποτε τιμή σε "
+"boolean, αν η τιμή μπορεί να ερμηνευτεί ως τιμή αλήθειας (βλέπε παραπάνω "
+"ενότητα :ref:`truth`)."
 
 #: library/stdtypes.rst:825
 msgid ""
@@ -1316,19 +1319,19 @@ msgid ""
 "\"and\", \"or\", \"xor\". However, the logical operators ``and``, ``or`` and "
 "``!=`` should be preferred over ``&``, ``|`` and ``^``."
 msgstr ""
-"Για λογικές πράξεις, χρησιμοποιήστε τους τελεστές :ref:`boolean <boolean>` ``and``, "
-"``or`` και ``not``. Κατά την εφαρμογή των bitwise τελεστών ``&``, ``|``, ``^`` "
-"σε δύο booleans, επιστρέφουν ένα bool ισοδύναμο με τις λογικές πράξεις "
-"\«and\», \«or\», \«xor\». Ωστόσο, οι λογικοί τελεστές ``and``, ``or`` και "
-"``!=`` θα πρέπει να προτιμώνται έναντι των ``&``, ``|`` και ``^``."
+"Για λογικές πράξεις, χρησιμοποιήστε τους τελεστές :ref:`boolean <boolean>` "
+"``and``, ``or`` και ``not``. Κατά την εφαρμογή των bitwise τελεστών ``&``, "
+"``|``, ``^`` σε δύο booleans, επιστρέφουν ένα bool ισοδύναμο με τις λογικές "
+"πράξεις \"and\", \"or\", \"xor\". Ωστόσο, οι λογικοί τελεστές ``and``, "
+"``or`` και ``!=`` θα πρέπει να προτιμώνται έναντι των ``&``, ``|`` και ``^``."
 
 #: library/stdtypes.rst:834
 msgid ""
 "The use of the bitwise inversion operator ``~`` is deprecated and will raise "
 "an error in Python 3.14."
 msgstr ""
-"Η χρήση του bitwise inversion τελεστή ``~`` είναι ξεπερασμένη και κάνει raise "
-"ένα σφάλμα στην Python 3.14."
+"Η χρήση του bitwise inversion τελεστή ``~`` είναι ξεπερασμένη και κάνει "
+"raise ένα σφάλμα στην Python 3.14."
 
 #: library/stdtypes.rst:837
 msgid ""
@@ -1337,10 +1340,10 @@ msgid ""
 "1, respectively. However, relying on this is discouraged; explicitly convert "
 "using :func:`int` instead."
 msgstr ""
-"Η :class:`bool` είναι υποκλάση της :class:`int` (βλέπε :ref:`typesnumeric`). Σε "
-"πολλά αριθμητικά περιβάλλοντα, τα ``False`` και ``True`` συμπεριφέρονται όπως οι ακέραιοι αριθμοί 0 και "
-"1, αντίστοιχα. Ωστόσο, δεν συνιστάται να βασίζεστε σε αυτό· μετατρέψτε "
-"χρησιμοποιώντας το :func:`int` αντ' αυτού."
+"Η :class:`bool` είναι υποκλάση της :class:`int` (βλέπε :ref:`typesnumeric`). "
+"Σε πολλά αριθμητικά περιβάλλοντα, τα ``False`` και ``True`` συμπεριφέρονται "
+"όπως οι ακέραιοι αριθμοί 0 και 1, αντίστοιχα. Ωστόσο, δεν συνιστάται να "
+"βασίζεστε σε αυτό· μετατρέψτε χρησιμοποιώντας το :func:`int` αντ' αυτού."
 
 #: library/stdtypes.rst:845
 msgid "Iterator Types"
@@ -1353,18 +1356,20 @@ msgid ""
 "support iteration.  Sequences, described below in more detail, always "
 "support the iteration methods."
 msgstr ""
-"Η Python υποστηρίζει την έννοια της επανάληψης σε containers.  Αυτό υλοποιείται "
-"χρησιμοποιώντας δύο διαφορετικές μεθόδους· αυτές χρησιμοποιούνται για να επιτρέψουν σε κλάσεις που ορίζονται από το χρήστη να "
-"να υποστηρίζουν την επανάληψη.  Οι ακολουθίες (sequences), που περιγράφονται παρακάτω με περισσότερες λεπτομέρειες, πάντα "
-"υποστηρίζουν τις μεθόδους επανάληψης."
+"Η Python υποστηρίζει την έννοια της επανάληψης σε containers.  Αυτό "
+"υλοποιείται χρησιμοποιώντας δύο διαφορετικές μεθόδους· αυτές "
+"χρησιμοποιούνται για να επιτρέψουν σε κλάσεις που ορίζονται από το χρήστη να "
+"να υποστηρίζουν την επανάληψη.  Οι ακολουθίες (sequences), που περιγράφονται "
+"παρακάτω με περισσότερες λεπτομέρειες, πάντα υποστηρίζουν τις μεθόδους "
+"επανάληψης."
 
 #: library/stdtypes.rst:858
 msgid ""
 "One method needs to be defined for container objects to provide :term:"
 "`iterable` support:"
 msgstr ""
-"Μια μέθοδος πρέπει να οριστεί για τα container αντικείμενα ώστε να παρέχει :term:"
-"`iterable` υποστήριξη:"
+"Μια μέθοδος πρέπει να οριστεί για τα container αντικείμενα ώστε να παρέχει :"
+"term:`iterable` υποστήριξη:"
 
 #: library/stdtypes.rst:865
 msgid ""
@@ -1377,22 +1382,23 @@ msgid ""
 "member:`~PyTypeObject.tp_iter` slot of the type structure for Python objects "
 "in the Python/C API."
 msgstr ""
-"Επιστρέφει ένα αντικείμενο :term:`iterator`.  Το αντικείμενο απαιτείται να υποστηρίζει το "
-"πρωτόκολλο επαναλήψεων που περιγράφεται παρακάτω.  Εάν ένας container υποστηρίζει διαφορετικούς τύπους "
-"της επανάληψης, μπορούν να παρασχεθούν πρόσθετες μέθοδοι για να ζητηθούν συγκεκριμένοι "
-"iterators για αυτούς τους τύπους επανάληψης.  (Ένα παράδειγμα αντικειμένου που υποστηρίζει "
-"πολλαπλές μορφές επανάληψης θα ήταν μια δενδρική δομή που υποστηρίζει και αμφότερες τις "
-"breadth-first και depth-first μορφές).  Αυτή η μέθοδος αντιστοιχεί στη μέθοδο :c:"
-"member:`~PyTypeObject.tp_iter` της δομής τύπου για αντικείμενα Python "
-"στο API της Python/C."
+"Επιστρέφει ένα αντικείμενο :term:`iterator`.  Το αντικείμενο απαιτείται να "
+"υποστηρίζει το πρωτόκολλο επαναλήψεων που περιγράφεται παρακάτω.  Εάν ένας "
+"container υποστηρίζει διαφορετικούς τύπους της επανάληψης, μπορούν να "
+"παρασχεθούν πρόσθετες μέθοδοι για να ζητηθούν συγκεκριμένοι iterators για "
+"αυτούς τους τύπους επανάληψης.  (Ένα παράδειγμα αντικειμένου που υποστηρίζει "
+"πολλαπλές μορφές επανάληψης θα ήταν μια δενδρική δομή που υποστηρίζει και "
+"αμφότερες τις breadth-first και depth-first μορφές).  Αυτή η μέθοδος "
+"αντιστοιχεί στη μέθοδο :c:member:`~PyTypeObject.tp_iter` της δομής τύπου για "
+"αντικείμενα Python στο API της Python/C."
 
 #: library/stdtypes.rst:874
 msgid ""
 "The iterator objects themselves are required to support the following two "
 "methods, which together form the :dfn:`iterator protocol`:"
 msgstr ""
-"Τα ίδια τα αντικείμενα επαναλήψεων απαιτείται να υποστηρίζουν τις ακόλουθες δύο "
-"μεθόδους, οι οποίες από κοινού αποτελούν το :dfn:`iterator protocol`:"
+"Τα ίδια τα αντικείμενα επαναλήψεων απαιτείται να υποστηρίζουν τις ακόλουθες "
+"δύο μεθόδους, οι οποίες από κοινού αποτελούν το :dfn:`iterator protocol`:"
 
 #: library/stdtypes.rst:880
 msgid ""
@@ -1401,6 +1407,11 @@ msgid ""
 "`in` statements.  This method corresponds to the :c:member:`~PyTypeObject."
 "tp_iter` slot of the type structure for Python objects in the Python/C API."
 msgstr ""
+"Επιστρέφει το ίδιο το αντικείμενο :term:`iterator`.  Αυτό απαιτείται ώστε να "
+"επιτραπεί η χρησιμοποίηση τόσο των containers, όσο και των iterators με τα "
+"statements :keyword:`for` και :keyword:`in`.  Αυτή η μέθοδος αντιστοιχεί στη "
+"δομή :c:member:`~PyTypeObject.tp_iter` των αντικειμένων της Python στο "
+"Python/C API."
 
 #: library/stdtypes.rst:889
 msgid ""
@@ -1409,6 +1420,10 @@ msgid ""
 "the :c:member:`~PyTypeObject.tp_iternext` slot of the type structure for "
 "Python objects in the Python/C API."
 msgstr ""
+"Επιστρέφει το επόμενο στοιχείο από τον :term:`iterator`.  Εάν δεν υπάρχουν "
+"άλλα στοιχεία, κάνει raise την εξαίρεση :exc:`StopIteration`.  Αυτή η "
+"μέθοδος αντιστοιχεί στην στην δομή :c:member:`~PyTypeObject.tp_iternext` των "
+"αντικειμένων της Python στο API της Python/C."
 
 #: library/stdtypes.rst:894
 msgid ""
@@ -1417,6 +1432,11 @@ msgid ""
 "forms.  The specific types are not important beyond their implementation of "
 "the iterator protocol."
 msgstr ""
+"Η Python ορίζει διάφορα αντικείμενα iterator για την υποστήριξη της "
+"επανάληψης πάνω σε γενικούς και συγκεκριμένους τύπους ακολουθιών "
+"(sequences), λεξικά (dictionaries) και άλλες πιο εξειδικευμένες μορφές.  Οι "
+"συγκεκριμένοι τύποι δεν είναι σημαντικοί πέρα από την υλοποίησή του του "
+"iterator πρωτοκόλλου."
 
 #: library/stdtypes.rst:899
 msgid ""
@@ -1424,10 +1444,13 @@ msgid ""
 "`StopIteration`, it must continue to do so on subsequent calls. "
 "Implementations that do not obey this property are deemed broken."
 msgstr ""
+"Μόλις η μέθοδος :meth:`~iterator.__next__` ενός iterator κάνει raise ένα :"
+"exc:`StopIteration`, πρέπει να συνεχίσει να το κάνει σε επόμενες κλήσεις. "
+"Υλοποιήσεις που δεν υπακούν σε αυτή την ιδιότητα θεωρούνται εσφαλμένες."
 
 #: library/stdtypes.rst:907
 msgid "Generator Types"
-msgstr ""
+msgstr "Τύποι Generator"
 
 #: library/stdtypes.rst:909
 msgid ""
@@ -1439,10 +1462,18 @@ msgid ""
 "generators can be found in :ref:`the documentation for the yield expression "
 "<yieldexpr>`."
 msgstr ""
+"Οι :term:`generator`\\s της Python παρέχουν έναν βολικό τρόπο για να "
+"υλοποιήσετε το iterator πρωτόκολλο.  Εάν η μέθοδος :meth:`~iterator."
+"__iter__` ενός container αντικειμένου είναι υλοποιημένη ως generator, θα "
+"επιστρέψει αυτόματα ένα αντικείμενο iterator (τεχνικά, ένα αντικείμενο "
+"generator) που παρέχει τις :meth:`!__iter__` και :meth:`~generator.__next__` "
+"μεθόδους. Περισσότερες πληροφορίες σχετικά με τους generators μπορείτε να "
+"βρείτε στην :ref:the documentation for the yield expression <yieldexpr>`."
 
 #: library/stdtypes.rst:921
 msgid "Sequence Types --- :class:`list`, :class:`tuple`, :class:`range`"
 msgstr ""
+"Τύποι Ακολουθίας (Sequence) --- :class:`list`, :class:`tuple`, :class:`range`"
 
 #: library/stdtypes.rst:923
 msgid ""
@@ -1451,10 +1482,14 @@ msgid ""
 "<binaryseq>` and :ref:`text strings <textseq>` are described in dedicated "
 "sections."
 msgstr ""
+"Υπάρχουν τρεις βασικοί τύποι ακολουθιών: lists (λίστες), tuples (πλειάδες) "
+"και range objects (αντικείμενα εύρους). Πρόσθετοι τύποι ακολουθίας "
+"προσαρμοσμένοι για την επεξεργασία :ref:`binary data  <binaryseq>` και :ref:"
+"`text strings <textseq>` περιγράφονται σε ειδικές ενότητες."
 
 #: library/stdtypes.rst:932
 msgid "Common Sequence Operations"
-msgstr ""
+msgstr "Κοινές Λειτουργίες Ακολουθιών (Sequences)"
 
 #: library/stdtypes.rst:936
 msgid ""
@@ -1463,6 +1498,11 @@ msgid ""
 "provided to make it easier to correctly implement these operations on custom "
 "sequence types."
 msgstr ""
+"Οι λειτουργίες του παρακάτω πίνακα υποστηρίζονται από τους περισσότερους "
+"τύπους ακολουθιών, τόσο μεταβλητών (mutable) όσο και αμετάβλητων "
+"(immutable). Η :class:`collections.abc.Sequence` ABC παρέχεται για να "
+"διευκολύνει τη σωστή υλοποίηση αυτών των πράξεων σε προσαρμοσμένες τύπους "
+"ακολουθίας."
 
 #: library/stdtypes.rst:941
 msgid ""
@@ -1471,6 +1511,11 @@ msgid ""
 "are integers and *x* is an arbitrary object that meets any type and value "
 "restrictions imposed by *s*."
 msgstr ""
+"Αυτός ο πίνακας απαριθμεί τις λειτουργίες ακολουθίας ταξινομημένες κατά "
+"αύξουσα προτεραιότητα.  Στον πίνακα, τα *s* και *t* είναι ακολουθίες του "
+"ίδιου τύπου, τα *n*, *i*, *j* και *k* είναι ακέραιοι αριθμοί και το *x* "
+"είναι ένα αυθαίρετο αντικείμενο που πληροί οποιονδήποτε τύπο και "
+"περιορισμούς τιμής που επιβάλλονται από το *s*."
 
 #: library/stdtypes.rst:946
 msgid ""
@@ -1479,124 +1524,129 @@ msgid ""
 "operations have the same priority as the corresponding numeric operations. "
 "[3]_"
 msgstr ""
+"Οι πράξεις ``in`` και ``not in`` έχουν τις ίδιες προτεραιότητες με τις "
+"πράξεις σύγκρισης. Οι πράξεις ``+`` (συνένωση) και ``*`` (επανάληψη) έχουν "
+"την ίδια προτεραιότητα με τις αντίστοιχες αριθμητικές πράξεις. [3]_"
 
 #: library/stdtypes.rst:967
 msgid "``x in s``"
-msgstr ""
+msgstr "``x in s``"
 
 #: library/stdtypes.rst:967
 msgid "``True`` if an item of *s* is equal to *x*, else ``False``"
-msgstr ""
+msgstr "``True`` αν ένα στοιχείο του *s* είναι ίσο με το *x*, αλλιώς ``False``"
 
 #: library/stdtypes.rst:970
 msgid "``x not in s``"
-msgstr ""
+msgstr "``x not in s``"
 
 #: library/stdtypes.rst:970
 msgid "``False`` if an item of *s* is equal to *x*, else ``True``"
-msgstr ""
+msgstr "``False`` αν ένα στοιχείο του *s* είναι ίσο με το *x*, αλλιώς ``True``"
 
 #: library/stdtypes.rst:973
 msgid "``s + t``"
-msgstr ""
+msgstr "``s + t``"
 
 #: library/stdtypes.rst:973
 msgid "the concatenation of *s* and *t*"
-msgstr ""
+msgstr "η συνένωση του *s* και *t*"
 
 #: library/stdtypes.rst:973
 msgid "(6)(7)"
-msgstr ""
+msgstr "(6)(7)"
 
 #: library/stdtypes.rst:976
 msgid "``s * n`` or ``n * s``"
-msgstr ""
+msgstr "``s * n`` ή ``n * s``"
 
 #: library/stdtypes.rst:976
 msgid "equivalent to adding *s* to itself *n* times"
-msgstr ""
+msgstr "ίσο με την πρόσθεση του *s* στον εαυτό του *n* φορές"
 
 #: library/stdtypes.rst:976
 msgid "(2)(7)"
-msgstr ""
+msgstr "(2)(7)"
 
 #: library/stdtypes.rst:979
 msgid "``s[i]``"
-msgstr ""
+msgstr "``s[i]``"
 
 #: library/stdtypes.rst:979
 msgid "*i*\\ th item of *s*, origin 0"
-msgstr ""
+msgstr "*i*\\ ο στοιχείο του *s*, αρχή το 0"
 
 #: library/stdtypes.rst:981
 msgid "``s[i:j]``"
-msgstr ""
+msgstr "``s[i:j]``"
 
 #: library/stdtypes.rst:981
 msgid "slice of *s* from *i* to *j*"
-msgstr ""
+msgstr "slice (υποσύνολο) του *s* από το *i* μέχρι το *j*"
 
 #: library/stdtypes.rst:981
 msgid "(3)(4)"
-msgstr ""
+msgstr "(3)(4)"
 
 #: library/stdtypes.rst:983
 msgid "``s[i:j:k]``"
-msgstr ""
+msgstr "``s[i:j:k]``"
 
 #: library/stdtypes.rst:983
 msgid "slice of *s* from *i* to *j* with step *k*"
-msgstr ""
+msgstr "slice (υποσύνολο) του *s* από το *i* μέχρι το *j* με βήμα *k*"
 
 #: library/stdtypes.rst:983
 msgid "(3)(5)"
-msgstr ""
+msgstr "(3)(5)"
 
 #: library/stdtypes.rst:986
 msgid "``len(s)``"
-msgstr ""
+msgstr "``len(s)``"
 
 #: library/stdtypes.rst:986
 msgid "length of *s*"
-msgstr ""
+msgstr "μήκος του *s*"
 
 #: library/stdtypes.rst:988
 msgid "``min(s)``"
-msgstr ""
+msgstr "``min(s)``"
 
 #: library/stdtypes.rst:988
 msgid "smallest item of *s*"
-msgstr ""
+msgstr "μικρότερο αντικείμενο του *s*"
 
 #: library/stdtypes.rst:990
 msgid "``max(s)``"
-msgstr ""
+msgstr "``max(s)``"
 
 #: library/stdtypes.rst:990
 msgid "largest item of *s*"
-msgstr ""
+msgstr "μεγαλύτερο αντικείμενο του *s*"
 
 #: library/stdtypes.rst:992
 msgid "``s.index(x[, i[, j]])``"
-msgstr ""
+msgstr "``s.index(x[, i[, j]])``"
 
 #: library/stdtypes.rst:992
 msgid ""
 "index of the first occurrence of *x* in *s* (at or after index *i* and "
 "before index *j*)"
 msgstr ""
+"δείκτης της πρώτης εμφάνισης του *x* στο *s* (μετά από τον ή στον δείκτη *i* "
+"και πριν από το δείκτη *j*)"
 
 #: library/stdtypes.rst:3645
 msgid "\\(8)"
-msgstr ""
+msgstr "\\(8)"
 
 #: library/stdtypes.rst:996
 msgid "``s.count(x)``"
-msgstr ""
+msgstr "``s.count(x)``"
 
 #: library/stdtypes.rst:996
 msgid "total number of occurrences of *x* in *s*"
-msgstr ""
+msgstr "συνολικές εμφανίσεις του *x* στο *s*"
 
 #: library/stdtypes.rst:1000
 msgid ""
@@ -1606,6 +1656,12 @@ msgid ""
 "and the two sequences must be of the same type and have the same length.  "
 "(For full details see :ref:`comparisons` in the language reference.)"
 msgstr ""
+"Οι ακολουθίες (sequences) του ίδιου τύπου υποστηρίζουν επίσης συγκρίσεις.  "
+"Ειδικότερα, τα tuples (πλειάδες) και οι λίστες συγκρίνονται λεξικογραφικά "
+"συγκρίνοντας τα αντίστοιχα στοιχεία. Αυτό σημαίνει ότι για να συγκρίνουμε "
+"ίσα, κάθε στοιχείο πρέπει να συγκρίνεται ως ίσο με το αντίστοιχό του, οι δύο "
+"ακολουθίες πρέπει να είναι του ίδιου τύπου και να έχουν το ίδιο μήκος.  (Για "
+"πλήρεις λεπτομέρειες δείτε την αναφορά :ref:`comparisons`.)"
 
 #: library/stdtypes.rst:1010
 msgid ""
@@ -1615,6 +1671,12 @@ msgid ""
 "`IndexError` or a :exc:`StopIteration` is encountered (or when the index "
 "drops below zero)."
 msgstr ""
+"Εμπρόσθιοι και αντίστροφοι iterators πάνω σε μεταβλητές ακολουθίες έχουν "
+"πρόσβαση σε τιμές χρησιμοποιώντας ένα δείκτη.  Αυτός ο δείκτης θα συνεχίσει "
+"να βαδίζει προς τα εμπρός (ή προς τα πίσω) ακόμα και αν η υποκείμενη "
+"ακολουθία μεταλλάσσεται.  Ο iterator τερματίζει μόνο όταν ένα :exc:"
+"`IndexError` ή ένα :exc:`StopIteration` γίνει raise (ή όταν ο δείκτης πέσει "
+"κάτω από το μηδέν)."
 
 #: library/stdtypes.rst:1019
 msgid ""
@@ -1623,6 +1685,11 @@ msgid ""
 "as :class:`str`, :class:`bytes` and :class:`bytearray`) also use them for "
 "subsequence testing::"
 msgstr ""
+"Ενώ οι πράξεις ``in`` και ``not in`` χρησιμοποιούνται γενικά μόνο για απλό "
+"έλεγχο containment (αν στοιχείο περιέχεται σε μια δομή), ορισμένες "
+"εξειδικευμένες ακολουθίες (όπως όπως οι :class:`str`, :class:`bytes` και :"
+"class:`bytearray`) τις χρησιμοποιούν επίσης για subsequence testing (έλεγχο "
+"υποακολουθίας)::"
 
 #: library/stdtypes.rst:1028
 msgid ""
@@ -1631,6 +1698,10 @@ msgid ""
 "not copied; they are referenced multiple times.  This often haunts new "
 "Python programmers; consider::"
 msgstr ""
+"Τιμές του *n* μικρότερες από το ``0`` αντιμετωπίζονται ως ``0`` (που δίνει "
+"μια κενή ακολουθία του ίδιου τύπου με *s*).  Σημειώστε ότι τα στοιχεία της "
+"ακολουθίας *s* δεν αντιγράφονται· αναφέρονται πολλές φορές.  Αυτό συχνά "
+"στοιχειώνει τα άτομα που ξεκινούν με Python- σκεφτείτε::"
 
 #: library/stdtypes.rst:1040
 msgid ""
@@ -1639,12 +1710,19 @@ msgid ""
 "empty list.  Modifying any of the elements of ``lists`` modifies this single "
 "list. You can create a list of different lists this way::"
 msgstr ""
+"Αυτό που συνέβη είναι ότι το ``[[]]`` είναι μια λίστα ενός στοιχείου που "
+"περιέχει μία κενή λίστα, οπότε και τα τρία στοιχεία της ``[[]] * 3`` είναι "
+"αναφορές σε αυτή τη μία κενή λίστα.  Η τροποποίηση οποιουδήποτε από τα "
+"στοιχεία της ``lists`` τροποποιεί αυτή τη μοναδική λίστα. Μπορείτε να "
+"δημιουργήσετε μια λίστα από διαφορετικές λίστες με αυτόν τον τρόπο:: "
 
 #: library/stdtypes.rst:1052
 msgid ""
 "Further explanation is available in the FAQ entry :ref:`faq-multidimensional-"
 "list`."
 msgstr ""
+"Περαιτέρω επεξήγηση είναι διαθέσιμη στο λήμμα FAQ :ref:`faq-multidimensional-"
+"list`."
 
 #: library/stdtypes.rst:1056
 msgid ""
@@ -1652,6 +1730,9 @@ msgid ""
 "``len(s) + i`` or ``len(s) + j`` is substituted.  But note that ``-0`` is "
 "still ``0``."
 msgstr ""
+"Εάν το *i* ή το *j* είναι αρνητικό, ο δείκτης είναι σχετικός με το τέλος της "
+"ακολουθίας *s*: το ``len(s) + i`` ή το ``len(s) + j`` αντικαθίσταται.  "
+"Σημειώστε όμως ότι το ``-0`` εξακολουθεί να είναι ``0``."
 
 #: library/stdtypes.rst:1061
 msgid ""
@@ -1661,6 +1742,12 @@ msgid ""
 "*j* is omitted or ``None``, use ``len(s)``.  If *i* is greater than or equal "
 "to *j*, the slice is empty."
 msgstr ""
+"Το υποσύνολο (slice) του *s* από το *i* έως το *j* ορίζεται ως η ακολουθία "
+"στοιχείων με δείκτη *k* τέτοια ώστε ``i <= k < j```.  Εάν το *i* ή το *j* "
+"είναι μεγαλύτερο από το ``len(s)``, χρησιμοποιήστε το ``len(s)``.  Αν το *i* "
+"παραλείπεται ή είναι ``None``, χρησιμοποιήστε ``0``.  Αν το *j* παραλείπεται "
+"ή είναι ``μηδέν``, χρησιμοποιήστε το ``len(s)``.  Εάν το *i* είναι "
+"μεγαλύτερο από ή ίσο με το *j*, το υποσύνολο (slice) είναι κενό."
 
 #: library/stdtypes.rst:1068
 msgid ""
@@ -1674,6 +1761,16 @@ msgid ""
 "(which end depends on the sign of *k*).  Note, *k* cannot be zero. If *k* is "
 "``None``, it is treated like ``1``."
 msgstr ""
+"Το υποσύνολο (slice) του *s* από *i* έως *j* με βήμα *k* ορίζεται ως η "
+"ακολουθία των στοιχείων με δείκτη ``x = i + n*k`` τέτοια ώστε ``0 <= n < (j-"
+"i)/k``.  Με άλλα λόγια, οι δείκτες είναι ``i``, ``i+k``, ``i+2*k``, "
+"``i+3*k`` και ούτω καθεξής, σταματώντας όταν φτάσουμε στο *j* (αλλά ποτέ δεν "
+"περιλαμβάνει το *j*).  Όταν το *k* είναι θετικό, τα *i* και *j* μειώνονται "
+"σε ``len(s)`` αν είναι μεγαλύτερα. Όταν το *k* είναι αρνητικό, τα *i* και "
+"*j* μειώνονται σε ``len(s) - 1`` αν είναι μεγαλύτερα.  Εάν τα *i* ή *j* "
+"παραλείπονται ή είναι ``None``, γίνονται τιμές \"end\" (το τέλος εξαρτάται "
+"από το πρόσημο του *k*).  Σημειώστε ότι το *k* δεν μπορεί να είναι μηδέν. "
+"Εάν το *k* είναι ``None``, αντιμετωπίζεται όπως το ``1``."
 
 #: library/stdtypes.rst:1079
 msgid ""
@@ -1682,6 +1779,12 @@ msgid ""
 "quadratic runtime cost in the total sequence length.  To get a linear "
 "runtime cost, you must switch to one of the alternatives below:"
 msgstr ""
+"Η συνένωση αμετάβλητων ακολουθιών (immutable sequences) οδηγεί πάντα σε ένα "
+"νέο αντικείμενο.  Αυτό σημαίνει ότι η δημιουργία μιας ακολουθίας με "
+"επαναλαμβανόμενη συνένωση θα έχει τετραγωνικό κόστος χρόνου εκτέλεσης "
+"(runtime cost) στο συνολικό μήκος της ακολουθίας.  Για να πάρετε ένα "
+"γραμμικό κόστος χρόνου εκτέλεσης (runtime cost), πρέπει να μεταβείτε σε μία "
+"από τις παρακάτω εναλλακτικές λύσεις::"
 
 #: library/stdtypes.rst:1084
 msgid ""
@@ -1689,6 +1792,10 @@ msgid ""
 "`str.join` at the end or else write to an :class:`io.StringIO` instance and "
 "retrieve its value when complete"
 msgstr ""
+"αν συνενώνεται αντικείμενα :class:`str`, μπορείτε να δημιουργήσετε μια λίστα "
+"και να χρησιμοποιήσετε την :meth:`str.join` στο τέλος ή αλλιώς να γράψετε σε "
+"ένα :class:`io.StringIO` instance και ανακτήσετε την τιμή της όταν "
+"ολοκληρωθεί"
 
 #: library/stdtypes.rst:1088
 msgid ""
@@ -1697,14 +1804,21 @@ msgid ""
 "class:`bytearray` object.  :class:`bytearray` objects are mutable and have "
 "an efficient overallocation mechanism"
 msgstr ""
+"Αν συνενώνεται αντικείμενα :class:`bytes`, μπορείτε να χρησιμοποιήσετε "
+"παρόμοια τη μέθοδο :meth:`bytes.join` ή :class:`io.BytesIO`, ή μπορείτε να "
+"κάνετε in-place συνένωση (concatenation) με ένα :class:`bytearray` "
+"αντικείμενο. Τα αντικείμενα :class:`bytearray` είναι μεταβλητά και έχουν "
+"έναν αποτελεσματικό μηχανισμό συνολικής κατανομής (overallocation)"
 
 #: library/stdtypes.rst:1093
 msgid "if concatenating :class:`tuple` objects, extend a :class:`list` instead"
 msgstr ""
+"αν συνενώνεται αντικείμενα :class:`tuple`, επεκτείνετε μια :class:`list` "
+"αντ' αυτού"
 
 #: library/stdtypes.rst:1095
 msgid "for other types, investigate the relevant class documentation"
-msgstr ""
+msgstr "για άλλους τύπους, ερευνήστε τη σχετική τεκμηρίωση των κλάσεων"
 
 #: library/stdtypes.rst:1099
 msgid ""
@@ -1712,6 +1826,9 @@ msgid ""
 "that follow specific patterns, and hence don't support sequence "
 "concatenation or repetition."
 msgstr ""
+"Ορισμένοι τύποι ακολουθιών (όπως :class:`range`) υποστηρίζουν μόνο "
+"ακολουθίες στοιχείων που ακολουθούν συγκεκριμένα μοτίβα, και ως εκ τούτου "
+"δεν υποστηρίζουν ακολουθία συνένωση ή επανάληψη."
 
 #: library/stdtypes.rst:1104
 msgid ""
@@ -1722,10 +1839,17 @@ msgid ""
 "without copying any data and with the returned index being relative to the "
 "start of the sequence rather than the start of the slice."
 msgstr ""
+"Το ``index`` κάνει raise :exc:`ValueError` όταν το *x* δεν βρίσκεται στο "
+"*s*. Όχι όλες οι υλοποιήσεις υποστηρίζουν τη διαβίβαση των πρόσθετων ορίων "
+"*i* και *j*. Αυτές οι παράμετροι επιτρέπουν την αποτελεσματική αναζήτηση "
+"υποτμημάτων της ακολουθίας. Η διαβίβαση των πρόσθετων ορίων είναι περίπου "
+"ισοδύναμη με τη χρήση του ``s[i:j].index(x)``, μόνο χωρίς να αντιγράφονται "
+"δεδομένα και με τον επιστρεφόμενο δείκτη να είναι σχετικός με την αρχή της "
+"ακολουθίας και όχι στην αρχή του υποσυνόλου (slice)."
 
 #: library/stdtypes.rst:1115
 msgid "Immutable Sequence Types"
-msgstr ""
+msgstr "Τύποι Αμετάβλητων Ακολουθιών (Sequences)"
 
 #: library/stdtypes.rst:1122
 msgid ""
@@ -1733,6 +1857,9 @@ msgid ""
 "not also implemented by mutable sequence types is support for the :func:"
 "`hash` built-in."
 msgstr ""
+"Η μόνη λειτουργία που υλοποιούν οι αμετάβλητοι γενικοί τύποι ακολουθίας που "
+"δεν είναι υλοποιημένοι από μεταβλητούς τύπους ακολουθίας, είναι η υποστήριξη "
+"της :func:`hash` built-in."
 
 #: library/stdtypes.rst:1126
 msgid ""
@@ -1740,16 +1867,21 @@ msgid ""
 "to be used as :class:`dict` keys and stored in :class:`set` and :class:"
 "`frozenset` instances."
 msgstr ""
+"Αυτή η υποστήριξη επιτρέπει αμετάβλητες ακολουθίες, όπως οι περιπτώσεις των :"
+"class:`tuple`, να χρησιμοποιούνται ως κλειδιά :class:`dict` και να "
+"αποθηκεύονται σε :class:`set` και :class:`frozenset` instances."
 
 #: library/stdtypes.rst:1130
 msgid ""
 "Attempting to hash an immutable sequence that contains unhashable values "
 "will result in :exc:`TypeError`."
 msgstr ""
+"Η προσπάθεια κατακερματισμού μιας αμετάβλητης ακολουθίας που περιέχει μη "
+"κατακερματιστέες (unhashable) τιμές θα οδηγήσει σε :exc:`TypeError`."
 
 #: library/stdtypes.rst:1137
 msgid "Mutable Sequence Types"
-msgstr ""
+msgstr "Τύποι Μεταβλητών Ακολουθιών (Sequences)"
 
 #: library/stdtypes.rst:1144
 msgid ""
@@ -1757,6 +1889,10 @@ msgid ""
 "The :class:`collections.abc.MutableSequence` ABC is provided to make it "
 "easier to correctly implement these operations on custom sequence types."
 msgstr ""
+"Οι λειτουργίες του ακόλουθου πίνακα ορίζονται σε μεταβλητούς τύπους "
+"ακολουθίας. Η :class:`collections.abc.MutableSequence` ABC παρέχεται για να "
+"κάνει ευκολότερη την σωστή υλοποίηση αυτών των λειτουργιών σε "
+"προσαρμοσμένους τύπους ακολουθιών."
 
 #: library/stdtypes.rst:1148
 msgid ""
@@ -1765,137 +1901,154 @@ msgid ""
 "restrictions imposed by *s* (for example, :class:`bytearray` only accepts "
 "integers that meet the value restriction ``0 <= x <= 255``)."
 msgstr ""
+"Στον πίνακα το *s* είναι ένα instance ενός μεταβλητού τύπου ακολουθίας, το "
+"*t* είναι οποιοδήποτε iterable αντικείμενο και το *x* είναι ένα αυθαίρετο "
+"αντικείμενο που πληροί οποιονδήποτε τύπο και περιορισμούς τιμής που "
+"επιβάλλονται από το *s* (για παράδειγμα, το :class:`bytearray` δέχεται μόνο "
+"ακέραιους που πληρούν τον περιορισμό ``0 <= x <= 255``)."
 
 #: library/stdtypes.rst:1172
 msgid "``s[i] = x``"
-msgstr ""
+msgstr "``s[i] = x``"
 
 #: library/stdtypes.rst:1172
 msgid "item *i* of *s* is replaced by *x*"
-msgstr ""
+msgstr "το στοιχείο *i* του *s* αντικαθίσταται από το *x*"
 
 #: library/stdtypes.rst:1175
 msgid "``s[i:j] = t``"
-msgstr ""
+msgstr "``s[i:j] = t``"
 
 #: library/stdtypes.rst:1175
 msgid ""
 "slice of *s* from *i* to *j* is replaced by the contents of the iterable *t*"
 msgstr ""
+"το υποσύνολο (slice) του *s* από το *i* έως το *j* αντικαθίσταται από τα "
+"περιεχόμενα του iterable *t*"
 
 #: library/stdtypes.rst:1179
 msgid "``del s[i:j]``"
-msgstr ""
+msgstr "``del s[i:j]``"
 
 #: library/stdtypes.rst:1179
 msgid "same as ``s[i:j] = []``"
-msgstr ""
+msgstr "ίδιο με το ``s[i:j] = []``"
 
 #: library/stdtypes.rst:1181
 msgid "``s[i:j:k] = t``"
-msgstr ""
+msgstr "``s[i:j:k] = t``"
 
 #: library/stdtypes.rst:1181
 msgid "the elements of ``s[i:j:k]`` are replaced by those of *t*"
-msgstr ""
+msgstr "τα στοιχεία του ``s[i:j:k]`` αντικαθίστανται από εκείνα του *t*"
 
 #: library/stdtypes.rst:1184
 msgid "``del s[i:j:k]``"
-msgstr ""
+msgstr "``del s[i:j:k]``"
 
 #: library/stdtypes.rst:1184
 msgid "removes the elements of ``s[i:j:k]`` from the list"
-msgstr ""
+msgstr "αφαιρεί τα στοιχεία του ``s[i:j:k]`` από τη λίστα"
 
 #: library/stdtypes.rst:1187
 msgid "``s.append(x)``"
-msgstr ""
+msgstr "``s.append(x)``"
 
 #: library/stdtypes.rst:1187
 msgid ""
 "appends *x* to the end of the sequence (same as ``s[len(s):len(s)] = [x]``)"
 msgstr ""
+"εισάγει το *x* στο τέλος της ακολουθίας (ίδιο με ``s[len(s):len(s)] = [x]``)"
 
 #: library/stdtypes.rst:1191
 msgid "``s.clear()``"
-msgstr ""
+msgstr "``s.clear()``"
 
 #: library/stdtypes.rst:1191
 msgid "removes all items from *s* (same as ``del s[:]``)"
-msgstr ""
+msgstr "αφαιρεί όλα τα στοιχεία από το *s* (ίδιο με το ``del s[:]``)"
 
 #: library/stdtypes.rst:1194
 msgid "``s.copy()``"
-msgstr ""
+msgstr "``s.copy()``"
 
 #: library/stdtypes.rst:1194
 msgid "creates a shallow copy of *s* (same as ``s[:]``)"
-msgstr ""
+msgstr "δημιουργεί ένα shallow αντίγραφο του *s* (ίδιο με το ``s[:]``)"
 
 #: library/stdtypes.rst:1197
 msgid "``s.extend(t)`` or ``s += t``"
-msgstr ""
+msgstr "``s.extend(t)`` ή ``s += t``"
 
 #: library/stdtypes.rst:1197
 msgid ""
 "extends *s* with the contents of *t* (for the most part the same as "
 "``s[len(s):len(s)] = t``)"
 msgstr ""
+"επεκτείνει το *s* με τα περιεχόμενα του *t* (ως επί το πλείστον το ίδιο με "
+"το ``s[len(s):len(s)] = t``)"
 
 #: library/stdtypes.rst:1202
 msgid "``s *= n``"
-msgstr ""
+msgstr "``s *= n``"
 
 #: library/stdtypes.rst:1202
 msgid "updates *s* with its contents repeated *n* times"
-msgstr ""
+msgstr "ενημερώνει το *s* με το περιεχόμενό του επαναλαμβανόμενο *n* φορές"
 
 #: library/stdtypes.rst:1205
 msgid "``s.insert(i, x)``"
-msgstr ""
+msgstr "``s.insert(i, x)``"
 
 #: library/stdtypes.rst:1205
 msgid ""
 "inserts *x* into *s* at the index given by *i* (same as ``s[i:i] = [x]``)"
 msgstr ""
+"εισάγει το *x* στο *s* στο δείκτη που δίνεται από το *i* (το ίδιο με το "
+"``s[i:i] = [x]``)"
 
 #: library/stdtypes.rst:1209
 msgid "``s.pop()`` or ``s.pop(i)``"
-msgstr ""
+msgstr "``s.pop()`` ή ``s.pop(i)``"
 
 #: library/stdtypes.rst:1209
 msgid "retrieves the item at *i* and also removes it from *s*"
-msgstr ""
+msgstr "ανακτά το στοιχείο στο *i* και το αφαιρεί επίσης από το *s*"
 
 #: library/stdtypes.rst:1212
 msgid "``s.remove(x)``"
-msgstr ""
+msgstr "``s.remove(x)``"
 
 #: library/stdtypes.rst:1212
 msgid "remove the first item from *s* where ``s[i]`` is equal to *x*"
-msgstr ""
+msgstr "αφαιρεί του πρώτου στοιχείου από το *s* όπου ``s[i]`` είναι ίσο με *x*"
 
 #: library/stdtypes.rst:1215
 msgid "``s.reverse()``"
-msgstr ""
+msgstr "``s.reverse()``"
 
 #: library/stdtypes.rst:1215
 msgid "reverses the items of *s* in place"
-msgstr ""
+msgstr "αντιστρέφει τα στοιχεία του *s*"
 
 #: library/stdtypes.rst:1223
 msgid "*t* must have the same length as the slice it is replacing."
 msgstr ""
+"το *t* πρέπει να έχει το ίδιο μήκος με το υποσύνολο (slice) που αντικαθιστά."
 
 #: library/stdtypes.rst:1226
 msgid ""
 "The optional argument *i* defaults to ``-1``, so that by default the last "
 "item is removed and returned."
 msgstr ""
+"Το προαιρετικό όρισμα *i* έχει προεπιλεγμένη τιμή ``-1``, έτσι ώστε από "
+"default το τελευταίο στοιχείο αφαιρείται και επιστρέφεται."
 
 #: library/stdtypes.rst:1230
 msgid ":meth:`remove` raises :exc:`ValueError` when *x* is not found in *s*."
 msgstr ""
+"η :meth:`remove` κάνει raise :exc:`ValueError` όταν το *x* δεν βρίσκεται στο "
+"*s*."
 
 #: library/stdtypes.rst:1233
 msgid ""
@@ -1903,6 +2056,10 @@ msgid ""
 "space when reversing a large sequence.  To remind users that it operates by "
 "side effect, it does not return the reversed sequence."
 msgstr ""
+"Η μέθοδος :meth:`reverse` τροποποιεί την ακολουθία στη θέση της για "
+"οικονομία χώρου όταν αντιστρέφεται μια μεγάλη ακολουθία.  Να υπενθυμίσουμε "
+"στους χρήστες ότι λειτουργεί με παρενέργεια, δεν επιστρέφει την "
+"αντιστραμμένη ακολουθία."
 
 #: library/stdtypes.rst:1238
 msgid ""
@@ -1912,10 +2069,15 @@ msgid ""
 "`collections.abc.MutableSequence` ABC, but most concrete mutable sequence "
 "classes provide it."
 msgstr ""
+" Η :meth:`clear` και η :meth:`!copy` περιλαμβάνονται για λόγους συνέπειας "
+"(consistency) με τα interfaces των μεταβλητών container που δεν υποστηρίζουν "
+"λειτουργίες τεμαχισμού (όπως τα :class:`dict` και :class:`set`). Η :meth:`!"
+"copy` δεν αποτελεί μέρος της :class:`collections.abc.MutableSequence` ABC, "
+"αλλά οι περισσότερες κλάσεις μεταβλητών ακολουθιών την παρέχουν."
 
 #: library/stdtypes.rst:1244
 msgid ":meth:`clear` and :meth:`!copy` methods."
-msgstr ""
+msgstr "μέθοδοι :meth:`clear` και :meth:`!copy`."
 
 #: library/stdtypes.rst:1248
 msgid ""
@@ -1924,10 +2086,15 @@ msgid ""
 "the sequence are not copied; they are referenced multiple times, as "
 "explained for ``s * n`` under :ref:`typesseq-common`."
 msgstr ""
+"Η τιμή *n* είναι ένας ακέραιος αριθμός ή ένα αντικείμενο που υλοποιεί την :"
+"meth:`~object.__index__`.  Οι μηδενικές και αρνητικές τιμές του *n* "
+"καθαρίζουν την ακολουθία.  Τα στοιχεία της ακολουθίας δεν αντιγράφονται· "
+"αναφέρονται πολλές φορές, όπως εξηγείται για το ``s * n``` στο :ref:"
+"`typesseq-common`."
 
 #: library/stdtypes.rst:1257
 msgid "Lists"
-msgstr ""
+msgstr "Λίστες"
 
 #: library/stdtypes.rst:1261
 msgid ""
@@ -1935,27 +2102,35 @@ msgid ""
 "homogeneous items (where the precise degree of similarity will vary by "
 "application)."
 msgstr ""
+"Οι λίστες είναι μεταβλητές ακολουθίες, που συνήθως χρησιμοποιούνται για την "
+"αποθήκευση συλλογών ομοιογενών στοιχείων (όπου ο ακριβής βαθμός ομοιότητας "
+"ποικίλλει ανάλογα με εφαρμογή)."
 
 #: library/stdtypes.rst:1267
 msgid "Lists may be constructed in several ways:"
-msgstr ""
+msgstr "Οι λίστες μπορούν να κατασκευαστούν με διάφορους τρόπους:"
 
 #: library/stdtypes.rst:1269
 msgid "Using a pair of square brackets to denote the empty list: ``[]``"
 msgstr ""
+"Χρησιμοποιείστε ένα ζεύγος αγκυλών για να δηλώσετε την κενή λίστα: ``[]``"
 
 #: library/stdtypes.rst:1270
 msgid ""
 "Using square brackets, separating items with commas: ``[a]``, ``[a, b, c]``"
 msgstr ""
+"Χρησιμοποιώντας αγκύλες, διαχωρίζοντας τα στοιχεία με κόμματα: ``[a]``, "
+"``[a, b, c]``"
 
 #: library/stdtypes.rst:1271
 msgid "Using a list comprehension: ``[x for x in iterable]``"
-msgstr ""
+msgstr "Χρήση ενός list comprehension: ``[x for x in iterable]``"
 
 #: library/stdtypes.rst:1272
 msgid "Using the type constructor: ``list()`` or ``list(iterable)``"
 msgstr ""
+"Χρήση του κατασκευαστή τύπου (type constructor): ``list()`` ή "
+"``list(iterable)``"
 
 #: library/stdtypes.rst:1274
 msgid ""
@@ -1967,12 +2142,22 @@ msgid ""
 "returns ``[1, 2, 3]``. If no argument is given, the constructor creates a "
 "new empty list, ``[]``."
 msgstr ""
+"Ο κατασκευαστής (constructor) δημιουργεί μια λίστα της οποίας τα στοιχεία "
+"είναι τα ίδια και με την ίδια σειρά όπως τα στοιχεία της *iterable*.  Η "
+"*iterable* μπορεί να είναι είτε μια ακολουθία, είτε ένας container που "
+"υποστηρίζει την επανάληψη, ή ένα αντικείμενο iterator.  Εάν το *iterable* "
+"είναι ήδη μια λίστα, δημιουργείται ένα αντίγραφο και επιστρέφεται, παρόμοια "
+"με την ``iterable[:]``. Για παράδειγμα, η ``list('abc')`` επιστρέφει ``['a', "
+"'b', 'c']`` και η ``list( (1, 2, 3) )`` επιστρέφει ``[1, 2, 3]``. Αν δεν "
+"δοθεί κανένα όρισμα, ο κατασκευαστής δημιουργεί μία νέα κενή λίστα, ``[]``."
 
 #: library/stdtypes.rst:1283
 msgid ""
 "Many other operations also produce lists, including the :func:`sorted` built-"
 "in."
 msgstr ""
+"Πολλές άλλες λειτουργίες παράγουν επίσης λίστες, συμπεριλαμβανομένης της "
+"built-in :func:`sorted`."
 
 #: library/stdtypes.rst:1286
 msgid ""
@@ -1980,6 +2165,9 @@ msgid ""
 "<typesseq-mutable>` sequence operations. Lists also provide the following "
 "additional method:"
 msgstr ""
+"Οι λίστες υλοποιούν όλες τις :ref:`common <typesseq-common>` και :ref:"
+"`mutable <typesseq-mutable>` λειτουργίες ακολουθίας. Οι λίστες παρέχουν "
+"επίσης την ακόλουθη πρόσθετη μέθοδο:"
 
 #: library/stdtypes.rst:1292
 msgid ""
@@ -1988,12 +2176,18 @@ msgid ""
 "the entire sort operation will fail (and the list will likely be left in a "
 "partially modified state)."
 msgstr ""
+"Αυτή η μέθοδος ταξινομεί τη λίστα, χρησιμοποιώντας μόνο συγκρίσεις ``<`` "
+"μεταξύ στοιχείων. Οι εξαιρέσεις δεν καταστέλλονται - αν αποτύχει κάποια "
+"πράξη σύγκρισης, ολόκληρη η λειτουργία ταξινόμησης θα αποτύχει (και η λίστα "
+"θα παραμείνει πιθανότατα σε μια μερικώς τροποποιημένη κατάσταση)."
 
 #: library/stdtypes.rst:1297
 msgid ""
 ":meth:`sort` accepts two arguments that can only be passed by keyword (:ref:"
 "`keyword-only arguments <keyword-only_parameter>`):"
 msgstr ""
+"η :meth:`sort` δέχεται δύο ορίσματα που μπορούν να περάσουν μόνο με τη λέξη-"
+"κλειδί (:ref:`keyword-only arguments <keyword-only_parameter>`):"
 
 #: library/stdtypes.rst:1300
 msgid ""
@@ -2003,18 +2197,29 @@ msgid ""
 "for the entire sorting process. The default value of ``None`` means that "
 "list items are sorted directly without calculating a separate key value."
 msgstr ""
+"το *key* καθορίζει μια συνάρτηση ενός ορίσματος που χρησιμοποιείται για την "
+"εξαγωγή ενός κλειδιού σύγκρισης (comparison key) από κάθε στοιχείο της "
+"λίστας (για παράδειγμα, ``key=str.lower``). Το κλειδί που αντιστοιχεί σε "
+"κάθε στοιχείο της λίστας υπολογίζεται μία φορά και στη συνέχεια "
+"χρησιμοποιείται για ολόκληρη τη διαδικασία ταξινόμησης. Η προεπιλεγμένη τιμή "
+"(default) ``None`` σημαίνει ότι τα στοιχεία της λίστας ταξινομούνται "
+"απευθείας χωρίς να υπολογίζεται ξεχωριστή τιμή κλειδιού."
 
 #: library/stdtypes.rst:1307
 msgid ""
 "The :func:`functools.cmp_to_key` utility is available to convert a 2.x style "
 "*cmp* function to a *key* function."
 msgstr ""
+"Το utility :func:`functools.cmp_to_key` είναι διαθέσιμο για τη μετατροπή μια "
+"συνάρτηση *cmp* στυλ 2.x σε συνάρτηση *key*."
 
 #: library/stdtypes.rst:1310
 msgid ""
 "*reverse* is a boolean value.  If set to ``True``, then the list elements "
 "are sorted as if each comparison were reversed."
 msgstr ""
+"η *reverse* είναι μια boolean τιμή.  Αν τεθεί σε ``True``, τότε τα στοιχεία "
+"της λίστας ταξινομούνται σαν να ήταν αντίστροφη κάθε σύγκριση."
 
 #: library/stdtypes.rst:1313
 msgid ""
@@ -2023,6 +2228,11 @@ msgid ""
 "not return the sorted sequence (use :func:`sorted` to explicitly request a "
 "new sorted list instance)."
 msgstr ""
+"Αυτή η μέθοδος τροποποιεί την ακολουθία για εξοικονόμηση χώρου κατά την "
+"ταξινόμηση μιας μεγάλης ακολουθίας.  Nα υπενθυμίσουμε στους χρήστες ότι "
+"λειτουργεί με παρενέργεια, δεν επιστρέφει την ταξινομημένη ακολουθία "
+"(χρησιμοποιήστε την :func:`sorted` για να ζητήσετε μια νέα περίπτωση "
+"ταξινομημένης λίστας)."
 
 #: library/stdtypes.rst:1318
 msgid ""
@@ -2031,11 +2241,18 @@ msgid ""
 "--- this is helpful for sorting in multiple passes (for example, sort by "
 "department, then by salary grade)."
 msgstr ""
+"Η μέθοδος :meth:`sort` είναι εγγυημένα σταθερή.  Μια ταξινόμηση είναι "
+"σταθερή αν εγγυάται ότι δεν θα αλλάξει τη σχετική σειρά των στοιχείων που "
+"συγκρίνουν ίσα --- αυτό είναι χρήσιμο για την ταξινόμηση σε πολλαπλά "
+"περάσματα (για παράδειγμα, ταξινόμηση κατά τμήμα, στη συνέχεια με βάση το "
+"μισθολογικό κλιμάκιο κτλ)."
 
 #: library/stdtypes.rst:1323
 msgid ""
 "For sorting examples and a brief sorting tutorial, see :ref:`sortinghowto`."
 msgstr ""
+"Για παραδείγματα ταξινόμησης και ένα σύντομο tutorial, δείτε :ref:"
+"`sortinghowto`."
 
 #: library/stdtypes.rst:1327
 msgid ""
@@ -2044,10 +2261,15 @@ msgid ""
 "list appear empty for the duration, and raises :exc:`ValueError` if it can "
 "detect that the list has been mutated during a sort."
 msgstr ""
+"Ενώ μια λίστα ταξινομείται, το αποτέλεσμα της προσπάθειας μετάλλαξης, ή "
+"ακόμα και η επιθεώρηση, της λίστας είναι απροσδιόριστη.  Η υλοποίηση της "
+"Python στη C κάνει την λίστα να εμφανίζεται κενή για όλη τη διάρκεια, και "
+"κάνει raise :exc:`ValueError` αν ανιχνεύσει ότι η λίστα έχει μεταλλαχθεί "
+"κατά τη διάρκεια μιας ταξινόμησης."
 
 #: library/stdtypes.rst:1336
 msgid "Tuples"
-msgstr ""
+msgstr "Tuples (Πλειάδες)"
 
 #: library/stdtypes.rst:1340
 msgid ""
@@ -2057,26 +2279,36 @@ msgid ""
 "homogeneous data is needed (such as allowing storage in a :class:`set` or :"
 "class:`dict` instance)."
 msgstr ""
+"Τα tuples (πλειάδες) είναι αμετάβλητες ακολουθίες, που συνήθως "
+"χρησιμοποιούνται για την αποθήκευση συλλογών ετερογενών δεδομένων (όπως οι 2-"
+"tuples που παράγονται από την built-in :func:`enumerate`). Τα tuples "
+"χρησιμοποιούνται επίσης για περιπτώσεις όπου μια αμετάβλητη ακολουθία "
+"ομοιογενών δεδομένων (όπως για παράδειγμα για να επιτρέπεται η αποθήκευση σε "
+"ένα :class:`set` ή σε ένα :class:`dict` instance)."
 
 #: library/stdtypes.rst:1348
 msgid "Tuples may be constructed in a number of ways:"
-msgstr ""
+msgstr "Τα tuples (πλειάδες) μπορούν να κατασκευαστούν με διάφορους τρόπους:"
 
 #: library/stdtypes.rst:1350
 msgid "Using a pair of parentheses to denote the empty tuple: ``()``"
 msgstr ""
+"Χρήση ενός ζεύγους παρενθέσεων για να δηλωθεί το κενό tuple (πλειάδα): ``()``"
 
 #: library/stdtypes.rst:1351
 msgid "Using a trailing comma for a singleton tuple: ``a,`` or ``(a,)``"
 msgstr ""
+"Χρήση ενός κόμματος στο τέλος για ένα μοναδικό tuple (πλειάδα): ``a,`` ή "
+"``(a,)``"
 
 #: library/stdtypes.rst:1352
 msgid "Separating items with commas: ``a, b, c`` or ``(a, b, c)``"
-msgstr ""
+msgstr "Διαχωρισμός στοιχείων με κόμμα: ``a, b, c`` ή ``(a, b, c)``"
 
 #: library/stdtypes.rst:1353
 msgid "Using the :func:`tuple` built-in: ``tuple()`` or ``tuple(iterable)``"
 msgstr ""
+"Χρήση του ενσωματωμένου :func:`tuple`: ``tuple()`` ή ``tuple(iterable)``"
 
 #: library/stdtypes.rst:1355
 msgid ""
