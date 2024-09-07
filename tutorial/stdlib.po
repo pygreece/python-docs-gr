@@ -9,26 +9,30 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-08-02 23:37+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: tutorial/stdlib.rst:5
 msgid "Brief Tour of the Standard Library"
-msgstr ""
+msgstr "Σύντομη ξενάγηση στην Standard Βιβλιοθήκη"
 
 #: tutorial/stdlib.rst:11
 msgid "Operating System Interface"
-msgstr ""
+msgstr "Διεπαφή Λειτουργικού Συστήματος"
 
 #: tutorial/stdlib.rst:13
 msgid ""
 "The :mod:`os` module provides dozens of functions for interacting with the "
 "operating system::"
 msgstr ""
+"Το module :mod:`os` παρέχει δεκάδες λειτουργίες για αλληλεπίδραση με το "
+"λειτουργικό σύστημα::"
 
 #: tutorial/stdlib.rst:23
 msgid ""
@@ -36,32 +40,42 @@ msgid ""
 "This will keep :func:`os.open` from shadowing the built-in :func:`open` "
 "function which operates much differently."
 msgstr ""
+"Βεβαιωθείτε ότι χρησιμοποιείτε το στυλ ``import os`` αντί για το ``from os "
+"import *``.  Αυτό θα κρατήσει το :func:`os.open` υπό τη σκίαση της "
+"ενσωματωμένης συνάρτησης :func:`open` που λειτουργεί πολύ διαφορετικά."
 
 #: tutorial/stdlib.rst:29
 msgid ""
 "The built-in :func:`dir` and :func:`help` functions are useful as "
 "interactive aids for working with large modules like :mod:`os`::"
 msgstr ""
+"Οι ενσωματωμένες συναρτήσεις :func:`dir` και :func:`help` είναι χρήσιμες ως "
+"διαδραστικά βοηθήματα για εργασία με μεγάλα modules όπως :mod:`os`::"
 
 #: tutorial/stdlib.rst:38
 msgid ""
 "For daily file and directory management tasks, the :mod:`shutil` module "
 "provides a higher level interface that is easier to use::"
 msgstr ""
+"Για καθημερινές διαχειριστικές εργασίες σε αρχεία και καταλόγους, το module :"
+"mod:`shutil` παρέχει μια διεπαφή υψηλότερου επιπέδου που είναι πιο εύκολη "
+"στην χρήση::"
 
 #: tutorial/stdlib.rst:51
 msgid "File Wildcards"
-msgstr ""
+msgstr "Wildcard Αρχεία"
 
 #: tutorial/stdlib.rst:53
 msgid ""
 "The :mod:`glob` module provides a function for making file lists from "
 "directory wildcard searches::"
 msgstr ""
+"Το module :mod:`glob` παρέχει μια λειτουργία για τη δημιουργία λιστών "
+"αρχείων από αναζητήσεις με χαρακτήρες μπαλαντέρ καταλόγου::"
 
 #: tutorial/stdlib.rst:64
 msgid "Command Line Arguments"
-msgstr ""
+msgstr "Ορίσματα γραμμής εντολών"
 
 #: tutorial/stdlib.rst:66
 msgid ""
@@ -69,12 +83,18 @@ msgid ""
 "arguments are stored in the :mod:`sys` module's *argv* attribute as a list.  "
 "For instance, let's take the following :file:`demo.py` file::"
 msgstr ""
+"Τα κοινά scripts βοηθητικών προγραμμάτων συχνά χρειάζονται να επεξεργάζονται "
+"ορίσματα γραμμής εντολών. Αυτά τα ορίσματα αποθηκεύονται στο χαρακτηριστικό "
+"*argv* του module :mod:`sys` ως λίστα.  Για παράδειγμα, ας πάρουμε το "
+"ακόλουθο αρχείο :file:`demo.py`::"
 
 #: tutorial/stdlib.rst:74
 msgid ""
 "Here is the output from running ``python demo.py one two three`` at the "
 "command line::"
 msgstr ""
+"Εδώ είναι το αποτέλεσμα από την εκτέλεση του ``python demo.py one two "
+"three`` στη γραμμή εντολών::"
 
 #: tutorial/stdlib.rst:79
 msgid ""
@@ -82,6 +102,10 @@ msgid ""
 "process command line arguments.  The following script extracts one or more "
 "filenames and an optional number of lines to be displayed::"
 msgstr ""
+"Το module :mod:`argparse` παρέχει έναν πιο εξελιγμένο μηχανισμό για την "
+"επεξεργασία ορισμάτων γραμμής εντολών.  Το ακόλουθο script εξάγει ένα ή "
+"περισσότερα ονόματα αρχείων και έναν προαιρετικό αριθμό γραμμών που θα "
+"εμφανιστούν::"
 
 #: tutorial/stdlib.rst:93
 msgid ""
@@ -89,10 +113,13 @@ msgid ""
 "txt``, the script sets ``args.lines`` to ``5`` and ``args.filenames`` to "
 "``['alpha.txt', 'beta.txt']``."
 msgstr ""
+"Όταν εκτελείται στη γραμμή εντολών το ``python top.py --lines=5 alpha.txt "
+"beta.txt``, το script ορίζει το ``args.lines`` σε ``5`` και το  ``args."
+"filenames`` σε ``['alpha.txt', 'beta.txt']``."
 
 #: tutorial/stdlib.rst:101
 msgid "Error Output Redirection and Program Termination"
-msgstr ""
+msgstr "Ανακατεύθυνση εξόδου σφάλματος και τερματισμός προγράμματος"
 
 #: tutorial/stdlib.rst:103
 msgid ""
@@ -100,14 +127,20 @@ msgid ""
 "*stderr*. The latter is useful for emitting warnings and error messages to "
 "make them visible even when *stdout* has been redirected::"
 msgstr ""
+"Το module :mod:`sys` έχει επίσης χαρακτηριστικά για *stdin*, *stdout*, και "
+"*stderr*. Το τελευταίο είναι χρήσιμο για την εκπομπή προειδοποιήσεων και "
+"μηνυμάτων σφαλμάτων ώστε να είναι ορατά ακόμα και όταν το *stdout* έχει "
+"ανακατευθυνθεί::"
 
 #: tutorial/stdlib.rst:110
 msgid "The most direct way to terminate a script is to use ``sys.exit()``."
 msgstr ""
+"Ο πιο άμεσος τρόπος για να τερματίσετε ένα script είναι να χρησιμοποιήσετε "
+"το ``sys.exit()``."
 
 #: tutorial/stdlib.rst:116
 msgid "String Pattern Matching"
-msgstr ""
+msgstr "Ταίριασμα μοτίβων συμβολοσειρών"
 
 #: tutorial/stdlib.rst:118
 msgid ""
@@ -115,42 +148,55 @@ msgid ""
 "processing. For complex matching and manipulation, regular expressions offer "
 "succinct, optimized solutions::"
 msgstr ""
+"Το module :mod:`re` παρέχει εργαλεία κανονική έκφρασης για προηγμένη "
+"επεξεργασία συμβολοσειρών. Για πολύπλοκη αντιστοίχιση και χειρισμό, οι "
+"τυπικές εκφράσεις προσφέρουν συνοπτικές, βελτιστοποιημένες λύσεις::"
 
 #: tutorial/stdlib.rst:128
 msgid ""
 "When only simple capabilities are needed, string methods are preferred "
 "because they are easier to read and debug::"
 msgstr ""
+"Όταν χρειάζονται μόνο απλές δυνατότητες, προτιμώνται οι μέθοδοι "
+"συμβολοσειρών, επειδή είναι ευκολότερες στην ανάγνωση και τον εντοπισμό "
+"σφαλμάτων::"
 
 #: tutorial/stdlib.rst:138
 msgid "Mathematics"
-msgstr ""
+msgstr "Μαθηματικά"
 
 #: tutorial/stdlib.rst:140
 msgid ""
 "The :mod:`math` module gives access to the underlying C library functions "
 "for floating point math::"
 msgstr ""
+"Το module :mod:`math` δίνει πρόσβαση στις υποκείμενες συναρτήσεις της "
+"βιβλιοθήκης C για μαθηματικά κινητής υποδιαστολής::"
 
 #: tutorial/stdlib.rst:149
 msgid "The :mod:`random` module provides tools for making random selections::"
 msgstr ""
+"Το module :mod:`random` παρέχει εργαλεία για να κάνουμε τυχαίες επιλογές::"
 
 #: tutorial/stdlib.rst:161
 msgid ""
 "The :mod:`statistics` module calculates basic statistical properties (the "
 "mean, median, variance, etc.) of numeric data::"
 msgstr ""
+"Το module :mod:`statistics` υπολογίζει βασικές στατιστικές ιδιότητες (μέσος "
+"όρος, διάμεσος, διακύμανση, κ.λπ.) αριθμητικών δεδομένων::"
 
 #: tutorial/stdlib.rst:173
 msgid ""
 "The SciPy project <https://scipy.org> has many other modules for numerical "
 "computations."
 msgstr ""
+"Το έργο SciPy <https://scipy.org> έχει πολλές άλλες ενότητες για "
+"αριθμητικούς υπολογισμούς."
 
 #: tutorial/stdlib.rst:179
 msgid "Internet Access"
-msgstr ""
+msgstr "Πρόσβαση στο Διαδίκτυο"
 
 #: tutorial/stdlib.rst:181
 msgid ""
@@ -158,14 +204,20 @@ msgid ""
 "internet protocols. Two of the simplest are :mod:`urllib.request` for "
 "retrieving data from URLs and :mod:`smtplib` for sending mail::"
 msgstr ""
+"Υπάρχει ένας αριθμός modules για πρόσβαση στο διαδίκτυο και επεξεργασία "
+"πρωτοκόλλων διαδικτύου. Δύο από τα πιο απλά είναι το :mod:`urllib.request` "
+"για να την ανάκτηση δεδομένων από διευθύνσεις URL και το :mod:`smtplib` για "
+"την αποστολή αλληλογραφίας::"
 
 #: tutorial/stdlib.rst:204
 msgid "(Note that the second example needs a mailserver running on localhost.)"
 msgstr ""
+"(Σημειώστε ότι το δεύτερο παράδειγμα χρειάζεται διακομιστή αλληλογραφίας που "
+"εκτελείται σε localhost.)"
 
 #: tutorial/stdlib.rst:210
 msgid "Dates and Times"
-msgstr ""
+msgstr "Ημερομηνίες και ώρες"
 
 #: tutorial/stdlib.rst:212
 msgid ""
@@ -175,10 +227,15 @@ msgid ""
 "for output formatting and manipulation.  The module also supports objects "
 "that are timezone aware. ::"
 msgstr ""
+"Το module :mod:`datetime` παρέχει κλάσεις για χειρισμό ημερομηνιών και ωρών "
+"με απλούς και σύνθετους τρόπους. Ενώ υποστηρίζεται η αριθμητική ημερομηνία "
+"και ώρα, η υλοποίηση εστιάζεται στην αποτελεσματική εξαγωγή μελών για "
+"μορφοποίηση και χειρισμό εξόδου.  Το module επίσης υποστηρίζει αντικείμενα "
+"που έχουν επίγνωση ζώνης ώρας. ::"
 
 #: tutorial/stdlib.rst:236
 msgid "Data Compression"
-msgstr ""
+msgstr "Συμπίεση Δεδομένων"
 
 #: tutorial/stdlib.rst:238
 msgid ""
@@ -186,10 +243,13 @@ msgid ""
 "modules including: :mod:`zlib`, :mod:`gzip`, :mod:`bz2`, :mod:`lzma`, :mod:"
 "`zipfile` and :mod:`tarfile`. ::"
 msgstr ""
+"Οι συνήθεις μορφές αρχειοθέτησης και συμπίεσης δεδομένων υποστηρίζονται "
+"άμεσα από modules όπως: :mod:`zlib`, :mod:`gzip`, :mod:`bz2`, :mod:`lzma`, :"
+"mod:`zipfile` και :mod:`tarfile`. ::"
 
 #: tutorial/stdlib.rst:258
 msgid "Performance Measurement"
-msgstr ""
+msgstr "Μέτρηση επίδοσης"
 
 #: tutorial/stdlib.rst:260
 msgid ""
@@ -197,6 +257,9 @@ msgid ""
 "performance of different approaches to the same problem. Python provides a "
 "measurement tool that answers those questions immediately."
 msgstr ""
+"Ορισμένοι χρήστες Python αναπτύσσουν βαθύ ενδιαφέρον να γνωρίζουν τη σχετική "
+"απόδοση διαφορετικών προσεγγίσεων στο ίδιο πρόβλημα. Η Python παρέχει ένα "
+"εργαλείο μέτρησης που απαντά σε αυτές τις ερωτήσεις αμέσως."
 
 #: tutorial/stdlib.rst:264
 msgid ""
@@ -204,6 +267,10 @@ msgid ""
 "feature instead of the traditional approach to swapping arguments. The :mod:"
 "`timeit` module quickly demonstrates a modest performance advantage::"
 msgstr ""
+"Για παράδειγμα, μπορεί να είναι δελεαστικό να χρησιμοποιήσετε τη δυνατότητα "
+"tuple packing και unpacking αντί της παραδοσιακής προσέγγισης για την "
+"εναλλαγή ορισμάτων. Το module :mod:`timeit` δείχνει γρήγορα ένα ταπεινό "
+"πλεονέκτημα απόδοσης::"
 
 #: tutorial/stdlib.rst:274
 msgid ""
@@ -211,10 +278,13 @@ msgid ""
 "and :mod:`pstats` modules provide tools for identifying time critical "
 "sections in larger blocks of code."
 msgstr ""
+"Σε αντίθεση με το λεπτό επίπεδο ευκρίνειας του :mod:`timeit`, τα modules :"
+"mod:`profile` και :mod:`pstats` παρέχουν εργαλεία για τον εντοπισμό κρίσιμων "
+"χρονικών τμημάτων σε μεγαλύτερα μπλοκ κώδικα."
 
 #: tutorial/stdlib.rst:282
 msgid "Quality Control"
-msgstr ""
+msgstr "Έλεγχος ποιότητας"
 
 #: tutorial/stdlib.rst:284
 msgid ""
@@ -222,6 +292,9 @@ msgid ""
 "function as it is developed and to run those tests frequently during the "
 "development process."
 msgstr ""
+"Μια καλή προσέγγιση για την ανάπτυξη λογισμικού υψηλής ποιότητας είναι να "
+"γράφονται tests για κάθε λειτουργία καθώς αναπτύσσεται και να εκτελούνται "
+"συχνά αυτά τα tests κατά τη διαδικασία ανάπτυξης."
 
 #: tutorial/stdlib.rst:288
 msgid ""
@@ -232,6 +305,13 @@ msgid ""
 "example and it allows the doctest module to make sure the code remains true "
 "to the documentation::"
 msgstr ""
+"Το module :mod:`doctest` παρέχει ένα εργαλείο για τη σάρωση ενός module και "
+"την επικύρωση tests που είναι ενσωματωμένες στις συμβολοσειρές εγγράφων ενός "
+"προγράμματος.  Η κατασκευή του test είναι τόσο απλή όσο η αποκοπή και "
+"επικόλληση μιας τυπικής κλήσης μαζί με τα αποτελέσματα της στη συμβολοσειρά "
+"εγγράφων. Αυτό βελτιώνει την τεκμηρίωση παρέχοντας στον χρήστη ένα "
+"παράδειγμα και επιτρέπει στην ενότητα doctest να βεβαιωθεί ότι ο κώδικας "
+"παραμένει πιστός στην τεκμηρίωση::"
 
 #: tutorial/stdlib.rst:306
 msgid ""
@@ -239,10 +319,13 @@ msgid ""
 "module, but it allows a more comprehensive set of tests to be maintained in "
 "a separate file::"
 msgstr ""
+"Το module :mod:`unittest` δεν είναι τόσο εύκολο όσο το module :mod:"
+"`doctest`, αλλά επιτρέπει τη διατήρηση ενός πιο ολοκληρωμένου συνόλου tests "
+"σε ξεχωριστό αρχείο::"
 
 #: tutorial/stdlib.rst:328
 msgid "Batteries Included"
-msgstr ""
+msgstr "Batteries Included"
 
 #: tutorial/stdlib.rst:330
 msgid ""
@@ -250,6 +333,9 @@ msgid ""
 "the sophisticated and robust capabilities of its larger packages. For "
 "example:"
 msgstr ""
+"Η Python έχει μια φιλοσοφία \"συμπεριλαμβάνονται μπαταρίες\".  Αυτό φαίνεται "
+"καλύτερα μέσα από τις εξελιγμένες και ισχυρές δυνατότητες των μεγαλύτερων "
+"πακέτων της. Για παράδειγμα:"
 
 #: tutorial/stdlib.rst:333
 msgid ""
@@ -257,6 +343,10 @@ msgid ""
 "remote procedure calls into an almost trivial task.  Despite the modules' "
 "names, no direct knowledge or handling of XML is needed."
 msgstr ""
+"Τα modules :mod:`xmlrpc.client` και :mod:`xmlrpc.server` καθιστούν την "
+"υλοποίηση κλήσεων απομακρυσμένων διαδικασιών σε μια σχεδόν ασήμαντη "
+"εργασία.  Παρά τα ονόματα των modules, δεν απαιτείται άμεση γνώση ή "
+"χειρισμός της XML."
 
 #: tutorial/stdlib.rst:337
 msgid ""
@@ -267,6 +357,14 @@ msgid ""
 "structures (including attachments) and for implementing internet encoding "
 "and header protocols."
 msgstr ""
+"Το πακέτο :mod:`email` είναι μια βιβλιοθήκη για τη διαχείριση μηνυμάτων "
+"ηλεκτρονικού ταχυδρομείου, συμπεριλαμβανομένων MIME και άλλων μηνυμάτων "
+"εγγράφων που βασίζονται σε :rfc:`2822`. Σε αντίθεση με τα :mod:`smtplib` "
+"και :mod:`poplib` που στην πραγματικότητα στέλνουν και λαμβάνουν μηνύματα, "
+"το πακέτο email έχει ένα πλήρες σύνολο εργαλείων για τη δημιουργία ή την "
+"αποκωδικοποίηση πολύπλοκων δομών μηνυμάτων (συμπεριλαμβανομένων των "
+"συνημμένων) και για την εφαρμογή κωδικοποίηση και πρωτόκολλο κεφαλίδων στο "
+"διαδίκτυο."
 
 #: tutorial/stdlib.rst:344
 msgid ""
@@ -278,6 +376,14 @@ msgid ""
 "these modules and packages greatly simplify data interchange between Python "
 "applications and other tools."
 msgstr ""
+"Το πακέτο :mod:`json` παρέχει ισχυρή υποστήριξη για την ανάλυση αυτής της "
+"δημοφιλούς μορφής ανταλλαγής δεδομένων.  Το module :mod:`csv` υποστηρίζει "
+"την άμεση ανάγνωση και εγγραφή αρχείων σε μορφή τιμής διαχωρισμένου με "
+"κόμματα, που συνήθως υποστηρίζεται από βάσεις δεδομένων και υπολογιστικά "
+"φύλλα.  Η XML επεξεργασία υποστηρίζεται από τα πακέτα :mod:`xml.etree."
+"ElementTree`, :mod:`xml.dom` και :mod:`xml.sax`. Μαζί, αυτές οι μονάδες και "
+"τα πακέτα απλοποιούν σημαντικά την ανταλλαγή δεδομένων μεταξύ εφαρμογών "
+"Python και άλλων εργαλείων."
 
 #: tutorial/stdlib.rst:353
 msgid ""
@@ -285,17 +391,22 @@ msgid ""
 "providing a persistent database that can be updated and accessed using "
 "slightly nonstandard SQL syntax."
 msgstr ""
+"Το module :mod:`sqlite3` αποτελεί έναν wrapper για τη βιβλιοθήκη της βάσης "
+"δεδομένων SQLite, παρέχοντας μια συνεχής βάση δεδομένων που μπορεί να "
+"ενημερωθεί και να προσπελαστεί χρησιμοποιώντας ελαφρώς μη τυπική σύνταξη SQL."
 
 #: tutorial/stdlib.rst:357
 msgid ""
 "Internationalization is supported by a number of modules including :mod:"
 "`gettext`, :mod:`locale`, and the :mod:`codecs` package."
 msgstr ""
+"Η διεθνοποίηση υποστηρίζεται από έναν αριθμό modules, συμπεριλαμβανομένων "
+"των :mod:`gettext`, :mod:`locale`, και το πακέτο :mod:`codecs`."
 
 #: tutorial/stdlib.rst:27
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένες συναρτήσεις"
 
 #: tutorial/stdlib.rst:27
 msgid "help"
-msgstr ""
+msgstr "βοήθεια"
