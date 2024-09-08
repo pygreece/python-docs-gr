@@ -20,7 +20,7 @@ msgstr ""
 
 #: library/functions.rst:11
 msgid "Built-in Functions"
-msgstr "Ενσωματωμένες Συναρτήσεις"
+msgstr "Ενσωματωμένες (Built-in) Συναρτήσεις"
 
 #: library/functions.rst:7
 msgid ""
@@ -28,7 +28,7 @@ msgid ""
 "that are always available.  They are listed here in alphabetical order."
 msgstr ""
 "O interpreter της Python έχει έναν αριθμό από συναρτήσεις και τύπους "
-"ενσωματωμένους σε αυτόν, που είναι πάντα διαθέσιμα.  Παρατίθενται εδώ με "
+"ενσωματωμένους (built-in) σε αυτόν, που είναι πάντα διαθέσιμα.  Παρατίθενται εδώ με "
 "αλφαβητική σειρά."
 
 #: library/functions.rst:0
@@ -401,9 +401,9 @@ msgid ""
 "floating point number, or an object implementing :meth:`~object.__abs__`. If "
 "the argument is a complex number, its magnitude is returned."
 msgstr ""
-"Επιστρέφει την απόλυτη τιμή ενός αριθμού. Το όρισμα μπορεί να είναι ένα "
+"Επιστρέφει την απόλυτη τιμή ενός αριθμού. Το όρισμα μπορεί να είναι ένας "
 "ακέραιος, ένας αριθμός κινητής υποδιαστολής, ή ένα αντικείμενο που υλοποιεί "
-"το :meth:`~object.__abs__`. Εάν το όρισμα είναι ένας περίπλοκος αριθμός "
+"την :meth:`~object.__abs__`. Εάν το όρισμα είναι ένας περίπλοκος αριθμός "
 "επιστρέφεται το μέγεθός του."
 
 #: library/functions.rst:67
@@ -411,7 +411,7 @@ msgid ""
 "Return an :term:`asynchronous iterator` for an :term:`asynchronous "
 "iterable`. Equivalent to calling ``x.__aiter__()``."
 msgstr ""
-"Επιστρέφεται ένας :term:`asynchronous iterator` για έναν :term:`asynchronous "
+"Επιστρέφεται ένας :term:`asynchronous iterator` για ένα :term:`asynchronous "
 "iterable`. Ισοδυναμεί με την κλήση του ``x.__aiter__()``."
 
 #: library/functions.rst:70
@@ -1050,7 +1050,7 @@ msgid ""
 "For other containers see the built-in :class:`list`, :class:`set`, and :"
 "class:`tuple` classes, as well as the :mod:`collections` module."
 msgstr ""
-"Για άλλα κοντέινερ, δείτε τις ενσωματωμένες κλάσεις :class:`list`, :class:"
+"Για άλλα containers, δείτε τις ενσωματωμένες κλάσεις :class:`list`, :class:"
 "`set`, και :class:`tuple`, καθώς και το module :mod:`collections`."
 
 #: library/functions.rst:433
@@ -1085,7 +1085,7 @@ msgid ""
 "necessarily complete and may be inaccurate when the object has a custom :"
 "func:`~object.__getattr__`."
 msgstr ""
-"Εάν το αντικείμενο δεν παρέχει :meth:`~object.__dir__`, η συνάρτηση "
+"Εάν το αντικείμενο δεν παρέχει την :meth:`~object.__dir__`, η συνάρτηση "
 "προσπαθεί να συλλέξει πληροφορίες από το χαρακτηριστικό :attr:`~object."
 "__dict__` του αντικειμένου, εάν έχει οριστεί, και από το αντικείμενο του "
 "τύπου του.  Η λίστα που παράγεται ως αποτέλεσμα δεν είναι απαραίτητα πλήρης "
