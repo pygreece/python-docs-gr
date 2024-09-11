@@ -2,7 +2,7 @@
 # Copyright (C) 2001-2024, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -113,12 +113,12 @@ msgid ""
 "meth:`~string.Template.safe_substitute` method may be more appropriate --- "
 "it will leave placeholders unchanged if data is missing::"
 msgstr ""
-"Η μέθοδος :meth:`~string.Template.substitute` κάνει raise ένα :exc:`KeyError "
-"όταν ένα placeholder δεν παρέχεται σε ένα λεξικό ή ένα όρισμα λέξης-"
-"κλειδιού.  Για εφαρμογές στυλ συγχώνευσης mail, τα δεδομένα που παρέχονται "
-"από τον χρήστη ενδέχεται να είναι ελλιπή και η μέθοδος :meth:`~string."
-"Template.safe_substitute` μπορεί να είναι πιο κατάλληλη --- θα αφήσει "
-"αμετάβλητα τα placeholders εάν λείπουν δεδομένα::"
+"Η μέθοδος :meth:`~string.Template.substitute` κάνει raise ένα :exc:"
+"`KeyError` όταν ένα placeholder δεν παρέχεται σε ένα λεξικό ή ένα όρισμα "
+"λέξης-κλειδιού.  Για εφαρμογές στυλ συγχώνευσης mail, τα δεδομένα που "
+"παρέχονται από τον χρήστη ενδέχεται να είναι ελλιπή και η μέθοδος :meth:"
+"`~string.Template.safe_substitute` μπορεί να είναι πιο κατάλληλη --- θα "
+"αφήσει αμετάβλητα τα placeholders εάν λείπουν δεδομένα::"
 
 #: tutorial/stdlib2.rst:103
 msgid ""
@@ -153,10 +153,9 @@ msgid ""
 "The :mod:`struct` module provides :func:`~struct.pack` and :func:`~struct."
 "unpack` functions for working with variable length binary record formats.  "
 "The following example shows how to loop through header information in a ZIP "
-"file without using the :mod:`zipfile` module.  Pack codes ``\"H\"`` and "
-"``\"I\"`` represent two and four byte unsigned numbers respectively.  The "
-"``\"<\"`` indicates that they are standard size and in little-endian byte "
-"order::"
+"file without using the :mod:`zipfile` module.  Pack codes ``\"H\"`` and ``\"I"
+"\"`` represent two and four byte unsigned numbers respectively.  The ``\"<"
+"\"`` indicates that they are standard size and in little-endian byte order::"
 msgstr ""
 "Το module :mod:`struct` παρέχει τις συναρτήσεις :func:`~struct.pack` και :"
 "func:`~struct.unpack` για εργασία με μορφές δυαδικών εγγραφών μεταβλητού "
