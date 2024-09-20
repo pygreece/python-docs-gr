@@ -9,24 +9,26 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-08-06 00:40+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: tutorial/appendix.rst:5
 msgid "Appendix"
-msgstr ""
+msgstr "Παράρτημα"
 
 #: tutorial/appendix.rst:11
 msgid "Interactive Mode"
-msgstr ""
+msgstr "Διαδραστική Λειτουργία"
 
 #: tutorial/appendix.rst:16
 msgid "Error Handling"
-msgstr ""
+msgstr "Διαχείριση Σφαλμάτων"
 
 #: tutorial/appendix.rst:18
 msgid ""
@@ -40,6 +42,17 @@ msgid ""
 "memory.  All error messages are written to the standard error stream; normal "
 "output from executed commands is written to standard output."
 msgstr ""
+"Όταν παρουσιαστεί ένα σφάλμα, ο interpreter εμφανίζει ένα μήνυμα σφάλματος "
+"και ένα stack trace. Στη διαδραστική λειτουργία, στη συνέχεια επιστρέφει "
+"στην κύρια γραμμή εντολών∙ όταν η είσοδος προέρχεται από ένα αρχείο, "
+"εξέρχεται με κατάσταση εξόδου μη μηδενική μετά την εκτύπωση του stack "
+"trace.  (Οι εξαιρέσεις που αντιμετωπίζονται από μια εντολή :keyword:`except` "
+"σε ένα :keyword:`try` μπλοκ, δεν είναι σφάλματα σε αυτό το πλαίσιο.)  "
+"Ορισμένα σφάλματα είναι άνευ όρων μοιραία και προκαλούν έξοδο με κατάσταση "
+"εξόδου μη μηδενική.  Αυτό ισχύει για εσωτερικές ασυνέπειες και ορισμένες "
+"περιπτώσεις εξάντλησης της μνήμης.  Όλα τα μηνύματα σφάλματος εγγράφονται "
+"στην τυπική ροή σφαλμάτων∙ η κανονική έξοδος από τις εκτελεσμένες εντολές "
+"γράφεται στην τυπική έξοδο."
 
 #: tutorial/appendix.rst:28
 msgid ""
@@ -49,16 +62,23 @@ msgid ""
 "the :exc:`KeyboardInterrupt` exception, which may be handled by a :keyword:"
 "`try` statement."
 msgstr ""
+"Πληκτρολογώντας τον χαρακτήρα διακοπής (συνήθως :kbd:`Control-C` ή :kbd:"
+"`Delete`) στην κύρια ή δευτερεύουσα γραμμή εντολών ακυρώνει την είσοδο και "
+"επιστρέφει στην κύρια γραμμή εντολών. [#]_ Πληκτρολογώντας μια διακοπή ενώ "
+"εκτελείται μια εντολή δημιουργείται η εξαίρεση :exc:`KeyboardInterrupt`, η "
+"οποία μπορεί να αντιμετωπιστεί από μια πρόταση :keyword:`try`."
 
 #: tutorial/appendix.rst:38
 msgid "Executable Python Scripts"
-msgstr ""
+msgstr "Εκτελέσιμα Python Scripts"
 
 #: tutorial/appendix.rst:40
 msgid ""
 "On BSD'ish Unix systems, Python scripts can be made directly executable, "
 "like shell scripts, by putting the line ::"
 msgstr ""
+"Στα συστήματα BSD'ish Unix systems, τα Python scripts μπορούν να γίνουν "
+"άμεσα εκτελέσιμα, όπως τα shell scripts, βάζοντας τη γραμμή::"
 
 #: tutorial/appendix.rst:45
 msgid ""
@@ -69,12 +89,22 @@ msgid ""
 "(``'\\r\\n'``) line ending.  Note that the hash, or pound, character, "
 "``'#'``, is used to start a comment in Python."
 msgstr ""
+"(υποθέτοντας ότι ο interpreter βρίσκεται στο :envvar:`PATH` του χρήστη) στην "
+"αρχή του σεναρίου και δίνοντας στο αρχείο μια εκτελέσιμη λειτουργία.  Το ``#!"
+"`` πρέπει να είναι οι δύο πρώτοι χαρακτήρες του αρχείου.  Σε ορισμένες "
+"πλατφόρμες, αυτή η πρώτη γραμμή πρέπει να τελειώνει με μια γραμμή τύπου Unix "
+"που τελειώνει με μια γραμμή τύπου Unix που τελειώνει (``'\\n'``), όχι με "
+"γραμμή Windows (``'\\r\\n'``).  Σημειώστε ότι ο χαρακτήρας "
+"κατακερματισμού, , ``'#'``, χρησιμοποιείται για την έναρξη ενός σχολίου στην "
+"Python."
 
 #: tutorial/appendix.rst:52
 msgid ""
 "The script can be given an executable mode, or permission, using the :"
 "program:`chmod` command."
 msgstr ""
+"Το script μπορεί να δοθεί μια εκτελέσιμη λειτουργία ή άδεια, χρησιμοποιώντας "
+"την εντολή :program:`chmod`."
 
 #: tutorial/appendix.rst:59
 msgid ""
@@ -84,10 +114,15 @@ msgid ""
 "extension can also be ``.pyw``, in that case, the console window that "
 "normally appears is suppressed."
 msgstr ""
+"Στα συστήματα Windows, δεν υπάρχει η έννοια της \"εκτελέσιμη λειτουργίας\".  "
+"Το πρόγραμμα εγκατάστασης της Python συσχετίζει αυτόματα τα αρχεία ``.py`` "
+"με το ``python.exe`` έτσι ώστε να εκτελείται ένα διπλό κλικ σε ένα αρχείο "
+"Python ως script.  Η επέκταση μπορεί επίσης να είναι ``.pyw``, σε αυτήν την "
+"περίπτωση, το παράθυρο της κονσόλας που εμφανίζεται συνήθως αποκρύπτεται."
 
 #: tutorial/appendix.rst:69
 msgid "The Interactive Startup File"
-msgstr ""
+msgstr "Το διαδραστικό αρχείο εκκίνησης"
 
 #: tutorial/appendix.rst:71
 msgid ""
@@ -97,6 +132,12 @@ msgid ""
 "the name of a file containing your start-up commands.  This is similar to "
 "the :file:`.profile` feature of the Unix shells."
 msgstr ""
+"Όταν χρησιμοποιείτε την Python διαδραστικά, είναι συχνά βολικό να "
+"εκτελούνται ορισμένες τυπικές εντολές κάθε φορά που ξεκινά ο interpreter.  "
+"Μπορείτε να το κάνετε αυτό ορίζοντας μια μεταβλητή περιβάλλοντος με το "
+"όνομα :envvar:`PYTHONSTARTUP` στο όνομα ενός αρχείου που περιέχει τις "
+"εντολές εκκίνησης σας.  Αυτό είναι παρόμοιο με το χαρακτηριστικό :file:`."
+"profile` στα Unix shells."
 
 #: tutorial/appendix.rst:77
 msgid ""
@@ -108,6 +149,14 @@ msgid ""
 "qualification in the interactive session. You can also change the prompts "
 "``sys.ps1`` and ``sys.ps2`` in this file."
 msgstr ""
+"Αυτό το αρχείο διαβάζεται μόνο σε διαδραστικές συνεδρίες, όχι όταν η Python "
+"διαβάζει εντολές από ένα script, και όχι όταν το :file:`/dev/tty` δίνεται ως "
+"η ρητή πηγή εντολών (η οποία κατά τα άλλα συμπεριφέρεται σαν μια διαδραστική "
+"συνεδρία).  Εκτελείται στον ίδιο χώρο ονομάτων όπου εκτελούνται "
+"αλληλεπιδραστικές εντολές, έτσι ώστε τα αντικείμενα που ορίζει ή εισάγει να "
+"μπορούν να χρησιμοποιηθούν χωρίς επιφύλαξη στη διαδραστική περίοδο "
+"λειτουργίας. Μπορείτε επίσης να αλλάξετε τις προτροπές ``sys.ps1`` και ``sys."
+"ps2`` σε αυτό το αρχείο."
 
 #: tutorial/appendix.rst:85
 msgid ""
@@ -117,10 +166,15 @@ msgid ""
 "want to use the startup file in a script, you must do this explicitly in the "
 "script::"
 msgstr ""
+"Εάν θέλετε να διαβάσετε ένα επιπλέον αρχείο εκκίνησης από τον τρέχοντα "
+"κατάλογο, μπορείτε να το προγραμματίσετε στο καθολικό αρχείο εκκίνησης "
+"χρησιμοποιώντας κώδικα όπως ``if os.path.isfile('.pythonrc.py'): exec(open('."
+"pythonrc.py').read())``.  Εάν θέλετε να χρησιμοποιήσετε το αρχείο εκκίνησης "
+"σε ένα σενάριο, πρέπει να το κάνετε ρητά στο script::"
 
 #: tutorial/appendix.rst:102
 msgid "The Customization Modules"
-msgstr ""
+msgstr "Τα Modules Προσαρμογής"
 
 #: tutorial/appendix.rst:104
 msgid ""
@@ -129,6 +183,10 @@ msgid ""
 "location of your user site-packages directory.  Start Python and run this "
 "code::"
 msgstr ""
+"Η Python παρέχει δύο άγκιστρα για να σας επιτρέψει να την προσαρμόσετε: :"
+"index:`sitecustomize` και :index:`usercustomize`.  Για να δείτε πώς "
+"λειτουργεί, πρέπει πρώτα να βρείτε τη θέση του καταλόγου πακέτων ιστοτόπων "
+"χρήστη.  Ξεκινήστε την Python και εκτελέσετε αυτός ο κώδικας::"
 
 #: tutorial/appendix.rst:112
 msgid ""
@@ -137,6 +195,10 @@ msgid ""
 "unless it is started with the :option:`-s` option to disable the automatic "
 "import."
 msgstr ""
+"Τώρα μπορείτε να δημιουργήσετε ένα αρχείο με το όνομα :file:`usercustomize."
+"py` σε αυτόν τον κατάλογο και να βάλετε ό,τι θέλετε σε αυτόν.  Θα επηρεάσει "
+"κάθε επίκληση της Python, εκτός εάν ξεκινήσει με την επιλογή :option:`-s` "
+"απενεργοποιήστε την αυτόματη εισαγωγή."
 
 #: tutorial/appendix.rst:116
 msgid ""
@@ -145,11 +207,15 @@ msgid ""
 "imported before :index:`usercustomize`.  See the documentation of the :mod:"
 "`site` module for more details."
 msgstr ""
+"Το :index:`sitecustomize` λειτουργεί με τον ίδιο τρόπο, αλλά συνήθως "
+"δημιουργείται από έναν διαχειριστή του υπολογιστή στον παγκόσμιο κατάλογο "
+"πακέτων τοποθεσιών και εισάγεται πριν από το :index:`usercustomize`.  Δείτε "
+"την τεκμηρίωση του module :mod:`site` για περισσότερες λεπτομέρειες."
 
 #: tutorial/appendix.rst:123
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: tutorial/appendix.rst:124
 msgid "A problem with the GNU Readline package may prevent this."
-msgstr ""
+msgstr "Ένα πρόβλημα με το πακέτο GNU Readline μπορεί να το αποτρέψει."
