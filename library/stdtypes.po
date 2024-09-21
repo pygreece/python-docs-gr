@@ -3318,6 +3318,8 @@ msgid ""
 "If the string starts with the *prefix* string, return "
 "``string[len(prefix):]``. Otherwise, return a copy of the original string::"
 msgstr ""
+"Εάν η συμβολοσειρά (string) ξεκινά με το *prefix*, επιστρέφει "
+"``string[len(prefix):]``. Διαφορετικά, επιστρέφει ένα αντίγραφο της αρχικής συμβολοσειράς::"
 
 #: library/stdtypes.rst:2008
 msgid ""
@@ -3325,6 +3327,9 @@ msgid ""
 "return ``string[:-len(suffix)]``. Otherwise, return a copy of the original "
 "string::"
 msgstr ""
+"Αν η συμβολοσειρά τελειώνει με το *suffix* και το *suffix* δεν είναι κενό, "
+"επιστρέφει ``string[:-len(suffix)]``. Διαφορετικά, επιστρέφει ένα αντίγραφο της αρχικής "
+"συμβολοσειράς::"
 
 #: library/stdtypes.rst:2022
 msgid ""
@@ -3332,6 +3337,9 @@ msgid ""
 "by *new*.  If the optional argument *count* is given, only the first *count* "
 "occurrences are replaced."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με όλες τις εμφανίσεις της υπό-συμβολοσειράς *old* αντικατεστημένες "
+"από την *new*.  Εάν δοθεί το προαιρετικό όρισμα *count*, μόνο οι πρώτες *count* "
+"εμφανίσεις αντικαθίστανται."
 
 #: library/stdtypes.rst:2029
 msgid ""
@@ -3339,12 +3347,17 @@ msgid ""
 "that *sub* is contained within ``s[start:end]``.  Optional arguments *start* "
 "and *end* are interpreted as in slice notation.  Return ``-1`` on failure."
 msgstr ""
+"Επιστρέφει το υψηλότερο index στη συμβολοσειρά (string) όπου βρίσκεται η υπό-συμβολοσειρά *sub*, έτσι "
+"ώστε το *sub* περιέχεται στο ``s[start:end]``.  Τα προαιρετικά ορίσματα *start* "
+"και *end* ερμηνεύονται ως slice notation.  Επιστρέφει ``-1`` σε περίπτωση αποτυχίας."
 
 #: library/stdtypes.rst:2036
 msgid ""
 "Like :meth:`rfind` but raises :exc:`ValueError` when the substring *sub* is "
 "not found."
 msgstr ""
+"Όπως η :meth:`rfind`, αλλά κάνει raise :exc:`ValueError` όταν η υπό-συμβολοσειρά (sub-string) *sub* "
+"δεν βρέθηκε."
 
 #: library/stdtypes.rst:2042
 msgid ""
@@ -3352,6 +3365,9 @@ msgid ""
 "done using the specified *fillchar* (default is an ASCII space). The "
 "original string is returned if *width* is less than or equal to ``len(s)``."
 msgstr ""
+"Επιστρέφει τη συμβολοσειρά (string) με δεξιό προσανατολισμό σε μια συμβολοσειρά μήκους *width*. Το padding "
+"γίνεται χρησιμοποιώντας το καθορισμένο *fillchar* (η προεπιλογή είναι ένα διάστημα ASCII). Η "
+"αρχική συμβολοσειρά επιστρέφεται εάν το *width* είναι μικρότερο ή ίσο με ``len(s)``."
 
 #: library/stdtypes.rst:2049
 msgid ""
@@ -3360,6 +3376,10 @@ msgid ""
 "after the separator.  If the separator is not found, return a 3-tuple "
 "containing two empty strings, followed by the string itself."
 msgstr ""
+"Διαχωρίζει τη συμβολοσειρά (string) στην τελευταία εμφάνιση του *sep* και επιστρέφει ένα 3-tuple "
+"που περιέχει το τμήμα πριν από το διαχωριστικό, το ίδιο το διαχωριστικό και το μέρος "
+"μετά το διαχωριστικό.  Εάν το διαχωριστικό δεν βρεθεί, επιστρέφει ένα 3-tuple "
+"που περιέχει δύο κενές συμβολοσειρές, ακολουθούμενες από την ίδια τη συμβολοσειρά."
 
 #: library/stdtypes.rst:2057
 msgid ""
@@ -3369,6 +3389,11 @@ msgid ""
 "string is a separator.  Except for splitting from the right, :meth:`rsplit` "
 "behaves like :meth:`split` which is described in detail below."
 msgstr ""
+"Επιστρέφει μια λίστα με τις λέξεις στη συμβολοσειρά (string), χρησιμοποιώντας το *sep* ως οριοθέτη. "
+"Εάν δοθεί το *maxsplit*, θα γίνουν το πολύ *maxsplit* διαχωρισμοί, ξεκινώντας "
+"από τα δεξιά.  Εάν το *sep* δεν έχει καθοριστεί ή είναι ``None``, οποιοδήποτε κενό διάστημα "
+"γίνεται διαχωριστικό. Εκτός από το διαχωρισμό από τα δεξιά, η :meth:`rsplit` "
+"συμπεριφέρεται όπως η :meth:`split` που περιγράφεται λεπτομερώς παρακάτω."
 
 #: library/stdtypes.rst:2066
 msgid ""
@@ -3378,12 +3403,19 @@ msgid ""
 "The *chars* argument is not a suffix; rather, all combinations of its values "
 "are stripped::"
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με τους χαρακτήρες που έχουν αφαιρεθεί.  Τα όρισμα "
+"*chars* είναι μια συμβολοσειρά που καθορίζει το σύνολο των χαρακτήρων που πρέπει να αφαιρεθούν.  Εάν "
+"παραληφθεί ή είναι ``None``, το όρισμα *chars* έχει ως προεπιλογή την αφαίρεση των κενών διαστημάτων.  "
+"Το όρισμα *chars* δεν είναι suffix, αλλά όλοι οι συνδυασμοί των τιμών του "
+"αφαιρούνται::"
 
 #: library/stdtypes.rst:2076
 msgid ""
 "See :meth:`str.removesuffix` for a method that will remove a single suffix "
 "string rather than all of a set of characters.  For example::"
 msgstr ""
+"Δείτε τη :meth:`str.removesuffix` για μια μέθοδο που θα αφαιρέσει ένα απλό suffix "
+"αντί για όλο το σύνολο των χαρακτήρων.  Για παράδειγμα::"
 
 #: library/stdtypes.rst:2086
 msgid ""
@@ -3393,6 +3425,11 @@ msgid ""
 "specified or ``-1``, then there is no limit on the number of splits (all "
 "possible splits are made)."
 msgstr ""
+"Επιστρέφει μια λίστα με τις λέξεις της συμβολοσειράς (string), χρησιμοποιώντας το *sep* ως διαχωριστικό.  "
+"Αν δοθεί το *maxsplit*, γίνονται το πολύ *maxsplit* διαχωρισμοί (έτσι, "
+"η λίστα θα έχει το πολύ ``maxsplit+1`` στοιχεία).  Εάν το *maxsplit* δεν "
+"καθοριστεί ή είναι ``-1``, τότε δεν υπάρχει όριο στον αριθμό των διαχωρισμών "
+"(γίνονται όλες οι πιθανές διασπάσεις)."
 
 #: library/stdtypes.rst:2092
 msgid ""
@@ -3402,6 +3439,11 @@ msgid ""
 "(for example, ``'1<>2<>3'.split('<>')`` returns ``['1', '2', '3']``). "
 "Splitting an empty string with a specified separator returns ``['']``."
 msgstr ""
+"Αν δοθεί το *sep*, οι διαδοχικά οριοθέτες δεν ομαδοποιούνται μαζί και "
+"θεωρείται ότι οριοθετούν κενές συμβολοσειρές (strings) (για παράδειγμα, το ``'1,,2'.split(',')`` επιστρέφει "
+"``['1', '', '2']``).  Το όρισμα *sep* μπορεί να αποτελείται από πολλούς χαρακτήρες "
+"(για παράδειγμα, το ``'1<>2<>3'.split('<>')`` επιστρέφει ``['1', '2', '3']``). "
+"Η διάσπαση μιας κενής συμβολοσειράς με ένα καθορισμένο διαχωριστικό επιστρέφει ``['']``."
 
 #: library/stdtypes.rst:2114 library/stdtypes.rst:2234
 #: library/stdtypes.rst:3149 library/stdtypes.rst:3256
@@ -3409,7 +3451,7 @@ msgstr ""
 #: library/stdtypes.rst:3371 library/stdtypes.rst:3421
 #: library/stdtypes.rst:3490 library/stdtypes.rst:3514
 msgid "For example::"
-msgstr ""
+msgstr "Για παράδειγμα::"
 
 #: library/stdtypes.rst:2107
 msgid ""
@@ -3420,6 +3462,12 @@ msgid ""
 "string or a string consisting of just whitespace with a ``None`` separator "
 "returns ``[]``."
 msgstr ""
+"Αν το *sep* καθοριστεί ή είναι ``None``, εφαρμόζεται ένας διαφορετικός αλγόριθμος "
+"διαχωρισμού: οι εμφανίσεις διαδοχικών κενών θεωρούνται ως ένα ενιαίο διαχωριστικό, "
+"και το αποτέλεσμα δεν θα περιέχει κενές συμβολοσειρές (strings) στην αρχή ή στο τέλος, αν η "
+"συμβολοσειρά έχει κενό διάστημα στην αρχή ή στο τέλος.  Κατά συνέπεια, η διάσπαση μιας κενής "
+"συμβολοσειράς ή μιας συμβολοσειράς που αποτελείται μόνο από κενά διαστήματα με ένα ``None`` ως διαχωριστικό "
+"επιστρέφει ``[]``."
 
 #: library/stdtypes.rst:2129
 msgid ""
@@ -3427,112 +3475,117 @@ msgid ""
 "breaks are not included in the resulting list unless *keepends* is given and "
 "true."
 msgstr ""
+"Επιστρέφει μια λίστα με τις γραμμές της συμβολοσειράς (string), διαχωρίζοντας στα όρια των γραμμών.  Τα "
+"διαχωριστικά των γραμμών δεν περιλαμβάνονται στην νέα λίστα, εκτός αν δοθεί το *keepends* και "
+"είναι true."
 
 #: library/stdtypes.rst:2133
 msgid ""
 "This method splits on the following line boundaries.  In particular, the "
 "boundaries are a superset of :term:`universal newlines`."
 msgstr ""
+"Αυτή η μέθοδος διαχωρίζει στα ακόλουθα όρια γραμμών.  Πιο συγκεκριμένα, τα "
+"όρια είναι ένα υπερσύνολο του :term:`universal newlines`."
 
 #: library/stdtypes.rst:2137
 msgid "Representation"
-msgstr ""
+msgstr "Αναπαράσταση"
 
 #: library/stdtypes.rst:2137
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: library/stdtypes.rst:2139
 msgid "``\\n``"
-msgstr ""
+msgstr "``\\n``"
 
 #: library/stdtypes.rst:2139
 msgid "Line Feed"
-msgstr ""
+msgstr "Line Feed"
 
 #: library/stdtypes.rst:2141
 msgid "``\\r``"
-msgstr ""
+msgstr "``\\r``"
 
 #: library/stdtypes.rst:2141
 msgid "Carriage Return"
-msgstr ""
+msgstr "Carriage Return"
 
 #: library/stdtypes.rst:2143
 msgid "``\\r\\n``"
-msgstr ""
+msgstr "``\\r\\n``"
 
 #: library/stdtypes.rst:2143
 msgid "Carriage Return + Line Feed"
-msgstr ""
+msgstr "Carriage Return + Line Feed"
 
 #: library/stdtypes.rst:2145
 msgid "``\\v`` or ``\\x0b``"
-msgstr ""
+msgstr "``\\v`` or ``\\x0b``"
 
 #: library/stdtypes.rst:2145
 msgid "Line Tabulation"
-msgstr ""
+msgstr "Line Tabulation"
 
 #: library/stdtypes.rst:2147
 msgid "``\\f`` or ``\\x0c``"
-msgstr ""
+msgstr "``\\f`` or ``\\x0c``"
 
 #: library/stdtypes.rst:2147
 msgid "Form Feed"
-msgstr ""
+msgstr "Form Feed"
 
 #: library/stdtypes.rst:2149
 msgid "``\\x1c``"
-msgstr ""
+msgstr "``\\x1c``"
 
 #: library/stdtypes.rst:2149
 msgid "File Separator"
-msgstr ""
+msgstr "Διαχωριστής Αρχείου"
 
 #: library/stdtypes.rst:2151
 msgid "``\\x1d``"
-msgstr ""
+msgstr "``\\x1d``"
 
 #: library/stdtypes.rst:2151
 msgid "Group Separator"
-msgstr ""
+msgstr "Διαχωριστής Group"
 
 #: library/stdtypes.rst:2153
 msgid "``\\x1e``"
-msgstr ""
+msgstr "``\\x1e``"
 
 #: library/stdtypes.rst:2153
 msgid "Record Separator"
-msgstr ""
+msgstr "Διαχωριστής Εγγραφών"
 
 #: library/stdtypes.rst:2155
 msgid "``\\x85``"
-msgstr ""
+msgstr "``\\x85``"
 
 #: library/stdtypes.rst:2155
 msgid "Next Line (C1 Control Code)"
-msgstr ""
+msgstr "Επόμενη Γραμμή (C1 Control Code)"
 
 #: library/stdtypes.rst:2157
 msgid "``\\u2028``"
-msgstr ""
+msgstr "``\\u2028``"
 
 #: library/stdtypes.rst:2157
 msgid "Line Separator"
-msgstr ""
+msgstr "Διαχωριστής Γραμμής"
 
 #: library/stdtypes.rst:2159
 msgid "``\\u2029``"
-msgstr ""
+msgstr "``\\u2029``"
 
 #: library/stdtypes.rst:2159
 msgid "Paragraph Separator"
-msgstr ""
+msgstr "Διαχωριστής Παραγράφου"
 
 #: library/stdtypes.rst:2164
 msgid "``\\v`` and ``\\f`` added to list of line boundaries."
-msgstr ""
+msgstr "Τα ``\\v`` και ``\\f`` προστίθενται στην λίστα ορίων των γραμμών."
 
 #: library/stdtypes.rst:2173
 msgid ""
@@ -3540,10 +3593,13 @@ msgid ""
 "method returns an empty list for the empty string, and a terminal line break "
 "does not result in an extra line::"
 msgstr ""
+"Σε αντίθεση με την :meth:`~str.split` όταν δίνεται μια συμβολοσειρά (string) οριοθέτησης *sep*, αυτή "
+"η μέθοδος επιστρέφει μια κενή λίστα για το κενό αλφαριθμητικό, και μια τερματικό break γραμμής "
+"δεν οδηγεί σε μια επιπλέον γραμμή::"
 
 #: library/stdtypes.rst:2182
 msgid "For comparison, ``split('\\n')`` gives::"
-msgstr ""
+msgstr "Συγκριτικά, η ``split('\\n')`` δίνει::"
 
 #: library/stdtypes.rst:2192
 msgid ""
@@ -3552,6 +3608,10 @@ msgid ""
 "optional *start*, test string beginning at that position.  With optional "
 "*end*, stop comparing string at that position."
 msgstr ""
+"Επιστρέφει ``True`` αν η συμβολοσειρά (string) αρχίζει με το *prefix*, αλλιώς επιστρέφει "
+"``False``. Το *prefix* μπορεί επίσης να είναι μια πλειάδα (tuple) prefix προς αναζήτηση.  Με "
+"το προαιρετικό *start*, ελέγχεται το αλφαριθμητικό που αρχίζει από τη συγκεκριμένη θέση.  Με το προαιρετικό "
+"*end*, σταματά η σύγκριση της συμβολοσειράς σε αυτή τη θέση."
 
 #: library/stdtypes.rst:2200
 msgid ""
@@ -3561,6 +3621,11 @@ msgid ""
 "removing whitespace. The *chars* argument is not a prefix or suffix; rather, "
 "all combinations of its values are stripped::"
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με τους πρώτους και τους τελευταίους χαρακτήρες "
+"να έχουν αφαιρεθεί. Το όρισμα *chars* είναι μια συμβολοσειρά που καθορίζει το σύνολο των χαρακτήρων "
+"που πρέπει να αφαιρεθούν. Εάν παραλειφθεί ή είναι ``None``, το όρισμα *chars* έχει ως default "
+"την αφαίρεση των κενών διαστημάτων. Το όρισμα *chars* δεν είναι prefix ή suffix· μάλλον, "
+"όλοι οι συνδυασμοί των τιμών του αφαιρούνται::"
 
 #: library/stdtypes.rst:2211
 msgid ""
@@ -3569,6 +3634,10 @@ msgid ""
 "string character that is not contained in the set of characters in *chars*. "
 "A similar action takes place on the trailing end. For example::"
 msgstr ""
+"Οι ακραίες αρχικές και τελικές τιμές του ορίσματος *chars* αφαιρούνται από "
+"τη συμβολοσειρά (string). Οι χαρακτήρες αφαιρούνται από το μπροστινό άκρο μέχρι να φτάσουν στο "
+"χαρακτήρα της συμβολοσειράς (string) που δεν περιέχεται στο σύνολο χαρακτήρων του *chars*. "
+"Μια παρόμοια ενέργεια λαμβάνει χώρα στο τέλος της ουράς. Για παράδειγμα: "
 
 #: library/stdtypes.rst:2224
 msgid ""
@@ -3576,12 +3645,17 @@ msgid ""
 "and vice versa. Note that it is not necessarily true that ``s.swapcase()."
 "swapcase() == s``."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με κεφαλαίους χαρακτήρες που έχουν μετατραπεί σε πεζούς "
+"και αντίστροφα. Σημειώστε ότι δεν είναι απαραίτητα αληθές ότι ``s.swapcase()."
+"swapcase() == s``."
 
 #: library/stdtypes.rst:2231
 msgid ""
 "Return a titlecased version of the string where words start with an "
 "uppercase character and the remaining characters are lowercase."
 msgstr ""
+"Επιστρέφει μια titlecased έκδοση της συμβολοσειράς, όπου οι λέξεις ξεκινούν με ένα "
+"κεφαλαίο χαρακτήρα και οι υπόλοιποι χαρακτήρες είναι πεζοί."
 
 #: library/stdtypes.rst:3458
 msgid ""
@@ -3590,18 +3664,26 @@ msgid ""
 "means that apostrophes in contractions and possessives form word boundaries, "
 "which may not be the desired result::"
 msgstr ""
+"Ο αλγόριθμος χρησιμοποιεί έναν απλό, ανεξάρτητο από τη γλώσσα, ορισμό μιας λέξης ως "
+"group διαδοχικών γραμμάτων.  Ο ορισμός λειτουργεί σε πολλά contexts, αλλά "
+"σημαίνει ότι οι απόστροφοι σε συναιρέσεις και κτητικές λέξεις αποτελούν όρια λέξεων, "
+"που μπορεί να μην είναι το επιθυμητό αποτέλεσμα::"
 
 #: library/stdtypes.rst:2247
 msgid ""
 "The :func:`string.capwords` function does not have this problem, as it "
 "splits words on spaces only."
 msgstr ""
+"Η συνάρτηση :func:`string.capwords` δεν έχει αυτό το πρόβλημα, καθώς "
+"χωρίζει τις λέξεις μόνο σε κενά."
 
 #: library/stdtypes.rst:2250
 msgid ""
 "Alternatively, a workaround for apostrophes can be constructed using regular "
 "expressions::"
 msgstr ""
+"Εναλλακτικά, μπορεί να κατασκευαστεί μια λύση για τις αποστρόφους χρησιμοποιώντας κανονικές "
+"εκφράσεις::"
 
 #: library/stdtypes.rst:2265
 msgid ""
@@ -3614,18 +3696,30 @@ msgid ""
 "delete the character from the return string; or raise a :exc:`LookupError` "
 "exception, to map the character to itself."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) στο οποίο κάθε χαρακτήρας έχει αντιστοιχιστεί μέσω "
+"του πίνακα μετάφρασης.  Ο πίνακας πρέπει να είναι ένα αντικείμενο που υλοποιεί "
+"το indexing μέσω της :meth:`~object.__getitem__`, συνήθως ένα :term:`mapping` ή ένα :"
+"term:`sequence`.  Όταν το indexing γίνεται με ένα Unicode ordinal (ένας ακέραιος), το αντικείμενο του "
+"πίνακα μπορεί να κάνει οποιοδήποτε από τα ακόλουθα: να επιστρέψει ένα Unicode ordinal ή μια συμβολοσειρά (string), να "
+"αντιστοιχίσει τον χαρακτήρα σε έναν ή περισσότερους άλλους χαρακτήρες· να επιστρέψει ``None``, για να "
+"διαγράψει τον χαρακτήρα από τη συμβολοσειρά που επιστρέφεται· ή να κάνει raise ένα :exc:`LookupError`, "
+"για να αντιστοιχίσει τον χαρακτήρα στον εαυτό του."
 
 #: library/stdtypes.rst:2274
 msgid ""
 "You can use :meth:`str.maketrans` to create a translation map from character-"
 "to-character mappings in different formats."
 msgstr ""
+"Μπορείτε να χρησιμοποιήσετε το :meth:`str.maketrans` για να δημιουργήσετε ένα χάρτη μετάφρασης από χαρακτήρα-"
+"σε-χαρακτήρα mappings σε διαφορετικές μορφές."
 
 #: library/stdtypes.rst:2277
 msgid ""
 "See also the :mod:`codecs` module for a more flexible approach to custom "
 "character mappings."
 msgstr ""
+"Δείτε επίσης την ενότητα :mod:`codecs` για μια πιο ευέλικτη προσέγγιση σε προσαρμοσμένα "
+"mappings χαρακτήρων."
 
 #: library/stdtypes.rst:2283
 msgid ""
@@ -3635,6 +3729,11 @@ msgid ""
 "character(s) is not \"Lu\" (Letter, uppercase), but e.g. \"Lt\" (Letter, "
 "titlecase)."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με όλους τους χαρακτήρες [4]_ που έχουν μετατραπεί σε "
+"κεφαλαία.  Σημειώστε ότι το ``s.upper().isupper()`` μπορεί να είναι ``False`` αν το ``s`` "
+"περιέχει χαρακτήρες χωρίς πεζά γράμματα ή αν η κατηγορία Unicode του προκύπτοντος "
+"χαρακτήρα(ων) δεν είναι \«Lu\» (Γράμμα, κεφαλαίο), αλλά π.χ. \«Lt\» (Γράμμα, "
+"titlecase)."
 
 #: library/stdtypes.rst:2289
 msgid ""
