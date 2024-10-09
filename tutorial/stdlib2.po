@@ -9,32 +9,39 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-09-11 11:14+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: tutorial/stdlib2.rst:5
 msgid "Brief Tour of the Standard Library --- Part II"
-msgstr ""
+msgstr "Σύντομη περιήγηση στην Πρότυπη Βιβλιοθήκη --- Μέρος II"
 
 #: tutorial/stdlib2.rst:7
 msgid ""
 "This second tour covers more advanced modules that support professional "
 "programming needs.  These modules rarely occur in small scripts."
 msgstr ""
+"Αυτή η δεύτερη περιήγηση καλύπτει τα πιο προηγμένα modules που υποστηρίζουν "
+"επαγγελματικές ανάγκες προγραμματισμού.  Αυτά τα modules σπάνια εμφανίζονται "
+"σε μικρά scripts."
 
 #: tutorial/stdlib2.rst:14
 msgid "Output Formatting"
-msgstr ""
+msgstr "Μορφοποίηση εξόδου"
 
 #: tutorial/stdlib2.rst:16
 msgid ""
 "The :mod:`reprlib` module provides a version of :func:`repr` customized for "
 "abbreviated displays of large or deeply nested containers::"
 msgstr ""
+"Το module :mod:`reprlib` παρέχει μια έκδοση του :func:`repr` προσαρμοσμένη "
+"για συντομευμένες εμφανίσεις μεγάλων ή βαθιά ένθετων containers::"
 
 #: tutorial/stdlib2.rst:23
 msgid ""
@@ -43,12 +50,19 @@ msgid ""
 "interpreter. When the result is longer than one line, the \"pretty printer\" "
 "adds line breaks and indentation to more clearly reveal data structure::"
 msgstr ""
+"Το module :mod:`pprint` προσφέρει πιο εξελιγμένο έλεγχο της εκτύπωσης τόσο "
+"των ενσωματωμένων (built-in) και των καθορισμένων από τον χρήστη "
+"αντικειμένων με τρόπο που είναι ευανάγνωστο από τον διερμηνέα. Όταν το "
+"αποτέλεσμα είναι μεγαλύτερο από μία γραμμή, ο \"pretty printer\" προσθέτει "
+"αλλαγές γραμμής και εσοχές για να εμφανιστεί πιο ξεκάθαρα η δομή δεδομένων::"
 
 #: tutorial/stdlib2.rst:39
 msgid ""
 "The :mod:`textwrap` module formats paragraphs of text to fit a given screen "
 "width::"
 msgstr ""
+"Το module :mod:`textwrap` μορφοποιεί τις παραγράφους του κειμένου ώστε να "
+"ταιριάζει σε ένα δεδομένο πλάτος οθόνης::"
 
 #: tutorial/stdlib2.rst:53
 msgid ""
@@ -56,10 +70,14 @@ msgid ""
 "formats. The grouping attribute of locale's format function provides a "
 "direct way of formatting numbers with group separators::"
 msgstr ""
+"Το module :mod:`locale` έχει πρόσβαση σε μια βάση δεδομένων μορφών δεδομένων "
+"συγκεκριμένης κουλτούρας. Το χαρακτηριστικό ομαδοποίησης της συνάρτησης "
+"μορφοποίησης της τοπικής ρύθμισης παρέχει έναν άμεσο τρόπο μορφοποίησης "
+"αριθμών με διαχωριστικά ομάδων::"
 
 #: tutorial/stdlib2.rst:72
 msgid "Templating"
-msgstr ""
+msgstr "Templating"
 
 #: tutorial/stdlib2.rst:74
 msgid ""
@@ -68,6 +86,10 @@ msgid ""
 "allows users to customize their applications without having to alter the "
 "application."
 msgstr ""
+"Το module :mod:`string` περιλαμβάνει μια ευέλικτη κλάση :class:`~string."
+"Template` με απλοποιημένη σύνταξη κατάλληλη για επεξεργασία από τελικούς "
+"χρήστες.  Αυτό επιτρέπει στους χρήστες να προσαρμόζουν τις εφαρμογές τους "
+"χωρίς να χρειάζεται να αλλάξουν την εφαρμογή."
 
 #: tutorial/stdlib2.rst:78
 msgid ""
@@ -77,6 +99,11 @@ msgid ""
 "letters with no intervening spaces.  Writing ``$$`` creates a single escaped "
 "``$``::"
 msgstr ""
+"Η μορφή χρησιμοποιεί ονόματα κράτησης θέσης που σχηματίζονται από ``$`` με "
+"έγκυρα αναγνωριστικά Python (αλφαριθμητικούς χαρακτήρες και κάτω παύλες).  "
+"Περιβάλλοντας το placeholder με αγκύλες επιτρέπει να ακολουθείται από "
+"περισσότερα αλφαριθμητικά γράμματα χωρίς ενδιάμεσα κενά.  Γράφοντας ``$$`` "
+"δημιουργεί ένα ενιαίο ``$``::"
 
 #: tutorial/stdlib2.rst:88
 msgid ""
@@ -86,6 +113,12 @@ msgid ""
 "meth:`~string.Template.safe_substitute` method may be more appropriate --- "
 "it will leave placeholders unchanged if data is missing::"
 msgstr ""
+"Η μέθοδος :meth:`~string.Template.substitute` κάνει raise ένα :exc:"
+"`KeyError` όταν ένα placeholder δεν παρέχεται σε ένα λεξικό ή ένα όρισμα "
+"λέξης-κλειδιού.  Για εφαρμογές στυλ συγχώνευσης mail, τα δεδομένα που "
+"παρέχονται από τον χρήστη ενδέχεται να είναι ελλιπή και η μέθοδος :meth:"
+"`~string.Template.safe_substitute` μπορεί να είναι πιο κατάλληλη --- θα "
+"αφήσει αμετάβλητα τα placeholders εάν λείπουν δεδομένα::"
 
 #: tutorial/stdlib2.rst:103
 msgid ""
@@ -94,6 +127,11 @@ msgid ""
 "placeholders such as the current date, image sequence number, or file "
 "format::"
 msgstr ""
+"Οι υποκατηγορίες προτύπων μπορούν να καθορίσουν έναν προσαρμοσμένο "
+"οριοθέτη.  Για παράδειγμα, ένα batch πρόγραμμα μετονομασίας για ένα "
+"πρόγραμμα περιήγησης φωτογραφιών μπορεί να επιλέξει να χρησιμοποιεί σύμβολα "
+"ποσοστού για placeholders όπως η τρέχουσα ημερομηνία, ο αριθμός ακολουθίας "
+"εικόνων ή η μορφή αρχείου::"
 
 #: tutorial/stdlib2.rst:126
 msgid ""
@@ -101,10 +139,14 @@ msgid ""
 "details of multiple output formats.  This makes it possible to substitute "
 "custom templates for XML files, plain text reports, and HTML web reports."
 msgstr ""
+"Μια άλλη εφαρμογή για templating είναι ο διαχωρισμός της λογικής του "
+"προγράμματος από τις λεπτομέρειες πολλαπλών μορφών εξόδου.  Αυτό καθιστά "
+"δυνατή την αντικατάσταση προσαρμοσμένων προτύπων για αρχεία XML, αναφορές "
+"απλού κειμένου και αναφορές ιστού HTML."
 
 #: tutorial/stdlib2.rst:134
 msgid "Working with Binary Data Record Layouts"
-msgstr ""
+msgstr "Εργασία με δυαδικές διατάξεις εγγραφής δεδομένων"
 
 #: tutorial/stdlib2.rst:136
 msgid ""
@@ -116,10 +158,17 @@ msgid ""
 "``\"<\"`` indicates that they are standard size and in little-endian byte "
 "order::"
 msgstr ""
+"Το module :mod:`struct` παρέχει τις συναρτήσεις :func:`~struct.pack` και :"
+"func:`~struct.unpack` για εργασία με μορφές δυαδικών (binary) εγγραφών "
+"μεταβλητού μήκους.  Το ακόλουθο παράδειγμα δείχνει πως να κάνετε μια λούπα "
+"μέσω των πληροφοριών κεφαλίδας στο ένα αρχείο ZIP χωρίς τη χρήση του module :"
+"mod:`zipfile`.  Οι κωδικοί πακέτου ``\"H\"`` και ``\"I\"`` αντιπροσωπεύουν "
+"αριθμούς χωρίς υπογραφή δύο και τεσσάρων byte αντίστοιχα.  Το ``\"<\"`` "
+"υποδηλώνει ότι είναι τυπικού μεγέθους και σε σειρά byte λίγο endian::"
 
 #: tutorial/stdlib2.rst:167
 msgid "Multi-threading"
-msgstr ""
+msgstr "Multi-threading"
 
 #: tutorial/stdlib2.rst:169
 msgid ""
@@ -129,12 +178,20 @@ msgid ""
 "background.  A related use case is running I/O in parallel with computations "
 "in another thread."
 msgstr ""
+"Το threading είναι μια τεχνική για την αποσύνδεση εργασιών που είναι "
+"διαδοχικά εξαρτώμενες.  Τα νήματα μπορούν να χρησιμοποιηθούν για την "
+"βελτίωση της ανταπόκρισης των εφαρμογών που δέχονται είσοδο από τον χρήστη "
+"ενώ άλλες εργασίες εκτελούνται στο παρασκήνιο.  Μια σχετική περίπτωση χρήσης "
+"εκτελεί I/O παράλληλα με υπολογισμούς στο άλλο νήμα."
 
 #: tutorial/stdlib2.rst:174
 msgid ""
 "The following code shows how the high level :mod:`threading` module can run "
 "tasks in background while the main program continues to run::"
 msgstr ""
+"Ο ακόλουθος κώδικας δείχνει πως το module υψηλού επιπέδου :mod:`threading` "
+"μπορεί να εκτελεί εργασίες στο παρασκήνιο ενώ το κύριο πρόγραμμα συνεχίζει "
+"να εκτελείται::"
 
 #: tutorial/stdlib2.rst:198
 msgid ""
@@ -143,6 +200,10 @@ msgid ""
 "module provides a number of synchronization primitives including locks, "
 "events, condition variables, and semaphores."
 msgstr ""
+"Η κύρια πρόκληση των εφαρμογών πολλαπλών νημάτων είναι ο συντονισμός νημάτων "
+"που μοιράζονται δεδομένα ή άλλους πόρους.  Για το σκοπό αυτό, το thread "
+"module παρέχει έναν αριθμό πρωτόγονων συγχρονισμού, συμπεριλαμβανομένων "
+"locks, events, μεταβλητών συνθηκών, και semaphores."
 
 #: tutorial/stdlib2.rst:203
 msgid ""
@@ -154,10 +215,18 @@ msgid ""
 "thread communication and coordination are easier to design, more readable, "
 "and more reliable."
 msgstr ""
+"Ενώ αυτά τα εργαλεία είναι ισχυρά, μικρά σφάλματα σχεδιασμού μπορεί να "
+"οδηγήσουν σε προβλήματα που είναι δύσκολο να αναπαραχθούν.  Επομένως, η "
+"προτιμώμενη προσέγγιση στον συντονισμό εργασιών είναι να συγκεντρωθεί όλη η "
+"πρόσβαση σε έναν πόρο σε ένα μόνο νήμα και στη συνέχεια να χρησιμοποιηθεί το "
+"module :mod:`queue`, για τροφοδοτήσει αυτό το νήμα με αιτήματα από άλλα "
+"νήματα. Οι εφαρμογές που χρησιμοποιούν αντικείμενα :class:`~queue.Queue` για "
+"επικοινωνία και συντονισμό μεταξύ νημάτων είναι πιο εύκολο να σχεδιαστούν, "
+"είναι πιο ευανάγνωστες και πιο αξιόπιστες."
 
 #: tutorial/stdlib2.rst:214
 msgid "Logging"
-msgstr ""
+msgstr "Logging"
 
 #: tutorial/stdlib2.rst:216
 msgid ""
@@ -165,10 +234,13 @@ msgid ""
 "system. At its simplest, log messages are sent to a file or to ``sys."
 "stderr``::"
 msgstr ""
+"Το module :mod:`logging` προσφέρει ένα πλήρως εξοπλισμένο και ευέλικτο "
+"σύστημα καταγραφής. Στην απλούστερη μορφή του, τα μηνύματα καταγραφής "
+"αποστέλλονται σε ένα αρχείο ή στο ``sys.stderr``::"
 
 #: tutorial/stdlib2.rst:226
 msgid "This produces the following output:"
-msgstr ""
+msgstr "Αυτό παράγει την ακόλουθη έξοδο:"
 
 #: tutorial/stdlib2.rst:234
 msgid ""
@@ -179,6 +251,13 @@ msgid ""
 "`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :const:"
 "`~logging.ERROR`, and :const:`~logging.CRITICAL`."
 msgstr ""
+"Από default (προεπιλογή), τα ενημερωτικά μηνύματα και τα μηνύματα εντοπισμού "
+"σφαλμάτων αποκρύπτονται και η έξοδος αποστέλλεται σε τυπικό σφάλμα.  Άλλες "
+"επιλογές εξόδου περιλαμβάνουν δρομολόγηση μηνυμάτων μέσω email, datagrams, "
+"υποδοχών (sockets), ή σε HTTP διακομιστή (server).  Τα νέα φίλτρα μπορούν να "
+"επιλέξουν διαφορετική δρομολόγηση με βάση την προτεραιότητα του μηνύματος: :"
+"const:`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :"
+"const:`~logging.ERROR`, και :const:`~logging.CRITICAL`."
 
 #: tutorial/stdlib2.rst:241
 msgid ""
@@ -186,10 +265,13 @@ msgid ""
 "from a user editable configuration file for customized logging without "
 "altering the application."
 msgstr ""
+"Το σύστημα logging μπορεί να διαμορφωθεί απευθείας από την Python ή μπορεί "
+"να φορτωθεί από ένα επεξεργάσιμο αρχείο διαμόρφωσης για προσαρμοσμένη "
+"καταγραφή χωρίς την τροποποίηση της εφαρμογής."
 
 #: tutorial/stdlib2.rst:249
 msgid "Weak References"
-msgstr ""
+msgstr "Αδύναμες αναφορές"
 
 #: tutorial/stdlib2.rst:251
 msgid ""
@@ -197,6 +279,10 @@ msgid ""
 "and :term:`garbage collection` to eliminate cycles).  The memory is freed "
 "shortly after the last reference to it has been eliminated."
 msgstr ""
+"Η Python κάνει αυτόματη διαχείριση μνήμης (καταμέτρηση αναφορών για τα "
+"περισσότερα αντικείμενα και :term:`garbage collection` για την εξάλειψη των "
+"κύκλων).  Η μνήμη ελευθερώνεται λίγο μετά την κατάργηση της τελευταίας "
+"αναφοράς σε αυτήν."
 
 #: tutorial/stdlib2.rst:255
 msgid ""
@@ -209,10 +295,18 @@ msgid ""
 "weakref objects.  Typical applications include caching objects that are "
 "expensive to create::"
 msgstr ""
+"Αυτή η προσέγγιση λειτουργεί καλά για τις περισσότερες εφαρμογές, αλλά "
+"περιστασιακά υπάρχει ανάγκη παρακολούθησης αντικειμένων μόνο εφόσον "
+"χρησιμοποιούνται από κάτι άλλο.  Δυστυχώς, η παρακολούθηση τους δημιουργεί "
+"μια αναφορά που τα κάνει μόνιμα. Το module :mod:`weakref` παρέχει εργαλεία "
+"για την παρακολούθηση αντικειμένων χωρίς τη δημιουργία αναφοράς.  Όταν το "
+"αντικείμενο δεν χρειάζεται πλέον, αφαιρείται αυτόματα από έναν πίνακα "
+"ασθενούς αναφοράς και ενεργοποιείται μια επιστροφή κλήσης για αντικείμενα "
+"ασθενούς αναφοράς::"
 
 #: tutorial/stdlib2.rst:290
 msgid "Tools for Working with Lists"
-msgstr ""
+msgstr "Εργαλεία για εργασία με λίστες"
 
 #: tutorial/stdlib2.rst:292
 msgid ""
@@ -220,6 +314,9 @@ msgid ""
 "sometimes there is a need for alternative implementations with different "
 "performance trade-offs."
 msgstr ""
+"Πολλές ανάγκες δομών δεδομένων μπορούν να καλυφθούν με τον ενσωματωμένο τύπο "
+"λίστας. Ωστόσο, μερικές φορές υπάρχει ανάγκη για εναλλακτικές υλοποιήσεις με "
+"διαφορετικούς συμβιβασμούς απόδοσης."
 
 #: tutorial/stdlib2.rst:296
 msgid ""
@@ -229,6 +326,12 @@ msgid ""
 "binary numbers (typecode ``\"H\"``) rather than the usual 16 bytes per entry "
 "for regular lists of Python int objects::"
 msgstr ""
+"Το module :mod:`array` παρέχει ένα αντικείμενο :class:`~array.array()` που "
+"μοιάζει με μια λίστα που αποθηκεύει μόνο ομοιογενή δεδομένα και τα "
+"αποθηκεύει με πιο συμπαγή τρόπο.  Το ακόλουθο παράδειγμα δείχνει έναν πίνακα "
+"αριθμών που είναι αποθηκευμένοι ως δύο byte ανυπόγραφων δυαδικών (binary) "
+"αριθμών (κωδικός τύπου ``\"H\"``) αντί για τα συνηθισμένα 16 byte ανά "
+"καταχώρηση για κανονικές λίστες αντικειμένων τύπου Python int::"
 
 #: tutorial/stdlib2.rst:309
 msgid ""
@@ -237,6 +340,10 @@ msgid ""
 "but slower lookups in the middle. These objects are well suited for "
 "implementing queues and breadth first tree searches::"
 msgstr ""
+"Το module :mod:`collections` παρέχει ένα αντικείμενο :class:`~collections."
+"deque()` που μοιάζει με λίστα με ταχύτερα προσαρτήματα και αναδύεται από την "
+"αριστερή πλευρά αλλά με πιο αργές αναζητήσεις στη μέση. Αυτά τα αντικείμενα "
+"είναι κατάλληλα για υλοποίηση ουρών και αναζητήσεων σε πρώτο δέντρο εύρους::"
 
 #: tutorial/stdlib2.rst:330
 msgid ""
@@ -244,6 +351,9 @@ msgid ""
 "other tools such as the :mod:`bisect` module with functions for manipulating "
 "sorted lists::"
 msgstr ""
+"Εκτός από τις εναλλακτικές υλοποιήσεις λιστών, η βιβλιοθήκη προσφέρει επίσης "
+"και άλλα εργαλεία όπως το module :mod:`bisect` με συναρτήσεις για τον "
+"χειρισμό ταξινομημένων λιστών::"
 
 #: tutorial/stdlib2.rst:340
 msgid ""
@@ -252,10 +362,15 @@ msgid ""
 "This is useful for applications which repeatedly access the smallest element "
 "but do not want to run a full list sort::"
 msgstr ""
+"Το module :mod:`heapq` παρέχει λειτουργίες για την υλοποίηση σωρών (heaps) "
+"που βασίζονται σε κανονικές λίστες.  Η καταχώριση με την χαμηλότερη τιμή "
+"διατηρείται πάντα στη θέση μηδέν.  Αυτό είναι χρήσιμο για εφαρμογές που "
+"έχουν επανειλημμένα πρόσβαση στο μικρότερο στοιχείο αλλά δεν θέλουν να "
+"εκτελέσουν μια πλήρη ταξινόμηση λίστας::"
 
 #: tutorial/stdlib2.rst:356
 msgid "Decimal Floating Point Arithmetic"
-msgstr ""
+msgstr "Δεκαδική Αριθμητικής Κινητής Υποδιαστολής"
 
 #: tutorial/stdlib2.rst:358
 msgid ""
@@ -263,30 +378,40 @@ msgid ""
 "decimal floating point arithmetic.  Compared to the built-in :class:`float` "
 "implementation of binary floating point, the class is especially helpful for"
 msgstr ""
+"Το module :mod:`decimal` προσφέρουν έναν τύπο δεδομένων :class:`~decimal."
+"Decimal` για δεκαδική αριθμητική κινητής υποδιαστολής.  Σε σύγκριση με την "
+"ενσωματωμένη (built-in) εφαρμογή :class:`float` του δυαδικού κινητής "
+"υποδιαστολής, η κλάση είναι ιδιαίτερα χρήσιμη για"
 
 #: tutorial/stdlib2.rst:362
 msgid ""
 "financial applications and other uses which require exact decimal "
 "representation,"
 msgstr ""
+"οικονομικές εφαρμογές και άλλες χρήσεις που απαιτούν ακριβή δεκαδική "
+"αναπαράσταση,"
 
 #: tutorial/stdlib2.rst:364
 msgid "control over precision,"
-msgstr ""
+msgstr "έλεγχος για την ακρίβεια,"
 
 #: tutorial/stdlib2.rst:365
 msgid "control over rounding to meet legal or regulatory requirements,"
 msgstr ""
+"έλεγχος της στρογγυλοποίησης για την εκπλήρωση νομικών ή κανονιστικών "
+"απαιτήσεων,"
 
 #: tutorial/stdlib2.rst:366
 msgid "tracking of significant decimal places, or"
-msgstr ""
+msgstr "παρακολούθηση σημαντικών δεκαδικών ψηφίων, ή"
 
 #: tutorial/stdlib2.rst:367
 msgid ""
 "applications where the user expects the results to match calculations done "
 "by hand."
 msgstr ""
+"εφαρμογές όπου ο χρήστης αναμένει ότι τα αποτελέσματα ταιριάζουν με "
+"υπολογισμούς που έγιναν με το χέρι."
 
 #: tutorial/stdlib2.rst:370
 msgid ""
@@ -294,6 +419,10 @@ msgid ""
 "results in decimal floating point and binary floating point. The difference "
 "becomes significant if the results are rounded to the nearest cent::"
 msgstr ""
+"Για παράδειγμα, ο υπολογισμός ενός φόρου 5% σε χρέωση τηλεφώνου 70 λεπτών "
+"δίνει διαφορετικά αποτελέσματα σε δεκαδική κινητή υποδιαστολή και σε δυαδική "
+"(binary) κινητή υποδιαστολή. Η διαφορά γίνεται σημαντική εάν τα αποτελέσματα "
+"στρογγυλοποιηθούν στο πλησιέστερο λεπτό::"
 
 #: tutorial/stdlib2.rst:380
 msgid ""
@@ -303,6 +432,11 @@ msgid ""
 "issues that can arise when binary floating point cannot exactly represent "
 "decimal quantities."
 msgstr ""
+"Το αποτέλεσμα :class:`~decimal.Decimal` διατηρεί ένα μηδέν στο τέλος, "
+"συνάγοντας αυτόματα τη σημασία τεσσάρων θέσεων από πολλαπλάσια με σημασία "
+"δύο θέσεων.  Το δεκαδικό αναπαράγει τα μαθηματικά όπως γίνονται με το χέρι "
+"και αποφεύγει ζητήματα που μπορεί να προκύψουν όταν η δυαδική κινητή "
+"υποδιαστολή δεν μπορεί να αντιπροσωπεύει ακριβώς τις δεκαδικές ποσότητες."
 
 #: tutorial/stdlib2.rst:386
 msgid ""
@@ -310,9 +444,13 @@ msgid ""
 "modulo calculations and equality tests that are unsuitable for binary "
 "floating point::"
 msgstr ""
+"Η ακριβής αναπαράσταση επιτρέπει στην κλάση :class:`~decimal.Decimal` να "
+"εκτελεί υπολογισμούς modulo και δοκιμές ισότητας που είναι ακατάλληλες για "
+"δυαδική κινητή υποδιαστολή::"
 
 #: tutorial/stdlib2.rst:400
 msgid ""
 "The :mod:`decimal` module provides arithmetic with as much precision as "
 "needed::"
 msgstr ""
+"Το module :mod:`decimal` παρέχει αριθμητική με όση ακρίβεια χρειάζεται::"
