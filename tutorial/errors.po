@@ -9,16 +9,19 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2024-09-20 11:30+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: tutorial/errors.rst:5
 msgid "Errors and Exceptions"
-msgstr ""
+msgstr "Σφάλματα και Εξαιρέσεις"
 
 #: tutorial/errors.rst:7
 msgid ""
@@ -26,16 +29,23 @@ msgid ""
 "tried out the examples you have probably seen some.  There are (at least) "
 "two distinguishable kinds of errors: *syntax errors* and *exceptions*."
 msgstr ""
+"Μέχρι τώρα τα μηνύματα σφαλμάτων (error messages) δεν ήταν περισσότερα από "
+"όσα αναφέρθηκαν, αλλά αν έχετε δοκιμάσει τα παραδείγματα, πιθανότατα έχετε "
+"δει μερικά.  Υπάρχουν (τουλάχιστον) δύο διαφορετικά είδη σφαλμάτων: *syntax "
+"errors* (συντακτικά σφάλματα) και *exceptions* (εξαιρέσεις)."
 
 #: tutorial/errors.rst:15
 msgid "Syntax Errors"
-msgstr ""
+msgstr "Syntax Errors (Συντακτικά Σφάλματα)"
 
 #: tutorial/errors.rst:17
 msgid ""
 "Syntax errors, also known as parsing errors, are perhaps the most common "
 "kind of complaint you get while you are still learning Python::"
 msgstr ""
+"Τα syntax errors, γνωστά και ως parsing errors, είναι ίσως το πιο "
+"συνηθισμένο είδος παραπόνου που λαμβάνετε ενώ εξακολουθείτε να μαθαίνετε "
+"Python::"
 
 #: tutorial/errors.rst:26
 msgid ""
@@ -46,10 +56,17 @@ msgid ""
 "(``':'``) is missing before it.  File name and line number are printed so "
 "you know where to look in case the input came from a script."
 msgstr ""
+"Ο αναλυτής επαναλαμβάνει την παραβατική γραμμή και εμφανίζει ένα μικρό "
+"'βέλος' που δείχνει το διακριτικό στη γραμμή που εντοπίστηκε το σφάλμα.  Το "
+"σφάλμα μπορεί να προκληθεί από την απουσία διακριτικού *πριν* από το "
+"υποδεικνυόμενο διακριτικό.  Στο παράδειγμα, το σφάλμα ανιχνεύεται στην "
+"συνάρτηση :func:`print`, καθώς λείπει μια άνω κάτω τελεία (``':'``) πριν από "
+"αυτήν.  Το όνομα του αρχείου και ο αριθμός γραμμής εκτυπώνονται, ώστε να "
+"γνωρίζετε πού να ψάξετε σε περίπτωση που η είσοδος προήλθε από ένα script."
 
 #: tutorial/errors.rst:37
 msgid "Exceptions"
-msgstr ""
+msgstr "Exceptions (Εξαιρέσεις)"
 
 #: tutorial/errors.rst:39
 msgid ""
@@ -60,6 +77,12 @@ msgid ""
 "not handled by programs, however, and result in error messages as shown "
 "here::"
 msgstr ""
+"Ακόμη και αν μια πρόταση ή μια έκφραση είναι συντακτικά σωστή, μπορεί να "
+"προκαλέσει σφάλμα όταν γίνεται προσπάθεια εκτέλεσης της. Τα σφάλματα που "
+"εντοπίζονται κατά την εκτέλεση ονομάζονται *εξαιρέσεις* και δεν είναι άνευ "
+"όρων μοιραία (fatal): σύντομα θα μάθετε πως να τα χειρίζεστε σε προγράμματα "
+"Python.  Ωστόσο, οι περισσότερες εξαιρέσεις δεν αντιμετωπίζονται από "
+"προγράμματα και οδηγούν σε μηνύματα σφάλματος όπως φαίνεται εδώ::"
 
 #: tutorial/errors.rst:58
 msgid ""
@@ -72,12 +95,23 @@ msgid ""
 "convention). Standard exception names are built-in identifiers (not reserved "
 "keywords)."
 msgstr ""
+"Η τελευταία γραμμή του μηνύματος σφάλματος υποδεικνύει τι συνέβη. Οι "
+"εξαιρέσεις υπάρχουν σε διαφορετικούς τύπους και ο τύπος εκτυπώνεται ως μέρος "
+"του μηνύματος: οι τύποι στο παράδειγμα είναι :exc:`ZeroDivisionError`, :exc:"
+"`NameError` και :exc:`TypeError`. Η συμβολοσειρά που εκτυπώνεται ως τύπος "
+"εξαίρεσης είναι όνομα της ενσωματωμένης εξαίρεσης που προέκυψε.  Αυτό ισχύει "
+"για όλες τις ενσωματωμένες (built-in) εξαιρέσεις, αλλά δεν χρειάζεται να "
+"ισχύει για εξαιρέσεις που ορίζονται από το χρήστη (αν και είναι μια χρήσιμη "
+"σύμβαση). Οι standard εξαιρέσεις είναι ενσωματωμένα (built-in) αναγνωριστικά "
+"(όχι δεσμευμένες λέξεις-κλειδιά)."
 
 #: tutorial/errors.rst:66
 msgid ""
 "The rest of the line provides detail based on the type of exception and what "
 "caused it."
 msgstr ""
+"Η υπόλοιπη γραμμή παρέχει λεπτομέρειες με βάση τον τύπο της εξαίρεσης και το "
+"τι την προκάλεσε."
 
 #: tutorial/errors.rst:69
 msgid ""
@@ -86,15 +120,21 @@ msgid ""
 "a stack traceback listing source lines; however, it will not display lines "
 "read from standard input."
 msgstr ""
+"Το προηγούμενο μέρος του μηνύματος σφάλματος εμφανίζει το περιβάλλον όπου "
+"συνέβη η εξαίρεση, με τη μορφή ανίχνευσης στοίβας. Γενικά περιέχει μια "
+"στοίβα ανίχνευσης γραμμών πηγής∙ ωστόσο, δεν θα εμφανίζει γραμμές που "
+"διαβάζονται από standard είσοδο."
 
 #: tutorial/errors.rst:74
 msgid ""
 ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
+"Το :ref:`bltin-exceptions` παραθέτει τις ενσωματωμένες εξαιρέσεις και τις "
+"έννοιές τους."
 
 #: tutorial/errors.rst:80
 msgid "Handling Exceptions"
-msgstr ""
+msgstr "Διαχείριση Εξαιρέσεων"
 
 #: tutorial/errors.rst:82
 msgid ""
@@ -105,22 +145,33 @@ msgid ""
 "generated interruption is signalled by raising the :exc:`KeyboardInterrupt` "
 "exception. ::"
 msgstr ""
+"Είναι δυνατό να γραφτεί κώδικας που χειρίζεται επιλεγμένες εξαιρέσεις. "
+"Κοιτάξτε το ακόλουθο παράδειγμα, το οποίο ζητά από τον χρήστη να εισάγει "
+"έναν έγκυρο ακέραιο αριθμό, αλλά επιτρέπει στον χρήστη να διακόψει το "
+"πρόγραμμα (χρησιμοποιώντας :kbd:`Control-C` ή ό,τι υποστηρίζει το "
+"λειτουργικό σύστημα)· σημειώστε ότι μια διακοπή που δημιουργείται από τον "
+"χρήστη σηματοδοτείται κάνοντας raise την εξαίρεση :exc:"
+"`KeyboardInterrupt`. ::"
 
 #: tutorial/errors.rst:96
 msgid "The :keyword:`try` statement works as follows."
-msgstr ""
+msgstr "Η δήλωση :keyword:`try` λειτουργεί ως εξής."
 
 #: tutorial/errors.rst:98
 msgid ""
 "First, the *try clause* (the statement(s) between the :keyword:`try` and :"
 "keyword:`except` keywords) is executed."
 msgstr ""
+"Πρώτον, εκτελείται η *try clause* (η πρόταση(εις) μεταξύ των λέξεων-"
+"κλειδιών :keyword:`try` and :keyword:`except`)."
 
 #: tutorial/errors.rst:101
 msgid ""
 "If no exception occurs, the *except clause* is skipped and execution of the :"
 "keyword:`try` statement is finished."
 msgstr ""
+"Εάν δεν προκύψει εξαίρεση, η *except clause* παραλείπεται και η εκτέλεση της "
+"πρότασης :keyword:`try` ολοκληρώνεται."
 
 #: tutorial/errors.rst:104
 msgid ""
@@ -129,6 +180,11 @@ msgid ""
 "named after the :keyword:`except` keyword, the *except clause* is executed, "
 "and then execution continues after the try/except block."
 msgstr ""
+"Εάν παρουσιαστεί μια εξαίρεση κατά την εκτέλεση της πρότασης :keyword:`try`, "
+"η υπόλοιπη πρόταση παραλείπεται.  Στη συνέχεια, εάν ο τύπος της ταιριάζει με "
+"την εξαίρεση που ονομάζεται από τη λέξη-κλειδί :keyword:`except`, η *except "
+"clause* εκτελείται, και στη συνέχεια η εκτέλεση συνεχίζεται μετά το μπλοκ "
+"try/except."
 
 #: tutorial/errors.rst:109
 msgid ""
@@ -137,6 +193,10 @@ msgid ""
 "handler is found, it is an *unhandled exception* and execution stops with an "
 "error message."
 msgstr ""
+"Εάν προκύψει μια εξαίρεση που δεν ταιριάζει με την εξαίρεση που αναφέρεται "
+"στην *except clause*, μεταβιβάζεται σε εξωτερικές εντολές :keyword:`try` · "
+"εάν δεν βρεθεί κανένας χειριστής, είναι μια *unhandled exception* και η "
+"εκτέλεση σταματά με μήνυμα σφάλματος."
 
 #: tutorial/errors.rst:113
 msgid ""
@@ -147,6 +207,12 @@ msgid ""
 "An *except clause* may name multiple exceptions as a parenthesized tuple, "
 "for example::"
 msgstr ""
+"Μια πρόταση :keyword:`try` μπορεί να έχει περισσότερες από μία *except "
+"clause*, για να καθορίσει χειριστές για διαφορετικές εξαιρέσεις.  Το πολύ "
+"ένας χειριστής θα εκτελεστεί. Οι χειριστές χειρίζονται μόνο εξαιρέσεις που "
+"εμφανίζονται στην αντίστοιχη *try clause*, όχι σε άλλους χειριστές της ίδιας "
+"πρότασης :keyword:`!try`.  Μια *except clause* μπορεί να ονομάσει πολλαπλές "
+"εξαιρέσεις ως πλειάδα (tuple) σε παρένθεση, για παράδειγμα::"
 
 #: tutorial/errors.rst:122
 msgid ""
@@ -155,6 +221,11 @@ msgid ""
 "an *except clause* listing a derived class is not compatible with a base "
 "class). For example, the following code will print B, C, D in that order::"
 msgstr ""
+"Μια κλάση σε μια πρόταση :keyword:`except` είναι συμβατή με μια εξαίρεση εάν "
+"είναι ίδια κλάση ή μια βασική κλάση αυτής (αλλά όχι το αντίστροφο -- μια "
+"*except clause* που παραθέτει μια παραγόμενη κλάση δεν είναι συμβατή με μια "
+"βασική κλάση). Για παράδειγμα, ο ακόλουθος κώδικας θα εκτυπώσει τα B, C, D "
+"με αυτή τη σειρά::"
 
 #: tutorial/errors.rst:146
 msgid ""
@@ -162,6 +233,9 @@ msgid ""
 "it would have printed B, B, B --- the first matching *except clause* is "
 "triggered."
 msgstr ""
+"Σημειώστε ότι εάν οι *except clauses* είχαν αντιστραφεί (με το ``except B`` "
+"πρώτα), θα είχε εκτυπωθεί B, B, B --- ενεργοποιείται η πρώτη αντιστοίχιση "
+"*except clause*."
 
 #: tutorial/errors.rst:149
 msgid ""
@@ -169,6 +243,9 @@ msgid ""
 "exception's *arguments*. The presence and types of the arguments depend on "
 "the exception type."
 msgstr ""
+"Όταν προκύπτει μια εξαίρεση, μπορεί να έχει συσχετισμένες τιμές, γνωστές και "
+"ως *ορίσματα* της εξαίρεσης. Η παρουσία και οι τύποι των ορισμάτων "
+"εξαρτώνται από τον τύπο εξαίρεσης."
 
 #: tutorial/errors.rst:153
 msgid ""
@@ -178,12 +255,20 @@ msgid ""
 "types define :meth:`~object.__str__` to print all the arguments without "
 "explicitly accessing ``.args``.  ::"
 msgstr ""
+"Το *except clause* μπορεί να καθορίσει μια μεταβλητή μετά το όνομα της "
+"εξαίρεσης.  Η μεταβλητή συνδέεται με το στιγμιότυπο της εξαίρεσης η οποία "
+"συνήθως έχει ένα χαρακτηριστικό ``args`` που αποθηκεύει τα ορίσματα. Για "
+"ευκολία, οι ενσωματωμένοι (builtin) τύποι εξαίρεσης ορίζουν :meth:`~object."
+"__str__` για να εκτυπώσετε όλα τα ορίσματα χωρίς ρητή πρόσβαση στο ``."
+"args``.  ::"
 
 #: tutorial/errors.rst:176
 msgid ""
 "The exception's :meth:`~object.__str__` output is printed as the last part "
 "('detail') of the message for unhandled exceptions."
 msgstr ""
+"Η έξοδος της εξαίρεσης :meth:`~object.__str__` εκτυπώνεται ως το τελευταίο "
+"μέρος ('λεπτομέρεια') του μηνύματος για μη χειριζόμενες εξαιρέσεις."
 
 #: tutorial/errors.rst:179
 msgid ""
@@ -195,6 +280,14 @@ msgid ""
 "exit` and :exc:`KeyboardInterrupt` which is raised when a user wishes to "
 "interrupt the program."
 msgstr ""
+"Η :exc:`BaseException` είναι η κοινή βασική κλάση όλων των εξαιρέσεων. Μια "
+"από τις υποκατηγορίες της, :exc:`Exception`, είναι η βασική κλάση όλων των "
+"μη μοιραίων εξαιρέσεων. Εξαιρέσεις που δεν είναι υποκλάσεις του :exc:"
+"`Exception` δεν αντιμετωπίζονται συνήθως, επειδή χρησιμοποιούνται για να "
+"υποδείξουν ότι το πρόγραμμα πρέπει να τερματιστεί. Περιλαμβάνουν το :exc:"
+"`SystemExit` το οποίο αυξάνεται από το :meth:`sys.exit` και το :exc:"
+"`KeyboardInterrupt` το οποίο γίνεται raise όταν ο χρήστης επιθυμεί να "
+"διακόψει την εκτέλεση του προγράμματος."
 
 #: tutorial/errors.rst:187
 msgid ""
@@ -203,6 +296,10 @@ msgid ""
 "exceptions that we intend to handle, and to allow any unexpected exceptions "
 "to propagate on."
 msgstr ""
+"Η :exc:`Exception` μπορεί να χρησιμοποιηθεί ως μπαλαντέρ που πιάνει (σχεδόν) "
+"τα πάντα. Ωστόσο, είναι καλή πρακτική να είμαστε όσο το δυνατόν πιο "
+"συγκεκριμένοι με τους τύπους εξαιρέσεων που σκοπεύουμε να χειριστούμε και να "
+"επιτρέπουμε τυχόν απροσδόκητες εξαιρέσεις που εξαπλώνονται."
 
 #: tutorial/errors.rst:192
 msgid ""
@@ -210,6 +307,9 @@ msgid ""
 "exception and then re-raise it (allowing a caller to handle the exception as "
 "well)::"
 msgstr ""
+"Το πιο κοινό μοτίβο για το χειρισμό :exc:`Exception` είναι να εκτυπώσετε ή "
+"να καταγράψετε την εξαίρεση και στη συνέχεια να την επαναφέρετε "
+"(επιτρέποντας σε έναν καλούντα να χειριστεί και την εξαίρεση)::"
 
 #: tutorial/errors.rst:210
 msgid ""
@@ -218,6 +318,10 @@ msgid ""
 "useful for code that must be executed if the *try clause* does not raise an "
 "exception. For example::"
 msgstr ""
+"Η πρόταση :keyword:`try` ... :keyword:`except` έχει ένα προαιρετικό *else "
+"clause*, το οποίο, όταν υπάρχει, πρέπει να ακολουθεί όλες τις *except "
+"clauses*.  Είναι χρήσιμο για κώδικα που πρέπει να εκτελεστεί εάν το *try "
+"clause* δεν κάνει raise μια εξαίρεση. Για παράδειγμα::"
 
 #: tutorial/errors.rst:224
 msgid ""
@@ -226,6 +330,10 @@ msgid ""
 "exception that wasn't raised by the code being protected by the :keyword:`!"
 "try` ... :keyword:`!except` statement."
 msgstr ""
+"Η χρήση της πρότασης :keyword:`!else` είναι καλύτερη από την προσθήκη "
+"πρόσθετου κώδικα στην πρόταση :keyword:`try`, επειδή αποφεύγει την κατά "
+"λάθος σύλληψη μιας εξαίρεσης που δεν προέκυψε από τον κώδικα που "
+"προστατεύεται από την πρόταση :keyword:`!try` ... :keyword:`!except`."
 
 #: tutorial/errors.rst:229
 msgid ""
@@ -233,16 +341,22 @@ msgid ""
 "the *try clause*, but also those that occur inside functions that are called "
 "(even indirectly) in the *try clause*. For example::"
 msgstr ""
+"Οι χειριστές εξαιρέσεων δεν χειρίζονται μόνο τις εξαιρέσεις που εμφανίζονται "
+"αμέσως στη *try clause*, αλλά και εκείνες που εμφανίζονται μέσα σε "
+"συναρτήσεις που καλούνται (ακόμη και έμμεσα) στην *try clause*. Για "
+"παράδειγμα::"
 
 #: tutorial/errors.rst:247
 msgid "Raising Exceptions"
-msgstr ""
+msgstr "Raising Εξαιρέσεων"
 
 #: tutorial/errors.rst:249
 msgid ""
 "The :keyword:`raise` statement allows the programmer to force a specified "
 "exception to occur. For example::"
 msgstr ""
+"Η δήλωση :keyword:`raise` επιτρέπει στον προγραμματιστή να αναγκάσει να "
+"εμφανιστεί μια καθορισμένη εξαίρεση. Για  παράδειγμα::"
 
 #: tutorial/errors.rst:257
 msgid ""
@@ -252,6 +366,12 @@ msgid ""
 "its subclasses).  If an exception class is passed, it will be implicitly "
 "instantiated by calling its constructor with no arguments::"
 msgstr ""
+"Το μοναδικό όρισμα στο :keyword:`raise` υποδεικνύει την εξαίρεση που πρέπει "
+"να γίνει raise. Αυτή πρέπει να είναι είτε μια παρουσία εξαίρεσης ή μια "
+"εξαίρεση κλάση (μια κλάση που προέρχεται από :class:`BaseException`, όπως :"
+"exc:`Exception` ή μία από τις υποκλάσεις της). Εάν περάσει μια κλάση "
+"εξαίρεσης, θα δημιουργηθεί σιωπηρά καλώντας τον constructor της χωρίς "
+"ορίσματα::"
 
 #: tutorial/errors.rst:265
 msgid ""
@@ -259,10 +379,13 @@ msgid ""
 "handle it, a simpler form of the :keyword:`raise` statement allows you to re-"
 "raise the exception::"
 msgstr ""
+"Εάν πρέπει να προσδιορίσετε εάν έχει εγγραφεί μια εξαίρεση, αλλά δεν "
+"σκοπεύετε να τη χειριστείτε, μια απλούστερη μορφή της δήλωσης :keyword:"
+"`raise` σας επιτρέπει να κάνετε ξανά raise την εξαίρεση::"
 
 #: tutorial/errors.rst:284
 msgid "Exception Chaining"
-msgstr ""
+msgstr "Αλυσιδωτές Εξαιρέσεις"
 
 #: tutorial/errors.rst:286
 msgid ""
@@ -270,31 +393,43 @@ msgid ""
 "will have the exception being handled attached to it and included in the "
 "error message::"
 msgstr ""
+"Εάν παρουσιαστεί μια μη χειριζόμενη (unhandled) εξαίρεση μέσα σε μια "
+"ενότητα :keyword:`except`, θα επισυνάψει την εξαίρεση που θα χειριστεί και "
+"θα συμπεριληφθεί στο μήνυμα σφάλματος::"
 
 #: tutorial/errors.rst:305
 msgid ""
 "To indicate that an exception is a direct consequence of another, the :"
 "keyword:`raise` statement allows an optional :keyword:`from<raise>` clause::"
 msgstr ""
+"Για να υποδείξετε ότι μια εξαίρεση είναι άμεση συνέπεια μιας άλλης, η "
+"πρόταση :keyword:`raise` επιτρέπει μια προαιρετική πρόταση :keyword:"
+"`from<raise>`::"
 
 #: tutorial/errors.rst:311
 msgid "This can be useful when you are transforming exceptions. For example::"
 msgstr ""
+"Αυτό μπορεί να είναι χρήσιμο όταν μετασχηματίζεται εξαιρέσεις. Για "
+"παράδειγμα::"
 
 #: tutorial/errors.rst:332
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
 msgstr ""
+"Επιτρέπει επίσης την απενεργοποίηση της αυτόματης αλυσίδας εξαιρέσεων "
+"χρησιμοποιώντας ``from None`` idiom::"
 
 #: tutorial/errors.rst:344
 msgid ""
 "For more information about chaining mechanics, see :ref:`bltin-exceptions`."
 msgstr ""
+"Για περισσότερες πληροφορίες σχετικά με την μηχανική αλυσίδων, δείτε :ref:"
+"`bltin-exceptions`."
 
 #: tutorial/errors.rst:350
 msgid "User-defined Exceptions"
-msgstr ""
+msgstr "Εξαιρέσεις που καθορίζονται από το χρήστη"
 
 #: tutorial/errors.rst:352
 msgid ""
@@ -303,6 +438,10 @@ msgid ""
 "typically be derived from the :exc:`Exception` class, either directly or "
 "indirectly."
 msgstr ""
+"Τα  προγράμματα μπορούν να ονομάσουν τις δικές τους εξαιρέσεις δημιουργώντας "
+"μια νέα κλάση εξαιρέσεων (δείτε :ref:`tut-classes` για περισσότερα σχετικά "
+"με τις κλάσεις Python).  Οι εξαιρέσεις θα πρέπει συνήθως να προέρχονται από "
+"την κλάση :exc:`Exception`, είτε άμεσα είτε έμμεσα."
 
 #: tutorial/errors.rst:356
 msgid ""
@@ -311,22 +450,30 @@ msgid ""
 "allow information about the error to be extracted by handlers for the "
 "exception."
 msgstr ""
+"Μπορούν να οριστούν κλάσεις εξαίρεσης που κάνουν οτιδήποτε μπορεί να κάνει "
+"οποιαδήποτε άλλη κλάση, αλλά συνήθως διατηρούνται απλές, συχνά προσφέρουν "
+"μόνο έναν αριθμό χαρακτηριστικών που επιτρέπουν την εξαγωγή πληροφοριών "
+"σχετικά με το σφάλμα από τους χειριστές για την εξαίρεση."
 
 #: tutorial/errors.rst:360
 msgid ""
 "Most exceptions are defined with names that end in \"Error\", similar to the "
 "naming of the standard exceptions."
 msgstr ""
+"Οι περισσότερες εξαιρέσεις ορίζονται με ονόματα που τελειώνουν σε \"Error\", "
+"παρόμοια με την ονομασία των τυπικών εξαιρέσεων."
 
 #: tutorial/errors.rst:363
 msgid ""
 "Many standard modules define their own exceptions to report errors that may "
 "occur in functions they define."
 msgstr ""
+"Πολλά standard modules ορίζουν τις δικές τους εξαιρέσεις για την αναφορά "
+"σφαλμάτων που μπορεί να προκύψουν σε συναρτήσεις που ορίζουν."
 
 #: tutorial/errors.rst:370
 msgid "Defining Clean-up Actions"
-msgstr ""
+msgstr "Καθορισμός ενεργειών καθαρισμού"
 
 #: tutorial/errors.rst:372
 msgid ""
@@ -334,6 +481,9 @@ msgid ""
 "to define clean-up actions that must be executed under all circumstances.  "
 "For example::"
 msgstr ""
+"Η δήλωση :keyword:`try` έχει μια άλλη προαιρετική πρόταση που προορίζεται να "
+"ορίσει ενέργειες καθαρισμού που πρέπει να εκτελεστούν υπό οποιεσδήποτε "
+"συνθήκες.  Για παράδειγμα::"
 
 #: tutorial/errors.rst:386
 msgid ""
@@ -343,6 +493,11 @@ msgid ""
 "statement produces an exception. The following points discuss more complex "
 "cases when an exception occurs:"
 msgstr ""
+"Εάν υπάρχει μια πρόταση :keyword:`finally`, η πρόταση :keyword:`!finally` θα "
+"εκτελεστεί ως η τελευταία εργασία πριν από την ολοκλήρωση της πρότασης :"
+"keyword:`try`. Η πρόταση :keyword:`!finally` εκτελείται είτε όχι η πρόταση :"
+"keyword:`!try` παράγει μια εξαίρεση. Τα ακόλουθα σημεία συζητούν πιο "
+"περίπλοκες περιπτώσεις όταν εμφανίζεται μια εξαίρεση:"
 
 #: tutorial/errors.rst:392
 msgid ""
@@ -351,6 +506,11 @@ msgid ""
 "not handled by an :keyword:`!except` clause, the exception is re-raised "
 "after the :keyword:`!finally` clause has been executed."
 msgstr ""
+"Εάν παρουσιαστεί μια εξαίρεση κατά την εκτέλεση της πρότασης :keyword:`!"
+"try`, η εξαίρεση μπορεί να αντιμετωπιστεί από μια πρόταση :keyword:`except`, "
+"Εάν η εξαίρεση δεν αντιμετωπίζεται από μια πρόταση :keyword:`!except`, η "
+"εξαίρεση γίνεται ξανά raise μετά την εκτέλεση της πρότασης :keyword:`!"
+"finally`."
 
 #: tutorial/errors.rst:398
 msgid ""
@@ -358,12 +518,17 @@ msgid ""
 "keyword:`!else` clause. Again, the exception is re-raised after the :keyword:"
 "`!finally` clause has been executed."
 msgstr ""
+"Μια εξαίρεση θα μπορούσε να προκύψει κατά την εκτέλεση μιας πρότασης :"
+"keyword:`!except` ή :keyword:`!else`. Και πάλι, η εξαίρεση τίθεται ξανά μετά "
+"την εκτέλεση της πρότασης :keyword:`!finally`."
 
 #: tutorial/errors.rst:402
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, exceptions are not re-raised."
 msgstr ""
+"Εάν η πρόταση :keyword:`!finally` εκτελέσει μια πρόταση :keyword:`break`, :"
+"keyword:`continue` ή :keyword:`return`, οι εξαιρέσεις δεν αυξάνονται εκ νέου."
 
 #: tutorial/errors.rst:406
 msgid ""
@@ -372,6 +537,10 @@ msgid ""
 "will execute just prior to the :keyword:`!break`, :keyword:`!continue` or :"
 "keyword:`!return` statement's execution."
 msgstr ""
+"Εάν η πρόταση :keyword:`!try` φτάσει σε μια δήλωση :keyword:`break`, :"
+"keyword:`continue` ή :keyword:`return`, η πρόταση :keyword:`!finally` θα "
+"εκτελεστεί ακριβώς πριν από τα :keyword:`!break`, :keyword:`!continue` or :"
+"keyword:`!return` της εκτέλεσης της δήλωσης."
 
 #: tutorial/errors.rst:412
 msgid ""
@@ -380,14 +549,18 @@ msgid ""
 "keyword:`!return` statement, not the value from the :keyword:`!try` "
 "clause's :keyword:`!return` statement."
 msgstr ""
+"Εάν μια πρόταση :keyword:`!finally` περιλαμβάνει μια δήλωση :keyword:`!"
+"return`, η τιμή που επιστρέφεται θα είναι αυτή από την πρόταση :keyword:`!"
+"finally` της δήλωσης της :keyword:`!return`, και όχι η τιμή από τη δήλωση :"
+"keyword:`!try` της πρότασης :keyword:`!return`."
 
 #: tutorial/errors.rst:418
 msgid "For example::"
-msgstr ""
+msgstr "Για παράδειγμα::"
 
 #: tutorial/errors.rst:429
 msgid "A more complicated example::"
-msgstr ""
+msgstr "Ένα πιο περίπλοκο παράδειγμα::"
 
 #: tutorial/errors.rst:454
 msgid ""
@@ -396,6 +569,10 @@ msgid ""
 "keyword:`except` clause and therefore re-raised after the :keyword:`!"
 "finally` clause has been executed."
 msgstr ""
+"Όπως μπορείτε να δείτε, η πρόταση :keyword:`finally` εκτελείται σε "
+"οποιαδήποτε περίπτωση.  Το :exc:`TypeError` που δημιουργείται με τη διαίρεση "
+"δύο συμβολοσειρών δεν χειρίζεται από την πρόταση :keyword:`except` και "
+"επομένως γίνεται ξανά raise μετά την εκτέλεση του όρου :keyword:`!finally`."
 
 #: tutorial/errors.rst:459
 msgid ""
@@ -403,10 +580,13 @@ msgid ""
 "releasing external resources (such as files or network connections), "
 "regardless of whether the use of the resource was successful."
 msgstr ""
+"Στις εφαρμογές του πραγματικού κόσμου, η πρόταση :keyword:`finally` είναι "
+"χρήσιμη για την απελευθέρωση εξωτερικών πόρων (όπως αρχεία ή συνδέσεις "
+"δικτύου), ανεξάρτητα από το εάν η χρήση του πόρου ήταν επιτυχής."
 
 #: tutorial/errors.rst:467
 msgid "Predefined Clean-up Actions"
-msgstr ""
+msgstr "Προκαθορισμένες ενέργειες καθαρισμού"
 
 #: tutorial/errors.rst:469
 msgid ""
@@ -415,6 +595,11 @@ msgid ""
 "the object succeeded or failed. Look at the following example, which tries "
 "to open a file and print its contents to the screen. ::"
 msgstr ""
+"Μερικά αντικείμενα ορίζουν τις τυπικές ενέργειες καθαρισμού που πρέπει να "
+"αναλαμβάνονται όταν το αντικείμενο δεν χρειάζεται πλέον, ανεξάρτητα από το "
+"εάν η λειτουργία που χρησιμοποιεί το αντικείμενο πέτυχε ή απέτυχε. Κοιτάξτε "
+"το ακόλουθο αντικείμενο, το οποίο προσπαθεί να ανοίξει ένα αρχείο και να "
+"εκτυπώσει τα περιεχόμενα του στην οθόνη. ::"
 
 #: tutorial/errors.rst:477
 msgid ""
@@ -425,6 +610,12 @@ msgid ""
 "to be used in a way that ensures they are always cleaned up promptly and "
 "correctly. ::"
 msgstr ""
+"Το πρόβλημα με αυτόν τον κώδικα είναι ότι αφήνει το αρχείο ανοιχτό για "
+"απροσδιόριστο χρονικό διάστημα μετά την ολοκλήρωση της εκτέλεσης αυτού του "
+"τμήματος του κώδικα. Αυτό δεν είναι πρόβλημα σε απλά σενάρια, αλλά μπορεί να "
+"είναι πρόβλημα για μεγαλύτερες εφαρμογές. Η δήλωση :keyword:`with` επιτρέπει "
+"σε αντικείμενα όπως αρχεία να χρησιμοποιούνται με τρόπο που διασφαλίζει ότι "
+"καθαρίζονται πάντα άμεσα και σωστά. ::"
 
 #: tutorial/errors.rst:487
 msgid ""
@@ -433,10 +624,14 @@ msgid ""
 "files, provide predefined clean-up actions will indicate this in their "
 "documentation."
 msgstr ""
+"Μετά την εκτέλεση της πρότασης, το αρχείο *f* είναι πάντα κλειστό, ακόμα και "
+"αν παρουσιάστηκε πρόβλημα κατά την επεξεργασία των γραμμών. Τα αντικείμενα "
+"που, όπως τα αρχεία παρέχουν προκαθορισμένες ενέργειες καθαρισμού θα το "
+"υποδεικνύουν στην τεκμηρίωση τους."
 
 #: tutorial/errors.rst:495
 msgid "Raising and Handling Multiple Unrelated Exceptions"
-msgstr ""
+msgstr "Raising και Χειρισμός Πολλαπλών Άσχετων Εξαιρέσεων"
 
 #: tutorial/errors.rst:497
 msgid ""
@@ -446,6 +641,11 @@ msgid ""
 "cases where it is desirable to continue execution and collect multiple "
 "errors rather than raise the first exception."
 msgstr ""
+"Υπάρχουν περιπτώσεις όπου είναι απαραίτητο να αναφερθούν πολλές εξαιρέσεις "
+"που έχουν συμβεί. Αυτό συμβαίνει συχνά σε πλαίσια ταυτόχρονης χρήσης, όταν "
+"πολλές εργασίες μπορεί να έχουνε αποτύχει παράλληλα, αλλά υπάρχουν και άλλες "
+"περιπτώσεις χρήσης όπου είναι επιθυμητό να συνεχιστεί η εκτέλεση και η "
+"συλλογή πολλαπλών σφαλμάτων αντί να κάνει raise την πρώτη εξαίρεση."
 
 #: tutorial/errors.rst:503
 msgid ""
@@ -453,6 +653,9 @@ msgid ""
 "that they can be raised together. It is an exception itself, so it can be "
 "caught like any other exception. ::"
 msgstr ""
+"Η ενσωματωμένη (builtin) :exc:`ExceptionGroup` αναδιπλώνει μια λίστα με "
+"παρουσίες εξαιρέσεων ώστε να μπορούν να αυξηθούν μαζί. Είναι μια εξαίρεση "
+"από μόνη της, επομένως μπορεί να συλληφθεί όπως κάθε άλλη εξαίρεση. ::"
 
 #: tutorial/errors.rst:529
 msgid ""
@@ -462,6 +665,12 @@ msgid ""
 "extracts from the group exceptions of a certain type while letting all other "
 "exceptions propagate to other clauses and eventually to be reraised. ::"
 msgstr ""
+"Χρησιμοποιώντας ``except*`` αντί για ``except``, μπορούμε επιλεκτικά να "
+"χειριστούμε μόνο τις εξαιρέσεις στην ομάδα που αντιστοιχούν σε έναν "
+"συγκεκριμένο τύπο. Στο παρακάτω παράδειγμα, το οποίο δείχνει μια ένθετη "
+"ομάδα εξαιρέσεων, κάθε πρόταση ``except*`` εξάγει από τις εξαιρέσεις της "
+"ομάδας ενός συγκεκριμένου τύπου, ενώ αφήνει όλες τις άλλες εξαιρέσεις να "
+"διαδοθούν σε άλλες προτάσεις και τελικά να ξαναγίνουν raise. ::"
 
 #: tutorial/errors.rst:572
 msgid ""
@@ -470,10 +679,14 @@ msgid ""
 "that have already been raised and caught by the program, along the following "
 "pattern::"
 msgstr ""
+"Λάβετε υπόψη ότι οι εξαιρέσεις που είναι ένθετες σε μια ομάδα εξαιρέσεων "
+"πρέπει να είναι στιγμιότυπα, όχι τύποι. Αυτό συμβαίνει επειδή στην πράξη οι "
+"εξαιρέσεις θα ήταν συνήθως αυτές που έχουν ήδη αναφερθεί και καταγραφεί από "
+"το πρόγραμμα, σύμφωνα με το ακόλουθο μοτίβο::"
 
 #: tutorial/errors.rst:592
 msgid "Enriching Exceptions with Notes"
-msgstr ""
+msgstr "Εμπλουτίζοντας τις Εξαιρέσεις με Σημειώσεις"
 
 #: tutorial/errors.rst:594
 msgid ""
@@ -485,6 +698,13 @@ msgid ""
 "standard traceback rendering includes all notes, in the order they were "
 "added, after the exception. ::"
 msgstr ""
+"Όταν δημιουργείται μια εξαίρεση προκειμένου να γίνει raise, συνήθως "
+"αρχικοποιείται με πληροφορίες που περιγράφουν το σφάλμα που έχει προκύψει. "
+"Υπάρχουν περιπτώσεις όπου είναι χρήσιμο να προστεθούν πληροφορίες μετά την "
+"σύλληψη της εξαίρεσης. Για το σκοπό αυτό, οι εξαιρέσεις έχουνε μια μέθοδο "
+"``add_note(note)`` που δέχεται μια συμβολοσειρά και την προσθέτει στη λίστα "
+"σημειώσεων της εξαίρεσης. Η standard απόδοση παρακολούθησης περιλαμβάνει "
+"όλες τις σημειώσεις, με τη σειρά που προστέθηκα, μετά την εξαίρεση. ::"
 
 #: tutorial/errors.rst:615
 msgid ""
@@ -492,3 +712,7 @@ msgid ""
 "to add context information for the individual errors. In the following each "
 "exception in the group has a note indicating when this error has occurred. ::"
 msgstr ""
+"Για παράδειγμα, όταν συλλέγουμε εξαιρέσεις σε μια ομάδα εξαιρέσεων, μπορεί "
+"να θέλουμε να προσθέσουμε πληροφορίες περιβάλλοντος για τα μεμονωμένα "
+"σφάλματα. Στην συνέχεια κάθε εξαίρεση στην ομάδα έχει μια σημείωση που "
+"υποδεικνύει πότε έχει συμβεί αυτό το σφάλμα. ::"
