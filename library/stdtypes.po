@@ -3741,6 +3741,9 @@ msgid ""
 "Folding' of the Unicode Standard <https://www.unicode.org/versions/"
 "Unicode15.0.0/ch03.pdf>`__."
 msgstr ""
+"Ο uppercasing αλγόριθμος που χρησιμοποιείται `περιγράφεται στην ενότητα 3.13 'Default Case "
+"Folding' του προτύπου Unicode <https://www.unicode.org/versions/"
+"Unicode15.0.0/ch03.pdf>`__."
 
 #: library/stdtypes.rst:2296
 msgid ""
@@ -3749,10 +3752,14 @@ msgid ""
 "by inserting the padding *after* the sign character rather than before. The "
 "original string is returned if *width* is less than or equal to ``len(s)``."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) που έμεινε γεμάτη με ψηφία ASCII ``'0'``` για να δημιουργήσει μία "
+"συμβολοσειρά μήκους *width*. Χειρίζεται ένα leading sign prefix (``'+'``/``'-'``) "
+"εισάγοντας την συμπλήρωση *μετά* τον χαρακτήρα sign αντί για πριν. Η "
+"αρχική συμβολοσειρά επιστρέφεται εάν το *width* είναι μικρότερο ή ίσο με ``len(s)``."
 
 #: library/stdtypes.rst:2314
 msgid "``printf``-style String Formatting"
-msgstr ""
+msgstr "``printf``-style String Formatting"
 
 #: library/stdtypes.rst:2327
 msgid ""
@@ -3764,6 +3771,13 @@ msgid ""
 "provides their own trade-offs and benefits of simplicity, flexibility, and/"
 "or extensibility."
 msgstr ""
+"Οι λειτουργίες μορφοποίησης που περιγράφονται εδώ παρουσιάζουν μια ποικιλία ιδιορρυθμιών που "
+"οδηγούν σε έναν αριθμό κοινών σφαλμάτων (όπως η αποτυχία εμφάνισης tuple και "
+"σωστών λεξικών). Χρησιμοποιώντας τα νεότερα :ref:`formatted string literals <f-"
+"strings>`, το :meth:`str.format` interface ή το :ref:`template strings "
+"<template-strings>` μπορεί να βοηθήσει στην αποφυγή αυτών των σφαλμάτων. Κάθε μία από αυτές τις εναλλακτικές "
+"παρέχει τους δικούς τους συμβιβασμούς και τα οφέλη της απλότητας, ευελιξίας και/"
+"ή επεκτασιμότητας."
 
 #: library/stdtypes.rst:2335
 msgid ""
@@ -3774,6 +3788,12 @@ msgid ""
 "elements of *values*. The effect is similar to using the :c:func:`sprintf` "
 "in the C language."
 msgstr ""
+"Τα αντικείμενα string έχουν μια μοναδική ενσωματωμένη λειτουργία: τον τελεστή ``%`` "
+"(modulo). Αυτός είναι επίσης γνωστός ως τελεστής *formatting* ή * interpolation*. "
+"Δεδομένων των ``format % values`` (όπου *format* είναι μία συμβολοσειρά), ``%`` "
+"οι προδιαγραφές μετατροπής στο *format* αντικαθίστανται από μηδέν ή περισσότερα "
+"στοιχεία των *values*. Το αποτέλεσμα είναι παρόμοιο με τη χρήση του :c:func:`sprintf` "
+"στη γλώσσα C."
 
 #: library/stdtypes.rst:2341
 msgid ""
@@ -3782,28 +3802,38 @@ msgid ""
 "items specified by the format string, or a single mapping object (for "
 "example, a dictionary)."
 msgstr ""
+"Εάν το *format* απαιτεί ένα μεμονωμένο όρισμα, το *values* μπορεί να είναι ένα μεμονωμένο non-tuple "
+"αντικείμενο. [5]_ Διαφορετικά, τα *values* πρέπει να είναι ένα tuple με ακριβώς τον ίδιο αριθμό των "
+"στοιχείων που καθορίζονται από το format string ή ένα μεμονωμένο αντικείμενο mapping (για "
+"παράδειγμα, ένα λεξικό)."
 
 #: library/stdtypes.rst:3569
 msgid ""
 "A conversion specifier contains two or more characters and has the following "
 "components, which must occur in this order:"
 msgstr ""
+"Ένας conversion specifier περιέχει δύο ή περισσότερους χαρακτήρες και έχει τους εξής "
+"components, οι οποίοι πρέπει να εμφανίζονται με αυτή τη σειρά:"
 
 #: library/stdtypes.rst:3572
 msgid "The ``'%'`` character, which marks the start of the specifier."
-msgstr ""
+msgstr "Ο χαρακτήρας ```%''``, που σηματοδοτεί την αρχή του specifier."
 
 #: library/stdtypes.rst:3574
 msgid ""
 "Mapping key (optional), consisting of a parenthesised sequence of characters "
 "(for example, ``(somename)``)."
 msgstr ""
+"Κλειδί mapping (προαιρετικό), που αποτελείται από μια ακολουθία χαρακτήρων σε παρένθεση "
+"(για παράδειγμα, ``(somename)``)."
 
 #: library/stdtypes.rst:3577
 msgid ""
 "Conversion flags (optional), which affect the result of some conversion "
 "types."
 msgstr ""
+"Σημαίες conversion (προαιρετικό), που επηρεάζουν το αποτέλεσμα κάποιων τύπων "
+"conversion."
 
 #: library/stdtypes.rst:3580
 msgid ""
@@ -3811,6 +3841,9 @@ msgid ""
 "actual width is read from the next element of the tuple in *values*, and the "
 "object to convert comes after the minimum field width and optional precision."
 msgstr ""
+"Ελάχιστο πλάτος πεδίου (προαιρετικό). Εάν ορίζεται ως ``'*'`` (αστερίσκος), το "
+"πραγματικό πλάτος διαβάζεται από το επόμενο στοιχείο του tuple στα *values*, και το "
+"αντικείμενο προς μετατροπή έρχεται μετά από το ελάχιστο πλάτος πεδίου και το προαιρετικό precision."
 
 #: library/stdtypes.rst:3584
 msgid ""
@@ -3819,14 +3852,18 @@ msgid ""
 "next element of the tuple in *values*, and the value to convert comes after "
 "the precision."
 msgstr ""
+"Precision (προαιρετικό), δίνεται ως ``'.'`` (τελεία) ακολουθούμενη από το precision."
+"Εάν ορίζεται ως ``'*'`` (αστερίσκος), το πραγματικό precision διαβάζεται από το "
+"επόμενο στοιχείο του tuple στα *values*, και η τιμή προς μετατροπή έρχεται μετά το "
+"precision."
 
 #: library/stdtypes.rst:3589
 msgid "Length modifier (optional)."
-msgstr ""
+msgstr "Μετατροπέας του length (προαιρετικό)."
 
 #: library/stdtypes.rst:3591
 msgid "Conversion type."
-msgstr ""
+msgstr "Τύπος conversion."
 
 #: library/stdtypes.rst:2375
 msgid ""
@@ -3835,6 +3872,10 @@ msgid ""
 "dictionary inserted immediately after the ``'%'`` character. The mapping key "
 "selects the value to be formatted from the mapping.  For example:"
 msgstr ""
+"Όταν το σωστό όρισμα είναι ένα λεξικό (ή άλλος τύπος αντιστοίχισης), τότε το "
+"οι μορφές στη συμβολοσειρά *πρέπει* να περιλαμβάνουν ένα κλειδί αντιστοίχισης σε παρένθεση σε αυτό "
+"Το λεξικό εισήχθη αμέσως μετά τον χαρακτήρα ``'%'``. Το κλειδί mapping "
+"επιλέγει την τιμή που θα μορφοποιηθεί από το mapping.  Για παράδειγμα:"
 
 #: library/stdtypes.rst:3602
 msgid ""
