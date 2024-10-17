@@ -5052,6 +5052,9 @@ msgid ""
 "support the buffer protocol.  Built-in objects that support the buffer "
 "protocol include :class:`bytes` and :class:`bytearray`."
 msgstr ""
+"Δημιουργεί μια :class:`memoryview` που αναφέρεται στο *object*.  Το *object* "
+"πρέπει να υποστηρίζει το πρωτόκολλο bugger.  Τα ενσωματωμένα αντικείμενα που υποστηρίζουν "
+"το πρωτόκολλο buffer περιλαμβάνουν :class:`bytes` και :class:`bytearray`."
 
 #: library/stdtypes.rst:3749
 msgid ""
@@ -5060,6 +5063,10 @@ msgid ""
 "as :class:`bytes` and :class:`bytearray`, an element is a single byte, but "
 "other types such as :class:`array.array` may have bigger elements."
 msgstr ""
+"Μια :class:`memoryview` έχει την έννοια ενός *στοιχείου*, το οποίο είναι η μονάδα ατομικής "
+"μνήμης που χειρίζεται το αρχικό *object*.  Για πολλούς απλούς τύπους όπως "
+":class:`bytes` και :class:`bytearray`, ένα στοιχείο είναι ένα μεμονωμένο byte, αλλά "
+"άλλοι τύποι όπως :class:`array.array` μπορεί να έχουν μεγαλύτερα στοιχεία."
 
 #: library/stdtypes.rst:3754
 msgid ""
@@ -5067,24 +5074,32 @@ msgid ""
 "is the nested list representation of the view. If ``view.ndim = 1``, this is "
 "equal to the number of elements in the view."
 msgstr ""
+"Το ``len(view)`` ισούται με το μήκος του :class:`~memoryview.tolist`, το οποίο είναι η "
+"ένθετη αναπαράσταση κατά την προβολή της λίστας. Εάν ``view.ndim = 1``, αυτό ισούται με "
+"τον αριθμό των στοιχείων για την προβολή."
 
 #: library/stdtypes.rst:3758
 msgid ""
 "If ``view.ndim == 0``, ``len(view)`` now raises :exc:`TypeError` instead of "
 "returning 1."
 msgstr ""
+"Εάν ``view.ndim == 0``, το ``len(view)`` τώρα κάνει raise μια :exc:`TypeError` αντί να "
+"επιστρέψει 1."
 
 #: library/stdtypes.rst:3761
 msgid ""
 "The :class:`~memoryview.itemsize` attribute will give you the number of "
 "bytes in a single element."
 msgstr ""
+"Το χαρακτηριστικό :class:`~memoryview.itemsize` θα σας δώσει τον αριθμό των byte σε ένα μόνο στοιχείο."
 
 #: library/stdtypes.rst:3764
 msgid ""
 "A :class:`memoryview` supports slicing and indexing to expose its data. One-"
 "dimensional slicing will result in a subview::"
 msgstr ""
+"Μια :class:`memoryview` υποστηρίζει το slicing και το indexing για την έκθεση των δεδομένων του. To "
+"μονοδιάστατο slicing θα έχει ως αποτέλεσμα μια δευτερεύουσα προβολή::"
 
 #: library/stdtypes.rst:3777
 msgid ""
@@ -5096,16 +5111,24 @@ msgid ""
 "*ndim* integers where *ndim* is the number of dimensions.  Zero-dimensional "
 "memoryviews can be indexed with the empty tuple."
 msgstr ""
+"Εάν το :class:`~memoryview.format` είναι ένας από τους προσδιοριστές εγγενούς μορφής από το "
+"module :mod:`struct`, το indexing με έναν ακέραιο ή μια πλειάδα (tuple) ακεραίων υποστηρίζεται "
+"επίσης και επιστρέφει ένα μεμονωμένο *στοιχείο* με το σωστό τύπο.  Τα μονοδιάστατα memoryviews μπορούν "
+"να γίνουν indexed με έναν ακέραιο ή έναν ακέραιο πλειάδα (tuple).  Τα πολυδιάστατα memoryviews μπορούν αν γίνουν "
+"indexed με πλειάδες (tuples) ακριβώς *ndim* ακεραίων όπου *ndim* είναι ο αριθμός των διαστάσεων.  Τα μηδενικών "
+"διαστάσεων memoryviews μπορούν να γίνουν indexed με την κενή πλειάδα (tuple)."
 
 #: library/stdtypes.rst:3786
 msgid "Here is an example with a non-byte format::"
-msgstr ""
+msgstr "Ακολουθεί ένα παράδειγμα με μορφή χωρίς byte::"
 
 #: library/stdtypes.rst:3798
 msgid ""
 "If the underlying object is writable, the memoryview supports one-"
 "dimensional slice assignment. Resizing is not allowed::"
 msgstr ""
+"Εάν το υποκείμενο αντικείμενο είναι εγγράψιμο, το memoryview υποστηρίζει "
+"μονοδιάστατη εκχώρηση slice. Δεν επιτρέπεται  αλλαγή μεγέθους::"
 
 #: library/stdtypes.rst:3819
 msgid ""
@@ -5113,26 +5136,33 @@ msgid ""
 "formats 'B', 'b' or 'c' are also hashable. The hash is defined as ``hash(m) "
 "== hash(m.tobytes())``::"
 msgstr ""
+"Τα μονοδιάστατα memoryviews των τύπων :term:`hashable` (μόνο για ανάγνωση) με μορφές "
+"'B', 'b' ή 'c' μπορούν επίσης να κατακερματιστούν. Ο κατακερματισμός ορίζεται ως ``hash(m) "
+"== hash(m.tobytes())``::"
 
 #: library/stdtypes.rst:3831
 msgid ""
 "One-dimensional memoryviews can now be sliced. One-dimensional memoryviews "
 "with formats 'B', 'b' or 'c' are now :term:`hashable`."
 msgstr ""
+"Τα μονοδιάστατα memoryviews μπορούν πλέον να γίνουν sliced. Τα μονοδιάστατα memoryviews "
+"με μορφές 'B', 'b' ή 'c' είναι πλεόν :term:`hashable`."
 
 #: library/stdtypes.rst:3835
 msgid ""
 "memoryview is now registered automatically with :class:`collections.abc."
 "Sequence`"
 msgstr ""
+"το memoryview εγγράφεται πλέον αυτόματα με :class:`collections.abc."
+"Sequence`"
 
 #: library/stdtypes.rst:3839
 msgid "memoryviews can now be indexed with tuple of integers."
-msgstr ""
+msgstr "τα memoryviews μπορούν τώρα να γίνουν indexed με πλειάδα (tuple) ακεραίων."
 
 #: library/stdtypes.rst:3842
 msgid ":class:`memoryview` has several methods:"
-msgstr ""
+msgstr "το :class:`memoryview` έχει διάφορες μεθόδους:"
 
 #: library/stdtypes.rst:3846
 msgid ""
@@ -5140,12 +5170,17 @@ msgid ""
 "equivalent and if all corresponding values are equal when the operands' "
 "respective format codes are interpreted using :mod:`struct` syntax."
 msgstr ""
+"Ένα memoryview και ένας εξαγωγέας :pep:`3118` είναι ίσοι εάν τα σχήματα τους "
+"είναι ισοδύναμα και εάν όλες οι αντίστοιχες τιμές είναι ίσες όταν οι αντίστοιχοι κωδικοί "
+"μορφής των τελεστών ερμηνεύονται χρησιμοποιώντας τη σύνταξη :mod:`struct`."
 
 #: library/stdtypes.rst:3850
 msgid ""
 "For the subset of :mod:`struct` format strings currently supported by :meth:"
 "`tolist`, ``v`` and ``w`` are equal if ``v.tolist() == w.tolist()``::"
 msgstr ""
+"Για το υποσύνολο του :mod:`struct` οι συμβολοσειρές μορφής που υποστηρίζονται αυτή τη στιμγή "
+"από το :meth:`tolist`, ``v`` και ``w`` είναι ίσες εάν ``v.tolist() == w.tolist()``::"
 
 #: library/stdtypes.rst:3869
 msgid ""
@@ -5153,24 +5188,33 @@ msgid ""
 "the objects will always compare as unequal (even if the format strings and "
 "buffer contents are identical)::"
 msgstr ""
+"Εάν καμία συμβολοσειρά μορφής δεν υποστηρίζεται από το module :mod:`struct`, τότε "
+"τα αντικείμενα θα συγκρίνονται πάντα ως άνισα (ακόμα και αν οι συμβολοσειρές μορφοποίησης "
+"και τα περιεχόμενα της προσωρινής μνήμης είναι πανομοιότυπα)::"
 
 #: library/stdtypes.rst:3885
 msgid ""
 "Note that, as with floating point numbers, ``v is w`` does *not* imply ``v "
 "== w`` for memoryview objects."
 msgstr ""
+"Λάβετε υπόψη ότι, όπως και με τους αριθμούς κινητής υποδιαστολής, ``v is w`` *δεν* σημαίνει "
+"``v == w`` για αντικείμενα memoryview."
 
 #: library/stdtypes.rst:3888
 msgid ""
 "Previous versions compared the raw memory disregarding the item format and "
 "the logical array structure."
 msgstr ""
+"Οι προηγούμενες εκδόσεις συνέκριναν την ακατέργαστη μνήμη ανγοώντας τη μορφή του στοιχείου "
+"και τη δομή του λογικού πίνακα."
 
 #: library/stdtypes.rst:3894
 msgid ""
 "Return the data in the buffer as a bytestring.  This is equivalent to "
 "calling the :class:`bytes` constructor on the memoryview. ::"
 msgstr ""
+"Επιστρέφει τα δεδομένα στο buffer ως ένα bytestring.  Αυτό ισοδυναμεί με την κλήση "
+"του κατασκευαστή :class:`bytes` στο memoryview. ::"
 
 #: library/stdtypes.rst:3903
 msgid ""
@@ -5179,6 +5223,10 @@ msgid ""
 "supports all format strings, including those that are not in :mod:`struct` "
 "module syntax."
 msgstr ""
+"Για μη συνεχόμενοςυ πίνακας, το αποτέλεσμα είναι ίσο με την αναπαράσταση της ισοπεδωμένης "
+"λίστας με όλα τα στοιχέια να μετατρέπονται σε bytes. Η :meth:`tobytes` υποστηρίζει "
+"όλες τις συμβολοσειρές μορφής, συμπεριλαμβανομένων εκείνων που δεν είναι στη σύνταξη "
+"του module :mod:`struct`."
 
 #: library/stdtypes.rst:3908
 msgid ""
@@ -5188,12 +5236,19 @@ msgid ""
 "Fortran order is preserved. For non-contiguous views, the data is converted "
 "to C first. *order=None* is the same as *order='C'*."
 msgstr ""
+"Το *order* μπορεί να είναι {'C', 'F', 'A'}.  Όταν το *order* είναι 'C' ή 'F', τα δεδομένα "
+"του αρχικού πίνακα μετατρέπονται σε C ή σε σειρά Fortran. Για συνεχόμενες όψεις, το 'A' "
+"επιστρέφει ένα ακριβές αντίγραφο της φυσικής μνήμης. Συγκεκριμένα, διατηρείται σειρά "
+"Fortran στη μνήμη. Για μη συνεχόμενες προβολές, τα δεδομένα μετατρέπονται πρώτα σε C. "
+"Το *order=None* είναι το ίδιο με το *order='C'*."
 
 #: library/stdtypes.rst:3917
 msgid ""
 "Return a string object containing two hexadecimal digits for each byte in "
 "the buffer. ::"
 msgstr ""
+"Επιστρέφει ένα αντικείμενο συμβολοσειράς που περιέχει δύο δεκαεξαδικά ψηφία για κάθε "
+"byte στο buffer. ::"
 
 #: library/stdtypes.rst:3926
 msgid ""
@@ -5201,22 +5256,29 @@ msgid ""
 "*sep* and *bytes_per_sep* parameters to insert separators between bytes in "
 "the hex output."
 msgstr ""
+"Παρόμοιο με το :meth:`bytes.hex`, το :meth:`memoryview.hex` τώρα υποστηρίζει "
+"προαιρετικές παραμέτρους *sep* και *bytes_per_sep* για να εισάγετε διαχωριστικά "
+"μεταξύ των byte στην εξαγωγή δεκαεξαδικού."
 
 #: library/stdtypes.rst:3933
 msgid "Return the data in the buffer as a list of elements. ::"
-msgstr ""
+msgstr "Επιστρέψτε τα δεδομένα στο buffer ως λίστα στοιχείων. ::"
 
 #: library/stdtypes.rst:3943
 msgid ""
 ":meth:`tolist` now supports all single character native formats in :mod:"
 "`struct` module syntax as well as multi-dimensional representations."
 msgstr ""
+"Η :meth:`tolist` υποστηρίζει πλέον όλες τις εγγενείς μορφές μεμονωμένων χαρακτήρων "
+"στη σύνταξη του :mod:`struct`, καθώς και πολυδιάστατες αναπαραστάσεις."
 
 #: library/stdtypes.rst:3950
 msgid ""
 "Return a readonly version of the memoryview object.  The original memoryview "
 "object is unchanged. ::"
 msgstr ""
+"Επιστρέφει μια έκδοση μόνο για ανάγνωση του αντικειμένου memoryview.  Το αρχικό αντικείμενο "
+"memoryview είναι αμετάβλητο. ::"
 
 #: library/stdtypes.rst:3969
 msgid ""
@@ -5226,6 +5288,11 @@ msgid ""
 "release() is handy to remove these restrictions (and free any dangling "
 "resources) as soon as possible."
 msgstr ""
+"Απελευθερώνει το υποκείμενου buffer που εκτίθεται από το αντικείμενο memoryview.  Πολλά "
+"αντικείμενα πραγματοποιούν ειδικές ενέργειες όταν διατηρείται μια προβολή σε αυτά "
+"(για παράδειγμα, μια :class:`bytearray` θα απαγόρευε προσωρινά την αλλαγή μεγέθους)· "
+"επομένως, η κλήση της release() είναι βολική για την κατάργηση αυτών των περιορισμών "
+"(και απελευθερώνει οποιουσδήποτε αιωρούμενους πόρους) το συντομότερο δυνατό."
 
 #: library/stdtypes.rst:3975
 msgid ""
@@ -5233,12 +5300,17 @@ msgid ""
 "a :class:`ValueError` (except :meth:`release()` itself which can be called "
 "multiple times)::"
 msgstr ""
+"Μετά την κλήση αυτής της μεθόδου, οποιαδήποτε περαιτέρω λειτουργία στην προβολή "
+"δημιουργεί μια :class:`ValueError` (εκτός από την ίδια την :meth:`release()` που "
+"μπορεί να κληθεί πολλές φορές)::"
 
 #: library/stdtypes.rst:3986
 msgid ""
 "The context management protocol can be used for a similar effect, using the "
 "``with`` statement::"
 msgstr ""
+"Το πρωτόκολλο διαχείρισης περιεχομένου μπορεί να χρησιμοποιηθεί για παρόμοιο "
+"αποτέλεσμα, χρησιμοποιώντας τη δήλωση ``with``::"
 
 #: library/stdtypes.rst:4002
 msgid ""
@@ -5248,6 +5320,11 @@ msgid ""
 "is not copied. Supported casts are 1D -> C-:term:`contiguous` and C-"
 "contiguous -> 1D."
 msgstr ""
+"Μορφοποιεί ένα memoryview σε νέα μορφή ή σχήμα. Το *shape* είναι από προεπιλογή "
+"``[byte_length//new_itemsize]``, που σημαίνει ότι η προβολή αποτελέσματος θα είναι "
+"μονοδιάστατη. Η επιστρεφόμενη τιμή είναι ένα νέο memoryview, αλλά το ίδιο το buffer "
+"δεν αντιγράφετεαι. Οι υποστηριζόμενες μετατροπές είναι 1D -> C-:term:`contiguous` και C-"
+"contiguous -> 1D."
 
 #: library/stdtypes.rst:4008
 msgid ""
@@ -5256,34 +5333,38 @@ msgid ""
 "'c'). The byte length of the result must be the same as the original length. "
 "Note that all byte lengths may depend on the operating system."
 msgstr ""
+"Η μορφή προορισμού περιορίζεται σε μια εγγενή μορφή μεμονωμένου στοιχείου στη "
+"σύνταξη :mod:`struct`. Μία από τις μορφές πρέπει να είναι μορφή byte ('B', 'b' ή "
+"'c'). Το μήκος byte του αποτελέσματος πρέπει να είναι το ίδιο με το αρχικό μήκος. "
+"Σημειώστε ότι όλα τα μήκη byte μπορεί να εξαρτώνται από το λειτουργικό σύστημα."
 
 #: library/stdtypes.rst:4014
 msgid "Cast 1D/long to 1D/unsigned bytes::"
-msgstr ""
+msgstr "Μορφοποίηση από 1D/long σε 1D/unsigned bytes::"
 
 #: library/stdtypes.rst:4037
 msgid "Cast 1D/unsigned bytes to 1D/char::"
-msgstr ""
+msgstr "Μορφοποίηση από 1D/unsigned bytes σε 1D/char::"
 
 #: library/stdtypes.rst:4050
 msgid "Cast 1D/bytes to 3D/ints to 1D/signed char::"
-msgstr ""
+msgstr "Μορφοποίηση από 1D/bytes σε 3D/ints σε 1D/signed char::"
 
 #: library/stdtypes.rst:4076
 msgid "Cast 1D/unsigned long to 2D/unsigned long::"
-msgstr ""
+msgstr "Μορφοποίηση από 1D/unsigned long σε 2D/unsigned long::"
 
 #: library/stdtypes.rst:4090
 msgid "The source format is no longer restricted when casting to a byte view."
-msgstr ""
+msgstr "Η πηγαία μορφή δεν είναι πλέον περιορισμένη κατά τη μορφοποίηση σε όψη byte."
 
 #: library/stdtypes.rst:4093
 msgid "There are also several readonly attributes available:"
-msgstr ""
+msgstr "Υπάρχουν επίσης αρκετά διαθέσιμα χαρακτηριστικά μόνο για ανάγνωση:"
 
 #: library/stdtypes.rst:4097
 msgid "The underlying object of the memoryview::"
-msgstr ""
+msgstr "Το υποκείμενο αντικείμενο του memoryview::"
 
 #: library/stdtypes.rst:4108
 msgid ""
@@ -5291,14 +5372,17 @@ msgid ""
 "amount of space in bytes that the array would use in a contiguous "
 "representation. It is not necessarily equal to ``len(m)``::"
 msgstr ""
+"``nbytes == product(shape) * itemsize == len(m.tobytes())``. Αυτή είναι η ποσότητα "
+"χώρου σε byte που θα χρησιμοποιούσε ο πίνακας σε μια συνεχόμενη αναπαράσταση. Δεν ισούται "
+"απαραίτητα με ``len(m)``::"
 
 #: library/stdtypes.rst:4127
 msgid "Multi-dimensional arrays::"
-msgstr ""
+msgstr "Πολυδιάστατοι πίνακες::"
 
 #: library/stdtypes.rst:4144
 msgid "A bool indicating whether the memory is read only."
-msgstr ""
+msgstr "Ένα bool που υποδεικνύει εάν η μνήμη είναι μόνο για ανάγνωση."
 
 #: library/stdtypes.rst:4148
 msgid ""
@@ -5307,58 +5391,70 @@ msgid ""
 "arbitrary format strings, but some methods (e.g. :meth:`tolist`) are "
 "restricted to native single element formats."
 msgstr ""
+"Μια συμβολοσειρά που περιέχει τη μορφή (σε module style :mod:`struct`) για κάθε στοιχείο "
+"σε μια όψη. Μπορεί αν δημιουργηθεί ένα memoryview από εξαγωγείς με συμβολοσειρές αυθαίρετης "
+"μορφής, αλλά ορισμένες μεθόδοι (π.χ. :meth:`tolist`) είναι περιορισμένες σε εγγενείς μορφές "
+"ενός στοιχείου."
 
 #: library/stdtypes.rst:4153
 msgid ""
 "format ``'B'`` is now handled according to the struct module syntax. This "
 "means that ``memoryview(b'abc')[0] == b'abc'[0] == 97``."
 msgstr ""
+"Η μορφή ``'B'`` αντιμετωπίζεται πλέον σύμφωνα με τη σύνταξη ενός struct module. Αυτό σημαίνει "
+"ότι ``memoryview(b'abc')[0] == b'abc'[0] == 97``."
 
 #: library/stdtypes.rst:4159
 msgid "The size in bytes of each element of the memoryview::"
-msgstr ""
+msgstr "Το μέγεθος σε bytes κάθε στοιχείου στο memoryview::"
 
 #: library/stdtypes.rst:4172
 msgid ""
 "An integer indicating how many dimensions of a multi-dimensional array the "
 "memory represents."
 msgstr ""
+"Ένα ακέραιος αριθμός που δείχνει πόσες διαστάσεις ενός πολυδιάστατου πίνακα "
+"αντιπροσωπεύει η μνήμη."
 
 #: library/stdtypes.rst:4177
 msgid ""
 "A tuple of integers the length of :attr:`ndim` giving the shape of the "
 "memory as an N-dimensional array."
 msgstr ""
+"Μια πλειάδα (tuple) ακεραίων με μήκο :attr:`ndim` δίνοντας το σχήμα της μνήμης "
+"ως πίνακα N-διαστάσεων."
 
 #: library/stdtypes.rst:4188
 msgid "An empty tuple instead of ``None`` when ndim = 0."
-msgstr ""
+msgstr "Μια κενή πλειάδα (tuple) αντί για ``None`` όταν ndim = 0."
 
 #: library/stdtypes.rst:4185
 msgid ""
 "A tuple of integers the length of :attr:`ndim` giving the size in bytes to "
 "access each element for each dimension of the array."
 msgstr ""
+"Μια πλειάδα ακεραίων με μήκος :attr:`ndim` που δίνει το μέγεθος σε bytes για την πρόσβαση "
+"σε κάθε στοιχείο για κάθε διάσταση του πίνακα."
 
 #: library/stdtypes.rst:4193
 msgid "Used internally for PIL-style arrays. The value is informational only."
-msgstr ""
+msgstr "Χρησιμοποιείται εσωτερικά για συστοιχίες τύπου PIL. Η τιμή είναι μόνο ενημερωτική."
 
 #: library/stdtypes.rst:4197
 msgid "A bool indicating whether the memory is C-:term:`contiguous`."
-msgstr ""
+msgstr "Ένα bool που υποδεικνύει εάν η μνήμη είναι C-:term:`contiguous`."
 
 #: library/stdtypes.rst:4203
 msgid "A bool indicating whether the memory is Fortran :term:`contiguous`."
-msgstr ""
+msgstr "Ένα bool που υποδεικνύει εάν η μνήμη είναι Fortran :term:`contiguous`."
 
 #: library/stdtypes.rst:4209
 msgid "A bool indicating whether the memory is :term:`contiguous`."
-msgstr ""
+msgstr "Ένα bool που υποδεικνύει εάν η μνήμη είναι :term:`contiguous`."
 
 #: library/stdtypes.rst:4217
 msgid "Set Types --- :class:`set`, :class:`frozenset`"
-msgstr ""
+msgstr "Τύποι Συνόλου (Set) --- :class:`set`, :class:`frozenset`"
 
 #: library/stdtypes.rst:4221
 msgid ""
@@ -5369,6 +5465,11 @@ msgid ""
 "in :class:`dict`, :class:`list`, and :class:`tuple` classes, and the :mod:"
 "`collections` module.)"
 msgstr ""
+"Ένα αντικείμενο :dfn:`set` είναι μια μη ταξινομημένη συλλογή από διακριτά αντικείμενα "
+":term:`hashable`. Οι συνήθεις χρήσεις περιλαμβάνουν τη δοκιμή ιδιότητας μέλους, την αφαίρεση "
+"διπλότυπων από μια ακολουθία και τον υπολογισμό μαθηματικών πράξεων όπως τομή, ένωση, διαφορά, και "
+"συμμετρική διαφορά. (Για άλλα containers, δείτε τις ενσωματωμένες κλάσεις :class:`dict`, :class:`list`, "
+"και :class:`tuple` και το module :mod:`collections`)." 
 
 #: library/stdtypes.rst:4228
 msgid ""
@@ -5377,6 +5478,10 @@ msgid ""
 "position or order of insertion.  Accordingly, sets do not support indexing, "
 "slicing, or other sequence-like behavior."
 msgstr ""
+"Όπως και άλλες συλλογές, τα σύνολα (sets) υποστηρίζουν ``x in set``, ``len(set)``, και "
+"``for x in set``.  Όντως μια μη ταξινομημένη συλλογή, τα σύνολα δεν καταγράφουν τη θέση του στοιχείου "
+"ή τη σειρά εισαγωγής.  Συνεπώνς, τα σύνολα (sets) δεν υποστηρίζουν λειτουργίες indexing, "
+"slicing ή άλλη συμπεριφορά ακολουθίας."
 
 #: library/stdtypes.rst:4233
 msgid ""
@@ -5389,6 +5494,13 @@ msgid ""
 "it is created; it can therefore be used as a dictionary key or as an element "
 "of another set."
 msgstr ""
+"Υπάρχουν αυτή τη στιμγή δύο ενσωματωμένοι τύποι συνόλου, :class:`set` και :class:"
+"`frozenset`. Ο τύπος :class:`set` είναι ευμετάβλητος --- τα περιεχόμενα του μπορούν να "
+"αλλάξουν χρησιμοποιώντας μεθόδους όπως :meth:`~set.add` και :meth:`~set.remove`.  Δεδομένου "
+"ότι είναι ευμετάβλητο, δεν έχει τιμή κατακερματισμού και δεν μπορεί να χρησιμοποιηθεί ούτε ως κλειδί "
+"λεξικού ούτε ως στοιχείο ενός άλλου συνόλου (set).  Ο τύπος :class:`frozenset` είναι αμετάβλητος "
+"και :term:`hashable` --- το περιεχόμενό του δεν μπορεί να αλλάξει μετά τη δημιουργία του· μπορεί "
+"επομένως να χρησιμοποιηθεί ως κλειδί λεξικού ή ως στοιχείο άλλου συνόλου (set)."
 
 #: library/stdtypes.rst:4241
 msgid ""
@@ -5396,10 +5508,13 @@ msgid ""
 "list of elements within braces, for example: ``{'jack', 'sjoerd'}``, in "
 "addition to the :class:`set` constructor."
 msgstr ""
+"Μπορούν να δημιουργηθούν μη κενά σύνολα (όχι παγμένα σύνολα (frozensets)) τοποθετώντας μια λίστα στοιχείων "
+"διαχωρισμένων με κόμμα μέσα σε αγκύλες, για παράδειγμα: ``{'jack', 'sjoerd'}``, επιπλέον με τη χρήση "
+"του constructor του :class:`set`."
 
 #: library/stdtypes.rst:4245
 msgid "The constructors for both classes work the same:"
-msgstr ""
+msgstr "Οι constructors και για τις δύο κλάσεις λειτουργούν το ίδιο:"
 
 #: library/stdtypes.rst:4250
 msgid ""
@@ -5408,91 +5523,108 @@ msgid ""
 "sets of sets, the inner sets must be :class:`frozenset` objects.  If "
 "*iterable* is not specified, a new empty set is returned."
 msgstr ""
+"Επιστρέφει ένα νέο σύνολο (set) ή ένα παγωμένο σύνολο (frozenset) των οποίων τα στοιχεία "
+"έχουν ληφθεί από το *iterable*.  Τα στοιχεία ενός συνόλου πρέπει να είναι :term:`hashable`.  "
+"Για να αναπαραστήσουν σύνολα συνόλων, τα εσωτερικά σύνολα πρέπει να είναι :class:`frozenset` αντικείμενα.  "
+"Εάν δεν έχει καθοριστεί το *iterable*, επιστρέφεται ένα νέο κενό σύνολο."
 
 #: library/stdtypes.rst:4256
 msgid "Sets can be created by several means:"
-msgstr ""
+msgstr "Τα σύνολα μπορούν να δημιουργθούν με διάφορους τρόπους:"
 
 #: library/stdtypes.rst:4258
 msgid ""
 "Use a comma-separated list of elements within braces: ``{'jack', 'sjoerd'}``"
 msgstr ""
+"Χρησιμοποιώντας μια λίστα στοιχείων διαχωρισμένη με κόμματα: ``{'jack', 'sjoerd'}``"
 
 #: library/stdtypes.rst:4259
 msgid ""
 "Use a set comprehension: ``{c for c in 'abracadabra' if c not in 'abc'}``"
 msgstr ""
+"Χρησιμοποιώντας ένα set comprehension: ``{c for c in 'abracadabra' if c not in 'abc'}``"
 
 #: library/stdtypes.rst:4260
 msgid ""
 "Use the type constructor: ``set()``, ``set('foobar')``, ``set(['a', 'b', "
 "'foo'])``"
 msgstr ""
+"Χρησιμοποιώντας τον τύπο constructor: ``set()``, ``set('foobar')``, ``set(['a', 'b', "
+"'foo'])``"
 
 #: library/stdtypes.rst:4262
 msgid ""
 "Instances of :class:`set` and :class:`frozenset` provide the following "
 "operations:"
 msgstr ""
+"Τα στιγμιότυπα των :class:`set` και :class:`frozenset` παρέχουν τις ακόλουθες "
+"λειτουργίες:"
 
 #: library/stdtypes.rst:4267
 msgid "Return the number of elements in set *s* (cardinality of *s*)."
-msgstr ""
+msgstr "Επιστρέφει τον αριθμό των στοιχείων στο σύνολο *s* (πληθικότητα του *s*)."
 
 #: library/stdtypes.rst:4271
 msgid "Test *x* for membership in *s*."
-msgstr ""
+msgstr "Ελέγχει αν το *x* είναι μέρος στο *s*."
 
 #: library/stdtypes.rst:4275
 msgid "Test *x* for non-membership in *s*."
-msgstr ""
+msgstr "Ελέγχει αν το *x* δεν είναι μέρος στο *s*."
 
 #: library/stdtypes.rst:4279
 msgid ""
 "Return ``True`` if the set has no elements in common with *other*.  Sets are "
 "disjoint if and only if their intersection is the empty set."
 msgstr ""
+"Επιστρέφει ``True`` εάν το σύνολο δεν έχει κοινά στοιχεία με το *other*.  Τα σύνολα "
+"είναι ασύνδετα εάν και μόνο εάν η τομή τους είναι το κενό σύνολο."
 
 #: library/stdtypes.rst:4285
 msgid "Test whether every element in the set is in *other*."
-msgstr ""
+msgstr "Ελέγχει εάν κάθε στοιχείο στο σύνολο βρίσκεται στο *other*."
 
 #: library/stdtypes.rst:4289
 msgid ""
 "Test whether the set is a proper subset of *other*, that is, ``set <= other "
 "and set != other``."
 msgstr ""
+"Ελέγχει εάν το σύνολο είναι σωστό υποσύνολο του *other*, δηλαδή, ``set <= other "
+"and set != other``."
 
 #: library/stdtypes.rst:4295
 msgid "Test whether every element in *other* is in the set."
-msgstr ""
+msgstr "Ελέγχει αν κάθε στοιχείο του *other* είναι στο σύνολο."
 
 #: library/stdtypes.rst:4299
 msgid ""
 "Test whether the set is a proper superset of *other*, that is, ``set >= "
 "other and set != other``."
 msgstr ""
+"Ελέγχει αν το σύνολο είναι σωστό υπερσύνολο του *other*, δηλαδή, ``set >= "
+"other and set != other``."
 
 #: library/stdtypes.rst:4305
 msgid "Return a new set with elements from the set and all others."
-msgstr ""
+msgstr "Επιστρέφει ένα νέο σύνολο με στοιχέια από το σύνολο και όλα τα άλλα."
 
 #: library/stdtypes.rst:4310
 msgid "Return a new set with elements common to the set and all others."
-msgstr ""
+msgstr "Επιστρέφει ένα νεό σύνολο με στοιχεία κοινά στο σύνολο και σε όλα τα άλλα."
 
 #: library/stdtypes.rst:4315
 msgid "Return a new set with elements in the set that are not in the others."
-msgstr ""
+msgstr "Επιστρέφει ένα νέο σύνολο με στοιχεία στο σύνολο που δεν υπάρχουν στα άλλα."
 
 #: library/stdtypes.rst:4320
 msgid ""
 "Return a new set with elements in either the set or *other* but not both."
 msgstr ""
+"Επιστρέφει ένα νέο σύνολο με στοιχεία είτε στο σύνολο είτε στο *other* αλλά όχι και στα δύο."
 
 #: library/stdtypes.rst:4324
 msgid "Return a shallow copy of the set."
-msgstr ""
+msgstr "Επιστρέφει ένα ρηχό αντίγραφο του συνόλου."
 
 #: library/stdtypes.rst:4327
 msgid ""
@@ -5503,6 +5635,11 @@ msgid ""
 "precludes error-prone constructions like ``set('abc') & 'cbs'`` in favor of "
 "the more readable ``set('abc').intersection('cbs')``."
 msgstr ""
+"Σημείωση, οι εκδόσεις μη τελεστών των μεθόδων :meth:`union`, :meth:`intersection`, :"
+"meth:`difference`, :meth:`symmetric_difference`, :meth:`issubset`, και :meth:"
+"`issuperset` θα δεχτούν οποιοδήποτε επαναληπτικό ως όρισμα.  Αντίθετα, οι αντίστοιχοι τελεστές "
+"απαιτούν να οριστούν τα ορίσματά τους για να γίνουν σύνολα.  Αυτό αποκλείει κατασκευαστές επιρρεπείς "
+"σε σφάλματα όπως ``set('abc') & 'cbs'`` υπέρ του πιο ευανάγνωστου ``set('abc').intersection('cbs')``."
 
 #: library/stdtypes.rst:4334
 msgid ""
@@ -5513,6 +5650,11 @@ msgid ""
 "is not equal). A set is greater than another set if and only if the first "
 "set is a proper superset of the second set (is a superset, but is not equal)."
 msgstr ""
+"Τόσο το :class:`set` και :class:`frozenset` υποστηρίζουν τη σύγκριση μεταξύ συνόλων. Δύο σύνολα "
+"είναι ίσα εάν και μόνο εάν κάθε στοιχείο κάθε συνόλου περιέχεται στο άλλο (το καθένα είναι υποσύνολο του άλλου). "
+"Ένα σύνολο είναι μικρότερο από ένα άλλο σύνολο εάν και μόνο αν το πρώτο σύνολο είναι σωστό υποσύνολο του δεύτερου "
+"συνόλου (είναι υποσύνολο, αλλά δεν είναι ίσο), ένα σύνολο είναι μεγαλύτερο από ένα άλλο σύνολο, αν και μόνο αν το "
+"πρώτο σύνολο είναι σωστό υπερσύνολο του δεύτερου συνόλου (είναι υπερσύνολο αλλά δεν είναι ίσο)."
 
 #: library/stdtypes.rst:4341
 msgid ""
@@ -5520,6 +5662,9 @@ msgid ""
 "based on their members.  For example, ``set('abc') == frozenset('abc')`` "
 "returns ``True`` and so does ``set('abc') in set([frozenset('abc')])``."
 msgstr ""
+"Τα στιγμιότυπα της :class:`set` συγκρίνοτναι με τα στιγμιότυπα της :class:`frozenset` "
+"με βάση τα μέλη τους.  Για παράδειγμα, το ``set('abc') == frozenset('abc')`` "
+"επιστρέφει ``True`` και το ίδιο συμβαίνει και με το ``set('abc') in set([frozenset('abc')])``."
 
 #: library/stdtypes.rst:4345
 msgid ""
@@ -5528,16 +5673,22 @@ msgid ""
 "not subsets of each other, so *all* of the following return ``False``: "
 "``a<b``, ``a==b``, or ``a>b``."
 msgstr ""
+"Οι συγκρίσεις υποσυνόλου και ισότητας δεν γενικεύονται σε μια συνάρτηση ολικής ταξινόμησης.  "
+"Για παράδειγμα, οποιαδήποτε δύο μη κενά συνεχή σύνολα δεν είναι ίσα και δεν είναι υποσύνολα το ένα "
+"του άλλου, επομένως *όλα* τα ακόλουθα επιστρέφουν ``False``: "
+"``a<b``, ``a==b``, or ``a>b``."
 
 #: library/stdtypes.rst:4350
 msgid ""
 "Since sets only define partial ordering (subset relationships), the output "
 "of the :meth:`list.sort` method is undefined for lists of sets."
 msgstr ""
+"Δεδομένου ότι τα σύνολα ορίζουν μόνο μερική σειρά (σχέσεις υποσυνόλων), η έξοδος της μεθόδου "
+":meth:`list.sort` δεν έχει οριστεί για λίστες συνόλων."
 
 #: library/stdtypes.rst:4353
 msgid "Set elements, like dictionary keys, must be :term:`hashable`."
-msgstr ""
+msgstr "Τα στοιχεία συνόλου, όπως τα κλειδιά λεξικού, πρέπει να είναι :term:`hashable`."
 
 #: library/stdtypes.rst:4355
 msgid ""
@@ -5545,53 +5696,64 @@ msgid ""
 "return the type of the first operand.  For example: ``frozenset('ab') | "
 "set('bc')`` returns an instance of :class:`frozenset`."
 msgstr ""
+"Δυαδικές πράξεις που συνδυάζουν στιγμιότυπα :class:`set` με :class:`frozenset` επιστρέφουν "
+"τον τύπο του πρώτου τελεστή.  Για παράδειγμα: ``frozenset('ab') | "
+"set('bc')`` επιστρέφει ένα στιγμιότυπο του :class:`frozenset`."
 
 #: library/stdtypes.rst:4359
 msgid ""
 "The following table lists operations available for :class:`set` that do not "
 "apply to immutable instances of :class:`frozenset`:"
 msgstr ""
+"Ο παρακάτω πίνακας παραθέτει λειτουργίες που είναι διαθέσιμες για :class:`set` που δεν ισχύουν "
+"για αμετάβλητα στιγμιότυπα της :class:`frozenset`:"
 
 #: library/stdtypes.rst:4365
 msgid "Update the set, adding elements from all others."
-msgstr ""
+msgstr "Ενημερώνει το σύνολο (set), προσθέτοντας στοιχεία από όλα τα άλλα."
 
 #: library/stdtypes.rst:4370
 msgid "Update the set, keeping only elements found in it and all others."
-msgstr ""
+msgstr "Ενημερώνει το σύνολο, διατηρώντας μόνο τα στοιχεία που βρίσκονται σε αυτό και όλα "
+"τα άλλα."
 
 #: library/stdtypes.rst:4375
 msgid "Update the set, removing elements found in others."
-msgstr ""
+msgstr "Ενημερώνει το σύνολο, αφαιρώντας στοιχεία που βρίσκονται σε άλλα."
 
 #: library/stdtypes.rst:4380
 msgid ""
 "Update the set, keeping only elements found in either set, but not in both."
 msgstr ""
+"Ενημερώνει το σύνολο, διατηρώντας μόνο τα στοιχεία που βρίσκονται σε κάθε σύνολο, αλλά όχι και στα δύο."
 
 #: library/stdtypes.rst:4384
 msgid "Add element *elem* to the set."
-msgstr ""
+msgstr "Προσθέτει το στοιχείο *elem* στο σύνολο."
 
 #: library/stdtypes.rst:4388
 msgid ""
 "Remove element *elem* from the set.  Raises :exc:`KeyError` if *elem* is not "
 "contained in the set."
 msgstr ""
+"Αφαιρεί το στοιχείο *elem* από το σύνολο.  Κάνει rasei τη :exc:`KeyError` εάν το *elem* "
+"δεν περιέχεται στο σύνολο."
 
 #: library/stdtypes.rst:4393
 msgid "Remove element *elem* from the set if it is present."
-msgstr ""
+msgstr "Αφαιρεί το στοιχείο *elem* από το σύνολο εάν υπάρχει."
 
 #: library/stdtypes.rst:4397
 msgid ""
 "Remove and return an arbitrary element from the set.  Raises :exc:`KeyError` "
 "if the set is empty."
 msgstr ""
+"Αφαιρεί και επσιτρέφει ένα αυθαίρετο στοιχείο από το σύνολο.  Κάνει rasei μια "
+":exc:`KeyError` εάν το σύνολο είναι κενό."
 
 #: library/stdtypes.rst:4402
 msgid "Remove all elements from the set."
-msgstr ""
+msgstr "Αφαιρεί όλα τα στοιχεία από το σύνολο (set)."
 
 #: library/stdtypes.rst:4405
 msgid ""
@@ -5600,6 +5762,10 @@ msgid ""
 "`symmetric_difference_update` methods will accept any iterable as an "
 "argument."
 msgstr ""
+"Σημείωση, οι εκδόσεις μη-τελεστή μεθόδων :meth:`update`, :meth:"
+"`intersection_update`, :meth:`difference_update`, και :meth:"
+"`symmetric_difference_update` θα δέχονται οποιοδήποτε επαναλαμβανόμενο "
+"στοιχείο ως όρισμα."
 
 #: library/stdtypes.rst:4410
 msgid ""
@@ -5607,10 +5773,14 @@ msgid ""
 "`remove`, and :meth:`discard` methods may be a set.  To support searching "
 "for an equivalent frozenset, a temporary one is created from *elem*."
 msgstr ""
+"Σημείωση, το όρισμα  *elem* για τις μεθόδους :meth:`~object.__contains__`, :meth:"
+"`remove`, και :meth:`discard` μπορεί να είανι ένα σύολο.  Για την υποστήριξη της "
+"αναζήτησης για ένα ισοδύναμο παγωμένο σύνολο (frozenset), ένα προσωρινό δημιουργείται "
+"από το *elem*."
 
 #: library/stdtypes.rst:4419
 msgid "Mapping Types --- :class:`dict`"
-msgstr ""
+msgstr "Τύποι αντιστοίχισης --- :class:`dict`"
 
 #: library/stdtypes.rst:4429
 msgid ""
@@ -5620,6 +5790,10 @@ msgid ""
 "`list`, :class:`set`, and :class:`tuple` classes, and the :mod:`collections` "
 "module.)"
 msgstr ""
+"Ένα αντικείμενο :term:`mapping` αντιστοιχείζει :term:`hashable` τιμές σε αυθαίρετα αντικείμενα. "
+"Οι αντιστοιχίσεις είναι μεταβλητά αντικείμενα.  Υπάρχει επί του παρόντος μόνο ένα τυπικός τύπο "
+"αντιστοίχισης, το :dfn:`dictionary`.  (Για άλλα containers δείτε τις ενσωματωμένες (built-in) :class:"
+"`list`, :class:`set`, και :class:`tuple` κλάσεις, και το module :mod:`collections`.)"
 
 #: library/stdtypes.rst:4435
 msgid ""
@@ -5629,32 +5803,43 @@ msgid ""
 "may not be used as keys. Values that compare equal (such as ``1``, ``1.0``, "
 "and ``True``) can be used interchangeably to index the same dictionary entry."
 msgstr ""
+"Τα κλειδιά ενός λεξικού είναι *σχεδόν* αυθαίρετες τιμές.  Οι τιμές που δνε είναι "
+":term:`hashable`, δηλαδή, τιμές που περιέχουν λίστες, λεξικά ή άλλους μεταβλητούς τύπους "
+"(που συγκρίνονται βάσει τιμές και όχι βάσει ταυτότητας αντικειμένου) δεν μπορούν να χρησιμοποιηθούν "
+"ως κλειδιά. Οι τιμές που συγκρίνονται ίσες (όπως ``1``, ``1.0``, και ``True``) μπορούν να χρησιμοποιηθούν "
+"εναλλακτικά για το index της ίδιας καταχώρισης λεξικού."
 
 #: library/stdtypes.rst:4446
 msgid ""
 "Return a new dictionary initialized from an optional positional argument and "
 "a possibly empty set of keyword arguments."
 msgstr ""
+"Επιστρέφει ένα νέο λεξικό που έχει αρχικοποιηθεί από ένα προαιρετικό όρισμα θέσης και "
+"ένα πιθανό κενό σύνολο ορισμάτων λέξεων-κλειδιών."
 
 #: library/stdtypes.rst:4449
 msgid "Dictionaries can be created by several means:"
-msgstr ""
+msgstr "Τα λεξικά μπορούν να δημιουργηθούν με διάφορους τρόπους:"
 
 #: library/stdtypes.rst:4451
 msgid ""
 "Use a comma-separated list of ``key: value`` pairs within braces: ``{'jack': "
 "4098, 'sjoerd': 4127}`` or ``{4098: 'jack', 4127: 'sjoerd'}``"
 msgstr ""
+"Χρησιμοποιήστε μια λίστα διαχωρισμένων με κόμματα ζεύγων ``key: value`` μέσα σε αγκύλες: "
+"``{'jack': 4098, 'sjoerd': 4127}`` or ``{4098: 'jack', 4127: 'sjoerd'}``"
 
 #: library/stdtypes.rst:4453
 msgid "Use a dict comprehension: ``{}``, ``{x: x ** 2 for x in range(10)}``"
-msgstr ""
+msgstr "Χρησιμοποιήστε ένα comprehension λεξκού: ``{}``, ``{x: x ** 2 for x in range(10)}``"
 
 #: library/stdtypes.rst:4454
 msgid ""
 "Use the type constructor: ``dict()``, ``dict([('foo', 100), ('bar', "
 "200)])``, ``dict(foo=100, bar=200)``"
 msgstr ""
+"Χρησιμοποιήστε τον κατασκευαστή τύπου: ``dict()``, ``dict([('foo', 100), ('bar', "
+"200)])``, ``dict(foo=100, bar=200)``"
 
 #: library/stdtypes.rst:4457
 msgid ""
@@ -5667,6 +5852,13 @@ msgid ""
 "object the corresponding value.  If a key occurs more than once, the last "
 "value for that key becomes the corresponding value in the new dictionary."
 msgstr ""
+"Εάν δεν δοθεί όρισμα θέησς, δημιουργείται ένα κενό λεξικό. Εάν δοθεί ένα όρισμα "
+"θέσης και είναι αντικείμενο αντιστοίχισης, δημιουργείται ένα λεξικό με τα ίδια ζεύγη "
+"κλειδιών-τιμών με το αντικείμενο αντιστοίχισης.  Διαφορετικά, το όρισμα θέσης πρέπει να είναι "
+"ένα αντικείμενο :term:`iterable`.  Κάθε στοιχείο στο iterable πρέπει από μόνο του να είναι "
+"ένας iterable με ακριβώς δύο αντικείμενα.  Το πρώτο αντικείμενο κάθε στοιχείου γίνεται κλειδί "
+"στο νέο λεξικό και το δεύτερο αντικείμενο η αντίστοιχη τιμή.  Εάν εάν κλειδί εμφανίζεται περισσότερες "
+"από μία φορές, η τελευταία τιμή για αυτό το κλειδί γίνεται η αντίστοιχη τιμή στο νέο λεξικό."
 
 #: library/stdtypes.rst:4467
 msgid ""
@@ -5675,38 +5867,50 @@ msgid ""
 "being added is already present, the value from the keyword argument replaces "
 "the value from the positional argument."
 msgstr ""
+"Εάν δίνονται ορίσματα λέξης-κλειδιού, τα ορίσματα λέξης-κλειδιού και οι τιμές τους προστίθενται "
+"στο λεξικό που δημιουργήθηκε από το όρισμα θέσης.  Εάν υπάρχει ήδη ένα κλειδί "
+"που προστίθεται, η τιμή από το όρισμα λέξης-κλειδιού αντικαθιστά την τιμή από το όρισμα θέσης."
 
 #: library/stdtypes.rst:4472
 msgid ""
 "To illustrate, the following examples all return a dictionary equal to "
 "``{\"one\": 1, \"two\": 2, \"three\": 3}``::"
 msgstr ""
+"Για επεξήγηση, τα ακόλουθα παραδείγματα επιστρέφουν όλα ένα λεξικό ίσο με "
+"``{\"one\": 1, \"two\": 2, \"three\": 3}``::"
 
 #: library/stdtypes.rst:4484
 msgid ""
 "Providing keyword arguments as in the first example only works for keys that "
 "are valid Python identifiers.  Otherwise, any valid keys can be used."
 msgstr ""
+"Η παροχή ορισμάτων λέξεων-κλειδιών όπως στο πρώτο παράδειγμα λειτουργεί μόνο για κλειδιά "
+"που είναι έγκυρα αναγνωριστικά Python.  Διαφορετικά, μπορούν να χρησιμοποιηθούν οποιαδήποτε έγκυρα "
+"κλειδιά."
 
 #: library/stdtypes.rst:4488
 msgid ""
 "These are the operations that dictionaries support (and therefore, custom "
 "mapping types should support too):"
 msgstr ""
+"Αυτές είναι οι λειτουργίες που υποστηρίζουν τα λεξικά (και επομένως, θα πρέπει "
+"να υποστηρίζουν και προσαρμοσμένους τύπους αντιστοίχισης επίσης):"
 
 #: library/stdtypes.rst:4493
 msgid "Return a list of all the keys used in the dictionary *d*."
-msgstr ""
+msgstr "Επιστρέφει μια λίστα με όλα τα κλειδιά που χρησιμοποιούνται στο λεξικό *d*."
 
 #: library/stdtypes.rst:4497
 msgid "Return the number of items in the dictionary *d*."
-msgstr ""
+msgstr "Επιστρέφει τον αριθμό των στοιχείων στο λεξικό *d*."
 
 #: library/stdtypes.rst:4501
 msgid ""
 "Return the item of *d* with key *key*.  Raises a :exc:`KeyError` if *key* is "
 "not in the map."
 msgstr ""
+"Επιστρέφει το στοιχείο του *d* με το κλειδί *key*.  Κάνει rasei ένα :exc:`KeyError` εάν το "
+"*key* δεν υπάρχει για να αντιστοιχηθεί."
 
 #: library/stdtypes.rst:4506
 msgid ""
@@ -5718,6 +5922,12 @@ msgid ""
 "exc:`KeyError` is raised. :meth:`__missing__` must be a method; it cannot be "
 "an instance variable::"
 msgstr ""
+"Εάν μια υποκλάση ενός λεξικού ορίζει μια μέθοδο :meth:`__missing__` και το *key* δεν υπάρχει, "
+"η λειτουργία ``d[key]`` καλεί αυτήν την μέθοδο με το κλειδί *key* ως όρισμα. Στη συνέχεια, η λειτουργία "
+"``d[key]`` επιστρέφει ή κάνει raise ό, τι επιστρέφεται ή γίνεται raised από την κλήση ``__missing__(key)``. "
+"Καμία άλλη λειτουργία ή μέθοδος δεν επικαλεί την :meth:`__missing__`. Εάν το :meth:`__missing__` δεν έχει "
+"οριστεί, γίνεται raise :exc:`KeyError`. To :meth:`__missing__` πρέπει να είναι μέθοδος∙ δεν μπορεί να είναι "
+"ένα στιγμιότυπο μεταβλητής::"
 
 #: library/stdtypes.rst:4525
 msgid ""
@@ -5725,43 +5935,51 @@ msgid ""
 "Counter`.  A different ``__missing__`` method is used by :class:`collections."
 "defaultdict`."
 msgstr ""
+"Το παραπάνω παράδειγμα δείχνει μέρος της υλοποίησης του :class:`collections."
+"Counter`.  Μια διαφορετική μέθοδος ``__missing__`` χρησιμοποιείται από την :class:`collections."
+"defaultdict`."
 
 #: library/stdtypes.rst:4531
 msgid "Set ``d[key]`` to *value*."
-msgstr ""
+msgstr "Ορίζει το ``d[key]`` στο *value*."
 
 #: library/stdtypes.rst:4535
 msgid ""
 "Remove ``d[key]`` from *d*.  Raises a :exc:`KeyError` if *key* is not in the "
 "map."
 msgstr ""
+"Αφαιρεί το ``d[key]`` από το *d*.  Κάνει raise ένα :exc:`KeyError` εάν το *key* δεν υπάρχει "
+"για αντιστοίχιση."
 
 #: library/stdtypes.rst:4540
 msgid "Return ``True`` if *d* has a key *key*, else ``False``."
-msgstr ""
+msgstr "Επιστρέφει ``True`` εάν το *d* έχει ένα κλειδί *key*, διαφορετικά ``False``."
 
 #: library/stdtypes.rst:4544
 msgid "Equivalent to ``not key in d``."
-msgstr ""
+msgstr "Ισοδυναμεί με ``not key in d``."
 
 #: library/stdtypes.rst:4548
 msgid ""
 "Return an iterator over the keys of the dictionary.  This is a shortcut for "
 "``iter(d.keys())``."
 msgstr ""
+"Επιστρέφει έναν iterator πάνω από τα κλειδιά του λεξικού.  Αυτή είναι μια συτνόμευση για "
+"``iter(d.keys())``."
 
 #: library/stdtypes.rst:4553
 msgid "Remove all items from the dictionary."
-msgstr ""
+msgstr "Αφαιρεί όλα τα στοιχεία από το λεξικό."
 
 #: library/stdtypes.rst:4557
 msgid "Return a shallow copy of the dictionary."
-msgstr ""
+msgstr "Επιστρέφει ένα ρηχό αντίγραφο του λεξικού."
 
 #: library/stdtypes.rst:4561
 msgid ""
 "Create a new dictionary with keys from *iterable* and values set to *value*."
 msgstr ""
+"Δημιουργεί ένα νεό λεξικό με κλειδιά από το *iterable* και τιμές ως *value*."
 
 #: library/stdtypes.rst:4563
 msgid ""
@@ -5771,6 +5989,11 @@ msgid ""
 "an empty list.  To get distinct values, use a :ref:`dict comprehension "
 "<dict>` instead."
 msgstr ""
+"Το :meth:`fromkeys` είναι μια μέθοδος κλάσης που επιστρέφει ένα νέο λεξικό. Η τιμή "
+"*value* ορίζεται από προεπιλογή σε ``None``.  Όλες οι τιμές αναφέρονται σε ένα μόνο "
+"στιγμιότυπο, επομέωνς γενικά δεν έχει νόημα για το *value* να είναι μεταβλητό αντικείμενο, "
+"όπως μια κενή λίστα.  Για να λάβετε διαφορετικές τιμές, χρησιμοποιήστε αντ' αυτού ένα "
+":ref:`dict comprehension <dict>`."
 
 #: library/stdtypes.rst:4571
 msgid ""
@@ -5778,18 +6001,25 @@ msgid ""
 "*default* is not given, it defaults to ``None``, so that this method never "
 "raises a :exc:`KeyError`."
 msgstr ""
+"Επιστρέφει την τιμή για το *key* εάν το *key* είανι στο λεξικό, αλλιώς *default*. Εάν "
+"το *default* δεν δίνεται, ορίζεται από προεπιλογή σε ``None``, έτσι ώστε αυτή η μέθοδος να μην "
+"κάνει raise μια :exc:`KeyError`."
 
 #: library/stdtypes.rst:4577
 msgid ""
 "Return a new view of the dictionary's items (``(key, value)`` pairs). See "
 "the :ref:`documentation of view objects <dict-views>`."
 msgstr ""
+"Επιστρέφει μια νέα όψη των στοιχείων του λεξικού (``(key, value)`` ζέυγη). Δείτε την "
+":ref:`documentation of view objects <dict-views>`."
 
 #: library/stdtypes.rst:4582
 msgid ""
 "Return a new view of the dictionary's keys.  See the :ref:`documentation of "
 "view objects <dict-views>`."
 msgstr ""
+"Επιστρέφει μια νέα όψη των κλειδιών του λεξικού.  Δείτε το :ref:`documentation of "
+"view objects <dict-views>`."
 
 #: library/stdtypes.rst:4587
 msgid ""
@@ -5797,12 +6027,17 @@ msgid ""
 "*default*.  If *default* is not given and *key* is not in the dictionary, a :"
 "exc:`KeyError` is raised."
 msgstr ""
+"Εάν το *key* βρίσκεται στο λεξικό, αφαιρείται και επιστρέφει την τιμή του, διαφορετικά επιστρέφει "
+"*default*.  Εάν *default* δεν δίνεται και το *key* δεν είναι στο λεξικό, γίνεται raise "
+"ένα :exc:`KeyError`."
 
 #: library/stdtypes.rst:4593
 msgid ""
 "Remove and return a ``(key, value)`` pair from the dictionary. Pairs are "
 "returned in :abbr:`LIFO (last-in, first-out)` order."
 msgstr ""
+"Αφαιρεία και επιστρέφει ένα ζεύγος ``(key, value)`` από το λεξικό. Τα ζεύγη επιστρέφονται "
+"με τη σειρά :abbr:`LIFO (last-in, first-out)`."
 
 #: library/stdtypes.rst:4596
 msgid ""
@@ -5810,30 +6045,41 @@ msgid ""
 "often used in set algorithms.  If the dictionary is empty, calling :meth:"
 "`popitem` raises a :exc:`KeyError`."
 msgstr ""
+"Η μέθοδος :meth:`popitem` είναι χρήσιμη για καταστροφική επανάληψη σε ένα λεξικό, όπως "
+"χρησιμοποιείται συχνά σε αλγόριθμους συνόλου.  Εάν το λεξικό είναι κενό, η κλήση της :meth:"
+"`popitem` κάνει raise ένα :exc:`KeyError`."
 
 #: library/stdtypes.rst:4600
 msgid ""
 "LIFO order is now guaranteed. In prior versions, :meth:`popitem` would "
 "return an arbitrary key/value pair."
 msgstr ""
+"Η σειρά LIFO είναι πλέον εγγυημένη. Σε προηγούμενες εκδόσεις, η :meth:`popitem` επιστρέφει "
+"ένα αυθαίρετο ζεύγος κλειδιού/τιμής."
 
 #: library/stdtypes.rst:4606
 msgid ""
 "Return a reverse iterator over the keys of the dictionary. This is a "
 "shortcut for ``reversed(d.keys())``."
 msgstr ""
+"Επιστρέφει έναν αντίστροφο iterator πάνω από τα κλειδιά του λεξικόυ. Αυτή είναι μια "
+"συντόμευση για ``reversed(d.keys())``."
 
 #: library/stdtypes.rst:4613
 msgid ""
 "If *key* is in the dictionary, return its value.  If not, insert *key* with "
 "a value of *default* and return *default*.  *default* defaults to ``None``."
 msgstr ""
+"Εάν το *key* βρίσκεται στο λεξικό, επιστρέφει την τιμή οτυ.  Εάν όχι, εισάγετε το *key* "
+"με τιμή *default* και επιστρέφει *default*.  Το *default* από προεπιλογή είναι ``None``."
 
 #: library/stdtypes.rst:4619
 msgid ""
 "Update the dictionary with the key/value pairs from *other*, overwriting "
 "existing keys.  Return ``None``."
 msgstr ""
+"Ενημερώνει το λεξικό με τα ζεύγη κλειδιών/τιμών από το *other*, αντικαθιστώντας τα υπάρχοντα "
+"κλειδιά.  Επιστρέφει ``None``."
 
 #: library/stdtypes.rst:4622
 msgid ""
@@ -5842,12 +6088,17 @@ msgid ""
 "arguments are specified, the dictionary is then updated with those key/value "
 "pairs: ``d.update(red=1, blue=2)``."
 msgstr ""
+"H :meth:`update` δέχεται είτε ένα άλλο αντικείμενο λεξικού είτε έναν iterable ζευγών κλειδιών/τιμών "
+"(ως πλειάδες (tuples) ή άλλους iterables μήκους δύο).  Εάν καθορίζονται ορίσματα λέξης-κλειδιού, το λεξικό "
+"ενημερώνεται στη συνέχεια με αυτά τα ζεύγη κλειδιών/τιμών: ``d.update(red=1, blue=2)``."
 
 #: library/stdtypes.rst:4629
 msgid ""
 "Return a new view of the dictionary's values.  See the :ref:`documentation "
 "of view objects <dict-views>`."
 msgstr ""
+"Επιστρέφει μια νέα προβολή των τιμών του λεξικού.  Δείτε την :ref:`documentation "
+"of view objects <dict-views>`."
 
 #: library/stdtypes.rst:4632
 msgid ""
@@ -5855,6 +6106,8 @@ msgid ""
 "always return ``False``. This also applies when comparing ``dict.values()`` "
 "to itself::"
 msgstr ""
+"Μια σύγκριση ισότητας μεταξύ μιας όψης ``dict.values()`` και μιας άλλης θα επιστρέφει πάντα "
+"``False``. Αυτό ισχύει επίσης όταν συγκρίνετε το ``dict.values()`` με τον εαυτό της::"
 
 #: library/stdtypes.rst:4642
 msgid ""
@@ -5862,6 +6115,9 @@ msgid ""
 "which must both be dictionaries. The values of *other* take priority when "
 "*d* and *other* share keys."
 msgstr ""
+"Δημιουργεί ένα νέο λεξικό με τα συγχωνευμένα κλειδιά και τις τιμές των *d* και *other*, "
+"τα οποία πρέπει να είναι και τα δύο λεξικά. Οι τιμές του *other* έχουν προτεραιότητα όταν τα κλειδιά "
+"των *d* και *other* είναι κοινά."
 
 #: library/stdtypes.rst:4650
 msgid ""
@@ -5869,6 +6125,9 @@ msgid ""
 "either a :term:`mapping` or an :term:`iterable` of key/value pairs. The "
 "values of *other* take priority when *d* and *other* share keys."
 msgstr ""
+"Ενημερώνει το λεξικό *d* με κλειδιά και τιμές από το *other*, που μπορεί να είναι είτε "
+":term:`mapping` είτε :term:`iterable` ζευγάρι κλειδιών/τιμών. Οι τιμές του *other* έχουν "
+"προτεραιότητα όταν τα κλειδιά των το *d* και *other* είναι κοινά."
 
 #: library/stdtypes.rst:4656
 msgid ""
@@ -5876,36 +6135,45 @@ msgid ""
 "value)`` pairs (regardless of ordering). Order comparisons ('<', '<=', '>=', "
 "'>') raise :exc:`TypeError`."
 msgstr ""
+"Τα λεξικά συγκρίνουν ίσα εάν και μόνο εάν έχουν τα ίδια ζεύγη ``(key, "
+"value)`` (ανεξάρτητα από τη σειρά). Οι συγκρίσεις διάταξης ('<', '<=', '>=', "
+"'>') κάνουν raise την :exc:`TypeError`."
 
 #: library/stdtypes.rst:4660
 msgid ""
 "Dictionaries preserve insertion order.  Note that updating a key does not "
 "affect the order.  Keys added after deletion are inserted at the end. ::"
 msgstr ""
+"Τα λεξικά διατηρούν τη σειρά εισαγωγής.  Σημειώστε ότι η ενημέρωση ενός κλειδιού δεν επηρεάζει τη σειρά.  "
+"Τα κλειδιά που προστέθηκαν μετά τη διαγραφή εισάγονται στο τέλος. ::"
 
 #: library/stdtypes.rst:4678
 msgid ""
 "Dictionary order is guaranteed to be insertion order.  This behavior was an "
 "implementation detail of CPython from 3.6."
 msgstr ""
+"Η σειρά λεξικού είναι εγγυημένη ότι είναι η σειρά εισαγωγής.  Αυτή η συμπεριφορά ήταν μια "
+"λεπτομέρεια υλοποίηση της CPython από την έκδοση 3.6."
 
 #: library/stdtypes.rst:4682
 msgid "Dictionaries and dictionary views are reversible. ::"
-msgstr ""
+msgstr "Τα λεξικά και οι όψεις λεξικών είναι αναστρέψιμες. ::"
 
 #: library/stdtypes.rst:4694
 msgid "Dictionaries are now reversible."
-msgstr ""
+msgstr "Τα λεξικά είναι πλέον αναστρέψιμα."
 
 #: library/stdtypes.rst:4699
 msgid ""
 ":class:`types.MappingProxyType` can be used to create a read-only view of a :"
 "class:`dict`."
 msgstr ""
+"Η :class:`types.MappingProxyType` μπορεί να χρησιμοποιηθεί για τη δημιουργία μιας όψης μόνο "
+"για ανάγνωση μιας :class:`dict`."
 
 #: library/stdtypes.rst:4706
 msgid "Dictionary view objects"
-msgstr ""
+msgstr "Αντικείμενα όψης λεξικού"
 
 #: library/stdtypes.rst:4708
 msgid ""
@@ -5914,22 +6182,29 @@ msgid ""
 "dictionary's entries, which means that when the dictionary changes, the view "
 "reflects these changes."
 msgstr ""
+"Τα αντικείμενα που επιστρέφονται από τι :meth:`dict.keys`, :meth:`dict.values` and :meth:"
+"`dict.items` είναι *όψεις αντικειμένων (view objects)*.  Παρέχουν μια δυναμική όψη στις εγγραφές "
+"του λεξικού, που σημαίνει ότι όταν αλλάζει το λεξικό, η όψη αντικατοπτρίζει αυτές τις αλλαγές."
 
 #: library/stdtypes.rst:4713
 msgid ""
 "Dictionary views can be iterated over to yield their respective data, and "
 "support membership tests:"
 msgstr ""
+"Οι όψεις λεξικού μπορούν να γίνουν iterate για την απόδοση τω αντίστοιχων δεδομένων τους και την "
+"υποστήριξη ελέγχων για το αν είναι μέρος του."
 
 #: library/stdtypes.rst:4718
 msgid "Return the number of entries in the dictionary."
-msgstr ""
+msgstr "Επιστρέφει τον αριθμό των καταχωρήσεων στο λεξικό."
 
 #: library/stdtypes.rst:4722
 msgid ""
 "Return an iterator over the keys, values or items (represented as tuples of "
 "``(key, value)``) in the dictionary."
 msgstr ""
+"Επιστρέφει έναν iterator πάνω στα κλειδιά, τις τιμές ή τα στοιχεία (που αντιπροσωπεύονται ως "
+"πλειάδες (tuples) του ``(key, value)`` στο λεξικό."
 
 #: library/stdtypes.rst:4725
 msgid ""
@@ -5938,38 +6213,50 @@ msgid ""
 "values(), d.keys())``.  Another way to create the same list is ``pairs = "
 "[(v, k) for (k, v) in d.items()]``."
 msgstr ""
+"Τα κλειδιά και οι τιμές επαναλμβάνονται με την σειρά εισαγωγής. Αυτό επιτρέπει "
+"τη δημιουργία ζευγών ``(value, key)`` χρησιμοποιώντας τη :func:`zip`: ``pairs = zip(d."
+"values(), d.keys())``.  Ένας άλλος τρόπος είναι να δημιουργήσετε την ίδια λίστα είναι ``pairs = "
+"[(v, k) for (k, v) in d.items()]``."
 
 #: library/stdtypes.rst:4730
 msgid ""
 "Iterating views while adding or deleting entries in the dictionary may raise "
 "a :exc:`RuntimeError` or fail to iterate over all entries."
 msgstr ""
+"Το iterate όψεων κατά την προσθήκη ή τη διαγραφή καταχωρήσεων στο λεξικό μπορεί να κάνει "
+"raise μια :exc:`RuntimeError` ή να αποτύχει το iterate σε όλες τις καταχωρησείς."
 
 #: library/stdtypes.rst:4733
 msgid "Dictionary order is guaranteed to be insertion order."
-msgstr ""
+msgstr "Η σειρά λεξικού  είναι εγγυημένη σειρά εισαγωγής."
 
 #: library/stdtypes.rst:4738
 msgid ""
 "Return ``True`` if *x* is in the underlying dictionary's keys, values or "
 "items (in the latter case, *x* should be a ``(key, value)`` tuple)."
 msgstr ""
+"Επιστρέφει ``True`` εάν το *x* βρίσκεται στα κλειδιά του λεξικού, τις τιμές ή τα στοιχεία του "
+"υποκείμενου λεξικού (στην τελευταία περίπτωση, το *x* θα πρέπει να είναι μια ``(key, value)`` πλειάδα (tuple))."
 
 #: library/stdtypes.rst:4743
 msgid ""
 "Return a reverse iterator over the keys, values or items of the dictionary. "
 "The view will be iterated in reverse order of the insertion."
 msgstr ""
+"Επιστρέφει έναν αντίστροφο iterator πάνω στα κλειδιά, τις τιμές ή τα στοιχεία του λεξικού. "
+"Η όψη θα γίνει iterate με την αντίστροφη σειρά από την εισαγωγή."
 
 #: library/stdtypes.rst:4746
 msgid "Dictionary views are now reversible."
-msgstr ""
+msgstr "Οι όψεις λεξικού είναι πλέον αναστρέψιμες."
 
 #: library/stdtypes.rst:4751
 msgid ""
 "Return a :class:`types.MappingProxyType` that wraps the original dictionary "
 "to which the view refers."
 msgstr ""
+"Επιστρέφει μια :class:`types.MappingProxyType` που αναδιπλώνει το αρχικό λεξικό στο "
+"οποίο αναφέρεται η όψη."
 
 #: library/stdtypes.rst:4756
 msgid ""
@@ -5984,14 +6271,23 @@ msgid ""
 "any iterable as the other operand, unlike sets which only accept sets as the "
 "input."
 msgstr ""
+"Οι όψεις κλειδιών μοιάζουν με σύνολο καθώς οι καταχωρίσεις τους είναι μοναδικές και :term:`hashable`. "
+"Οι όψεις στοιχείων έχουν επίσης λειτουργίες που μοιάζουν με σύνολο, καθώς τα ζεύγη (κλειδί, τιμή) είναι "
+"μοναδικά και τα κλειδιά μπορούν να κατακερματιστούν. Εάν όλες οι τιμές σε μία όψη στοιχείων μπορούν επίσης "
+"να κατακερματιστούν, τότε η όψη στοιχείων μπορεί να διαλειτουργήσει με άλλα σύνολα. "
+"(Οι όψεις  τιμών δεν αντιμετωπίζονται ως σύνολο, καθώς οι καταχωρίσεις δεν είναι γενικά μοναδικές.)  "
+"Για όψεις που μοιάουν με σύνολο, όλες οι λειτουργίες που ορίζονται για την αφηρημένη βασική κλάση "
+":class:`collections.abc.Set` είναι διαθέσιμες (για παράδειγμα, )"
+"``==``, ``<``, or ``^``).  Κατά τη χρήση τελεστών συνόλου, οι όψεις που μοιάζουν με σύνολο δέχονται οποιοδήποτε "
+"iterable ως άλλο τελεστή, σε αντίθεση με τα σύνολα που δέχονται μόνο σύνολα ως είσοδο."
 
 #: library/stdtypes.rst:4768
 msgid "An example of dictionary view usage::"
-msgstr ""
+msgstr "Ένα παράδειγμα χρήσης όψης λεξικού::"
 
 #: library/stdtypes.rst:4812
 msgid "Context Manager Types"
-msgstr ""
+msgstr "Τύποι Διαχείρισης Περιεχομένου"
 
 #: library/stdtypes.rst:4819
 msgid ""
@@ -6000,6 +6296,10 @@ msgid ""
 "that allow user-defined classes to define a runtime context that is entered "
 "before the statement body is executed and exited when the statement ends:"
 msgstr ""
+"Η δήλωση :keyword:`with` της Python υποστηρίζει την έννοια ενός περιεχομένου χρόνου εκτέλεσης "
+"που ορίζεται από έναν διαχειριστή περιεχομένου.  Αυτό υλοποιείται χρησιμοποιώντας ένα ζεύγος μεθόδων "
+"που επιτρέπουν σε κλάσεις που οριζόνται από το χρήστη να ορίζουν περιεχόμενο χρόνου εκτέλεσης που "
+"εισάγεται πριν από την εκτέλεση του σώματος της δήλωσης και να κάνει έξοδο όταν τερματιστεί η δήλωση:"
 
 #: library/stdtypes.rst:4827
 msgid ""
@@ -6008,6 +6308,10 @@ msgid ""
 "to the identifier in the :keyword:`!as` clause of :keyword:`with` statements "
 "using this context manager."
 msgstr ""
+"Εισάγει το περιεχόμενο εκτέλεσης και επιστρέφει είτε αυτό το αντικείμενο είτε ένα άλλο "
+"που σχετίζεται με το περιεχόμενο χρόνου εκτέλεσης. Η τιμή που επιστρέφεται από αυτήν την "
+"μέθοδο είναι δεσμευμένη στο αναγνωριστικό στην πρόταση :keyword:`!as` των δηλώσεων "
+":keyword:`with` διαχείρισης περιεχομένου."
 
 #: library/stdtypes.rst:4832
 msgid ""
@@ -6015,6 +6319,10 @@ msgid ""
 "object`. File objects return themselves from __enter__() to allow :func:"
 "`open` to be used as the context expression in a :keyword:`with` statement."
 msgstr ""
+"Ένα παράδειγμα ενός διαχειριστή περιεχομένου που επιστρέφει ο ίδιος είναι ένα "
+":term:`file object`. Τα αντικείμενα αρχείου επιστρέφουν μόνα τους από __enter__() για να "
+"επιτρέψουν στο :func:`open` να χρησιμοποιηθεί ως έκφραση περιεχομένου σε μια δήλωση "
+":keyword:`with`."
 
 #: library/stdtypes.rst:4836
 msgid ""
@@ -6025,6 +6333,12 @@ msgid ""
 "the body of the :keyword:`with` statement without affecting code outside "
 "the :keyword:`!with` statement."
 msgstr ""
+"Ένα παράδειγμα διαχείρισης περιεχομένου που επιστρέφει ένα σχετικό αντικείμενο είναι αυτό "
+"που επιστρέφεται από το :func:`decimal.localcontext`. Αυτοί οι διαχειριστές ορίζουν το ενεργό "
+"δεκαδικό περιεχόμενο σε ένα αντίγραφο του αρχικού δεκαδικού περιεχομένου και στη συνέχεια "
+"επιστρέφουν το αντίγραφο. Αυτό επιστρέπει την πραγματοποίηση αλλαγών στο τρέχον δεκαδικό πλαίσιο "
+"στο σώμα της δήλωσης :keyword:`with`, χωρίς να επηρεάζεται ο κώδικας εκτός της δήλωσης "
+":keyword:`!with`."
 
 #: library/stdtypes.rst:4846
 msgid ""
@@ -6034,6 +6348,11 @@ msgid ""
 "the exception type, value and traceback information. Otherwise, all three "
 "arguments are ``None``."
 msgstr ""
+"Τερματίζει από το περιεχόμενο χρόνου εκτέλεσης και επιστρέφει ένα Boolean flag "
+"που υποδεικνύει εάν κάποια εξαίρεση που πρέκυψε θα πρέπει να καταργηθεί. Εάν προκύψει μια εξαίρεση "
+"κατά την εκτέλεση του σώματος της δήλωσης :keyword:`with`, τα ορίσματα περιέχουν τον τύπο "
+"εξαίρεσης, την τιμή και τις πληροφορίες ανίχνευσης. Διαφορετικά, και τα τρία ορίσματα είναι "
+"``None``."
 
 #: library/stdtypes.rst:4851
 msgid ""
@@ -6045,6 +6364,11 @@ msgid ""
 "replace any exception that occurred in the body of the :keyword:`!with` "
 "statement."
 msgstr ""
+"Η επιστροφή μιας πραγματικής τιμής από αυτήν την μέθοδο θα έχει ως αποτέλεσμα η "
+"δήλωση :keyword:`with` να καταργήσει την εξαίρεση και να συνεχίσει την εκτέλεση με τη δήλωση "
+"αμέσως μετά τη δήλωση :keyword:`!with`. Διαφορετικά, η εξαίρεση θα συνεχίσει να διαδίδεται μετά "
+"την ολοκλήρωση αυτής της μεθόδου. Οι εξαιρέσεις που προκύπτουν κατά την εκτέλεση αυτής της μεθόδου "
+"θα αντικαταστήσουν κάθε εξαίρεση που προέκυψε στο σώμα της δήλωσης :keyword:`!with`."
 
 #: library/stdtypes.rst:4858
 msgid ""
@@ -6054,6 +6378,11 @@ msgid ""
 "context management code to easily detect whether or not an :meth:`~object."
 "__exit__` method has actually failed."
 msgstr ""
+"Η εξαίρεση που διαβιβάστηκε δεν θα πρέπει ποτέ να επανατοποθετηθεί ρητά - αντίθετα, αυτή "
+"η μέθοδος θα πρέπει να επιστρέψει μια ψευδή τιμή για να υποδείξει ότι η μέθοδος ολοκληρώθηκε "
+"με επιτυχία και δεν θέλει να αποκρύψει την εξαίρεση που έχει γίνει raise. Αυτό επιτρέπει "
+"στον κώδικα διαχείρισης περιεχομένου να εντοπίζει εύκολα εάν μια μέθοδος :meth:`~object."
+"__exit__` έχει  πράγματι αποτύχει."
 
 #: library/stdtypes.rst:4864
 msgid ""
@@ -6063,6 +6392,11 @@ msgid ""
 "are not treated specially beyond their implementation of the context "
 "management protocol. See the :mod:`contextlib` module for some examples."
 msgstr ""
+"Η Python ορίζει  αρκετούς διαχειριστές περιεχομένου για να υποστηρίζουν τον εύκολο "
+"συγχρονισμό νημάτων, το  άμεσο κλείσιμο αρχείων ή άλλων αντικειμένων και τον απλούστερο "
+"χειρισμό του ενεργού δεκαδικού αριθμητικού περιεχομένου. Οι συγκεκριμένοι τύποι δεν "
+"αντιμετωίζονται ειδικά πέρα από την εφαρμογή τους πρωτοκόλλου διαχείρισης περιεχομένου. "
+"Δείτε το module :mod:`contextlib` για μερικά παραδείγματα."
 
 #: library/stdtypes.rst:4870
 msgid ""
@@ -6073,6 +6407,12 @@ msgid ""
 "`~contextmanager.__enter__` and :meth:`~contextmanager.__exit__` methods, "
 "rather than the iterator produced by an undecorated generator function."
 msgstr ""
+"Οι decorators :term:`generator`\\s και :class:`contextlib.contextmanager` "
+"παρέχουν έναν βολικό τρόπο υλοποίησης αυτών των πρωτοκόλλων.  Εάν μια συνάρτηση "
+"γεννήτριας είναι decorated με τον :class:`contextlib.contextmanager` "
+"decorator, θα επιστρέψει έναν διαχειριστή περιεχομένου που εφαρμόζει τις απαραίτητες "
+"μεθόδους :meth:`~contextmanager.__enter__` και :meth:`~contextmanager.__exit__`, "
+"αντί του iterator που παράγεται από μια undecorated συνάρτηση γεννήτριας."
 
 #: library/stdtypes.rst:4877
 msgid ""
@@ -6082,22 +6422,31 @@ msgid ""
 "Compared to the overhead of setting up the runtime context, the overhead of "
 "a single class dictionary lookup is negligible."
 msgstr ""
+"Λάβετε υπόψη ότι δεν υπάρχει συγκεκριμένη υποδοχή για κμία από αυτές τις μεθόδους "
+"στη δομή τύπου για αντικείμενα Python στο Python/C API. Οι τύποι επεκτάσεων που θέλουν "
+"να ορίσουν αυτές τις μεθόδους πρέπει να τις παρέχουν ως μια κανονική μέθοδο προσβάσιμη "
+"στην Python. Σε σύγκριση με την επιβάρυνση της ρύθμισης στο πλαίσιο του χρόνου εκτέλεσης, η "
+"επιβάρυνση μιας απλής αναζήτησης κλάσης λεξικού είναι αμελητέα."
 
 #: library/stdtypes.rst:4885
 msgid ""
 "Type Annotation Types --- :ref:`Generic Alias <types-genericalias>`, :ref:"
 "`Union <types-union>`"
 msgstr ""
+"Τύποι Annotation τύπου --- :ref:`Generic Alias <types-genericalias>`, :ref:"
+"`Union <types-union>`"
 
 #: library/stdtypes.rst:4890
 msgid ""
 "The core built-in types for :term:`type annotations <annotation>` are :ref:"
 "`Generic Alias <types-genericalias>` and :ref:`Union <types-union>`."
 msgstr ""
+"Οι βασικοί ενσωματωμένοι τύποι για :term:`type annotations <annotation>` είναι "
+":ref:`Generic Alias <types-genericalias>` και :ref:`Union <types-union>`."
 
 #: library/stdtypes.rst:4897
 msgid "Generic Alias Type"
-msgstr ""
+msgstr "Τύπος Generic Alias"
 
 #: library/stdtypes.rst:4903
 msgid ""
@@ -6108,18 +6457,28 @@ msgid ""
 "the ``list`` class with the argument :class:`int`. ``GenericAlias`` objects "
 "are intended primarily for use with :term:`type annotations <annotation>`."
 msgstr ""
+"Τα αντικείμενα ``GenericAlias`` δημιουργούνται γενικά με :ref:`subscripting "
+"<subscriptions>` μια κλάση. Χρησιμοποιούνται πιο συχνά με :ref:`container "
+"classes <sequence-types>`, όπως :class:`list` ή :class:`dict`.Για παράδειγμα, "
+"το ``list[int]`` είναι ένα αντικείμενο ``GenericAlias`` που δημιουργήθηκε με την εγγραφή της "
+"κλάσης ``list`` με το όρισμα :class:`int`. Τα αντικείμενα ``GenericAlias`` προορίζονται κυρίως "
+"για χρήση με :term:`type annotations <annotation>`."
 
 #: library/stdtypes.rst:4913
 msgid ""
 "It is generally only possible to subscript a class if the class implements "
 "the special method :meth:`~object.__class_getitem__`."
 msgstr ""
+"Γενικά είναι δυνατή η εγγραφή μιας κλάσης μόνο εάν η κλάση εφαρμόζει την ειδική μέθοδο "
+":meth:`~object.__class_getitem__`."
 
 #: library/stdtypes.rst:4916
 msgid ""
 "A ``GenericAlias`` object acts as a proxy for a :term:`generic type`, "
 "implementing *parameterized generics*."
 msgstr ""
+"Ένα αντικείμενο ``GenericAlias`` λειτουργεί ως διακομιστής μεσολάβησης (proxy) για έναν "
+":term:`generic type`, υλοποιώντας *parameterized generics*."
 
 #: library/stdtypes.rst:4919
 msgid ""
@@ -6129,6 +6488,11 @@ msgid ""
 "to signify a :class:`set` in which all the elements are of type :class:"
 "`bytes`."
 msgstr ""
+"Για μια κλάση container, το όρισμα(τα) που παρέχει σε μια :ref:`subscription "
+"<subscriptions>` της κλάσης μπορεί να υποδεικνύει τον τύπο(ους) των στοιχείων που "
+"περιέχει ένα αντικείμενο. Για παράδειγμα, το ``set[bytes]`` μπορεί να χρησιμοποιηθεί σε "
+"annotations τύπου για  να υποδηλώσει ένα :class:`set` στο  οποίο όλα τα στοιχεία είναι τύπου "
+":class:`bytes`."
 
 #: library/stdtypes.rst:4925
 msgid ""
@@ -6138,6 +6502,11 @@ msgid ""
 "object. For example, :mod:`regular expressions <re>` can be used on both "
 "the :class:`str` data type and the :class:`bytes` data type:"
 msgstr ""
+"Για μια κλάση που ορίζει :meth:`~object.__class_getitem__` αλλά δεν είναι container, "
+"τα ορίσματα που παρέχονται σε μια συνδρομή της κλάσης θα υποδεικνύουν συχνά τον τύπο ή τους "
+"τύπους επιστροφής μιας ή περισσότερων μεθόδων που ορίζονται σε ένα αντικείμενο. Για παράδειγμα, "
+"το :mod:`regular expressions <re>` μπορούν να χρησιμοποιηθούν τόσο στον τύπο δεδομένων :class:`str` "
+"όσο και στον τύπο δεδομένων :class:`bytes`."
 
 #: library/stdtypes.rst:4931
 msgid ""
@@ -6146,6 +6515,10 @@ msgid ""
 "both be of type :class:`str`. We can represent this kind of object in type "
 "annotations with the ``GenericAlias`` ``re.Match[str]``."
 msgstr ""
+"Εάν ``x = re.search('foo', 'foo')``, το ``x`` θα είναι ένα αντικείμενο :ref:`re.Match <match-"
+"objects>` όπου επιστρέφονται οι τιμές του το ``x.group(0)`` και το ``x[0]`` θα είναι και τα δύο "
+"τύπου :class:`str`. Μπορούμε να αναπαραστήσουμε αυτό το είδος  αντικειμένου σε σχολιασμούς τύπου με το "
+"``GenericAlias`` ``re.Match[str]``."
 
 #: library/stdtypes.rst:4937
 msgid ""
@@ -6155,6 +6528,11 @@ msgid ""
 "annotations, we would represent this variety of :ref:`re.Match <match-"
 "objects>` objects with ``re.Match[bytes]``."
 msgstr ""
+"Εάν ``y = re.search(b'bar', b'bar')``, (σημειώστε το ``b`` για :class:`bytes`), "
+"το ``y`` θα είναι επίσης μια παρουσία του ``re.Match``, αλλά οι επιστρεφόμενες τιμές των "
+"``y.group(0)`` και ``y[0]`` θα είναι και οι δύο τύπου :class:`bytes`. Στους τύπους "
+"annotations, θα αντιπροσωπεύαμε αυτήν την ποικιλία αντικειμένων :ref:`re.Match <match-"
+"objects>` με το ``re.Match[bytes]``."
 
 #: library/stdtypes.rst:4943
 msgid ""
@@ -6162,6 +6540,9 @@ msgid ""
 "GenericAlias`, which can also be used to create ``GenericAlias`` objects "
 "directly."
 msgstr ""
+"Τα αντικείμενα ``GenericAlias`` είναι στιγμιότυπα της κλάσης :class:`types."
+"GenericAlias`, τα οποία μπορούν επίσης να χρησιμοποιηθούν για την δημιουργία αντικειμένων "
+"``GenericAlias`` απευθείας."
 
 #: library/stdtypes.rst:4949
 msgid ""
@@ -6169,6 +6550,9 @@ msgid ""
 "*X*, *Y*, and more depending on the ``T`` used. For example, a function "
 "expecting a :class:`list` containing :class:`float` elements::"
 msgstr ""
+"Δημιουργεί ένα ``GenericAlias`` που αντιπροσωπεύει έναν τύπο ``T`` παραμετροποιημένο από "
+"τύπους *X*, *Y*, και άλλα ανάλογα με το ``T`` που χρησιμοποιείται. Για παράδειγμα, μια συνάρτηση "
+"που αναμένει μια :class:`list` που περιέχει στοιχεία της  :class:`float`::"
 
 #: library/stdtypes.rst:4957
 msgid ""
@@ -6177,12 +6561,18 @@ msgid ""
 "the value type.  In this example, the function expects a ``dict`` with keys "
 "of type :class:`str` and values of type :class:`int`::"
 msgstr ""
+"Ένα άλλο παράδειγμα για αντικείμενα :term:`mapping`, χρησιμοποιώντας ένα :class:`dict`,"
+"που είναι ένας generic τύπος που αναμένει δύο παραμέτρους τύπου που αντιπροσωπεύουν τον τύπο "
+"κλειδιού και τον τύπο τιμής.  Σε αυτό το παράδειγμα, η συνάρτηση αναμένει ένα ``dict`` με κλειδιά "
+"τύπου :class:`str` και τιμές τύπου :class:`int`::"
 
 #: library/stdtypes.rst:4965
 msgid ""
 "The builtin functions :func:`isinstance` and :func:`issubclass` do not "
 "accept ``GenericAlias`` types for their second argument::"
 msgstr ""
+"Οι ενσωματωμένες συναρτήσεις (built-in) :func:`isinstance` και :func:`issubclass` δεν "
+"δέχονται τους τύπους ``GenericAlias`` για το δεύτερο όρισμά τους::"
 
 #: library/stdtypes.rst:4973
 msgid ""
@@ -6192,24 +6582,34 @@ msgid ""
 "not checked against their type. For example, the following code is "
 "discouraged, but will run without errors::"
 msgstr ""
+"Ο χρόνος εκτέλεσης Python δεν επιβάλλει :term:`type annotations <annotation>`. "
+"Αυτό επεκτείνεται σε generic τύπους και στις παραμέτρους τύπου τους. Κατά τη δημιουργία "
+"ενός αντικειμένου container από ένα ``GenericAlias``, τα στοιχεία στο container δεν "
+"ελέγχονται ως προς τον τύπο τους. Για παράδειγμα, ο ακόλουθος κώδικας αποθαρρύνεται, αλλά "
+"θα εκτελεστεί χωρίς σφάλματα::"
 
 #: library/stdtypes.rst:4983
 msgid ""
 "Furthermore, parameterized generics erase type parameters during object "
 "creation::"
 msgstr ""
+"Επιπλέον, τα παραμετροποιημένα generics διαγράφουν τις παραμέτρους τύπου κατά τη δημιουργία "
+"αντικειμένου::"
 
 #: library/stdtypes.rst:4994
 msgid ""
 "Calling :func:`repr` or :func:`str` on a generic shows the parameterized "
 "type::"
 msgstr ""
+"Η κλήση :func:`repr` ή :func:`str` σε ένα generic δείχνει τον παραμετροποιημένο τύπο::"
 
 #: library/stdtypes.rst:5002
 msgid ""
 "The :meth:`~object.__getitem__` method of generic containers will raise an "
 "exception to disallow mistakes like ``dict[str][str]``::"
 msgstr ""
+"Η μέθοδος :meth:`~object.__getitem__` των generic containers θα κάνει raise μια "
+"εξαίρεση για την απαγόρευση λαθών όπως ``dict[str][str]``::"
 
 #: library/stdtypes.rst:5010
 msgid ""
@@ -6217,244 +6617,250 @@ msgid ""
 "are used.  The index must have as many elements as there are type variable "
 "items in the ``GenericAlias`` object's :attr:`~genericalias.__args__`. ::"
 msgstr ""
+"Ωστόσο, τέτοιες εκφράσεις είναι έγκυρες όταν χρησιμοποιούνται μεταβλητές τύπου "
+":ref:`type variables <generics>`.  Το ευρετήριο πρέπει να έχει τόσα στοιχεία όσα και τα στοιχεία "
+"μεταβλητής τύπου στο αντικείμενο ``GenericAlias`` :attr:`~genericalias.__args__`. ::"
 
 #: library/stdtypes.rst:5021
 msgid "Standard Generic Classes"
-msgstr ""
+msgstr "Τυπικές Γενικές Κλάσεις"
 
 #: library/stdtypes.rst:5023
 msgid ""
 "The following standard library classes support parameterized generics. This "
 "list is non-exhaustive."
 msgstr ""
+"Οι ακόλουθες τυπικές κλάσεις βιβλιοθήκης υποστηρίζουν γενικά παραμετροποιημένα. Αυτή η λίστα "
+"δεν είναι εξαντλητική."
 
 #: library/stdtypes.rst:5026
 msgid ":class:`tuple`"
-msgstr ""
+msgstr ":class:`tuple`"
 
 #: library/stdtypes.rst:5027
 msgid ":class:`list`"
-msgstr ""
+msgstr ":class:`list`"
 
 #: library/stdtypes.rst:5028
 msgid ":class:`dict`"
-msgstr ""
+msgstr ":class:`dict`"
 
 #: library/stdtypes.rst:5029
 msgid ":class:`set`"
-msgstr ""
+msgstr ":class:`set`"
 
 #: library/stdtypes.rst:5030
 msgid ":class:`frozenset`"
-msgstr ""
+msgstr ":class:`frozenset`"
 
 #: library/stdtypes.rst:5031
 msgid ":class:`type`"
-msgstr ""
+msgstr ":class:`type`"
 
 #: library/stdtypes.rst:5032
 msgid ":class:`collections.deque`"
-msgstr ""
+msgstr ":class:`collections.deque`"
 
 #: library/stdtypes.rst:5033
 msgid ":class:`collections.defaultdict`"
-msgstr ""
+msgstr ":class:`collections.defaultdict`"
 
 #: library/stdtypes.rst:5034
 msgid ":class:`collections.OrderedDict`"
-msgstr ""
+msgstr ":class:`collections.OrderedDict`"
 
 #: library/stdtypes.rst:5035
 msgid ":class:`collections.Counter`"
-msgstr ""
+msgstr ":class:`collections.Counter`"
 
 #: library/stdtypes.rst:5036
 msgid ":class:`collections.ChainMap`"
-msgstr ""
+msgstr ":class:`collections.ChainMap`"
 
 #: library/stdtypes.rst:5037
 msgid ":class:`collections.abc.Awaitable`"
-msgstr ""
+msgstr ":class:`collections.abc.Awaitable`"
 
 #: library/stdtypes.rst:5038
 msgid ":class:`collections.abc.Coroutine`"
-msgstr ""
+msgstr ":class:`collections.abc.Coroutine`"
 
 #: library/stdtypes.rst:5039
 msgid ":class:`collections.abc.AsyncIterable`"
-msgstr ""
+msgstr ":class:`collections.abc.AsyncIterable`"
 
 #: library/stdtypes.rst:5040
 msgid ":class:`collections.abc.AsyncIterator`"
-msgstr ""
+msgstr ":class:`collections.abc.AsyncIterator`"
 
 #: library/stdtypes.rst:5041
 msgid ":class:`collections.abc.AsyncGenerator`"
-msgstr ""
+msgstr ":class:`collections.abc.AsyncGenerator`"
 
 #: library/stdtypes.rst:5042
 msgid ":class:`collections.abc.Iterable`"
-msgstr ""
+msgstr ":class:`collections.abc.Iterable`"
 
 #: library/stdtypes.rst:5043
 msgid ":class:`collections.abc.Iterator`"
-msgstr ""
+msgstr ":class:`collections.abc.Iterator`"
 
 #: library/stdtypes.rst:5044
 msgid ":class:`collections.abc.Generator`"
-msgstr ""
+msgstr ":class:`collections.abc.Generator`"
 
 #: library/stdtypes.rst:5045
 msgid ":class:`collections.abc.Reversible`"
-msgstr ""
+msgstr ":class:`collections.abc.Reversible`"
 
 #: library/stdtypes.rst:5046
 msgid ":class:`collections.abc.Container`"
-msgstr ""
+msgstr ":class:`collections.abc.Container`"
 
 #: library/stdtypes.rst:5047
 msgid ":class:`collections.abc.Collection`"
-msgstr ""
+msgstr ":class:`collections.abc.Collection`"
 
 #: library/stdtypes.rst:5048
 msgid ":class:`collections.abc.Callable`"
-msgstr ""
+msgstr ":class:`collections.abc.Callable`"
 
 #: library/stdtypes.rst:5049
 msgid ":class:`collections.abc.Set`"
-msgstr ""
+msgstr ":class:`collections.abc.Set`"
 
 #: library/stdtypes.rst:5050
 msgid ":class:`collections.abc.MutableSet`"
-msgstr ""
+msgstr ":class:`collections.abc.MutableSet`"
 
 #: library/stdtypes.rst:5051
 msgid ":class:`collections.abc.Mapping`"
-msgstr ""
+msgstr ":class:`collections.abc.Mapping`"
 
 #: library/stdtypes.rst:5052
 msgid ":class:`collections.abc.MutableMapping`"
-msgstr ""
+msgstr ":class:`collections.abc.MutableMapping`"
 
 #: library/stdtypes.rst:5053
 msgid ":class:`collections.abc.Sequence`"
-msgstr ""
+msgstr ":class:`collections.abc.Sequence`"
 
 #: library/stdtypes.rst:5054
 msgid ":class:`collections.abc.MutableSequence`"
-msgstr ""
+msgstr ":class:`collections.abc.MutableSequence`"
 
 #: library/stdtypes.rst:5055
 msgid ":class:`collections.abc.ByteString`"
-msgstr ""
+msgstr ":class:`collections.abc.ByteString`"
 
 #: library/stdtypes.rst:5056
 msgid ":class:`collections.abc.MappingView`"
-msgstr ""
+msgstr ":class:`collections.abc.MappingView`"
 
 #: library/stdtypes.rst:5057
 msgid ":class:`collections.abc.KeysView`"
-msgstr ""
+msgstr ":class:`collections.abc.KeysView`"
 
 #: library/stdtypes.rst:5058
 msgid ":class:`collections.abc.ItemsView`"
-msgstr ""
+msgstr ":class:`collections.abc.ItemsView`"
 
 #: library/stdtypes.rst:5059
 msgid ":class:`collections.abc.ValuesView`"
-msgstr ""
+msgstr ":class:`collections.abc.ValuesView`"
 
 #: library/stdtypes.rst:5060
 msgid ":class:`contextlib.AbstractContextManager`"
-msgstr ""
+msgstr ":class:`contextlib.AbstractContextManager`"
 
 #: library/stdtypes.rst:5061
 msgid ":class:`contextlib.AbstractAsyncContextManager`"
-msgstr ""
+msgstr ":class:`contextlib.AbstractAsyncContextManager`"
 
 #: library/stdtypes.rst:5062
 msgid ":class:`dataclasses.Field`"
-msgstr ""
+msgstr ":class:`dataclasses.Field`"
 
 #: library/stdtypes.rst:5063
 msgid ":class:`functools.cached_property`"
-msgstr ""
+msgstr ":class:`functools.cached_property`"
 
 #: library/stdtypes.rst:5064
 msgid ":class:`functools.partialmethod`"
-msgstr ""
+msgstr ":class:`functools.partialmethod`"
 
 #: library/stdtypes.rst:5065
 msgid ":class:`os.PathLike`"
-msgstr ""
+msgstr ":class:`os.PathLike`"
 
 #: library/stdtypes.rst:5066
 msgid ":class:`queue.LifoQueue`"
-msgstr ""
+msgstr ":class:`queue.LifoQueue`"
 
 #: library/stdtypes.rst:5067
 msgid ":class:`queue.Queue`"
-msgstr ""
+msgstr ":class:`queue.Queue`"
 
 #: library/stdtypes.rst:5068
 msgid ":class:`queue.PriorityQueue`"
-msgstr ""
+msgstr ":class:`queue.PriorityQueue`"
 
 #: library/stdtypes.rst:5069
 msgid ":class:`queue.SimpleQueue`"
-msgstr ""
+msgstr ":class:`queue.SimpleQueue`"
 
 #: library/stdtypes.rst:5070
 msgid ":ref:`re.Pattern <re-objects>`"
-msgstr ""
+msgstr ":ref:`re.Pattern <re-objects>`"
 
 #: library/stdtypes.rst:5071
 msgid ":ref:`re.Match <match-objects>`"
-msgstr ""
+msgstr ":ref:`re.Match <match-objects>`"
 
 #: library/stdtypes.rst:5072
 msgid ":class:`shelve.BsdDbShelf`"
-msgstr ""
+msgstr ":class:`shelve.BsdDbShelf`"
 
 #: library/stdtypes.rst:5073
 msgid ":class:`shelve.DbfilenameShelf`"
-msgstr ""
+msgstr ":class:`shelve.DbfilenameShelf"
 
 #: library/stdtypes.rst:5074
 msgid ":class:`shelve.Shelf`"
-msgstr ""
+msgstr ":class:`shelve.Shelf"
 
 #: library/stdtypes.rst:5075
 msgid ":class:`types.MappingProxyType`"
-msgstr ""
+msgstr ":class:`types.MappingProxyType`"
 
 #: library/stdtypes.rst:5076
 msgid ":class:`weakref.WeakKeyDictionary`"
-msgstr ""
+msgstr ":class:`weakref.WeakKeyDictionary`"
 
 #: library/stdtypes.rst:5077
 msgid ":class:`weakref.WeakMethod`"
-msgstr ""
+msgstr ":class:`weakref.WeakMethod`"
 
 #: library/stdtypes.rst:5078
 msgid ":class:`weakref.WeakSet`"
-msgstr ""
+msgstr ":class:`weakref.WeakSet`"
 
 #: library/stdtypes.rst:5079
 msgid ":class:`weakref.WeakValueDictionary`"
-msgstr ""
+msgstr ":class:`weakref.WeakValueDictionary`"
 
 #: library/stdtypes.rst:5084
 msgid "Special Attributes of ``GenericAlias`` objects"
-msgstr ""
+msgstr "Ειδικά Χαρακτηριστικά αντικειμένων ``GenericAlias``"
 
 #: library/stdtypes.rst:5086
 msgid "All parameterized generics implement special read-only attributes."
-msgstr ""
+msgstr "Όλα τα παραμετροποιημένα geneics εφαρμόζουν ειδικά χαρακτηριστικά μόνο για "
+"ανάγνωση."
 
 #: library/stdtypes.rst:5090
 msgid "This attribute points at the non-parameterized generic class::"
-msgstr ""
+msgstr "Αυτό το χαρακτηριστικό δείχνει στη μη παραμετροποιημένη γενική κλάση::"
 
 #: library/stdtypes.rst:5098
 msgid ""
@@ -6462,12 +6868,16 @@ msgid ""
 "passed to the original :meth:`~object.__class_getitem__` of the generic "
 "class::"
 msgstr ""
+"Αυτό το χαρακτηριστικό είναι μια :class:`tuple` (πιθανώς μήκους 1) generic τύπων "
+"που μεταβιβάστηκαν στο αρχικό :meth:`~object.__class_getitem__` της generic κλάσης::"
 
 #: library/stdtypes.rst:5108
 msgid ""
 "This attribute is a lazily computed tuple (possibly empty) of unique type "
 "variables found in ``__args__``::"
 msgstr ""
+"Αυτό το χαρακτηριστικό είναιμια νωχελικά υπολογισμένη πλειάδα (tuple) (πιθανώς κενή) "
+"μεταβλητών μοναδικού τύπου που βρίσκονται στο ``__args__``::"
 
 #: library/stdtypes.rst:5119
 msgid ""
@@ -6475,24 +6885,29 @@ msgid ""
 "have correct ``__parameters__`` after substitution because :class:`typing."
 "ParamSpec` is intended primarily for static type checking."
 msgstr ""
+"Ένα αντικείμενο ``GenericAlias`` με παραμέτρους :class:`typing.ParamSpec` ενδέχεται να μην "
+"έχει σωστές ``__parameters__`` μετά την αντικατάσταση επειδή το :class:`typing."
+"ParamSpec` προορίζεται κυρίως για έλεγχο στατικού τύπου."
 
 #: library/stdtypes.rst:5126
 msgid ""
 "A boolean that is true if the alias has been unpacked using the ``*`` "
 "operator (see :data:`~typing.TypeVarTuple`)."
 msgstr ""
+"Ένα boolean που ισχύει αν το alias έχει αποσυμπιεστεί χρησιμοποιώντας τον τελεστή ``*`` "
+"(δείτε το :data:`~typing.TypeVarTuple`)."
 
 #: library/stdtypes.rst:5135
 msgid ":pep:`484` - Type Hints"
-msgstr ""
+msgstr ":pep:`484` - Τύπος Συμβουλές"
 
 #: library/stdtypes.rst:5135
 msgid "Introducing Python's framework for type annotations."
-msgstr ""
+msgstr "Παρουσιάζοντας το framework της Python για τύπους annotations."
 
 #: library/stdtypes.rst:5140
 msgid ":pep:`585` - Type Hinting Generics In Standard Collections"
-msgstr ""
+msgstr ":pep:`585` - Τύπος Generics Συμβουλών στις Τυπικές Συλλογές"
 
 #: library/stdtypes.rst:5138
 msgid ""
@@ -6500,22 +6915,29 @@ msgid ""
 "provided they implement the special class method :meth:`~object."
 "__class_getitem__`."
 msgstr ""
+"Εισαγωγή της δυνατότητας εγγενούς παραμετροποιήσης κλάσεων τυπικής βιβλιοθήκης, "
+"υπό την προϋπόθεση ότι εφαρμόζουν τη μέθοδο ειδικής κλάσης :meth:`~object."
+"__class_getitem__`."
 
 #: library/stdtypes.rst:5143
 msgid ""
 ":ref:`Generics`, :ref:`user-defined generics <user-defined-generics>` and :"
 "class:`typing.Generic`"
 msgstr ""
+"Τα :ref:`Generics`, :ref:`user-defined generics <user-defined-generics>` και :"
+"class:`typing.Generic`"
 
 #: library/stdtypes.rst:5143
 msgid ""
 "Documentation on how to implement generic classes that can be parameterized "
 "at runtime and understood by static type-checkers."
 msgstr ""
+"Τεκμηρίωση για τον τρόπο υλοποίησης generic κλάσεων που μπορούν να παραμετροποιηθούν κατά "
+"το χρόνο εκτέλεσης και να κατανοηθούν από στατικούς ελεγκτές τύπων."
 
 #: library/stdtypes.rst:5152
 msgid "Union Type"
-msgstr ""
+msgstr "Τύπος Ένωσης"
 
 #: library/stdtypes.rst:5158
 msgid ""
@@ -6525,6 +6947,10 @@ msgid ""
 "expression enables cleaner type hinting syntax compared to :data:`typing."
 "Union`."
 msgstr ""
+"Ένα αντικείμενο ένωσης διατηρεί την τιμή της λειτουργίας ``|`` (κατά bit or) σε πολλαπλά "
+"αντικείμενα :ref:`type objects <bltin-type-objects>`.  Αυτοί οι τύποι προορίζονται κυρίως για "
+":term:`type annotations <annotation>`. Η έκφραση τύπου ένωσης επιτρέπει την καθαρότερη "
+"σύνταξη υπόδειξης σε σύγκριση με το :data:`typing."
 
 #: library/stdtypes.rst:5165
 msgid ""
@@ -6533,6 +6959,9 @@ msgid ""
 "example, the following function expects an argument of type :class:`int` or :"
 "class:`float`::"
 msgstr ""
+"Ορίζει ένα αντικείμενο ένωσης που περιέχει τύπους *X*, *Y*, και  ούτω καθεξής. Το ``X | Y`` "
+"σημαίνει είτε X είτε Y.  Είναι ισοδύναμο με το ``typing.Union[X, Y]``. Για παράδειγμα, "
+"η ακόλουθη συνάρτηση αναμένει ένα όρισμα τύπου :class:`int` or :class:`float`::"
 
 #: library/stdtypes.rst:5175
 msgid ""
@@ -6542,43 +6971,53 @@ msgid ""
 "For unions which include forward references, present the whole expression as "
 "a string, e.g. ``\"int | Foo\"``."
 msgstr ""
+"Ο τελεστής ``|`` δεν μπορεί να χρησιμοποιηθεί κατά το χρονο εκτέλεσης για να ορίσει ενώσεις "
+"όπου ενα ή περισσότερα μέλη είναι μια μπροστινή αναφορά. Για  παράδειγμα το ``int | \"Foo\"``, "
+"όπου το ``\"Foo\"`` είναι μια αναφορά σε μια κλάση που δεν έχει ακόμη καθοριστεί, θα αποτύχει κατά "
+"το χρόνο εκτέλεσης. Για ενώσεις που περιλαμβάνουν μπροστινές αναφορές, παρουσιάζει ολόκληρη την έκφραση "
+"ως συμβολοσειρά, π.χ. ``\"int | Foo\"``."
 
 #: library/stdtypes.rst:5183
 msgid ""
 "Union objects can be tested for equality with other union objects.  Details:"
 msgstr ""
+"Τα αντικείμενα ένωσης μπορούν να ελεγχθούν για ισότητα με άλλα αντικείμενα ένωσης.  Λεπτομέρειες:"
 
 #: library/stdtypes.rst:5185
 msgid "Unions of unions are flattened::"
-msgstr ""
+msgstr "Οι εώσεις των ενώσεων ισοπεδώνονται::"
 
 #: library/stdtypes.rst:5189
 msgid "Redundant types are removed::"
-msgstr ""
+msgstr "Οι περιττοί τύποι καταργούνται::"
 
 #: library/stdtypes.rst:5193
 msgid "When comparing unions, the order is ignored::"
-msgstr ""
+msgstr "Κατά τη σύγκριση των ενώσεων, η σειρά αγνοείται::"
 
 #: library/stdtypes.rst:5197
 msgid "It is compatible with :data:`typing.Union`::"
-msgstr ""
+msgstr "Είναι συμβατό με το :data:`typing.Union`::"
 
 #: library/stdtypes.rst:5201
 msgid "Optional types can be spelled as a union with ``None``::"
-msgstr ""
+msgstr "Οι προαιρετικοί τύποι μπορούν να γραφτούν ως ένωση με ``None``::"
 
 #: library/stdtypes.rst:5208
 msgid ""
 "Calls to :func:`isinstance` and :func:`issubclass` are also supported with a "
 "union object::"
 msgstr ""
+"Οι κλήσεις σε :func:`isinstance` και :func:`issubclass` υποστηρίζονται επίσης με ένα "
+"αντικείμενο ένωσης::"
 
 #: library/stdtypes.rst:5214
 msgid ""
 "However, :ref:`parameterized generics <types-genericalias>` in union objects "
 "cannot be checked::"
 msgstr ""
+"Ωστόσο, το :ref:`parameterized generics <types-genericalias>` σε αντικείμενα ένωσης "
+"δεν μπορούν να ελεγχθούν::"
 
 #: library/stdtypes.rst:5224
 msgid ""
@@ -6586,6 +7025,9 @@ msgid ""
 "UnionType` and used for :func:`isinstance` checks.  An object cannot be "
 "instantiated from the type::"
 msgstr ""
+"Ο τύπος που εκτίθεται από τον χρήστη για το αντικείμενο ένωσης μπορεί να προσπελαστεί από το "
+":data:`types.UnionType` και να χρησιμοποιηθεί για ελέγχους :func:`isinstance`.  Δεν είναι δυνατή η "
+"δημιουργία ενός αντικειμένου από τον τύπο::"
 
 #: library/stdtypes.rst:5237
 msgid ""
@@ -6593,24 +7035,29 @@ msgid ""
 "``X | Y``.  If a metaclass implements :meth:`!__or__`, the Union may "
 "override it:"
 msgstr ""
+"Η μέθοδος :meth:`!__or__` για αντικείμενα τύπου προστέθηκε για να υποστηρίξει τη "
+"σύνταξη ``X | Y``.  Εάν μια μετακλάση υλοποιεί :meth:`!__or__`, η Ένωση μπορεί να την "
+"παρακάμψει:"
 
 #: library/stdtypes.rst:5257
 msgid ":pep:`604` -- PEP proposing the ``X | Y`` syntax and the Union type."
-msgstr ""
+msgstr ":pep:`604` -- Το PEP προτείνει τη σύνταξη ``X | Y`` και τον τύπο Ένωση."
 
 #: library/stdtypes.rst:5265
 msgid "Other Built-in Types"
-msgstr ""
+msgstr "Άλλοι Ενσωματωμένοι (built-in) Τύποι"
 
 #: library/stdtypes.rst:5267
 msgid ""
 "The interpreter supports several other kinds of objects. Most of these "
 "support only one or two operations."
 msgstr ""
+"Ο διερμηνέας υποστηρίζει πολλά άλλα είδη αντικειμένων. Τα περισσότερα από αυτά υποστηρίζουν "
+"μόνο μία ή δύο λειτουργίες."
 
 #: library/stdtypes.rst:5274
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 #: library/stdtypes.rst:5276
 msgid ""
@@ -6622,6 +7069,12 @@ msgid ""
 "exist, rather it requires an (external) *definition* for a module named "
 "*foo* somewhere.)"
 msgstr ""
+"Η μόνη ειδική λειτουργία σε ένα module είναι η πρόσβαση χαρακτηριστικών: ``m.name``, "
+"όπου το *m* είναι ένα module και το *name* έχει πρόσβαση σε ένα όνομα που ορίζεται στον "
+"πίνακα συμβόλων του *m*. Τα χαρακτηριστικά του module μπορούν να εκχωρηθούν.  (Σημειώστε ότι η δήλωση "
+":keyword:`import` δεν είναι, αυστηρά, μια λειτουργία σε ένα αντικείμενο module· το ``import foo`` "
+"δεν απαιτεί να υπάρχει ένα αντικείμενο module με το όνομα *foo* αλλά απαιτεί έναν (εξωτερικό) "
+"*definition* για ένα module που ονομάζεται *foo* κάπου.)"
 
 #: library/stdtypes.rst:5283
 msgid ""
@@ -6633,6 +7086,12 @@ msgid ""
 "``m.__dict__ = {}``).  Modifying :attr:`~object.__dict__` directly is not "
 "recommended."
 msgstr ""
+"Ένα ειδικό χαρακηριστικό κάθε module είναι :attr:`~object.__dict__`. Αυτό είναι το λεξικό "
+"που περιέχει τον πίνακα συμβόλων της ενότητας. Η τροποποίηση αυτού του λεξικού θα αλλάξει στην "
+"πραγματικότητα τον πίνακα συμβόλων του module, αλλά η απευθείας εκχώρηση στο χαρακτηριστικό "
+":attr:`~object.__dict__` δεν είναι δυνατή (μπορείτε να γράψετε ``m."
+"__dict__['a'] = 1``, που ορίζει το ``m.a`` να είναι ``1``, αλλά δεν μπορείτε να γράψετε "
+"``m.__dict__ = {}``).  Δεν συνίσταται η απευείας τροποποίηση του :attr:`~object.__dict__`."
 
 #: library/stdtypes.rst:5291
 msgid ""
@@ -6640,24 +7099,29 @@ msgid ""
 "'sys' (built-in)>``.  If loaded from a file, they are written as ``<module "
 "'os' from '/usr/local/lib/pythonX.Y/os.pyc'>``."
 msgstr ""
+"Τα modules που είναι ενσωματωμένες στον διερμηνέα γράφονται ως εξής: ``<module "
+"'sys' (built-in)>``.  Εάν φορτωθούν από ένα αρχείο, γράφονται ως ``<module "
+"'os' from '/usr/local/lib/pythonX.Y/os.pyc'>``."
 
 #: library/stdtypes.rst:5299
 msgid "Classes and Class Instances"
-msgstr ""
+msgstr "Κλάσεις και Στιγμιότυπα Κλάσης"
 
 #: library/stdtypes.rst:5301
 msgid "See :ref:`objects` and :ref:`class` for these."
-msgstr ""
+msgstr "Δείτε :ref:`objects` και :ref:`class` για αυτά."
 
 #: library/stdtypes.rst:5307
 msgid "Functions"
-msgstr ""
+msgstr "Συναρτήσεις"
 
 #: library/stdtypes.rst:5309
 msgid ""
 "Function objects are created by function definitions.  The only operation on "
 "a function object is to call it: ``func(argument-list)``."
 msgstr ""
+"Τα αντικείμενα συναρτήσεων δημιουργούνται από ορισμούς συναρτήσεων.  Η μόνη λειτουργία "
+"σε ένα αντικείμενο συνάρτησης είναι  να το ονομάσουμε: ``func(argument-list)``."
 
 #: library/stdtypes.rst:5312
 msgid ""
@@ -6666,14 +7130,17 @@ msgid ""
 "function), but the implementation is different, hence the different object "
 "types."
 msgstr ""
+"Υπάρχουν πραγματικά δύο είδη αντικειμένων συναρτήσεων: ενσωματωμένες συναρτήσεις και συναρτήσεις "
+"που καθορίζονται από τον χρήστη.  Και οι δύο υποστηρίζουν την ίδια λειτουργία (για να καλέσετε "
+"τη συνάρτηση), αλλά η υλοποίηση είναι διαφορετική, εξ ου και οι διαφορετικοί τύποι αντικειμένων."
 
 #: library/stdtypes.rst:5316
 msgid "See :ref:`function` for more information."
-msgstr ""
+msgstr "Δείτε το :ref:`function` για περισσότερες πληροφορίες."
 
 #: library/stdtypes.rst:5322
 msgid "Methods"
-msgstr ""
+msgstr "Μέθοδοι"
 
 #: library/stdtypes.rst:5326
 msgid ""
@@ -6682,6 +7149,10 @@ msgid ""
 "`append` on lists) and :ref:`class instance method <instance-methods>`. "
 "Built-in methods are described with the types that support them."
 msgstr ""
+"Οι μέθοδοι είναι συναρτήσεις που καλούνται χρησιμοποιώντας το notation χαρακτηριστικών. "
+"Υπάρχουν δύο είδη: :ref:`built-in methods <builtin-methods>` (όπως η :meth:"
+"`append` στις λίστες) και :ref:`class instance method <instance-methods>`. "
+"Οι ενσωματωμένες μέθοδοι περιγράφονται με τους τύπους που τις υποστηρίζουν."
 
 #: library/stdtypes.rst:5331
 msgid ""
@@ -6695,6 +7166,14 @@ msgid ""
 "is completely equivalent to calling ``m.__func__(m.__self__, arg-1, "
 "arg-2, ..., arg-n)``."
 msgstr ""
+"Εάν αποκτήσετε πρόσβαση σε μια μέθοδο (μια συνάρτηση που ορίζεται μια namespace κλάση) "
+"μέσω ενός στιγμιοτύπου, λαμβάνετε ένα ειδικό αντικείμενο: ένα αντικείμενο :dfn:`bound method` (ονομάζεται επίσης :ref:"
+"`instance method <instance-methods>`). Όταν καλείται, θα προσθέσει το όρισμα ``self`` στη λίστα ορισμάτων.  "
+"Οι δεσμευμένες μέθοδοι έχουν δύο ειδικά χαρακτηριστικά μόνο για ανάγνωση: "
+":attr:`m.__self__ <method.__self__>` είναι το αντικείμενο στο οποίο λειτουργεί η μέθοδος "
+"και :attr:`m.__func__ <method.__func__>` είναι η συνάρτηση που υλοποιεί την μέθοδο.  Η κλήση "
+"του ``m(arg-1, arg-2, ..., arg-n)`` είναι απολύτως ισοδύναμη με την κλήση του ``m.__func__(m.__self__, arg-1, "
+"arg-2, ..., arg-n)``."
 
 #: library/stdtypes.rst:5342
 msgid ""
@@ -6706,14 +7185,21 @@ msgid ""
 "In order to set a method attribute, you need to explicitly set it on the "
 "underlying function object:"
 msgstr ""
+"Όπως τα :ref:`function objects <user-defined-funcs>`, τα αντικείμενα δεσμευμένης "
+"μεθόδου υποστηρίζουν τη λήψη αυθαίρετων χαρακτηριστικών. Ωστόσο, δεδομένου ότι τα "
+"χαρακτηριστικά της μεθόδου αποθηκεύονται στην πραγματικότητα στο υποκείμενο αντικείμενο "
+"συνάρτησης (:attr:`method.__func__`), ο ορισμός χαρακτηριστικών μεθόδου σε δεσμευμένες μεθόδους "
+"δεν επιτρέπεται.  Η προσπάθεια ορισμού ενός χαρακτηριστικού σε μια μέθοδο έχει ως αποτέλεσμα "
+"να γίνει raise η :exc:`AttributeError`.  Για να ορίσετε ένα χαρακτηριστικό μεθόδου πρέπει να το ορίσετε "
+"ρητά στο υποκείμενο αντικείμενο συνάρτησης."
 
 #: library/stdtypes.rst:5365
 msgid "See :ref:`instance-methods` for more information."
-msgstr ""
+msgstr "Δείτε το :ref:`instance-methods` για περισσότερες πληροφορίες."
 
 #: library/stdtypes.rst:5373
 msgid "Code Objects"
-msgstr ""
+msgstr "Αντικείμενα Κώδικα"
 
 #: library/stdtypes.rst:5379
 msgid ""
@@ -6724,6 +7210,12 @@ msgid ""
 "function and can be extracted from function objects through their :attr:"
 "`~function.__code__` attribute. See also the :mod:`code` module."
 msgstr ""
+"Τα αντικείμενα κώδικα χρησιμοποιούνται από την υλοποίηση για να αναπαραστήσουν τον "
+"\"ψευδο-μεταγλωττισμένο\" εκτελέσιμο κώδικα Python, όπως ένα σώμα συνάρτησης. Διαφέρουν "
+"από τα αντικείμενα συνάρτησης επειδή δεν περιέχουν αναφορά στο παγκόσμιο (global) περιβάλλον "
+"εκτέλεσης τους.  Τα αντικείμενα κώδικα επιστρέφονται από την ενσωματωμένη συνάρτηση :func:`compile` "
+"και μπορεί να εξαχθεί από τα αντικείμενα συνάρτησης μέσω του χαρακτηριστικού τους :attr:"
+"`~function.__code__`. Δείτε επίσης το module :mod:`code`."
 
 #: library/stdtypes.rst:5386
 msgid ""
@@ -6731,20 +7223,25 @@ msgid ""
 "<auditing>` ``object.__getattr__`` with arguments ``obj`` and "
 "``\"__code__\"``."
 msgstr ""
+"Η πρόσβαση στη :attr:`~function.__code__` κάνει raise ένα :ref:`auditing event "
+"<auditing>` ``object.__getattr__`` με ορίσματα ``obj`` και "
+"``\"__code__\"``."
 
 #: library/stdtypes.rst:5393
 msgid ""
 "A code object can be executed or evaluated by passing it (instead of a "
 "source string) to the :func:`exec` or :func:`eval`  built-in functions."
 msgstr ""
+"Ένα αντικείμενο κώιδκα μπορεί να εκτελεστεί ή να αξιολογηθεί περνώντας το (αντί "
+"για πηγαία συμβολοσειρά) στις ενσωματωμένες συναρτήσεις :func:`exec` ή :func:`eval`."
 
 #: library/stdtypes.rst:5396
 msgid "See :ref:`types` for more information."
-msgstr ""
+msgstr "Δείτε :ref:`types` για περισσότερες πληροφορίες."
 
 #: library/stdtypes.rst:5402
 msgid "Type Objects"
-msgstr ""
+msgstr "Τύποι Αντικειμένων"
 
 #: library/stdtypes.rst:5408
 msgid ""
@@ -6753,14 +7250,17 @@ msgid ""
 "operations on types.  The standard module :mod:`types` defines names for all "
 "standard built-in types."
 msgstr ""
+"Τα αντικείμενα τύπου αντιπροσωπεύουν τους διάφορους τύπους αντικειμένων.  Ο τύπος ενός αντικειμένου "
+"προσεγγίζεται από την ενσωματωμένη συνάρτηση :func:`type`.  Δεν υπάρχουν ειδικές λειτουργίες στους τύπους.  "
+"Το τυπικό (standard) module :mod:`types` ορίζει ονόματα για όλους τους τυπικούς ενσωματωμένους τύπους."
 
 #: library/stdtypes.rst:5413
 msgid "Types are written like this: ``<class 'int'>``."
-msgstr ""
+msgstr "Οι τύποι γράφονται ως εξής: ``<class 'int'>``."
 
 #: library/stdtypes.rst:5419
 msgid "The Null Object"
-msgstr ""
+msgstr "Το Αντικείμενο Null"
 
 #: library/stdtypes.rst:5421
 msgid ""
@@ -6768,14 +7268,17 @@ msgid ""
 "It supports no special operations.  There is exactly one null object, named "
 "``None`` (a built-in name).  ``type(None)()`` produces the same singleton."
 msgstr ""
+"Αυτό το αντικείμενο επιστρέφεται από συναρτήσεις που δεν επιστρέφουν ρητά μια τιμή.  "
+"Δεν υποστηρίζει ειδικές λειτουργίες.  Υπάρχει ακριβώς ένα μηδενικό αντικείμενο, που ονομάζεται "
+"``None`` (ένα ενσωματωμένο όνομα).  Το ``type(None)()`` παράγει το ίδιο singleton."
 
 #: library/stdtypes.rst:5425
 msgid "It is written as ``None``."
-msgstr ""
+msgstr "Γράφεται ως ``None``."
 
 #: library/stdtypes.rst:5432
 msgid "The Ellipsis Object"
-msgstr ""
+msgstr "Το αντικείμενο Ellipsis"
 
 #: library/stdtypes.rst:5434
 msgid ""
@@ -6784,14 +7287,18 @@ msgid ""
 "`Ellipsis` (a built-in name).  ``type(Ellipsis)()`` produces the :const:"
 "`Ellipsis` singleton."
 msgstr ""
+"Αυτό το αντικείμενο χρησιμοποιείται συνήθως με slicing (δείτε :ref:`slicings`).  Δεν υποστηρίζει "
+"ειδικές λειτουργίες.  Υπάρχει ακριβώς ένα αντικείμενο έλλειψης, που ονομάζεται :const:"
+"`Ellipsis` (ένα ενσωματωμένο όνομα).  Το ``type(Ellipsis)()`` παράγει το :const:"
+"`Ellipsis` singleton."
 
 #: library/stdtypes.rst:5439
 msgid "It is written as ``Ellipsis`` or ``...``."
-msgstr ""
+msgstr "Γράφεται ως ``Ellipsis`` ή ``...``."
 
 #: library/stdtypes.rst:5445
 msgid "The NotImplemented Object"
-msgstr ""
+msgstr "Το NotImplemented Αντικείμενο"
 
 #: library/stdtypes.rst:5447
 msgid ""
@@ -6800,14 +7307,18 @@ msgid ""
 "more information.  There is exactly one :data:`NotImplemented` object. :code:"
 "`type(NotImplemented)()` produces the singleton instance."
 msgstr ""
+"Αυτό το αντικείμενο επιστρέφεται από συγκρίσεις και δυαδικές λειτουργίες όταν τους "
+"ζητείται να λειτουργήσουν σε τύπους που δεν υποστηρίζουν. Δείτε το :ref:`comparisons` για "
+"περισσότερες πληροφορίες.  Υπάρχει ακριβώς ένα αντικείμενο :data:`NotImplemented`. Το :code:"
+"`type(NotImplemented)()` παράγει το στιγμιότυπο singleton."
 
 #: library/stdtypes.rst:5452
 msgid "It is written as :code:`NotImplemented`."
-msgstr ""
+msgstr "Είναι γραμμένο ως :code:`NotImplemented`."
 
 #: library/stdtypes.rst:5458
 msgid "Internal Objects"
-msgstr ""
+msgstr "Εσωτερικά Αντικείμενα"
 
 #: library/stdtypes.rst:5460
 msgid ""
@@ -6815,10 +7326,13 @@ msgid ""
 "objects <frame-objects>`, :ref:`traceback objects <traceback-objects>`, and "
 "slice objects."
 msgstr ""
+"Δείτε :ref:`types` για αυτές τις πληροφορίες.  Περιγράφει :ref:`stack frame "
+"objects <frame-objects>`, :ref:`traceback objects <traceback-objects>`, και "
+"slice αντικείμενα."
 
 #: library/stdtypes.rst:5468
 msgid "Special Attributes"
-msgstr ""
+msgstr "Ειδικά Χαρακτηριστικά"
 
 #: library/stdtypes.rst:5470
 msgid ""
@@ -6826,43 +7340,55 @@ msgid ""
 "types, where they are relevant.  Some of these are not reported by the :func:"
 "`dir` built-in function."
 msgstr ""
+"Η υλοποίηση προσθέτει μερικά ειδικά χαρακτηριστικά μόνο για ανάγνωση σε διάφορους τύπους "
+"αντικειμένων, όπου είναι σχετικά.  Ορισμένα από αυτά δεν αναφέρονται από την ενσωματωμένη "
+"συνάρτηση :func:`dir`."
 
 #: library/stdtypes.rst:5477
 msgid ""
 "A dictionary or other mapping object used to store an object's (writable) "
 "attributes."
 msgstr ""
+"Ένα λεξικό ή άλλο αντικείμενο αντιστοίχισης που χρησιμοποιείται για την αποθήκευση των "
+"(εγγράψιμων) χαρακτηριστικών ενός αντικειμένου."
 
 #: library/stdtypes.rst:5483
 msgid "The class to which a class instance belongs."
-msgstr ""
+msgstr "Η κλάση στην οποία ανήκει ένα στιγμιότυπο κλάσης."
 
 #: library/stdtypes.rst:5488
 msgid "The tuple of base classes of a class object."
-msgstr ""
+msgstr "Η πλειάδα (tuple) των βασικών κλάσεων ενός αντικειμένου κλάσης."
 
 #: library/stdtypes.rst:5493
 msgid ""
 "The name of the class, function, method, descriptor, or generator instance."
 msgstr ""
+"Το όνομα της κλάσης, της συνάρτησης, της μεθόδου, του descriptor ή τους στιγμιοτύπου generator."
 
 #: library/stdtypes.rst:5499
 msgid ""
 "The :term:`qualified name` of the class, function, method, descriptor, or "
 "generator instance."
 msgstr ""
+"Το :term:`qualified name` της κλάσης, της συνάρτησης, της μεθόδου, του descriptor, ή του "
+"generator στιγμιοτύπου."
 
 #: library/stdtypes.rst:5507
 msgid ""
 "The :ref:`type parameters <type-params>` of generic classes, functions, and :"
 "ref:`type aliases <type-aliases>`."
 msgstr ""
+"Οι παράμετροι :ref:`type parameters <type-params>` των γενικών κλάσεων, συναρτήσεων και "
+":ref:`type aliases <type-aliases>`."
 
 #: library/stdtypes.rst:5515
 msgid ""
 "This attribute is a tuple of classes that are considered when looking for "
 "base classes during method resolution."
 msgstr ""
+"Αυτό το χαρακτηριστικό είναι μια πλειάδα κλάσεων που λαμβάνονται υπόψη κατά την αναζήτηση "
+"βασικών κλάσεων κατά την ανάλυση μεθόδου."
 
 #: library/stdtypes.rst:5521
 msgid ""
@@ -6870,6 +7396,9 @@ msgid ""
 "resolution order for its instances.  It is called at class instantiation, "
 "and its result is stored in :attr:`~class.__mro__`."
 msgstr ""
+"Αυτή η μέθοδος μπορεί να παρακαμφθεί από μια μετακλάση για να προσαρμόσει τη σειρά "
+"ανάλυσης της μεθόδου για τα στιγμιότυπα της.  Καλείται στην εγκατάσταση κλάσης, και το "
+"αποτέλεσμα της αποθηκεύεται σε :attr:`~class.__mro__`."
 
 #: library/stdtypes.rst:5528
 msgid ""
@@ -6877,10 +7406,13 @@ msgid ""
 "This method returns a list of all those references still alive.  The list is "
 "in definition order.  Example::"
 msgstr ""
+"Κάθε κλάση διατηρεί μια λίστα αδύναμων αναφορών στις άμεσες υποκλάσεις της.  Αυτή η μέθοδος "
+"επιστρέφει μια λίστα με όλες αυτές τις αναφορές που είναι ακόμα ζωντανές.  Η λίστα είναι με τη "
+"σειρά ορισμόύ.  Παράδειγμα::"
 
 #: library/stdtypes.rst:5539
 msgid "Integer string conversion length limitation"
-msgstr ""
+msgstr "Περιορισμός μήκους μετατροπής συμβολοσειράς ακέραιο αριθμού"
 
 #: library/stdtypes.rst:5541
 msgid ""
@@ -6889,6 +7421,10 @@ msgid ""
 "decimal or other non-power-of-two number bases. Hexadecimal, octal, and "
 "binary conversions are unlimited. The limit can be configured."
 msgstr ""
+"Η CPython έχει ένα παγκόσμιο όριο για τη μετατροπή μεταξύ :class:`int` and :class:"
+"`str` για τον μετριασμό των επιθέσεων άρνησης υπηρεσίας. Αυτό το όριο ισχύει *μόνο* για δεκαδικές "
+"ή άλλες βάσεις αριθμών που δεν έχουν την δύναμη του δύο. Οι δεξαεξαδικές, οκταδικές, και "
+"δυαδικές μετατροπές είναι απεριόριστες. Το όριο μπορεί να διαμορφωθεί."
 
 #: library/stdtypes.rst:5546
 msgid ""
@@ -6899,12 +7435,20 @@ msgid ""
 "algorithms for base 10 have sub-quadratic complexity. Converting a large "
 "value such as ``int('1' * 500_000)`` can take over a second on a fast CPU."
 msgstr ""
+"Ο τύπος :class:`int` στην CPython είναι ένας αυθαίρετος αριμθός μήκους που είναι "
+"αποθηκευμένος σε δυαδική μορφή (κοινώς γνωστός ως \"bignum\"). Δεν υπάρχει αλγόριθμος που να "
+"μπορεί να μετατρέψει μια συμβολοσειρά σε δυαδικό ακέραιο ή δυαδικό ακέραιο σε μια συμβολοσειρά σε "
+"γραμμικό χρόνο, *εκτός* εάν η βάση είναι δύναμη του 2. Ακόμη και οι πιο γνωστοί αλγόριθμοι για τη βάση "
+"10 έχουν υποτετραγωνική πολυπλοκότητα. Η μετατροπή μιας μεγάλης τιμής όπως ``int('1' * 500_000)`` "
+"μπορεί να διαρκέσει περισσότερο από ένα δευτερόλεπτο σε μια γρήγορ CPU."
 
 #: library/stdtypes.rst:5553
 msgid ""
 "Limiting conversion size offers a practical way to avoid `CVE-2020-10735 "
 "<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735>`_."
 msgstr ""
+"Ο περιορισμός του μεγέθους μετατροπής προσφέρει έναν πρακτικό τρόπο αποφυγής `CVE-2020-10735 "
+"<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735>`_."
 
 #: library/stdtypes.rst:5556
 msgid ""
@@ -6912,11 +7456,15 @@ msgid ""
 "output string when a non-linear conversion algorithm would be involved.  "
 "Underscores and the sign are not counted towards the limit."
 msgstr ""
+"Το όριο εφαρμόζεται στον αριθμός των ψηφιακών χαρακτήρων στη συμβολοσειρά εισόδου ή εξόδου "
+"όταν εμπλέκεται ένα μη γραμμικός αλγόριθμος μετατροπής.  Τα underscores και το πρόσημο δεν υπολογίζονται "
+"στο όριο."
 
 #: library/stdtypes.rst:5560
 msgid ""
 "When an operation would exceed the limit, a :exc:`ValueError` is raised:"
 msgstr ""
+"Όταν μια λειτουρία υπερβαίνει το όριο, γίνεται raise μια :exc:`ValueError`."
 
 #: library/stdtypes.rst:5582
 msgid ""
@@ -6925,14 +7473,18 @@ msgid ""
 "configured is 640 digits as provided in :data:`sys.int_info."
 "str_digits_check_threshold <sys.int_info>`."
 msgstr ""
+"Το προεπιλεγμένο όριο είναι 4300 ψηφία όπως προβλέπεται στο :data:`sys.int_info."
+"default_max_str_digits <sys.int_info>`. Το κατώτατο όριο που μπορεί να διαμορφωθεί είναι "
+"640 ψηφία όπως προβλέπεται στο :data:`sys.int_info."
+"str_digits_check_threshold <sys.int_info>`."
 
 #: library/stdtypes.rst:5587
 msgid "Verification:"
-msgstr ""
+msgstr "Επαλήθεση:"
 
 #: library/stdtypes.rst:5602
 msgid "Affected APIs"
-msgstr ""
+msgstr "Επηρεασμένα APIs"
 
 #: library/stdtypes.rst:5604
 msgid ""
@@ -6942,63 +7494,67 @@ msgstr ""
 
 #: library/stdtypes.rst:5607
 msgid "``int(string)`` with default base 10."
-msgstr ""
+msgstr "``int(string)`` με default βάση το 10."
 
 #: library/stdtypes.rst:5608
 msgid "``int(string, base)`` for all bases that are not a power of 2."
-msgstr ""
+msgstr "``int(string, base)`` για όλες τις βάσεις που δεν είναι δύναμη του 2."
 
 #: library/stdtypes.rst:5609
 msgid "``str(integer)``."
-msgstr ""
+msgstr "``str(integer)``."
 
 #: library/stdtypes.rst:5610
 msgid "``repr(integer)``."
-msgstr ""
+msgstr "``repr(integer)``."
 
 #: library/stdtypes.rst:5611
 msgid ""
 "any other string conversion to base 10, for example ``f\"{integer}\"``, "
 "``\"{}\".format(integer)``, or ``b\"%d\" % integer``."
 msgstr ""
+"οποιαδήποτε άλλη μετατροπή συμβολοσειράς στη βάση 10, για παράδειγμα ``f\"{integer}\"``, "
+"``\"{}\".format(integer)``, ή ``b\"%d\" % integer``."
 
 #: library/stdtypes.rst:5614
 msgid "The limitations do not apply to functions with a linear algorithm:"
-msgstr ""
+msgstr "Οι περιορισμοί δεν ισχύουν για συναρτήσεις με γραμμικό αλγόριθμο:"
 
 #: library/stdtypes.rst:5616
 msgid "``int(string, base)`` with base 2, 4, 8, 16, or 32."
-msgstr ""
+msgstr "``int(string, base)`` με βάση 2, 4, 8, 16, ή 32."
 
 #: library/stdtypes.rst:5617
 msgid ":func:`int.from_bytes` and :func:`int.to_bytes`."
-msgstr ""
+msgstr ":func:`int.from_bytes` και :func:`int.to_bytes`."
 
 #: library/stdtypes.rst:5618
 msgid ":func:`hex`, :func:`oct`, :func:`bin`."
-msgstr ""
+msgstr ":func:`hex`, :func:`oct`, :func:`bin`."
 
 #: library/stdtypes.rst:5619
 msgid ":ref:`formatspec` for hex, octal, and binary numbers."
-msgstr ""
+msgstr ":ref:`formatspec` για δεκαεξαδικούς, οκταδικούς και δυαδικούς αριθμούς."
 
 #: library/stdtypes.rst:5620
 msgid ":class:`str` to :class:`float`."
-msgstr ""
+msgstr ":class:`str` σε :class:`float`."
 
 #: library/stdtypes.rst:5621
 msgid ":class:`str` to :class:`decimal.Decimal`."
-msgstr ""
+msgstr ":class:`str` σε :class:`decimal.Decimal`."
 
 #: library/stdtypes.rst:5624
 msgid "Configuring the limit"
-msgstr ""
+msgstr "Διαμόρφωση ορίου"
 
 #: library/stdtypes.rst:5626
 msgid ""
 "Before Python starts up you can use an environment variable or an "
 "interpreter command line flag to configure the limit:"
 msgstr ""
+"Πριν από την εκκίνηση της Python, μπορείτε να χρησιμοποιήσετε μια μεταβλητή "
+"περιβάλλοντος ή ένα flag γραμμής εντολών διερμηνέα για να διαμορφώσετε το όριο."
 
 #: library/stdtypes.rst:5629
 msgid ""
@@ -7006,12 +7562,17 @@ msgid ""
 "to set the limit to 640 or ``PYTHONINTMAXSTRDIGITS=0 python3`` to disable "
 "the limitation."
 msgstr ""
+":envvar:`PYTHONINTMAXSTRDIGITS`, π.χ. ``PYTHONINTMAXSTRDIGITS=640 python3`` "
+"για να ορίσετε το όριο σε 640 ή ``PYTHONINTMAXSTRDIGITS=0 python3`` για να απενεργοποιήσετε "
+"τον περιορισμό."
 
 #: library/stdtypes.rst:5632
 msgid ""
 ":option:`-X int_max_str_digits <-X>`, e.g. ``python3 -X "
 "int_max_str_digits=640``"
 msgstr ""
+":option:`-X int_max_str_digits <-X>`, π.χ. ``python3 -X "
+"int_max_str_digits=640``"
 
 #: library/stdtypes.rst:5634
 msgid ""
@@ -7021,12 +7582,19 @@ msgid ""
 "value of *-1* indicates that both were unset, thus a value of :data:`sys."
 "int_info.default_max_str_digits` was used during initialization."
 msgstr ""
+"Το :data:`sys.flags.int_max_str_digits` περιέχει την τιμή :envvar:"
+"`PYTHONINTMAXSTRDIGITS` ή :option:`-X int_max_str_digits <-X>`. Εάν και η επιλογή "
+"env var και η επιλογή  ``-X`` είναι καθορισμένη, η επιλογή ``-X`` έχει προτεραιότητα. "
+"Μια τιμή *-1* υποδεικνύει ότι και τα δύο δεν ορίστηκαν, επομένως χρησιμοποιήθηκε μια τιμή "
+":data:`sys.int_info.default_max_str_digits` κατά την προετοιμασία."
 
 #: library/stdtypes.rst:5640
 msgid ""
 "From code, you can inspect the current limit and set a new one using these :"
 "mod:`sys` APIs:"
 msgstr ""
+"Από τον κώδικα, μπορείτε να επιθεωρήσετε το τρέχον όριο και να ορίσετε ένα νέο χρησιμοποιώντας "
+"αυτά τα :mod:`sys` APIs:"
 
 #: library/stdtypes.rst:5643
 msgid ""
@@ -7034,24 +7602,32 @@ msgid ""
 "are a getter and setter for the interpreter-wide limit. Subinterpreters have "
 "their own limit."
 msgstr ""
+"Οι :func:`sys.get_int_max_str_digits` και :func:`sys.set_int_max_str_digits` είναι ένας "
+"getter και setter για το όριο σε όλο τον διερμηνέα. Οι δευτερεύοντες διερμηνείς έχουν το δικό τους όριο."
 
 #: library/stdtypes.rst:5647
 msgid ""
 "Information about the default and minimum can be found in :data:`sys."
 "int_info`:"
 msgstr ""
+"Πληροφορίες σχετικά με την προεπιλογή και το ελάχιστο μπορούν να βρεθούν στο :data:`sys."
+"int_info`:"
 
 #: library/stdtypes.rst:5649
 msgid ""
 ":data:`sys.int_info.default_max_str_digits <sys.int_info>` is the compiled-"
 "in default limit."
 msgstr ""
+"Το :data:`sys.int_info.default_max_str_digits <sys.int_info>` είναι το  μεταγλωττισμένο "
+"προεπιλεγμένο όριο."
 
 #: library/stdtypes.rst:5651
 msgid ""
 ":data:`sys.int_info.str_digits_check_threshold <sys.int_info>` is the lowest "
 "accepted value for the limit (other than 0 which disables it)."
 msgstr ""
+"Το :data:`sys.int_info.str_digits_check_threshold <sys.int_info>` είανι η χαμηλότερη αποδεκτή τιμή "
+"για το όριο (εκτός από το 0 που το απενεργοποιεί)."
 
 #: library/stdtypes.rst:5658
 msgid ""
@@ -7064,6 +7640,13 @@ msgid ""
 "exist for the code. A workaround for source that contains such large "
 "constants is to convert them to ``0x`` hexadecimal form as it has no limit."
 msgstr ""
+"Ο ορισμός ενός χαμηλού ορίου *μπορεί* να οδηγήσει σε προβλήματα. Αν και σπάνιος, υπάρχει κώδικας "
+"που περιέχει ακέραιες σταθερές σε δεκαδικό αριθμό στην πηγή τους που υπερβαίνουν το ελάχιστο όριο. "
+"Συνέπεια της ρύθμισης του ορίου είναι ότι ο πηγαίος κώδικας Python που περιέχει δεκαδικούς ακέραιους αριθμούς "
+"μεγαλύτερους από το όριο θα αντιμετωπίσει σφάλμα κατά την ανάλυση, συνήθως κατά την εκκίνηση ή την ώρα "
+"της εισαγωγής ή ακόμα και κατά την εγκατάσταση - ανά πάσα στιγμή είναι ενημερωμένο ``.pyc`` δεν υπάρχει "
+"ήδη για τον κώδικα. Μια λύση για τον πηγαίο που περιέχει τόσο μεγάλες σταθερές είναι να τις μετατρέψετε "
+"σε δεκαεξαδική μορφή ``0x`` καθώς δεν έχει όριο."
 
 #: library/stdtypes.rst:5667
 msgid ""
@@ -7072,10 +7655,15 @@ msgid ""
 "during startup and even during any installation step that may invoke Python "
 "to precompile ``.py`` sources to ``.pyc`` files."
 msgstr ""
+"Δοκιμάστε σχολαστικά την εφαρμογή σας εάν χρησιμοποιείτε χαμηλό όριο. Βεβαιωθείτε ότι οι "
+"δοκιμές σας εκτελούνται με το όριο που έχει οριστεί νωρίς μέσω του περιβάλλοντος ή του flag, "
+"ώστε να ισχύει κατά την εκκίνηση και ακόμη και κατά τη διάρκεια οποιουδήποτε βήματος "
+"εγκατάστασης που μπορεί να καλέσει την Python για να μεταγλωττίσει εκ των προτέρων το "
+"``.py`` πηγαίο σε αρχεία ``.pyc``."
 
 #: library/stdtypes.rst:5673
 msgid "Recommended configuration"
-msgstr ""
+msgstr "Προτεινόμενη διαμόρφωση"
 
 #: library/stdtypes.rst:5675
 msgid ""
@@ -7084,34 +7672,42 @@ msgid ""
 "limit, set it from your main entry point using Python version agnostic code "
 "as these APIs were added in security patch releases in versions before 3.12."
 msgstr ""
+"Το προεπιλεγμένο :data:`sys.int_info.default_max_str_digits` αναμένεται να είναι λογικό για τις "
+"περισσότερες εφαρμογές. Εάν η εφαρμογή σας απαιτέι διαφορετικό όριο, ορίστε το από το κύριο "
+"σημείο εισόδου σας χρησιμοποιώντας τον αγνωστικό κώδικα της έκδοσης Python, καθώς αυτά τα "
+"API προστέθηκαν στην ενημερωμένη έκδοση κώδικα ασφαλείας σε εκδόσεις πριν από την 3.12."
 
 #: library/stdtypes.rst:5680
 msgid "Example::"
-msgstr ""
+msgstr "Παράδειγμα::"
 
 #: library/stdtypes.rst:5692
 msgid "If you need to disable it entirely, set it to ``0``."
-msgstr ""
+msgstr "Εάν πρέπει να το απενεργοποιήσετε εντελώς, ορίστε το σε ``0``."
 
 #: library/stdtypes.rst:5696
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημείωσεις"
 
 #: library/stdtypes.rst:5697
 msgid ""
 "Additional information on these special methods may be found in the Python "
 "Reference Manual (:ref:`customization`)."
 msgstr ""
+"Πρόσθετε πληροφορίες σχετικά με αυτές τις ειδικές μεθόδους μπορείτε να βρείτε στο "
+"Εγχειρίδιο Αναφοράς Python (:ref:`customization`)."
 
 #: library/stdtypes.rst:5700
 msgid ""
 "As a consequence, the list ``[1, 2]`` is considered equal to ``[1.0, 2.0]``, "
 "and similarly for tuples."
 msgstr ""
+"Σαν συνέπεια, η λίστα ``[1, 2]`` θεωρείται ίση με ``[1.0, 2.0]``, και ομοίως για "
+"πλειάδες (tuples)."
 
 #: library/stdtypes.rst:5703
 msgid "They must have since the parser can't tell the type of the operands."
-msgstr ""
+msgstr "Πρέπει να έχουν, αφού ο parser δεν μπορεί να ξεχωρίσει τον τύπο των τελεστών."
 
 #: library/stdtypes.rst:5705
 msgid ""
@@ -7119,134 +7715,140 @@ msgid ""
 "\"Lu\" (Letter, uppercase), \"Ll\" (Letter, lowercase), or \"Lt\" (Letter, "
 "titlecase)."
 msgstr ""
+"Οι χαρακτήρες με πεζούν χαρακτήρες είναι αυτό με την ιδιότητα γενικής κατηγορίας "
+"να είναι ένας από τους \"Lu\" (Γράμμα, κεφαλαίο), \"Ll\" (Γράμμα, πεζά), ή \"Lt\" (Γράμμα, "
+"κεφαλαία)."
 
 #: library/stdtypes.rst:5708
 msgid ""
 "To format only a tuple you should therefore provide a singleton tuple whose "
 "only element is the tuple to be formatted."
 msgstr ""
+"Για να μορφοποιήσετε μόνο μια πλειάδα (tuple) θα πρέπει επομένως να παρέχετε μια "
+"πλειάδα singleton της οποίας το μόνο στοιχείο είναι η πλειάδα που πρόκειται "
+"να μορφοποιηθεί."
 
 #: library/stdtypes.rst:13
 msgid "built-in"
-msgstr ""
+msgstr "Ενσωματωμένοι (built-in) τύποι"
 
 #: library/stdtypes.rst:316 library/stdtypes.rst:950 library/stdtypes.rst:1139
 #: library/stdtypes.rst:4421 library/stdtypes.rst:5404
 msgid "types"
-msgstr ""
+msgstr "Τύποι"
 
 #: library/stdtypes.rst:1154 library/stdtypes.rst:4421
 msgid "statement"
-msgstr ""
+msgstr "statement"
 
 #: library/stdtypes.rst:34
 msgid "if"
-msgstr ""
+msgstr "if"
 
 #: library/stdtypes.rst:34
 msgid "while"
-msgstr ""
+msgstr "while"
 
 #: library/stdtypes.rst:34
 msgid "truth"
-msgstr ""
+msgstr "αληθές"
 
 #: library/stdtypes.rst:34
 msgid "value"
-msgstr ""
+msgstr "τιμή"
 
 #: library/stdtypes.rst:81 library/stdtypes.rst:817
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: library/stdtypes.rst:81 library/stdtypes.rst:393
 msgid "operations"
-msgstr ""
+msgstr "λειτουργίες"
 
 #: library/stdtypes.rst:34
 msgid "false"
-msgstr ""
+msgstr "false"
 
 #: library/stdtypes.rst:44
 msgid "true"
-msgstr ""
+msgstr "true"
 
 #: library/stdtypes.rst:52
 msgid "None (Built-in object)"
-msgstr ""
+msgstr "None (Ενσωματωμένο (Built-in) αντικείμενο)"
 
 #: library/stdtypes.rst:52
 msgid "False (Built-in object)"
-msgstr ""
+msgstr "False (Ενσωματωμένο (Built-in) αντικείμενο)"
 
 #: library/stdtypes.rst:98 library/stdtypes.rst:195 library/stdtypes.rst:393
 #: library/stdtypes.rst:950
 msgid "operator"
-msgstr ""
+msgstr "τελεστής"
 
 #: library/stdtypes.rst:98
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: library/stdtypes.rst:98
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: library/stdtypes.rst:817
 msgid "False"
-msgstr ""
+msgstr "False"
 
 #: library/stdtypes.rst:817
 msgid "True"
-msgstr ""
+msgstr "True"
 
 #: library/stdtypes.rst:98
 msgid "not"
-msgstr ""
+msgstr "not"
 
 #: library/stdtypes.rst:123
 msgid "chaining"
-msgstr ""
+msgstr "αλυσίδα"
 
 #: library/stdtypes.rst:123
 msgid "comparisons"
-msgstr ""
+msgstr "συγκρίσεις"
 
 #: library/stdtypes.rst:123
 msgid "comparison"
-msgstr ""
+msgstr "σύγκριση"
 
 #: library/stdtypes.rst:123
 msgid "=="
-msgstr ""
+msgstr "=="
 
 #: library/stdtypes.rst:123
 msgid "< (less)"
-msgstr ""
+msgstr "< (μικρότερο)"
 
 #: library/stdtypes.rst:123
 msgid "<="
-msgstr ""
+msgstr "<="
 
 #: library/stdtypes.rst:123
 msgid "> (greater)"
-msgstr ""
+msgstr "> (μεγαλύτερο)"
 
 #: library/stdtypes.rst:123
 msgid ">="
-msgstr ""
+msgstr ">="
 
 #: library/stdtypes.rst:123
 msgid "!="
-msgstr ""
+msgstr "!="
 
 #: library/stdtypes.rst:123
 msgid "is"
-msgstr ""
+msgstr "is"
 
 #: library/stdtypes.rst:123
 msgid "is not"
-msgstr ""
+msgstr "is not"
 
 #: library/stdtypes.rst:208 library/stdtypes.rst:1117 library/stdtypes.rst:1259
 #: library/stdtypes.rst:1382 library/stdtypes.rst:1539
@@ -7254,587 +7856,587 @@ msgstr ""
 #: library/stdtypes.rst:4899 library/stdtypes.rst:5324
 #: library/stdtypes.rst:5368
 msgid "object"
-msgstr ""
+msgstr "αντικείμενο"
 
 #: library/stdtypes.rst:208 library/stdtypes.rst:316 library/stdtypes.rst:335
 msgid "numeric"
-msgstr ""
+msgstr "αριθμητικό"
 
 #: library/stdtypes.rst:163
 msgid "objects"
-msgstr ""
+msgstr "αντικείμενα"
 
 #: library/stdtypes.rst:163
 msgid "comparing"
-msgstr ""
+msgstr "συγκρίνοντας"
 
 #: library/stdtypes.rst:173
 msgid "__eq__() (instance method)"
-msgstr ""
+msgstr "__eq__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:173
 msgid "__ne__() (instance method)"
-msgstr ""
+msgstr "__ne__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:173
 msgid "__lt__() (instance method)"
-msgstr ""
+msgstr "__lt__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:173
 msgid "__le__() (instance method)"
-msgstr ""
+msgstr "__le__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:173
 msgid "__gt__() (instance method)"
-msgstr ""
+msgstr "__gt__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:173
 msgid "__ge__() (instance method)"
-msgstr ""
+msgstr "__ge__() (μέθοδος στιγμιοτύπου)"
 
 #: library/stdtypes.rst:950
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: library/stdtypes.rst:950
 msgid "not in"
-msgstr ""
+msgstr "not in"
 
 #: library/stdtypes.rst:229 library/stdtypes.rst:393
 msgid "integer"
-msgstr ""
+msgstr "ακέραιος"
 
 #: library/stdtypes.rst:229
 msgid "floating point"
-msgstr ""
+msgstr "κινητής υποδιαστολής"
 
 #: library/stdtypes.rst:229
 msgid "complex number"
-msgstr ""
+msgstr "μιγαδικός αριθμός"
 
 #: library/stdtypes.rst:208
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #: library/stdtypes.rst:208
 msgid "language"
-msgstr ""
+msgstr "γλώσσα"
 
 #: library/stdtypes.rst:229
 msgid "literals"
-msgstr ""
+msgstr "literals"
 
 #: library/stdtypes.rst:229
 msgid "hexadecimal"
-msgstr ""
+msgstr "δεκαεξαδικό"
 
 #: library/stdtypes.rst:229
 msgid "octal"
-msgstr ""
+msgstr "οκταδικό"
 
 #: library/stdtypes.rst:229
 msgid "binary"
-msgstr ""
+msgstr "δυαδικό"
 
 #: library/stdtypes.rst:246
 msgid "arithmetic"
-msgstr ""
+msgstr "αριθμητικό"
 
 #: library/stdtypes.rst:950 library/stdtypes.rst:4421 library/stdtypes.rst:5389
 #: library/stdtypes.rst:5404
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένες (built-in) συναρτήσεις"
 
 #: library/stdtypes.rst:246
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: library/stdtypes.rst:246
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: library/stdtypes.rst:246
 msgid "complex"
-msgstr ""
+msgstr "complex"
 
 #: library/stdtypes.rst:2389 library/stdtypes.rst:3607
 msgid "+ (plus)"
-msgstr ""
+msgstr "+ (συν)"
 
 #: library/stdtypes.rst:246
 msgid "unary operator"
-msgstr ""
+msgstr "τελεστής unary"
 
 #: library/stdtypes.rst:246
 msgid "binary operator"
-msgstr ""
+msgstr "δυαδικός τελεστής"
 
 #: library/stdtypes.rst:2389 library/stdtypes.rst:3607
 msgid "- (minus)"
-msgstr ""
+msgstr "- (πλην)"
 
 #: library/stdtypes.rst:2346 library/stdtypes.rst:3564
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (αστερίσκος)"
 
 #: library/stdtypes.rst:246
 msgid "/ (slash)"
-msgstr ""
+msgstr "/ (κάθετος)"
 
 #: library/stdtypes.rst:246
 msgid "//"
-msgstr ""
+msgstr "//"
 
 #: library/stdtypes.rst:2316 library/stdtypes.rst:3532
 msgid "% (percent)"
-msgstr ""
+msgstr "% (τοις εκατό)"
 
 #: library/stdtypes.rst:246
 msgid "**"
-msgstr ""
+msgstr "**"
 
 #: library/stdtypes.rst:393 library/stdtypes.rst:1154 library/stdtypes.rst:4421
 msgid "operations on"
-msgstr ""
+msgstr "λειτουργίες on"
 
 #: library/stdtypes.rst:316
 msgid "conjugate() (complex number method)"
-msgstr ""
+msgstr "conjugate() (μεθοδος μιγαδικών αριθμών)"
 
 #: library/stdtypes.rst:1605 library/stdtypes.rst:5404
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: library/stdtypes.rst:335
 msgid "math"
-msgstr ""
+msgstr "math"
 
 #: library/stdtypes.rst:335
 msgid "floor() (in module math)"
-msgstr ""
+msgstr "floor() (στο module math)"
 
 #: library/stdtypes.rst:335
 msgid "ceil() (in module math)"
-msgstr ""
+msgstr "ceil() (στο module math)"
 
 #: library/stdtypes.rst:335
 msgid "trunc() (in module math)"
-msgstr ""
+msgstr "trunc() (στο module math)"
 
 #: library/stdtypes.rst:335
 msgid "conversions"
-msgstr ""
+msgstr "μετατροπές"
 
 #: library/stdtypes.rst:393
 msgid "bitwise"
-msgstr ""
+msgstr "δυαδικά"
 
 #: library/stdtypes.rst:393
 msgid "shifting"
-msgstr ""
+msgstr "μετατόπιση (shifting)"
 
 #: library/stdtypes.rst:393
 msgid "masking"
-msgstr ""
+msgstr "συγκάλυψη (masking)"
 
 #: library/stdtypes.rst:393
 msgid "| (vertical bar)"
-msgstr ""
+msgstr "| (κάθετη μπάρα)"
 
 #: library/stdtypes.rst:393
 msgid "^ (caret)"
-msgstr ""
+msgstr "^ (caret)"
 
 #: library/stdtypes.rst:393
 msgid "& (ampersand)"
-msgstr ""
+msgstr "& (ampersand)"
 
 #: library/stdtypes.rst:393
 msgid "<<"
-msgstr ""
+msgstr "<<"
 
 #: library/stdtypes.rst:393
 msgid ">>"
-msgstr ""
+msgstr ">>"
 
 #: library/stdtypes.rst:393
 msgid "~ (tilde)"
-msgstr ""
+msgstr "~ (περισπωμένη)"
 
 #: library/stdtypes.rst:817
 msgid "values"
-msgstr ""
+msgstr "τιμές"
 
 #: library/stdtypes.rst:847
 msgid "iterator protocol"
-msgstr ""
+msgstr "πρωτόκολλο iterator"
 
 #: library/stdtypes.rst:4814
 msgid "protocol"
-msgstr ""
+msgstr "πρωτόκολλο"
 
 #: library/stdtypes.rst:847
 msgid "iterator"
-msgstr ""
+msgstr "iterator"
 
 #: library/stdtypes.rst:934 library/stdtypes.rst:1117 library/stdtypes.rst:1154
 msgid "sequence"
-msgstr ""
+msgstr "sequence"
 
 #: library/stdtypes.rst:847
 msgid "iteration"
-msgstr ""
+msgstr "iteration"
 
 #: library/stdtypes.rst:847
 msgid "container"
-msgstr ""
+msgstr "container"
 
 #: library/stdtypes.rst:847
 msgid "iteration over"
-msgstr ""
+msgstr "iteration over"
 
 #: library/stdtypes.rst:4421
 msgid "len"
-msgstr ""
+msgstr "len"
 
 #: library/stdtypes.rst:950
 msgid "min"
-msgstr ""
+msgstr "min"
 
 #: library/stdtypes.rst:950
 msgid "max"
-msgstr ""
+msgstr "max"
 
 #: library/stdtypes.rst:950
 msgid "concatenation"
-msgstr ""
+msgstr "concatenation"
 
 #: library/stdtypes.rst:950
 msgid "operation"
-msgstr ""
+msgstr "λειτουργία"
 
 #: library/stdtypes.rst:950
 msgid "repetition"
-msgstr ""
+msgstr "επανάληψη"
 
 #: library/stdtypes.rst:1154
 msgid "subscript"
-msgstr ""
+msgstr "subscript"
 
 #: library/stdtypes.rst:1154
 msgid "slice"
-msgstr ""
+msgstr "slice"
 
 #: library/stdtypes.rst:950
 msgid "count() (sequence method)"
-msgstr ""
+msgstr "count() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:950
 msgid "index() (sequence method)"
-msgstr ""
+msgstr "index() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1006
 msgid "loop"
-msgstr ""
+msgstr "loop"
 
 #: library/stdtypes.rst:1006
 msgid "over mutable sequence"
-msgstr ""
+msgstr "πάνω από μεταβλητή ακολουθία"
 
 #: library/stdtypes.rst:1006
 msgid "mutable sequence"
-msgstr ""
+msgstr "μεταβλητή ακολουθία"
 
 #: library/stdtypes.rst:1006
 msgid "loop over"
-msgstr ""
+msgstr "loop over"
 
 #: library/stdtypes.rst:1117
 msgid "immutable"
-msgstr ""
+msgstr "αμετάβλητο"
 
 #: library/stdtypes.rst:1338
 msgid "tuple"
-msgstr ""
+msgstr "πλειάδα (tuple)"
 
 #: library/stdtypes.rst:1117
 msgid "hash"
-msgstr ""
+msgstr "hash"
 
 #: library/stdtypes.rst:1139
 msgid "mutable"
-msgstr ""
+msgstr "ευμετάβλητο"
 
 #: library/stdtypes.rst:1154 library/stdtypes.rst:1259
 msgid "list"
-msgstr ""
+msgstr "λίστα"
 
 #: library/stdtypes.rst:2513 library/stdtypes.rst:2711
 #: library/stdtypes.rst:3532
 msgid "bytearray"
-msgstr ""
+msgstr "bytearray"
 
 #: library/stdtypes.rst:4421 library/stdtypes.rst:5404
 msgid "type"
-msgstr ""
+msgstr "τύπος"
 
 #: library/stdtypes.rst:1154
 msgid "assignment"
-msgstr ""
+msgstr "εκχώρηση"
 
 #: library/stdtypes.rst:4421
 msgid "del"
-msgstr ""
+msgstr "del"
 
 #: library/stdtypes.rst:1154
 msgid "append() (sequence method)"
-msgstr ""
+msgstr "append() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "clear() (sequence method)"
-msgstr ""
+msgstr "clear() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "copy() (sequence method)"
-msgstr ""
+msgstr "copy() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "extend() (sequence method)"
-msgstr ""
+msgstr "extend() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "insert() (sequence method)"
-msgstr ""
+msgstr "insert() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "pop() (sequence method)"
-msgstr ""
+msgstr "pop() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "remove() (sequence method)"
-msgstr ""
+msgstr "remove() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1154
 msgid "reverse() (sequence method)"
-msgstr ""
+msgstr "reverse() (μέθοδος ακολουθίας)"
 
 #: library/stdtypes.rst:1382
 msgid "range"
-msgstr ""
+msgstr "range"
 
 #: library/stdtypes.rst:1552 library/stdtypes.rst:2316
 msgid "string"
-msgstr ""
+msgstr "string"
 
 #: library/stdtypes.rst:1503
 msgid "text sequence type"
-msgstr ""
+msgstr "τύπος ακολουθίας κειμένου"
 
 #: library/stdtypes.rst:1552 library/stdtypes.rst:1570
 msgid "str (built-in class)"
-msgstr ""
+msgstr "str (ενσωματωμένη (built-in) κλάση)"
 
 #: library/stdtypes.rst:1503
 msgid "(see also string)"
-msgstr ""
+msgstr "(βλ. επίσης string)"
 
 #: library/stdtypes.rst:1539
 msgid "io.StringIO"
-msgstr ""
+msgstr "io.StringIO"
 
 #: library/stdtypes.rst:2505
 msgid "buffer protocol"
-msgstr ""
+msgstr "πρωτόκολλο buffer"
 
 #: library/stdtypes.rst:2513 library/stdtypes.rst:2711
 #: library/stdtypes.rst:3532
 msgid "bytes"
-msgstr ""
+msgstr "bytes"
 
 #: library/stdtypes.rst:2711
 msgid "methods"
-msgstr ""
+msgstr "μέθοδοι"
 
 #: library/stdtypes.rst:1605
 msgid "re"
-msgstr ""
+msgstr "re"
 
 #: library/stdtypes.rst:3386
 msgid "universal newlines"
-msgstr ""
+msgstr "καθολικές νέες γραμμές"
 
 #: library/stdtypes.rst:2124
 msgid "str.splitlines method"
-msgstr ""
+msgstr "μέθοδος str.splitlines"
 
 #: library/stdtypes.rst:2316
 msgid "formatting, string (%)"
-msgstr ""
+msgstr "μορφοποίηση, string (%)"
 
 #: library/stdtypes.rst:2316
 msgid "interpolation, string (%)"
-msgstr ""
+msgstr "παρεμβολή, string (%)"
 
 #: library/stdtypes.rst:2316
 msgid "formatting, printf"
-msgstr ""
+msgstr "μορφοποίηση, printf"
 
 #: library/stdtypes.rst:2316
 msgid "interpolation, printf"
-msgstr ""
+msgstr "παρεμβολή, printf"
 
 #: library/stdtypes.rst:3532
 msgid "printf-style formatting"
-msgstr ""
+msgstr "μορφοποίηση σε στυλ printf"
 
 #: library/stdtypes.rst:3532
 msgid "sprintf-style formatting"
-msgstr ""
+msgstr "μορφοποίηση σε στυλ sprintf"
 
 #: library/stdtypes.rst:3564
 msgid "() (parentheses)"
-msgstr ""
+msgstr "() (παρενθέσεις)"
 
 #: library/stdtypes.rst:2389 library/stdtypes.rst:3607
 msgid "in printf-style formatting"
-msgstr ""
+msgstr "σε μορφοποίηση σε στυλ printf"
 
 #: library/stdtypes.rst:3564
 msgid ". (dot)"
-msgstr ""
+msgstr ". (τελεία)"
 
 #: library/stdtypes.rst:3607
 msgid "# (hash)"
-msgstr ""
+msgstr "# (δίεση)"
 
 #: library/stdtypes.rst:3607
 msgid "space"
-msgstr ""
+msgstr "διάστημα"
 
 #: library/stdtypes.rst:2505
 msgid "binary sequence types"
-msgstr ""
+msgstr "τύπος δυαδικών ακολουθιών"
 
 #: library/stdtypes.rst:2513
 msgid "memoryview"
-msgstr ""
+msgstr "memoryview"
 
 #: library/stdtypes.rst:2513
 msgid "array"
-msgstr ""
+msgstr "πίνακας"
 
 #: library/stdtypes.rst:3386
 msgid "bytes.splitlines method"
-msgstr ""
+msgstr "bytes.splitlines μέθοδος"
 
 #: library/stdtypes.rst:3386
 msgid "bytearray.splitlines method"
-msgstr ""
+msgstr "bytearray.splitlines μέθοδος"
 
 #: library/stdtypes.rst:3532
 msgid "formatting"
-msgstr ""
+msgstr "μορφοποίηση"
 
 #: library/stdtypes.rst:3532
 msgid "bytes (%)"
-msgstr ""
+msgstr "bytes (%)"
 
 #: library/stdtypes.rst:3532
 msgid "bytearray (%)"
-msgstr ""
+msgstr "bytearray (%)"
 
 #: library/stdtypes.rst:3532
 msgid "interpolation"
-msgstr ""
+msgstr "μεταβολή"
 
 #: library/stdtypes.rst:4219
 msgid "set"
-msgstr ""
+msgstr "set"
 
 #: library/stdtypes.rst:4421
 msgid "mapping"
-msgstr ""
+msgstr "αντιστοίχιση"
 
 #: library/stdtypes.rst:4421
 msgid "dictionary"
-msgstr ""
+msgstr "λεξικό"
 
 #: library/stdtypes.rst:4504
 msgid "__missing__()"
-msgstr ""
+msgstr "__missing__()"
 
 #: library/stdtypes.rst:4814
 msgid "context manager"
-msgstr ""
+msgstr "διαχειριστής περιεχομένου"
 
 #: library/stdtypes.rst:4814
 msgid "context management protocol"
-msgstr ""
+msgstr "πρωτόκολλο διαχειριστή περιεχομένου"
 
 #: library/stdtypes.rst:4814
 msgid "context management"
-msgstr ""
+msgstr "διαχείριση περιεχομένου"
 
 #: library/stdtypes.rst:4887
 msgid "annotation"
-msgstr ""
+msgstr "σχόλιο"
 
 #: library/stdtypes.rst:4887
 msgid "type annotation; type hint"
-msgstr ""
+msgstr "type annotation; type hint"
 
 #: library/stdtypes.rst:4899
 msgid "GenericAlias"
-msgstr ""
+msgstr "GenericAlias"
 
 #: library/stdtypes.rst:4899
 msgid "Generic"
-msgstr ""
+msgstr "Generic"
 
 #: library/stdtypes.rst:4899
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 #: library/stdtypes.rst:5154
 msgid "Union"
-msgstr ""
+msgstr "Ένωση"
 
 #: library/stdtypes.rst:5154
 msgid "union"
-msgstr ""
+msgstr "ένωση"
 
 #: library/stdtypes.rst:5324
 msgid "method"
-msgstr ""
+msgstr "μέθοδος"
 
 #: library/stdtypes.rst:5368
 msgid "code"
-msgstr ""
+msgstr "κώδικας"
 
 #: library/stdtypes.rst:5368
 msgid "code object"
-msgstr ""
+msgstr "αντικείμενο κώδικα"
 
 #: library/stdtypes.rst:5375
 msgid "compile"
-msgstr ""
+msgstr "compile"
 
 #: library/stdtypes.rst:5375
 msgid "__code__ (function object attribute)"
-msgstr ""
+msgstr "__code__ (χαρακτηριστικό αντικείμενου συνάρτησης)"
 
 #: library/stdtypes.rst:5389
 msgid "exec"
-msgstr ""
+msgstr "exec"
 
 #: library/stdtypes.rst:5389
 msgid "eval"
-msgstr ""
+msgstr "eval"
 
 #: library/stdtypes.rst:5428
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: library/stdtypes.rst:5428
 msgid "ellipsis literal"
-msgstr ""
+msgstr "ellipsis literal"
