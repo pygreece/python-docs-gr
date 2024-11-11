@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 <h2 id="contributing">Συνεισφορά</h2>
 
-Έχουμε [μια λίστα με issues στο GitHub](https://github.com/pygreece/python-docs-gr/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation) όπου συντονίζουμε τη δουλειά που γίνεται ή που πρέπει να γίνει ώστε να γίνεταια διαχωρισμός αρμοδιοτήτων και διαχείριση της δουλειάς και των απαιτούμενων ενεργειών.
+Έχουμε [μια λίστα με issues στο GitHub](https://github.com/pygreece/python-docs-gr/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation) όπου συντονίζουμε τη δουλειά που γίνεται ή που πρέπει να γίνει ώστε να γίνεται διαχωρισμός αρμοδιοτήτων και διαχείριση της δουλειάς και των απαιτούμενων ενεργειών.
 
 Οι τρόποι συνεισφοράς στο έργο είναι δύο:
 
