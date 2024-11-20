@@ -46,7 +46,13 @@ cd python-docs-gr/
 git remote add upstream git@github.com:pygreece/python-docs-gr.git
 ```
 
-5. [Προαιρετικό βήμα] Δημιουργείστε ένα virtual environment και κάντε activate:
+5. Και προσθέστε το προσωπικό σας repository ώστε να γίνονται push οι αλλάγες:
+
+```bash
+git remote set-url --push upstream git@github.com:<your-username>/python-docs-gr.git
+```
+
+6. [Προαιρετικό βήμα] Δημιουργείστε ένα virtual environment και κάντε activate:
 
 ```bash
 python -m venv env
@@ -54,7 +60,7 @@ source env/bin/activate   # macOS or Linux
 env\Scripts\activate.bat  # Windows
 ```
 
-6. [Προαιρετικό βήμα] Εγκαταστείστε τα requirements:
+7. [Προαιρετικό βήμα] Εγκαταστείστε τα requirements:
 
 ```bash
 pip install -r requirements.txt
