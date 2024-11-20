@@ -86,11 +86,11 @@ To milestone που μπορείτε να συνεισφέρετε είναι τ
 
 Επίσης, για διευκόλυνση, έχουμε κάνει μια κατηγοριοποίηση των **Issues** με βάση το μέγεθος (γραμμές κώδικα/ προς μετάφραση). Πιο αναλυτικά:
 
--   `small` για αρχεία με λιγότερες από _200_ γραμμές
--   `medium` για αρχεία με λιγότερες από _500_ γραμμές
--   `large` για αρχεία με λιγότερες από _1000_ γραμμές
--   `xlarge` για αρχεία με λιγότερες από _2500_ γραμμές
--   `god` (για τους τολμηρούς) για αρχεία με περισσόρερες από _2500_ γραμμές
+-   [small](https://github.com/pygreece/python-docs-gr/labels/small) για αρχεία με λιγότερες από _200_ γραμμές
+-   [medium](https://github.com/pygreece/python-docs-gr/labels/medium) για αρχεία με λιγότερες από _500_ γραμμές
+-   [large](https://github.com/pygreece/python-docs-gr/labels/large) για αρχεία με λιγότερες από _1000_ γραμμές
+-   [xlarge](https://github.com/pygreece/python-docs-gr/labels/xlarge) για αρχεία με λιγότερες από _2500_ γραμμές
+-   [god](https://github.com/pygreece/python-docs-gr/labels/small) (για τους τολμηρούς) για αρχεία με περισσόρερες από _2500_ γραμμές
 
 <h3 id="translation-review">Αξιολόγηση Μετάφρασης</h3>
 
