@@ -112,7 +112,7 @@ To milestone που μπορείτε να συνεισφέρετε είναι τ
 
 Τα αρχεία που πρέπει να μεταφραστούν είναι αυτά με την κατάληξη `.po`.
 
-Τα εργαλεία που προτείνουμε για να χρησιμοποιήσετε είναι το [VScode](https://code.visualstudio.com/) ή το [PoEdit](https://poedit.net/). Για το [VScode](https://code.visualstudio.com/) μια χρήσιμη επέκταση είναι [`gettext` extension](https://marketplace.visualstudio.com/items?itemName=mrorz.language-gettext). Αντίθετα το [PoEdit](https://poedit.net/) χρησιμοποιεί ένα καλύτερο περιβάλλον διεπαφής και δεν απατείται να ασχοληθεί ο χρήστης με τη δομή του αρχείου.
+Τα εργαλεία που προτείνουμε να χρησιμοποιήσετε είναι το [VScode](https://code.visualstudio.com/) ή το [PoEdit](https://poedit.net/). Για το [VScode](https://code.visualstudio.com/) μια χρήσιμη επέκταση είναι το [`gettext` extension](https://marketplace.visualstudio.com/items?itemName=mrorz.language-gettext). Αντίθετα το [PoEdit](https://poedit.net/) χρησιμοποιεί ένα καλύτερο περιβάλλον διεπαφής και δεν απατείται να ασχοληθεί ο χρήστης με τη δομή του αρχείου.
 
 2. Επιβεβαιώστε ότι είστε στο 3.12 branch (πολύ σημαντικό βήμα για να αποφύγετε να ξεκινήσετε ένα branch από παλαιότερη έκδοση):
 
