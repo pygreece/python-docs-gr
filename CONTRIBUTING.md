@@ -186,7 +186,7 @@ git push origin translate-library-ast
 
 Πατώντας το κουμπί θα μεταβείτε στην οθόνη για να βάλετε τις πληροφορίες του συγκεκριμένου _Pull Request_, και κάνοντας click στο κουμπί `Create pull request` θα δημιουργηθεί το PR.
 
-![pr_descrtiption](/public/assets/pr-descrtiption.png)
+![pr_descrtiption](/public/assets/pr-description.png)
 
 Μπράβο! Ανεβάσατε το πρώτο σας PR. Τώρα απλώς περιμένετε να το αξιολογήσουν οι διαχειριστές, και έχετε το νου σας, μπορεί να σας ζητήσουν κάποιες αλλαγές.
 
