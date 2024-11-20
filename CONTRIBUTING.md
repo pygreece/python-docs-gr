@@ -149,7 +149,7 @@ git checkout -b ft/library-set
     2. `popspell`: ορθογραφικός έλεγχος του αρχείου [pospell](https://github.com/AFPy/pospell). Μπορείτε να χρησιμοποιήσετε το ακόλουθο script.
 
         ```bash
-        python scripts/check_spelling.py <dir>/<file>.po
+        python scripts/check_spelling.py <φάκελος>/<όνομα_του_αρχείου>.po
         ```
 
         Εάν κάποια από τις λέξεις δεν είναι αναγνωρισμένη από το script προσθέστε την στο [dictionary](/dictionaries/main.txt) και επαναλάβετε.
