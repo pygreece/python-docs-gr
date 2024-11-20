@@ -82,7 +82,7 @@ pip install -r requirements.txt
 
 Τα **Issues** είναι χωρισμένα σε milestones:
 
-To milestone που μπορείτε να συνεισφέρετε είναι το `translate_3.12_additional`. Άμα είναι η πρώτη σας φορά σε αυτό το έργο ή γενικότερα σε έργο ανοιχτού κώδικα είναι προτιμότερο να αναλάβετε ένα **Issue** με **label** _good first issue_.
+To milestone που μπορείτε να συνεισφέρετε είναι το [translate_3.12_additional](https://github.com/pygreece/python-docs-gr/milestone/3). Άμα είναι η πρώτη σας φορά σε αυτό το έργο ή γενικότερα σε έργο ανοιχτού κώδικα είναι προτιμότερο να αναλάβετε ένα **Issue** με **label** [_good first issue_](https://github.com/pygreece/python-docs-gr/labels/good%20first%20issue).
 
 Επίσης, για διευκόλυνση, έχουμε κάνει μια κατηγοριοποίηση των **Issues** με βάση το μέγεθος (γραμμές κώδικα/ προς μετάφραση). Πιο αναλυτικά:
 
