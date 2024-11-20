@@ -141,7 +141,7 @@ git checkout -b ft/library-set
     1. `powrap`: έλεγχος και μορφοποίηση της δομής του αρχείου. Μπορείτε να χρησιμοποιήσετε το ακόλουθο script.
 
         ```bash
-        powrap <φακελος>/<ονομα_του_αρχειου>.po
+        powrap <φάκελος>/<όνομα_του_αρχείου>.po
         ```
 
         Εάν είστε χρήστης των windows μπορείτε να δείτε περισσότερες πληροφορίες [εδώ](https://python-docs-es.readthedocs.io/es/3.12/faq.html#powrap-windows).
