@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 To milestone που μπορείτε να συνεισφέρετε είναι το [translate_3.12_additional](https://github.com/pygreece/python-docs-gr/milestone/3). Άμα είναι η πρώτη σας φορά σε αυτό το έργο ή γενικότερα σε έργο ανοιχτού κώδικα είναι προτιμότερο να αναλάβετε ένα **Issue** με **label** [_good first issue_](https://github.com/pygreece/python-docs-gr/labels/good%20first%20issue).
 
-Επίσης, για διευκόλυνση, έχουμε κάνει μια κατηγοριοποίηση των **Issues** με βάση το μέγεθος (γραμμές κώδικα/ προς μετάφραση). Πιο αναλυτικά:
+Επίσης, για διευκόλυνση, έχουμε κάνει μια κατηγοριοποίηση των **Issues** με βάση το μέγεθος (γραμμές κώδικα προς μετάφραση). Πιο αναλυτικά:
 
 -   [small](https://github.com/pygreece/python-docs-gr/labels/small) για αρχεία με λιγότερες από _200_ γραμμές
 -   [medium](https://github.com/pygreece/python-docs-gr/labels/medium) για αρχεία με λιγότερες από _500_ γραμμές
