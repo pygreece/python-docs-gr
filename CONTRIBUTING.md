@@ -46,7 +46,7 @@ cd python-docs-gr/
 git remote add upstream git@github.com:pygreece/python-docs-gr.git
 ```
 
-5. Και πληκτρολογήστε την παρακάτω εντολή για το submodule του repository σας:
+5. Και πληκτρολογήστε την παρακάτω εντολή για το upstream του repository σας:
 
 ```bash
 git remote set-url --push upstream git@github.com:<your-username>/cpython.git
