@@ -70,7 +70,7 @@ all: ensure_prerequisites
 	  -D latex_elements.inputenc=       \
 	  -D latex_elements.fontenc='       \
 	  $(MODE)
-	@echo "Build success, open file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html or run 'make serve' to see them."
+	@echo "Build success, open file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html or run either 'make http-serve' or 'make serve' to see them."
 
 
 .PHONY: ensure_prerequisites
@@ -102,6 +102,17 @@ ensure_prerequisites:
 serve:
 	$(PYTHON) -c "import os, webbrowser; webbrowser.open('file://' + os.path.realpath('cpython/Doc/build/html/index.html'))"
 
+.PHONY: http-serve
+http-serve:
+	$(PYTHON) -m http.server -d cpython/Doc/build/html/
+
+.PHONY: preview
+preview:
+	make all && make serve
+
+.PHONY: http-preview
+http-preview:
+	make all && make http-serve
 
 .PHONY: progress
 progress:
@@ -109,6 +120,14 @@ progress:
 	$(shell msgcat *.po */*.po | msgattrib --translated | grep -c '^msgid') \
 	$(shell msgcat *.po */*.po | grep -c '^msgid')
 
+.PHONY: spellcheck
+spellcheck:
+	$(PYTHON) scripts/check_spelling.py $(filter-out $@, $(MAKECMDGOALS))
+
+.PHONY: lint
+lint:
+	powrap *.po **/*.po && \
+	make spellcheck
 
 .PHONY: todo
 todo: ensure_prerequisites
