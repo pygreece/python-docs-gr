@@ -18,7 +18,7 @@ msgstr ""
 
 #: reference/toplevel_components.rst:6
 msgid "Top-level components"
-msgstr ""
+msgstr "Top-level στοιχεία"
 
 #: reference/toplevel_components.rst:10
 msgid ""
@@ -27,10 +27,14 @@ msgid ""
 "interactively, from a module source file, etc.  This chapter gives the "
 "syntax used in these cases."
 msgstr ""
+"Ο διερμηνευτής της Python μπορεί να λαμβάνει την είσοδό του από διάφορες πηγές: απο ενα "
+"script που του περνάται ως τυπική είσοδος ή ως όρισμα προγράμματος, που πληκτρολογήθηκε "
+"διαδραστικά, από ενα module αρχείο προέλευσης, κλπ.  Αυτό το κεφάλαιο δίνει τη "
+"σύνταξη που χρησιμοποιείται σε αυτές τις περιπτώσεις."
 
 #: reference/toplevel_components.rst:19
 msgid "Complete Python programs"
-msgstr ""
+msgstr "Ολοκληρωμένα προγράμματα Python"
 
 #: reference/toplevel_components.rst:28
 msgid ""
@@ -43,12 +47,22 @@ msgid ""
 "`__main__`.  The latter is used to provide the local and global namespace "
 "for execution of the complete program."
 msgstr ""
+"Ενώ μια προδιαγραφή γλώσσας δεν χρειάζεται να καθορίζει πώς ο διερμηνέας "
+"της γλώσσας καλείται, είναι χρήσιμο να έχουμε μια ιδέα ενός πλήρους προγράμματος "
+"Python.  Ένα πλήρες πρόγραμμα Python εκτελείται σε ένα ελάχιστα αρχικοποιημένο "
+"περιβάλλον: όλες τα built-in και standard modules είναι διαθέσιμα, αλλα κανενα δεν εχει "
+"αεχικοποιηθεί. εκτός από το :mod:`sys` (διάφορες υπηρεσίες συστήματος), :mod: "
+"`builtins` (ενσωματωμένες συναρτήσεις, εξαιρέσεις και``None``) and :mod: "
+"`__main__`.  Το τελευταίο χρησιμοποιείται για την παροχή του τοπικού και καθολικού χώρου ονομάτων "
+"για την εκτέλεση του πλήρους προγράμματος."
 
 #: reference/toplevel_components.rst:36
 msgid ""
 "The syntax for a complete Python program is that for file input, described "
 "in the next section."
 msgstr ""
+"Η σύνταξη για ένα πλήρες πρόγραμμα Python είναι αυτή για την εισαγωγή αρχείου, "
+"που περιγράφεται στην επόμενη ενότητα."
 
 #: reference/toplevel_components.rst:43
 msgid ""
@@ -58,6 +72,11 @@ msgid ""
 "identical to that of a complete program; each statement is executed in the "
 "namespace of :mod:`__main__`."
 msgstr ""
+"Ο διερμηνέας μπορεί επίσης να κληθεί σε διαδραστική λειτουργία· σε αυτή την περίπτωση, "
+"δεν διαβάζει και εκτελεί ένα πλήρες πρόγραμμα, αλλά διαβάζει και εκτελεί μία "
+"δήλωση (ενδεχομένως σύνθετη) κάθε φορά.  Το αρχικό περιβάλλον είναι "
+"πανομοιότυπο με αυτό ενός πλήρους προγράμματος· κάθε δήλωση εκτελείται στον "
+"χώρο ονομάτων του :mod:`__main__`."
 
 #: reference/toplevel_components.rst:55
 msgid ""
@@ -67,38 +86,43 @@ msgid ""
 "is a tty device, the interpreter enters interactive mode; otherwise, it "
 "executes the file as a complete program."
 msgstr ""
+"Ένα πλήρες πρόγραμμα μπορεί να περάσει στον διερμηνέα με τρεις μορφές: με "
+"την με την επιλογή γραμμής εντολών :option:`-c` *string*, ως αρχείο που μεταβιβάζεται ως πρώτο "
+"όρισμα στη γραμμή εντολών ή ως τυπική είσοδος.  Εάν το αρχείο ή η τυπική είσοδος "
+"είναι μια συσκευή tty, ο διερμηνέας εισέρχεται σε διαδραστική λειτουργία· διαφορετικά, "
+"εκτελεί το αρχείο ως πλήρες πρόγραμμα."
 
 #: reference/toplevel_components.rst:65
 msgid "File input"
-msgstr ""
+msgstr "Εισαγωγή αρχείου"
 
 #: reference/toplevel_components.rst:67
 msgid "All input read from non-interactive files has the same form:"
-msgstr ""
+msgstr "Όλες οι εισαγωγές που διαβάζονται από μη διαδραστικά αρχεία έχουν την ίδια μορφή:"
 
 #: reference/toplevel_components.rst:72
 msgid "This syntax is used in the following situations:"
-msgstr ""
+msgstr "Αυτή η σύνταξη χρησιμοποιείται στις ακόλουθες περιπτώσεις:"
 
 #: reference/toplevel_components.rst:74
 msgid "when parsing a complete Python program (from a file or from a string);"
-msgstr ""
+msgstr "κατά την ανάλυση ενός πλήρους προγράμματος Python (από ένα αρχείο ή από μια συμβολοσειρά)·"
 
 #: reference/toplevel_components.rst:76
 msgid "when parsing a module;"
-msgstr ""
+msgstr "κατά την ανάλυση ενός module·"
 
 #: reference/toplevel_components.rst:78
 msgid "when parsing a string passed to the :func:`exec` function;"
-msgstr ""
+msgstr "κατά την ανάλυση μιας συμβολοσειράς που περνά στη συνάρτηση :func:`exec`·"
 
 #: reference/toplevel_components.rst:84
 msgid "Interactive input"
-msgstr ""
+msgstr "Διαδραστική είσοδος"
 
 #: reference/toplevel_components.rst:86
 msgid "Input in interactive mode is parsed using the following grammar:"
-msgstr ""
+msgstr "Η είσοδος σε διαδραστική λειτουργία αναλύεται χρησιμοποιώντας την ακόλουθη γραμματική:"
 
 #: reference/toplevel_components.rst:91
 msgid ""
@@ -106,69 +130,76 @@ msgid ""
 "in interactive mode; this is needed to help the parser detect the end of the "
 "input."
 msgstr ""
+"Σημειώστε ότι μια σύνθετη δήλωση ανώτατου επιπέδου(top-level) πρέπει να ακολουθείται από μια κενή γραμμή "
+"σε διαδραστική λειτουργία· aυτό είναι απαραίτητο για να βοηθήσει τον αναλυτή να εντοπίσει το τέλος της "
+"εισόδου."
 
 #: reference/toplevel_components.rst:98
 msgid "Expression input"
-msgstr ""
+msgstr "Είσοδος έκφρασης"
 
 #: reference/toplevel_components.rst:103
 msgid ""
 ":func:`eval` is used for expression input.  It ignores leading whitespace. "
 "The string argument to :func:`eval` must have the following form:"
 msgstr ""
+":func:`eval` χρησιμοποιείται για την εισαγωγή έκφρασης. Αγνοεί τα αρχικά κενό. "
+" Το όρισμα συμβολοσειράς σε :func:`eval` πρέπει να έχει την ακόλουθη μορφή·"
 
 #: reference/toplevel_components.rst:8
 msgid "interpreter"
-msgstr ""
+msgstr "διερμηνέας"
 
 #: reference/toplevel_components.rst:21
 msgid "program"
-msgstr ""
+msgstr "πρόγραμμα"
 
 #: reference/toplevel_components.rst:23 reference/toplevel_components.rst:39
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: reference/toplevel_components.rst:23
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
 #: reference/toplevel_components.rst:23 reference/toplevel_components.rst:39
 msgid "__main__"
-msgstr ""
+msgstr "__main__"
 
 #: reference/toplevel_components.rst:23
 msgid "builtins"
-msgstr ""
+msgstr "builtins"
 
 #: reference/toplevel_components.rst:39
 msgid "interactive mode"
-msgstr ""
+msgstr "διαδραστική λειτουργία
+"
 
 #: reference/toplevel_components.rst:49
 msgid "UNIX"
-msgstr ""
+msgstr "UNIX"
 
 #: reference/toplevel_components.rst:49
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: reference/toplevel_components.rst:49
 msgid "command line"
-msgstr ""
+msgstr "γραμμή εντολών
+"
 
 #: reference/toplevel_components.rst:49
 msgid "standard input"
-msgstr ""
+msgstr "τυπική είσοδος"
 
 #: reference/toplevel_components.rst:100
 msgid "input"
-msgstr ""
+msgstr "είσοδος"
 
 #: reference/toplevel_components.rst:101
 msgid "built-in function"
-msgstr ""
+msgstr "built-in συνάρτηση"
 
 #: reference/toplevel_components.rst:101
 msgid "eval"
-msgstr ""
+msgstr "eval"
