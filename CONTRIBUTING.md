@@ -6,9 +6,9 @@ Eυχαριστούμε πολύ για το ενδιαφέρον σας να σ
 
 Σε περίπτωση που έχετε οποιαδήποτε απορία για το πρότζεκτ, μπορείτε να μας βρείτε με τους εξής τρόπους:
 
-- Μπορείτε να μπείτε στον discord server του PyGreece (πρόσκληση εδώ: https://discord.gg/evcNPRVCMB)
+- [Discord server](https://discord.gg/evcNPRVCMB)
 
-- Μπορείτε να μας βρείτε στο linkedin [εδώ](https://www.linkedin.com/company/pygreece)
+- [LinkedIn](https://www.linkedin.com/company/pygreece)
 
 Πριν ξεκινήσετε με την πρώτη σας μετάφραση θα θέλαμε να μοιραστούμε [κάποιες γενικές οδηγίες](#γενικές-οδηγίες).
 
