@@ -100,19 +100,11 @@ ensure_prerequisites:
 
 .PHONY: serve
 serve:
-	$(PYTHON) -c "import os, webbrowser; webbrowser.open('file://' + os.path.realpath('cpython/Doc/build/html/index.html'))"
-
-.PHONY: http-serve
-http-serve:
 	$(PYTHON) -m http.server -d cpython/Doc/build/html/
 
 .PHONY: preview
 preview:
 	make all && make serve
-
-.PHONY: http-preview
-http-preview:
-	make all && make http-serve
 
 .PHONY: progress
 progress:
