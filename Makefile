@@ -70,8 +70,10 @@ all: ensure_prerequisites
 	  -D latex_elements.inputenc=       \
 	  -D latex_elements.fontenc='       \
 	  $(MODE)
-	@echo "Build success, open file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html or run either 'make http-serve' or 'make serve' to see them."
-
+	@echo "Build successful! 🎉"
+	@echo "You can now open the documentation in your browser:"
+	@echo "  file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html"
+	@echo "Or, run 'make serve' to start a local web server for the docs."
 
 .PHONY: ensure_prerequisites
 ensure_prerequisites:
@@ -100,6 +102,7 @@ ensure_prerequisites:
 
 .PHONY: serve
 serve:
+	@echo "Starting local server at http://localhost:8000..."
 	$(PYTHON) -m http.server -d cpython/Doc/build/html/
 
 .PHONY: preview
