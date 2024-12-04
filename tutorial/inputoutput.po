@@ -9,16 +9,18 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-09-20 11:10+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: tutorial/inputoutput.rst:5
 msgid "Input and Output"
-msgstr ""
+msgstr "Είσοδος και Έξοδος"
 
 #: tutorial/inputoutput.rst:7
 msgid ""
@@ -26,10 +28,14 @@ msgid ""
 "printed in a human-readable form, or written to a file for future use. This "
 "chapter will discuss some of the possibilities."
 msgstr ""
+"Υπάρχουν διάφοροι τρόποι για να παρουσιάσετε τα αποτελέσματα ενός "
+"προγράμματος· τα δεδομένα μπορούν να εκτυπωθούν σε μορφή αναγνώσιμη από τον "
+"άνθρωπο ή να εγγραφούν σε ένα αρχείο για μελλοντική χρήση. Αυτό το κεφάλαιο "
+"θα συζητήσει μερικές από τις δυνατότητες."
 
 #: tutorial/inputoutput.rst:15
 msgid "Fancier Output Formatting"
-msgstr ""
+msgstr "Ομορφότερη Μορφοποίηση Εξόδου"
 
 #: tutorial/inputoutput.rst:17
 msgid ""
@@ -39,6 +45,11 @@ msgid ""
 "referenced as ``sys.stdout``. See the Library Reference for more information "
 "on this.)"
 msgstr ""
+"Μέχρι στιγμής έχουμε συναντήσει δύο τρόπους γραφής τιμών: *expression "
+"statements* και τη συνάρτηση :func:`print`.  (Ένας τρίτος τρόπος είναι η "
+"χρήση της μεθόδου :meth:`~io.TextIOBase.write` των αντικειμένων αρχείων· το "
+"standard αρχείο εξόδου μπορεί να αναφέρεται ως ``sys.stdout``. Δείτε την "
+"Αναφορά Βιβλιοθήκης για περισσότερες πληροφορίες σχετικά με αυτό.)"
 
 #: tutorial/inputoutput.rst:22
 msgid ""
@@ -46,6 +57,9 @@ msgid ""
 "simply printing space-separated values. There are several ways to format "
 "output."
 msgstr ""
+"Συχνά θα θέλετε περισσότερο έλεγχο στη μορφοποίηση της εξόδου σας παρά απλώς "
+"να εκτυπώνετε τιμές διαχωρισμένες με διάστημα. Υπάρχουν διάφοροι τρόποι για "
+"να μορφοποιήσετε την έξοδο."
 
 #: tutorial/inputoutput.rst:25
 msgid ""
@@ -54,6 +68,11 @@ msgid ""
 "Inside this string, you can write a Python expression between ``{`` and ``}"
 "`` characters that can refer to variables or literal values."
 msgstr ""
+"Για να χρησιμοποιήσετε :ref:`formatted string literals <tut-f-strings>`, "
+"ξεκινήστε μια συμβολοσειρά με ``f`` or ``F`` πριν από το αρχικό εισαγωγικό ή "
+"το τριπλό εισαγωγικό. Μέσα σε αυτήν την συμβολοσειρά, μπορείτε να γράψετε "
+"μια έκφραση Python μεταξύ χαρακτήρων ``{`` και ``}`` που μπορεί να "
+"αναφέρεται σε μεταβλητές ή κυριολεκτικές τιμές."
 
 #: tutorial/inputoutput.rst:37
 msgid ""
@@ -62,6 +81,11 @@ msgid ""
 "substituted and can provide detailed formatting directives, but you'll also "
 "need to provide the information to be formatted."
 msgstr ""
+"Η μέθοδος :meth:`str.format` των συμβολοσειρών απαιτεί περισσότερη μη "
+"χειροκίνητη προσπάθεια.  Θα εξακολουθείτε να χρησιμοποιείτε τα ``{`` και ``}"
+"`` για να επισημάνετε που θα αντικατασταθεί μια μεταβλητή και μπορεί να "
+"παρέχει λεπτομερείς οδηγίες μορφοποίησης, αλλά θα χρειαστεί επίσης να "
+"παρέχετε τις πληροφορίες που θα μορφοποιήσετε."
 
 #: tutorial/inputoutput.rst:50
 msgid ""
@@ -70,6 +94,11 @@ msgid ""
 "string type has some methods that perform useful operations for padding "
 "strings to a given column width."
 msgstr ""
+"Τέλος, μπορείτε να κάνετε μόνοι σας όλο τον χειρισμό συμβολοσειράς "
+"χρησιμοποιώντας λειτουργίες slicing και συνένωσης συμβολοσειρών για να "
+"δημιουργήσετε οποιαδήποτε διάταξη μπορείτε να φανταστείτε.  Ο τύπος "
+"συμβολοσειράς έχει ορισμένες μεθόδους που εκτελούν χρήσιμες λειτουργίες για "
+"την προσθήκη συμβολοσειρών σε ένα δεδομένο πλάτος στήλης."
 
 #: tutorial/inputoutput.rst:55
 msgid ""
@@ -77,6 +106,10 @@ msgid ""
 "variables for debugging purposes, you can convert any value to a string with "
 "the :func:`repr` or :func:`str` functions."
 msgstr ""
+"Όταν δεν χρειάζεστε φανταχτερή έξοδο, άλλα θέλετε απλώς μια γρήγορη εμφάνιση "
+"ορισμένων μεταβλητών για σκοπούς εντοπισμού σφαλμάτων, μπορείτε να "
+"μετατρέψετε οποιαδήποτε τιμή σε μια συμβολοσειρά με τις συναρτήσεις :func:"
+"`repr` ή :func:`str`."
 
 #: tutorial/inputoutput.rst:59
 msgid ""
@@ -89,10 +122,19 @@ msgid ""
 "structures like lists and dictionaries, have the same representation using "
 "either function.  Strings, in particular, have two distinct representations."
 msgstr ""
+"Η συνάρτηση :func:`str` προορίζεται να επιστρέφει αναπαραστάσεις τιμών που "
+"είναι αρκετά αναγνώσιμες από τον άνθρωπο, ενώ το :func:`repr` προορίζεται "
+"για τη δημιουργία αναπαραστάσεων που μπορούν να διαβαστούν από τον διερμηνέα "
+"(ή θα επιβάλουν ένα :exc:`SyntaxError` αν δεν υπάρχει ισοδύναμη σύνταξη).  "
+"Για αντικείμενα που δεν έχουν συγκεκριμένη αναπαράσταση για ανθρώπινη "
+"κατανάλωση, η :func:`str` θα επιστρέψει την ίδια τιμή με το :func:`repr`.  "
+"Πολλές τιμές, όπως αριθμοί ή δομές όπως λίστες και λεξικά, έχουν την ίδια "
+"αναπαράσταση χρησιμοποιώντας οποιαδήποτε συνάρτηση. Τα strings, "
+"συγκεκριμένα, έχουν δύο διακριτές παραστάσεις."
 
 #: tutorial/inputoutput.rst:68
 msgid "Some examples::"
-msgstr ""
+msgstr "Μερικά παραδείγματα::"
 
 #: tutorial/inputoutput.rst:91
 msgid ""
@@ -101,10 +143,14 @@ msgid ""
 "like ``$x`` and replacing them with values from a dictionary, but offers "
 "much less control of the formatting."
 msgstr ""
+"Το module :mod:`string` περιέχει μια κλάση :class:`~string.Template` που "
+"προσφέρει έναν ακόμη τρόπο αντικατάστασης τιμών σε συμβολοσειρές, "
+"χρησιμοποιώντας placeholders όπως ``$x`` και αντικαθιστώντας τις με τιμές "
+"από ένα λεξικό, αλλά προσφέρει πολύ λιγότερο έλεγχο της μορφοποίησης."
 
 #: tutorial/inputoutput.rst:100
 msgid "Formatted String Literals"
-msgstr ""
+msgstr "Μορφοποιημένα String Literals"
 
 #: tutorial/inputoutput.rst:102
 msgid ""
@@ -113,6 +159,10 @@ msgid ""
 "prefixing the string with ``f`` or ``F`` and writing expressions as "
 "``{expression}``."
 msgstr ""
+"Τα :ref:`Formatted string literals <f-strings>` (ονομάζονται επίσης f-"
+"strings για συντομία) σας επιτρέπουν να συμπεριλάβετε την τιμή των εκφράσεων "
+"Python μέσα σε μια συμβολοσειρά, θέτοντας πρόθεμα στη συμβολοσειρά με ``f`` "
+"ή ``F`` και γράφοντας εκφράσεις ως ``{expression}``."
 
 #: tutorial/inputoutput.rst:107
 msgid ""
@@ -120,12 +170,18 @@ msgid ""
 "control over how the value is formatted. The following example rounds pi to "
 "three places after the decimal::"
 msgstr ""
+"Ένας προαιρετικός αναθέτης (specifier) μορφής μπορεί να ακολουθεί την "
+"έκφραση. Αυτό επιτρέπει μεγαλύτερο έλεγχο στον τρόπο μορφοποίησης της τιμής. "
+"Το παρακάτω παράδειγμα στρογγυλοποιεί το pi σε τρία ψηφία μετά το δεκαδικό::"
 
 #: tutorial/inputoutput.rst:115
 msgid ""
 "Passing an integer after the ``':'`` will cause that field to be a minimum "
 "number of characters wide.  This is useful for making columns line up. ::"
 msgstr ""
+"Η μετάδοση ενός ακέραιου αριθμού μετά το ``':'`` θα έχει ως αποτέλεσμα αυτό "
+"το πεδίο να έχει πλάτος ελάχιστου αριθμού χαρακτήρων.  Αυτό είναι χρήσιμο "
+"για την ευθυγράμμιση στηλών. ::"
 
 #: tutorial/inputoutput.rst:126
 msgid ""
@@ -133,6 +189,9 @@ msgid ""
 "a'`` applies :func:`ascii`, ``'!s'`` applies :func:`str`, and ``'!r'`` "
 "applies :func:`repr`::"
 msgstr ""
+"Μπορούν να χρησιμοποιηθούν άλλοι τροποποιητές για την μετατροπή της τιμής "
+"πριν τη μορφοποίηση της. Το ``'!a'`` ισχύει για :func:`ascii`, το ``'!s'`` "
+"ισχύει για :func:`str`, και το ``'!r'`` ισχύει για :func:`repr`::"
 
 #: tutorial/inputoutput.rst:136
 msgid ""
@@ -140,6 +199,9 @@ msgid ""
 "expression, an equal sign, then the representation of the evaluated "
 "expression:"
 msgstr ""
+"Ο αναθέτης (specifier) ``=`` μπορεί να χρησιμοποιηθεί για να επεκτείνει μια "
+"έκφραση στο κείμενο της έκφρασης, ένα σύμβολο ίσο, και μετά την αναπαράσταση "
+"της αξιολογούμενης έκφρασης:"
 
 #: tutorial/inputoutput.rst:145
 msgid ""
@@ -147,14 +209,18 @@ msgid ""
 "information on the ``=`` specifier. For a reference on these format "
 "specifications, see the reference guide for the :ref:`formatspec`."
 msgstr ""
+"Δείτε το :ref:`self-documenting expressions <bpo-36817-whatsnew>` για "
+"περισσότερες πληροφορίες σχετικά με τον αναθέτη (specifier) ``=``. Για "
+"αναφορά σε αυτές τις προδιαγραφές μορφής, ανατρέξτε στον οδηγό αναφοράς για "
+"το :ref:`formatspec`."
 
 #: tutorial/inputoutput.rst:152
 msgid "The String format() Method"
-msgstr ""
+msgstr "Η μέθοδος String format()"
 
 #: tutorial/inputoutput.rst:154
 msgid "Basic usage of the :meth:`str.format` method looks like this::"
-msgstr ""
+msgstr "Η βασική χρήση της μεθόδου :meth:`str.format` μοιάζει με αυτό::"
 
 #: tutorial/inputoutput.rst:159
 msgid ""
@@ -163,16 +229,24 @@ msgid ""
 "brackets can be used to refer to the position of the object passed into the :"
 "meth:`str.format` method. ::"
 msgstr ""
+"Οι αγκύλες και οι χαρακτήρες μέσα σε αυτές (που ονομάζονται πεδία μορφής) "
+"αντικαθίστανται με τα αντικείμενα που μεταβιβάζονται στη μέθοδο :meth:`str."
+"format`.  Ένας αριθμός στις αγκύλες μπορεί να χρησιμοποιηθεί για να "
+"αναφέρεται στη θέση του αντικειμένου που μεταβιβάζεται στη μέθοδο :meth:`str."
+"format`. ::"
 
 #: tutorial/inputoutput.rst:169
 msgid ""
 "If keyword arguments are used in the :meth:`str.format` method, their values "
 "are referred to by using the name of the argument. ::"
 msgstr ""
+"Εάν χρησιμοποιούνται keyword ορίσματα στη μέθοδο :meth:`str.format`, οι "
+"τιμές τους αναφέρονται χρησιμοποιώντας το όνομα του ορίσματος. ::"
 
 #: tutorial/inputoutput.rst:176
 msgid "Positional and keyword arguments can be arbitrarily combined::"
 msgstr ""
+"Τα ορίσματα θέσης και λέξης-κλειδιού μπορούν να συνδυαστούν αυθαίρετα::"
 
 #: tutorial/inputoutput.rst:182
 msgid ""
@@ -181,44 +255,60 @@ msgid ""
 "instead of by position.  This can be done by simply passing the dict and "
 "using square brackets ``'[]'`` to access the keys. ::"
 msgstr ""
+"Εάν έχετε μια συμβολοσειρά πολύ μακριάς μορφής που δεν θέλετε να χωρίσετε, "
+"θα ήταν ωραίο να αναφέρετε τις μεταβλητές που θα μορφοποιηθούν με βάση το "
+"όνομα αντί για τη θέση.  Αυτό μπορεί να γίνει απλά περνώντας το λεξικό και "
+"χρησιμοποιώντας αγκύλες ``'[]'`` για πρόσβαση στα κλειδιά ::"
 
 #: tutorial/inputoutput.rst:192
 msgid ""
 "This could also be done by passing the ``table`` dictionary as keyword "
 "arguments with the ``**`` notation. ::"
 msgstr ""
+"Αυτό θα μπορούσε επίσης να γίνει περνώντας το λεξικό ``table`` ως ορίσματα "
+"λέξεων-κλειδιών με την σημείωση ``**``. ::"
 
 #: tutorial/inputoutput.rst:199
 msgid ""
 "This is particularly useful in combination with the built-in function :func:"
 "`vars`, which returns a dictionary containing all local variables."
 msgstr ""
+"Αυτό είναι ιδιαίτερα χρήσιμο σε συνδυασμό με την ενσωματωμένη (built-in) "
+"συνάρτηση :func:`vars`, η οποία επιστρέφει ένα λεξικό που περιέχει όλες τις "
+"τοπικές μεταβλητές."
 
 #: tutorial/inputoutput.rst:202
 msgid ""
 "As an example, the following lines produce a tidily aligned set of columns "
 "giving integers and their squares and cubes::"
 msgstr ""
+"Για παράδειγμα, οι ακόλουθες γραμμές παράγουν ένα τακτοποιημένο σύνολο "
+"στηλών που δίνουν ακέραιους αριθμούς και τα τετράγωνα και τους κύβους τους::"
 
 #: tutorial/inputoutput.rst:219
 msgid ""
 "For a complete overview of string formatting with :meth:`str.format`, see :"
 "ref:`formatstrings`."
 msgstr ""
+"Για μια πλήρη επισκόπηση της μορφοποίησης συμβολοσειρών με :meth:`str."
+"format`, δείτε :ref:`formatstrings`."
 
 #: tutorial/inputoutput.rst:224
 msgid "Manual String Formatting"
-msgstr ""
+msgstr "Χειροκίνητη Μορφοποίηση Συμβολοσειρών"
 
 #: tutorial/inputoutput.rst:226
 msgid "Here's the same table of squares and cubes, formatted manually::"
 msgstr ""
+"Ακολουθεί ο ίδιος πίνακας τετραγώνων και κύβων, μορφοποιημένος χειροκίνητα::"
 
 #: tutorial/inputoutput.rst:244
 msgid ""
 "(Note that the one space between each column was added by the way :func:"
 "`print` works: it always adds spaces between its arguments.)"
 msgstr ""
+"(Σημειώστε ότι το ένα κενό μεταξύ κάθε στήλης προστέθηκε με τον τρόπο που "
+"λειτουργεί το :func:`print`: προσθέτει πάντα κενά μεταξύ των ορισμάτων του.)"
 
 #: tutorial/inputoutput.rst:247
 msgid ""
@@ -231,16 +321,28 @@ msgid ""
 "would be lying about a value. (If you really want truncation you can always "
 "add a slice operation, as in ``x.ljust(n)[:n]``.)"
 msgstr ""
+"Η μέθοδος :meth:`str.rjust` των αντικειμένων συμβολοσειράς τοποθετεί δεξιά "
+"μια συμβολοσειρά σε ένα πεδίο δεδομένου πλάτους συμπληρώνοντας την με κενά "
+"στα αριστερά. Υπάρχουν παρόμοιες μέθοδοι :meth:`str.ljust` και :meth:`str."
+"center`. Αυτές οι μέθοδοι δεν γράφουν τίποτα, απλώς επιστρέφουν μια "
+"συμβολοσειρά. Εάν η συμβολοσειρά εισόδου είναι πολύ μεγάλη, δεν την "
+"περικόπτουν, αλλά την επιστρέφουν αμετάβλητη· αυτό θα μπερδέψει τη διάταξη "
+"της στήλης σας, αλλά αυτό είναι συνήθως καλύτερο από την εναλλακτική, που θα "
+"ήταν ψέματα για μια τιμή. (Αν θέλετε πραγματικά περικοπή, μπορείτε πάντα να "
+"προσθέσετε μια λειτουργία slice, όπως στο ``x.ljust(n)[:n]``.)"
 
 #: tutorial/inputoutput.rst:256
 msgid ""
 "There is another method, :meth:`str.zfill`, which pads a numeric string on "
 "the left with zeros.  It understands about plus and minus signs::"
 msgstr ""
+"Υπάρχει μια άλλη μέθοδος, η :meth:`str.zfill`, η οποία συμπληρώνει μια "
+"αριθμητική συμβολοσειρά στα αριστερά με μηδενικά.  Καταλαβαίνει τα σύμβολα "
+"συν και πλην::"
 
 #: tutorial/inputoutput.rst:268
 msgid "Old string formatting"
-msgstr ""
+msgstr "Παλιά μορφοποίηση συμβολοσειράς"
 
 #: tutorial/inputoutput.rst:270
 msgid ""
@@ -249,15 +351,22 @@ msgid ""
 "zero or more elements of ``values``. This operation is commonly known as "
 "string interpolation. For example::"
 msgstr ""
+"Ο τελεστής % (modulo) μπορεί επίσης να χρησιμοποιηθεί για τη μορφοποίηση "
+"συμβολοσειρών. Δεδομένων των τιμών ``'string' % values``, στιγμιότυπα του "
+"``%`` στο ``string`` αντικαθίστανται με μηδέν ή περισσότερα στοιχεία των "
+"``τιμών``. Αυτή η λειτουργία είναι συνήθως γνωστή ως παρεμβολή "
+"συμβολοσειρών. Για παράδειγμα::"
 
 #: tutorial/inputoutput.rst:279
 msgid ""
 "More information can be found in the :ref:`old-string-formatting` section."
 msgstr ""
+"Περισσότερες πληροφορίες μπορείτε να βρείτε στην ενότητα :ref:`old-string-"
+"formatting`."
 
 #: tutorial/inputoutput.rst:285
 msgid "Reading and Writing Files"
-msgstr ""
+msgstr "Ανάγνωση και Εγγραφή Αρχείων"
 
 #: tutorial/inputoutput.rst:291
 msgid ""
@@ -265,6 +374,9 @@ msgid ""
 "two positional arguments and one keyword argument: ``open(filename, mode, "
 "encoding=None)``"
 msgstr ""
+"Η :func:`open` επιστρέφει ένα :term:`file object`, και χρησιμοποιείται πιο "
+"συχνά με δύο ορίσματα θέσης και ένα όρισμα λέξης-κλειδιού: ``open(filename, "
+"mode, encoding=None)``"
 
 #: tutorial/inputoutput.rst:304
 msgid ""
@@ -277,6 +389,15 @@ msgid ""
 "reading and writing. The *mode* argument is optional; ``'r'`` will be "
 "assumed if it's omitted."
 msgstr ""
+"Το πρώτο όρισμα είναι μια συμβολοσειρά που περιέχει το όνομα αρχείου.  Το "
+"δεύτερο όρισμα είναι μια άλλη συμβολοσειρά που περιέχει μερικούς χαρακτήρες "
+"που περιγράφουν τον τρόπο με τον οποίο θα χρησιμοποιηθεί το αρχείο. Η *mode* "
+"μπορεί να είναι ``'r'`` όταν το αρχείο θα είναι μόνο για διάβασμα, ``'w'`` "
+"μόνο για εγγραφή (ένα υπάρχον αρχείο με το ίδιο όνομα θα διαγραφεί) και το "
+"``'a'`` ανοίγει το αρχείο για προσάρτηση· οποιαδήποτε δεδομένα γράφονται στο "
+"αρχείο και προστίθενται αυτόματα στο τέλος. Το ``'r+'`` ανοίγει το αρχείο "
+"τόσο για ανάγνωση όσο και για γραφή. Το όρισμα *mode* είναι προαιρετικό· το "
+"``'r'`` θα θεωρείται εάν παραληφθεί."
 
 #: tutorial/inputoutput.rst:313
 msgid ""
@@ -289,6 +410,17 @@ msgid ""
 "`binary mode`. Binary mode data is read and written as :class:`bytes` "
 "objects. You can not specify *encoding* when opening file in binary mode."
 msgstr ""
+"Κανονικά, τα αρχεία ανοίγουν σε :dfn:`text mode`, που σημαίνει ότι διαβάζετε "
+"και γράφετε συμβολοσειρές από και προς το αρχείο, οι οποίες κωδικοποιούνται "
+"σε μια συγκεκριμένη *κωδικοποίηση*. Εάν δεν έχει καθοριστεί η "
+"*κωδικοποιήση*, η προεπιλογή είναι εξαρτώμενη από την πλατφόρμα (δείτε :func:"
+"`open`). Επειδή το UTF-8 είναι το σύγχρονο de-facto standard, "
+"``encoding=\"utf-8\"`` συνίσταται εκτός εάν γνωρίζετε ότι πρέπει να "
+"χρησιμοποιήσετε διαφορετική κωδικοποίηση. Η προσθήκη ενός ``'b'`` στη "
+"λειτουργία ανοίγει το αρχείο σε :dfn:`binary mode`. Τα δεδομένα δυαδικής "
+"λειτουργίας διαβάζονται και γράφονται ως αντικείμενα :class:`bytes`. Δεν "
+"μπορείτε να καθορίσετε *κωδικοποίηση* όταν ανοίγετε αρχείο σε δυαδική "
+"λειτουργία."
 
 #: tutorial/inputoutput.rst:323
 msgid ""
@@ -300,6 +432,15 @@ msgid ""
 "file:`JPEG` or :file:`EXE` files.  Be very careful to use binary mode when "
 "reading and writing such files."
 msgstr ""
+"Στη λειτουργία κειμένου, η προεπιλογή (default) κατά την ανάγνωση είναι να "
+"μετατρέψετε τις καταλήξεις γραμμών για συγκεκριμένη πλατφόρμα (``\\n`` στο "
+"Unix, ``\\r\\n`` στα Windows) σε μόνο ``\\n``.  Όταν γράφετε σε λειτουργία "
+"κειμένου, η προεπιλογή είναι να μετατρέπονται οι εμφανίσεις ``\\n`` σε "
+"καταλήξεις γραμμών για συγκεκριμένη πλατφόρμα. Αυτή η παρασκηνιακή "
+"τροποποίηση στα δεδομένα αρχείων είναι καλή για αρχεία κειμένου, αλλά θα "
+"καταστρέψει δυαδικά δεδομένα όπως αυτό σε αρχεία :file:`JPEG` ή :file:"
+"`EXE`.  Να είστε πολύ προσεκτικοί να χρησιμοποιείτε τη δυαδική λειτουργία "
+"όταν διαβάζετε και γράφετε τέτοια αρχεία."
 
 #: tutorial/inputoutput.rst:331
 msgid ""
@@ -309,6 +450,12 @@ msgid ""
 "keyword:`!with` is also much shorter than writing equivalent :keyword:"
 "`try`\\ -\\ :keyword:`finally` blocks::"
 msgstr ""
+"Είναι καλή πρακτική να χρησιμοποιείτε το keyword :keyword:`with` όταν "
+"ασχολούμαστε με αντικείμενα αρχείου.  Το πλεονέκτημα είναι ότι το αρχείο "
+"κλείνει σωστά μετά την ολοκλήρωση της εκτέλεσής του, ακόμα κι αν κάποια "
+"στιγμή προκύψει εξαίρεση.  Χρησιμοποιώντας το :keyword:`!with` είναι επίσης "
+"πολύ πιο σύντομο από την σύνταξη ισοδύναμου :keyword:`try`\\ -\\ :keyword:"
+"`finally` blocks::"
 
 #: tutorial/inputoutput.rst:344
 msgid ""
@@ -316,6 +463,9 @@ msgid ""
 "close()`` to close the file and immediately free up any system resources "
 "used by it."
 msgstr ""
+"Εάν δεν χρησιμοποιείτε τη keyword :keyword:`with`, τότε θα πρέπει να καλείτε "
+"τη ``f.close()`` για να κλείσετε το αρχείο και να ελευθερώσετε αμέσως τυχόν "
+"πόρους συστήματος που χρησιμοποιούνται από αυτό."
 
 #: tutorial/inputoutput.rst:349
 msgid ""
@@ -323,6 +473,10 @@ msgid ""
 "``f.close()`` **might** result in the arguments of ``f.write()`` not being "
 "completely written to the disk, even if the program exits successfully."
 msgstr ""
+"Η κλήση του ``f.write()`` χωρίς τη χρήση της keyword :keyword:`!with` ή η "
+"κλήση του ``f.close()`` **μπορεί** να οδηγήσει στα ορίσματα του ``f."
+"write()`` να μην εγγραφεί πλήρως στο δίσκο, ακόμα και αν το πρόγραμμα "
+"εξέλθει με επιτυχία."
 
 #: tutorial/inputoutput.rst:357
 msgid ""
@@ -330,16 +484,21 @@ msgid ""
 "calling ``f.close()``, attempts to use the file object will automatically "
 "fail. ::"
 msgstr ""
+"Μετά το κλείσιμο ενός αντικειμένου αρχείου, είτε μια δήλωση :keyword:`with` "
+"είτε καλώντας ``f.close()``, οι προσπάθειες χρήσης του αντικειμένου αρχείου "
+"θα αποτύχουν αυτόματα. ::"
 
 #: tutorial/inputoutput.rst:371
 msgid "Methods of File Objects"
-msgstr ""
+msgstr "Μέθοδοι Αντικειμένων Αρχείων"
 
 #: tutorial/inputoutput.rst:373
 msgid ""
 "The rest of the examples in this section will assume that a file object "
 "called ``f`` has already been created."
 msgstr ""
+"Τα υπόλοιπα παραδείγματα σε αυτήν την ενότητα θα υποθέσουν ότι ένα "
+"αντικείμενο αρχείου που ονομάζεται ``f`` έχει ήδη δημιουργηθεί."
 
 #: tutorial/inputoutput.rst:376
 msgid ""
@@ -352,6 +511,16 @@ msgid ""
 "binary mode) are read and returned. If the end of the file has been reached, "
 "``f.read()`` will return an empty string (``''``).  ::"
 msgstr ""
+"Για να διαβάσετε τα περιεχόμενα ενός αρχείου, καλέστε το ``f.read(size)``, "
+"το οποίο διαβάζει κάποια ποσότητα δεδομένων και την επιστρέφει ως "
+"συμβολοσειρά (σε λειτουργία κειμένου) ή ως αντικείμενο bytes (σε δυαδική "
+"λειτουργία). Το *size* είναι προαιρετικό αριθμητικό όρισμα.  Όταν το *size* "
+"παραλείπεται ή είναι αρνητικό, ολόκληρο το περιεχόμενο του αρχείου θα "
+"διαβαστεί και θα επιστραφεί∙ είναι δικό σας πρόβλημα εάν το αρχείο είναι "
+"διπλάσιο από τη μνήμη του υπολογιστή σας. Διαφορετικά, διαβάζονται και "
+"επιστρέφονται το πολύ *size* χαρακτήρες (σε λειτουργία κειμένου) ή byte "
+"*size* (σε δυαδική λειτουργία). Εάν έχει φτάσει το τέλος του αρχείου, το ``f."
+"read()`` θα επιστρέψει μια κενή συμβολοσειρά (``''``).  ::"
 
 #: tutorial/inputoutput.rst:390
 msgid ""
@@ -362,30 +531,47 @@ msgid ""
 "end of the file has been reached, while a blank line is represented by "
 "``'\\n'``, a string containing only a single newline.  ::"
 msgstr ""
+"Το ``f.readline()`` διαβάζει μία γραμμή από το αρχείο· ένας χαρακτήρας νέας "
+"γραμμής (``\\n``) παραμένει στο τέλος της συμβολοσειράς, και παραλείπεται "
+"μόνο στην τελευταία γραμμή του αρχείου εάν το αρχείο δεν τελειώνει σε μια "
+"νέα γραμμή.  Αυτό καθιστά την τιμή επιστροφής σαφή· εάν το ``f.readline()`` "
+"επιστρέφει μια κενή συμβολοσειρά, έχει φτάσει στο τέλος του αρχείου, ενώ μια "
+"κενή γραμμή αντιπροσωπεύεται από ``'\\n'``, μια συμβολοσειρά που περιέχει "
+"μόνο μία νέα γραμμή.  ::"
 
 #: tutorial/inputoutput.rst:404
 msgid ""
 "For reading lines from a file, you can loop over the file object. This is "
 "memory efficient, fast, and leads to simple code::"
 msgstr ""
+"Για την ανάγνωση γραμμών από ένα αρχείο, μπορείτε να κάνετε loop πάνω από το "
+"αντικείμενο του αρχείου. Αυτό είναι αποδοτικό στη μνήμη, γρήγορο και οδηγεί "
+"σε απλό κώδικα::"
 
 #: tutorial/inputoutput.rst:413
 msgid ""
 "If you want to read all the lines of a file in a list you can also use "
 "``list(f)`` or ``f.readlines()``."
 msgstr ""
+"Εάν θέλετε να διαβάσετε όλες τις γραμμές ενός αρχείου σε μια λίστα, μπορείτε "
+"επίσης να χρησιμοποιήσετε το ``list(f)`` ή ``f.readlines()``."
 
 #: tutorial/inputoutput.rst:416
 msgid ""
 "``f.write(string)`` writes the contents of *string* to the file, returning "
 "the number of characters written. ::"
 msgstr ""
+"Το ``f.write(string)`` γράφει τα περιεχόμενα του *string* στο αρχείο, "
+"επιστρέφοντας τον αριθμό των χαρακτήρων που γράφτηκαν. ::"
 
 #: tutorial/inputoutput.rst:422
 msgid ""
 "Other types of objects need to be converted -- either to a string (in text "
 "mode) or a bytes object (in binary mode) -- before writing them::"
 msgstr ""
+"Άλλοι τύποι αντικειμένων πρέπει να μετατραπούν -- είτε σε μια συμβολοσειρά "
+"(σε λειτουργία κειμένου) ή σε ένα αντικείμενο bytes (σε δυαδική λειτουργία) "
+"-- πριν τα γράψετε::"
 
 #: tutorial/inputoutput.rst:430
 msgid ""
@@ -393,6 +579,10 @@ msgid ""
 "the file represented as number of bytes from the beginning of the file when "
 "in binary mode and an opaque number when in text mode."
 msgstr ""
+"Το ``f.tell()`` επιστρέφει έναν ακέραιο που δίνει την τρέχουσα θέση του "
+"αντικειμένου αρχείου στο αρχείο που αντιπροσωπεύεται ως αριθμό byte από την "
+"αρχή του αρχείου όταν βρίσκεται σε δυαδική λειτουργία και έναν αδιαφανή "
+"αριθμό όταν βρίσκεται σε λειτουργία κειμένου."
 
 #: tutorial/inputoutput.rst:434
 msgid ""
@@ -404,6 +594,13 @@ msgid ""
 "omitted and defaults to 0, using the beginning of the file as the reference "
 "point. ::"
 msgstr ""
+"Για να αλλάξετε τη θέση του αντικειμένου, χρησιμοποιήστε το ``f.seek(offset, "
+"whence)``.  Η θέση υπολογίζεται από την προσθήκη *offset* σε ένα σημείο "
+"αναφοράς· το σημείο αναφοράς επιλέγεται από το όρισμα *whence*.  Μια 0 τιμή "
+"*whence* μετρά από την αρχή του αρχείο το 1 χρησιμοποιεί την τρέχουσα θέση "
+"αρχείου και το 2 χρησιμοποιεί το τέλος του αρχείου ως σημείο αναφοράς.  Το "
+"*whence* μπορεί να παραληφθεί και να οριστεί από προεπιλογή 0, "
+"χρησιμοποιώντας την αρχή του αρχείου ως σημείο αναφοράς. ::"
 
 #: tutorial/inputoutput.rst:453
 msgid ""
@@ -413,6 +610,12 @@ msgid ""
 "*offset* values are those returned from the ``f.tell()``, or zero. Any other "
 "*offset* value produces undefined behaviour."
 msgstr ""
+"Σε αρχεία κειμένου (αυτά που ανοίγουν χωρίς ``b`` στη λειτουργία string), "
+"επιτρέπονται μόνο αναζητήσεις σε σχέση με την αρχή του αρχείου (η εξαίρεση "
+"είναι η αναζήτηση μέχρι το ίδιο το αρχείο που τελειώνει με ``seek(0, 2)``) "
+"και οι μόνες έγκυρες τιμές *offset* είναι αυτές που επιστρέφονται από το ``f."
+"tell()``, ή μηδέν. Οποιαδήποτε άλλη τιμή *offset* παράγει  απροσδιόριστη "
+"συμπεριφορά."
 
 #: tutorial/inputoutput.rst:459
 msgid ""
@@ -420,10 +623,14 @@ msgid ""
 "and :meth:`~io.IOBase.truncate` which are less frequently used; consult the "
 "Library Reference for a complete guide to file objects."
 msgstr ""
+"Τα αντικείμενα αρχείου έχουν ορισμένες πρόσθετες μεθόδους, όπως :meth:`~io."
+"IOBase.isatty` και :meth:`~io.IOBase.truncate` που χρησιμοποιούνται λιγότερο "
+"συχνά· συμβουλευτείτε την Αναφορά της Βιβλιοθήκης για έναν πλήρη οδηγό για "
+"τα αντικείμενα αρχείων."
 
 #: tutorial/inputoutput.rst:467
 msgid "Saving structured data with :mod:`json`"
-msgstr ""
+msgstr "Αποθήκευση δομημένων δεδομένων με :mod:`json`"
 
 #: tutorial/inputoutput.rst:471
 msgid ""
@@ -434,6 +641,13 @@ msgid ""
 "want to save more complex data types like nested lists and dictionaries, "
 "parsing and serializing by hand becomes complicated."
 msgstr ""
+"Οι συμβολοσειρές μπορούν εύκολα να γραφούν και να διαβαστούν από ένα "
+"αρχείο.  Οι αριθμοί απαιτούν λίγο περισσότερη προσπάθεια, καθώς η μέθοδος :"
+"meth:`~io.TextIOBase.read` επιστρέφει μόνο συμβολοσειρές, οι οποίες θα "
+"πρέπει να περάσουν μια συνάρτηση όπως :func:`int`, που παίρνει μια "
+"συμβολοσειρά όπως ``'123'`` και επιστρέφει την αριθμητική της τιμή 123.  "
+"Όταν θέλετε να αποθηκεύσετε πιο σύνθετους τύπους δεδομένων, όπως ένθετε "
+"λίστες και λεξικά, η ανάλυση και η σειριοποίηση με το χέρι γίνεται περίπλοκη."
 
 #: tutorial/inputoutput.rst:478
 msgid ""
@@ -447,6 +661,18 @@ msgid ""
 "deserializing, the string representing the object may have been stored in a "
 "file or data, or sent over a network connection to some distant machine."
 msgstr ""
+"Αντί να χρειάζεται οι χρήστες να γράφουν και να διορθώνουν συνεχώς κώδικα "
+"για να αποθηκεύουν πολύπλοκους τύπους δεδομένων σε αρχεία, η Python σας "
+"επιτρέπει να χρησιμοποιείτε τη δημοφιλή μορφή ανταλλαγής δεδομένων που "
+"ονομάζεται `JSON (JavaScript Object Notation) <https://json.org>`_.  Το "
+"standard module που ονομάζεται :mod:`json` μπορεί να λάβει ιεραρχίες "
+"δεδομένων Python, και να τις μετατρέψει σε αναπαραστάσεις συμβολοσειρών· "
+"αυτή η διαδικασία ονομάζεται :dfn:`serializing`..  Η ανασύνθεση των "
+"δεδομένων από την αναπαράσταση συμβολοσειράς ονομάζεται :dfn:"
+"`deserializing`.  Μεταξύ σειριοποίησης και αποσειριοποίησης, η συμβολοσειρά "
+"που αντιπροσωπεύει το αντικείμενο μπορεί να έχει αποθηκευτεί σε ένα αρχείο ή "
+"δεδομένα ή να έχει σταλεί μέσω μιας σύνδεσης δικτύου σε κάποιο απομακρυσμένο "
+"μηχάνημα."
 
 #: tutorial/inputoutput.rst:489
 msgid ""
@@ -454,12 +680,18 @@ msgid ""
 "exchange.  Many programmers are already familiar with it, which makes it a "
 "good choice for interoperability."
 msgstr ""
+"Η μορφή JSON χρησιμοποιείται συνήθως από σύγχρονες εφαρμογές για να "
+"επιτρέπει την ανταλλαγή δεδομένων.  Πολλοί προγραμματιστές είναι ήδη "
+"εξοικειωμένοι με αυτήν, γεγονός που την καθιστά καλή επιλογή για "
+"διαλειτουργικότητα."
 
 #: tutorial/inputoutput.rst:493
 msgid ""
 "If you have an object ``x``, you can view its JSON string representation "
 "with a simple line of code::"
 msgstr ""
+"Εάν έχετε ένα αντικείμενο ``x``, μπορείτε να δείτε την αναπαράσταση "
+"συμβολοσειράς JSON με μια απλή γραμμή κώδικα::"
 
 #: tutorial/inputoutput.rst:501
 msgid ""
@@ -467,18 +699,28 @@ msgid ""
 "dump`, simply serializes the object to a :term:`text file`.  So if ``f`` is "
 "a :term:`text file` object opened for writing, we can do this::"
 msgstr ""
+"Μια άλλη παραλλαγή της συνάρτησης :func:`~json.dumps`, που ονομάζεται :func:"
+"`~json.dump`, απλώς σειριοποιεί το αντικείμενο σε ένα :term:`text file`.  "
+"Έτσι, εάν το ``f`` είναι ένα αντικείμενο :term:`text file` που ανοίγει για "
+"εγγραφή, μπορούμε να κάνουμε αυτό::"
 
 #: tutorial/inputoutput.rst:507
 msgid ""
 "To decode the object again, if ``f`` is a :term:`binary file` or :term:`text "
 "file` object which has been opened for reading::"
 msgstr ""
+"Για να αποκωδικοποιήσετε ξανά το αντικείμενο, εάν το ``f`` είναι ένα "
+"αντικείμενο :term:`binary file` ή :term:`text file` που έχει ανοίξει για "
+"ανάγνωση::"
 
 #: tutorial/inputoutput.rst:513
 msgid ""
 "JSON files must be encoded in UTF-8. Use ``encoding=\"utf-8\"`` when opening "
 "JSON file as a :term:`text file` for both of reading and writing."
 msgstr ""
+"Τα αρχεία JSON πρέπει να είναι κωδικοποιημένα σε UTF-8. Χρησιμοποιήστε το "
+"``encoding=\"utf-8\"`` όταν ανοίγετε το αρχείο JSON ως :term:`text file` "
+"τόσο για ανάγνωση όσο και για εγγραφή."
 
 #: tutorial/inputoutput.rst:516
 msgid ""
@@ -487,10 +729,14 @@ msgid ""
 "effort. The reference for the :mod:`json` module contains an explanation of "
 "this."
 msgstr ""
+"Αυτή η απλή τεχνική σειριοποίησης μπορεί να χειριστεί λίστες και λεξικά, "
+"άλλα η σειριοποίηση αυθαίρετων στιγμιοτύπων κλάσεων σε JSON απαιτεί λίγη "
+"επιπλέον προσπάθεια. Η αναφορά για το module :mod:`json` περιέχει μια "
+"εξήγηση για αυτό."
 
 #: tutorial/inputoutput.rst:522
 msgid ":mod:`pickle` - the pickle module"
-msgstr ""
+msgstr ":mod:`pickle` - το pickle module"
 
 #: tutorial/inputoutput.rst:524
 msgid ""
@@ -501,27 +747,34 @@ msgid ""
 "pickle data coming from an untrusted source can execute arbitrary code, if "
 "the data was crafted by a skilled attacker."
 msgstr ""
+"Σε αντίθεση με το :ref:`JSON <tut-json>`, το *pickle* είναι ένα πρωτόκολλο "
+"που επιτρέπει τη σειριοποίηση αυθαίρετα πολύπλοκων αντικειμένων Python.  Ως "
+"εκ τούτου, είναι συγκεκριμένο για την Python και δεν μπορεί να "
+"χρησιμοποιηθεί για επικοινωνία με εφαρμογές γραμμένες σε άλλες γλώσσες.  "
+"Είναι επίσης ανασφαλές από προεπιλογή: η αποσειριοποίηση pickle δεδομένων "
+"που προέρχονται από μια μη αξιόπιστη πηγή μπορεί να εκτελέσει αυθαίρετο "
+"κώδικα, εάν τα δεδομένα έχουν δημιουργηθεί από έναν έμπειρο εισβολέα."
 
 #: tutorial/inputoutput.rst:287
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένη (built-in) συνάρτηση"
 
 #: tutorial/inputoutput.rst:287
 msgid "open"
-msgstr ""
+msgstr "open"
 
 #: tutorial/inputoutput.rst:287
 msgid "object"
-msgstr ""
+msgstr "object"
 
 #: tutorial/inputoutput.rst:287
 msgid "file"
-msgstr ""
+msgstr "file"
 
 #: tutorial/inputoutput.rst:469
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: tutorial/inputoutput.rst:469
 msgid "json"
-msgstr ""
+msgstr "json"
