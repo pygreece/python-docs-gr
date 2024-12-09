@@ -65,7 +65,7 @@ source env/bin/activate   # macOS or Linux
 env\Scripts\activate.bat  # Windows
 ```
 
-8. [Προαιρετικό βήμα] Εγκαταστείστε τα requirements:
+8. [Προαιρετικό βήμα] Εγκαταστήστε τα requirements:
 
 ```bash
 pip install -r requirements.txt
