@@ -52,7 +52,12 @@ git remote add upstream git@github.com:pygreece/python-docs-gr.git
 git remote set-url --push upstream git@github.com:<your-username>/cpython.git
 ```
 
-6. [Προαιρετικό βήμα] Δημιουργείστε ένα virtual environment και κάντε activate:
+6. Τέλος κατεβάστε το περιεχόμενο του cpython submodule πληκτρολογώντας:
+```bash
+git submodule update --init
+```
+
+7. [Προαιρετικό βήμα] Δημιουργείστε ένα virtual environment και κάντε activate:
 
 ```bash
 python -m venv env
@@ -60,7 +65,7 @@ source env/bin/activate   # macOS or Linux
 env\Scripts\activate.bat  # Windows
 ```
 
-7. [Προαιρετικό βήμα] Εγκαταστείστε τα requirements:
+8. [Προαιρετικό βήμα] Εγκαταστείστε τα requirements:
 
 ```bash
 pip install -r requirements.txt
