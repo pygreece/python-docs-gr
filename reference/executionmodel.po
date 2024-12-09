@@ -9,20 +9,20 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-12-09 18:41+0200\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: reference/executionmodel.rst:6
 msgid "Execution model"
-msgstr ""
+msgstr "Μοντέλο εκτέλεσης"
 
 #: reference/executionmodel.rst:15
 msgid "Structure of a program"
-msgstr ""
+msgstr "Δομή ενός προγράμματος"
 
 #: reference/executionmodel.rst:19
 msgid ""
@@ -37,6 +37,18 @@ msgid ""
 "option:`-m` argument is also a code block. The string argument passed to the "
 "built-in functions :func:`eval` and :func:`exec` is a code block."
 msgstr ""
+"Ένα πρόγραμμα Python αποτελείται από μπλοκ κώδικα. Ένα :dfn:`μπλοκ` είναι "
+"ένα κομμάτι κειμένου προγράμματος Python που εκτελείται ως μονάδα. Τα "
+"παρακάτω είναι μπλοκ: ένα module, το σώμα μιας συνάρτησης, ο ένας ορισμός "
+"κλάσης. Κάθε εντολή που πληκτρολογείται διαδραστικά αποτελεί μπλοκ. Ένα "
+"αρχείο δέσμης ενεργειών (ένα αρχείο που δίνεται ως τυπική είσοδος στο "
+"διερμηνέα ή καθορίζεται ως όρισμα γραμμής εντολών στον διερμηνέα) είναι ένα "
+"μπλοκ κώδικα. Μια εντολή σεναρίου (μια εντολή που καθορίζεται στο διερμηνέα "
+"με την επιλογή :option:`-c`) είναι ένα μπλοκ κώδικα. Μια ενότητα που "
+"εκτελείται ως σενάριο ανώτερου επιπέδου (ως ενότητα ``__main__``) από τη "
+"γραμμή εντολών χρησιμοποιώντας ένα όρισμα :option:`-m` όρισμα είναι επίσης "
+"ένα μπλοκ κώδικα. Το όρισμα συμβολοσειράς που περνάει στις ενσωματωμένες "
+"συναρτήσεις :func:`eval` και :func:`exec` είναι ένα μπλοκ κώδικα."
 
 #: reference/executionmodel.rst:33
 msgid ""
@@ -44,50 +56,58 @@ msgid ""
 "some administrative information (used for debugging) and determines where "
 "and how execution continues after the code block's execution has completed."
 msgstr ""
+"Ένα μπλοκ κώδικα εκτελείται σε ένα :dfn:`πλαίσιο εκτέλεσης`. Ένα πλαίσιο "
+"περιέχει ορισμένες διοικητικές πληροφορίες (που χρησιμοποιούνται για "
+"αποσφαλμάτωση) και καθορίζει που και πως συνεχίζεται η εκτέλεση μετά την "
+"ολοκλήρωση της εκτέλεσης του μπλοκ κώδικα."
 
 #: reference/executionmodel.rst:40
 msgid "Naming and binding"
-msgstr ""
+msgstr "Ονομασία και δέσμευση"
 
 #: reference/executionmodel.rst:49
 msgid "Binding of names"
-msgstr ""
+msgstr "Δέσμευση ονομάτων"
 
 #: reference/executionmodel.rst:55
 msgid ""
 ":dfn:`Names` refer to objects.  Names are introduced by name binding "
 "operations."
 msgstr ""
+":dfn:`Ονόματα` αναφέρονται σε αντικείμενα. Τα ονόματα εισάγονται μέσω "
+"λειτουργιών δέσμευσης ονομάτων."
 
 #: reference/executionmodel.rst:59
 msgid "The following constructs bind names:"
-msgstr ""
+msgstr "Οι παρακάτω δομές δεσμεύουν ονόματα:"
 
 #: reference/executionmodel.rst:61
 msgid "formal parameters to functions,"
-msgstr ""
+msgstr "τυπικές παράμετροι συναρτήσεων,"
 
 #: reference/executionmodel.rst:62
 msgid "class definitions,"
-msgstr ""
+msgstr "ορισμοί κλάσεων,"
 
 #: reference/executionmodel.rst:63
 msgid "function definitions,"
-msgstr ""
+msgstr "ορισμοί συναρτήσεων"
 
 #: reference/executionmodel.rst:64
 msgid "assignment expressions,"
-msgstr ""
+msgstr "εκφράσεις ανάθεσης"
 
 #: reference/executionmodel.rst:65
 msgid ""
 ":ref:`targets <assignment>` that are identifiers if occurring in an "
 "assignment:"
 msgstr ""
+":ref:`στόχοι <assignment>` που είναι αναγνωριστικά αν εμφανίζονται σε μια "
+"ανάθεση:"
 
 #: reference/executionmodel.rst:68
 msgid ":keyword:`for` loop header,"
-msgstr ""
+msgstr "επικεφαλίδα βρόχου :keyword:`for`,"
 
 #: reference/executionmodel.rst:69
 msgid ""
@@ -95,22 +115,25 @@ msgid ""
 "clause, :keyword:`except* <except_star>` clause, or in the as-pattern in "
 "structural pattern matching,"
 msgstr ""
+"μετά το :keyword:`!as` σε μια δήλωση :keyword:`with`, σε ρήτρα :keyword: "
+"`except`, σε ρήτρα :keyword:`except* <except_star>` ή στο as-pattern κατά τη "
+"δομική αντιστοίχηση μοτίβων,"
 
 #: reference/executionmodel.rst:71
 msgid "in a capture pattern in structural pattern matching"
-msgstr ""
+msgstr "σε ένα capture pattern κατά τη δομική αντιστοίχηση μοτίβων"
 
 #: reference/executionmodel.rst:73
 msgid ":keyword:`import` statements."
-msgstr ""
+msgstr "δηλώσεις :keyword:`import`."
 
 #: reference/executionmodel.rst:74
 msgid ":keyword:`type` statements."
-msgstr ""
+msgstr "δηλώσεις :keyword:`type`."
 
 #: reference/executionmodel.rst:75
 msgid ":ref:`type parameter lists <type-params>`."
-msgstr ""
+msgstr ":ref:`λίστες παραμέτρων τύπου <type-params>`."
 
 #: reference/executionmodel.rst:77
 msgid ""
@@ -118,18 +141,28 @@ msgid ""
 "names defined in the imported module, except those beginning with an "
 "underscore. This form may only be used at the module level."
 msgstr ""
+"Η δήλωση :keyword:`!import` της μορφής ``from ... import *`` δεσμεύει όλα τα "
+"ονόματα που ορίζονται στο εισαγόμενο module, εκτός από αυτά που ξεκινούν με "
+"μια κάτω παύλα. Αυτή η μορφή μπορεί να χρησιμοποιηθεί μόνο στο επίπεδο του "
+"module."
 
 #: reference/executionmodel.rst:81
 msgid ""
 "A target occurring in a :keyword:`del` statement is also considered bound "
 "for this purpose (though the actual semantics are to unbind the name)."
 msgstr ""
+"Ένας στόχος που εμφανίζεται σε μια δήλωση :keyword:`del` θεωρείται επίσης "
+"δεσμευμένος για αυτό τον σκοπό (αν και η πραγματική σημασιολογία είναι να "
+"αποδεσμεύσει το όνομα)."
 
 #: reference/executionmodel.rst:84
 msgid ""
 "Each assignment or import statement occurs within a block defined by a class "
 "or function definition or at the module level (the top-level code block)."
 msgstr ""
+"Κάθε δήλωση ανάθεσης ή εισαγωγής συμβαίνει μέσα σε ένα μπλοκ που ορίζεται "
+"από έναν ορισμό κλάσης ή συνάρτησης ή στο επίπεδο του module (το μπλοκ "
+"κώδικα ανώτατου επιπέδου)."
 
 #: reference/executionmodel.rst:89
 msgid ""
@@ -139,16 +172,25 @@ msgid ""
 "code block are local and global.)  If a variable is used in a code block but "
 "not defined there, it is a :dfn:`free variable`."
 msgstr ""
+"Αν ένα όνομα δεσμεύεται σε ένα μπλοκ, είναι μια τοπική μεταβλητή αυτού του "
+"μπλοκ, εκτός αν δηλωθεί ως :keyword:`nonlocal` ή :keyword:`global`. Αν ένα "
+"όνομα δεσμεύεται στο επίπεδο του module, είναι μια καθολική μεταβλητή. (Οι "
+"μεταβλητές του μπλοκ του module είναι ταυτόχρονα τοπικές και καθολικές.) Αν "
+"μια μεταβλητή χρησιμοποιείται σε ένα μπλοκ κώδικα αλλά δεν ορίζεται εκεί, "
+"είναι μια :dfn:`ελεύθερη μεταβλητή`."
 
 #: reference/executionmodel.rst:95
 msgid ""
 "Each occurrence of a name in the program text refers to the :dfn:`binding` "
 "of that name established by the following name resolution rules."
 msgstr ""
+"Κάθε εμφάνιση ενός ονόματος στο κείμενο του προγράμματος αναφέρεται στη :dfn:"
+"`δέσμευση` αυτού του ονόματος που καθορίζεται από τους παρακάτω κανόνες "
+"επίλυσης ονομάτων."
 
 #: reference/executionmodel.rst:101
 msgid "Resolution of names"
-msgstr ""
+msgstr "Επίλυση ονομάτων"
 
 #: reference/executionmodel.rst:105
 msgid ""
@@ -158,6 +200,11 @@ msgid ""
 "contained within the defining one, unless a contained block introduces a "
 "different binding for the name."
 msgstr ""
+"Ένα :dfn:`πεδίο` ορίζει την ορατότητα ενός ονόματος μέσα σε ένα μπλοκ. Αν "
+"μια τοπική μεταβλητή οριστεί σε ένα μπλοκ, το πεδίο της περιλαμβάνει το "
+"μπλοκ αυτό. Αν ο ορισμός συμβαίνει σε ένα μπλοκ συνάρτησης, το πεδίο "
+"επεκτείνεται σε οποιαδήποτε μπλοκ περιέχονται μέσα σε αυτό που την ορίζει, "
+"εκτός αν ένα περιεχόμενο μπλοκ εισάγει διαφορετική δέσμευση για το όνομα."
 
 #: reference/executionmodel.rst:113
 msgid ""
@@ -165,6 +212,9 @@ msgid ""
 "enclosing scope.  The set of all such scopes visible to a code block is "
 "called the block's :dfn:`environment`."
 msgstr ""
+"Όταν ένα όνομα χρησιμοποιείται σε ένα μπλοκ κώδικα, επιλύεται "
+"χρησιμοποιώντας το πλησιέστερο περιβάλλον πεδίο. Το σύνολο όλων των πεδίων "
+"που είναι ορατά σε ένα μπλοκ κώδικα ονομάζεται :dfn:`περιβάλλον` του μπλοκ."
 
 #: reference/executionmodel.rst:121
 msgid ""
@@ -174,6 +224,12 @@ msgid ""
 "is used, an :exc:`UnboundLocalError` exception is raised. :exc:"
 "`UnboundLocalError` is a subclass of :exc:`NameError`."
 msgstr ""
+"Όταν ένα όνομα δεν βρίσκεται καθόλου, εγείρεται μια εξαίρεση :exc:"
+"`NameError`. Αν το τρέχον πεδίο είναι πεδίο συνάρτησης και το όνομα "
+"αναφέρεται σε μια τοπική μεταβλητή που δεν έχει ακόμα δεσμευτεί σε κάποια "
+"τιμή στο σημείο που χρησιμοποιείται το όνομα, εγείρεται μια εξαίρεση :exc:"
+"`UnboundLocalError`. Η :exc:`UnboundLocalError` είναι μια υποκλάση της :exc:"
+"`NameError`."
 
 #: reference/executionmodel.rst:127
 msgid ""
@@ -186,6 +242,16 @@ msgid ""
 "the block for name binding operations. See :ref:`the FAQ entry on "
 "UnboundLocalError <faq-unboundlocalerror>` for examples."
 msgstr ""
+"Αν μια λειτουργία δέσμευσης ονομάτων συμβεί οπουδήποτε μέσα σε ένα μπλοκ "
+"κώδικα, όλες οι χρήσεις του ονόματος μέσα στο μπλοκ αντιμετωπίζονται ως "
+"αναφορές στο τρέχον μπλοκ. Αυτό μπορεί να οδηγήσει σε σφάλματα όταν ένα "
+"όνομα χρησιμοποιείται μέσα σε ένα μπλοκ πριν δεσμευτεί. Αυτός ο κανόνας "
+"είναι λεπτός. Η Python δεν διαθέτει δηλώσεις και επιτρέπει τις λειτουργίες "
+"δέσμευσης ονομάτων να συμβαίνουν οπουδήποτε μέσα σε ένα μπλοκ κώδικα. Οι "
+"τοπικές μεταβλητές ενός μπλοκ κώδικα μπορούν να προσδιοριστούν σαρώνοντας "
+"ολόκληρο το κείμενο του μπλοκ για λειτουργίες δέσμευσης ονομάτων. Δείτε :ref:"
+"`την εγγραφή στο FAQ για το UnboundLocalError <faq-unboundlocalerror>` για "
+"παραδείγματα."
 
 #: reference/executionmodel.rst:136
 msgid ""
@@ -198,6 +264,16 @@ msgid ""
 "found there, the builtins namespace is searched.  The :keyword:`!global` "
 "statement must precede all uses of the listed names."
 msgstr ""
+"Αν η δήλωση :keyword:`global` εμφανιστεί μέσα σε ένα μπλοκ, όλες οι χρήσεις "
+"των ονομάτων που καθορίζονται στη δήλωση αναφέρονται στις δεσμεύσεις αυτών "
+"των ονομάτων στον χώρο ονομάτων ανώτατου επιπέδου. Τα ονόματα επιλύονται "
+"στον χώρο ανώτατου επιπέδου αναζητώντας πρώτα στον καθολικό χώρο ονομάτων, "
+"δηλαδή τον χώρο ονομάτων του module που περιέχει το μπλοκ κώδικα, και στη "
+"συνέχεια στο χώρο ονομάτων των builtins, τον χώρο ονομάτων του module :mod: "
+"`builtins`. Ο καθολικός χώρος ονομάτων αναζητείται πρώτος. Αν τα ονόματα δεν "
+"βρεθούν εκεί, αναζητούνται στον χώρο ονομάτων των builtins. Η δήλωση :"
+"keyword:`!global` πρέπει να προηγείται όλων των χρήσεων των καταγεγραμμένων "
+"ονομάτων."
 
 #: reference/executionmodel.rst:145
 msgid ""
@@ -206,6 +282,10 @@ msgid ""
 "variable contains a global statement, the free variable is treated as a "
 "global."
 msgstr ""
+"Η δήλωση :keyword:`global` έχει το ίδιο πεδίο με μια λειτουργία δέσμευσης "
+"ονόματος στο ίδιο μπλοκ. Αν το πλησιέστερο περιβάλλον πεδίου για μια "
+"ελεύθερη μεταβλητή περιέχει μια δήλωση global, η ελεύθερη μεταβλητή "
+"αντιμετωπίζεται ως καθολική."
 
 #: reference/executionmodel.rst:151
 msgid ""
@@ -215,12 +295,21 @@ msgid ""
 "any enclosing function scope. :ref:`Type parameters <type-params>` cannot be "
 "rebound with the :keyword:`!nonlocal` statement."
 msgstr ""
+"Η δήλωση :keyword:`nonlocal` προκαλεί τα αντίστοιχα ονόματα να αναφέρονται "
+"σε προηγουμένως δεσμευμένες μεταβλητές στο πλησιέστερο περιβάλλον πεδίου "
+"συνάρτησης. Μια εξαίρεση :exc:`SyntaxError` εγείρεται κατά το χρόνο "
+"μεταγλώττισης αν το συγκεκριμένο δεν υπάρχει σε κανένα περιβάλλον πεδίου "
+"συνάρτησης. :ref:`Οι παράμετροι τύπου <type-params>` δεν μπορούν να "
+"δεσμευτούν εκ νέου με τη δήλωση :keyword:`!nonlocal`."
 
 #: reference/executionmodel.rst:159
 msgid ""
 "The namespace for a module is automatically created the first time a module "
 "is imported.  The main module for a script is always called :mod:`__main__`."
 msgstr ""
+"Ο χώρος ονομάτων για ένα module δημιουργείται αυτόματα την πρώτη φορά που το "
+"module εισάγεται Το κύριο module για ένα σενάριο ονομάζεται πάντα :mod:"
+"`__main__`."
 
 #: reference/executionmodel.rst:162
 msgid ""
@@ -236,14 +325,26 @@ msgid ""
 "scopes>`, which have access to their enclosing class scopes. This means that "
 "the following will fail::"
 msgstr ""
+"Τα μπλοκ ορισμού κλάσεων και τα ορίσματα στις συναρτήσεις :func:`exec` και :"
+"func:`eval` είναι ειδικές περιπτώσεις στο πλαίσιο της επίλυσης ονομάτων. "
+"Ένας ορισμός κλάσης είναι μια εκτελέσιμη δήλωση που μπορεί να χρησιμοποιεί "
+"και να ορίζει ονόματα. Αυτές οι αναφορές ακολουθούν τους κανονικούς κανόνες "
+"επίλυσης ονομάτων, με την εξαίρεση ότι οι αδέσμευτες τοπικές μεταβλητές "
+"αναζητούνται στον καθολικό χώρο ονομάτων. Ο χώρος ονομάτων του ορισμού της "
+"κλάσης γίνεται το λεξικό χαρακτηριστικών της κλάσης. Το πεδίο των ονομάτων "
+"που ορίζονται σε ένα μπλοκ κλάσης περιορίζεται στο μπλοκ της κλάσης· δεν "
+"επεκτείνεται στα μπλοκ κώδικα των μεθόδων. Αυτό περιλαμβάνει συνθέσεις και "
+"εκφράσεις γεννητριών, αλλά δεν περιλαμβάνει:ref:`πεδία σημειώσεων "
+"<annotation-scopes>`, τα οποία έχουν πρόσβαση στα περιβάλλοντα πεδία της "
+"περιβάλλουσας κλάσης. Αυτό σημαίνει ότι το παρακάτω θα αποτύχει::"
 
 #: reference/executionmodel.rst:179
 msgid "However, the following will succeed::"
-msgstr ""
+msgstr "Ωστόσο, το παρακάτω θα επιτύχει::"
 
 #: reference/executionmodel.rst:190
 msgid "Annotation scopes"
-msgstr ""
+msgstr "Πεδία σημειώσεων"
 
 #: reference/executionmodel.rst:192
 msgid ""
@@ -253,15 +354,23 @@ msgid ""
 "currently do not use annotation scopes, but they are expected to use "
 "annotation scopes in Python 3.13 when :pep:`649` is implemented."
 msgstr ""
+":ref:`Οι λίστες παραμέτρων τύπου <type-params>` και οι δηλώσεις :keyword:"
+"`type` εισάγουν *πεδία σημειώσεων*, τα οποία συμπεριφέρονται κυρίως όπως τα "
+"πεδία συναρτήσεων,αλλά με κάποιες εξαιρέσεις που συζητούνται παρακάτω. :term:"
+"`Οι σημειώσεις <annotation>`προς το παρόν δεν χρησιμοποιούν πεδία "
+"σημειώσεων, αλλά αναμένεται να τα χρησιμοποιήσουν στην Python 3.13, όταν "
+"υλοποιηθεί το :pep:`649`."
 
 #: reference/executionmodel.rst:198
 msgid "Annotation scopes are used in the following contexts:"
-msgstr ""
+msgstr "Τα πεδία σημειώσεων χρησιμοποιούνται στα παρακάτω συμφραζόμενα:"
 
 #: reference/executionmodel.rst:200
 msgid ""
 "Type parameter lists for :ref:`generic type aliases <generic-type-aliases>`."
 msgstr ""
+"Λίστες παραμέτρων τύπου για :ref:`γενικούς τύπους ψευδωνύμων <generic-type-"
+"aliases>`."
 
 #: reference/executionmodel.rst:201
 msgid ""
@@ -269,6 +378,9 @@ msgid ""
 "generic function's annotations are executed within the annotation scope, but "
 "its defaults and decorators are not."
 msgstr ""
+"Λίστες παραμέτρων τύπου για :ref:`γενικές συναρτήσεις <generic-functions>`. "
+"Οι σημειώσεις μιας γενικής συνάρτησης εκτελούνται μέσα στο πεδίο σημειώσεων, "
+"αλλά οι προεπιλογές και οι διακοσμητές της όχι."
 
 #: reference/executionmodel.rst:204
 msgid ""
@@ -276,20 +388,28 @@ msgid ""
 "class's base classes and keyword arguments are executed within the "
 "annotation scope, but its decorators are not."
 msgstr ""
+"Λίστες παραμέτρων τύπου για :ref:`γενικές κλάσεις <generic-classes>`. Οι "
+"βασικές κλάσεις και τα ορίσματα λέξεων-κλειδιών μιας γενικής κλάσης "
+"εκτελούνται μέσα στο πεδίο σημειώσεων, αλλά οι διακοσμητές της όχι."
 
 #: reference/executionmodel.rst:207
 msgid ""
 "The bounds and constraints for type variables (:ref:`lazily evaluated <lazy-"
 "evaluation>`)."
 msgstr ""
+"Τα όρια και οι περιορισμοί για μεταβλητές τύπου (:ref:`εκτιμώμενα "
+"καθυστερημένα <lazy-evaluation>`)."
 
 #: reference/executionmodel.rst:209
 msgid "The value of type aliases (:ref:`lazily evaluated <lazy-evaluation>`)."
 msgstr ""
+"Η τιμή των ψευδωνύμων τύπου (:ref:`εκτιμώμενη καθυστερημένα <lazy-"
+"evaluation>`)."
 
 #: reference/executionmodel.rst:211
 msgid "Annotation scopes differ from function scopes in the following ways:"
 msgstr ""
+"Τα πεδία σημειώσεων διαφέρουν από τα πεδία συναρτήσεων με τους εξής τρόπους:"
 
 #: reference/executionmodel.rst:213
 msgid ""
@@ -301,6 +421,14 @@ msgid ""
 "functions defined within classes, which cannot access names defined in the "
 "class scope."
 msgstr ""
+"Τα πεδία σημειώσεων έχουν πρόσβαση στον χώρο ονομάτων της περιβάλλουσας "
+"κλάσης. Αν ένα πεδίο σημειώσεων βρίσκεται αμέσως μέσα σε έναν χώρο κλάσης ή "
+"μέσα σε ένα άλλο πεδίο σημειώσεων που βρίσκεται αμέσως μέσα σε έναν χώρο "
+"κλάσης, ο κώδικας στο πεδίο σημειώσεων μπορεί να χρησιμοποιεί ονόματα που "
+"έχουν οριστεί στον χώρο της κλάσης σαν να εκτελούνταν απευθείας στο σώμα της "
+"κλάσης. Αυτό έρχεται σε αντίθεση με τις κανονικές συναρτήσεις που ορίζονται "
+"μέσα σε κλάσεις, οι οποίες δεν μπορούν να έχουν πρόσβαση σε ονόματα που "
+"έχουν οριστεί στο χώρο της κλάσης."
 
 #: reference/executionmodel.rst:219
 msgid ""
@@ -309,6 +437,10 @@ msgid ""
 "assignment_expression>` expressions. (These expressions are allowed in other "
 "scopes contained within the annotation scope.)"
 msgstr ""
+"Οι εκφράσεις σε πεδία σημειώσεων δεν μπορούν να περιέχουν τις εκφράσεις:"
+"keyword:`yield`, ``yield from``, :keyword:`await` ή :token:`:=<python-"
+"grammar:assignment_expression`. (Αυτές οι εκφράσεις επιτρέπονται σε άλλα "
+"πεδία που περιέχονται μέσα στο πεδίο σημειώσεων.)"
 
 #: reference/executionmodel.rst:223
 msgid ""
@@ -317,6 +449,10 @@ msgid ""
 "as no other syntactic elements that can appear within annotation scopes can "
 "introduce new names."
 msgstr ""
+"Τα ονόματα που ορίζονται σε πεδία σημειώσεων δεν μπορούν να δεσμευτούν εκ "
+"νέου με δηλώσεις :keyword:`nonlocal` σε εσωτερικά πεδία. Αυτό περιλαμβάνει "
+"μόνο παραμέτρους τύπου, καθώς και κανένα άλλο συντακτικό στοιχείο που μπορεί "
+"να εμφανιστεί μέσα σε πεδία σημειώσεων δεν μπορεί να εισαγάγει νέα ονόματα."
 
 #: reference/executionmodel.rst:226
 msgid ""
@@ -325,14 +461,19 @@ msgid ""
 "scope. Instead, the :attr:`!__qualname__` of such objects is as if the "
 "object were defined in the enclosing scope."
 msgstr ""
+"Ενώ τα πεδία σημειώσεων έχουν ένα εσωτερικό όνομα, αυτό το όνομα δεν "
+"αντικατοπτρίζεται στο :term:`__qualname__ <qualified name>` των αντικειμένων "
+"που ορίζονται μέσα στο πεδίο.Αντίθετα, το :attr:`!__qualname__` αυτών των "
+"αντικειμένων είναι σαν το αντικείμενο να είχε οριστεί στο περιβάλλον πεδίο."
 
 #: reference/executionmodel.rst:231
 msgid "Annotation scopes were introduced in Python 3.12 as part of :pep:`695`."
 msgstr ""
+"Τα πεδία σημειώσεων εισήχθησαν στην Python 3.12 ως μέρος του :pep:`695`."
 
 #: reference/executionmodel.rst:237
 msgid "Lazy evaluation"
-msgstr ""
+msgstr "Καθυστερημένη εκτίμηση"
 
 #: reference/executionmodel.rst:239
 msgid ""
@@ -343,16 +484,26 @@ msgid ""
 "is created. Instead, they are only evaluated when doing so is necessary to "
 "resolve an attribute access."
 msgstr ""
+"Οι τιμές των ψευδωνύμων τύπου που δημιουργούνται μέσω της δήλωσης :keyword:"
+"`type`αξιολογούνται *καθυστερημένα*. Το ίδιο ισχύει και για τα όρια και τους "
+"περιορισμούς τωνμεταβλητών τύπου που δημιουργούνται μέσω της :ref:`σύνταξης "
+"παραμέτρων τύπου <type-params>`.Αυτό σημαίνει ότι δεν αξιολογούνται κατά τη "
+"δημιουργία του ψευδωνύμου τύπου ή της μεταβλητής τύπου. Αντίθετα, "
+"αξιολογούνται μόνο όταν αυτό είναι απαραίτητο για την επίλυση μιας πρόσβασης "
+"χαρακτηριστικού."
 
 #: reference/executionmodel.rst:246
 msgid "Example:"
-msgstr ""
+msgstr "Παράδειγμα:"
 
 #: reference/executionmodel.rst:262
 msgid ""
 "Here the exception is raised only when the ``__value__`` attribute of the "
 "type alias or the ``__bound__`` attribute of the type variable is accessed."
 msgstr ""
+"Εδώ η εξαίρεση εγείρεται μόνο όταν γίνει πρόσβαση στο χαρακτηριστικό "
+"``__value__`` του ψευδωνύμου τύπου ή στο χαρακτηριστικό ``__bound__`` της "
+"μεταβλητής τύπου."
 
 #: reference/executionmodel.rst:266
 msgid ""
@@ -360,6 +511,10 @@ msgid ""
 "been defined when the type alias or type variable is created. For example, "
 "lazy evaluation enables creation of mutually recursive type aliases::"
 msgstr ""
+"Αυτή η συμπεριφορά είναι κυρίως χρήσιμη για αναφορές σε τύπους που δεν έχουν "
+"ακόμη οριστεί κατά τη δημιουργία του ψευδωνύμου τύπου ή της μεταβλητής "
+"τύπου. Για παράδειγμα, η καθυστερημένη εκτίμηση επιτρέπει τη δημιουργία "
+"αμοιβαία αναδρομικών ψευδωνύμων τύπων::"
 
 #: reference/executionmodel.rst:276
 msgid ""
@@ -367,10 +522,14 @@ msgid ""
 "scopes>`, which means that names that appear inside the lazily evaluated "
 "value are looked up as if they were used in the immediately enclosing scope."
 msgstr ""
+"Οι τιμές που αξιολογούνται καθυστερημένα αξιολογούνται στο :ref:`πεδίο "
+"σημειώσεων <annotation-scopes>`, που σημαίνει ότι τα ονόματα που "
+"εμφανίζονται μέσα στην καθυστερημένα αξιολογούμενη τιμή αναζητούνται σαν να "
+"χρησιμοποιήθηκαν στο αμέσως περιβάλλον πεδίο."
 
 #: reference/executionmodel.rst:285
 msgid "Builtins and restricted execution"
-msgstr ""
+msgstr "Ενσωματωμένες συναρτήσεις και περιορισμένη εκτέλεση"
 
 #: reference/executionmodel.rst:291
 msgid ""
@@ -379,6 +538,10 @@ msgid ""
 "keyword:`import` the :mod:`builtins` module and modify its attributes "
 "appropriately."
 msgstr ""
+"Οι χρήστες δεν θα πρέπει να τροποποιούν το ``__builtins__``· είναι αυστηρά "
+"μια λεπτομέρεια υλοποίησης. Οι χρήστες που θέλουν να παρακάμψουν τιμές στον "
+"χώρο ονομάτων των ενσωματωμένων συναρτήσεων θα πρέπει να :keyword:`εισάγουν` "
+"το module :mod:`builtins` και να τροποποιούν τα χαρακτηριστικά του κατάλληλα."
 
 #: reference/executionmodel.rst:296
 msgid ""
@@ -390,16 +553,27 @@ msgid ""
 "other module, ``__builtins__`` is an alias for the dictionary of the :mod:"
 "`builtins` module itself."
 msgstr ""
+"Ο χώρος ονομάτων των ενσωματωμένων συναρτήσεων που σχετίζεται με την "
+"εκτέλεση ενός μπλοκ κώδικα βρίσκεται στην πραγματικότητα μέσω αναζήτησης του "
+"ονόματος ``__builtins__`` στον καθολικό του χώρο ονομάτων· αυτό θα πρέπει να "
+"είναι ένα λεξικό ή ένα module (στη δεύτερη περίπτωση χρησιμοποιείται το "
+"λεξικό του module). Από προεπιλογή, όταν βρισκόμαστε στο module :mod:"
+"``__main__``, το ``__builtins__`` είναι το ενσωματωμένο module :mod:"
+"`builtins`· όταν βρισκόμαστε σε οποιοδήποτε άλλο module, το ``__builtins__`` "
+"είναι ένα ψευδώνυμο για το λεξικό του ίδιου του module :mod:`builtins`."
 
 #: reference/executionmodel.rst:308
 msgid "Interaction with dynamic features"
-msgstr ""
+msgstr "Αλληλεπίδραση με δυναμικές λειτουργίες"
 
 #: reference/executionmodel.rst:310
 msgid ""
 "Name resolution of free variables occurs at runtime, not at compile time. "
 "This means that the following code will print 42::"
 msgstr ""
+"Η επίλυση ονομάτων των ελεύθερων μεταβλητών συμβαίνει κατά το χρόνο "
+"εκτέλεσης, όχι κατά το χρόνο μεταγλώττισης. Αυτό σημαίνει ότι ο παρακάτω "
+"κώδικας θα εκτυπώσει το 42::"
 
 #: reference/executionmodel.rst:321
 msgid ""
@@ -411,10 +585,18 @@ msgid ""
 "global and local namespace.  If only one namespace is specified, it is used "
 "for both."
 msgstr ""
+"Οι συναρτήσεις :func:`eval` και :func:`exec` δεν έχουν πρόσβαση στο πλήρες "
+"περιβάλλον για την επίλυση ονομάτων. Τα ονόματα μπορεί να επιλύονται στους "
+"τοπικούς και καθολικούς χώρους ονομάτων του καλούντος. Οι ελεύθερες "
+"μεταβλητές δεν επιλύονται στο πλησιέστερο περιβάλλον πεδίου, αλλά στον "
+"καθολικό χώρο ονομάτων. [#]_ Οι συναρτήσεις :func:`exec` και :func:`eval` "
+"έχουν προαιρετικά ορίσματα για να παρακάμψουν τους καθολικούς και τοπικούς "
+"χώρους ονομάτων. Αν καθοριστεί μόνο ένας χώρος ονομάτων, χρησιμοποιείται και "
+"για τους δύο."
 
 #: reference/executionmodel.rst:332
 msgid "Exceptions"
-msgstr ""
+msgstr "Εξαιρέσεις"
 
 #: reference/executionmodel.rst:343
 msgid ""
@@ -424,6 +606,12 @@ msgid ""
 "*handled* by the surrounding code block or by any code block that directly "
 "or indirectly invoked the code block where the error occurred."
 msgstr ""
+"Οι εξαιρέσεις είναι ένας τρόπος διακοπής της κανονικής ροής ελέγχου ενός "
+"μπλοκ κώδικα, προκειμένου να αντιμετωπιστούν σφάλματα ή άλλες εξαιρετικές "
+"συνθήκες. Μια εξαίρεση  *εγείρεται* στο σημείο όπου εντοπίζεται το σφάλμα· "
+"μπορεί να *αντιμετωπιστεί* από το περιβάλλον μπλοκ κώδικα ή από οποιοδήποτε "
+"μπλοκ κώδικα που άμεσα ή έμμεσα εκτέλεσε το μπλοκ κώδικα όπου συνέβη το "
+"σφάλμα."
 
 #: reference/executionmodel.rst:349
 msgid ""
@@ -435,6 +623,14 @@ msgid ""
 "code which does not handle the exception, but is executed whether an "
 "exception occurred or not in the preceding code."
 msgstr ""
+"Ο διερμηνέας της Python εγείρει μια εξαίρεση όταν εντοπίσει ένα σφάλμα κατά "
+"την εκτέλεση(όπως η διαίρεση με το μηδέν). Ένα πρόγραμμα Python μπορεί "
+"επίσης να εγείρει ρητά μια  εξαίρεση με τη δήλωση :keyword:`raise`. Οι "
+"διαχειριστές εξαιρέσεων καθορίζονται με τη δήλωση :keyword:`try` ... :"
+"keyword:`except`. Η ρήτρα :keyword:`finally` μιας τέτοιας δήλωσης μπορεί να "
+"χρησιμοποιηθεί για να καθοριστεί κώδικας καθαρισμού, ο οποίος δεν "
+"διαχειρίζεται την εξαίρεση αλλά εκτελείται ανεξάρτητα από το αν προηγήθηκε "
+"εξαίρεση ή όχι στον προηγούμενο κώδικα."
 
 #: reference/executionmodel.rst:359
 msgid ""
@@ -443,6 +639,11 @@ msgid ""
 "but it cannot repair the cause of the error and retry the failing operation "
 "(except by re-entering the offending piece of code from the top)."
 msgstr ""
+"Η Python χρησιμοποιεί το μοντέλο διαχείρισης σφαλμάτων «τερματισμού»: ένας "
+"διαχειριστής εξαιρέσεων μπορεί να διαπιστώσει τι συνέβη και να συνεχίσει την "
+"εκτέλεση σε ένα εξωτερικό επίπεδο, αλλά δεν μπορεί να διορθώσει την αιτία "
+"του σφάλματος και να επαναλάβει τη λειτουργία που απέτυχε (εκτός αν "
+"επανεισαχθεί το προβληματικό κομμάτι κώδικα από την αρχή)."
 
 #: reference/executionmodel.rst:366
 msgid ""
@@ -451,6 +652,10 @@ msgid ""
 "either case, it prints a stack traceback, except when the exception is :exc:"
 "`SystemExit`."
 msgstr ""
+"Όταν μια εξαίρεση δεν αντιμετωπιστεί καθόλου, ο διερμηνέας τερματίζει την "
+"εκτέλεση του προγράμματος ή επιστρέφει στον διαδραστικό κύριο βρόχο του. Και "
+"στις δύο περιπτώσεις, εκτυπώνει το ίχνος της στοίβας, εκτός αν η εξαίρεση "
+"είναι :exc:`SystemExit`."
 
 #: reference/executionmodel.rst:370
 msgid ""
@@ -460,6 +665,12 @@ msgid ""
 "class>` thereof. The instance can be received by the handler and can carry "
 "additional information about the exceptional condition."
 msgstr ""
+"Οι εξαιρέσεις αναγνωρίζονται από στιγμιότυπα κλάσεων. Η ρήτρα :keyword:"
+"`except` επιλέγεται ανάλογα με την κλάση του στιγμιότυπου: πρέπει να "
+"αναφέρεται στην κλάση του στιγμιότυπου  ή σε μια :term:`μη εικονική βασική "
+"κλάση <abstract base class>` αυτής. Το στιγμιότυπο μπορεί να παραληφθεί από "
+"τον διαχειριστή και να μεταφέρει πρόσθετες πληροφορίες σχετικά με την "
+"εξαιρετική συνθήκη."
 
 #: reference/executionmodel.rst:378
 msgid ""
@@ -468,127 +679,135 @@ msgid ""
 "be relied on by code which will run under multiple versions of the "
 "interpreter."
 msgstr ""
+"Τα μηνύματα εξαιρέσεων δεν αποτελούν μέρος του API της Python. Το "
+"περιεχόμενό τους μπορεί να αλλάξει από τη μία έκδοση της Python στην επόμενη "
+"χωρίς προειδοποίηση και δεν θα πρέπει να βασίζεται σε αυτά ο κώδικας που θα "
+"εκτελεστεί σε πολλαπλές εκδόσεις του διερμηνέα."
 
 #: reference/executionmodel.rst:382
 msgid ""
 "See also the description of the :keyword:`try` statement in section :ref:"
 "`try` and :keyword:`raise` statement in section :ref:`raise`."
 msgstr ""
+"Δείτε επίσης την περιγραφή της δήλωσης :keyword:`try` στην ενότητα :ref:"
+"`try` και της δήλωσης :keyword:`raise` στην ενότητα :ref:`raise`."
 
 #: reference/executionmodel.rst:387
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: reference/executionmodel.rst:388
 msgid ""
 "This limitation occurs because the code that is executed by these operations "
 "is not available at the time the module is compiled."
 msgstr ""
+"Αυτός ο περιορισμός προκύπτει επειδή ο κώδικας που εκτελείται από αυτές τις "
+"λειτουργίες δεν είναι διαθέσιμος τη στιγμή που το module μεταγλωττίζεται."
 
 #: reference/executionmodel.rst:8
 msgid "execution model"
-msgstr ""
+msgstr "μοντέλο εκτέλεσης"
 
 #: reference/executionmodel.rst:8
 msgid "code"
-msgstr ""
+msgstr "κώδικας"
 
 #: reference/executionmodel.rst:17
 msgid "block"
-msgstr ""
+msgstr "μπλοκ"
 
 #: reference/executionmodel.rst:31 reference/executionmodel.rst:287
 msgid "execution"
-msgstr ""
+msgstr "εκτέλεση"
 
 #: reference/executionmodel.rst:31
 msgid "frame"
-msgstr ""
+msgstr "πλαίσιο"
 
 #: reference/executionmodel.rst:42
 msgid "namespace"
-msgstr ""
+msgstr "χώρος ονομάτων"
 
 #: reference/executionmodel.rst:42 reference/executionmodel.rst:103
 msgid "scope"
-msgstr ""
+msgstr "πεδίο"
 
 #: reference/executionmodel.rst:51
 msgid "name"
-msgstr ""
+msgstr "όνομα"
 
 #: reference/executionmodel.rst:51
 msgid "binding"
-msgstr ""
+msgstr "δέσμευση"
 
 #: reference/executionmodel.rst:57
 msgid "from"
-msgstr ""
+msgstr "από"
 
 #: reference/executionmodel.rst:57
 msgid "import statement"
-msgstr ""
+msgstr "δήλωση εισαγωγής"
 
 #: reference/executionmodel.rst:87
 msgid "free"
-msgstr ""
+msgstr "ελεύθερη"
 
 #: reference/executionmodel.rst:87
 msgid "variable"
-msgstr ""
+msgstr "μεταβλητή"
 
 #: reference/executionmodel.rst:111
 msgid "environment"
-msgstr ""
+msgstr "περιβάλλον"
 
 #: reference/executionmodel.rst:117
 msgid "NameError (built-in exception)"
-msgstr ""
+msgstr "NameError (ενσωματωμένη εξαίρεση)"
 
 #: reference/executionmodel.rst:117
 msgid "UnboundLocalError"
-msgstr ""
+msgstr "UnboundLocalError"
 
 #: reference/executionmodel.rst:157
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: reference/executionmodel.rst:157
 msgid "__main__"
-msgstr ""
+msgstr "__main__"
 
 #: reference/executionmodel.rst:287
 msgid "restricted"
-msgstr ""
+msgstr "περιορισμένη"
 
 #: reference/executionmodel.rst:334
 msgid "exception"
-msgstr ""
+msgstr "εξαίρεση"
 
 #: reference/executionmodel.rst:336
 msgid "raise an exception"
-msgstr ""
+msgstr "εγείρει μια εξαίρεση"
 
 #: reference/executionmodel.rst:336
 msgid "handle an exception"
-msgstr ""
+msgstr "διαχειρίζεται μια εξαίρεση"
 
 #: reference/executionmodel.rst:336
 msgid "exception handler"
-msgstr ""
+msgstr "διαχειριστής εξαιρέσεων"
 
 #: reference/executionmodel.rst:336
 msgid "errors"
-msgstr ""
+msgstr "σφάλματα"
 
 #: reference/executionmodel.rst:336
 msgid "error handling"
-msgstr ""
+msgstr "διαχείριση σφαλμάτων"
 
 #: reference/executionmodel.rst:357
 msgid "termination model"
-msgstr ""
+msgstr "μοντέλο τερματισμού"
 
 #: reference/executionmodel.rst:364
 msgid "SystemExit (built-in exception)"
-msgstr ""
+msgstr "SystemExit (ενσωματωμένη εξαίρεση)"
