@@ -116,4 +116,3 @@ if __name__ == "__main__":
             sys.exit(1)
         # Process the input file and update the dictionary
         new_word_count = scan_and_update(file_path)
-
