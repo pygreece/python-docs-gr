@@ -9,22 +9,26 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-11-25 12:27+0200\n"
+"Last-Translator: Stelios Rotas <steliosrotas@yahoo.com> \n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: reference/introduction.rst:6
 msgid "Introduction"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: reference/introduction.rst:8
 msgid ""
 "This reference manual describes the Python programming language. It is not "
 "intended as a tutorial."
 msgstr ""
+"Αυτό το εγχειρίδιο αναφοράς περιγράφει την γλώσσα προγραμματισμού Python. "
+"Δεν προορίζεται ως εγχειρίδιο μάθησης."
 
 #: reference/introduction.rst:11
 msgid ""
@@ -40,6 +44,19 @@ msgid ""
 "like to see a more formal definition of the language, maybe you could "
 "volunteer your time --- or invent a cloning machine :-)."
 msgstr ""
+"Στην προσπάθεια το έγγραφο αυτό να είναι όσο το δυνατόν πιο ακριβές, "
+"επιλέχθηκε αρχικά η Αγγλική γλώσσα, και ύστερα μεταφράστηκε στην Ελληνική, "
+"και όχι οι επίσημες προδιαγραφές, με εξαίρεση την συντακτική και λεξιλογική "
+"ανάλυση. Αυτό θα πρέπει να κάνει το έγγραφο πιο κατανοητό στον μέσο "
+"αναγνώστη, αλλά θα αφήσει χώρο για αμφισημίες. Συνεπώς, αν ερχόσουν από τον "
+"Άρη και προσπαθούσες να ξανα-υλοποιήσεις την Python από το έγγραφο αυτό και "
+"μόνο, μάλλον θα χρειαζόταν να μαντέψεις κάποια πράγματα και για την ακρίβεια "
+"ίσως θα κατέληγες να υλοποιήσεις μια τελείως διαφορετική γλώσσα. Από την "
+"άλλη πλευρά, αν χρησιμοποιείς την Python και αναρωτιέσαι ποιοι είναι οι "
+"ακριβείς κανόνες σχετικά με έναν συγκεκριμένο τομέα της γλώσσας, τότε "
+"σίγουρα θα τους βρεις εδώ πέρα. Αν θα ήθελες να δεις έναν πιο επίσημο ορισμό "
+"της γλώσσας, ίσως θα μπορούσες να προσφέρεις λίγο από τον χρόνο σου --- ή να "
+"φτιάξεις μια μηχανή κλωνοποίησης :-)."
 
 #: reference/introduction.rst:23
 msgid ""
@@ -52,6 +69,14 @@ msgid ""
 "implementation imposes additional limitations. Therefore, you'll find short "
 "\"implementation notes\" sprinkled throughout the text."
 msgstr ""
+"Είναι επικίνδυνο να προσθέσουμε πολλές λεπτομέρειες υλοποίησης σε ένα "
+"έγγραφο αναφοράς μίας γλώσσας --- η υλοποίηση δύναται να αλλάξει, και άλλες "
+"υλοποιήσεις της ίδιας γλώσσας μπορεί να λειτουργούν διαφορετικά. Από την "
+"άλλη, η CPython είναι μία υλοποίηση της Python με ευρεία χρήση (ωστόσο "
+"εναλλακτικές υλοποιήσεις συνεχίζουν να υποστηρίζονται), και οι συγκεκριμένες "
+"της ιδιομορφίες ενίοτε αξίζουν αναφορά, ειδικά εκεί που η υλοποίηση "
+"επιβάλλει επιπρόσθετους περιορισμούς. Επομένως, θα βρεις σύντομες "
+"\"σημειώσεις υλοποίησης\"  σε διάφορα μέρη του κειμένου."
 
 #: reference/introduction.rst:32
 msgid ""
@@ -60,10 +85,14 @@ msgid ""
 "modules are mentioned when they interact in a significant way with the "
 "language definition."
 msgstr ""
+"Κάθε υλοποίηση της Python συνοδεύεται από έναν αριθμό ενσωματωμένων και "
+"πρότυπων ενοτήτων. Αυτές είναι καταγεγραμμένες στο  :ref:`library-index`. "
+"Κάποιες ενσωματωμένες ενότητες αναφέρονται όταν αλληλεπιδρούν με έναν "
+"σημαντικό τρόπο με τον ορισμό της γλώσσας."
 
 #: reference/introduction.rst:41
 msgid "Alternate Implementations"
-msgstr ""
+msgstr "Εναλλακτικές Υλοποιήσεις"
 
 #: reference/introduction.rst:43
 msgid ""
@@ -71,24 +100,29 @@ msgid ""
 "there are some alternate implementations which are of particular interest to "
 "different audiences."
 msgstr ""
+"Παρόλο που υπάρχει μία υλοποίηση της Python που είναι μακράν η πιο διάσημη, "
+"υπάρχουν εναλλακτικές υλοποιήσεις που έχουν ιδιαίτερο ενδιαφέρον για "
+"διάφορους ανθρώπους."
 
 #: reference/introduction.rst:47
 msgid "Known implementations include:"
-msgstr ""
+msgstr "Γνωστές υλοποιήσεις περιλαμβάνουν:"
 
 #: reference/introduction.rst:51
 msgid "CPython"
-msgstr ""
+msgstr "CPython"
 
 #: reference/introduction.rst:50
 msgid ""
 "This is the original and most-maintained implementation of Python, written "
 "in C. New language features generally appear here first."
 msgstr ""
+"Αυτή είναι η πρωτότυπη και η πιο καλο-διατηρημένη υλοποίηση της Python, "
+"γραμμένη στην C. Νέες λειτουργίες της γλώσσας συνήθως εμφανίζονται πρώτα εδώ."
 
 #: reference/introduction.rst:57
 msgid "Jython"
-msgstr ""
+msgstr "Jython"
 
 #: reference/introduction.rst:54
 msgid ""
@@ -98,10 +132,16 @@ msgid ""
 "libraries. More information can be found at `the Jython website <https://www."
 "jython.org/>`_."
 msgstr ""
+"Η υλοποίηση της Python στην Java. Αυτή η υλοποίηση μπορεί να χρησιμοποιηθεί "
+"ως γλώσσα σεναρίου για εφαρμογές στην Java, ή μπορεί να χρησιμοποιηθεί για "
+"να δημιουργήσει εφαρμογές με τη χρήση των βιβλιοθηκών των κλάσεων της Java. "
+"Συχνά επίσης χρησιμοποιείται για να δημιουργήσει τεστ για τις βιβλιοθήκες "
+"της Java. Περισσότερες πληροφορίες μπορείτε να βρείτε στην `ιστοσελίδα της "
+"Jython <https://www.jython.org/>`_."
 
 #: reference/introduction.rst:63
 msgid "Python for .NET"
-msgstr ""
+msgstr "Python για το .NET"
 
 #: reference/introduction.rst:60
 msgid ""
@@ -110,10 +150,15 @@ msgid ""
 "by Brian Lloyd.  For more information, see the `Python for .NET home page "
 "<https://pythonnet.github.io/>`_."
 msgstr ""
+"Αυτή η υλοποίηση στην πραγματικότητα χρησιμοποιεί την υλοποίηση CPython, "
+"αλλά είναι μία διαχειριζόμενη εφαρμογή του .NET και κάνει διαθέσιμες τις ."
+"NET βιβλιοθήκες. Δημιουργήθηκε από τον *Brian Lloyd*. Για περισσότερες "
+"πληροφορίες, δείτε την `αρχική σελίδα της Python για το .NET <https://"
+"pythonnet.github.io/>`_."
 
 #: reference/introduction.rst:69
 msgid "IronPython"
-msgstr ""
+msgstr "IronPython"
 
 #: reference/introduction.rst:66
 msgid ""
@@ -123,10 +168,15 @@ msgid ""
 "For more information, see `the IronPython website <https://ironpython.net/"
 ">`_."
 msgstr ""
+"Μια εναλλακτική Python για το .NET. Σε αντίθεση με το Python.NET, αυτή είναι "
+"μία ολοκληρωμένη υλοποίηση της Python που παράγει IL, και κάνει μεταγλώττιση "
+"του κώδικα της Python απευθείας στις μονλαδες του .NET. Δημιουργήθηκε από "
+"τον *Jim Hugunin*, ο πρωτότυπος δημιουργός της Jython. Για περισσότερες "
+"πληροφορίες δείτε την `ιστοσελίδα της IronPython <https://ironpython.net/>`_."
 
 #: reference/introduction.rst:77
 msgid "PyPy"
-msgstr ""
+msgstr "PyPy"
 
 #: reference/introduction.rst:72
 msgid ""
@@ -138,6 +188,13 @@ msgid ""
 "information is available on `the PyPy project's home page <https://www.pypy."
 "org/>`_."
 msgstr ""
+"Μια υλοποίηση της Python γραμμένη εξ ολοκλήρου σε Python. Υποστηρίζει "
+"αρκετές προηγμένες λειτουργίες που δεν υπάρχουν σε άλλες υλοποιήσεις όπως "
+"υποστήριξη για *stackless* και τον μεταγλωττιστή *Just in Time*. Ένας από "
+"τους στόχους του πρότζεκτ είναι να ενθαρρύνει τον πειραματισμό με την ίδια "
+"την γλώσσα κάνοντας πιο εύκολη την τροποποίηση του διερμηνέα (αφού είναι "
+"γραμμένος στην Python). Περισσότερες πληροφορίες είναι διαθέσιμες στην "
+"`αρχική σελίδα του PyPy πρότζεκτ <https://www.pypy.org/>`_."
 
 #: reference/introduction.rst:79
 msgid ""
@@ -147,10 +204,16 @@ msgid ""
 "implementation-specific documentation to determine what else you need to "
 "know about the specific implementation you're using."
 msgstr ""
+"Κάθε μία από αυτές τις υλοποιήσεις διαφοροποιούνται με κάποιον τρόπο από την "
+"γλώσσα καταγεγραμμένη σε αυτό το εγχειρίδιο, ή εισάγει συγκεκριμένη "
+"πληροφορία πέρα από ό,τι καλύπτουν τα πρότυπα έγγραφα της Python. Παρακαλώ "
+"να συμβουλευτείτε στο έγγραφο συγκεκριμένης υλοποίησης για να προσδιορίσετε "
+"τι άλλο χρειάζεται να ξέρετε σχετικά με την συγκεκριμένη υλοποίηση που "
+"χρησιμοποιείτε."
 
 #: reference/introduction.rst:89
 msgid "Notation"
-msgstr ""
+msgstr "Συμβολισμός"
 
 #: reference/introduction.rst:93
 msgid ""
@@ -158,6 +221,12 @@ msgid ""
 "form (BNF) <https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form>`_ "
 "grammar notation.  This uses the following style of definition:"
 msgstr ""
+"Οι περιγραφές στην λεξιλογική ανάλυση και σύνταξη χρησιμοποιούν έναν "
+"τροποποιημένο  γραμματικό συμβολισμό στην  `μορφή Μπάκους-Νάουρ (BNF) "
+"<https://el.wikipedia.org/wiki/"
+"%CE%9C%CE%BF%CF%81%CF%86%CE%AE_%CE%9C%CF%80%CE%AC%CE%BA%CE%BF%CF%85%CF%82-"
+"%CE%9D%CE%AC%CE%BF%CF%85%CF%81>`_. Αυτό χρησιμοποιεί τον ακόλουθο τρόπο "
+"ορισμού:"
 
 #: reference/introduction.rst:101
 msgid ""
@@ -167,6 +236,12 @@ msgid ""
 "``'z'``.  (This rule is actually adhered to for the names defined in lexical "
 "and grammar rules in this document.)"
 msgstr ""
+"Η πρώτη γραμμή λέει ότι ένα ``όνομα`` είναι ένα ``lc_letter`` ακολουθούμενο "
+"από μία σειρά από μηδέν ή περισσότερα ``lc_letter``\\ s και κάτω παύλες. Ένα "
+"``lc_letter`` με τη σειρά του είναι οποιοσδήποτε από τους μονούς χαρακτήρες "
+"``'a'`` εώς ``'z'``. (Αυτός ο κανόνας στην πραγματικότητα εφαρμόζεται στα "
+"ονόματα ορισμένα στους λεξιλογικούς και γραμματικούς κανόνες αυτού του "
+"εγγράφου.)"
 
 #: reference/introduction.rst:106
 msgid ""
@@ -182,6 +257,20 @@ msgid ""
 "line; rules with many alternatives may be formatted alternatively with each "
 "line after the first beginning with a vertical bar."
 msgstr ""
+"Κάθε κανόνας ξεκινά με ένα όνομα (το οποίο είναι ένα όνομα ορισμένο από τον "
+"κανόνα) και ``::=``. Μία κάθετη μπάρα (``|``) χρησιμοποιείται για να "
+"διαχωρίσει τις εναλλακτικές· το οποίο είναι ο λιγότερος ενωτικός τελεστής σε "
+"αυτόν τον συμβολισμό. Ένας αστερίσκος (``*``) σημαίνει μηδέν ή περισσότερες "
+"επαναλήψεις του προηγούμενου αντικειμένου· παρομοίως, το συν (``+``) "
+"σημαίνει μία ή περισσότερες επαναλήψεις, και μία φράση περιφραγμένη από "
+"αγκύλες (``[ ]``) σημαίνει μηδέν ή μία περίπτωση (με άλλα λόγια, η "
+"περιφραγμένη φράση είναι προαιρετική). Οι τελεστές ``*`` και ``+`` ενώνονται "
+"όσο το δυνατόν πιο σφιχτά· για την κατηγοριοποίηση χρησιμοποιούνται "
+"παρενθέσεις. Οι συμβολοσειρές είναι περιφραγμένες από εισαγωγικά. Οι κενοί "
+"χαρακτήρες είναι μόνο σημαντικοί για να διαχωρίσουν τα *tokens*. Οι κανόνες "
+"συνήθως περιέχονται σε μία μονή γραμμή· οι κανόνες με πολλές εναλλακτικές "
+"μπορεί να έχουν εναλλακτική μορφή με κάθε γραμμή μετά την πρώτη αρχή με την "
+"κάθετη μπάρα."
 
 #: reference/introduction.rst:120
 msgid ""
@@ -192,6 +281,13 @@ msgid ""
 "the symbol defined; e.g., this could be used to describe the notion of "
 "'control character' if needed."
 msgstr ""
+"Στους λεξιλογικούς ορισμούς (όπως στο παραπάνω παράδειγμα), δύο περισσότεροι "
+"κανόνες χρησιμοποιούνται: Δύο χαρακτήρες χωρισμένοι από τρεις τελείες "
+"σημαίνει επιλογή όποιου μονού χαρακτήρα στο συγκεκριμένο "
+"(συμπεριλαμβανομένου) εύρος *ASCII* χαρακτήρων. Η φράση ανάμεσα σε αγκύλες "
+"(``<...>``) δίνει μία άτυπη περιγραφή του ορισμένου συμβόλου· π.χ., αυτό θα "
+"μπορούσε να χρησιμοποιηθεί για να περιγράψει την ιδέα του 'χαρακτήρα "
+"ελέγχου' (control character) αν χρειαστεί."
 
 #: reference/introduction.rst:127
 msgid ""
@@ -203,27 +299,34 @@ msgid ""
 "are lexical definitions; uses in subsequent chapters are syntactic "
 "definitions."
 msgstr ""
+"Μολονότι η ιδέα που χρησιμοποιείται είναι σχεδόν το ίδιο, υπάρχει μεγάλη "
+"διαφορά ανάμεσα στη σημασία των λεξιλογικών και συντακτικών ορισμών: ένας "
+"λεξιλογικός ορισμός λειτουργεί με τους μεμονωμένους χαρακτήρες της πηγής "
+"εισόδου, ενώ ο ορισμός συντακτικού λειτουργεί στην ροή από παραγόμενα "
+"*token* της λεξιλογικής ανάλυσης. Όλες οι χρήσεις του *BNF* στο επόμενο "
+"κεφάλαιο  (\"Λεξιλογική Ανάλυση\") είναι λεξιλογικοί ορισμοί· χρήσεις στα "
+"ακόλουθα κεφάλαια είναι συντακτικοί ορισμοί."
 
 #: reference/introduction.rst:91
 msgid "BNF"
-msgstr ""
+msgstr "BNF"
 
 #: reference/introduction.rst:91
 msgid "grammar"
-msgstr ""
+msgstr "γραμματική"
 
 #: reference/introduction.rst:91
 msgid "syntax"
-msgstr ""
+msgstr "συντακτικό"
 
 #: reference/introduction.rst:91
 msgid "notation"
-msgstr ""
+msgstr "συμβολισμός"
 
 #: reference/introduction.rst:118
 msgid "lexical definitions"
-msgstr ""
+msgstr "λεξιλογικοί ορισμοί"
 
 #: reference/introduction.rst:118
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
