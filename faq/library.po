@@ -9,28 +9,29 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-12-10 14:07+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: faq/library.rst:5
 msgid "Library and Extension FAQ"
-msgstr ""
+msgstr "Συχνές ερωτήσεις βιβλιοθήκης και επέκτασης"
 
 #: faq/library.rst:8
 msgid "Contents"
-msgstr ""
+msgstr "Περιεχόμενα"
 
 #: faq/library.rst:12
 msgid "General Library Questions"
-msgstr ""
+msgstr "Γενικές Ερωτήσεις Βιβλιοθήκης"
 
 #: faq/library.rst:15
 msgid "How do I find a module or application to perform task X?"
 msgstr ""
+"Πως μπορώ να βρω ένα module ή μια εφαρμογή για να εκτελέσω την εργασία Χ;"
 
 #: faq/library.rst:17
 msgid ""
@@ -38,6 +39,9 @@ msgid ""
 "relevant standard library module.  (Eventually you'll learn what's in the "
 "standard library and will be able to skip this step.)"
 msgstr ""
+"Ελέγξτε την :ref:`the Library Reference <library-index>` για να δείτε αν "
+"υπάρχει ένα σχετικό τυπικό module.  (Τελικά θα μάθετε τι υπάρχει στην τυπική "
+"βιβλιοθήκη και θα μπορείτε να παραλείψετε αυτό το βήμα.)"
 
 #: faq/library.rst:21
 msgid ""
@@ -46,10 +50,15 @@ msgid ""
 "engine.  Searching for \"Python\" plus a keyword or two for your topic of "
 "interest will usually find something helpful."
 msgstr ""
+"Για πακέτα τρίτων, πραγματοποιήστε αναζήτηση στο `Python Package Index "
+"<https://pypi.org>`_ ή δοκιμάστε στο `Google <https://www.google.com>`_ ή σε "
+"κάποια άλλη μηχανή αναζήτησης ιστού.  Η αναζήτηση με τον όρο \"Python\" μαζί "
+"με μια ή δύο λέξεις κλειδιά για το θέμα που σας ενδιαφέρει συνήθως θα βγάλει "
+"κάποιο χρήσιμο αποτέλεσμα."
 
 #: faq/library.rst:28
 msgid "Where is the math.py (socket.py, regex.py, etc.) source file?"
-msgstr ""
+msgstr "Που βρίσκεται το πηγαίο αρχείο math.py (socket.py, regex.py, κ.λπ.);"
 
 #: faq/library.rst:30
 msgid ""
@@ -59,29 +68,38 @@ msgid ""
 "file:`mathmodule.c`, somewhere in a C source directory (not on the Python "
 "Path)."
 msgstr ""
+"Εάν δεν μπορείτε να βρείτε ένα πηγαίο αρχείο για ένα module, μπορεί να είναι "
+"ένα ενσωματωμένο (built-in) module ή ένα module που φορτώνεται δυναμικά "
+"υλοποιημένο σε C, C++ ή άλλη μεταγλωττισμένη γλώσσα. Σε αυτή την περίπτωση "
+"μπορεί να μην έχετε το αρχείο προέλευσης ή μπορεί να είναι κάτι σαν :file:"
+"`mathmodule.c`, κάπου σε έναν κατάλογο προέλευσης C (όχι στην διαδρομή της "
+"Python)."
 
 #: faq/library.rst:35
 msgid "There are (at least) three kinds of modules in Python:"
-msgstr ""
+msgstr "Υπάρχουν (το λιγότερο) τριών ειδών modules στην Python:"
 
 #: faq/library.rst:37
 msgid "modules written in Python (.py);"
-msgstr ""
+msgstr "modules γραμμένα σε Python (.py):"
 
 #: faq/library.rst:38
 msgid ""
 "modules written in C and dynamically loaded (.dll, .pyd, .so, .sl, etc);"
 msgstr ""
+"modules γραμμένα σε C και φορτώνονται δυναμικά (.dll, .pyd, .so, .sl, κ.λπ.):"
 
 #: faq/library.rst:39
 msgid ""
 "modules written in C and linked with the interpreter; to get a list of "
 "these, type::"
 msgstr ""
+"modules γραμμένα σε C και συνδεδεμένα με τον διερμηνέα: για να λάβετε μια "
+"λίστα από αυτά, πληκτρολογήστε::"
 
 #: faq/library.rst:47
 msgid "How do I make a Python script executable on Unix?"
-msgstr ""
+msgstr "Πως δημιουργώ ένα εκτελέσιμο Python Script στο Unix;"
 
 #: faq/library.rst:49
 msgid ""
@@ -89,24 +107,33 @@ msgid ""
 "first line must begin with ``#!`` followed by the path of the Python "
 "interpreter."
 msgstr ""
+"Θα πρέπει να κάνετε δύο πράγματα: η λειτουργία του script αρχείου πρέπει να "
+"είναι εκτελέσιμη και η πρώτη γραμμή θα πρέπει αν ξεκινά με ``#!`` "
+"ακολουθούμενη από τη διαδρομή του διερμηνέα της Python."
 
 #: faq/library.rst:53
 msgid ""
 "The first is done by executing ``chmod +x scriptfile`` or perhaps ``chmod "
 "755 scriptfile``."
 msgstr ""
+"Το πρώτο γίνεται με την εκτέλεση του ``chmod +x scriptfile`` ή ίσως ``chmod "
+"755 scriptfile``."
 
 #: faq/library.rst:56
 msgid ""
 "The second can be done in a number of ways.  The most straightforward way is "
 "to write ::"
 msgstr ""
+"Το δεύτερο μπορεί να γίνει με μια σειρά από ποικίλους τρόπους.  Ο πιο απλός "
+"τρόπος είναι να γράψετε ::"
 
 #: faq/library.rst:61
 msgid ""
 "as the very first line of your file, using the pathname for where the Python "
 "interpreter is installed on your platform."
 msgstr ""
+"ως η πρώτη γραμμή του αρχείου σας, χρησιμοποιώντας το όνομα διαδρομής για το "
+"πού είναι εγκατεστημένος ο διερμηνέας Python στην πλατφόρμα σας."
 
 #: faq/library.rst:64
 msgid ""
@@ -115,6 +142,10 @@ msgid ""
 "variants support the following, assuming the Python interpreter is in a "
 "directory on the user's :envvar:`PATH`::"
 msgstr ""
+"Εάν θέλετε το script να είναι ανεξάρτητο, από το που ζει ο διερμηνέας της "
+"Python, μπορείτε να χρησιμοποιήσετε το πρόγραμμα :program:`env`.  Σχεδόν "
+"όλες οι παραλλαγές Unix υποστηρίζουν τα ακόλουθα, υποθέτοντας ότι ο "
+"διερμηνέας Python βρίσκεται σε έναν κατάλογο στο :envvar:`PATH` του χρήστη::"
 
 #: faq/library.rst:71
 msgid ""
@@ -122,6 +153,9 @@ msgid ""
 "scripts is often very minimal, so you need to use the actual absolute "
 "pathname of the interpreter."
 msgstr ""
+"*Μην* το κάνετε αυτό για CGI scripts.  Η μεταβλητή :envvar:`PATH` για τα CGI "
+"scripts είναι συχνά πολύ ελάχιστη, επομένως πρέπει να χρησιμοποιήσετε το "
+"πραγματικό απόλυτο όνομα διαδρομής του διερμηνέα."
 
 #: faq/library.rst:75
 msgid ""
@@ -129,16 +163,22 @@ msgid ""
 "env` program fails; or there's no env program at all.  In that case, you can "
 "try the following hack (due to Alex Rezinsky):"
 msgstr ""
+"Περιστασιακά, το περιβάλλον ενός χρήστη είναι τόσο γεμάτο που το πρόγραμμα :"
+"program:`/usr/bin/env` αποτυγχάνει ή δεν υπάρχει καθόλου πρόγραμμα env.  Σε "
+"αυτήν την περίπτωση, μπορείτε να δοκιμάσετε το ακόλουθο hack (λόγω του Alex "
+"Rezinsky):"
 
 #: faq/library.rst:86
 msgid ""
 "The minor disadvantage is that this defines the script's __doc__ string. "
 "However, you can fix that by adding ::"
 msgstr ""
+"Το, ελάχιστης σημασίας, μειονέκτημα είναι ότι αυτό καθορίζει τη συμβολοσειρά "
+"__doc__ του script. Ωστόσο, μπορείτε να το διορθώσετε προσθέτοντας ::"
 
 #: faq/library.rst:94
 msgid "Is there a curses/termcap package for Python?"
-msgstr ""
+msgstr "Υπάρχει ένα curses/termcap πακέτο για την Python;"
 
 #: faq/library.rst:98
 msgid ""
@@ -147,6 +187,10 @@ msgid ""
 "compiled by default. (Note that this is not available in the Windows "
 "distribution -- there is no curses module for Windows.)"
 msgstr ""
+"Για παραλλαγές Unix: Η τυπική διανομή του πηγαίου της Python συνοδεύεται από "
+"ένα curses module στον υποκατάλογο :source:`Modules`, αν και δεν έχει "
+"μεταγλωττιστεί από προεπιλογή.  (Λάβετε υπόψη ότι αυτό δεν είναι διαθέσιμο "
+"στη διανομή των Windows -- δεν υπάρχει curses module για Windows.)"
 
 #: faq/library.rst:103
 msgid ""
@@ -157,38 +201,48 @@ msgid ""
 "but there don't seem to be any currently maintained OSes that fall into this "
 "category."
 msgstr ""
+"Το module :mod:`curses` υποστηρίζει βασικές curses λειτουργίες καθώς και "
+"πολλές πρόσθετες λειτουργίες από ncurses και SYSV curses, όπως χρώμα, "
+"υποστήριξη εναλλακτικού συνόλου χαρακτήρων, pads και υποστήριξη ποντικιού. "
+"Αυτό σημαίνει ότι το module δεν είναι συμβατό με λειτουργικά συστήματα που "
+"έχουνε μόνο BSD curses, αλλά δεν φαίνεται να υπάρχουν επί του παρόντος "
+"διατηρημένα λειτουργικά συστήματα που να εμπίπτουν σε αυτήν την κατηγορία."
 
 #: faq/library.rst:111
 msgid "Is there an equivalent to C's onexit() in Python?"
-msgstr ""
+msgstr "Υπάρχει κάτι ισοδύναμο με την onexit() της C στην Python;"
 
 #: faq/library.rst:113
 msgid ""
 "The :mod:`atexit` module provides a register function that is similar to "
 "C's :c:func:`!onexit`."
 msgstr ""
+"Το module :mod:`atexit` παρέχει μια συνάρτηση καταχωρητή παρόμοια με τη "
+"συνάρτηση :c:func:`!onexit` της C."
 
 #: faq/library.rst:118
 msgid "Why don't my signal handlers work?"
-msgstr ""
+msgstr "Γιατί δεν λειτουργούν οι χειριστές σήματος μου;"
 
 #: faq/library.rst:120
 msgid ""
 "The most common problem is that the signal handler is declared with the "
 "wrong argument list.  It is called as ::"
 msgstr ""
+"Το πιο συνηθισμένο πρόβλημα είναι ότι ο χειριστής σήματος δηλώνεται με λάθος "
+"λίστα ορισμάτων.  Ονομάζεται ως ::"
 
 #: faq/library.rst:125
 msgid "so it should be declared with two parameters::"
-msgstr ""
+msgstr "οπότε θα πρέπει να δηλωθεί με δύο παραμέτρους::"
 
 #: faq/library.rst:132
 msgid "Common tasks"
-msgstr ""
+msgstr "Κοινές εργασίες"
 
 #: faq/library.rst:135
 msgid "How do I test a Python program or component?"
-msgstr ""
+msgstr "Πως μπορώ να τεστάρω ένα Python πρόγραμμα ή ένα Python component;"
 
 #: faq/library.rst:137
 msgid ""
@@ -196,12 +250,17 @@ msgid ""
 "examples in the docstrings for a module and runs them, comparing the output "
 "with the expected output given in the docstring."
 msgstr ""
+"Η Python συνοδεύεται από δύο frameworks για τεστ.  To module :mod:`doctest` "
+"βρίσκει παραδείγματα στα docstrings για ένα module και τα εκτελεί, "
+"συγκρίνοντας την έξοδο με την αναμενόμενη έξοδο που δίνεται στο docstring."
 
 #: faq/library.rst:141
 msgid ""
 "The :mod:`unittest` module is a fancier testing framework modelled on Java "
 "and Smalltalk testing frameworks."
 msgstr ""
+"Το module :mod:`unittest` είναι ένα πιο εντυπωσιακό framework που έχει "
+"σχεδιαστεί με βάση τα frameworks για τεστ της Java και του Smalltalk."
 
 #: faq/library.rst:144
 msgid ""
@@ -213,14 +272,24 @@ msgid ""
 "avoid depending on mutating global variables, since this makes testing much "
 "more difficult to do."
 msgstr ""
+"Για να κάνετε τα τεστ σας ευκολότερα θα πρέπει να χρησιμοποιείτε μια καλή "
+"αρθρωτή σχεδίαση στο πρόγραμμα σας. Το πρόγραμμα σας θα πρέπει να έχει όλες "
+"σχεδόν τις λειτουργίες ενσωματωμένες είτε σε συναρτήσεις είτε σε μεθόδους "
+"κλάσης - και αυτό μερικές φορές έχει το εκπληκτικό και ευχάριστο αποτέλεσμα "
+"να κάνει το πρόγραμμα να τρέχει πιο γρήγορα (γιατί  οι τοπικές προσβάσεις "
+"μεταβλητών είναι πιο γρήγορες από τις καθολικές προσβάσεις).  Επιπλέον, το "
+"πρόγραμμα θα πρέπει να αποφεύγει την εξάρτηση από μεταλλάξεις παγκόσμιων "
+"μεταβλητών, καθώς αυτό κάνει τη δοκιμή πολύ πιο δύσκολη."
 
 #: faq/library.rst:152
 msgid "The \"global main logic\" of your program may be as simple as ::"
 msgstr ""
+"Η \"παγκόσμια κύρια λογική\" του προγράμματος σας μπορεί να είναι τόσο απλή "
+"όσο ::"
 
 #: faq/library.rst:157
 msgid "at the bottom of the main module of your program."
-msgstr ""
+msgstr "στο κάτω μέρος του κύριου module τους προγράμματός σας."
 
 #: faq/library.rst:159
 msgid ""
@@ -233,12 +302,24 @@ msgid ""
 "the \"production code\", since this makes it easy to find bugs and even "
 "design flaws earlier."
 msgstr ""
+"Από τη στιγμή που το πρόγραμμα σας οργανωθεί ως μια συλλογή από συναρτήσεις "
+"και κλάσεις που υλοποιούν μια διαδικασία, θα πρέπει να γράψετε τεστ "
+"συναρτήσεις που εκτελούν τις αντίστοιχες διαδικασίες.  Μια τεστ σουίτα που "
+"αυτοματοποιεί μια ακολουθία από tests μπορεί να συσχετιστεί με κάθε module. "
+"Αυτό ακούγεται σαν πολλή δουλειά, αλλά επειδή η Python είναι τόσο σύντομη "
+"και ευέλικτη, αυτό είναι εκπληκτικά εύκολο.  Μπορείτε να κάνετε την συγγραφή "
+"κώδικα πολύ πιο ευχάριστη και διασκεδαστική γράφοντας τις δοκιμαστικές "
+"συναρτήσεις σας παράλληλα με τον \"κώδικα παραγωγής\", καθώς αυτό "
+"διευκολύνει την εύρεση σφαλμάτων και ακόμη και ελαττώματα σχεδιασμού "
+"νωρίτερα."
 
 #: faq/library.rst:167
 msgid ""
 "\"Support modules\" that are not intended to be the main module of a program "
 "may include a self-test of the module. ::"
 msgstr ""
+"\"Modules υποστήριξης\" που δεν προορίζονται να είναι το κύριο module ενός "
+"προγράμματος μπορεί να περιλαμβάνουν αυτοέλεγχο της ενότητας::"
 
 #: faq/library.rst:173
 msgid ""
@@ -246,10 +327,13 @@ msgid ""
 "when the external interfaces are unavailable by using \"fake\" interfaces "
 "implemented in Python."
 msgstr ""
+"Ακόμη και προγράμματα που αλληλεπιδρούν με πολύπλοκες εξωτερικές διεπαφές "
+"μπορούν να δοκιμαστούν όταν οι εξωτερικές διεπαφές δεν είναι διαθέσιμες "
+"χρησιμοποιώντας \"τεχνητές\" διεπαφές υλοποιημένες στην Python."
 
 #: faq/library.rst:179
 msgid "How do I create documentation from doc strings?"
-msgstr ""
+msgstr "Πως δημιουργώ τεκμηρίωση από doc strings;"
 
 #: faq/library.rst:181
 msgid ""
@@ -258,24 +342,32 @@ msgid ""
 "docstrings is `epydoc <https://epydoc.sourceforge.net/>`_.  `Sphinx <https://"
 "www.sphinx-doc.org>`_ can also include docstring content."
 msgstr ""
+"Το module :mod:`pydoc` μπορεί να δημιουργήσει HTML από τα doc strings στον "
+"πηγαίο κώδικα Python σας.  Μια εναλλακτική λύση για τη δημιουργία μιας "
+"τεκμηρίωσης API αποκλειστικά με docstrings είναι το `epydoc <https://epydoc."
+"sourceforge.net/>`_.  `Sphinx <https://www.sphinx-doc.org>`_ μπορεί επίσης "
+"να περιλαμβάνει docstring περιεχόμενο."
 
 #: faq/library.rst:188
 msgid "How do I get a single keypress at a time?"
-msgstr ""
+msgstr "Πως μπορώ να λάβω μόνο ένα πάτημα κουμπιού κάθε φορά;"
 
 #: faq/library.rst:190
 msgid ""
 "For Unix variants there are several solutions.  It's straightforward to do "
 "this using curses, but curses is a fairly large module to learn."
 msgstr ""
+"Για τις παραλλαγές του Unix υπάρχουν πολλές λύσεις.  Είναι απλό να κάνετε "
+"αυτό χρησιμοποιώντας curses, αλλά τα curses είναι ένα αρκετά μεγάλο module "
+"για εκμάθηση."
 
 #: faq/library.rst:234
 msgid "Threads"
-msgstr ""
+msgstr "Νήματα (Threads)"
 
 #: faq/library.rst:237
 msgid "How do I program using threads?"
-msgstr ""
+msgstr "Πώς μπορώ να προγραμματίσω χρησιμοποιώντας νήματα(threads);"
 
 #: faq/library.rst:239
 msgid ""
@@ -283,22 +375,31 @@ msgid ""
 "module. The :mod:`threading` module builds convenient abstractions on top of "
 "the low-level primitives provided by the :mod:`_thread` module."
 msgstr ""
+"Βεβαιωθείτε ότι χρησιμοποιείτε το module :mod:`threading` και όχι το module :"
+"mod:`_thread`. Το module :mod:`threading` δημιουργεί βολικές αφηρημένες "
+"έννοιες πάνω από τα πρωτόγονα χαμηλού επιπέδου που παρέχονται από το module :"
+"mod:`_thread`."
 
 #: faq/library.rst:245
 msgid "None of my threads seem to run: why?"
-msgstr ""
+msgstr "Κανένα από τα νήματα (threads) μου δεν φαίνεται να εκτελείται: γιατί;"
 
 #: faq/library.rst:247
 msgid ""
 "As soon as the main thread exits, all threads are killed.  Your main thread "
 "is running too quickly, giving the threads no time to do any work."
 msgstr ""
+"Μόλις γίνει έξοδος από το κύριο νήμα, τερματίζονται όλα τα νήματα.  Το κύριο "
+"νήμα τρέχει πολύ γρήγορα, χωρίς να δίνεται χρόνος στα νήματα να κάνουν "
+"οποιαδήποτε εργασία."
 
 #: faq/library.rst:250
 msgid ""
 "A simple fix is to add a sleep to the end of the program that's long enough "
 "for all the threads to finish::"
 msgstr ""
+"Μια απλή λύση είναι να προσθέσετε ένα sleep στο τέλος που προγράμματος που "
+"είναι αρκετό για να τερματιστούν όλα τα νήματα::"
 
 #: faq/library.rst:265
 msgid ""
@@ -306,10 +407,16 @@ msgid ""
 "run sequentially, one at a time!  The reason is that the OS thread scheduler "
 "doesn't start a new thread until the previous thread is blocked."
 msgstr ""
+"Αλλά τώρα (σε πολλές πλατφόρμες) τα νήματα δεν εκτελούνται παράλληλα, αλλά "
+"φαίνεται να εκτελούνται διαδοχικά, ένα κάθε φορά!  Ο λόγος είναι ότι ο "
+"προγραμματιστής νημάτων του λειτουργικού συστήματος δεν ξεκινά ένα νέο νήμα "
+"μέχρι να αποκλειστεί το προηγούμενο νήμα."
 
 #: faq/library.rst:269
 msgid "A simple fix is to add a tiny sleep to the start of the run function::"
 msgstr ""
+"Μια απλή λύση είναι να προσθέσετε ένα μικρό sleep στην αρχή της λειτουργίας "
+"εκτέλεσης::"
 
 #: faq/library.rst:282
 msgid ""
@@ -319,16 +426,26 @@ msgid ""
 "the queue when it finishes, and let the main thread read as many tokens from "
 "the queue as there are threads."
 msgstr ""
+"Αντί να προσπαθείτε να μαντέψετε μια καλή τιμή καθυστέρησης για την :func:"
+"`time.sleep`, είναι καλύτερα να χρησιμοποιείτε κάποιο είδος μηχανισμού "
+"σηματοφόρου.  Μια ιδέα είναι να χρησιμοποιήσετε το module :mod:`queue` για "
+"να δημιουργήσετε ένα αντικείμενο ουράς, αφήνοντας το κάθε νήμα να προσθέτει "
+"ένα token στην ουρά όταν ολοκληρωθεί, και να αφήνει στο κύριο νήμα να "
+"διαβάσει τόσα tokens από την ουρά όσα είναι και τα νήματα."
 
 #: faq/library.rst:290
 msgid "How do I parcel out work among a bunch of worker threads?"
 msgstr ""
+"Πως μπορώ να μοιράσω την εργασία σε ένα σωρό από νήματα για αυτήν την "
+"εργασία;"
 
 #: faq/library.rst:292
 msgid ""
 "The easiest way is to use the :mod:`concurrent.futures` module, especially "
 "the :mod:`~concurrent.futures.ThreadPoolExecutor` class."
 msgstr ""
+"Ο ευκολότερο τρόπος είναι να χρησιμοποιήσετε το module :mod:`concurrent."
+"futures`, ειδικά την κλάση :mod:`~concurrent.futures.ThreadPoolExecutor`."
 
 #: faq/library.rst:295
 msgid ""
@@ -339,24 +456,33 @@ msgid ""
 "``.get()`` method to return them.  The class will take care of the locking "
 "necessary to ensure that each job is handed out exactly once."
 msgstr ""
+"Ή, ένα θέλετε καλό έλεγχο στον αλγόριθμο αποστολής, μπορείτε να γράψετε τη "
+"δική σας λογική με μη αυτόματο τρόπο.  Χρησιμοποιήστε το module :mod:`queue` "
+"για να δημιουργήσετε μια ουρά που περιέχει μια λίστα εργασιών.  Η κλάση :"
+"class:`~queue.Queue` διατηρεί μια λίστα αντικειμένων και έχει μια μέθοδο ``."
+"put(obj)`` που προσθέτει στοιχεία στην ουρά και μια μέθοδο ``.get()`` για "
+"επιστροφή.  Η κλάση θα φροντίσει για το κλείδωμα που είναι απαραίτητο για να "
+"διασφαλίσει ότι κάθε εργασία θα παραδοθεί ακριβώς μία φορά."
 
 #: faq/library.rst:302
 msgid "Here's a trivial example::"
-msgstr ""
+msgstr "Ακολουθεί ένα ασήμαντο παράδειγμα::"
 
 #: faq/library.rst:340
 msgid "When run, this will produce the following output:"
-msgstr ""
+msgstr "Κατά την εκτέλεση, αυτό θα παράγει την ακόλουθη έξοδο:"
 
 #: faq/library.rst:358
 msgid ""
 "Consult the module's documentation for more details; the :class:`~queue."
 "Queue` class provides a featureful interface."
 msgstr ""
+"Συμβουλευτείτε την τεκμηρίωση του module για περισσότερες λεπτομέρειες· η "
+"κλάση :class:`~queue.Queue` παρέχει μια χαρακτηριστική διεπαφή."
 
 #: faq/library.rst:363
 msgid "What kinds of global value mutation are thread-safe?"
-msgstr ""
+msgstr "Ποια είδη global μετάλλαξης τιμής είναι ασφαλή για νήμα(thread);"
 
 #: faq/library.rst:365
 msgid ""
@@ -367,6 +493,13 @@ msgid ""
 "instruction and therefore all the C implementation code reached from each "
 "instruction is therefore atomic from the point of view of a Python program."
 msgstr ""
+"Ένα :term:`global interpreter lock` (GIL) χρησιμοποιείται εσωτερικά για να "
+"διασφαλιστεί ότι μόνο ένα νήμα εκτελείται στο Python VM κάθε φορά.  Γενικά, "
+"η Python προσφέρει εναλλαγή μεταξύ νημάτων μόνο μεταξύ εντολών bytecode· το "
+"πόσο συχνά γίνεται αυτή η εναλλαγή καθορίζεται από την :func:`sys."
+"setswitchinterval`.  Κάθε εντολή bytecode και επομένως όλος ο κώδικας "
+"υλοποίησης C που φτάνει από κάθε εντολή είναι επομένως ατομικός από την "
+"άποψη ενός προγράμματος Python."
 
 #: faq/library.rst:372
 msgid ""
@@ -375,16 +508,23 @@ msgid ""
 "shared variables of built-in data types (ints, lists, dicts, etc) that "
 "\"look atomic\" really are."
 msgstr ""
+"Θεωρητικά, αυτό σημαίνει ότι μια ακριβώς λογιστική απαιτεί ακριβή κατανόηση "
+"της εφαρμογής bytecode PVM.  Στην πράξη, σημαίνει ότι οι λειτουργίες σε "
+"κοινόχρηστες μεταβλητές ενσωματωμένων δεδομένων (ακέραιοι, λίστες, λεξικά, κ."
+"λπ.) που \"φαίνονται ατομικά\" πραγματικά είναι."
 
 #: faq/library.rst:377
 msgid ""
 "For example, the following operations are all atomic (L, L1, L2 are lists, "
 "D, D1, D2 are dicts, x, y are objects, i, j are ints)::"
 msgstr ""
+"Για παράδειγμα, οι ακόλουθες πράξεις είναι όλες ατομικές (L, L1, L2 είναι "
+"λίστες, D, D1, D2 είναι λεξικά, x, y είναι αντικείμενα, i, j είναι "
+"ακέραιοι)::"
 
 #: faq/library.rst:392
 msgid "These aren't::"
-msgstr ""
+msgstr "Αυτά δεν είναι::"
 
 #: faq/library.rst:399
 msgid ""
@@ -393,10 +533,15 @@ msgid ""
 "can affect things.  This is especially true for the mass updates to "
 "dictionaries and lists.  When in doubt, use a mutex!"
 msgstr ""
+"Οι λειτουργίες που αντικαθιστούν άλλα αντικείμενα ενδέχεται να καλέσουν αυτά "
+"τα άλλα αντικείμενα της :meth:`~object.__del__` όταν ο αριθμός αναφοράς τους "
+"φτάσει στο μηδέν και αυτό μπορεί να επηρεάσει πράγματα.  Αυτό ισχύει "
+"ιδιαίτερα για τις μαζικές ενημερώσεις σε λεξικά και λίστες.  Σε περίπτωση "
+"αμφιβολίας, χρησιμοποιήστε ένα mutex!"
 
 #: faq/library.rst:406
 msgid "Can't we get rid of the Global Interpreter Lock?"
-msgstr ""
+msgstr "Δεν μπορούμε να απαλλαγούμε από την Global Interpreter Lock;"
 
 #: faq/library.rst:410
 msgid ""
@@ -405,6 +550,11 @@ msgid ""
 "multi-threaded Python program effectively only uses one CPU, due to the "
 "insistence that (almost) all Python code can only run while the GIL is held."
 msgstr ""
+"Ο :term:`global interpreter lock` (GIL) θεωρείται συχνά ως εμπόδιο για την "
+"ανάπτυξη της Python σε υψηλής τεχνολογίας μηχανήματα διακομιστών με "
+"πολυεπεξεργαστές, επειδή ένα πρόγραμμα  Python με πολλά νήματα χρησιμοποιεί "
+"αποτελεσματικά μόνο μία CPU, λόγω της επιμονής ότι (σχεδόν) όλος ο κώδικας "
+"της Python μπορεί να εκτελεστεί μόνο όσο διατηρείται το GIL."
 
 #: faq/library.rst:415
 msgid ""
@@ -417,6 +567,14 @@ msgid ""
 "due to the amount of fine-grained locking necessary to compensate for the "
 "removal of the GIL."
 msgstr ""
+"Πίσω στις μέρες της Python 1.5, ο Greg Stein υλοποίησε πραγματικά ένα "
+"ολοκληρωμένο σύνολο επιδιορθώσεων (οι επιδιορθώσεις \"ελεύθερου νήματος\") "
+"που αφαίρεσε το GIL και το αντικατέστησε με ένα άριστα προσεγμένο κλειδωμένο "
+"thread.  Ο Adam Olsen έκανε πρόσφατα ένα παρόμοιο πείραμα στο έργο `python-"
+"safethread <https://code.google.com/archive/p/python-safethread>`_.  "
+"Δυστυχώς, και τα δύο πειράματα εμφάνισαν απότομη πτώση στην απόδοση ενός "
+"νήματος (τουλάχιστον 30% πιο αργή), λόγω της ποσότητας του προσεγμένου "
+"κλειδώματος που απαιτείται για την αντιστάθμιση της αφαίρεσης του GIL."
 
 #: faq/library.rst:423
 msgid ""
@@ -428,6 +586,13 @@ msgid ""
 "module provides a lower-level API in case you want more control over "
 "dispatching of tasks."
 msgstr ""
+"Αυτό δεν σημαίνει ότι δεν μπορείτε να κάνετε καλή χρήση της Python σε "
+"μηχανές πολλαπλών CPU! Απλώς πρέπει να είστε δημιουργικοί μοιράζοντας την "
+"εργασία μεταξύ πολλαπλών *διεργασιών* και όχι πολλών *νημάτων*.  Η κλάση :"
+"class:`~concurrent.futures.ProcessPoolExecutor` στο  νέο module :mod:"
+"`concurrent.futures`, παρέχει έναν εύκολο τρόπο για να το κάνετε αυτό· Το "
+"module :mod:`multiprocessing` παρέχει ένα API χαμηλότερου επιπέδου σε "
+"περίπτωση που θέλετε περισσότερο έλεγχο στην αποστολή των εργασιών."
 
 #: faq/library.rst:431
 msgid ""
@@ -437,6 +602,11 @@ msgid ""
 "work done.  Some standard library modules such as :mod:`zlib` and :mod:"
 "`hashlib` already do this."
 msgstr ""
+"Η συνετή χρήση των επεκτάσεων C βοηθάει επίσης· εάν χρησιμοποιείτε μια "
+"επέκταση C για να εκτελέσετε μια χρονοβόρα εργασία, η επέκταση μπορεί να "
+"απελευθερώσει το GIL ενώ το νήμα εκτέλεσης βρίσκεται στον κώδικα C και να "
+"επιτρέψει σε άλλα νήματα να ολοκληρώσουν κάποια εργασία.  Ορισμένα τυπικά "
+"module βιβλιοθήκης όπως :mod:`zlib` και :mod:`hashlib` το κάνουν ήδη αυτό."
 
 #: faq/library.rst:437
 msgid ""
@@ -449,6 +619,16 @@ msgid ""
 "types have their own free list; these free lists would have to be moved to "
 "the interpreter state. And so on."
 msgstr ""
+"Έχει προταθεί ότι το GIL θα πρέπει να είναι ένα κλείδωμα ανά κατάσταση "
+"διερμηνέα αντί να είναι πραγματικά καθολικό∙ τότε οι διερμηνείς δεν θα "
+"μπορούν να μοιράζονται αντικείμενα. Δυστυχώς, ούτε αυτό είναι πιθανό να "
+"συμβεί.  Θα ήταν τεράστιος όγκος δουλειάς, επειδή πολλές υλοποιήσεις "
+"αντικειμένων επί του παρόντος έχουν παγκόσμια κατάσταση. Για παράδειγμα, "
+"μικροί ακέραιοι αριθμοί και σύντομες συμβολοσειρές αποθηκεύονται στην κρυφή "
+"μνήμη∙ αυτές οι κρυφές μνήμες θα πρέπει να μετακινηθούν στην κατάσταση "
+"διερμηνέα. Άλλοι τύποι αντικειμένων έχουν τη δική τους κενή λίστα∙ αυτές οι "
+"κενές λίστες θα πρέπει να μετακινηθούν στην κατάσταση διερμηνέα. Και ούτω "
+"καθεξής."
 
 #: faq/library.rst:446
 msgid ""
@@ -457,20 +637,29 @@ msgid ""
 "extensions are being written at a faster rate than you can convert them to "
 "store all their global state in the interpreter state."
 msgstr ""
+"Και αμφιβάλλω ότι μπορεί να γίνει ακόμη και σε πεπερασμένο χρόνο, επειδή το "
+"ίδιο πρόβλημα υπάρχει για τις επεκτάσεις τρίτων.  Είναι πιθανό ότι οι "
+"επεκτάσεις τρίτων γράφονται με ταχύτερο ρυθμό από ό,τι μπορείτε να τις "
+"μετατρέψετε για να αποθηκεύσετε όλη την καθολική τους κατάσταση στην "
+"κατάσταση διερμηνέα."
 
 #: faq/library.rst:451
 msgid ""
 "And finally, once you have multiple interpreters not sharing any state, what "
 "have you gained over running each interpreter in a separate process?"
 msgstr ""
+"Και τέλος, από τη στιγμή που έχετε πολλούς διερμηνείς που δεν μοιράζονται "
+"καμία κατάσταση, τι έχετε κερδίσει από τη λειτουργία κάθε διερμηνέα σε μια "
+"ξεχωριστή διαδικασία;"
 
 #: faq/library.rst:456
 msgid "Input and Output"
-msgstr ""
+msgstr "Είσοδος και Έξοδος"
 
 #: faq/library.rst:459
 msgid "How do I delete a file? (And other file questions...)"
 msgstr ""
+"Πώς μπορώ να διαγράψω ένα αρχείο; (Και άλλες ερωτήσεις για το αρχείο...)"
 
 #: faq/library.rst:461
 msgid ""
@@ -478,6 +667,10 @@ msgid ""
 "see the :mod:`os` module.  The two functions are identical; :func:`~os."
 "unlink` is simply the name of the Unix system call for this function."
 msgstr ""
+"Χρησιμοποιήστε τα ``os.remove(filename)`` ή ``os.unlink(filename)`` ∙ για "
+"τεκμηρίωση, ανατρέξτε στο module :mod:`os`.  Οι δύο συναρτήσεις είναι ίδιες∙ "
+"η :func:`~os.unlink` είναι απλώς το όνομα της κλήσης συστήματος Unix για "
+"αυτήν τη λειτουργία."
 
 #: faq/library.rst:465
 msgid ""
@@ -487,10 +680,18 @@ msgid ""
 "directories as long as they're empty; if you want to delete an entire "
 "directory tree and its contents, use :func:`shutil.rmtree`."
 msgstr ""
+"Για να καταργήσετε έναν κατάλογο, χρησιμοποιήστε τη :func:`os.rmdir` ∙ "
+"χρησιμοποιήστε τη :func:`os.mkdir` για να δημιουργήσετε έναν. Το ``os."
+"makedirs(path)`` θα δημιουργήσει τυχόν ενδιάμεσους καταλόγους στο ``path`` "
+"που δεν υπάρχουν. Το ``os.removedirs(path)`` θα αφαιρέσει τους ενδιάμεσους "
+"καταλόγους εφόσον είναι κενοί∙ εάν θέλετε να διαγράψετε ολόκληρο δέντρο "
+"καταλόγου και τα περιεχόμενα του, χρησιμοποιήστε τη :func:`shutil.rmtree`."
 
 #: faq/library.rst:471
 msgid "To rename a file, use ``os.rename(old_path, new_path)``."
 msgstr ""
+"Για να μετονομάσετε ένα αρχείο, χρησιμοποιήστε το ``os.rename(old_path, "
+"new_path)``."
 
 #: faq/library.rst:473
 msgid ""
@@ -499,6 +700,11 @@ msgid ""
 "There's also ``os.ftruncate(fd, offset)`` for files opened with :func:`os."
 "open`, where *fd* is the file descriptor (a small integer)."
 msgstr ""
+"Για να περικόψετε ένα αρχείο, ανοίξτε το χρησιμοποιώντας ``f = "
+"open(filename, \"rb+\")``, και χρησιμοποιήστε το ``f.truncate(offset)``∙ "
+"μετατόπιση των προεπιλογών στην τρέχουσα θέση αναζήτησης.  Υπάρχει επίσης το "
+"``os.ftruncate(fd, offset)`` για αρχεία που ανοίγουν με :func:`os.open`, "
+"όπου *fd* είναι ο περιγραφέας αρχείου (ένας μικρός ακέραιος)."
 
 #: faq/library.rst:478
 msgid ""
@@ -506,10 +712,13 @@ msgid ""
 "files including :func:`~shutil.copyfile`, :func:`~shutil.copytree`, and :"
 "func:`~shutil.rmtree`."
 msgstr ""
+"Το module :mod:`shutil` περιέχει επίσης έναν αριθμό λειτουργιών για εργασία "
+"σε αρχεία, όπως :func:`~shutil.copyfile`, :func:`~shutil.copytree`, και :"
+"func:`~shutil.rmtree`."
 
 #: faq/library.rst:484
 msgid "How do I copy a file?"
-msgstr ""
+msgstr "Πως αντιγράφω ένα αρχείο;"
 
 #: faq/library.rst:486
 msgid ""
@@ -521,10 +730,17 @@ msgid ""
 "permissions and metadata, though using :func:`shutil.copy2` instead will "
 "preserve most (though not all) of it."
 msgstr ""
+"Το module :mod:`shutil` περιέχει μια συνάρτηση :func:`~shutil.copyfile`. "
+"Σημειώστε ότι στους τόμους NTFS των Windows, δεν αντιγράφει `alternate data "
+"streams <https://en.wikipedia.org/wiki/NTFS#Alternate_data_stream_(ADS)>`_ "
+"ούτε `resource forks <https://en.wikipedia.org/wiki/Resource_fork>`__ σε "
+"τόμους macOS HFS+, αν και οι δύο χρησιμοποιούνται πλέον σπάνια. Επίσης δεν "
+"αντιγράφει δικαιώματα αρχείων και μεταδεδομένα, αν και η χρήση :func:`shutil."
+"copy2` θα διατηρήσει το μεγαλύτερο μέρος (αν και όχι όλο) από αυτό."
 
 #: faq/library.rst:497
 msgid "How do I read (or write) binary data?"
-msgstr ""
+msgstr "Πώς διαβάζω (ή γράφω) δυαδικά δεδομένα;"
 
 #: faq/library.rst:499
 msgid ""
@@ -532,12 +748,18 @@ msgid ""
 "`struct` module.  It allows you to take a string containing binary data "
 "(usually numbers) and convert it to Python objects; and vice versa."
 msgstr ""
+"Για να διαβάσετε ή να γράψετε σύνθετες μορφές δυαδικών δεδομένων, είναι "
+"καλύτερο να χρησιμοποιήσετε το module :mod:`struct`.  Σας επιτρέπει να "
+"πάρετε μια συμβολοσειρά που περιέχει δυαδικά δεδομένα (συνήθως αριθμούς) και "
+"να τη μετατρέψετε σε αντικείμενα Python και αντίστροφα."
 
 #: faq/library.rst:503
 msgid ""
 "For example, the following code reads two 2-byte integers and one 4-byte "
 "integer in big-endian format from a file::"
 msgstr ""
+"Για παράδειγμα, ο παρακάτω κώδικας διαβάζει δύο ακέραιους αριθμούς 2 byte "
+"και έναν ακέραιο αριθμό 4 byte σε μορφή big-endian από ένα αρχείο::"
 
 #: faq/library.rst:512
 msgid ""
@@ -545,12 +767,18 @@ msgid ""
 "one \"short integer\" (2 bytes), and 'l' reads one \"long integer\" (4 "
 "bytes) from the string."
 msgstr ""
+"Το '>' στη συμβολοσειρά μορφής αναγκάζει δεδομένα big-endian∙ το γράμμα 'h' "
+"διαβάζει έναν \"short integer\" (2 bytes), και το 'l' διαβάζει έναν \"long "
+"integer\" (4 byte) από την συμβολοσειρά."
 
 #: faq/library.rst:516
 msgid ""
 "For data that is more regular (e.g. a homogeneous list of ints or floats), "
 "you can also use the :mod:`array` module."
 msgstr ""
+"Για δεδομένα που είναι πιο κανονικά (π.χ. μια ομοιογενής λίστα ακεραίων ή "
+"αριθμούς με υποδιαστολή), μπορείτε επίσης να χρησιμοποιήσετε το module :mod:"
+"`array`."
 
 #: faq/library.rst:521
 msgid ""
@@ -559,10 +787,17 @@ msgid ""
 "instead (the default), the file will be open in text mode and ``f.read()`` "
 "will return :class:`str` objects rather than :class:`bytes` objects."
 msgstr ""
+"Για να διαβάσετε και να γράψετε δυαδικά δεδομένα, είναι υποχρεωτικό να "
+"ανοίξετε το αρχείο σε δυαδική λειτουργία (εδώ, περνώντας το ``\"rb\"`` στη :"
+"func:`open`).  Εάν χρησιμοποιείτε ``\"r\"`` αντί (η προεπιλογή) το αρχείο θα "
+"είναι ανοιχτό σε λειτουργία κειμένου και το ``f.read()`` θα επιστρέψει "
+"αντικείμενα :class:`str` αντί για αντικείμενα :class:`bytes`."
 
 #: faq/library.rst:529
 msgid "I can't seem to use os.read() on a pipe created with os.popen(); why?"
 msgstr ""
+"Δεν μπορώ να χρησιμοποιήσω το os.read() σε ένα pipe που δημιουργήθηκε με το "
+"os.popen()∙ γιατί;"
 
 #: faq/library.rst:531
 msgid ""
@@ -572,36 +807,46 @@ msgid ""
 "function. Thus, to read *n* bytes from a pipe *p* created with :func:`os."
 "popen`, you need to use ``p.read(n)``."
 msgstr ""
+"Η :func:`os.read` είναι μια συνάρτηση χαμηλού επιπέδου που παίρνει έναν "
+"περιγραφέα αρχείου, έναν μικρό ακέραιο που αντιπροσωπεύει το ανοιχτό "
+"αρχείο.  Η :func:`os.popen` δημιουργεί ένα αντικείμενο αρχείου υψηλού "
+"επιπέδου, του ίδιου τύπου που επιστρέφεται από την ενσωματωμένη συνάρτηση :"
+"func:`open`. Έτσι, για να διαβάσετε *n* byte από ένα pipe *p* που "
+"δημιουργήθηκε με τη :func:`os.popen`, πρέπει να χρησιμοποιήσετε το ``p."
+"read(n)``."
 
 #: faq/library.rst:618
 msgid "How do I access the serial (RS232) port?"
-msgstr ""
+msgstr "Πώς μπορώ να αποκτήσω πρόσβαση στη σειριακή θύρα (RS232);"
 
 #: faq/library.rst:620
 msgid "For Win32, OSX, Linux, BSD, Jython, IronPython:"
-msgstr ""
+msgstr "Για Win32, OSX, Linux, BSD, Jython, IronPython:"
 
 #: faq/library.rst:622
 msgid "https://pypi.org/project/pyserial/"
-msgstr ""
+msgstr "https://pypi.org/project/pyserial/"
 
 #: faq/library.rst:624
 msgid "For Unix, see a Usenet post by Mitch Chapman:"
-msgstr ""
+msgstr "Για το Unix, δείτε μια ανάρτηση στο Usenet από τον Mitch Chapman:"
 
 #: faq/library.rst:626
 msgid "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
-msgstr ""
+msgstr "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 
 #: faq/library.rst:630
 msgid "Why doesn't closing sys.stdout (stdin, stderr) really close it?"
 msgstr ""
+"Γιατί το κλείσιμο του sys.stdout (stdin, stderr) δεν το κλείνει πραγματικά;"
 
 #: faq/library.rst:632
 msgid ""
 "Python :term:`file objects <file object>` are a high-level layer of "
 "abstraction on low-level C file descriptors."
 msgstr ""
+"Το Python :term:`file objects <file object>` είναι ένα επίπεδο αφαίρεσης "
+"υψηλού επιπέδου σε χαμηλού επιπέδου περιγραφείς αρχείων C."
 
 #: faq/library.rst:635
 msgid ""
@@ -611,6 +856,11 @@ msgid ""
 "descriptor.  This also happens automatically in ``f``'s destructor, when "
 "``f`` becomes garbage."
 msgstr ""
+"Για τα περισσότερα αντικείμενα αρχείων που δημιουργείτε στην Python μέσω της "
+"ενσωματωμένης συνάρτησης :func:`open`, η ``f.close()`` επισημαίνει το "
+"αντικείμενο αρχείου Python ως κλειστό από την άποψη της Python και επίσης "
+"κανονίζει να κλείσει ο υποκείμενος περιγραφέας αρχείου C. Αυτό συμβαίνει "
+"επίσης αυτόματα στον καταστροφέα του ``f``, όταν το ``f`` γίνεται σκουπίδια."
 
 #: faq/library.rst:641
 msgid ""
@@ -619,6 +869,10 @@ msgid ""
 "marks the Python-level file object as being closed, but does *not* close the "
 "associated C file descriptor."
 msgstr ""
+"Αλλά τα stdin, stdout και stderr αντιμετωπίζονται ειδικά από την Python, "
+"λόγω της ειδικής κατάστασης που τους δίνεται επίσης από τη C.  Εκτελώντας το "
+"``sys.stdout.close()`` επισημαίνει το αντικείμενο αρχείου σε επίπεδο Python "
+"ως κλειστό, αλλά *δεν* κλείνει το συσχετισμένο περιγραφικό αρχείου C."
 
 #: faq/library.rst:646
 msgid ""
@@ -626,18 +880,24 @@ msgid ""
 "first be sure that's what you really want to do (e.g., you may confuse "
 "extension modules trying to do I/O).  If it is, use :func:`os.close`::"
 msgstr ""
+"Για να κλείσετε τον υποκείμενο περιγραφέα αρχείου C για ένα από αυτά τα "
+"τρία, θα πρέπει πρώτα να βεβαιωθείτε ότι αυτό θέλετε πραγματικά να κάνετε (π."
+"χ., μπορείτε να μπερδέψετε τα modules επέκτασης που προσπαθούν να κάνουν I/"
+"O).  Εάν είναι, χρησιμοποιήστε τη :func:`os.close`::"
 
 #: faq/library.rst:654
 msgid "Or you can use the numeric constants 0, 1 and 2, respectively."
 msgstr ""
+"Ή μπορείτε να χρησιμοποιήσετε τις αριθμητικές σταθερές 0, 1 και 2, "
+"αντίστοιχα."
 
 #: faq/library.rst:658
 msgid "Network/Internet Programming"
-msgstr ""
+msgstr "Προγραμματισμός Δικτύου/Διαδικτύου"
 
 #: faq/library.rst:661
 msgid "What WWW tools are there for Python?"
-msgstr ""
+msgstr "Ποια εργαλεία WWW υπάρχουν για την Python;"
 
 #: faq/library.rst:663
 msgid ""
@@ -645,12 +905,17 @@ msgid ""
 "Reference Manual.  Python has many modules that will help you build server-"
 "side and client-side web systems."
 msgstr ""
+"Δείτε τα κεφάλαια με τίτλο :ref:`internet` και :ref:`netdata` στο Εγχειρίδιο "
+"Αναφοράς Βιβλιοθήκης.  Η Python έχει πολλά modules που θα σας βοηθήσουν να "
+"δημιουργήσετε συστήματα ιστού από την πλευρά του διακομιστή και του πελάτη."
 
 #: faq/library.rst:669
 msgid ""
 "A summary of available frameworks is maintained by Paul Boddie at https://"
 "wiki.python.org/moin/WebProgramming\\ ."
 msgstr ""
+"Μια σύνοψη των διαθέσιμων πλαισίων διατηρείται από τον Paul Boddie στη "
+"διεύθυνση https://wiki.python.org/moin/WebProgramming\\ ."
 
 #: faq/library.rst:672
 msgid ""
@@ -658,20 +923,26 @@ msgid ""
 "at https://web.archive.org/web/20210224183619/http://phaseit.net/claird/comp."
 "lang.python/web_python."
 msgstr ""
+"Η Cameron Laird διατηρεί ένα χρήσιμο σύνολο σελίδων σχετικά με τις "
+"τεχνολογίες Ιστού Python στη διεύθυνση https://web.archive.org/"
+"web/20210224183619/http://phaseit.net/claird/comp.lang.python/web_python."
 
 #: faq/library.rst:677
 msgid "How can I mimic CGI form submission (METHOD=POST)?"
-msgstr ""
+msgstr "Πώς μπορώ να μιμηθώ την υποβολή φόρμας CGI (METHOD=POST);"
 
 #: faq/library.rst:679
 msgid ""
 "I would like to retrieve web pages that are the result of POSTing a form. Is "
 "there existing code that would let me do this easily?"
 msgstr ""
+"Θα ήθελα να ανακτήσω ιστοσελίδες που είναι αποτέλεσμα του POST μιας φόρμας.  "
+"Υπάρχει κώδικας που θα επέτρεπε να το κάνω εύκολα;"
 
 #: faq/library.rst:682
 msgid "Yes. Here's a simple example that uses :mod:`urllib.request`::"
 msgstr ""
+"Ναι. Ακολουθεί ένα απλό παράδειγμα που χρησιμοποιεί :mod:`urllib.request`::"
 
 #: faq/library.rst:697
 msgid ""
@@ -679,34 +950,43 @@ msgid ""
 "be quoted using :func:`urllib.parse.urlencode`.  For example, to send "
 "``name=Guy Steele, Jr.``::"
 msgstr ""
+"Λάβετε υπόψιν ότι γενικά για λειτουργίες POST με κωδικοποίηση ποσοστού, οι "
+"συμβολοσειρές ερωτημάτων πρέπει να αναφέρονται χρησιμοποιώντας τη :func:"
+"`urllib.parse.urlencode`.  Για παράδειγμα, για να στείλετε ``name=Guy "
+"Steele, Jr.``::"
 
 #: faq/library.rst:705
 msgid ":ref:`urllib-howto` for extensive examples."
-msgstr ""
+msgstr ":ref:`urllib-howto` για εκτενή παραδείγματα."
 
 #: faq/library.rst:709
 msgid "What module should I use to help with generating HTML?"
-msgstr ""
+msgstr "Τι module πρέπει να χρησιμοποιήσω για να βοηθήσω στην δημιουργία HTML;"
 
 #: faq/library.rst:713
 msgid ""
 "You can find a collection of useful links on the `Web Programming wiki page "
 "<https://wiki.python.org/moin/WebProgramming>`_."
 msgstr ""
+"Μπορείτε να βρείτε μια συλλογή από χρήσιμους συνδέσμους στη σελίδα `Web "
+"Programming wiki page <https://wiki.python.org/moin/WebProgramming>`_."
 
 #: faq/library.rst:718
 msgid "How do I send mail from a Python script?"
-msgstr ""
+msgstr "Πώς μπορώ να στείλω αλληλογραφία από ένα Python script;"
 
 #: faq/library.rst:720
 msgid "Use the standard library module :mod:`smtplib`."
-msgstr ""
+msgstr "Χρησιμοποιήστε την τυπική module βιβλιοθήκη :mod:`smtplib`."
 
 #: faq/library.rst:722
 msgid ""
 "Here's a very simple interactive mail sender that uses it.  This method will "
 "work on any host that supports an SMTP listener. ::"
 msgstr ""
+"Εδώ είναι ένας πολύ απλός διαδραστικός αποστολέας αλληλογραφίας που τον "
+"χρησιμοποιεί.  Αυτή η μέθοδος θα λειτουργήσει σε οποιονδήποτε κεντρικό "
+"υπολογιστή υποστηρίζει το πρόγραμμα ακρόασης SMTP. ::"
 
 #: faq/library.rst:742
 msgid ""
@@ -715,16 +995,22 @@ msgid ""
 "usr/sbin/sendmail``.  The sendmail manual page will help you out.  Here's "
 "some sample code::"
 msgstr ""
+"Μια εναλλακτική λύση μόνο για Unix χρησιμοποιεί sendmail.  Η τοποθεσία του "
+"προγράμματος sendmail ποικίλλει μεταξύ των συστημάτων∙ μερικές φορές είναι "
+"``/usr/lib/sendmail``, μερικές φορές ``/usr/sbin/sendmail``.  Η σελίδα "
+"εγχειριδίου sendmail θα σας βοηθήσει.  Ορίστε ένα δείγμα κώδικα::"
 
 #: faq/library.rst:762
 msgid "How do I avoid blocking in the connect() method of a socket?"
-msgstr ""
+msgstr "Πώς μπορώ να αποφύγω τον αποκλεισμό στη μέθοδο connect() ενός socket;"
 
 #: faq/library.rst:764
 msgid ""
 "The :mod:`select` module is commonly used to help with asynchronous I/O on "
 "sockets."
 msgstr ""
+"Το module :mod:`select` χρησιμοποιείται συνήθως για να βοηθήσει με "
+"ασύγχρονες I/O σε sockets."
 
 #: faq/library.rst:767
 msgid ""
@@ -736,6 +1022,14 @@ msgid ""
 "return different values, so you're going to have to check what's returned on "
 "your system."
 msgstr ""
+"Για να αποτρέψετε τον αποκλεισμό της σύνδεσης TCP, μπορείτε να ρυθμίσετε την "
+"υποδοχή σε λειτουργία μη αποκλεισμού.  Στην συνέχεια, όταν κάνετε τη :meth:"
+"`~socket.socket.connect`, είτε θα συνδεθείτε αμέσως (απίθανο), είτε θα "
+"λάβετε μια εξαίρεση που περιέχει τον αριθμό σφάλματος ως ``.errno``. Το "
+"``errno.EINPROGRESS`` υποδηλώνει ότι η σύνδεση είναι σε εξέλιξη, αλλά δεν "
+"έχει ολοκληρωθεί ακόμα.  Διαφορετικά λειτουργικά συστήματα θα επιστρέψουν "
+"διαφορετικές τιμές, επομένως θα πρέπει να ελέγξετε τι επιστρέφεται στο "
+"σύστημα σας."
 
 #: faq/library.rst:775
 msgid ""
@@ -745,6 +1039,12 @@ msgid ""
 "indicate that you're connected -- or you can pass this socket to :meth:"
 "`select.select` to check if it's writable."
 msgstr ""
+"Μπορείτε να χρησιμοποιήσετε τη μέθοδο :meth:`~socket.socket.connect_ex` για "
+"να αποφύγετε τη δημιουργία εξαίρεσης. Απλώς θα επιστρέψει την τιμή errno. "
+"Για δημοσκόπηση, μπορείτε να καλέσετε το :meth:`~socket.socket.connect_ex` "
+"ξανά αργότερα -- ``0`` ή ``errno.EISCONN`` υποδηλώνει ότι είστε συνδεδεμένοι "
+"-- ή μπορείτε να περάσετε αυτό το socket στη :meth:`select.select` για να "
+"ελέγξτε αν είναι εγγράψιμο."
 
 #: faq/library.rst:783
 msgid ""
@@ -753,18 +1053,22 @@ msgid ""
 "network code. The third-party `Twisted <https://twisted.org/>`_ library is a "
 "popular and feature-rich alternative."
 msgstr ""
+"Το module :mod:`asyncio` παρέχει μια γενικού σκοπού απλή και ταυτόχρονη "
+"ασύγχρονη βιβλιοθήκη, η οποία μπορεί να χρησιμοποιηθεί για τη σύνταξη κώδικα "
+"δικτύου χωρίς αποκλεισμό.  Η βιβλιοθήκη `Twisted <https://twisted.org/>`_ "
+"είναι μια δημοφιλής και με πολλές λειτουργίες εναλλακτική λύση."
 
 #: faq/library.rst:791
 msgid "Databases"
-msgstr ""
+msgstr "Βάσης Δεδομένων"
 
 #: faq/library.rst:794
 msgid "Are there any interfaces to database packages in Python?"
-msgstr ""
+msgstr "Υπάρχουν διεπαφές σε πακέτα βάσεων δεδομένων στην Python;"
 
 #: faq/library.rst:796
 msgid "Yes."
-msgstr ""
+msgstr "Ναι."
 
 #: faq/library.rst:798
 msgid ""
@@ -773,6 +1077,10 @@ msgid ""
 "`sqlite3` module, which provides a lightweight disk-based relational "
 "database."
 msgstr ""
+"Διεπαφές σε κατακερματισμούς που βασίζονται σε δίσκο, όπως :mod:`DBM <dbm."
+"ndbm>` και :mod:`GDBM <dbm.gnu>` περιλαμβάνονται επίσης στην τυπική Python.  "
+"Υπάρχει επίσης το module :mod:`sqlite3`, το οποίο παρέχει μια ελαφριά "
+"σχεσιακή βάση δεδομένων που βασίζεται στο δίσκο."
 
 #: faq/library.rst:803
 msgid ""
@@ -780,10 +1088,13 @@ msgid ""
 "`DatabaseProgramming wiki page <https://wiki.python.org/moin/"
 "DatabaseProgramming>`_ for details."
 msgstr ""
+"Υποστήριξη για τις περισσότερες σχεσιακές βάσεις δεδομένων είναι διαθέσιμη.  "
+"Δείτε τη σελίδα `DatabaseProgramming wiki page <https://wiki.python.org/moin/"
+"DatabaseProgramming>`_ για λεπτομέρειες."
 
 #: faq/library.rst:809
 msgid "How do you implement persistent objects in Python?"
-msgstr ""
+msgstr "Πως υλοποιείται μόνιμα αντικείμενα στην Python;"
 
 #: faq/library.rst:811
 msgid ""
@@ -792,57 +1103,77 @@ msgid ""
 "mod:`shelve` library module uses pickle and (g)dbm to create persistent "
 "mappings containing arbitrary Python objects."
 msgstr ""
+"To module βιβλιοθήκης :mod:`pickle` το λύνει αυτό με πολύ γενικό τρόπο (αν "
+"και δεν μπορείτε ακόμα να αποθηκεύσετε πράγματα όπως ανοιχτά αρχεία, sockets "
+"ή παράθυρα), και το module βιβλιοθήκης :mod:`shelve` χρησιμοποιεί pickle και "
+"(g)dbm για τη δημιουργία επίμονων αντιστοιχίσεων που περιέχουν αυθαίρετα "
+"αντικείμενα Python."
 
 #: faq/library.rst:818
 msgid "Mathematics and Numerics"
-msgstr ""
+msgstr "Μαθηματικά και Αριθμητικά"
 
 #: faq/library.rst:821
 msgid "How do I generate random numbers in Python?"
-msgstr ""
+msgstr "Πως μπορώ να δημιουργήσω τυχαίους αριθμούς στην Python;"
 
 #: faq/library.rst:823
 msgid ""
 "The standard module :mod:`random` implements a random number generator.  "
 "Usage is simple::"
 msgstr ""
+"Η τυπική ενότητα :mod:`random` υλοποιεί μια γεννήτρια τυχαίων αριθμών.  Η "
+"χρήση είναι απλή::"
 
 #: faq/library.rst:829
 msgid "This returns a random floating point number in the range [0, 1)."
 msgstr ""
+"Αυτό επιστρέψει έναν τυχαίο αριθμό κινητής υποδιαστολής στο διάστημα [0, 1)."
 
 #: faq/library.rst:831
 msgid ""
 "There are also many other specialized generators in this module, such as:"
 msgstr ""
+"Υπάρχουν επίσης πολλές άλλες εξειδικευμένες γεννήτριες σε αυτό το module, "
+"όπως:"
 
 #: faq/library.rst:833
 msgid "``randrange(a, b)`` chooses an integer in the range [a, b)."
-msgstr ""
+msgstr "Το ``randrange(a, b)`` επιλέγει έναν ακέραιο στο εύρος [a, b)."
 
 #: faq/library.rst:834
 msgid "``uniform(a, b)`` chooses a floating point number in the range [a, b)."
 msgstr ""
+"Το ``uniform(a, b)`` επιλέγει έναν αριθμό κινητής υποδιαστολής στο εύρος [a, "
+"b)."
 
 #: faq/library.rst:835
 msgid ""
 "``normalvariate(mean, sdev)`` samples the normal (Gaussian) distribution."
 msgstr ""
+"Το ``normalvariate(mean, sdev)`` λαμβάνει δείγματα της κανονικής (Gaussian) "
+"κατανομής."
 
 #: faq/library.rst:837
 msgid "Some higher-level functions operate on sequences directly, such as:"
 msgstr ""
+"Ορισμένες συναρτήσεις υψηλότερου επιπέδου λειτουργούν απευθείας σε "
+"ακολουθίες, όπως:"
 
 #: faq/library.rst:839
 msgid "``choice(S)`` chooses a random element from a given sequence."
 msgstr ""
+"To ``choice(S)`` επιλέγει ένα τυχαίο στοιχείο από μια δεδομένη ακολουθία."
 
 #: faq/library.rst:840
 msgid "``shuffle(L)`` shuffles a list in-place, i.e. permutes it randomly."
 msgstr ""
+"Το ``shuffle(L)`` ανακατεύει μια λίστα επιτόπου, δηλαδή τη μεταθέτει τυχαία."
 
 #: faq/library.rst:842
 msgid ""
 "There's also a ``Random`` class you can instantiate to create independent "
 "multiple random number generators."
 msgstr ""
+"Υπάρχει επίσης μια κλάση ``Random`` που μπορείτε να επιβεβαιώσετε για να "
+"δημιουργήσετε ανεξάρτητες γεννήτριες πολλαπλών τυχαίων αριθμών."
