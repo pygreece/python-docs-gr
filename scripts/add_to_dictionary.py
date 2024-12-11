@@ -1,18 +1,10 @@
-"""
-Script to update the custom dictionary 'main.txt' with new words from a given .po file.
-
-The script scans a specified .po file, ignoring certain metadata lines (e.g., lines starting with "#:").
-It extracts all unique Greek and English words, compares them against the custom dictionary
-under the 'dictionaries/' directory (sibling to the 'scripts/' directory), and adds any new words in alphabetical order.
-"""
-
 import sys
 import os
 import re
 
 def scan_and_update(file_path):
     """
-    Scan the given .po file, extract words, and update the main dictionary.
+    Scan the given .po file, extract words from msgstr blocks, and update the main dictionary.
 
     If the dictionary does not exist, it creates a new one.
 
@@ -47,21 +39,15 @@ def scan_and_update(file_path):
         print(f"Input file {file_path} not found.")
         return 0
 
-    # Regular expression to ignore metadata lines like #: reference/executionmodel.rst:145
-    ignore_pattern = re.compile(r"^#:")
-
     # Regular expression to include accented Greek letters
-    word_pattern = re.compile(r'\b[a-zA-Zα-ωά-ώΑ-ΩΆ-Ώ]+\b', re.UNICODE)
+    word_pattern = re.compile(r'\b[a-zA-Z\u03B1-\u03C9\u0386-\u03CE]+\b', re.UNICODE)
 
     new_words = set()
     entry_buffer = []
     collecting_msgstr = False
 
-    # Step 4: Extract words from the .po file
+    # Step 4: Extract words only from msgstr blocks
     for line in lines:
-        if ignore_pattern.match(line):
-            continue  # Ignore metadata lines
-
         # Handle msgstr entries
         if line.startswith("msgstr"):
             collecting_msgstr = True
@@ -81,7 +67,6 @@ def scan_and_update(file_path):
                     entry_buffer = []
             else:
                 # Continue collecting multiline msgstr
-                # Remove surrounding quotes and append
                 entry_buffer.append(line.strip().strip('"'))
 
     # Handle any remaining buffered text after the loop
