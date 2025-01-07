@@ -18,13 +18,15 @@ msgstr ""
 
 #: using/windows.rst:7
 msgid "Using Python on Windows"
-msgstr ""
+msgstr "Χρηιμοποιώντας Python στα Windows"
 
 #: using/windows.rst:12
 msgid ""
 "This document aims to give an overview of Windows-specific behaviour you "
 "should know about when using Python on Microsoft Windows."
 msgstr ""
+"Αυτό το έγγραφο στοχεύει να δώσει μια επισκόπηση της συμπεριφοράς των Windows που πρέπει να γνωρίζετε "
+"όταν χρησιμοποιείτε την Python στα Microsoft Windows."
 
 #: using/windows.rst:15
 msgid ""
@@ -37,6 +39,13 @@ msgid ""
 "users of a single machine, and a separate ZIP file is available for "
 "application-local distributions."
 msgstr ""
+"Σε αντίθεση με τα περισσότερα συστήματ και υπηρεσίες Unix, τα Windows δεν περιλαμβάνουν εγκατάσταση "
+"Python που υποστηρίζεται από το σύστημα. Για να είναι διαθέσιμη η Python, η ομάδα της CPython έχει μεταγλωττίσει προγράμματα "
+"εγκατάστασης των Windows με κάθε `έκδοση <https://www.python.org/downloads/>`_ για πολλά χρόνια. Αυτά τα "
+"προγράμματα εγκατάστασης προορίζονται κυρίως για την προσθήκη μιας εγκατάστασης της Python ανά χρήστη, με τον βασικό "
+"διερμηνέα και τη βιβλιοθήκη να χρησιμοποιούνται από έναν μόνο χρήστη είναι επίσης σε θέση να εγκαταστήσει "
+"για όλους τους χρήστες ενός μεμονωμένου μηχανήματος και ένα ξεχωριστό αρχείο ZIP είναι διαθέσιμο για τοπικές "
+"διανομές εφαρμογής."
 
 #: using/windows.rst:24
 msgid ""
@@ -45,18 +54,26 @@ msgid ""
 "that Python |version| supports Windows 8.1 and newer. If you require Windows "
 "7 support, please install Python 3.8."
 msgstr ""
+"Όπως ορίζεται στο :pep:`11`, μια έκδοση Python υποστηρίζει μόνο μια πλατφόρμα Windows, ενώ "
+"η microsoft θεωρεί την πλατφόρμα υπό εκτεαμένη υποστήριξη. Αυτό σημαίνιε ότι η Python "
+"|έκδοση| υποστηρίζει Windows 8.1 και νεότερες εκδόσεις. Εάν χρειάζεστε υποστήριξη Windows 7, "
+"εγκαταστήστε την Python 3.8."
 
 #: using/windows.rst:29
 msgid ""
 "There are a number of different installers available for Windows, each with "
 "certain benefits and downsides."
 msgstr ""
+"Υπάρχει ένας αριθμός διαφορετικών προγραμμάτων εγκατάστασης διαθέσιμα για Windows, το καθένα με ορισμένα "
+"πλεονεκτήματα και μειονεκτήματα."
 
 #: using/windows.rst:32
 msgid ""
 ":ref:`windows-full` contains all components and is the best option for "
 "developers using Python for any kind of project."
 msgstr ""
+"Το :ref:`windows-full` περιέχει όλα τα στοιχεία και είναι η καλύτερη επιλογή για προγραμματιστές που "
+"χρησιμοποιούν Python για κάθε είδους έργο."
 
 #: using/windows.rst:35
 msgid ""
@@ -66,6 +83,10 @@ msgid ""
 "without corrupting other programs. It also provides many convenient commands "
 "for launching Python and its tools."
 msgstr ""
+"Το :ref:`windows-store` είναι μια απλή εγκατάσταση της Python που είναι κατάλληλη για εκτέλεση scripts και πακέτων, και "
+"χρήση IDLE ή άλλων περιβαλλόντων ανάπτυξης. Απαιτεί Windows 10 και νεότερη έκδοση, αλλά μπορεί να εγκατασταθεί "
+"με ασφάλεια χωρίς να καταστρέψει άλλα προγράμματα. Παρέχει επίσης πολλές βολικές εντολές "
+"για την εκκίνηση της Python και των εργαλείων της."
 
 #: using/windows.rst:41
 msgid ""
@@ -73,20 +94,25 @@ msgid ""
 "integration systems. It can be used to build Python packages or run scripts, "
 "but is not updateable and has no user interface tools."
 msgstr ""
+"Το :ref:`windows-nuget` είναι ελαφριές εγκαταστάσεις που προορίζονται για συστήματα συνεχούς "
+"ενοποίησης. Μπορεί να χρησιμοποιηθεί για τη δημουργία πακέτων Python ή την εκτέλεση scripts, "
+"αλλά δεν μπορεί να ενημερωθεί και δεν διαθέτει εργαλεία διεπαφής χρήστη."
 
 #: using/windows.rst:45
 msgid ""
 ":ref:`windows-embeddable` is a minimal package of Python suitable for "
 "embedding into a larger application."
 msgstr ""
+"Το :ref:`windows-embeddable` είναι ένα ελάχιστο πακέτο Python κατάλληλο για ενσωμάτωση σε μεγαλύτερη "
+"εφαρμογή."
 
 #: using/windows.rst:52
 msgid "The full installer"
-msgstr ""
+msgstr "Το πλήρες πρόγραμμα εγκατάστασης"
 
 #: using/windows.rst:55
 msgid "Installation steps"
-msgstr ""
+msgstr "Βήματα Εγκατάστασης"
 
 #: using/windows.rst:57
 msgid ""
@@ -98,42 +124,51 @@ msgid ""
 "connection for optional features. See :ref:`install-layout-option` for other "
 "ways to avoid downloading during installation."
 msgstr ""
+"Τέσσερα προγράμματα εγκατάστασης Python |έκδοση| είναι διαθέσιμα για λήψη - δύο το καθένα για τις "
+"εκδόσεις 32-bit και 64-bit του διερμηνέα. Το *web installer* είναι μια αρχική λήψη και θα πραγματοποιήσει αυτόματα "
+"λήψη των απαιτούμενων στοιχείων, όπως απαιτείται. Το *offline installer* περιλαμβάνει τα στοιχεία που είναι "
+"απαραίτητα για μια προεπιλεγμένη εγκατάσταση και απαιτεί μόνο σύνδεση στο διαδίκτυο για προαιρετικές "
+"λειτουργίες. Δείτε το :ref:`install-layout-option` για άλλους τρόπους αποφυγής λήψης κατά την εγκατάσταση."
 
 #: using/windows.rst:65
 msgid "After starting the installer, one of two options may be selected:"
-msgstr ""
+msgstr "Μετά την εκκίνηση του προγράμματος εγκατάστασης, μπορεί να επιλέγει μία από τις δύο "
+"επιλογές:"
 
 #: using/windows.rst:69
 msgid "If you select \"Install Now\":"
-msgstr ""
+msgstr "Εάν επιλέξετε \"Install Now\":"
 
 #: using/windows.rst:71
 msgid ""
 "You will *not* need to be an administrator (unless a system update for the C "
 "Runtime Library is required or you install the :ref:`launcher` for all users)"
 msgstr ""
+"*Δεν* θα χρειάζεται να είστε διαχειριστής (εκτός εάν απαιτείται ενημέρωση συστήματος για τη "
+"Βιβλιοθήκη C Runtime ή εγκαταστήσετε το :ref:`launcher` για όλους τους χρήστες)"
 
 #: using/windows.rst:74
 msgid "Python will be installed into your user directory"
-msgstr ""
+msgstr "Η Python θα εγκατασταθεί στον κατάλογο χρήστη σας"
 
 #: using/windows.rst:75
 msgid ""
 "The :ref:`launcher` will be installed according to the option at the bottom "
 "of the first page"
 msgstr ""
+"Το :ref:`launcher` θα εγκατασταθεί σύμφωνα με την επιλογή στο κάτω μέρος της πρώτης σελίδας"
 
 #: using/windows.rst:77
 msgid "The standard library, test suite, launcher and pip will be installed"
-msgstr ""
+msgstr "Θα εγκατασταθεί η τυπική βιβλιοθήκ, η δοκιμαστική σουίτα, ο εκκινητής και το pip"
 
 #: using/windows.rst:78
 msgid "If selected, the install directory will be added to your :envvar:`PATH`"
-msgstr ""
+msgstr "Εάν επιλεγεί, ο κατάλογος εγκατάστασης θα προστεθεί στο :envvar:`PATH` σας"
 
 #: using/windows.rst:79
 msgid "Shortcuts will only be visible for the current user"
-msgstr ""
+msgstr "Οι συντομεύσεις θα είναι ορατές μόνο για τον τρέχονται χρήστη"
 
 #: using/windows.rst:81
 msgid ""
@@ -142,51 +177,59 @@ msgid ""
 "actions. To install debugging symbols or binaries, you will need to use this "
 "option."
 msgstr ""
+"Επιλέγοντας \"Customize installation\" θα σας επιτρέψει να επιλέξετε τις λειτουργίες προς εγκατάσταση, "
+"τη θέση εγκατάστασης και άλλες επιλογές ή ενέργειες μετά την εγκατάσταση. Για να εγκαταστήσετε σύμβολα "
+"εντοπισμού σφαλμάτων ή δυαδικά αρχεία, θα χρειαστεί να χρησιμοποιήσετε αυτήν την επιλογή."
 
 #: using/windows.rst:85
 msgid ""
 "To perform an all-users installation, you should select \"Customize "
 "installation\". In this case:"
 msgstr ""
+"Για να εκτελέσετε μια εγκατάσταση για όλους τους χρήστες, θα πρέπει να επιλέξετε \"Customize "
+"installation\". Σε αυτήν την περίπτωση:"
 
 #: using/windows.rst:88
 msgid "You may be required to provide administrative credentials or approval"
-msgstr ""
+msgstr "Ενδέχεται να σας ζητηθεί να παράσχετε διαπιστευτήρια διαχείρισης ή έγκριση"
 
 #: using/windows.rst:89
 msgid "Python will be installed into the Program Files directory"
-msgstr ""
+msgstr "Η Python θα εγκατασταθεί στον κατάλογο Program Files"
 
 #: using/windows.rst:90
 msgid "The :ref:`launcher` will be installed into the Windows directory"
-msgstr ""
+msgstr "Το :ref:`launcher` θα εγκατασταθεί στον κατάλογο των Windows"
 
 #: using/windows.rst:91
 msgid "Optional features may be selected during installation"
-msgstr ""
+msgstr "Προαιρετικά χαρακτηριστικά μπορούν να επιλεγούν κατά την εγκατάσταση"
 
 #: using/windows.rst:92
 msgid "The standard library can be pre-compiled to bytecode"
-msgstr ""
+msgstr "Η τυπική βιβλιοθήκη μπορεί να προ-μεταγλωττιστεί σε bytecode"
 
 #: using/windows.rst:93
 msgid ""
 "If selected, the install directory will be added to the system :envvar:`PATH`"
 msgstr ""
+"Εάν επιλεγεί, ο κατάλογος εγκατάστασης θα προστεθεί στο σύστημα :envvar:`PATH`"
 
 #: using/windows.rst:94
 msgid "Shortcuts are available for all users"
-msgstr ""
+msgstr "Οι συντομεύσεις είναι διαθέσιμες για όλους τους χρήστες"
 
 #: using/windows.rst:99
 msgid "Removing the MAX_PATH Limitation"
-msgstr ""
+msgstr "Κατάργηση του περιορισμού MAX_PATH"
 
 #: using/windows.rst:101
 msgid ""
 "Windows historically has limited path lengths to 260 characters. This meant "
 "that paths longer than this would not resolve and errors would result."
 msgstr ""
+"Τα Windows έχουν ιστορικά περιορισμένα μήκη διαδρομής στους 260 χαρακτήρες. Αυτό σήμαινε ότι "
+"διαδρομές μεγαλύτερες από αυτό δεν θα επιλύονταν και θα προέκυπταν σφάλματα."
 
 #: using/windows.rst:104
 msgid ""
@@ -196,24 +239,30 @@ msgid ""
 "``1`` in the registry key "
 "``HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem``."
 msgstr ""
+"Στις πιο πρόσφατες εκδόσεις των Windows, αυτός ο περιορισμός μπορεί να επεκταθεί σε περίπου 32.000 "
+"χαρακτήρες. Ο διαχειριστής σας θα πρέπει να ενεργοποιήσει την πολιτική ομάδας \"Enable Win32 long paths\", ή να ορίσει "
+"``LongPathsEnabled`` σε ``1`` το κλειδί μητρώου "
+"``HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem``."
 
 #: using/windows.rst:110
 msgid ""
 "This allows the :func:`open` function, the :mod:`os` module and most other "
 "path functionality to accept and return paths longer than 260 characters."
 msgstr ""
+"Αυτό επιστρέπει στη συνάρτηση :func:`open`, στο module :mod:`os` και στις περισσότερες άλλες "
+"λειτουργίες διαδρομής να αποδέχονται και να επιστρέφουν διαδρομές μεγαλύτερες από 260 χαρακτήρες."
 
 #: using/windows.rst:113
 msgid "After changing the above option, no further configuration is required."
-msgstr ""
+msgstr "Μετά την αλλαγή της παραπάνω επιλογής, δεν απαιτείται περαιτέρω διαμόρφωση."
 
 #: using/windows.rst:117
 msgid "Support for long paths was enabled in Python."
-msgstr ""
+msgstr "Η υποστήριξη για μεγάλες διαδρομές ήταν ενεργοποιημένη στην Python."
 
 #: using/windows.rst:122
 msgid "Installing Without UI"
-msgstr ""
+msgstr "Εγκατάσταση χωρίς UI"
 
 #: using/windows.rst:124
 msgid ""
@@ -222,68 +271,74 @@ msgid ""
 "on many machines without user interaction.  These options may also be set "
 "without suppressing the UI in order to change some of the defaults."
 msgstr ""
+"Όλες οι διαθέσιμες επιλογές στη διεπαφή χρήστη του προγράμματος εγκατάστασης μπορούν επίσης "
+"να καθοριστούν από τη γραμμή εντολών, επιστρέποντας στους εγκαταστάτες με σενάριο να αναπαράγουν "
+"μια εγκατάσταση σε πολλά μηχανήματα χωρίς αλληλεπίδραση με τον χρήστη. Αυτές οι επιλογές μπορούν επίσης "
+"να οριστούν χωρίς να καταργηθεί η διεπαφή χρήστη προκειμένου να αλλάξουν ορισμένες από τις προεπιλογές."
 
 #: using/windows.rst:129
 msgid ""
 "The following options (found by executing the installer with ``/?``) can be "
 "passed into the installer:"
 msgstr ""
+"Οι ακόλουθες επιλογές (που βρίσκονται εκτελώντας το πρόγραμμα εγκατάστασης με ``/?``) μπορούν "
+"να περάσουν στο πρόγραμμα εγκατάστασης:"
 
 #: using/windows.rst:153 using/windows.rst:1082
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: using/windows.rst:153 using/windows.rst:1082
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: using/windows.rst:135
 msgid "/passive"
-msgstr ""
+msgstr "/passive"
 
 #: using/windows.rst:135
 msgid "to display progress without requiring user interaction"
-msgstr ""
+msgstr "για εμφάνιση προόδου χωρίς να απαιτείται αλληλεπίδραση με τον χρήστη"
 
 #: using/windows.rst:137
 msgid "/quiet"
-msgstr ""
+msgstr "/quiet"
 
 #: using/windows.rst:137
 msgid "to install/uninstall without displaying any UI"
-msgstr ""
+msgstr "για εγκατάσταση/απεγκατάσταση χωρίς εμφάνιση διεπαφής χρήστη"
 
 #: using/windows.rst:139
 msgid "/simple"
-msgstr ""
+msgstr "/simple"
 
 #: using/windows.rst:139
 msgid "to prevent user customization"
-msgstr ""
+msgstr "για να αποτρέψετε την προσαρμογή του χρήστη"
 
 #: using/windows.rst:141
 msgid "/uninstall"
-msgstr ""
+msgstr "/uninstall"
 
 #: using/windows.rst:141
 msgid "to remove Python (without confirmation)"
-msgstr ""
+msgstr "για να αφαιρέσετε την Python (χωρίς επιβεβαίωση)"
 
 #: using/windows.rst:143
 msgid "/layout [directory]"
-msgstr ""
+msgstr "/layout [κατάλογος]"
 
 #: using/windows.rst:143
 msgid "to pre-download all components"
-msgstr ""
+msgstr "για προ-λήψη όλων των στοχείων"
 
 #: using/windows.rst:145
 msgid "/log [filename]"
-msgstr ""
+msgstr "/log [όνομα αρχείου]"
 
 #: using/windows.rst:145
 msgid "to specify log files location"
-msgstr ""
+msgstr "για να καθορίσετε τη θέση των αρχείων καταγραφής"
 
 #: using/windows.rst:148
 msgid ""
@@ -291,57 +346,62 @@ msgid ""
 "``0`` to disable a feature, ``1`` to enable a feature, or a path. The full "
 "list of available options is shown below."
 msgstr ""
+"Όλες οι άλλες επιλογές μεταβιβάζονται ως ``name=value``, όπου η τιμή είναι συνήθως ``0`` "
+"για να απενεργοποιήσετε ένα χαρακτηριστικό, ``1`` για να ενεργοποιήσετε ένα χαρακτηριστικό ή μια "
+"διαδρομή. Η πλήρης λίστα των διαθέσιμων επιλογών φαίνεται παρακάτω."
 
 #: using/windows.rst:153
 msgid "Default"
-msgstr ""
+msgstr "Προεπιλογή"
 
 #: using/windows.rst:155
 msgid "InstallAllUsers"
-msgstr ""
+msgstr "InstallAllUsers"
 
 #: using/windows.rst:155
 msgid "Perform a system-wide installation."
-msgstr ""
+msgstr "Εκτέλεση εγκατάστασης σε όλο το σύστημα."
 
 #: using/windows.rst:181 using/windows.rst:188 using/windows.rst:219
 #: using/windows.rst:230
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: using/windows.rst:157
 msgid "TargetDir"
-msgstr ""
+msgstr "TargetDir"
 
 #: using/windows.rst:157
 msgid "The installation directory"
-msgstr ""
+msgstr "Ο κατάλογος εγκατάστασης"
 
 #: using/windows.rst:157
 msgid "Selected based on InstallAllUsers"
-msgstr ""
+msgstr "Επιλέχθηκε με βάση το InstallAllUsers"
 
 #: using/windows.rst:160
 msgid "DefaultAllUsersTargetDir"
-msgstr ""
+msgstr "DefaultAllUsersTargetDir"
 
 #: using/windows.rst:160
 msgid "The default installation directory for all-user installs"
-msgstr ""
+msgstr "Ο προεπιλεγμένος κατάλογος εγκατάστασης για τις εγκαταστάσεις όλων των χρηστών"
 
 #: using/windows.rst:160
 msgid ""
 ":file:`%ProgramFiles%\\\\\\ Python X.Y` or :file:`\\ %ProgramFiles(x86)%\\\\"
 "\\ Python X.Y`"
 msgstr ""
+":file:`%ProgramFiles%\\\\\\ Python X.Y` or :file:`\\ %ProgramFiles(x86)%\\\\"
+"\\ Python X.Y`"
 
 #: using/windows.rst:165
 msgid "DefaultJustForMeTargetDir"
-msgstr ""
+msgstr "DefaultJustForMeTargetDir"
 
 #: using/windows.rst:165
 msgid "The default install directory for just-for-me installs"
-msgstr ""
+msgstr "Ο προεπιλεγμένος κατάλογος εγκατάστασης για just-for-me εγκαταστάσεις"
 
 #: using/windows.rst:165
 msgid ""
@@ -349,53 +409,58 @@ msgid ""
 "`%LocalAppData%\\\\\\ Programs\\\\Python\\\\\\ PythonXY-32` or :file:"
 "`%LocalAppData%\\\\\\ Programs\\\\Python\\\\\\ PythonXY-64`"
 msgstr ""
+":file:`%LocalAppData%\\\\\\ Programs\\\\Python\\\\\\ PythonXY` or :file:"
+"`%LocalAppData%\\\\\\ Programs\\\\Python\\\\\\ PythonXY-32` or :file:"
+"`%LocalAppData%\\\\\\ Programs\\\\Python\\\\\\ PythonXY-64`"
 
 #: using/windows.rst:175
 msgid "DefaultCustomTargetDir"
-msgstr ""
+msgstr "DefaultCustomTargetDir"
 
 #: using/windows.rst:175
 msgid "The default custom install directory displayed in the UI"
-msgstr ""
+msgstr "Ο προεπιλεγμένο κατάλογος προσαρμοσμένης εγκατάστασης που εμφανίζεται στο UI"
 
 #: using/windows.rst:232
 msgid "(empty)"
-msgstr ""
+msgstr "(empty)"
 
 #: using/windows.rst:178
 msgid "AssociateFiles"
-msgstr ""
+msgstr "AssociateFiles"
 
 #: using/windows.rst:178
 msgid "Create file associations if the launcher is also installed."
-msgstr ""
+msgstr "Δημιουρήστε συσχετίσεις αρχείων εάν είναι επίσης εγκατεστημένο το πρόγραμμα εκκίνησης."
 
 #: using/windows.rst:192 using/windows.rst:199 using/windows.rst:207
 #: using/windows.rst:213 using/windows.rst:221 using/windows.rst:225
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: using/windows.rst:181
 msgid "CompileAll"
-msgstr ""
+msgstr "CompileAll"
 
 #: using/windows.rst:181
 msgid "Compile all ``.py`` files to ``.pyc``."
-msgstr ""
+msgstr "Μεταγλώττιση όλων των αρχείων ``.py`` σε ``.pyc``."
 
 #: using/windows.rst:184
 msgid "PrependPath"
-msgstr ""
+msgstr "PrependPath"
 
 #: using/windows.rst:184
 msgid ""
 "Prepend install and Scripts directories  to :envvar:`PATH` and add ``.PY`` "
 "to :envvar:`PATHEXT`"
 msgstr ""
+"Προετοιμάστε τους καταλόγους εγκατάστασης και δέσμης αρχείων στο :envvar:`PATH` και προσθέστε το "
+"``.PY`` στο :envvar:`PATHEXT`"
 
 #: using/windows.rst:188
 msgid "AppendPath"
-msgstr ""
+msgstr "AppendPath"
 
 #: using/windows.rst:188
 msgid ""
