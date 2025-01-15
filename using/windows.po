@@ -1975,12 +1975,18 @@ msgid ""
 "specify if a 32 or 64 bit implementation shall be requested by adding "
 "\"-32\" or \"-64\"."
 msgstr ""
+"Σε ορισμένες περιπτώσεις, ένας προσδιορισμός έκδοσης μπορεί να συμπεριληφθεί σε μια εντολή για να υπαγορεύεσει ποια "
+"έκδοση της Python θα χρησιμοποιηθεί από την εντολή. Ένας προσδιοριστής έκδοσης ξεκινά με τον αριθμό κύριας έκδοσης "
+"και μπορεί προαιρετικά να ακολουθείτα από μια τελεία ('.') και ένας δευτερεύων προσδιοριστής έκδοσης. Επιπλέον, είναι δυνατό "
+"να καθοριστεί εάν θα ζητηθεί υλοποίηση 32 ή 64 bit προσθέτοντας \"-32\" ή \"-64\"."
 
 #: using/windows.rst:965
 msgid ""
 "For example, a shebang line of ``#!python`` has no version qualifier, while "
 "``#!python3`` has a version qualifier which specifies only a major version."
 msgstr ""
+"Για παράδειγμα, μια γραμμή shebang του ``#!python`` δεν έχει προσδιοριστικό έκδοσης, ενώ το "
+"``#!python3`` έχει έναν προσδιορισμό έκδοσης που καθορίζει μόνο μια κύρια έκδοση."
 
 #: using/windows.rst:968
 msgid ""
@@ -1991,6 +1997,11 @@ msgid ""
 "\"3.7-64\". (Note that the \"-64\" option is only available with the "
 "launcher included with Python 3.7 or newer.)"
 msgstr ""
+"Εάν δεν βρεθούν κριτήρια έκδοσης σε μια εντολή, η μεταβλητή περιβάλλοντος :"
+"envvar:`PY_PYTHON` μπορεί να οριστεί για να καθορίσει τον προσδιορισμό της προεπιλεγμένης έκδοσης. Εάν "
+"δεν έχει οριστεί, η προεπιλογή είναι \"3\", \"3.7\", \"3.7-32\" ή \"3.7-64\". "
+"(Σημειώστε όιτ η επιλογή \"-64\" είναι διαθέσιμη μόνο με το πρόγραμμα εκκίνησης που περιλαμβάνεται "
+"στην Python 3.7 ή νεότερη έκδοση.)"
 
 #: using/windows.rst:975
 msgid ""
@@ -2002,6 +2013,12 @@ msgid ""
 "is likely, although not guaranteed, to be the most recently installed "
 "version in that family."
 msgstr ""
+"Εάν δεν βρεθούν περιορισμοί δευτερεύουσα έκδοσης, η μεταβλητή περιβάλλοντος ``PY_PYTHON{major}`` "
+"(όπου ``{major}`` είναι ο προσδιορισμός της τρέχουσας κύριας έκδοσης όπως προσδιορίζεται παραπάνω) "
+"μπορεί να οριστεί για να καθορίσει την πλήρη έκδοση. Εάν όχι αν βρεθεί τέτοια επιλογή, ο εκκινητής θα "
+"απαριθμήσει τις εγκατεστημένες εκδόσεις Python και θα χρησιμοποιήσει την πιο πρόσφατη δευτερεύουσα έκδοση "
+"που βρέθηκε για την κύρια έκδοση, η οποία είναι πιθανό, αν και δεν είναι εγγυημένη, να είναι η πιο πρόσφατα εγκατεστημένη "
+"έκδοση σε αυτήν την οικογένεια."
 
 #: using/windows.rst:983
 msgid ""
@@ -2016,10 +2033,18 @@ msgid ""
 "launcher was installed last). As noted above, an optional \"-32\" or \"-64\" "
 "suffix can be used on a version specifier to change this behaviour."
 msgstr ""
+"Σε Windows 64-bit με εγκατεστημένες υλοποιήσεις 32-bit και 64-bit της ίδιας (major.minor) έκδοσης "
+"Python, η έκδοση 64-bit θα προτιμάται πάντα. Αυτό θα ισχύει τόσο για 32-bit όσο και για 64-bit υλοποιήσεις "
+"του προγράμματος εκκίνησης - ένα 32-bit εκκινητής θα προτιμήσει να εκτελέσει μια εγκατάσταση Python 64-bit "
+"της καθορισμένης έκδοσης, εάν είναι διαθέσιμη. Αυτό είναι έτσι ώστε η συμπεριφορά του προγραμμάτος εκκίνησης μπορεί "
+"να προβλεφθεί γνωρίζοντας μόνο ποιες έκδοσεις είναι εγκατεστημένες στον υπολογιστή και χωρίς να λαμβάνεται υπόψη η "
+"σειρά με την οποία εγκαταστάθηκαν (δηλαδή, χωρίς να γνωρίζουμε εάν μια έκδοση 32 ή 64-bit της Python και το αντίστοιχο "
+"πρόγραμμα εκκίνησης εγκαταστάθηκε τελευταίο). Όπως σημειώθηκε παραπάνω, ένα προαιρετικό επίθημα \"-32\" ή \"-64\" "
+"μπορεί να χρησιμοποιηθεί σε έναν προσδιοριστή έκδοσης για την αλλαγή αυτής της συμπεριφοράς."
 
 #: using/windows.rst:994
 msgid "Examples:"
-msgstr ""
+msgstr "Παραδείγματα:"
 
 #: using/windows.rst:996
 msgid ""
@@ -2027,18 +2052,25 @@ msgid ""
 "use the latest Python 2.x version installed and the command ``python3`` will "
 "use the latest Python 3.x installed."
 msgstr ""
+"Εάν δεν οριστούν σχετικές επιλογές, οι εντολές ``python`` και ``python2`` θα χρησιμοποιήσουν "
+"την πιο πρόσφατη εγκατεστημένη έκδοση Python 2.x και η εντολή ``python3`` θα χρησιμοποιήσει την πιο "
+"πρόσφατη εγκατεστημένη Python 3.x."
 
 #: using/windows.rst:1000
 msgid ""
 "The command ``python3.7`` will not consult any options at all as the "
 "versions are fully specified."
 msgstr ""
+"Η εντολή ``python3.7`` δεν θα συμβουλευτεί καμία απολύτως επιλογή καθώς οι εκδόσεις είναι "
+"πλήρως καθορισμένες."
 
 #: using/windows.rst:1003
 msgid ""
 "If ``PY_PYTHON=3``, the commands ``python`` and ``python3`` will both use "
 "the latest installed Python 3 version."
 msgstr ""
+"Εάν ``PY_PYTHON=3``, οι εντολές ``python`` και ``python3`` θα χρησιμοποιούν και οι δύο την πιο "
+"πρόσφατη εγακτεστημένη έκδοση Python 3."
 
 #: using/windows.rst:1006
 msgid ""
@@ -2047,12 +2079,17 @@ msgid ""
 "installed Python (PY_PYTHON was not considered at all as a major version was "
 "specified.)"
 msgstr ""
+"Εάν ``PY_PYTHON=3.7-32``, η εντολή ``python`` θα χρησιμοποιήσει την υλοποίηση 32-bit "
+"του 3.7 ενώ η εντολή ``python3`` θα χρησιμοποιήσει την πιο πρόσφατη εγκατεστημένη Python (Το PY_PYTHON δεν "
+"θεωρήθηκε καθόλου καθώς καθορίστηκε μια κύρια έκδοση.)"
 
 #: using/windows.rst:1011
 msgid ""
 "If ``PY_PYTHON=3`` and ``PY_PYTHON3=3.7``, the commands ``python`` and "
 "``python3`` will both use specifically 3.7"
 msgstr ""
+"Εάν ``PY_PYTHON=3`` και ``PY_PYTHON3=3.7``, οι εντολές ``python`` και "
+"``python3`` θα χρησιμοποιούν και οι δύο συγκεκριμένα την 3.7"
 
 #: using/windows.rst:1014
 msgid ""
@@ -2063,24 +2100,30 @@ msgid ""
 "the INI file are case insensitive.)  The contents of an environment variable "
 "will override things specified in the INI file."
 msgstr ""
+"Εκτός από τις μεταβλητές περιβάλλοντος, οι ίδες ρυθμίσεις μπορούν να διαμορφωθούν στο αρχείο "
+".INI που χρησιμοποιείται από το πρόγραμμα εκκίνησης.  Η ενότητα στο αρχείο INI ονομάζεται "
+"``[defaults]`` και το όνομα του κλειδιού θα είναι το ίδιο με τις μεταβλητές περιβάλλοντος χωρίς το αρχικό "
+"πρόθεμα ``PY_`` (και σημειώστε ότι τα ονόματα κλειδιών στο αρχείο INI δεν έχουν διάκριση πεζών-κεφαλαίων.)  Τα περιεχόμενα "
+"μιας μεταβλητής περιβάλλοντος θα αντικαταστήσουν τα στοιχεία που καθορίζονται στο αρχείο INI."
 
 #: using/windows.rst:1021
 msgid "For example:"
-msgstr ""
+msgstr "Για παράδειγμα:"
 
 #: using/windows.rst:1023
 msgid "Setting ``PY_PYTHON=3.7`` is equivalent to the INI file containing:"
-msgstr ""
+msgstr "Η ρύθμιση ``PY_PYTHON=3.7`` είναι ισοδύναμη με το αρχείο INI που περιέχει:"
 
 #: using/windows.rst:1030
 msgid ""
 "Setting ``PY_PYTHON=3`` and ``PY_PYTHON3=3.7`` is equivalent to the INI file "
 "containing:"
 msgstr ""
+"Η ρύθμιση ``PY_PYTHON=3`` και ``PY_PYTHON3=3.7`` ισοδυναμεί με το αρχείο INI που περιέχει:"
 
 #: using/windows.rst:1040
 msgid "Diagnostics"
-msgstr ""
+msgstr "Διαγνωστικά"
 
 #: using/windows.rst:1042
 msgid ""
@@ -2091,10 +2134,16 @@ msgid ""
 "a particular version was chosen and the exact command-line used to execute "
 "the target Python. It is primarily intended for testing and debugging."
 msgstr ""
+"Εάν μια μεταβλητή περιβάλλοντος :envvar:`PYLAUNCHER_DEBUG` έχει οριστεί (σε οποιαδήποτε τιμή), "
+"το πρόγραμμα εκκίνησης θα εκτυπώσει διαγνωστικές πληροφορίες στο stderr (δηλαδή στην κονσόλα). "
+"Ενώ αυτές οι πληροφορίες καταφέρνουν να είναι ταυτόχρονα αναλυτικές *και*, "
+"θα πρέπει να επιτρέπουν για να δείτε ποιες εκδόσεις της Pyhton εντοπίστηκαν, γιατί επιλέχθηκε μια "
+"συγκεκριμένη έκδοση και η ακριβής γραμμή ενοτλών που χρησιμοποιήθηκε για την εκτέλεση του στόχου Python. "
+"Προορίζεται κυρίως για δοκιμή και εντοπισμό σφαλμάτων."
 
 #: using/windows.rst:1050
 msgid "Dry Run"
-msgstr ""
+msgstr "Dry Run"
 
 #: using/windows.rst:1052
 msgid ""
@@ -2105,10 +2154,15 @@ msgid ""
 "written to standard output is always encoded using UTF-8, and may not render "
 "correctly in the console."
 msgstr ""
+"Εάν μια μεταβλητή περιβάλλοντος :envvar:`PYLAUNCHER_DRYRUN` έχει οριστεί (σε οποιαδήποτε τιμή), το πρόγραμμα "
+"εκκίνησης θα δώσει την εντολή που θα εκτελούσε, άλλά δεν θα εκκινήσει πραγματικά την Python. Αυτό μπορεί να είναι χρήσιμο για "
+"εργαλεία που θέλουν να χρησιμοποιήσουν το πρόγραμμα εκκίνησης για να εντοπιστεί και να εκκινηθέι απευθείας η Python. Σημειώστε "
+"ότι η εντολή που είναι γραμμένη στην τυπική έξοδο κωδικοποιείται πάντα με χρήση UTF-8 και ενδέχεται να μην αποδίδεται σωστά στην "
+"κονσόλα."
 
 #: using/windows.rst:1060
 msgid "Install on demand"
-msgstr ""
+msgstr "Εγκατάταση κατ' απαίτηση"
 
 #: using/windows.rst:1062
 msgid ""
@@ -2118,6 +2172,10 @@ msgid ""
 "require user interaction to complete, and you may need to run the command "
 "again."
 msgstr ""
+"Εάν μια μεταβλητή περιβάλλοντος :envvar:`PYLAUNCHER_ALLOW_INSTALL` έχει οριστεί (σε οποιαδήποτε τιμή), "
+"και η ζητούμενη έκδοση Python δεν είναι εγκατεστημένη αλλά είναι διαθέσιμη στο Microsoft Store, το πρόγραμμα "
+"εκκίνησης θα επιχειρήσει να την εγκαταστήσει. Αυτό μπορεί να απαιτεί την ολοκλήρωση της αλληλεπίδρασης του χρήστη "
+"και ίσως χρειαστεί να εκτελέσετε ξανά την εντολή."
 
 #: using/windows.rst:1067
 msgid ""
@@ -2126,10 +2184,13 @@ msgid ""
 "mainly intended for testing (and should be used with :envvar:"
 "`PYLAUNCHER_DRYRUN`)."
 msgstr ""
+"Μια πρόσθετη μεταβλητή :envvar:`PYLAUNCHER_ALWAYS_INSTALL` αναγκάζει το πρόγραμμα εκκίνησης να προσπαθεί πάντα "
+"να εγκαταστήσει την Python, ακόμα κι αν εντοπιστεί. Αυτό προορίζεται κυρίως για δοκιμή (και θα πρέπει να χρησιμοποιείται "
+"με το :envvar:`PYLAUNCHER_DRYRUN`)."
 
 #: using/windows.rst:1072
 msgid "Return codes"
-msgstr ""
+msgstr "Κωδικοί επιστροφής"
 
 #: using/windows.rst:1074
 msgid ""
@@ -2137,6 +2198,8 @@ msgid ""
 "Unfortunately, there is no way to distinguish these from the exit code of "
 "Python itself."
 msgstr ""
+"Οι ακόλουθοι κωδικοί εξόδου ενδέχεται να επιστραφούν από το πρόγραμμα εκκίνησης της Python. "
+"Δυστυχώς, δεν υπάρχει τρόπος να διακριθούν από τον κωδικό εξόδου της ίδιας της Python."
 
 #: using/windows.rst:1077
 msgid ""
@@ -2144,118 +2207,126 @@ msgid ""
 "There is no way to access or resolve them apart from reading this page. "
 "Entries are listed in alphabetical order of names."
 msgstr ""
+"Τα ονόματα των κωδικών είναι όπως χρησιμοποιούνται στις πηγές και είναι μόνο για αναφορά. Δεν υπάρχει τρόπος "
+"πρόσβασης ή επίλυσης τους εκτός από την ανάγνωση αυτής της σελίδα. Οι καταχωρήσεις παρατίθενται με αλφαβητική σειρά "
+"ονομάτων."
 
 #: using/windows.rst:1082
 msgid "Value"
-msgstr ""
+msgstr "Τιμή"
 
 #: using/windows.rst:1084
 msgid "RC_BAD_VENV_CFG"
-msgstr ""
+msgstr "RC_BAD_VENV_CFG"
 
 #: using/windows.rst:1084
 msgid "107"
-msgstr ""
+msgstr "107"
 
 #: using/windows.rst:1084
 msgid "A :file:`pyvenv.cfg` was found but is corrupt."
-msgstr ""
+msgstr "Βρέθηκε ένα :file:`pyvenv.cfg` αλλά είναι κατεστραμμένο."
 
 #: using/windows.rst:1086
 msgid "RC_CREATE_PROCESS"
-msgstr ""
+msgstr "RC_CREATE_PROCESS"
 
 #: using/windows.rst:1086
 msgid "101"
-msgstr ""
+msgstr "101"
 
 #: using/windows.rst:1086
 msgid "Failed to launch Python."
-msgstr ""
+msgstr "Απέτυχε η εκκίνηση της Python."
 
 #: using/windows.rst:1088
 msgid "RC_INSTALLING"
-msgstr ""
+msgstr "RC_INSTALLING"
 
 #: using/windows.rst:1088
 msgid "111"
-msgstr ""
+msgstr "111"
 
 #: using/windows.rst:1088
 msgid ""
 "An install was started, but the command will need to be re-run after it "
 "completes."
 msgstr ""
+"Ξεκίνησε μια εγκατάσταση, αλλά η εντολή θα πρέπει να εκτελεστεί ξανά μετά την ολοκλήρωση της."
 
 #: using/windows.rst:1091
 msgid "RC_INTERNAL_ERROR"
-msgstr ""
+msgstr "RC_INTERNAL_ERROR"
 
 #: using/windows.rst:1091
 msgid "109"
-msgstr ""
+msgstr "109"
 
 #: using/windows.rst:1091
 msgid "Unexpected error. Please report a bug."
-msgstr ""
+msgstr "Απροσδόκητο σφάλμα, Αναφέρετε ένα σφάλμα."
 
 #: using/windows.rst:1093
 msgid "RC_NO_COMMANDLINE"
-msgstr ""
+msgstr "RC_NO_COMMANDLINE"
 
 #: using/windows.rst:1093
 msgid "108"
-msgstr ""
+msgstr "108"
 
 #: using/windows.rst:1093
 msgid "Unable to obtain command line from the operating system."
-msgstr ""
+msgstr "Δεν είναι δυνατή η λήψη της γραμμής εντολών από το λειτουργικό σύστημα."
 
 #: using/windows.rst:1096
 msgid "RC_NO_PYTHON"
-msgstr ""
+msgstr "RC_NO_PYTHON"
 
 #: using/windows.rst:1096
 msgid "103"
-msgstr ""
+msgstr "103"
 
 #: using/windows.rst:1096
 msgid "Unable to locate the requested version."
-msgstr ""
+msgstr "Δεν είναι δυνατός ο εντοπισμός της ζητούμενης έκδοσης."
 
 #: using/windows.rst:1098
 msgid "RC_NO_VENV_CFG"
-msgstr ""
+msgstr "RC_NO_VENV_CFG"
 
 #: using/windows.rst:1098
 msgid "106"
-msgstr ""
+msgstr "106"
 
 #: using/windows.rst:1098
 msgid "A :file:`pyvenv.cfg` was required but not found."
-msgstr ""
+msgstr "Απαιτήθηκε ένα :file:`pyvenv.cfg` αλλα δεν βρέθηκε."
 
 #: using/windows.rst:1106
 msgid "Finding modules"
-msgstr ""
+msgstr "Εύρεση modules"
 
 #: using/windows.rst:1108
 msgid ""
 "These notes supplement the description at :ref:`sys-path-init` with detailed "
 "Windows notes."
 msgstr ""
+"Αυτές οι σημειώσει συμπληρώνουν την περιγραφή :ref:`sys-path-init` με λεπτομέρείς "
+"σημειώσεις των Windows."
 
 #: using/windows.rst:1111
 msgid ""
 "When no ``._pth`` file is found, this is how :data:`sys.path` is populated "
 "on Windows:"
 msgstr ""
+"Όταν δεν βρεθεί αρχείο ``._pth``, συμπληρώνεται έτσι το :data:`sys.path` στα Windows:"
 
 #: using/windows.rst:1114
 msgid ""
 "An empty entry is added at the start, which corresponds to the current "
 "directory."
 msgstr ""
+"Μια κενή καταχώρηση προστίθεται στην αρχή, η οποία αντιστοιχεί στον τρέχονται κατάλογο."
 
 #: using/windows.rst:1117
 msgid ""
@@ -2264,6 +2335,10 @@ msgid ""
 "paths in this variable must be separated by semicolons, to distinguish them "
 "from the colon used in drive identifiers (``C:\\`` etc.)."
 msgstr ""
+"Εάν υπάρχει η μεταβλητή περιβάλλοντος :envvar:`PYTHONPATH`, όπως περιγράφεται στο "
+":ref:`using-on-envvars`, οι εγγραφές της προστίθενται στη συνέχεια.  Σημειώστε ότι στα Windows, οι "
+"διαδρομές σε αυτήν τη μεταβλητή πρέπει να διαχωρίζονται με ερωτηματικά, για να γίνει διάκριση από την άνω και κάτω τελεία "
+"που χρησιμοποιείται στα αναγνωριστικά μονάδων δίσκου (``C:\\`` κλπ.)."
 
 #: using/windows.rst:1122
 msgid ""
@@ -2274,6 +2349,12 @@ msgid ""
 "cause each path to be added to :data:`sys.path`.  (Note that all known "
 "installers only use HKLM, so HKCU is typically empty.)"
 msgstr ""
+"Μπορούν να προστεθούν επιπλέον \"διαδρομές εφαρμογής\" στο μητρώο ως δευτερεύοντα κλειδιά του "
+":samp:`\\\\SOFTWARE\\\\Python\\\\PythonCore\\\\{version}\\\\PythonPath` κάτω από τις κυψέλες "
+"``HKEY_CURRENT_USER`` και ``HKEY_LOCAL_MACHINE``.  Τα δευτερεύοντα κλειδιά που έχουν ως προεπιλεγμένη τιμή συμβολοσειρές "
+"διαδρομής οριοθετημένη με ερωτιματικό θα προκαλέσει την προσθήκη κάθε διαδρομής στο "
+":data:`sys.path`.  (Λάβετε υπόχη ότι όλα τα γνωστά προγράμματα εγκατάστασης χρησιμοποιούν μόνο "
+"HKLM, επομένως το HKCU είναι συνήθως κενό.)"
 
 #: using/windows.rst:1129
 msgid ""
@@ -2285,6 +2366,12 @@ msgid ""
 "on that folder.  Otherwise, the core Python path is constructed from the "
 "PythonPath stored in the registry."
 msgstr ""
+"Εάν έχει οριστεί η μεταβλητή περιβάλλοντος :envvar:`PYTHONHOME`, θεωρείται ότι είναι "
+"\"Python Home\".  Διαφορετικά, η διαδρομή του κύριου εκτελέσιμου Python χρησιμοποιείται για τον " 
+"εντοπισμόενός \"αρχείου ορόσημο\" (είτε ``Lib\\os.py`` ή ``pythonXY.zip``) για να συμπεράνουμε "
+"το \"Python Home\". Βρεθεί ένα Python home, οι σχετικοί υποκατάλογοι που προστέθηκαν στο "
+":data:`sys.path` (``Lib``, ``plat-win``, κ.λπ.) βασίζονται σε αυτόν τον φάκελο.  Διαφορετικά, η διαδρομή του πυρήνα "
+"της Python δημιουργείται από το PythonPath που είναι αποθηκευμένο στο μητρώο."
 
 #: using/windows.rst:1137
 msgid ""
@@ -2292,12 +2379,17 @@ msgid ""
 "in the environment, and no registry entries can be found, a default path "
 "with relative entries is used (e.g. ``.\\Lib;.\\plat-win``, etc)."
 msgstr ""
+"Εάν δεν μπορεί να εντοπιστεί το Python Home, δεν καθορίζεται :envvar:`PYTHONPATH` στο περιβάλλον "
+"και δεν μπορούν να βρεθούν καταχωρίσεις μητρώου, χρησιμοποιείται μια προεπιλεγμένη διαδρομή με σχετικές καταχωρήσεις "
+"(π.χ. ``.\\Lib;.\\plat-win``, κλπ)."
 
 #: using/windows.rst:1141
 msgid ""
 "If a ``pyvenv.cfg`` file is found alongside the main executable or in the "
 "directory one level above the executable, the following variations apply:"
 msgstr ""
+"Εάν ένα αρχείο ``pyvenv.cfg`` βρίσκεται δίπλα στο κύριο εκτελέσιμο αρχείο ή στον κατάλογο "
+"ένα επίπεδο πάνω από το εκτελέσιμο αρχείο, ισχύουν οι ακόλουθες παραλλαγές:"
 
 #: using/windows.rst:1144
 msgid ""
@@ -2305,10 +2397,12 @@ msgid ""
 "path is used instead of the path to the main executable when deducing the "
 "home location."
 msgstr ""
+"Εάν το ``home`` είναι μια απόλυτη διαδρομή και το :envvar:`PYTHONHOME` δεν έχει οριστεί, αυτή η διαδρομή "
+"χρησιμοποιείται αντί για τη διαδρομή προς το κύριο εκτελέσιμο κατά την εξαγωγή της αρχικής τοποθεσίας."
 
 #: using/windows.rst:1148
 msgid "The end result of all this is:"
-msgstr ""
+msgstr "Το τελικό αποτέλεσμα όλων αυτών είναι:"
 
 #: using/windows.rst:1150
 msgid ""
@@ -2317,6 +2411,10 @@ msgid ""
 "directory), the core path is deduced, and the core paths in the registry are "
 "ignored.  Other \"application paths\" in the registry are always read."
 msgstr ""
+"Όταν εκτελείται το :file:`python.exe`, ή οποιοήποτε άλλο .exe στον κύριο κατάλογο "
+"της Python (είτε μια εγκατεστημένη έκδοση, είτε απευθείας από τον κατάλογο PCbuild), "
+"συνάγεται η διαδρομή του πυρήνα και οι βασικές διαφορές στο μητρώο αγνοούνται.  Άλλες "
+"\"διαδρομές εφαρμογής\" στο μητρώο διαβάζονται πάντα."
 
 #: using/windows.rst:1155
 msgid ""
@@ -2325,6 +2423,9 @@ msgid ""
 "the registry is used.  Other \"application paths\" in the registry are "
 "always read."
 msgstr ""
+"Όταν η Python φιλοξενείται σε άλλο .exe (διαφορεικός κατάλογος, ενσωματωμένος μέσω COM, κ.λπ.), "
+"το \"Python Home\" δεν θα συναχθεί επομένως χρησιμοποιείται η βασική διαδρομή από το μητρώο.  Άλλες "
+"\"διαδρομές εφαρμογής\" στο μητρώο διαβάζονται πάντα."
 
 #: using/windows.rst:1159
 msgid ""
@@ -2332,12 +2433,16 @@ msgid ""
 "some very strange installation setup) you get a path with some default, but "
 "relative, paths."
 msgstr ""
+"Εάν η Python δεν μπορεί να βρει το home της και δεν υπάρχει τιμή μητρώου (frozen .exe, κάποια "
+"πολύ περιέργη εγκατάσταση) λαμβάνετε μια διαδρομή με κάποιες προεπιλεγμένες, αλλά σχετικές, διαδρομές."
 
 #: using/windows.rst:1163
 msgid ""
 "For those who want to bundle Python into their application or distribution, "
 "the following advice will prevent conflicts with other installations:"
 msgstr ""
+"Για όσους θέλουν να ενσωματώσουν την Python στην εφαρμογή ή την διανομή τους, οι ακόλουθες συμβουλές "
+"θα αποτρέψουν τις διενέξεις με άλλες εγκαταστάσεις:"
 
 #: using/windows.rst:1166
 msgid ""
@@ -2346,6 +2451,9 @@ msgid ""
 "environment variables, and also ignore :mod:`site` unless ``import site`` is "
 "listed."
 msgstr ""
+"Συμπεριλάβετε ένα αρχείο ``._pth`` δίπλα στο εκτελέσιμο αρχείο σας που περιέχει τους καταλόγους που θέλετε "
+"να συμπεριλάβετε. Αυτό θα αγνοήσει τις διαδρομές που παρατίθενται στο μητρώο και τις μεταβλητες περιβάλλοντος "
+"και θα αγνοήσει επίσης το :mod:`site` εκτός εάν αναφέρεται το ``import site``."
 
 #: using/windows.rst:1171
 msgid ""
@@ -2353,12 +2461,17 @@ msgid ""
 "executable, explicitly call :c:func:`Py_SetPath` or (at least) :c:func:"
 "`Py_SetProgramName` before :c:func:`Py_Initialize`."
 msgstr ""
+"Εάν φορτώνετε το :file:`python3.dll` ή το :file:`python37.dll` στο δικό σας εκτελέσιμο "
+"αρχείο, καλέστε ρητά το :c:func:`Py_SetPath` ή (τουλάχιστον) το :c:func:"
+"`Py_SetProgramName` πριν από :c:func:`Py_Initialize`."
 
 #: using/windows.rst:1175
 msgid ""
 "Clear and/or overwrite :envvar:`PYTHONPATH` and set :envvar:`PYTHONHOME` "
 "before launching :file:`python.exe` from your application."
 msgstr ""
+"Διαγράψτε και/ή αντικαταστήστε το :envvar:`PYTHONPATH` και ορίστε το :envvar:`PYTHONHOME "
+"πριν από την εκκίνηση του :file:`python.exe` από την εφαρμογή σας."
 
 #: using/windows.rst:1178
 msgid ""
@@ -2368,6 +2481,10 @@ msgid ""
 "directory. (Note that it will not be detected inside a ZIP file, but a "
 "correctly named ZIP file will be detected instead.)"
 msgstr ""
+"Εάν δεν μπορείτε να χρησιμοποιήσετε τις προηγούμενες προτάσεις (για παράδειγμα, είστε μια διανομή "
+"που επιτρέπει στους χρήστες να εκτελούν απευθείας το :file:`python.exe`), βεβαιωθείτε ότι το αρχείο "
+"ορόσημο (:file:`Lib\\\\os.py`) υπάρχει στον κατάλογο εγκατάστασης σας. (Λάβετε υπόψη ότι δεν θα εντοπιστεί σε ένα αρχείο "
+"ZIP, αλλά θα εντοπιστεί ένα αρχείο ZIP με το σωστό όνομα.)"
 
 #: using/windows.rst:1184
 msgid ""
@@ -2378,18 +2495,27 @@ msgid ""
 "still be susceptible to non-standard paths in the registry and user site-"
 "packages."
 msgstr ""
+"Αυτά θα διασφαλίσουν ότι τα αρχεία σε μια εγκατάσταση σε όλο το σύστημα δεν θα "
+"υπερισχύουν του αντιγράφου της τυπικής βιβλιοθήκης που συνοδεύει την εφαρμογή σας. Διαφορετικά, "
+"οι χρήστες σας ενδέχεται να αντιμετωπίσουν προβλήματα με τη χρήση της εφαρμογής σας. Λάβετε υπόψη "
+"ότι η πρώτη πρόταση είναι η καλύτερη, καθώς τα άλλα μπορεί να εξακολουθούν να είναι επιρρεπή "
+"σε μη τυπικές διαδρομές στο μητρώο και στα πακέτα ιστοτόπων χρηστών."
 
 #: using/windows.rst:1192
 msgid ""
 "Add ``._pth`` file support and removes ``applocal`` option from ``pyvenv."
 "cfg``."
 msgstr ""
+"Προσθήκη υποστήριξης αρχείου ``._pth`` και καταργείται η επιλογή  ``applocal`` από το ``pyvenv."
+"cfg``."
 
 #: using/windows.rst:1197
 msgid ""
 "Add :file:`python{XX}.zip` as a potential landmark when directly adjacent to "
 "the executable."
 msgstr ""
+"Προσθήκη :file:`python{XX}.zip` ως πιθανό ορόσημο όταν βρίσκεται ακριβώς δίπλα στο εκτελέσιμο "
+"αρχείο."
 
 #: using/windows.rst:1202
 msgid ""
@@ -2398,10 +2524,14 @@ msgid ""
 "finder is enabled on Windows in 3.6.0 and earlier, but may need to be "
 "explicitly added to :data:`sys.meta_path` in the future."
 msgstr ""
+"Τα modules που καθορίζονται στο μητρώο στην περιοχή ``Modules`` (όχι ``PythonPath``) μπορούν "
+"να εισαχθούν από το :class:`importlib.machinery.WindowsRegistryFinder`. Αυτό το "
+"πρόγραμμα εύρεσης είναι ενεργοποιημένο στα Windows σε 3.6.0 και παλαιότερες εκδόσεις, αλλά ενδέχεται "
+"να πρέπει να προστεθεί ρητά στο :data:`sys.meta_path` στο μέλλον."
 
 #: using/windows.rst:1208
 msgid "Additional modules"
-msgstr ""
+msgstr "Πρόσθετα modules"
 
 #: using/windows.rst:1210
 msgid ""
@@ -2409,16 +2539,21 @@ msgid ""
 "features that are unique to Windows.  A couple of modules, both in the "
 "standard library and external, and snippets exist to use these features."
 msgstr ""
+"Αν και η Python στοχεύει να είναι φορητή σε όλες τις πλατφόρμες, υπάρχουν δυνατότητες "
+"που είναι μοναδικές για τα Windows.  Μερικά modules, τόσο στην τυπική βιβλιόθηκη όσο και στην "
+"εξωτερική, και αποσπάσματα υπάρχουν για χρήση αυτών των δυνατοτήτων."
 
 #: using/windows.rst:1214
 msgid ""
 "The Windows-specific standard modules are documented in :ref:`mswin-specific-"
 "services`."
 msgstr ""
+"Τα τυπικά modules ειδικά για Windows τεκμηριώνονται στο :ref:`mswin-specific-"
+"services`."
 
 #: using/windows.rst:1218
 msgid "PyWin32"
-msgstr ""
+msgstr "PyWin32"
 
 #: using/windows.rst:1220
 msgid ""
@@ -2426,30 +2561,37 @@ msgid ""
 "a collection of modules for advanced Windows-specific support.  This "
 "includes utilities for:"
 msgstr ""
+"Το module `PyWin32 <https://pypi.org/project/pywin32>`_ του Mark Hammond είναι μια "
+"συλλογή από modules για προηγμένη υποστήριξη ειδικά για Windows.  Αυτό περιλαμβάνει βοηθητικά "
+"προγράμματα για:"
 
 #: using/windows.rst:1224
 msgid ""
 "`Component Object Model <https://docs.microsoft.com/en-us/windows/win32/com/"
 "component-object-model--com--portal>`_ (COM)"
 msgstr ""
+"`Component Object Model <https://docs.microsoft.com/en-us/windows/win32/com/"
+"component-object-model--com--portal>`_ (COM)"
 
 #: using/windows.rst:1227
 msgid "Win32 API calls"
-msgstr ""
+msgstr "Win32 API κλήσεις"
 
 #: using/windows.rst:1228
 msgid "Registry"
-msgstr ""
+msgstr "Μητρώο"
 
 #: using/windows.rst:1229
 msgid "Event log"
-msgstr ""
+msgstr "Μητρώο συμβάντων"
 
 #: using/windows.rst:1230
 msgid ""
 "`Microsoft Foundation Classes <https://docs.microsoft.com/en-us/cpp/mfc/mfc-"
 "desktop-applications>`_ (MFC) user interfaces"
 msgstr ""
+"Τα `Microsoft Foundation Classes <https://docs.microsoft.com/en-us/cpp/mfc/mfc-"
+"desktop-applications>`_ (MFC) διεπαφές χρήστη"
 
 #: using/windows.rst:1234
 msgid ""
@@ -2457,27 +2599,31 @@ msgid ""
 "org/windows/pythonwin/>`_ is a sample MFC application shipped with PyWin32.  "
 "It is an embeddable IDE with a built-in debugger."
 msgstr ""
+"Το `PythonWin <https://web.archive.org/web/20060524042422/ https://www.python."
+"org/windows/pythonwin/>`_ είναι ένα δείγμα εφαρμογής MFC που αποστέλλεται με το PyWin32.  "
+"Είναι ένα ενσωματωμένο IDE με ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων."
 
 #: using/windows.rst:1241
 msgid ""
 "`Win32 How Do I...? <http://timgolden.me.uk/python/win32_how_do_i.html>`_"
 msgstr ""
+"`Win32 How Do I...? <http://timgolden.me.uk/python/win32_how_do_i.html>`_"
 
 #: using/windows.rst:1241
 msgid "by Tim Golden"
-msgstr ""
+msgstr "από τον Tim Golden"
 
 #: using/windows.rst:1243
 msgid "`Python and COM <https://www.boddie.org.uk/python/COM.html>`_"
-msgstr ""
+msgstr "`Python and COM <https://www.boddie.org.uk/python/COM.html>`_"
 
 #: using/windows.rst:1244
 msgid "by David and Paul Boddie"
-msgstr ""
+msgstr "από τους David και Paul Boddie"
 
 #: using/windows.rst:1248
 msgid "cx_Freeze"
-msgstr ""
+msgstr "cx_Freeze"
 
 #: using/windows.rst:1250
 msgid ""
@@ -2486,10 +2632,13 @@ msgid ""
 "have done this, you can distribute your application without requiring your "
 "users to install Python."
 msgstr ""
+"Το cx_Freeze <https://cx-freeze.readthedocs.io/en/latest/>`_ αναδιπλώνει Python scripts "
+"σε εκτελέσιμα προγράμματα των Windows (:file:`{*}.exe` αρχεία). Όταν το κάνετε αυτό, μπορείτε να "
+"διανείμετε ην εφαρμογή σας χωρίς να απαιτείται από τους χρήστες σας να εγκαταστήσουν την Python."
 
 #: using/windows.rst:1257
 msgid "Compiling Python on Windows"
-msgstr ""
+msgstr "Μεταγλώττιση Python στα Windows"
 
 #: using/windows.rst:1259
 msgid ""
@@ -2498,6 +2647,10 @@ msgid ""
 "either the latest release's source or just grab a fresh `checkout <https://"
 "devguide.python.org/setup/#get-the-source-code>`_."
 msgstr ""
+"Εάν θέλετε να μεταγλωττίσετε μόνοι σας το CPython, το πρώτο πράγματα που πρέπει να κάνετε είναι να λάβετε "
+"το `source <https://www.python.org/downloads/source/>`_. Μπορείτε να κάνετε λήψη είτε τον πηγαίο κώδικα "
+"της πιο πρόσφατης έκδοσης είτε απλώς να πάρετε μια φρέσκια έκδοση `checkout <https://"
+"devguide.python.org/setup/#get-the-source-code>`_."
 
 #: using/windows.rst:1264
 msgid ""
@@ -2505,20 +2658,25 @@ msgid ""
 "Visual Studio, which is the compiler used to build the official Python "
 "releases. These files are in the :file:`PCbuild` directory."
 msgstr ""
+"Το δέντρο προέλευσης περιέχειμια λύση έκδοσης και αρχεια έργου για το Microsoft Visual Studio, που είναι "
+"ο μεταγλωττιστής που χρησιμοποιείται για τη δημιουργία των επίσημων εκδόσεων Python. Αυτά τα αρχεία βρίσκονται "
+"στον κατάλογο :file:`PCbuild`."
 
 #: using/windows.rst:1268
 msgid ""
 "Check :file:`PCbuild/readme.txt` for general information on the build "
 "process."
 msgstr ""
+"Ελέγξτε το :file:`PCbuild/readme.txt` για γενικές πληροφορίες σχετικά με τη διαδικασία "
+"κατασκευής."
 
 #: using/windows.rst:1270
 msgid "For extension modules, consult :ref:`building-on-windows`."
-msgstr ""
+msgstr "Για modules επέκτασης, συμβουλευτείτε το :ref:`building-on-windows`."
 
 #: using/windows.rst:1274
 msgid "Other Platforms"
-msgstr ""
+msgstr "Άλλες Πλατφόρμες"
 
 #: using/windows.rst:1276
 msgid ""
@@ -2526,6 +2684,9 @@ msgid ""
 "earlier are no longer supported (due to the lack of users or developers). "
 "Check :pep:`11` for details on all unsupported platforms."
 msgstr ""
+"Με τη συνεχή ανάπτυξη της Python, ορισμένες πλατφόρμες που υποστηριζόταν παλαιότερα δεν υποστηρίζονται "
+"πλέον (λόγω έλλειψης χρηστών ή προγραμματιστών). "
+"Ελέγξτε το :pep:`11` για λεπτομέρειες σχετικά με όλες τις μη υποστηριζόμενες πλατφόρμες."
 
 #: using/windows.rst:1280
 msgid ""
@@ -2533,15 +2694,21 @@ msgid ""
 "<https://github.com/python/cpython/issues/71542>`__ since Python 3 (if it "
 "ever was)."
 msgstr ""
+"Το `Windows CE <https://pythonce.sourceforge.net/>`_ `no longer supported "
+"<https://github.com/python/cpython/issues/71542>`__ από την Python 3 (αν ήταν ποτέ)."
 
 #: using/windows.rst:1283
 msgid ""
 "The `Cygwin <https://cygwin.com/>`_ installer offers to install the `Python "
 "interpreter <https://cygwin.com/packages/summary/python3.html>`__ as well"
 msgstr ""
+"Το πρόγραμμα εγκατάστασης `Cygwin <https://cygwin.com/>`_ προσφέρει επίσης την εγκατάσταση του διερμηνέα "
+"Python <https://cygwin.com/packages/summary/python3.html>`"
 
 #: using/windows.rst:1287
 msgid ""
 "See `Python for Windows <https://www.python.org/downloads/windows/>`_ for "
 "detailed information about platforms with pre-compiled installers."
 msgstr ""
+"Ανατρέξτε στην ενότητα `Python for Windows <https://www.python.org/downloads/windows/>`_ "
+"για λεπτομερείς πληροφορίες σχετικά με πλατφόρμες με προμεταγλωττισμένα προγράμματα εγκατάστασης."
