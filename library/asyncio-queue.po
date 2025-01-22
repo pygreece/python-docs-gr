@@ -31,9 +31,9 @@ msgid ""
 "be used specifically in async/await code."
 msgstr ""
 "Οι ουρές asyncio έχουν σχεδιαστεί ώστε να μοιάζουν με τις κλάσεις του "
-"module :mod:`queue`.  Αν και οι ουρές asyncio δεν είναι ασφαλείς για χρήση με "
-"νήματα (thread-safe), έχουν σχεδιαστεί για να χρησιμοποιούνται συγκεκριμένα "
-"σε κώδικα async/await."
+"module :mod:`queue`.  Αν και οι ουρές asyncio δεν είναι ασφαλείς για χρήση "
+"με νήματα (thread-safe), έχουν σχεδιαστεί για να χρησιμοποιούνται "
+"συγκεκριμένα σε κώδικα async/await."
 
 #: library/asyncio-queue.rst:17
 msgid ""
@@ -109,20 +109,21 @@ msgid ""
 "Remove and return an item from the queue. If queue is empty, wait until an "
 "item is available."
 msgstr ""
-"Αφαίρεση και επιστροφή ενός αντικειμένου από την ουρά. Αν η ουρά είναι "
-"κενή, περίμενετε μέχρι να είναι διαθέσιμο ένα αντικείμενο."
+"Αφαίρεση και επιστροφή ενός αντικειμένου από την ουρά. Αν η ουρά είναι κενή, "
+"περίμενετε μέχρι να είναι διαθέσιμο ένα αντικείμενο."
 
 #: library/asyncio-queue.rst:67
 msgid ""
 "Return an item if one is immediately available, else raise :exc:`QueueEmpty`."
 msgstr ""
-"Επιστρέφει ένααντικειμένο, αν είναι άμεσα διαθέσιμο, αλλιώς κάνε raise την :exc:"
-"`QueueEmpty`."
+"Επιστρέφει ένααντικειμένο, αν είναι άμεσα διαθέσιμο, αλλιώς κάνε raise την :"
+"exc:`QueueEmpty`."
 
 #: library/asyncio-queue.rst:72
 msgid "Block until all items in the queue have been received and processed."
 msgstr ""
-"Αποκλείει μέχρι να ληφθούν και να υποβληθούν σε επεξεργασία όλα τα στοιχεία στην ουρά."
+"Αποκλείει μέχρι να ληφθούν και να υποβληθούν σε επεξεργασία όλα τα στοιχεία "
+"στην ουρά."
 
 #: library/asyncio-queue.rst:74
 msgid ""
