@@ -32,36 +32,36 @@ msgstr ""
 "Αυτό το module αποτελεί μέρος του παλιού API (``Compat32``) του email.  Στο "
 "νέο API, χρησιμοποιείται μόνο ο πίνακας των ψευδωνύμων."
 
-#: library/email.charset.rst:14
+#: library/email..rst:14
 msgid ""
 "The remaining text in this section is the original documentation of the "
 "module."
 msgstr ""
 "Το υπόλοιπο κείμενο σε αυτή την ενότητα είναι η αρχική τεκμηρίωση του module."
 
-#: library/email.charset.rst:16
+#: library/email..rst:16
 msgid ""
-"This module provides a class :class:`Charset` for representing character "
+"This module provides a class :class:`` for representing character "
 "sets and character set conversions in email messages, as well as a character "
 "set registry and several convenience methods for manipulating this registry. "
-"Instances of :class:`Charset` are used in several other modules within the :"
+"Instances of :class:`` are used in several other modules within the :"
 "mod:`email` package."
 msgstr ""
-"Αυτό το module παρέχει την κλάση :class:`Charset` για την αναπαράσταση των "
+"Αυτό το module παρέχει την κλάση :class:`` για την αναπαράσταση των "
 "συνόλων χαρακτήρων και των μετατροπών τους σε μηνύματα email, καθώς και ένα "
 "μητρώο συνόλων χαρακτήρων και διάφορες βοηθητικές μεθόδους για τη διαχείρισή "
-"του. Τα στιγμιότυπα της :class:`Charset` χρησιμοποιούνται σε αρκετά άλλα "
+"του. Τα στιγμιότυπα της :class:`` χρησιμοποιούνται σε αρκετά άλλα "
 "modules εντός του πακέτου :mod:`email`."
 
-#: library/email.charset.rst:22
-msgid "Import this class from the :mod:`email.charset` module."
-msgstr "Εισάγετε αυτή την κλάση από το module :mod:`email.charset`."
+#: library/email..rst:22
+msgid "Import this class from the :mod:`email.` module."
+msgstr "Εισάγετε αυτή την κλάση από το module :mod:`email.`."
 
-#: library/email.charset.rst:27
+#: library/email..rst:27
 msgid "Map character sets to their email properties."
 msgstr "Αντιστοίχιση συνόλων χαρακτήρων στις ιδιότητες τους στο email."
 
-#: library/email.charset.rst:29
+#: library/email..rst:29
 msgid ""
 "This class provides information about the requirements imposed on email for "
 "a specific character set.  It also provides convenience routines for "
@@ -76,7 +76,7 @@ msgstr ""
 "προσπαθήσει να παρέχει πληροφορίες σχετικά με τον τρόπο χρήσης του σε ένα "
 "email με τρόπο συμβατό με το RFC."
 
-#: library/email.charset.rst:35
+#: library/email..rst:35
 msgid ""
 "Certain character sets must be encoded with quoted-printable or base64 when "
 "used in email headers or bodies.  Certain character sets must be converted "
@@ -86,31 +86,31 @@ msgstr ""
 "base64 όταν χρησιμοποιούνται σε κεφαλίδες ή σώματα email. Ορισμένα σύνολα "
 "χαρακτήρων πρέπει να μετατραπούν πλήρως και δεν επιτρέπονται στα email."
 
-#: library/email.charset.rst:39
+#: library/email..rst:39
 msgid ""
-"Optional *input_charset* is as described below; it is always coerced to "
+"Optional *input_* is as described below; it is always coerced to "
 "lower case.  After being alias normalized it is also used as a lookup into "
 "the registry of character sets to find out the header encoding, body "
 "encoding, and output conversion codec to be used for the character set.  For "
-"example, if *input_charset* is ``iso-8859-1``, then headers and bodies will "
+"example, if *input_* is ``iso-8859-1``, then headers and bodies will "
 "be encoded using quoted-printable and no output conversion codec is "
-"necessary.  If *input_charset* is ``euc-jp``, then headers will be encoded "
+"necessary.  If *input_* is ``euc-jp``, then headers will be encoded "
 "with base64, bodies will not be encoded, but output text will be converted "
 "from the ``euc-jp`` character set to the ``iso-2022-jp`` character set."
 msgstr ""
-"Το προαιρετικό *input_charset* περιγράφεται παρακάτω· μετατρέπεται πάντα σε "
+"Το προαιρετικό *input_* περιγράφεται παρακάτω· μετατρέπεται πάντα σε "
 "πεζά. Μετά την κανονικοποίηση ψευδωνύμων, χρησιμοποιείται επίσης ως "
 "αναζήτηση στο μητρώο των συνόλων χαρακτήρων για να προσδιορίσει την "
 "κωδικοποίηση κεφαλίδας, την κωδικοποίηση σώματος και τον κωδικοποιητή "
 "μετατροπής εξόδου που θα χρησιμοποιηθεί για το σύνολο χαρακτήρων. Για "
-"παράδειγμα, εάν το *input_charset* είναι ``iso-8859-1``, τότε οι κεφαλίδες "
+"παράδειγμα, εάν το *input_* είναι ``iso-8859-1``, τότε οι κεφαλίδες "
 "και τα σώματα θα κωδικοποιηθούν χρησιμοποιώντας quoted-printable και δεν "
-"απαιτείται codec μετατροπής εξόδου. Εάν το *input_charset* είναι ``euc-jp``, "
+"απαιτείται codec μετατροπής εξόδου. Εάν το *input_* είναι ``euc-jp``, "
 "τότε οι κεφαλίδες θα κωδικοποιηθούν με base64, τα σώματα δεν θα "
 "κωδικοποιηθούν, αλλά το κείμενο εξόδου θα μετατραπεί από το σύνολο "
 "χαρακτήρων ``euc-jp`` στο ``iso-2022-jp``."
 
-#: library/email.charset.rst:49
+#: library/email..rst:49
 msgid ":class:`Charset` instances have the following data attributes:"
 msgstr ""
 "Στιγμιότυπα της κλάσης :class:`Charset` έχουν τα ακόλουθα χαρακτηριστικά "
@@ -406,6 +406,6 @@ msgid ""
 "of a Python codec, as appropriate for the second argument to the :class:"
 "`str`'s :meth:`~str.encode` method."
 msgstr ""
-"Το *charset* είναι το κανονικό όνομα ενός συνόλου χαρακτήρων. Το *codecname* είναι "
-"το όνομα ενός κωδικοποιητή Python, ως κατάλληλο για το δεύτερο όρισμα της "
-"μεθόδου :meth:`~str.encode` της κλάσης :class:`str`."
+"Το *charset* είναι το κανονικό όνομα ενός συνόλου χαρακτήρων. Το *codecname* "
+"είναι το όνομα ενός κωδικοποιητή Python, ως κατάλληλο για το δεύτερο όρισμα "
+"της μεθόδου :meth:`~str.encode` της κλάσης :class:`str`."
