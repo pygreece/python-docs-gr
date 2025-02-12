@@ -18,11 +18,11 @@ msgstr ""
 
 #: reference/datamodel.rst:6
 msgid "Data model"
-msgstr ""
+msgstr "Μοντέλο Δεδομένων"
 
 #: reference/datamodel.rst:12
 msgid "Objects, values and types"
-msgstr ""
+msgstr "Αντικείμενα, τιμές και τύποι"
 
 #: reference/datamodel.rst:18
 msgid ""
@@ -30,7 +30,10 @@ msgid ""
 "program is represented by objects or by relations between objects. (In a "
 "sense, and in conformance to Von Neumann's model of a \"stored program "
 "computer\", code is also represented by objects.)"
-msgstr ""
+msgstr "Το :dfn:`Objects` είναι μια αφαιρετική αναπαράσταση της Python για τα δεδομένα.  Όλα τα δεδομένα "
+"σε ένα Python πρόγραμμα αναπαριστόνται από αντικείμενα ή από συσχετίσεις μεταξύ αντικειμένων. (Κατά μία "
+"έννοια, και σύμφωνα με το μοντέλο του Von Neumann για έναν \"υπολογιστή αποθηκευμένου προγράμματος\", ο κώδικας "
+"αντιπροσωπεύεται επίσης από αντικείμενα.)"
 
 #: reference/datamodel.rst:35
 msgid ""
@@ -40,10 +43,14 @@ msgid ""
 "objects; the :func:`id` function returns an integer representing its "
 "identity."
 msgstr ""
+"Κάθε αντικείμενο έχει μια ταυτότητα, έναν τύπο και μια τιμή.  Η *ταυτότητα* ενός αντικειμένου "
+"δεν αλλάζει ποτέ αφού δημιουργηθεί∙ μπορείτε να το σκεφτείτε ως τη διεύθυνση του αντικειμένου στη μνήμη.  "
+"Ο τελεστής :keyword:`is` συγκρίνει την ταυτότητα δύο αντικειμένων∙ η συνάρτηση :func:`id` επιστρέφει έναν "
+"ακέραιο αριθμό που αντιπροσωπεύει την ταυτότητά του."
 
 #: reference/datamodel.rst:42
 msgid "For CPython, ``id(x)`` is the memory address where ``x`` is stored."
-msgstr ""
+msgstr "Για την CPython, το ``id(x)`` είναι η διεύθυνση μνήμης όπου είναι αποθηκευμένο το ``x``."
 
 #: reference/datamodel.rst:44
 msgid ""
@@ -53,6 +60,10 @@ msgid ""
 "an object itself).  Like its identity, an object's :dfn:`type` is also "
 "unchangeable. [#]_"
 msgstr ""
+"Ο τύπος ενός αντικειμένου καθορίζει τις λειτουργίες που υποστηρίζει το αντικείμενο (π.χ., "
+"\"έχει μήκος;\") και ορίζει επίσης τις πιθανές τιμές για αντικείμενα αυτού του τύπου.  Η συνάρτηση "
+":func:`type` επιστρέφει τον τύπο ενός αντικειμένου (που είναι το ίδιο το αντικείμενο).  Όπως και η ταυτότητά, "
+"το :dfn:`type` ενός αντικειμένου είναι επίσης αμετάβλητο. [#]_"
 
 #: reference/datamodel.rst:50
 msgid ""
@@ -67,6 +78,14 @@ msgid ""
 "instance, numbers, strings and tuples are immutable, while dictionaries and "
 "lists are mutable."
 msgstr ""
+"Η *τιμή* ορισμένων αντικειμένων μπορεί να αλλάξει.  Τα αντικείμενα των οποίων η τιμή μπορεί "
+"να αλλάξει λέγονται *μεταβλητά*∙ τα αντικείμενα των οποίων η τιμή είναι αμετάβλητη μόλις "
+"δημιουργηθούν ονομάζονται *αμετάβλητα*. (Η τιμή ενός αμετάβλητου container αντικειμένου "
+"που περιέχει μια αναφορά σε ένα μεταβλητό αντικείμενο μπορεί να αλλάξει όταν αλλάξει η τιμή του τελευταίου.  Ωστόσο, "
+"το container δεν μπορεί να θεωρήται ακόμα αμετάβλητο, επειδή η συλλογή δεν μπορεί να αλλάξει.  Έτσι, "
+"η αμετάβλητη δεν είναι αυστηρά ίδια με την αμετάβλητη τιμή, είναι πιο λεπτή.) Η μεταβλητότητα ενός αντικειμένου "
+"καθορίζεται από τον τύπο του∙ για παράδειγμα οι αριθμοί, οι συμβολοσειρές και οι πλειάδες είναι αμετάβλητα, ενώ τα λεξικά και οι λίστες "
+"είναι μεταβλητά."
 
 #: reference/datamodel.rst:65
 msgid ""
@@ -76,6 +95,10 @@ msgid ""
 "implementation quality how garbage collection is implemented, as long as no "
 "objects are collected that are still reachable."
 msgstr ""
+"Τα αντικείμενα δεν καταστρέφονται ποτέ ρητά∙ ωστόσο, όταν γίνονται απρόσιτα μπορεί να συλλεχθούν "
+"ως σκουπίδια.  Μια υλοποίηση επιτρέπεται να αναβάλει τη συλλογή σκουπιδιών ή να την παραλείψει εντελώς --- "
+"είναι θέμα ποιότητας υλοποίησης πώς θα υλοποιηθεί η συλλογή απορριμάττων, εφόσον δεν συλλέγονται αντικείμενα "
+"που είναι ακόμα προσβάσιμα."
 
 #: reference/datamodel.rst:73
 msgid ""
@@ -88,6 +111,12 @@ msgid ""
 "on immediate finalization of objects when they become unreachable (so you "
 "should always close files explicitly)."
 msgstr ""
+"Η CPython χρησιμοποιεί επί του παρόντος ένα σχήμα μέτρησης αναφορών με (προαιρετικό) καθυστερημένο "
+"εντοπισμό κυκλικά συνδεδεμένων σκουπιδιών, το οποίο συλλέγει τα περισσότερα αντικείμενα μόλις γίνουν απρόσιτα, αλλά δεν "
+"είναι εγγυμένο ότι συλλέγει σκουπίδια που κάνουν κυκλικές αναφορές.  Δείτε την τεκμηρίωση του module :mod:`gc` "
+"για πληροφορίες σχετικά με τον έλεγχο της συλλογής κυκλικών σκουπιδιών. Άλλες υλοποιήσεις ενεργούν διαφορετικά και η "
+"CPython μπορεί να αλλάξει. Μην εξαρτάστε από την άμεση οριστικοποίηση των αντικειμένων όταν γίνονται απρόσιτα (έτσι "
+"θα πρέπει πάντα να κλείνετε ρητά τα αρχεία)."
 
 #: reference/datamodel.rst:82
 msgid ""
@@ -3873,11 +3902,11 @@ msgstr ""
 #: reference/datamodel.rst:1200 reference/datamodel.rst:1407
 #: reference/datamodel.rst:2834
 msgid "object"
-msgstr ""
+msgstr "αντικείμενο"
 
 #: reference/datamodel.rst:122
 msgid "data"
-msgstr ""
+msgstr "δεδομένα"
 
 #: reference/datamodel.rst:292 reference/datamodel.rst:420
 #: reference/datamodel.rst:799 reference/datamodel.rst:1490
@@ -3885,901 +3914,902 @@ msgstr ""
 #: reference/datamodel.rst:2962 reference/datamodel.rst:3011
 #: reference/datamodel.rst:3070 reference/datamodel.rst:3098
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένη συναρτήση"
 
 #: reference/datamodel.rst:23
 msgid "id"
-msgstr ""
+msgstr "αναγνωριστικό"
 
 #: reference/datamodel.rst:122 reference/datamodel.rst:2375
 msgid "type"
-msgstr ""
+msgstr "τύπος"
 
 #: reference/datamodel.rst:23
 msgid "identity of an object"
-msgstr ""
+msgstr "ταυτότητα ενός αντικειμένου"
 
 #: reference/datamodel.rst:23
 msgid "value of an object"
-msgstr ""
+msgstr "τιμή ενός αντικειμένου"
 
 #: reference/datamodel.rst:23
 msgid "type of an object"
-msgstr ""
+msgstr "τύπος ενός αντικειμένου"
 
 #: reference/datamodel.rst:23
 msgid "mutable object"
-msgstr ""
+msgstr "ευμετάβλητο αντικείμενο"
 
 #: reference/datamodel.rst:23
 msgid "immutable object"
-msgstr ""
+msgstr "αμετάβλητο αντικείμενο"
 
 #: reference/datamodel.rst:60
 msgid "garbage collection"
-msgstr ""
+msgstr "συλλογή σκουπιδιών"
 
 #: reference/datamodel.rst:60
 msgid "reference counting"
-msgstr ""
+msgstr "καταμέτρηση αναφοράς"
 
 #: reference/datamodel.rst:60
 msgid "unreachable object"
-msgstr ""
+msgstr "απρόσιτο αντικείμενο"
 
 #: reference/datamodel.rst:938
 msgid "container"
-msgstr ""
+msgstr "κοντέινερ"
 
 #: reference/datamodel.rst:122
 msgid "hierarchy"
-msgstr ""
+msgstr "ιεραρχία"
 
 #: reference/datamodel.rst:122
 msgid "extension"
-msgstr ""
+msgstr "επέκταση"
 
 #: reference/datamodel.rst:393 reference/datamodel.rst:495
 #: reference/datamodel.rst:876 reference/datamodel.rst:1053
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: reference/datamodel.rst:261 reference/datamodel.rst:799
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #: reference/datamodel.rst:261 reference/datamodel.rst:799
 msgid "language"
-msgstr ""
+msgstr "γλώσσα"
 
 #: reference/datamodel.rst:938 reference/datamodel.rst:1007
 #: reference/datamodel.rst:1027
 msgid "attribute"
-msgstr ""
+msgstr "χαρακτηριστικό"
 
 #: reference/datamodel.rst:135
 msgid "special"
-msgstr ""
+msgstr "ειδικό"
 
 #: reference/datamodel.rst:135
 msgid "generic"
-msgstr ""
+msgstr "γενικό"
 
 #: reference/datamodel.rst:180
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: reference/datamodel.rst:180
 msgid "ellipsis literal"
-msgstr ""
+msgstr "ellipsis literal"
 
 #: reference/datamodel.rst:1034
 msgid "numeric"
-msgstr ""
+msgstr "αριθμητικό"
 
 #: reference/datamodel.rst:231 reference/datamodel.rst:336
 msgid "integer"
-msgstr ""
+msgstr "ακέραιος"
 
 #: reference/datamodel.rst:231
 msgid "representation"
-msgstr ""
+msgstr "αναπαράσταση"
 
 #: reference/datamodel.rst:246
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: reference/datamodel.rst:246
 msgid "False"
-msgstr ""
+msgstr "False"
 
 #: reference/datamodel.rst:246
 msgid "True"
-msgstr ""
+msgstr "True"
 
 #: reference/datamodel.rst:261
 msgid "floating point"
-msgstr ""
+msgstr "κινητής υποδιαστολής"
 
 #: reference/datamodel.rst:279
 msgid "number"
-msgstr ""
+msgstr "αριθμός"
 
 #: reference/datamodel.rst:261
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #: reference/datamodel.rst:3070
 msgid "complex"
-msgstr ""
+msgstr "σύνθετο"
 
 #: reference/datamodel.rst:420 reference/datamodel.rst:2804
 msgid "len"
-msgstr ""
+msgstr "len"
 
 #: reference/datamodel.rst:1034
 msgid "sequence"
-msgstr ""
+msgstr "ακολουθία"
 
 #: reference/datamodel.rst:292
 msgid "index operation"
-msgstr ""
+msgstr "λειτουργία ευρετηρίου"
 
 #: reference/datamodel.rst:292
 msgid "item selection"
-msgstr ""
+msgstr "επιλογή αντικειμένου"
 
 #: reference/datamodel.rst:381 reference/datamodel.rst:459
 msgid "subscription"
-msgstr ""
+msgstr "εγγραφή"
 
 #: reference/datamodel.rst:381
 msgid "slicing"
-msgstr ""
+msgstr "τμηματοποίηση"
 
 #: reference/datamodel.rst:321
 msgid "immutable sequence"
-msgstr ""
+msgstr "αμετάβλητη ακολουθία"
 
 #: reference/datamodel.rst:321
 msgid "immutable"
-msgstr ""
+msgstr "αμετάβλητο"
 
 #: reference/datamodel.rst:1705 reference/datamodel.rst:1735
 msgid "string"
-msgstr ""
+msgstr "συμβολοσειρά"
 
 #: reference/datamodel.rst:332
 msgid "immutable sequences"
-msgstr ""
+msgstr "αμετάβλητες ακολουθίες"
 
 #: reference/datamodel.rst:336
 msgid "chr"
-msgstr ""
+msgstr "chr"
 
 #: reference/datamodel.rst:336
 msgid "ord"
-msgstr ""
+msgstr "ord"
 
 #: reference/datamodel.rst:336
 msgid "character"
-msgstr ""
+msgstr "χαρακτήρας"
 
 #: reference/datamodel.rst:336
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: reference/datamodel.rst:356
 msgid "tuple"
-msgstr ""
+msgstr "πλειάδα"
 
 #: reference/datamodel.rst:356
 msgid "singleton"
-msgstr ""
+msgstr "singleton"
 
 #: reference/datamodel.rst:356
 msgid "empty"
-msgstr ""
+msgstr "κενό"
 
 #: reference/datamodel.rst:1730
+msgid "bytes"
 msgid "bytes"
 msgstr ""
 
 #: reference/datamodel.rst:369
 msgid "byte"
-msgstr ""
+msgstr "byte"
 
 #: reference/datamodel.rst:381
 msgid "mutable sequence"
-msgstr ""
+msgstr "ευμετάβλητη ακολουθία"
 
 #: reference/datamodel.rst:381
 msgid "mutable"
-msgstr ""
+msgstr "ευμετάβλητο"
 
 #: reference/datamodel.rst:956 reference/datamodel.rst:1027
 msgid "assignment"
-msgstr ""
+msgstr "εκχώρηση"
 
 #: reference/datamodel.rst:856 reference/datamodel.rst:1626
 #: reference/datamodel.rst:3125
 msgid "statement"
-msgstr ""
+msgstr "δήλωση"
 
 #: reference/datamodel.rst:393
 msgid "array"
-msgstr ""
+msgstr "πίνακας"
 
 #: reference/datamodel.rst:394
 msgid "collections"
-msgstr ""
+msgstr "συλογές"
 
 #: reference/datamodel.rst:402
 msgid "list"
-msgstr ""
+msgstr "λίστα"
 
 #: reference/datamodel.rst:409
 msgid "bytearray"
-msgstr ""
+msgstr "πίνακας byte"
 
 #: reference/datamodel.rst:420
 msgid "set type"
-msgstr ""
+msgstr "τύπος συνόλου"
 
 #: reference/datamodel.rst:440
 msgid "set"
-msgstr ""
+msgstr "σύνολο"
 
 #: reference/datamodel.rst:448
 msgid "frozenset"
-msgstr ""
+msgstr "αμετάβλητο σύνολο"
 
 #: reference/datamodel.rst:1034
 msgid "mapping"
-msgstr ""
+msgstr "αντιστοίχιση"
 
 #: reference/datamodel.rst:938 reference/datamodel.rst:1819
 msgid "dictionary"
-msgstr ""
+msgstr "λεξικό"
 
 #: reference/datamodel.rst:495
 msgid "dbm.ndbm"
-msgstr ""
+msgstr "dbm.ndbm"
 
 #: reference/datamodel.rst:495
 msgid "dbm.gnu"
-msgstr ""
+msgstr "dbm.gnu"
 
 #: reference/datamodel.rst:512
 msgid "callable"
-msgstr ""
+msgstr "καλλέσιμο"
 
 #: reference/datamodel.rst:527 reference/datamodel.rst:761
 #: reference/datamodel.rst:799
 msgid "function"
-msgstr ""
+msgstr "συνάρτηση"
 
 #: reference/datamodel.rst:938 reference/datamodel.rst:2756
 msgid "call"
-msgstr ""
+msgstr "κλήση"
 
 #: reference/datamodel.rst:512
 msgid "invocation"
-msgstr ""
+msgstr "εκτέλεση"
 
 #: reference/datamodel.rst:512
 msgid "argument"
-msgstr ""
+msgstr "παράμετρος"
 
 #: reference/datamodel.rst:654
 msgid "user-defined"
-msgstr ""
+msgstr "ορισμένο από τον χρήστη"
 
 #: reference/datamodel.rst:527
 msgid "user-defined function"
-msgstr ""
+msgstr "συναρτηση ορισμένη από τον χρήστη"
 
 #: reference/datamodel.rst:540
 msgid "__closure__ (function attribute)"
-msgstr ""
+msgstr "__closure__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:540
 msgid "__globals__ (function attribute)"
-msgstr ""
+msgstr "__globals__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:540
 msgid "global"
-msgstr ""
+msgstr "global"
 
 #: reference/datamodel.rst:876
 msgid "namespace"
-msgstr ""
+msgstr "πεδίο ονομάτων"
 
 #: reference/datamodel.rst:566
 msgid "__doc__ (function attribute)"
-msgstr ""
+msgstr "__doc__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__name__ (function attribute)"
-msgstr ""
+msgstr "__name__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__module__ (function attribute)"
-msgstr ""
+msgstr "__module__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__dict__ (function attribute)"
-msgstr ""
+msgstr "__dict__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__defaults__ (function attribute)"
-msgstr ""
+msgstr "__defaults__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__code__ (function attribute)"
-msgstr ""
+msgstr "__code__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__annotations__ (function attribute)"
-msgstr ""
+msgstr "__annotations__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__kwdefaults__ (function attribute)"
-msgstr ""
+msgstr "__kwdefaults__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:566
 msgid "__type_params__ (function attribute)"
-msgstr ""
+msgstr "__type_params__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:823
 msgid "method"
-msgstr ""
+msgstr "μέθοδος"
 
 #: reference/datamodel.rst:654
 msgid "user-defined method"
-msgstr ""
+msgstr "μέθοδος ορισμένη από τον χρήστη"
 
 #: reference/datamodel.rst:662
 msgid "__func__ (method attribute)"
-msgstr ""
+msgstr "__func__ (χαρακτηριστικό μεθόδου)"
 
 #: reference/datamodel.rst:662
 msgid "__self__ (method attribute)"
-msgstr ""
+msgstr "__self__ (χαρακτηριστικό μεθόδου)"
 
 #: reference/datamodel.rst:662
 msgid "__doc__ (method attribute)"
-msgstr ""
+msgstr "__doc__ (χαρακτηριστικό μεθόδου)"
 
 #: reference/datamodel.rst:662
 msgid "__name__ (method attribute)"
-msgstr ""
+msgstr "__name__ (χαρακτηριστικό μεθόδου)"
 
 #: reference/datamodel.rst:662
 msgid "__module__ (method attribute)"
-msgstr ""
+msgstr "__module__ (χαρακτηριστικό μεθόδου)"
 
 #: reference/datamodel.rst:1200
 msgid "generator"
-msgstr ""
+msgstr "γεννήτρια"
 
 #: reference/datamodel.rst:743
 msgid "iterator"
-msgstr ""
+msgstr "iterator"
 
 #: reference/datamodel.rst:3312
 msgid "coroutine"
-msgstr ""
+msgstr "coroutine"
 
 #: reference/datamodel.rst:774
 msgid "asynchronous generator"
-msgstr ""
+msgstr "ασύγχρονη γεννήτρια"
 
 #: reference/datamodel.rst:774
 msgid "asynchronous iterator"
-msgstr ""
+msgstr "ασύγχρονος iterator"
 
 #: reference/datamodel.rst:823
 msgid "built-in method"
-msgstr ""
+msgstr "ενσωματωμένη μέθοδος"
 
 #: reference/datamodel.rst:823
 msgid "built-in"
-msgstr ""
+msgstr "ενσωματωμένο"
 
 #: reference/datamodel.rst:856
 msgid "import"
-msgstr ""
+msgstr "εισαγωγή"
 
 #: reference/datamodel.rst:876
 msgid "__name__ (module attribute)"
-msgstr ""
+msgstr "__name__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:876
 msgid "__doc__ (module attribute)"
-msgstr ""
+msgstr "__doc__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:876
 msgid "__file__ (module attribute)"
-msgstr ""
+msgstr "__file__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:876
 msgid "__annotations__ (module attribute)"
-msgstr ""
+msgstr "__annotations__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:907
 msgid "__dict__ (module attribute)"
-msgstr ""
+msgstr "__dict__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:956 reference/datamodel.rst:1609
 #: reference/datamodel.rst:2486
 msgid "class"
-msgstr ""
+msgstr "κλάση"
 
 #: reference/datamodel.rst:1007 reference/datamodel.rst:1027
 msgid "class instance"
-msgstr ""
+msgstr "στιγμιότυπο κλάσης"
 
 #: reference/datamodel.rst:1007 reference/datamodel.rst:2756
 msgid "instance"
-msgstr ""
+msgstr "στιγμιότυπο"
 
 #: reference/datamodel.rst:961
 msgid "class object"
-msgstr ""
+msgstr "αντικείμενα κλάσης"
 
 #: reference/datamodel.rst:965
 msgid "__name__ (class attribute)"
-msgstr ""
+msgstr "__name__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__module__ (class attribute)"
-msgstr ""
+msgstr "__module__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__dict__ (class attribute)"
-msgstr ""
+msgstr "__dict__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__bases__ (class attribute)"
-msgstr ""
+msgstr "__bases__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__doc__ (class attribute)"
-msgstr ""
+msgstr "__doc__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__annotations__ (class attribute)"
-msgstr ""
+msgstr "__annotations__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:965
 msgid "__type_params__ (class attribute)"
-msgstr ""
+msgstr "__type_params__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:1042
 msgid "__dict__ (instance attribute)"
-msgstr ""
+msgstr "__dict__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:1042
 msgid "__class__ (instance attribute)"
-msgstr ""
+msgstr "__class__ (χαρακτηριστικό στιγμιοτύπου)"
 
 #: reference/datamodel.rst:1053
 msgid "open"
-msgstr ""
+msgstr "άνοιγμα"
 
 #: reference/datamodel.rst:1053
 msgid "io"
-msgstr ""
+msgstr "io"
 
 #: reference/datamodel.rst:1053
 msgid "popen() (in module os)"
-msgstr ""
+msgstr "popen() (στο module os)"
 
 #: reference/datamodel.rst:1053
 msgid "makefile() (socket method)"
-msgstr ""
+msgstr "makefile() (μέθοδος socket)"
 
 #: reference/datamodel.rst:1053
 msgid "sys.stdin"
-msgstr ""
+msgstr "sys.stdin"
 
 #: reference/datamodel.rst:1053
 msgid "sys.stdout"
-msgstr ""
+msgstr "sys.stdout"
 
 #: reference/datamodel.rst:1053
 msgid "sys.stderr"
-msgstr ""
+msgstr "sys.stderr"
 
 #: reference/datamodel.rst:1053
 msgid "stdio"
-msgstr ""
+msgstr "stdio"
 
 #: reference/datamodel.rst:1053
 msgid "stdin (in module sys)"
-msgstr ""
+msgstr "stdin (στο module sys)"
 
 #: reference/datamodel.rst:1053
 msgid "stdout (in module sys)"
-msgstr ""
+msgstr "stdout (στο module sys)"
 
 #: reference/datamodel.rst:1053
 msgid "stderr (in module sys)"
-msgstr ""
+msgstr "stderr (στο module sys)"
 
 #: reference/datamodel.rst:1082
 msgid "internal type"
-msgstr ""
+msgstr "εσωτερικός τύπος"
 
 #: reference/datamodel.rst:1082
 msgid "types, internal"
-msgstr ""
+msgstr "τύποι, εσωτερικό"
 
 #: reference/datamodel.rst:1096
 msgid "bytecode"
-msgstr ""
+msgstr "bytecode"
 
 #: reference/datamodel.rst:1096
 msgid "code"
-msgstr ""
+msgstr "code"
 
 #: reference/datamodel.rst:1096
 msgid "code object"
-msgstr ""
+msgstr "code object"
 
 #: reference/datamodel.rst:1107
 msgid "co_argcount (code object attribute)"
-msgstr ""
+msgstr "co_argcount (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_posonlyargcount (code object attribute)"
-msgstr ""
+msgstr "co_posonlyargcount (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_kwonlyargcount (code object attribute)"
-msgstr ""
+msgstr "co_kwonlyargcount (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_code (code object attribute)"
-msgstr ""
+msgstr "co_code (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_consts (code object attribute)"
-msgstr ""
+msgstr "co_consts (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_filename (code object attribute)"
-msgstr ""
+msgstr "co_filename (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_firstlineno (code object attribute)"
-msgstr ""
+msgstr "co_firstlineno (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_flags (code object attribute)"
-msgstr ""
+msgstr "co_flags (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_lnotab (code object attribute)"
-msgstr ""
+msgstr "co_lnotab (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_name (code object attribute)"
-msgstr ""
+msgstr "co_name (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_names (code object attribute)"
-msgstr ""
+msgstr "co_names (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_nlocals (code object attribute)"
-msgstr ""
+msgstr "co_nlocals (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_stacksize (code object attribute)"
-msgstr ""
+msgstr "co_stacksize (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_varnames (code object attribute)"
-msgstr ""
+msgstr "co_varnames (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_cellvars (code object attribute)"
-msgstr ""
+msgstr "co_cellvars (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_freevars (code object attribute)"
-msgstr ""
+msgstr "co_freevars (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1107
 msgid "co_qualname (code object attribute)"
-msgstr ""
+msgstr "co_qualname (χαρακτηριστικό code object)"
 
 #: reference/datamodel.rst:1218
 msgid "documentation string"
-msgstr ""
+msgstr "κείμενο τεκμηρίωσης"
 
 #: reference/datamodel.rst:1307
 msgid "frame"
-msgstr ""
+msgstr "frame"
 
 #: reference/datamodel.rst:1313
 msgid "f_back (frame attribute)"
-msgstr ""
+msgstr "f_back (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1313
 msgid "f_code (frame attribute)"
-msgstr ""
+msgstr "f_code (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1313
 msgid "f_globals (frame attribute)"
-msgstr ""
+msgstr "f_globals (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1313
 msgid "f_locals (frame attribute)"
-msgstr ""
+msgstr "f_locals (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1313
 msgid "f_lasti (frame attribute)"
-msgstr ""
+msgstr "f_lasti (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1313
 msgid "f_builtins (frame attribute)"
-msgstr ""
+msgstr "f_builtins (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1352
 msgid "f_trace (frame attribute)"
-msgstr ""
+msgstr "f_trace (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1352
 msgid "f_trace_lines (frame attribute)"
-msgstr ""
+msgstr "f_trace_lines (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1352
 msgid "f_trace_opcodes (frame attribute)"
-msgstr ""
+msgstr "f_trace_opcodes (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1352
 msgid "f_lineno (frame attribute)"
-msgstr ""
+msgstr "f_lineno (χαρακτηριστικό frame)"
 
 #: reference/datamodel.rst:1407
 msgid "traceback"
-msgstr ""
+msgstr "traceback"
 
 #: reference/datamodel.rst:1407
 msgid "stack"
-msgstr ""
+msgstr "stack"
 
 #: reference/datamodel.rst:1407
 msgid "trace"
-msgstr ""
+msgstr "trace"
 
 #: reference/datamodel.rst:1407
 msgid "exception"
-msgstr ""
+msgstr "exception"
 
 #: reference/datamodel.rst:1407
 msgid "handler"
-msgstr ""
+msgstr "χειριστής"
 
 #: reference/datamodel.rst:1407
 msgid "execution"
-msgstr ""
+msgstr "execution"
 
 #: reference/datamodel.rst:1407
 msgid "exc_info (in module sys)"
-msgstr ""
+msgstr "exc_info (στο module sys)"
 
 #: reference/datamodel.rst:1407
 msgid "last_traceback (in module sys)"
-msgstr ""
+msgstr "last_traceback (στο module sys)"
 
 #: reference/datamodel.rst:1407
 msgid "sys.exc_info"
-msgstr ""
+msgstr "sys.exc_info"
 
 #: reference/datamodel.rst:1407
 msgid "sys.exception"
-msgstr ""
+msgstr "sys.exception"
 
 #: reference/datamodel.rst:1407
 msgid "sys.last_traceback"
-msgstr ""
+msgstr "sys.last_traceback"
 
 #: reference/datamodel.rst:1444
 msgid "tb_frame (traceback attribute)"
-msgstr ""
+msgstr "tb_frame (χαρακτηριστικό traceback)"
 
 #: reference/datamodel.rst:1444
 msgid "tb_lineno (traceback attribute)"
-msgstr ""
+msgstr "tb_lineno (χαρακτηριστικό traceback)"
 
 #: reference/datamodel.rst:1444
 msgid "tb_lasti (traceback attribute)"
-msgstr ""
+msgstr "tb_lasti (χαρακτηριστικό traceback)"
 
 #: reference/datamodel.rst:1444
 msgid "try"
-msgstr ""
+msgstr "try"
 
 #: reference/datamodel.rst:1474
 msgid "tb_next (traceback attribute)"
-msgstr ""
+msgstr "tb_next (χαρακτηριστικό traceback)"
 
 #: reference/datamodel.rst:2834
 msgid "slice"
-msgstr ""
+msgstr "slice"
 
 #: reference/datamodel.rst:1496
 msgid "start (slice object attribute)"
-msgstr ""
+msgstr "start (χαρακτηριστικό αντικειμένου slice)"
 
 #: reference/datamodel.rst:1496
 msgid "stop (slice object attribute)"
-msgstr ""
+msgstr "stop (χαρακτηριστικό αντικειμένου slice)"
 
 #: reference/datamodel.rst:1496
 msgid "step (slice object attribute)"
-msgstr ""
+msgstr "step (χαρακτηριστικό αντικειμένου slice)"
 
 #: reference/datamodel.rst:1544
 msgid "operator"
-msgstr ""
+msgstr "τελεστής"
 
 #: reference/datamodel.rst:1544
 msgid "overloading"
-msgstr ""
+msgstr "υπερφόρτωση"
 
 #: reference/datamodel.rst:1544
 msgid "__getitem__() (mapping object method)"
-msgstr ""
+msgstr "__getitem__() (μέθοδος αντικειμένου αντιστοίχισης)"
 
 #: reference/datamodel.rst:1580
 msgid "subclassing"
-msgstr ""
+msgstr "δημιουργία υποκλάσης"
 
 #: reference/datamodel.rst:1580
 msgid "immutable types"
-msgstr ""
+msgstr "αμετάβλητοι τύποι"
 
 #: reference/datamodel.rst:1609
 msgid "constructor"
-msgstr ""
+msgstr "constructor"
 
 #: reference/datamodel.rst:1626
 msgid "destructor"
-msgstr ""
+msgstr "destructor"
 
 #: reference/datamodel.rst:1626
 msgid "finalizer"
-msgstr ""
+msgstr "διαχεριστής καταστροφής"
 
 #: reference/datamodel.rst:1626
 msgid "del"
-msgstr ""
+msgstr "del"
 
 #: reference/datamodel.rst:1688
 msgid "repr() (built-in function)"
-msgstr ""
+msgstr "repr() (ενσωματωμένη συνάρτηση)"
 
 #: reference/datamodel.rst:1688
 msgid "__repr__() (object method)"
-msgstr ""
+msgstr "__repr__() (μέθοδος αντικειμένου)"
 
 #: reference/datamodel.rst:1705
 msgid "__str__() (object method)"
-msgstr ""
+msgstr "__str__() (μέθοδος αντικειμένου)"
 
 #: reference/datamodel.rst:1705
 msgid "format() (built-in function)"
-msgstr ""
+msgstr "format() (ενσωματωμένη συνάρτηση)"
 
 #: reference/datamodel.rst:1705
 msgid "print() (built-in function)"
-msgstr ""
+msgstr "print() (ενσωματωμένη συνάρτηση)"
 
 #: reference/datamodel.rst:1735
 msgid "__format__() (object method)"
-msgstr ""
+msgstr "__format__() (μεθοδος αντικειμένου)"
 
 #: reference/datamodel.rst:1735
 msgid "conversion"
-msgstr ""
+msgstr "μετατροπή"
 
 #: reference/datamodel.rst:1735
 msgid "print"
-msgstr ""
+msgstr "print"
 
 #: reference/datamodel.rst:1774
 msgid "comparisons"
-msgstr ""
+msgstr "συγκρίσεις"
 
 #: reference/datamodel.rst:1819
 msgid "hash"
-msgstr ""
+msgstr "hash"
 
 #: reference/datamodel.rst:1900
 msgid "__len__() (mapping object method)"
-msgstr ""
+msgstr "__len__() (μέθοδος αντιστοίχισης αντικειμένου)"
 
 #: reference/datamodel.rst:2004
 msgid "__getattr__ (module attribute)"
-msgstr ""
+msgstr "__getattr__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:2004
 msgid "__dir__ (module attribute)"
-msgstr ""
+msgstr "__dir__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:2004
 msgid "__class__ (module attribute)"
-msgstr ""
+msgstr "__class__ (χαρακτηριστικό module)"
 
 #: reference/datamodel.rst:2375
 msgid "metaclass"
-msgstr ""
+msgstr "μετακλάση"
 
 #: reference/datamodel.rst:2375
 msgid "= (equals)"
-msgstr ""
+msgstr "= (ισοδυναμεί)"
 
 #: reference/datamodel.rst:2375
 msgid "class definition"
-msgstr ""
+msgstr "ορισμός κλάσης"
 
 #: reference/datamodel.rst:2439
 msgid "metaclass hint"
-msgstr ""
+msgstr "υπόδειξη μετακλάσης"
 
 #: reference/datamodel.rst:2462
 msgid "__prepare__ (metaclass method)"
-msgstr ""
+msgstr "__prepare__ (μέθοδος μετακλάσης)"
 
 #: reference/datamodel.rst:2486
 msgid "body"
-msgstr ""
+msgstr "σώμα"
 
 #: reference/datamodel.rst:2506
 msgid "__class__ (method cell)"
-msgstr ""
+msgstr "__class__ (κελί που περιέχει μέθοδο)"
 
 #: reference/datamodel.rst:2506
 msgid "__classcell__ (class namespace entry)"
-msgstr ""
+msgstr "__classcell__ (καταχώρηση στο namespace της κλάσης)"
 
 #: reference/datamodel.rst:2804
 msgid "__bool__() (object method)"
-msgstr ""
+msgstr "__bool__() (μέθοδος αντικειμένου)"
 
 #: reference/datamodel.rst:2997
 msgid "divmod"
-msgstr ""
+msgstr "divmod"
 
 #: reference/datamodel.rst:2997 reference/datamodel.rst:3011
 msgid "pow"
-msgstr ""
+msgstr "pow"
 
 #: reference/datamodel.rst:3060
 msgid "abs"
-msgstr ""
+msgstr "abs"
 
 #: reference/datamodel.rst:3070
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: reference/datamodel.rst:3070
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: reference/datamodel.rst:3098
 msgid "round"
-msgstr ""
+msgstr "round"
 
 #: reference/datamodel.rst:3125
 msgid "with"
-msgstr ""
+msgstr "with"
 
 #: reference/datamodel.rst:3125
 msgid "context manager"
-msgstr ""
+msgstr "διαχειριστής περιβάλλοντος"
