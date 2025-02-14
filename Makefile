@@ -26,7 +26,6 @@ CPYTHON_CURRENT_COMMIT := 9cbde7c6ce6f7b93301a37f03dfa0c0d45e00a39
 CPYTHON_PATH := ./cpython
 
 LANGUAGE := el
-TRANSLATION_BRANCH := main
 BRANCH := 3.12
 
 EXCLUDED := whatsnew/ c-api/
@@ -119,7 +118,7 @@ wrap: ensure_prerequisites
 	@echo "Verify wrapping"
 	powrap --check --quiet *.po **/*.po
 
-SRCS = $(shell git diff --name-only $(TRANSLATION_BRANCH) | grep '.po$$')
+SRCS = $(shell git diff --name-only $(BRANCH) | grep '.po$$')
 # foo/bar.po => $(POSPELL_TMP_DIR)/foo/bar.po.out
 DESTS = $(addprefix $(POSPELL_TMP_DIR)/,$(addsuffix .out,$(SRCS)))
 
