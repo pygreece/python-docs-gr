@@ -160,8 +160,8 @@ msgstr ""
 #: howto/sorting.rst:99
 msgid ""
 "Objects with named attributes can be made by a regular class as shown above, "
-"or they can be instances of :class:`~dataclasses.dataclass` or "
-"a :term:`named tuple`."
+"or they can be instances of :class:`~dataclasses.dataclass` or a :term:"
+"`named tuple`."
 msgstr ""
 
 #: howto/sorting.rst:104
@@ -172,9 +172,8 @@ msgstr ""
 msgid ""
 "The :term:`key function` patterns shown above are very common, so Python "
 "provides convenience functions to make accessor functions easier and faster. "
-"The :mod:`operator` module "
-"has :func:`~operator.itemgetter`, :func:`~operator.attrgetter`, and "
-"a :func:`~operator.methodcaller` function."
+"The :mod:`operator` module has :func:`~operator.itemgetter`, :func:"
+"`~operator.attrgetter`, and a :func:`~operator.methodcaller` function."
 msgstr ""
 
 #: howto/sorting.rst:111
@@ -380,9 +379,9 @@ msgstr ""
 
 #: howto/sorting.rst:246
 msgid ""
-"Another name for this idiom is `Schwartzian transform <https://"
-"en.wikipedia.org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, "
-"who popularized it among Perl programmers."
+"Another name for this idiom is `Schwartzian transform <https://en.wikipedia."
+"org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, who "
+"popularized it among Perl programmers."
 msgstr ""
 
 #: howto/sorting.rst:250
@@ -420,9 +419,9 @@ msgstr ""
 
 #: howto/sorting.rst:269
 msgid ""
-"To accommodate those situations, Python "
-"provides :class:`functools.cmp_to_key` to wrap the comparison function to "
-"make it usable as a key function::"
+"To accommodate those situations, Python provides :class:`functools."
+"cmp_to_key` to wrap the comparison function to make it usable as a key "
+"function::"
 msgstr ""
 
 #: howto/sorting.rst:273
@@ -435,9 +434,9 @@ msgstr ""
 
 #: howto/sorting.rst:278
 msgid ""
-"For locale aware sorting, use :func:`locale.strxfrm` for a key function "
-"or :func:`locale.strcoll` for a comparison function.  This is necessary "
-"because \"alphabetical\" sort orderings can vary across cultures even if the "
+"For locale aware sorting, use :func:`locale.strxfrm` for a key function or :"
+"func:`locale.strcoll` for a comparison function.  This is necessary because "
+"\"alphabetical\" sort orderings can vary across cultures even if the "
 "underlying alphabet is the same."
 msgstr ""
 
@@ -463,8 +462,8 @@ msgstr ""
 #: howto/sorting.rst:297
 msgid ""
 "The sort routines use ``<`` when making comparisons between two objects. So, "
-"it is easy to add a standard sort order to a class by defining "
-"an :meth:`~object.__lt__` method:"
+"it is easy to add a standard sort order to a class by defining an :meth:"
+"`~object.__lt__` method:"
 msgstr ""
 
 #: howto/sorting.rst:301
@@ -476,8 +475,8 @@ msgstr ""
 
 #: howto/sorting.rst:307
 msgid ""
-"However, note that ``<`` can fall back to using :meth:`~object.__gt__` "
-"if :meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
+"However, note that ``<`` can fall back to using :meth:`~object.__gt__` if :"
+"meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
 "details on the mechanics).  To avoid surprises, :pep:`8` recommends that all "
 "six comparison methods be implemented. The :func:`~functools.total_ordering` "
 "decorator is provided to make that task easier."

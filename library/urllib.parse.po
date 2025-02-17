@@ -71,9 +71,9 @@ msgstr ""
 #: library/urllib.parse.rst:47
 msgid ""
 "Parse a URL into six components, returning a 6-item :term:`named tuple`.  "
-"This corresponds to the general structure of a URL: ``scheme://netloc/"
-"path;parameters?query#fragment``. Each tuple item is a string, possibly "
-"empty. The components are not broken up into smaller parts (for example, the "
+"This corresponds to the general structure of a URL: ``scheme://netloc/path;"
+"parameters?query#fragment``. Each tuple item is a string, possibly empty. "
+"The components are not broken up into smaller parts (for example, the "
 "network location is a single string), and % escapes are not expanded. The "
 "delimiters as shown above are not part of the result, except for a leading "
 "slash in the *path* component, which is retained if present.  For example:"
@@ -115,8 +115,8 @@ msgstr ""
 msgid ""
 ">>> from urllib.parse import urlparse\n"
 ">>> urlparse('//www.cwi.nl:80/%7Eguido/Python.html')\n"
-"ParseResult(scheme='', netloc='www.cwi.nl:80', path='/%7Eguido/"
-"Python.html',\n"
+"ParseResult(scheme='', netloc='www.cwi.nl:80', path='/%7Eguido/Python."
+"html',\n"
 "            params='', query='', fragment='')\n"
 ">>> urlparse('www.cwi.nl/%7Eguido/Python.html')\n"
 "ParseResult(scheme='', netloc='', path='www.cwi.nl/%7Eguido/Python.html',\n"
@@ -292,8 +292,8 @@ msgstr ""
 
 #: library/urllib.parse.rst:328
 msgid ""
-"Unmatched square brackets in the :attr:`netloc` attribute will raise "
-"a :exc:`ValueError`."
+"Unmatched square brackets in the :attr:`netloc` attribute will raise a :exc:"
+"`ValueError`."
 msgstr ""
 
 #: library/urllib.parse.rst:331
@@ -307,9 +307,9 @@ msgstr ""
 #: library/urllib.parse.rst:150
 msgid ""
 "As is the case with all named tuples, the subclass has a few additional "
-"methods and attributes that are particularly useful. One such method "
-"is :meth:`_replace`. The :meth:`_replace` method will return a new "
-"ParseResult object replacing specified fields with new values."
+"methods and attributes that are particularly useful. One such method is :"
+"meth:`_replace`. The :meth:`_replace` method will return a new ParseResult "
+"object replacing specified fields with new values."
 msgstr ""
 
 #: library/urllib.parse.rst:155
@@ -317,12 +317,12 @@ msgid ""
 ">>> from urllib.parse import urlparse\n"
 ">>> u = urlparse('//www.cwi.nl:80/%7Eguido/Python.html')\n"
 ">>> u\n"
-"ParseResult(scheme='', netloc='www.cwi.nl:80', path='/%7Eguido/"
-"Python.html',\n"
+"ParseResult(scheme='', netloc='www.cwi.nl:80', path='/%7Eguido/Python."
+"html',\n"
 "            params='', query='', fragment='')\n"
 ">>> u._replace(scheme='http')\n"
-"ParseResult(scheme='http', netloc='www.cwi.nl:80', path='/%7Eguido/"
-"Python.html',\n"
+"ParseResult(scheme='http', netloc='www.cwi.nl:80', path='/%7Eguido/Python."
+"html',\n"
 "            params='', query='', fragment='')"
 msgstr ""
 
@@ -345,8 +345,8 @@ msgstr ""
 
 #: library/urllib.parse.rst:345
 msgid ""
-"Out-of-range port numbers now raise :exc:`ValueError`, instead of "
-"returning :const:`None`."
+"Out-of-range port numbers now raise :exc:`ValueError`, instead of returning :"
+"const:`None`."
 msgstr ""
 
 #: library/urllib.parse.rst:349
@@ -357,10 +357,10 @@ msgstr ""
 
 #: library/urllib.parse.rst:191
 msgid ""
-"Parse a query string given as a string argument (data of "
-"type :mimetype:`application/x-www-form-urlencoded`).  Data are returned as a "
-"dictionary.  The dictionary keys are the unique query variable names and the "
-"values are lists of values for each name."
+"Parse a query string given as a string argument (data of type :mimetype:"
+"`application/x-www-form-urlencoded`).  Data are returned as a dictionary.  "
+"The dictionary keys are the unique query variable names and the values are "
+"lists of values for each name."
 msgstr ""
 
 #: library/urllib.parse.rst:241
@@ -382,8 +382,8 @@ msgstr ""
 #: library/urllib.parse.rst:251
 msgid ""
 "The optional *encoding* and *errors* parameters specify how to decode "
-"percent-encoded sequences into Unicode characters, as accepted by "
-"the :meth:`bytes.decode` method."
+"percent-encoded sequences into Unicode characters, as accepted by the :meth:"
+"`bytes.decode` method."
 msgstr ""
 
 #: library/urllib.parse.rst:255
@@ -423,9 +423,9 @@ msgstr ""
 
 #: library/urllib.parse.rst:237
 msgid ""
-"Parse a query string given as a string argument (data of "
-"type :mimetype:`application/x-www-form-urlencoded`).  Data are returned as a "
-"list of name, value pairs."
+"Parse a query string given as a string argument (data of type :mimetype:"
+"`application/x-www-form-urlencoded`).  Data are returned as a list of name, "
+"value pairs."
 msgstr ""
 
 #: library/urllib.parse.rst:262
@@ -505,8 +505,8 @@ msgstr ""
 
 #: library/urllib.parse.rst:381
 msgid ""
-"The *allow_fragments* argument has the same meaning and default as "
-"for :func:`urlparse`."
+"The *allow_fragments* argument has the same meaning and default as for :func:"
+"`urlparse`."
 msgstr ""
 
 #: library/urllib.parse.rst:386
@@ -570,10 +570,10 @@ msgstr ""
 
 #: library/urllib.parse.rst:439
 msgid ""
-"Extract the url from a wrapped URL (that is, a string formatted as "
-"``<URL:scheme://host/path>``, ``<scheme://host/path>``, ``URL:scheme://host/"
-"path`` or ``scheme://host/path``). If *url* is not a wrapped URL, it is "
-"returned without changes."
+"Extract the url from a wrapped URL (that is, a string formatted as ``<URL:"
+"scheme://host/path>``, ``<scheme://host/path>``, ``URL:scheme://host/path`` "
+"or ``scheme://host/path``). If *url* is not a wrapped URL, it is returned "
+"without changes."
 msgstr ""
 
 #: library/urllib.parse.rst:447
@@ -626,37 +626,36 @@ msgid ""
 "The URL parsing functions were originally designed to operate on character "
 "strings only. In practice, it is useful to be able to manipulate properly "
 "quoted and encoded URLs as sequences of ASCII bytes. Accordingly, the URL "
-"parsing functions in this module all operate on :class:`bytes` "
-"and :class:`bytearray` objects in addition to :class:`str` objects."
+"parsing functions in this module all operate on :class:`bytes` and :class:"
+"`bytearray` objects in addition to :class:`str` objects."
 msgstr ""
 
 #: library/urllib.parse.rst:484
 msgid ""
-"If :class:`str` data is passed in, the result will also contain "
-"only :class:`str` data. If :class:`bytes` or :class:`bytearray` data is "
-"passed in, the result will contain only :class:`bytes` data."
+"If :class:`str` data is passed in, the result will also contain only :class:"
+"`str` data. If :class:`bytes` or :class:`bytearray` data is passed in, the "
+"result will contain only :class:`bytes` data."
 msgstr ""
 
 #: library/urllib.parse.rst:488
 msgid ""
-"Attempting to mix :class:`str` data with :class:`bytes` "
-"or :class:`bytearray` in a single function call will result in "
-"a :exc:`TypeError` being raised, while attempting to pass in non-ASCII byte "
-"values will trigger :exc:`UnicodeDecodeError`."
+"Attempting to mix :class:`str` data with :class:`bytes` or :class:"
+"`bytearray` in a single function call will result in a :exc:`TypeError` "
+"being raised, while attempting to pass in non-ASCII byte values will "
+"trigger :exc:`UnicodeDecodeError`."
 msgstr ""
 
 #: library/urllib.parse.rst:493
 msgid ""
-"To support easier conversion of result objects between :class:`str` "
-"and :class:`bytes`, all return values from URL parsing functions provide "
-"either an :meth:`encode` method (when the result contains :class:`str` data) "
-"or a :meth:`decode` method (when the result contains :class:`bytes` data). "
-"The signatures of these methods match those of the "
-"corresponding :class:`str` and :class:`bytes` methods (except that the "
-"default encoding is ``'ascii'`` rather than ``'utf-8'``). Each produces a "
-"value of a corresponding type that contains either :class:`bytes` data "
-"(for :meth:`encode` methods) or :class:`str` data (for :meth:`decode` "
-"methods)."
+"To support easier conversion of result objects between :class:`str` and :"
+"class:`bytes`, all return values from URL parsing functions provide either "
+"an :meth:`encode` method (when the result contains :class:`str` data) or a :"
+"meth:`decode` method (when the result contains :class:`bytes` data). The "
+"signatures of these methods match those of the corresponding :class:`str` "
+"and :class:`bytes` methods (except that the default encoding is ``'ascii'`` "
+"rather than ``'utf-8'``). Each produces a value of a corresponding type that "
+"contains either :class:`bytes` data (for :meth:`encode` methods) or :class:"
+"`str` data (for :meth:`decode` methods)."
 msgstr ""
 
 #: library/urllib.parse.rst:504
@@ -684,9 +683,9 @@ msgstr ""
 
 #: library/urllib.parse.rst:522
 msgid ""
-"The result objects from the :func:`urlparse`, :func:`urlsplit`  "
-"and :func:`urldefrag` functions are subclasses of the :class:`tuple` type. "
-"These subclasses add the attributes listed in the documentation for those "
+"The result objects from the :func:`urlparse`, :func:`urlsplit`  and :func:"
+"`urldefrag` functions are subclasses of the :class:`tuple` type. These "
+"subclasses add the attributes listed in the documentation for those "
 "functions, the encoding and decoding support described in the previous "
 "section, as well as an additional method:"
 msgstr ""
@@ -798,8 +797,8 @@ msgid ""
 "ASCII characters, as accepted by the :meth:`str.encode` method. *encoding* "
 "defaults to ``'utf-8'``. *errors* defaults to ``'strict'``, meaning "
 "unsupported characters raise a :class:`UnicodeEncodeError`. *encoding* and "
-"*errors* must not be supplied if *string* is a :class:`bytes`, or "
-"a :class:`TypeError` is raised."
+"*errors* must not be supplied if *string* is a :class:`bytes`, or a :class:"
+"`TypeError` is raised."
 msgstr ""
 
 #: library/urllib.parse.rst:635
@@ -826,8 +825,8 @@ msgstr ""
 
 #: library/urllib.parse.rst:653
 msgid ""
-"Like :func:`quote`, but accepts a :class:`bytes` object rather than "
-"a :class:`str`, and does not perform string-to-bytes encoding."
+"Like :func:`quote`, but accepts a :class:`bytes` object rather than a :class:"
+"`str`, and does not perform string-to-bytes encoding."
 msgstr ""
 
 #: library/urllib.parse.rst:656
@@ -838,8 +837,8 @@ msgstr ""
 msgid ""
 "Replace :samp:`%{xx}` escapes with their single-character equivalent. The "
 "optional *encoding* and *errors* parameters specify how to decode percent-"
-"encoded sequences into Unicode characters, as accepted by "
-"the :meth:`bytes.decode` method."
+"encoded sequences into Unicode characters, as accepted by the :meth:`bytes."
+"decode` method."
 msgstr ""
 
 #: library/urllib.parse.rst:669
@@ -935,9 +934,9 @@ msgstr ""
 
 #: library/urllib.parse.rst:739
 msgid ""
-"Refer to :ref:`urllib examples <urllib-examples>` to find out how "
-"the :func:`urllib.parse.urlencode` method can be used for generating the "
-"query string of a URL or data for a POST request."
+"Refer to :ref:`urllib examples <urllib-examples>` to find out how the :func:"
+"`urllib.parse.urlencode` method can be used for generating the query string "
+"of a URL or data for a POST request."
 msgstr ""
 
 #: library/urllib.parse.rst:743
