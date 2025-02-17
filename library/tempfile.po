@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/tempfile.rst:2
-msgid ":mod:`tempfile` --- Generate temporary files and directories"
+msgid ":mod:`!tempfile` --- Generate temporary files and directories"
 msgstr ""
 
 #: library/tempfile.rst:9
@@ -27,11 +28,12 @@ msgstr ""
 #: library/tempfile.rst:17
 msgid ""
 "This module creates temporary files and directories.  It works on all "
-"supported platforms. :class:`TemporaryFile`, :class:`NamedTemporaryFile`, :"
-"class:`TemporaryDirectory`, and :class:`SpooledTemporaryFile` are high-level "
-"interfaces which provide automatic cleanup and can be used as :term:`context "
-"managers <context manager>`. :func:`mkstemp` and :func:`mkdtemp` are lower-"
-"level functions which require manual cleanup."
+"supported "
+"platforms. :class:`TemporaryFile`, :class:`NamedTemporaryFile`, :class:`TemporaryDirectory`, "
+"and :class:`SpooledTemporaryFile` are high-level interfaces which provide "
+"automatic cleanup and can be used as :term:`context managers <context "
+"manager>`. :func:`mkstemp` and :func:`mkdtemp` are lower-level functions "
+"which require manual cleanup."
 msgstr ""
 
 #: library/tempfile.rst:24
@@ -63,9 +65,9 @@ msgstr ""
 
 #: library/tempfile.rst:44
 msgid ""
-"The resulting object can be used as a :term:`context manager` (see :ref:"
-"`tempfile-examples`).  On completion of the context or destruction of the "
-"file object the temporary file will be removed from the filesystem."
+"The resulting object can be used as a :term:`context manager` "
+"(see :ref:`tempfile-examples`).  On completion of the context or destruction "
+"of the file object the temporary file will be removed from the filesystem."
 msgstr ""
 
 #: library/tempfile.rst:49
@@ -195,10 +197,10 @@ msgstr ""
 #: library/tempfile.rst:121
 msgid ""
 "*delete* is true but *delete_on_close* is false. Note, that in this case the "
-"additional opens that do not share delete access (e.g. created via builtin :"
-"func:`open`) must be closed before exiting the context manager, else the :"
-"func:`os.unlink` call on context manager exit will fail with a :exc:"
-"`PermissionError`."
+"additional opens that do not share delete access (e.g. created via "
+"builtin :func:`open`) must be closed before exiting the context manager, "
+"else the :func:`os.unlink` call on context manager exit will fail with "
+"a :exc:`PermissionError`."
 msgstr ""
 
 #: library/tempfile.rst:127
@@ -226,8 +228,8 @@ msgid ""
 "This class operates exactly as :func:`TemporaryFile` does, except that data "
 "is spooled in memory until the file size exceeds *max_size*, or until the "
 "file's :func:`~io.IOBase.fileno` method is called, at which point the "
-"contents are written to disk and operation proceeds as with :func:"
-"`TemporaryFile`."
+"contents are written to disk and operation proceeds as "
+"with :func:`TemporaryFile`."
 msgstr ""
 
 #: library/tempfile.rst:156
@@ -258,8 +260,8 @@ msgstr ""
 
 #: library/tempfile.rst:180
 msgid ""
-"This class securely creates a temporary directory using the same rules as :"
-"func:`mkdtemp`. The resulting object can be used as a :term:`context "
+"This class securely creates a temporary directory using the same rules "
+"as :func:`mkdtemp`. The resulting object can be used as a :term:`context "
 "manager` (see :ref:`tempfile-examples`).  On completion of the context or "
 "destruction of the temporary directory object, the newly created temporary "
 "directory and all its contents are removed from the filesystem."
@@ -336,8 +338,8 @@ msgstr ""
 #: library/tempfile.rst:239
 msgid ""
 "If *prefix* is not ``None``, the file name will begin with that prefix; "
-"otherwise, a default prefix is used.  The default is the return value of :"
-"func:`gettempprefix` or :func:`gettempprefixb`, as appropriate."
+"otherwise, a default prefix is used.  The default is the return value "
+"of :func:`gettempprefix` or :func:`gettempprefixb`, as appropriate."
 msgstr ""
 
 #: library/tempfile.rst:243
@@ -399,8 +401,8 @@ msgstr ""
 
 #: library/tempfile.rst:285
 msgid ""
-"The *prefix*, *suffix*, and *dir* arguments are the same as for :func:"
-"`mkstemp`."
+"The *prefix*, *suffix*, and *dir* arguments are the same as "
+"for :func:`mkstemp`."
 msgstr ""
 
 #: library/tempfile.rst:288
@@ -449,8 +451,8 @@ msgstr ""
 
 #: library/tempfile.rst:325
 msgid ""
-"On all other platforms, the directories :file:`/tmp`, :file:`/var/tmp`, and :"
-"file:`/usr/tmp`, in that order."
+"On all other platforms, the directories :file:`/tmp`, :file:`/var/tmp`, "
+"and :file:`/usr/tmp`, in that order."
 msgstr ""
 
 #: library/tempfile.rst:328
@@ -510,11 +512,11 @@ msgstr ""
 #: library/tempfile.rst:375
 msgid ""
 "Beware that if you set ``tempdir`` to a bytes value, there is a nasty side "
-"effect: The global default return type of :func:`mkstemp` and :func:"
-"`mkdtemp` changes to bytes when no explicit ``prefix``, ``suffix``, or "
-"``dir`` arguments of type str are supplied. Please do not write code "
-"expecting or depending on this. This awkward behavior is maintained for "
-"compatibility with the historical implementation."
+"effect: The global default return type of :func:`mkstemp` "
+"and :func:`mkdtemp` changes to bytes when no explicit ``prefix``, "
+"``suffix``, or ``dir`` arguments of type str are supplied. Please do not "
+"write code expecting or depending on this. This awkward behavior is "
+"maintained for compatibility with the historical implementation."
 msgstr ""
 
 #: library/tempfile.rst:386
@@ -523,6 +525,49 @@ msgstr ""
 
 #: library/tempfile.rst:388
 msgid "Here are some examples of typical usage of the :mod:`tempfile` module::"
+msgstr ""
+
+#: library/tempfile.rst:390
+msgid ""
+">>> import tempfile\n"
+"\n"
+"# create a temporary file and write some data to it\n"
+">>> fp = tempfile.TemporaryFile()\n"
+">>> fp.write(b'Hello world!')\n"
+"# read data from file\n"
+">>> fp.seek(0)\n"
+">>> fp.read()\n"
+"b'Hello world!'\n"
+"# close the file, it will be removed\n"
+">>> fp.close()\n"
+"\n"
+"# create a temporary file using a context manager\n"
+">>> with tempfile.TemporaryFile() as fp:\n"
+"...     fp.write(b'Hello world!')\n"
+"...     fp.seek(0)\n"
+"...     fp.read()\n"
+"b'Hello world!'\n"
+">>>\n"
+"# file is now closed and removed\n"
+"\n"
+"# create a temporary file using a context manager\n"
+"# close the file, use the name to open the file again\n"
+">>> with tempfile.NamedTemporaryFile(delete_on_close=False) as fp:\n"
+"...     fp.write(b'Hello world!')\n"
+"...     fp.close()\n"
+"... # the file is closed, but not removed\n"
+"... # open the file again by using its name\n"
+"...     with open(fp.name, mode='rb') as f:\n"
+"...         f.read()\n"
+"b'Hello world!'\n"
+">>>\n"
+"# file is now removed\n"
+"\n"
+"# create a temporary directory using the context manager\n"
+">>> with tempfile.TemporaryDirectory() as tmpdirname:\n"
+"...     print('created temporary directory', tmpdirname)\n"
+">>>\n"
+"# directory and contents have been removed"
 msgstr ""
 
 #: library/tempfile.rst:433
@@ -559,6 +604,19 @@ msgid ""
 "else may have beaten you to the punch.  :func:`mktemp` usage can be replaced "
 "easily with :func:`NamedTemporaryFile`, passing it the ``delete=False`` "
 "parameter::"
+msgstr ""
+
+#: library/tempfile.rst:462
+msgid ""
+">>> f = NamedTemporaryFile(delete=False)\n"
+">>> f.name\n"
+"'/tmp/tmptjujjt'\n"
+">>> f.write(b\"Hello World!\\n\")\n"
+"13\n"
+">>> f.close()\n"
+">>> os.unlink(f.name)\n"
+">>> os.path.exists(f.name)\n"
+"False"
 msgstr ""
 
 #: library/tempfile.rst:11

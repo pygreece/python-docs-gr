@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/gettext.rst:2
-msgid ":mod:`gettext` --- Multilingual internationalization services"
+msgid ":mod:`!gettext` --- Multilingual internationalization services"
 msgstr ""
 
 #: library/gettext.rst:10
@@ -57,12 +58,13 @@ msgstr ""
 
 #: library/gettext.rst:39
 msgid ""
-"Bind the *domain* to the locale directory *localedir*.  More concretely, :"
-"mod:`gettext` will look for binary :file:`.mo` files for the given domain "
-"using the path (on Unix): :file:`{localedir}/{language}/LC_MESSAGES/{domain}."
-"mo`, where *language* is searched for in the environment variables :envvar:"
-"`LANGUAGE`, :envvar:`LC_ALL`, :envvar:`LC_MESSAGES`, and :envvar:`LANG` "
-"respectively."
+"Bind the *domain* to the locale directory *localedir*.  More "
+"concretely, :mod:`gettext` will look for binary :file:`.mo` files for the "
+"given domain using the path (on Unix): :file:`{localedir}/{language}/"
+"LC_MESSAGES/{domain}.mo`, where *language* is searched for in the "
+"environment "
+"variables :envvar:`LANGUAGE`, :envvar:`LC_ALL`, :envvar:`LC_MESSAGES`, "
+"and :envvar:`LANG` respectively."
 msgstr ""
 
 #: library/gettext.rst:45
@@ -130,6 +132,16 @@ msgstr ""
 msgid "Here's an example of typical usage for this API::"
 msgstr ""
 
+#: library/gettext.rst:106
+msgid ""
+"import gettext\n"
+"gettext.bindtextdomain('myapplication', '/path/to/my/language/directory')\n"
+"gettext.textdomain('myapplication')\n"
+"_ = gettext.gettext\n"
+"# ...\n"
+"print(_('This is a translatable string.'))"
+msgstr ""
+
 #: library/gettext.rst:115
 msgid "Class-based API"
 msgstr ""
@@ -157,11 +169,12 @@ msgstr ""
 msgid ""
 "If *localedir* is not given, then the default system locale directory is "
 "used. [#]_  If *languages* is not given, then the following environment "
-"variables are searched: :envvar:`LANGUAGE`, :envvar:`LC_ALL`, :envvar:"
-"`LC_MESSAGES`, and :envvar:`LANG`.  The first one returning a non-empty "
-"value is used for the *languages* variable. The environment variables should "
-"contain a colon separated list of languages, which will be split on the "
-"colon to produce the expected list of language code strings."
+"variables are "
+"searched: :envvar:`LANGUAGE`, :envvar:`LC_ALL`, :envvar:`LC_MESSAGES`, "
+"and :envvar:`LANG`.  The first one returning a non-empty value is used for "
+"the *languages* variable. The environment variables should contain a colon "
+"separated list of languages, which will be split on the colon to produce the "
+"expected list of language code strings."
 msgstr ""
 
 #: library/gettext.rst:140
@@ -203,8 +216,8 @@ msgstr ""
 #: library/gettext.rst:165
 msgid ""
 "If no :file:`.mo` file is found, this function raises :exc:`OSError` if "
-"*fallback* is false (which is the default), and returns a :class:"
-"`NullTranslations` instance if *fallback* is true."
+"*fallback* is false (which is the default), and returns "
+"a :class:`NullTranslations` instance if *fallback* is true."
 msgstr ""
 
 #: library/gettext.rst:169
@@ -218,8 +231,8 @@ msgstr ""
 #: library/gettext.rst:177
 msgid ""
 "This installs the function :func:`!_` in Python's builtins namespace, based "
-"on *domain* and *localedir* which are passed to the function :func:"
-"`translation`."
+"on *domain* and *localedir* which are passed to the "
+"function :func:`translation`."
 msgstr ""
 
 #: library/gettext.rst:180
@@ -233,6 +246,10 @@ msgid ""
 "As seen below, you usually mark the strings in your application that are "
 "candidates for translation, by wrapping them in a call to the :func:`!_` "
 "function, like this::"
+msgstr ""
+
+#: library/gettext.rst:187
+msgid "print(_('This string will be translated.'))"
 msgstr ""
 
 #: library/gettext.rst:189
@@ -334,11 +351,18 @@ msgstr ""
 
 #: library/gettext.rst:279
 msgid ""
-"Note that this is only one way, albeit the most convenient way, to make the :"
-"func:`!_` function available to your application.  Because it affects the "
-"entire application globally, and specifically the built-in namespace, "
+"Note that this is only one way, albeit the most convenient way, to make "
+"the :func:`!_` function available to your application.  Because it affects "
+"the entire application globally, and specifically the built-in namespace, "
 "localized modules should never install :func:`!_`. Instead, they should use "
 "this code to make :func:`!_` available to their module::"
+msgstr ""
+
+#: library/gettext.rst:285
+msgid ""
+"import gettext\n"
+"t = gettext.translation('mymodule', ...)\n"
+"_ = t.gettext"
 msgstr ""
 
 #: library/gettext.rst:289
@@ -357,18 +381,18 @@ msgstr ""
 
 #: library/gettext.rst:299
 msgid ""
-"The :mod:`!gettext` module provides one additional class derived from :class:"
-"`NullTranslations`: :class:`GNUTranslations`.  This class overrides :meth:`!"
-"_parse` to enable reading GNU :program:`gettext` format :file:`.mo` files in "
-"both big-endian and little-endian format."
+"The :mod:`!gettext` module provides one additional class derived "
+"from :class:`NullTranslations`: :class:`GNUTranslations`.  This class "
+"overrides :meth:`!_parse` to enable reading GNU :program:`gettext` "
+"format :file:`.mo` files in both big-endian and little-endian format."
 msgstr ""
 
 #: library/gettext.rst:304
 msgid ""
 ":class:`GNUTranslations` parses optional metadata out of the translation "
 "catalog. It is convention with GNU :program:`gettext` to include metadata as "
-"the translation for the empty string. This metadata is in :rfc:`822`\\ -"
-"style ``key: value`` pairs, and should contain the ``Project-Id-Version`` "
+"the translation for the empty string. This metadata is in :rfc:`822`\\ "
+"-style ``key: value`` pairs, and should contain the ``Project-Id-Version`` "
 "key.  If the key ``Content-Type`` is found, then the ``charset`` property is "
 "used to initialize the \"protected\" :attr:`!_charset` instance variable, "
 "defaulting to ``None`` if not found.  If the charset encoding is specified, "
@@ -419,13 +443,23 @@ msgstr ""
 #: library/gettext.rst:343
 msgid ""
 "If the message id is not found in the catalog, and a fallback is specified, "
-"the request is forwarded to the fallback's :meth:`~NullTranslations."
-"ngettext` method.  Otherwise, when *n* is 1 *singular* is returned, and "
-"*plural* is returned in all other cases."
+"the request is forwarded to the "
+"fallback's :meth:`~NullTranslations.ngettext` method.  Otherwise, when *n* "
+"is 1 *singular* is returned, and *plural* is returned in all other cases."
 msgstr ""
 
 #: library/gettext.rst:348
 msgid "Here is an example::"
+msgstr ""
+
+#: library/gettext.rst:350
+msgid ""
+"n = len(os.listdir('.'))\n"
+"cat = GNUTranslations(somefile)\n"
+"message = cat.ngettext(\n"
+"    'There is %(num)d file in this directory',\n"
+"    'There are %(num)d files in this directory',\n"
+"    n) % {'num': n}"
 msgstr ""
 
 #: library/gettext.rst:360
@@ -471,6 +505,14 @@ msgstr ""
 msgid ""
 "GNOME uses a version of the :mod:`gettext` module by James Henstridge, but "
 "this version has a slightly different API.  Its documented usage was::"
+msgstr ""
+
+#: library/gettext.rst:399
+msgid ""
+"import gettext\n"
+"cat = gettext.Catalog(domain, localedir)\n"
+"_ = cat.gettext\n"
+"print(_('hello world'))"
 msgstr ""
 
 #: library/gettext.rst:404
@@ -526,6 +568,14 @@ msgid ""
 "<gettext>`.  For example::"
 msgstr ""
 
+#: library/gettext.rst:434
+msgid ""
+"filename = 'mylog.txt'\n"
+"message = _('writing a log message')\n"
+"with open(filename, 'w') as fp:\n"
+"    fp.write(message)"
+msgstr ""
+
 #: library/gettext.rst:439
 msgid ""
 "In this example, the string ``'writing a log message'`` is marked as a "
@@ -548,34 +598,35 @@ msgstr ""
 
 #: library/gettext.rst:452
 msgid ""
-"(Python also includes pure-Python versions of these programs, called :"
-"program:`pygettext.py` and :program:`msgfmt.py`; some Python distributions "
-"will install them for you.  :program:`pygettext.py` is similar to :program:"
-"`xgettext`, but only understands Python source code and cannot handle other "
-"programming languages such as C or C++. :program:`pygettext.py` supports a "
-"command-line interface similar to :program:`xgettext`; for details on its "
-"use, run ``pygettext.py --help``.  :program:`msgfmt.py` is binary compatible "
-"with GNU :program:`msgfmt`.  With these two programs, you may not need the "
-"GNU :program:`gettext` package to internationalize your Python applications.)"
+"(Python also includes pure-Python versions of these programs, "
+"called :program:`pygettext.py` and :program:`msgfmt.py`; some Python "
+"distributions will install them for you.  :program:`pygettext.py` is similar "
+"to :program:`xgettext`, but only understands Python source code and cannot "
+"handle other programming languages such as C or C++. :program:`pygettext.py` "
+"supports a command-line interface similar to :program:`xgettext`; for "
+"details on its use, run ``pygettext.py --help``.  :program:`msgfmt.py` is "
+"binary compatible with GNU :program:`msgfmt`.  With these two programs, you "
+"may not need the GNU :program:`gettext` package to internationalize your "
+"Python applications.)"
 msgstr ""
 
 #: library/gettext.rst:464
 msgid ""
-":program:`xgettext`, :program:`pygettext`, and similar tools generate :file:"
-"`.po` files that are message catalogs.  They are structured human-readable "
-"files that contain every marked string in the source code, along with a "
-"placeholder for the translated versions of these strings."
+":program:`xgettext`, :program:`pygettext`, and similar tools "
+"generate :file:`.po` files that are message catalogs.  They are structured "
+"human-readable files that contain every marked string in the source code, "
+"along with a placeholder for the translated versions of these strings."
 msgstr ""
 
 #: library/gettext.rst:470
 msgid ""
 "Copies of these :file:`.po` files are then handed over to the individual "
 "human translators who write translations for every supported natural "
-"language.  They send back the completed language-specific versions as a :"
-"file:`<language-name>.po` file that's compiled into a machine-readable :file:"
-"`.mo` binary catalog file using the :program:`msgfmt` program.  The :file:`."
-"mo` files are used by the :mod:`gettext` module for the actual translation "
-"processing at run-time."
+"language.  They send back the completed language-specific versions as "
+"a :file:`<language-name>.po` file that's compiled into a machine-"
+"readable :file:`.mo` binary catalog file using the :program:`msgfmt` "
+"program.  The :file:`.mo` files are used by the :mod:`gettext` module for "
+"the actual translation processing at run-time."
 msgstr ""
 
 #: library/gettext.rst:479
@@ -592,8 +643,8 @@ msgstr ""
 #: library/gettext.rst:487
 msgid ""
 "If you are localizing your module, you must take care not to make global "
-"changes, e.g. to the built-in namespace. You should not use the GNU :program:"
-"`gettext` API but instead the class-based API."
+"changes, e.g. to the built-in namespace. You should not use the "
+"GNU :program:`gettext` API but instead the class-based API."
 msgstr ""
 
 #: library/gettext.rst:491
@@ -602,6 +653,13 @@ msgid ""
 "language translation :file:`.mo` files reside in :file:`/usr/share/locale` "
 "in GNU :program:`gettext` format.  Here's what you would put at the top of "
 "your module::"
+msgstr ""
+
+#: library/gettext.rst:496
+msgid ""
+"import gettext\n"
+"t = gettext.translation('spam', '/usr/share/locale')\n"
+"_ = t.gettext"
 msgstr ""
 
 #: library/gettext.rst:502
@@ -622,10 +680,22 @@ msgid ""
 "main driver file of your application::"
 msgstr ""
 
+#: library/gettext.rst:512
+msgid ""
+"import gettext\n"
+"gettext.install('myapplication')"
+msgstr ""
+
 #: library/gettext.rst:515
 msgid ""
-"If you need to set the locale directory, you can pass it into the :func:"
-"`install` function::"
+"If you need to set the locale directory, you can pass it into "
+"the :func:`install` function::"
+msgstr ""
+
+#: library/gettext.rst:518
+msgid ""
+"import gettext\n"
+"gettext.install('myapplication', '/usr/share/locale')"
 msgstr ""
 
 #: library/gettext.rst:523
@@ -639,6 +709,24 @@ msgid ""
 "explicitly, like so::"
 msgstr ""
 
+#: library/gettext.rst:529
+msgid ""
+"import gettext\n"
+"\n"
+"lang1 = gettext.translation('myapplication', languages=['en'])\n"
+"lang2 = gettext.translation('myapplication', languages=['fr'])\n"
+"lang3 = gettext.translation('myapplication', languages=['de'])\n"
+"\n"
+"# start by using language1\n"
+"lang1.install()\n"
+"\n"
+"# ... time goes by, user selects language 2\n"
+"lang2.install()\n"
+"\n"
+"# ... more time goes by, user selects language 3\n"
+"lang3.install()"
+msgstr ""
+
 #: library/gettext.rst:546
 msgid "Deferred translations"
 msgstr ""
@@ -650,6 +738,18 @@ msgid ""
 "actual translation until later.  A classic example is::"
 msgstr ""
 
+#: library/gettext.rst:552
+msgid ""
+"animals = ['mollusk',\n"
+"           'albatross',\n"
+"           'rat',\n"
+"           'penguin',\n"
+"           'python', ]\n"
+"# ...\n"
+"for a in animals:\n"
+"    print(a)"
+msgstr ""
+
 #: library/gettext.rst:561
 msgid ""
 "Here, you want to mark the strings in the ``animals`` list as being "
@@ -659,6 +759,23 @@ msgstr ""
 
 #: library/gettext.rst:565
 msgid "Here is one way you can handle this situation::"
+msgstr ""
+
+#: library/gettext.rst:567
+msgid ""
+"def _(message): return message\n"
+"\n"
+"animals = [_('mollusk'),\n"
+"           _('albatross'),\n"
+"           _('rat'),\n"
+"           _('penguin'),\n"
+"           _('python'), ]\n"
+"\n"
+"del _\n"
+"\n"
+"# ...\n"
+"for a in animals:\n"
+"    print(_(a))"
 msgstr ""
 
 #: library/gettext.rst:581
@@ -679,6 +796,21 @@ msgstr ""
 
 #: library/gettext.rst:591
 msgid "Another way to handle this is with the following example::"
+msgstr ""
+
+#: library/gettext.rst:593
+msgid ""
+"def N_(message): return message\n"
+"\n"
+"animals = [N_('mollusk'),\n"
+"           N_('albatross'),\n"
+"           N_('rat'),\n"
+"           N_('penguin'),\n"
+"           N_('python'), ]\n"
+"\n"
+"# ...\n"
+"for a in animals:\n"
+"    print(_(a))"
 msgstr ""
 
 #: library/gettext.rst:605

@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/base64.rst:2
-msgid ":mod:`base64` --- Base16, Base32, Base64, Base85 Data Encodings"
+msgid ":mod:`!base64` --- Base16, Base32, Base64, Base85 Data Encodings"
 msgstr ""
 
 #: library/base64.rst:8
@@ -37,17 +38,18 @@ msgstr ""
 msgid ""
 "The :rfc:`4648` encodings are suitable for encoding binary data so that it "
 "can be safely sent by email, used as parts of URLs, or included as part of "
-"an HTTP POST request.  The encoding algorithm is not the same as the :"
-"program:`uuencode` program."
+"an HTTP POST request.  The encoding algorithm is not the same as "
+"the :program:`uuencode` program."
 msgstr ""
 
 #: library/base64.rst:27
 msgid ""
 "There are two interfaces provided by this module.  The modern interface "
-"supports encoding :term:`bytes-like objects <bytes-like object>` to ASCII :"
-"class:`bytes`, and decoding :term:`bytes-like objects <bytes-like object>` "
-"or strings containing ASCII to :class:`bytes`.  Both base-64 alphabets "
-"defined in :rfc:`4648` (normal, and URL- and filesystem-safe) are supported."
+"supports encoding :term:`bytes-like objects <bytes-like object>` to "
+"ASCII :class:`bytes`, and decoding :term:`bytes-like objects <bytes-like "
+"object>` or strings containing ASCII to :class:`bytes`.  Both base-64 "
+"alphabets defined in :rfc:`4648` (normal, and URL- and filesystem-safe) are "
+"supported."
 msgstr ""
 
 #: library/base64.rst:33
@@ -56,8 +58,8 @@ msgid ""
 "provide functions for encoding and decoding to and from :term:`file objects "
 "<file object>`.  It only supports the Base64 standard alphabet, and it adds "
 "newlines every 76 characters as per :rfc:`2045`.  Note that if you are "
-"looking for :rfc:`2045` support you probably want to be looking at the :mod:"
-"`email` package instead."
+"looking for :rfc:`2045` support you probably want to be looking at "
+"the :mod:`email` package instead."
 msgstr ""
 
 #: library/base64.rst:41
@@ -127,8 +129,8 @@ msgstr ""
 
 #: library/base64.rst:83
 msgid ""
-"For more information about the strict base64 check, see :func:`binascii."
-"a2b_base64`"
+"For more information about the strict base64 check, "
+"see :func:`binascii.a2b_base64`"
 msgstr ""
 
 #: library/base64.rst:85
@@ -160,8 +162,8 @@ msgstr ""
 msgid ""
 "Decode :term:`bytes-like object` or ASCII string *s* using the URL- and "
 "filesystem-safe alphabet, which substitutes ``-`` instead of ``+`` and ``_`` "
-"instead of ``/`` in the standard Base64 alphabet, and return the decoded :"
-"class:`bytes`."
+"instead of ``/`` in the standard Base64 alphabet, and return the "
+"decoded :class:`bytes`."
 msgstr ""
 
 #: library/base64.rst:119
@@ -248,7 +250,7 @@ msgstr ""
 msgid ""
 "*wrapcol* controls whether the output should have newline (``b'\\n'``) "
 "characters added to it. If this is non-zero, each output line will be at "
-"most this many characters long."
+"most this many characters long, excluding the trailing newline."
 msgstr ""
 
 #: library/base64.rst:198
@@ -330,11 +332,12 @@ msgstr ""
 #: library/base64.rst:267
 msgid ""
 "Encode the contents of the binary *input* file and write the resulting "
-"base64 encoded data to the *output* file. *input* and *output* must be :term:"
-"`file objects <file object>`. *input* will be read until ``input.read()`` "
-"returns an empty bytes object. :func:`encode` inserts a newline character "
-"(``b'\\n'``) after every 76 bytes of the output, as well as ensuring that "
-"the output always ends with a newline, as per :rfc:`2045` (MIME)."
+"base64 encoded data to the *output* file. *input* and *output* must "
+"be :term:`file objects <file object>`. *input* will be read until "
+"``input.read()`` returns an empty bytes object. :func:`encode` inserts a "
+"newline character (``b'\\n'``) after every 76 bytes of the output, as well "
+"as ensuring that the output always ends with a newline, as per :rfc:`2045` "
+"(MIME)."
 msgstr ""
 
 #: library/base64.rst:277
@@ -360,7 +363,7 @@ msgid ""
 "production."
 msgstr ""
 
-#: library/base64.rst:306
+#: library/base64.rst:305
 msgid "Module :mod:`binascii`"
 msgstr ""
 
@@ -369,7 +372,7 @@ msgid ""
 "Support module containing ASCII-to-binary and binary-to-ASCII conversions."
 msgstr ""
 
-#: library/base64.rst:309
+#: library/base64.rst:308
 msgid ""
 ":rfc:`1521` - MIME (Multipurpose Internet Mail Extensions) Part One: "
 "Mechanisms for Specifying and Describing the Format of Internet Message "

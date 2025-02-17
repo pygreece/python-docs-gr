@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +52,12 @@ msgid ""
 "It returns a new sorted list:"
 msgstr ""
 
+#: howto/sorting.rst:22
+msgid ""
+">>> sorted([5, 2, 3, 1, 4])\n"
+"[1, 2, 3, 4, 5]"
+msgstr ""
+
 #: howto/sorting.rst:27
 msgid ""
 "You can also use the :meth:`list.sort` method. It modifies the list in-place "
@@ -59,10 +66,24 @@ msgid ""
 "more efficient."
 msgstr ""
 
+#: howto/sorting.rst:32
+msgid ""
+">>> a = [5, 2, 3, 1, 4]\n"
+">>> a.sort()\n"
+">>> a\n"
+"[1, 2, 3, 4, 5]"
+msgstr ""
+
 #: howto/sorting.rst:39
 msgid ""
 "Another difference is that the :meth:`list.sort` method is only defined for "
 "lists. In contrast, the :func:`sorted` function accepts any iterable."
+msgstr ""
+
+#: howto/sorting.rst:42
+msgid ""
+">>> sorted({1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'})\n"
+"[1, 2, 3, 4, 5]"
 msgstr ""
 
 #: howto/sorting.rst:48
@@ -80,6 +101,12 @@ msgstr ""
 msgid "For example, here's a case-insensitive string comparison:"
 msgstr ""
 
+#: howto/sorting.rst:56
+msgid ""
+">>> sorted(\"This is a test string from Andrew\".split(), key=str.casefold)\n"
+"['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']"
+msgstr ""
+
 #: howto/sorting.rst:61
 msgid ""
 "The value of the *key* parameter should be a function (or other callable) "
@@ -94,16 +121,47 @@ msgid ""
 "indices as keys. For example:"
 msgstr ""
 
+#: howto/sorting.rst:69
+msgid ""
+">>> student_tuples = [\n"
+"...     ('john', 'A', 15),\n"
+"...     ('jane', 'B', 12),\n"
+"...     ('dave', 'B', 10),\n"
+"... ]\n"
+">>> sorted(student_tuples, key=lambda student: student[2])   # sort by age\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
 #: howto/sorting.rst:79
 msgid ""
 "The same technique works for objects with named attributes. For example:"
 msgstr ""
 
+#: howto/sorting.rst:81
+msgid ""
+">>> class Student:\n"
+"...     def __init__(self, name, grade, age):\n"
+"...         self.name = name\n"
+"...         self.grade = grade\n"
+"...         self.age = age\n"
+"...     def __repr__(self):\n"
+"...         return repr((self.name, self.grade, self.age))\n"
+"\n"
+">>> student_objects = [\n"
+"...     Student('john', 'A', 15),\n"
+"...     Student('jane', 'B', 12),\n"
+"...     Student('dave', 'B', 10),\n"
+"... ]\n"
+">>> sorted(student_objects, key=lambda student: student.age)   # sort by "
+"age\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
 #: howto/sorting.rst:99
 msgid ""
 "Objects with named attributes can be made by a regular class as shown above, "
-"or they can be instances of :class:`~dataclasses.dataclass` or a :term:"
-"`named tuple`."
+"or they can be instances of :class:`~dataclasses.dataclass` or "
+"a :term:`named tuple`."
 msgstr ""
 
 #: howto/sorting.rst:104
@@ -114,12 +172,24 @@ msgstr ""
 msgid ""
 "The :term:`key function` patterns shown above are very common, so Python "
 "provides convenience functions to make accessor functions easier and faster. "
-"The :mod:`operator` module has :func:`~operator.itemgetter`, :func:"
-"`~operator.attrgetter`, and a :func:`~operator.methodcaller` function."
+"The :mod:`operator` module "
+"has :func:`~operator.itemgetter`, :func:`~operator.attrgetter`, and "
+"a :func:`~operator.methodcaller` function."
 msgstr ""
 
 #: howto/sorting.rst:111
 msgid "Using those functions, the above examples become simpler and faster:"
+msgstr ""
+
+#: howto/sorting.rst:113
+msgid ""
+">>> from operator import itemgetter, attrgetter\n"
+"\n"
+">>> sorted(student_tuples, key=itemgetter(2))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('age'))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
 msgstr ""
 
 #: howto/sorting.rst:123
@@ -128,12 +198,35 @@ msgid ""
 "to sort by *grade* then by *age*:"
 msgstr ""
 
+#: howto/sorting.rst:126
+msgid ""
+">>> sorted(student_tuples, key=itemgetter(1,2))\n"
+"[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('grade', 'age'))\n"
+"[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]"
+msgstr ""
+
 #: howto/sorting.rst:134
 msgid ""
 "The :mod:`functools` module provides another helpful tool for making key-"
 "functions.  The :func:`~functools.partial` function can reduce the `arity "
 "<https://en.wikipedia.org/wiki/Arity>`_ of a multi-argument function making "
 "it suitable for use as a key-function."
+msgstr ""
+
+#: howto/sorting.rst:139
+msgid ""
+">>> from functools import partial\n"
+">>> from unicodedata import normalize\n"
+"\n"
+">>> names = 'Zoë Åbjørn Núñez Élana Zeke Abe Nubia Eloise'.split()\n"
+"\n"
+">>> sorted(names, key=partial(normalize, 'NFD'))\n"
+"['Abe', 'Åbjørn', 'Eloise', 'Élana', 'Nubia', 'Núñez', 'Zeke', 'Zoë']\n"
+"\n"
+">>> sorted(names, key=partial(normalize, 'NFC'))\n"
+"['Abe', 'Eloise', 'Nubia', 'Núñez', 'Zeke', 'Zoë', 'Åbjørn', 'Élana']"
 msgstr ""
 
 #: howto/sorting.rst:153
@@ -147,6 +240,15 @@ msgid ""
 "the student data in reverse *age* order:"
 msgstr ""
 
+#: howto/sorting.rst:159
+msgid ""
+">>> sorted(student_tuples, key=itemgetter(2), reverse=True)\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('age'), reverse=True)\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+msgstr ""
+
 #: howto/sorting.rst:168
 msgid "Sort Stability and Complex Sorts"
 msgstr ""
@@ -156,6 +258,13 @@ msgid ""
 "Sorts are guaranteed to be `stable <https://en.wikipedia.org/wiki/"
 "Sorting_algorithm#Stability>`_\\. That means that when multiple records have "
 "the same key, their original order is preserved."
+msgstr ""
+
+#: howto/sorting.rst:174
+msgid ""
+">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n"
+">>> sorted(data, key=itemgetter(0))\n"
+"[('blue', 1), ('blue', 2), ('red', 1), ('red', 2)]"
 msgstr ""
 
 #: howto/sorting.rst:180
@@ -171,10 +280,30 @@ msgid ""
 "ascending *age*, do the *age* sort first and then sort again using *grade*:"
 msgstr ""
 
+#: howto/sorting.rst:187
+msgid ""
+">>> s = sorted(student_objects, key=attrgetter('age'))     # sort on "
+"secondary key\n"
+">>> sorted(s, key=attrgetter('grade'), reverse=True)       # now sort on "
+"primary key, descending\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
 #: howto/sorting.rst:193
 msgid ""
 "This can be abstracted out into a wrapper function that can take a list and "
 "tuples of field and order to sort them on multiple passes."
+msgstr ""
+
+#: howto/sorting.rst:196
+msgid ""
+">>> def multisort(xs, specs):\n"
+"...     for key, reverse in reversed(specs):\n"
+"...         xs.sort(key=attrgetter(key), reverse=reverse)\n"
+"...     return xs\n"
+"\n"
+">>> multisort(list(student_objects), (('grade', True), ('age', False)))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
 msgstr ""
 
 #: howto/sorting.rst:206
@@ -213,6 +342,15 @@ msgid ""
 "For example, to sort the student data by *grade* using the DSU approach:"
 msgstr ""
 
+#: howto/sorting.rst:224
+msgid ""
+">>> decorated = [(student.grade, i, student) for i, student in "
+"enumerate(student_objects)]\n"
+">>> decorated.sort()\n"
+">>> [student for grade, i, student in decorated]               # undecorate\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+msgstr ""
+
 #: howto/sorting.rst:231
 msgid ""
 "This idiom works because tuples are compared lexicographically; the first "
@@ -242,9 +380,9 @@ msgstr ""
 
 #: howto/sorting.rst:246
 msgid ""
-"Another name for this idiom is `Schwartzian transform <https://en.wikipedia."
-"org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, who "
-"popularized it among Perl programmers."
+"Another name for this idiom is `Schwartzian transform <https://"
+"en.wikipedia.org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, "
+"who popularized it among Perl programmers."
 msgstr ""
 
 #: howto/sorting.rst:250
@@ -282,9 +420,13 @@ msgstr ""
 
 #: howto/sorting.rst:269
 msgid ""
-"To accommodate those situations, Python provides :class:`functools."
-"cmp_to_key` to wrap the comparison function to make it usable as a key "
-"function::"
+"To accommodate those situations, Python "
+"provides :class:`functools.cmp_to_key` to wrap the comparison function to "
+"make it usable as a key function::"
+msgstr ""
+
+#: howto/sorting.rst:273
+msgid "sorted(words, key=cmp_to_key(strcoll))  # locale-aware sort order"
 msgstr ""
 
 #: howto/sorting.rst:276
@@ -293,9 +435,9 @@ msgstr ""
 
 #: howto/sorting.rst:278
 msgid ""
-"For locale aware sorting, use :func:`locale.strxfrm` for a key function or :"
-"func:`locale.strcoll` for a comparison function.  This is necessary because "
-"\"alphabetical\" sort orderings can vary across cultures even if the "
+"For locale aware sorting, use :func:`locale.strxfrm` for a key function "
+"or :func:`locale.strcoll` for a comparison function.  This is necessary "
+"because \"alphabetical\" sort orderings can vary across cultures even if the "
 "underlying alphabet is the same."
 msgstr ""
 
@@ -307,17 +449,35 @@ msgid ""
 "function twice:"
 msgstr ""
 
+#: howto/sorting.rst:288
+msgid ""
+">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n"
+">>> standard_way = sorted(data, key=itemgetter(0), reverse=True)\n"
+">>> double_reversed = list(reversed(sorted(reversed(data), "
+"key=itemgetter(0))))\n"
+">>> assert standard_way == double_reversed\n"
+">>> standard_way\n"
+"[('red', 1), ('red', 2), ('blue', 1), ('blue', 2)]"
+msgstr ""
+
 #: howto/sorting.rst:297
 msgid ""
 "The sort routines use ``<`` when making comparisons between two objects. So, "
-"it is easy to add a standard sort order to a class by defining an :meth:"
-"`~object.__lt__` method:"
+"it is easy to add a standard sort order to a class by defining "
+"an :meth:`~object.__lt__` method:"
+msgstr ""
+
+#: howto/sorting.rst:301
+msgid ""
+">>> Student.__lt__ = lambda self, other: self.age < other.age\n"
+">>> sorted(student_objects)\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
 msgstr ""
 
 #: howto/sorting.rst:307
 msgid ""
-"However, note that ``<`` can fall back to using :meth:`~object.__gt__` if :"
-"meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
+"However, note that ``<`` can fall back to using :meth:`~object.__gt__` "
+"if :meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
 "details on the mechanics).  To avoid surprises, :pep:`8` recommends that all "
 "six comparison methods be implemented. The :func:`~functools.total_ordering` "
 "decorator is provided to make that task easier."
@@ -329,6 +489,14 @@ msgid ""
 "function can also access external resources. For instance, if the student "
 "grades are stored in a dictionary, they can be used to sort a separate list "
 "of student names:"
+msgstr ""
+
+#: howto/sorting.rst:319
+msgid ""
+">>> students = ['dave', 'john', 'jane']\n"
+">>> newgrades = {'john': 'F', 'jane':'A', 'dave': 'C'}\n"
+">>> sorted(students, key=newgrades.__getitem__)\n"
+"['jane', 'dave', 'john']"
 msgstr ""
 
 #: howto/sorting.rst:327

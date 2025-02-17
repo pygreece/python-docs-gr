@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,6 +38,10 @@ msgstr ""
 
 #: c-api/capsule.rst:27
 msgid "The type of a destructor callback for a capsule.  Defined as::"
+msgstr ""
+
+#: c-api/capsule.rst:29
+msgid "typedef void (*PyCapsule_Destructor)(PyObject *);"
 msgstr ""
 
 #: c-api/capsule.rst:31
@@ -104,8 +109,8 @@ msgstr ""
 #: c-api/capsule.rst:76
 msgid ""
 "It is legal for a capsule to have a ``NULL`` destructor.  This makes a "
-"``NULL`` return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` or :"
-"c:func:`PyErr_Occurred` to disambiguate."
+"``NULL`` return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` "
+"or :c:func:`PyErr_Occurred` to disambiguate."
 msgstr ""
 
 #: c-api/capsule.rst:83
@@ -117,8 +122,8 @@ msgstr ""
 #: c-api/capsule.rst:86
 msgid ""
 "It is legal for a capsule to have a ``NULL`` context.  This makes a ``NULL`` "
-"return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` or :c:func:"
-"`PyErr_Occurred` to disambiguate."
+"return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` "
+"or :c:func:`PyErr_Occurred` to disambiguate."
 msgstr ""
 
 #: c-api/capsule.rst:93
@@ -130,8 +135,8 @@ msgstr ""
 #: c-api/capsule.rst:96
 msgid ""
 "It is legal for a capsule to have a ``NULL`` name.  This makes a ``NULL`` "
-"return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` or :c:func:"
-"`PyErr_Occurred` to disambiguate."
+"return code somewhat ambiguous; use :c:func:`PyCapsule_IsValid` "
+"or :c:func:`PyErr_Occurred` to disambiguate."
 msgstr ""
 
 #: c-api/capsule.rst:103

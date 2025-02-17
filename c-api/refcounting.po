@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,8 +75,8 @@ msgstr ""
 
 #: c-api/refcounting.rst:52
 msgid ""
-"This function is usually used to convert a :term:`borrowed reference` to a :"
-"term:`strong reference` in-place. The :c:func:`Py_NewRef` function can be "
+"This function is usually used to convert a :term:`borrowed reference` to "
+"a :term:`strong reference` in-place. The :c:func:`Py_NewRef` function can be "
 "used to create a new :term:`strong reference`."
 msgstr ""
 
@@ -89,11 +90,10 @@ msgid ""
 "use :c:func:`Py_XINCREF`."
 msgstr ""
 
-#: c-api/refcounting.rst:127
+#: c-api/refcounting.rst:61
 msgid ""
-"Do not expect this function to actually modify *o* in any way. For at least "
-"`some objects <https://peps.python.org/pep-0683/>`_, this function has no "
-"effect."
+"Do not expect this function to actually modify *o* in any way. For at "
+"least :pep:`some objects <0683>`, this function has no effect."
 msgstr ""
 
 #: c-api/refcounting.rst:71
@@ -128,8 +128,18 @@ msgstr ""
 msgid "For example::"
 msgstr ""
 
+#: c-api/refcounting.rst:90
+msgid ""
+"Py_INCREF(obj);\n"
+"self->attr = obj;"
+msgstr ""
+
 #: c-api/refcounting.rst:93
 msgid "can be written as::"
+msgstr ""
+
+#: c-api/refcounting.rst:95
+msgid "self->attr = Py_NewRef(obj);"
 msgstr ""
 
 #: c-api/refcounting.rst:97
@@ -169,10 +179,16 @@ msgid ""
 "use :c:func:`Py_XDECREF`."
 msgstr ""
 
+#: c-api/refcounting.rst:127
+msgid ""
+"Do not expect this function to actually modify *o* in any way. For at "
+"least :pep:`some objects <683>`, this function has no effect."
+msgstr ""
+
 #: c-api/refcounting.rst:133
 msgid ""
-"The deallocation function can cause arbitrary Python code to be invoked (e."
-"g. when a class instance with a :meth:`~object.__del__` method is "
+"The deallocation function can cause arbitrary Python code to be invoked "
+"(e.g. when a class instance with a :meth:`~object.__del__` method is "
 "deallocated).  While exceptions in such code are not propagated, the "
 "executed code has free access to all Python global variables.  This means "
 "that any object that is reachable from a global variable should be in a "
@@ -220,8 +236,9 @@ msgstr ""
 
 #: c-api/refcounting.rst:180
 msgid ""
-"Release a :term:`strong reference` to object *o*. A function version of :c:"
-"func:`Py_XDECREF`. It can be used for runtime dynamic embedding of Python."
+"Release a :term:`strong reference` to object *o*. A function version "
+"of :c:func:`Py_XDECREF`. It can be used for runtime dynamic embedding of "
+"Python."
 msgstr ""
 
 #: c-api/refcounting.rst:187
@@ -234,8 +251,18 @@ msgstr ""
 msgid "As in case of :c:func:`Py_CLEAR`, \"the obvious\" code can be deadly::"
 msgstr ""
 
+#: c-api/refcounting.rst:192
+msgid ""
+"Py_DECREF(dst);\n"
+"dst = src;"
+msgstr ""
+
 #: c-api/refcounting.rst:195
 msgid "The safe way is::"
+msgstr ""
+
+#: c-api/refcounting.rst:197
+msgid "Py_SETREF(dst, src);"
 msgstr ""
 
 #: c-api/refcounting.rst:199

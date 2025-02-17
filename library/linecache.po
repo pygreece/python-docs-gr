@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/linecache.rst:2
-msgid ":mod:`linecache` --- Random access to text lines"
+msgid ":mod:`!linecache` --- Random access to text lines"
 msgstr ""
 
 #: library/linecache.rst:9
@@ -28,9 +29,9 @@ msgstr ""
 msgid ""
 "The :mod:`linecache` module allows one to get any line from a Python source "
 "file, while attempting to optimize internally, using a cache, the common "
-"case where many lines are read from a single file.  This is used by the :mod:"
-"`traceback` module to retrieve source lines for inclusion in  the formatted "
-"traceback."
+"case where many lines are read from a single file.  This is used by "
+"the :mod:`traceback` module to retrieve source lines for inclusion in  the "
+"formatted traceback."
 msgstr ""
 
 #: library/linecache.rst:18
@@ -53,12 +54,12 @@ msgstr ""
 
 #: library/linecache.rst:33
 msgid ""
-"If a file named *filename* is not found, the function first checks for a :"
-"pep:`302` ``__loader__`` in *module_globals*. If there is such a loader and "
-"it defines a ``get_source`` method, then that determines the source lines "
-"(if ``get_source()`` returns ``None``, then ``''`` is returned). Finally, if "
-"*filename* is a relative filename, it is looked up relative to the entries "
-"in the module search path, ``sys.path``."
+"If a file named *filename* is not found, the function first checks for "
+"a :pep:`302` ``__loader__`` in *module_globals*. If there is such a loader "
+"and it defines a ``get_source`` method, then that determines the source "
+"lines (if ``get_source()`` returns ``None``, then ``''`` is returned). "
+"Finally, if *filename* is a relative filename, it is looked up relative to "
+"the entries in the module search path, ``sys.path``."
 msgstr ""
 
 #: library/linecache.rst:44
@@ -84,6 +85,13 @@ msgstr ""
 
 #: library/linecache.rst:63
 msgid "Example::"
+msgstr ""
+
+#: library/linecache.rst:65
+msgid ""
+">>> import linecache\n"
+">>> linecache.getline(linecache.__file__, 8)\n"
+"'import sys\\n'"
 msgstr ""
 
 #: library/linecache.rst:31

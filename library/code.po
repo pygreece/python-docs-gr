@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/code.rst:2
-msgid ":mod:`code` --- Interpreter base classes"
+msgid ":mod:`!code` --- Interpreter base classes"
 msgstr ""
 
 #: library/code.rst:7
@@ -54,10 +55,10 @@ msgid ""
 "instance of :class:`InteractiveConsole` and sets *readfunc* to be used as "
 "the :meth:`InteractiveConsole.raw_input` method, if provided.  If *local* is "
 "provided, it is passed to the :class:`InteractiveConsole` constructor for "
-"use as the default namespace for the interpreter loop.  The :meth:`interact` "
-"method of the instance is then run with *banner* and *exitmsg* passed as the "
-"banner and exit message to use, if provided.  The console object is "
-"discarded after use."
+"use as the default namespace for the interpreter loop.  "
+"The :meth:`~InteractiveConsole.interact` method of the instance is then run "
+"with *banner* and *exitmsg* passed as the banner and exit message to use, if "
+"provided.  The console object is discarded after use."
 msgstr ""
 
 #: library/code.rst:44
@@ -104,10 +105,10 @@ msgstr ""
 
 #: library/code.rst:81
 msgid ""
-"The input is incorrect; :func:`compile_command` raised an exception (:exc:"
-"`SyntaxError` or :exc:`OverflowError`).  A syntax traceback will be printed "
-"by calling the :meth:`showsyntaxerror` method.  :meth:`runsource` returns "
-"``False``."
+"The input is incorrect; :func:`compile_command` raised an exception "
+"(:exc:`SyntaxError` or :exc:`OverflowError`).  A syntax traceback will be "
+"printed by calling the :meth:`showsyntaxerror` method.  :meth:`runsource` "
+"returns ``False``."
 msgstr ""
 
 #: library/code.rst:86
@@ -126,15 +127,15 @@ msgstr ""
 
 #: library/code.rst:93
 msgid ""
-"The return value can be used to decide whether to use ``sys.ps1`` or ``sys."
-"ps2`` to prompt the next line."
+"The return value can be used to decide whether to use ``sys.ps1`` or "
+"``sys.ps2`` to prompt the next line."
 msgstr ""
 
 #: library/code.rst:99
 msgid ""
 "Execute a code object. When an exception occurs, :meth:`showtraceback` is "
-"called to display a traceback.  All exceptions are caught except :exc:"
-"`SystemExit`, which is allowed to propagate."
+"called to display a traceback.  All exceptions are caught "
+"except :exc:`SystemExit`, which is allowed to propagate."
 msgstr ""
 
 #: library/code.rst:103
@@ -179,9 +180,9 @@ msgstr ""
 
 #: library/code.rst:138
 msgid ""
-"The :class:`InteractiveConsole` class is a subclass of :class:"
-"`InteractiveInterpreter`, and so offers all the methods of the interpreter "
-"objects as well as the following additions."
+"The :class:`InteractiveConsole` class is a subclass "
+"of :class:`InteractiveInterpreter`, and so offers all the methods of the "
+"interpreter objects as well as the following additions."
 msgstr ""
 
 #: library/code.rst:145
@@ -229,7 +230,7 @@ msgstr ""
 #: library/code.rst:181
 msgid ""
 "Write a prompt and read a line.  The returned line does not include the "
-"trailing newline.  When the user enters the EOF key sequence, :exc:"
-"`EOFError` is raised. The base implementation reads from ``sys.stdin``; a "
-"subclass may replace this with a different implementation."
+"trailing newline.  When the user enters the EOF key "
+"sequence, :exc:`EOFError` is raised. The base implementation reads from "
+"``sys.stdin``; a subclass may replace this with a different implementation."
 msgstr ""

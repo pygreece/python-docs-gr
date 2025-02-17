@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -75,8 +76,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:42
 msgid ""
-"in parallel, managing \"sub-interpreters\" using :c:func:"
-"`Py_NewInterpreter`/:c:func:`Py_EndInterpreter`."
+"in parallel, managing \"sub-interpreters\" "
+"using :c:func:`Py_NewInterpreter`/:c:func:`Py_EndInterpreter`."
 msgstr ""
 
 #: howto/isolating-extensions.rst:45
@@ -148,6 +149,17 @@ msgid ""
 "example:"
 msgstr ""
 
+#: howto/isolating-extensions.rst:93
+msgid ""
+">>> import sys\n"
+">>> import binascii\n"
+">>> old_binascii = binascii\n"
+">>> del sys.modules['binascii']\n"
+">>> import binascii  # create a new module object\n"
+">>> old_binascii == binascii\n"
+"False"
+msgstr ""
+
 #: howto/isolating-extensions.rst:103
 msgid ""
 "As a rule of thumb, the two modules should be completely independent. All "
@@ -177,6 +189,20 @@ msgid ""
 "<Isolated Module Objects_>`__, note that ``old_binascii.Error`` and "
 "``binascii.Error`` are separate objects. In the following code, the "
 "exception is *not* caught:"
+msgstr ""
+
+#: howto/isolating-extensions.rst:126
+msgid ""
+">>> old_binascii.Error == binascii.Error\n"
+"False\n"
+">>> try:\n"
+"...     old_binascii.unhexlify(b'qwertyuiop')\n"
+"... except binascii.Error:\n"
+"...     print('boo')\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"binascii.Error: Non-hexadecimal digit found"
 msgstr ""
 
 #: howto/isolating-extensions.rst:139
@@ -281,8 +307,9 @@ msgstr ""
 #: howto/isolating-extensions.rst:205
 msgid ""
 "An example of a module with per-module state is currently available as "
-"`xxlimited <https://github.com/python/cpython/blob/master/Modules/xxlimited."
-"c>`__; example module initialization shown at the bottom of the file."
+"`xxlimited <https://github.com/python/cpython/blob/master/Modules/"
+"xxlimited.c>`__; example module initialization shown at the bottom of the "
+"file."
 msgstr ""
 
 #: howto/isolating-extensions.rst:211
@@ -297,6 +324,23 @@ msgid ""
 "For example::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:218
+msgid ""
+"static int loaded = 0;\n"
+"\n"
+"static int\n"
+"exec_module(PyObject* module)\n"
+"{\n"
+"    if (loaded) {\n"
+"        PyErr_SetString(PyExc_ImportError,\n"
+"                        \"cannot load module more than once per process\");\n"
+"        return -1;\n"
+"    }\n"
+"    loaded = 1;\n"
+"    // ... rest of initialization\n"
+"}"
+msgstr ""
+
 #: howto/isolating-extensions.rst:234
 msgid "Module State Access from Functions"
 msgstr ""
@@ -306,6 +350,19 @@ msgid ""
 "Accessing the state from module-level functions is straightforward. "
 "Functions get the module object as their first argument; for extracting the "
 "state, you can use ``PyModule_GetState``::"
+msgstr ""
+
+#: howto/isolating-extensions.rst:240
+msgid ""
+"static PyObject *\n"
+"func(PyObject *module, PyObject *args)\n"
+"{\n"
+"    my_struct *state = (my_struct*)PyModule_GetState(module);\n"
+"    if (state == NULL) {\n"
+"        return NULL;\n"
+"    }\n"
+"    // ... rest of logic\n"
+"}"
 msgstr ""
 
 #: howto/isolating-extensions.rst:251
@@ -379,8 +436,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:302
 msgid ""
-"Unlike static types, heap type objects are mutable by default. Use the :c:"
-"macro:`Py_TPFLAGS_IMMUTABLETYPE` flag to prevent mutability."
+"Unlike static types, heap type objects are mutable by default. Use "
+"the :c:macro:`Py_TPFLAGS_IMMUTABLETYPE` flag to prevent mutability."
 msgstr ""
 
 #: howto/isolating-extensions.rst:304
@@ -397,8 +454,8 @@ msgstr ""
 #: howto/isolating-extensions.rst:312
 msgid ""
 "Heap types can be created by filling a :c:struct:`PyType_Spec` structure, a "
-"description or \"blueprint\" of a class, and calling :c:func:"
-"`PyType_FromModuleAndSpec` to construct a new class object."
+"description or \"blueprint\" of a class, and "
+"calling :c:func:`PyType_FromModuleAndSpec` to construct a new class object."
 msgstr ""
 
 #: howto/isolating-extensions.rst:317
@@ -443,8 +500,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:342
 msgid ""
-"Please refer to the the documentation of :c:macro:`Py_TPFLAGS_HAVE_GC` and :"
-"c:member:`~PyTypeObject.tp_traverse` for additional considerations."
+"Please refer to the documentation of :c:macro:`Py_TPFLAGS_HAVE_GC` "
+"and :c:member:`~PyTypeObject.tp_traverse` for additional considerations."
 msgstr ""
 
 #: howto/isolating-extensions.rst:346
@@ -465,6 +522,17 @@ msgid ""
 "visit the type, so it must be more complicated::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:358
+msgid ""
+"static int my_traverse(PyObject *self, visitproc visit, void *arg)\n"
+"{\n"
+"    if (Py_Version >= 0x03090000) {\n"
+"        Py_VISIT(Py_TYPE(self));\n"
+"    }\n"
+"    return 0;\n"
+"}"
+msgstr ""
+
 #: howto/isolating-extensions.rst:366
 msgid ""
 "Unfortunately, :c:data:`Py_Version` was only added in Python 3.11. As a "
@@ -477,8 +545,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:370
 msgid ""
-":py:data:`sys.version_info` (via :c:func:`PySys_GetObject` and :c:func:"
-"`PyArg_ParseTuple`)."
+":py:data:`sys.version_info` (via :c:func:`PySys_GetObject` "
+"and :c:func:`PyArg_ParseTuple`)."
 msgstr ""
 
 #: howto/isolating-extensions.rst:375
@@ -487,24 +555,39 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:377
 msgid ""
-"If your traverse function delegates to the :c:member:`~PyTypeObject."
-"tp_traverse` of its base class (or another type), ensure that "
-"``Py_TYPE(self)`` is visited only once. Note that only heap type are "
-"expected to visit the type in ``tp_traverse``."
+"If your traverse function delegates to "
+"the :c:member:`~PyTypeObject.tp_traverse` of its base class (or another "
+"type), ensure that ``Py_TYPE(self)`` is visited only once. Note that only "
+"heap type are expected to visit the type in ``tp_traverse``."
 msgstr ""
 
 #: howto/isolating-extensions.rst:382
 msgid "For example, if your traverse function includes::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:384
+msgid "base->tp_traverse(self, visit, arg)"
+msgstr ""
+
 #: howto/isolating-extensions.rst:386
 msgid "...and ``base`` may be a static type, then it should also include::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:388
+msgid ""
+"if (base->tp_flags & Py_TPFLAGS_HEAPTYPE) {\n"
+"    // a heap type's tp_traverse already visited Py_TYPE(self)\n"
+"} else {\n"
+"    if (Py_Version >= 0x03090000) {\n"
+"        Py_VISIT(Py_TYPE(self));\n"
+"    }\n"
+"}"
+msgstr ""
+
 #: howto/isolating-extensions.rst:396
 msgid ""
-"It is not necessary to handle the type's reference count in :c:member:"
-"`~PyTypeObject.tp_new` and :c:member:`~PyTypeObject.tp_clear`."
+"It is not necessary to handle the type's reference count "
+"in :c:member:`~PyTypeObject.tp_new` and :c:member:`~PyTypeObject.tp_clear`."
 msgstr ""
 
 #: howto/isolating-extensions.rst:401
@@ -532,6 +615,18 @@ msgid ""
 "needs to be decremented *after* the instance is deallocated. For example::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:412
+msgid ""
+"static void my_dealloc(PyObject *self)\n"
+"{\n"
+"    PyObject_GC_UnTrack(self);\n"
+"    ...\n"
+"    PyTypeObject *type = Py_TYPE(self);\n"
+"    type->tp_free(self);\n"
+"    Py_DECREF(type);\n"
+"}"
+msgstr ""
+
 #: howto/isolating-extensions.rst:421
 msgid ""
 "The default ``tp_dealloc`` function does this, so if your type does *not* "
@@ -544,8 +639,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:429
 msgid ""
-"The :c:member:`~PyTypeObject.tp_free` slot of a heap type must be set to :c:"
-"func:`PyObject_GC_Del`. This is the default; do not override it."
+"The :c:member:`~PyTypeObject.tp_free` slot of a heap type must be set "
+"to :c:func:`PyObject_GC_Del`. This is the default; do not override it."
 msgstr ""
 
 #: howto/isolating-extensions.rst:435
@@ -566,6 +661,10 @@ msgid ""
 "That is, replace ``TYPE *o = PyObject_New(TYPE, typeobj)`` with::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:444
+msgid "TYPE *o = typeobj->tp_alloc(typeobj, 0);"
+msgstr ""
+
 #: howto/isolating-extensions.rst:446
 msgid ""
 "Replace ``o = PyObject_NewVar(TYPE, typeobj, size)`` with the same, but use "
@@ -574,8 +673,15 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:449
 msgid ""
-"If the above is not possible (e.g. inside a custom ``tp_alloc``), call :c:"
-"func:`PyObject_GC_New` or :c:func:`PyObject_GC_NewVar`::"
+"If the above is not possible (e.g. inside a custom ``tp_alloc``), "
+"call :c:func:`PyObject_GC_New` or :c:func:`PyObject_GC_NewVar`::"
+msgstr ""
+
+#: howto/isolating-extensions.rst:452
+msgid ""
+"TYPE *o = PyObject_GC_New(TYPE, typeobj);\n"
+"\n"
+"TYPE *o = PyObject_GC_NewVar(TYPE, typeobj, size);"
 msgstr ""
 
 #: howto/isolating-extensions.rst:458
@@ -593,6 +699,14 @@ msgstr ""
 msgid ""
 "To save a some tedious error-handling boilerplate code, you can combine "
 "these two steps with :c:func:`PyType_GetModuleState`, resulting in::"
+msgstr ""
+
+#: howto/isolating-extensions.rst:467
+msgid ""
+"my_struct *state = (my_struct*)PyType_GetModuleState(type);\n"
+"if (state == NULL) {\n"
+"    return NULL;\n"
+"}"
 msgstr ""
 
 #: howto/isolating-extensions.rst:474
@@ -623,16 +737,39 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:490
 msgid ""
-"The following Python code can illustrate the concept. ``Base."
-"get_defining_class`` returns ``Base`` even if ``type(self) == Sub``:"
+"The following Python code can illustrate the concept. "
+"``Base.get_defining_class`` returns ``Base`` even if ``type(self) == Sub``:"
+msgstr ""
+
+#: howto/isolating-extensions.rst:494
+msgid ""
+"class Base:\n"
+"    def get_type_of_self(self):\n"
+"        return type(self)\n"
+"\n"
+"    def get_defining_class(self):\n"
+"        return __class__\n"
+"\n"
+"class Sub(Base):\n"
+"    pass"
 msgstr ""
 
 #: howto/isolating-extensions.rst:506
 msgid ""
-"For a method to get its \"defining class\", it must use the :ref:"
-"`METH_METHOD | METH_FASTCALL | METH_KEYWORDS <METH_METHOD-METH_FASTCALL-"
-"METH_KEYWORDS>` :c:type:`calling convention <PyMethodDef>` and the "
-"corresponding :c:type:`PyCMethod` signature::"
+"For a method to get its \"defining class\", it must use "
+"the :ref:`METH_METHOD | METH_FASTCALL | METH_KEYWORDS <METH_METHOD-"
+"METH_FASTCALL-METH_KEYWORDS>` :c:type:`calling convention <PyMethodDef>` and "
+"the corresponding :c:type:`PyCMethod` signature::"
+msgstr ""
+
+#: howto/isolating-extensions.rst:511
+msgid ""
+"PyObject *PyCMethod(\n"
+"    PyObject *self,               // object the method was called on\n"
+"    PyTypeObject *defining_class, // defining class\n"
+"    PyObject *const *args,        // C array of arguments\n"
+"    Py_ssize_t nargs,             // length of \"args\"\n"
+"    PyObject *kwnames)            // NULL, or dict of keyword arguments"
 msgstr ""
 
 #: howto/isolating-extensions.rst:518
@@ -645,6 +782,33 @@ msgstr ""
 msgid "For example::"
 msgstr ""
 
+#: howto/isolating-extensions.rst:523
+msgid ""
+"static PyObject *\n"
+"example_method(PyObject *self,\n"
+"        PyTypeObject *defining_class,\n"
+"        PyObject *const *args,\n"
+"        Py_ssize_t nargs,\n"
+"        PyObject *kwnames)\n"
+"{\n"
+"    my_struct *state = (my_struct*)PyType_GetModuleState(defining_class);\n"
+"    if (state == NULL) {\n"
+"        return NULL;\n"
+"    }\n"
+"    ... // rest of logic\n"
+"}\n"
+"\n"
+"PyDoc_STRVAR(example_method_doc, \"...\");\n"
+"\n"
+"static PyMethodDef my_methods[] = {\n"
+"    {\"example_method\",\n"
+"      (PyCFunction)(void(*)(void))example_method,\n"
+"      METH_METHOD|METH_FASTCALL|METH_KEYWORDS,\n"
+"      example_method_doc}\n"
+"    {NULL},\n"
+"}"
+msgstr ""
+
 #: howto/isolating-extensions.rst:549
 msgid "Module State Access from Slot Methods, Getters and Setters"
 msgstr ""
@@ -655,19 +819,29 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:561
 msgid ""
-"Slot methods—the fast C equivalents for special methods, such as :c:member:"
-"`~PyNumberMethods.nb_add` for :py:attr:`~object.__add__` or :c:member:"
-"`~PyTypeObject.tp_new` for initialization—have a very simple API that "
-"doesn't allow passing in the defining class, unlike with :c:type:"
-"`PyCMethod`. The same goes for getters and setters defined with :c:type:"
-"`PyGetSetDef`."
+"Slot methods—the fast C equivalents for special methods, such "
+"as :c:member:`~PyNumberMethods.nb_add` for :py:attr:`~object.__add__` "
+"or :c:member:`~PyTypeObject.tp_new` for initialization—have a very simple "
+"API that doesn't allow passing in the defining class, unlike "
+"with :c:type:`PyCMethod`. The same goes for getters and setters defined "
+"with :c:type:`PyGetSetDef`."
 msgstr ""
 
 #: howto/isolating-extensions.rst:568
 msgid ""
-"To access the module state in these cases, use the :c:func:"
-"`PyType_GetModuleByDef` function, and pass in the module definition. Once "
-"you have the module, call :c:func:`PyModule_GetState` to get the state::"
+"To access the module state in these cases, use "
+"the :c:func:`PyType_GetModuleByDef` function, and pass in the module "
+"definition. Once you have the module, call :c:func:`PyModule_GetState` to "
+"get the state::"
+msgstr ""
+
+#: howto/isolating-extensions.rst:573
+msgid ""
+"PyObject *module = PyType_GetModuleByDef(Py_TYPE(self), &module_def);\n"
+"my_struct *state = (my_struct*)PyModule_GetState(module);\n"
+"if (state == NULL) {\n"
+"    return NULL;\n"
+"}"
 msgstr ""
 
 #: howto/isolating-extensions.rst:579
@@ -698,11 +872,11 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:599
 msgid ""
-"Usually this is not an issue, because types created with :c:func:"
-"`PyType_FromModuleAndSpec`, and their instances, hold a reference to the "
-"module. However, you must be careful in reference counting when you "
-"reference module state from other places, such as callbacks for external "
-"libraries."
+"Usually this is not an issue, because types created "
+"with :c:func:`PyType_FromModuleAndSpec`, and their instances, hold a "
+"reference to the module. However, you must be careful in reference counting "
+"when you reference module state from other places, such as callbacks for "
+"external libraries."
 msgstr ""
 
 #: howto/isolating-extensions.rst:608

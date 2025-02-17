@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/http.server.rst:2
-msgid ":mod:`http.server` --- HTTP servers"
+msgid ":mod:`!http.server` --- HTTP servers"
 msgstr ""
 
 #: library/http.server.rst:7
@@ -30,12 +31,12 @@ msgstr ""
 
 #: library/http.server.rst:22
 msgid ""
-":mod:`http.server` is not recommended for production. It only implements :"
-"ref:`basic security checks <http.server-security>`."
+":mod:`http.server` is not recommended for production. It only "
+"implements :ref:`basic security checks <http.server-security>`."
 msgstr ""
 
 #: includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: includes/wasm-notavail.rst:5
@@ -52,12 +53,20 @@ msgid ""
 "requests to a handler.  Code to create and run the server looks like this::"
 msgstr ""
 
+#: library/http.server.rst:31
+msgid ""
+"def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):\n"
+"    server_address = ('', 8000)\n"
+"    httpd = server_class(server_address, handler_class)\n"
+"    httpd.serve_forever()"
+msgstr ""
+
 #: library/http.server.rst:39
 msgid ""
 "This class builds on the :class:`~socketserver.TCPServer` class by storing "
-"the server address as instance variables named :attr:`server_name` and :attr:"
-"`server_port`. The server is accessible by the handler, typically through "
-"the handler's :attr:`server` instance variable."
+"the server address as instance variables named :attr:`server_name` "
+"and :attr:`server_port`. The server is accessible by the handler, typically "
+"through the handler's :attr:`server` instance variable."
 msgstr ""
 
 #: library/http.server.rst:46
@@ -79,9 +88,9 @@ msgstr ""
 msgid ""
 "This class is used to handle the HTTP requests that arrive at the server.  "
 "By itself, it cannot respond to any actual HTTP requests; it must be "
-"subclassed to handle each request method (e.g. GET or POST). :class:"
-"`BaseHTTPRequestHandler` provides a number of class and instance variables, "
-"and methods for use by subclasses."
+"subclassed to handle each request method (e.g. GET or "
+"POST). :class:`BaseHTTPRequestHandler` provides a number of class and "
+"instance variables, and methods for use by subclasses."
 msgstr ""
 
 #: library/http.server.rst:66
@@ -118,9 +127,9 @@ msgstr ""
 #: library/http.server.rst:92
 msgid ""
 "Contains the string representation of the HTTP request line. The terminating "
-"CRLF is stripped. This attribute should be set by :meth:"
-"`handle_one_request`. If no valid request line was processed, it should be "
-"set to the empty string."
+"CRLF is stripped. This attribute should be set "
+"by :meth:`handle_one_request`. If no valid request line was processed, it "
+"should be set to the empty string."
 msgstr ""
 
 #: library/http.server.rst:99
@@ -178,9 +187,9 @@ msgstr ""
 
 #: library/http.server.rst:144
 msgid ""
-"Contains the Python system version, in a form usable by the :attr:"
-"`version_string` method and the :attr:`server_version` class variable. For "
-"example, ``'Python/1.4'``."
+"Contains the Python system version, in a form usable by "
+"the :attr:`version_string` method and the :attr:`server_version` class "
+"variable. For example, ``'Python/1.4'``."
 msgstr ""
 
 #: library/http.server.rst:150
@@ -211,8 +220,8 @@ msgstr ""
 #: library/http.server.rst:172
 msgid ""
 "Specifies an :class:`email.message.Message`\\ -like class to parse HTTP "
-"headers.  Typically, this is not overridden, and it defaults to :class:`http."
-"client.HTTPMessage`."
+"headers.  Typically, this is not overridden, and it defaults "
+"to :class:`http.client.HTTPMessage`."
 msgstr ""
 
 #: library/http.server.rst:178
@@ -293,8 +302,8 @@ msgid ""
 "Adds the HTTP header to an internal buffer which will be written to the "
 "output stream when either :meth:`end_headers` or :meth:`flush_headers` is "
 "invoked. *keyword* should specify the header keyword, with *value* "
-"specifying its value. Note that, after the send_header calls are done, :meth:"
-"`end_headers` MUST BE called in order to complete the operation."
+"specifying its value. Note that, after the send_header calls are "
+"done, :meth:`end_headers` MUST BE called in order to complete the operation."
 msgstr ""
 
 #: library/http.server.rst:250
@@ -312,7 +321,7 @@ msgstr ""
 #: library/http.server.rst:264
 msgid ""
 "Adds a blank line (indicating the end of the HTTP headers in the response) "
-"to the headers buffer and calls :meth:`flush_headers()`."
+"to the headers buffer and calls :meth:`flush_headers`."
 msgstr ""
 
 #: library/http.server.rst:268
@@ -343,15 +352,15 @@ msgstr ""
 msgid ""
 "Logs an arbitrary message to ``sys.stderr``. This is typically overridden to "
 "create custom error logging mechanisms. The *format* argument is a standard "
-"printf-style format string, where the additional arguments to :meth:"
-"`log_message` are applied as inputs to the formatting. The client ip address "
-"and current date and time are prefixed to every message logged."
+"printf-style format string, where the additional arguments "
+"to :meth:`log_message` are applied as inputs to the formatting. The client "
+"ip address and current date and time are prefixed to every message logged."
 msgstr ""
 
 #: library/http.server.rst:301
 msgid ""
-"Returns the server software's version string. This is a combination of the :"
-"attr:`server_version` and :attr:`sys_version` attributes."
+"Returns the server software's version string. This is a combination of "
+"the :attr:`server_version` and :attr:`sys_version` attributes."
 msgstr ""
 
 #: library/http.server.rst:306
@@ -396,15 +405,15 @@ msgstr ""
 
 #: library/http.server.rst:337
 msgid ""
-"A lot of the work, such as parsing the request, is done by the base class :"
-"class:`BaseHTTPRequestHandler`.  This class implements the :func:`do_GET` "
-"and :func:`do_HEAD` functions."
+"A lot of the work, such as parsing the request, is done by the base "
+"class :class:`BaseHTTPRequestHandler`.  This class implements "
+"the :func:`do_GET` and :func:`do_HEAD` functions."
 msgstr ""
 
 #: library/http.server.rst:341
 msgid ""
-"The following are defined as class-level attributes of :class:"
-"`SimpleHTTPRequestHandler`:"
+"The following are defined as class-level attributes "
+"of :class:`SimpleHTTPRequestHandler`:"
 msgstr ""
 
 #: library/http.server.rst:346
@@ -449,16 +458,16 @@ msgid ""
 "If the request was mapped to a directory, the directory is checked for a "
 "file named ``index.html`` or ``index.htm`` (in that order). If found, the "
 "file's contents are returned; otherwise a directory listing is generated by "
-"calling the :meth:`list_directory` method. This method uses :func:`os."
-"listdir` to scan the directory, and returns a ``404`` error response if the :"
-"func:`~os.listdir` fails."
+"calling the :meth:`list_directory` method. This method "
+"uses :func:`os.listdir` to scan the directory, and returns a ``404`` error "
+"response if the :func:`~os.listdir` fails."
 msgstr ""
 
 #: library/http.server.rst:379
 msgid ""
 "If the request was mapped to a file, it is opened. Any :exc:`OSError` "
 "exception in opening the requested file is mapped to a ``404``, ``'File not "
-"found'`` error. If there was a ``'If-Modified-Since'`` header in the "
+"found'`` error. If there was an ``'If-Modified-Since'`` header in the "
 "request, and the file was not modified after this time, a ``304``, ``'Not "
 "Modified'`` response is sent. Otherwise, the content type is guessed by "
 "calling the :meth:`guess_type` method, which in turn uses the "
@@ -481,8 +490,8 @@ msgstr ""
 
 #: library/http.server.rst:395
 msgid ""
-"For example usage, see the implementation of the ``test`` function in :"
-"source:`Lib/http/server.py`."
+"For example usage, see the implementation of the ``test`` function "
+"in :source:`Lib/http/server.py`."
 msgstr ""
 
 #: library/http.server.rst:398
@@ -494,6 +503,20 @@ msgid ""
 "The :class:`SimpleHTTPRequestHandler` class can be used in the following "
 "manner in order to create a very basic webserver serving files relative to "
 "the current directory::"
+msgstr ""
+
+#: library/http.server.rst:405
+msgid ""
+"import http.server\n"
+"import socketserver\n"
+"\n"
+"PORT = 8000\n"
+"\n"
+"Handler = http.server.SimpleHTTPRequestHandler\n"
+"\n"
+"with socketserver.TCPServer((\"\", PORT), Handler) as httpd:\n"
+"    print(\"serving at port\", PORT)\n"
+"    httpd.serve_forever()"
 msgstr ""
 
 #: library/http.server.rst:417
@@ -510,10 +533,18 @@ msgid ""
 "files relative to the current directory::"
 msgstr ""
 
+#: library/http.server.rst:427
+msgid "python -m http.server"
+msgstr ""
+
 #: library/http.server.rst:429
 msgid ""
 "The server listens to port 8000 by default. The default can be overridden by "
 "passing the desired port number as an argument::"
+msgstr ""
+
+#: library/http.server.rst:432
+msgid "python -m http.server 9000"
 msgstr ""
 
 #: library/http.server.rst:434
@@ -522,6 +553,10 @@ msgid ""
 "bind`` specifies a specific address to which it should bind. Both IPv4 and "
 "IPv6 addresses are supported. For example, the following command causes the "
 "server to bind to localhost only::"
+msgstr ""
+
+#: library/http.server.rst:439
+msgid "python -m http.server --bind 127.0.0.1"
 msgstr ""
 
 #: library/http.server.rst:441
@@ -539,6 +574,10 @@ msgid ""
 "example, the following command uses a specific directory::"
 msgstr ""
 
+#: library/http.server.rst:451
+msgid "python -m http.server --directory /tmp/"
+msgstr ""
+
 #: library/http.server.rst:453
 msgid "Added the ``--directory`` option."
 msgstr ""
@@ -548,6 +587,10 @@ msgid ""
 "By default, the server is conformant to HTTP/1.0. The option ``-p/--"
 "protocol`` specifies the HTTP version to which the server is conformant. For "
 "example, the following command runs an HTTP/1.1 conformant server::"
+msgstr ""
+
+#: library/http.server.rst:460
+msgid "python -m http.server --protocol HTTP/1.1"
 msgstr ""
 
 #: library/http.server.rst:462
@@ -616,6 +659,10 @@ msgid ""
 "the ``--cgi`` option::"
 msgstr ""
 
+#: library/http.server.rst:508
+msgid "python -m http.server --cgi"
+msgstr ""
+
 #: library/http.server.rst:512
 msgid ""
 ":class:`CGIHTTPRequestHandler` and the ``--cgi`` command line option are not "
@@ -637,10 +684,10 @@ msgstr ""
 #: library/http.server.rst:527
 msgid ""
 "Earlier versions of Python did not scrub control characters from the log "
-"messages emitted to stderr from ``python -m http.server`` or the default :"
-"class:`BaseHTTPRequestHandler` ``.log_message`` implementation. This could "
-"allow remote clients connecting to your server to send nefarious control "
-"codes to your terminal."
+"messages emitted to stderr from ``python -m http.server`` or the "
+"default :class:`BaseHTTPRequestHandler` ``.log_message`` implementation. "
+"This could allow remote clients connecting to your server to send nefarious "
+"control codes to your terminal."
 msgstr ""
 
 #: library/http.server.rst:533

@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,8 +36,8 @@ msgstr ""
 
 #: c-api/code.rst:24
 msgid ""
-"This is an instance of :c:type:`PyTypeObject` representing the Python :ref:"
-"`code object <code-objects>`."
+"This is an instance of :c:type:`PyTypeObject` representing the "
+"Python :ref:`code object <code-objects>`."
 msgstr ""
 
 #: c-api/code.rst:30
@@ -61,8 +62,9 @@ msgstr ""
 
 #: c-api/code.rst:46
 msgid ""
-"Since the definition of the bytecode changes often, calling :c:func:"
-"`PyUnstable_Code_New` directly can bind you to a precise Python version."
+"Since the definition of the bytecode changes often, "
+"calling :c:func:`PyUnstable_Code_New` directly can bind you to a precise "
+"Python version."
 msgstr ""
 
 #: c-api/code.rst:49
@@ -119,9 +121,9 @@ msgstr ""
 
 #: c-api/code.rst:93
 msgid ""
-"For efficiently iterating over the line numbers in a code object, use `the "
-"API described in PEP 626 <https://peps.python.org/pep-0626/#out-of-process-"
-"debuggers-and-profilers>`_."
+"For efficiently iterating over the line numbers in a code object, "
+"use :pep:`the API described in PEP 626 <0626#out-of-process-debuggers-and-"
+"profilers>`."
 msgstr ""
 
 #: c-api/code.rst:98
@@ -181,10 +183,10 @@ msgstr ""
 
 #: c-api/code.rst:156
 msgid ""
-"Clear watcher identified by *watcher_id* previously returned from :c:func:"
-"`PyCode_AddWatcher` for the current interpreter. Return ``0`` on success, or "
-"``-1`` and set an exception on error (e.g. if the given *watcher_id* was "
-"never registered.)"
+"Clear watcher identified by *watcher_id* previously returned "
+"from :c:func:`PyCode_AddWatcher` for the current interpreter. Return ``0`` "
+"on success, or ``-1`` and set an exception on error (e.g. if the given "
+"*watcher_id* was never registered.)"
 msgstr ""
 
 #: c-api/code.rst:165
@@ -226,8 +228,8 @@ msgstr ""
 #: c-api/code.rst:192
 msgid ""
 "If the callback sets an exception, it must return ``-1``; this exception "
-"will be printed as an unraisable exception using :c:func:"
-"`PyErr_WriteUnraisable`. Otherwise it should return ``0``."
+"will be printed as an unraisable exception "
+"using :c:func:`PyErr_WriteUnraisable`. Otherwise it should return ``0``."
 msgstr ""
 
 #: c-api/code.rst:196
@@ -271,8 +273,8 @@ msgstr ""
 #: c-api/code.rst:224
 msgid ""
 "If *free* is not ``NULL``: when a code object is deallocated, *free* will be "
-"called on non-``NULL`` data stored under the new index. Use :c:func:"
-"`Py_DecRef` when storing :c:type:`PyObject`."
+"called on non-``NULL`` data stored under the new index. "
+"Use :c:func:`Py_DecRef` when storing :c:type:`PyObject`."
 msgstr ""
 
 #: c-api/code.rst:230

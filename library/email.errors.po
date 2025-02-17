@@ -8,16 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-12-14 01:00+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/email.errors.rst:2
-msgid ":mod:`email.errors`: Exception and Defect classes"
+#, fuzzy
+msgid ":mod:`!email.errors`: Exception and Defect classes"
 msgstr ":mod:`email.errors`: Κλάσεις Εξαιρέσεων και Ελαττωμάτων"
 
 #: library/email.errors.rst:7
@@ -42,9 +44,10 @@ msgstr ""
 
 #: library/email.errors.rst:23
 msgid ""
-"This is the base class for exceptions raised by the :class:`~email.parser."
-"Parser` class.  It is derived from :exc:`MessageError`.  This class is also "
-"used internally by the parser used by :mod:`~email.headerregistry`."
+"This is the base class for exceptions raised by "
+"the :class:`~email.parser.Parser` class.  It is derived "
+"from :exc:`MessageError`.  This class is also used internally by the parser "
+"used by :mod:`~email.headerregistry`."
 msgstr ""
 "Αυτή είναι η βασική κλάση για τις εξαιρέσεις που γίνονται raise από την "
 "κλάση :class:`~email.parser.Parser`. Κληρονομεί από την :exc:`MessageError`. "
@@ -54,23 +57,25 @@ msgstr ""
 #: library/email.errors.rst:31
 msgid ""
 "Raised under some error conditions when parsing the :rfc:`5322` headers of a "
-"message, this class is derived from :exc:`MessageParseError`.  The :meth:"
-"`~email.message.EmailMessage.set_boundary` method will raise this error if "
-"the content type is unknown when the method is called. :class:`~email.header."
-"Header` may raise this error for certain base64 decoding errors, and when an "
-"attempt is made to create a header that appears to contain an embedded "
-"header (that is, there is what is supposed to be a continuation line that "
-"has no leading whitespace and looks like a header)."
+"message, this class is derived from :exc:`MessageParseError`.  "
+"The :meth:`~email.message.EmailMessage.set_boundary` method will raise this "
+"error if the content type is unknown when the method is "
+"called. :class:`~email.header.Header` may raise this error for certain "
+"base64 decoding errors, and when an attempt is made to create a header that "
+"appears to contain an embedded header (that is, there is what is supposed to "
+"be a continuation line that has no leading whitespace and looks like a "
+"header)."
 msgstr ""
 "Γίνεται raise κάτω από ορισμένες συνθήκες σφάλματος κατά την ανάλυση των "
-"κεφαλίδων :rfc:`5322` ενός μηνύματος, αυτή η κλάση προέρχεται από την :exc:"
-"`MessageParseError`. Η μέθοδος :meth:`~email.message.EmailMessage."
-"set_boundary` θα κάνει raise αυτό το σφάλμα αν ο τύπος περιεχομένου είναι "
-"άγνωστος όταν καλείται η μέθοδος. Η :class:`~email.header.Header` μπορεί να "
-"κάνει raise αυτό το σφάλμα για ορισμένα σφάλματα αποκωδικοποίησης base64, "
-"καθώς και όταν επιχειρείται η δημιουργία μιας κεφαλίδας που φαίνεται να "
-"περιέχει ενσωματωμένη κεφαλίδα (δηλαδή υπάρχει μια γραμμή συνέχειας που δεν "
-"έχει προηγούμενο κενό διάστημα και μοιάζει με κεφαλίδα)."
+"κεφαλίδων :rfc:`5322` ενός μηνύματος, αυτή η κλάση προέρχεται από "
+"την :exc:`MessageParseError`. Η "
+"μέθοδος :meth:`~email.message.EmailMessage.set_boundary` θα κάνει raise αυτό "
+"το σφάλμα αν ο τύπος περιεχομένου είναι άγνωστος όταν καλείται η μέθοδος. "
+"Η :class:`~email.header.Header` μπορεί να κάνει raise αυτό το σφάλμα για "
+"ορισμένα σφάλματα αποκωδικοποίησης base64, καθώς και όταν επιχειρείται η "
+"δημιουργία μιας κεφαλίδας που φαίνεται να περιέχει ενσωματωμένη κεφαλίδα "
+"(δηλαδή υπάρχει μια γραμμή συνέχειας που δεν έχει προηγούμενο κενό διάστημα "
+"και μοιάζει με κεφαλίδα)."
 
 #: library/email.errors.rst:43
 msgid "Deprecated and no longer used."
@@ -80,32 +85,39 @@ msgstr "Έχει καταργηθεί και δεν χρησιμοποιείτα
 msgid ""
 "Raised when a payload is added to a :class:`~email.message.Message` object "
 "using :meth:`add_payload`, but the payload is already a scalar and the "
-"message's :mailheader:`Content-Type` main type is not either :mimetype:"
-"`multipart` or missing.  :exc:`MultipartConversionError` multiply inherits "
-"from :exc:`MessageError` and the built-in :exc:`TypeError`."
+"message's :mailheader:`Content-Type` main type is not "
+"either :mimetype:`multipart` or missing.  :exc:`MultipartConversionError` "
+"multiply inherits from :exc:`MessageError` and the built-in :exc:`TypeError`."
 msgstr ""
-"Γίνεται raise όταν προστεθεί ένα payload σε ένα αντικείμενο :class:`~email."
-"message.Message` χρησιμοποιώντας τη μέθοδο :meth:`add_payload`, αλλά το "
-"payload είναι ήδη scalar και ο κύριος τύπος του :mailheader:`Content-Type` "
-"μηνύματος δεν είναι ούτε :mimetype:`multipart` ούτε απών. Η :exc:"
-"`MultipartConversionError` κληρονομεί ταυτόχρονα από την :exc:`MessageError` "
-"και την ενσωματωμένη :exc:`TypeError`."
+"Γίνεται raise όταν προστεθεί ένα payload σε ένα "
+"αντικείμενο :class:`~email.message.Message` χρησιμοποιώντας τη "
+"μέθοδο :meth:`add_payload`, αλλά το payload είναι ήδη scalar και ο κύριος "
+"τύπος του :mailheader:`Content-Type` μηνύματος δεν είναι "
+"ούτε :mimetype:`multipart` ούτε απών. Η :exc:`MultipartConversionError` "
+"κληρονομεί ταυτόχρονα από την :exc:`MessageError` και την "
+"ενσωματωμένη :exc:`TypeError`."
 
 #: library/email.errors.rst:54
 msgid ""
 "Since :meth:`Message.add_payload` is deprecated, this exception is rarely "
-"raised in practice.  However the exception may also be raised if the :meth:"
-"`~email.message.Message.attach` method is called on an instance of a class "
-"derived from :class:`~email.mime.nonmultipart.MIMENonMultipart` (e.g. :class:"
-"`~email.mime.image.MIMEImage`)."
+"raised in practice.  However the exception may also be raised if "
+"the :meth:`~email.message.Message.attach` method is called on an instance of "
+"a class derived from :class:`~email.mime.nonmultipart.MIMENonMultipart` "
+"(e.g. :class:`~email.mime.image.MIMEImage`)."
 msgstr ""
 "Επειδή η μέθοδος :meth:`Message.add_payload` έχει ξεπεραστεί, αυτή η "
 "εξαίρεση σπάνια εμφανίζεται στην πράξη. Ωστόσο, η εξαίρεση μπορεί επίσης να "
 "εμφανιστεί αν κληθεί η μέθοδος :meth:`~email.message.Message.attach` σε ένα "
-"στιγμιότυπο μιας κλάσης που κληρονομεί από :class:`~email.mime.nonmultipart."
-"MIMENonMultipart` (π.χ. :class:`~email.mime.image.MIMEImage`)."
+"στιγμιότυπο μιας κλάσης που κληρονομεί "
+"από :class:`~email.mime.nonmultipart.MIMENonMultipart` "
+"(π.χ. :class:`~email.mime.image.MIMEImage`)."
 
-#: library/email.errors.rst:63
+#: library/email.errors.rst:64
+msgid ""
+"Raised when an error occurs when the :mod:`~email.generator` outputs headers."
+msgstr ""
+
+#: library/email.errors.rst:70
 msgid ""
 "This is the base class for all defects found when parsing email messages. It "
 "is derived from :exc:`ValueError`."
@@ -113,7 +125,7 @@ msgstr ""
 "Αυτή είναι η βασική κλάση για όλα τα ελαττώματα που εντοπίζονται κατά την "
 "ανάλυση μηνυμάτων email. Είναι παράγωγη της :exc:`ValueError`."
 
-#: library/email.errors.rst:68
+#: library/email.errors.rst:75
 msgid ""
 "This is the base class for all defects found when parsing email headers. It "
 "is derived from :exc:`MessageDefect`."
@@ -121,7 +133,7 @@ msgstr ""
 "Αυτή είναι η βασική κλάση για όλα τα ελαττώματα που εντοπίζονται κατά την "
 "ανάλυση των κεφαλίδων email. Είναι παράγωγο της :exc:`MessageDefect`."
 
-#: library/email.errors.rst:71
+#: library/email.errors.rst:78
 msgid ""
 "Here is the list of the defects that the :class:`~email.parser.FeedParser` "
 "can find while parsing messages.  Note that the defects are added to the "
@@ -130,21 +142,22 @@ msgid ""
 "nested message object would have a defect, but the containing messages would "
 "not."
 msgstr ""
-"Ακολουθεί η λίστα με τα ελαττώματα που μπορεί να εντοπίσει η :class:`~email."
-"parser.FeedParser` κατά την ανάλυση των μηνυμάτων. Σημειώστε ότι τα "
-"ελαττώματα προστίθενται στο μήνυμα όπου βρέθηκε το πρόβλημα, οπότε για "
-"παράδειγμα, εάν ένα μήνυμα που είναι ένθετο μέσα σε ένα :mimetype:`multipart/"
-"alternative` είχε μια παραμορφωμένη κεφαλίδα, αυτό το ένθετο αντικείμενο "
-"μηνύματος θα είχε ένα ελάττωμα, αλλά τα μηνύματα που το περιέχουν όχι."
+"Ακολουθεί η λίστα με τα ελαττώματα που μπορεί να εντοπίσει "
+"η :class:`~email.parser.FeedParser` κατά την ανάλυση των μηνυμάτων. "
+"Σημειώστε ότι τα ελαττώματα προστίθενται στο μήνυμα όπου βρέθηκε το "
+"πρόβλημα, οπότε για παράδειγμα, εάν ένα μήνυμα που είναι ένθετο μέσα σε "
+"ένα :mimetype:`multipart/alternative` είχε μια παραμορφωμένη κεφαλίδα, αυτό "
+"το ένθετο αντικείμενο μηνύματος θα είχε ένα ελάττωμα, αλλά τα μηνύματα που "
+"το περιέχουν όχι."
 
-#: library/email.errors.rst:77
+#: library/email.errors.rst:84
 msgid ""
 "All defect classes are subclassed from :class:`email.errors.MessageDefect`."
 msgstr ""
-"Όλες οι κλάσεις ελαττωμάτων είναι υποκλάσεις της :class:`email.errors."
-"MessageDefect`."
+"Όλες οι κλάσεις ελαττωμάτων είναι υποκλάσεις "
+"της :class:`email.errors.MessageDefect`."
 
-#: library/email.errors.rst:79
+#: library/email.errors.rst:86
 msgid ""
 ":class:`NoBoundaryInMultipartDefect` -- A message claimed to be a multipart, "
 "but had no :mimetype:`boundary` parameter."
@@ -152,15 +165,15 @@ msgstr ""
 ":class:`NoBoundaryInMultipartDefect` -- Ένα μήνυμα δήλωσε ότι είναι "
 "πολλαπλό, αλλά δεν είχε παράμετρο :mimetype:`boundary`."
 
-#: library/email.errors.rst:82
+#: library/email.errors.rst:89
 msgid ""
-":class:`StartBoundaryNotFoundDefect` -- The start boundary claimed in the :"
-"mailheader:`Content-Type` header was never found."
+":class:`StartBoundaryNotFoundDefect` -- The start boundary claimed in "
+"the :mailheader:`Content-Type` header was never found."
 msgstr ""
 ":class:`StartBoundaryNotFoundDefect` -- Το όριο εκκίνησης που αναφέρεται "
 "στην κεφαλίδα :mailheader:`Content-Type` δεν βρέθηκε ποτέ."
 
-#: library/email.errors.rst:85
+#: library/email.errors.rst:92
 msgid ""
 ":class:`CloseBoundaryNotFoundDefect` -- A start boundary was found, but no "
 "corresponding close boundary was ever found."
@@ -168,7 +181,7 @@ msgstr ""
 ":class:`CloseBoundaryNotFoundDefect` -- Βρέθηκε ένα όριο εκκίνησης, αλλά δεν "
 "βρέθηκε ποτέ αντίστοιχο όριο κλεισίματος."
 
-#: library/email.errors.rst:90
+#: library/email.errors.rst:97
 msgid ""
 ":class:`FirstHeaderLineIsContinuationDefect` -- The message had a "
 "continuation line as its first header line."
@@ -176,7 +189,7 @@ msgstr ""
 ":class:`FirstHeaderLineIsContinuationDefect` -- Το μήνυμα είχε μια γραμμή "
 "συνέχισης ως την πρώτη γραμμή κεφαλίδας."
 
-#: library/email.errors.rst:93
+#: library/email.errors.rst:100
 msgid ""
 ":class:`MisplacedEnvelopeHeaderDefect` - A \"Unix From\" header was found in "
 "the middle of a header block."
@@ -184,7 +197,7 @@ msgstr ""
 ":class:`MisplacedEnvelopeHeaderDefect` - Βρέθηκε μια κεφαλίδα \"Unix From\" "
 "στη μέση ενός μπλοκ κεφαλίδων."
 
-#: library/email.errors.rst:96
+#: library/email.errors.rst:103
 msgid ""
 ":class:`MissingHeaderBodySeparatorDefect` - A line was found while parsing "
 "headers that had no leading white space but contained no ':'.  Parsing "
@@ -195,7 +208,7 @@ msgstr ""
 "ανάλυση συνεχίζεται στην περίπτωση που η γραμμή αντιπροσωπεύει την πρώτη "
 "γραμμή του σώματος."
 
-#: library/email.errors.rst:102
+#: library/email.errors.rst:109
 msgid ""
 ":class:`MalformedHeaderDefect` -- A header was found that was missing a "
 "colon, or was otherwise malformed."
@@ -203,26 +216,27 @@ msgstr ""
 ":class:`MalformedHeaderDefect` -- Βρέθηκε μια κεφαλίδα που της έλειπε μια "
 "άνω τελεία, ή ήταν αλλιώς παραμορφωμένη."
 
-#: library/email.errors.rst:105
+#: library/email.errors.rst:112
 msgid "This defect has not been used for several Python versions."
 msgstr ""
 "Αυτό το σφάλμα δεν έχει χρησιμοποιηθεί εδώ και πολλές εκδόσεις της Python."
 
-#: library/email.errors.rst:108
+#: library/email.errors.rst:115
 msgid ""
-":class:`MultipartInvariantViolationDefect` -- A message claimed to be a :"
-"mimetype:`multipart`, but no subparts were found.  Note that when a message "
-"has this defect, its :meth:`~email.message.Message.is_multipart` method may "
-"return ``False`` even though its content type claims to be :mimetype:"
-"`multipart`."
+":class:`MultipartInvariantViolationDefect` -- A message claimed to be "
+"a :mimetype:`multipart`, but no subparts were found.  Note that when a "
+"message has this defect, its :meth:`~email.message.Message.is_multipart` "
+"method may return ``False`` even though its content type claims to "
+"be :mimetype:`multipart`."
 msgstr ""
-":class:`MultipartInvariantViolationDefect` -- Ένα μήνυμα δήλωσε ότι είναι :"
-"mimetype:`multipart`, αλλά δεν βρέθηκαν υπομέρη. Σημειώστε ότι όταν ένα "
-"μήνυμα έχει αυτό το σφάλμα, η μέθοδος του :meth:`~email.message.Message."
-"is_multipart` μπορεί να επιστρέψει ``False`` ακόμα κι αν ο τύπος "
-"περιεχομένου του δηλώνει ότι είναι :mimetype:`multipart`."
+":class:`MultipartInvariantViolationDefect` -- Ένα μήνυμα δήλωσε ότι "
+"είναι :mimetype:`multipart`, αλλά δεν βρέθηκαν υπομέρη. Σημειώστε ότι όταν "
+"ένα μήνυμα έχει αυτό το σφάλμα, η μέθοδος "
+"του :meth:`~email.message.Message.is_multipart` μπορεί να επιστρέψει "
+"``False`` ακόμα κι αν ο τύπος περιεχομένου του δηλώνει ότι "
+"είναι :mimetype:`multipart`."
 
-#: library/email.errors.rst:113
+#: library/email.errors.rst:120
 msgid ""
 ":class:`InvalidBase64PaddingDefect` -- When decoding a block of base64 "
 "encoded bytes, the padding was not correct.  Enough padding is added to "
@@ -233,7 +247,7 @@ msgstr ""
 "αρκετό padding για να πραγματοποιηθεί η αποκωδικοποίηση, αλλά τα "
 "αποκωδικοποιημένα bytes που προκύπτουν μπορεί να είναι άκυρα."
 
-#: library/email.errors.rst:117
+#: library/email.errors.rst:124
 msgid ""
 ":class:`InvalidBase64CharactersDefect` -- When decoding a block of base64 "
 "encoded bytes, characters outside the base64 alphabet were encountered. The "
@@ -244,7 +258,7 @@ msgstr ""
 "base64. Οι χαρακτήρες αγνοούνται, αλλά τα αποκωδικοποιημένα bytes που "
 "προκύπτουν μπορεί να είναι άκυρα."
 
-#: library/email.errors.rst:121
+#: library/email.errors.rst:128
 msgid ""
 ":class:`InvalidBase64LengthDefect` -- When decoding a block of base64 "
 "encoded bytes, the number of non-padding base64 characters was invalid (1 "
@@ -255,7 +269,7 @@ msgstr ""
 "συμπλήρωμα ήταν άκυρος (1 παραπάνω από ένα πολλαπλάσιο του 4). Το "
 "κωδικοποιημένο μπλοκ διατηρήθηκε ως έχει."
 
-#: library/email.errors.rst:125
+#: library/email.errors.rst:132
 msgid ""
 ":class:`InvalidDateDefect` -- When decoding an invalid or unparsable date "
 "field. The original value is kept as-is."

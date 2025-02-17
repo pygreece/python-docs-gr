@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/tkinter.rst:2
-msgid ":mod:`tkinter` --- Python interface to Tcl/Tk"
+msgid ":mod:`!tkinter` --- Python interface to Tcl/Tk"
 msgstr ""
 
 #: library/tkinter.rst:9
@@ -65,7 +66,7 @@ msgid ""
 "and can be woefully outdated."
 msgstr ""
 
-#: library/tkinter.rst:43
+#: library/tkinter.rst:41
 msgid "`TkDocs <https://tkdocs.com/>`_"
 msgstr ""
 
@@ -75,7 +76,7 @@ msgid ""
 "concepts, and illustrates recommended approaches using the modern API."
 msgstr ""
 
-#: library/tkinter.rst:46
+#: library/tkinter.rst:45
 msgid ""
 "`Tkinter 8.5 reference: a GUI for Python <https://www.tkdocs.com/shipman/>`_"
 msgstr ""
@@ -90,7 +91,7 @@ msgstr ""
 msgid "Tcl/Tk Resources:"
 msgstr ""
 
-#: library/tkinter.rst:51
+#: library/tkinter.rst:50
 msgid "`Tk commands <https://www.tcl.tk/man/tcl8.6/TkCmd/contents.htm>`_"
 msgstr ""
 
@@ -100,7 +101,7 @@ msgid ""
 "Tkinter."
 msgstr ""
 
-#: library/tkinter.rst:54
+#: library/tkinter.rst:53
 msgid "`Tcl/Tk Home Page <https://www.tcl.tk>`_"
 msgstr ""
 
@@ -112,7 +113,7 @@ msgstr ""
 msgid "Books:"
 msgstr ""
 
-#: library/tkinter.rst:59
+#: library/tkinter.rst:58
 msgid ""
 "`Modern Tkinter for Busy Python Developers <https://tkdocs.com/book.html>`_"
 msgstr ""
@@ -121,17 +122,17 @@ msgstr ""
 msgid "By Mark Roseman. (ISBN 978-1999149567)"
 msgstr ""
 
-#: library/tkinter.rst:62
+#: library/tkinter.rst:61
 msgid ""
-"`Python GUI programming with Tkinter <https://www.packtpub.com/product/"
-"python-gui-programming-with-tkinter/9781788835886>`_"
+"`Python GUI programming with Tkinter <https://www.packtpub.com/en-us/product/"
+"python-gui-programming-with-tkinter-9781788835886>`_"
 msgstr ""
 
 #: library/tkinter.rst:62
 msgid "By Alan D. Moore. (ISBN 978-1788835886)"
 msgstr ""
 
-#: library/tkinter.rst:65
+#: library/tkinter.rst:64
 msgid "`Programming Python <https://learning-python.com/about-pp4e.html>`_"
 msgstr ""
 
@@ -163,7 +164,7 @@ msgid ""
 "with it."
 msgstr ""
 
-#: library/tkinter.rst:90
+#: library/tkinter.rst:79
 msgid "Tcl"
 msgstr ""
 
@@ -188,13 +189,14 @@ msgstr ""
 #: library/tkinter.rst:93
 msgid ""
 "Tk is a `Tcl package <https://wiki.tcl-lang.org/37432>`_ implemented in C "
-"that adds custom commands to create and manipulate GUI widgets. Each :class:"
-"`Tk` object embeds its own Tcl interpreter instance with Tk loaded into it. "
-"Tk's widgets are very customizable, though at the cost of a dated "
-"appearance. Tk uses Tcl's event queue to generate and process GUI events."
+"that adds custom commands to create and manipulate GUI widgets. "
+"Each :class:`Tk` object embeds its own Tcl interpreter instance with Tk "
+"loaded into it. Tk's widgets are very customizable, though at the cost of a "
+"dated appearance. Tk uses Tcl's event queue to generate and process GUI "
+"events."
 msgstr ""
 
-#: library/tkinter.rst:103
+#: library/tkinter.rst:99
 msgid "Ttk"
 msgstr ""
 
@@ -208,8 +210,8 @@ msgstr ""
 
 #: library/tkinter.rst:105
 msgid ""
-"Internally, Tk and Ttk use facilities of the underlying operating system, i."
-"e., Xlib on Unix/X11, Cocoa on macOS, GDI on Windows."
+"Internally, Tk and Ttk use facilities of the underlying operating system, "
+"i.e., Xlib on Unix/X11, Cocoa on macOS, GDI on Windows."
 msgstr ""
 
 #: library/tkinter.rst:108
@@ -233,6 +235,12 @@ msgid ""
 "module, which provides the modern themed widget set and API::"
 msgstr ""
 
+#: library/tkinter.rst:123
+msgid ""
+"from tkinter import *\n"
+"from tkinter import ttk"
+msgstr ""
+
 #: library/tkinter.rst:129
 msgid ""
 "Construct a toplevel Tk widget, which is usually the main window of an "
@@ -246,7 +254,7 @@ msgid ""
 "However, the following keyword arguments are currently recognized:"
 msgstr ""
 
-#: library/tkinter.rst:137
+#: library/tkinter.rst:136
 msgid "*screenName*"
 msgstr ""
 
@@ -256,7 +264,7 @@ msgid ""
 "(X11 only)"
 msgstr ""
 
-#: library/tkinter.rst:140
+#: library/tkinter.rst:139
 msgid "*baseName*"
 msgstr ""
 
@@ -266,7 +274,7 @@ msgid ""
 "program name (``sys.argv[0]``)."
 msgstr ""
 
-#: library/tkinter.rst:143
+#: library/tkinter.rst:142
 msgid "*className*"
 msgstr ""
 
@@ -276,7 +284,7 @@ msgid ""
 "which Tcl is invoked (*argv0* in *interp*)."
 msgstr ""
 
-#: library/tkinter.rst:146
+#: library/tkinter.rst:145
 msgid "*useTk*"
 msgstr ""
 
@@ -286,7 +294,7 @@ msgid ""
 "function sets this to ``False``."
 msgstr ""
 
-#: library/tkinter.rst:149
+#: library/tkinter.rst:148
 msgid "*sync*"
 msgstr ""
 
@@ -296,7 +304,7 @@ msgid ""
 "reported immediately.  Can be used for debugging. (X11 only)"
 msgstr ""
 
-#: library/tkinter.rst:159
+#: library/tkinter.rst:151
 msgid "*use*"
 msgstr ""
 
@@ -316,11 +324,11 @@ msgstr ""
 
 #: library/tkinter.rst:161
 msgid ""
-":class:`Tk` reads and interprets profile files, named :file:`.{className}."
-"tcl` and :file:`.{baseName}.tcl`, into the Tcl interpreter and calls :func:"
-"`exec` on the contents of :file:`.{className}.py` and :file:`.{baseName}."
-"py`.  The path for the profile files is the :envvar:`HOME` environment "
-"variable or, if that isn't defined, then :data:`os.curdir`."
+":class:`Tk` reads and interprets profile files, named :file:`."
+"{className}.tcl` and :file:`.{baseName}.tcl`, into the Tcl interpreter and "
+"calls :func:`exec` on the contents of :file:`.{className}.py` and :file:`."
+"{baseName}.py`.  The path for the profile files is the :envvar:`HOME` "
+"environment variable or, if that isn't defined, then :data:`os.curdir`."
 msgstr ""
 
 #: library/tkinter.rst:170
@@ -355,15 +363,15 @@ msgid ""
 "interpreter in an environment where one doesn't want to create extraneous "
 "toplevel windows, or where one cannot (such as Unix/Linux systems without an "
 "X server).  An object created by the :func:`Tcl` object can have a Toplevel "
-"window created (and the Tk subsystem initialized) by calling its :meth:"
-"`loadtk` method."
+"window created (and the Tk subsystem initialized) by calling "
+"its :meth:`loadtk` method."
 msgstr ""
 
 #: library/tkinter.rst:203
 msgid "The modules that provide Tk support include:"
 msgstr ""
 
-#: library/tkinter.rst:206
+#: library/tkinter.rst:205
 msgid ":mod:`tkinter`"
 msgstr ""
 
@@ -371,7 +379,7 @@ msgstr ""
 msgid "Main Tkinter module."
 msgstr ""
 
-#: library/tkinter.rst:209
+#: library/tkinter.rst:208
 msgid ":mod:`tkinter.colorchooser`"
 msgstr ""
 
@@ -379,7 +387,7 @@ msgstr ""
 msgid "Dialog to let the user choose a color."
 msgstr ""
 
-#: library/tkinter.rst:212
+#: library/tkinter.rst:211
 msgid ":mod:`tkinter.commondialog`"
 msgstr ""
 
@@ -387,7 +395,7 @@ msgstr ""
 msgid "Base class for the dialogs defined in the other modules listed here."
 msgstr ""
 
-#: library/tkinter.rst:215
+#: library/tkinter.rst:214
 msgid ":mod:`tkinter.filedialog`"
 msgstr ""
 
@@ -395,7 +403,7 @@ msgstr ""
 msgid "Common dialogs to allow the user to specify a file to open or save."
 msgstr ""
 
-#: library/tkinter.rst:218
+#: library/tkinter.rst:217
 msgid ":mod:`tkinter.font`"
 msgstr ""
 
@@ -403,7 +411,7 @@ msgstr ""
 msgid "Utilities to help work with fonts."
 msgstr ""
 
-#: library/tkinter.rst:221
+#: library/tkinter.rst:220
 msgid ":mod:`tkinter.messagebox`"
 msgstr ""
 
@@ -411,7 +419,7 @@ msgstr ""
 msgid "Access to standard Tk dialog boxes."
 msgstr ""
 
-#: library/tkinter.rst:224
+#: library/tkinter.rst:223
 msgid ":mod:`tkinter.scrolledtext`"
 msgstr ""
 
@@ -419,7 +427,7 @@ msgstr ""
 msgid "Text widget with a vertical scroll bar built in."
 msgstr ""
 
-#: library/tkinter.rst:227
+#: library/tkinter.rst:226
 msgid ":mod:`tkinter.simpledialog`"
 msgstr ""
 
@@ -427,7 +435,7 @@ msgstr ""
 msgid "Basic dialogs and convenience functions."
 msgstr ""
 
-#: library/tkinter.rst:231
+#: library/tkinter.rst:229
 msgid ":mod:`tkinter.ttk`"
 msgstr ""
 
@@ -441,7 +449,7 @@ msgstr ""
 msgid "Additional modules:"
 msgstr ""
 
-#: library/tkinter.rst:243
+#: library/tkinter.rst:238
 msgid ":mod:`_tkinter`"
 msgstr ""
 
@@ -454,28 +462,28 @@ msgid ""
 "interpreter."
 msgstr ""
 
-#: library/tkinter.rst:247
+#: library/tkinter.rst:245
 msgid ":mod:`idlelib`"
 msgstr ""
 
 #: library/tkinter.rst:246
 msgid ""
-"Python's Integrated Development and Learning Environment (IDLE). Based on :"
-"mod:`tkinter`."
+"Python's Integrated Development and Learning Environment (IDLE). Based "
+"on :mod:`tkinter`."
 msgstr ""
 
-#: library/tkinter.rst:252
+#: library/tkinter.rst:249
 msgid ":mod:`tkinter.constants`"
 msgstr ""
 
 #: library/tkinter.rst:250
 msgid ""
 "Symbolic constants that can be used in place of strings when passing various "
-"parameters to Tkinter calls. Automatically imported by the main :mod:"
-"`tkinter` module."
+"parameters to Tkinter calls. Automatically imported by the "
+"main :mod:`tkinter` module."
 msgstr ""
 
-#: library/tkinter.rst:256
+#: library/tkinter.rst:254
 msgid ":mod:`tkinter.dnd`"
 msgstr ""
 
@@ -485,7 +493,7 @@ msgid ""
 "deprecated when it is replaced with the Tk DND."
 msgstr ""
 
-#: library/tkinter.rst:260
+#: library/tkinter.rst:258
 msgid ":mod:`tkinter.tix`"
 msgstr ""
 
@@ -495,7 +503,7 @@ msgid ""
 "widgets. Better alternatives for most can be found in :mod:`tkinter.ttk`."
 msgstr ""
 
-#: library/tkinter.rst:264
+#: library/tkinter.rst:262
 msgid ":mod:`turtle`"
 msgstr ""
 
@@ -535,6 +543,18 @@ msgid ""
 "some key concepts you'll need to know."
 msgstr ""
 
+#: library/tkinter.rst:290
+msgid ""
+"from tkinter import *\n"
+"from tkinter import ttk\n"
+"root = Tk()\n"
+"frm = ttk.Frame(root, padding=10)\n"
+"frm.grid()\n"
+"ttk.Label(frm, text=\"Hello World!\").grid(column=0, row=0)\n"
+"ttk.Button(frm, text=\"Quit\", command=root.destroy).grid(column=1, row=0)\n"
+"root.mainloop()"
+msgstr ""
+
 #: library/tkinter.rst:300
 msgid ""
 "After the imports, the next line creates an instance of the :class:`Tk` "
@@ -552,9 +572,10 @@ msgstr ""
 
 #: library/tkinter.rst:309
 msgid ""
-"The next line creates a label widget holding a static text string. The :meth:"
-"`grid` method is used to specify the relative layout (position) of the label "
-"within its containing frame widget, similar to how tables in HTML work."
+"The next line creates a label widget holding a static text string. "
+"The :meth:`grid` method is used to specify the relative layout (position) of "
+"the label within its containing frame widget, similar to how tables in HTML "
+"work."
 msgstr ""
 
 #: library/tkinter.rst:313
@@ -577,18 +598,18 @@ msgstr ""
 msgid "Even this simple program illustrates the following key Tk concepts:"
 msgstr ""
 
-#: library/tkinter.rst:329
+#: library/tkinter.rst:326
 msgid "widgets"
 msgstr ""
 
 #: library/tkinter.rst:327
 msgid ""
 "A Tkinter user interface is made up of individual *widgets*. Each widget is "
-"represented as a Python object, instantiated from classes like :class:`ttk."
-"Frame`, :class:`ttk.Label`, and :class:`ttk.Button`."
+"represented as a Python object, instantiated from classes "
+"like :class:`ttk.Frame`, :class:`ttk.Label`, and :class:`ttk.Button`."
 msgstr ""
 
-#: library/tkinter.rst:335
+#: library/tkinter.rst:331
 msgid "widget hierarchy"
 msgstr ""
 
@@ -600,7 +621,7 @@ msgid ""
 "argument to the widget constructor."
 msgstr ""
 
-#: library/tkinter.rst:340
+#: library/tkinter.rst:337
 msgid "configuration options"
 msgstr ""
 
@@ -611,7 +632,7 @@ msgid ""
 "classes of widgets will have different sets of options."
 msgstr ""
 
-#: library/tkinter.rst:345
+#: library/tkinter.rst:342
 msgid "geometry management"
 msgstr ""
 
@@ -622,7 +643,7 @@ msgid ""
 "interface they are placed."
 msgstr ""
 
-#: library/tkinter.rst:351
+#: library/tkinter.rst:347
 msgid "event loop"
 msgstr ""
 
@@ -657,6 +678,15 @@ msgstr ""
 msgid ""
 "To illustrate, here is the Tcl/Tk equivalent of the main part of the Tkinter "
 "script above."
+msgstr ""
+
+#: library/tkinter.rst:371
+msgid ""
+"ttk::frame .frm -padding 10\n"
+"grid .frm\n"
+"grid [ttk::label .frm.lbl -text \"Hello World!\"] -column 0 -row 0\n"
+"grid [ttk::button .frm.btn -text \"Quit\" -command \"destroy .\"] -column 1 "
+"-row 0"
 msgstr ""
 
 #: library/tkinter.rst:377
@@ -737,6 +767,12 @@ msgid ""
 "values. Use :meth:`keys` to get just the names of each option."
 msgstr ""
 
+#: library/tkinter.rst:427
+msgid ""
+"btn = ttk.Button(frm, ...)\n"
+"print(btn.configure().keys())"
+msgstr ""
+
 #: library/tkinter.rst:430
 msgid ""
 "As most widgets have many configuration options in common, it can be useful "
@@ -745,12 +781,22 @@ msgid ""
 "that."
 msgstr ""
 
+#: library/tkinter.rst:437
+msgid "print(set(btn.configure().keys()) - set(frm.configure().keys()))"
+msgstr ""
+
 #: library/tkinter.rst:439
 msgid ""
 "Similarly, you can find the available methods for a widget object using the "
 "standard :func:`dir` function. If you try it, you'll see there are over 200 "
 "common widget methods, so again identifying those specific to a widget class "
 "is helpful."
+msgstr ""
+
+#: library/tkinter.rst:446
+msgid ""
+"print(dir(btn))\n"
+"print(set(dir(btn)) - set(dir(frm)))"
 msgstr ""
 
 #: library/tkinter.rst:451
@@ -774,6 +820,12 @@ msgid ""
 "parameters, e.g."
 msgstr ""
 
+#: library/tkinter.rst:465
+msgid ""
+"destroy .\n"
+"grid .frm.btn -column 0 -row 0"
+msgstr ""
+
 #: library/tkinter.rst:468
 msgid ""
 "Others, however, look more like methods called on a widget object (in fact, "
@@ -782,30 +834,36 @@ msgid ""
 "name of a method to call)."
 msgstr ""
 
+#: library/tkinter.rst:475
+msgid ""
+".frm.btn invoke\n"
+".frm.lbl configure -text \"Goodbye\""
+msgstr ""
+
 #: library/tkinter.rst:479
 msgid ""
 "In the official Tcl/Tk reference documentation, you'll find most operations "
 "that look like method calls on the man page for a specific widget (e.g., "
-"you'll find the :meth:`invoke` method on the `ttk::button <https://www.tcl."
-"tk/man/tcl8.6/TkCmd/ttk_button.htm>`_ man page), while functions that take a "
-"widget as a parameter often have their own man page (e.g., `grid <https://"
-"www.tcl.tk/man/tcl8.6/TkCmd/grid.htm>`_)."
+"you'll find the :meth:`invoke` method on the `ttk::button <https://"
+"www.tcl.tk/man/tcl8.6/TkCmd/ttk_button.htm>`_ man page), while functions "
+"that take a widget as a parameter often have their own man page (e.g., `grid "
+"<https://www.tcl.tk/man/tcl8.6/TkCmd/grid.htm>`_)."
 msgstr ""
 
 #: library/tkinter.rst:487
 msgid ""
-"You'll find many common options and methods in the `options <https://www.tcl."
-"tk/man/tcl8.6/TkCmd/options.htm>`_ or `ttk::widget <https://www.tcl.tk/man/"
-"tcl8.6/TkCmd/ttk_widget.htm>`_ man pages, while others are found in the man "
-"page for a specific widget class."
+"You'll find many common options and methods in the `options <https://"
+"www.tcl.tk/man/tcl8.6/TkCmd/options.htm>`_ or `ttk::widget <https://"
+"www.tcl.tk/man/tcl8.6/TkCmd/ttk_widget.htm>`_ man pages, while others are "
+"found in the man page for a specific widget class."
 msgstr ""
 
 #: library/tkinter.rst:492
 msgid ""
-"You'll also find that many Tkinter methods have compound names, e.g., :func:"
-"`winfo_x`, :func:`winfo_height`, :func:`winfo_viewable`. You'd find "
-"documentation for all of these in the `winfo <https://www.tcl.tk/man/tcl8.6/"
-"TkCmd/winfo.htm>`_ man page."
+"You'll also find that many Tkinter methods have compound names, "
+"e.g., :func:`winfo_x`, :func:`winfo_height`, :func:`winfo_viewable`. You'd "
+"find documentation for all of these in the `winfo <https://www.tcl.tk/man/"
+"tcl8.6/TkCmd/winfo.htm>`_ man page."
 msgstr ""
 
 #: library/tkinter.rst:498
@@ -813,8 +871,8 @@ msgid ""
 "Somewhat confusingly, there are also methods on all Tkinter widgets that "
 "don't actually operate on the widget, but operate at a global scope, "
 "independent of any widget. Examples are methods for accessing the clipboard "
-"or the system bell. (They happen to be implemented as methods in the base :"
-"class:`Widget` class that all Tkinter widgets inherit from)."
+"or the system bell. (They happen to be implemented as methods in the "
+"base :class:`Widget` class that all Tkinter widgets inherit from)."
 msgstr ""
 
 #: library/tkinter.rst:507
@@ -849,14 +907,14 @@ msgstr ""
 #: library/tkinter.rst:524
 msgid ""
 "Tcl/Tk applications are normally event-driven, meaning that after "
-"initialization, the interpreter runs an event loop (i.e. :func:`Tk."
-"mainloop`) and responds to events. Because it is single-threaded, event "
-"handlers must respond quickly, otherwise they will block other events from "
-"being processed. To avoid this, any long-running computations should not run "
-"in an event handler, but are either broken into smaller pieces using timers, "
-"or run in another thread. This is different from many GUI toolkits where the "
-"GUI runs in a completely separate thread from all application code including "
-"event handlers."
+"initialization, the interpreter runs an event loop "
+"(i.e. :func:`Tk.mainloop`) and responds to events. Because it is single-"
+"threaded, event handlers must respond quickly, otherwise they will block "
+"other events from being processed. To avoid this, any long-running "
+"computations should not run in an event handler, but are either broken into "
+"smaller pieces using timers, or run in another thread. This is different "
+"from many GUI toolkits where the GUI runs in a completely separate thread "
+"from all application code including event handlers."
 msgstr ""
 
 #: library/tkinter.rst:533
@@ -872,17 +930,17 @@ msgstr ""
 
 #: library/tkinter.rst:539
 msgid ""
-"Tcl/Tk libraries can be built so they are not thread-aware. In this case, :"
-"mod:`tkinter` calls the library from the originating Python thread, even if "
-"this is different than the thread that created the Tcl interpreter. A global "
-"lock ensures only one call occurs at a time."
+"Tcl/Tk libraries can be built so they are not thread-aware. In this "
+"case, :mod:`tkinter` calls the library from the originating Python thread, "
+"even if this is different than the thread that created the Tcl interpreter. "
+"A global lock ensures only one call occurs at a time."
 msgstr ""
 
 #: library/tkinter.rst:544
 msgid ""
-"While :mod:`tkinter` allows you to create more than one instance of a :class:"
-"`Tk` object (with its own interpreter), all interpreters that are part of "
-"the same thread share a common event queue, which gets ugly fast. In "
+"While :mod:`tkinter` allows you to create more than one instance of "
+"a :class:`Tk` object (with its own interpreter), all interpreters that are "
+"part of the same thread share a common event queue, which gets ugly fast. In "
 "practice, don't create more than one instance of :class:`Tk` at a time. "
 "Otherwise, it's best to create them in separate threads and ensure you're "
 "running a thread-aware Tcl/Tk build."
@@ -916,18 +974,32 @@ msgid ""
 "can be set in three ways:"
 msgstr ""
 
-#: library/tkinter.rst:574
+#: library/tkinter.rst:571
 msgid "At object creation time, using keyword arguments"
 msgstr ""
 
-#: library/tkinter.rst:580
+#: library/tkinter.rst:574
+msgid "fred = Button(self, fg=\"red\", bg=\"blue\")"
+msgstr ""
+
+#: library/tkinter.rst:576
 msgid "After object creation, treating the option name like a dictionary index"
 msgstr ""
 
-#: library/tkinter.rst:585
+#: library/tkinter.rst:579
+msgid ""
+"fred[\"fg\"] = \"red\"\n"
+"fred[\"bg\"] = \"blue\""
+msgstr ""
+
+#: library/tkinter.rst:582
 msgid ""
 "Use the config() method to update multiple attrs subsequent to object "
 "creation"
+msgstr ""
+
+#: library/tkinter.rst:585
+msgid "fred.config(fg=\"red\", bg=\"blue\")"
 msgstr ""
 
 #: library/tkinter.rst:587
@@ -941,8 +1013,8 @@ msgid ""
 "Note that the man pages list \"STANDARD OPTIONS\" and \"WIDGET SPECIFIC "
 "OPTIONS\" for each widget.  The former is a list of options that are common "
 "to many widgets, the latter are the options that are idiosyncratic to that "
-"particular widget.  The Standard Options are documented on the :manpage:"
-"`options(3)` man page."
+"particular widget.  The Standard Options are documented on "
+"the :manpage:`options(3)` man page."
 msgstr ""
 
 #: library/tkinter.rst:596
@@ -1043,6 +1115,12 @@ msgstr ""
 msgid "Example::"
 msgstr ""
 
+#: library/tkinter.rst:630
+msgid ""
+">>> print(fred.config())\n"
+"{'relief': ('relief', 'relief', 'Relief', 'raised', 'groove')}"
+msgstr ""
+
 #: library/tkinter.rst:633
 msgid ""
 "Of course, the dictionary printed will include all the options available and "
@@ -1090,6 +1168,13 @@ msgid ""
 "when the main application window is resized.  Here are some examples::"
 msgstr ""
 
+#: library/tkinter.rst:666
+msgid ""
+"fred.pack()                     # defaults to side = \"top\"\n"
+"fred.pack(side=\"left\")\n"
+"fred.pack(expand=1)"
+msgstr ""
+
 #: library/tkinter.rst:672
 msgid "Packer Options"
 msgstr ""
@@ -1100,7 +1185,7 @@ msgid ""
 "take, see the man pages and page 183 of John Ousterhout's book."
 msgstr ""
 
-#: library/tkinter.rst:798
+#: library/tkinter.rst:796
 msgid "anchor"
 msgstr ""
 
@@ -1109,7 +1194,7 @@ msgid ""
 "Anchor type.  Denotes where the packer is to place each slave in its parcel."
 msgstr ""
 
-#: library/tkinter.rst:681
+#: library/tkinter.rst:680
 msgid "expand"
 msgstr ""
 
@@ -1117,7 +1202,7 @@ msgstr ""
 msgid "Boolean, ``0`` or ``1``."
 msgstr ""
 
-#: library/tkinter.rst:684
+#: library/tkinter.rst:683
 msgid "fill"
 msgstr ""
 
@@ -1125,7 +1210,7 @@ msgstr ""
 msgid "Legal values: ``'x'``, ``'y'``, ``'both'``, ``'none'``."
 msgstr ""
 
-#: library/tkinter.rst:687
+#: library/tkinter.rst:686
 msgid "ipadx and ipady"
 msgstr ""
 
@@ -1134,7 +1219,7 @@ msgid ""
 "A distance - designating internal padding on each side of the slave widget."
 msgstr ""
 
-#: library/tkinter.rst:690
+#: library/tkinter.rst:689
 msgid "padx and pady"
 msgstr ""
 
@@ -1143,7 +1228,7 @@ msgid ""
 "A distance - designating external padding on each side of the slave widget."
 msgstr ""
 
-#: library/tkinter.rst:694
+#: library/tkinter.rst:692
 msgid "side"
 msgstr ""
 
@@ -1176,16 +1261,49 @@ msgstr ""
 
 #: library/tkinter.rst:711
 msgid ""
-"There are many useful subclasses of Variable already defined: :class:"
-"`StringVar`, :class:`IntVar`, :class:`DoubleVar`, and :class:`BooleanVar`.  "
-"To read the current value of such a variable, call the :meth:`get` method on "
-"it, and to change its value you call the :meth:`!set` method.  If you follow "
-"this protocol, the widget will always track the value of the variable, with "
-"no further intervention on your part."
+"There are many useful subclasses of Variable already "
+"defined: :class:`StringVar`, :class:`IntVar`, :class:`DoubleVar`, "
+"and :class:`BooleanVar`.  To read the current value of such a variable, call "
+"the :meth:`get` method on it, and to change its value you call the :meth:`!"
+"set` method.  If you follow this protocol, the widget will always track the "
+"value of the variable, with no further intervention on your part."
 msgstr ""
 
 #: library/tkinter.rst:898
 msgid "For example::"
+msgstr ""
+
+#: library/tkinter.rst:720
+msgid ""
+"import tkinter as tk\n"
+"\n"
+"class App(tk.Frame):\n"
+"    def __init__(self, master):\n"
+"        super().__init__(master)\n"
+"        self.pack()\n"
+"\n"
+"        self.entrythingy = tk.Entry()\n"
+"        self.entrythingy.pack()\n"
+"\n"
+"        # Create the application variable.\n"
+"        self.contents = tk.StringVar()\n"
+"        # Set it to some value.\n"
+"        self.contents.set(\"this is a variable\")\n"
+"        # Tell the entry widget to watch this variable.\n"
+"        self.entrythingy[\"textvariable\"] = self.contents\n"
+"\n"
+"        # Define a callback for when the user hits return.\n"
+"        # It prints the current value of the variable.\n"
+"        self.entrythingy.bind('<Key-Return>',\n"
+"                             self.print_contents)\n"
+"\n"
+"    def print_contents(self, event):\n"
+"        print(\"Hi. The current entry content is:\",\n"
+"              self.contents.get())\n"
+"\n"
+"root = tk.Tk()\n"
+"myapp = App(root)\n"
+"myapp.mainloop()"
 msgstr ""
 
 #: library/tkinter.rst:751
@@ -1207,14 +1325,36 @@ msgid ""
 "To get at the toplevel window that contains a given widget, you can often "
 "just refer to the widget's master.  Of course if the widget has been packed "
 "inside of a frame, the master won't represent a toplevel window.  To get at "
-"the toplevel window that contains an arbitrary widget, you can call the :"
-"meth:`_root` method. This method begins with an underscore to denote the "
-"fact that this function is part of the implementation, and not an interface "
-"to Tk functionality."
+"the toplevel window that contains an arbitrary widget, you can call "
+"the :meth:`_root` method. This method begins with an underscore to denote "
+"the fact that this function is part of the implementation, and not an "
+"interface to Tk functionality."
 msgstr ""
 
 #: library/tkinter.rst:769
 msgid "Here are some examples of typical usage::"
+msgstr ""
+
+#: library/tkinter.rst:771
+msgid ""
+"import tkinter as tk\n"
+"\n"
+"class App(tk.Frame):\n"
+"    def __init__(self, master=None):\n"
+"        super().__init__(master)\n"
+"        self.pack()\n"
+"\n"
+"# create the application\n"
+"myapp = App()\n"
+"\n"
+"#\n"
+"# here are method calls to the window manager class\n"
+"#\n"
+"myapp.master.title(\"My Do-Nothing Application\")\n"
+"myapp.master.maxsize(1000, 400)\n"
+"\n"
+"# start the program\n"
+"myapp.mainloop()"
 msgstr ""
 
 #: library/tkinter.rst:794
@@ -1228,7 +1368,7 @@ msgid ""
 "``\"center\"``."
 msgstr ""
 
-#: library/tkinter.rst:804
+#: library/tkinter.rst:800
 msgid "bitmap"
 msgstr ""
 
@@ -1240,7 +1380,7 @@ msgid ""
 "file, preceded with an ``@``, as in ``\"@/usr/contrib/bitmap/gumby.bit\"``."
 msgstr ""
 
-#: library/tkinter.rst:807
+#: library/tkinter.rst:806
 msgid "boolean"
 msgstr ""
 
@@ -1248,7 +1388,7 @@ msgstr ""
 msgid "You can pass integers 0 or 1 or the strings ``\"yes\"`` or ``\"no\"``."
 msgstr ""
 
-#: library/tkinter.rst:814
+#: library/tkinter.rst:809
 msgid "callback"
 msgstr ""
 
@@ -1256,7 +1396,14 @@ msgstr ""
 msgid "This is any Python function that takes no arguments.  For example::"
 msgstr ""
 
-#: library/tkinter.rst:820
+#: library/tkinter.rst:812
+msgid ""
+"def print_it():\n"
+"    print(\"hi there\")\n"
+"fred[\"command\"] = print_it"
+msgstr ""
+
+#: library/tkinter.rst:816
 msgid "color"
 msgstr ""
 
@@ -1269,7 +1416,7 @@ msgid ""
 "digit.  See page 160 of Ousterhout's book for details."
 msgstr ""
 
-#: library/tkinter.rst:826
+#: library/tkinter.rst:822
 msgid "cursor"
 msgstr ""
 
@@ -1281,7 +1428,7 @@ msgid ""
 "of your own. See page 179 of Ousterhout's book."
 msgstr ""
 
-#: library/tkinter.rst:833
+#: library/tkinter.rst:828
 msgid "distance"
 msgstr ""
 
@@ -1294,7 +1441,7 @@ msgid ""
 "is expressed as ``\"3.5i\"``."
 msgstr ""
 
-#: library/tkinter.rst:838
+#: library/tkinter.rst:835
 msgid "font"
 msgstr ""
 
@@ -1305,7 +1452,7 @@ msgid ""
 "are measured in pixels."
 msgstr ""
 
-#: library/tkinter.rst:843
+#: library/tkinter.rst:840
 msgid "geometry"
 msgstr ""
 
@@ -1316,7 +1463,7 @@ msgid ""
 "text). For example: ``fred[\"geometry\"] = \"200x100\"``."
 msgstr ""
 
-#: library/tkinter.rst:847
+#: library/tkinter.rst:845
 msgid "justify"
 msgstr ""
 
@@ -1326,7 +1473,7 @@ msgid ""
 "and ``\"fill\"``."
 msgstr ""
 
-#: library/tkinter.rst:852
+#: library/tkinter.rst:849
 msgid "region"
 msgstr ""
 
@@ -1337,7 +1484,7 @@ msgid ""
 "2i\"`` and ``\"3c 2c 4c 10.43c\"``  are all legal regions."
 msgstr ""
 
-#: library/tkinter.rst:856
+#: library/tkinter.rst:854
 msgid "relief"
 msgstr ""
 
@@ -1348,7 +1495,7 @@ msgid ""
 "``\"ridge\"``."
 msgstr ""
 
-#: library/tkinter.rst:860
+#: library/tkinter.rst:858
 msgid "scrollcommand"
 msgstr ""
 
@@ -1358,7 +1505,7 @@ msgid ""
 "can be any widget method that takes a single argument."
 msgstr ""
 
-#: library/tkinter.rst:863
+#: library/tkinter.rst:862
 msgid "wrap"
 msgstr ""
 
@@ -1377,22 +1524,26 @@ msgid ""
 "The form of the bind method is::"
 msgstr ""
 
+#: library/tkinter.rst:878
+msgid "def bind(self, sequence, func, add=''):"
+msgstr ""
+
 #: library/tkinter.rst:880
 msgid "where:"
 msgstr ""
 
-#: library/tkinter.rst:885
+#: library/tkinter.rst:882
 msgid "sequence"
 msgstr ""
 
 #: library/tkinter.rst:883
 msgid ""
-"is a string that denotes the target kind of event.  (See the :manpage:"
-"`bind(3tk)` man page, and page 201 of John Ousterhout's book, :title-"
-"reference:`Tcl and the Tk Toolkit (2nd edition)`, for details)."
+"is a string that denotes the target kind of event.  (See "
+"the :manpage:`bind(3tk)` man page, and page 201 of John Ousterhout's "
+"book, :title-reference:`Tcl and the Tk Toolkit (2nd edition)`, for details)."
 msgstr ""
 
-#: library/tkinter.rst:890
+#: library/tkinter.rst:887
 msgid "func"
 msgstr ""
 
@@ -1403,7 +1554,7 @@ msgid ""
 "deployed this way are commonly known as *callbacks*.)"
 msgstr ""
 
-#: library/tkinter.rst:896
+#: library/tkinter.rst:892
 msgid "add"
 msgstr ""
 
@@ -1413,6 +1564,14 @@ msgid ""
 "this binding is to replace any other bindings that this event is associated "
 "with.  Passing a ``'+'`` means that this function is to be added to the list "
 "of functions bound to this event type."
+msgstr ""
+
+#: library/tkinter.rst:900
+msgid ""
+"def turn_red(self, event):\n"
+"    event.widget[\"activeforeground\"] = \"red\"\n"
+"\n"
+"self.button.bind(\"<Enter>\", self.turn_red)"
 msgstr ""
 
 #: library/tkinter.rst:905
@@ -1567,7 +1726,7 @@ msgid ""
 "characters in an Entry widget, or to particular menu items in a Menu widget."
 msgstr ""
 
-#: library/tkinter.rst:941
+#: library/tkinter.rst:938
 msgid "Entry widget indexes (index, view index, etc.)"
 msgstr ""
 
@@ -1578,7 +1737,7 @@ msgid ""
 "special points in text widgets:"
 msgstr ""
 
-#: library/tkinter.rst:945
+#: library/tkinter.rst:943
 msgid "Text widget indexes"
 msgstr ""
 
@@ -1588,7 +1747,7 @@ msgid ""
 "the Tk man pages."
 msgstr ""
 
-#: library/tkinter.rst:970
+#: library/tkinter.rst:947
 msgid "Menu indexes (menu.invoke(), menu.entryconfig(), etc.)"
 msgstr ""
 
@@ -1687,6 +1846,16 @@ msgid ""
 "one handler may be registered per file descriptor. Example code::"
 msgstr ""
 
+#: library/tkinter.rst:1006
+msgid ""
+"import tkinter\n"
+"widget = tkinter.Tk()\n"
+"mask = tkinter.READABLE | tkinter.WRITABLE\n"
+"widget.tk.createfilehandler(file, mask, callback)\n"
+"...\n"
+"widget.tk.deletefilehandler(file)"
+msgstr ""
+
 #: library/tkinter.rst:1013
 msgid "This feature is not available on Windows."
 msgstr ""
@@ -1694,12 +1863,12 @@ msgstr ""
 #: library/tkinter.rst:1015
 msgid ""
 "Since you don't know how many bytes are available for reading, you may not "
-"want to use the :class:`~io.BufferedIOBase` or :class:`~io.TextIOBase` :meth:"
-"`~io.BufferedIOBase.read` or :meth:`~io.IOBase.readline` methods, since "
-"these will insist on reading a predefined number of bytes. For sockets, the :"
-"meth:`~socket.socket.recv` or :meth:`~socket.socket.recvfrom` methods will "
-"work fine; for other files, use raw reads or ``os.read(file.fileno(), "
-"maxbytecount)``."
+"want to use the :class:`~io.BufferedIOBase` "
+"or :class:`~io.TextIOBase` :meth:`~io.BufferedIOBase.read` "
+"or :meth:`~io.IOBase.readline` methods, since these will insist on reading a "
+"predefined number of bytes. For sockets, the :meth:`~socket.socket.recv` "
+"or :meth:`~socket.socket.recvfrom` methods will work fine; for other files, "
+"use raw reads or ``os.read(file.fileno(), maxbytecount)``."
 msgstr ""
 
 #: library/tkinter.rst:1026
@@ -1709,6 +1878,10 @@ msgid ""
 "or socket object), or an integer file descriptor. The *mask* argument is an "
 "ORed combination of any of the three constants below. The callback is called "
 "as follows::"
+msgstr ""
+
+#: library/tkinter.rst:1032
+msgid "callback(file, mask)"
 msgstr ""
 
 #: library/tkinter.rst:1037
