@@ -396,7 +396,6 @@ msgid ":func:`__import__`"
 msgstr ":func:`__import__`"
 
 #: library/functions.rst:59
-#, fuzzy
 msgid ""
 "Return the absolute value of a number.  The argument may be an integer, a "
 "floating-point number, or an object implementing :meth:`~object.__abs__`. If "
@@ -404,7 +403,7 @@ msgid ""
 msgstr ""
 "Επιστρέφει την απόλυτη τιμή ενός αριθμού. Το όρισμα μπορεί να είναι ένας "
 "ακέραιος, ένας αριθμός κινητής υποδιαστολής, ή ένα αντικείμενο που υλοποιεί "
-"την :meth:`~object.__abs__`. Εάν το όρισμα είναι ένας περίπλοκος αριθμός "
+"την :meth:`~object.__abs__`. Εάν το όρισμα είναι ένας μιγαδικός αριθμός "
 "επιστρέφεται το μέγεθός του."
 
 #: library/functions.rst:67
@@ -437,6 +436,11 @@ msgid ""
 "            return False\n"
 "    return True"
 msgstr ""
+"def all(iterable):\n"
+"    for element in iterable:\n"
+"        if not element:\n"
+"            return False\n"
+"    return True"
 
 #: library/functions.rst:89
 msgid ""
@@ -483,6 +487,11 @@ msgid ""
 "            return True\n"
 "    return False"
 msgstr ""
+"def any(iterable):\n"
+"    for element in iterable:\n"
+"        if element:\n"
+"            return True\n"
+"    return False"
 
 #: library/functions.rst:116
 msgid ""
@@ -522,7 +531,6 @@ msgid "See also :func:`format` for more information."
 msgstr "Δείτε επίσης τη :func:`format` για περισσότερες πληροφορίες."
 
 #: library/functions.rst:146
-#, fuzzy
 msgid ""
 "Return a Boolean value, i.e. one of ``True`` or ``False``.  The argument is "
 "converted using the standard :ref:`truth testing procedure <truth>`. If the "
@@ -532,20 +540,18 @@ msgid ""
 "``False`` and ``True`` (see :ref:`typebool`)."
 msgstr ""
 "Επιστρέφετε μια δυαδική τιμή, π.χ. μία από τις τιμές ``True`` ή ``False``.  "
-"Το *x* μετατρέπεται χρησιμοποιώντας την τυπική :ref:`truth testing procedure "
-"<truth>`.  Εάν το *x* είναι ψευδές ή παραλειφθεί, αυτό επιστρέφει ``False``∙ "
+"Το όρισμα μετατρέπεται χρησιμοποιώντας την τυπική :ref:`truth testing procedure "
+"<truth>`.  Εάν το όρισμα είναι ψευδές ή παραλειφθεί, αυτό επιστρέφει ``False``∙ "
 "διαφορετικά, επιστρέφει ``True``.  Η κλάση :class:`bool` είναι μια υποκλάση "
 "της :class:`int` (βλ. :ref:`typesnumeric`). Δεν μπορεί να γίνει περαιτέρω "
 "υποκλάση.  Οι μόνες περιπτώσεις είναι ``False`` και ``True`` (βλ. :ref:"
 "`typebool`)."
 
 #: library/functions.rst:786
-#, fuzzy
 msgid "The parameter is now positional-only."
-msgstr "Το *x* είναι πλέον μόνο παράμετρος θέσης."
+msgstr "Η παράμετρος είναι πλέον μόνο παράμετρος θέσης."
 
 #: library/functions.rst:161
-#, fuzzy
 msgid ""
 "This function drops you into the debugger at the call site.  Specifically, "
 "it calls :func:`sys.breakpointhook`, passing ``args`` and ``kws`` straight "
@@ -560,7 +566,7 @@ msgstr ""
 "Αυτή η συνάρτηση μας μεταφέρει στο πρόγραμμα εντοπισμού σφαλμάτων στην "
 "τοποθεσία της κλήσης.  Συγκεκριμένα, καλεί το :func:`sys.breakpointhook`, "
 "περνώντας απευθείας τα ``args`` και ``kws``. Από προεπιλογή, το ``sys."
-"breakpointhook()`` καλεί την :func:`pdb.set_trace()` χωρίς να περιμένει "
+"breakpointhook()`` καλεί την :func:`pdb.set_trace` χωρίς να περιμένει "
 "ορίσματα.  Σε αυτήν την περίπτωση, είναι καθαρά μια βολική συνάρτηση, "
 "επομένως δεν χρειάζεται να εισάγετε ρητά το :mod:`pdb` ή να πληκτρολογήσετε "
 "τόσο πολύ κώδικα.  Ωστόσο η :func:`sys.breakpointhook` μπορεί να ρυθμιστεί "
@@ -752,6 +758,9 @@ msgid ""
 "    @classmethod\n"
 "    def f(cls, arg1, arg2): ..."
 msgstr ""
+"class C:\n"
+"    @classmethod\n"
+"    def f(cls, arg1, arg2): ..."
 
 #: library/functions.rst:269
 msgid ""
@@ -792,7 +801,6 @@ msgstr ""
 "<descriptor>` όπως η :func:`property`."
 
 #: library/functions.rst:285
-#, fuzzy
 msgid ""
 "Class methods now inherit the method attributes (:attr:`~function."
 "__module__`, :attr:`~function.__name__`, :attr:`~function.__qualname__`, :"
@@ -800,8 +808,9 @@ msgid ""
 "new ``__wrapped__`` attribute."
 msgstr ""
 "Οι μέθοδοι κλάσης κληρονομούν πλέον τα χαρακτηριστικά της μεθόδους "
-"(``__module__``, ``__name__``, ``__qualname__``, ``__doc__`` και "
-"``__annotations__``) και έχουν ένα νέο χαρακτηριστικό ``__wrapped__``."
+"(:attr:`~function.__module__`, :attr:`~function.__name__`, :attr:`~function.__qualname__`, :"
+"attr:`~function.__doc__` and :attr:`~function.__annotations__`) "
+"και έχουν ένα νέο χαρακτηριστικό ``__wrapped__``."
 
 #: library/functions.rst:292
 msgid ""
@@ -987,11 +996,12 @@ msgid ""
 "Convert a single string or number to a complex number, or create a complex "
 "number from real and imaginary parts."
 msgstr ""
+"Μετατρέπει μια συμβολοσειρά ή έναν αριθμό σε έναν μιγαδικό αριθμό ή δημιουργεί έναν μιγαδικό αριθμός "
+"από πραγματικά και φανταστικά μέρη."
 
 #: library/functions.rst:731 library/functions.rst:977
-#, fuzzy
 msgid "Examples:"
-msgstr "Παραδείγματα::"
+msgstr "Παραδείγματα:"
 
 #: library/functions.rst:386
 msgid ""
@@ -1012,6 +1022,22 @@ msgid ""
 ">>> complex(-1.23, 4.5)\n"
 "(-1.23+4.5j)"
 msgstr ""
+">>> complex('+1.23')\n"
+"(1.23+0j)\n"
+">>> complex('-4.5j')\n"
+"-4.5j\n"
+">>> complex('-1.23+4.5j')\n"
+"(-1.23+4.5j)\n"
+">>> complex('\\t( -1.23+4.5J )\\n')\n"
+"(-1.23+4.5j)\n"
+">>> complex('-Infinity+NaNj')\n"
+"(-inf+nanj)\n"
+">>> complex(1.23)\n"
+"(1.23+0j)\n"
+">>> complex(imag=-4.5)\n"
+"-4.5j\n"
+">>> complex(-1.23, 4.5)\n"
+"(-1.23+4.5j)"
 
 #: library/functions.rst:405
 msgid ""
@@ -1027,9 +1053,19 @@ msgid ""
 "token:`~float:complexvalue` production rule in the following grammar, after "
 "parentheses and leading and trailing whitespace characters are removed:"
 msgstr ""
+"Αν το όρισμα είναι συμβολοσειρά, πρέπει να περιέχει είτε ένα πραγματικό μέρος "
+"(στην ίδια μορφή όπως για το :func:`float`) είτε ένα φανταστικό μέρος (στην ίδια μορφή "
+"αλλά με επίθημα ``'j'`` ή ``'J'``) ή και πραγματικά και φανταστικά μέρη (το πρόσημο του "
+"φανταστικού τμήματος είναι υποχρεωτικό σε αυτήν την περίπτωση). Η συμβολοσειρά μπορεί προαιρετικά "
+"να περιβάλλεται από κενά διαστήματα και τις στρογγυλές παρενθέσεις ``'('`` "
+"και ``')'`` οι οποίες αγνοούνται. Η συμβολοσειρά δεν πρέπει να περιέχει κενό διάστημα μεταξύ των "
+"``'+'``, ``'-'`` του επιθέματος ``'j'`` ή ``'J'`` και του δεκαδικού αριθμού. Για παράδειγμα, το "
+"``complex('1+2j')`` είναι εντάξει, αλλά το ``complex('1 + 2j')`` κάνει raise μια :exc:`ValueError`. "
+"Πιο συγκεκριμένα, η είσοδος πρέπει να συμμοργώνεται με τον κανόνας πραγωγής :"
+"token:`~float:complexvalue` στην ακόλουθη γραμματική, αφού αφαιρεθούν οι παρενθέσεις και οι "
+"χαρακτήρες του κενών διαστημάτων στο τέλος:"
 
 #: library/functions.rst:424
-#, fuzzy
 msgid ""
 "If the argument is a number, the constructor serves as a numeric conversion "
 "like :class:`int` and :class:`float`. For a general Python object ``x``, "
@@ -1038,10 +1074,12 @@ msgid ""
 "If :meth:`!__float__` is not defined then it falls back to :meth:`~object."
 "__index__`."
 msgstr ""
-"Για ένα γενικό αντικείμενο Python ``x``, ``complex(x)`` εκχωρεί στο ``x."
-"__complex__()``.  Εάν το :meth:`~object.__complex__` δεν έχει οριστεί, τότε "
-"επιστρέφει στο :meth:`~object.__float__`.  Εάν το :meth:`!__float__` δεν "
-"έχει οριστεί , τότε επιστρέφει στο :meth:`~object.__index__`."
+"Εάν το όρισμα είναι αριθμός, ο κατασκευαστής χρησιμεύει ως αριθμητική μετατροπή όπως "
+":class:`int` και :class:`float`. Για ένα γενικό αντικείμενο Python ``x``, "
+"το ``complex(x)`` εκχωρεί στο ``x.__complex__()``. Εάν το :meth:`~object."
+"__complex__` δεν έχει οριστεί, τότε επιστρέφει στο :meth:`~object.__float__`. "
+"Εάν το :meth:`!__float__` δεν έχει οριστεί τότε επιστρέφει στο :meth:`~object."
+"__index__`."
 
 #: library/functions.rst:433
 msgid ""
@@ -1053,10 +1091,16 @@ msgid ""
 "imaginary component ``real.imag+imag.real``. If one of arguments is a real "
 "number, only its real component is used in the above expressions."
 msgstr ""
+"Εάν παρέχονται δύο ορίσματα ή χρησιμοποιούνται ορίσματα λέξης-κλειδιού, κάθε όρισμα μπορεί να είναι "
+"οποιουδήποτε αριθμητικού τύπου (συμπεριλαμβανομένων των μιγαδικών). Εάν και τα δύο ορίσματα είναι "
+"πραγματικοί αριθμοί, επιστρέψτε έναν μιγαδικό αριθμό με το πραγματικό στοιχείο *real* και το φανταστικό στοιχείο "
+"*imag*. Εάν και τα δύο ορίσματα είναι μιγαδικοί αριθμοί, επιστρέψτε έναν μιγαδικό αριθμό με το πραγματικό στοιχείο "
+"``real.real-imag.imag`` και ``real.imag+imag.real``. Αν ένα από τα ορίσματα είναι πραγματικός αριθμός, χρησιμοποιείται μόνο το "
+"πραγματικό στοιχείο στις παραπάνω εκφράσεις."
 
 #: library/functions.rst:443
 msgid "If all arguments are omitted, returns ``0j``."
-msgstr ""
+msgstr "Εάν παραληφθούν όλα τα ορίσματα, επιστρέφει ``0j``"
 
 #: library/functions.rst:445
 msgid "The complex type is described in :ref:`typesnumeric`."
@@ -1205,7 +1249,6 @@ msgstr ""
 "κλάση."
 
 #: library/functions.rst:540
-#, fuzzy
 msgid ""
 "Take two (non-complex) numbers as arguments and return a pair of numbers "
 "consisting of their quotient and remainder when using integer division.  "
@@ -1254,44 +1297,51 @@ msgid ""
 "        yield n, elem\n"
 "        n += 1"
 msgstr ""
+"def enumerate(iterable, start=0):\n"
+"    n = start\n"
+"    for elem in iterable:\n"
+"        yield n, elem\n"
+"        n += 1"
 
 #: library/functions.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "Παράμετροι"
 
 #: library/functions.rst:576
 msgid "A Python expression."
-msgstr ""
+msgstr "Μια έκφραση Python."
 
 #: library/functions.rst:580
 msgid "The global namespace (default: ``None``)."
-msgstr ""
+msgstr "Το καθολικό namespace (προεπιλογή: ``None``)."
 
 #: library/functions.rst:584
 msgid "The local namespace (default: ``None``)."
-msgstr ""
+msgstr "Το τοπικό namespace (προεπιλογή: ``None``)."
 
 #: library/functions.rst:0
 msgid "Returns"
-msgstr ""
+msgstr "Επιστρέφει"
 
 #: library/functions.rst:588
 msgid "The result of the evaluated expression."
-msgstr ""
+msgstr "Το αποτέλεσμα της αξιολογούμενης έκφρασης"
 
 #: library/functions.rst:0
 msgid "raises"
-msgstr ""
+msgstr "κάνει raise"
 
 #: library/functions.rst:589
 msgid "Syntax errors are reported as exceptions."
-msgstr ""
+msgstr "Τα συντακτικά σφάλματα αναφέρονται ως εξαιρέσεις"
 
 #: library/functions.rst:644
 msgid ""
 "This function executes arbitrary code. Calling it with user-supplied input "
 "may lead to security vulnerabilities."
 msgstr ""
+"Αυτή η συνάρτηση εκτελεί αυθαίρετο κώδικα. "
+"Η κλήση της με είσοδο που παρέχεται από το χρήστη μπορεί να οδηγήσει σε ευπάθειες ασφαλείας."
 
 #: library/functions.rst:596
 msgid ""
@@ -1325,9 +1375,8 @@ msgstr ""
 "περιβάλλον που περικλείει."
 
 #: library/functions.rst:611
-#, fuzzy
 msgid "Example:"
-msgstr "Παράδειγμα::"
+msgstr "Παράδειγμα:"
 
 #: library/functions.rst:617
 msgid ""
@@ -1404,7 +1453,6 @@ msgstr ""
 "`exec`. Η επιστρεφόμενη τιμή είναι ``None``."
 
 #: library/functions.rst:658
-#, fuzzy
 msgid ""
 "In all cases, if the optional parts are omitted, the code is executed in the "
 "current scope.  If only *globals* is provided, it must be a dictionary (and "
@@ -1419,9 +1467,7 @@ msgstr ""
 "ένα λεξικό (και όχι μια υποκατηγορία λεξικού), το οποίο θα χρησιμοποιείται "
 "και για τις δύο μεταβλητές αντίστοιχα.  Εάν παρέχονται τα *locals* μπορεί να "
 "είναι οποιοδήποτε αντικείμενο αντιστοίχισης.  Να θυμάστε ότι σε επίπεδο "
-"module, τα globals και locals είναι το ίδιο λεξικό. Εάν το exec λάβει δύο "
-"ξεχωριστά αντικείμενα ως *globals* και *locals*, ο κώδικας θα εκτελεστεί σαν "
-"να ήταν ενσωματωμένος σε έναν ορισμό κλάσης."
+"module, τα globals και locals είναι το ίδιο λεξικό."
 
 #: library/functions.rst:668
 msgid ""
@@ -1429,6 +1475,9 @@ msgid ""
 "gets two separate objects as *globals* and *locals*, the code will be "
 "executed as if it were embedded in a class definition."
 msgstr ""
+"Οι περισσότεροι χρήστες θα πρέπει απλώς να περάσουν ένα όρισμα *globals* και ποτέ *locals*. "
+"Εάν το exec λάβει δύο ξεχωριστά αντικείμενα ως *globals* και *locals*, ο κώδικας θα εκτελεστεί σαν "
+"να ήταν ενσωματωμένος σε έναν ορισμό κλάσης."
 
 #: library/functions.rst:672
 msgid ""
@@ -1519,11 +1568,10 @@ msgstr ""
 "επιστρέφει στοιχεία του *iterable* για τα οποία η *function* είναι ψευδής."
 
 #: library/functions.rst:729
-#, fuzzy
 msgid "Return a floating-point number constructed from a number or a string."
 msgstr ""
 "Επιστέφει έναν αριθμό κινητής υποδιαστολής που κατασκευάστηκε από έναν "
-"αριθμό ή μια συμβολοσειρά *x*."
+"αριθμό ή μια συμβολοσειρά."
 
 #: library/functions.rst:733
 msgid ""
@@ -1538,9 +1586,18 @@ msgid ""
 ">>> float('-Infinity')\n"
 "-inf"
 msgstr ""
+">>> float('+1.23')\n"
+"1.23\n"
+">>> float('   -12345\\n')\n"
+"-12345.0\n"
+">>> float('1e-003')\n"
+"0.001\n"
+">>> float('+1E6')\n"
+"1000000.0\n"
+">>> float('-Infinity')\n"
+"-inf"
 
 #: library/functions.rst:746
-#, fuzzy
 msgid ""
 "If the argument is a string, it should contain a decimal number, optionally "
 "preceded by a sign, and optionally embedded in whitespace.  The optional "
@@ -1555,9 +1612,9 @@ msgstr ""
 "ενσωματωμένο σε κενό διάστημα.  Το προαιρετικό πρόσημο μπορεί να είναι "
 "``'+'`` ή ``'-'``∙ ένα σύμβολο ``'+'`` δεν έχει καμία επίδραση στην τιμή που "
 "παράγεται.  Το όρισμα μπορεί επίσης να είναι μια συμβολοσειρά που "
-"αντιπροσωπεύει ένα NaN (not-a-number), ή θετικό η αρνητικό άπειρο.  Πιο "
+"αντιπροσωπεύει ένα NaN (not-a-number), ή θετικό η αρνητικό άπειρο. Πιο "
 "συγκεκριμένα, η είσοδος πρέπει να συμμορφώνεται με τον κανόνα παραγωγής "
-"``floatvalue`` στην ακόλουθη γραμματική, αφού αφαιρεθούν οι χαρακτήρες κενού "
+":token:`~float:floatvalue` στην ακόλουθη γραμματική, αφού αφαιρεθούν οι χαρακτήρες κενού "
 "διαστήματος που έπονται και προηγούνται:"
 
 #: library/functions.rst:767
@@ -1570,7 +1627,6 @@ msgstr ""
 "το θετικό άπειρο."
 
 #: library/functions.rst:770
-#, fuzzy
 msgid ""
 "Otherwise, if the argument is an integer or a floating-point number, a "
 "floating-point number with the same value (within Python's floating-point "
@@ -1874,6 +1930,10 @@ msgid ""
 ">>> s  \n"
 "\"Monty Python's Flying Circus\""
 msgstr ""
+">>> s = input('--> ')  \n"
+"--> Monty Python's Flying Circus\n"
+">>> s  \n"
+"\"Monty Python's Flying Circus\""
 
 #: library/functions.rst:957
 msgid ""
@@ -1901,13 +1961,12 @@ msgstr ""
 "με το αποτέλεσμα μετά την επιτυχή ανάγνωση των δεδομένων."
 
 #: library/functions.rst:974
-#, fuzzy
 msgid ""
 "Return an integer object constructed from a number or a string, or return "
 "``0`` if no arguments are given."
 msgstr ""
 "Επιστέφει έναν αριθμό κινητής υποδιαστολής που κατασκευάστηκε από έναν "
-"αριθμό ή μια συμβολοσειρά *x*."
+"αριθμό ή μια συμβολοσειρά, ή επιστρέφει ``0`` εάν δεν δίνετια κάποιο όρισμα."
 
 #: library/functions.rst:979
 msgid ""
@@ -1924,9 +1983,20 @@ msgid ""
 ">>> int('01110011', base=2)\n"
 "115"
 msgstr ""
+">>> int(123.45)\n"
+"123\n"
+">>> int('123')\n"
+"123\n"
+">>> int('   -12_345\\n')\n"
+"-12345\n"
+">>> int('FACE', 16)\n"
+"64206\n"
+">>> int('0xface', 0)\n"
+"64206\n"
+">>> int('01110011', base=2)\n"
+"115"
 
 #: library/functions.rst:994
-#, fuzzy
 msgid ""
 "If the argument defines :meth:`~object.__int__`, ``int(x)`` returns ``x."
 "__int__()``.  If the argument defines :meth:`~object.__index__`, it returns "
@@ -1934,15 +2004,12 @@ msgid ""
 "returns ``x.__trunc__()``. For floating-point numbers, this truncates "
 "towards zero."
 msgstr ""
-"Επιστρέφει ένα ακέραιο αντικείμενο που έχει δημιουργηθεί από έναν αριθμό ή "
-"συμβολοσειρά *x*, ή επιστρέφει ``0`` εάν δεν δίνονται ορίσματα.  Εάν το *x* "
-"ορίζει :meth:`~object.__int__`, ``int(x)`` επιστρέφει ``x.__int__()``. Εάν "
-"το *x* ορίζει :meth:`~object.__index__`, επιστρέφει``x.__index__()``. Εάν το "
-"*x* ορίζει :meth:`~object.__trunc__`, επιστρέφει``x.__trunc__()``. Για "
-"αριθμούς κινητής υποδιαστολής, αυτό περικόπτεται προς το μηδέν."
+"Εάν το όρισμα ορίζει :meth:`~object.__int__`, ``int(x)`` επιστρέφει "
+"``x.__int__()``.  Εάν το όρισμα ορίζει :meth:`~object.__index__`, επιστρέφει "
+"``x.__index__()``.  Εάν το όρισμα ορίζει το :meth:`~object.__trunc__`, επιστρέφει "
+"``x.__trunc__()``. Για αριθμούς κινητής υποδιαστολής, αυτό περικόπτεται προς το μηδέν."
 
 #: library/functions.rst:1000
-#, fuzzy
 msgid ""
 "If the argument is not a number or if *base* is given, then it must be a "
 "string, :class:`bytes`, or :class:`bytearray` instance representing an "
@@ -1950,12 +2017,11 @@ msgid ""
 "``-`` (with no space in between), have leading zeros, be surrounded by "
 "whitespace, and have single underscores interspersed between digits."
 msgstr ""
-"Εάν το *x* δεν είναι ένα αριθμός ή εάν το *base* δίνεται, τότε το *x* πρέπει "
-"να είναι μια συμβολοσειρά, η :class:`bytes`, ή :class:`bytearray` instances "
-"αντιπροσωπεύουν έναν ακέραιο στην ρίζα του *base*. Προαιρετικά, η "
-"συμβολοσειρά μπορεί να προηγηθεί από ``+`` ή ``-`` (χωρίς κενά ενδιάμεσα), "
-"προηγούνται από δυναμικά, περιβάλλονται από κενό διάστημα και έχουν μονές "
-"κάτω παύλες μεταξύ των ψηφίων."
+"Εάν το όρισμα δεν είναι αριθμός ή εάν δίνεται *base*, τότε πρέπει να είναι μια συμβολοσειρά "
+", :class:`bytes`, ή :class:`bytearray` που αντιπροσωπεύει έναν ακέραιο αριθμό στην ρίζα "
+"*base*.  Προαιρετικά, η συμβολοσειρά μπορεί να προηγείται από ``+`` ή ``-`` "
+"(χωρίς κενό ενδιάμεσο), να έχει αρχικά μηδενικά, να περιβάλλεται από κενό διάστημα και να έχει μονές υπογραμμίσεις "
+"διάσπαρτες μεταξύ των ψηφίων."
 
 #: library/functions.rst:1006
 msgid ""
@@ -2002,7 +2068,7 @@ msgstr ""
 
 #: library/functions.rst:1029
 msgid "The first parameter is now positional-only."
-msgstr ""
+msgstr "Η πρώτη παράμετρος είναι πλέον μόνο θέσεως."
 
 #: library/functions.rst:1032
 msgid ""
@@ -2017,7 +2083,6 @@ msgid "The delegation to :meth:`~object.__trunc__` is deprecated."
 msgstr "Η ανάθεση στη :meth:`~object.__trunc__` έχει καταργηθεί."
 
 #: library/functions.rst:1038
-#, fuzzy
 msgid ""
 ":class:`int` string inputs and string representations can be limited to help "
 "avoid denial of service attacks. A :exc:`ValueError` is raised when the "
@@ -2029,7 +2094,7 @@ msgstr ""
 "Οι είσοδοι συμβολοσειράς και οι αναπαραστάσεις συμβολοσειρών :class:`int` "
 "μπορούν να περιοριστούν για να αποφευχθούν επιθέσεις άρνησης υπηρεσίας. Μια :"
 "exc:`ValueError` γίνεται raise όταν γίνεται υπέρβαση του ορίου κατά τη "
-"μετατροπή μιας συμβολοσειράς *x* σε μια :class:`int` ή κατά τη μετατροπή "
+"μετατροπή μιας συμβολοσειράς σε μια :class:`int` ή κατά τη μετατροπή "
 "ενός :class:`int` σε μια συμβολοσειρά θα υπερβεί το όριο. Δείτε την "
 "τεκμηρίωση :ref:`integer string conversion length limitation "
 "<int_max_str_digits>`."
@@ -2129,6 +2194,10 @@ msgid ""
 "    for block in iter(partial(f.read, 64), b''):\n"
 "        process_block(block)"
 msgstr ""
+"from functools import partial\n"
+"with open('mydata.db', 'rb') as f:\n"
+"    for block in iter(partial(f.read, 64), b''):\n"
+"        process_block(block)"
 
 #: library/functions.rst:1108
 msgid ""
@@ -2300,26 +2369,23 @@ msgstr ""
 "έχει εξαντληθεί, διαφορετικά γίνεται raise μια :exc:`StopIteration`."
 
 #: library/functions.rst:1226
-#, fuzzy
 msgid ""
 "This is the ultimate base class of all other classes. It has methods that "
 "are common to all instances of Python classes. When the constructor is "
 "called, it returns a new featureless object. The constructor does not accept "
 "any arguments."
 msgstr ""
-"Επιστρέφει ένα νέο αντικείμενο χωρίς χαρακτηριστικά.  Το :class:`object` "
-"είναι μια βάση για όλες τις κλάσεις. Έχει μεθόδους που είναι κοινές σε όλες "
-"τις περιπτώσεις κλάσεων Python.  Αυτή η συνάρτηση δεν δέχεται ορίσματα."
+"Αυτή είναι η τελική βασική κλάση όλων των άλλων κλάσεων. Έχει μεθόδους που είναι κοινές "
+"σε όλες τις περιπτώσεις κλάσεων Python. Όταν καλείται ο κατασκευαστής, επιστρέφει ένα νέο "
+"αντικείμενο χωρίς χαρακτηριστικά. Ο κατασκευαστής δεν δέχετια ορίσματα."
 
 #: library/functions.rst:1233
-#, fuzzy
 msgid ""
 ":class:`object` instances do *not* have :attr:`~object.__dict__` attributes, "
 "so you can't assign arbitrary attributes to an instance of :class:`object`."
 msgstr ""
-"Το :class:`object` *δεν* έχει :attr:`~object.__dict__` επομένως δεν μπορείτε "
-"να εκχωρήσετε αυθαίρετα χαρακτηριστικά σε ένα instance της κλάσης :class:"
-"`object`."
+"Τα στιγμιότυπα :class:`object` *δεν* έχουν χαρακτηριστικά :attr:`~object.__dict__`, επομένως "
+"δεν μπορείτε να εκχωρήσετε αυθαίρετα χαρακτηριστικά σε ένα στιγμιότυπο του :class:`object`."
 
 #: library/functions.rst:1240
 msgid ""
@@ -2368,7 +2434,6 @@ msgstr ""
 "ως ``False``.)"
 
 #: library/functions.rst:1277
-#, fuzzy
 msgid ""
 "*mode* is an optional string that specifies the mode in which the file is "
 "opened.  It defaults to ``'r'`` which means open for reading in text mode. "
@@ -2389,7 +2454,7 @@ msgstr ""
 "συστήματα Unix, σημαίνει ότι *όλες* οι εγγραφές προσαρτώνται στο τέλος του "
 "αρχείου ανεξάρτητα από την τρέχουσα θέση αναζήτησης).  Στη λειτουργία "
 "κειμένου, εάν δεν έχει καθοριστεί το *encoding*, η κωδικοποίηση που "
-"χρησιμοποιείται εξαρτάται από την πλατφόρμα: :func:`locale.getencoding()` "
+"χρησιμοποιείται εξαρτάται από την πλατφόρμα: :func:`locale.getencoding` "
 "καλείται για να ληφθεί η τρέχουσα κωδικοποίηση τοπικών ρυθμίσεων. (Για την "
 "ανάγνωση και την εγγραφή ακατέργαστων bytes χρησιμοποιείται δυαδική "
 "λειτουργία και αφήνουν το *encoding* απροσδιόριστο.)  Οι διαθέσιμες "
@@ -2747,6 +2812,15 @@ msgid ""
 "...\n"
 ">>> os.close(dir_fd)  # don't leak a file descriptor"
 msgstr ""
+">>> import os\n"
+">>> dir_fd = os.open('somedir', os.O_RDONLY)\n"
+">>> def opener(path, flags):\n"
+"...     return os.open(path, flags, dir_fd=dir_fd)\n"
+"...\n"
+">>> with open('spamspam.txt', 'w', opener=opener) as f:\n"
+"...     print('This will be written to somedir/spamspam.txt', file=f)\n"
+"...\n"
+">>> os.close(dir_fd)  # μην διαρρεύσετε τη περιγραφή του αρχείου"
 
 #: library/functions.rst:1432
 msgid ""
@@ -2787,12 +2861,11 @@ msgstr ""
 "`tempfile`, και :mod:`shutil`."
 
 #: library/functions.rst:1457
-#, fuzzy
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``open`` with arguments ``path``, "
 "``mode``, ``flags``."
 msgstr ""
-"Εγείρει ένα :ref:`auditing event <auditing>` ``open`` με ορίσματα ``file``, "
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``open`` με ορίσματα ``path``, "
 "``mode``, ``flags``."
 
 #: library/functions.rst:1459
@@ -2888,7 +2961,6 @@ msgstr ""
 "ισοδυναμεί με τη χρήση του τελεστή δύναμης: ``base**exp``."
 
 #: library/functions.rst:1505
-#, fuzzy
 msgid ""
 "The arguments must have numeric types.  With mixed operand types, the "
 "coercion rules for binary arithmetic operators apply.  For :class:`int` "
@@ -2911,7 +2983,9 @@ msgstr ""
 "``pow(10, 2)`` επιστρέφει ``100``, αλλά το ``pow(10, -2)`` επιστρέφει "
 "``0.01``.  Για μια αρνητική βάση τύπου :class:`int` ή :class:`float` και "
 "έναν μη αναπόσπαστο εκθέτη, παραδίδεται ένα μιγαδικό αποτέλεσμα.  Για "
-"παράδειγμα, ``pow(-9, 0.5)`` επιστρέφει μια τιμή κοντά στο ``3j``."
+"παράδειγμα, ``pow(-9, 0.5)`` επιστρέφει μια τιμή κοντά στο ``3j``. Ενώ, για μια "
+"αρνητική βάση τύπου :class:`int` ή :class:`float` με αναπόσπαστο εκθέτη, παραδίδεται ένα "
+"αποτέλεσμα float. Για παράδειγμα, το ``pow(-9, 2.0)`` επιστρέφει το ``81.0``."
 
 #: library/functions.rst:1517
 msgid ""
@@ -2941,6 +3015,10 @@ msgid ""
 ">>> 23 * 38 % 97 == 1\n"
 "True"
 msgstr ""
+">>> pow(38, -1, mod=97)\n"
+"23\n"
+">>> 23 * 38 % 97 == 1\n"
+"True"
 
 #: library/functions.rst:1530
 msgid ""
@@ -3046,6 +3124,20 @@ msgid ""
 "\n"
 "    x = property(getx, setx, delx, \"I'm the 'x' property.\")"
 msgstr ""
+"class C:\n"
+"    def __init__(self):\n"
+"        self._x = None\n"
+"\n"
+"    def getx(self):\n"
+"        return self._x\n"
+"\n"
+"    def setx(self, value):\n"
+"        self._x = value\n"
+"\n"
+"    def delx(self):\n"
+"        del self._x\n"
+"\n"
+"    x = property(getx, setx, delx, \"I'm the 'x' property.\")"
 
 #: library/functions.rst:1590
 msgid ""
@@ -3078,6 +3170,14 @@ msgid ""
 "        \"\"\"Get the current voltage.\"\"\"\n"
 "        return self._voltage"
 msgstr ""
+"class Parrot:\n"
+"    def __init__(self):\n"
+"        self._voltage = 100000\n"
+"\n"
+"    @property\n"
+"    def voltage(self):\n"
+"        \"\"\"Get the current voltage.\"\"\"\n"
+"        return self._voltage"
 
 #: library/functions.rst:1606
 msgid ""
@@ -3120,6 +3220,22 @@ msgid ""
 "    def x(self):\n"
 "        del self._x"
 msgstr ""
+"class C:\n"
+"    def __init__(self):\n"
+"        self._x = None\n"
+"\n"
+"    @property\n"
+"    def x(self):\n"
+"        \"\"\"I'm the 'x' property.\"\"\"\n"
+"        return self._x\n"
+"\n"
+"    @x.setter\n"
+"    def x(self, value):\n"
+"        self._x = value\n"
+"\n"
+"    @x.deleter\n"
+"    def x(self):\n"
+"        del self._x"
 
 #: library/functions.rst:1638
 msgid ""
@@ -3191,6 +3307,13 @@ msgid ""
 "   def __repr__(self):\n"
 "      return f\"Person('{self.name}', {self.age})\""
 msgstr ""
+"class Person:\n"
+"   def __init__(self, name, age):\n"
+"      self.name = name\n"
+"      self.age = age\n"
+"\n"
+"   def __repr__(self):\n"
+"      return f\"Person('{self.name}', {self.age})\""
 
 #: library/functions.rst:1684
 msgid ""
@@ -3455,6 +3578,9 @@ msgid ""
 "    @staticmethod\n"
 "    def f(arg1, arg2, argN): ..."
 msgstr ""
+"class C:\n"
+"    @staticmethod\n"
+"    def f(arg1, arg2, argN): ..."
 
 #: library/functions.rst:1821
 msgid ""
@@ -3465,7 +3591,6 @@ msgstr ""
 "ref:`function` για λεπτομέρειες."
 
 #: library/functions.rst:1824
-#, fuzzy
 msgid ""
 "A static method can be called either on the class (such as ``C.f()``) or on "
 "an instance (such as ``C().f()``). Moreover, the static method :term:"
@@ -3473,8 +3598,9 @@ msgid ""
 "(such as ``f()``)."
 msgstr ""
 "Μια στατική μέθοδος μπορεί να κληθεί είτε στην κλάση (όπως ``C.f()``) είτε "
-"σε ένα instance (όπως ``C().f()``). Επιπλέον, μπορούν να κληθούν ως "
-"κανονικές συναρτήσεις (όπως ``f()``)."
+"σε ένα instance (όπως ``C().f()``). Επιπλέον, η στατική μέθοδος :term:"
+"`descriptor` μπορεί επίσης να κληθεί, επομένως μπορεί να χρησιμοποιηθεί στον ορισμός της κλάσης "
+"(όπως ``f()``)."
 
 #: library/functions.rst:1829
 msgid ""
@@ -3509,6 +3635,11 @@ msgid ""
 "class C:\n"
 "    method = staticmethod(regular_function)"
 msgstr ""
+"def regular_function():\n"
+"    ...\n"
+"\n"
+"class C:\n"
+"    method = staticmethod(regular_function)"
 
 #: library/functions.rst:1845
 msgid "For more information on static methods, see :ref:`types`."
@@ -3517,7 +3648,6 @@ msgstr ""
 "`types`."
 
 #: library/functions.rst:1847
-#, fuzzy
 msgid ""
 "Static methods now inherit the method attributes (:attr:`~function."
 "__module__`, :attr:`~function.__name__`, :attr:`~function.__qualname__`, :"
@@ -3525,8 +3655,8 @@ msgid ""
 "``__wrapped__`` attribute, and are now callable as regular functions."
 msgstr ""
 "Οι στατικές μέθοδοι κληρονομούν πλέον τα χαρακτηριστικά της μεθόδου "
-"(``__module__``, ``__name__``, ``__qualname__``, ``__doc__`` και "
-"``__annotations__``), έχουν ένα νέο χαρακτηριστικό ``__wrapped__``, και "
+"(:attr:`~function.__module__`, :attr:`~function.__name__`, :attr:`~function.__qualname__`, :"
+"attr:`~function.__doc__` και :attr:`~function.__annotations__`),, έχουν ένα νέο χαρακτηριστικό ``__wrapped__``, και "
 "μπορούν πλέον να καλούνται ως κανονικές λειτουργίες."
 
 #: library/functions.rst:1863
@@ -3555,7 +3685,6 @@ msgstr ""
 "και η τιμή έναρξης δεν επιτρέπεται να είναι συμβολοσειρά."
 
 #: library/functions.rst:1875
-#, fuzzy
 msgid ""
 "For some use cases, there are good alternatives to :func:`sum`. The "
 "preferred, fast way to concatenate a sequence of strings is by calling ``''."
@@ -3601,25 +3730,23 @@ msgstr ""
 "αναζητηθεί.  Η αναζήτηση ξεκινά από την κλάση αμέσως μετά τον *type*."
 
 #: library/functions.rst:1899
-#, fuzzy
 msgid ""
 "For example, if :attr:`~type.__mro__` of *object_or_type* is ``D -> B -> C -"
 "> A -> object`` and the value of *type* is ``B``, then :func:`super` "
 "searches ``C -> A -> object``."
 msgstr ""
-"Για παράδειγμα, εάν :attr:`~class.__mro__` του *object_or_type* είναι ``D -> "
+"Για παράδειγμα, εάν :attr:`~type.__mro__` του *object_or_type* είναι ``D -> "
 "B -> C -> A -> object`` και η τιμή του *type* είναι ``B``, τότε η :func:"
 "`super` αναζητά ``C -> A -> object``."
 
 #: library/functions.rst:1903
-#, fuzzy
 msgid ""
 "The :attr:`~type.__mro__` attribute of the class corresponding to "
 "*object_or_type* lists the method resolution search order used by both :func:"
 "`getattr` and :func:`super`.  The attribute is dynamic and can change "
 "whenever the inheritance hierarchy is updated."
 msgstr ""
-"¨Το χαρακτηριστικό :attr:`~class.__mro__` του *object_or_type* παραθέτει τη "
+"Το χαρακτηριστικό :attr:`~type.__mro__` της κλάσης που αντιστοιχεί σε λίστες του *object_or_type* παραθέτει τη "
 "σειρά αναζήτησης ανάλυσης μεθόδου που χρησιμοποιείται και από τις :func:"
 "`getattr` και :func:`super`.  Το χαρακτηριστικό είναι δυναμικό και μπορεί να "
 "αλλάξει κάθε φορά που ενημερώνεται η ιεραρχία κληρονομικότητας."
@@ -3687,6 +3814,10 @@ msgid ""
 "        super().method(arg)    # This does the same thing as:\n"
 "                               # super(C, self).method(arg)"
 msgstr ""
+"class C(B):\n"
+"    def method(self, arg):\n"
+"        super().method(arg)    # Αυτό κάνει το ίδιο πράγμα όπως το:\n"
+"                               # super(C, self).method(arg)"
 
 #: library/functions.rst:1935
 msgid ""
@@ -3752,7 +3883,6 @@ msgstr ""
 "και :ref:`typesseq`."
 
 #: library/functions.rst:1973
-#, fuzzy
 msgid ""
 "With one argument, return the type of an *object*.  The return value is a "
 "type object and generally the same object as returned by :attr:`object."
@@ -3760,7 +3890,7 @@ msgid ""
 msgstr ""
 "Με ένα όρισμα, επιστρέψτε τον τύπο ενός *object*.  Η τιμή που επιστρέφεται "
 "είναι ένα αντικείμενο τύπου και γενικά το ίδιο αντικείμενο με αυτό που "
-"επιστρέφεται από το :attr:`object.__class__ <instance.__class__>`."
+"επιστρέφεται από το :attr:`object.__class__`."
 
 #: library/functions.rst:1977
 msgid ""
@@ -3771,7 +3901,6 @@ msgstr ""
 "τύπου ενός αντικειμένου, επειδή λαμβάνει υπόψη τις υποκλάσεις."
 
 #: library/functions.rst:1980
-#, fuzzy
 msgid ""
 "With three arguments, return a new type object.  This is essentially a "
 "dynamic form of the :keyword:`class` statement. The *name* string is the "
@@ -3785,29 +3914,30 @@ msgid ""
 msgstr ""
 "Με τρία ορίσματα, επιστρέφει ένα αντικείμενο νέου τύπου.  Αυτή είναι "
 "ουσιαστικά μια δυναμική μορφή της δήλωσης :keyword:`class`. Η συμβολοσειρά "
-"*name* είναι το όνομα της κλάσης και γίνεται το χαρακτηριστικό :attr:"
-"`~definition.__name__`. Η πλειάδα *bases* περιέχει τις βασικές κλάσεις και "
-"γίνεται το χαρακτηριστικό :attr:`~class.__bases__` ∙ αν είναι κενό, "
+"*name* είναι το όνομα της κλάσης και γίνεται το χαρακτηριστικό :attr:`~type.__name__`. "
+"Η πλειάδα *bases* περιέχει τις βασικές κλάσεις και "
+"γίνεται το χαρακτηριστικό :attr:`~type.__bases__` ∙ αν είναι κενό, "
 "προστίθεται το :class:`object`, η τελική βάση όλων των κλάσεων.  Το λεξικό "
 "*dict* περιέχει ορισμούς χαρακτηριστικών και μεθόδων για το σώμα της κλάσης∙ "
-"μπορεί να αντιγραφεί ή να προσαρμοστεί πριν γίνει το χαρακτηριστικό :attr:"
-"`~object.__dict__`. Οι ακόλουθες δύο προτάσεις δημιουργούν πανομοιότυπα "
-"αντικείμενα :class:`type`:"
+"μπορεί να αντιγραφεί ή να προσαρμοστεί πριν γίνει το χαρακτηριστικό :attr:`~type."
+"__dict__`. Οι ακόλουθες δύο προτάσεις δημιουργούν πανομοιότυπα "
+"αντικείμενα :class:`!type`"
 
 #: library/functions.rst:1995
 msgid "See also:"
-msgstr ""
+msgstr "Δείτε επίσης:"
 
 #: library/functions.rst:1997
 msgid ""
 ":ref:`Documentation on attributes and methods on classes <class-attrs-and-"
 "methods>`."
 msgstr ""
+":ref:`Τεκμηρίωση για χαρακτηριστικά και μεθόδους σε κλάσεις <class-attrs-and-"
+"methods>`."
 
 #: library/functions.rst:1998
-#, fuzzy
 msgid ":ref:`bltin-type-objects`"
-msgstr "Δείτε επίσης :ref:`bltin-type-objects`."
+msgstr ":ref:`bltin-type-objects`"
 
 #: library/functions.rst:2000
 msgid ""
@@ -3826,27 +3956,23 @@ msgid "See also :ref:`class-customization`."
 msgstr "Δείτε επίσης :ref:`class-customization`."
 
 #: library/functions.rst:2007
-#, fuzzy
 msgid ""
 "Subclasses of :class:`!type` which don't override ``type.__new__`` may no "
 "longer use the one-argument form to get the type of an object."
 msgstr ""
-"Οι υποκλάσης της :class:`type` που δεν αντικαθιστούν το ``type.__new__`` δεν "
+"Οι υποκλάσης της :class:`!type` που δεν αντικαθιστούν το ``type.__new__`` δεν "
 "μπορούν πλέον να χρησιμοποιούν τη φόρμα ενός επιχειρήματος για να λάβουν τον "
 "τύπο ενός αντικειμένου."
 
 #: library/functions.rst:2014
-#, fuzzy
 msgid ""
 "Return the :attr:`~object.__dict__` attribute for a module, class, instance, "
 "or any other object with a :attr:`!__dict__` attribute."
 msgstr ""
 "Επιστρέφει το χαρακτηριστικό :attr:`~object.__dict__` για ένα module, κλάση, "
-"instance, ή οποιοδήποτε άλλο αντικείμενο με ένα χαρακτηριστικό :attr:"
-"`~object.__dict__`."
+"στιγμιότυπο, ή οποιοδήποτε άλλο αντικείμενο με ένα χαρακτηριστικό :attr:`!__dict__`."
 
 #: library/functions.rst:2017
-#, fuzzy
 msgid ""
 "Objects such as modules and instances have an updateable :attr:`~object."
 "__dict__` attribute; however, other objects may have write restrictions on "
@@ -3855,8 +3981,8 @@ msgid ""
 msgstr ""
 "Αντικείμενα όπως modules και instances έχουν ένα χαρακτηριστικό :attr:"
 "`~object.__dict__` με δυνατότητα ενημέρωσης∙ ωστόσο, άλλα αντικείμενα μπορεί "
-"να έχουν περιορισμούς εγγραφής στα χαρακτηριστικά τους :attr:`~object."
-"__dict__` (για παράδειγμα, οι κλάσεις χρησιμοποιούν ένα :class:`types."
+"να έχουν περιορισμούς εγγραφής στα χαρακτηριστικά τους :attr:`!__dict__` "
+"(για παράδειγμα, οι κλάσεις χρησιμοποιούν ένα :class:`types."
 "MappingProxyType` για την αποτροπή άμεσων ενημερώσεων λεξικού)."
 
 #: library/functions.rst:2022
@@ -3901,6 +4027,12 @@ msgid ""
 "(2, 'spice')\n"
 "(3, 'everything nice')"
 msgstr ""
+">>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):\n"
+"...     print(item)\n"
+"...\n"
+"(1, 'sugar')\n"
+"(2, 'spice')\n"
+"(3, 'everything nice')"
 
 #: library/functions.rst:2044
 msgid ""
@@ -3959,6 +4091,8 @@ msgid ""
 ">>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))\n"
 "[(0, 'fee'), (1, 'fi'), (2, 'fo')]"
 msgstr ""
+">>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))\n"
+"[(0, 'fee'), (1, 'fi'), (2, 'fo')]"
 
 #: library/functions.rst:2067
 msgid ""
@@ -3976,6 +4110,8 @@ msgid ""
 ">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
 "[('a', 1), ('b', 2), ('c', 3)]"
 msgstr ""
+">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
+"[('a', 1), ('b', 2), ('c', 3)]"
 
 #: library/functions.rst:2074
 msgid ""
@@ -4051,6 +4187,13 @@ msgid ""
 ">>> x == list(x2) and y == list(y2)\n"
 "True"
 msgstr ""
+">>> x = [1, 2, 3]\n"
+">>> y = [4, 5, 6]\n"
+">>> list(zip(x, y))\n"
+"[(1, 4), (2, 5), (3, 6)]\n"
+">>> x2, y2 = zip(*zip(x, y))\n"
+">>> x == list(x2) and y == list(y2)\n"
+"True"
 
 #: library/functions.rst:2122
 msgid "Added the ``strict`` argument."
@@ -4138,7 +4281,7 @@ msgstr ""
 
 #: library/functions.rst:2167
 msgid "spam = __import__('spam', globals(), locals(), [], 0)"
-msgstr ""
+msgstr "spam = __import__('spam', globals(), locals(), [], 0)"
 
 #: library/functions.rst:2169
 msgid "The statement ``import spam.ham`` results in this call::"
@@ -4146,7 +4289,7 @@ msgstr "Η δήλωση ``import spam.ham`` καταλήγει σε αυτήν �
 
 #: library/functions.rst:2171
 msgid "spam = __import__('spam.ham', globals(), locals(), [], 0)"
-msgstr ""
+msgstr "spam = __import__('spam.ham', globals(), locals(), [], 0)"
 
 #: library/functions.rst:2173
 msgid ""
@@ -4171,6 +4314,9 @@ msgid ""
 "eggs = _temp.eggs\n"
 "saus = _temp.sausage"
 msgstr ""
+"_temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], 0)\n"
+"eggs = _temp.eggs\n"
+"saus = _temp.sausage"
 
 #: library/functions.rst:2183
 msgid ""

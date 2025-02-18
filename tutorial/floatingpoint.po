@@ -19,7 +19,6 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #: tutorial/floatingpoint.rst:10
-#, fuzzy
 msgid "Floating-Point Arithmetic:  Issues and Limitations"
 msgstr "Αριθμητική Κινητής Υποδιαστολής:  Ζητήματα και Περιορισμοί"
 
@@ -62,7 +61,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:31
 msgid "0.3"
-msgstr ""
+msgstr "0.3"
 
 #: tutorial/floatingpoint.rst:37
 msgid "or, better, ::"
@@ -70,11 +69,11 @@ msgstr "ή, καλύτερα, ::"
 
 #: tutorial/floatingpoint.rst:35
 msgid "0.33"
-msgstr ""
+msgstr "0.33"
 
 #: tutorial/floatingpoint.rst:39
 msgid "0.333"
-msgstr ""
+msgstr "0.333"
 
 #: tutorial/floatingpoint.rst:41
 msgid ""
@@ -98,7 +97,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:49
 msgid "0.0001100110011001100110011001100110011001100110011..."
-msgstr ""
+msgstr "0.0001100110011001100110011001100110011001100110011..."
 
 #: tutorial/floatingpoint.rst:51
 msgid ""
@@ -136,6 +135,8 @@ msgid ""
 ">>> 0.1\n"
 "0.1000000000000000055511151231257827021181583404541015625"
 msgstr ""
+">>> 0.1\n"
+"0.1000000000000000055511151231257827021181583404541015625"
 
 #: tutorial/floatingpoint.rst:67
 msgid ""
@@ -151,6 +152,8 @@ msgid ""
 ">>> 1 / 10\n"
 "0.1"
 msgstr ""
+">>> 1 / 10\n"
+"0.1"
 
 #: tutorial/floatingpoint.rst:75
 msgid ""
@@ -193,7 +196,6 @@ msgstr ""
 "επιλέξει το συντομότερο από αυτά και απλά εμφανίζει το ``0.1``."
 
 #: tutorial/floatingpoint.rst:91
-#, fuzzy
 msgid ""
 "Note that this is in the very nature of binary floating point: this is not a "
 "bug in Python, and it is not a bug in your code either.  You'll see the same "
@@ -228,6 +230,14 @@ msgid ""
 ">>> repr(math.pi)\n"
 "'3.141592653589793'"
 msgstr ""
+">>> format(math.pi, '.12g')  # δίνει 12 δεδκαδικά ψηφία\n"
+"'3.14159265359'\n"
+"\n"
+">>> format(math.pi, '.2f')   # δίνει 2 ψηφία μετά την υποδιαστολή\n"
+"'3.14'\n"
+"\n"
+">>> repr(math.pi)\n"
+"'3.141592653589793'"
 
 #: tutorial/floatingpoint.rst:111
 msgid ""
@@ -252,6 +262,8 @@ msgid ""
 ">>> 0.1 + 0.1 + 0.1 == 0.3\n"
 "False"
 msgstr ""
+">>> 0.1 + 0.1 + 0.1 == 0.3\n"
+"False"
 
 #: tutorial/floatingpoint.rst:122
 msgid ""
@@ -268,6 +280,8 @@ msgid ""
 ">>> round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)\n"
 "False"
 msgstr ""
+">>> round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)\n"
+"False"
 
 #: tutorial/floatingpoint.rst:131
 msgid ""
@@ -283,6 +297,8 @@ msgid ""
 ">>> math.isclose(0.1 + 0.1 + 0.1, 0.3)\n"
 "True"
 msgstr ""
+">>> math.isclose(0.1 + 0.1 + 0.1, 0.3)\n"
+"True"
 
 #: tutorial/floatingpoint.rst:139
 msgid ""
@@ -297,9 +313,10 @@ msgid ""
 ">>> round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)\n"
 "True"
 msgstr ""
+">>> round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)\n"
+"True"
 
 #: tutorial/floatingpoint.rst:147
-#, fuzzy
 msgid ""
 "Binary floating-point arithmetic holds many surprises like this.  The "
 "problem with \"0.1\" is explained in precise detail below, in the "
@@ -321,7 +338,6 @@ msgstr ""
 "κοινών εκπλήξεων."
 
 #: tutorial/floatingpoint.rst:156
-#, fuzzy
 msgid ""
 "As that says near the end, \"there are no easy answers.\"  Still, don't be "
 "unduly wary of floating point!  The errors in Python float operations are "
@@ -404,6 +420,9 @@ msgid ""
 ">>> x.as_integer_ratio()\n"
 "(3537115888337719, 1125899906842624)"
 msgstr ""
+">>> x = 3.14159\n"
+">>> x.as_integer_ratio()\n"
+"(3537115888337719, 1125899906842624)"
 
 #: tutorial/floatingpoint.rst:192
 msgid ""
@@ -418,6 +437,8 @@ msgid ""
 ">>> x == 3537115888337719 / 1125899906842624\n"
 "True"
 msgstr ""
+">>> x == 3537115888337719 / 1125899906842624\n"
+"True"
 
 #: tutorial/floatingpoint.rst:200
 msgid ""
@@ -432,6 +453,8 @@ msgid ""
 ">>> x.hex()\n"
 "'0x1.921f9f01b866ep+1'"
 msgstr ""
+">>> x.hex()\n"
+"'0x1.921f9f01b866ep+1'"
 
 #: tutorial/floatingpoint.rst:208
 msgid ""
@@ -446,6 +469,8 @@ msgid ""
 ">>> x == float.fromhex('0x1.921f9f01b866ep+1')\n"
 "True"
 msgstr ""
+">>> x == float.fromhex('0x1.921f9f01b866ep+1')\n"
+"True"
 
 #: tutorial/floatingpoint.rst:216
 msgid ""
@@ -481,9 +506,12 @@ msgid ""
 ">>> sum([0.1] * 10) == 1.0\n"
 "True"
 msgstr ""
+">>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0\n"
+"False\n"
+">>> sum([0.1] * 10) == 1.0\n"
+"True"
 
 #: tutorial/floatingpoint.rst:233
-#, fuzzy
 msgid ""
 "The :func:`math.fsum` goes further and tracks all of the \"lost digits\" as "
 "values are added onto a running total so that the result has only a single "
@@ -491,7 +519,7 @@ msgid ""
 "uncommon cases where large magnitude inputs mostly cancel each other out "
 "leaving a final sum near zero:"
 msgstr ""
-"Το :func:`math.fsum()` πηγαίνει πιο μακριά και παρακολουθεί όλα τα \"χαμένα "
+"Το :func:`math.fsum` πηγαίνει πιο μακριά και παρακολουθεί όλα τα \"χαμένα "
 "ψηφία\" καθώς οι τιμές προστίθενται σε ένα τρέχον σύνολο, έτσι ώστε το "
 "αποτέλεσμα να έχει μόνο μία στρογγυλοποίηση.  Αυτό είναι πιο αργό από το :"
 "func:`sum` αλλά θα είναι πιο ακριβές σε ασυνήθιστες περιπτώσεις όπου οι "
@@ -518,6 +546,23 @@ msgid ""
 "digits!\n"
 "-0.0051575902860057365"
 msgstr ""
+">>> arr = [-0.10430216751806065, -266310978.67179024, 143401161448607.16,\n"
+"...        -143401161400469.7, 266262841.31058735, -0.003244936839808227]\n"
+">>> float(sum(map(Fraction, arr)))   # Ακριβής άθροισε με απλή στρογγυλοποίηση\n"
+"8.042173697819788e-13\n"
+">>> math.fsum(arr)                   # Ενιαία στρογγυλοποίηση\n"
+"8.042173697819788e-13\n"
+">>> sum(arr)                         # Πολλαπλές στρογγυλοποιήσεις με εκτεταμένη "
+"ακρίβεια\n"
+"8.042178034628478e-13\n"
+">>> total = 0.0\n"
+">>> for x in arr:\n"
+"...     total += x                   # Πολλαπλές στρογγυλοποιήσεις με τυπική "
+"ακρίβεια\n"
+"...\n"
+">>> total                            # Η ευθεία προσθήκη δεν έχει σωστά ψηφία "
+"ψηφία!\n"
+"-0.0051575902860057365"
 
 #: tutorial/floatingpoint.rst:260
 msgid "Representation Error"
@@ -569,7 +614,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:280
 msgid "1 / 10 ~= J / (2**N)"
-msgstr ""
+msgstr "1 / 10 ~= J / (2**N)"
 
 #: tutorial/floatingpoint.rst:282
 msgid "as ::"
@@ -577,7 +622,7 @@ msgstr "ως ::"
 
 #: tutorial/floatingpoint.rst:284
 msgid "J ~= 2**N / 10"
-msgstr ""
+msgstr "J ~= 2**N / 10"
 
 #: tutorial/floatingpoint.rst:286
 msgid ""
@@ -592,6 +637,8 @@ msgid ""
 ">>> 2**52 <=  2**56 // 10  < 2**53\n"
 "True"
 msgstr ""
+">>> 2**52 <=  2**56 // 10  < 2**53\n"
+"True"
 
 #: tutorial/floatingpoint.rst:294
 msgid ""
@@ -608,6 +655,9 @@ msgid ""
 ">>> r\n"
 "6"
 msgstr ""
+">>> q, r = divmod(2**56, 10)\n"
+">>> r\n"
+"6"
 
 #: tutorial/floatingpoint.rst:303
 msgid ""
@@ -622,6 +672,8 @@ msgid ""
 ">>> q+1\n"
 "7205759403792794"
 msgstr ""
+">>> q+1\n"
+"7205759403792794"
 
 #: tutorial/floatingpoint.rst:313
 msgid ""
@@ -633,7 +685,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:316
 msgid "7205759403792794 / 2 ** 56"
-msgstr ""
+msgstr "7205759403792794 / 2 ** 56"
 
 #: tutorial/floatingpoint.rst:318
 msgid ""
@@ -643,7 +695,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:320
 msgid "3602879701896397 / 2 ** 55"
-msgstr ""
+msgstr "3602879701896397 / 2 ** 55"
 
 #: tutorial/floatingpoint.rst:322
 msgid ""
@@ -670,6 +722,8 @@ msgid ""
 ">>> 0.1 * 2 ** 55\n"
 "3602879701896397.0"
 msgstr ""
+">>> 0.1 * 2 ** 55\n"
+"3602879701896397.0"
 
 #: tutorial/floatingpoint.rst:334
 msgid ""
@@ -684,6 +738,8 @@ msgid ""
 ">>> 3602879701896397 * 10 ** 55 // 2 ** 55\n"
 "1000000000000000055511151231257827021181583404541015625"
 msgstr ""
+">>> 3602879701896397 * 10 ** 55 // 2 ** 55\n"
+"1000000000000000055511151231257827021181583404541015625"
 
 #: tutorial/floatingpoint.rst:342
 msgid ""
@@ -704,6 +760,8 @@ msgid ""
 ">>> format(0.1, '.17f')\n"
 "'0.10000000000000001'"
 msgstr ""
+">>> format(0.1, '.17f')\n"
+"'0.10000000000000001'"
 
 #: tutorial/floatingpoint.rst:352
 msgid ""
@@ -729,3 +787,17 @@ msgid ""
 ">>> format(Decimal.from_float(0.1), '.17')\n"
 "'0.10000000000000001'"
 msgstr ""
+">>> from decimal import Decimal\n"
+">>> from fractions import Fraction\n"
+"\n"
+">>> Fraction.from_float(0.1)\n"
+"Fraction(3602879701896397, 36028797018963968)\n"
+"\n"
+">>> (0.1).as_integer_ratio()\n"
+"(3602879701896397, 36028797018963968)\n"
+"\n"
+">>> Decimal.from_float(0.1)\n"
+"Decimal('0.1000000000000000055511151231257827021181583404541015625')\n"
+"\n"
+">>> format(Decimal.from_float(0.1), '.17')\n"
+"'0.10000000000000001'"

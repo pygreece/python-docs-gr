@@ -255,7 +255,6 @@ msgstr ""
 "παραδείγματα."
 
 #: reference/executionmodel.rst:136
-#, fuzzy
 msgid ""
 "If the :keyword:`global` statement occurs within a block, all uses of the "
 "names specified in the statement refer to the bindings of those names in the "
@@ -274,9 +273,10 @@ msgstr ""
 "δηλαδή τον χώρο ονομάτων του module που περιέχει το μπλοκ κώδικα, και στη "
 "συνέχεια στο χώρο ονομάτων των builtins, τον χώρο ονομάτων του module :mod:"
 "`builtins`. Ο καθολικός χώρος ονομάτων αναζητείται πρώτος. Αν τα ονόματα δεν "
-"βρεθούν εκεί, αναζητούνται στον χώρο ονομάτων των builtins. Η δήλωση :"
-"keyword:`!global` πρέπει να προηγείται όλων των χρήσεων των καταγεγραμμένων "
-"ονομάτων."
+"βρεθούν εκεί, γίνεται αναζήτηση του ενσωματωμένου χώρου ονομάτων. Εάν τα ονόματα "
+"δεν βρίσκονται επίσης στον ενσωματωμένο χώρο ονομάτων, δημιουργούνται νέες μεταβλητές "
+"στον καθολικό χώρο ονομάτων. Η καθολική δήλωση πρέπει να προηγείται όλων των χρήσεων των "
+"ονομάτων που αναφέρονται."
 
 #: reference/executionmodel.rst:146
 msgid ""
@@ -347,6 +347,9 @@ msgid ""
 "    a = 42\n"
 "    b = list(a + i for i in range(10))"
 msgstr ""
+"class A:\n"
+"    a = 42\n"
+"    b = list(a + i for i in range(10))"
 
 #: reference/executionmodel.rst:180
 msgid "However, the following will succeed::"
@@ -360,6 +363,11 @@ msgid ""
 "\n"
 "print(A.Alias.__value__)  # <type 'A.Nested'>"
 msgstr ""
+"class A:\n"
+"    type Alias = Nested\n"
+"    class Nested: pass\n"
+"\n"
+"print(A.Alias.__value__)  # <type 'A.Nested'>"
 
 #: reference/executionmodel.rst:191
 msgid "Annotation scopes"
@@ -474,7 +482,6 @@ msgstr ""
 "να εμφανιστεί μέσα σε πεδία σημειώσεων δεν μπορεί να εισαγάγει νέα ονόματα."
 
 #: reference/executionmodel.rst:227
-#, fuzzy
 msgid ""
 "While annotation scopes have an internal name, that name is not reflected in "
 "the :term:`qualified name` of objects defined within the scope. Instead, "
@@ -482,8 +489,8 @@ msgid ""
 "were defined in the enclosing scope."
 msgstr ""
 "Ενώ τα πεδία σημειογραφίας έχουν ένα εσωτερικό όνομα, αυτό το όνομα δεν "
-"αντικατοπτρίζεται στο :term:`__qualname__ <qualified name>` των αντικειμένων "
-"που ορίζονται μέσα στο πεδίο.Αντίθετα, το :attr:`!__qualname__` αυτών των "
+"αντικατοπτρίζεται στο :term:`qualified name` των αντικειμένων "
+"που ορίζονται μέσα στο πεδίο.Αντίθετα, το :attr:`~definition.__qualname__` αυτών των "
 "αντικειμένων είναι σαν το αντικείμενο να είχε οριστεί στο περιβάλλων πεδίο."
 
 #: reference/executionmodel.rst:232
@@ -530,6 +537,17 @@ msgid ""
 "  ...\n"
 "ZeroDivisionError: division by zero"
 msgstr ""
+">>> type Alias = 1/0\n"
+">>> Alias.__value__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero\n"
+">>> def func[T: 1/0](): pass\n"
+">>> T = func.__type_params__[0]\n"
+">>> T.__bound__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero"
 
 #: reference/executionmodel.rst:263
 msgid ""
@@ -559,9 +577,13 @@ msgid ""
 "type Parenthesized = tuple[Literal[\"(\"], Expr, Literal[\")\"]]\n"
 "type Expr = SimpleExpr | tuple[SimpleExpr, Literal[\"+\", \"-\"], Expr]"
 msgstr ""
+"from typing import Literal\n"
+"\n"
+"type SimpleExpr = int | Parenthesized\n"
+"type Parenthesized = tuple[Literal[\"(\"], Expr, Literal[\")\"]]\n"
+"type Expr = SimpleExpr | tuple[SimpleExpr, Literal[\"+\", \"-\"], Expr]"
 
 #: reference/executionmodel.rst:277
-#, fuzzy
 msgid ""
 "Lazily evaluated values are evaluated in :ref:`annotation scope <annotation-"
 "scopes>`, which means that names that appear inside the lazily evaluated "
@@ -629,6 +651,11 @@ msgid ""
 "i = 42\n"
 "f()"
 msgstr ""
+"i = 10\n"
+"def f():\n"
+"    print(i)\n"
+"i = 42\n"
+"f()"
 
 #: reference/executionmodel.rst:322
 msgid ""

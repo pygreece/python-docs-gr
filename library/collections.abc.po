@@ -18,9 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/collections.abc.rst:2
-#, fuzzy
 msgid ":mod:`!collections.abc` --- Abstract Base Classes for Containers"
-msgstr ":mod:`collections.abc` --- Αφηρημένες Βασικές Κλάσεις για Containers"
+msgstr ":mod:`!collections.abc` --- Αφηρημένες Βασικές Κλάσεις για Containers"
 
 #: library/collections.abc.rst:10
 msgid "Formerly, this module was part of the :mod:`collections` module."
@@ -72,6 +71,12 @@ msgid ""
 "    def __len__(self):  ...             # Required abstract method\n"
 "    def count(self, value): ...         # Optionally override a mixin method"
 msgstr ""
+"class C(Sequence):                      # Άμεση κληρονομικότητα\n"
+"    def __init__(self): ...             # Επιπλεόν μέθοδος δεν απαιτείται από το "
+"ABC\n"
+"    def __getitem__(self, index):  ...  # Απαιτούμενη αφηρημένη μέθοδος\n"
+"    def __len__(self):  ...             # Απαιτούμενη αφηρημένη μέθοδος\n"
+"    def count(self, value): ...         # παρακάμπτει προαιρετικά μια μέθοδο mixin"
 
 #: library/collections.abc.rst:43
 msgid ""
@@ -80,6 +85,10 @@ msgid ""
 ">>> isinstance(C(), Sequence)\n"
 "True"
 msgstr ""
+">>> issubclass(C, Sequence)\n"
+"True\n"
+">>> isinstance(C(), Sequence)\n"
+"True"
 
 #: library/collections.abc.rst:50
 msgid ""
@@ -110,6 +119,15 @@ msgid ""
 "\n"
 "Sequence.register(D)                     # Register instead of inherit"
 msgstr ""
+"class D:                                 # Χωρίς κληρονομικότητα\n"
+"    def __init__(self): ...              # Επιπλεόν μέθοδος δεν απαιτείται από το "
+"ABC\n"
+"    def __getitem__(self, index):  ...   # Αφηρημένη μέθοδος\n"
+"    def __len__(self):  ...              # Αφηρημένη μέθοδος\n"
+"    def count(self, value): ...          # Mixin μέθοδος\n"
+"    def index(self, value): ...          # Mixin μέθοδος\n"
+"\n"
+"Sequence.register(D)                     # Εγγράφη αντί για κληρονομικότητα"
 
 #: library/collections.abc.rst:69
 msgid ""
@@ -118,6 +136,10 @@ msgid ""
 ">>> isinstance(D(), Sequence)\n"
 "True"
 msgstr ""
+">>> issubclass(D, Sequence)\n"
+"True\n"
+">>> isinstance(D(), Sequence)\n"
+"True"
 
 #: library/collections.abc.rst:76
 msgid ""
@@ -148,6 +170,9 @@ msgid ""
 "    def __iter__(self): ...\n"
 "    def __next__(self): ..."
 msgstr ""
+"class E:\n"
+"    def __iter__(self): ...\n"
+"    def __next__(self): ..."
 
 #: library/collections.abc.rst:92
 msgid ""
@@ -156,6 +181,10 @@ msgid ""
 ">>> isinstance(E(), Iterable)\n"
 "True"
 msgstr ""
+">>> issubclass(E, Iterable)\n"
+"True\n"
+">>> isinstance(E(), Iterable)\n"
+"True"
 
 #: library/collections.abc.rst:99
 msgid ""
@@ -351,14 +380,14 @@ msgid ":class:`Collection`"
 msgstr ":class:`Collection`"
 
 #: library/collections.abc.rst:147
-#, fuzzy
 msgid ""
 "``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
 "``__and__``, ``__or__``, ``__sub__``, ``__rsub__``, ``__xor__``, "
 "``__rxor__`` and ``isdisjoint``"
 msgstr ""
 "``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
-"``__and__``, ``__or__``, ``__sub__``, ``__xor__``, και ``isdisjoint``"
+"``__and__``, ``__or__``, ``__sub__``, ``__rsub__``, ``__xor__``, "
+"``__rxor__`` και ``isdisjoint``"
 
 #: library/collections.abc.rst:152
 msgid ":class:`MutableSet`"
@@ -419,9 +448,8 @@ msgid ":class:`Sized`"
 msgstr ":class:`Sized`"
 
 #: library/collections.abc.rst:169
-#, fuzzy
 msgid "``__init__``, ``__len__`` and ``__repr__``"
-msgstr "``__getitem__``, ``__iter__``, ``__len__``"
+msgstr "``__init__``, ``__len__`` and ``__repr__``"
 
 #: library/collections.abc.rst:170
 msgid ":class:`ItemsView`"
@@ -569,6 +597,8 @@ msgid ""
 "See :ref:`annotating-callables` for details on how to use :class:`!Callable` "
 "in type annotations."
 msgstr ""
+"Ανατρέξτε στο :ref:`annotating-calables` "
+"για λεπτομέρειες σχετικά με τον τρόπο χρήσης του :class:`!Callable` σε τύπους annotations."
 
 #: library/collections.abc.rst:225
 msgid "ABC for classes that provide the :meth:`~container.__iter__` method."
@@ -626,6 +656,8 @@ msgid ""
 "See :ref:`annotating-generators-and-coroutines` for details on using :class:"
 "`!Generator` in type annotations."
 msgstr ""
+"Δείτε. :ref:`annotating-generators-and-coroutines` "
+"για λεπτομέρειες σχετικά με τη χρήση του :class:`!Generator` σε τύπους annotations."
 
 #: library/collections.abc.rst:269
 msgid "ABCs for read-only and mutable :term:`sequences <sequence>`."
@@ -752,6 +784,9 @@ msgid ""
 "`!Coroutine` in type annotations. The variance and order of type parameters "
 "correspond to those of :class:`Generator`."
 msgstr ""
+"Βλ. :ref:`annotating-generators-and-coroutines` για λεπτομέρειες "
+"σχετικά με τη χρήση της :class:`!Coroutine` σε σχολιασμούς τύπου. "
+"Η διακύμανση και η σειρά των παραμέτρων τύπου αντιστοιχούν σε εκείνες της :class:`Generator`.
 
 #: library/collections.abc.rst:350
 msgid ""
@@ -782,6 +817,8 @@ msgid ""
 "See :ref:`annotating-generators-and-coroutines` for details on using :class:"
 "`!AsyncGenerator` in type annotations."
 msgstr ""
+"Δείτε :ref:`annotating-generators-and-coroutines` "
+"για λεπτομέρειες σχετικά με τη χρήση του :class:`!AsyncGenerator` σε σχολιασμούς τύπου."
 
 #: library/collections.abc.rst:374
 msgid ""
@@ -809,6 +846,9 @@ msgid ""
 "if isinstance(myvar, collections.abc.Sized):\n"
 "    size = len(myvar)"
 msgstr ""
+"size = None\n"
+"if isinstance(myvar, collections.abc.Sized):\n"
+"    size = len(myvar)"
 
 #: library/collections.abc.rst:389
 msgid ""
@@ -852,6 +892,28 @@ msgid ""
 "overlap = s1 & s2            # The __and__() method is supported "
 "automatically"
 msgstr ""
+"class ListBasedSet(collections.abc.Set):\n"
+"    ''' Alternate set implementation favoring space over speed\n"
+"        and not requiring the set elements to be hashable. '''\n"
+"    def __init__(self, iterable):\n"
+"        self.elements = lst = []\n"
+"        for value in iterable:\n"
+"            if value not in lst:\n"
+"                lst.append(value)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return iter(self.elements)\n"
+"\n"
+"    def __contains__(self, value):\n"
+"        return value in self.elements\n"
+"\n"
+"    def __len__(self):\n"
+"        return len(self.elements)\n"
+"\n"
+"s1 = ListBasedSet('abcdef')\n"
+"s2 = ListBasedSet('defghi')\n"
+"overlap = s1 & s2            # Η __and__() μέθοδος υποστηρίζεται "
+"automatically"
 
 #: library/collections.abc.rst:418
 msgid "Notes on using :class:`Set` and :class:`MutableSet` as a mixin:"

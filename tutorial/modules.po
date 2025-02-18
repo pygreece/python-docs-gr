@@ -1145,7 +1145,6 @@ msgid "Packages in Multiple Directories"
 msgstr "Πακέτα σε Πολλαπλούς Καταλόγους"
 
 #: tutorial/modules.rst:588
-#, fuzzy
 msgid ""
 "Packages support one more special attribute, :attr:`~module.__path__`.  This "
 "is initialized to be a :term:`sequence` of strings containing the name of "
@@ -1153,8 +1152,8 @@ msgid ""
 "that file is executed.  This variable can be modified; doing so affects "
 "future searches for modules and subpackages contained in the package."
 msgstr ""
-"Τα πακέτα υποστηρίζουν ένα ακόμη ειδικό χαρακτηριστικό, :attr:`__path__`.  "
-"Αυτό έχει αρχικοποιηθεί ώστε να είναι μια λίστα που περιέχει το όνομα του "
+"Τα πακέτα υποστηρίζουν ένα ακόμη ειδικό χαρακτηριστικό, :attr:`~module.__path__`.  "
+"Αυτό έχει αρχικοποιηθεί ως μια :term:`ακολουθία` από συμβολοσειρές που περιέχει το όνομα του "
 "καταλόγου που το :file:`__init__.py` του πακέτου πριν από την εκτέλεση του "
 "κώδικα σε αυτό το αρχείο.  Αυτή η μεταβλητή μπορεί να τροποποιηθεί, αυτό "
 "επηρεάζει τις μελλοντικές αναζητήσεις για modules και υποπακέτα που "

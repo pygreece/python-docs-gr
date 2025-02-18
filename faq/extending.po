@@ -231,6 +231,9 @@ msgid ""
 "PyObject_CallMethod(PyObject *object, const char *method_name,\n"
 "                    const char *arg_format, ...);"
 msgstr ""
+"PyObject *\n"
+"PyObject_CallMethod(PyObject *object, const char *method_name,\n"
+"                    const char *arg_format, ...);"
 
 #: faq/extending.rst:121
 msgid ""
@@ -261,6 +264,13 @@ msgid ""
 "        Py_DECREF(res);\n"
 "}"
 msgstr ""
+"res = PyObject_CallMethod(f, \"seek\", \"(ii)\", 10, 0);\n"
+"if (res == NULL) {\n"
+"        ... an exception occurred ...\n"
+"}\n"
+"else {\n"
+"        Py_DECREF(res);\n"
+"}"
 
 #: faq/extending.rst:135
 msgid ""
@@ -311,6 +321,13 @@ msgid ""
 "foo\n"
 "hello world!"
 msgstr ""
+">>> import io, sys\n"
+">>> sys.stdout = io.StringIO()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(sys.stdout.getvalue())\n"
+"foo\n"
+"hello world!"
 
 #: faq/extending.rst:161
 msgid "A custom object to do the same would look like this:"
@@ -333,6 +350,20 @@ msgid ""
 "foo\n"
 "hello world!"
 msgstr ""
+">>> import io, sys\n"
+">>> class StdoutCatcher(io.TextIOBase):\n"
+"...     def __init__(self):\n"
+"...         self.data = []\n"
+"...     def write(self, stuff):\n"
+"...         self.data.append(stuff)\n"
+"...\n"
+">>> import sys\n"
+">>> sys.stdout = StdoutCatcher()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(''.join(sys.stdout.data))\n"
+"foo\n"
+"hello world!"
 
 #: faq/extending.rst:182
 msgid "How do I access a module written in Python from C?"
@@ -345,7 +376,7 @@ msgstr "Μπορείτε να λάβετε έναν δείκτη στο αντι
 
 #: faq/extending.rst:186
 msgid "module = PyImport_ImportModule(\"<modulename>\");"
-msgstr ""
+msgstr "module = PyImport_ImportModule(\"<modulename>\");"
 
 #: faq/extending.rst:188
 msgid ""
@@ -371,7 +402,7 @@ msgstr ""
 
 #: faq/extending.rst:197
 msgid "attr = PyObject_GetAttrString(module, \"<attrname>\");"
-msgstr ""
+msgstr "attr = PyObject_GetAttrString(module, \"<attrname>\");"
 
 #: faq/extending.rst:199
 msgid ""
@@ -441,7 +472,7 @@ msgstr "Στο αρχείο σας ``.gdbinit`` (ή διαδραστικά), π�
 
 #: faq/extending.rst:231
 msgid "br _PyImport_LoadDynamicModule"
-msgstr ""
+msgstr "br _PyImport_LoadDynamicModule"
 
 #: faq/extending.rst:235
 msgid "Then, when you run GDB:"
@@ -456,6 +487,12 @@ msgid ""
 "gdb) br myfunction.c:50\n"
 "gdb) continue"
 msgstr ""
+"$ gdb /local/bin/python\n"
+"gdb) run myscript.py\n"
+"gdb) continue # repeat until your extension is loaded\n"
+"gdb) finish   # so that your extension is loaded\n"
+"gdb) br myfunction.c:50\n"
+"gdb) continue"
 
 #: faq/extending.rst:247
 msgid ""
@@ -466,26 +503,22 @@ msgstr ""
 "ορισμένα αρχεία. Γιατί;"
 
 #: faq/extending.rst:249
-#, fuzzy
 msgid ""
 "Most packaged versions of Python omit some files required for compiling "
 "Python extensions."
 msgstr ""
-"Οι περισσότερες συσκευασμένες εκδόσεις της Python δεν περιλαμβάνουν τον "
-"κατάλογο :file:`/usr/lib/python2.{x}/config/`, ο οποίος περιέχει διάφορα "
-"αρχεία που απαιτούνται για τη μεταγλώττιση των επεκτάσεων Python."
+"Οι περισσότερες συσκευασμένες εκδόσεις της Python παραλείπουν ορισμένα αρχεία που απαιτούνται "
+"για τη μεταγλώττιση των επεκτάσεων Python."
 
 #: faq/extending.rst:252
-#, fuzzy
 msgid "For Red Hat, install the python3-devel RPM to get the necessary files."
 msgstr ""
-"Για το Red Hat, εγκαταστήστε το RPM της python-devel για να λάβετε τα "
+"Για το Red Hat, εγκαταστήστε το RPM της python3-devel για να λάβετε τα "
 "απαραίτητα αρχεία."
 
 #: faq/extending.rst:254
-#, fuzzy
 msgid "For Debian, run ``apt-get install python3-dev``."
-msgstr "Για το Debian, εκτελέστε το ``apt-get install python-dev``."
+msgstr "Για το Debian, εκτελέστε το ``apt-get install python3-dev``."
 
 #: faq/extending.rst:257
 msgid "How do I tell \"incomplete input\" from \"invalid input\"?"

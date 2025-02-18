@@ -175,6 +175,8 @@ msgid ""
 "complex(real=3, imag=5)\n"
 "complex(**{'real': 3, 'imag': 5})"
 msgstr ""
+"complex(real=3, imag=5)\n"
+"complex(**{'real': 3, 'imag': 5})"
 
 #: glossary.rst:75
 msgid ""
@@ -194,6 +196,8 @@ msgid ""
 "complex(3, 5)\n"
 "complex(*(3, 5))"
 msgstr ""
+"complex(3, 5)\n"
+"complex(*(3, 5))"
 
 #: glossary.rst:84
 msgid ""
@@ -291,7 +295,6 @@ msgstr ""
 "ασύγχρονου generator μέχρι την επόμενη :keyword:`yield` έκφραση."
 
 #: glossary.rst:120
-#, fuzzy
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "execution state (including local variables and pending try-statements).  "
@@ -300,7 +303,7 @@ msgid ""
 "off.  See :pep:`492` and :pep:`525`."
 msgstr ""
 "Κάθε :keyword:`yield` αναστέλλει προσωρινά την επεξεργασία, θυμάται την "
-"τοποθεσία της κατάστασης εκτέλεσης (συμπεριλαμβανομένων των τοπικών "
+"κατάσταση εκτέλεσης (συμπεριλαμβανομένων των τοπικών "
 "μεταβλητών και των δηλώσεων `try` σε εκκρεμότητα). Όταν ο *ασύγχρονος "
 "generator iterator* συνεχίσει αποτελεσματικά με άλλο αναμενόμενο που "
 "επιστρέφεται από :meth:`~object.__anext__ `, συνεχίζει από εκεί που "
@@ -542,7 +545,7 @@ msgstr ""
 
 #: glossary.rst:218
 msgid "callable(argument1, argument2, argumentN)"
-msgstr ""
+msgstr "callable(argument1, argument2, argumentN)"
 
 #: glossary.rst:220
 msgid ""
@@ -758,6 +761,13 @@ msgid ""
 "def f(arg):\n"
 "    ..."
 msgstr ""
+"def f(arg):\n"
+"    ...\n"
+"f = staticmethod(f)\n"
+"\n"
+"@staticmethod\n"
+"def f(arg):\n"
+"    ..."
 
 #: glossary.rst:311
 msgid ""
@@ -860,7 +870,6 @@ msgid "docstring"
 msgstr "docstring"
 
 #: glossary.rst:351
-#, fuzzy
 msgid ""
 "A string literal which appears as the first expression in a class, function "
 "or module.  While ignored when the suite is executed, it is recognized by "
@@ -870,8 +879,8 @@ msgid ""
 msgstr ""
 "Μια literal συμβολοσειρά που εμφανίζεται ως η πρώτη έκφραση σε μια κλάση, "
 "συνάρτηση ή module. Ενώ αγνοείται κατά την εκτέλεση της σουίτας, "
-"αναγνωρίζεται από τον μεταγλωττιστή και τοποθετείται στο χαρακτηριστικό :"
-"attr:`!__doc__` της κλάσης, της συνάρτησης ή του module που περικλείει.  "
+"αναγνωρίζεται από τον μεταγλωττιστή και τοποθετείται στο χαρακτηριστικό "
+":attr:`~definition.__doc__` της κλάσης, της συνάρτησης ή του module που περικλείει.  "
 "Δεδομένου ότι είναι διαθέσιμο μέσω ενδοσκόπησης, το κανονικό μέρος για την "
 "τεκμηρίωση του αντικειμένου."
 
@@ -1077,22 +1086,20 @@ msgstr ""
 "εισήχθη."
 
 #: glossary.rst:436
-#, fuzzy
 msgid ""
 "There are two types of finder: :term:`meta path finders <meta path finder>` "
 "for use with :data:`sys.meta_path`, and :term:`path entry finders <path "
 "entry finder>` for use with :data:`sys.path_hooks`."
 msgstr ""
-"Από την Python 3.3, υπάρχουν δύο τύποι finder: :term:`finders μετα διαδρομής "
+"Υπάρχουν δύο τύποι finder: :term:`finders μετα διαδρομής "
 "<meta path finder>` για χρήση με :data:`sys.meta_path`, και :term:`finders "
 "εισόδου διαδρομής <path entry finder>` για χρήση με :data:`sys.path_hooks`."
 
 #: glossary.rst:440
-#, fuzzy
 msgid ""
 "See :ref:`finders-and-loaders` and :mod:`importlib` for much more detail."
 msgstr ""
-"Βλ. :pep:`302`, :pep:`420` και :pep:`451` για περισσότερες λεπτομέρειες."
+"Βλ. :ref:`finders-and-loaders` και :mod:`importlib` για περισσότερες λεπτομέρειες."
 
 #: glossary.rst:441
 msgid "floor division"
@@ -1154,6 +1161,8 @@ msgid ""
 "def sum_two_numbers(a: int, b: int) -> int:\n"
 "   return a + b"
 msgstr ""
+"def sum_two_numbers(a: int, b: int) -> int:\n"
+"   return a + b"
 
 #: glossary.rst:466
 msgid "Function annotation syntax is explained in section :ref:`function`."
@@ -1199,6 +1208,9 @@ msgid ""
 ">>> __future__.division\n"
 "_Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)"
 msgstr ""
+">>> import __future__\n"
+">>> __future__.division\n"
+"_Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)"
 
 #: glossary.rst:485
 msgid "garbage collection"
@@ -1254,7 +1266,6 @@ msgid "An object created by a :term:`generator` function."
 msgstr "Ένα αντικείμενο που δημιουργείται από μια συνάρτηση :term:`generator`."
 
 #: glossary.rst:507
-#, fuzzy
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "execution state (including local variables and pending try-statements).  "
@@ -1262,7 +1273,7 @@ msgid ""
 "contrast to functions which start fresh on every invocation)."
 msgstr ""
 "Κάθε :keyword:`yield` αναστέλλει προσωρινά την επεξεργασία, θυμάται την "
-"τοποθεσία κατάστασης εκτέλεσης (συμπεριλαμβανομένων των τοπικών μεταβλητών "
+"κατάσταση εκτέλεσης (συμπεριλαμβανομένων των τοπικών μεταβλητών "
 "και των δηλώσεων δοκιμής σε εκκρεμότητα). Όταν ο *generator iterator* "
 "συνεχίσει, συνεχίζει από εκεί που σταμάτησε (σε αντίθεση με τις συναρτήσεις "
 "που ξεκινούν από την αρχή σε κάθε επίκληση)."
@@ -1288,6 +1299,8 @@ msgid ""
 ">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
 "285"
 msgstr ""
+">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
+"285"
 
 #: glossary.rst:523
 msgid "generic function"
@@ -1468,13 +1481,15 @@ msgstr ""
 
 #: glossary.rst:593
 msgid "immortal"
-msgstr ""
+msgstr "Αθάνατο"
 
 #: glossary.rst:595
 msgid ""
 "*Immortal objects* are a CPython implementation detail introduced in :pep:"
 "`683`."
 msgstr ""
+"*Αθάνατα αντικείμενα* είναι μια λεπτομέρεια υλοποίησης της CPython που εισήχθη στην "
+":pep:`683`."
 
 #: glossary.rst:598
 msgid ""
@@ -1482,6 +1497,9 @@ msgid ""
 "therefore it is never deallocated while the interpreter is running. For "
 "example, :const:`True` and :const:`None` are immortal in CPython."
 msgstr ""
+"Εάν ένα αντικείμενο είναι αθάνατο, ο :term:`πλήθος αναφοράς` του δεν τροποποιείται, και "
+"επομένως δεν εκχωρείται ποτέ ενώ εκτελείται ο διερμηνέας. Για παράδειγμα, "
+":const:`True` και :const:`None` είναι αθάνατα στην CPython."
 
 #: glossary.rst:601
 msgid "immutable"
@@ -1853,30 +1871,27 @@ msgid "loader"
 msgstr "loader"
 
 #: glossary.rst:751
-#, fuzzy
 msgid ""
 "An object that loads a module. It must define the :meth:`!exec_module` and :"
 "meth:`!create_module` methods to implement the :class:`~importlib.abc."
 "Loader` interface. A loader is typically returned by a :term:`finder`. See "
 "also:"
 msgstr ""
-"Ένα αντικείμενο που φορτώνει ένα module. Πρέπει να ορίσει μια μέθοδο με το "
-"όνομα :meth:`load_module`. Ένας loader συνήθως επιστρέφεται από έναν :term:"
-"`finder`. Βλ. :pep:`302` για λεπτομέρειες και :class:`importlib.abc.Loader` "
-"για μια :term:`abstract base class`."
+"Ένα αντικείμενο που φορτώνει ένα module. Πρέπει να ορίζει τις μεθόδους :meth:`!exec_module` και "
+":meth:`!create_module` για την υλοποίηση της διεπαφής :class:`~importlib.abc."
+"Loader`. Ένας loader συνήθως επιστρέφεται με ένα :term:`finder`. Δείτε επίσης:"
 
 #: glossary.rst:757
 msgid ":ref:`finders-and-loaders`"
-msgstr ""
+msgstr ":ref:`finders-and-loaders`"
 
 #: glossary.rst:758
 msgid ":class:`importlib.abc.Loader`"
-msgstr ""
+msgstr ":class:`importlib.abc.Loader`"
 
 #: glossary.rst:759
-#, fuzzy
 msgid ":pep:`302`"
-msgstr "Βλ. :pep:`1`."
+msgstr ":pep:`302`"
 
 #: glossary.rst:760
 msgid "locale encoding"
@@ -1903,10 +1918,9 @@ msgstr ""
 "κωδικοποίηση."
 
 #: glossary.rst:769
-#, fuzzy
 msgid ":func:`locale.getencoding` can be used to get the locale encoding."
 msgstr ""
-"``locale.getencoding()`` μπορεί να χρησιμοποιηθεί για την ανάκτηση της "
+":func:`locale.getencoding` μπορεί να χρησιμοποιηθεί για την ανάκτηση της "
 "τοπικής κωδικοποίησης."
 
 #: glossary.rst:771
@@ -2016,15 +2030,13 @@ msgid "method resolution order"
 msgstr "σειρά ανάλυσης μεθόδων"
 
 #: glossary.rst:814
-#, fuzzy
 msgid ""
 "Method Resolution Order is the order in which base classes are searched for "
 "a member during lookup. See :ref:`python_2.3_mro` for details of the "
 "algorithm used by the Python interpreter since the 2.3 release."
 msgstr ""
-"Η σειρά ανάλυσης μεθόδων είναι η σειρά με την οποία οι βασικές κλάσεις "
-"αναζητούνται για ένα μέλος κατά την αναζήτησης. Βλ. `The Python 2.3 Method "
-"Resolution Order <https://www.python.org/download/releases/2.3/mro/>`_ για "
+"Η Σειρά Ανάλυσης Μεθόδων είναι η σειρά με την οποία οι βασικές κλάσεις "
+"αναζητούνται για ένα μέλος κατά την αναζήτησης. Βλ. :ref:`python_2.3_mro` για "
 "λεπτομέρειες του αλγορίθμου που χρησιμοποιείται από τον διερμηνέα της Python "
 "από την έκδοση 2.3."
 
@@ -2061,9 +2073,8 @@ msgstr ""
 "`importlib.machinery.ModuleSpec`."
 
 #: glossary.rst:829
-#, fuzzy
 msgid "See also :ref:`module-specs`."
-msgstr "Βλ. επίσης :term:`module`."
+msgstr "Βλ. επίσης :ref:`module-specs`."
 
 #: glossary.rst:830
 msgid "MRO"
@@ -2119,6 +2130,12 @@ msgid ""
 ">>> isinstance(sys.float_info, tuple)   # kind of tuple\n"
 "True"
 msgstr ""
+">>> sys.float_info[1]                   # indexed access\n"
+"1024\n"
+">>> sys.float_info.max_exp              # named field access\n"
+"1024\n"
+">>> isinstance(sys.float_info, tuple)   # kind of tuple\n"
+"True"
 
 #: glossary.rst:854
 msgid ""
@@ -2170,13 +2187,12 @@ msgid "namespace package"
 msgstr "πακέτο namespace"
 
 #: glossary.rst:876
-#, fuzzy
 msgid ""
 "A :term:`package` which serves only as a container for subpackages. "
 "Namespace packages may have no physical representation, and specifically are "
 "not like a :term:`regular package` because they have no ``__init__.py`` file."
 msgstr ""
-"Ένα :pep:`420` :term:`package` που χρησιμεύει μόνο ως κοντέινερ για "
+"Ένα :term:`package` που χρησιμεύει μόνο ως κοντέινερ για "
 "υποπακέτα. Τα πακέτα χώρου ονομάτων μπορεί να μην έχουν φυσική αναπαράσταση "
 "και συγκεκριμένα να μην είναι σαν ένα :term:`regular package` επειδή δεν "
 "έχουν το ``__init__.py`` αρχείο."
@@ -2187,11 +2203,15 @@ msgid ""
 "common parent package. Otherwise, it is recommended to use a :term:`regular "
 "package`."
 msgstr ""
+"Τα πακέτα χώρου ονομάτων επιτρέπουν σε πολλά πακέτα με δυνατότητα εγκατάστασης μεμονωμένα "
+"να έχουν ένα κοινό γονικό πακέτο.  Διαφορετικά, συνίσταται η χρήση ενός :term:`κανονικού "
+"πακέτου`."
 
 #: glossary.rst:884
 msgid ""
 "For more information, see :pep:`420` and :ref:`reference-namespace-package`."
 msgstr ""
+"Για περισσότερς πληροφορίες, δείτε το :pep:`420` και το :ref:`reference-namespace-package`."
 
 #: glossary.rst:886
 msgid "See also :term:`module`."
@@ -2294,7 +2314,7 @@ msgstr ""
 
 #: glossary.rst:926
 msgid "def func(foo, bar=None): ..."
-msgstr ""
+msgstr "def func(foo, bar=None): ..."
 
 #: glossary.rst:930
 msgid ""
@@ -2310,7 +2330,7 @@ msgstr ""
 
 #: glossary.rst:935
 msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
-msgstr ""
+msgstr "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 
 #: glossary.rst:939
 msgid ""
@@ -2328,7 +2348,7 @@ msgstr ""
 
 #: glossary.rst:945
 msgid "def func(arg, *, kw_only1, kw_only2): ..."
-msgstr ""
+msgstr "def func(arg, *, kw_only1, kw_only2): ..."
 
 #: glossary.rst:947
 msgid ""
@@ -2346,7 +2366,7 @@ msgstr ""
 
 #: glossary.rst:953
 msgid "def func(*args, **kwargs): ..."
-msgstr ""
+msgstr "def func(*args, **kwargs): ..."
 
 #: glossary.rst:955
 msgid ""
@@ -2611,6 +2631,8 @@ msgid ""
 "for i in range(len(food)):\n"
 "    print(food[i])"
 msgstr ""
+"for i in range(len(food)):\n"
+"    print(food[i])"
 
 #: glossary.rst:1059
 msgid "As opposed to the cleaner, Pythonic method::"
@@ -2621,6 +2643,8 @@ msgid ""
 "for piece in food:\n"
 "    print(piece)"
 msgstr ""
+"for piece in food:\n"
+"    print(piece)"
 
 #: glossary.rst:1063
 msgid "qualified name"
@@ -2652,6 +2676,17 @@ msgid ""
 ">>> C.D.meth.__qualname__\n"
 "'C.D.meth'"
 msgstr ""
+">>> class C:\n"
+"...     class D:\n"
+"...         def meth(self):\n"
+"...             pass\n"
+"...\n"
+">>> C.__qualname__\n"
+"'C'\n"
+">>> C.D.__qualname__\n"
+"'C.D'\n"
+">>> C.D.meth.__qualname__\n"
+"'C.D.meth'"
 
 #: glossary.rst:1082
 msgid ""
@@ -2669,6 +2704,9 @@ msgid ""
 ">>> email.mime.text.__name__\n"
 "'email.mime.text'"
 msgstr ""
+">>> import email.mime.text\n"
+">>> email.mime.text.__name__\n"
+"'email.mime.text'"
 
 #: glossary.rst:1089
 msgid "reference count"
@@ -2732,7 +2770,6 @@ msgid "sequence"
 msgstr "ακολουθία"
 
 #: glossary.rst:1114
-#, fuzzy
 msgid ""
 "An :term:`iterable` which supports efficient element access using integer "
 "indices via the :meth:`~object.__getitem__` special method and defines a :"
@@ -2750,7 +2787,7 @@ msgstr ""
 "είναι :class:`list`, :class:`str`, :class:`tuple`, και :class:`bytes`. "
 "Σημειώστε ότι το :class:`dict` υποστηρίζει επίσης :meth:`~object."
 "__getitem__` και :meth:`!__len__`, αλλά θεωρείται αντιστοίχιση και όχι "
-"ακολουθία επειδή οι αναζητήσεις χρησιμοποιούν αυθαίρετα :term:`immutable` "
+"ακολουθία επειδή οι αναζητήσεις χρησιμοποιούν αυθαίρετα :term:`hashable` "
 "κλειδιά παρά ακέραιοι."
 
 #: glossary.rst:1123
@@ -2819,7 +2856,7 @@ msgstr ""
 
 #: glossary.rst:1148
 msgid "soft deprecated"
-msgstr ""
+msgstr "απαρχαιωμένη με ήπιο τρόπο"
 
 #: glossary.rst:1150
 msgid ""
@@ -2827,18 +2864,25 @@ msgid ""
 "already existing code to use it. The API remains documented and tested, but "
 "will not be enhanced further."
 msgstr ""
+"Ένα απαρχαιωμένο με ήπιο τρόπο API δεν θα πρέπει να χρησιμοποιείται σε νέο κώδικα, αλλά είναι "
+"ασφαλές σε ήδη υπάχοντα κώδικα να το χρησιμοποιεί. Το API παραμένει τεκμηριωμένο και δοκιμασμένο, αλλά "
+"δεν θα ενισχυθεί περαιτέρω."
 
 #: glossary.rst:1154
 msgid ""
 "Soft deprecation, unlike normal deprecation, does not plan on removing the "
 "API and will not emit warnings."
 msgstr ""
+"Η κατάργηση με ήπιο τρόπο, σε αντίθεση με την κανονική κατάργηση, δεν σχεδιάζει "
+"την κατάργηση του API και δεν θα εκπέμπει ειδοποιήσεις"
 
 #: glossary.rst:1157
 msgid ""
 "See `PEP 387: Soft Deprecation <https://peps.python.org/pep-0387/#soft-"
 "deprecation>`_."
 msgstr ""
+"Δείτε `PEP 387: Soft Deprecation <https://peps.python.org/pep-0387/#soft-"
+"deprecation>`_."
 
 #: glossary.rst:1159
 msgid "special method"
@@ -3003,15 +3047,14 @@ msgid "type"
 msgstr "τύπος"
 
 #: glossary.rst:1225
-#, fuzzy
 msgid ""
 "The type of a Python object determines what kind of object it is; every "
 "object has a type.  An object's type is accessible as its :attr:`~object."
 "__class__` attribute or can be retrieved with ``type(obj)``."
 msgstr ""
-"Ο τύπος ενός Python αντικειμένου καθορίζει τι είδους αντικείμενο είναι' κάθε "
+"Ο τύπος ενός Python αντικειμένου καθορίζει τι είδους αντικείμενο είναι∙ κάθε "
 "αντικείμενο έχει έναν τύπο. Ο τύπος ενός αντικειμένου είναι προσβάσιμος ως "
-"το χαρακτηριστικό :attr:`~instance.__class__` ή μπορεί να ανακτηθεί με "
+"το χαρακτηριστικό :attr:`~object.__class__` ή μπορεί να ανακτηθεί με "
 "``type(obj)``."
 
 #: glossary.rst:1229
@@ -3038,6 +3081,9 @@ msgid ""
 "        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
 "    pass"
 msgstr ""
+"def remove_gray_shades(\n"
+"        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
+"    pass"
 
 #: glossary.rst:1240
 msgid "could be made more readable like this::"
@@ -3050,6 +3096,10 @@ msgid ""
 "def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
 "    pass"
 msgstr ""
+"Color = tuple[int, int, int]\n"
+"\n"
+"def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
+"    pass"
 
 #: glossary.rst:1261
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
@@ -3127,6 +3177,8 @@ msgid ""
 "class C:\n"
 "    field: 'annotation'"
 msgstr ""
+"class C:\n"
+"    field: 'annotation'"
 
 #: glossary.rst:1278
 msgid ""
@@ -3139,7 +3191,7 @@ msgstr ""
 
 #: glossary.rst:1282
 msgid "count: int = 0"
-msgstr ""
+msgstr "count: int = 0"
 
 #: glossary.rst:1284
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."
