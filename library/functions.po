@@ -2828,7 +2828,7 @@ msgstr ""
 ">>> with open('spamspam.txt', 'w', opener=opener) as f:\n"
 "...     print('This will be written to somedir/spamspam.txt', file=f)\n"
 "...\n"
-">>> os.close(dir_fd)  # μην διαρρεύσετε τη περιγραφή του αρχείου"
+">>> os.close(dir_fd)  # don't leak a file descriptor"
 
 #: library/functions.rst:1432
 msgid ""
@@ -3827,7 +3827,7 @@ msgid ""
 msgstr ""
 "class C(B):\n"
 "    def method(self, arg):\n"
-"        super().method(arg)    # Αυτό κάνει το ίδιο πράγμα όπως το:\n"
+"        super().method(arg)    # This does the same thing as:\n"
 "                               # super(C, self).method(arg)"
 
 #: library/functions.rst:1935
