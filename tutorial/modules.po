@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-06-12 09:11+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -75,6 +75,26 @@ msgstr ""
 "αρχείο που ονομάζεται :file:`fibo.py` στον τρέχοντα κατάλογο με τα ακόλουθα "
 "περιεχόμενα::"
 
+#: tutorial/modules.rst:28
+msgid ""
+"# Fibonacci numbers module\n"
+"\n"
+"def fib(n):    # write Fibonacci series up to n\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        print(a, end=' ')\n"
+"        a, b = b, a+b\n"
+"    print()\n"
+"\n"
+"def fib2(n):   # return Fibonacci series up to n\n"
+"    result = []\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        result.append(a)\n"
+"        a, b = b, a+b\n"
+"    return result"
+msgstr ""
+
 #: tutorial/modules.rst:45
 msgid ""
 "Now enter the Python interpreter and import this module with the following "
@@ -82,6 +102,10 @@ msgid ""
 msgstr ""
 "Τώρα εισάγετε τον Python interpreter και εισάγετε αυτό το module με την "
 "ακόλουθη εντολή::"
+
+#: tutorial/modules.rst:48
+msgid ">>> import fibo"
+msgstr ""
 
 #: tutorial/modules.rst:50
 msgid ""
@@ -96,12 +120,29 @@ msgstr ""
 "εκεί. Χρησιμοποιώντας το όνομα του module μπορείτε να αποκτήσετε πρόσβαση "
 "στις λειτουργίες::"
 
+#: tutorial/modules.rst:55
+msgid ""
+">>> fibo.fib(1000)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n"
+">>> fibo.fib2(100)\n"
+"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n"
+">>> fibo.__name__\n"
+"'fibo'"
+msgstr ""
+
 #: tutorial/modules.rst:62
 msgid ""
 "If you intend to use a function often you can assign it to a local name::"
 msgstr ""
 "Εάν σκοπεύετε να χρησιμοποιείτε συχνά μια συνάρτηση, μπορείτε να την "
 "αντιστοιχίσετε σε ένα τοπικό όνομα::"
+
+#: tutorial/modules.rst:64
+msgid ""
+">>> fib = fibo.fib\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+msgstr ""
 
 #: tutorial/modules.rst:72
 msgid "More on Modules"
@@ -161,6 +202,13 @@ msgstr ""
 "ένα module απευθείας στον χώρο στα importing module's namespace.  Για "
 "παράδειγμα::"
 
+#: tutorial/modules.rst:94
+msgid ""
+">>> from fibo import fib, fib2\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+msgstr ""
+
 #: tutorial/modules.rst:98
 msgid ""
 "This does not introduce the module name from which the imports are taken in "
@@ -174,6 +222,13 @@ msgid "There is even a variant to import all names that a module defines::"
 msgstr ""
 "Υπάρχει ακόμη και μια παραλλαγή για την εισαγωγή όλων των ονομάτων που "
 "ορίζει μια ενότητα::"
+
+#: tutorial/modules.rst:103
+msgid ""
+">>> from fibo import *\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+msgstr ""
 
 #: tutorial/modules.rst:107
 msgid ""
@@ -207,6 +262,13 @@ msgstr ""
 "Εάν το όνομα του module ακολουθείται από :keyword:`!as`, τότε το όνομα που "
 "ακολουθεί :keyword:`!as` συνδέεται απευθείας με το εισαγόμενο module."
 
+#: tutorial/modules.rst:121
+msgid ""
+">>> import fibo as fib\n"
+">>> fib.fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+msgstr ""
+
 #: tutorial/modules.rst:125
 msgid ""
 "This is effectively importing the module in the same way that ``import "
@@ -221,6 +283,13 @@ msgid ""
 msgstr ""
 "Μπορεί επίσης να χρησιμοποιηθεί όταν χρησιμοποιείτε :keyword:`from` με "
 "παρόμοια εφέ::"
+
+#: tutorial/modules.rst:130
+msgid ""
+">>> from fibo import fib as fibonacci\n"
+">>> fibonacci(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+msgstr ""
 
 #: tutorial/modules.rst:137
 msgid ""
@@ -244,6 +313,10 @@ msgstr "Εκτέλεση modules ως scripts"
 msgid "When you run a Python module with ::"
 msgstr "Όταν εκτελείτε ένα Python module με::"
 
+#: tutorial/modules.rst:151
+msgid "python fibo.py <arguments>"
+msgstr ""
+
 #: tutorial/modules.rst:153
 msgid ""
 "the code in the module will be executed, just as if you imported it, but "
@@ -253,6 +326,13 @@ msgstr ""
 "ο κώδικας στο module θα εκτελεστεί, ακριβώς σαν να τον εισαγάγετε, αλλά με "
 "το ``name`` να έχει οριστεί σε ``\"__main__\"``.  Αυτό σημαίνει ότι "
 "προσθέτοντας αυτόν τον κώδικα στο τέλος του module σας::"
+
+#: tutorial/modules.rst:157
+msgid ""
+"if __name__ == \"__main__\":\n"
+"    import sys\n"
+"    fib(int(sys.argv[1]))"
+msgstr ""
 
 #: tutorial/modules.rst:161
 msgid ""
@@ -264,9 +344,21 @@ msgstr ""
 "που μπορεί να εισαχθεί, επειδή ο κώδικας που αναλύει την γραμμή εντολών "
 "εκτελείται μόνο εάν το module εκτελείται ως το \"main\" αρχείο:"
 
+#: tutorial/modules.rst:165
+msgid ""
+"$ python fibo.py 50\n"
+"0 1 1 2 3 5 8 13 21 34"
+msgstr ""
+
 #: tutorial/modules.rst:170
 msgid "If the module is imported, the code is not run::"
 msgstr "Εάν το module έχει εισαχθεί, ο κώδικας δεν εκτελείται::"
+
+#: tutorial/modules.rst:172
+msgid ""
+">>> import fibo\n"
+">>>"
+msgstr ""
 
 #: tutorial/modules.rst:175
 msgid ""
@@ -490,6 +582,19 @@ msgstr ""
 "της Python.  Οι μεταβλητές ``sys.ps1`` και ``sys.ps2`` ορίζουν τις "
 "συμβολοσειρές που χρησιμοποιούνται ως κύρια και δευτερεύοντα prompts::"
 
+#: tutorial/modules.rst:281
+msgid ""
+">>> import sys\n"
+">>> sys.ps1\n"
+"'>>> '\n"
+">>> sys.ps2\n"
+"'... '\n"
+">>> sys.ps1 = 'C> '\n"
+"C> print('Yuck!')\n"
+"Yuck!\n"
+"C>"
+msgstr ""
+
 #: tutorial/modules.rst:292
 msgid ""
 "These two variables are only defined if the interpreter is in interactive "
@@ -513,6 +618,12 @@ msgstr ""
 "δεν έχει οριστεί.  Μπορείτε να το τροποποιήσετε χρησιμοποιώντας τυπικές "
 "λειτουργίες λίστας::"
 
+#: tutorial/modules.rst:300
+msgid ""
+">>> import sys\n"
+">>> sys.path.append('/ufs/guido/lib/python')"
+msgstr ""
+
 #: tutorial/modules.rst:307
 msgid "The :func:`dir` Function"
 msgstr "Η συνάρτηση :func:`dir`"
@@ -525,12 +636,57 @@ msgstr ""
 "Η ενσωματωμένη συνάρτηση :func:`dir` χρησιμοποιείται για να ανακαλύψει ποια "
 "ονόματα ορίζει ένα module.  Επιστρέφει μια ταξινομημένη λίστα συμβολοσειρών::"
 
+#: tutorial/modules.rst:312
+msgid ""
+">>> import fibo, sys\n"
+">>> dir(fibo)\n"
+"['__name__', 'fib', 'fib2']\n"
+">>> dir(sys)  \n"
+"['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n"
+" '__interactivehook__', '__loader__', '__name__', '__package__', "
+"'__spec__',\n"
+" '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n"
+" '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n"
+" '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n"
+" 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n"
+" 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n"
+" 'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', "
+"'exc_info',\n"
+" 'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n"
+" 'float_repr_style', 'get_asyncgen_hooks', "
+"'get_coroutine_origin_tracking_depth',\n"
+" 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',\n"
+" 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n"
+" 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n"
+" 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n"
+" 'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n"
+" 'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n"
+" 'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', "
+"'pycache_prefix',\n"
+" 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', "
+"'setdlopenflags',\n"
+" 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', "
+"'stderr',\n"
+" 'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', "
+"'version_info',\n"
+" 'warnoptions']"
+msgstr ""
+
 #: tutorial/modules.rst:338
 msgid ""
 "Without arguments, :func:`dir` lists the names you have defined currently::"
 msgstr ""
 "Χωρίς ορίσματα, η :func:`dir` παραθέτει τα ονόματα που έχετε ορίσει αυτήν τη "
 "στιγμή::"
+
+#: tutorial/modules.rst:340
+msgid ""
+">>> a = [1, 2, 3, 4, 5]\n"
+">>> import fibo\n"
+">>> fib = fibo.fib\n"
+">>> dir()\n"
+"['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']"
+msgstr ""
 
 #: tutorial/modules.rst:346
 msgid ""
@@ -548,6 +704,42 @@ msgstr ""
 "Η :func:`dir` δεν παραθέτει τα ονόματα των ενσωματωμένων συναρτήσεων και "
 "μεταβλητών.  Εάν θέλετε μια λίστα από αυτές, ορίζονται στην τυπική ενότητα :"
 "mod:`builtins`::"
+
+#: tutorial/modules.rst:354
+msgid ""
+">>> import builtins\n"
+">>> dir(builtins)  \n"
+"['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n"
+" 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n"
+" 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n"
+" 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n"
+" 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n"
+" 'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n"
+" 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',\n"
+" 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n"
+" 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n"
+" 'MemoryError', 'NameError', 'None', 'NotADirectoryError', "
+"'NotImplemented',\n"
+" 'NotImplementedError', 'OSError', 'OverflowError',\n"
+" 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n"
+" 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n"
+" 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n"
+" 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n"
+" 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n"
+" 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n"
+" 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n"
+" '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n"
+" 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n"
+" 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n"
+" 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n"
+" 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n"
+" 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n"
+" 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n"
+" 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n"
+" 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n"
+" 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n"
+" 'zip']"
+msgstr ""
 
 #: tutorial/modules.rst:389
 msgid "Packages"
@@ -599,6 +791,33 @@ msgstr ""
 "αυτές τις λειτουργίες.  Ακολουθεί μια πιθανή δομή για το πακέτο σας (που "
 "εκφράζεται ως ιεραρχικό σύστημα αρχείων):"
 
+#: tutorial/modules.rst:410
+msgid ""
+"sound/                          Top-level package\n"
+"      __init__.py               Initialize the sound package\n"
+"      formats/                  Subpackage for file format conversions\n"
+"              __init__.py\n"
+"              wavread.py\n"
+"              wavwrite.py\n"
+"              aiffread.py\n"
+"              aiffwrite.py\n"
+"              auread.py\n"
+"              auwrite.py\n"
+"              ...\n"
+"      effects/                  Subpackage for sound effects\n"
+"              __init__.py\n"
+"              echo.py\n"
+"              surround.py\n"
+"              reverse.py\n"
+"              ...\n"
+"      filters/                  Subpackage for filters\n"
+"              __init__.py\n"
+"              equalizer.py\n"
+"              vocoder.py\n"
+"              karaoke.py\n"
+"              ..."
+msgstr ""
+
 #: tutorial/modules.rst:436
 msgid ""
 "When importing the package, Python searches through the directories on ``sys."
@@ -635,6 +854,10 @@ msgstr ""
 "Οι χρήστες του πακέτου μπορούν να εισάγουν μεμονωμένα module από το πακέτο, "
 "για παράδειγμα::"
 
+#: tutorial/modules.rst:450
+msgid "import sound.effects.echo"
+msgstr ""
+
 #: tutorial/modules.rst:452
 msgid ""
 "This loads the submodule :mod:`!sound.effects.echo`.  It must be referenced "
@@ -643,9 +866,17 @@ msgstr ""
 "Αυτό φορτώνει το submodule :mod:`!sound.effects.echo`.  Πρέπει να αναφέρεται "
 "με το πλήρες όνομά του. ::"
 
+#: tutorial/modules.rst:455
+msgid "sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)"
+msgstr ""
+
 #: tutorial/modules.rst:457
 msgid "An alternative way of importing the submodule is::"
 msgstr "Ένα εναλλακτικός τρόπος για την εισαγωγή του submodule είναι::"
+
+#: tutorial/modules.rst:459
+msgid "from sound.effects import echo"
+msgstr ""
 
 #: tutorial/modules.rst:461
 msgid ""
@@ -655,6 +886,10 @@ msgstr ""
 "Αυτό φορτώνει επίσης το submodule :mod:`!echo`, και την καθιστά διαθέσιμη "
 "χωρίς το πρόθεμα πακέτου, ώστε να μπορεί να χρησιμοποιηθεί ως εξής::"
 
+#: tutorial/modules.rst:464
+msgid "echo.echofilter(input, output, delay=0.7, atten=4)"
+msgstr ""
+
 #: tutorial/modules.rst:466
 msgid ""
 "Yet another variation is to import the desired function or variable "
@@ -663,6 +898,10 @@ msgstr ""
 "Μια άλλη παραλλαγή είναι η απευθείας εισαγωγή της επιθυμητής συνάρτησης ή "
 "μεταβλητής::"
 
+#: tutorial/modules.rst:468
+msgid "from sound.effects.echo import echofilter"
+msgstr ""
+
 #: tutorial/modules.rst:470
 msgid ""
 "Again, this loads the submodule :mod:`!echo`, but this makes its function :"
@@ -670,6 +909,10 @@ msgid ""
 msgstr ""
 "Και πάλι, αυτό φορτώνει το submodule :mod:`!echo`, αλλά αυτό κάνει τη "
 "συνάρτηση της :func:`!echofilter` άμεσα διαθέσιμη::"
+
+#: tutorial/modules.rst:473
+msgid "echofilter(input, output, delay=0.7, atten=4)"
+msgstr ""
 
 #: tutorial/modules.rst:475
 msgid ""
@@ -743,6 +986,10 @@ msgstr ""
 "παράδειγμα το αρχείο :file:`sound/effects/__init__.py` θα μπορούσε να "
 "περιέχει τον ακόλουθο κώδικα::"
 
+#: tutorial/modules.rst:511
+msgid "__all__ = [\"echo\", \"surround\", \"reverse\"]"
+msgstr ""
+
 #: tutorial/modules.rst:513
 msgid ""
 "This would mean that ``from sound.effects import *`` would import the three "
@@ -767,6 +1014,18 @@ msgstr ""
 "``surround``, αλλά *όχι* το submodule ``reverse``, επειδή επισκιάζεται από "
 "την τοπικά καθορισμένη συνάρτηση ``reverse``::"
 
+#: tutorial/modules.rst:523
+msgid ""
+"__all__ = [\n"
+"    \"echo\",      # refers to the 'echo.py' file\n"
+"    \"surround\",  # refers to the 'surround.py' file\n"
+"    \"reverse\",   # !!! refers to the 'reverse' function now !!!\n"
+"]\n"
+"\n"
+"def reverse(msg: str):  # <-- this name shadows the 'reverse.py' submodule\n"
+"    return msg[::-1]    #     in the case of a 'from sound.effects import *'"
+msgstr ""
+
 #: tutorial/modules.rst:532
 msgid ""
 "If ``__all__`` is not defined, the statement ``from sound.effects import *`` "
@@ -788,6 +1047,13 @@ msgstr ""
 "submodules που έχουν φορτωθεί ρητά) από το :file:`__init__.py`.  "
 "Περιλαμβάνει επίσης τυχόν submodules του πακέτου που φορτώθηκαν ρητά από "
 "προηγούμενες δηλώσεις :keyword:`import`.  Σκεφτείτε αυτόν τον κώδικα::"
+
+#: tutorial/modules.rst:541
+msgid ""
+"import sound.effects.echo\n"
+"import sound.effects.surround\n"
+"from sound.effects import *"
+msgstr ""
 
 #: tutorial/modules.rst:545
 msgid ""
@@ -855,6 +1121,13 @@ msgstr ""
 "στη σχετική εισαγωγή.  Από το :mod:`!surround` module για παράδειγμα, μπορεί "
 "να χρησιμοποιήσετε::"
 
+#: tutorial/modules.rst:576
+msgid ""
+"from . import echo\n"
+"from .. import formats\n"
+"from ..filters import equalizer"
+msgstr ""
+
 #: tutorial/modules.rst:580
 msgid ""
 "Note that relative imports are based on the name of the current module.  "
@@ -873,20 +1146,20 @@ msgstr "Πακέτα σε Πολλαπλούς Καταλόγους"
 
 #: tutorial/modules.rst:588
 msgid ""
-"Packages support one more special attribute, :attr:`__path__`.  This is "
-"initialized to be a list containing the name of the directory holding the "
-"package's :file:`__init__.py` before the code in that file is executed.  "
-"This variable can be modified; doing so affects future searches for modules "
-"and subpackages contained in the package."
+"Packages support one more special attribute, :attr:`~module.__path__`.  This "
+"is initialized to be a :term:`sequence` of strings containing the name of "
+"the directory holding the package's :file:`__init__.py` before the code in "
+"that file is executed.  This variable can be modified; doing so affects "
+"future searches for modules and subpackages contained in the package."
 msgstr ""
-"Τα πακέτα υποστηρίζουν ένα ακόμη ειδικό χαρακτηριστικό, :attr:`__path__`.  "
-"Αυτό έχει αρχικοποιηθεί ώστε να είναι μια λίστα που περιέχει το όνομα του "
-"καταλόγου που το :file:`__init__.py` του πακέτου πριν από την εκτέλεση του "
-"κώδικα σε αυτό το αρχείο.  Αυτή η μεταβλητή μπορεί να τροποποιηθεί, αυτό "
-"επηρεάζει τις μελλοντικές αναζητήσεις για modules και υποπακέτα που "
-"περιέχονται στο πακέτο."
+"Τα πακέτα υποστηρίζουν ένα ακόμη ειδικό χαρακτηριστικό, :attr:`~module."
+"__path__`.  Αυτό έχει αρχικοποιηθεί ως μια :term:`ακολουθία` από "
+"συμβολοσειρές που περιέχει το όνομα του καταλόγου που το :file:`__init__.py` "
+"του πακέτου πριν από την εκτέλεση του κώδικα σε αυτό το αρχείο.  Αυτή η "
+"μεταβλητή μπορεί να τροποποιηθεί, αυτό επηρεάζει τις μελλοντικές αναζητήσεις "
+"για modules και υποπακέτα που περιέχονται στο πακέτο."
 
-#: tutorial/modules.rst:594
+#: tutorial/modules.rst:595
 msgid ""
 "While this feature is not often needed, it can be used to extend the set of "
 "modules found in a package."
@@ -894,11 +1167,11 @@ msgstr ""
 "Ενώ αυτή η δυνατότητα δεν χρειάζεται συχνά, μπορεί να χρησιμοποιηθεί για την "
 "επέκταση του συνόλου των modules που βρίσκονται σε ένα πακέτο."
 
-#: tutorial/modules.rst:599
+#: tutorial/modules.rst:600
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/modules.rst:600
+#: tutorial/modules.rst:601
 msgid ""
 "In fact function definitions are also 'statements' that are 'executed'; the "
 "execution of a module-level function definition adds the function name to "

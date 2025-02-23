@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/email.parser.rst:2
-msgid ":mod:`email.parser`: Parsing email messages"
+msgid ":mod:`!email.parser`: Parsing email messages"
 msgstr ""
 
 #: library/email.parser.rst:7
@@ -321,6 +322,12 @@ msgstr ""
 msgid ""
 "Here's an example of how you might use :func:`message_from_bytes` at an "
 "interactive Python prompt::"
+msgstr ""
+
+#: library/email.parser.rst:286
+msgid ""
+">>> import email\n"
+">>> msg = email.message_from_bytes(myBytes)  "
 msgstr ""
 
 #: library/email.parser.rst:291

@@ -8,17 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/importlib.resources.rst:2
 msgid ""
-":mod:`importlib.resources` -- Package resource reading, opening and access"
+":mod:`!importlib.resources` -- Package resource reading, opening and access"
 msgstr ""
 
 #: library/importlib.resources.rst:7
@@ -189,6 +190,10 @@ msgstr ""
 msgid "Calls to this function can be replaced by::"
 msgstr ""
 
+#: library/importlib.resources.rst:145
+msgid "files(package).joinpath(resource).open('rb')"
+msgstr ""
+
 #: library/importlib.resources.rst:150
 msgid ""
 "Open for text reading the *resource* within *package*.  By default, the "
@@ -210,6 +215,10 @@ msgid ""
 "for reading."
 msgstr ""
 
+#: library/importlib.resources.rst:166
+msgid "files(package).joinpath(resource).open('r', encoding=encoding)"
+msgstr ""
+
 #: library/importlib.resources.rst:171
 msgid ""
 "Read and return the contents of the *resource* within *package* as ``bytes``."
@@ -222,6 +231,10 @@ msgid ""
 "within *package*; it may not contain path separators and it may not have sub-"
 "resources (i.e. it cannot be a directory).  This function returns the "
 "contents of the resource as :class:`bytes`."
+msgstr ""
+
+#: library/importlib.resources.rst:184
+msgid "files(package).joinpath(resource).read_bytes()"
 msgstr ""
 
 #: library/importlib.resources.rst:189
@@ -238,6 +251,10 @@ msgid ""
 "resources (i.e. it cannot be a directory).  *encoding* and *errors* have the "
 "same meaning as with built-in :func:`open`.  This function returns the "
 "contents of the resource as :class:`str`."
+msgstr ""
+
+#: library/importlib.resources.rst:203
+msgid "files(package).joinpath(resource).read_text(encoding=encoding)"
 msgstr ""
 
 #: library/importlib.resources.rst:208
@@ -265,12 +282,20 @@ msgstr ""
 msgid "Calls to this function can be replaced using :func:`as_file`::"
 msgstr ""
 
+#: library/importlib.resources.rst:224
+msgid "as_file(files(package).joinpath(resource))"
+msgstr ""
+
 #: library/importlib.resources.rst:229
 msgid ""
 "Return ``True`` if there is a resource named *name* in the package, "
 "otherwise ``False``. This function does not consider directories to be "
 "resources. *package* is either a name or a module object which conforms to "
 "the ``Package`` requirements."
+msgstr ""
+
+#: library/importlib.resources.rst:239
+msgid "files(package).joinpath(resource).is_file()"
 msgstr ""
 
 #: library/importlib.resources.rst:244
@@ -284,4 +309,10 @@ msgstr ""
 msgid ""
 "*package* is either a name or a module object which conforms to the "
 "``Package`` requirements."
+msgstr ""
+
+#: library/importlib.resources.rst:255
+msgid ""
+"(resource.name for resource in files(package).iterdir() if resource."
+"is_file())"
 msgstr ""

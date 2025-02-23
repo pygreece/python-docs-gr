@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/smtplib.rst:2
-msgid ":mod:`smtplib` --- SMTP protocol client"
+msgid ":mod:`!smtplib` --- SMTP protocol client"
 msgstr ""
 
 #: library/smtplib.rst:9
@@ -33,7 +34,7 @@ msgid ""
 msgstr ""
 
 #: includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: includes/wasm-notavail.rst:5
@@ -76,10 +77,14 @@ msgid ""
 "keyword:`!with` statement exits.  E.g.::"
 msgstr ""
 
-#: library/smtplib.rst:70
+#: library/smtplib.rst:52
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``smtplib.send`` with arguments "
-"``self``, ``data``."
+">>> from smtplib import SMTP\n"
+">>> with SMTP(\"domain.org\") as smtp:\n"
+"...     smtp.noop()\n"
+"...\n"
+"(250, b'Ok')\n"
+">>>"
 msgstr ""
 
 #: library/smtplib.rst:61
@@ -231,7 +236,7 @@ msgid ""
 "username/password combination provided."
 msgstr ""
 
-#: library/smtplib.rst:201
+#: library/smtplib.rst:199
 msgid ":rfc:`821` - Simple Mail Transfer Protocol"
 msgstr ""
 
@@ -241,7 +246,7 @@ msgid ""
 "procedure, and protocol details for SMTP."
 msgstr ""
 
-#: library/smtplib.rst:205
+#: library/smtplib.rst:203
 msgid ":rfc:`1869` - SMTP Service Extensions"
 msgstr ""
 
@@ -308,7 +313,7 @@ msgid ""
 "connection response."
 msgstr ""
 
-#: library/smtplib.rst:264
+#: library/smtplib.rst:253
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``smtplib.connect`` with "
 "arguments ``self``, ``host``, ``port``."
@@ -355,7 +360,7 @@ msgid ""
 "first."
 msgstr ""
 
-#: library/smtplib.rst:319 library/smtplib.rst:476
+#: library/smtplib.rst:318 library/smtplib.rst:475
 msgid ":exc:`SMTPHeloError`"
 msgstr ""
 
@@ -390,7 +395,7 @@ msgid ""
 "successful, or may raise the following exceptions:"
 msgstr ""
 
-#: library/smtplib.rst:322
+#: library/smtplib.rst:321
 msgid ":exc:`SMTPAuthenticationError`"
 msgstr ""
 
@@ -398,7 +403,7 @@ msgstr ""
 msgid "The server didn't accept the username/password combination."
 msgstr ""
 
-#: library/smtplib.rst:410 library/smtplib.rst:487
+#: library/smtplib.rst:409 library/smtplib.rst:485
 msgid ":exc:`SMTPNotSupportedError`"
 msgstr ""
 
@@ -406,7 +411,7 @@ msgstr ""
 msgid "The ``AUTH`` command is not supported by the server."
 msgstr ""
 
-#: library/smtplib.rst:328
+#: library/smtplib.rst:327
 msgid ":exc:`SMTPException`"
 msgstr ""
 
@@ -452,6 +457,10 @@ msgstr ""
 #: library/smtplib.rst:354
 msgid ""
 "*authobject* must be a callable object taking an optional single argument::"
+msgstr ""
+
+#: library/smtplib.rst:356
+msgid "data = authobject(challenge=None)"
 msgstr ""
 
 #: library/smtplib.rst:358
@@ -522,7 +531,7 @@ msgstr ""
 msgid "The server does not support the STARTTLS extension."
 msgstr ""
 
-#: library/smtplib.rst:413
+#: library/smtplib.rst:412
 msgid ":exc:`RuntimeError`"
 msgstr ""
 
@@ -599,7 +608,7 @@ msgstr ""
 msgid "This method may raise the following exceptions:"
 msgstr ""
 
-#: library/smtplib.rst:473
+#: library/smtplib.rst:469
 msgid ":exc:`SMTPRecipientsRefused`"
 msgstr ""
 
@@ -611,7 +620,7 @@ msgid ""
 "accepted)."
 msgstr ""
 
-#: library/smtplib.rst:479
+#: library/smtplib.rst:478
 msgid ":exc:`SMTPSenderRefused`"
 msgstr ""
 
@@ -619,7 +628,7 @@ msgstr ""
 msgid "The server didn't accept the *from_addr*."
 msgstr ""
 
-#: library/smtplib.rst:483
+#: library/smtplib.rst:481
 msgid ":exc:`SMTPDataError`"
 msgstr ""
 
@@ -682,11 +691,11 @@ msgid ""
 "and *to_addrs*, ``send_message`` does not transmit any :mailheader:`Bcc` or :"
 "mailheader:`Resent-Bcc` headers that may appear in *msg*.  If any of the "
 "addresses in *from_addr* and *to_addrs* contain non-ASCII characters and the "
-"server does not advertise ``SMTPUTF8`` support, an :exc:`SMTPNotSupported` "
-"error is raised.  Otherwise the ``Message`` is serialized with a clone of "
-"its :mod:`~email.policy` with the :attr:`~email.policy.EmailPolicy.utf8` "
-"attribute set to ``True``, and ``SMTPUTF8`` and ``BODY=8BITMIME`` are added "
-"to *mail_options*."
+"server does not advertise ``SMTPUTF8`` support, an :exc:"
+"`SMTPNotSupportedError` is raised.  Otherwise the ``Message`` is serialized "
+"with a clone of its :mod:`~email.policy` with the :attr:`~email.policy."
+"EmailPolicy.utf8` attribute set to ``True``, and ``SMTPUTF8`` and "
+"``BODY=8BITMIME`` are added to *mail_options*."
 msgstr ""
 
 #: library/smtplib.rst:534
@@ -718,10 +727,40 @@ msgid ""
 "headers to be included with the message must be included in the message as "
 "entered; this example doesn't do any processing of the :rfc:`822` headers.  "
 "In particular, the 'To' and 'From' addresses must be included in the message "
-"headers explicitly. ::"
+"headers explicitly::"
 msgstr ""
 
-#: library/smtplib.rst:591
+#: library/smtplib.rst:561
+msgid ""
+"import smtplib\n"
+"\n"
+"def prompt(title):\n"
+"    return input(title).strip()\n"
+"\n"
+"from_addr = prompt(\"From: \")\n"
+"to_addrs  = prompt(\"To: \").split()\n"
+"print(\"Enter message, end with ^D (Unix) or ^Z (Windows):\")\n"
+"\n"
+"# Add the From: and To: headers at the start!\n"
+"lines = [f\"From: {from_addr}\", f\"To: {', '.join(to_addrs)}\", \"\"]\n"
+"while True:\n"
+"    try:\n"
+"        line = input()\n"
+"    except EOFError:\n"
+"        break\n"
+"    else:\n"
+"        lines.append(line)\n"
+"\n"
+"msg = \"\\r\\n\".join(lines)\n"
+"print(\"Message length is\", len(msg))\n"
+"\n"
+"server = smtplib.SMTP(\"localhost\")\n"
+"server.set_debuglevel(1)\n"
+"server.sendmail(from_addr, to_addrs, msg)\n"
+"server.quit()"
+msgstr ""
+
+#: library/smtplib.rst:590
 msgid ""
 "In general, you will want to use the :mod:`email` package's features to "
 "construct an email message, which you can then send via :meth:`~smtplib.SMTP."

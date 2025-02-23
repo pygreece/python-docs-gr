@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/selectors.rst:2
-msgid ":mod:`selectors` --- High-level I/O multiplexing"
+msgid ":mod:`!selectors` --- High-level I/O multiplexing"
 msgstr ""
 
 #: library/selectors.rst:9
@@ -69,7 +70,7 @@ msgid "Low-level I/O multiplexing module."
 msgstr ""
 
 #: includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: includes/wasm-notavail.rst:5
@@ -85,6 +86,16 @@ msgstr ""
 
 #: library/selectors.rst:46
 msgid "Classes hierarchy::"
+msgstr ""
+
+#: library/selectors.rst:48
+msgid ""
+"BaseSelector\n"
+"+-- SelectSelector\n"
+"+-- PollSelector\n"
+"+-- EpollSelector\n"
+"+-- DevpollSelector\n"
+"+-- KqueueSelector"
 msgstr ""
 
 #: library/selectors.rst:56
@@ -323,4 +334,40 @@ msgstr ""
 
 #: library/selectors.rst:245
 msgid "Here is a simple echo server implementation::"
+msgstr ""
+
+#: library/selectors.rst:247
+msgid ""
+"import selectors\n"
+"import socket\n"
+"\n"
+"sel = selectors.DefaultSelector()\n"
+"\n"
+"def accept(sock, mask):\n"
+"    conn, addr = sock.accept()  # Should be ready\n"
+"    print('accepted', conn, 'from', addr)\n"
+"    conn.setblocking(False)\n"
+"    sel.register(conn, selectors.EVENT_READ, read)\n"
+"\n"
+"def read(conn, mask):\n"
+"    data = conn.recv(1000)  # Should be ready\n"
+"    if data:\n"
+"        print('echoing', repr(data), 'to', conn)\n"
+"        conn.send(data)  # Hope it won't block\n"
+"    else:\n"
+"        print('closing', conn)\n"
+"        sel.unregister(conn)\n"
+"        conn.close()\n"
+"\n"
+"sock = socket.socket()\n"
+"sock.bind(('localhost', 1234))\n"
+"sock.listen(100)\n"
+"sock.setblocking(False)\n"
+"sel.register(sock, selectors.EVENT_READ, accept)\n"
+"\n"
+"while True:\n"
+"    events = sel.select()\n"
+"    for key, mask in events:\n"
+"        callback = key.data\n"
+"        callback(key.fileobj, mask)"
 msgstr ""

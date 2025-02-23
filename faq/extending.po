@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-10-31 12:22+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -225,6 +225,16 @@ msgstr ""
 "αυτή που χρησιμοποιείται με τη :c:func:`Py_BuildValue`, και τις τιμές "
 "ορίσματος::"
 
+#: faq/extending.rst:117
+msgid ""
+"PyObject *\n"
+"PyObject_CallMethod(PyObject *object, const char *method_name,\n"
+"                    const char *arg_format, ...);"
+msgstr ""
+"PyObject *\n"
+"PyObject_CallMethod(PyObject *object, const char *method_name,\n"
+"                    const char *arg_format, ...);"
+
 #: faq/extending.rst:121
 msgid ""
 "This works for any object that has methods -- whether built-in or user-"
@@ -243,6 +253,24 @@ msgstr ""
 "Για να καλέσετε, π.χ., τη μέθοδο \"seek\" ενός αντικειμένου αρχείου με "
 "ορίσματα 10, 0 (υποθέτοντας ότι ο δείκτης του αντικειμένου αρχείου είναι "
 "\"f\")::"
+
+#: faq/extending.rst:127
+msgid ""
+"res = PyObject_CallMethod(f, \"seek\", \"(ii)\", 10, 0);\n"
+"if (res == NULL) {\n"
+"        ... an exception occurred ...\n"
+"}\n"
+"else {\n"
+"        Py_DECREF(res);\n"
+"}"
+msgstr ""
+"res = PyObject_CallMethod(f, \"seek\", \"(ii)\", 10, 0);\n"
+"if (res == NULL) {\n"
+"        ... an exception occurred ...\n"
+"}\n"
+"else {\n"
+"        Py_DECREF(res);\n"
+"}"
 
 #: faq/extending.rst:135
 msgid ""
@@ -283,9 +311,59 @@ msgstr ""
 "Ο ευκολότερος τρόπος για να το κάνετε αυτό είναι να χρησιμοποιήσετε την "
 "κλάση :class:`io.StringIO`:"
 
+#: faq/extending.rst:151
+msgid ""
+">>> import io, sys\n"
+">>> sys.stdout = io.StringIO()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(sys.stdout.getvalue())\n"
+"foo\n"
+"hello world!"
+msgstr ""
+">>> import io, sys\n"
+">>> sys.stdout = io.StringIO()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(sys.stdout.getvalue())\n"
+"foo\n"
+"hello world!"
+
 #: faq/extending.rst:161
 msgid "A custom object to do the same would look like this:"
 msgstr "Ένα προσαρμοσμένο αντικείμενο για να κάνει το ίδιο θα μοιάζει με αυτό:"
+
+#: faq/extending.rst:163
+msgid ""
+">>> import io, sys\n"
+">>> class StdoutCatcher(io.TextIOBase):\n"
+"...     def __init__(self):\n"
+"...         self.data = []\n"
+"...     def write(self, stuff):\n"
+"...         self.data.append(stuff)\n"
+"...\n"
+">>> import sys\n"
+">>> sys.stdout = StdoutCatcher()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(''.join(sys.stdout.data))\n"
+"foo\n"
+"hello world!"
+msgstr ""
+">>> import io, sys\n"
+">>> class StdoutCatcher(io.TextIOBase):\n"
+"...     def __init__(self):\n"
+"...         self.data = []\n"
+"...     def write(self, stuff):\n"
+"...         self.data.append(stuff)\n"
+"...\n"
+">>> import sys\n"
+">>> sys.stdout = StdoutCatcher()\n"
+">>> print('foo')\n"
+">>> print('hello world!')\n"
+">>> sys.stderr.write(''.join(sys.stdout.data))\n"
+"foo\n"
+"hello world!"
 
 #: faq/extending.rst:182
 msgid "How do I access a module written in Python from C?"
@@ -295,6 +373,10 @@ msgstr ""
 #: faq/extending.rst:184
 msgid "You can get a pointer to the module object as follows::"
 msgstr "Μπορείτε να λάβετε έναν δείκτη στο αντικείμενο του module ως εξής::"
+
+#: faq/extending.rst:186
+msgid "module = PyImport_ImportModule(\"<modulename>\");"
+msgstr "module = PyImport_ImportModule(\"<modulename>\");"
 
 #: faq/extending.rst:188
 msgid ""
@@ -317,6 +399,10 @@ msgid ""
 msgstr ""
 "Μπορείτε στη συνέχεια να αποκτήσετε πρόσβαση στα χαρακτηριστικά του module "
 "(δηλαδή οποιοδήποτε όνομα ορίζεται στο module) ως εξής::"
+
+#: faq/extending.rst:197
+msgid "attr = PyObject_GetAttrString(module, \"<attrname>\");"
+msgstr "attr = PyObject_GetAttrString(module, \"<attrname>\");"
 
 #: faq/extending.rst:199
 msgid ""
@@ -384,9 +470,29 @@ msgstr ""
 msgid "In your ``.gdbinit`` file (or interactively), add the command:"
 msgstr "Στο αρχείο σας ``.gdbinit`` (ή διαδραστικά), προσθέστε την εντολή:"
 
+#: faq/extending.rst:231
+msgid "br _PyImport_LoadDynamicModule"
+msgstr "br _PyImport_LoadDynamicModule"
+
 #: faq/extending.rst:235
 msgid "Then, when you run GDB:"
 msgstr "Στη συνέχεια, όταν εκτελείτε το GDB:"
+
+#: faq/extending.rst:237
+msgid ""
+"$ gdb /local/bin/python\n"
+"gdb) run myscript.py\n"
+"gdb) continue # repeat until your extension is loaded\n"
+"gdb) finish   # so that your extension is loaded\n"
+"gdb) br myfunction.c:50\n"
+"gdb) continue"
+msgstr ""
+"$ gdb /local/bin/python\n"
+"gdb) run myscript.py\n"
+"gdb) continue # repeat until your extension is loaded\n"
+"gdb) finish   # so that your extension is loaded\n"
+"gdb) br myfunction.c:50\n"
+"gdb) continue"
 
 #: faq/extending.rst:247
 msgid ""
@@ -398,30 +504,28 @@ msgstr ""
 
 #: faq/extending.rst:249
 msgid ""
-"Most packaged versions of Python don't include the :file:`/usr/lib/python2."
-"{x}/config/` directory, which contains various files required for compiling "
+"Most packaged versions of Python omit some files required for compiling "
 "Python extensions."
 msgstr ""
-"Οι περισσότερες συσκευασμένες εκδόσεις της Python δεν περιλαμβάνουν τον "
-"κατάλογο :file:`/usr/lib/python2.{x}/config/`, ο οποίος περιέχει διάφορα "
+"Οι περισσότερες συσκευασμένες εκδόσεις της Python παραλείπουν ορισμένα "
 "αρχεία που απαιτούνται για τη μεταγλώττιση των επεκτάσεων Python."
 
-#: faq/extending.rst:253
-msgid "For Red Hat, install the python-devel RPM to get the necessary files."
+#: faq/extending.rst:252
+msgid "For Red Hat, install the python3-devel RPM to get the necessary files."
 msgstr ""
-"Για το Red Hat, εγκαταστήστε το RPM της python-devel για να λάβετε τα "
+"Για το Red Hat, εγκαταστήστε το RPM της python3-devel για να λάβετε τα "
 "απαραίτητα αρχεία."
 
-#: faq/extending.rst:255
-msgid "For Debian, run ``apt-get install python-dev``."
-msgstr "Για το Debian, εκτελέστε το ``apt-get install python-dev``."
+#: faq/extending.rst:254
+msgid "For Debian, run ``apt-get install python3-dev``."
+msgstr "Για το Debian, εκτελέστε το ``apt-get install python3-dev``."
 
-#: faq/extending.rst:258
+#: faq/extending.rst:257
 msgid "How do I tell \"incomplete input\" from \"invalid input\"?"
 msgstr ""
 "Πώς μπορώ να ξεχωρίσω την \"ελλιπή εισαγωγή\" από την \"έγκυρη εισαγωγή\";"
 
-#: faq/extending.rst:260
+#: faq/extending.rst:259
 msgid ""
 "Sometimes you want to emulate the Python interactive interpreter's behavior, "
 "where it gives you a continuation prompt when the input is incomplete (e.g. "
@@ -435,7 +539,7 @@ msgstr ""
 "παρενθέσεις ή τα τριπλά εισαγωγικά συμβολοσειρών), αλλά σας δίνει ένα μήνυμα "
 "συντακτικού σφάλματος αμέσως όταν η εισαγωγή δεν είναι έγκυρη."
 
-#: faq/extending.rst:266
+#: faq/extending.rst:265
 msgid ""
 "In Python you can use the :mod:`codeop` module, which approximates the "
 "parser's behavior sufficiently.  IDLE uses this, for example."
@@ -444,7 +548,7 @@ msgstr ""
 "προσεγγίζει επαρκώς τη συμπεριφορά του parser.  Το IDLE χρησιμοποιεί αυτό, "
 "για παράδειγμα."
 
-#: faq/extending.rst:269
+#: faq/extending.rst:268
 msgid ""
 "The easiest way to do it in C is to call :c:func:`PyRun_InteractiveLoop` "
 "(perhaps in a separate thread) and let the Python interpreter handle the "
@@ -459,12 +563,12 @@ msgstr ""
 "προσαρμοσμένη συνάρτηση εισαγωγής. Δείτε τα ``Modules/readline.c`` και "
 "``Parser/myreadline.c`` για περισσότερες συμβουλές."
 
-#: faq/extending.rst:276
+#: faq/extending.rst:275
 msgid "How do I find undefined g++ symbols __builtin_new or __pure_virtual?"
 msgstr ""
 "Πώς μπορώ να βρω απροσδιόριστα σύμβολα g++ __builtin_new ή __pure_virtual;"
 
-#: faq/extending.rst:278
+#: faq/extending.rst:277
 msgid ""
 "To dynamically load g++ extension modules, you must recompile Python, relink "
 "it using g++ (change LINKCC in the Python Modules Makefile), and link your "
@@ -475,7 +579,7 @@ msgstr ""
 "Python Modules Makefile), και να συνδέσετε το module επέκτασης σας "
 "χρησιμοποιώντας g++ (π.χ. ``g++ -shared -o mymodule.so mymodule.o``)."
 
-#: faq/extending.rst:284
+#: faq/extending.rst:283
 msgid ""
 "Can I create an object class with some methods implemented in C and others "
 "in Python (e.g. through inheritance)?"
@@ -483,7 +587,7 @@ msgstr ""
 "Μπορώ να δημιουργήσω μια κλάση αντικειμένου με ορισμένες μεθόδους που "
 "υλοποιούνται στη C και άλλες στη Python (π.χ. μέσω κληρονομικότητας);"
 
-#: faq/extending.rst:286
+#: faq/extending.rst:285
 msgid ""
 "Yes, you can inherit from built-in classes such as :class:`int`, :class:"
 "`list`, :class:`dict`, etc."
@@ -491,7 +595,7 @@ msgstr ""
 "Ναι, μπορείτε να κληρονομήσετε από ενσωματωμένες (built-in) κλάσεις όπως :"
 "class:`int`, :class:`list`, :class:`dict`, κ.λπ."
 
-#: faq/extending.rst:289
+#: faq/extending.rst:288
 msgid ""
 "The Boost Python Library (BPL, https://www.boost.org/libs/python/doc/index."
 "html) provides a way of doing this from C++ (i.e. you can inherit from an "

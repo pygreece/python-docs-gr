@@ -21,7 +21,7 @@
 # from which we generated our po files.  We use it here so when we
 # test build, we're building with the .rst files that generated our
 # .po files.
-CPYTHON_CURRENT_COMMIT := 9cbde7c6ce6f7b93301a37f03dfa0c0d45e00a39
+CPYTHON_CURRENT_COMMIT := 0274115585db8e26d9d1c0218fe65e5041c70f2c
 
 CPYTHON_PATH := ./cpython
 
@@ -69,8 +69,10 @@ all: ensure_prerequisites
 	  -D latex_elements.inputenc=       \
 	  -D latex_elements.fontenc='       \
 	  $(MODE)
-	@echo "Build success, open file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html or run 'make serve' to see them."
-
+	@echo "Build successful! 🎉"
+	@echo "You can now open the documentation in your browser:"
+	@echo "  file://$(abspath $(CPYTHON_PATH))/Doc/build/html/index.html"
+	@echo "Or, run 'make serve' to start a local web server for the docs."
 
 .PHONY: ensure_prerequisites
 ensure_prerequisites:
@@ -99,8 +101,12 @@ ensure_prerequisites:
 
 .PHONY: serve
 serve:
-	$(PYTHON) -c "import os, webbrowser; webbrowser.open('file://' + os.path.realpath('cpython/Doc/build/html/index.html'))"
+	@echo "Starting local server at http://localhost:8000..."
+	$(PYTHON) -m http.server -d cpython/Doc/build/html/
 
+.PHONY: preview
+preview:
+	make all && make serve
 
 .PHONY: progress
 progress:
@@ -108,6 +114,14 @@ progress:
 	$(shell msgcat *.po */*.po | msgattrib --translated | grep -c '^msgid') \
 	$(shell msgcat *.po */*.po | grep -c '^msgid')
 
+.PHONY: spellcheck
+spellcheck:
+	$(PYTHON) scripts/check_spelling.py $(filter-out $@, $(MAKECMDGOALS))
+
+.PHONY: lint
+lint:
+	powrap *.po **/*.po && \
+	make spellcheck
 
 .PHONY: todo
 todo: ensure_prerequisites

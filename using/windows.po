@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -546,11 +547,21 @@ msgid ""
 "you could use the following command (from an elevated command prompt)::"
 msgstr ""
 
+#: using/windows.rst:239
+msgid "python-3.9.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0"
+msgstr ""
+
 #: using/windows.rst:241
 msgid ""
 "To allow users to easily install a personal copy of Python without the test "
 "suite, you could provide a shortcut with the following command. This will "
 "display a simplified initial page and disallow customization::"
+msgstr ""
+
+#: using/windows.rst:245
+msgid ""
+"python-3.9.0.exe InstallAllUsers=0 Include_launcher=0 Include_test=0\n"
+"    SimpleInstall=1 SimpleInstallDescription=\"Just for me, no test suite.\""
 msgstr ""
 
 #: using/windows.rst:248
@@ -567,6 +578,18 @@ msgid ""
 "values. When a value is provided as an attribute, it will be converted to a "
 "number if possible. Values provided as element text are always left as "
 "strings. This example file sets the same options as the previous example:"
+msgstr ""
+
+#: using/windows.rst:258
+msgid ""
+"<Options>\n"
+"    <Option Name=\"InstallAllUsers\" Value=\"no\" />\n"
+"    <Option Name=\"Include_launcher\" Value=\"0\" />\n"
+"    <Option Name=\"Include_test\" Value=\"no\" />\n"
+"    <Option Name=\"SimpleInstall\" Value=\"yes\" />\n"
+"    <Option Name=\"SimpleInstallDescription\">Just for me, no test suite</"
+"Option>\n"
+"</Options>"
 msgstr ""
 
 #: using/windows.rst:271
@@ -590,6 +613,10 @@ msgid ""
 "required files.  Remember to substitute ``python-3.9.0.exe`` for the actual "
 "name of your installer, and to create layouts in their own directories to "
 "avoid collisions between files with the same name."
+msgstr ""
+
+#: using/windows.rst:288
+msgid "python-3.9.0.exe /layout [optional target directory]"
 msgstr ""
 
 #: using/windows.rst:290
@@ -740,6 +767,16 @@ msgid ""
 "realpath`:"
 msgstr ""
 
+#: using/windows.rst:380
+msgid ""
+">>> import os\n"
+">>> test_file = 'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\test.txt'\n"
+">>> os.path.realpath(test_file)\n"
+"'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\Packages\\"
+"\\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\\\\LocalCache\\\\Local\\"
+"\\test.txt'"
+msgstr ""
+
 #: using/windows.rst:387
 msgid "When writing to the Windows Registry, the following behaviors exist:"
 msgstr ""
@@ -768,7 +805,7 @@ msgid ""
 "For more detail on the technical basis for these limitations, please consult "
 "Microsoft's documentation on packaged full-trust apps, currently available "
 "at `docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-behind-the-"
-"scenes <https://docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-"
+"scenes <https://learn.microsoft.com/windows/msix/desktop/desktop-to-uwp-"
 "behind-the-scenes>`_"
 msgstr ""
 
@@ -799,6 +836,12 @@ msgid ""
 "installed using::"
 msgstr ""
 
+#: using/windows.rst:421
+msgid ""
+"nuget.exe install python -ExcludeVersion -OutputDirectory .\n"
+"nuget.exe install pythonx86 -ExcludeVersion -OutputDirectory ."
+msgstr ""
+
 #: using/windows.rst:424
 msgid ""
 "To select a particular version, add a ``-Version 3.x.y``. The output "
@@ -807,6 +850,17 @@ msgid ""
 "package, and without the ``-ExcludeVersion`` option this name will include "
 "the specific version installed. Inside the subdirectory is a ``tools`` "
 "directory that contains the Python installation:"
+msgstr ""
+
+#: using/windows.rst:431
+msgid ""
+"# Without -ExcludeVersion\n"
+"> .\\python.3.5.2\\tools\\python.exe -V\n"
+"Python 3.5.2\n"
+"\n"
+"# With -ExcludeVersion\n"
+"> .\\python\\tools\\python.exe -V\n"
+"Python 3.5.2"
 msgstr ""
 
 #: using/windows.rst:441
@@ -858,7 +912,7 @@ msgstr ""
 #: using/windows.rst:477
 msgid ""
 "The embedded distribution does not include the `Microsoft C Runtime <https://"
-"docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist#visual-"
+"learn.microsoft.com/cpp/windows/latest-supported-vc-redist#visual-"
 "studio-2015-2017-2019-and-2022>`_ and it is the responsibility of the "
 "application installer to provide this. The runtime may have already been "
 "installed on a user's system previously or automatically via Windows Update, "
@@ -957,7 +1011,7 @@ msgid ""
 "versions and their key features:"
 msgstr ""
 
-#: using/windows.rst:545
+#: using/windows.rst:544
 msgid "`ActivePython <https://www.activestate.com/products/python/>`_"
 msgstr ""
 
@@ -965,7 +1019,7 @@ msgstr ""
 msgid "Installer with multi-platform compatibility, documentation, PyWin32"
 msgstr ""
 
-#: using/windows.rst:549
+#: using/windows.rst:547
 msgid "`Anaconda <https://www.anaconda.com/download/>`_"
 msgstr ""
 
@@ -975,8 +1029,9 @@ msgid ""
 "``conda`` package manager."
 msgstr ""
 
-#: using/windows.rst:555
-msgid "`Enthought Deployment Manager <https://www.enthought.com/edm/>`_"
+#: using/windows.rst:551
+msgid ""
+"`Enthought Deployment Manager <https://assets.enthought.com/downloads/edm/>`_"
 msgstr ""
 
 #: using/windows.rst:552
@@ -991,7 +1046,7 @@ msgid ""
 "Code>`_."
 msgstr ""
 
-#: using/windows.rst:559
+#: using/windows.rst:557
 msgid "`WinPython <https://winpython.github.io/>`_"
 msgstr ""
 
@@ -1036,6 +1091,13 @@ msgid ""
 "command:`set` command:"
 msgstr ""
 
+#: using/windows.rst:587
+msgid ""
+"C:\\>set PATH=C:\\Program Files\\Python 3.9;%PATH%\n"
+"C:\\>set PYTHONPATH=%PYTHONPATH%;C:\\My_python_lib\n"
+"C:\\>python"
+msgstr ""
+
 #: using/windows.rst:593
 msgid ""
 "These changes will apply to any further commands executed in that console, "
@@ -1074,20 +1136,19 @@ msgid ""
 "code that is compatible with all of your installed Python versions."
 msgstr ""
 
-#: using/windows.rst:622
+#: using/windows.rst:621
 msgid ""
-"https://docs.microsoft.com/en-us/windows/win32/procthread/environment-"
-"variables"
+"https://learn.microsoft.com/windows/win32/procthread/environment-variables"
 msgstr ""
 
 #: using/windows.rst:622
 msgid "Overview of environment variables on Windows"
 msgstr ""
 
-#: using/windows.rst:625
+#: using/windows.rst:624
 msgid ""
-"https://docs.microsoft.com/en-us/windows-server/administration/windows-"
-"commands/set_1"
+"https://learn.microsoft.com/windows-server/administration/windows-commands/"
+"set_1"
 msgstr ""
 
 #: using/windows.rst:625
@@ -1096,8 +1157,8 @@ msgstr ""
 
 #: using/windows.rst:627
 msgid ""
-"https://docs.microsoft.com/en-us/windows-server/administration/windows-"
-"commands/setx"
+"https://learn.microsoft.com/windows-server/administration/windows-commands/"
+"setx"
 msgstr ""
 
 #: using/windows.rst:628
@@ -1135,6 +1196,10 @@ msgid ""
 "directory of your Python installation, delimited by a semicolon from other "
 "entries.  An example variable could look like this (assuming the first two "
 "entries already existed)::"
+msgstr ""
+
+#: using/windows.rst:657
+msgid "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\Program Files\\Python 3.9"
 msgstr ""
 
 #: using/windows.rst:662
@@ -1234,6 +1299,10 @@ msgid ""
 "the launcher is available, execute the following command in Command Prompt::"
 msgstr ""
 
+#: using/windows.rst:729
+msgid "py"
+msgstr ""
+
 #: using/windows.rst:731
 msgid ""
 "You should find that the latest version of Python you have installed is "
@@ -1248,10 +1317,18 @@ msgid ""
 "3.7, try the command::"
 msgstr ""
 
+#: using/windows.rst:739
+msgid "py -3.7"
+msgstr ""
+
 #: using/windows.rst:741
 msgid ""
 "If you want the latest version of Python 2 you have installed, try the "
 "command::"
+msgstr ""
+
+#: using/windows.rst:744
+msgid "py -2"
 msgstr ""
 
 #: using/windows.rst:746
@@ -1259,8 +1336,18 @@ msgid ""
 "If you see the following error, you do not have the launcher installed::"
 msgstr ""
 
+#: using/windows.rst:748
+msgid ""
+"'py' is not recognized as an internal or external command,\n"
+"operable program or batch file."
+msgstr ""
+
 #: using/windows.rst:751
 msgid "The command::"
+msgstr ""
+
+#: using/windows.rst:753
+msgid "py --list"
 msgstr ""
 
 #: using/windows.rst:755
@@ -1281,6 +1368,18 @@ msgid ""
 "When using the ``-V:`` argument, specifying the Company will limit selection "
 "to runtimes from that provider, while specifying only the Tag will select "
 "from all providers. Note that omitting the slash implies a tag::"
+msgstr ""
+
+#: using/windows.rst:767
+msgid ""
+"# Select any '3.*' tagged runtime\n"
+"py -V:3\n"
+"\n"
+"# Select any 'PythonCore' released runtime\n"
+"py -V:PythonCore/\n"
+"\n"
+"# Select PythonCore's latest Python 3 runtime\n"
+"py -V:PythonCore/3"
 msgstr ""
 
 #: using/windows.rst:776
@@ -1323,14 +1422,29 @@ msgid ""
 "the following contents"
 msgstr ""
 
+#: using/windows.rst:805
+msgid ""
+"#! python\n"
+"import sys\n"
+"sys.stdout.write(\"hello from Python %s\\n\" % (sys.version,))"
+msgstr ""
+
 #: using/windows.rst:811
 msgid "From the directory in which hello.py lives, execute the command::"
+msgstr ""
+
+#: using/windows.rst:813
+msgid "py hello.py"
 msgstr ""
 
 #: using/windows.rst:815
 msgid ""
 "You should notice the version number of your latest Python 2.x installation "
 "is printed.  Now try changing the first line to be:"
+msgstr ""
+
+#: using/windows.rst:818
+msgid "#! python3"
 msgstr ""
 
 #: using/windows.rst:822
@@ -1410,6 +1524,10 @@ msgstr ""
 msgid "For example, if the first line of your script starts with"
 msgstr ""
 
+#: using/windows.rst:866
+msgid "#! /usr/bin/python"
+msgstr ""
+
 #: using/windows.rst:870
 msgid ""
 "The default Python will be located and used.  As many Python scripts written "
@@ -1467,6 +1585,12 @@ msgid ""
 "part of the filename)."
 msgstr ""
 
+#: using/windows.rst:913
+msgid ""
+"[commands]\n"
+"/bin/xpython=C:\\Program Files\\XPython\\python.exe"
+msgstr ""
+
 #: using/windows.rst:918
 msgid ""
 "Any commands not found in the .INI file are treated as **Windows** "
@@ -1486,6 +1610,10 @@ msgstr ""
 msgid ""
 "The shebang lines can also specify additional options to be passed to the "
 "Python interpreter.  For example, if you have a shebang line:"
+msgstr ""
+
+#: using/windows.rst:932
+msgid "#! /usr/bin/python -v"
 msgstr ""
 
 #: using/windows.rst:936
@@ -1627,10 +1755,23 @@ msgstr ""
 msgid "Setting ``PY_PYTHON=3.7`` is equivalent to the INI file containing:"
 msgstr ""
 
+#: using/windows.rst:1025
+msgid ""
+"[defaults]\n"
+"python=3.7"
+msgstr ""
+
 #: using/windows.rst:1030
 msgid ""
 "Setting ``PY_PYTHON=3`` and ``PY_PYTHON3=3.7`` is equivalent to the INI file "
 "containing:"
+msgstr ""
+
+#: using/windows.rst:1033
+msgid ""
+"[defaults]\n"
+"python=3\n"
+"python3=3.7"
 msgstr ""
 
 #: using/windows.rst:1040
@@ -1977,14 +2118,13 @@ msgstr ""
 
 #: using/windows.rst:1220
 msgid ""
-"The `PyWin32 <https://pypi.org/project/pywin32>`_ module by Mark Hammond is "
-"a collection of modules for advanced Windows-specific support.  This "
-"includes utilities for:"
+"The :pypi:`PyWin32` module by Mark Hammond is a collection of modules for "
+"advanced Windows-specific support.  This includes utilities for:"
 msgstr ""
 
 #: using/windows.rst:1224
 msgid ""
-"`Component Object Model <https://docs.microsoft.com/en-us/windows/win32/com/"
+"`Component Object Model <https://learn.microsoft.com/windows/win32/com/"
 "component-object-model--com--portal>`_ (COM)"
 msgstr ""
 
@@ -2002,7 +2142,7 @@ msgstr ""
 
 #: using/windows.rst:1230
 msgid ""
-"`Microsoft Foundation Classes <https://docs.microsoft.com/en-us/cpp/mfc/mfc-"
+"`Microsoft Foundation Classes <https://learn.microsoft.com/cpp/mfc/mfc-"
 "desktop-applications>`_ (MFC) user interfaces"
 msgstr ""
 
@@ -2013,9 +2153,9 @@ msgid ""
 "It is an embeddable IDE with a built-in debugger."
 msgstr ""
 
-#: using/windows.rst:1241
+#: using/windows.rst:1240
 msgid ""
-"`Win32 How Do I...? <http://timgolden.me.uk/python/win32_how_do_i.html>`_"
+"`Win32 How Do I...? <https://timgolden.me.uk/python/win32_how_do_i.html>`_"
 msgstr ""
 
 #: using/windows.rst:1241

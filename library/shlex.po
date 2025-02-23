@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/shlex.rst:2
-msgid ":mod:`shlex` --- Simple lexical analysis"
+msgid ":mod:`!shlex` --- Simple lexical analysis"
 msgstr ""
 
 #: library/shlex.rst:12
@@ -476,6 +477,21 @@ msgid ""
 "following snippet:"
 msgstr ""
 
+#: library/shlex.rst:412
+msgid ""
+">>> import shlex\n"
+">>> text = \"a && b; c && d || e; f >'abc'; (def \\\"ghi\\\")\"\n"
+">>> s = shlex.shlex(text, posix=True)\n"
+">>> s.whitespace_split = True\n"
+">>> list(s)\n"
+"['a', '&&', 'b;', 'c', '&&', 'd', '||', 'e;', 'f', '>abc;', '(def', 'ghi)']\n"
+">>> s = shlex.shlex(text, posix=True, punctuation_chars=True)\n"
+">>> s.whitespace_split = True\n"
+">>> list(s)\n"
+"['a', '&&', 'b', ';', 'c', '&&', 'd', '||', 'e', ';', 'f', '>', 'abc', ';',\n"
+"'(', 'def', 'ghi', ')']"
+msgstr ""
+
 #: library/shlex.rst:427
 msgid ""
 "Of course, tokens will be returned which are not valid for shells, and "
@@ -489,12 +505,29 @@ msgid ""
 "used to determine which characters constitute punctuation. For example::"
 msgstr ""
 
+#: library/shlex.rst:434
+msgid ""
+">>> import shlex\n"
+">>> s = shlex.shlex(\"a && b || c\", punctuation_chars=\"|\")\n"
+">>> list(s)\n"
+"['a', '&', '&', 'b', '||', 'c']"
+msgstr ""
+
 #: library/shlex.rst:439
 msgid ""
 "When ``punctuation_chars`` is specified, the :attr:`~shlex.wordchars` "
 "attribute is augmented with the characters ``~-./*?=``.  That is because "
 "these characters can appear in file names (including wildcards) and command-"
 "line arguments (e.g. ``--color=auto``). Hence::"
+msgstr ""
+
+#: library/shlex.rst:444
+msgid ""
+">>> import shlex\n"
+">>> s = shlex.shlex('~/a && b-c --color=auto || d *.py?',\n"
+"...                 punctuation_chars=True)\n"
+">>> list(s)\n"
+"['~/a', '&&', 'b-c', '--color=auto', '||', 'd', '*.py?']"
 msgstr ""
 
 #: library/shlex.rst:450

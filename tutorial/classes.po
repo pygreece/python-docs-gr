@@ -8,13 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: 2024-12-10 12:00+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
+"PO-Revision-Date: 2025-02-20 00:47+0200\n"
 "Last-Translator: Anastasios Louka <EMAIL@ADDRESS>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: tutorial/classes.rst:5
 msgid "Classes"
@@ -60,7 +62,7 @@ msgstr ""
 "ίδιο όνομα. Τα αντικείμενα μπορούν να περιέχουν αυθαίρετα ποσά και είδη "
 "δεδομένων. Όπως ισχύει για τα modules, οι κλάσεις συμμετέχουν στη δυναμική "
 "φύση της Python: δημιουργούνται κατά το χρόνο εκτέλεσης και μπορούν να "
-"τροποποιηθούν περαιτέρω μετά τη δημιουργία. "
+"τροποποιηθούν περαιτέρω μετά τη δημιουργία."
 
 #: tutorial/classes.rst:23
 msgid ""
@@ -100,7 +102,7 @@ msgstr ""
 "κάνω περιστασιακή χρήση όρων από τη Smalltalk και τη C++. Θα χρησιμοποιούσα "
 "όρους  από τη Modula-3, καθώς η αντικειμενοστραφής σημασιολογία του είναι "
 "πιο κοντά σε αυτήν της Python από ότι της C++, Αλλά πιστεύω ότι λίγοι "
-"αναγνώστες το έχουν ακούσει.) "
+"αναγνώστες το έχουν ακούσει.)"
 
 #: tutorial/classes.rst:43
 msgid "A Word About Names and Objects"
@@ -157,7 +159,7 @@ msgstr ""
 
 #: tutorial/classes.rst:69
 msgid "Let's begin with some definitions."
-msgstr "Ας ξεκινήσουμε με ορισμένους ορισμούς. "
+msgstr "Ας ξεκινήσουμε με ορισμένους ορισμούς."
 
 #: tutorial/classes.rst:71
 msgid ""
@@ -282,7 +284,7 @@ msgid ""
 msgstr ""
 "Παρόλο που τα πεδία προσδιορίζονται στατικά, χρησιμοποιούνται δυναμικά. Σε "
 "οποιοδήποτε χρόνο κατά την διάρκεια της εκτέλεσης, υπάρχουν 3 ή 4 ένθετα "
-"πεδία των οποίων οι χώροι ονομάτων είναι άμεσα προσβάσιμοι "
+"πεδία των οποίων οι χώροι ονομάτων είναι άμεσα προσβάσιμοι:"
 
 #: tutorial/classes.rst:120
 msgid "the innermost scope, which is searched first, contains the local names"
@@ -302,7 +304,7 @@ msgstr ""
 msgid "the next-to-last scope contains the current module's global names"
 msgstr ""
 "η επόμενη προς την τελευταία εμβέλεια περιέχει τα τρέχοντα καθολικά ονόματα "
-"του module "
+"του module"
 
 #: tutorial/classes.rst:124
 msgid ""
@@ -341,7 +343,7 @@ msgstr ""
 "Συνήθως, η τοπική εμβέλεια παραπέμπει στα τοπικά ονόματα της (κείμενης) "
 "τρέχουσας συνάρτησης. Εκτός συναρτήσεων, η τοπική εμβέλεια αναφέρεται στον "
 "ίδιο χώρο ονομάτων με την καθολική εμβέλεια: τον χώρο ονομάτων του module.Οι "
-"ορισμοί κλάσεων τοποθετούν έναν ακόμη χώρο ονομάτων στην τοπική εμβέλεια. "
+"ορισμοί κλάσεων τοποθετούν έναν ακόμη χώρο ονομάτων στην τοπική εμβέλεια."
 
 #: tutorial/classes.rst:138
 msgid ""
@@ -360,7 +362,7 @@ msgstr ""
 "ονομάτων γίνεται δυναμικά, κατά το χρόνο εκτέλεσης --- ωστόσο, ο ορισμός της "
 "γλώσσας εξελίσσεται προς τη στατική ανάλυση ονομάτων, την ώρα της "
 "\"μεταγλώττισης\", επομένως μην βασίζεστε σε δυναμική ανάλυση ονόματος! "
-"(Στην πραγματικότητα, οι τοπικές μεταβλητές έχουν ήδη καθοριστεί στατικά.) "
+"(Στην πραγματικότητα, οι τοπικές μεταβλητές έχουν ήδη καθοριστεί στατικά.)"
 
 #: tutorial/classes.rst:146
 msgid ""
@@ -410,9 +412,69 @@ msgstr ""
 "πεδία και χώρους ονομάτων και πώς τα :keyword:`global` και :keyword:"
 "`nonlocal` επηρεάζουν τα variable binding::"
 
+#: tutorial/classes.rst:168
+msgid ""
+"def scope_test():\n"
+"    def do_local():\n"
+"        spam = \"local spam\"\n"
+"\n"
+"    def do_nonlocal():\n"
+"        nonlocal spam\n"
+"        spam = \"nonlocal spam\"\n"
+"\n"
+"    def do_global():\n"
+"        global spam\n"
+"        spam = \"global spam\"\n"
+"\n"
+"    spam = \"test spam\"\n"
+"    do_local()\n"
+"    print(\"After local assignment:\", spam)\n"
+"    do_nonlocal()\n"
+"    print(\"After nonlocal assignment:\", spam)\n"
+"    do_global()\n"
+"    print(\"After global assignment:\", spam)\n"
+"\n"
+"scope_test()\n"
+"print(\"In global scope:\", spam)"
+msgstr ""
+"def scope_test():\n"
+"    def do_local():\n"
+"        spam = \"local spam\"\n"
+"\n"
+"    def do_nonlocal():\n"
+"        nonlocal spam\n"
+"        spam = \"nonlocal spam\"\n"
+"\n"
+"    def do_global():\n"
+"        global spam\n"
+"        spam = \"global spam\"\n"
+"\n"
+"    spam = \"test spam\"\n"
+"    do_local()\n"
+"    print(\"After local assignment:\", spam)\n"
+"    do_nonlocal()\n"
+"    print(\"After nonlocal assignment:\", spam)\n"
+"    do_global()\n"
+"    print(\"After global assignment:\", spam)\n"
+"\n"
+"scope_test()\n"
+"print(\"In global scope:\", spam)"
+
 #: tutorial/classes.rst:191
 msgid "The output of the example code is:"
 msgstr "Το αποτέλεσμα του κώδικα στο παράδειγμα είναι:"
+
+#: tutorial/classes.rst:193
+msgid ""
+"After local assignment: test spam\n"
+"After nonlocal assignment: nonlocal spam\n"
+"After global assignment: nonlocal spam\n"
+"In global scope: global spam"
+msgstr ""
+"After local assignment: test spam\n"
+"After nonlocal assignment: nonlocal spam\n"
+"After global assignment: nonlocal spam\n"
+"In global scope: global spam"
 
 #: tutorial/classes.rst:200
 msgid ""
@@ -432,7 +494,7 @@ msgid ""
 "keyword:`global` assignment."
 msgstr ""
 "Μπορείτε επίσης να δείτε ότι δεν υπήρχε προηγούμενη δέσμευση για *spam* πριν "
-"από την εκχώρηση :keyword:`global`"
+"από την εκχώρηση :keyword:`global`.."
 
 #: tutorial/classes.rst:212
 msgid "A First Look at Classes"
@@ -453,6 +515,22 @@ msgstr "Σύνταξη Ορισμού Κλάσης"
 #: tutorial/classes.rst:223
 msgid "The simplest form of class definition looks like this::"
 msgstr "Η απλούστερη μορφή ορισμού κλάσης μοιάζει με αυτό::"
+
+#: tutorial/classes.rst:225
+msgid ""
+"class ClassName:\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
+"class ClassName:\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
 
 #: tutorial/classes.rst:232
 msgid ""
@@ -536,19 +614,35 @@ msgstr ""
 "βρίσκονταν στον χώρο ονομάτων της κλάσης όταν δημιουργήθηκε το αντικείμενο "
 "της κλάσης. Έτσι, αν ο ορισμός της κλάσης έμοιαζε ως εξής::"
 
+#: tutorial/classes.rst:269
+msgid ""
+"class MyClass:\n"
+"    \"\"\"A simple example class\"\"\"\n"
+"    i = 12345\n"
+"\n"
+"    def f(self):\n"
+"        return 'hello world'"
+msgstr ""
+"class MyClass:\n"
+"    \"\"\"A simple example class\"\"\"\n"
+"    i = 12345\n"
+"\n"
+"    def f(self):\n"
+"        return 'hello world'"
+
 #: tutorial/classes.rst:276
 msgid ""
 "then ``MyClass.i`` and ``MyClass.f`` are valid attribute references, "
 "returning an integer and a function object, respectively. Class attributes "
 "can also be assigned to, so you can change the value of ``MyClass.i`` by "
-"assignment. :attr:`!__doc__` is also a valid attribute, returning the "
+"assignment. :attr:`~type.__doc__` is also a valid attribute, returning the "
 "docstring belonging to the class: ``\"A simple example class\"``."
 msgstr ""
 "τότε τα `MyClass.i` και `MyClass.f` είναι έγκυρες αναφορές χαρακτηριστικών, "
 "επιστρέφοντας έναν ακέραιο και ένα αντικείμενο συνάρτησης, αντίστοιχα.Τα "
 "attributes κλάσης μπορούν επίσης να εκχωρηθούν, ώστε να μπορείτε να αλλάξετε "
-"την τιμή του `MyClass.i` ανά ανάθεση. :attr:`!__doc__` είναι επίσης ένα "
-"έγκυρο χαρακτηριστικό, επιστρέφοντας το docstring που ανήκει στην κλάση: "
+"την τιμή του `MyClass.i` ανά ανάθεση. Το :attr:`~type.__doc__` είναι επίσης "
+"ένα έγκυρο χαρακτηριστικό, επιστρέφοντας το docstring που ανήκει στην κλάση: "
 "``\"Ένα απλό παράδειγμα κλάσης\"``."
 
 #: tutorial/classes.rst:282
@@ -561,6 +655,10 @@ msgstr ""
 "προσποιηθείτε ότι το αντικείμενο της κλάσης είναι μια συνάρτηση χωρίς "
 "παραμέτρους που επιστρέφει ένα νέο στιγμιότυπο της κλάσης.Για παράδειγμα "
 "(υποθέτοντας την παραπάνω κλάση)::"
+
+#: tutorial/classes.rst:303
+msgid "x = MyClass()"
+msgstr "x = MyClass()"
 
 #: tutorial/classes.rst:288
 msgid ""
@@ -582,6 +680,14 @@ msgstr ""
 "αντικείμενα με στιγμιότυπα προσαρμοσμένα σε μια συγκεκριμένη αρχική "
 "κατάσταση. Επομένως μια κλάση μπορεί να ορίσει μια ειδική μέθοδο με το "
 "όνομα :meth:`~object.__init__`, όπως αυτό::"
+
+#: tutorial/classes.rst:296
+msgid ""
+"def __init__(self):\n"
+"    self.data = []"
+msgstr ""
+"def __init__(self):\n"
+"    self.data = []"
 
 #: tutorial/classes.rst:299
 msgid ""
@@ -605,6 +711,26 @@ msgstr ""
 "μεγαλύτερη ευελιξία. Σε αυτήν την περίπτωση, τα ορίσματα που δίνονται στον "
 "τελεστή στιγμιότυπου κλάσης μεταβιβάζονται σε :meth:`!__init__`. Για "
 "παράδειγμα, ::"
+
+#: tutorial/classes.rst:309
+msgid ""
+">>> class Complex:\n"
+"...     def __init__(self, realpart, imagpart):\n"
+"...         self.r = realpart\n"
+"...         self.i = imagpart\n"
+"...\n"
+">>> x = Complex(3.0, -4.5)\n"
+">>> x.r, x.i\n"
+"(3.0, -4.5)"
+msgstr ""
+">>> class Complex:\n"
+"...     def __init__(self, realpart, imagpart):\n"
+"...         self.r = realpart\n"
+"...         self.i = imagpart\n"
+"...\n"
+">>> x = Complex(3.0, -4.5)\n"
+">>> x.r, x.i\n"
+"(3.0, -4.5)"
 
 #: tutorial/classes.rst:322
 msgid "Instance Objects"
@@ -637,27 +763,29 @@ msgstr ""
 "του :class:`!MyClass` που δημιουργήθηκε παραπάνω, το ακόλουθο κομμάτι κώδικα "
 "θα εκτυπώσει την τιμή ``16``, χωρίς να αφήσει ίχνος::"
 
+#: tutorial/classes.rst:334
+msgid ""
+"x.counter = 1\n"
+"while x.counter < 10:\n"
+"    x.counter = x.counter * 2\n"
+"print(x.counter)\n"
+"del x.counter"
+msgstr ""
+"x.counter = 1\n"
+"while x.counter < 10:\n"
+"    x.counter = x.counter * 2\n"
+"print(x.counter)\n"
+"del x.counter"
+
 #: tutorial/classes.rst:340
 msgid ""
 "The other kind of instance attribute reference is a *method*. A method is a "
-"function that \"belongs to\" an object.  (In Python, the term method is not "
-"unique to class instances: other object types can have methods as well.  For "
-"example, list objects have methods called append, insert, remove, sort, and "
-"so on. However, in the following discussion, we'll use the term method "
-"exclusively to mean methods of class instance objects, unless explicitly "
-"stated otherwise.)"
+"function that \"belongs to\" an object."
 msgstr ""
 "Το άλλο είδος αναφοράς χαρακτηριστικού στιγμιότυπου είναι μια *μέθοδος*. Μια "
-"μέθοδος είναι μια συνάρτηση που \"ανήκει\" σε ένα αντικείμενο. (Στην Python, "
-"ο όρος μέθοδος δεν είναι μοναδικός σε στιγμιότυπα κλάσεων: άλλοι τύποι "
-"αντικειμένων μπορούν επίσης να έχουν μεθόδους. Για παράδειγμα, τα "
-"αντικείμενα λίστας έχουν μεθόδους που ονομάζονται προσάρτηση(append), "
-"εισαγωγή(insert), αφαίρεση(remove), ταξινόμηση(sort) και ούτω καθεξής. "
-"Ωστόσο, στην παρακάτω συζήτηση, θα χρησιμοποιήσουμε τον όρο μέθοδος "
-"αποκλειστικά για να εννοούμε μεθόδους αντικειμένων στιγμιότυπου κλάσης, "
-"εκτός εάν ρητά δηλώνεται διαφορετικά.)"
+"μέθοδος είναι μια συνάρτηση που \"ανήκει\" σε ένα αντικείμενο."
 
-#: tutorial/classes.rst:349
+#: tutorial/classes.rst:345
 msgid ""
 "Valid method names of an instance object depend on its class.  By "
 "definition, all attributes of a class that are function  objects define "
@@ -674,15 +802,19 @@ msgstr ""
 "`MyClass.i` δεν είναι. Αλλά το `x.f` δεν είναι το ίδιο πράγμα με το `MyClass."
 "f` --- είναι ένα *αντικείμενο μεθόδου*, όχι ένα αντικείμενο συνάρτησης."
 
-#: tutorial/classes.rst:360
+#: tutorial/classes.rst:356
 msgid "Method Objects"
 msgstr "Αντικείμενα Μεθόδου"
 
-#: tutorial/classes.rst:362
+#: tutorial/classes.rst:358
 msgid "Usually, a method is called right after it is bound::"
 msgstr "Συνήθως, μια μέθοδος καλείται αμέσως μετά τη δέσμευσή της::"
 
-#: tutorial/classes.rst:366
+#: tutorial/classes.rst:360
+msgid "x.f()"
+msgstr "x.f()"
+
+#: tutorial/classes.rst:362
 msgid ""
 "In the :class:`!MyClass` example, this will return the string ``'hello "
 "world'``. However, it is not necessary to call a method right away: ``x.f`` "
@@ -694,12 +826,22 @@ msgstr ""
 "αμέσως: το ``x.f`` είναι ένα αντικείμενο μεθόδου και μπορεί να αποθηκευτεί "
 "και να κληθεί αργότερα. Για παράδειγμα::"
 
-#: tutorial/classes.rst:374
+#: tutorial/classes.rst:366
+msgid ""
+"xf = x.f\n"
+"while True:\n"
+"    print(xf())"
+msgstr ""
+"xf = x.f\n"
+"while True:\n"
+"    print(xf())"
+
+#: tutorial/classes.rst:370
 msgid "will continue to print ``hello world`` until the end of time."
 msgstr ""
 "θα συνεχίσει να εκτυπώνει το ``hello world`` μέχρι το τέλος του χρόνου."
 
-#: tutorial/classes.rst:376
+#: tutorial/classes.rst:372
 msgid ""
 "What exactly happens when a method is called?  You may have noticed that ``x."
 "f()`` was called without an argument above, even though the function "
@@ -712,9 +854,9 @@ msgstr ""
 "``x.f()`` κλήθηκε χωρίς όρισμα παραπάνω, παρόλο που ο ορισμός της συνάρτησης "
 "για :meth:`!f` καθόριζε ένα όρισμα. Τι συνέβη με το όρισμα; Σίγουρα η Python "
 "δημιουργεί μια εξαίρεση όταν μια συνάρτηση που απαιτεί όρισμα καλείται χωρίς "
-"--- ακόμα κι αν το όρισμα δεν χρησιμοποιείται στην πραγματικότητα "
+"--- ακόμα κι αν το όρισμα δεν χρησιμοποιείται στην πραγματικότητα.."
 
-#: tutorial/classes.rst:382
+#: tutorial/classes.rst:378
 msgid ""
 "Actually, you may have guessed the answer: the special thing about methods "
 "is that the instance object is passed as the first argument of the "
@@ -732,7 +874,7 @@ msgstr ""
 "συνάρτησης με μια λίστα ορισμάτων που δημιουργείται με την εισαγωγή του "
 "αντικειμένου στιγμιότυπου της μεθόδου πριν από το πρώτο όρισμα."
 
-#: tutorial/classes.rst:389
+#: tutorial/classes.rst:385
 msgid ""
 "In general, methods work as follows.  When a non-data attribute of an "
 "instance is referenced, the instance's class is searched. If the name "
@@ -752,11 +894,11 @@ msgstr ""
 "στιγμιότυπου και τη λίστα ορισμάτων, και το αντικείμενο συνάρτησης καλείται "
 "με αυτήν τη νέα λίστα ορισμάτων."
 
-#: tutorial/classes.rst:402
+#: tutorial/classes.rst:398
 msgid "Class and Instance Variables"
 msgstr "Μεταβλητές Κλάσης και Στιγμιότυπου"
 
-#: tutorial/classes.rst:404
+#: tutorial/classes.rst:400
 msgid ""
 "Generally speaking, instance variables are for data unique to each instance "
 "and class variables are for attributes and methods shared by all instances "
@@ -766,7 +908,45 @@ msgstr ""
 "μοναδικά για κάθε στιγμιότυπο και οι μεταβλητές κλάσης είναι για "
 "χαρακτηριστικά και μεθόδους που μοιράζονται όλα τα στιγμιότυπα της κλάσης::"
 
-#: tutorial/classes.rst:426
+#: tutorial/classes.rst:404
+msgid ""
+"class Dog:\n"
+"\n"
+"    kind = 'canine'         # class variable shared by all instances\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name    # instance variable unique to each instance\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> e.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> d.name                  # unique to d\n"
+"'Fido'\n"
+">>> e.name                  # unique to e\n"
+"'Buddy'"
+msgstr ""
+"class Dog:\n"
+"\n"
+"    kind = 'canine'         # class variable shared by all instances\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name    # instance variable unique to each instance\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> e.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> d.name                  # unique to d\n"
+"'Fido'\n"
+">>> e.name                  # unique to e\n"
+"'Buddy'"
+
+#: tutorial/classes.rst:422
 msgid ""
 "As discussed in :ref:`tut-object`, shared data can have possibly surprising "
 "effects with involving :term:`mutable` objects such as lists and "
@@ -780,17 +960,91 @@ msgstr ""
 "παρακάτω κώδικα δεν θα πρέπει να χρησιμοποιείται ως μεταβλητή κλάσης επειδή "
 "μόνο μία λίστα θα μπορούσε να είναι κοινή σε όλα τα στιγμιότυπα *Dog*::"
 
-#: tutorial/classes.rst:449
+#: tutorial/classes.rst:428
+msgid ""
+"class Dog:\n"
+"\n"
+"    tricks = []             # mistaken use of a class variable\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks                # unexpectedly shared by all dogs\n"
+"['roll over', 'play dead']"
+msgstr ""
+"class Dog:\n"
+"\n"
+"    tricks = []             # mistaken use of a class variable\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks                # unexpectedly shared by all dogs\n"
+"['roll over', 'play dead']"
+
+#: tutorial/classes.rst:445
 msgid "Correct design of the class should use an instance variable instead::"
 msgstr ""
 "Ο σωστός σχεδιασμός της κλάσης θα πρέπει να χρησιμοποιεί μια μεταβλητή "
 "στιγμιότυπου αντί::"
 
-#: tutorial/classes.rst:473
+#: tutorial/classes.rst:447
+msgid ""
+"class Dog:\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"        self.tricks = []    # creates a new empty list for each dog\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks\n"
+"['roll over']\n"
+">>> e.tricks\n"
+"['play dead']"
+msgstr ""
+"class Dog:\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"        self.tricks = []    # creates a new empty list for each dog\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks\n"
+"['roll over']\n"
+">>> e.tricks\n"
+"['play dead']"
+
+#: tutorial/classes.rst:469
 msgid "Random Remarks"
 msgstr "Τυχαίες Παρατηρήσεις"
 
-#: tutorial/classes.rst:477
+#: tutorial/classes.rst:473
 msgid ""
 "If the same attribute name occurs in both an instance and in a class, then "
 "attribute lookup prioritizes the instance::"
@@ -799,7 +1053,33 @@ msgstr ""
 "μια κλάση, τότε η αναζήτηση χαρακτηριστικών δίνει προτεραιότητα στο "
 "στιγμιότυπο::"
 
-#: tutorial/classes.rst:492
+#: tutorial/classes.rst:476
+msgid ""
+">>> class Warehouse:\n"
+"...    purpose = 'storage'\n"
+"...    region = 'west'\n"
+"...\n"
+">>> w1 = Warehouse()\n"
+">>> print(w1.purpose, w1.region)\n"
+"storage west\n"
+">>> w2 = Warehouse()\n"
+">>> w2.region = 'east'\n"
+">>> print(w2.purpose, w2.region)\n"
+"storage east"
+msgstr ""
+">>> class Warehouse:\n"
+"...    purpose = 'storage'\n"
+"...    region = 'west'\n"
+"...\n"
+">>> w1 = Warehouse()\n"
+">>> print(w1.purpose, w1.region)\n"
+"storage west\n"
+">>> w2 = Warehouse()\n"
+">>> w2.region = 'east'\n"
+">>> print(w2.purpose, w2.region)\n"
+"storage east"
+
+#: tutorial/classes.rst:488
 msgid ""
 "Data attributes may be referenced by methods as well as by ordinary users "
 "(\"clients\") of an object.  In other words, classes are not usable to "
@@ -819,7 +1099,7 @@ msgstr ""
 "είναι απαραίτητο αυτό μπορεί να χρησιμοποιηθεί από επεκτάσεις στην Python "
 "γραμμένες σε C.)"
 
-#: tutorial/classes.rst:500
+#: tutorial/classes.rst:496
 msgid ""
 "Clients should use data attributes with care --- clients may mess up "
 "invariants maintained by the methods by stamping on their data attributes.  "
@@ -835,7 +1115,7 @@ msgstr ""
 "εφόσον αποφεύγονται οι συγκρούσεις ονομάτων --- και πάλι, μια σύμβαση "
 "ονομασίας μπορεί να σώσει πολλούς πονοκεφάλους εδώ."
 
-#: tutorial/classes.rst:506
+#: tutorial/classes.rst:502
 msgid ""
 "There is no shorthand for referencing data attributes (or other methods!) "
 "from within methods.  I find that this actually increases the readability of "
@@ -848,7 +1128,7 @@ msgstr ""
 "σύγχυσης τοπικών μεταβλητών και των μεταβλητών παραδείγματος όταν εξετάζουμε "
 "μια μέθοδο."
 
-#: tutorial/classes.rst:511
+#: tutorial/classes.rst:507
 msgid ""
 "Often, the first argument of a method is called ``self``.  This is nothing "
 "more than a convention: the name ``self`` has absolutely no special meaning "
@@ -864,7 +1144,7 @@ msgstr ""
 "προγραμματιστές Python, και είναι επίσης κατανοητό ότι μπορεί να γραφτεί ένα "
 "πρόγραμμα *class browser* που να βασίζεται σε μια τέτοια σύμβαση."
 
-#: tutorial/classes.rst:517
+#: tutorial/classes.rst:513
 msgid ""
 "Any function object that is a class attribute defines a method for instances "
 "of that class.  It is not necessary that the function definition is "
@@ -877,7 +1157,33 @@ msgstr ""
 "ενός αντικειμένου συνάρτησης σε μια τοπική μεταβλητή της κλάσης είναι επίσης "
 "εντάξει. Για παράδειγμα::"
 
-#: tutorial/classes.rst:534
+#: tutorial/classes.rst:518
+msgid ""
+"# Function defined outside the class\n"
+"def f1(self, x, y):\n"
+"    return min(x, x+y)\n"
+"\n"
+"class C:\n"
+"    f = f1\n"
+"\n"
+"    def g(self):\n"
+"        return 'hello world'\n"
+"\n"
+"    h = g"
+msgstr ""
+"# Function defined outside the class\n"
+"def f1(self, x, y):\n"
+"    return min(x, x+y)\n"
+"\n"
+"class C:\n"
+"    f = f1\n"
+"\n"
+"    def g(self):\n"
+"        return 'hello world'\n"
+"\n"
+"    h = g"
+
+#: tutorial/classes.rst:530
 msgid ""
 "Now ``f``, ``g`` and ``h`` are all attributes of class :class:`!C` that "
 "refer to function objects, and consequently they are all methods of "
@@ -888,17 +1194,41 @@ msgstr ""
 "C` που αναφέρονται σε αντικείμενα συνάρτησης, και κατά συνέπεια είναι όλες "
 "μέθοδοι στιγμιοτύπων του :class:`!C` --- Το ``h`` είναι ακριβώς ισοδύναμο με "
 "το ``g``. Σημειώστε ότι αυτή η πρακτική συνήθως χρησιμεύει μόνο για να "
-"μπερδέψει τον αναγνώστη ενός προγράμματος. "
+"μπερδέψει τον αναγνώστη ενός προγράμματος."
 
-#: tutorial/classes.rst:539
+#: tutorial/classes.rst:535
 msgid ""
 "Methods may call other methods by using method attributes of the ``self`` "
 "argument::"
 msgstr ""
 "Οι μέθοδοι μπορούν να καλούν άλλες μεθόδους χρησιμοποιώντας χαρακτηριστικά "
-"μεθόδου του argument ``self``:: "
+"μεθόδου του argument ``self``::"
 
-#: tutorial/classes.rst:553
+#: tutorial/classes.rst:538
+msgid ""
+"class Bag:\n"
+"    def __init__(self):\n"
+"        self.data = []\n"
+"\n"
+"    def add(self, x):\n"
+"        self.data.append(x)\n"
+"\n"
+"    def addtwice(self, x):\n"
+"        self.add(x)\n"
+"        self.add(x)"
+msgstr ""
+"class Bag:\n"
+"    def __init__(self):\n"
+"        self.data = []\n"
+"\n"
+"    def add(self, x):\n"
+"        self.data.append(x)\n"
+"\n"
+"    def addtwice(self, x):\n"
+"        self.add(x)\n"
+"        self.add(x)"
+
+#: tutorial/classes.rst:549
 msgid ""
 "Methods may reference global names in the same way as ordinary functions.  "
 "The global scope associated with a method is the module containing its "
@@ -922,19 +1252,19 @@ msgstr ""
 "εμβέλεια, και στην επόμενη ενότητα θα βρούμε μερικούς καλούς λόγους για τους "
 "οποίους μια μέθοδος θα ήθελε να αναφέρει τη δική της κλάση."
 
-#: tutorial/classes.rst:563
+#: tutorial/classes.rst:559
 msgid ""
 "Each value is an object, and therefore has a *class* (also called its "
 "*type*). It is stored as ``object.__class__``."
 msgstr ""
 "Κάθε τιμή είναι ένα αντικείμενο και επομένως έχει μια *κλάση* (ονομάζεται "
-"επίσης *τύπος* της). Αποθηκεύεται ως ``object.__class__``. "
+"επίσης *τύπος* της). Αποθηκεύεται ως ``object.__class__``."
 
-#: tutorial/classes.rst:570
+#: tutorial/classes.rst:566
 msgid "Inheritance"
 msgstr "Κληρονομικότητα"
 
-#: tutorial/classes.rst:572
+#: tutorial/classes.rst:568
 msgid ""
 "Of course, a language feature would not be worthy of the name \"class\" "
 "without supporting inheritance.  The syntax for a derived class definition "
@@ -944,7 +1274,23 @@ msgstr ""
 "\"class\" χωρίς την υποστήριξη της κληρονομικότητας. Η σύνταξη για έναν "
 "παραγόμενο ορισμό κλάσης μοιάζει με αυτό:"
 
-#: tutorial/classes.rst:583
+#: tutorial/classes.rst:572
+msgid ""
+"class DerivedClassName(BaseClassName):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
+"class DerivedClassName(BaseClassName):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+
+#: tutorial/classes.rst:579
 msgid ""
 "The name :class:`!BaseClassName` must be defined in a namespace accessible "
 "from the scope containing the derived class definition.  In place of a base "
@@ -957,7 +1303,11 @@ msgstr ""
 "Αυτό μπορεί να είναι χρήσιμο, για παράδειγμα, όταν η βασική κλάση ορίζεται "
 "σε άλλη module::"
 
-#: tutorial/classes.rst:591
+#: tutorial/classes.rst:585
+msgid "class DerivedClassName(modname.BaseClassName):"
+msgstr "class DerivedClassName(modname.BaseClassName):"
+
+#: tutorial/classes.rst:587
 msgid ""
 "Execution of a derived class definition proceeds the same as for a base "
 "class. When the class object is constructed, the base class is remembered.  "
@@ -974,7 +1324,7 @@ msgstr ""
 "εφαρμόζεται αναδρομικά εάν η ίδια η βασική κλάση προέρχεται από κάποια άλλη "
 "κλάση."
 
-#: tutorial/classes.rst:597
+#: tutorial/classes.rst:593
 msgid ""
 "There's nothing special about instantiation of derived classes: "
 "``DerivedClassName()`` creates a new instance of the class.  Method "
@@ -989,7 +1339,7 @@ msgstr ""
 "των βασικών κλάσεων εάν είναι απαραίτητο, και η αναφορά της μεθόδου είναι "
 "έγκυρη εάν αυτό αποδίδει ένα αντικείμενο συνάρτησης."
 
-#: tutorial/classes.rst:603
+#: tutorial/classes.rst:599
 msgid ""
 "Derived classes may override methods of their base classes.  Because methods "
 "have no special privileges when calling other methods of the same object, a "
@@ -1005,7 +1355,7 @@ msgstr ""
 "προγραμματιστές C++: όλες οι μέθοδοι στην Python είναι ουσιαστικά "
 "«εικονικές».)"
 
-#: tutorial/classes.rst:609
+#: tutorial/classes.rst:605
 msgid ""
 "An overriding method in a derived class may in fact want to extend rather "
 "than simply replace the base class method of the same name. There is a "
@@ -1022,13 +1372,13 @@ msgstr ""
 "αυτό λειτουργεί μόνο εάν η βασική κλάση είναι προσβάσιμη ως "
 "``BaseClassName`` στην καθολική εμβέλεια.)"
 
-#: tutorial/classes.rst:616
+#: tutorial/classes.rst:612
 msgid "Python has two built-in functions that work with inheritance:"
 msgstr ""
 "Η Python έχει δύο (ενσωματωμένες) built-in συναρτήσεις που λειτουργούν με "
 "κληρονομικότητα:"
 
-#: tutorial/classes.rst:618
+#: tutorial/classes.rst:614
 msgid ""
 "Use :func:`isinstance` to check an instance's type: ``isinstance(obj, int)`` "
 "will be ``True`` only if ``obj.__class__`` is :class:`int` or some class "
@@ -1039,7 +1389,7 @@ msgstr ""
 "``obj.__class__`` είναι :class:`int` ή προέρχεται από κάποια κλάση από :"
 "class:`int`."
 
-#: tutorial/classes.rst:622
+#: tutorial/classes.rst:618
 msgid ""
 "Use :func:`issubclass` to check class inheritance: ``issubclass(bool, int)`` "
 "is ``True`` since :class:`bool` is a subclass of :class:`int`.  However, "
@@ -1051,11 +1401,11 @@ msgstr ""
 "είναι υποκλάση του :class:`int`. Ωστόσο, το ``issubclass(float, int)`` είναι "
 "``False`` αφού το :class:`float` δεν είναι υποκλάση του :class:`int`."
 
-#: tutorial/classes.rst:632
+#: tutorial/classes.rst:628
 msgid "Multiple Inheritance"
 msgstr "Πολλαπλή Κληρονομικότητα"
 
-#: tutorial/classes.rst:634
+#: tutorial/classes.rst:630
 msgid ""
 "Python supports a form of multiple inheritance as well.  A class definition "
 "with multiple base classes looks like this::"
@@ -1063,7 +1413,23 @@ msgstr ""
 "Η Python υποστηρίζει επίσης μια μορφή πολλαπλής κληρονομικότητας. Ένας "
 "ορισμός κλάσης με πολλαπλές βασικές κλάσεις μοιάζει με αυτό::"
 
-#: tutorial/classes.rst:644
+#: tutorial/classes.rst:633
+msgid ""
+"class DerivedClassName(Base1, Base2, Base3):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
+"class DerivedClassName(Base1, Base2, Base3):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+
+#: tutorial/classes.rst:640
 msgid ""
 "For most purposes, in the simplest cases, you can think of the search for "
 "attributes inherited from a parent class as depth-first, left-to-right, not "
@@ -1081,7 +1447,7 @@ msgstr ""
 "Base1` και μετά (αναδρομικά) στις βασικές κλάσεις του :class:`!Base1`, και "
 "αν δεν βρέθηκε εκεί,αναζητήθηκε στο :class:`!Base2`, και ούτω καθεξής."
 
-#: tutorial/classes.rst:651
+#: tutorial/classes.rst:647
 msgid ""
 "In fact, it is slightly more complex than that; the method resolution order "
 "changes dynamically to support cooperative calls to :func:`super`.  This "
@@ -1095,7 +1461,7 @@ msgstr ""
 "κληρονομικότητας ως call-next-method και είναι πιο ισχυρή από τη σούπερ "
 "κλήση που βρίσκεται σε γλώσσες μεμονωμένης κληρονομικότητας."
 
-#: tutorial/classes.rst:657
+#: tutorial/classes.rst:653
 msgid ""
 "Dynamic ordering is necessary because all cases of multiple inheritance "
 "exhibit one or more diamond relationships (where at least one of the parent "
@@ -1108,8 +1474,7 @@ msgid ""
 "and that is monotonic (meaning that a class can be subclassed without "
 "affecting the precedence order of its parents). Taken together, these "
 "properties make it possible to design reliable and extensible classes with "
-"multiple inheritance.  For more detail, see https://www.python.org/download/"
-"releases/2.3/mro/."
+"multiple inheritance.  For more detail, see :ref:`python_2.3_mro`."
 msgstr ""
 "Η δυναμική σειρά είναι απαραίτητη επειδή όλες οι περιπτώσεις πολλαπλής "
 "κληρονομικότητας εμφανίζουν μία ή περισσότερες σχέσεις διαμαντιών (όπου "
@@ -1124,14 +1489,14 @@ msgstr ""
 "μονότονος (που σημαίνει ότι μια κλάση μπορεί να γίνει υπό-κλάση χωρίς να "
 "επηρεαστεί η σειρά προτεραιότητας των γονέων της). Συνολικά, αυτές οι "
 "ιδιότητες καθιστούν δυνατό τον σχεδιασμό αξιόπιστων και επεκτάσιμων κλάσεων "
-"με πολλαπλή κληρονομικότητα. Για περισσότερες λεπτομέρειες, ανατρέξτε στη "
-"διεύθυνση https://www.python.org/download/releases/2.3/mro/."
+"με πολλαπλή κληρονομικότητα. Για περισσότερες λεπτομέρειες, δείτε :ref:"
+"`python_2.3_mro`."
 
-#: tutorial/classes.rst:674
+#: tutorial/classes.rst:670
 msgid "Private Variables"
 msgstr "Ιδιωτικές Μεταβλητές"
 
-#: tutorial/classes.rst:676
+#: tutorial/classes.rst:672
 msgid ""
 "\"Private\" instance variables that cannot be accessed except from inside an "
 "object don't exist in Python.  However, there is a convention that is "
@@ -1146,9 +1511,9 @@ msgstr ""
 "κώδικα: ένα όνομα με πρόθεμα κάτω παύλα (π.χ. ``_spam``) θα πρέπει να "
 "αντιμετωπίζεται ως μη δημόσιο μέρος του API (είτε πρόκειται για συνάρτηση,"
 "μέθοδο ή μέλος δεδομένων). Θα πρέπει να θεωρείται ως λεπτομέρεια υλοποίησης "
-"και υπόκειται σε αλλαγές χωρίς προειδοποίηση. "
+"και υπόκειται σε αλλαγές χωρίς προειδοποίηση."
 
-#: tutorial/classes.rst:686
+#: tutorial/classes.rst:682
 msgid ""
 "Since there is a valid use-case for class-private members (namely to avoid "
 "name clashes of names with names defined by subclasses), there is limited "
@@ -1170,7 +1535,15 @@ msgstr ""
 "λαμβάνεται υπόψη η συντακτική θέση του του αναγνωριστικού, αρκεί να "
 "εμφανίζεται εντός του ορισμού μιας κλάσης."
 
-#: tutorial/classes.rst:695
+#: tutorial/classes.rst:693
+msgid ""
+"The :ref:`private name mangling specifications <private-name-mangling>` for "
+"details and special cases."
+msgstr ""
+"Οι :ref:`προδιαγραφές παραποίησης ιδιωτικού ονόματος <private-name-"
+"mangling>` για λεπτομέρειες και ειδικές περιπτώσεις."
+
+#: tutorial/classes.rst:696
 msgid ""
 "Name mangling is helpful for letting subclasses override methods without "
 "breaking intraclass method calls.  For example::"
@@ -1179,7 +1552,47 @@ msgstr ""
 "παρακάμπτουν μεθόδους χωρίς να διακόπτουν τις κλήσεις μεθόδων ενδοκλάσεων. "
 "Για παράδειγμα::"
 
-#: tutorial/classes.rst:717
+#: tutorial/classes.rst:699
+msgid ""
+"class Mapping:\n"
+"    def __init__(self, iterable):\n"
+"        self.items_list = []\n"
+"        self.__update(iterable)\n"
+"\n"
+"    def update(self, iterable):\n"
+"        for item in iterable:\n"
+"            self.items_list.append(item)\n"
+"\n"
+"    __update = update   # private copy of original update() method\n"
+"\n"
+"class MappingSubclass(Mapping):\n"
+"\n"
+"    def update(self, keys, values):\n"
+"        # provides new signature for update()\n"
+"        # but does not break __init__()\n"
+"        for item in zip(keys, values):\n"
+"            self.items_list.append(item)"
+msgstr ""
+"class Mapping:\n"
+"    def __init__(self, iterable):\n"
+"        self.items_list = []\n"
+"        self.__update(iterable)\n"
+"\n"
+"    def update(self, iterable):\n"
+"        for item in iterable:\n"
+"            self.items_list.append(item)\n"
+"\n"
+"    __update = update   # private copy of original update() method\n"
+"\n"
+"class MappingSubclass(Mapping):\n"
+"\n"
+"    def update(self, keys, values):\n"
+"        # provides new signature for update()\n"
+"        # but does not break __init__()\n"
+"        for item in zip(keys, values):\n"
+"            self.items_list.append(item)"
+
+#: tutorial/classes.rst:718
 msgid ""
 "The above example would work even if ``MappingSubclass`` were to introduce a "
 "``__update`` identifier since it is replaced with ``_Mapping__update`` in "
@@ -1191,7 +1604,7 @@ msgstr ""
 "``_Mapping__update`` στην κλάση ``Mapping`` και με το "
 "``_MappingSubclass__update`` στη κλάση ``MappingSubclass`` αντίστοιχα."
 
-#: tutorial/classes.rst:722
+#: tutorial/classes.rst:723
 msgid ""
 "Note that the mangling rules are designed mostly to avoid accidents; it "
 "still is possible to access or modify a variable that is considered "
@@ -1204,7 +1617,7 @@ msgstr ""
 "και σε ειδικές περιπτώσεις, όπως στο πρόγραμμα εντοπισμού "
 "σφαλμάτων(debugger)."
 
-#: tutorial/classes.rst:726
+#: tutorial/classes.rst:727
 msgid ""
 "Notice that code passed to ``exec()`` or ``eval()`` does not consider the "
 "classname of the invoking class to be the current class; this is similar to "
@@ -1221,11 +1634,11 @@ msgstr ""
 "``getattr()``, ``setattr()`` και ``delattr()``, καθώς και όταν γίνεται "
 "αναφορά απευθείας στο ``__dict__``."
 
-#: tutorial/classes.rst:737
+#: tutorial/classes.rst:738
 msgid "Odds and Ends"
 msgstr "Μικροπράγματα"
 
-#: tutorial/classes.rst:739
+#: tutorial/classes.rst:740
 msgid ""
 "Sometimes it is useful to have a data type similar to the Pascal \"record\" "
 "or C \"struct\", bundling together a few named data items. The idiomatic "
@@ -1236,7 +1649,39 @@ msgstr ""
 "δεδομένων. Η ιδιωματική προσέγγιση είναι η χρήση :mod:`dataclasses` για "
 "αυτόν τον σκοπό::"
 
-#: tutorial/classes.rst:759
+#: tutorial/classes.rst:744
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"@dataclass\n"
+"class Employee:\n"
+"    name: str\n"
+"    dept: str\n"
+"    salary: int"
+msgstr ""
+"from dataclasses import dataclass\n"
+"\n"
+"@dataclass\n"
+"class Employee:\n"
+"    name: str\n"
+"    dept: str\n"
+"    salary: int"
+
+#: tutorial/classes.rst:754
+msgid ""
+">>> john = Employee('john', 'computer lab', 1000)\n"
+">>> john.dept\n"
+"'computer lab'\n"
+">>> john.salary\n"
+"1000"
+msgstr ""
+">>> john = Employee('john', 'computer lab', 1000)\n"
+">>> john.dept\n"
+"'computer lab'\n"
+">>> john.salary\n"
+"1000"
+
+#: tutorial/classes.rst:760
 msgid ""
 "A piece of Python code that expects a particular abstract data type can "
 "often be passed a class that emulates the methods of that data type "
@@ -1253,7 +1698,7 @@ msgstr ""
 "TextIOBase.readline` που λαμβάνουν τα δεδομένα από ένα buffer συμβολοσειρών "
 "αντ' αυτού, και περάστε το ως όρισμα."
 
-#: tutorial/classes.rst:771
+#: tutorial/classes.rst:772
 msgid ""
 ":ref:`Instance method objects <instance-methods>` have attributes, too: :"
 "attr:`m.__self__ <method.__self__>` is the instance object with the method :"
@@ -1266,11 +1711,11 @@ msgstr ""
 "είναι το :ref:`αντικείμενο συνάρτησης <user-defined-funcs>` που αντιστοιχεί "
 "στη μέθοδο."
 
-#: tutorial/classes.rst:781
+#: tutorial/classes.rst:782
 msgid "Iterators"
 msgstr "Επαναλήπτες"
 
-#: tutorial/classes.rst:783
+#: tutorial/classes.rst:784
 msgid ""
 "By now you have probably noticed that most container objects can be looped "
 "over using a :keyword:`for` statement::"
@@ -1278,7 +1723,31 @@ msgstr ""
 "Μέχρι τώρα πιθανότατα έχετε παρατηρήσει ότι τα περισσότερα αντικείμενα "
 "container μπορούν να επαναληφθούν χρησιμοποιώντας μια δήλωση :keyword:`for`::"
 
-#: tutorial/classes.rst:797
+#: tutorial/classes.rst:787
+msgid ""
+"for element in [1, 2, 3]:\n"
+"    print(element)\n"
+"for element in (1, 2, 3):\n"
+"    print(element)\n"
+"for key in {'one':1, 'two':2}:\n"
+"    print(key)\n"
+"for char in \"123\":\n"
+"    print(char)\n"
+"for line in open(\"myfile.txt\"):\n"
+"    print(line, end='')"
+msgstr ""
+"for element in [1, 2, 3]:\n"
+"    print(element)\n"
+"for element in (1, 2, 3):\n"
+"    print(element)\n"
+"for key in {'one':1, 'two':2}:\n"
+"    print(key)\n"
+"for char in \"123\":\n"
+"    print(char)\n"
+"for line in open(\"myfile.txt\"):\n"
+"    print(line, end='')"
+
+#: tutorial/classes.rst:798
 msgid ""
 "This style of access is clear, concise, and convenient.  The use of "
 "iterators pervades and unifies Python.  Behind the scenes, the :keyword:"
@@ -1301,7 +1770,41 @@ msgstr ""
 "χρησιμοποιώντας την ενσωματωμένη συνάρτηση :func:`next`. Αυτό το παράδειγμα "
 "δείχνει πώς λειτουργούν όλα::"
 
-#: tutorial/classes.rst:822
+#: tutorial/classes.rst:807
+msgid ""
+">>> s = 'abc'\n"
+">>> it = iter(s)\n"
+">>> it\n"
+"<str_iterator object at 0x10c90e650>\n"
+">>> next(it)\n"
+"'a'\n"
+">>> next(it)\n"
+"'b'\n"
+">>> next(it)\n"
+"'c'\n"
+">>> next(it)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    next(it)\n"
+"StopIteration"
+msgstr ""
+">>> s = 'abc'\n"
+">>> it = iter(s)\n"
+">>> it\n"
+"<str_iterator object at 0x10c90e650>\n"
+">>> next(it)\n"
+"'a'\n"
+">>> next(it)\n"
+"'b'\n"
+">>> next(it)\n"
+"'c'\n"
+">>> next(it)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    next(it)\n"
+"StopIteration"
+
+#: tutorial/classes.rst:823
 msgid ""
 "Having seen the mechanics behind the iterator protocol, it is easy to add "
 "iterator behavior to your classes.  Define an :meth:`~container.__iter__` "
@@ -1315,11 +1818,67 @@ msgstr ""
 "`~iterator.__next__`. Εάν η κλάση ορίζει :meth:`!__next__`, τότε το :meth:`!"
 "__iter__` μπορεί απλώς να επιστρέψει ``self``::"
 
-#: tutorial/classes.rst:859
+#: tutorial/classes.rst:828
+msgid ""
+"class Reverse:\n"
+"    \"\"\"Iterator for looping over a sequence backwards.\"\"\"\n"
+"    def __init__(self, data):\n"
+"        self.data = data\n"
+"        self.index = len(data)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return self\n"
+"\n"
+"    def __next__(self):\n"
+"        if self.index == 0:\n"
+"            raise StopIteration\n"
+"        self.index = self.index - 1\n"
+"        return self.data[self.index]"
+msgstr ""
+"class Reverse:\n"
+"    \"\"\"Iterator for looping over a sequence backwards.\"\"\"\n"
+"    def __init__(self, data):\n"
+"        self.data = data\n"
+"        self.index = len(data)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return self\n"
+"\n"
+"    def __next__(self):\n"
+"        if self.index == 0:\n"
+"            raise StopIteration\n"
+"        self.index = self.index - 1\n"
+"        return self.data[self.index]"
+
+#: tutorial/classes.rst:845
+msgid ""
+">>> rev = Reverse('spam')\n"
+">>> iter(rev)\n"
+"<__main__.Reverse object at 0x00A1DB50>\n"
+">>> for char in rev:\n"
+"...     print(char)\n"
+"...\n"
+"m\n"
+"a\n"
+"p\n"
+"s"
+msgstr ""
+">>> rev = Reverse('spam')\n"
+">>> iter(rev)\n"
+"<__main__.Reverse object at 0x00A1DB50>\n"
+">>> for char in rev:\n"
+"...     print(char)\n"
+"...\n"
+"m\n"
+"a\n"
+"p\n"
+"s"
+
+#: tutorial/classes.rst:860
 msgid "Generators"
 msgstr "Γεννήτορες (Generators)"
 
-#: tutorial/classes.rst:861
+#: tutorial/classes.rst:862
 msgid ""
 ":term:`Generators <generator>` are a simple and powerful tool for creating "
 "iterators.  They are written like regular functions but use the :keyword:"
@@ -1336,7 +1895,35 @@ msgstr ""
 "τελευταία). Ένα παράδειγμα δείχνει ότι οι generators μπορεί να είναι "
 "ασήμαντα εύκολο να δημιουργηθούν::"
 
-#: tutorial/classes.rst:882
+#: tutorial/classes.rst:869
+msgid ""
+"def reverse(data):\n"
+"    for index in range(len(data)-1, -1, -1):\n"
+"        yield data[index]"
+msgstr ""
+"def reverse(data):\n"
+"    for index in range(len(data)-1, -1, -1):\n"
+"        yield data[index]"
+
+#: tutorial/classes.rst:875
+msgid ""
+">>> for char in reverse('golf'):\n"
+"...     print(char)\n"
+"...\n"
+"f\n"
+"l\n"
+"o\n"
+"g"
+msgstr ""
+">>> for char in reverse('golf'):\n"
+"...     print(char)\n"
+"...\n"
+"f\n"
+"l\n"
+"o\n"
+"g"
+
+#: tutorial/classes.rst:883
 msgid ""
 "Anything that can be done with generators can also be done with class-based "
 "iterators as described in the previous section.  What makes generators so "
@@ -1348,7 +1935,7 @@ msgstr ""
 "κάνει τους generators τόσο συμπαγείς είναι ότι οι μέθοδοι :meth:`~iterator."
 "__iter__` και :meth:`~.generator__next__` δημιουργούνται αυτόματα."
 
-#: tutorial/classes.rst:887
+#: tutorial/classes.rst:888
 msgid ""
 "Another key feature is that the local variables and execution state are "
 "automatically saved between calls.  This made the function easier to write "
@@ -1360,7 +1947,7 @@ msgstr ""
 "συνάρτηση πιο εύκολη στην γραφή και πολύ πιο ξεκάθαρη από μια προσέγγιση που "
 "χρησιμοποιεί μεταβλητές παράδειγμα όπως ``self.index`` και ``self.data``."
 
-#: tutorial/classes.rst:892
+#: tutorial/classes.rst:893
 msgid ""
 "In addition to automatic method creation and saving program state, when "
 "generators terminate, they automatically raise :exc:`StopIteration`. In "
@@ -1373,11 +1960,11 @@ msgstr ""
 "καθιστούν εύκολη τη δημιουργία επαναλήψεων χωρίς περισσότερη προσπάθεια από "
 "τη σύνταξη μιας κανονικής συνάρτησης."
 
-#: tutorial/classes.rst:901
+#: tutorial/classes.rst:902
 msgid "Generator Expressions"
 msgstr "Εκφράσεις Γεννήτορων"
 
-#: tutorial/classes.rst:903
+#: tutorial/classes.rst:904
 msgid ""
 "Some simple generators can be coded succinctly as expressions using a syntax "
 "similar to list comprehensions but with parentheses instead of square "
@@ -1394,43 +1981,98 @@ msgstr ""
 "ευέλικτες από τους ορισμούς πλήρους generator και τείνουν να είναι "
 "περισσότερο φιλικό προς τη μνήμη από αντίστοιχα list comprehensions."
 
-#: tutorial/classes.rst:910
+#: tutorial/classes.rst:911
 msgid "Examples::"
 msgstr "Παραδείγματα::"
 
-#: tutorial/classes.rst:931
+#: tutorial/classes.rst:913
+msgid ""
+">>> sum(i*i for i in range(10))                 # sum of squares\n"
+"285\n"
+"\n"
+">>> xvec = [10, 20, 30]\n"
+">>> yvec = [7, 5, 3]\n"
+">>> sum(x*y for x,y in zip(xvec, yvec))         # dot product\n"
+"260\n"
+"\n"
+">>> unique_words = set(word for line in page  for word in line.split())\n"
+"\n"
+">>> valedictorian = max((student.gpa, student.name) for student in "
+"graduates)\n"
+"\n"
+">>> data = 'golf'\n"
+">>> list(data[i] for i in range(len(data)-1, -1, -1))\n"
+"['f', 'l', 'o', 'g']"
+msgstr ""
+">>> sum(i*i for i in range(10))                 # sum of squares\n"
+"285\n"
+"\n"
+">>> xvec = [10, 20, 30]\n"
+">>> yvec = [7, 5, 3]\n"
+">>> sum(x*y for x,y in zip(xvec, yvec))         # dot product\n"
+"260\n"
+"\n"
+">>> unique_words = set(word for line in page  for word in line.split())\n"
+"\n"
+">>> valedictorian = max((student.gpa, student.name) for student in "
+"graduates)\n"
+"\n"
+">>> data = 'golf'\n"
+">>> list(data[i] for i in range(len(data)-1, -1, -1))\n"
+"['f', 'l', 'o', 'g']"
+
+#: tutorial/classes.rst:932
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/classes.rst:932
+#: tutorial/classes.rst:933
 msgid ""
 "Except for one thing.  Module objects have a secret read-only attribute "
 "called :attr:`~object.__dict__` which returns the dictionary used to "
-"implement the module's namespace; the name :attr:`~object.__dict__` is an "
-"attribute but not a global name. Obviously, using this violates the "
-"abstraction of namespace implementation, and should be restricted to things "
-"like post-mortem debuggers."
+"implement the module's namespace; the name ``__dict__`` is an attribute but "
+"not a global name. Obviously, using this violates the abstraction of "
+"namespace implementation, and should be restricted to things like post-"
+"mortem debuggers."
 msgstr ""
 "Εκτός από ένα πράγμα. Τα αντικείμενα του module έχουν ένα μυστικό "
 "χαρακτηριστικό μόνο για ανάγνωση που καλείται :attr:`~object.__dict__` το "
 "οποίο επιστρέφει το λεξικό που χρησιμοποιείται για την υλοποίηση του χώρου "
-"ονομάτων του module.Το όνομα :attr:`~object.__dict__` είναι ένα "
-"χαρακτηριστικό αλλά όχι καθολικό όνομα. Προφανώς, η χρήση αυτού παραβιάζει "
-"την αφαίρεση υλοποίησης χώρου ονομάτων και θα πρέπει να περιορίζεται σε "
-"πράγματα όπως τα ύστερα προγράμματα εντοπισμού σφαλμάτων."
+"ονομάτων του module.Το όνομα ``__dict__`` είναι ένα χαρακτηριστικό αλλά όχι "
+"καθολικό όνομα. Προφανώς, η χρήση αυτού παραβιάζει την αφαίρεση υλοποίησης "
+"χώρου ονομάτων και θα πρέπει να περιορίζεται σε πράγματα όπως τα ύστερα "
+"προγράμματα εντοπισμού σφαλμάτων."
 
-#: tutorial/classes.rst:347
+#: tutorial/classes.rst:343
 msgid "object"
 msgstr "αντικείμενο"
 
-#: tutorial/classes.rst:347
+#: tutorial/classes.rst:343
 msgid "method"
 msgstr "μέθοδος"
 
-#: tutorial/classes.rst:683
+#: tutorial/classes.rst:679
 msgid "name"
 msgstr "όνομα"
 
-#: tutorial/classes.rst:683
+#: tutorial/classes.rst:679
 msgid "mangling"
 msgstr "συντριβή"
+
+#~ msgid ""
+#~ "The other kind of instance attribute reference is a *method*. A method is "
+#~ "a function that \"belongs to\" an object.  (In Python, the term method is "
+#~ "not unique to class instances: other object types can have methods as "
+#~ "well.  For example, list objects have methods called append, insert, "
+#~ "remove, sort, and so on. However, in the following discussion, we'll use "
+#~ "the term method exclusively to mean methods of class instance objects, "
+#~ "unless explicitly stated otherwise.)"
+#~ msgstr ""
+#~ "Το άλλο είδος αναφοράς χαρακτηριστικού στιγμιότυπου είναι μια *μέθοδος*. "
+#~ "Μια μέθοδος είναι μια συνάρτηση που \"ανήκει\" σε ένα αντικείμενο. (Στην "
+#~ "Python, ο όρος μέθοδος δεν είναι μοναδικός σε στιγμιότυπα κλάσεων: άλλοι "
+#~ "τύποι αντικειμένων μπορούν επίσης να έχουν μεθόδους. Για παράδειγμα, τα "
+#~ "αντικείμενα λίστας έχουν μεθόδους που ονομάζονται προσάρτηση(append), "
+#~ "εισαγωγή(insert), αφαίρεση(remove), ταξινόμηση(sort) και ούτω καθεξής. "
+#~ "Ωστόσο, στην παρακάτω συζήτηση, θα χρησιμοποιήσουμε τον όρο μέθοδος "
+#~ "αποκλειστικά για να εννοούμε μεθόδους αντικειμένων στιγμιότυπου κλάσης, "
+#~ "εκτός εάν ρητά δηλώνεται διαφορετικά.)"

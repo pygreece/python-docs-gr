@@ -8,17 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2025-01-03 15:43+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/collections.abc.rst:2
-msgid ":mod:`collections.abc` --- Abstract Base Classes for Containers"
-msgstr ":mod:`collections.abc` --- Αφηρημένες Βασικές Κλάσεις για Containers"
+msgid ":mod:`!collections.abc` --- Abstract Base Classes for Containers"
+msgstr ":mod:`!collections.abc` --- Αφηρημένες Βασικές Κλάσεις για Containers"
 
 #: library/collections.abc.rst:10
 msgid "Formerly, this module was part of the :mod:`collections` module."
@@ -61,6 +62,34 @@ msgstr ""
 "παρακαμφθούν αν χρειάζεται. Άλλες μέθοδοι μπορούν να προστεθούν όταν είναι "
 "αναγκαίο:"
 
+#: library/collections.abc.rst:35
+msgid ""
+"class C(Sequence):                      # Direct inheritance\n"
+"    def __init__(self): ...             # Extra method not required by the "
+"ABC\n"
+"    def __getitem__(self, index):  ...  # Required abstract method\n"
+"    def __len__(self):  ...             # Required abstract method\n"
+"    def count(self, value): ...         # Optionally override a mixin method"
+msgstr ""
+"class C(Sequence):                      # Direct inheritance\n"
+"    def __init__(self): ...             # Extra method not required by the "
+"ABC\n"
+"    def __getitem__(self, index):  ...  # Required abstract method\n"
+"    def __len__(self):  ...             # Required abstract method\n"
+"    def count(self, value): ...         # Optionally override a mixin method"
+
+#: library/collections.abc.rst:43
+msgid ""
+">>> issubclass(C, Sequence)\n"
+"True\n"
+">>> isinstance(C(), Sequence)\n"
+"True"
+msgstr ""
+">>> issubclass(C, Sequence)\n"
+"True\n"
+">>> isinstance(C(), Sequence)\n"
+"True"
+
 #: library/collections.abc.rst:50
 msgid ""
 "2) Existing classes and built-in classes can be registered as \"virtual "
@@ -77,6 +106,40 @@ msgstr ""
 "func:`issubclass` ή :func:`isinstance` για να καθορίσουν εάν υποστηρίζεται η "
 "πλήρης διεπαφή. Η εξαίρεση σε αυτό τον κανόνα είναι για τις μεθόδους που "
 "προσδιορίζονται αυτόματα από το υπόλοιπο API:"
+
+#: library/collections.abc.rst:58
+msgid ""
+"class D:                                 # No inheritance\n"
+"    def __init__(self): ...              # Extra method not required by the "
+"ABC\n"
+"    def __getitem__(self, index):  ...   # Abstract method\n"
+"    def __len__(self):  ...              # Abstract method\n"
+"    def count(self, value): ...          # Mixin method\n"
+"    def index(self, value): ...          # Mixin method\n"
+"\n"
+"Sequence.register(D)                     # Register instead of inherit"
+msgstr ""
+"class D:                                 # No inheritance\n"
+"    def __init__(self): ...              # Extra method not required by the "
+"ABC\n"
+"    def __getitem__(self, index):  ...   # Abstract method\n"
+"    def __len__(self):  ...              # Abstract method\n"
+"    def count(self, value): ...          # Mixin method\n"
+"    def index(self, value): ...          # Mixin method\n"
+"\n"
+"Sequence.register(D)                     # Register instead of inherit"
+
+#: library/collections.abc.rst:69
+msgid ""
+">>> issubclass(D, Sequence)\n"
+"True\n"
+">>> isinstance(D(), Sequence)\n"
+"True"
+msgstr ""
+">>> issubclass(D, Sequence)\n"
+"True\n"
+">>> isinstance(D(), Sequence)\n"
+"True"
 
 #: library/collections.abc.rst:76
 msgid ""
@@ -99,7 +162,29 @@ msgid ""
 msgstr ""
 "3) Ορισμένες απλές διεπαφές είναι άμεσα αναγνωρίσιμες από την παρουσία των "
 "απαιτούμενων μεθόδων (εκτός αν αυτές οι μέθοδοι έχουν οριστεί σε :const:"
-"`None`): "
+"`None`):"
+
+#: library/collections.abc.rst:86
+msgid ""
+"class E:\n"
+"    def __iter__(self): ...\n"
+"    def __next__(self): ..."
+msgstr ""
+"class E:\n"
+"    def __iter__(self): ...\n"
+"    def __next__(self): ..."
+
+#: library/collections.abc.rst:92
+msgid ""
+">>> issubclass(E, Iterable)\n"
+"True\n"
+">>> isinstance(E(), Iterable)\n"
+"True"
+msgstr ""
+">>> issubclass(E, Iterable)\n"
+"True\n"
+">>> isinstance(E(), Iterable)\n"
+"True"
 
 #: library/collections.abc.rst:99
 msgid ""
@@ -205,7 +290,7 @@ msgstr ":class:`Generator`  [1]_"
 msgid ":class:`Iterator`"
 msgstr ":class:`Iterator`"
 
-#: library/collections.abc.rst:128 library/collections.abc.rst:176
+#: library/collections.abc.rst:128 library/collections.abc.rst:177
 msgid "``send``, ``throw``"
 msgstr "``send``, ``throw``"
 
@@ -217,7 +302,7 @@ msgstr "``close``, ``__iter__``, ``__next__``"
 msgid ":class:`Sized`  [1]_"
 msgstr ":class:`Sized`  [1]_"
 
-#: library/collections.abc.rst:129 library/collections.abc.rst:168
+#: library/collections.abc.rst:129
 msgid "``__len__``"
 msgstr "``__len__``"
 
@@ -286,31 +371,33 @@ msgstr ":class:`ByteString`"
 msgid "Inherited :class:`Sequence` methods"
 msgstr "Κληρονομημένες :class:`Sequence` μέθοδοι"
 
-#: library/collections.abc.rst:147 library/collections.abc.rst:151
+#: library/collections.abc.rst:147 library/collections.abc.rst:152
 msgid ":class:`Set`"
 msgstr ":class:`Set`"
 
-#: library/collections.abc.rst:147 library/collections.abc.rst:157
+#: library/collections.abc.rst:147 library/collections.abc.rst:158
 msgid ":class:`Collection`"
 msgstr ":class:`Collection`"
 
 #: library/collections.abc.rst:147
 msgid ""
 "``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
-"``__and__``, ``__or__``, ``__sub__``, ``__xor__``, and ``isdisjoint``"
+"``__and__``, ``__or__``, ``__sub__``, ``__rsub__``, ``__xor__``, "
+"``__rxor__`` and ``isdisjoint``"
 msgstr ""
 "``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
-"``__and__``, ``__or__``, ``__sub__``, ``__xor__``, και ``isdisjoint``"
+"``__and__``, ``__or__``, ``__sub__``, ``__rsub__``, ``__xor__``, "
+"``__rxor__`` και ``isdisjoint``"
 
-#: library/collections.abc.rst:151
+#: library/collections.abc.rst:152
 msgid ":class:`MutableSet`"
 msgstr ":class:`MutableSet`"
 
-#: library/collections.abc.rst:151
+#: library/collections.abc.rst:152
 msgid "``__contains__``, ``__iter__``, ``__len__``, ``add``, ``discard``"
 msgstr "``__contains__``, ``__iter__``, ``__len__``, ``add``, ``discard``"
 
-#: library/collections.abc.rst:151
+#: library/collections.abc.rst:152
 msgid ""
 "Inherited :class:`Set` methods and ``clear``, ``pop``, ``remove``, "
 "``__ior__``, ``__iand__``, ``__ixor__``, and ``__isub__``"
@@ -318,15 +405,15 @@ msgstr ""
 "Κληρονομημένες :class:`Set` μέθοδοι και ``clear``, ``pop``, ``remove``, "
 "``__ior__``, ``__iand__``, ``__ixor__``, και ``__isub__``"
 
-#: library/collections.abc.rst:157 library/collections.abc.rst:161
+#: library/collections.abc.rst:158 library/collections.abc.rst:162
 msgid ":class:`Mapping`"
 msgstr ":class:`Mapping`"
 
-#: library/collections.abc.rst:157
+#: library/collections.abc.rst:158
 msgid "``__getitem__``, ``__iter__``, ``__len__``"
 msgstr "``__getitem__``, ``__iter__``, ``__len__``"
 
-#: library/collections.abc.rst:157
+#: library/collections.abc.rst:158
 msgid ""
 "``__contains__``, ``keys``, ``items``, ``values``, ``get``, ``__eq__``, and "
 "``__ne__``"
@@ -334,17 +421,17 @@ msgstr ""
 "``__contains__``, ``keys``, ``items``, ``values``, ``get``, ``__eq__``, και "
 "``__ne__``"
 
-#: library/collections.abc.rst:161
+#: library/collections.abc.rst:162
 msgid ":class:`MutableMapping`"
 msgstr ":class:`MutableMapping`"
 
-#: library/collections.abc.rst:161
+#: library/collections.abc.rst:162
 msgid ""
 "``__getitem__``, ``__setitem__``, ``__delitem__``, ``__iter__``, ``__len__``"
 msgstr ""
 "``__getitem__``, ``__setitem__``, ``__delitem__``, ``__iter__``, ``__len__``"
 
-#: library/collections.abc.rst:161
+#: library/collections.abc.rst:162
 msgid ""
 "Inherited :class:`Mapping` methods and ``pop``, ``popitem``, ``clear``, "
 "``update``, and ``setdefault``"
@@ -352,108 +439,112 @@ msgstr ""
 "Κληρονομημένες :class:`Mapping` μέθοδοι και ``pop``, ``popitem``, ``clear``, "
 "``update``, και ``setdefault``"
 
-#: library/collections.abc.rst:168
+#: library/collections.abc.rst:169
 msgid ":class:`MappingView`"
 msgstr ":class:`MappingView`"
 
-#: library/collections.abc.rst:168
+#: library/collections.abc.rst:169
 msgid ":class:`Sized`"
 msgstr ":class:`Sized`"
 
 #: library/collections.abc.rst:169
+msgid "``__init__``, ``__len__`` and ``__repr__``"
+msgstr "``__init__``, ``__len__`` and ``__repr__``"
+
+#: library/collections.abc.rst:170
 msgid ":class:`ItemsView`"
 msgstr ":class:`ItemsView`"
 
-#: library/collections.abc.rst:169 library/collections.abc.rst:171
+#: library/collections.abc.rst:170 library/collections.abc.rst:172
 msgid ":class:`MappingView`, :class:`Set`"
 msgstr ":class:`MappingView`, :class:`Set`"
 
-#: library/collections.abc.rst:169 library/collections.abc.rst:171
-#: library/collections.abc.rst:173
+#: library/collections.abc.rst:170 library/collections.abc.rst:172
+#: library/collections.abc.rst:174
 msgid "``__contains__``, ``__iter__``"
 msgstr "``__contains__``, ``__iter__``"
 
-#: library/collections.abc.rst:171
+#: library/collections.abc.rst:172
 msgid ":class:`KeysView`"
 msgstr ":class:`KeysView`"
 
-#: library/collections.abc.rst:173
+#: library/collections.abc.rst:174
 msgid ":class:`ValuesView`"
 msgstr ":class:`ValuesView`"
 
-#: library/collections.abc.rst:173
+#: library/collections.abc.rst:174
 msgid ":class:`MappingView`, :class:`Collection`"
 msgstr ":class:`MappingView`, :class:`Collection`"
 
-#: library/collections.abc.rst:175
+#: library/collections.abc.rst:176
 msgid ":class:`Awaitable` [1]_"
 msgstr ":class:`Awaitable` [1]_"
 
-#: library/collections.abc.rst:175
+#: library/collections.abc.rst:176
 msgid "``__await__``"
 msgstr "``__await__``"
 
-#: library/collections.abc.rst:176
+#: library/collections.abc.rst:177
 msgid ":class:`Coroutine` [1]_"
 msgstr ":class:`Coroutine` [1]_"
 
-#: library/collections.abc.rst:176
+#: library/collections.abc.rst:177
 msgid ":class:`Awaitable`"
 msgstr ":class:`Awaitable`"
 
-#: library/collections.abc.rst:176
+#: library/collections.abc.rst:177
 msgid "``close``"
 msgstr "``close``"
 
-#: library/collections.abc.rst:177
+#: library/collections.abc.rst:178
 msgid ":class:`AsyncIterable` [1]_"
 msgstr ":class:`AsyncIterable` [1]_"
 
-#: library/collections.abc.rst:177 library/collections.abc.rst:178
+#: library/collections.abc.rst:178 library/collections.abc.rst:179
 msgid "``__aiter__``"
 msgstr "``__aiter__``"
 
-#: library/collections.abc.rst:178
+#: library/collections.abc.rst:179
 msgid ":class:`AsyncIterator` [1]_"
 msgstr ":class:`AsyncIterator` [1]_"
 
-#: library/collections.abc.rst:178
+#: library/collections.abc.rst:179
 msgid ":class:`AsyncIterable`"
 msgstr ":class:`AsyncIterable`"
 
-#: library/collections.abc.rst:178
+#: library/collections.abc.rst:179
 msgid "``__anext__``"
 msgstr "``__anext__``"
 
-#: library/collections.abc.rst:179
+#: library/collections.abc.rst:180
 msgid ":class:`AsyncGenerator` [1]_"
 msgstr ":class:`AsyncGenerator` [1]_"
 
-#: library/collections.abc.rst:179
+#: library/collections.abc.rst:180
 msgid ":class:`AsyncIterator`"
 msgstr ":class:`AsyncIterator`"
 
-#: library/collections.abc.rst:179
+#: library/collections.abc.rst:180
 msgid "``asend``, ``athrow``"
 msgstr "``asend``, ``athrow``"
 
-#: library/collections.abc.rst:179
+#: library/collections.abc.rst:180
 msgid "``aclose``, ``__aiter__``, ``__anext__``"
 msgstr "``aclose``, ``__aiter__``, ``__anext__``"
 
-#: library/collections.abc.rst:180
+#: library/collections.abc.rst:181
 msgid ":class:`Buffer` [1]_"
 msgstr ":class:`Buffer` [1]_"
 
-#: library/collections.abc.rst:180
+#: library/collections.abc.rst:181
 msgid "``__buffer__``"
 msgstr "``__buffer__``"
 
-#: library/collections.abc.rst:185
+#: library/collections.abc.rst:186
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: library/collections.abc.rst:186
+#: library/collections.abc.rst:187
 msgid ""
 "These ABCs override :meth:`~abc.ABCMeta.__subclasshook__` to support testing "
 "an interface by verifying the required methods are present and have not been "
@@ -466,7 +557,7 @@ msgstr ""
 "`None`. Αυτό λειτουργεί μόνο για απλές διεπαφές. Πιο σύνθετες διεπαφές "
 "απαιτούν εγγραφή ή άμεση υποκλάση."
 
-#: library/collections.abc.rst:192
+#: library/collections.abc.rst:193
 msgid ""
 "Checking ``isinstance(obj, Iterable)`` detects classes that are registered "
 "as :class:`Iterable` or that have an :meth:`~container.__iter__` method, but "
@@ -481,31 +572,39 @@ msgstr ""
 "προσδιοριστεί αν ένα αντικείμενο είναι :term:`iterable` είναι να καλέσετε "
 "``iter(obj)``."
 
-#: library/collections.abc.rst:200
+#: library/collections.abc.rst:201
 msgid "Collections Abstract Base Classes -- Detailed Descriptions"
 msgstr "Αφηρημένες Βασικές Κλάσεις Συλλογών -- Αναλυτικές Περιγραφές"
 
-#: library/collections.abc.rst:205
+#: library/collections.abc.rst:206
 msgid "ABC for classes that provide the :meth:`~object.__contains__` method."
 msgstr "ABC για κλάσεις που παρέχουν την μέθοδο :meth:`~object.__contains__`."
 
-#: library/collections.abc.rst:209
+#: library/collections.abc.rst:210
 msgid "ABC for classes that provide the :meth:`~object.__hash__` method."
 msgstr "ABC για κλάσεις που παρέχουν την μέθοδο :meth:`~object.__hash__`."
 
-#: library/collections.abc.rst:213
+#: library/collections.abc.rst:214
 msgid "ABC for classes that provide the :meth:`~object.__len__` method."
 msgstr "ABC για κλάσεις που παρέχουν την μέθοδο :meth:`~object.__len__`."
 
-#: library/collections.abc.rst:217
+#: library/collections.abc.rst:218
 msgid "ABC for classes that provide the :meth:`~object.__call__` method."
 msgstr "ABC για κλάσεις που παρέχουν την μέθοδο :meth:`~object.__call__`."
 
-#: library/collections.abc.rst:221
+#: library/collections.abc.rst:220
+msgid ""
+"See :ref:`annotating-callables` for details on how to use :class:`!Callable` "
+"in type annotations."
+msgstr ""
+"Ανατρέξτε στο :ref:`annotating-callables` για λεπτομέρειες σχετικά με τον "
+"τρόπο χρήσης του :class:`!Callable` σε τύπους annotations."
+
+#: library/collections.abc.rst:225
 msgid "ABC for classes that provide the :meth:`~container.__iter__` method."
 msgstr "ABC για κλάσεις που παρέχουν την μέθοδο :meth:`~container.__iter__`."
 
-#: library/collections.abc.rst:223
+#: library/collections.abc.rst:227
 msgid ""
 "Checking ``isinstance(obj, Iterable)`` detects classes that are registered "
 "as :class:`Iterable` or that have an :meth:`~container.__iter__` method, but "
@@ -520,11 +619,11 @@ msgstr ""
 "τρόπος για να προσδιοριστεί αν ένα αντικείμενο είναι :term:`iterable` είναι "
 "να κληθεί ``iter(obj)``."
 
-#: library/collections.abc.rst:232
+#: library/collections.abc.rst:236
 msgid "ABC for sized iterable container classes."
 msgstr "ABC για τις κλάσεις επαναλαμβανόμενων container με μέγεθος."
 
-#: library/collections.abc.rst:238
+#: library/collections.abc.rst:242
 msgid ""
 "ABC for classes that provide the :meth:`~iterator.__iter__` and :meth:"
 "`~iterator.__next__` methods.  See also the definition of :term:`iterator`."
@@ -532,15 +631,15 @@ msgstr ""
 "ABC για κλάσεις που παρέχουν τις μεθόδους :meth:`~iterator.__iter__` και :"
 "meth:`~iterator.__next__`. Δείτε επίσης τον ορισμό του :term:`iterator`."
 
-#: library/collections.abc.rst:244
+#: library/collections.abc.rst:248
 msgid ""
 "ABC for iterable classes that also provide the :meth:`~object.__reversed__` "
 "method."
 msgstr ""
 "ABC για τις επαναλαμβανόμενες κλάσεις που παρέχουν επίσης τη μέθοδο :meth:"
-"`~object.__reversed__`"
+"`~object.__reversed__`."
 
-#: library/collections.abc.rst:251
+#: library/collections.abc.rst:255
 msgid ""
 "ABC for :term:`generator` classes that implement the protocol defined in :"
 "pep:`342` that extends :term:`iterators <iterator>` with the :meth:"
@@ -552,12 +651,20 @@ msgstr ""
 "<iterator>` με τις μεθόδους :meth:`~generator.send`, :meth:`~generator."
 "throw` και :meth:`~generator.close`."
 
-#: library/collections.abc.rst:262
+#: library/collections.abc.rst:260
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using :class:"
+"`!Generator` in type annotations."
+msgstr ""
+"Δείτε. :ref:`annotating-generators-and-coroutines` για λεπτομέρειες σχετικά "
+"με τη χρήση του :class:`!Generator` σε τύπους annotations."
+
+#: library/collections.abc.rst:269
 msgid "ABCs for read-only and mutable :term:`sequences <sequence>`."
 msgstr ""
 "ABCs μόνο για ανάγνωση (read-only) και mutable :term:`sequences <sequence>`."
 
-#: library/collections.abc.rst:264
+#: library/collections.abc.rst:271
 msgid ""
 "Implementation note: Some of the mixin methods, such as :meth:`~container."
 "__iter__`, :meth:`~object.__reversed__` and :meth:`index`, make repeated "
@@ -567,8 +674,8 @@ msgid ""
 "method is linear (as it would be with a linked list), the mixins will have "
 "quadratic performance and will likely need to be overridden."
 msgstr ""
-"Σημείωση υλοποίησης: Μερικές από τις μεθόδους mixin, όπως :meth:`~cotnainer."
-"__iter__`, :meth:`~object.__reversed__` και :meth`index`, κάνουν "
+"Σημείωση υλοποίησης: Μερικές από τις μεθόδους mixin, όπως :meth:`~container."
+"__iter__`, :meth:`~object.__reversed__` και :meth:`index`, κάνουν "
 "επανειλημμένες κλήσεις στην μέθοδο :meth:`~object.__getitem__`. Ως "
 "αποτέλεσμα, αν η :meth:`~object.__getitem__` είναι υλοποιημένη με σταθερή "
 "ταχύτητα πρόσβασης, οι μέθοδοι mixin θα έχουν γραμμική απόδοση. Ωστόσο, αν η "
@@ -576,12 +683,12 @@ msgstr ""
 "οι mixins θα έχουν τετραγωνική απόδοση και πιθανώς θα χρειαστεί να "
 "αντικατασταθούν."
 
-#: library/collections.abc.rst:273
+#: library/collections.abc.rst:280
 msgid "The index() method added support for *stop* and *start* arguments."
 msgstr ""
 "Η μέθοδος index() πρόσθεσε υποστήριξη για τα ορίσματα *stop* και *start*."
 
-#: library/collections.abc.rst:281
+#: library/collections.abc.rst:284
 msgid ""
 "The :class:`ByteString` ABC has been deprecated. For use in typing, prefer a "
 "union, like ``bytes | bytearray``, or :class:`collections.abc.Buffer`. For "
@@ -592,24 +699,24 @@ msgstr ""
 "Buffer`. Για χρήση ως ABC, προτιμάται :class:`Sequence` ή :class:"
 "`collections.abc.Buffer`."
 
-#: library/collections.abc.rst:286
+#: library/collections.abc.rst:293
 msgid "ABCs for read-only and mutable :ref:`sets <types-set>`."
 msgstr ""
 "ABCs μόνο για ανάγνωση (read-only) και mutable :ref:`sets <types-set>`."
 
-#: library/collections.abc.rst:291
+#: library/collections.abc.rst:298
 msgid "ABCs for read-only and mutable :term:`mappings <mapping>`."
 msgstr ""
 "ABCs μόνο για ανάγνωση (read-only) και mutable :term:`mappings <mapping>`."
 
-#: library/collections.abc.rst:298
+#: library/collections.abc.rst:305
 msgid ""
 "ABCs for mapping, items, keys, and values :term:`views <dictionary view>`."
 msgstr ""
 "ABCs για αντιστοιχήσεις, στοιχεία, κλειδιά και τιμές :term:`views "
 "<dictionary view>`."
 
-#: library/collections.abc.rst:302
+#: library/collections.abc.rst:309
 msgid ""
 "ABC for :term:`awaitable` objects, which can be used in :keyword:`await` "
 "expressions.  Custom implementations must provide the :meth:`~object."
@@ -619,7 +726,7 @@ msgstr ""
 "εκφράσεις :keyword:`await`. Οι προσαρμοσμένες υλοποιήσεις πρέπει να παρέχουν "
 "τη μέθοδο :meth:`~object.__await__`."
 
-#: library/collections.abc.rst:306
+#: library/collections.abc.rst:313
 msgid ""
 ":term:`Coroutine <coroutine>` objects and instances of the :class:"
 "`~collections.abc.Coroutine` ABC are all instances of this ABC."
@@ -627,7 +734,7 @@ msgstr ""
 "Τα αντικείμενα :term:`Coroutine <coroutine>` και τα στιγμιότυπα της κλάσης :"
 "class:`~collections.abc.Coroutine` είναι όλα παραδείγματα αυτής της ABC."
 
-#: library/collections.abc.rst:310
+#: library/collections.abc.rst:317
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :func:`@types.coroutine <types.coroutine>`) are *awaitables*, "
@@ -642,7 +749,7 @@ msgstr ""
 "Χρησιμοποιείτε τη συνάρτηση :func:`inspect.isawaitable` για να τις "
 "εντοπίσετε."
 
-#: library/collections.abc.rst:320
+#: library/collections.abc.rst:327
 msgid ""
 "ABC for :term:`coroutine` compatible classes.  These implement the following "
 "methods, defined in :ref:`coroutine-objects`: :meth:`~coroutine.send`, :meth:"
@@ -657,7 +764,7 @@ msgstr ""
 "`~object.__await__`. Όλα τα :class:`Coroutine` στιγμιότυπα είναι επίσης "
 "στιγμιότυπα της κλάσης :class:`Awaitable`."
 
-#: library/collections.abc.rst:328
+#: library/collections.abc.rst:335
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :func:`@types.coroutine <types.coroutine>`) are *awaitables*, "
@@ -671,7 +778,17 @@ msgstr ""
 "της ``isinstance (gencoro, Coroutine)`` γι' αυτές θα επιστρέψει ``False``. "
 "Χρησιμοποιείται η συνάρτηση :func:`inspect.isawaitable` για να εντοπιστούν."
 
-#: library/collections.abc.rst:338
+#: library/collections.abc.rst:341
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using :class:"
+"`!Coroutine` in type annotations. The variance and order of type parameters "
+"correspond to those of :class:`Generator`."
+msgstr ""
+"Βλ. :ref:`annotating-generators-and-coroutines` για λεπτομέρειες σχετικά με "
+"τη χρήση της :class:`!Coroutine` σε σχολιασμούς τύπου. Η διακύμανση και η "
+"σειρά των παραμέτρων τύπου αντιστοιχούν σε εκείνες της :class:`Generator`."
+
+#: library/collections.abc.rst:350
 msgid ""
 "ABC for classes that provide an ``__aiter__`` method.  See also the "
 "definition of :term:`asynchronous iterable`."
@@ -679,7 +796,7 @@ msgstr ""
 "ABC για κλάσεις που παρέχουν μια μέθοδο ``__aiter__``. Δείτε επίσης τον "
 "ορισμό του :term:`asynchronous iterable`."
 
-#: library/collections.abc.rst:345
+#: library/collections.abc.rst:357
 msgid ""
 "ABC for classes that provide ``__aiter__`` and ``__anext__`` methods.  See "
 "also the definition of :term:`asynchronous iterator`."
@@ -687,7 +804,7 @@ msgstr ""
 "ABC για κλάσεις που παρέχουν τις μεθόδους ``__aiter__`` και ``__anext__``. "
 "Δείτε επίσης τον ορισμό του :term:`asynchronous iterator`."
 
-#: library/collections.abc.rst:352
+#: library/collections.abc.rst:364
 msgid ""
 "ABC for :term:`asynchronous generator` classes that implement the protocol "
 "defined in :pep:`525` and :pep:`492`."
@@ -695,7 +812,15 @@ msgstr ""
 "ABC για κλάσεις :term:`asynchronous generator` που υλοποιούν το πρωτόκολλο "
 "που ορίζεται στο :pep:`525` και :pep:`492`."
 
-#: library/collections.abc.rst:359
+#: library/collections.abc.rst:367
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using :class:"
+"`!AsyncGenerator` in type annotations."
+msgstr ""
+"Δείτε :ref:`annotating-generators-and-coroutines` για λεπτομέρειες σχετικά "
+"με τη χρήση του :class:`!AsyncGenerator` σε σχολιασμούς τύπου."
+
+#: library/collections.abc.rst:374
 msgid ""
 "ABC for classes that provide the :meth:`~object.__buffer__` method, "
 "implementing the :ref:`buffer protocol <bufferobjects>`. See :pep:`688`."
@@ -703,11 +828,11 @@ msgstr ""
 "ABC για κλάσεις που παρέχουν τη μέθοδο :meth:`~object.__buffer__`, "
 "υλοποιώντας το :ref:`buffer protocol <bufferobjects>`. Δείτε το :pep:`688`."
 
-#: library/collections.abc.rst:365
+#: library/collections.abc.rst:380
 msgid "Examples and Recipes"
 msgstr "Παραδείγματα και Συνταγές"
 
-#: library/collections.abc.rst:367
+#: library/collections.abc.rst:382
 msgid ""
 "ABCs allow us to ask classes or instances if they provide particular "
 "functionality, for example::"
@@ -715,7 +840,17 @@ msgstr ""
 "Οι ABCs επιτρέπουν να ρωτήσουμε τις κλάσεις ή τα αντικείμενα αν παρέχουν "
 "συγκεκριμένη λειτουργικότητα, για παράδειγμα::"
 
-#: library/collections.abc.rst:374
+#: library/collections.abc.rst:385
+msgid ""
+"size = None\n"
+"if isinstance(myvar, collections.abc.Sized):\n"
+"    size = len(myvar)"
+msgstr ""
+"size = None\n"
+"if isinstance(myvar, collections.abc.Sized):\n"
+"    size = len(myvar)"
+
+#: library/collections.abc.rst:389
 msgid ""
 "Several of the ABCs are also useful as mixins that make it easier to develop "
 "classes supporting container APIs.  For example, to write a class supporting "
@@ -732,12 +867,60 @@ msgstr ""
 "ABC παρέχει τις υπόλοιπες μεθόδους, όπως :meth:`!__and__` και :meth:"
 "`~frozenset.isdisjoint`::"
 
-#: library/collections.abc.rst:403
+#: library/collections.abc.rst:396
+msgid ""
+"class ListBasedSet(collections.abc.Set):\n"
+"    ''' Alternate set implementation favoring space over speed\n"
+"        and not requiring the set elements to be hashable. '''\n"
+"    def __init__(self, iterable):\n"
+"        self.elements = lst = []\n"
+"        for value in iterable:\n"
+"            if value not in lst:\n"
+"                lst.append(value)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return iter(self.elements)\n"
+"\n"
+"    def __contains__(self, value):\n"
+"        return value in self.elements\n"
+"\n"
+"    def __len__(self):\n"
+"        return len(self.elements)\n"
+"\n"
+"s1 = ListBasedSet('abcdef')\n"
+"s2 = ListBasedSet('defghi')\n"
+"overlap = s1 & s2            # The __and__() method is supported "
+"automatically"
+msgstr ""
+"class ListBasedSet(collections.abc.Set):\n"
+"    ''' Alternate set implementation favoring space over speed\n"
+"        and not requiring the set elements to be hashable. '''\n"
+"    def __init__(self, iterable):\n"
+"        self.elements = lst = []\n"
+"        for value in iterable:\n"
+"            if value not in lst:\n"
+"                lst.append(value)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return iter(self.elements)\n"
+"\n"
+"    def __contains__(self, value):\n"
+"        return value in self.elements\n"
+"\n"
+"    def __len__(self):\n"
+"        return len(self.elements)\n"
+"\n"
+"s1 = ListBasedSet('abcdef')\n"
+"s2 = ListBasedSet('defghi')\n"
+"overlap = s1 & s2            # The __and__() method is supported "
+"automaticallyautomatically"
+
+#: library/collections.abc.rst:418
 msgid "Notes on using :class:`Set` and :class:`MutableSet` as a mixin:"
 msgstr ""
 "Σημειώσεις για τη χρήση των :class:`Set` και :class:`MutableSet` ως mixin:"
 
-#: library/collections.abc.rst:406
+#: library/collections.abc.rst:421
 msgid ""
 "Since some set operations create new sets, the default mixin methods need a "
 "way to create new instances from an :term:`iterable`. The class constructor "
@@ -760,7 +943,7 @@ msgstr ""
 "αντικαταστήσετε την :meth:`!_from_iterable` με μια μέθοδο κλάσης ή κανονική "
 "μέθοδο που μπορεί να δημιουργήσει νέα αντικείμενα από ένα όρισμα iterable."
 
-#: library/collections.abc.rst:417
+#: library/collections.abc.rst:432
 msgid ""
 "To override the comparisons (presumably for speed, as the semantics are "
 "fixed), redefine :meth:`~object.__le__` and :meth:`~object.__ge__`, then the "
@@ -771,7 +954,7 @@ msgstr ""
 "__le__`, και :meth:`~object.__ge__`, και οι άλλες λειτουργίες θα "
 "ακολουθήσουν αυτόματα."
 
-#: library/collections.abc.rst:423
+#: library/collections.abc.rst:438
 msgid ""
 "The :class:`Set` mixin provides a :meth:`!_hash` method to compute a hash "
 "value for the set; however, :meth:`~object.__hash__` is not defined because "
@@ -786,7 +969,7 @@ msgstr ""
 "χρησιμοποιώντας mixins, κληρονομήστε τόσο από τις κλάσεις :meth:`Set` όσο "
 "και :meth:`Hashable`, και στη συνέχεια ορίστε ``__hash__ = Set._hash``."
 
-#: library/collections.abc.rst:431
+#: library/collections.abc.rst:446
 msgid ""
 "`OrderedSet recipe <https://code.activestate.com/recipes/576694/>`_ for an "
 "example built on :class:`MutableSet`."
@@ -794,7 +977,7 @@ msgstr ""
 "Συνταγή `OrderedSet <https://code.activestate.com/recipes/576694/>`_ για ένα "
 "παράδειγμα που βασίζεται στην κλάση :class:`MutableSet`."
 
-#: library/collections.abc.rst:434
+#: library/collections.abc.rst:449
 msgid "For more about ABCs, see the :mod:`abc` module and :pep:`3119`."
 msgstr ""
 "Για περισσότερα σχετικά με τις ABCs, δείτε το :mod:`abc` module και το :pep:"

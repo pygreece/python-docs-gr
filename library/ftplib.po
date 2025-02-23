@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/ftplib.rst:2
-msgid ":mod:`ftplib` --- FTP protocol client"
+msgid ":mod:`!ftplib` --- FTP protocol client"
 msgstr ""
 
 #: library/ftplib.rst:7
@@ -39,7 +40,7 @@ msgid "The default encoding is UTF-8, following :rfc:`2640`."
 msgstr ""
 
 #: includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: includes/wasm-notavail.rst:5
@@ -51,6 +52,28 @@ msgstr ""
 
 #: library/ftplib.rst:26
 msgid "Here's a sample session using the :mod:`ftplib` module::"
+msgstr ""
+
+#: library/ftplib.rst:28
+msgid ""
+">>> from ftplib import FTP\n"
+">>> ftp = FTP('ftp.us.debian.org')  # connect to host, default port\n"
+">>> ftp.login()                     # user anonymous, passwd anonymous@\n"
+"'230 Login successful.'\n"
+">>> ftp.cwd('debian')               # change into \"debian\" directory\n"
+"'250 Directory successfully changed.'\n"
+">>> ftp.retrlines('LIST')           # list directory contents\n"
+"-rw-rw-r--    1 1176     1176         1063 Jun 15 10:18 README\n"
+"...\n"
+"drwxr-sr-x    5 1176     1176         4096 Dec 19  2000 pool\n"
+"drwxr-sr-x    4 1176     1176         4096 Nov 17  2008 project\n"
+"drwxr-xr-x    3 1176     1176         4096 Oct 10  2012 tools\n"
+"'226 Directory send OK.'\n"
+">>> with open('README', 'wb') as fp:\n"
+">>>     ftp.retrbinary('RETR README', fp.write)\n"
+"'226 Transfer complete.'\n"
+">>> ftp.quit()\n"
+"'221 Goodbye.'"
 msgstr ""
 
 #: library/ftplib.rst:51
@@ -182,7 +205,7 @@ msgid ""
 "timeout setting)."
 msgstr ""
 
-#: library/ftplib.rst:198
+#: library/ftplib.rst:187
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``ftplib.connect`` with arguments "
 "``self``, ``host``, ``port``."
@@ -219,7 +242,7 @@ msgid ""
 "Send a simple command string to the server and return the response string."
 msgstr ""
 
-#: library/ftplib.rst:249
+#: library/ftplib.rst:238
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``ftplib.sendcmd`` with arguments "
 "``self``, ``cmd``."
@@ -236,8 +259,8 @@ msgstr ""
 msgid "Retrieve a file in binary transfer mode."
 msgstr ""
 
-#: library/ftplib.rst:289
-msgid "An appropriate ``STOR`` command: :samp:`\"STOR {filename}\"`."
+#: library/ftplib.rst:245
+msgid "An appropriate ``RETR`` command: :samp:`\"RETR {filename}\"`."
 msgstr ""
 
 #: library/ftplib.rst:248
@@ -279,6 +302,10 @@ msgstr ""
 
 #: library/ftplib.rst:287
 msgid "Store a file in binary transfer mode."
+msgstr ""
+
+#: library/ftplib.rst:289
+msgid "An appropriate ``STOR`` command: :samp:`\"STOR {filename}\"`."
 msgstr ""
 
 #: library/ftplib.rst:292
@@ -476,6 +503,23 @@ msgstr ""
 msgid "Here's a sample session using the :class:`FTP_TLS` class::"
 msgstr ""
 
+#: library/ftplib.rst:516
+msgid ""
+">>> ftps = FTP_TLS('ftp.pureftpd.org')\n"
+">>> ftps.login()\n"
+"'230 Anonymous user logged in'\n"
+">>> ftps.prot_p()\n"
+"'200 Data protection level set to \"private\"'\n"
+">>> ftps.nlst()\n"
+"['6jack', 'OpenBSD', 'antilink', 'blogbench', 'bsdcam', 'clockspeed', "
+"'djbdns-jedi', 'docs', 'eaccelerator-jedi', 'favicon.ico', 'francotone', "
+"'fugu', 'ignore', 'libpuzzle', 'metalog', 'minidentd', 'misc', 'mysql-udf-"
+"global-user-variables', 'php-jenkins-hash', 'php-skein-hash', 'php-webdav', "
+"'phpaudit', 'phpbench', 'pincaster', 'ping', 'posto', 'pub', 'public', "
+"'public_keys', 'pure-ftpd', 'qscan', 'qtc', 'sharedance', 'skycache', "
+"'sound', 'tmp', 'ucarp']"
+msgstr ""
+
 #: library/ftplib.rst:524
 msgid ""
 ":class:`!FTP_TLS` class inherits from :class:`FTP`, defining these "
@@ -548,7 +592,7 @@ msgid ""
 "four exceptions listed above as well as :exc:`OSError` and :exc:`EOFError`."
 msgstr ""
 
-#: library/ftplib.rst:597
+#: library/ftplib.rst:595
 msgid "Module :mod:`netrc`"
 msgstr ""
 
