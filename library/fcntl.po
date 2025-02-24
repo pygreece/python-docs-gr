@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/fcntl.rst:2
-msgid ":mod:`fcntl` --- The ``fcntl`` and ``ioctl`` system calls"
+msgid ":mod:`!fcntl` --- The ``fcntl`` and ``ioctl`` system calls"
 msgstr ""
 
 #: library/fcntl.rst:16
@@ -29,7 +30,7 @@ msgid ""
 msgstr ""
 
 #: library/fcntl.rst:21
-msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: library/fcntl.rst:23
@@ -178,6 +179,20 @@ msgstr ""
 msgid "An example::"
 msgstr ""
 
+#: library/fcntl.rst:125
+msgid ""
+">>> import array, fcntl, struct, termios, os\n"
+">>> os.getpgrp()\n"
+"13341\n"
+">>> struct.unpack('h', fcntl.ioctl(0, termios.TIOCGPGRP, \"  \"))[0]\n"
+"13341\n"
+">>> buf = array.array('h', [0])\n"
+">>> fcntl.ioctl(0, termios.TIOCGPGRP, buf, 1)\n"
+"0\n"
+">>> buf\n"
+"array('h', [13341])"
+msgstr ""
+
 #: library/fcntl.rst:136
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.ioctl`` with arguments "
@@ -275,6 +290,17 @@ msgstr ""
 msgid "Examples (all on a SVR4 compliant system)::"
 msgstr ""
 
+#: library/fcntl.rst:198
+msgid ""
+"import struct, fcntl, os\n"
+"\n"
+"f = open(...)\n"
+"rv = fcntl.fcntl(f, fcntl.F_SETFL, os.O_NDELAY)\n"
+"\n"
+"lockdata = struct.pack('hhllhh', fcntl.F_WRLCK, 0, 0, 0, 0, 0)\n"
+"rv = fcntl.fcntl(f, fcntl.F_SETLKW, lockdata)"
+msgstr ""
+
 #: library/fcntl.rst:206
 msgid ""
 "Note that in the first example the return value variable *rv* will hold an "
@@ -283,7 +309,7 @@ msgid ""
 "therefore using the :func:`flock` call may be better."
 msgstr ""
 
-#: library/fcntl.rst:217
+#: library/fcntl.rst:214
 msgid "Module :mod:`os`"
 msgstr ""
 

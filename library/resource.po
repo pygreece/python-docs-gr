@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/resource.rst:2
-msgid ":mod:`resource` --- Resource usage information"
+msgid ":mod:`!resource` --- Resource usage information"
 msgstr ""
 
 #: library/resource.rst:13
@@ -26,8 +27,9 @@ msgid ""
 "resources utilized by a program."
 msgstr ""
 
-#: library/resource.rst:16
-msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
+#: library/resource.rst:104 library/resource.rst:192 library/resource.rst:210
+#: library/resource.rst:229 library/resource.rst:252 library/resource.rst:268
+msgid "Availability"
 msgstr ""
 
 #: library/resource.rst:18
@@ -147,10 +149,6 @@ msgid ""
 "arguments ``pid``, ``resource``, ``limits``."
 msgstr ""
 
-#: library/resource.rst:104
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.36 with glibc >= 2.13."
-msgstr ""
-
 #: library/resource.rst:109
 msgid ""
 "These symbols define resources whose consumption can be controlled using "
@@ -221,10 +219,6 @@ msgstr ""
 msgid "The largest area of mapped memory which the process may occupy."
 msgstr ""
 
-#: library/resource.rst:268
-msgid ":ref:`Availability <availability>`: FreeBSD >= 11."
-msgstr ""
-
 #: library/resource.rst:185
 msgid ""
 "The maximum area (in bytes) of address space which may be taken by the "
@@ -235,16 +229,8 @@ msgstr ""
 msgid "The number of bytes that can be allocated for POSIX message queues."
 msgstr ""
 
-#: library/resource.rst:229
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.8."
-msgstr ""
-
 #: library/resource.rst:199
 msgid "The ceiling for the process's nice level (calculated as 20 - rlim_cur)."
-msgstr ""
-
-#: library/resource.rst:210
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.12."
 msgstr ""
 
 #: library/resource.rst:208
@@ -257,10 +243,6 @@ msgid ""
 "real-time scheduling without making a blocking syscall."
 msgstr ""
 
-#: library/resource.rst:220
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.25."
-msgstr ""
-
 #: library/resource.rst:227
 msgid "The number of signals which the process may queue."
 msgstr ""
@@ -270,10 +252,6 @@ msgid ""
 "The maximum size (in bytes) of socket buffer usage for this user. This "
 "limits the amount of network memory, and hence the amount of mbufs, that "
 "this user may hold at any time."
-msgstr ""
-
-#: library/resource.rst:252 library/resource.rst:260
-msgid ":ref:`Availability <availability>`: FreeBSD."
 msgstr ""
 
 #: library/resource.rst:245
@@ -313,6 +291,21 @@ msgstr ""
 msgid "A simple example::"
 msgstr ""
 
+#: library/resource.rst:287
+msgid ""
+"from resource import *\n"
+"import time\n"
+"\n"
+"# a non CPU-bound task\n"
+"time.sleep(3)\n"
+"print(getrusage(RUSAGE_SELF))\n"
+"\n"
+"# a CPU-bound task\n"
+"for i in range(10 ** 8):\n"
+"   _ = 1 + 1\n"
+"print(getrusage(RUSAGE_SELF))"
+msgstr ""
+
 #: library/resource.rst:299
 msgid ""
 "The fields of the return value each describe how a particular system "
@@ -331,7 +324,7 @@ msgstr ""
 #: library/resource.rst:307
 msgid ""
 "The fields :attr:`ru_utime` and :attr:`ru_stime` of the return value are "
-"floating point values representing the amount of time spent executing in "
+"floating-point values representing the amount of time spent executing in "
 "user mode and the amount of time spent executing in system mode, "
 "respectively. The remaining values are integers. Consult the :manpage:"
 "`getrusage(2)` man page for detailed information about these values. A brief "

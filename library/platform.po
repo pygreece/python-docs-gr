@@ -8,16 +8,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2024-03-14 12:51+0000\n"
 "PO-Revision-Date: 2025-02-14 17:10+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
+=======
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+>>>>>>> origin/3.12
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/platform.rst:2
-msgid ":mod:`platform` ---  Access to underlying platform's identifying data"
+msgid ":mod:`!platform` ---  Access to underlying platform's identifying data"
 msgstr ""
 ":mod:`platform` --- Πρόσβαση στα αναγνωριστικά δεδομένα της υποκείμενης "
 "πλατφόρμας"
@@ -96,6 +104,10 @@ msgid ""
 msgstr ""
 "Για να προσδιορίσετε αν ο τρέχων διερμηνέας είναι 64-bit, είναι πιο "
 "αξιόπιστο να ελέγξετε το χαρακτηριστικό :data:`sys.maxsize`::"
+
+#: library/platform.rst:51
+msgid "is_64bits = sys.maxsize > 2**32"
+msgstr ""
 
 #: library/platform.rst:56
 msgid ""
@@ -357,9 +369,9 @@ msgstr ""
 msgid ""
 "As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT "
 "machines and ``'Multiprocessor Free'`` on multi processor machines. The "
-"*'Free'* refers to the OS version being free of debugging code. It could "
-"also state *'Checked'* which means the OS version uses debugging code, i.e. "
-"code that checks arguments, ranges, etc."
+"``'Free'`` refers to the OS version being free of debugging code. It could "
+"also state ``'Checked'`` which means the OS version uses debugging code, i."
+"e. code that checks arguments, ranges, etc."
 msgstr ""
 "Ως υπόδειξη: το *ptype* είναι ``'Uniprocessor Free'`` σε μηχανές NT με έναν "
 "επεξεργαστή και ``'Multiprocessor Free'`` σε μηχανές με πολλαπλούς "
@@ -498,4 +510,19 @@ msgstr ""
 
 #: library/platform.rst:289
 msgid "Example::"
+<<<<<<< HEAD
 msgstr "Παράδειγμα::"
+=======
+msgstr ""
+
+#: library/platform.rst:291
+msgid ""
+"def get_like_distro():\n"
+"    info = platform.freedesktop_os_release()\n"
+"    ids = [info[\"ID\"]]\n"
+"    if \"ID_LIKE\" in info:\n"
+"        # ids are space separated and ordered by precedence\n"
+"        ids.extend(info[\"ID_LIKE\"].split())\n"
+"    return ids"
+msgstr ""
+>>>>>>> origin/3.12
