@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/poplib.rst:2
-msgid ":mod:`poplib` --- POP3 protocol client"
+msgid ":mod:`!poplib` --- POP3 protocol client"
 msgstr ""
 
 #: library/poplib.rst:10
@@ -50,7 +51,7 @@ msgid ""
 msgstr ""
 
 #: includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid "Availability"
 msgstr ""
 
 #: includes/wasm-notavail.rst:5
@@ -73,19 +74,13 @@ msgid ""
 "timeout setting will be used)."
 msgstr ""
 
-#: library/poplib.rst:77
+#: library/poplib.rst:66
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``poplib.connect`` with arguments "
 "``self``, ``host``, ``port``."
 msgstr ""
 
-#: library/poplib.rst:79
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``poplib.putline`` with arguments "
-"``self``, ``line``."
-msgstr ""
-
-#: library/poplib.rst:70
+#: library/poplib.rst:48 library/poplib.rst:70
 msgid ""
 "All commands will raise an :ref:`auditing event <auditing>` ``poplib."
 "putline`` with arguments ``self`` and ``line``, where ``line`` is the bytes "
@@ -134,7 +129,7 @@ msgid ""
 "constructor as a string."
 msgstr ""
 
-#: library/poplib.rst:102
+#: library/poplib.rst:101
 msgid "Module :mod:`imaplib`"
 msgstr ""
 
@@ -142,7 +137,7 @@ msgstr ""
 msgid "The standard Python IMAP module."
 msgstr ""
 
-#: library/poplib.rst:106
+#: library/poplib.rst:104
 msgid ""
 "`Frequently Asked Questions About Fetchmail <http://www.catb.org/~esr/"
 "fetchmail/fetchmail-FAQ.html>`_"
@@ -308,6 +303,19 @@ msgstr ""
 msgid ""
 "Here is a minimal example (without error checking) that opens a mailbox and "
 "retrieves and prints all messages::"
+msgstr ""
+
+#: library/poplib.rst:260
+msgid ""
+"import getpass, poplib\n"
+"\n"
+"M = poplib.POP3('localhost')\n"
+"M.user(getpass.getuser())\n"
+"M.pass_(getpass.getpass())\n"
+"numMessages = len(M.list()[1])\n"
+"for i in range(numMessages):\n"
+"    for j in M.retr(i+1)[1]:\n"
+"        print(j)"
 msgstr ""
 
 #: library/poplib.rst:270

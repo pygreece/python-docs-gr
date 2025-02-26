@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-08-06 00:40+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -80,6 +80,10 @@ msgstr ""
 "Στα συστήματα BSD'ish Unix systems, τα Python scripts μπορούν να γίνουν "
 "άμεσα εκτελέσιμα, όπως τα shell scripts, βάζοντας τη γραμμή::"
 
+#: tutorial/appendix.rst:43
+msgid "#!/usr/bin/env python3"
+msgstr "#!/usr/bin/env python3"
+
 #: tutorial/appendix.rst:45
 msgid ""
 "(assuming that the interpreter is on the user's :envvar:`PATH`) at the "
@@ -105,6 +109,10 @@ msgid ""
 msgstr ""
 "Το script μπορεί να δοθεί μια εκτελέσιμη λειτουργία ή άδεια, χρησιμοποιώντας "
 "την εντολή :program:`chmod`."
+
+#: tutorial/appendix.rst:55
+msgid "$ chmod +x myscript.py"
+msgstr "$ chmod +x myscript.py"
 
 #: tutorial/appendix.rst:59
 msgid ""
@@ -172,6 +180,22 @@ msgstr ""
 "pythonrc.py').read())``.  Εάν θέλετε να χρησιμοποιήσετε το αρχείο εκκίνησης "
 "σε ένα σενάριο, πρέπει να το κάνετε ρητά στο script::"
 
+#: tutorial/appendix.rst:91
+msgid ""
+"import os\n"
+"filename = os.environ.get('PYTHONSTARTUP')\n"
+"if filename and os.path.isfile(filename):\n"
+"    with open(filename) as fobj:\n"
+"        startup_file = fobj.read()\n"
+"    exec(startup_file)"
+msgstr ""
+"import os\n"
+"filename = os.environ.get('PYTHONSTARTUP')\n"
+"if filename and os.path.isfile(filename):\n"
+"    with open(filename) as fobj:\n"
+"        startup_file = fobj.read()\n"
+"    exec(startup_file)"
+
 #: tutorial/appendix.rst:102
 msgid "The Customization Modules"
 msgstr "Τα Modules Προσαρμογής"
@@ -187,6 +211,16 @@ msgstr ""
 "index:`sitecustomize` και :index:`usercustomize`.  Για να δείτε πώς "
 "λειτουργεί, πρέπει πρώτα να βρείτε τη θέση του καταλόγου πακέτων ιστοτόπων "
 "χρήστη.  Ξεκινήστε την Python και εκτελέσετε αυτός ο κώδικας::"
+
+#: tutorial/appendix.rst:108
+msgid ""
+">>> import site\n"
+">>> site.getusersitepackages()\n"
+"'/home/user/.local/lib/python3.x/site-packages'"
+msgstr ""
+">>> import site\n"
+">>> site.getusersitepackages()\n"
+"'/home/user/.local/lib/python3.x/site-packages'"
 
 #: tutorial/appendix.rst:112
 msgid ""

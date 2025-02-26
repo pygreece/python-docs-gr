@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/termios.rst:2
-msgid ":mod:`termios` --- POSIX style tty control"
+msgid ":mod:`!termios` --- POSIX style tty control"
 msgstr ""
 
 #: library/termios.rst:14
@@ -29,7 +30,7 @@ msgid ""
 msgstr ""
 
 #: library/termios.rst:19
-msgid ":ref:`Availability <availability>`: Unix."
+msgid "Availability"
 msgstr ""
 
 #: library/termios.rst:21
@@ -142,6 +143,22 @@ msgid ""
 "the technique using a separate :func:`tcgetattr` call and a :keyword:"
 "`try` ... :keyword:`finally` statement to ensure that the old tty attributes "
 "are restored exactly no matter what happens::"
+msgstr ""
+
+#: library/termios.rst:125
+msgid ""
+"def getpass(prompt=\"Password: \"):\n"
+"    import termios, sys\n"
+"    fd = sys.stdin.fileno()\n"
+"    old = termios.tcgetattr(fd)\n"
+"    new = termios.tcgetattr(fd)\n"
+"    new[3] = new[3] & ~termios.ECHO          # lflags\n"
+"    try:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, new)\n"
+"        passwd = input(prompt)\n"
+"    finally:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, old)\n"
+"    return passwd"
 msgstr ""
 
 #: library/termios.rst:8

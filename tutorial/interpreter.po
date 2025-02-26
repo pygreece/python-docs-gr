@@ -8,10 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-08-02 23:31+0000\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
-"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +37,10 @@ msgstr ""
 "bin/python3.12` σε εκείνα τα μηχανήματα όπου είναι διαθέσιμο· βάζοντας :file:"
 "`/usr/local/bin` στη διαδρομή αναζήτησης του Unix shell σας επιτρέπει να το "
 "εκκινήσετε πληκτρολογώντας την εντολή:"
+
+#: tutorial/interpreter.rst:17
+msgid "python3.12"
+msgstr "python3.12"
 
 #: tutorial/interpreter.rst:21
 msgid ""
@@ -211,6 +214,22 @@ msgstr ""
 "καλωσορίσματος που αναφέρει τον αριθμό έκδοσης και μια ειδοποίηση "
 "πνευματικών δικαιωμάτων πριν εκτυπώσει το πρώτο μήνυμα:"
 
+#: tutorial/interpreter.rst:98
+msgid ""
+"$ python3.12\n"
+"Python 3.12 (default, April 4 2022, 09:25:04)\n"
+"[GCC 10.2.0] on linux\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
+msgstr ""
+"$ python3.12\n"
+"Python 3.12 (default, April 4 2022, 09:25:04)\n"
+"[GCC 10.2.0] on linux\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
+
 #: tutorial/interpreter.rst:108
 msgid ""
 "Continuation lines are needed when entering a multi-line construct. As an "
@@ -218,6 +237,20 @@ msgid ""
 msgstr ""
 "Απαιτούνται γραμμές συνέχειας όταν εισάγεται μια κατασκευή πολλών γραμμών. "
 "Για παράδειγμα ρίξτε μια ματιά σε αυτήν την δήλωση :keyword:`if`::"
+
+#: tutorial/interpreter.rst:111
+msgid ""
+">>> the_world_is_flat = True\n"
+">>> if the_world_is_flat:\n"
+"...     print(\"Be careful not to fall off!\")\n"
+"...\n"
+"Be careful not to fall off!"
+msgstr ""
+">>> the_world_is_flat = True\n"
+">>> if the_world_is_flat:\n"
+"...     print(\"Be careful not to fall off!\")\n"
+"...\n"
+"Be careful not to fall off!"
 
 #: tutorial/interpreter.rst:118
 msgid "For more on interactive mode, see :ref:`tut-interac`."
@@ -262,6 +295,10 @@ msgstr ""
 "πρέπει να προστεθεί μια ειδική γραμμή σχολίων ως *πρώτη* γραμμή του "
 "αρχείου.  Η σύνταξη είναι η εξής::"
 
+#: tutorial/interpreter.rst:143
+msgid "# -*- coding: encoding -*-"
+msgstr "# -*- coding: encoding -*-"
+
 #: tutorial/interpreter.rst:145
 msgid "where *encoding* is one of the valid :mod:`codecs` supported by Python."
 msgstr ""
@@ -277,6 +314,10 @@ msgstr ""
 "κωδικοποίηση Windows-1252 , η πρώτη γραμμή του αρχείου του πηγαίου κώδικα θα "
 "πρέπει να είναι::"
 
+#: tutorial/interpreter.rst:150
+msgid "# -*- coding: cp1252 -*-"
+msgstr "# -*- coding: cp1252 -*-"
+
 #: tutorial/interpreter.rst:152
 msgid ""
 "One exception to the *first line* rule is when the source code starts with "
@@ -287,6 +328,14 @@ msgstr ""
 "μια γραμμή :ref:`UNIX \"shebang\" <tut-scripts>`.  Σε αυτήν την περίπτωση, η "
 "δήλωση κωδικοποίησης θα πρέπει να προστεθεί ως δεύτερη γραμμή του αρχείου.  "
 "Για παράδειγμα::"
+
+#: tutorial/interpreter.rst:156
+msgid ""
+"#!/usr/bin/env python3\n"
+"# -*- coding: cp1252 -*-"
+msgstr ""
+"#!/usr/bin/env python3\n"
+"# -*- coding: cp1252 -*-"
 
 #: tutorial/interpreter.rst:160
 msgid "Footnotes"

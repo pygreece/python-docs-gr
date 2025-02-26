@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -231,10 +232,28 @@ msgid ""
 "following syntax valid::"
 msgstr ""
 
+#: whatsnew/3.7.rst:158
+msgid ""
+"class C:\n"
+"    @classmethod\n"
+"    def from_string(cls, source: str) -> C:\n"
+"        ...\n"
+"\n"
+"    def validate_b(self, obj: B) -> bool:\n"
+"        ...\n"
+"\n"
+"class B:\n"
+"    ..."
+msgstr ""
+
 #: whatsnew/3.7.rst:169
 msgid ""
 "Since this change breaks compatibility, the new behavior needs to be enabled "
 "on a per-module basis in Python 3.7 using a :mod:`__future__` import::"
+msgstr ""
+
+#: whatsnew/3.7.rst:172
+msgid "from __future__ import annotations"
 msgstr ""
 
 #: whatsnew/3.7.rst:174
@@ -469,7 +488,7 @@ msgstr ""
 #: whatsnew/3.7.rst:341
 msgid ""
 "The resolution of clocks in modern systems can exceed the limited precision "
-"of a floating point number returned by the :func:`time.time` function and "
+"of a floating-point number returned by the :func:`time.time` function and "
 "its variants.  To avoid loss of precision, :pep:`564` adds six new "
 "\"nanosecond\" variants of the existing timer functions to the :mod:`time` "
 "module:"
@@ -505,9 +524,9 @@ msgstr ""
 
 #: whatsnew/3.7.rst:356
 msgid ""
-"`Measurements <https://peps.python.org/pep-0564/#annex-clocks-resolution-in-"
-"python>`_ show that on Linux and Windows the resolution of :func:`time."
-"time_ns` is approximately 3 times better than that of :func:`time.time`."
+":pep:`Measurements <0564#annex-clocks-resolution-in-python>` show that on "
+"Linux and Windows the resolution of :func:`time.time_ns` is approximately 3 "
+"times better than that of :func:`time.time`."
 msgstr ""
 
 #: whatsnew/3.7.rst:362
@@ -668,7 +687,7 @@ msgstr ""
 msgid "Korean: https://docs.python.org/ko/"
 msgstr ""
 
-#: whatsnew/3.7.rst:477
+#: whatsnew/3.7.rst:476
 msgid ":pep:`545` -- Python Documentation Translations"
 msgstr ""
 
@@ -817,6 +836,18 @@ msgstr ""
 msgid "Example::"
 msgstr ""
 
+#: whatsnew/3.7.rst:582
+msgid ""
+"@dataclass\n"
+"class Point:\n"
+"    x: float\n"
+"    y: float\n"
+"    z: float = 0.0\n"
+"\n"
+"p = Point(1.5, 2.5)\n"
+"print(p)   # produces \"Point(x=1.5, y=2.5, z=0.0)\""
+msgstr ""
+
 #: whatsnew/3.7.rst:593
 msgid ":pep:`557` -- Data Classes"
 msgstr ""
@@ -835,7 +866,7 @@ msgid ""
 "new ABC for access to, opening, and reading *resources* inside packages. "
 "Resources are roughly similar to files inside packages, but they needn't be "
 "actual files on the physical file system.  Module loaders can provide a :"
-"meth:`get_resource_reader()` function which returns a :class:`importlib.abc."
+"meth:`get_resource_reader` function which returns a :class:`importlib.abc."
 "ResourceReader` instance to support this new API.  Built-in file path "
 "loaders and zip file loaders both support this."
 msgstr ""
@@ -923,9 +954,8 @@ msgid ""
 "The new :func:`asyncio.current_task` function returns the currently running :"
 "class:`~asyncio.Task` instance, and the new :func:`asyncio.all_tasks` "
 "function returns a set of all existing ``Task`` instances in a given loop. "
-"The :meth:`Task.current_task() <asyncio.Task.current_task>` and :meth:`Task."
-"all_tasks() <asyncio.Task.all_tasks>` methods have been deprecated. "
-"(Contributed by Andrew Svetlov in :issue:`32250`.)"
+"The :meth:`!Task.current_task` and :meth:`!Task.all_tasks` methods have been "
+"deprecated. (Contributed by Andrew Svetlov in :issue:`32250`.)"
 msgstr ""
 
 #: whatsnew/3.7.rst:676
@@ -983,6 +1013,16 @@ msgid ""
 "<asyncio.Server.is_serving>` method returns ``True`` if the server is "
 "serving.  :class:`~asyncio.Server` objects are now asynchronous context "
 "managers::"
+msgstr ""
+
+#: whatsnew/3.7.rst:716
+msgid ""
+"srv = await loop.create_server(...)\n"
+"\n"
+"async with srv:\n"
+"    # some code\n"
+"\n"
+"# At this point, srv is closed and no longer accepts new connections."
 msgstr ""
 
 #: whatsnew/3.7.rst:723
@@ -2803,7 +2843,7 @@ msgstr ""
 
 #: whatsnew/3.7.rst:1972
 msgid ""
-"The :meth:`asyncio.Task.current_task` and :meth:`asyncio.Task.all_tasks` "
+"The :meth:`!asyncio.Task.current_task` and :meth:`!asyncio.Task.all_tasks` "
 "methods have been deprecated. (Contributed by Andrew Svetlov in :issue:"
 "`32250`.)"
 msgstr ""
@@ -2848,9 +2888,9 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2019
 msgid ""
-"Methods :meth:`!MetaPathFinder.find_module()` (replaced by :meth:"
+"Methods :meth:`!MetaPathFinder.find_module` (replaced by :meth:"
 "`MetaPathFinder.find_spec() <importlib.abc.MetaPathFinder.find_spec>`) and :"
-"meth:`!PathEntryFinder.find_loader()` (replaced by :meth:`PathEntryFinder."
+"meth:`!PathEntryFinder.find_loader` (replaced by :meth:`PathEntryFinder."
 "find_spec() <importlib.abc.PathEntryFinder.find_spec>`) both deprecated in "
 "Python 3.4 now emit :exc:`DeprecationWarning`. (Contributed by Matthias "
 "Bussonnier in :issue:`29576`.)"
@@ -2884,8 +2924,8 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2051
 msgid ""
-":mod:`dummy_threading` and :mod:`_dummy_thread` have been deprecated.  It is "
-"no longer possible to build Python with threading disabled. Use :mod:"
+":mod:`!dummy_threading` and :mod:`!_dummy_thread` have been deprecated.  It "
+"is no longer possible to build Python with threading disabled. Use :mod:"
 "`threading` instead. (Contributed by Antoine Pitrou in :issue:`31370`.)"
 msgstr ""
 
@@ -3076,9 +3116,9 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2186
 msgid ""
-":mod:`asyncio` no longer exports the :mod:`selectors` and :mod:`_overlapped` "
-"modules as ``asyncio.selectors`` and ``asyncio._overlapped``. Replace ``from "
-"asyncio import selectors`` with ``import selectors``."
+":mod:`asyncio` no longer exports the :mod:`selectors` and :mod:`!"
+"_overlapped` modules as ``asyncio.selectors`` and ``asyncio._overlapped``. "
+"Replace ``from asyncio import selectors`` with ``import selectors``."
 msgstr ""
 
 #: whatsnew/3.7.rst:2191
@@ -3170,6 +3210,14 @@ msgstr ""
 msgid ""
 "Due to an oversight, earlier Python versions erroneously accepted the "
 "following syntax::"
+msgstr ""
+
+#: whatsnew/3.7.rst:2255
+msgid ""
+"f(1 for x in [1],)\n"
+"\n"
+"class C(1 for x in [1]):\n"
+"    pass"
 msgstr ""
 
 #: whatsnew/3.7.rst:2260
@@ -3328,7 +3376,7 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2369
 msgid ""
-":func:`re.sub()` now replaces empty matches adjacent to a previous non-empty "
+":func:`re.sub` now replaces empty matches adjacent to a previous non-empty "
 "match.  For example ``re.sub('x*', '-', 'abxd')`` returns now ``'-a-b--d-'`` "
 "instead of ``'-a-b-d-'`` (the first minus between 'b' and 'd' replaces 'x', "
 "and the second minus replaces an empty string between 'x' and 'd')."
@@ -3414,7 +3462,7 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2428
 msgid ""
-":meth:`ast.literal_eval()` is now stricter.  Addition and subtraction of "
+":meth:`ast.literal_eval` is now stricter.  Addition and subtraction of "
 "arbitrary numbers are no longer allowed. (Contributed by Serhiy Storchaka "
 "in :issue:`31778`.)"
 msgstr ""
@@ -3484,14 +3532,14 @@ msgstr ""
 
 #: whatsnew/3.7.rst:2479
 msgid ""
-"There are two new opcodes: :opcode:`LOAD_METHOD` and :opcode:`CALL_METHOD`. "
+"There are two new opcodes: :opcode:`LOAD_METHOD` and :opcode:`!CALL_METHOD`. "
 "(Contributed by Yury Selivanov and INADA Naoki in :issue:`26110`.)"
 msgstr ""
 
 #: whatsnew/3.7.rst:2482
 msgid ""
-"The :opcode:`STORE_ANNOTATION` opcode has been removed. (Contributed by Mark "
-"Shannon in :issue:`32550`.)"
+"The :opcode:`!STORE_ANNOTATION` opcode has been removed. (Contributed by "
+"Mark Shannon in :issue:`32550`.)"
 msgstr ""
 
 #: whatsnew/3.7.rst:2489
@@ -3667,10 +3715,9 @@ msgid ""
 "(binary), 4, 8 (octal), 16 (hexadecimal), or 32 such as base 10 (decimal) "
 "now raises a :exc:`ValueError` if the number of digits in string form is "
 "above a limit to avoid potential denial of service attacks due to the "
-"algorithmic complexity. This is a mitigation for `CVE-2020-10735 <https://"
-"cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735>`_. This limit can be "
-"configured or disabled by environment variable, command line flag, or :mod:"
-"`sys` APIs. See the :ref:`integer string conversion length limitation "
-"<int_max_str_digits>` documentation.  The default limit is 4300 digits in "
-"string form."
+"algorithmic complexity. This is a mitigation for :cve:`2020-10735`. This "
+"limit can be configured or disabled by environment variable, command line "
+"flag, or :mod:`sys` APIs. See the :ref:`integer string conversion length "
+"limitation <int_max_str_digits>` documentation.  The default limit is 4300 "
+"digits in string form."
 msgstr ""

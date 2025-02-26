@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-12-09 18:41+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -261,8 +262,9 @@ msgid ""
 "searching the global namespace, i.e. the namespace of the module containing "
 "the code block, and the builtins namespace, the namespace of the module :mod:"
 "`builtins`.  The global namespace is searched first.  If the names are not "
-"found there, the builtins namespace is searched.  The :keyword:`!global` "
-"statement must precede all uses of the listed names."
+"found there, the builtins namespace is searched next. If the names are also "
+"not found in the builtins namespace, new variables are created in the global "
+"namespace. The global statement must precede all uses of the listed names."
 msgstr ""
 "Αν η δήλωση :keyword:`global` εμφανιστεί μέσα σε ένα μπλοκ, όλες οι χρήσεις "
 "των ονομάτων που καθορίζονται στη δήλωση αναφέρονται στις συνδέσεις αυτών "
@@ -271,11 +273,12 @@ msgstr ""
 "δηλαδή τον χώρο ονομάτων του module που περιέχει το μπλοκ κώδικα, και στη "
 "συνέχεια στο χώρο ονομάτων των builtins, τον χώρο ονομάτων του module :mod:"
 "`builtins`. Ο καθολικός χώρος ονομάτων αναζητείται πρώτος. Αν τα ονόματα δεν "
-"βρεθούν εκεί, αναζητούνται στον χώρο ονομάτων των builtins. Η δήλωση :"
-"keyword:`!global` πρέπει να προηγείται όλων των χρήσεων των καταγεγραμμένων "
-"ονομάτων."
+"βρεθούν εκεί, γίνεται αναζήτηση του ενσωματωμένου χώρου ονομάτων. Εάν τα "
+"ονόματα δεν βρίσκονται επίσης στον ενσωματωμένο χώρο ονομάτων, "
+"δημιουργούνται νέες μεταβλητές στον καθολικό χώρο ονομάτων. Η καθολική "
+"δήλωση πρέπει να προηγείται όλων των χρήσεων των ονομάτων που αναφέρονται."
 
-#: reference/executionmodel.rst:145
+#: reference/executionmodel.rst:146
 msgid ""
 "The :keyword:`global` statement has the same scope as a name binding "
 "operation in the same block.  If the nearest enclosing scope for a free "
@@ -287,7 +290,7 @@ msgstr ""
 "ελεύθερη μεταβλητή περιέχει μια δήλωση global, η ελεύθερη μεταβλητή "
 "αντιμετωπίζεται ως καθολική."
 
-#: reference/executionmodel.rst:151
+#: reference/executionmodel.rst:152
 msgid ""
 "The :keyword:`nonlocal` statement causes corresponding names to refer to "
 "previously bound variables in the nearest enclosing function scope. :exc:"
@@ -302,7 +305,7 @@ msgstr ""
 "συνάρτησης. :ref:`Οι παράμετροι τύπου <type-params>` δεν μπορούν να "
 "δεσμευτούν εκ νέου με τη δήλωση :keyword:`!nonlocal`."
 
-#: reference/executionmodel.rst:159
+#: reference/executionmodel.rst:160
 msgid ""
 "The namespace for a module is automatically created the first time a module "
 "is imported.  The main module for a script is always called :mod:`__main__`."
@@ -311,7 +314,7 @@ msgstr ""
 "module εισάγεται Το κύριο module για ένα script ονομάζεται πάντα :mod:"
 "`__main__`."
 
-#: reference/executionmodel.rst:162
+#: reference/executionmodel.rst:163
 msgid ""
 "Class definition blocks and arguments to :func:`exec` and :func:`eval` are "
 "special in the context of name resolution. A class definition is an "
@@ -338,15 +341,39 @@ msgstr ""
 "<annotation-scopes>`, τα οποία έχουν πρόσβαση στα περιβάλλοντα πεδία της "
 "περιβάλλουσας κλάσης. Αυτό σημαίνει ότι το παρακάτω θα αποτύχει::"
 
-#: reference/executionmodel.rst:179
+#: reference/executionmodel.rst:176
+msgid ""
+"class A:\n"
+"    a = 42\n"
+"    b = list(a + i for i in range(10))"
+msgstr ""
+"class A:\n"
+"    a = 42\n"
+"    b = list(a + i for i in range(10))"
+
+#: reference/executionmodel.rst:180
 msgid "However, the following will succeed::"
 msgstr "Ωστόσο, το παρακάτω θα επιτύχει::"
 
-#: reference/executionmodel.rst:190
+#: reference/executionmodel.rst:182
+msgid ""
+"class A:\n"
+"    type Alias = Nested\n"
+"    class Nested: pass\n"
+"\n"
+"print(A.Alias.__value__)  # <type 'A.Nested'>"
+msgstr ""
+"class A:\n"
+"    type Alias = Nested\n"
+"    class Nested: pass\n"
+"\n"
+"print(A.Alias.__value__)  # <type 'A.Nested'>"
+
+#: reference/executionmodel.rst:191
 msgid "Annotation scopes"
 msgstr "Σημειογραφία πεδία"
 
-#: reference/executionmodel.rst:192
+#: reference/executionmodel.rst:193
 msgid ""
 ":ref:`Type parameter lists <type-params>` and :keyword:`type` statements "
 "introduce *annotation scopes*, which behave mostly like function scopes, but "
@@ -361,18 +388,18 @@ msgstr ""
 "σημειώσεων, αλλά αναμένεται να τα χρησιμοποιήσουν στην Python 3.13, όταν "
 "υλοποιηθεί το :pep:`649`."
 
-#: reference/executionmodel.rst:198
+#: reference/executionmodel.rst:199
 msgid "Annotation scopes are used in the following contexts:"
 msgstr "Τα πεδία σημειογραφίας χρησιμοποιούνται στα παρακάτω συμφραζόμενα:"
 
-#: reference/executionmodel.rst:200
+#: reference/executionmodel.rst:201
 msgid ""
 "Type parameter lists for :ref:`generic type aliases <generic-type-aliases>`."
 msgstr ""
 "Λίστες παραμέτρων τύπου για :ref:`generic type aliases  <generic-type-"
 "aliases>`."
 
-#: reference/executionmodel.rst:201
+#: reference/executionmodel.rst:202
 msgid ""
 "Type parameter lists for :ref:`generic functions <generic-functions>`. A "
 "generic function's annotations are executed within the annotation scope, but "
@@ -382,7 +409,7 @@ msgstr ""
 "σημειογραφίες μιας γενικής συνάρτησης εκτελούνται μέσα στο πεδίο σημειώσεων, "
 "αλλά οι προεπιλογές και οι διακοσμητές της όχι."
 
-#: reference/executionmodel.rst:204
+#: reference/executionmodel.rst:205
 msgid ""
 "Type parameter lists for :ref:`generic classes <generic-classes>`. A generic "
 "class's base classes and keyword arguments are executed within the "
@@ -392,7 +419,7 @@ msgstr ""
 "βασικές κλάσεις και τα ορίσματα λέξεων-κλειδιών μιας γενικής κλάσης "
 "εκτελούνται μέσα στο πεδίο σημειώσεων, αλλά οι διακοσμητές της όχι."
 
-#: reference/executionmodel.rst:207
+#: reference/executionmodel.rst:208
 msgid ""
 "The bounds and constraints for type variables (:ref:`lazily evaluated <lazy-"
 "evaluation>`)."
@@ -400,18 +427,18 @@ msgstr ""
 "Τα όρια και οι περιορισμοί για μεταβλητές τύπου (:ref:`lazily evaluated "
 "<lazy-evaluation>`)."
 
-#: reference/executionmodel.rst:209
+#: reference/executionmodel.rst:210
 msgid "The value of type aliases (:ref:`lazily evaluated <lazy-evaluation>`)."
 msgstr ""
 "Η τιμή των ψευδωνύμων τύπου (:ref:`lazily evaluated <lazy-evaluation>`)."
 
-#: reference/executionmodel.rst:211
+#: reference/executionmodel.rst:212
 msgid "Annotation scopes differ from function scopes in the following ways:"
 msgstr ""
 "Τα πεδία σημειογραφίας διαφέρουν από τα πεδία συναρτήσεων με τους εξής "
 "τρόπους:"
 
-#: reference/executionmodel.rst:213
+#: reference/executionmodel.rst:214
 msgid ""
 "Annotation scopes have access to their enclosing class namespace. If an "
 "annotation scope is immediately within a class scope, or within another "
@@ -430,7 +457,7 @@ msgstr ""
 "που ορίζονται μέσα σε κλάσεις, οι οποίες δεν μπορούν να έχουν πρόσβαση σε "
 "ονόματα που έχουν οριστεί στο χώρο της κλάσης."
 
-#: reference/executionmodel.rst:219
+#: reference/executionmodel.rst:220
 msgid ""
 "Expressions in annotation scopes cannot contain :keyword:`yield`, ``yield "
 "from``, :keyword:`await`, or :token:`:= <python-grammar:"
@@ -442,7 +469,7 @@ msgstr ""
 "grammar:assignment_expression`. (Αυτές οι εκφράσεις επιτρέπονται σε άλλα "
 "πεδία που περιέχονται μέσα στο πεδίο σημειογραφίας.)"
 
-#: reference/executionmodel.rst:223
+#: reference/executionmodel.rst:224
 msgid ""
 "Names defined in annotation scopes cannot be rebound with :keyword:"
 "`nonlocal` statements in inner scopes. This includes only type parameters, "
@@ -454,28 +481,28 @@ msgstr ""
 "μόνο παραμέτρους τύπου, καθώς και κανένα άλλο συντακτικό στοιχείο που μπορεί "
 "να εμφανιστεί μέσα σε πεδία σημειώσεων δεν μπορεί να εισαγάγει νέα ονόματα."
 
-#: reference/executionmodel.rst:226
+#: reference/executionmodel.rst:227
 msgid ""
 "While annotation scopes have an internal name, that name is not reflected in "
-"the :term:`__qualname__ <qualified name>` of objects defined within the "
-"scope. Instead, the :attr:`!__qualname__` of such objects is as if the "
-"object were defined in the enclosing scope."
+"the :term:`qualified name` of objects defined within the scope. Instead, "
+"the :attr:`~definition.__qualname__` of such objects is as if the object "
+"were defined in the enclosing scope."
 msgstr ""
 "Ενώ τα πεδία σημειογραφίας έχουν ένα εσωτερικό όνομα, αυτό το όνομα δεν "
-"αντικατοπτρίζεται στο :term:`__qualname__ <qualified name>` των αντικειμένων "
-"που ορίζονται μέσα στο πεδίο.Αντίθετα, το :attr:`!__qualname__` αυτών των "
+"αντικατοπτρίζεται στο :term:`qualified name` των αντικειμένων που ορίζονται "
+"μέσα στο πεδίο.Αντίθετα, το :attr:`~definition.__qualname__` αυτών των "
 "αντικειμένων είναι σαν το αντικείμενο να είχε οριστεί στο περιβάλλων πεδίο."
 
-#: reference/executionmodel.rst:231
+#: reference/executionmodel.rst:232
 msgid "Annotation scopes were introduced in Python 3.12 as part of :pep:`695`."
 msgstr ""
 "Τα πεδία σημειώσεων εισήχθησαν στην Python 3.12 ως μέρος του :pep:`695`."
 
-#: reference/executionmodel.rst:237
+#: reference/executionmodel.rst:238
 msgid "Lazy evaluation"
 msgstr "Καθυστερημένη εκτίμηση"
 
-#: reference/executionmodel.rst:239
+#: reference/executionmodel.rst:240
 msgid ""
 "The values of type aliases created through the :keyword:`type` statement are "
 "*lazily evaluated*. The same applies to the bounds and constraints of type "
@@ -492,11 +519,37 @@ msgstr ""
 "τύπου. Αντίθετα, αξιολογούνται μόνο όταν αυτό είναι απαραίτητο για την "
 "επίλυση μιας πρόσβασης χαρακτηριστικού."
 
-#: reference/executionmodel.rst:246
+#: reference/executionmodel.rst:247
 msgid "Example:"
 msgstr "Παράδειγμα:"
 
-#: reference/executionmodel.rst:262
+#: reference/executionmodel.rst:249
+msgid ""
+">>> type Alias = 1/0\n"
+">>> Alias.__value__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero\n"
+">>> def func[T: 1/0](): pass\n"
+">>> T = func.__type_params__[0]\n"
+">>> T.__bound__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero"
+msgstr ""
+">>> type Alias = 1/0\n"
+">>> Alias.__value__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero\n"
+">>> def func[T: 1/0](): pass\n"
+">>> T = func.__type_params__[0]\n"
+">>> T.__bound__\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ZeroDivisionError: division by zero"
+
+#: reference/executionmodel.rst:263
 msgid ""
 "Here the exception is raised only when the ``__value__`` attribute of the "
 "type alias or the ``__bound__`` attribute of the type variable is accessed."
@@ -505,7 +558,7 @@ msgstr ""
 "``__value__`` του ψευδωνύμου τύπου ή στο χαρακτηριστικό ``__bound__`` της "
 "μεταβλητής τύπου."
 
-#: reference/executionmodel.rst:266
+#: reference/executionmodel.rst:267
 msgid ""
 "This behavior is primarily useful for references to types that have not yet "
 "been defined when the type alias or type variable is created. For example, "
@@ -516,10 +569,24 @@ msgstr ""
 "τύπου. Για παράδειγμα, η καθυστερημένη εκτίμηση επιτρέπει τη δημιουργία "
 "αμοιβαίων αναδρομικών ψευδωνύμων τύπων::"
 
-#: reference/executionmodel.rst:276
+#: reference/executionmodel.rst:271
+msgid ""
+"from typing import Literal\n"
+"\n"
+"type SimpleExpr = int | Parenthesized\n"
+"type Parenthesized = tuple[Literal[\"(\"], Expr, Literal[\")\"]]\n"
+"type Expr = SimpleExpr | tuple[SimpleExpr, Literal[\"+\", \"-\"], Expr]"
+msgstr ""
+"from typing import Literal\n"
+"\n"
+"type SimpleExpr = int | Parenthesized\n"
+"type Parenthesized = tuple[Literal[\"(\"], Expr, Literal[\")\"]]\n"
+"type Expr = SimpleExpr | tuple[SimpleExpr, Literal[\"+\", \"-\"], Expr]"
+
+#: reference/executionmodel.rst:277
 msgid ""
 "Lazily evaluated values are evaluated in :ref:`annotation scope <annotation-"
-"scopes>`,which means that names that appear inside the lazily evaluated "
+"scopes>`, which means that names that appear inside the lazily evaluated "
 "value are looked up as if they were used in the immediately enclosing scope."
 msgstr ""
 "Οι τιμές που αξιολογούνται καθυστερημένα αξιολογούνται στο :ref:`πεδίο "
@@ -527,11 +594,11 @@ msgstr ""
 "εμφανίζονται μέσα στην καθυστερημένα αξιολογούμενη τιμή αναζητούνται σαν να "
 "χρησιμοποιήθηκαν στο αμέσως περιβάλλον πεδίο."
 
-#: reference/executionmodel.rst:285
+#: reference/executionmodel.rst:286
 msgid "Builtins and restricted execution"
 msgstr "Ενσωματωμένες συναρτήσεις και περιορισμένη εκτέλεση"
 
-#: reference/executionmodel.rst:291
+#: reference/executionmodel.rst:292
 msgid ""
 "Users should not touch ``__builtins__``; it is strictly an implementation "
 "detail.  Users wanting to override values in the builtins namespace should :"
@@ -544,7 +611,7 @@ msgstr ""
 "`import` το module :mod:`builtins` και να τροποποιούν τα χαρακτηριστικά του "
 "κατάλληλα."
 
-#: reference/executionmodel.rst:296
+#: reference/executionmodel.rst:297
 msgid ""
 "The builtins namespace associated with the execution of a code block is "
 "actually found by looking up the name ``__builtins__`` in its global "
@@ -563,11 +630,11 @@ msgstr ""
 "`builtins`· όταν βρισκόμαστε σε οποιοδήποτε άλλο module, το ``__builtins__`` "
 "είναι ένα ψευδώνυμο για το λεξικό του ίδιου του module :mod:`builtins`."
 
-#: reference/executionmodel.rst:308
+#: reference/executionmodel.rst:309
 msgid "Interaction with dynamic features"
 msgstr "Αλληλεπίδραση με δυναμικές λειτουργίες"
 
-#: reference/executionmodel.rst:310
+#: reference/executionmodel.rst:311
 msgid ""
 "Name resolution of free variables occurs at runtime, not at compile time. "
 "This means that the following code will print 42::"
@@ -576,7 +643,21 @@ msgstr ""
 "εκτέλεσης, όχι κατά το χρόνο μεταγλώττισης. Αυτό σημαίνει ότι ο παρακάτω "
 "κώδικας θα εκτυπώσει το 42::"
 
-#: reference/executionmodel.rst:321
+#: reference/executionmodel.rst:314
+msgid ""
+"i = 10\n"
+"def f():\n"
+"    print(i)\n"
+"i = 42\n"
+"f()"
+msgstr ""
+"i = 10\n"
+"def f():\n"
+"    print(i)\n"
+"i = 42\n"
+"f()"
+
+#: reference/executionmodel.rst:322
 msgid ""
 "The :func:`eval` and :func:`exec` functions do not have access to the full "
 "environment for resolving names.  Names may be resolved in the local and "
@@ -595,11 +676,11 @@ msgstr ""
 "χώρους ονομάτων. Αν καθοριστεί μόνο ένας χώρος ονομάτων, χρησιμοποιείται και "
 "για τους δύο."
 
-#: reference/executionmodel.rst:332
+#: reference/executionmodel.rst:333
 msgid "Exceptions"
 msgstr "Εξαιρέσεις"
 
-#: reference/executionmodel.rst:343
+#: reference/executionmodel.rst:344
 msgid ""
 "Exceptions are a means of breaking out of the normal flow of control of a "
 "code block in order to handle errors or other exceptional conditions.  An "
@@ -614,7 +695,7 @@ msgstr ""
 "οποιοδήποτε μπλοκ κώδικα που άμεσα ή έμμεσα εκτέλεσε το μπλοκ κώδικα όπου "
 "συνέβη το σφάλμα."
 
-#: reference/executionmodel.rst:349
+#: reference/executionmodel.rst:350
 msgid ""
 "The Python interpreter raises an exception when it detects a run-time error "
 "(such as division by zero).  A Python program can also explicitly raise an "
@@ -633,7 +714,7 @@ msgstr ""
 "διαχειρίζεται την εξαίρεση αλλά εκτελείται ανεξάρτητα από το αν προηγήθηκε "
 "εξαίρεση ή όχι στον προηγούμενο κώδικα."
 
-#: reference/executionmodel.rst:359
+#: reference/executionmodel.rst:360
 msgid ""
 "Python uses the \"termination\" model of error handling: an exception "
 "handler can find out what happened and continue execution at an outer level, "
@@ -646,7 +727,7 @@ msgstr ""
 "του σφάλματος και να επαναλάβει τη λειτουργία που απέτυχε (εκτός αν "
 "επανεισαχθεί το προβληματικό κομμάτι κώδικα από την αρχή)."
 
-#: reference/executionmodel.rst:366
+#: reference/executionmodel.rst:367
 msgid ""
 "When an exception is not handled at all, the interpreter terminates "
 "execution of the program, or returns to its interactive main loop.  In "
@@ -658,7 +739,7 @@ msgstr ""
 "στις δύο περιπτώσεις, εκτυπώνει το ίχνος της στοίβας, εκτός αν η εξαίρεση "
 "είναι :exc:`SystemExit`."
 
-#: reference/executionmodel.rst:370
+#: reference/executionmodel.rst:371
 msgid ""
 "Exceptions are identified by class instances.  The :keyword:`except` clause "
 "is selected depending on the class of the instance: it must reference the "
@@ -673,7 +754,7 @@ msgstr ""
 "τον διαχειριστή και να μεταφέρει πρόσθετες πληροφορίες σχετικά με την "
 "εξαιρετική συνθήκη."
 
-#: reference/executionmodel.rst:378
+#: reference/executionmodel.rst:379
 msgid ""
 "Exception messages are not part of the Python API.  Their contents may "
 "change from one version of Python to the next without warning and should not "
@@ -685,7 +766,7 @@ msgstr ""
 "χωρίς προειδοποίηση και δεν θα πρέπει να βασίζεται σε αυτά ο κώδικας που θα "
 "εκτελεστεί σε πολλαπλές εκδόσεις του διερμηνέα."
 
-#: reference/executionmodel.rst:382
+#: reference/executionmodel.rst:383
 msgid ""
 "See also the description of the :keyword:`try` statement in section :ref:"
 "`try` and :keyword:`raise` statement in section :ref:`raise`."
@@ -693,11 +774,11 @@ msgstr ""
 "Δείτε επίσης την περιγραφή της δήλωσης :keyword:`try` στην ενότητα :ref:"
 "`try` και της δήλωσης :keyword:`raise` στην ενότητα :ref:`raise`."
 
-#: reference/executionmodel.rst:387
+#: reference/executionmodel.rst:388
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: reference/executionmodel.rst:388
+#: reference/executionmodel.rst:389
 msgid ""
 "This limitation occurs because the code that is executed by these operations "
 "is not available at the time the module is compiled."
@@ -717,7 +798,7 @@ msgstr "κώδικας"
 msgid "block"
 msgstr "μπλοκ"
 
-#: reference/executionmodel.rst:31 reference/executionmodel.rst:287
+#: reference/executionmodel.rst:31 reference/executionmodel.rst:288
 msgid "execution"
 msgstr "εκτέλεση"
 
@@ -769,46 +850,46 @@ msgstr "NameError (ενσωματωμένη εξαίρεση)"
 msgid "UnboundLocalError"
 msgstr "UnboundLocalError"
 
-#: reference/executionmodel.rst:157
+#: reference/executionmodel.rst:158
 msgid "module"
 msgstr "module"
 
-#: reference/executionmodel.rst:157
+#: reference/executionmodel.rst:158
 msgid "__main__"
 msgstr "__main__"
 
-#: reference/executionmodel.rst:287
+#: reference/executionmodel.rst:288
 msgid "restricted"
 msgstr "περιορισμένη"
 
-#: reference/executionmodel.rst:334
+#: reference/executionmodel.rst:335
 msgid "exception"
 msgstr "εξαίρεση"
 
-#: reference/executionmodel.rst:336
+#: reference/executionmodel.rst:337
 msgid "raise an exception"
 msgstr "κάνει raise μια εξαίρεση"
 
-#: reference/executionmodel.rst:336
+#: reference/executionmodel.rst:337
 msgid "handle an exception"
 msgstr "διαχειρίζεται μια εξαίρεση"
 
-#: reference/executionmodel.rst:336
+#: reference/executionmodel.rst:337
 msgid "exception handler"
 msgstr "διαχειριστής εξαιρέσεων"
 
-#: reference/executionmodel.rst:336
+#: reference/executionmodel.rst:337
 msgid "errors"
 msgstr "σφάλματα"
 
-#: reference/executionmodel.rst:336
+#: reference/executionmodel.rst:337
 msgid "error handling"
 msgstr "διαχείριση σφαλμάτων"
 
-#: reference/executionmodel.rst:357
+#: reference/executionmodel.rst:358
 msgid "termination model"
 msgstr "μοντέλο τερματισμού"
 
-#: reference/executionmodel.rst:364
+#: reference/executionmodel.rst:365
 msgid "SystemExit (built-in exception)"
 msgstr "SystemExit (ενσωματωμένη εξαίρεση)"

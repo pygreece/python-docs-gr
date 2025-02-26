@@ -1,0 +1,47 @@
+{
+  "name": "Python Translation Devcontainer",
+  "image": "python:3.12-slim",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml",
+        "gettext.gettext",
+        "restructuredtext.restructuredtext"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+          }
+        },
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        },
+        "terminal.integrated.env.linux": {
+          "ZSH": "/bin/zsh"
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "workspaceFolder": "/python-docs-gr",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/python-docs-gr,type=bind,consistency=cached",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y hunspell hunspell-el && pip install -r ./requirements.txt",
+  "mounts": [
+    "source=pip-cache,target=/home/translator/.cache/pip,type=volume"
+  ],
+  "remoteUser": "translator"
+}
