@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: 2025-01-22 21:40+0200\n"
+"PO-Revision-Date: 2025-02-26 09:20+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -669,7 +669,7 @@ msgstr ""
 
 #: using/windows.rst:239
 msgid "python-3.9.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0"
-msgstr ""
+msgstr "python-3.9.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0"
 
 #: using/windows.rst:241
 msgid ""
@@ -687,6 +687,8 @@ msgid ""
 "python-3.9.0.exe InstallAllUsers=0 Include_launcher=0 Include_test=0\n"
 "    SimpleInstall=1 SimpleInstallDescription=\"Just for me, no test suite.\""
 msgstr ""
+"python-3.9.0.exe InstallAllUsers=0 Include_launcher=0 Include_test=0\n"
+"    SimpleInstall=1 SimpleInstallDescription=\"Just for me, no test suite.\""
 
 #: using/windows.rst:248
 msgid ""
@@ -725,6 +727,14 @@ msgid ""
 "Option>\n"
 "</Options>"
 msgstr ""
+"<Options>\n"
+"    <Option Name=\"InstallAllUsers\" Value=\"no\" />\n"
+"    <Option Name=\"Include_launcher\" Value=\"0\" />\n"
+"    <Option Name=\"Include_test\" Value=\"no\" />\n"
+"    <Option Name=\"SimpleInstall\" Value=\"yes\" />\n"
+"    <Option Name=\"SimpleInstallDescription\">Just for me, no test suite</"
+"Option>\n"
+"</Options>"
 
 #: using/windows.rst:271
 msgid "Installing Without Downloading"
@@ -765,7 +775,7 @@ msgstr ""
 
 #: using/windows.rst:288
 msgid "python-3.9.0.exe /layout [optional target directory]"
-msgstr ""
+msgstr "python-3.9.0.exe /layout [optional target directory]"
 
 #: using/windows.rst:290
 msgid ""
@@ -998,6 +1008,12 @@ msgid ""
 "\\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\\\\LocalCache\\\\Local\\"
 "\\test.txt'"
 msgstr ""
+">>> import os\n"
+">>> test_file = 'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\test.txt'\n"
+">>> os.path.realpath(test_file)\n"
+"'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\Packages\\"
+"\\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\\\\LocalCache\\\\Local\\"
+"\\test.txt'"
 
 #: using/windows.rst:387
 msgid "When writing to the Windows Registry, the following behaviors exist:"
@@ -1088,6 +1104,8 @@ msgid ""
 "nuget.exe install python -ExcludeVersion -OutputDirectory .\n"
 "nuget.exe install pythonx86 -ExcludeVersion -OutputDirectory ."
 msgstr ""
+"nuget.exe install python -ExcludeVersion -OutputDirectory .\n"
+"nuget.exe install pythonx86 -ExcludeVersion -OutputDirectory ."
 
 #: using/windows.rst:424
 msgid ""
@@ -1116,6 +1134,13 @@ msgid ""
 "> .\\python\\tools\\python.exe -V\n"
 "Python 3.5.2"
 msgstr ""
+"# Without -ExcludeVersion\n"
+"> .\\python.3.5.2\\tools\\python.exe -V\n"
+"Python 3.5.2\n"
+"\n"
+"# With -ExcludeVersion\n"
+"> .\\python\\tools\\python.exe -V\n"
+"Python 3.5.2"
 
 #: using/windows.rst:441
 msgid ""
@@ -1458,6 +1483,9 @@ msgid ""
 "C:\\>set PYTHONPATH=%PYTHONPATH%;C:\\My_python_lib\n"
 "C:\\>python"
 msgstr ""
+"C:\\>set PATH=C:\\Program Files\\Python 3.9;%PATH%\n"
+"C:\\>set PYTHONPATH=%PYTHONPATH%;C:\\My_python_lib\n"
+"C:\\>python"
 
 #: using/windows.rst:593
 msgid ""
@@ -1612,7 +1640,7 @@ msgstr ""
 
 #: using/windows.rst:657
 msgid "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\Program Files\\Python 3.9"
-msgstr ""
+msgstr "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\Program Files\\Python 3.9"
 
 #: using/windows.rst:662
 msgid "UTF-8 mode"
@@ -1756,7 +1784,7 @@ msgstr ""
 
 #: using/windows.rst:729
 msgid "py"
-msgstr ""
+msgstr "py"
 
 #: using/windows.rst:731
 msgid ""
@@ -1780,7 +1808,7 @@ msgstr ""
 
 #: using/windows.rst:739
 msgid "py -3.7"
-msgstr ""
+msgstr "py -3.7"
 
 #: using/windows.rst:741
 msgid ""
@@ -1792,7 +1820,7 @@ msgstr ""
 
 #: using/windows.rst:744
 msgid "py -2"
-msgstr ""
+msgstr "py -2"
 
 #: using/windows.rst:746
 msgid ""
@@ -1813,7 +1841,7 @@ msgstr "Η εντολή::"
 
 #: using/windows.rst:753
 msgid "py --list"
-msgstr ""
+msgstr "py --list"
 
 #: using/windows.rst:755
 msgid "displays the currently installed version(s) of Python."
@@ -1857,6 +1885,14 @@ msgid ""
 "# Select PythonCore's latest Python 3 runtime\n"
 "py -V:PythonCore/3"
 msgstr ""
+"# Select any '3.*' tagged runtime\n"
+"py -V:3\n"
+"\n"
+"# Select any 'PythonCore' released runtime\n"
+"py -V:PythonCore/\n"
+"\n"
+"# Select PythonCore's latest Python 3 runtime\n"
+"py -V:PythonCore/3"
 
 #: using/windows.rst:776
 msgid ""
@@ -1923,6 +1959,9 @@ msgid ""
 "import sys\n"
 "sys.stdout.write(\"hello from Python %s\\n\" % (sys.version,))"
 msgstr ""
+"#! python\n"
+"import sys\n"
+"sys.stdout.write(\"hello from Python %s\\n\" % (sys.version,))"
 
 #: using/windows.rst:811
 msgid "From the directory in which hello.py lives, execute the command::"
@@ -1930,7 +1969,7 @@ msgstr "Από τον κατάλογο στον οποίο ζει το hello.py,
 
 #: using/windows.rst:813
 msgid "py hello.py"
-msgstr ""
+msgstr "py hello.py"
 
 #: using/windows.rst:815
 msgid ""
@@ -1942,7 +1981,7 @@ msgstr ""
 
 #: using/windows.rst:818
 msgid "#! python3"
-msgstr ""
+msgstr "#! python3"
 
 #: using/windows.rst:822
 msgid ""
@@ -2053,7 +2092,7 @@ msgstr "Για παράδειγμα, εάν η πρώτη γραμμή του sc
 
 #: using/windows.rst:866
 msgid "#! /usr/bin/python"
-msgstr ""
+msgstr "#! /usr/bin/python"
 
 #: using/windows.rst:870
 msgid ""
@@ -2156,6 +2195,8 @@ msgid ""
 "[commands]\n"
 "/bin/xpython=C:\\Program Files\\XPython\\python.exe"
 msgstr ""
+"[commands]\n"
+"/bin/xpython=C:\\Program Files\\XPython\\python.exe"
 
 #: using/windows.rst:918
 msgid ""
@@ -2191,7 +2232,7 @@ msgstr ""
 
 #: using/windows.rst:932
 msgid "#! /usr/bin/python -v"
-msgstr ""
+msgstr "#! /usr/bin/python -v"
 
 #: using/windows.rst:936
 msgid "Then Python will be started with the ``-v`` option"
@@ -2406,6 +2447,8 @@ msgid ""
 "[defaults]\n"
 "python=3.7"
 msgstr ""
+"[defaults]\n"
+"python=3.7"
 
 #: using/windows.rst:1030
 msgid ""
@@ -2421,6 +2464,9 @@ msgid ""
 "python=3\n"
 "python3=3.7"
 msgstr ""
+"[defaults]\n"
+"python=3\n"
+"python3=3.7"
 
 #: using/windows.rst:1040
 msgid "Diagnostics"
