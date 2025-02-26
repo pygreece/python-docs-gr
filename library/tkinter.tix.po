@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +52,7 @@ msgid ""
 "match the special needs of your application and users."
 msgstr ""
 
-#: library/tkinter.tix.rst:38
+#: library/tkinter.tix.rst:36
 msgid "`Tix Homepage <https://tix.sourceforge.net/>`_"
 msgstr ""
 
@@ -61,7 +62,7 @@ msgid ""
 "documentation and downloads."
 msgstr ""
 
-#: library/tkinter.tix.rst:41
+#: library/tkinter.tix.rst:40
 msgid "`Tix Man Pages <https://tix.sourceforge.net/dist/current/man/>`_"
 msgstr ""
 
@@ -69,7 +70,7 @@ msgstr ""
 msgid "On-line version of the man pages and reference material."
 msgstr ""
 
-#: library/tkinter.tix.rst:44
+#: library/tkinter.tix.rst:43
 msgid ""
 "`Tix Programming Guide <https://tix.sourceforge.net/dist/current/docs/tix-"
 "book/tix.book.html>`_"
@@ -79,7 +80,7 @@ msgstr ""
 msgid "On-line version of the programmer's reference material."
 msgstr ""
 
-#: library/tkinter.tix.rst:48
+#: library/tkinter.tix.rst:46
 msgid ""
 "`Tix Development Applications <https://tix.sourceforge.net/Tixapps/src/Tide."
 "html>`_"
@@ -111,11 +112,25 @@ msgid ""
 "`tkinter.Tk` with :class:`tix.Tk`::"
 msgstr ""
 
+#: library/tkinter.tix.rst:67
+msgid ""
+"from tkinter import tix\n"
+"from tkinter.constants import *\n"
+"root = tix.Tk()"
+msgstr ""
+
 #: library/tkinter.tix.rst:71
 msgid ""
 "To use :mod:`tkinter.tix`, you must have the Tix widgets installed, usually "
 "alongside your installation of the Tk widgets. To test your installation, "
 "try the following::"
+msgstr ""
+
+#: library/tkinter.tix.rst:75
+msgid ""
+"from tkinter import tix\n"
+"root = tix.Tk()\n"
+"root.tk.eval('package require Tix')"
 msgstr ""
 
 #: library/tkinter.tix.rst:81
@@ -421,6 +436,13 @@ msgstr ""
 
 #: library/tkinter.tix.rst:497
 msgid "To view the current settings, the common usage is::"
+msgstr ""
+
+#: library/tkinter.tix.rst:499
+msgid ""
+"from tkinter import tix\n"
+"root = tix.Tk()\n"
+"print(root.tix_configure())"
 msgstr ""
 
 #: library/tkinter.tix.rst:506

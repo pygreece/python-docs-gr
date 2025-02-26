@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/token.rst:2
-msgid ":mod:`token` --- Constants used with Python parse trees"
+msgid ":mod:`!token` --- Constants used with Python parse trees"
 msgstr ""
 
 #: library/token.rst:9
@@ -282,25 +283,30 @@ msgstr ""
 #: library/token.rst:77
 msgid ""
 "Token value indicating that a type comment was recognized.  Such tokens are "
-"only produced when :func:`ast.parse()` is invoked with "
-"``type_comments=True``."
+"only produced when :func:`ast.parse` is invoked with ``type_comments=True``."
 msgstr ""
 
-#: library/token.rst:82
+#: library/token.rst:84
+msgid ""
+"A dictionary mapping the string representation of a token to its numeric "
+"code."
+msgstr ""
+
+#: library/token.rst:89
 msgid "Added :data:`AWAIT` and :data:`ASYNC` tokens."
 msgstr ""
 
-#: library/token.rst:85
+#: library/token.rst:92
 msgid "Added :data:`COMMENT`, :data:`NL` and :data:`ENCODING` tokens."
 msgstr ""
 
-#: library/token.rst:88
+#: library/token.rst:95
 msgid ""
 "Removed :data:`AWAIT` and :data:`ASYNC` tokens. \"async\" and \"await\" are "
 "now tokenized as :data:`NAME` tokens."
 msgstr ""
 
-#: library/token.rst:92
+#: library/token.rst:99
 msgid ""
 "Added :data:`TYPE_COMMENT`, :data:`TYPE_IGNORE`, :data:`COLONEQUAL`. Added :"
 "data:`AWAIT` and :data:`ASYNC` tokens back (they're needed to support "

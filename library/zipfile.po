@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/zipfile.rst:2
-msgid ":mod:`zipfile` --- Work with ZIP archives"
+msgid ":mod:`!zipfile` --- Work with ZIP archives"
 msgstr ""
 
 #: library/zipfile.rst:10
@@ -131,7 +132,7 @@ msgid ""
 "individual files."
 msgstr ""
 
-#: library/zipfile.rst:129
+#: library/zipfile.rst:127
 msgid "`PKZIP Application Note`_"
 msgstr ""
 
@@ -141,7 +142,7 @@ msgid ""
 "and algorithms used."
 msgstr ""
 
-#: library/zipfile.rst:132
+#: library/zipfile.rst:131
 msgid "`Info-ZIP Home Page <https://infozip.sourceforge.net/>`_"
 msgstr ""
 
@@ -231,6 +232,12 @@ msgid ""
 "ZipFile is also a context manager and therefore supports the :keyword:`with` "
 "statement.  In the example, *myzip* is closed after the :keyword:`!with` "
 "statement's suite is finished---even if an exception occurs::"
+msgstr ""
+
+#: library/zipfile.rst:200
+msgid ""
+"with ZipFile('spam.zip', 'w') as myzip:\n"
+"    myzip.write('eggs.txt')"
 msgstr ""
 
 #: library/zipfile.rst:205
@@ -328,6 +335,13 @@ msgstr ""
 msgid ""
 ":meth:`~ZipFile.open` is also a context manager and therefore supports the :"
 "keyword:`with` statement::"
+msgstr ""
+
+#: library/zipfile.rst:283
+msgid ""
+"with ZipFile('spam.zip') as myzip:\n"
+"    with myzip.open('eggs.txt') as myfile:\n"
+"        print(myfile.read())"
 msgstr ""
 
 #: library/zipfile.rst:287
@@ -709,6 +723,13 @@ msgid ""
 "following are equivalent::"
 msgstr ""
 
+#: library/zipfile.rst:621
+msgid ""
+">>> Path(...).joinpath('child').joinpath('grandchild')\n"
+">>> Path(...).joinpath('child', 'grandchild')\n"
+">>> Path(...) / 'child' / 'grandchild'"
+msgstr ""
+
 #: library/zipfile.rst:625
 msgid ""
 "Prior to 3.10, ``joinpath`` was undocumented and accepted exactly one "
@@ -717,9 +738,9 @@ msgstr ""
 
 #: library/zipfile.rst:629
 msgid ""
-"The `zipp <https://pypi.org/project/zipp>`_ project provides backports of "
-"the latest path object functionality to older Pythons. Use ``zipp.Path`` in "
-"place of ``zipfile.Path`` for early access to changes."
+"The :pypi:`zipp` project provides backports of the latest path object "
+"functionality to older Pythons. Use ``zipp.Path`` in place of ``zipfile."
+"Path`` for early access to changes."
 msgstr ""
 
 #: library/zipfile.rst:637
@@ -788,8 +809,27 @@ msgid ""
 "exclude them::"
 msgstr ""
 
+#: library/zipfile.rst:685
+msgid ""
+">>> zf = PyZipFile('myprog.zip')\n"
+">>> def notests(s):\n"
+"...     fn = os.path.basename(s)\n"
+"...     return (not (fn == 'test' or fn.startswith('test_')))\n"
+"...\n"
+">>> zf.writepy('myprog', filterfunc=notests)"
+msgstr ""
+
 #: library/zipfile.rst:692
 msgid "The :meth:`writepy` method makes archives with file names like this::"
+msgstr ""
+
+#: library/zipfile.rst:695
+msgid ""
+"string.pyc                   # Top level name\n"
+"test/__init__.pyc            # Package directory\n"
+"test/testall.pyc             # Module test.testall\n"
+"test/bogus/__init__.pyc      # Subpackage directory\n"
+"test/bogus/myfile.pyc        # Submodule test.bogus.myfile"
 msgstr ""
 
 #: library/zipfile.rst:701
@@ -1007,8 +1047,16 @@ msgid ""
 "`-c` option and then list the filename(s) that should be included:"
 msgstr ""
 
+#: library/zipfile.rst:881
+msgid "$ python -m zipfile -c monty.zip spam.txt eggs.txt"
+msgstr ""
+
 #: library/zipfile.rst:885
 msgid "Passing a directory is also acceptable:"
+msgstr ""
+
+#: library/zipfile.rst:887
+msgid "$ python -m zipfile -c monty.zip life-of-brian_1979/"
 msgstr ""
 
 #: library/zipfile.rst:891
@@ -1017,8 +1065,16 @@ msgid ""
 "option:`-e` option:"
 msgstr ""
 
+#: library/zipfile.rst:894
+msgid "$ python -m zipfile -e monty.zip target-dir/"
+msgstr ""
+
 #: library/zipfile.rst:898
 msgid "For a list of the files in a ZIP archive, use the :option:`-l` option:"
+msgstr ""
+
+#: library/zipfile.rst:900
+msgid "$ python -m zipfile -l monty.zip"
 msgstr ""
 
 #: library/zipfile.rst:906

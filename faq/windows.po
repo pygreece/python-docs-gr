@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: 2024-05-31 22:08+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -58,6 +58,10 @@ msgstr ""
 "τέτοιο παράθυρο επειδή θα δείτε ένα \"command prompt\" των Windows, η οποία "
 "συνήθως μοιάζει με αυτό:"
 
+#: faq/windows.rst:35
+msgid "C:\\>"
+msgstr "C:\\>"
+
 #: faq/windows.rst:39
 msgid ""
 "The letter may be different, and there might be other things after it, so "
@@ -65,6 +69,10 @@ msgid ""
 msgstr ""
 "Το γράμμα μπορεί να είναι διαφορετικό, και μπορεί να υπάρχουνε άλλα πράγματα "
 "μετά από αυτό, έτσι μπορείτε να δείτε εξίσου εύκολα κάτι σαν:"
+
+#: faq/windows.rst:42
+msgid "D:\\YourName\\Projects\\Python>"
+msgstr "D:\\YourName\\Projects\\Python>"
 
 #: faq/windows.rst:46
 msgid ""
@@ -101,9 +109,27 @@ msgstr ""
 "έχετε ανοίξει ένα παράθυρο εντολών, θα πρέπει να δοκιμάσετε να εισαγάγετε "
 "την εντολή ``py`` και να πατήσετε return:"
 
+#: faq/windows.rst:60
+msgid "C:\\Users\\YourName> py"
+msgstr "C:\\Users\\YourName> py"
+
 #: faq/windows.rst:64
 msgid "You should then see something like:"
 msgstr "Στη συνέχεια, θα πρέπει να δείτε κάτι σαν:"
+
+#: faq/windows.rst:66
+msgid ""
+"Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit "
+"(Intel)] on win32\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
+msgstr ""
+"Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit "
+"(Intel)] on win32\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
 
 #: faq/windows.rst:72
 msgid ""
@@ -117,6 +143,18 @@ msgstr ""
 "εκτελείτε ή να τις αξιολογείτε ενώ περιμένετε.  Αυτό είναι ένα από τα "
 "ισχυρότερα χαρακτηριστικά της Python.  Ελέγξτε το εισάγοντας μερικές "
 "εκφράσεις της επιλογή σας και βλέποντας τα αποτελέσματα:"
+
+#: faq/windows.rst:77
+msgid ""
+">>> print(\"Hello\")\n"
+"Hello\n"
+">>> \"Hello\" * 3\n"
+"'HelloHelloHello'"
+msgstr ""
+">>> print(\"Hello\")\n"
+"Hello\n"
+">>> \"Hello\" * 3\n"
+"'HelloHelloHello'"
 
 #: faq/windows.rst:84
 msgid ""
@@ -164,6 +202,10 @@ msgstr ""
 "py``, και η γραμμή εντολών σας ανοίγει όμορφα στον αρχικό σας κατάλογο, ώστε "
 "να βλέπετε κάτι παρόμοιο με::"
 
+#: faq/windows.rst:104
+msgid "C:\\Users\\YourName>"
+msgstr "C:\\Users\\YourName>"
+
 #: faq/windows.rst:106
 msgid ""
 "So now you'll ask the ``py`` command to give your script to Python by typing "
@@ -172,6 +214,14 @@ msgstr ""
 "Λοιπόν τώρα θα ζητήσετε από την εντολή ``py`` να δώσει το σενάριο σας στην "
 "Python πληκτρολογώντας ``py`` ακολουθούμενη από τη διαδρομή του σεναρίου "
 "σας::"
+
+#: faq/windows.rst:110
+msgid ""
+"C:\\Users\\YourName> py Desktop\\hello.py\n"
+"hello"
+msgstr ""
+"C:\\Users\\YourName> py Desktop\\hello.py\n"
+"hello"
 
 #: faq/windows.rst:114
 msgid "How do I make Python scripts executable?"
@@ -394,6 +444,20 @@ msgstr ""
 "Με λίγα λόγια, μπορείτε να χρησιμοποιήσετε τον ακόλουθο κώδικα για να "
 "αρχικοποιήσετε τον Python interpreter με το module επέκτασης."
 
+#: faq/windows.rst:210
+msgid ""
+"#include <Python.h>\n"
+"...\n"
+"Py_Initialize();  // Initialize Python.\n"
+"initmyAppc();  // Initialize (import) the helper class.\n"
+"PyRun_SimpleString(\"import myApp\");  // Import the shadow class."
+msgstr ""
+"#include <Python.h>\n"
+"...\n"
+"Py_Initialize();  // Initialize Python.\n"
+"initmyAppc();  // Initialize (import) the helper class.\n"
+"PyRun_SimpleString(\"import myApp\");  // Import the shadow class."
+
 #: faq/windows.rst:218
 msgid ""
 "There are two problems with Python's C API which will become apparent if you "
@@ -423,6 +487,16 @@ msgstr ""
 "Πρόβλημα 2: Το SWIG δημιουργεί τον ακόλουθο κώδικα όταν δημιουργεί wrappers "
 "σε void συναρτήσεις:"
 
+#: faq/windows.rst:229
+msgid ""
+"Py_INCREF(Py_None);\n"
+"_resultobj = Py_None;\n"
+"return _resultobj;"
+msgstr ""
+"Py_INCREF(Py_None);\n"
+"_resultobj = Py_None;\n"
+"return _resultobj;"
+
 #: faq/windows.rst:235
 msgid ""
 "Alas, Py_None is a macro that expands to a reference to a complex data "
@@ -433,6 +507,10 @@ msgstr ""
 "σε μια σύνθετη δομή δεδομένων που ονομάζεται _Py_NoneStruct μέσα στο "
 "pythonNN.dll.  Και πάλι, αυτός ο κώδικας θα αποτύχει σε ένα mult-compiler "
 "περιβάλλον.  Αντικαταστήστε αυτόν τον κώδικα με:"
+
+#: faq/windows.rst:239
+msgid "return Py_BuildValue(\"\");"
+msgstr "return Py_BuildValue(\"\");"
 
 #: faq/windows.rst:243
 msgid ""
