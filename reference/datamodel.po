@@ -125,6 +125,10 @@ msgid ""
 "catching an exception with a :keyword:`try`...\\ :keyword:`except` statement "
 "may keep objects alive."
 msgstr ""
+"Λάβετε υπόχη ότι η χρήση των υπηρεσιών ανίχνευσης ή εντοπισμού σφαλμάτων της υλοποίησης "
+"μπορεί να διατηρήσει ζωντανά αντικείμενα που κανονικά θα μπορούσαν να συλλεχθούν. Επίσης "
+"σημειώστε ότι η σύλληψη μιας εξαίρεσης με μια δήλωση :keyword:`try`...\\ :keyword:`except`, μπορεί "
+"να κρατήσει ζωντανά αντικείμενα."
 
 #: reference/datamodel.rst:87
 msgid ""
@@ -137,6 +141,12 @@ msgid ""
 "`finally` statement and the :keyword:`with` statement provide convenient "
 "ways to do this."
 msgstr ""
+"Ορισμένα αντικείμενα περιέχουν αναφορές σε \"εξωτερικούς\" πόρους, όπως ανοιχτά αρχεία ή "
+"παράθυρα.  Είναι κατανοητό ότι αυτόι οι πόροι ελευθερώνονται όταν το αντικείμενο συλλέγεται από σκουπίδια, "
+"αλλά επειδή η συλλογή απορριμμάτων δεν είναι εγγυημένη, τέτοια αντικείμενα παρέχουν επίσης έναν σαφή τρόπο "
+"απλευθέρωσης του εξωτερικού πόρου, συνήθως μια μέθοδο :meth:`!close`. Συνιστώνται προγράμματα για τη ρητό "
+"κλέισιμο τέτοιων αντικειμένων.  Η δήλωση :keyword:`try`...\\ :keyword:"
+"`finally` και η δήλωση :keyword:`with` παρέχουν βολικούς τρόπους για να το κάνετε αυτό." 
 
 #: reference/datamodel.rst:97
 msgid ""
@@ -149,6 +159,13 @@ msgid ""
 "implied.  So, if an immutable container (like a tuple) contains a reference "
 "to a mutable object, its value changes if that mutable object is changed."
 msgstr ""
+"Μερικά αντικείμενα περιέχουν αναφορές σε άλλα αντικείμενα· αυτά ονομάζονται "
+"*containers*. Παραδείγματα containers είναι πλειάδες, λίστες και λεξικά. Οι αναφορές "
+"αποτελούν μέρος της τιμής ενός container. Στις περισσότερες περιπτώσεις, όταν μιλάμε για την αξία ενός "
+"container, υπονοούμε τις τιμές, όχι τις ταυτότητες των αντικειμένων που περιέχονται. Ωστόσο, όταν μιλάμε "
+"για τη μεταβλητότητα ενός δοχείου υπονοούνται μόνο οι ταυτότητες των αμέσως περιεχομένων αντικειμένων. Έτσι, "
+"εάν ένα αμετάβλητο container (όπως μια πλειάδα) περιέχει μια αναφορά σε ένα μεταβλητό αντικείμενο, η τιμή του αλλάζει "
+"εάν αυτό το μεταβλητό αντικείμενο αλλάξει."
 
 #: reference/datamodel.rst:106
 msgid ""
@@ -162,10 +179,16 @@ msgid ""
 "different, unique, newly created empty lists. (Note that ``c = d = []`` "
 "assigns the same object to both ``c`` and ``d``.)"
 msgstr ""
+"Οι τύποι επηρεάζουν σχεδόν όλες τις πυτχές της συμπεριφοράς των αντικειμένων.  Ακόμη και η σημασία "
+"της ταυτότητας αντικειμένου επηρεάζεται κατά κάποιο τρόπο: για αμετάβλητους τύπους, οι πράξεις που υπολογίζουν "
+"νέες τιμές μπορόυν στην πραγματικότητα να επιστρέψουν μια αναφορά σε οποιοδήποτε υπάρχον αντικείμενο με τον ίδιο τύπο και τιμή, "
+"ενώ για μεταβλητά αντικείμενα αυτό δεν επιτρέπεται. Π.χ., μετά από ``a = 1; b = 1``, τα ``a`` και ``b`` μπορεί να αναφέρονται ή να μην "
+"αναφέρονται στο ίδιο αντικείμενο με την τιμή ένα, ανάλογα με την υλοποιήση, αλλά μετά από ``c = []; d = []``, τα ``c`` και ``d`` είναι εγγυημένα ότι αναφέρονται "
+"σε διαφορετικές, μοναδικές, πρόσφατα δημιουργημένες κενές λίστες. (Σημειώστε ότι το ``c = d = []`` εκχωρεί το ίδιο αντικείμενο και στο ``c`` και στο ``d``.)"
 
 #: reference/datamodel.rst:120
 msgid "The standard type hierarchy"
-msgstr ""
+msgstr "Η τυπική ιεραρχία τύπου"
 
 #: reference/datamodel.rst:129
 msgid ""
@@ -176,6 +199,11 @@ msgid ""
 "integers, etc.), although such additions will often be provided via the "
 "standard library instead."
 msgstr ""
+"Ακολουθεί μια λίστα με τους τύπους που είναι ενσωματωμένοι στην Python.  Τα modules "
+"επέκτασης (γραμμένες σε C, Java, ή άλλες γλώσσες, ανάλογα με την υλοποίηση) μπορούν να ορίσουν "
+"πρόσθετους τύπους. Οι μελλοντικές εκδόσεις της Python ενδέχεται να προσθέσουν τύπους στην ιεραρχία "
+"τύπων (π.χ. ορθολογικοί αριθμοί, αποτελεσματικά αποθηκευμένοι πίνακες ακεραίων κ.λπ.), ν και αντ' αυτού "
+"παρέχονται τυπικές βιβλιοθήκες."
 
 #: reference/datamodel.rst:140
 msgid ""
@@ -184,10 +212,12 @@ msgid ""
 "and are not intended for general use.  Their definition may change in the "
 "future."
 msgstr ""
+"Ορισμένες από τις παρακάτω περιγραφές τύπων περιέχουν μια παράγραφο με 'ειδικά χαρακτηριστικά.'  Αυτά "
+"είναι χαρακτηριστικά που παρέχουν πρόβαση στην υλοποίηση και δεν προορίζονται για γενική χρήση ο ορισμός τους μπορεί να αλλάξει στο μέλλον."
 
 #: reference/datamodel.rst:148
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: reference/datamodel.rst:150
 msgid ""
@@ -196,10 +226,14 @@ msgid ""
 "signify the absence of a value in many situations, e.g., it is returned from "
 "functions that don't explicitly return anything. Its truth value is false."
 msgstr ""
+"Αυτό ο τύπος έχει μια ενιαία τιμή.  Υπάρχει ένα μεμονωμένο αντικείμενο με αυτήν την τιμή. Η πρόσβαση σε αυτό "
+"το αντικείμενο γίνεται μέσω του ενσωματωμένου ονόματος ``None``. Χρησιμοποιείται για να υποδήλώσει την απουσία τιμής "
+"σε πολλές περιπτώσεις, π.χ. επιστρέφεται από συναρτήσεις που δεν επιστρέφουν ρητά τίποτα. Η τιμή αλήθειας του είναι "
+"ψευδής."
 
 #: reference/datamodel.rst:159
 msgid "NotImplemented"
-msgstr ""
+msgstr "NotImplemented"
 
 #: reference/datamodel.rst:161
 msgid ""
@@ -210,10 +244,15 @@ msgid ""
 "will then try the reflected operation, or some other fallback, depending on "
 "the operator.)  It should not be evaluated in a boolean context."
 msgstr ""
+"Αυτός ο τύπος έχει μια ενιαία τιμή.  Υπάρχει ένα μεμονωμένο αντικείμενο με αυτήν την τιμή. "
+"Η πρόσβαση σε αυτό το αντικείμενο γίνεται μέσω του ενσωαμτωμένου ονόματος :data:`NotImplemented`. "
+"Οι αριθμητικές μέθοδοι και οι μέθοδοι εμπλουτισμένης σύγκρισης θα πρέπει να επιστρέφουν αυτήν την τιμή "
+"εάν δεν εφαρμόζουν τη λειτουργία για τους τελεστές που παρέχονται.  (Ο διερμηνέας θα δοκιμάσει την ανακλώμενη "
+"λειτουργία ή κάποια άλλη εναλλακτική, ανάλογα με τον τελεστή.)  Δεν πρέπει να αξιολογείται σε ένα boolean πλαίσιο."
 
 #: reference/datamodel.rst:168
 msgid "See :ref:`implementing-the-arithmetic-operations` for more details."
-msgstr ""
+msgstr "Δείτε το :ref:`implementing-the-arithmetic-operations` για περισσότερες λεπτομέρειες."
 
 #: reference/datamodel.rst:172
 msgid ""
@@ -221,10 +260,13 @@ msgid ""
 "it currently evaluates as true, it will emit a :exc:`DeprecationWarning`. It "
 "will raise a :exc:`TypeError` in a future version of Python."
 msgstr ""
+"Η αξιολόγηση του :data:`NotImplemented` σε ένα boolean πλαίσιο έχει καταργηθεί. Ενώ αυτή τη στιγμή "
+"αξιλογείται ως αληθές, θα κάνει raise ένα :exc:`DeprecationWarning`. Ενώ αυτή τη στιγμή αξιολογείται ως αληθές, "
+"θα κάνει ένα :exc:`TypeError` σε μια μελλοντική έκδοση της Python."
 
 #: reference/datamodel.rst:180
 msgid "Ellipsis"
-msgstr ""
+msgstr "Ellipsis"
 
 #: reference/datamodel.rst:184
 msgid ""
@@ -232,10 +274,13 @@ msgid ""
 "This object is accessed through the literal ``...`` or the built-in name "
 "``Ellipsis``.  Its truth value is true."
 msgstr ""
+"Αυτός ο τύπος έχει μια ενιαία τιμή.  Υπάρχει ένα μεμονωμένο αντικείμενο με αυτή την τιμή. "
+"Η πρόσβαση σε αυτό το αντικείμενο γίνεται μέσω του literal ``...`` ή του ενσωματωμένου ονόματος "
+"``Ellipsis``.  Η τιμή αλήθειας του είναι αληθής."
 
 #: reference/datamodel.rst:190
 msgid ":class:`numbers.Number`"
-msgstr ""
+msgstr ":class:`numbers.Number`"
 
 #: reference/datamodel.rst:194
 msgid ""
@@ -245,6 +290,10 @@ msgid ""
 "strongly related to mathematical numbers, but subject to the limitations of "
 "numerical representation in computers."
 msgstr ""
+"Αυτά δημιουργούνται από αριθμητικά literals και επιστρέφονται ως αποτελέσματα από αριθμητικούς "
+"τελεστές και αριθμητικές ενσωματωμένες συναρτήσεις.  Τα αριθμητικά αντικείμενα είναι αμετάβλητα∙ "
+"μόλις δημιουργηθούν, η τιμή τους δεν αλλάζει ποτέ.  Οι αριθμοί Python φυσικά σχετίζονται στενά με "
+"τους μαθηματικούς αριθμούς, αλλά υπόκεινται στους περιορισμούς της αριθμητικής αναπαράστασης στους υπολογιστές."
 
 #: reference/datamodel.rst:200
 msgid ""
@@ -252,48 +301,58 @@ msgid ""
 "`~object.__repr__` and :meth:`~object.__str__`, have the following "
 "properties:"
 msgstr ""
+"Οι αναπαραστάσεις συμβολοσειρών των αριθμητικών κλάσεων, που υπολογίζονται από την "
+":meth:"
+"`~object.__repr__` και από τη :meth:`~object.__str__`, έχουν τις ακόλουθες ιδιότητες:"
 
 #: reference/datamodel.rst:204
 msgid ""
 "They are valid numeric literals which, when passed to their class "
 "constructor, produce an object having the value of the original numeric."
 msgstr ""
+"Είναι έγκυρα αριθμητικά γράμματα τα οποία, όταν περάσουν στον κατασκευαστή της κλάσης τους, παράγουν ένα "
+"αντικείμενο που έχει την τιμή του αρχικού αριθμητικού."
 
 #: reference/datamodel.rst:208
 msgid "The representation is in base 10, when possible."
-msgstr ""
+msgstr "Η αναπαράσταση είναι στη βάση του 10, όταν αυτό είναι εφικτό."
 
 #: reference/datamodel.rst:210
 msgid ""
 "Leading zeros, possibly excepting a single zero before a decimal point, are "
 "not shown."
 msgstr ""
+"Τα προηγούμενα μηδενικά ενδεχομένς με εξαίρεση ένα μόνο μηδέν πριν από μια υποδιαστολή, "
+"δεν εμφανίζονται."
 
 #: reference/datamodel.rst:213
 msgid ""
 "Trailing zeros, possibly excepting a single zero after a decimal point, are "
 "not shown."
 msgstr ""
+"Τα μηδενικά που ακολουθούν, ενδεχομένως με εξαίρεση ένα μεμονωμένο μηδέν μετά από μια υποδιαστολή, δεν εμφανίζονται."
 
 #: reference/datamodel.rst:216
 msgid "A sign is shown only when the number is negative."
-msgstr ""
+msgstr "Ένα πρόσημο εμφανίζεται μόνο όταν ο αριθμός είναι αρνητικός."
 
 #: reference/datamodel.rst:218
 msgid ""
 "Python distinguishes between integers, floating point numbers, and complex "
 "numbers:"
 msgstr ""
+"Η Python κάνει διάκριση μεταξύ ακεραίων, αριθμών κινητής υποδιαστολής και μιγαδικών αριθμών:"
 
 #: reference/datamodel.rst:223
 msgid ":class:`numbers.Integral`"
-msgstr ""
+msgstr ":class:`numbers.Integral`"
 
 #: reference/datamodel.rst:227
 msgid ""
 "These represent elements from the mathematical set of integers (positive and "
 "negative)."
 msgstr ""
+"Αυτά αντιπροσωπεύουν στοιχεία από το μαθηματικό σύνολο ακεραίων (θετικών και αρνητικών)."
 
 #: reference/datamodel.rst:233
 msgid ""
@@ -301,14 +360,16 @@ msgid ""
 "meaningful interpretation of shift and mask operations involving negative "
 "integers."
 msgstr ""
+"Οι κανόνες για την αναπαράσταση ακεραίων έχουν σκοπό να δώσουν την πιο ουσιαστική ερμηνεία "
+"των πράξεων μετατόπισης και κάλυψης που περιλαμβάνουν αρνητικούς ακέραιους αριθμούς."
 
 #: reference/datamodel.rst:236
 msgid "There are two types of integers:"
-msgstr ""
+msgstr "Υπάρχουν δύο τύποι ακεραίων:"
 
 #: reference/datamodel.rst:243
 msgid "Integers (:class:`int`)"
-msgstr ""
+msgstr "Ακέραιοι (:class:`int`)"
 
 #: reference/datamodel.rst:239
 msgid ""
@@ -318,10 +379,14 @@ msgid ""
 "variant of 2's complement which gives the illusion of an infinite string of "
 "sign bits extending to the left."
 msgstr ""
+"Αυτές αντιπροσωπεύν αριθμούς σε απεριόριστο εύρος, υπόκεινται μόνο στη διαθέσιμη (εικονική) μνήμη.  "
+"Για τους σκοπούς των λειτουργιών μετατόπισης και κάλυψης, θεωρείται μια δυαδική αναπαράσταση και οι αρνητικοί "
+"αριθμοί αντιπροσωπεύονται σε μια παραλλαγή του συμπληρώματος του 2 που δίνει την ψευδαίσθηση μιας άπειρης "
+"συμβολοσειράς bits από bits προσήμου που εκτείνονται προς τα αριστερά."
 
 #: reference/datamodel.rst:256
 msgid "Booleans (:class:`bool`)"
-msgstr ""
+msgstr "Booleans (:class:`bool`)"
 
 #: reference/datamodel.rst:251
 msgid ""
@@ -332,10 +397,15 @@ msgid ""
 "being that when converted to a string, the strings ``\"False\"`` or "
 "``\"True\"`` are returned, respectively."
 msgstr ""
+"Αυτά αντιπροσωπεόυν τις τιμές αλήθειας False και True.  Τα δύο αντικείμενα που αντιπροσωπεύουν τις τιμές "
+"``False`` και ``True`` είναι τα μόνα Boolean αντικείμενα. Ο Boolean τύπος είναι ένας υποτύπος του ακεραίου "
+"τύπου και οι Boolean τιμές συμπεριφέρονται όπως οι τιμές 0 και 1, αντίστοιχα, σχεδόν σε όλα τα περιβάλλοντα, οι εξαιρέσεις "
+"που μετατρέπονται σε string είναι ``\"False\"`` ή "
+"``\"True\"`` επιστρέφονται, αντίστοιχα."
 
 #: reference/datamodel.rst:259
 msgid ":class:`numbers.Real` (:class:`float`)"
-msgstr ""
+msgstr ":class:`numbers.Real` (:class:`float`)"
 
 #: reference/datamodel.rst:267
 msgid ""
@@ -347,10 +417,16 @@ msgid ""
 "dwarfed by the overhead of using objects in Python, so there is no reason to "
 "complicate the language with two kinds of floating point numbers."
 msgstr ""
+"Αυτοί αντιπροσωπεύουν αριθμούς κινητής υποδιαστολής διπλής ακρίβειας σε επίπεδο μηχανής. Βρίσκεστε "
+"σε έλεος της υποκείμενης αρχιτεκτονικής μηχανής (και της εφαρμογής C ή Java) για το αποδεκτό εύρος "
+"και τον χειρισμό υπερχείλισης. Η Python δεν υποστηρίζει αριθμούς κινητής υποδιαστολής απλής ακρίβειας∙ "
+"η εξοικονόμηση στη χρήση επεξεργαστή και μνήμης που συνήθως είναι συνήθως ο λόγος για τη χρήση τους μειώνεται "
+"από την επιβάρυνση της χρήσης αντικειμένων στην Python, επομένως δεν υπάρχει λόγος να περιπλέκουμε τη γλώσσα "
+"με δύο είδη αριθμών κινητής υποδιαστολής."
 
 #: reference/datamodel.rst:277
 msgid ":class:`numbers.Complex` (:class:`complex`)"
-msgstr ""
+msgstr ":class:`numbers.Complex` (:class:`complex`)"
 
 #: reference/datamodel.rst:283
 msgid ""
@@ -359,10 +435,14 @@ msgid ""
 "numbers. The real and imaginary parts of a complex number ``z`` can be "
 "retrieved through the read-only attributes ``z.real`` and ``z.imag``."
 msgstr ""
+"Αυτοί αντιπροσωπεύουν μιγαδικούς αριθμούς ως ζεύγος αριθμών κινητής υποδιαστολής "
+"διπλής ακρίβειας σε επίπεδο μηχανής.  Ισχύου οι ίδιες προειδοποιήσεις όπως και για τους αριθμούς "
+"κινητής υποδιαστολής. Τα πραγματικά και τα φανταστικά μέρη ενός μιγαδικού αριθμού ``z`` μπορούν να "
+"ανακτηθούν μέσω των χαρακτηριστικών ``z.real`` και ``z.imag`` μόνο για ανάγνωση.""
 
 #: reference/datamodel.rst:290
 msgid "Sequences"
-msgstr ""
+msgstr "Ακολουθίες"
 
 #: reference/datamodel.rst:299
 msgid ""
@@ -371,6 +451,10 @@ msgid ""
 "When the length of a sequence is *n*, the index set contains the numbers 0, "
 "1, ..., *n*-1.  Item *i* of sequence *a* is selected by ``a[i]``."
 msgstr ""
+"Αυτά αντιπροσωπεύουν πεπερασμένα διατεταγμένα σύνολα ευρετηριασμένα με μη αρνητικούς αριθμούς. Η "
+"ενσωματωμένη συνάρτηση :func:`len` επιστρέφει τον αριθμός των στοιχείων μιας ακολουθίας. "
+"Όταν το μήκος μια ακολουθίας είναι *n*, το σύνολο δεικτών περιέχει τους αριθμούς "
+"0, 1, ..., *n*-1.  Το στοιχείο *i* της ακολουθίας *a* επιλέγεται από το ``a[i]``."
 
 #: reference/datamodel.rst:306
 msgid ""
@@ -379,6 +463,10 @@ msgid ""
 "a sequence of the same type.  This implies that the index set is renumbered "
 "so that it starts at 0."
 msgstr ""
+"Οι ακολουθίες υποστηρίζουν επίσης την τμηματοποίηση: το ``a[i:j]`` επιλέγει όλα τα "
+"στοιχεία με ευρετήριο *k* έτσι ώστε *i* ``<=`` *k* ``<`` *j*. Όταν χρησιμοποιείται ως έκφραση, "
+"ένα τμήμα είναι μια σκολουθία του ίδιου τύπου.  Αυτό σημαίνει ότι το σύνολο ευρετηρίου "
+"επαναριθμείται έτσι ώστε να ξεκινά στο 0."
 
 #: reference/datamodel.rst:311
 msgid ""
@@ -386,14 +474,17 @@ msgid ""
 "parameter: ``a[i:j:k]`` selects all items of *a* with index *x* where ``x = "
 "i + n*k``, *n* ``>=`` ``0`` and *i* ``<=`` *x* ``<`` *j*."
 msgstr ""
+"Ορισμένες ακολουθίες υποστηρίζουν επίσης την \"εκτεταμένη τμηματοποίηση\" με μια τρίτη παράμετρο "
+"\"βήμα\": το ``a[i:j:k]`` επιλέγει όλα τα στοιχεία του *a* με ευρετήριο *x* όπου ``x = "
+"i + n*k``, *n* ``>=`` ``0`` και *i* ``<=`` *x* ``<`` *j*."
 
 #: reference/datamodel.rst:315
 msgid "Sequences are distinguished according to their mutability:"
-msgstr ""
+msgstr "Οι ακολουθίες διακρίνονται ανάλογα με τη μεταβλητότητά τους:"
 
 #: reference/datamodel.rst:319
 msgid "Immutable sequences"
-msgstr ""
+msgstr "Αμετάβλητες ακολουθίες"
 
 #: reference/datamodel.rst:325
 msgid ""
@@ -402,14 +493,18 @@ msgid ""
 "be mutable and may be changed; however, the collection of objects directly "
 "referenced by an immutable object cannot change.)"
 msgstr ""
+"Ένα αντικείμενο ενός τύπου αμετάβλητης ακολουθίας δεν μπορεί να αλλάξει μόλις δημιουργηθεί.  "
+"(Εάν το ατνικείμενο περιέχει αναφορές σε άλλα αντικείμενα, αυτά τα άλλα αντικείμενα μπορεί να είναι "
+"μεταβλητά και μπορεί να αλλάξουν∙ ωστόσο, η συλλογή αντικειμένων που αναφέρονται απευθείας από ένα αμετάβλητο αντικείμενο "
+"δεν μπορεί να αλλάξει.)"
 
 #: reference/datamodel.rst:330
 msgid "The following types are immutable sequences:"
-msgstr ""
+msgstr "Οι ακόλουθοι τύποι είναι αμετάβλητες ακολουθίες:"
 
 #: reference/datamodel.rst:353
 msgid "Strings"
-msgstr ""
+msgstr "Συμβολοσειρές"
 
 #: reference/datamodel.rst:343
 msgid ""
@@ -424,10 +519,19 @@ msgid ""
 "`bytes` using the given text encoding, and :meth:`bytes.decode` can be used "
 "to achieve the opposite."
 msgstr ""
+"Μια συμβολοσειρά είναι μια ακολουθία τιμών που αντιπροσωπεύουν σημεία κώδικα Unicode. "
+"Όλα τα σημεία κώδικα στο εύρος ``U+0000 - U+10FFFF`` μπορούν να αναπαρασταθούν σε μια συμβολοσειρά.  "
+"Η Python δεν έχει τύπο :c:expr:`char` ∙ αντίθετα, κάθε σημείο κώδικα στη συμβολοσειρά αντιπροσωπεύεται ως αντικείμενο "
+"συμβολοσειράς με μήκος ``1``.  Η ενσωματωμένη συνάρτηση :func:`ord` μετατρέπει ένα σημείο κώδικα από τη μορφή "
+"συμβολοσειράς του σε έναν ακέραιο στο εύρος ``0 - 10FFFF`` ∙ η :func:`chr` μετατρέπει έναν ακέραιο στο εύρος "
+"``0 - 10FFFF`` στο αντικείμενο συμβολοσειράς αντίστοιχοου μήκους ``1``. Η :meth:`str.encode` μπορεί να χρησιμοποιηθεί "
+"για τη μετροπή μιας :class:`str` σε :class:"
+"`bytes` χρησιμοποιώντας τη δεδομένη κωδικοποίηση κειμένου και η :meth:`bytes.decode` μπορεί να χρησιμοποιηθεί "
+"για να επιτευχθεί το αντίθετο."
 
 #: reference/datamodel.rst:366
 msgid "Tuples"
-msgstr ""
+msgstr "Πλειάδες (Tuples)"
 
 #: reference/datamodel.rst:361
 msgid ""
@@ -438,10 +542,14 @@ msgid ""
 "usable for grouping of expressions).  An empty tuple can be formed by an "
 "empty pair of parentheses."
 msgstr ""
+"Τα στοιχεία της πλειάδας είναι αυθαίρετα αντικείμενα Python. Οι πλειάδεες δύο ή περισσότερων αντικειμένων "
+"σχηματίζνται από λίστες εκφράσεων διαχωρισμένων με κόμμα.  Μια πλειάδα ενός στοιχείο (ενός «singleton») μπορεί να "
+"σχηματιστεί με την τοποθέτηση ενός κόμματος σε μια έκφραση (μια έκφραση από μόνη της δεν δημιουργεί πλειάδα, αφού οι παρενθέσεις "
+"μπορούν να χρησιμοποιηθούν για ομαδοποιήση εκφράσεων).  Μια κενή πλειάδα μπορεί να σχηματιστεί από ένα κενό ζευγάρι παρενθέσεων."
 
 #: reference/datamodel.rst:376
 msgid "Bytes"
-msgstr ""
+msgstr "Bytes"
 
 #: reference/datamodel.rst:371
 msgid ""
