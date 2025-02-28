@@ -559,10 +559,15 @@ msgid ""
 "create bytes objects.  Also, bytes objects can be decoded to strings via "
 "the :meth:`~bytes.decode` method."
 msgstr ""
+"Ένα αντικείμενο bytes είναι ένας αμετάβλητος πίνακας.  Τα στοιχεία είναι bytes των 8-bit, "
+"που αντιπροσωπεύονται από ακέραιους αριθμούς στο εύρος 0 <= x < 256.  Τα bytes literals "
+"(όπως ``b'abc'``) και ο ενσωματωμένος κατασκευαστής :func:`bytes()` μπορεί να χρησιμοποιηθεί για τη "
+"δημιουργία αντικειμένων bytes.  Επίσης, τα αντικείμενα bytes μπορούν να αποκωδικοποιηθούν σε συμβολοσειρές μέσω της "
+"μεθόδου :meth:`~bytes.decode`."
 
 #: reference/datamodel.rst:379
 msgid "Mutable sequences"
-msgstr ""
+msgstr "Μεταβλητές ακολουθίες"
 
 #: reference/datamodel.rst:388
 msgid ""
@@ -570,20 +575,24 @@ msgid ""
 "and slicing notations can be used as the target of assignment and :keyword:"
 "`del` (delete) statements."
 msgstr ""
+"Οι μεταβλητές ακολουθίες μπορούν να αλλάξουν αφού δημιουργηθούν.  Οι σημειώσεις εγγραφής και τμηματοποιήσης "
+"μπορούν να χρησιμοποιηθούν ως στόχος εκχώρησης και δηλώσεων :keyword:"
+"`del` (delete)."
 
 #: reference/datamodel.rst:396
 msgid ""
 "The :mod:`collections` and :mod:`array` module provide additional examples "
 "of mutable sequence types."
 msgstr ""
+"Τα modules :mod:`collections` και :mod:`array` παρέχουν πρόσθετα παραδείγματα μεταβλητών τύπων ακολουθιών."
 
 #: reference/datamodel.rst:399
 msgid "There are currently two intrinsic mutable sequence types:"
-msgstr ""
+msgstr "Υπάρχει επί του παρόντος δύο εγγενείς τύποι μεταβλητών ακολουθιών:"
 
 #: reference/datamodel.rst:406
 msgid "Lists"
-msgstr ""
+msgstr "Λίστες"
 
 #: reference/datamodel.rst:404
 msgid ""
@@ -591,10 +600,13 @@ msgid ""
 "placing a comma-separated list of expressions in square brackets. (Note that "
 "there are no special cases needed to form lists of length 0 or 1.)"
 msgstr ""
+"Τα στοιχεία μιας λίστας είναι αυθαίρετα αντικείμενα Python.  Οι λίστες σχηματίζονται "
+"τοποθετώντας μια λίστα εκφράσεων διαχωρισμένων με κόμματα σε αγκύλες. (Σημειώστε ότι δεν χρειάζονται "
+"ειδικές περιπτώσεις για να σχηματιστούν λίστες μήκους ή 1.)"
 
 #: reference/datamodel.rst:415
 msgid "Byte Arrays"
-msgstr ""
+msgstr "Πίνακες Byte"
 
 #: reference/datamodel.rst:411
 msgid ""
@@ -603,10 +615,13 @@ msgid ""
 "unhashable), byte arrays otherwise provide the same interface and "
 "functionality as immutable :class:`bytes` objects."
 msgstr ""
+"Ένα αντικείμενο bytearray είναι ένα ευμετάβλητος πίνακας. Δημιουργούνται από τον ενσωματωμένο "
+"κατασκευαστή :func:`bytearray`.  Εκτός από το ότι είναι μεταβλητοί (και επομένως μη κατακερματισμένοι), οι "
+"πίνακες byte κατά τα άλλα παρέχουν την ίδια διεπαφή και λειτουργικότητα με τα αμετάβλητα αντικείμενα :class:`bytes`."
 
 #: reference/datamodel.rst:418
 msgid "Set types"
-msgstr ""
+msgstr "Σύνολο τύπων"
 
 #: reference/datamodel.rst:424
 msgid ""
@@ -617,6 +632,11 @@ msgid ""
 "from a sequence, and computing mathematical operations such as intersection, "
 "union, difference, and symmetric difference."
 msgstr ""
+"Αυτά αντιπροσωπεύουν μη διατεταγμένα, πεπερασμένα, σύνολα μοναδικών, αμετάβλητων αντικειμένων. Ως "
+"εκ τούτου, δεν μπορούν να ευρετηριοποιηθούν από κανένα δείκτη. Ωστόσο, μπορούν να επαναληφθούν "
+"και η ενσωματωμένη συνάρτηση :func:`len` επιστρέφει τον αριθμό των στοιχείων σε ένα σύνολο. Συνήθεις χρήσεις "
+"για τα σύνολα είανι ο γρήγορος έλεγχος ιδιότητας μέλους, η αφαίρεση διπλότυπων από μια αλληλουχία, μη "
+"συνδυαστική λειτουργία, και συμμετρική διαφορά."
 
 #: reference/datamodel.rst:431
 msgid ""
@@ -625,14 +645,17 @@ msgid ""
 "numbers compare equal (e.g., ``1`` and ``1.0``), only one of them can be "
 "contained in a set."
 msgstr ""
+"Για τα στοιχεία συνόλου ισχύουν οι ίδιοι κανένες αμετάβλητης όπως και για τα κλειδιά λεξικού. "
+"Λάβετε υπόψη ότι οι αριθμητικοί τύποι υπακούουν στους κανονικούς κανόνες για αριθμητική σύγκριση: εάν "
+"δύο αριθμοί συγκρίνονται ίσοι (π.χ. ``1`` και ``1.0``), μόνο ένας από αυτούς μπορεί να περιέχεται σε ένα σύνολο."
 
 #: reference/datamodel.rst:436
 msgid "There are currently two intrinsic set types:"
-msgstr ""
+msgstr "Υπάρχουν επί του παρόντος δύο εγγενείς τύποι συνόλων:"
 
 #: reference/datamodel.rst:445
 msgid "Sets"
-msgstr ""
+msgstr "Σύνολα"
 
 #: reference/datamodel.rst:442
 msgid ""
@@ -640,10 +663,13 @@ msgid ""
 "constructor and can be modified afterwards by several methods, such as :meth:"
 "`~set.add`."
 msgstr ""
+"Αυτά αντιπροσωπεύουν ένα μεταβλητό σύνολο. Δημιουργούνται από τον ενσωματωμένο κατασκευαστή "
+":func:`set` και μπορούν να τροποποιηθούν στη συνέχεια με διάφορες μεθόδους, όπως :meth:"
+"`~set.add`."
 
 #: reference/datamodel.rst:454
 msgid "Frozen sets"
-msgstr ""
+msgstr "Frozen σύνολα"
 
 #: reference/datamodel.rst:450
 msgid ""
@@ -651,10 +677,13 @@ msgid ""
 "`frozenset` constructor.  As a frozenset is immutable and :term:`hashable`, "
 "it can be used again as an element of another set, or as a dictionary key."
 msgstr ""
+"Αυτά αντιπροσωπεύουν ένα αμετάβλητο σύνολο.  Δημιουργούνται από τον ενσωματωμένο κατασκευαστή "
+":func:`frozenset`. Καθώς ένα παγωμένο σύνολο είναι αμετάβλητο και το :term:`hashable`, μπορεί να "
+"χρησιμοποιηθεί ξανά ως στοιχείο ενός άλλου συνόλου ή ως κλειδί λεξικού."
 
 #: reference/datamodel.rst:457
 msgid "Mappings"
-msgstr ""
+msgstr "Αντιστοιχίσεις"
 
 #: reference/datamodel.rst:464
 msgid ""
@@ -664,14 +693,18 @@ msgid ""
 "assignments or :keyword:`del` statements. The built-in function :func:`len` "
 "returns the number of items in a mapping."
 msgstr ""
+"Αυτά αντιπροσωπεύουν πεπερασμένα σύνολα αντικειμένων που ευρετηριάζονται από αυθαίρετα "
+"σύνολα ευρετηρίου. Ο συμβολικός συμβολισμός ``a[k]`` επιλέγει το στοιχείο που ευρετηριάζεται "
+"με ``k`` από την αντιστοίχιση ``a`` · αυτό μπορεί να χρησιμοποιηθεί σε εκφράσεις και ως στόχος αναθέσεων "
+"ή δηλώσεων :keyword:`del`. Η ενσωματωμένη συνάρτηση :func:`len` επιστρέφει τον αριθμό των στοιχείων σε μια αντιστοίχιση."
 
 #: reference/datamodel.rst:470
 msgid "There is currently a single intrinsic mapping type:"
-msgstr ""
+msgstr "Υπάρχει επί του παρόντος ένας ενιαίος εγγενής τύπος χαρτογράφησης:"
 
 #: reference/datamodel.rst:474
 msgid "Dictionaries"
-msgstr ""
+msgstr "Λεξικά"
 
 #: reference/datamodel.rst:478
 msgid ""
@@ -684,6 +717,14 @@ msgid ""
 "numbers compare equal (e.g., ``1`` and ``1.0``) then they can be used "
 "interchangeably to index the same dictionary entry."
 msgstr ""
+"Αυτά αντιπροσωπεύουν πεπερασμένα σύνολα αντικειμένων που ευρετηριάζονται με σχεδόν "
+"αυθαίρετες τιμές.  Οι μόνοι τύποι τιμών που δεν είναι αποδεκτοί ως κλειδιά είναι "
+"τιμές που περιέχουν λίστες ή λεξικά ή άλλους μεταβλητούς τύπους που συγκρίνονται με βάση την τιμή "
+"και όχι με την ταυτότητα αντικειμένου, ο λόγος είναι ότι η αποτελεσματική υλοποίηση λεξικών απαιτεί "
+"τιμή κατακερματισμού ενός κλειδιού να παραμένει σταθερή. Οι αριθμητικοί τύποι που χρησιμοποιούνται "
+"για κλειδιά υπακούουν στους κανονικούς κανόνες για αριθμητική σύγκριση: εάν δύο αριθμοί συγκρίνονται "
+"ίσοι (π.χ. ``1`` και ``1.0``), τότε μπορούν να χρησιμοποιηθούν εναλλακτικά για την ευρετηρίαση της ίδιας "
+"καταχώρησης λεξικού."
 
 #: reference/datamodel.rst:487
 msgid ""
@@ -692,18 +733,26 @@ msgid ""
 "an existing key does not change the order, however removing a key and re-"
 "inserting it will add it to the end instead of keeping its old place."
 msgstr ""
+"Τα λεξικά διατηρούν τη σειρά εισαγωγής, πράγμα που σημαίνει ότι τα κλειδιά θα "
+"παράγονται με την ίδια σειρά που προστέθηκαν διαδοχικά στο λεξικό. Η αντικατάσταση "
+"ενός υπάρχοντος κλειδιού δεν αλλάζει τη σειρά, ωστόσο η αφαίρεση ενός κλειδιού και η "
+"επανεισαγωγή του θα προσθέσει στο τέλος αντί να διατηρήσει την παλιά του θέση."
 
 #: reference/datamodel.rst:492
 msgid ""
 "Dictionaries are mutable; they can be created by the ``{...}`` notation (see "
 "section :ref:`dict`)."
 msgstr ""
+"Τα λεξικά είναι μεταβλητά· μπορούν να δημιουργηθούν με τη σημείωση ``{...}`` (βλ. ενότητα "
+":ref:`dict`)."
 
 #: reference/datamodel.rst:499
 msgid ""
 "The extension modules :mod:`dbm.ndbm` and :mod:`dbm.gnu` provide additional "
 "examples of mapping types, as does the :mod:`collections` module."
 msgstr ""
+"Τα modules επέκτασης :mod:`dbm.ndbm` και :mod:`dbm.gnu` παρέχουν πρόσθετα παραδείγματα "
+"τύπων αντιστοίχισης, όπως και το module :mod:`collections`."
 
 #: reference/datamodel.rst:503
 msgid ""
@@ -711,20 +760,25 @@ msgid ""
 "3.6. In CPython 3.6, insertion order was preserved, but it was considered an "
 "implementation detail at that time rather than a language guarantee."
 msgstr ""
+"Τα λεξικά δεν διατήρησαν τη σειρά εισαγωγής σε εκδόσεις της Python πριν από την 3.6. Στη "
+"CPython 3.6, η σειρά εισαγωγής διατηρήθηκε, αλλά θεωρήθηκε ως λεπτομέρεια υλοποίησης εκείνη τη στιγμή "
+"και όχι ως εγγύηση γλώσσας."
 
 #: reference/datamodel.rst:510
 msgid "Callable types"
-msgstr ""
+msgstr "Καλλέσιμοι τύποι"
 
 #: reference/datamodel.rst:518
 msgid ""
 "These are the types to which the function call operation (see section :ref:"
 "`calls`) can be applied:"
 msgstr ""
+"Αυτοί είναι οι τύποι στους οποίους μπορεί να εφαρμοστεί η λειρουργία κλήσης συνάρτησης (βλ. ενότητα :ref:"
+"`calls`)."
 
 #: reference/datamodel.rst:525
 msgid "User-defined functions"
-msgstr ""
+msgstr "Συναρτήσεις  που καθορίζονται από το χρήστη"
 
 #: reference/datamodel.rst:532
 msgid ""
@@ -732,18 +786,21 @@ msgid ""
 "section :ref:`function`).  It should be called with an argument list "
 "containing the same number of items as the function's formal parameter list."
 msgstr ""
+"Ένα αντικείμενο συνάρτησης που ορίζεται από τον χρήστη δημιουργείται από έναν ορισμό "
+"συνάρτησης (βλ. ενότητα :ref:`function`).  Θα πρέπει να καλείται με μια λίστα ορισμών που περιέχει "
+"τον ίδιο αριθμό στοιχείων με την επίσημη λίστα παραμέτρων της συνάρτησης."
 
 #: reference/datamodel.rst:1127 reference/datamodel.rst:1322
 msgid "Special read-only attributes"
-msgstr ""
+msgstr "Ειδικά χαρακτηριστικά μόνο για ανάγνωση"
 
 #: reference/datamodel.rst:582
 msgid "Attribute"
-msgstr ""
+msgstr "Χαρακτηριστικό"
 
 #: reference/datamodel.rst:583
 msgid "Meaning"
-msgstr ""
+msgstr "Έννοια"
 
 #: reference/datamodel.rst:552
 msgid ""
@@ -751,50 +808,63 @@ msgid ""
 "`global variables <naming>` -- the global namespace of the module in which "
 "the function was defined."
 msgstr ""
+"Μια αναφορά στη :class:`dictionary <dict>` που περιέχει τις :ref:"
+"`global variables <naming>` -- τον καθολικό χώρο ονομάτων του module στην οποία "
+"ορίστηκε η συνάρτηση."
 
 #: reference/datamodel.rst:557
 msgid ""
 "``None`` or a :class:`tuple` of cells that contain bindings for the "
 "function's free variables."
 msgstr ""
+"Το ``None`` ή μια :class:`tuple` κελιών που περιέχουν δεσμεύσεις για τις ελεύθερες μεταβλητές της συνάρτησης."
 
 #: reference/datamodel.rst:560
 msgid ""
 "A cell object has the attribute ``cell_contents``. This can be used to get "
 "the value of the cell, as well as set the value."
 msgstr ""
+"Ένα αντικείμενο κελιού έχει το χαρακτηριστικό ``cell_contents``. Αυτό μπορεί να χρησιμοποιηθεί "
+"για να ληφθεί η τιμή του κελιού, καθώς και να οριστεί η τιμή."
 
 #: reference/datamodel.rst:1359
 msgid "Special writable attributes"
-msgstr ""
+msgstr "Ειδικά εγγράψιμα χαρακτηριστικά"
 
 #: reference/datamodel.rst:577
 msgid "Most of these attributes check the type of the assigned value:"
-msgstr ""
+msgstr "Τα περισσότερα από αυτά τα χαρακτηριστικά ελέγχουν τον τύπο της εκχωρημένης τιμής:"
 
 #: reference/datamodel.rst:586
 msgid ""
 "The function's documentation string, or ``None`` if unavailable. Not "
 "inherited by subclasses."
 msgstr ""
+"Η συμβολοσειρά τεκμηρίωσης της συνάρτηση ή ``None`` εάν δεν είναι διαθέσιμη. Δεν κληρονομείται "
+"από υποκλάσεις."
 
 #: reference/datamodel.rst:590
 msgid ""
 "The function's name. See also: :attr:`__name__ attributes <definition."
 "__name__>`."
 msgstr ""
+"Το όνομα της συνάρτησης. Δείτε επίσης :attr:`__name__ attributes <definition."
+"__name__>`."
 
 #: reference/datamodel.rst:594
 msgid ""
 "The function's :term:`qualified name`. See also: :attr:`__qualname__ "
 "attributes <definition.__qualname__>`."
 msgstr ""
+"Η συνάρτηση είναι :term:`qualified name`. Δείτε επίσης :attr:`__qualname__ "
+"attributes <definition.__qualname__>`."
 
 #: reference/datamodel.rst:600
 msgid ""
 "The name of the module the function was defined in, or ``None`` if "
 "unavailable."
 msgstr ""
+"Το όνομα του module στην οποία ορίστηκε η συνάρτηση ή ``None`` εάν δεν είναι διαθέσιμη."
 
 #: reference/datamodel.rst:604
 msgid ""
@@ -802,18 +872,24 @@ msgid ""
 "parameters that have defaults, or ``None`` if no parameters have a default "
 "value."
 msgstr ""
+"Ένα :class:`tuple` που περιέχει προεπιλεγμένες τιμές :term:`parameter` για εκείνες τις παραμέτρους που έχουν "
+"προεπιλογές ή ``None`` εάν καμία παράμετρος δεν έχει προεπιλεγμένη τιμή."
 
 #: reference/datamodel.rst:609
 msgid ""
 "The :ref:`code object <code-objects>` representing the compiled function "
 "body."
 msgstr ""
+"Το αντικείμενο :ref:`code object <code-objects>` που αντιπροσωπεύει το μεταγλωττισμένο σώμα "
+"συνάρτησης."
 
 #: reference/datamodel.rst:613
 msgid ""
 "The namespace supporting arbitrary function attributes. See also: :attr:"
 "`__dict__ attributes <object.__dict__>`."
 msgstr ""
+"Ο χώρος ονομάτων που υποστηρίζει  αυθαίρετα χαρακτηριστικά συνάρτησης. Δείτε επίσης :attr:"
+"`__dict__ attributes <object.__dict__>`."
 
 #: reference/datamodel.rst:617
 msgid ""
@@ -822,18 +898,26 @@ msgid ""
 "``'return'`` for the return annotation, if provided. See also: :ref:"
 "`annotations-howto`."
 msgstr ""
+"Μια :class:`dictionary <dict>` που περιέχει annotations για :term:`parameters "
+"<parameter>`. Τα κλειδιά του λεξικού είναι τα ονόματα των παραμέτρων και ``'return'``, για το "
+"annotation επιστροφής, εάν παρέχεται. Δείτε επίσης: :ref:"
+"`annotations-howto`."
 
 #: reference/datamodel.rst:624
 msgid ""
 "A :class:`dictionary <dict>` containing defaults for keyword-only :term:"
 "`parameters <parameter>`."
 msgstr ""
+"Μια :class:`dictionary <dict>` που περιέχει προεπιλογές για λέξεις-κλειδιά μόνο "
+":term:`parameters <parameter>`."
 
 #: reference/datamodel.rst:628
 msgid ""
 "A :class:`tuple` containing the :ref:`type parameters <type-params>` of a :"
 "ref:`generic function <generic-functions>`."
 msgstr ""
+"Μια :class:`tuple` που περιέχει τις παραμέτρους :ref:`type parameters <type-params>` μιας "
+":ref:`generic function <generic-functions>`."
 
 #: reference/datamodel.rst:633
 msgid ""
@@ -841,6 +925,10 @@ msgid ""
 "which can be used, for example, to attach metadata to functions.  Regular "
 "attribute dot-notation is used to get and set such attributes."
 msgstr ""
+"Τα αντικείμενα συναρτήσεων υποστηρίζουν επίσης τη λήψη και τον καθορισμό αυθαίρετων χαρακτηριστικών "
+", τα οποία μπορούν να χρησιμοποιηθούν, για παράδειγμα, για την επισύναψη μεταδεδομένων σε συναρτήσεις.  "
+"Η τυπική σημειογραφία σημείων χαρακηριστικών χρησιμοποιείται για τη λήψη και τον ορισμό τέτοιων "
+"χαρακτηριστικών."
 
 #: reference/datamodel.rst:639
 msgid ""
@@ -848,6 +936,9 @@ msgid ""
 "defined functions. Function attributes on :ref:`built-in functions <builtin-"
 "functions>` may be supported in the future."
 msgstr ""
+"Η τρέχουσα υλοποίηση του CPython υποστηρίζει μόνο χαρακτηριστικά συναρτήσεων σε συναρτήσεις που καθορίζονται "
+"από τον χρήστη. Τα χαρακτηριστικά συναρτήσεων σε :ref:`built-in functions <builtin-"
+"functions>` ενδέχεται να υποστηρίζονται στο μέλλον."
 
 #: reference/datamodel.rst:644
 msgid ""
@@ -855,30 +946,37 @@ msgid ""
 "its :ref:`code object <code-objects>` (accessible via the :attr:`~function."
 "__code__` attribute)."
 msgstr ""
+"Μπορούν να ανακτηθούν πρόσθετες πληροφορίες σχετικά με τον ορισμό μιας συνάρτησης από το αντικείμενο "
+":ref:`code object <code-objects>` (προσβάσιμο μέσω του χαρακτηριστικού :attr:`~function."
+"__code__`)."
 
 #: reference/datamodel.rst:652
 msgid "Instance methods"
-msgstr ""
+msgstr "Μέθοδοι Στιγμιοτύπου"
 
 #: reference/datamodel.rst:659
 msgid ""
 "An instance method object combines a class, a class instance and any "
 "callable object (normally a user-defined function)."
 msgstr ""
+"Ένα αντικείμενο μεθόδου στιγμιοτύπου συνδυάζει μια κλάση, ένα στιγμιότυπο κλάσης και οποιοδήποτε "
+"αντικείμενο που μπορεί να κληθεί (συνήθως μια συνάρτηση που ορίζεται από τον χρήστη.)"
 
 #: reference/datamodel.rst:1450
 msgid "Special read-only attributes:"
-msgstr ""
+msgstr "Ειδικά χαρακτηριστικά μόνο για ανάγνωση:"
 
 #: reference/datamodel.rst:674
 msgid ""
 "Refers to the class instance object to which the method is :ref:`bound "
 "<method-binding>`"
 msgstr ""
+"Αναφέρεται στο αντικείμενο στιγμιοτύπου κλάσης στο οποίο βρίσκεται η μέθοδος "
+":ref:`bound <method-binding>`"
 
 #: reference/datamodel.rst:678
 msgid "Refers to the original :ref:`function object <user-defined-funcs>`"
-msgstr ""
+msgstr "Αναφέρεται στο αρχικό :ref:`function object <user-defined-funcs>`"
 
 #: reference/datamodel.rst:681
 msgid ""
@@ -886,23 +984,30 @@ msgid ""
 "__doc__>`). A :class:`string <str>` if the original function had a "
 "docstring, else ``None``."
 msgstr ""
+"Η τεκμηρίωση της μεθόδου (ίδια με την :attr:`method.__func__.__doc__ <function."
+"__doc__>`). Μια :class:`string <str>` εάν η αρχική συνάρτηση είχε docstring, αλλιώς ``None``."
 
 #: reference/datamodel.rst:687
 msgid ""
 "The name of the method (same as :attr:`method.__func__.__name__ <function."
 "__name__>`)"
 msgstr ""
+"Το όνομα της μεθόδου (ίδιο με το :attr:`method.__func__.__name__ <function."
+"__name__>`)"
 
 #: reference/datamodel.rst:691
 msgid ""
 "The name of the module the method was defined in, or ``None`` if unavailable."
 msgstr ""
+"Το όνομα του module στην οποία ορίστηκε η μέθοδος, ή ``None`` εάν δεν είναι διαθέσιμη."
 
 #: reference/datamodel.rst:694
 msgid ""
 "Methods also support accessing (but not setting) the arbitrary function "
 "attributes on the underlying :ref:`function object <user-defined-funcs>`."
 msgstr ""
+"Οι μέθοδοι υποστηρίζουν επίσης την πρόσβαση (αλλά όχι τη ρύθμιση) των αυθαίρετων "
+"χαρακτηριστικών συνάρτησης στο υποκείμενο αντικείμενο :ref:`function object <user-defined-funcs>`."
 
 #: reference/datamodel.rst:697
 msgid ""
@@ -911,6 +1016,9 @@ msgid ""
 "defined :ref:`function object <user-defined-funcs>` or a :class:"
 "`classmethod` object."
 msgstr ""
+"Τα αντικείμενα μεθόδου που ορίζονται από το χρήστη μπορούν να δημιουργηθούν όταν λαμβάνεται ένα χαρακτηριστικό "
+"μιας κλάσης (ίσως μέσω ενός στιγμιοτύπου αυτής της κλάσης), εάν αυτό το χαρακτηριστικό είναι ένα αντικείμενο "
+":ref:`function object <user-defined-funcs>` ή ένα αντικείμενο :class:`classmethod`."
 
 #: reference/datamodel.rst:704
 msgid ""
@@ -920,6 +1028,11 @@ msgid ""
 "method object is said to be *bound*.  The new method's :attr:`~method."
 "__func__` attribute is the original function object."
 msgstr ""
+"Όταν δημιουργείται ένα αντικείμενο μεθόδου στιγμιοτύπου ανακτώντας ένα αντικείμενο "
+":ref:`function object <user-defined-funcs>` που ορίζεται από το χρήστη από μια κλάση, το "
+"χαρακτηριστικό :attr:`~method.__self__` είναι το στιγμιότυπο και το αντικείμενό της μεθόδου "
+"λέγεται ότι είναι *δεσμευμένο*.  Το χαρακτηριστικό :attr:`~method."
+"__func__` της νέας μεθόδου είναι το αρχικό αντικείμενο συνάρτησης."
 
 #: reference/datamodel.rst:710
 msgid ""
@@ -928,6 +1041,10 @@ msgid ""
 "attribute is the class itself, and its :attr:`~method.__func__` attribute is "
 "the function object underlying the class method."
 msgstr ""
+"Όταν ένα αντικείμενο μεθόδου παρουσίας δημουργείται με ανάκτηση ενός αντικειμένου "
+":class:`classmethod` από μια κλάση ή στιγμιότυπο, το χαρακτηριστικό :attr:`~method.__self__` "
+"είναι η ίδια κλάση και το χαρακτηριστικό :attr:`~method.__func__` είναι το αντικείμενο συνάρτησης "
+"που βρίσκεται κάτω από τη μέθοδο κλάσης."
 
 #: reference/datamodel.rst:715
 msgid ""
@@ -938,6 +1055,12 @@ msgid ""
 "an instance of :class:`!C`, calling ``x.f(1)`` is equivalent to calling ``C."
 "f(x, 1)``."
 msgstr ""
+"Όταν καλείται ένα αντικείμενο μεθόδου στιγμιοτύπου, καλείται η υποκείμενη συνάρτηση (:attr:"
+"`~method.__func__`), εισάγοντας το στιγμιότυπο κλάσης (:attr:`~method."
+"__self__`) μπορστά από τη λίστα ορισμάτων.  Για παράδειγμα, όταν η :class:`!C` είναι μια κλάση "
+"που περιέχει έναν ορισμό για μια συνάρτηση :meth:`!f`, και το ``x`` είναι ένα στιγμιότυπο "
+"της :class:`!C`, η κλήση του ``x.f(1)`` ισοδυναμεί με την κλήση του ``C."
+"f(x, 1)``."
 
 #: reference/datamodel.rst:722
 msgid ""
@@ -947,6 +1070,11 @@ msgid ""
 "f(1)`` is equivalent to calling ``f(C,1)`` where ``f`` is the underlying "
 "function."
 msgstr ""
+"Όταν ένα αντικείμενο μεθόδου στιγμιοτύπου προέρχεται από ένα αντικείμενο "
+":class:`classmethod`, το \"στιγμιότυπο κλάσης\" που είναι αποθηκευμένο στη "
+":attr:`~method.__self__` θα είναι στη πραγματικότητα η ίδια η κλάση, έτσι ώστε η κλήση "
+"είτε του ``x.f(1)` ή του ``C.f(1)`` ισοδυναμεί με την κλήση του ``f(C,1)`` όπου το ``f`` "
+"είναι η υποκείμενη συνάρτηση."
 
 #: reference/datamodel.rst:727
 msgid ""
@@ -960,10 +1088,19 @@ msgid ""
 "which are attributes of a class instance are not converted to bound methods; "
 "this *only* happens when the function is an attribute of the class."
 msgstr ""
+"Λάβετε υπόψη ότι μετασχηματισμός από :ref:`function object <user-defined-"
+"funcs>` σε αντικείμενο μεθόδου στιγμιοτύπου πραγματοποιείται κάθε φορά που το "
+"χαρακτηριστικό ανακτάται από το στιγμιότυπο.  Σε ορισμένες περιπτώσεις, μια γόνιμη "
+"βελτιστοποίηση είναι να εκχωρήσετε το χαρακτηριστικό σε μια τοπική μεταβλητή και να καλέσετε αυτήν την "
+"τοπική μεταβλητή. Σημειώστε επίσης ότι αυτός ο μετασχηματισμός συμβαίνει μόνο για λειτουργίες που ορίζονται "
+"από το χρήστη∙ άλλα καλέσιμα αντικείμενα (και όλα τα μη-καλέσιμα αντικείμενα) ανακτώνται χωρίς μετασχηματισμό.  "
+"Είναι επίσης σημαντικό να σημειωθεί ότι οι συναρτήσεις που ορίζονται από το χρήστη και είναι χαρακτηριστικά ενός "
+"στιγμιοτύπου κλάσης δεν μετατρέπονται σε δεσμευμένες μεθόδους∙ αυτό συμβαίνει *μόνο* όταν η συνάρτηση είναι "
+"χαρακτηριστικό κλάσης."
 
 #: reference/datamodel.rst:741
 msgid "Generator functions"
-msgstr ""
+msgstr "Generator Συναρτήσεις"
 
 #: reference/datamodel.rst:747
 msgid ""
@@ -977,10 +1114,17 @@ msgid ""
 "exception is raised and the iterator will have reached the end of the set of "
 "values to be returned."
 msgstr ""
+"Μια συνάρτηση ή μέθοδος που χρησιμοποιεί τη δήλωση :keyword:`yield` (βλ. ενότητα "
+":ref:`yield`) ονομάζεται :dfn:`generator function`.  Μια τέτοια συνάρτηση, όταν καλείται, επιστρέφει πάντα ένα "
+"αντικείμενο :term:`iterator` που μπορεί να χρησιμοποιηθεί για την εκτέλεση του σώματος της συνάρτησης: "
+"καλώντας τη μέθοδο :meth:`iterator.__next__` του iterator θα προκαλέσει την εκτέλεση της συνάρτησης έως ότου παρέχει μια τιμή "
+"χρησιμοποιώντας τη δήλωση :keyword:`!yield`.  Όταν η συνάρτηση εκετελεί μια δήλωση :"
+"keyword:`return` ή πέστει στο τέλος, γίνεται raise μια εξαίρεση :exc:`StopIteration` "
+"και ο iterator θα έχει φτάσει στο τέλος του συνόλου τιμών που θα επιστραφεί."
 
 #: reference/datamodel.rst:759
 msgid "Coroutine functions"
-msgstr ""
+msgstr "Coroutine συναρτήσεις"
 
 #: reference/datamodel.rst:764
 msgid ""
@@ -990,10 +1134,15 @@ msgid ""
 "as :keyword:`async with` and :keyword:`async for` statements. See also the :"
 "ref:`coroutine-objects` section."
 msgstr ""
+"Μια συνάρτηση ή μέθοδος που ορίζεται χρησιμοποιώντας :keyword:`async def` ονομάζεται μια "
+":dfn:`coroutine function`.  Μια τέτοια συνάρτηση, όταν καλείται, επιστρέφει ένα αντικείμενο "
+":term:`coroutine`.  Μπορεί να περιέχει εκφράσεις :keyword:`await`, καθώς και :keyword:`async with` "
+"και :keyword:`async for`. Δείτε επίσης την ενότητα :"
+"ref:`coroutine-objects`."
 
 #: reference/datamodel.rst:772
 msgid "Asynchronous generator functions"
-msgstr ""
+msgstr "Asynchronous generator συναρτήσεις"
 
 #: reference/datamodel.rst:778
 msgid ""
@@ -1003,6 +1152,10 @@ msgid ""
 "iterator` object which can be used in an :keyword:`async for` statement to "
 "execute the body of the function."
 msgstr ""
+"Μια συνάρτηση ή μέθοδος που ορίζεται χρησιμοποιώντας :keyword:`async def` και που "
+"χρησιμοποιεί την πρόταση :keyword:`yield` ονομάζεται :dfn:`asynchronous generator "
+"function`.  Μια τέτοια συνάρτηση, όταν καλείται, επιστρέφει ένα αντικείμενο :term:`asynchronous "
+"iterator` που μπορεί να χρησιμοποιηθεί σε μια δήλωση :keyword:`async for` για την εκτέλεση του σώματος της συνάρτησης."
 
 #: reference/datamodel.rst:784
 msgid ""
@@ -1017,7 +1170,7 @@ msgstr ""
 
 #: reference/datamodel.rst:797
 msgid "Built-in functions"
-msgstr ""
+msgstr "Ενσωματωμένες συναρτήσεις"
 
 #: reference/datamodel.rst:804
 msgid ""
@@ -1117,23 +1270,23 @@ msgstr ""
 
 #: reference/datamodel.rst:886
 msgid ":attr:`__name__`"
-msgstr ""
+msgstr ":attr:`__name__`"
 
 #: reference/datamodel.rst:886
 msgid "The module's name."
-msgstr ""
+msgstr "Το όνομα του module."
 
 #: reference/datamodel.rst:990
 msgid ":attr:`__doc__`"
-msgstr ""
+msgstr ":attr:`__doc__`"
 
 #: reference/datamodel.rst:889
 msgid "The module's documentation string, or ``None`` if unavailable."
-msgstr ""
+msgstr "Η συμβολοσειρά τεκμηρίωσης του module, ή ``None`` εάν δεν είναι διαθέσιμη."
 
 #: reference/datamodel.rst:899
 msgid ":attr:`__file__`"
-msgstr ""
+msgstr ":attr:`__file__`"
 
 #: reference/datamodel.rst:893
 msgid ""
