@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-03-09 16:55+0200\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: library/struct.rst:2
 msgid ":mod:`!struct` --- Interpret bytes as packed binary data"
-msgstr ""
+msgstr ":mod:`!struct` --- Ερμηνεία bytes ως πακετοποιημένα δυαδικά δεδομένα"
 
 #: library/struct.rst:7
 msgid "**Source code:** :source:`Lib/struct.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/struct.py`"
 
 #: library/struct.rst:15
 msgid ""
@@ -35,6 +35,13 @@ msgid ""
 "connections), or data transfer between the Python application and the C "
 "layer."
 msgstr ""
+"Αυτό το module μετατρέπει μεταξύ τιμών της Python και δομών της C που "
+"αναπαρίστανται ως αντικείμενα :class:`bytes` της Python. Συμπαγείς :ref:"
+"`format strings <struct-format-strings>` περιγράφουν τις προβλεπόμενες "
+"μετατροπές από/προς τιμές της Python. Οι συναρτήσεις και τα αντικείμενα του "
+"module μπορούν να χρησιμοποιηθούν για δύο κυρίως εφαρμογές: την ανταλλαγή "
+"δεδομένων με εξωτερικές πηγές (αρχεία ή συνδέσεις δικτύου) ή τη μεταφορά "
+"δεδομένων μεταξύ της εφαρμογής Python και του επιπέδου C."
 
 #: library/struct.rst:25
 msgid ""
@@ -47,6 +54,16 @@ msgid ""
 "for defining byte ordering and padding between elements. See :ref:`struct-"
 "alignment` for details."
 msgstr ""
+"Όταν δεν δίνεται χαρακτήρας προθέματος, η προεπιλεγμένη λειτουργία είναι η "
+"εγγενής (native mode). Πακετάρει ή αποσυμπιέζει δεδομένα με βάση την "
+"πλατφόρμα και τον μεταγλωττιστή με τον οποίο κατασκευάστηκε ο διερμηνέας της "
+"Python. Το αποτέλεσμα της συσκευασίας μιας δεδομένης δομής C περιλαμβάνει "
+"συμπληρωματικά bytes (pad bytes) που διατηρούν τη σωστή στοίχιση για τους "
+"εμπλεκόμενους τύπους C· παρομοίως, η στοίχιση λαμβάνεται υπόψη κατά την "
+"αποσυσκευασία. Αντίθετα, κατά την επικοινωνία δεδομένων με εξωτερικές πηγές, "
+"ο προγραμματιστής είναι υπεύθυνος για τον καθορισμό της σειράς byte και του "
+"συμπληρώματος μεταξύ των στοιχείων. Δείτε :ref:`struct-alignment` για "
+"λεπτομέρειες. "
 
 #: library/struct.rst:35
 msgid ""
@@ -58,20 +75,30 @@ msgid ""
 "implement the buffer protocol, so that they can be read/filled without "
 "additional copying from a :class:`bytes` object."
 msgstr ""
+"Αρκετές συναρτήσεις του :mod:`struct` (και μέθοδοι της κλάσης :class:"
+"`Struct`) δέχονται μια παράμετρο *buffer*. Αυτή αναφέρεται σε αντικείμενα "
+"που υλοποιούν τα :ref:`bufferobjects` και παρέχουν είτε ένα αναγνώσιμο είτε "
+"έναν αναγνώσιμο-εγγράψιμο buffer. Οι πιο συνηθισμένοι τύποι που "
+"χρησιμοποιούνται για αυτόν τον σκοπό είναι οι :class:`bytes` και :class:"
+"`bytearray`, αλλά πολλοί άλλοι τύποι που μπορούν να θεωρηθούν ως πίνακες "
+"bytes υλοποιούν το πρωτόκολλο buffer, επιτρέποντας την ανάγνωση/τροφοδότηση "
+"χωρίς επιπλέον αντιγραφή από ένα αντικείμενο :class:`bytes`."
 
 #: library/struct.rst:44
 msgid "Functions and Exceptions"
-msgstr ""
+msgstr "Συναρτήσεις και εξαιρέσεις"
 
 #: library/struct.rst:46
 msgid "The module defines the following exception and functions:"
-msgstr ""
+msgstr "Το module ορίζει την ακόλουθη εξαίρεση και συναρτήσεις:"
 
 #: library/struct.rst:51
 msgid ""
 "Exception raised on various occasions; argument is a string describing what "
 "is wrong."
 msgstr ""
+"Εξαίρεση που γίνεται raise σε διάφορες περιπτώσεις· το όρισμα είναι μια "
+"συμβολοσειρά που περιγράφει το σφάλμα. "
 
 #: library/struct.rst:57
 msgid ""
@@ -79,6 +106,10 @@ msgid ""
 "to the format string *format*.  The arguments must match the values required "
 "by the format exactly."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο τύπου bytes που περιέχει τις τιμές *v1*, "
+"*v2*, ... πακεταρισμένες σύμφωνα με τη συμβολοσειρά μορφοποίησης *format*. "
+"Τα ορίσματα πρέπει να ταιριάζουν ακριβώς με τις απαιτούμενες τιμές της "
+"μορφοποίησης."
 
 #: library/struct.rst:64
 msgid ""
@@ -86,6 +117,10 @@ msgid ""
 "write the packed bytes into the writable buffer *buffer* starting at "
 "position *offset*.  Note that *offset* is a required argument."
 msgstr ""
+"Πακετάρει τις τιμές *v1*, *v2*, ... σύμφωνα με τη συμβολοσειρά μορφοποίησης "
+"*format* και γράφει τα πακεταρισμένα bytes στον εγγράψιμο buffer *buffer* "
+"ξεκινώντας από τη θέση *offset*. Σημειώστε ότι το *offset* είναι υποχρεωτικό "
+"όρισμα."
 
 #: library/struct.rst:71
 msgid ""
@@ -94,6 +129,12 @@ msgid ""
 "contains exactly one item.  The buffer's size in bytes must match the size "
 "required by the format, as reflected by :func:`calcsize`."
 msgstr ""
+"Αποσυμπιέζει από τον buffer *buffer* (ο οποίος υποτίθεται έχει πακεταριστεί "
+"με τη μέθοδο ``pack(format, ...)``) σύμφωνα με την συμβολοσειρά μορφοποίησης "
+"*format*. Το αποτέλεσμα είναι μια πλειάδα, ακόμα κι αν περιέχει μόνο ένα "
+"στοιχείο. Το μέγεθος του buffer σε bytes πρέπει να ταιριάζει με το "
+"απαιτούμενο μέγεθος σύμφωνα με τη μορφή, όπως καθορίζεται από τη συνάρτηση :"
+"func:`calcsize`."
 
 #: library/struct.rst:79
 msgid ""
@@ -102,6 +143,11 @@ msgid ""
 "item.  The buffer's size in bytes, starting at position *offset*, must be at "
 "least the size required by the format, as reflected by :func:`calcsize`."
 msgstr ""
+"Αποσυμπιέζει από τον *buffer* ξεκινώντας από τη θέση *offset*, σύμφωνα με τη "
+"συμβολοσειρά μορφοποίησης *format*.Το αποτέλεσμα είναι μια πλειάδα, ακόμα κι "
+"αν περιέχει μόνο ένα στοιχείο. Το μέγεθος του buffer σε bytes, ξεκινώντας "
+"από τη θέση *offset*, πρέπει να είναι τουλάχιστον το μέγεθος που απαιτείται "
+"από τη μορφή, όπως καθορίζεται από τη συνάρτηση :func:`calcsize`."
 
 #: library/struct.rst:87
 msgid ""
@@ -111,20 +157,31 @@ msgid ""
 "buffer's size in bytes must be a multiple of the size required by the "
 "format, as reflected by :func:`calcsize`."
 msgstr ""
+"Αποσυμπιέζει επαναληπτικά από τον buffer *buffer* σύμφωνα με τη συμβολοσειρά "
+"μορφοποίησης *format*. Αυτή η συνάρτηση επιστρέφει έναν iterator ο οποίος θα "
+"διαβάσει κομμάτια ίδιου μεγέθους από τον buffer μέχρι να καταναλωθούν όλα τα "
+"περιεχόμενά του. Το μέγεθος του buffer σε bytes πρέπει να είναι πολλαπλάσιο "
+"του μεγέθους που απαιτείται από τη μορφή, όπως καθορίζεται από τη συνάρτηση :"
+"func:`calcsize`."
 
 #: library/struct.rst:93
 msgid "Each iteration yields a tuple as specified by the format string."
 msgstr ""
+"Κάθε επανάληψη επιστρέφει μια πλειάδα σύμφωνα με τη συμβολοσειρά "
+"μορφοποίησης."
 
 #: library/struct.rst:100
 msgid ""
 "Return the size of the struct (and hence of the bytes object produced by "
 "``pack(format, ...)``) corresponding to the format string *format*."
 msgstr ""
+"Επιστρέφει το μέγεθος της δομής (και κατά συνέπεια του αντικειμένου bytes "
+"που παράγεται από το ``pack(format, ...)``) που αντιστοιχεί στη συμβολοσειρά "
+"μορφοποίησης *format*."
 
 #: library/struct.rst:107
 msgid "Format Strings"
-msgstr ""
+msgstr "Συμβολοσειρές μορφοποίησης"
 
 #: library/struct.rst:109
 msgid ""
@@ -136,10 +193,19 @@ msgid ""
 "which describes the overall properties of the data and one or more format "
 "characters which describe the actual data values and padding."
 msgstr ""
+"Οι συμβολοσειρές μορφοποίησης περιγράφουν τη διάταξη των δεδομένων κατά την "
+"συσκευασία και αποσυσκευασία των δεδομένων. Δημιουργούνται από :ref:`format "
+"characters<format-characters>`, οι οποίοι καθορίζουν τον τύπο των δεδομένων "
+"που συσκευάζονται/αποσυσκευάζονται. Επιπλέον, ειδικοί χαρακτήρες ελέγχουν "
+"την :ref:`byte order, size and alignment<struct-alignment>`. Κάθε "
+"συμβολοσειρά μορφοποίησης αποτελείται από έναν προαιρετικό χαρακτήρα πρόθεμα "
+"που περιγράφει τις συνολικές ιδιότητες των δεδομένων και έναν ή "
+"περισσότερους χαρακτήρες μορφοποίησης που περιγράφουν τις πραγματικές τιμές "
+"δεδομένων και το συμπλήρωμα."
 
 #: library/struct.rst:121
 msgid "Byte Order, Size, and Alignment"
-msgstr ""
+msgstr "Διάταξη Byte, Μέγεθος και Στοίχιση"
 
 #: library/struct.rst:123
 msgid ""
@@ -150,6 +216,13 @@ msgid ""
 "corresponding C struct. Whether to use native byte ordering and padding or "
 "standard formats depends on the application."
 msgstr ""
+"Από προεπιλογή, οι τύποι της C αναπαρίστανται στη φυσική μορφή και διάταξη "
+"byte της μηχανής και ευθυγραμμίζονται σωστά, παραλείποντας byte γεμίσματος "
+"εάν είναι απαραίτητο (σύμφωνα με τους κανόνες που χρησιμοποιεί ο "
+"μεταγλωττιστής C). Αυτή η συμπεριφορά επιλέγεται έτσι ώστε τα byte μιας "
+"συσκευασμένης δομής να αντιστοιχούν ακριβώς στη διάταξη μνήμης της "
+"αντίστοιχης δομής της C. Το αν θα χρησιμοποιηθεί φυσική διάταξη byte και "
+"γέμισμα ή τυποποιημένες μορφές εξαρτάται από την εφαρμογή."
 
 #: library/struct.rst:139
 msgid ""
@@ -157,88 +230,93 @@ msgid ""
 "indicate the byte order, size and alignment of the packed data, according to "
 "the following table:"
 msgstr ""
+"Εναλλακτικά, ο πρώτος χαρακτήρας της συμβολοσειράς μορφοποίησης μπορεί να "
+"χρησιμοποιηθεί για να υποδείξει τη σειρά byte, το μέγεθος και την "
+"ευθυγράμμιση των συσκευασμένων δεδομένων, σύμφωνα με το παρακάτω πίνακα: "
 
 #: library/struct.rst:144
 msgid "Character"
-msgstr ""
+msgstr "Χαρακτήρας"
 
 #: library/struct.rst:144
 msgid "Byte order"
-msgstr ""
+msgstr "Σειρά bytes"
 
 #: library/struct.rst:144
 msgid "Size"
-msgstr ""
+msgstr "Μέγεθος"
 
 #: library/struct.rst:144
 msgid "Alignment"
-msgstr ""
+msgstr "Στοίχιση"
 
 #: library/struct.rst:146
 msgid "``@``"
-msgstr ""
+msgstr "``@``"
 
 #: library/struct.rst:148
 msgid "native"
-msgstr ""
+msgstr "native"
 
 #: library/struct.rst:148
 msgid "``=``"
-msgstr ""
+msgstr "``=``"
 
 #: library/struct.rst:150 library/struct.rst:154
 msgid "standard"
-msgstr ""
+msgstr "τυπικό"
 
 #: library/struct.rst:150 library/struct.rst:154
 msgid "none"
-msgstr ""
+msgstr "κανένα"
 
 #: library/struct.rst:150
 msgid "``<``"
-msgstr ""
+msgstr "``<``"
 
 #: library/struct.rst:150
 msgid "little-endian"
-msgstr ""
+msgstr "little-endian"
 
 #: library/struct.rst:152
 msgid "``>``"
-msgstr ""
+msgstr "``>``"
 
 #: library/struct.rst:152
 msgid "big-endian"
-msgstr ""
+msgstr "big-endian"
 
 #: library/struct.rst:154
 msgid "``!``"
-msgstr ""
+msgstr "``!``"
 
 #: library/struct.rst:154
 msgid "network (= big-endian)"
-msgstr ""
+msgstr "δίκτυο (= big-endian)"
 
 #: library/struct.rst:157
 msgid "If the first character is not one of these, ``'@'`` is assumed."
-msgstr ""
+msgstr "Αν ο πρώτος χαρακτήρας δεν είναι ένας από αυτούς, υποτίθεται ``'@'``."
 
 #: library/struct.rst:161
 msgid ""
 "The number 1023 (``0x3ff`` in hexadecimal) has the following byte "
 "representations:"
 msgstr ""
+"Ο αριθμός 1023 (``0x3ff`` σε δεκαεξαδική μορφή) έχει τις ακόλουθες "
+"αναπαραστάσεις σε byte:"
 
 #: library/struct.rst:163
 msgid "``03 ff`` in big-endian (``>``)"
-msgstr ""
+msgstr "``03 ff`` σε big-endian (``>``)"
 
 #: library/struct.rst:164
 msgid "``ff 03`` in little-endian (``<``)"
-msgstr ""
+msgstr "``ff 03`` σε little-endian (``<``)"
 
 #: library/struct.rst:166
 msgid "Python example:"
-msgstr ""
+msgstr "Παράδειγμα Python:"
 
 #: library/struct.rst:174
 msgid ""
@@ -247,52 +325,74 @@ msgid ""
 "endian; IBM z and many legacy architectures are big-endian. Use :data:`sys."
 "byteorder` to check the endianness of your system."
 msgstr ""
+"Η native σειρά byte είναι big-endian ή little-endian, ανάλογα με το σύστημα "
+"υποδοχής. Για παράδειγμα, οι Intel x86, AMD64 (x86-64) και Apple M1 είναι "
+"little-endian, ενώ οι IBM z και πολλές παλαιότερες αρχιτεκτονικές είναι big-"
+"endian. Χρησιμοποιήστε τη μεταβλητή :data:`sys.byteorder` για να ελέγξετε το "
+"endianness του συστήματος σας."
 
 #: library/struct.rst:179
 msgid ""
 "Native size and alignment are determined using the C compiler's ``sizeof`` "
 "expression.  This is always combined with native byte order."
 msgstr ""
+"Το native μέγεθος και η στοίχιση καθορίζονται χρησιμοποιώντας την έκφραση "
+"``sizeof`` του μεταγλωττιστή C. Αυτό συνδυάζεται πάντα με την native σειρά "
+"byte. "
 
 #: library/struct.rst:182
 msgid ""
 "Standard size depends only on the format character;  see the table in the :"
 "ref:`format-characters` section."
 msgstr ""
+"Το τυπικό μέγεθος εξαρτάται μόνο από τον χαρακτήρα μορφοποίησης· δείτε τον "
+"πίνακα στην ενότητα :ref:`format-characters`."
 
 #: library/struct.rst:185
 msgid ""
 "Note the difference between ``'@'`` and ``'='``: both use native byte order, "
 "but the size and alignment of the latter is standardized."
 msgstr ""
+"Σημειώστε τη διαφορά μεταξύ του ``'@'`` και ``'='``: και τα δύο "
+"χρησιμοποιούν τη native σειρά byte,  αλλά το μέγεθος και η στοίχιση του "
+"τελευταίου είναι τυποποιημένα. "
 
 #: library/struct.rst:188
 msgid ""
 "The form ``'!'`` represents the network byte order which is always big-"
 "endian as defined in `IETF RFC 1700 <IETF RFC 1700_>`_."
 msgstr ""
+"Η μορφή ``'!'`` αντιπροσωπεύει τη σειρά byte του δικτύου, η οποία είναι "
+"πάντα big-endian όπως ορίζεται στο `IETF RFC 1700 <IETF RFC 1700_>`_."
 
 #: library/struct.rst:191
 msgid ""
 "There is no way to indicate non-native byte order (force byte-swapping); use "
 "the appropriate choice of ``'<'`` or ``'>'``."
 msgstr ""
+"Δεν υπάρχει τρόπος να δηλωθεί non-native σειρά byte (να επιβληθεί εναλλαγή "
+"byte). Χρησιμοποιήστε την κατάλληλη επιλογή ``'<'`` ή ``'>'``."
 
 #: library/struct.rst:273
 msgid "Notes:"
-msgstr ""
+msgstr "Σημειώσεις:"
 
 #: library/struct.rst:196
 msgid ""
 "Padding is only automatically added between successive structure members. No "
 "padding is added at the beginning or the end of the encoded struct."
 msgstr ""
+"Το συμπλήρωμα (padding) προστίθεται αυτόματα μόνο μεταξύ διαδοχικών μελών "
+"της δομής. Δεν προστίθεται συμπλήρωμα στην αρχή ή στο τέλος της "
+"κωδικοποιημένης δομής. "
 
 #: library/struct.rst:199
 msgid ""
 "No padding is added when using non-native size and alignment, e.g. with '<', "
 "'>', '=', and '!'."
 msgstr ""
+"Δεν προστίθεται συμπλήρωμα όταν χρησιμοποιείται non-native μέγεθος και "
+"στοίχιση, π.χ. με '<','>', '=', και '!'."
 
 #: library/struct.rst:202
 msgid ""
@@ -300,10 +400,13 @@ msgid ""
 "type, end the format with the code for that type with a repeat count of "
 "zero.  See :ref:`struct-examples`."
 msgstr ""
+"Για να ευθυγραμμίσετε το τέλος μιας δομής με την απαίτηση στοίχισης ενός "
+"συγκεκριμένου τύπου, τελειώστε τη μορφή με τον κωδικό για αυτό τον τύπο με "
+"πλήθος επαναλήψεων μηδέν. Δείτε :ref:`struct-examples`."
 
 #: library/struct.rst:210
 msgid "Format Characters"
-msgstr ""
+msgstr "Χαρακτήρες μορφής"
 
 #: library/struct.rst:212
 msgid ""
@@ -314,283 +417,292 @@ msgid ""
 "``'!'`` or ``'='``.  When using native size, the size of the packed value is "
 "platform-dependent."
 msgstr ""
+"Οι χαρακτήρες μορφής έχουν την ακόλουθη σημασία· η μετατροπή μεταξύ τιμών C "
+"και Python είναι προφανής δεδομένων των τύπων τους. Η στήλη 'Τυπικό μέγεθος' "
+"αναφέρεται στο μέγεθος της συμπιεσμένης τιμής σε byte όταν χρησιμοποιείται "
+"τυπικό μέγεθος· δηλαδή, όταν η συμβολοσειρά μορφής ξεκινά με ένα από τα "
+"``'<'``, ``'>'``, ``'!'`` or ``'='``. Όταν χρησιμοποιείται το native "
+"μέγεθος, το μέγεθος της συμπιεσμένης τιμής εξαρτάται από την πλατφόρμα."
 
 #: library/struct.rst:220
 msgid "Format"
-msgstr ""
+msgstr "Μορφή"
 
 #: library/struct.rst:220
 msgid "C Type"
-msgstr ""
+msgstr "Τύπος C"
 
 #: library/struct.rst:220
 msgid "Python type"
-msgstr ""
+msgstr "Τύπος Python"
 
 #: library/struct.rst:220
 msgid "Standard size"
-msgstr ""
+msgstr "Τυπικό μέγεθος"
 
 #: library/struct.rst:220
 msgid "Notes"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: library/struct.rst:222
 msgid "``x``"
-msgstr ""
+msgstr "``x``"
 
 #: library/struct.rst:222
 msgid "pad byte"
-msgstr ""
+msgstr "συμπληρωματικό byte"
 
 #: library/struct.rst:222
 msgid "no value"
-msgstr ""
+msgstr "καμία τιμή"
 
 #: library/struct.rst:222
 msgid "\\(7)"
-msgstr ""
+msgstr "\\(7)"
 
 #: library/struct.rst:224
 msgid "``c``"
-msgstr ""
+msgstr "``c``"
 
 #: library/struct.rst:224
 msgid ":c:expr:`char`"
-msgstr ""
+msgstr ":c:expr:`char`"
 
 #: library/struct.rst:224
 msgid "bytes of length 1"
-msgstr ""
+msgstr "bytes μήκους 1"
 
 #: library/struct.rst:226 library/struct.rst:230
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: library/struct.rst:226
 msgid "``b``"
-msgstr ""
+msgstr "``b``"
 
 #: library/struct.rst:226
 msgid ":c:expr:`signed char`"
-msgstr ""
+msgstr ":c:expr:`signed char`"
 
 #: library/struct.rst:228 library/struct.rst:234 library/struct.rst:238
 #: library/struct.rst:242 library/struct.rst:246 library/struct.rst:251
 #: library/struct.rst:263
 msgid "integer"
-msgstr ""
+msgstr "integer"
 
 #: library/struct.rst:226
 msgid "\\(1), \\(2)"
-msgstr ""
+msgstr "\\(1), \\(2)"
 
 #: library/struct.rst:228
 msgid "``B``"
-msgstr ""
+msgstr "``B``"
 
 #: library/struct.rst:228
 msgid ":c:expr:`unsigned char`"
-msgstr ""
+msgstr ":c:expr:`unsigned char`"
 
 #: library/struct.rst:232 library/struct.rst:236 library/struct.rst:240
 #: library/struct.rst:244 library/struct.rst:246
 msgid "\\(2)"
-msgstr ""
+msgstr "\\(2)"
 
 #: library/struct.rst:230
 msgid "``?``"
-msgstr ""
+msgstr "``?``"
 
 #: library/struct.rst:230
 msgid ":c:expr:`_Bool`"
-msgstr ""
+msgstr ":c:expr:`_Bool`"
 
 #: library/struct.rst:230
 msgid "bool"
-msgstr ""
+msgstr "bool"
 
 #: library/struct.rst:230
 msgid "\\(1)"
-msgstr ""
+msgstr "\\(1)"
 
 #: library/struct.rst:232
 msgid "``h``"
-msgstr ""
+msgstr "``h``"
 
 #: library/struct.rst:232
 msgid ":c:expr:`short`"
-msgstr ""
+msgstr ":c:expr:`short`"
 
 #: library/struct.rst:234 library/struct.rst:253
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: library/struct.rst:234
 msgid "``H``"
-msgstr ""
+msgstr "``H``"
 
 #: library/struct.rst:234
 msgid ":c:expr:`unsigned short`"
-msgstr ""
+msgstr ":c:expr:`unsigned short`"
 
 #: library/struct.rst:236
 msgid "``i``"
-msgstr ""
+msgstr "``i``"
 
 #: library/struct.rst:236
 msgid ":c:expr:`int`"
-msgstr ""
+msgstr ":c:expr:`int`"
 
 #: library/struct.rst:238 library/struct.rst:242 library/struct.rst:255
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: library/struct.rst:238
 msgid "``I``"
-msgstr ""
+msgstr "``I``"
 
 #: library/struct.rst:238
 msgid ":c:expr:`unsigned int`"
-msgstr ""
+msgstr ":c:expr:`unsigned int`"
 
 #: library/struct.rst:240
 msgid "``l``"
-msgstr ""
+msgstr "``l``"
 
 #: library/struct.rst:240
 msgid ":c:expr:`long`"
-msgstr ""
+msgstr ":c:expr:`long`"
 
 #: library/struct.rst:242
 msgid "``L``"
-msgstr ""
+msgstr "``L``"
 
 #: library/struct.rst:242
 msgid ":c:expr:`unsigned long`"
-msgstr ""
+msgstr ":c:expr:`unsigned long`"
 
 #: library/struct.rst:244
 msgid "``q``"
-msgstr ""
+msgstr "``q``"
 
 #: library/struct.rst:244
 msgid ":c:expr:`long long`"
-msgstr ""
+msgstr ":c:expr:`long long`"
 
 #: library/struct.rst:246 library/struct.rst:257
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: library/struct.rst:246
 msgid "``Q``"
-msgstr ""
+msgstr "``Q``"
 
 #: library/struct.rst:246
 msgid ":c:expr:`unsigned long long`"
-msgstr ""
+msgstr ":c:expr:`unsigned long long`"
 
 #: library/struct.rst:249
 msgid "``n``"
-msgstr ""
+msgstr "``n``"
 
 #: library/struct.rst:249
 msgid ":c:type:`ssize_t`"
-msgstr ""
+msgstr ":c:type:`ssize_t`"
 
 #: library/struct.rst:251
 msgid "\\(3)"
-msgstr ""
+msgstr "\\(3)"
 
 #: library/struct.rst:251
 msgid "``N``"
-msgstr ""
+msgstr "``N``"
 
 #: library/struct.rst:251
 msgid ":c:type:`size_t`"
-msgstr ""
+msgstr ":c:type:`size_t`"
 
 #: library/struct.rst:253
 msgid "``e``"
-msgstr ""
+msgstr "``e``"
 
 #: library/struct.rst:253
 msgid "\\(6)"
-msgstr ""
+msgstr "\\(6)"
 
 #: library/struct.rst:255 library/struct.rst:257
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: library/struct.rst:255 library/struct.rst:257
 msgid "\\(4)"
-msgstr ""
+msgstr "\\(4)"
 
 #: library/struct.rst:255
 msgid "``f``"
-msgstr ""
+msgstr "``f``"
 
 #: library/struct.rst:255
 msgid ":c:expr:`float`"
-msgstr ""
+msgstr ":c:expr:`float`"
 
 #: library/struct.rst:257
 msgid "``d``"
-msgstr ""
+msgstr "``d``"
 
 #: library/struct.rst:257
 msgid ":c:expr:`double`"
-msgstr ""
+msgstr ":c:expr:`double`"
 
 #: library/struct.rst:259
 msgid "``s``"
-msgstr ""
+msgstr "``s``"
 
 #: library/struct.rst:261
 msgid ":c:expr:`char[]`"
-msgstr ""
+msgstr ":c:expr:`char[]`"
 
 #: library/struct.rst:261
 msgid "bytes"
-msgstr ""
+msgstr "bytes"
 
 #: library/struct.rst:259
 msgid "\\(9)"
-msgstr ""
+msgstr "\\(9)"
 
 #: library/struct.rst:261
 msgid "``p``"
-msgstr ""
+msgstr "``p``"
 
 #: library/struct.rst:261
 msgid "\\(8)"
-msgstr ""
+msgstr "\\(8)"
 
 #: library/struct.rst:263
 msgid "``P``"
-msgstr ""
+msgstr "``P``"
 
 #: library/struct.rst:263
 msgid ":c:expr:`void \\*`"
-msgstr ""
+msgstr ":c:expr:`void \\*`"
 
 #: library/struct.rst:263
 msgid "\\(5)"
-msgstr ""
+msgstr "\\(5)"
 
 #: library/struct.rst:266
 msgid "Added support for the ``'n'`` and ``'N'`` formats."
-msgstr ""
+msgstr "Προστέθηκε υποστήριξη για τις μορφές ``'n'`` και ``'N'``."
 
 #: library/struct.rst:269
 msgid "Added support for the ``'e'`` format."
-msgstr ""
+msgstr "Προστέθηκε υποστήριξη για τη μορφή ``'e'``."
 
 #: library/struct.rst:278
 msgid ""
 "The ``'?'`` conversion code corresponds to the :c:expr:`_Bool` type defined "
 "by C standards since C99.  In standard mode, it is represented by one byte."
 msgstr ""
+"Ο κωδικός μετατροπής ``'?'`` αντιστοιχεί στον τύπο :c:expr:`_Bool` που "
+"ορίζεται από τα πρότυπα C από την έκδοση C99. Σε τυπική λειτουργία, "
+"αναπαρίσταται από ένα byte."
 
 #: library/struct.rst:283
 msgid ""
@@ -598,10 +710,16 @@ msgid ""
 "codes, if the non-integer has a :meth:`~object.__index__` method then that "
 "method is called to convert the argument to an integer before packing."
 msgstr ""
+"Όταν επιχειρείται η συσκευασία ενός μη ακέραιου αριθμού χρησιμοποιώντας "
+"οποιονδήποτε από τους κωδικούς μετατροπής ακεραίων, αν το αντικείμενο "
+"διαθέτει τη μέθοδο :meth:`~object.__index__`, τότε καλείται αυτή η μέθοδος "
+"για τη μετατροπή του ορίσματος σε ακέραιο πριν από τη συσκευασία."
 
 #: library/struct.rst:287
 msgid "Added use of the :meth:`~object.__index__` method for non-integers."
 msgstr ""
+"Προστέθηκε η χρήση της μεθόδου :meth:`~object.__index__` για μη ακέραιους "
+"αριθμούς."
 
 #: library/struct.rst:291
 msgid ""
@@ -610,6 +728,10 @@ msgid ""
 "the standard size, you can use whichever of the other integer formats fits "
 "your application."
 msgstr ""
+"Οι κωδικοί μετατροπής ``'n'`` και ``'N'`` είναι διαθέσιμοι μόνο για το "
+"native μέγεθος (επιλεγμένο ως προεπιλογή ή με τον χαρακτήρα διάταξης byte "
+"``'@'``). Για το τυπικό μέγεθος, μπορείτε να χρησιμοποιήσετε οποιαδήποτε από "
+"τις άλλες μορφές ακέραιων που ταιριάζουν στην εφαρμογή σας."
 
 #: library/struct.rst:297
 msgid ""
@@ -618,6 +740,10 @@ msgid ""
 "``'f'``, ``'d'`` or ``'e'`` respectively), regardless of the floating-point "
 "format used by the platform."
 msgstr ""
+"Για τους κωδικούς μετατροπής ``'f'``, ``'d'`` και ``'e'``, η συσκευασμένη "
+"αναπαράσταση χρησιμοποιεί τη μορφή IEEE 754 binary32, binary64 ή binary16 "
+"(αντίστοιχα για ``'f'``, ``'d'`` ή ``'e'``), ανεξάρτητα από τη μορφή κινητής "
+"υποδιαστολής που χρησιμοποιεί η πλατφόρμα. "
 
 #: library/struct.rst:303
 msgid ""
@@ -627,6 +753,11 @@ msgid ""
 "on the host system. The struct module does not interpret this as native "
 "ordering, so the ``'P'`` format is not available."
 msgstr ""
+"Ο χαρακτήρας μορφοποίησης ``'P'`` είναι διαθέσιμος μόνο για τη φυσική σειρά "
+"byte (επιλεγμένη ως προεπιλογή ή με τον χαρακτήρα σειράς byte ``'@'``). Ο "
+"χαρακτήρας σειράς byte ``'='`` επιλέγει τη χρήση little- ή big-endian σειράς "
+"με βάση το σύστημα. Το module struct δεν ερμηνεύει αυτό ως native σειρά, "
+"επομένως η μορφή ``'P'`` δεν είναι διαθέσιμη."
 
 #: library/struct.rst:310
 msgid ""
@@ -639,10 +770,19 @@ msgid ""
 "operations. See the Wikipedia page on the `half-precision floating-point "
 "format <half precision format_>`_ for more information."
 msgstr ""
+"Ο τύπος IEEE 754 binary16 \"half precision\" εισήχθη στην αναθεώρηση του "
+"2008 του προτύπου `IEEE 754 standard <ieee 754 standard_>`_. Διαθέτει ένα "
+"bit προσήμου, έναν εκθέτη 5-bit και ακρίβεια 11-bit (με 10 bit αποθηκευμένα "
+"ρητά) και μπορεί να αναπαραστήσει αριθμούς μεταξύ περίπου ``6.1e-05`` και "
+"``6.5e+04`` με πλήρη ακρίβεια. Αυτός ο τύπος δεν υποστηρίζεται ευρέως από "
+"τους μεταγλωττιστές της C: σε μια τυπική μηχανή, ένας μη προσημασμένος short "
+"μπορεί να χρησιμοποιηθεί για αποθήκευση, αλλά όχι για αριθμητικές πράξεις. "
+"Δείτε τη σελίδα της Wikipedia για τη `half-precision floating-point format "
+"<half precision format_>` για περισσότερες πληροφορίες. "
 
 #: library/struct.rst:320
 msgid "When packing, ``'x'`` inserts one NUL byte."
-msgstr ""
+msgstr "Κατά τη συσκευασία, το ``'x'`` εισάγει ένα NUL byte."
 
 #: library/struct.rst:323
 msgid ""
@@ -657,33 +797,64 @@ msgid ""
 "consumes ``count`` bytes, but that the string returned can never contain "
 "more than 255 bytes."
 msgstr ""
+"Ο χαρακτήρας μορφοποίησης ``'p'`` κωδικοποιεί ένα \"Pascal string\", δηλαδή "
+"μια μικρή συμβολοσειρά μεταβλητού μήκους αποθηκευμένη σε *σταθερό αριθμό "
+"byte*, που καθορίζεται από τον μετρητή. Το πρώτο byte που αποθηκεύεται είναι "
+"το μήκος της συμβολοσειράς ή 255, όποιο είναι μικρότερο. Ακολουθούν τα byte "
+"της συμβολοσειράς. Εάν η συμβολοσειρά που περνά στην :func:`pack` είναι πολύ "
+"μεγάλη (μεγαλύτερη από τον μετρητή μείον 1), αποθηκεύονται μόνο τα πρώτα "
+"``count-1`` byte της συμβολοσειράς. Εάν η συμβολοσειρά είναι μικρότερη από "
+"``count-1``, συμπληρώνεται με μηδενικά byte ώστε να χρησιμοποιηθούν ακριβώς "
+"τόσα byte όσα καθορίζει ο μετρητής. Σημειώστε ότι για τη :func:`unpack`, ο "
+"χαρακτήρας μορφοποίησης ``'p'`` καταναλώνει ``count`` byte, αλλά η "
+"συμβολοσειρά που επιστρέφεται δεν μπορεί ποτέ να περιέχει περισσότερα από "
+"255 byte. "
 
 #: library/struct.rst:335
 msgid ""
 "For the ``'s'`` format character, the count is interpreted as the length of "
 "the bytes, not a repeat count like for the other format characters; for "
-"example, ``'10s'`` means a single 10-byte string mapping to or from a single "
-"Python byte string, while ``'10c'`` means 10 separate one byte character "
-"elements (e.g., ``cccccccccc``) mapping to or from ten different Python byte "
-"objects. (See :ref:`struct-examples` for a concrete demonstration of the "
-"difference.) If a count is not given, it defaults to 1.  For packing, the "
-"string is truncated or padded with null bytes as appropriate to make it fit. "
-"For unpacking, the resulting bytes object always has exactly the specified "
+"example, ``'10s'`` means a single 10-byte string mapping to or from a "
+"single , while ``'10c'`` means 10 separate one byte character elements (e."
+"g., ``cccccccccc``) mapping to or from ten different Python byte objects. "
+"(See :ref:`struct-examples` for a concrete demonstration of the difference.) "
+"If a count is not given, it defaults to 1.  For packing, the string is "
+"truncated or padded with null bytes as appropriate to make it fit. For "
+"unpacking, the resulting bytes object always has exactly the specified "
 "number of bytes.  As a special case, ``'0s'`` means a single, empty string "
 "(while ``'0c'`` means 0 characters)."
 msgstr ""
+"Για το χαρακτήρα μορφοποίησης ``'s'``, αριθμός (count) ερμηνεύεται ως το "
+"μήκος των byte, και όχι ως ένας αριθμός επαναλήψεων, όπως συμβαίνει με "
+"άλλους χαρακτήρες μορφοποίησης. Για παράδειγμα, ``'10s'``σημαίνει μια "
+"μοναδική συμβολοσειρά 10 byte που αντιστοιχεί ή προέρχεται από ένα ενιαίο "
+"byte string της Python, ενώ ``'10c'`` σημαίνει 10 ξεχωριστούς χαρακτήρες του "
+"ενός byte στοιχεία (π.χ. ``cccccccccc``) που αντιστοιχούν σε ή από δέκα "
+"διαφορετικά byte objects της Python. (Δείτε το :ref:`struct-examples` για "
+"μια συγκεκριμένη επίδειξη της διαφοράς.) Αν δεν δοθεί αριθμός, η "
+"προεπιλεγμένη τιμή είναι 1. Κατά την συσκευασία (packing), η συμβολοσειρά "
+"περικόπτεται ή συμπληρώνεται με μηδενικά byte ώστε να ταιριάζει στο "
+"καθορισμένο μήκος. Κατά την αποσυσκευασία (unpacking), το αποτέλεσμα είναι "
+"πάντα ένα αντικείμενο bytes με ακριβώς το καθορισμένο μήκος. Ως ειδική "
+"περίπτωση, το ``'0s'`` σημαίνει μια μοναδική, κενή συμβολοσειρά (ενώ το "
+"``'0c'`` σημαίνει 0 χαρακτήρες). "
 
 #: library/struct.rst:348
 msgid ""
 "A format character may be preceded by an integral repeat count.  For "
 "example, the format string ``'4h'`` means exactly the same as ``'hhhh'``."
 msgstr ""
+"Ένας χαρακτήρας μορφοποίησης μπορεί να προηγείται από έναν ακέραιο αριθμό "
+"επαναλήψεων. Για παράδειγμα, η συμβολοσειρά μορφοποίησης ``'4h'`` σημαίνει "
+"ακριβώς το ίδιο με ``'hhhh'``."
 
 #: library/struct.rst:351
 msgid ""
 "Whitespace characters between formats are ignored; a count and its format "
 "must not contain whitespace though."
 msgstr ""
+"Οι χαρακτήρες κενού μεταξύ των μορφοποιήσεων αγνοούνται· ωστόσο, ένας "
+"αριθμός και η μορφή του δεν πρέπει να περιέχουν κενά. "
 
 #: library/struct.rst:354
 msgid ""
@@ -692,12 +863,18 @@ msgid ""
 "``'Q'``), if ``x`` is outside the valid range for that format then :exc:"
 "`struct.error` is raised."
 msgstr ""
+"Κατά το πακετάρισμα μιας τιμής ``x`` χρησιμοποιώντας μια από τις μορφές "
+"ακεραίων (``'b'``, ``'B'``, ``'h'``, ``'H'``, ``'i'``, ``'I'``, ``'l'``, "
+"``'L'``, ``'q'``, ``'Q'``), εάν το ``x`` είναι εκτός του έγκυρου εύρους για "
+"αυτήν τη μορφή, γίνεται raise μια εξαίρεση :exc:`struct.error`."
 
 #: library/struct.rst:359
 msgid ""
 "Previously, some of the integer formats wrapped out-of-range values and "
 "raised :exc:`DeprecationWarning` instead of :exc:`struct.error`."
 msgstr ""
+"Προηγουμένως, ορισμένες από τις μορφές ακεραίων περιτύλιγαν τιμές εκτός "
+"εύρους και εμφάνιζαν :exc:`DeprecationWarning` αντί για :exc:`struct.error`."
 
 #: library/struct.rst:365
 msgid ""
@@ -706,10 +883,15 @@ msgid ""
 "used. Either 0 or 1 in the native or standard bool representation will be "
 "packed, and any non-zero value will be ``True`` when unpacking."
 msgstr ""
+"Για το χαρακτήρα μορφής ``'?'``, η τιμή που επιστρέφεται είναι είτε :const:"
+"`True` είτε :const:`False`. Κατά την συσκευασία, χρησιμοποιείται η λογική "
+"τιμή του αντικειμένου-ορίσματος. Είτε 0 είτε 1 στη native ή τυπική "
+"αναπαράσταση του bool θα συσκευαστούν, και οποιαδήποτε μη μηδενική τιμή θα "
+"είναι ``True`` κατά την αποσυσκευασία."
 
 #: library/struct.rst:375
 msgid "Examples"
-msgstr ""
+msgstr "Παραδείγματα"
 
 #: library/struct.rst:378
 msgid ""
@@ -717,12 +899,18 @@ msgid ""
 "of any prefix character) may not match what the reader's machine produces as "
 "that depends on the platform and compiler."
 msgstr ""
+"Τα παραδείγματα native σειράς byte (που καθορίζονται από το πρόθεμα μορφής "
+"``'@'`` ή την απουσία οποιουδήποτε χαρακτήρα προθέματος) ενδέχεται να μην "
+"αντιστοιχούν σε αυτά που παράγει η μηχανή του αναγνώστη, καθώς αυτό "
+"εξαρτάται από την πλατφόρμα και τον μεταγλωττιστή. "
 
 #: library/struct.rst:383
 msgid ""
 "Pack and unpack integers of three different sizes, using big endian "
 "ordering::"
 msgstr ""
+"Συσκευασία και αποσυσκευασία ακεραίων τριών διαφορετικών μεγεθών, "
+"χρησιμοποιώντας διάταξη big endian::"
 
 #: library/struct.rst:386
 msgid ""
@@ -734,10 +922,19 @@ msgid ""
 ">>> calcsize('>bhl')\n"
 "7"
 msgstr ""
+">>> from struct import *\n"
+">>> pack(\">bhl\", 1, 2, 3)\n"
+"b'\\x01\\x00\\x02\\x00\\x00\\x00\\x03'\n"
+">>> unpack('>bhl', b'\\x01\\x00\\x02\\x00\\x00\\x00\\x03')\n"
+"(1, 2, 3)\n"
+">>> calcsize('>bhl')\n"
+"7"
 
 #: library/struct.rst:394
 msgid "Attempt to pack an integer which is too large for the defined field::"
 msgstr ""
+"Προσπάθεια συσκευασίας ενός ακεραίου που είναι πολύ μεγάλος για το "
+"καθορισμένο πεδίο::"
 
 #: library/struct.rst:396
 msgid ""
@@ -746,11 +943,17 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "struct.error: 'h' format requires -32768 <= number <= 32767"
 msgstr ""
+">>> pack(\">h\", 99999)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"struct.error: 'h' format requires -32768 <= number <= 32767"
 
 #: library/struct.rst:401
 msgid ""
 "Demonstrate the difference between ``'s'`` and ``'c'`` format characters::"
 msgstr ""
+"Επιδεικνύει την διαφορά μεταξύ των χαρακτήρων μορφοποίησης ``'s'`` και "
+"``'c'``::"
 
 #: library/struct.rst:404
 msgid ""
@@ -759,12 +962,18 @@ msgid ""
 ">>> pack(\"@3s\", b'123')\n"
 "b'123'"
 msgstr ""
+">>> pack(\"@ccc\", b'1', b'2', b'3')\n"
+"b'123'\n"
+">>> pack(\"@3s\", b'123')\n"
+"b'123'"
 
 #: library/struct.rst:409
 msgid ""
 "Unpacked fields can be named by assigning them to variables or by wrapping "
 "the result in a named tuple::"
 msgstr ""
+"Τα αποσυσκευασμένα πεδία μπορούν να ονομαστούν είτε αναθέτοντάς τα σε "
+"μεταβλητές είτε περιτυλίγοντάς τα σε μια ονομασμένη πλειάδα::"
 
 #: library/struct.rst:412
 msgid ""
@@ -776,6 +985,13 @@ msgid ""
 ">>> Student._make(unpack('<10sHHb', record))\n"
 "Student(name=b'raymond   ', serialnum=4658, school=264, gradelevel=8)"
 msgstr ""
+">>> record = b'raymond   \\x32\\x12\\x08\\x01\\x08'\n"
+">>> name, serialnum, school, gradelevel = unpack('<10sHHb', record)\n"
+"\n"
+">>> from collections import namedtuple\n"
+">>> Student = namedtuple('Student', 'name serialnum school gradelevel')\n"
+">>> Student._make(unpack('<10sHHb', record))\n"
+"Student(name=b'raymond   ', serialnum=4658, school=264, gradelevel=8)"
 
 #: library/struct.rst:420
 msgid ""
@@ -786,6 +1002,14 @@ msgid ""
 "integer on a four-byte boundary. In this example, the output was produced on "
 "a little endian machine::"
 msgstr ""
+"Η σειρά των χαρακτήρων μορφοποίησης μπορεί να επηρεάσει το μέγεθος σε "
+"κατάσταση native λειτουργίας, καθώς το συμπλήρωμα είναι έμμεσο. Σε τυπική "
+"λειτουργία, ο χρήστης είναι υπεύθυνος για την εισαγωγή οποιασδήποτε "
+"επιθυμητού συμπληρώματος. Σημειώστε στην πρώτη κλήση ``pack`` παρακάτω ότι "
+"προστέθηκαν τρία μηδενικά (NUL) bytes μετά την συσκευασμένη τιμή ``'#'`` για "
+"να ευθυγραμμιστεί ο επόμενος ακέραιος σε όριο τεσσάρων bytes. Σε αυτό το "
+"παράδειγμα, η έξοδος παράχθηκε σε έναν υπολογιστή με little endian "
+"αρχιτεκτονική::"
 
 #: library/struct.rst:428
 msgid ""
@@ -798,38 +1022,51 @@ msgid ""
 ">>> calcsize('@ic')\n"
 "5"
 msgstr ""
+">>> pack('@ci', b'#', 0x12131415)\n"
+"b'#\\x00\\x00\\x00\\x15\\x14\\x13\\x12'\n"
+">>> pack('@ic', 0x12131415, b'#')\n"
+"b'\\x15\\x14\\x13\\x12#'\n"
+">>> calcsize('@ci')\n"
+"8\n"
+">>> calcsize('@ic')\n"
+"5"
 
 #: library/struct.rst:437
 msgid ""
 "The following format ``'llh0l'`` results in two pad bytes being added at the "
 "end, assuming the platform's longs are aligned on 4-byte boundaries::"
 msgstr ""
+"Η ακόλουθη μορφή ``'llh0l'`` έχει ως αποτέλεσμα την προσθήκη δύο bytes "
+"συμπλήρωσης στο τέλος, υποθέτοντας ότι οι μακροί ακέραιοι (longs) της "
+"πλατφόρμας ευθυγραμμίζονται σε όρια 4-byte::"
 
 #: library/struct.rst:440
 msgid ""
 ">>> pack('@llh0l', 1, 2, 3)\n"
 "b'\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x02\\x00\\x03\\x00\\x00'"
 msgstr ""
+">>> pack('@llh0l', 1, 2, 3)\n"
+"b'\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x02\\x00\\x03\\x00\\x00'"
 
 #: library/struct.rst:446
 msgid "Module :mod:`array`"
-msgstr ""
+msgstr "Module :mod:`array`"
 
 #: library/struct.rst:447
 msgid "Packed binary storage of homogeneous data."
-msgstr ""
+msgstr "Πακεταρισμένη δυαδική αποθήκευση ομοιογενών δεδομένων."
 
 #: library/struct.rst:449
 msgid "Module :mod:`json`"
-msgstr ""
+msgstr "Module :mod:`json`"
 
 #: library/struct.rst:450
 msgid "JSON encoder and decoder."
-msgstr ""
+msgstr "Κωδικοποιητής και αποκωδικοποιητής JSON."
 
 #: library/struct.rst:452
 msgid "Module :mod:`pickle`"
-msgstr ""
+msgstr "Module :mod:`pickle`"
 
 #: library/struct.rst:453
 msgid "Python object serialization."
@@ -837,7 +1074,7 @@ msgstr ""
 
 #: library/struct.rst:459
 msgid "Applications"
-msgstr ""
+msgstr "Εφαρμογές"
 
 #: library/struct.rst:461
 msgid ""
@@ -848,10 +1085,17 @@ msgid ""
 "layout (:ref:`standard formats<struct-standard-formats>`).  Generally "
 "speaking, the format strings constructed for these two domains are distinct."
 msgstr ""
+"Υπάρχουν δύο κύριες εφαρμογές για τη χρήση του :mod:`struct`: η ανταλλαγή "
+"δεδομένων μεταξύ Python και κώδικα C μέσα σε μια εφαρμογή ή με μια άλλη "
+"εφαρμογή που έχει μεταγλωττιστεί με τον ίδιο μεταγλωττιστή (:ref:`native "
+"formats<struct-native-formats>`), και η ανταλλαγή δεδομένων μεταξύ εφαρμογών "
+"που χρησιμοποιούν μια συμφωνημένη διάταξη δεδομένων (:ref:`standard "
+"formats<struct-standard-formats>`). Γενικά, οι συμβολοσειρές μορφής που "
+"χρησιμοποιούνται σε αυτούς τους δύο τομείς είναι διαφορετικές."
 
 #: library/struct.rst:472
 msgid "Native Formats"
-msgstr ""
+msgstr "Native Μορφές"
 
 #: library/struct.rst:474
 msgid ""
@@ -863,11 +1107,21 @@ msgid ""
 "format string to round up to the correct byte boundary for proper alignment "
 "of consecutive chunks of data."
 msgstr ""
+"Όταν κατασκευάζετε συμβολοσειρές μορφοποίησης που μιμούνται native "
+"διατάξεις, ο μεταγλωττιστής και η αρχιτεκτονική του μηχανήματος καθορίζουν "
+"τη σειρά των byte και τη συμπλήρωση. Σε τέτοιες περιπτώσεις, ο χαρακτήρας "
+"μορφής ``@`` θα πρέπει να χρησιμοποιείται για να καθορίζει την native σειρά "
+"byte και τα μεγέθη δεδομένων. Τα εσωτερικά byte συμπλήρωσης εισάγονται "
+"συνήθως αυτόματα. Είναι πιθανό να χρειαστεί ένας κωδικός μορφοποίησης με "
+"επανάληψη μηδέν στο τέλος μιας συμβολοσειράς μορφοποίησης για να "
+"ευθυγραμμιστεί σωστά με τα όρια byte των διαδοχικών τμημάτων δεδομένων. "
 
 #: library/struct.rst:482
 msgid ""
 "Consider these two simple examples (on a 64-bit, little-endian machine)::"
 msgstr ""
+"Εξετάστε αυτά τα δύο απλά παραδείγματα (σε έναν 64-bit, little-endian "
+"υπολογιστή)::"
 
 #: library/struct.rst:485
 msgid ""
@@ -876,6 +1130,10 @@ msgid ""
 ">>> calcsize('@llh')\n"
 "18"
 msgstr ""
+">>> calcsize('@lhl')\n"
+"24\n"
+">>> calcsize('@llh')\n"
+"18"
 
 #: library/struct.rst:490
 msgid ""
@@ -883,28 +1141,39 @@ msgid ""
 "string without the use of extra padding.  A zero-repeat format code solves "
 "that problem::"
 msgstr ""
+"Τα δεδομένα δεν συμπληρώνονται σε όριο 8 byte στο τέλος της δεύτερης "
+"συμβολοσειράς μορφοποίησης χωρίς τη χρήση επιπλέον συμπλήρωσης. Ένας κωδικός "
+"μορφοποίησης με επανάληψη μηδέν λύνει αυτό το πρόβλημα::"
 
 #: library/struct.rst:494
 msgid ""
 ">>> calcsize('@llh0l')\n"
 "24"
 msgstr ""
+">>> calcsize('@llh0l')\n"
+"24"
 
 #: library/struct.rst:497
 msgid ""
 "The ``'x'`` format code can be used to specify the repeat, but for native "
 "formats it is better to use a zero-repeat format like ``'0l'``."
 msgstr ""
+"Ο κωδικός μορφοποίησης ``'x'`` μπορεί να χρησιμοποιηθεί για να καθορίσει την "
+"επανάληψη, αλλά για native μορφές είναι προτιμότερο να χρησιμοποιείται ένας "
+"κωδικός μορφοποίησης με επανάληψη μηδέν, όπως ``'0l'``."
 
 #: library/struct.rst:500
 msgid ""
 "By default, native byte ordering and alignment is used, but it is better to "
 "be explicit and use the ``'@'`` prefix character."
 msgstr ""
+"Από προεπιλογή, χρησιμοποιείται η native σειρά byte και στοίχιση, αλλά είναι "
+"καλύτερο να είμαστε σαφείς και να χρησιμοποιούμε τον χαρακτήρα πρόθεμα "
+"``'@'``."
 
 #: library/struct.rst:507
 msgid "Standard Formats"
-msgstr ""
+msgstr "Τυπικές μορφές"
 
 #: library/struct.rst:509
 msgid ""
@@ -919,6 +1188,18 @@ msgid ""
 "must explicitly add ``'x'`` pad bytes where needed.  Revisiting the examples "
 "from the previous section, we have::"
 msgstr ""
+"Όταν ανταλλάσετε δεδομένα πέρα από τη διεργασία σας, όπως σε δικτύωση ή "
+"αποθήκευση, να είστε ακριβείς. Καθορίστε την ακριβή σειρά των byte, το "
+"μέγεθος και την ευθυγράμμιση. Μην υποθέτετε ότι ταιριάζουν με τη φυσική "
+"σειρά μιας συγκεκριμένης μηχανής. Για παράδειγμα, η σειρά byte του δικτύου "
+"είναι big-endian, ενώ πολλοί δημοφιλείς επεξεργαστές είναι little-endian. "
+"Ορίζοντας αυτό ρητά, ο χρήστης δεν χρειάζεται να ενδιαφέρεται για τις "
+"λεπτομέρειες της πλατφόρμας στην οποία εκτελείται ο κώδικας. Ο πρώτος "
+"χαρακτήρας πρέπει τυπικά να είναι ``<`` ή ``>`` (ή ``!``). Η ευθύνη για την "
+"προσθήκη συμπληρωματικών byte ανήκει στον προγραμματιστή. Ο χαρακτήρας "
+"μορφής με μηδενική επανάληψη δεν θα λειτουργήσει. Αντ' αυτού, ο χρήστης "
+"πρέπει να προσθέτει ρητά byte ``'x'`` όπου απαιτείται. Επανεξετάζοντας τα "
+"παραδείγματα από την προηγούμενη ενότητα, έχουμε::"
 
 #: library/struct.rst:521
 msgid ""
@@ -937,6 +1218,20 @@ msgid ""
 ">>> pack('@llh0l', 1, 2, 3) == pack('<qqh6x', 1, 2, 3)\n"
 "True"
 msgstr ""
+">>> calcsize('<qh6xq')\n"
+"24\n"
+">>> pack('<qh6xq', 1, 2, 3) == pack('@lhl', 1, 2, 3)\n"
+"True\n"
+">>> calcsize('@llh')\n"
+"18\n"
+">>> pack('@llh', 1, 2, 3) == pack('<qqh', 1, 2, 3)\n"
+"True\n"
+">>> calcsize('<qqh6x')\n"
+"24\n"
+">>> calcsize('@llh0l')\n"
+"24\n"
+">>> pack('@llh0l', 1, 2, 3) == pack('<qqh6x', 1, 2, 3)\n"
+"True"
 
 #: library/struct.rst:536
 msgid ""
@@ -944,6 +1239,9 @@ msgid ""
 "when executed on different machines.  For example, the examples below were "
 "executed on a 32-bit machine::"
 msgstr ""
+"Τα παραπάνω αποτελέσματα (εκτελεσμένα σε 64-bit μηχανή) δεν είναι εγγυημένο "
+"ότι θα ταιριάζουν όταν εκτελούνται σε διαφορετικές μηχανές. Για παράδειγμα, "
+"τα παρακάτω παραδείγματα εκτελέστηκαν σε 32-bit μηχανή::"
 
 #: library/struct.rst:540
 msgid ""
@@ -954,14 +1252,20 @@ msgid ""
 ">>> pack('@llh0l', 1, 2, 3) == pack('<qqh6x', 1, 2, 3)\n"
 "False"
 msgstr ""
+">>> calcsize('<qqh6x')\n"
+"24\n"
+">>> calcsize('@llh0l')\n"
+"12\n"
+">>> pack('@llh0l', 1, 2, 3) == pack('<qqh6x', 1, 2, 3)\n"
+"False"
 
 #: library/struct.rst:551
 msgid "Classes"
-msgstr ""
+msgstr "Κλάσεις"
 
 #: library/struct.rst:553
 msgid "The :mod:`struct` module also defines the following type:"
-msgstr ""
+msgstr "Το module :mod:`struct` ορίζει επίσης τον ακόλουθο τύπο:"
 
 #: library/struct.rst:558
 msgid ""
@@ -970,6 +1274,11 @@ msgid ""
 "its methods is more efficient than calling module-level functions with the "
 "same format since the format string is only compiled once."
 msgstr ""
+"Επιστρέφει ένα νέο αντικείμενο Struct που γράφει και διαβάζει δυαδικά "
+"δεδομένα σύμφωνα με τη συμβολοσειρά μορφοποίησης *format*. Η δημιουργία ενός "
+"αντικειμένου ``Struct`` μια φορά και η κλήση των μεθόδων του είναι πιο "
+"αποδοτική από την κλήση συναρτήσεων σε επίπεδο module με την ίδια μορφή, "
+"καθώς η συμβολοσειρά μορφοποίησης μεταγλωττίζεται μόνο μία φορά."
 
 #: library/struct.rst:565
 msgid ""
@@ -977,26 +1286,39 @@ msgid ""
 "level functions are cached, so programs that use only a few format strings "
 "needn't worry about reusing a single :class:`Struct` instance."
 msgstr ""
+"Οι μεταγλωττισμένες εκδόσεις των πιο πρόσφατων συμβολοσειρών μορφοποίησης "
+"που περνούν στις συναρτήσεις του module αποθηκεύονται προσωρινά, επομένως τα "
+"προγράμματα που χρησιμοποιούν μόνο λίγες συμβολοσειρές μορφοποίησης δεν "
+"χρειάζεται να ανησυχούν για την επαναχρησιμοποίηση μιας μεμονωμένης "
+"περίπτωσης της κλάσης :class:`Struct`."
 
 #: library/struct.rst:570
 msgid "Compiled Struct objects support the following methods and attributes:"
 msgstr ""
+"Οι μεταγλωττισμένες αντικείμενα Struct υποστηρίζουν τις ακόλουθες μεθόδους "
+"και ιδιότητες:"
 
 #: library/struct.rst:574
 msgid ""
 "Identical to the :func:`pack` function, using the compiled format. "
 "(``len(result)`` will equal :attr:`size`.)"
 msgstr ""
+"Ταυτόσημο με τη συνάρτηση :func:`pack`, χρησιμοποιώντας τη μεταγλωττισμένη "
+"μορφή. (``len(result)`` θα είναι ίσο με :attr:`size`.)"
 
 #: library/struct.rst:580
 msgid "Identical to the :func:`pack_into` function, using the compiled format."
 msgstr ""
+"Ταυτόσημο με τη συνάρτηση :func:`pack_into`, χρησιμοποιώντας τη "
+"μεταγλωττισμένη μορφή."
 
 #: library/struct.rst:585
 msgid ""
 "Identical to the :func:`unpack` function, using the compiled format. The "
 "buffer's size in bytes must equal :attr:`size`."
 msgstr ""
+"Ταυτόσημο με τη συνάρτηση :func:`unpack`, χρησιμοποιώντας τη μεταγλωττισμένη "
+"μορφή. Το μέγεθος του buffer σε bytes πρέπει να είναι ίσο με :attr:`size`."
 
 #: library/struct.rst:591
 msgid ""
@@ -1004,71 +1326,83 @@ msgid ""
 "The buffer's size in bytes, starting at position *offset*, must be at least :"
 "attr:`size`."
 msgstr ""
+"Ταυτόσημο με τη συνάρτηση :func:`unpack_from`, χρησιμοποιώντας τη "
+"μεταγλωττισμένη μορφή. Το μέγεθος του buffer σε bytes, ξεκινώντας από τη "
+"θέση *offset*, πρέπει να είναι τουλάχιστον :attr:`size`."
 
 #: library/struct.rst:598
 msgid ""
 "Identical to the :func:`iter_unpack` function, using the compiled format. "
 "The buffer's size in bytes must be a multiple of :attr:`size`."
 msgstr ""
+"Ταυτόσημο με τη συνάρτηση :func:`iter_unpack`, χρησιμοποιώντας τη "
+"μεταγλωττισμένη μορφή. Το μέγεθος του buffer σε bytes πρέπει να είναι "
+"πολλαπλάσιο του :attr:`size`."
 
 #: library/struct.rst:605
 msgid "The format string used to construct this Struct object."
 msgstr ""
+"Η συμβολοσειρά μορφής που χρησιμοποιήθηκε για τη δημιουργία αυτού του "
+"αντικειμένου Struct."
 
 #: library/struct.rst:607
 msgid "The format string type is now :class:`str` instead of :class:`bytes`."
 msgstr ""
+"Ο τύπος της συμβολοσειράς μορφής είναι πλέον :class:`str` αντί για :class:"
+"`bytes`."
 
 #: library/struct.rst:612
 msgid ""
 "The calculated size of the struct (and hence of the bytes object produced by "
 "the :meth:`pack` method) corresponding to :attr:`format`."
 msgstr ""
+"Το υπολογισμένο μέγεθος της δομής (και κατά συνέπεια του αντικειμένου bytes "
+"που παράγεται από τη μέθοδο :meth:`pack`) που αντιστοιχεί στη :attr:`format`."
 
 #: library/struct.rst:9
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #: library/struct.rst:9
 msgid "structures"
-msgstr ""
+msgstr "δομές"
 
 #: library/struct.rst:9
 msgid "packing"
-msgstr ""
+msgstr "πακετάρισμα"
 
 #: library/struct.rst:9
 msgid "binary"
-msgstr ""
+msgstr "δυαδικό"
 
 #: library/struct.rst:9
 msgid "data"
-msgstr ""
+msgstr "δεδομένα"
 
 #: library/struct.rst:132
 msgid "@ (at)"
-msgstr ""
+msgstr "@ (παπάκι)"
 
 #: library/struct.rst:276 library/struct.rst:363
 msgid "in struct format strings"
-msgstr ""
+msgstr "στις συμβολοσειρές μορφοποίησης struct"
 
 #: library/struct.rst:132
 msgid "= (equals)"
-msgstr ""
+msgstr "= (ίσο)"
 
 #: library/struct.rst:132
 msgid "< (less)"
-msgstr ""
+msgstr "< (μικρότερο)"
 
 #: library/struct.rst:132
 msgid "> (greater)"
-msgstr ""
+msgstr "> (μεγαλύτερο)"
 
 #: library/struct.rst:132
 msgid "! (exclamation)"
-msgstr ""
+msgstr "! (θαυμαστικό)"
 
 #: library/struct.rst:363
 msgid "? (question mark)"
-msgstr ""
+msgstr "? (ερωτηματικό)"
