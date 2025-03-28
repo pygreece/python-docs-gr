@@ -1167,6 +1167,11 @@ msgid ""
 "asynchronous iterator will have reached the end of the set of values to be "
 "yielded."
 msgstr ""
+"Η κλήση της μεθόδου :meth:`aiterator.__anext__ <object."
+"__anext__>` του ασύγχρουνου iterator θα επσιστρέψει ένα :term:`awaitable` το οποίο όταν "
+"αναμένεται θα εκτελεστεί έως ότου δώσει μια τιμή χρησιμοποιώντας την έκφραση :keyword:`yield`.  Όταν η συνάρτηση "
+"εκτελεί μια κενή εντολή :keyword:`return` ή πέφτει στο τέλος, γίνεται raise μια εξαίρεση "
+":exc:`StopAsyncIteration` και ο ασύγχρονος iterator θα έχει φτάσει στο τέλος του συνόλου τιμών που θα αποδοθούν."
 
 #: reference/datamodel.rst:797
 msgid "Built-in functions"
@@ -1179,31 +1184,39 @@ msgid ""
 "standard built-in module). The number and type of the arguments are "
 "determined by the C function. Special read-only attributes:"
 msgstr ""
+"Ένα αντικείμενο ενσωματωμένης συνάρτησης είναι ένας wrapper γύρω από μια συνάρτηση C.  Παραδείγματα ενσωματωμένων "
+"συναρτήσεων είναι οι :func:`len` και :func:`math.sin` (:mod:`math` είναι ένα ενσωματωμένο module). Ο αριθμός και ο τύπος των ορισμάτων "
+"καθορίζονται από τη συνάρτηση C. Ειδικά χαρακτηριστικά μόνο για ανάγνωση."
 
 #: reference/datamodel.rst:809
 msgid ""
 ":attr:`!__doc__` is the function's documentation string, or ``None`` if "
 "unavailable. See :attr:`function.__doc__`."
 msgstr ""
+"Η :attr:`!__doc__` είναι η συμβολοσειρά τεκμηρίωσης της συνάρτησης, ή ``None`` εάν δεν είναι διαθέσιμη "
+". Δείτε :attr:`function.__doc__`."
 
 #: reference/datamodel.rst:811
 msgid ""
 ":attr:`!__name__` is the function's name. See :attr:`function.__name__`."
 msgstr ""
+"Η :attr:`!__name__` είναι το όνομα της συνάρτησης. Δείτε :attr:`function.__name__`."
 
 #: reference/datamodel.rst:812
 msgid ":attr:`!__self__` is set to ``None`` (but see the next item)."
-msgstr ""
+msgstr "Η :attr:`!__self__` έχει οριστεί σε ``None`` (αλλά δείτε το επόμενο στοιχείο)."
 
 #: reference/datamodel.rst:813
 msgid ""
 ":attr:`!__module__` is the name of the module the function was defined in or "
 "``None`` if unavailable. See :attr:`function.__module__`."
 msgstr ""
+"Η :attr:`!__module__` είναι το όνομα του module στην οποία ορίστηκε η συνάρτηση "
+"ή ``None`` εάν δεν είναι διαθέσιμη. Δείτε :attr:`function.__module__`."
 
 #: reference/datamodel.rst:821
 msgid "Built-in methods"
-msgstr ""
+msgstr "Ενσωματωμένες μεθόδους"
 
 #: reference/datamodel.rst:828
 msgid ""
@@ -1215,10 +1228,16 @@ msgid ""
 "the same semantics as it does with :attr:`other instance methods <method."
 "__self__>`.)"
 msgstr ""
+"Αυτή είναι πραγματικά μια διαφορετική μεταμφίεση μιας ενσωματωμένης συνάρτησης, αυτή τη φορά "
+"που περιέχει ένα αντικείμενο που μεταβιβάστηκε στη συνάρτηση C ως ένα έμμεσο επιπλέον όρισμα. Ένα "
+"παράδειγμα ενσωματωμένης μεθόδου είναι η ``alist.append()``, υποθέτοντας ότι το *alist* είναι αντικείμενο λίστας. "
+"Σε αυτήν την περίπτωση, το ειδικό χαρακτηριστικό μόνο για ανάγνωση :attr:`!__self__` ορίζεται στο αντικείμενο που συμβολίζεται "
+"με *alist*. (Το χαρακτηριστικό έχει την ίδια σημασιολογία με το :attr:`other instance methods <method."
+"__self__>`.)"
 
 #: reference/datamodel.rst:837
 msgid "Classes"
-msgstr ""
+msgstr "Κλάσεις"
 
 #: reference/datamodel.rst:839
 msgid ""
@@ -1228,20 +1247,26 @@ msgid ""
 "meth:`!__new__` and, in the typical case, to :meth:`~object.__init__` to "
 "initialize the new instance."
 msgstr ""
+"Οι κλάσεις μπορούν να κληθούν.  Αυτά τα αντικείμενα λειτουργούν κανονικά ως εργοστάσια για νέα στιγμιότυπα του "
+"εαυτού τους, αλλά είναι δυνατές παραλλαγές για τύπους κλάσεων που παρακάμπτουν το :meth:`~object.__new__`.  Τα ορίσματα "
+"της κλήσης μεταβιβάζονται στην :meth:`!__new__` και, στην τυπική περίπτωση, στη :meth:`~object.__init__` για να αρχικοποιηθεί "
+"το νέο στιγμιότυπο."
 
 #: reference/datamodel.rst:847
 msgid "Class Instances"
-msgstr ""
+msgstr "Στιγμιότυπα Κλάσης"
 
 #: reference/datamodel.rst:849
 msgid ""
 "Instances of arbitrary classes can be made callable by defining a :meth:"
 "`~object.__call__` method in their class."
 msgstr ""
+"Τα στιγμιότυπα αυθαίρετων κλάσεων μπορούν να γίνουν καλέσιμες ορίζοντας μια μέθοδο "
+":meth:`~object.__call__ στην κλάση τους."
 
 #: reference/datamodel.rst:854
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 #: reference/datamodel.rst:860
 msgid ""
@@ -1257,16 +1282,26 @@ msgid ""
 "initialize the module (since it isn't needed once the initialization is "
 "done)."
 msgstr ""
+"Τα modules είναι μια βασική οργανωτική μονάδα κώδικα Python, και δημιουργούνται από το :ref:`import system <importsystem>` "
+"όπως καλείται είτε από τη δήλωση :keyword:`import` είτε με κλήση συναρτήσεων όπως :func:`importlib."
+"import_module` και το ενσωματωμένο :func:`__import__`.  Ένα αντικείμενο module έχει έναν χώρο ονομάτων "
+"που υλοποιείται από ένα αντικείμενο :class:`dictionary <dict>` (αυτό είναι το λεξικό που αναφέρεται από τη "
+"συνάρτηση :attr:`~function.__globals__` των συναρτήσεων που ορίζονται στο module).  Οι αναφορές χαρακτηριστικών μεταφράζονται "
+"σε αναζητήσεις σε αυτό το λεξικό, π.χ., το ``m.x`` ισοδυναμεί με ``m."
+"__dict__[\"x\"]``. Ένα αντικείμενο module δεν περιέχει το αντικείμενο κώδικα που χρησιμοποιείται για την προετοιμασία του module "
+"(καθώς δεν χρειάζεται μόλις ολοκληρωθεί η προετοιμασία)."
 
 #: reference/datamodel.rst:873
 msgid ""
 "Attribute assignment updates the module's namespace dictionary, e.g., ``m.x "
 "= 1`` is equivalent to ``m.__dict__[\"x\"] = 1``."
 msgstr ""
+"Η εκχώρηση χαρακτηριστικών ενημερώνει το λεξικό χώρου ονομάτων του module, π.χ., ``m.x "
+"= 1`` ισοδυναμεί με ``m.__dict__[\"x\"] = 1``."
 
 #: reference/datamodel.rst:883
 msgid "Predefined (writable) attributes:"
-msgstr ""
+msgstr "Προκαθορισμένα (εγγράψιμα) χαρακτηριστικά:"
 
 #: reference/datamodel.rst:886
 msgid ":attr:`__name__`"
@@ -1296,10 +1331,14 @@ msgid ""
 "interpreter.  For extension modules loaded dynamically from a shared "
 "library, it's the pathname of the shared library file."
 msgstr ""
+"Το όνομα διαδρομής του αρχείου από το οποίο φορτώθηκε το module, εάν φορτώθηκε από ένα αρχείο. "
+"Το χαρακτηριστικό :attr:`__file__` ενδέχεται να λείπει για ορισμένους τύπους modules, όπως modules "
+"C που συνδέονται στατικά με τον διερμνέα.  Για modules επέκτασης που φορτώνονται δυναμικά από μια κοινόχρηστη "
+"βιβλιοθήκη, είναι το όνομα αρχείου διαδρομής της κοινόχρηστης βιβλιοθήκης."
 
 #: reference/datamodel.rst:997
 msgid ":attr:`__annotations__`"
-msgstr ""
+msgstr ":attr:`__annotations__`"
 
 #: reference/datamodel.rst:902
 msgid ""
@@ -1307,12 +1346,17 @@ msgid ""
 "collected during module body execution.  For best practices on working with :"
 "attr:`__annotations__`, please see :ref:`annotations-howto`."
 msgstr ""
+"Ένα λεξικό που περιέχει :term:`variable annotations <variable annotation>` "
+"που συλλέγεται κατά την εκτέλεση του σώματος του module.  Για βέλτιστες πρκατικές σχετικά με την εργασία με "
+":attr:`__annotations__`, ανατρέξτε στο :ref:`annotations-howto`."
 
 #: reference/datamodel.rst:909
 msgid ""
 "Special read-only attribute: :attr:`~object.__dict__` is the module's "
 "namespace as a dictionary object."
 msgstr ""
+"Ειδικό χαρακτηριστικό μόνο για ανάγνωση: :attr:`~object.__dict__` είναι ο χώρος ονομάτων του "
+"module ως αντικείμενο λεξικού."
 
 #: reference/datamodel.rst:914
 msgid ""
@@ -1321,10 +1365,14 @@ msgid ""
 "still has live references.  To avoid this, copy the dictionary or keep the "
 "module around while using its dictionary directly."
 msgstr ""
+"Λόγω του τρόπου με τον οποίο η CPython διαγράφει τα λεξικά των modules το λεξικό του module "
+"θα διαγραφεί όταν το module πέσει εκτός πεδίου εφαρμογής, ακόμα κι αν το λεξικό εξακολουθεί να έχει "
+"ζωντανές αναφορές.  Για να αποφύγετε αυτό, αντιγράψτε το λεξικό ή κρατήστε το module ενώ χρησιμοποιείται "
+"απευείας το λεξικό της."
 
 #: reference/datamodel.rst:921
 msgid "Custom classes"
-msgstr ""
+msgstr "Προσαρμοσμένες κλάσεις"
 
 #: reference/datamodel.rst:923
 msgid ""
@@ -1341,6 +1389,15 @@ msgid ""
 "found in the documentation accompanying the 2.3 release at https://www."
 "python.org/download/releases/2.3/mro/."
 msgstr ""
+"Οι τύποι προσαρμοσμένων κλάσεων δημιουργούνται συνήθως από ορισμόυς κλάσεων (βλ. ενότητα :"
+"ref:`class`).  Μια κλάση έχει έναν χώρο ονομάτων που υλοποιείται από ένα αντικείμενο λεξικού. "
+"Οι αναφορές χαρακτηριστικών κλάσης μεταφράζονται σε αναζητήσεις σε αυτό το λεξικό, π.χ., το "
+"``C.x`` μεταφράζεται σε ``C.__dict__[\"x\"]`` (αν και άλλα μέσα για τα οποία επιτρέπεται ο αριθμός των θέσεων υπάρχουν). "
+"Όταν το όνομα του χαρακτηριστικού δεν βρίσκεται εκεί, η αναζήτηση χαρακτηριστικών συνεχίζεται στις βασικές κλάσεις. Αυτή η "
+"αναζήτηση των βασικών κλάσεων χρησιμοποιεί τη σειρά ανάλυσης της μεθόδου C3 η οποία συμπεριφέρεται σωστά ακόμη και με την "
+"παρουσία δομών κληρονομικότητας «διαμάντι» όπου υπάρχουν πολλαπλές διαδρομές κληρονομικότητας που οδηγούν πίσω σε έναν "
+"κοινό πρόγονο. Πρόσθετε λεπτομέρειες για το C3 MRO που χρησιμοποιείται από την Python μπορείτε να βρείτε στην τεκμηρίωση που συνοδεύει "
+"την έκδοση 2.3 στη διεύθυνση https://www.python.org/download/releases/2.3/mro/."
 
 #: reference/datamodel.rst:947
 msgid ""
@@ -1352,60 +1409,68 @@ msgid ""
 "which attributes retrieved from a class may differ from those actually "
 "contained in its :attr:`~object.__dict__`."
 msgstr ""
+"Όταν μια αναφορά χαρακτηριστικού κλάσης (για την κλάση :class:`!C`, ας πούμε) θα έδινε ένα αντικείμενο "
+"μεθόδου κλάσης, μετατρέπεται σε ένα αντικείμενο μεθόδου παρουσίας του οποίου το χαρακτηριστικό "
+":attr:`~method.__self__` είναι :class:`!C`. Όταν θα έδινε ένα αντικείμενο :class:`staticmethod`, μετατρέπεται στο αντικείμενο "
+"που είναι wrapped από το αντικείμενο στατικής μεθόδου. Δείτε την ενότητα :ref:`descriptors` για έναν άλλο τρόπο με το οποίο "
+"τα χαρακτηριστικά που ανακτώνται από μια κλάση μπορεί να διαφέρουν από αυτά που πραγματικά περιέχονται στο :attr:`~object.__dict__` της."
 
 #: reference/datamodel.rst:958
 msgid ""
 "Class attribute assignments update the class's dictionary, never the "
 "dictionary of a base class."
 msgstr ""
+"Οι αναθέσεις χαρακτηριστικών κλάσης ενημερώνουν το λεξικό της κλάσης, ποτέ το λεξικό μιας βασικής κλάσης."
 
 #: reference/datamodel.rst:963
 msgid ""
 "A class object can be called (see above) to yield a class instance (see "
 "below)."
 msgstr ""
+"Ένα αντικείμενο κλάσης μπορεί να κληθεί (δείτε παραπάνω) για να δώσει ένα στιγμιότυπο κλάσης (δείτε παρακάτω)."
 
 #: reference/datamodel.rst:974
 msgid "Special attributes:"
-msgstr ""
+msgstr "Ειδικά χαρακτηριστικά:"
 
 #: reference/datamodel.rst:977
 msgid ":attr:`~definition.__name__`"
-msgstr ""
+msgstr ":attr:`~definition.__name__`"
 
 #: reference/datamodel.rst:977
 msgid "The class name."
-msgstr ""
+msgstr "Το όνομα της κλάσης"
 
 #: reference/datamodel.rst:980
 msgid ":attr:`__module__`"
-msgstr ""
+msgstr ":attr:`__module__`"
 
 #: reference/datamodel.rst:980
 msgid "The name of the module in which the class was defined."
-msgstr ""
+msgstr "Το όνομα του module στην οποία ορίστηκε η κλάση."
 
 #: reference/datamodel.rst:983
 msgid ":attr:`~object.__dict__`"
-msgstr ""
+msgstr ":attr:`~object.__dict__`"
 
 #: reference/datamodel.rst:983
 msgid "The dictionary containing the class's namespace."
-msgstr ""
+msgstr "Το λεξικό που περιέχει τον χώρο ονομάτων της κλάσης."
 
 #: reference/datamodel.rst:987
 msgid ":attr:`~class.__bases__`"
-msgstr ""
+msgstr ":attr:`~class.__bases__`"
 
 #: reference/datamodel.rst:986
 msgid ""
 "A tuple containing the base classes, in the order of their occurrence in the "
 "base class list."
 msgstr ""
+"Μια πλειάδα που περιέχει τις βασικές κλάσεις, με τη σειρά εμφάνισής τους στη λίστα βασικών κλάσεων."
 
 #: reference/datamodel.rst:990
 msgid "The class's documentation string, or ``None`` if undefined."
-msgstr ""
+msgstr "Η συμβολοσειρά τεκμηρίωσης της κλάσης, ή ``None`` εάν δεν έχει οριστεί."
 
 #: reference/datamodel.rst:993
 msgid ""
@@ -1413,20 +1478,25 @@ msgid ""
 "collected during class body execution.  For best practices on working with :"
 "attr:`__annotations__`, please see :ref:`annotations-howto`."
 msgstr ""
+"Ένα λεξικό που περιέχει :term:`variable annotations <variable annotation>` "
+"που συλλέγεται κατά την εκτέλεση του σώματος της κλάσης.  Για βέλτιστες πρακικές σχετικά με την εργασία με "
+":attr:`__annotations__`, ανατρέξτε στο :ref:`annotations-howto`."
 
 #: reference/datamodel.rst:1002
 msgid ":attr:`__type_params__`"
-msgstr ""
+msgstr ":attr:`__type_params__`"
 
 #: reference/datamodel.rst:1000
 msgid ""
 "A tuple containing the :ref:`type parameters <type-params>` of a :ref:"
 "`generic class <generic-classes>`."
 msgstr ""
+"Μια πλειάδα που περιέχει τις παραμέτρους :ref:`type parameters <type-params>` μιας :ref:"
+"`generic class <generic-classes>`."
 
 #: reference/datamodel.rst:1005
 msgid "Class instances"
-msgstr ""
+msgstr "Στιγμιότυπα κλάσης"
 
 #: reference/datamodel.rst:1013
 msgid ""
@@ -1444,6 +1514,16 @@ msgid ""
 "class attribute is found, and the object's class has a :meth:`~object."
 "__getattr__` method, that is called to satisfy the lookup."
 msgstr ""
+"Ένα στιγμιότυπο κλάσης δημιουργείτα καλώντας ένα αντικείμενο κλάσης (δείτε παραπάνω).  Ένα στιγμιότυπο "
+"κλάσης έχει έναν χώρο ονομάτων που υλοποιείται ως λεξικό που είναι το πρώτο μέρος στο οποίο αναζητούνται "
+"οι αναφορές χαρακτηριστικών. Όταν ένα χαρακτηριστικό δεν βρίσκεται εκεί και η κλάση του στιγμιοτύπου έχει ένα "
+"χαρακτηρισιτκό με αυτό το όνομα, η αναζήτηση συνεχίζεται με τα χαρακτηρισιτκά κλάσης.  Εάν βρεθεί ένα χαρακτηριστικό "
+"κλάσης που είναι ένα αντικείμενο συνάρτησης που ορίζεται από το χρήστη, μετατρέπεται σε ένα αντικείμενο μεθόδου στιγμιοτύπου "
+"του οποίου το χαρακτηριστικό :attr:`~method.__self__` είναι το στιγμιότυπο.  Τα αντικείμενα στατικής μεθόδου και μεθόδου κλάσης "
+"μετασχηματίζονται επίσης· δείτε παραπάνω στην ενότητα \"Κλάσεις\".  Δείτε την ενότητα :ref:`descriptors` για έναν άλλο τρόπο με τον οποίο "
+"τα χαρακτηριστικά μιας κλάσης που ανακτώνται μέσω των στιγμιοτύπων της μπορεί να διαφέρουν από τα αντικείμενα που είναι πραγματικά "
+"αποθηκευμένα στο :attr:`~object.__dict__` της κλάσης.  Εάν δεν βρεθεί χαρακτηριστικό κλάσης και η κλάση του αντικειμένου έχει μια μέθοδο "
+":meth:`~object.__getattr__`, αυτή καλείται να ικανοποιήσει την αναζήτηση."
 
 #: reference/datamodel.rst:1029
 msgid ""
@@ -1452,22 +1532,29 @@ msgid ""
 "meth:`~object.__delattr__` method, this is called instead of updating the "
 "instance dictionary directly."
 msgstr ""
+"Οι αναθέσεις χαρακτηριστικών ενημερώνουν το λεξικό της παρουσίας και πότε το λεξικό μιας κλάσης.  Εάν η κλάση "
+"έχει μια μέθοδο :meth:`~object.__setattr__` ή :meth:`~object.__delattr__`, καλείται  αντί  να ενημερώνεται απευθείας το λεξικό του "
+"στιγμιοτύπου."
 
 #: reference/datamodel.rst:1039
 msgid ""
 "Class instances can pretend to be numbers, sequences, or mappings if they "
 "have methods with certain special names.  See section :ref:`specialnames`."
 msgstr ""
+"Τα στιγμιότυπα κλάσεων μπορούν να προσποιηθούν ότι έιναι αριθμοί, ακολουθίες ή αντίστοιχίσεις έαν "
+"έχουν μεθόδους με συγκεκριμένα ειδικά ονόματα.  Δείτε την ενότητα :ref:`specialnames`."
 
 #: reference/datamodel.rst:1046
 msgid ""
 "Special attributes: :attr:`~object.__dict__` is the attribute dictionary; :"
 "attr:`~instance.__class__` is the instance's class."
 msgstr ""
+"Ειδικά χαρακτηριστικά :attr:`~object.__dict__` είναι το λεξικό χαρακτηριστικών· :"
+"attr:`~instance.__class__` είναι η κλάση του στιγμιοτύπου."
 
 #: reference/datamodel.rst:1051
 msgid "I/O objects (also known as file objects)"
-msgstr ""
+msgstr "Αντικείμενα εισόδου/εξόδου (γνωστά και ως αντικείμενα αρχείου)"
 
 #: reference/datamodel.rst:1066
 msgid ""
@@ -1477,6 +1564,10 @@ msgid ""
 "makefile` method of socket objects (and perhaps by other functions or "
 "methods provided by extension modules)."
 msgstr ""
+"Ένα αντικείμενο :term:`file object` αντιπροσωπεύει ένα ανοιχτό αρχείο.  Διάφορες συντομεύσεις "
+"είναι διαθέσιμες για τη δημιουργία αντικειμένων αρχείου: η ενσωματωμένη συνάρτηση :func:`open`, και επίσης "
+":func:`os.popen`, :func:`os.fdopen`, και τη μέθοδο :meth:`~socket.socket.makefile` των αντικειμένων socket (και ίσως από άλλες " 
+"συναρτήσεις ή μεθόδους που παρέχονται από modules επέκτασης)."
 
 #: reference/datamodel.rst:1072
 msgid ""
@@ -1485,10 +1576,13 @@ msgid ""
 "and error streams; they are all open in text mode and therefore follow the "
 "interface defined by the :class:`io.TextIOBase` abstract class."
 msgstr ""
+"Τα αντικείμενα ``sys.stdin``, ``sys.stdout`` και ``sys.stderr`` αρχικοποιούνται για να αρχειοθετούν "
+"αντικείμενα που αντιστοιχούν στις τυπικές ροές εισόδου, εξόδου και σφαλμάτων του διερμηνέα· είναι όλα ανοιχτά σε λειτουργία κειμένου και "
+"επομένως ακολοθούν τη διεπαφή που ορίζεται από την αφηρημένη κλάση :class:`io.TextIOBase`."
 
 #: reference/datamodel.rst:1080
 msgid "Internal types"
-msgstr ""
+msgstr "Εσωτερικοί τύποι"
 
 #: reference/datamodel.rst:1086
 msgid ""
@@ -1496,10 +1590,12 @@ msgid ""
 "Their definitions may change with future versions of the interpreter, but "
 "they are mentioned here for completeness."
 msgstr ""
+"Μερικοί τύποι που χρησιμοποιούνται εσωτερικά από τον διερμηνέα εκτίθενται στο χρήστη. "
+"Οι ορισμοί τους μπορεί να αλλάξουν με μελλοντικές εκδόσεις του διερμηνέα, αλλά αναφέρονται εδώ για πληρότητα."
 
 #: reference/datamodel.rst:1094
 msgid "Code objects"
-msgstr ""
+msgstr "Αντικείμενα κώδικα"
 
 #: reference/datamodel.rst:1098
 msgid ""
@@ -1512,14 +1608,20 @@ msgid ""
 "run-time).  Unlike function objects, code objects are immutable and contain "
 "no references (directly or indirectly) to mutable objects."
 msgstr ""
+"Τα αντικείμενα κώδικα αντιπροσωπεύουν *byte-compiled* εκτελέσιμο κώδικα Python, ή :term:"
+"`bytecode`. Η διαφορά μεταξύ ενός αντικειμένου κώδικα και ενός αντικειμένου συνάρτησης είναι "
+"ότι το αντικείμενο συνάρτησης περιέχει μια ρητή αναφορά στα καθολικά της συνάρτησης (το module στο οποίο ορίστηκε), "
+"ενώ ένα αντικείμενο κώδικα δεν περιέχει πλαίσιο· επίσης, οι προεπιλεγμένες τιμές ορίσματος αποθηκεύονται στο αντικείμενο συνάρτησης, "
+"όχι στο αντικείμενο κώδικα (επειδή αντιπροσωπεύουν τιμές που υπολογίζονται κατά τον χρόνο εκτέλεσης).  Σε αντίθεση με τα αντικείμενα "
+"συνάρτησης, τα αντικείμενα κώδικα είναι αμετάβλητα και δεν περιέχουν αναφορές (άμεσα ή έμμεσα) σε μεταβλητά αντικείμενα."
 
 #: reference/datamodel.rst:1132
 msgid "The function name"
-msgstr ""
+msgstr "Το όνομα της συνάρτησης"
 
 #: reference/datamodel.rst:1135
 msgid "The fully qualified function name"
-msgstr ""
+msgstr "Το πλήρως αναγνωρισμένο όνομα συνάρτησης"
 
 #: reference/datamodel.rst:1140
 msgid ""
@@ -1527,87 +1629,104 @@ msgid ""
 "positional-only parameters and parameters with default values) that the "
 "function has"
 msgstr ""
+"Ο συνολικός αριθμός των θέσεων :term:`parameters <parameter>` (συμπεριλαμβανομένων "
+"των παραμέτρων μόνο θέσης και παραμέτρων με προεπιλεγμένες τιμές) που έχει η συνάρτηση"
 
 #: reference/datamodel.rst:1145
 msgid ""
 "The number of positional-only :term:`parameters <parameter>` (including "
 "arguments with default values) that the function has"
 msgstr ""
+"Ο αριθμός των :term:`parameters <parameter>` θέσεως (συμπεριλαμβανομένων ορισμάτων με προεπιλεγμένες τιμές) που έχει η συνάρτηση"
 
 #: reference/datamodel.rst:1149
 msgid ""
 "The number of keyword-only :term:`parameters <parameter>` (including "
 "arguments with default values) that the function has"
 msgstr ""
+"Ο αριθμός των :term:`parameters <parameter>` λέξεων κλειδιών (συμπεριλαμβανομένων ορισμάτω με προεπιλεγμένες τιμές) που έχει η συνάρτηση"
 
 #: reference/datamodel.rst:1153
 msgid ""
 "The number of :ref:`local variables <naming>` used by the function "
 "(including parameters)"
 msgstr ""
+"Ο αριθμός των :ref:`local variables <naming>` που χρησιμοποιούνται από τη συνάρτηση "
+"(συμπεριλαμβανομένων των παραμέτρων)"
 
 #: reference/datamodel.rst:1157
 msgid ""
 "A :class:`tuple` containing the names of the local variables in the function "
 "(starting with the parameter names)"
 msgstr ""
+"Μια :class:`tuple που περιέχει τα  ονόματα των τοπικών μεταβλητών στη συνάρτηση (ξεκινώντας με τα ονόματα των παραμέτρων)"
 
 #: reference/datamodel.rst:1161
 msgid ""
 "A :class:`tuple` containing the names of :ref:`local variables <naming>` "
 "that are referenced by nested functions inside the function"
 msgstr ""
+"Μια :class:`tuple` που περιέχει τα ονόματα των :ref:`local variables <naming>` "
+"που αναφέρονται από ένθετες συναρτήσεις μέσα στη συνάρτηση"
 
 #: reference/datamodel.rst:1165
 msgid "A :class:`tuple` containing the names of free variables in the function"
-msgstr ""
+msgstr "Μια :class:`tuple` που περιέχει τα ονόματα των ελεύθερων μεταβλητών στη συνάρτηση"
 
 #: reference/datamodel.rst:1168
 msgid ""
 "A string representing the sequence of :term:`bytecode` instructions in the "
 "function"
 msgstr ""
+"Μια συμβολοσειρά που αντιπροσωπεύει την ακολουθία εντολών :term:`bytecode` στη συνάρτηση"
 
 #: reference/datamodel.rst:1172
 msgid ""
 "A :class:`tuple` containing the literals used by the :term:`bytecode` in the "
 "function"
 msgstr ""
+"Μια :class:`tuple` που περιέχει τα literals που χρησιμοποιούνται από το :term:`bytecode` στη συνάρτηση"
 
 #: reference/datamodel.rst:1176
 msgid ""
 "A :class:`tuple` containing the names used by the :term:`bytecode` in the "
 "function"
 msgstr ""
+"Μια :class:`tuple` που περιέχει τα ονόματα που χρησιμοποιούνται από τον :term:`bytecode στην συνάρτηση"
 
 #: reference/datamodel.rst:1180
 msgid "The name of the file from which the code was compiled"
-msgstr ""
+msgstr "Το όνομα του αρχείου από το οποίο συντάχθηκε ο κώδικας"
 
 #: reference/datamodel.rst:1183
 msgid "The line number of the first line of the function"
-msgstr ""
+msgstr "Ο αριθμός γραμμής της πρώτης γραμμής της συνάρτησης"
 
 #: reference/datamodel.rst:1186
 msgid ""
 "A string encoding the mapping from :term:`bytecode` offsets to line numbers. "
 "For details, see the source code of the interpreter."
 msgstr ""
+"Μια συμβολοσειρά που κωδικοποιεί την αντιστοίχιση από τον :term:`bytecode` μετατοπίζεται σε αριθμούς γραμμών. "
+"Για λεπτομέρειες, ανατρέξτε στον πηγαίο κώδικα του διερμηνέα."
 
 #: reference/datamodel.rst:1189
 msgid ""
 "This attribute of code objects is deprecated, and may be removed in Python "
 "3.14."
 msgstr ""
+"Αυτό το χαρακτηριστικό των αντικειμένων κώδικα έχει καταργηθεί, και μπορεί να αφαιρεθεί στην Python "
+"3.14."
 
 #: reference/datamodel.rst:1194
 msgid "The required stack size of the code object"
-msgstr ""
+msgstr "Το απαιτούμενο μέγεθος στοίβας του αντικειμένου κώδικα"
 
 #: reference/datamodel.rst:1197
 msgid ""
 "An :class:`integer <int>` encoding a number of flags for the interpreter."
 msgstr ""
+"Μια :class:`integer <int>` που κωδικοποιεί έναν αριθμό flags για τον διερμηνέα."
 
 #: reference/datamodel.rst:1202
 msgid ""
@@ -1619,6 +1738,12 @@ msgid ""
 "`inspect-module-co-flags` for details on the semantics of each flags that "
 "might be present."
 msgstr ""
+"Τα ακόλουθα flag bits ορίζονται για :attr:`~codeobject.co_flags`: το bit "
+"``0x04`` ορίζετα εάν η συνάρτηση χρησιμοποιεί τη σύνταξη ``*arguments`` για να αποδεχτεί "
+"έναν αυθαίρετο αριθμό ορισμάτων θέσης· το bit ``0x08`` ορίζεται εάν η συνάρτηση χρησιμοποιεί τη σύνταξη "
+"``**keywords`` για να δέχεται αυθαίρετα ορίσματα λέξεων-κλειδιών· το bit ``0x20`` ορίζετεαι εάν η συνάρτηση "
+"είναι γεννήτρια. Δείτε το :ref:"
+"`inspect-module-co-flags` για λεπτομέρειες σχετικά με τη σημασιολογία κάθε σημαίας που μπορεί να υπάρχει."
 
 #: reference/datamodel.rst:1210
 msgid ""
@@ -1628,11 +1753,16 @@ msgid ""
 "function was compiled with future division enabled; bits ``0x10`` and "
 "``0x1000`` were used in earlier versions of Python."
 msgstr ""
+"Οι δηλώσεις μελλοντικών χαρακτηριστικών (``from __future__ import division``) χρησιμοποιούν επίσης bit "
+"στο :attr:`~codeobject.co_flags` για να υποδείξουν εάν ένα αντικείμενο κώδικα έχει μεταγλωττιστεί με ένα συγκεκριμένο "
+"χαρακτηριστικό ενεργοποιημένο: το bit ``0x2000`` ορίζεται εάν η συνάρτηση μεταγλωττίστηκε με ενεργοποιημένη τη μελλοντική διαίρεση· "
+"τα bits ``0x10`` και ``0x1000`` χρησιμοποιήθηκαν σε προηγούμενες εκδόσεις της Python."
 
 #: reference/datamodel.rst:1216
 msgid ""
 "Other bits in :attr:`~codeobject.co_flags` are reserved for internal use."
 msgstr ""
+"Άλλα bits στο :attr:`~codeobject.co_flags` είναι δεσμευμένα για εσωτερική χρήση."
 
 #: reference/datamodel.rst:1220
 msgid ""
@@ -1640,16 +1770,21 @@ msgid ""
 "co_consts` is the documentation string of the function, or ``None`` if "
 "undefined."
 msgstr ""
+"Εάν ένα αντικείμενο κώδικα αντιπροσωπεύει μια συνάρτηση, το πρώτο στοιχείο στο "
+":attr:`~codeobject.co_consts` είναι η συμβολοσειρά τεκμηρίωσης της συνάρτησης ή ``None`` "
+"εάν δεν έχει ορισετί."
 
 #: reference/datamodel.rst:1225
 msgid "Methods on code objects"
-msgstr ""
+msgstr "Μέθοδοι σε αντικείμενα κώδικα"
 
 #: reference/datamodel.rst:1229
 msgid ""
 "Returns an iterable over the source code positions of each :term:`bytecode` "
 "instruction in the code object."
 msgstr ""
+"Επιστρέφει έναν iterable πάνω από τις θέσεις του πηγαίου κώδικα κάθε εντολής "
+":term:`bytecode` στο αντικείμενο κώδικα."
 
 #: reference/datamodel.rst:1232
 msgid ""
@@ -1658,36 +1793,44 @@ msgid ""
 "position of the source code that compiled to the *i-th* instruction. Column "
 "information is 0-indexed utf-8 byte offsets on the given source line."
 msgstr ""
+"Ο iterator επιστρέφει :class:`tuple`\\s που περιέχει το ``(start_line, "
+"end_line, start_column, end_column)``. Η πλειάδα *i-th* αντιστοιχεί στη θέση του πηγαίου κώδικα "
+"που μεταγλώττίστηκε στην εντολή *i-th*. Οι πληροφορίες στηλών είναι μετατοπίσεις utf-8 byte με ευρετήριο 0 στη δεδομένη "
+"γραμμή πηγής."
 
 #: reference/datamodel.rst:1238
 msgid ""
 "This positional information can be missing. A non-exhaustive lists of cases "
 "where this may happen:"
 msgstr ""
+"Αυτές οι πληροφορίες θέσης μπορεί να λείπουν. Μια μη εξαντλητική λίστα περιπτώσεων όπου αυτό μπορεί να συμβεί:"
 
 #: reference/datamodel.rst:1241
 msgid "Running the interpreter with :option:`-X` ``no_debug_ranges``."
-msgstr ""
+msgstr "Εκτέλεση του διερμηνέα με :option:`-X` ``no_debug_ranges``."
 
 #: reference/datamodel.rst:1242
 msgid ""
 "Loading a pyc file compiled while using :option:`-X` ``no_debug_ranges``."
 msgstr ""
+"Φόρτωση ενός αρχείου pyc που έχει μεταγλωττιστεί κατά τη χρήση του :option:`-X` ``no_debug_ranges``."
 
 #: reference/datamodel.rst:1243
 msgid "Position tuples corresponding to artificial instructions."
-msgstr ""
+msgstr "Τοποθετεί τις πλειάδες που αντιστοιχούν σε τεχνικές οδηγίες."
 
 #: reference/datamodel.rst:1244
 msgid ""
 "Line and column numbers that can't be represented due to implementation "
 "specific limitations."
 msgstr ""
+"Αριθμοί γραμμών και στηλών που δεν μπορούν να αναπαραστηθούν λόγω περιορισμών για την υλοποίηση."
 
 #: reference/datamodel.rst:1247
 msgid ""
 "When this occurs, some or all of the tuple elements can be :const:`None`."
 msgstr ""
+"Όταν συμβαίνει αυτό, ορισμένα η όλα τα πολλαπλά στοιχεία μπορεί να είναι :const:`None`."
 
 #: reference/datamodel.rst:1253
 msgid ""
@@ -1698,6 +1841,10 @@ msgid ""
 "``no_debug_ranges`` command line flag or the :envvar:`PYTHONNODEBUGRANGES` "
 "environment variable can be used."
 msgstr ""
+"Αυτή η δυνατότητα απαιτεί αποθήκευση θέσεων στηλών σε αντικείμενα κώδικα που μπορεί να οδηγήσει σε μικρή "
+"αύξηση της χρήσης δίσκου των μεταγλωττισμένων αρχείων Python ή της χρήσης μνήμης διερμηνέα. Για να αποφύγετε την αποθήκευση "
+"των επιπλέον πληροφοριών ή/και να απενεργοποιήσετε την εκτύπωση των επιπλέον πληροφοριών παρακολούθησης, μπορεί να χρησιμοποιθεί "
+"η σημαία γραμμής εντολών :option:`-X` ``no_debug_ranges`` ή η μεταβλητή περιβάλλοντος :envvar:`PYTHONNODEBUGRANGES`."
 
 #: reference/datamodel.rst:1262
 msgid ""
@@ -1705,18 +1852,25 @@ msgid ""
 "`bytecode`\\s. Each item yielded is a ``(start, end, lineno)`` :class:"
 "`tuple`:"
 msgstr ""
+"Επιστρέφει ένανα iterator που παράγει πληροφορίες σχετικά με διαδοχικά εύρη "
+":term:`bytecode`\\s. Κάθε στοιχείο που αποδίδεται είναι μια ``(start, end, lineno)`` :class:"
+"`tuple`:"
 
 #: reference/datamodel.rst:1266
 msgid ""
 "``start`` (an :class:`int`) represents the offset (inclusive) of the start "
 "of the :term:`bytecode` range"
 msgstr ""
+"Το ``start`` (ένα :class:`int`) αναπαριστά τη μετατόπιση (συμπεριλαμβανομένης) της έναρξης του εύρους "
+":term:`bytecode`"
 
 #: reference/datamodel.rst:1268
 msgid ""
 "``end`` (an :class:`int`) represents the offset (exclusive) of the end of "
 "the :term:`bytecode` range"
 msgstr ""
+"Το ``end`` (ένα :class:`int`) αναπαριστά τη μετατόπιση (αποκλειστική) του τέλους του "
+"εύρους :term:`bytecode`"
 
 #: reference/datamodel.rst:1270
 msgid ""
@@ -1724,14 +1878,16 @@ msgid ""
 "`bytecode` range, or ``None`` if the bytecodes in the given range have no "
 "line number"
 msgstr ""
+"Το ``lineno`` είναι ένα :class:`int` που αναπαριστά τον αριθμό γραμμής του εύρους "
+":term:`bytecode` ή ``None`` εάν τα bytecodes στη δεδομένη περιοχή δεν έχουν αριθμό γραμμής"
 
 #: reference/datamodel.rst:1274
 msgid "The items yielded will have the following properties:"
-msgstr ""
+msgstr "Τα στοιχεία που θα προκύψουν θα έχουν τις ακόλουθες ιδιότητες:"
 
 #: reference/datamodel.rst:1276
 msgid "The first range yielded will have a ``start`` of 0."
-msgstr ""
+msgstr "Το πρώτο εύρος που θα προκύψει θα έχει ένα ``start`` 0."
 
 #: reference/datamodel.rst:1277
 msgid ""
@@ -1739,16 +1895,20 @@ msgid ""
 "for any pair of :class:`tuple`\\s, the ``start`` of the second will be equal "
 "to the ``end`` of the first."
 msgstr ""
+"Τα εύρη ``(start, end)`` θα είναι μη φθίνουσες και διαδοχικές. Δηλαδή, για οποιοδήποτε "
+"ζεύγος :class:`tuple`\\s, το ``start`` του δεύτερου θα είναι ίσο με το το ``end`` του πρώτου."
 
 #: reference/datamodel.rst:1280
 msgid "No range will be backwards: ``end >= start`` for all triples."
-msgstr ""
+msgstr "Κανένα εύρος δεν θα είναι προς τα πίσω: ``end >= start`` για όλες τις τριάδες."
 
 #: reference/datamodel.rst:1281
 msgid ""
 "The last :class:`tuple` yielded will have ``end`` equal to the size of the :"
 "term:`bytecode`."
 msgstr ""
+"Το τελευταίο :class:`tuple` που θα αποφέρει θα έχει ``end`` ίσο με το μέγεθος του :"
+"term:`bytecode`."
 
 #: reference/datamodel.rst:1284
 msgid ""
@@ -1756,23 +1916,26 @@ msgid ""
 "are used for lines that are present in the source code, but have been "
 "eliminated by the :term:`bytecode` compiler."
 msgstr ""
+"Εύρος μηδενικόυ πλάτους, όπου ``start == end``, επιτρέπονται. Τα εύρη μηδενικού πλάτους χρησιμοποιούνται "
+"για γραμμές που υπάρχουν στον πηγαίο κώδικα, αλλά έχουν εξαλειφθεί από τον μεταγλωττιστή :term:`bytecode`."
 
 #: reference/datamodel.rst:1292
 msgid ":pep:`626` - Precise line numbers for debugging and other tools."
-msgstr ""
+msgstr ":pep:`626` - Ακριβείς αριθμοί γραμμών για εντοπισμό σφαλμάτων και άλλα εργαλεία."
 
 #: reference/datamodel.rst:1293
 msgid "The PEP that introduced the :meth:`!co_lines` method."
-msgstr ""
+msgstr "Το PEP που εισήγαγε τη μέθοδο :meth:`!co_lines`."
 
 #: reference/datamodel.rst:1297
 msgid ""
 "Return a copy of the code object with new values for the specified fields."
 msgstr ""
+"Επιστρέφει ένα αντίγραφο του αντικειμένου κώδικα με νέες τιμές για τα καθορισμένα πεδία."
 
 #: reference/datamodel.rst:1305
 msgid "Frame objects"
-msgstr ""
+msgstr "Πλαίσιο αντικειμένων"
 
 #: reference/datamodel.rst:1309
 msgid ""
@@ -1780,12 +1943,16 @@ msgid ""
 "objects <traceback-objects>`, and are also passed to registered trace "
 "functions."
 msgstr ""
+"Τα αντικείμενα πλαισίου αναπαριστούν πλαίσια εκτέλεσης.  Μπορούν να εμφανίζονται σε :ref:`traceback "
+"objects <traceback-objects>`, και επίσης μεταβιβάζονται σε καταχωρημένες συναρτήσεις ανίχνευσης."
 
 #: reference/datamodel.rst:1327
 msgid ""
 "Points to the previous stack frame (towards the caller), or ``None`` if this "
 "is the bottom stack frame"
 msgstr ""
+"Δείχνει το προηγούμενο πλαίσιο στοίβας (προς από εκεί  που καλείται), ή ``None`` αν αυτό είναι το πλαίσιο "
+"της κάτω στοίβας"
 
 #: reference/datamodel.rst:1331
 msgid ""
@@ -1793,28 +1960,37 @@ msgid ""
 "Accessing this attribute raises an :ref:`auditing event <auditing>` ``object."
 "__getattr__`` with arguments ``obj`` and ``\"f_code\"``."
 msgstr ""
+"Το αντικείμενο :ref:`code object <code-objects>` εκτελείται σε αυτό το πλαίσιο. "
+"Η πρόσβαση σε αυτό το χαρακτηριστικό κάνει raise σε ένα συμβάν "
+":ref:`auditing event <auditing>` ``object.__getattr__`` με ορίσματα ``obj`` και ``\"f_code\"``."
 
 #: reference/datamodel.rst:1336
 msgid ""
 "The dictionary used by the frame to look up :ref:`local variables <naming>`"
 msgstr ""
+"Το λεξικό που χρησιμοποιείται από το πλαίσιο για την αναζήτηση σε :ref:`local variables <naming>`"
 
 #: reference/datamodel.rst:1340
 msgid ""
 "The dictionary used by the frame to look up :ref:`global variables <naming>`"
 msgstr ""
+"Το λεξικό που χρησιμοποιείται από το πλαίσιο για την αναζήτηση :ref:`global variables <naming>`"
 
 #: reference/datamodel.rst:1344
 msgid ""
 "The dictionary used by the frame to look up :ref:`built-in (intrinsic) names "
 "<naming>`"
 msgstr ""
+"Το λεξικό που χρησιμοποιείται από το πλαίσιο για την αναζήτηση :ref:`built-in (intrinsic) names "
+"<naming>`"
 
 #: reference/datamodel.rst:1348
 msgid ""
 "The \"precise instruction\" of the frame object (this is an index into the :"
 "term:`bytecode` string of the :ref:`code object <code-objects>`)"
 msgstr ""
+"Η \"ακριβής εντολή\" του ανικειμένου πλαισίου (αυτό είναι ένα ευρετήριο στη συμβολοσειρά :"
+"term:`bytecode` του αντικειμένου :ref:`code object <code-objects>`)"
 
 #: reference/datamodel.rst:1364
 msgid ""
@@ -1822,12 +1998,17 @@ msgid ""
 "execution (this is used by debuggers). Normally an event is triggered for "
 "each new source line (see :attr:`~frame.f_trace_lines`)."
 msgstr ""
+"Εάν όχι ``None``, αυτή είναι μια συνάρτηση που καλείται για διάφορα συμβάντα κατά την εκτέλεση κώδικα (αυτό χρησιμοποιείται "
+"από προγράμματα εντοπισμού σφαλμάτων). Κανονικά ένα συμβάν ενεργοποιείται για κάθε νέα γραμμή πηγαίου κώδικα (δείτε "
+":attr:`~frame.f_trace_lines`)."
 
 #: reference/datamodel.rst:1369
 msgid ""
 "Set this attribute to :const:`False` to disable triggering a tracing event "
 "for each source line."
 msgstr ""
+"Ορίστε αυτό το χαρακτηριστικό σε :const:`False` για να απενεργοποιήσετε την ενεργοποίηση ενός συμβάντος "
+"ανίχνευσης για κάθε γραμμή πηγαίου κώδικα."
 
 #: reference/datamodel.rst:1373
 msgid ""
@@ -1835,6 +2016,9 @@ msgid ""
 "requested. Note that this may lead to undefined interpreter behaviour if "
 "exceptions raised by the trace function escape to the function being traced."
 msgstr ""
+"Ορίζει αυτό το χαρακτηριστικό σε :const:`True` για να επιτρέψετε να ζητηθούν συμβάντα ανά "
+"opcode. Σημειώστε ότι αυτό μπορεί να οδηγήσει σε απροσδιόριστη συμπεριφορά διερμηνέα εάν οι εξαιρέσεις που προκύπτουν από "
+"τη συνάρτηση ανίχνευσης διαφεύγουν στη συνάρτηση που παρακολουθείται."
 
 #: reference/datamodel.rst:1379
 msgid ""
@@ -1843,14 +2027,17 @@ msgid ""
 "debugger can implement a Jump command (aka Set Next Statement) by writing to "
 "this attribute."
 msgstr ""
+"Ο τρέχων αριθμός γραμμής του πλαισίου -- η εγγραφή σε αυτό μέσα από μια συνάρτηση "
+"ανίχνευσης μεταβαίνει στη δεδομένη γραμμή (μόνο για το πιο κάτω πλαίσιο).  Ένας εντοπισμός σφαλμάτων "
+"μποεί να εφαρμο΄σει μια εντολή Μετάβασης (γνωστή και ως Ορισμός Επόμενης Δήλωσης) γράφοντας σε αυτό το χαρακτηριστικό."
 
 #: reference/datamodel.rst:1385
 msgid "Frame object methods"
-msgstr ""
+msgstr "Μέθοδοι αντικειμένων πλαισίου"
 
 #: reference/datamodel.rst:1387
 msgid "Frame objects support one method:"
-msgstr ""
+msgstr "Τα αντικείμενα πλαισίου υποστηρίζουν μια μέθοδο:"
 
 #: reference/datamodel.rst:1391
 msgid ""
@@ -1860,6 +2047,10 @@ msgid ""
 "objects (for example when catching an :ref:`exception <bltin-exceptions>` "
 "and storing its :ref:`traceback <traceback-objects>` for later use)."
 msgstr ""
+"Αυτή η μέθοδος διαγράφει όλες τις αναφορές σε :ref:`local variables <naming>` που τηρούνται από το πλάισιο.  "
+"Επίσης, εάν το πλαίσιο ανήκε σε ένα :term:`generator`, η γεννήτρια έχει οριστικοποιηθεί.  Αυτό βοηθά στη διακοπή των κύκλων αναφοράς "
+"που περιλαμβάνουν αντικείμεναα πλαισίου (για παράδειγμα, όταν γίνεται catch μια :ref:`exception <bltin-exceptions>` "
+"και αποθηκεύετε το :ref:`traceback <traceback-objects>` για μετέπειτα χρήση)."
 
 #: reference/datamodel.rst:1397
 msgid ":exc:`RuntimeError` is raised if the frame is currently executing."
@@ -2964,7 +3155,7 @@ msgstr ""
 
 #: reference/datamodel.rst:2373
 msgid "Metaclasses"
-msgstr ""
+msgstr "Μετα-κλάσεις"
 
 #: reference/datamodel.rst:2380
 msgid ""
@@ -3029,7 +3220,7 @@ msgstr ""
 
 #: reference/datamodel.rst:2427
 msgid ":func:`types.resolve_bases`"
-msgstr ""
+msgstr ":func:`types.resolve_bases`"
 
 #: reference/datamodel.rst:2427
 msgid "Dynamically resolve bases that are not instances of :class:`type`."
@@ -3037,7 +3228,7 @@ msgstr ""
 
 #: reference/datamodel.rst:2431
 msgid ":func:`types.get_original_bases`"
-msgstr ""
+msgstr ":func:`types.get_original_bases`"
 
 #: reference/datamodel.rst:2430
 msgid ""
@@ -3047,7 +3238,7 @@ msgstr ""
 
 #: reference/datamodel.rst:2433
 msgid ":pep:`560`"
-msgstr ""
+msgstr ":pep:`560`"
 
 #: reference/datamodel.rst:2434
 msgid "Core support for typing module and generic types."
@@ -3935,11 +4126,11 @@ msgstr ""
 
 #: reference/datamodel.rst:3316
 msgid "Coroutines"
-msgstr ""
+msgstr "Coroutines"
 
 #: reference/datamodel.rst:3320
 msgid "Awaitable Objects"
-msgstr ""
+msgstr "Awaitable Αντικείμενα"
 
 #: reference/datamodel.rst:3322
 msgid ""
@@ -3947,6 +4138,9 @@ msgid ""
 "__await__` method. :term:`Coroutine objects <coroutine>` returned from :"
 "keyword:`async def` functions are awaitable."
 msgstr ""
+"Ένα αντικείμενο :term:`awaitable` εφαρμόζει γενικά μια μέθοδο :meth:`~object."
+"__await__`. Τα :term:`Coroutine objects <coroutine>` που επιστρέφονται από τις :"
+"keyword:`async def` συναρτήσεις είναι awaitable."
 
 #: reference/datamodel.rst:3328
 msgid ""
@@ -3954,6 +4148,9 @@ msgid ""
 "with :func:`types.coroutine` are also awaitable, but they do not implement :"
 "meth:`~object.__await__`."
 msgstr ""
+"Τα αντικείμενα :term:`generator iterator` που επιστράφηκαν από γεννήτριες διακοσμημένες "
+"με :func:`types.coroutine` είναι επίσης awaitable, αλλά δεν εφαρμόζουν το :"
+"meth:`~object.__await__`."
 
 #: reference/datamodel.rst:3334
 msgid ""
@@ -3961,6 +4158,9 @@ msgid ""
 "`awaitable` objects.  For instance, :class:`asyncio.Future` implements this "
 "method to be compatible with the :keyword:`await` expression."
 msgstr ""
+"Πρέπει να επιστρέψει ένα :term:`iterator`.  Θα πρέπει να χρησιμοποιείται για την υλοποίηση :term:"
+"`awaitable` αντικειμένων.  Για παράδειγνα, η :class:`asyncio.Future` υλοποιεί αυτήν την μέθοδο "
+"ώστε να είναι συμβατή με την έκφραση :keyword:`await`."
 
 #: reference/datamodel.rst:3340
 msgid ""
@@ -3969,14 +4169,17 @@ msgid ""
 "specific to the implementation of the asynchronous execution framework (e."
 "g. :mod:`asyncio`) that will be managing the :term:`awaitable` object."
 msgstr ""
+"Η γλώσσα δεν θέτει  κανέναν περιορισμό στον τύπο ή την τιμή των αντικειμένων που παράγονται "
+"από τον iterator που επιστρέφεται από το ``__await__``, καθώς αυτό αφορά συγκεκριμένα την υλοποίηση του πλασίου "
+"ασύγχρονης εκτέλεσης (π.χ. :mod:`asyncio`) που θα διαχειρίζεται το :term:`awaitable` αντικείμενο."
 
 #: reference/datamodel.rst:3348
 msgid ":pep:`492` for additional information about awaitable objects."
-msgstr ""
+msgstr "το :pep:`492` για πρόσθετες πληροφορίες σχετικά με τα awaitable αντικείμενα."
 
 #: reference/datamodel.rst:3354
 msgid "Coroutine Objects"
-msgstr ""
+msgstr "Coroutine Αντικείμενα"
 
 #: reference/datamodel.rst:3356
 msgid ""
@@ -3988,6 +4191,12 @@ msgid ""
 "coroutine raises an exception, it is propagated by the iterator.  Coroutines "
 "should not directly raise unhandled :exc:`StopIteration` exceptions."
 msgstr ""
+"Τα :term:`Coroutine objects <coroutine>` είναι :term:`awaitable` αντικείμενα. Η εκτέλεση μιας "
+"coroutine μπορεί να ελεγχθεί καλώντας το :meth:`~object.__await__` και επαναλαμβάνοντας το αποτέλεσμα.  "
+"Όταν η coroutine ολοκληρώσει την εκτέλεση και επιστρέψει ο iterator κάνει raise την :exc:`StopIteration`, "
+"και το χαρακτηριστικό :attr:`~StopIteration.value` της εξαίρεσης διατηρεί την τιμή επιστροφής.  Εάν η coroutine "
+"εγείρει μια εξαίρεση, αυτή διαδίδεται από τον iterator.  Οι coroutines δεν πρέπει να κάνουν raise "
+"μη χειρισμένες εξαιρέσεις :exc:`StopIteration`."
 
 #: reference/datamodel.rst:3364
 msgid ""
@@ -3995,10 +4204,13 @@ msgid ""
 "of generators (see :ref:`generator-methods`).  However, unlike generators, "
 "coroutines do not directly support iteration."
 msgstr ""
+"Οι coroutines έχουν επίσης τις μεθόδου που αναφέρονται παρακάτω, οι οποίες είναι ανάλογες "
+"με αυτές των γεννητριών (βλ. :ref:`generator-methods`).  Ωστόσο, σε αντίθεση με τις γεννήτριες, οι "
+"coroutines δεν υποστήρίζουν άμεσα την επανάληψη."
 
 #: reference/datamodel.rst:3368
 msgid "It is a :exc:`RuntimeError` to await on a coroutine more than once."
-msgstr ""
+msgstr "Είναι ένα :exc:`RuntimeError` να περιμένει κανείς σε μια coroutine περισσότερς από μία φορές."
 
 #: reference/datamodel.rst:3374
 msgid ""
@@ -4010,6 +4222,12 @@ msgid ""
 "exception) is the same as when iterating over the :meth:`!__await__` return "
 "value, described above."
 msgstr ""
+"Ξεκινά ή συνεχίζει την εκτέλεση της coroutine.  Εάν η *τιμή* είναι ``None``, "
+"αυτό ισοδυναμεί με την προώθηση του iterator που επιστρέφεται :meth:`~object."
+"__await__`.  Εάν η *τιμή* δεν είναι ``None``, αυτή η μέθοδος εκχωρεί στη μέθοδο "
+":meth:`~generator.send` του iterator που προκάλεσε την αναστολή της coroutine.  Το αποτέλεσμα "
+"(επιστρεφόμενη τιμή, :exc:`StopIteration`, ή άλλη εξαίρεση) είναι το ίδιο όπως όταν γίνεται επανάληψη "
+"πάνω από την τιμή επιστροφής :meth:`!__await__` , που περιγράφεται παραπάνω."
 
 #: reference/datamodel.rst:3385
 msgid ""
@@ -4021,12 +4239,20 @@ msgid ""
 "meth:`~object.__await__` return value, described above.  If the exception is "
 "not caught in the coroutine, it propagates back to the caller."
 msgstr ""
+"Κάνει Raise την καθορισμένη εξαίρεση στην coroutine.  Αυτή η μέθοδος εκχωρεί στη μέθοδο "
+":meth:`~generator.throw` του iterator που προκάλεσε την αναστολή της coroutine, εάν διαθέτει τέτοια "
+"μέθοδο.  Διαφορειτκά, η εξαίρεση γίνεται raise στο σημείο αναστολής.  Το αποτέλεσμα (επιστρεφόμενη τιμή, :exc:"
+"`StopIteration`, ή άλλη εξαίρεση) είναι το ίδιο όπως όταν γίνεται επανάληψη πάνω από την τιμή επιστροφής "
+":meth:`~object.__await__`, που περιγράφεται παραπάνω.  Εάν η εξαίρεση δεν περιλαμβάνεται στην coroutine, διαδίεται πίσω από εκεί "
+"που καλέστηκε."
 
 #: reference/datamodel.rst:3396
 msgid ""
 "The second signature \\(type\\[, value\\[, traceback\\]\\]\\) is deprecated "
 "and may be removed in a future version of Python."
 msgstr ""
+"Η δεύτερη υπογραφή \\(type\\[, value\\[, traceback\\]\\]\\)  έχει καταργηθεί και μπορεί να "
+"αφαιρεθεί σε μια μελλοντική έκδοση της Python."
 
 #: reference/datamodel.rst:3401
 msgid ""
@@ -4037,41 +4263,53 @@ msgid ""
 "causing the coroutine to immediately clean itself up. Finally, the coroutine "
 "is marked as having finished executing, even if it was never started."
 msgstr ""
+"Προκαλεί τον καθαρσιμό και την έξοδο της coroutine.  Εάν η coroutine τεθεί σε "
+"αναστολή, αυτή η μέθοδος εκχωρεί πρώατα στην μέθοδο :meth:`~generator.close` "
+"του iterator που προκάλεσε την αναστολή της coroutine, εάν έχει τέτοια μέθοδο.  Στη "
+"συνέχεια, σηκώνει το :exc:`GeneratorExit` στο σημείο αναστολής, με αποτέλεσμα η coroutine "
+"να καθαριστεί αμέσως. Τέλος, η coroutine επισημαίνεται ότι έχει τελειώσει την εκτέλεση, "
+"ακόμα κι αν δεν ξεκίνησε ποτέ."
 
 #: reference/datamodel.rst:3409
 msgid ""
 "Coroutine objects are automatically closed using the above process when they "
 "are about to be destroyed."
 msgstr ""
+"Τα αντικείμενα coroutine κλείνουν αυτόματα χρησιμοποιώντας την παραπάνω διαδικασία όταν "
+"πρόκεται να καταστραφούν."
 
 #: reference/datamodel.rst:3415
 msgid "Asynchronous Iterators"
-msgstr ""
+msgstr "Ασύγχρονοι Iterators"
 
 #: reference/datamodel.rst:3417
 msgid ""
 "An *asynchronous iterator* can call asynchronous code in its ``__anext__`` "
 "method."
 msgstr ""
+"Ένας *ασύγχρονος iterator* μπορεί να καλέσει ασύγχρονο κώδικα με τη μέθοδο ``__anext__``."
 
 #: reference/datamodel.rst:3420
 msgid ""
 "Asynchronous iterators can be used in an :keyword:`async for` statement."
 msgstr ""
+"Οι ασύγχρονοι iterators μπορούν να χρησιμοποιηθούν σε μια δήλωση :keyword:`async for`."
 
 #: reference/datamodel.rst:3424
 msgid "Must return an *asynchronous iterator* object."
-msgstr ""
+msgstr "Πρέπει να επιστρέψει ένα αντικείμενο *ασύγχρονου iterator*."
 
 #: reference/datamodel.rst:3428
 msgid ""
 "Must return an *awaitable* resulting in a next value of the iterator.  "
 "Should raise a :exc:`StopAsyncIteration` error when the iteration is over."
 msgstr ""
+"Πρέπει να επιστρέψει ένα *αναμενόμενο* που θα έχει ως αποτέλεσμα μια επόμενη τιμή iterator.  "
+"Θα πρέπει να κάνει raise ένα σφάλμα :exc:`StopAsyncIteration` όταν τελειώσει η επανάληψη."
 
 #: reference/datamodel.rst:3431
 msgid "An example of an asynchronous iterable object::"
-msgstr ""
+msgstr "Παράδειγμα σύγχρουνου iterator αντικειμένου::"
 
 #: reference/datamodel.rst:3448
 msgid ""
@@ -4079,6 +4317,9 @@ msgid ""
 "that would resolve to an :term:`asynchronous iterator <asynchronous "
 "iterator>`."
 msgstr ""
+"Πριν από την Python 3.7, η :meth:`~object.__aiter__` θα μπορούσε να επιστρέψει ένα "
+"*αναμενόμενο* που θα επιλύοντα σε ένα :term:`asynchronous iterator <asynchronous "
+"iterator>`."
 
 #: reference/datamodel.rst:3453
 msgid ""
@@ -4086,42 +4327,53 @@ msgid ""
 "asynchronous iterator object.  Returning anything else will result in a :exc:"
 "`TypeError` error."
 msgstr ""
+"Ξεκινώντας με την Python 3.7, η :meth:`~object.__aiter__`  πρέπει να επιστρέψει ένα "
+"ασύγχρονο αντικείμενο iterator.  Εάν επιστρέφει οτιδήποτε άλλο θα έχει ως αποτέλεσμα "
+"ένα σφάλμα :exc:`TypeError`."
 
 #: reference/datamodel.rst:3461
 msgid "Asynchronous Context Managers"
-msgstr ""
+msgstr "Ασύγχρονοι Διαχειριστές Περιβάλλοντος"
 
 #: reference/datamodel.rst:3463
 msgid ""
 "An *asynchronous context manager* is a *context manager* that is able to "
 "suspend execution in its ``__aenter__`` and ``__aexit__`` methods."
 msgstr ""
+"Ένας *ασύγχρονος διαχειριστής περιβάλλοντος* είναι ένα *διαχειριστής περιβάλλοντος* που μπορεί να "
+"αναστείλει την εκτέλεση στις μεθόδους ``__aenter__`` και ``__aexit__``."
 
 #: reference/datamodel.rst:3466
 msgid ""
 "Asynchronous context managers can be used in an :keyword:`async with` "
 "statement."
 msgstr ""
+"Οι ασύγχρονοι διαχειριστές περιβάλλοντος μπορούν να χρησιμοποιηθούν σε μια δήλωση "
+":keyword:`async with`."
 
 #: reference/datamodel.rst:3470
 msgid ""
 "Semantically similar to :meth:`~object.__enter__`, the only difference being "
 "that it must return an *awaitable*."
 msgstr ""
+"Σημασιολογικά παρόμοια με :meth:`~object.__enter__`, η μόνη διαφορά είναι ότι πρέπει να επιστρέψει ένα "
+"*awaitable*."
 
 #: reference/datamodel.rst:3475
 msgid ""
 "Semantically similar to :meth:`~object.__exit__`, the only difference being "
 "that it must return an *awaitable*."
 msgstr ""
+"Σημασιολογικά παρόμοια με :meth:`~object.__exit__`, η μόνη διαφορά είναι ότι πρέπει "
+"να επιστρέψει ένα *awaitable*."
 
 #: reference/datamodel.rst:3478
 msgid "An example of an asynchronous context manager class::"
-msgstr ""
+msgstr "Ένα παράδειγμα κλάσης ασύγχρονης διαχείρισης περιβάλλοντος::"
 
 #: reference/datamodel.rst:3491
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: reference/datamodel.rst:3492
 msgid ""
@@ -4129,6 +4381,9 @@ msgid ""
 "controlled conditions. It generally isn't a good idea though, since it can "
 "lead to some very strange behaviour if it is handled incorrectly."
 msgstr ""
+"Αυτό *είναι* δυνατό σε ορισμένες περιπτώσεις να αλλάξει ο τύπος ενός αντικειμένου, υπό ορισμένες ελεγχόμενες "
+"συνθήκες. Γενικά δεν είναι καλή ιδέα όμως, καθώς μπορεί να οδηγήσει σε κάποια πολύ περιέργη συμπεριφορά εάν γίνει "
+"λάθος χειρισμός."
 
 #: reference/datamodel.rst:3496
 msgid ""
@@ -4137,6 +4392,9 @@ msgid ""
 "handling for this; others will still raise a :exc:`TypeError`, but may do so "
 "by relying on the behavior that ``None`` is not callable."
 msgstr ""
+"Οι μέθοδοι :meth:`~object.__hash__`, :meth:`~object.__iter__`, :meth:`~object."
+"__reversed__`, και :meth:`~object.__contains__` έχουν ειδικό χειρισμό για αυτό∙ άλλοι θα εξακολουθήσουν "  
+"να κάνουν raise ένα :exc:`TypeError`, αλλά μπορεί να το κάνει βασιζόμενος στη συμπεριφορά ότι το ``None`` δεν καλείται."
 
 #: reference/datamodel.rst:3502
 msgid ""
@@ -4145,6 +4403,10 @@ msgid ""
 "you want to force fallback to the right operand's reflected method—that will "
 "instead have the opposite effect of explicitly *blocking* such fallback."
 msgstr ""
+"Το \"Δεν υποστήρίζει\" εδώ σημαίνει ότι η κλάση δεν έχει τέτοια μέθοδο ή η μέθοδος "
+"επιστρέφει :data:`NotImplemented`.  Μην ορίσετε τη μέθοδο σε ``None`` εάν θέλετε να "
+"αναγκάσετε την επιστροφή στη μέθοδο ανακλώμενης του δεξιού τελεστή-αυτό θα έχει το "
+"αντίθετο αποτέλεσμα του ρητού *μπλοκαρίσματος* αυτού του εναλλακτικού."
 
 #: reference/datamodel.rst:3508
 msgid ""
@@ -4152,6 +4414,9 @@ msgid ""
 "method -- such as :meth:`~object.__add__` -- fails then the overall "
 "operation is not supported, which is why the reflected method is not called."
 msgstr ""
+"Για τελεστές του ίδιου τύπου, θεωρήστει ότι εάν η μη ακαλώμενη μέθοδος -- όπως "
+":meth:`~object.__add__` -- αποτύχει, τότε η συνολική πράξη δεν υποστηρίζεται, γι' αυτό δεν καλείται η "
+"ανακλώμενη μέθοδος."
 
 #: reference/datamodel.rst:148 reference/datamodel.rst:180
 #: reference/datamodel.rst:225 reference/datamodel.rst:261
