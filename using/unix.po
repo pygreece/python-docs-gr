@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: 2025-03-26 18:14+0200\n"
+"PO-Revision-Date: 2025-03-31 15:09+0300\n"
 "Last-Translator: Kleopatra Karapanagiotou <kleopatrakapa22@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -38,9 +38,9 @@ msgid ""
 "latest version of Python from source."
 msgstr ""
 "Η Python είναι προεγκατεστημένη στις περισσότερες διανομές Linux, ενώ "
-"διατίθεται ως πακέτο σε όλες τις υπόλοιπες. Ωστόσο, υπάρχουν ορισμένα "
+"διατίθεται ως πακέτο σε όλες τις υπόλοιπες.  Ωστόσο, υπάρχουν ορισμένα "
 "χαρακτηριστικά που μπορεί να θέλετε να χρησιμοποιήσετε, τα οποία δεν είναι "
-"διαθέσιμα στο πακέτο της διανομής σας. Μπορείτε να κάνετε compile την πιο "
+"διαθέσιμα στο πακέτο της διανομής σας.  Μπορείτε να κάνετε compile την πιο "
 "πρόσφατη έκδοση της Python από τον πηγαίο κώδικα."
 
 #: using/unix.rst:23
@@ -50,8 +50,8 @@ msgid ""
 "distro.  Have a look at the following links:"
 msgstr ""
 "Στην περίπτωση που η πιο πρόσφατη έκδοση Python δεν είναι προεγκατεστημένη "
-"και επίσης δεν ανήκει στα αποθετήρια, μπορείς να δημιουργήσεις πακέτα για τη "
-"δική σου διανομή.  Δες τα παρακάτω links:"
+"και επίσης δεν ανήκει στα αποθετήρια, μπορείτε να δημιουργήσετε πακέτα για "
+"τη δική σας διανομή.  Δείτε τα παρακάτω links:"
 
 #: using/unix.rst:29
 msgid "https://www.debian.org/doc/manuals/maint-guide/first.en.html"
@@ -141,7 +141,7 @@ msgstr "Σε FreeBSD και OpenBSD"
 
 #: using/unix.rst:67
 msgid "FreeBSD users, to add the package use::"
-msgstr "Χρήστες του FreeBSD, για να προσθέσουν τη χρήση του πακέτου::"
+msgstr "Χρήστες του FreeBSD, για την προσθήκη του πακέτου χρησιμοποιήστε::"
 
 #: using/unix.rst:69
 msgid "pkg install python3"
@@ -149,7 +149,7 @@ msgstr "pkg install python3"
 
 #: using/unix.rst:71
 msgid "OpenBSD users, to add the package use::"
-msgstr "Χρήστες του OpenBSD, για να προσθέσουν τη χρήση του πακέτου::"
+msgstr "Χρήστες του OpenBSD, για την προσθήκη του πακέτου χρησιμοποιήστε::"
 
 #: using/unix.rst:73
 msgid ""
@@ -179,7 +179,7 @@ msgstr ""
 
 #: using/unix.rst:85
 msgid "Building Python"
-msgstr "Χτίζοντας την Python"
+msgstr "Μεταγλώττιση της Python"
 
 #: using/unix.rst:87
 msgid ""
@@ -192,13 +192,13 @@ msgstr ""
 "Αν θέλετε να κάνετε compile το CPython μόνοι σας, το πρώτο πράγμα που πρέπει "
 "να κάνετε είναι να πάρετε τον πηγαίο κώδικα <https://www.python.org/"
 "downloads/source/>`_. Μπορείτε να κατεβάσετε είτε τον πηγαίο κώδικα της "
-"τελευταίας έκδοσης είτε απλά να πάρετε έναν καινούργιο `κλώνο <https://"
+"τελευταίας έκδοσης είτε απλά να πάρετε έναν καινούργιο `clone <https://"
 "devguide.python.org/setup/#get-the-source-code>`_.  (Αν θέλετε να "
 "συνεισφέρετε διορθώσεις, θα χρειαστείτε έναν κλώνο)."
 
 #: using/unix.rst:93
 msgid "The build process consists of the usual commands::"
-msgstr "Η διαδικασία του χτισίματος απαρτίζεται από τις συνήθεις εντολές::"
+msgstr "Η διαδικασία της μεταγλώττισης απαρτίζεται από τις συνήθεις εντολές::"
 
 #: using/unix.rst:95
 msgid ""
@@ -216,9 +216,9 @@ msgid ""
 "Unix platforms are extensively documented in the :source:`README.rst` file "
 "in the root of the Python source tree."
 msgstr ""
-":ref:`Configuration options <configure-options>` and caveats for specific "
-"Unix platforms are extensively documented in the :source:`README.rst` file "
-"in the root of the Python source tree."
+"Το :ref:`Configuration options <configure-options>` και οι όροι για "
+"συγκεκριμένες πλατφόρμες Unix τεκμηριώνονται εκτενώς στο αρχείο :source:"
+"`README.rst` στην βάση του πηγαίου δέντρου της Python."
 
 #: using/unix.rst:105
 msgid ""
@@ -242,10 +242,10 @@ msgid ""
 "prefix>` are installation-dependent and should be interpreted as for GNU "
 "software; they may be the same."
 msgstr ""
-"Αυτά ενδέχεται να διαφέρουν ανάλογα με τις τοπικές συμβάσεις εγκατάστασης, "
+"Αυτά ενδέχεται να διαφέρουν ανάλογα με τις τοπικές συμβάσεις εγκατάστασης∙ "
 "τα :option:`prefix <--prefix>` και :option:`exec_prefix <--exec-prefix>` "
 "εξαρτώνται από την εγκατάσταση και θα πρέπει να ερμηνεύονται όπως για το "
-"λογισμικό GNU- μπορεί να είναι τα ίδια."
+"λογισμικό GNU∙ μπορεί να είναι τα ίδια."
 
 #: using/unix.rst:118
 msgid ""
@@ -268,7 +268,7 @@ msgstr ":file:`{exec_prefix}/bin/python3`"
 
 #: using/unix.rst:123
 msgid "Recommended location of the interpreter."
-msgstr "Προτεινόμενη θέση του διερμηνευτή."
+msgstr "Προτεινόμενη θέση του διερμηνέα."
 
 #: using/unix.rst:125
 msgid ""
@@ -282,8 +282,7 @@ msgstr ""
 msgid ""
 "Recommended locations of the directories containing the standard modules."
 msgstr ""
-"Προτεινόμενες θέσεις για τα directories που περιέχουν τις βασικές ενότητες "
-"(modules)."
+"Προτεινόμενες θέσεις για τους καταλόγους που περιέχουν τα βασικά modules."
 
 #: using/unix.rst:128
 msgid ""
@@ -298,9 +297,9 @@ msgid ""
 "Recommended locations of the directories containing the include files needed "
 "for developing Python extensions and embedding the interpreter."
 msgstr ""
-"Προτεινόμενες θέσεις των directories που περιέχουν τα αρχεία κεφαλίδων "
+"Προτεινόμενες θέσεις των καταλόγων που περιέχουν τα αρχεία κεφαλίδων "
 "(include files) που απαιτούνται για την ανάπτυξη επεκτάσεων της Python και "
-"την ενσωμάτωση του διερμηνευτή."
+"την ενσωμάτωση του διερμηνέα."
 
 #: using/unix.rst:136
 msgid "Miscellaneous"
@@ -336,10 +335,10 @@ msgid ""
 "However, some Unices may not have the :program:`env` command, so you may "
 "need to hardcode ``/usr/bin/python3`` as the interpreter path."
 msgstr ""
-"που κάνει αναζήτηση για τον Python διερμηνευτή σε ολόκληρο το :envvar:"
-"`PATH`. Ωστόσο, ορισμένα Unices μπορεί να μην έχουν την εντολή :program:"
+"που κάνει αναζήτηση για τον διερμηνέα της Python σε ολόκληρο το :envvar:"
+"`PATH`.  Ωστόσο, ορισμένα Unices μπορεί να μην έχουν την εντολή :program:"
 "`env`, οπότε μπορεί να χρειαστεί να κωδικοποιήσετε το ``/usr/bin/python3`` "
-"ως διαδρομή του διερμηνευτή."
+"ως διαδρομή του διερμηνέα."
 
 #: using/unix.rst:154
 msgid ""
@@ -361,12 +360,12 @@ msgid ""
 "directory should also contain a ``cert.pem`` file and/or a ``certs`` "
 "directory."
 msgstr ""
-"Για να χρησιμοποιήσετε τις ρυθμίσεις του OpenSSL και την αποθήκη "
-"εμπιστοσύνης του συστήματος του προμηθευτή σας, εντοπίστε τον φάκελο με το "
-"αρχείο ``openssl.cnf`` ή τον συμβολικό σύνδεσμο στο ``/etc``. Στις "
-"περισσότερες διανομές το αρχείο βρίσκεται είτε στο ``/etc/ssl`` είτε στο ``/"
-"etc/pki/tls``. Ο φάκελος θα πρέπει επίσης να περιέχει ένα αρχείο ``cert."
-"pem`` και/ή ένα φάκελο``certs``."
+"Για να χρησιμοποιήσετε τις ρυθμίσεις του OpenSSL και το αποθετήριο "
+"εμπιστοσύνης συστήματος, εντοπίστε τον κατάλογο με το αρχείο ``openssl.cnf`` "
+"ή τον συμβολικό σύνδεσμο στο ``/etc``. Στις περισσότερες διανομές το αρχείο "
+"βρίσκεται είτε στο ``/etc/ssl`` είτε στο ``/etc/pki/tls``. Ο κατάλογος θα "
+"πρέπει επίσης να περιέχει ένα αρχείο ``cert.pem`` και/ή έναν κατάλογο "
+"``certs``."
 
 #: using/unix.rst:167
 msgid ""
@@ -416,8 +415,8 @@ msgid ""
 "Build Python with custom OpenSSL (see the configure ``--with-openssl`` and "
 "``--with-openssl-rpath`` options)"
 msgstr ""
-"Φτιάξτε την Python με προσαρμοσμένη OpenSSL (δείτε τις επιλογές configure "
-"``----with-openssl`` και ``----with-openssl-rpath``)"
+"Μεταγλώττιση της Python με προσαρμοσμένο OpenSSL (δείτε τις επιλογές "
+"configure ``----with-openssl`` και ``----with-openssl-rpath``)"
 
 #: using/unix.rst:193
 msgid ""
@@ -443,7 +442,7 @@ msgid ""
 "recompile Python to update OpenSSL. It's sufficient to replace the custom "
 "OpenSSL installation with a newer version."
 msgstr ""
-"Οι patch εκδόσεις του OpenSSL έχουν μια δυαδική διεπαφή εφαρμογής (ABI) "
-"συμβατή προς τα πίσω. Δεν χρειάζεται να κάνετε compile εκ νέου την Python "
-"για να ενημερώσετε το OpenSSL. Αρκεί να αντικαταστήσετε την προσαρμοσμένη "
-"εγκατάσταση του OpenSSL με μια νεότερη έκδοση."
+"Οι διορθωτικές εκδόσεις του OpenSSL έχουν μια δυαδική διεπαφή εφαρμογής "
+"(ABI) συμβατή προς τα πίσω. Δεν χρειάζεται να κάνετε compile εκ νέου την "
+"Python για να ενημερώσετε το OpenSSL. Αρκεί να αντικαταστήσετε την "
+"προσαρμοσμένη εγκατάσταση του OpenSSL με μια νεότερη έκδοση."
