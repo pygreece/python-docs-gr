@@ -2054,11 +2054,11 @@ msgstr ""
 
 #: reference/datamodel.rst:1397
 msgid ":exc:`RuntimeError` is raised if the frame is currently executing."
-msgstr ""
+msgstr "Το :exc:`RuntimeError` γίνεται raise εάν το πλαίσιο εκτελείται αυτή την στιγμή."
 
 #: reference/datamodel.rst:1405
 msgid "Traceback objects"
-msgstr ""
+msgstr "Αντικείμενα ανίχνευσης"
 
 #: reference/datamodel.rst:1418
 msgid ""
@@ -2066,10 +2066,13 @@ msgid ""
 "errors>`. A traceback object is implicitly created when an exception occurs, "
 "and may also be explicitly created by calling :class:`types.TracebackType`."
 msgstr ""
+"Τα ατνικείμενα ανίχνευσης αντιπροσωπεύουν το ίχνος στοίβασς μιας :ref:`exception <tut-"
+"errors>`. Ένα αντικείμενο traceback δημιουργείται σιωπηρά όταν εμφανίζεται μια εξαίρεση και μπορεί επίσης "
+"να δημιουργηθεί ρητά καλώντας το :class:`types.TracebackType`."
 
 #: reference/datamodel.rst:1423
 msgid "Traceback objects can now be explicitly instantiated from Python code."
-msgstr ""
+msgstr "Τα αντικείμενα Traceback μπορούν τώρα να δημιουργηθούν ρητά από τον κώδικα Python."
 
 #: reference/datamodel.rst:1426
 msgid ""
@@ -2081,6 +2084,11 @@ msgid ""
 "`sys.exc_info`, and as the :attr:`~BaseException.__traceback__` attribute of "
 "the caught exception."
 msgstr ""
+"Για σιωπηρά δημιουργημένα tracebacks, όταν η αναζήτηση για έναν χειριστή εξαιρέσεων ξετυλίγει τη στοίβα εκτέλεσης, "
+"σε κάθε επίπεδο ξετυλίγματος εισάγετα ένα αντικείμενο traceback μπροστά από το τρέχον traceback.  Όταν εισάγεται ένα χειριστής "
+"εξαίρεσης, το ίχνος στοίβας διατίθεται στο πρόγραμμα. (Δείτε την ενότητα :ref:"
+"`try`.) Είναι προσβάσιμο ως το τρίτο στοιχείο της πλειάδα που επιστρέφεται από το :func:"
+"`sys.exc_info` και έχει ως το χαρακτηριστικό :attr:`~BaseException.__traceback__` της εξαίρεσης που έχει εντοπιστεί."
 
 #: reference/datamodel.rst:1435
 msgid ""
@@ -2089,6 +2097,9 @@ msgid ""
 "interactive, it is also made available to the user as :data:`sys."
 "last_traceback`."
 msgstr ""
+"Όταν το πρόγραμμα δεν περιέχειτ ον κατάλληλο χειριστή, το ίχνος στοίβας γράφεται (όμορφα μορφοποιημένο) στην τυπική ροή "
+"σφαλμάτων· εάν ο διερμηνέα είναι διαδραστικός, διατίθεται επίσης στον χρήστη ως :data:`sys."
+"last_traceback`."
 
 #: reference/datamodel.rst:1440
 msgid ""
@@ -2096,25 +2107,30 @@ msgid ""
 "to determine how the :attr:`~traceback.tb_next` attributes should be linked "
 "to form a full stack trace."
 msgstr ""
+"Για ρητά δημιουργημένα tracebacks, εναπόκειται στον δημιουργό του traceback να καθορίσει πως θα πρέπει να συνδεθούν, "
+"τα χαρακτηριστικά :attr:`~traceback.tb_next` για να σχηματίσουν ένα ίχνος πλήρους στοίβας."
 
 #: reference/datamodel.rst:1455
 msgid ""
 "Points to the execution :ref:`frame <frame-objects>` of the current level."
 msgstr ""
+"Δείχνει την εκτέλεση :ref:`frame <frame-objects>` του τρέχοντος επιπέδου."
 
 #: reference/datamodel.rst:1458
 msgid ""
 "Accessing this attribute raises an :ref:`auditing event <auditing>` ``object."
 "__getattr__`` with arguments ``obj`` and ``\"tb_frame\"``."
 msgstr ""
+"Η πρόσβαση σε αυτό το χαρακτηριστικό κάνει raise ένα :ref:`auditing event <auditing>` ``object."
+"__getattr__`` με ορίσματα ``obj`` και ``\"tb_frame\"``."
 
 #: reference/datamodel.rst:1463
 msgid "Gives the line number where the exception occurred"
-msgstr ""
+msgstr "Δίνει τον αριθμό γραμμής όπου προέκυψε η εξαίρεση"
 
 #: reference/datamodel.rst:1466
 msgid "Indicates the \"precise instruction\"."
-msgstr ""
+msgstr "Δηλώνει την \"ακριβή οδηγία\"."
 
 #: reference/datamodel.rst:1468
 msgid ""
@@ -2123,6 +2139,9 @@ msgid ""
 "occurred in a :keyword:`try` statement with no matching except clause or "
 "with a :keyword:`finally` clause."
 msgstr ""
+"Ο αριθμός γραμμής και η τελευταία εντολή στο traceback μπορεί να διαφέρουν από τον αριθμό γραμμής του "
+"αντικειμένου :ref:`frame object <frame-objects>` εάν η εξαίρεση εμφανίστηκε σε μια πρόταση :keyword:`try` χωρίς αντιστοίχιση "
+"εκτός από τον όρο ή με έναν όρο :keyword:`finally`."
 
 #: reference/datamodel.rst:1479
 msgid ""
@@ -2130,20 +2149,24 @@ msgid ""
 "stack trace (towards the frame where the exception occurred), or ``None`` if "
 "there is no next level."
 msgstr ""
+"Το ειδικό εγγράψιμο χαρακτηριστικό :attr:`!tb_next` είναι το επόμενο επίπεδο στο ίχνος στοίβας (προς το πλαίσι όπου "
+"σημειώθηκε η εξαίρεση), ή ``None`` εάν δεν υπάρχει επόμενο επίπεδο."
 
 #: reference/datamodel.rst:1483
 msgid "This attribute is now writable"
-msgstr ""
+msgstr "Αυτό το χαρακτηριστικό είναι τώρα εγγράψιμο"
 
 #: reference/datamodel.rst:1488
 msgid "Slice objects"
-msgstr ""
+msgstr "Αντικείμενα τμηματοποιήσης"
 
 #: reference/datamodel.rst:1492
 msgid ""
 "Slice objects are used to represent slices for :meth:`~object.__getitem__` "
 "methods.  They are also created by the built-in :func:`slice` function."
 msgstr ""
+"Τα αντικείμενα τμηματοποίησης χρησιμοποιούνται για να αναπαραστήσουν τμήματα για μεθόδους :meth:`~object.__getitem__`.  "
+"Δημιουργούνται επίσης από την ενσωματωμένη συνάρτηση :func:`slice`."
 
 #: reference/datamodel.rst:1501
 msgid ""
