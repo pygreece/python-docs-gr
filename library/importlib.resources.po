@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-04-04 11:06+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,16 +21,20 @@ msgstr ""
 msgid ""
 ":mod:`!importlib.resources` -- Package resource reading, opening and access"
 msgstr ""
+":mod:`!importlib.resources` -- Ανάγνωση, άνοιγμα και πρόσβαση σε πόρους "
+"πακέτων"
 
 #: library/importlib.resources.rst:7
 msgid "**Source code:** :source:`Lib/importlib/resources/__init__.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/importlib/resources/__init__.py`"
 
 #: library/importlib.resources.rst:13
 msgid ""
 "This module leverages Python's import system to provide access to "
 "*resources* within *packages*."
 msgstr ""
+"Αυτό το module αξιοποιεί το σύστημα εισαγωγής της Python για να παρέχει "
+"πρόσβαση σε *πόρους* εντός *πακέτων*."
 
 #: library/importlib.resources.rst:16
 msgid ""
@@ -43,10 +47,21 @@ msgid ""
 "primarily those non-Python artifacts exposed specifically by the package "
 "author."
 msgstr ""
+"\"Πόροι\" είναι πόροι που μοιάζουν με αρχεία και σχετίζονται με ένα module ή "
+"πακέτο στην Python. Οι πόροι μπορεί να περιέχονται απευθείας σε ένα πακέτο, "
+"μέσα σε έναν υποκατάλογο που περιλαμβάνεται σε αυτό το πακέτο, ή δίπλα σε "
+"modules έξω από ένα πακέτο. Οι πόροι μπορεί να είναι μορφής κειμένου ή "
+"δυαδικής μορφής. Ως αποτέλεσμα, ο πηγαίος κώδικας των modules της Python (."
+"py) ενός πακέτου και τα αποτελέσματα μεταγλώττισης (pycache) είναι τεχνικά "
+"de-facto πόροι αυτού του πακέτου. Ωστόσο, στην πράξη, οι πόροι είναι κυρίως "
+"εκείνα τα μη-Python αρχεία που εκτίθενται συγκεκριμένα από τον συγγραφέα του "
+"πακέτου."
 
 #: library/importlib.resources.rst:25
 msgid "Resources can be opened or read in either binary or text mode."
 msgstr ""
+"Οι πόροι μπορούν να ανοίξουν ή να διαβαστούν είτε σε δυαδική κατάσταση είτε "
+"σε κατάσταση κειμένου."
 
 #: library/importlib.resources.rst:27
 msgid ""
@@ -56,6 +71,11 @@ msgid ""
 "file system: for example, a package and its resources can be imported from a "
 "zip file using :py:mod:`zipimport`."
 msgstr ""
+"Οι πόροι είναι κατά κάποιο τρόπο ανάλογοι με αρχεία μέσα σε καταλόγους, αν "
+"και είναι σημαντικό να θυμόμαστε ότι αυτή είναι απλώς μια μεταφορά. Οι πόροι "
+"και τα πακέτα **δεν** χρειάζεται να υπάρχουν ως φυσικά αρχεία και κατάλογοι "
+"στο σύστημα αρχείων: για παράδειγμα, ένα πακέτο και οι πόροι του μπορούν να "
+"εισαχθούν από ένα αρχείο zip χρησιμοποιώντας το :py:mod:`zipimport`."
 
 #: library/importlib.resources.rst:35
 msgid ""
@@ -66,6 +86,12 @@ msgid ""
 "makes reading resources included in packages easier, with more stable and "
 "consistent semantics."
 msgstr ""
+"Αυτό το module παρέχει λειτουργικότητα παρόμοια με το `pkg_resources "
+"<https://setuptools.readthedocs.io/en/latest/pkg_resources.html>`_ `Basic "
+"Resource Access <https://setuptools.readthedocs.io/en/latest/pkg_resources."
+"html#basic-resource-access>`_, χωρίς όμως το κόστος απόδοσης που συνεπάγεται "
+"αυτό το πακέτο. Έτσι, η ανάγνωση πόρων που περιλαμβάνονται σε πακέτα γίνεται "
+"ευκολότερη, με πιο σταθερή και συνεπή σημασιολογία."
 
 #: library/importlib.resources.rst:43
 msgid ""
@@ -74,6 +100,11 @@ msgid ""
 "using.html>`_ and `migrating from pkg_resources to importlib.resources "
 "<https://importlib-resources.readthedocs.io/en/latest/migration.html>`_."
 msgstr ""
+"Το αυτόνομο backport αυτού του module παρέχει περισσότερες πληροφορίες στα "
+"`using importlib.resources <https://importlib-resources.readthedocs.io/en/"
+"latest/using.html>`_ και `migrating from pkg_resources to importlib."
+"resources <https://importlib-resources.readthedocs.io/en/latest/migration."
+"html>`_."
 
 #: library/importlib.resources.rst:49
 msgid ""
@@ -81,6 +112,10 @@ msgid ""
 "reading should implement a ``get_resource_reader(fullname)`` method as "
 "specified by :class:`importlib.resources.abc.ResourceReader`."
 msgstr ""
+"Οι :class:`Loaders <importlib.abc.Loader>` που επιθυμούν να υποστηρίξουν "
+"ανάγνωση πόρων θα πρέπει να υλοποιήσουν μια μέθοδο "
+"``get_resource_reader(fullname)`` όπως ορίζεται από την κλάση :class:"
+"`importlib.resources.abc.ResourceReader`."
 
 #: library/importlib.resources.rst:55
 msgid ""
@@ -88,6 +123,9 @@ msgid ""
 "ModuleType>` or a module name as a string. Defined as ``Union[str, "
 "ModuleType]``."
 msgstr ""
+"Αντιπροσωπεύει μία άγκυρα (anchor) για πόρους, είτε ένα :class:`module "
+"object <types.ModuleType>` είτε ένα όνομα module ως συμβολοσειρά. Ορίζεται "
+"ως ``Union[str, ModuleType]``."
 
 #: library/importlib.resources.rst:61
 msgid ""
@@ -95,6 +133,10 @@ msgid ""
 "the resource container (think directory) and its resources (think files). A "
 "Traversable may contain other containers (think subdirectories)."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο :class:`~importlib.resources.abc.Traversable` που "
+"αντιπροσωπεύει το δοχείο των πόρων (σκεφτείτε έναν κατάλογο) και τους πόρους "
+"του (σκεφτείτε αρχεία). Ένα Traversable μπορεί να περιέχει και άλλα δοχεία "
+"(σκεφτείτε υποκαταλόγους)."
 
 #: library/importlib.resources.rst:66
 msgid ""
@@ -103,6 +145,10 @@ msgid ""
 "resolved adjacent to that module (in the same package or the package root). "
 "If the anchor is omitted, the caller's module is used."
 msgstr ""
+"Το *anchor* είναι μια προαιρετική κλάση :class:`Anchor`. Αν το anchor είναι "
+"πακέτο, οι πόροι επιλύονται σε αυτό το πακέτο. Αν είναι module, οι πόροι "
+"επιλύονται δίπλα σε αυτό το module (στο ίδιο πακέτο ή στη ρίζα του πακέτου). "
+"Αν το anchor παραλειφθεί, χρησιμοποιείται το module του καλούντος."
 
 #: library/importlib.resources.rst:74
 msgid ""
@@ -112,6 +158,13 @@ msgid ""
 "`DeprecationWarning`. Consider passing the anchor positionally or using "
 "``importlib_resources >= 5.10`` for a compatible interface on older Pythons."
 msgstr ""
+"Η παράμετρος *package* μετονομάστηκε σε *anchor*. Το *anchor* μπορεί πλέον "
+"να είναι ένα module που δεν είναι πακέτο και αν παραλειφθεί θα "
+"χρησιμοποιηθεί το module του καλούντος. Το *package* γίνεται ακόμα αποδεκτό "
+"για συμβατότητα αλλά θα εμφανίσει ένα :exc:`DeprecationWarning`.Σκεφτείτε να "
+"περάσετε το anchor ως positional όρισμα ή να χρησιμοποιήσετε το "
+"``importlib_resources >= 5.10`` για συμβατή διεπαφή σε παλαιότερες εκδόσεις "
+"Python."
 
 #: library/importlib.resources.rst:84
 msgid ""
@@ -120,26 +173,37 @@ msgid ""
 "a context manager for use in a :keyword:`with` statement. The context "
 "manager provides a :class:`pathlib.Path` object."
 msgstr ""
+"Δεδομένου ενός αντικειμένου :class:`~importlib.resources.abc.Traversable` "
+"που αντιπροσωπεύει ένα αρχείο ή κατάλογο, συνήθως από το :func:`importlib."
+"resources.files`, επιστρέφει ένα context manager για χρήση σε μια :keyword:"
+"`with` πρόταση. Ο context manager παρέχει ένα αντικείμενο :class:`pathlib."
+"Path`."
 
 #: library/importlib.resources.rst:89
 msgid ""
 "Exiting the context manager cleans up any temporary file or directory "
 "created when the resource was extracted from e.g. a zip file."
 msgstr ""
+"Η έξοδος από τον context manager καθαρίζει οποιοδήποτε προσωρινό αρχείο ή "
+"κατάλογο που δημιουργήθηκε όταν ο πόρος εξήχθη, π.χ. από ένα αρχείο zip."
 
 #: library/importlib.resources.rst:92
 msgid ""
 "Use ``as_file`` when the Traversable methods (``read_text``, etc) are "
 "insufficient and an actual file or directory on the file system is required."
 msgstr ""
+"Χρησιμοποιήστε το ``as_file`` όταν οι μέθοδοι του Traversable (όπως "
+"``read_text``, κλπ) δεν επαρκούν και απαιτείται ένα πραγματικό αρχείο ή "
+"κατάλογος στο σύστημα αρχείων."
 
 #: library/importlib.resources.rst:98
 msgid "Added support for *traversable* representing a directory."
 msgstr ""
+"Προστέθηκε υποστήριξη για *traversable* που αντιπροσωπεύει έναν κατάλογο."
 
 #: library/importlib.resources.rst:103
 msgid "Deprecated functions"
-msgstr ""
+msgstr "Απαρχαιωμένες συναρτήσεις"
 
 #: library/importlib.resources.rst:105
 msgid ""
@@ -148,6 +212,11 @@ msgid ""
 "functions is that they do not support directories: they assume all resources "
 "are located directly within a *package*."
 msgstr ""
+"Μια παλαιότερη, απαρχαιωμένη σειρά συναρτήσεων εξακολουθεί να είναι "
+"διαθέσιμη, αλλά προγραμματίστηκε για αφαίρεση σε μελλοντική έκδοση της "
+"Python. Το κύριο μειονέκτημα αυτών των συναρτήσεων είναι ότι δεν "
+"υποστηρίζουν καταλόγους: υποθέτουν ότι όλοι οι πόροι βρίσκονται απευθείας "
+"μέσα σε ένα *package*."
 
 #: library/importlib.resources.rst:112
 msgid ""
@@ -156,24 +225,31 @@ msgid ""
 "You can only pass module objects whose ``__spec__."
 "submodule_search_locations`` is not ``None``."
 msgstr ""
+"Όταν μια συνάρτηση δέχεται ένα όρισμα ``Package``, μπορείτε να περάσετε είτε "
+"ένα :class:`module object <types.ModuleType>` είτε όνομα module ως "
+"συμβολοσειρά. Μπορείτε να περάσετε μόνο αντικείμενα module των οποίων το "
+"``__spec__.submodule_search_locations`` δεν είναι ``None``."
 
 #: library/importlib.resources.rst:117
 msgid "The ``Package`` type is defined as ``Union[str, ModuleType]``."
-msgstr ""
+msgstr "Ο τύπος ``Package`` ορίζεται ως ``Union[str, ModuleType]``."
 
 #: library/importlib.resources.rst:124
 msgid ""
 "For *resource* arguments of the functions below, you can pass in the name of "
 "a resource as a string or a :class:`path-like object <os.PathLike>`."
 msgstr ""
+"Για τα ορίσματα *resource* στις παρακάτω συναρτήσεις, μπορείτε να περάσετε "
+"το όνομα ενός πόρου ως συμβολοσειρά ή ένα :class:`path-like object <os."
+"PathLike>`."
 
 #: library/importlib.resources.rst:128
 msgid "The ``Resource`` type is defined as ``Union[str, os.PathLike]``."
-msgstr ""
+msgstr "Ο τύπος ``Resource`` ορίζεται ως ``Union[str, os.PathLike]``."
 
 #: library/importlib.resources.rst:133
 msgid "Open for binary reading the *resource* within *package*."
-msgstr ""
+msgstr "Ανοίγει για δυαδική ανάγνωση το *resource* μέσα στο *package*."
 
 #: library/importlib.resources.rst:135
 msgid ""
@@ -183,22 +259,31 @@ msgid ""
 "resources (i.e. it cannot be a directory).  This function returns a ``typing."
 "BinaryIO`` instance, a binary I/O stream open for reading."
 msgstr ""
+"Το *package* είναι είτε όνομα είτε αντικείμενο module που συμμορφώνεται με "
+"τις απαιτήσεις της κλάσης  ``Package``. Το *resource* είναι το όνομα του "
+"πόρου που θα ανοιχτεί μέσα στο *package*· δεν μπορεί να περιέχει "
+"διαχωριστικά διαδρομών και δεν μπορεί να έχει υπο-πόρους (δηλαδή δεν μπορεί "
+"να είναι κατάλογος). Αυτή η συνάρτηση επιστρέφει ένα στιγμιότυπο ``typing."
+"BinaryIO``, δηλαδή ένα δυαδικό ρεύμα εισόδου (binary I/O stream) ανοιχτό για "
+"ανάγνωση."
 
 #: library/importlib.resources.rst:143 library/importlib.resources.rst:164
 #: library/importlib.resources.rst:182 library/importlib.resources.rst:201
 #: library/importlib.resources.rst:237 library/importlib.resources.rst:253
 msgid "Calls to this function can be replaced by::"
-msgstr ""
+msgstr "Οι κλήσεις σε αυτή τη συνάρτηση μπορούν να αντικατασταθούν με::"
 
 #: library/importlib.resources.rst:145
 msgid "files(package).joinpath(resource).open('rb')"
-msgstr ""
+msgstr "files(package).joinpath(resource).open('rb')"
 
 #: library/importlib.resources.rst:150
 msgid ""
 "Open for text reading the *resource* within *package*.  By default, the "
 "resource is opened for reading as UTF-8."
 msgstr ""
+"Ανοίγει για ανάγνωση κειμένου το *resource* μέσα στο *package*. Από "
+"προεπιλογή, ο πόρος ανοίγει για ανάγνωση ως UTF-8."
 
 #: library/importlib.resources.rst:153
 msgid ""
@@ -208,21 +293,31 @@ msgid ""
 "resources (i.e. it cannot be a directory).  *encoding* and *errors* have the "
 "same meaning as with built-in :func:`open`."
 msgstr ""
+"Το *package* είναι είτε ένα όνομα είτε ένα αντικείμενο module που "
+"συμμορφώνεται με τις απαιτήσεις της κλάσης ``Package``. Το *resource* είναι "
+"το όνομα του πόρου που θα ανοιχτεί μέσα στο *package*· δεν μπορεί να "
+"περιέχει διαχωριστικά διαδρομών και δεν μπορεί να έχει υπο-πόρους (δηλαδή "
+"δεν μπορεί να είναι κατάλογος). Οι παράμετροι *encoding* και *errors* έχουν "
+"την ίδια σημασία όπως στην ενσωματωμένη :func:`open`."
 
 #: library/importlib.resources.rst:159
 msgid ""
 "This function returns a ``typing.TextIO`` instance, a text I/O stream open "
 "for reading."
 msgstr ""
+"Αυτή η συνάρτηση επιστρέφει ένα στιγμιότυπο ``typing.TextIO``, δηλαδή ένα "
+"ρεύμα εισόδου κειμένου (text I/O stream) ανοιχτό για ανάγνωση."
 
 #: library/importlib.resources.rst:166
 msgid "files(package).joinpath(resource).open('r', encoding=encoding)"
-msgstr ""
+msgstr "files(package).joinpath(resource).open('r', encoding=encoding)"
 
 #: library/importlib.resources.rst:171
 msgid ""
 "Read and return the contents of the *resource* within *package* as ``bytes``."
 msgstr ""
+"Διαβάζει και επιστρέφει τα περιεχόμενα του *resource* μέσα στο *package* ως "
+"``bytes``."
 
 #: library/importlib.resources.rst:174
 msgid ""
@@ -232,16 +327,24 @@ msgid ""
 "resources (i.e. it cannot be a directory).  This function returns the "
 "contents of the resource as :class:`bytes`."
 msgstr ""
+"Το *package* είναι είτε ένα όνομα είτε ένα αντικείμενο module που "
+"συμμορφώνεται με τις απαιτήσεις της κλάσης  ``Package``. Το *resource* είναι "
+"το όνομα του πόρου μέσα στο *package*· δεν μπορεί να περιέχει διαχωριστικά "
+"διαδρομών και δεν μπορεί να έχει υπο-πόρους (δηλαδή δεν μπορεί να είναι "
+"κατάλογος). Αυτή η συνάρτηση επιστρέφει τα περιεχόμενα του πόρου ως :class:"
+"`bytes`."
 
 #: library/importlib.resources.rst:184
 msgid "files(package).joinpath(resource).read_bytes()"
-msgstr ""
+msgstr "files(package).joinpath(resource).read_bytes()"
 
 #: library/importlib.resources.rst:189
 msgid ""
 "Read and return the contents of *resource* within *package* as a ``str``. By "
 "default, the contents are read as strict UTF-8."
 msgstr ""
+"Διαβάζει και επιστρέφει τα περιεχόμενα του *resource* μέσα στο *package* ως "
+"``str``. Από προεπιλογή, τα περιεχόμενα διαβάζονται ως αυστηρό UTF-8."
 
 #: library/importlib.resources.rst:192
 msgid ""
@@ -252,10 +355,17 @@ msgid ""
 "same meaning as with built-in :func:`open`.  This function returns the "
 "contents of the resource as :class:`str`."
 msgstr ""
+"Το *package* είναι είτε όνομα είτε αντικείμενο module που συμμορφώνεται με "
+"τις απαιτήσεις της κλάσης ``Package``. Το *resource* είναι το όνομα του "
+"πόρου μέσα στο *package*· δεν μπορεί να περιέχει διαχωριστικά διαδρομών και "
+"δεν μπορεί να έχει υπο-πόρους (δηλαδή δεν μπορεί να είναι κατάλογος). Οι "
+"παράμετροι *encoding* και *errors* έχουν την ίδια σημασία όπως στην "
+"ενσωματωμένη :func:`open`. Αυτή η συνάρτηση επιστρέφει τα περιεχόμενα του "
+"πόρου ως :class:`str`."
 
 #: library/importlib.resources.rst:203
 msgid "files(package).joinpath(resource).read_text(encoding=encoding)"
-msgstr ""
+msgstr "files(package).joinpath(resource).read_text(encoding=encoding)"
 
 #: library/importlib.resources.rst:208
 msgid ""
@@ -263,12 +373,18 @@ msgid ""
 "function returns a context manager for use in a :keyword:`with` statement. "
 "The context manager provides a :class:`pathlib.Path` object."
 msgstr ""
+"Επιστρέφει τη διαδρομή του *resource* ως πραγματική διαδρομή συστήματος "
+"αρχείων. Αυτή η συνάρτηση επιστρέφει ένα context manager για χρήση σε μια :"
+"keyword:`with` πρόταση. Ο context manager παρέχει ένα αντικείμενο :class:"
+"`pathlib.Path`."
 
 #: library/importlib.resources.rst:212
 msgid ""
 "Exiting the context manager cleans up any temporary file created when the "
 "resource needs to be extracted from e.g. a zip file."
 msgstr ""
+"Η έξοδος από τον context manager καθαρίζει οποιοδήποτε προσωρινό αρχείο "
+"δημιουργήθηκε όταν ο πόρος χρειάστηκε να εξαχθεί, π.χ. από αρχείο zip."
 
 #: library/importlib.resources.rst:215
 msgid ""
@@ -277,14 +393,21 @@ msgid ""
 "within *package*; it may not contain path separators and it may not have sub-"
 "resources (i.e. it cannot be a directory)."
 msgstr ""
+"Το *package* είναι είτε ένα όνομα είτε ένα αντικείμενο module που "
+"συμμορφώνεται με τις απαιτήσεις της κλάσης ``Package``. Το *resource* είναι "
+"το όνομα του πόρου μέσα στο *package*· δεν μπορεί να περιέχει διαχωριστικά "
+"διαδρομών και δεν μπορεί να έχει υπο-πόρους (δηλαδή δεν μπορεί να είναι "
+"κατάλογος)."
 
 #: library/importlib.resources.rst:222
 msgid "Calls to this function can be replaced using :func:`as_file`::"
 msgstr ""
+"Οι κλήσεις σε αυτή τη συνάρτηση μπορούν να αντικατασταθούν χρησιμοποιώντας :"
+"func:`as_file`::"
 
 #: library/importlib.resources.rst:224
 msgid "as_file(files(package).joinpath(resource))"
-msgstr ""
+msgstr "as_file(files(package).joinpath(resource))"
 
 #: library/importlib.resources.rst:229
 msgid ""
@@ -293,10 +416,14 @@ msgid ""
 "resources. *package* is either a name or a module object which conforms to "
 "the ``Package`` requirements."
 msgstr ""
+"Επιστρέφει ``True`` αν υπάρχει πόρος με όνομα *name* στο πακέτο, αλλιώς "
+"``False``. Αυτή η συνάρτηση δεν θεωρεί τους καταλόγους ως πόρους. *package* "
+"είναι είτε όνομα είτε αντικείμενο module που πληροί τις απαιτήσεις "
+"``Package``."
 
 #: library/importlib.resources.rst:239
 msgid "files(package).joinpath(resource).is_file()"
-msgstr ""
+msgstr "files(package).joinpath(resource).is_file()"
 
 #: library/importlib.resources.rst:244
 msgid ""
@@ -304,15 +431,22 @@ msgid ""
 "returns :class:`str` resources (e.g. files) and non-resources (e.g. "
 "directories).  The iterable does not recurse into subdirectories."
 msgstr ""
+"Επιστρέφει ένα iterable πάνω στα ονομασμένα στοιχεία μέσα στο πακέτο. Το "
+"iterable επιστρέφει πόρους :class:`str` (π.χ. αρχεία) και μη-πόρους (π.χ. "
+"καταλόγους). Το iterable δεν επαναλαμβάνεται σε υποκαταλόγους."
 
 #: library/importlib.resources.rst:248
 msgid ""
 "*package* is either a name or a module object which conforms to the "
 "``Package`` requirements."
 msgstr ""
+"Το *package* είναι είτε ένα όνομα είτε ένα αντικείμενο module που "
+"συμμορφώνεται με τις απαιτήσεις της κλάσης ``Package``."
 
 #: library/importlib.resources.rst:255
 msgid ""
 "(resource.name for resource in files(package).iterdir() if resource."
 "is_file())"
 msgstr ""
+"(resource.name for resource in files(package).iterdir() if resource."
+"is_file())"
