@@ -53,7 +53,7 @@ GITHUB_ISSUE_BODY = """/type translation
 
 Παρακαλούμε, σχολιάστε μέσα στο issue εάν θέλετε αυτό το αρχείο να ανατεθεί σε σας. Ένα μέλος της διαχειριστικής ομάδας θα σας το αναθέσει το συντομότερο δυνατό, ώστε να μπορέσεται να το δουλέψετε.
 
-Θυμηθείτε να ακουληθείσεται τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-gr/blob/main/CONTRIBUTING.md)
+Θυμηθείτε να ακολουθήσετε τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-gr/blob/main/CONTRIBUTING.md)
 """
 GITHUB_MVP_MILESTONE = int(os.getenv("GITHUB_MVP_MILESTONE", 2))
 GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")

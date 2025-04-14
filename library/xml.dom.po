@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-04-09 19:17+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: library/xml.dom.rst:2
 msgid ":mod:`!xml.dom` --- The Document Object Model API"
-msgstr ""
+msgstr ":mod:`!xml.dom` --- Το API του Μοντέλου Αντικειμένων Εγγράφου (DOM)"
 
 #: library/xml.dom.rst:10
 msgid "**Source code:** :source:`Lib/xml/dom/__init__.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/xml/dom/__init__.py`"
 
 #: library/xml.dom.rst:14
 msgid ""
@@ -33,6 +33,12 @@ msgid ""
 "client code to build such a structure from scratch.  It then gives access to "
 "the structure through a set of objects which provided well-known interfaces."
 msgstr ""
+"Το Μοντέλο Αντικειμένων Εγγράφου, ή αλλιώς \"DOM,\" είναι ένα API πολλών "
+"γλωσσών από το World Wide Web Consortium (W3C) για την πρόσβαση και την "
+"τροποποίηση εγγράφων XML. Μια υλοποίηση DOM παρουσιάζει ένα έγγραφο XML ως "
+"μια δενδρική δομή, ή επιτρέπει στον χρήστη να κατασκευάσει μια τέτοια δομή "
+"από το μηδέν. Στη συνέχεια, παρέχει πρόσβαση στη δομή μέσω ενός συνόλου "
+"αντικειμένων που προσφέρουν καθορισμένες διεπαφές."
 
 #: library/xml.dom.rst:20
 msgid ""
@@ -44,6 +50,14 @@ msgid ""
 "document somewhere in your own code.  SAX does not do it for you.  Also, if "
 "you need to look ahead in the XML document, you are just out of luck."
 msgstr ""
+"Το DOM είναι εξαιρετικά χρήσιμο για εφαρμογές με τυχαία πρόσβαση. Το SAX σου "
+"επιτρέπει να βλέπεις μόνο ένα κομμάτι του εγγράφου κάθε φορά. Αν εξετάζεις "
+"ένα στοιχείο SAX, δεν έχεις πρόσβαση σε κάποιο άλλο. Αν εξετάζεις έναν κόμβο "
+"κειμένου, δεν έχεις πρόσβαση στο στοιχείο που τον περιέχει. Όταν γράφεις μια "
+"εφαρμογή με χρήση του SAX, πρέπει να παρακολουθείς τη θέση του προγράμματος "
+"σου μέσα στο έγγραφο στον δικό σου κώδικα - το SAX δεν το κάνει αυτό για "
+"εσένα. Επίσης, αν χρειαστεί να κοιτάξεις μπροστά στο XML έγγραφο, δεν έχεις "
+"αυτή τη δυνατότητα."
 
 #: library/xml.dom.rst:28
 msgid ""
@@ -52,6 +66,11 @@ msgid ""
 "SAX events, but the DOM allows you to avoid writing that code.  The DOM is a "
 "standard tree representation for XML data."
 msgstr ""
+"Ορισμένες εφαρμογές είναι απλώς αδύναμες σε ένα μοντέλο βασισμένο σε "
+"γεγονότα χωρίς πρόσβαση σε δέντρο. Φυσικά, θα μπορούσες να κατασκευάσεις ένα "
+"δέντρο μόνος σου μέσω των γεγονότων του SAX, αλλά το DOM σου επιτρέπει να "
+"αποφύγεις την υλοποίηση αυτού του κώδικα. Το DOM είναι μια πρότυπη "
+"αναπαράσταση δέντρου για δεδομένα XML."
 
 #: library/xml.dom.rst:33
 msgid ""
@@ -59,6 +78,10 @@ msgid ""
 "\"levels\" in their terminology.  The Python mapping of the API is "
 "substantially based on the DOM Level 2 recommendation."
 msgstr ""
+"Το Document Object Model ορίζεται από το W3C σε στάδια, ή \"επίπεδα\" "
+"σύμφωνα με την ορολογία τους. Η αντιστοίχιση της διεπαφής προγραμματισμού "
+"εφαρμογών (API) στην Python βασίζεται σε μεγάλο βαθμό στη σύσταση του DOM "
+"Επιπέδου 2."
 
 #: library/xml.dom.rst:45
 msgid ""
@@ -73,6 +96,18 @@ msgid ""
 "Level 3 adds a Load/Store specification, which defines an interface to the "
 "reader, but this is not yet available in the Python standard library."
 msgstr ""
+"Οι εφαρμογές DOM συνήθως ξεκινούν αναλύοντας κάποιο XML σε DOM. Το πως "
+"επιτυγχάνεται αυτό δεν καλύπτεται καθόλου από το DOM Επίπεδο 1, ενώ το "
+"Επίπεδο 2 παρέχει μόνο περιορισμένες βελτιώσεις: Υπάρχει μια κλάση "
+"αντικειμένου :class:`DOMImplementation` που παρέχει πρόσβαση σε μεθόδους "
+"δημιουργίας :class:`Document`, αλλά δεν υπάρχει τρόπος πρόσβασης σε "
+"αναγνώστη XML/αναλυτή/κατασκευαστή εγγράφων με τρόπο ανεξάρτητο από την "
+"υλοποίηση. Επίσης, δεν υπάρχει καλά ορισμένος τρόπος πρόσβασης σε αυτές τις "
+"μεθόδους χωρίς ένα υπάρχον αντικείμενο :class:`Document`. Στην Python, κάθε "
+"υλοποίηση DOM θα παρέχει μια συνάρτηση :func:`getDOMImplementation`. Το DOM "
+"Επίπεδο 3 προσθέτει μια προδιαγραφή Load/Store, η οποία ορίζει μια διεπαφή "
+"προς τον αναγνώστη, αλλά αυτή δεν είναι ακόμα διαθέσιμη στη στάνταρ "
+"βιβλιοθήκη της Python."
 
 #: library/xml.dom.rst:56
 msgid ""
@@ -81,6 +116,10 @@ msgid ""
 "in the DOM specification; this portion of the reference manual describes the "
 "interpretation of the specification in Python."
 msgstr ""
+"Αφού έχετε ένα αντικείμενο εγγράφου DOM, μπορείτε να αποκτήσετε πρόσβαση στα "
+"τμήματα του XML εγγράφου σας μέσω των ιδιοτήτων και των μεθόδων του. Αυτές "
+"οι ιδιότητες ορίζονται στις προδιαγραφές του DOM· αυτό το τμήμα του "
+"εγχειριδίου αναφοράς περιγράφει την ερμηνεία των προδιαγραφών στην Python."
 
 #: library/xml.dom.rst:61
 msgid ""
@@ -91,44 +130,57 @@ msgid ""
 "IDL).  See section :ref:`dom-conformance` for a detailed discussion of "
 "mapping requirements."
 msgstr ""
+"Η προδιαγραφή που παρέχεται από το W3C ορίζει το API του DOM για τις γλώσσες "
+"Java, ECMAScript και OMG IDL. Η παρούσα αντιστοίχιση στην Python βασίζεται "
+"σε μεγάλο βαθμό στην έκδοση της προδιαγραφής με χρήση IDL, αλλά δεν "
+"απαιτείται αυστηρή συμμόρφωση (αν και οι υλοποιήσεις είναι ελεύθερες να "
+"υποστηρίζουν την αυστηρή αντιστοίχιση από IDL). Δείτε την ενότητα :ref:`dom-"
+"conformance` για μια λεπτομερή συζήτηση των απαιτήσεων αντιστοίχισης."
 
 #: library/xml.dom.rst:70
 msgid ""
 "`Document Object Model (DOM) Level 2 Specification <https://www.w3.org/"
 "TR/2000/REC-DOM-Level-2-Core-20001113/>`_"
 msgstr ""
+"`Document Object Model (DOM) Level 2 Specification <https://www.w3.org/"
+"TR/2000/REC-DOM-Level-2-Core-20001113/>`_"
 
 #: library/xml.dom.rst:71
 msgid "The W3C recommendation upon which the Python DOM API is based."
-msgstr ""
+msgstr "Η σύσταση του W3C πάνω στην οποία βασίζεται το DOM API της Python."
 
 #: library/xml.dom.rst:73
 msgid ""
 "`Document Object Model (DOM) Level 1 Specification <https://www.w3.org/TR/"
 "REC-DOM-Level-1/>`_"
 msgstr ""
+"`Document Object Model (DOM) Level 1 Specification <https://www.w3.org/TR/"
+"REC-DOM-Level-1/>`_"
 
 #: library/xml.dom.rst:74
 msgid "The W3C recommendation for the DOM supported by :mod:`xml.dom.minidom`."
 msgstr ""
+"Η σύσταση του W3C για το DOM που υποστηρίζεται από το :mod:`xml.dom.minidom`."
 
 #: library/xml.dom.rst:76
 msgid ""
 "`Python Language Mapping Specification <https://www.omg.org/spec/PYTH/1.2/"
 "PDF>`_"
 msgstr ""
+"`Python Language Mapping Specification <https://www.omg.org/spec/PYTH/1.2/"
+"PDF>`_"
 
 #: library/xml.dom.rst:77
 msgid "This specifies the mapping from OMG IDL to Python."
-msgstr ""
+msgstr "Αυτό καθορίζει την αντιστοίχιση από το OMG IDL στην Python."
 
 #: library/xml.dom.rst:81
 msgid "Module Contents"
-msgstr ""
+msgstr "Περιεχόμενα Module"
 
 #: library/xml.dom.rst:83
 msgid "The :mod:`xml.dom` contains the following functions:"
-msgstr ""
+msgstr "Το :mod:`xml.dom` περιέχει τις παρακάτω συναρτήσεις:"
 
 #: library/xml.dom.rst:88
 msgid ""
@@ -138,6 +190,11 @@ msgid ""
 "new one for each call, as appropriate for the specific implementation (e.g. "
 "if that implementation supports some customization)."
 msgstr ""
+"Καταχωρεί την συνάρτηση *factory* με το όνομα *name*. Η συνάρτηση factory θα "
+"πρέπει να επιστρέφει ένα αντικείμενο που υλοποιεί το interface :class:"
+"`DOMImplementation`. Η συνάρτηση factory μπορεί να επιστρέφει το ίδιο "
+"αντικείμενο κάθε φορά ή ένα νέο αντικείμενο σε κάθε κλήση, ανάλογα με την "
+"υλοποίηση (π.χ. αν η υλοποίηση υποστηρίζει κάποια παραμετροποίηση)."
 
 #: library/xml.dom.rst:97
 msgid ""
@@ -148,6 +205,12 @@ msgid ""
 "variable :envvar:`PYTHON_DOM` is set, this variable is used to find the "
 "implementation."
 msgstr ""
+"Επιστρέφει μια κατάλληλη υλοποίηση DOM. Το *name* είναι είτε ένα γνωστό "
+"όνομα, είτε το όνομα ενός module που υλοποιεί DOM, είτε ``None``. Αν δεν "
+"είναι ``None``, το αντίστοιχο module γίνεται import και επιστρέφεται ένα "
+"αντικείμενο :class:`DOMImplementation` αν το import πετύχει. Αν δεν δοθεί "
+"όνομα και έχει οριστεί η μεταβλητή περιβάλλοντος :envvar:`PYTHON_DOM`, τότε "
+"χρησιμοποιείται αυτή η μεταβλητή για την εύρεση της υλοποίησης."
 
 #: library/xml.dom.rst:103
 msgid ""
@@ -157,10 +220,16 @@ msgid ""
 "version)`` pairs which are passed to the :meth:`hasFeature` method on "
 "available :class:`DOMImplementation` objects."
 msgstr ""
+"Αν δεν δοθεί το όνομα, τότε εξετάζονται οι διαθέσιμες υλοποιήσεις για να "
+"βρεθεί μία που να υποστηρίζει το απαιτούμενο  σύνολο χαρακτηριστικών. Αν δεν "
+"βρεθεί κατάλληλη υλοποίηση, γίνεται raise :exc:`ImportError`. Η λίστα "
+"χαρακτηριστικών πρέπει να είναι μία ακολουθία από ζεύγη ``(feature, "
+"version)``, τα οποία περνιούνται στη μέθοδο :meth:`hasFeature` των "
+"διαθέσιμων αντικειμένων :class:`DOMImplementation`."
 
 #: library/xml.dom.rst:109
 msgid "Some convenience constants are also provided:"
-msgstr ""
+msgstr "Παρέχονται επίσης μερικές σταθερές ευκολίας:"
 
 #: library/xml.dom.rst:114
 msgid ""
@@ -168,12 +237,19 @@ msgid ""
 "the DOM.  This is typically found as the :attr:`namespaceURI` of a node, or "
 "used as the *namespaceURI* parameter to a namespaces-specific method."
 msgstr ""
+"Η τιμή που χρησιμοποιείται για να υποδείξει ότι δεν συνδέεται κάποιο "
+"namespace με έναν κόμβο στο DOM. Συνήθως, αυτή η τιμή εμφανίζεται ως το :"
+"attr:`namespaceURI` ενός κόμβου ή χρησιμοποιείται ως παράμετρος "
+"*namespaceURI* σε μεθόδους που σχετίζονται με namespaces."
 
 #: library/xml.dom.rst:121
 msgid ""
 "The namespace URI associated with the reserved prefix ``xml``, as defined by "
 "`Namespaces in XML <https://www.w3.org/TR/REC-xml-names/>`_ (section 4)."
 msgstr ""
+"Το URI του namespace που σχετίζεται με το δεσμευμένο πρόθεμα ``xml``, όπως "
+"ορίζεται από το έγγραφο `Namespaces in XML <https://www.w3.org/TR/REC-xml-"
+"names/>`_ (ενότητα 4)."
 
 #: library/xml.dom.rst:127
 msgid ""
@@ -181,12 +257,17 @@ msgid ""
 "Model (DOM) Level 2 Core Specification <https://www.w3.org/TR/DOM-Level-2-"
 "Core/core.html>`_ (section 1.1.8)."
 msgstr ""
+"Το URI του namespace για δηλώσεις namespaces, όπως ορίζεται από το `Document "
+"Object Model (DOM) Level 2 Core Specification <https://www.w3.org/TR/DOM-"
+"Level-2-Core/core.html>`_ (ενότητα 1.1.8)."
 
 #: library/xml.dom.rst:134
 msgid ""
 "The URI of the XHTML namespace as defined by `XHTML 1.0: The Extensible "
 "HyperText Markup Language <https://www.w3.org/TR/xhtml1/>`_ (section 3.1.1)."
 msgstr ""
+"Το URL του namespace XHTML όπως ορίζεται από το `XHTML 1.0: The Extensible "
+"HyperText Markup Language <https://www.w3.org/TR/xhtml1/>`_ (ενότητα 3.1.1)."
 
 #: library/xml.dom.rst:138
 msgid ""
@@ -199,16 +280,25 @@ msgid ""
 "located within the class rather than at the module level to conform with the "
 "DOM specifications."
 msgstr ""
+"Επιπλέον, το :mod:`xml.dom` περιέχει την βασική κλάση :class:`Node` και τις "
+"εξαιρέσεις DOM. Η κλάση :class:`Node` που παρέχεται από αυτό το module δεν "
+"υλοποιεί καμία από τις μεθόδους ή τα χαρακτηριστικά που ορίζονται από την "
+"προδιαγραφή DOM. Οι συγκεκριμένες υλοποιήσεις DOM πρέπει να παρέχουν αυτά τα "
+"χαρακτηριστικά. Η κλάση :class:`Node` που παρέχεται ως μέρος αυτού του "
+"module παρέχει τις σταθερές που χρησιμοποιούνται για το χαρακτηριστικό :attr:"
+"`nodeType` σε συγκεκριμένα αντικείμενα :class:`Node`· αυτές βρίσκονται μέσα "
+"στην κλάση και όχι στο επίπεδο του module, προκειμένου να συμβαδίζουν με τις "
+"προδιαγραφές DOM."
 
 #: library/xml.dom.rst:153
 msgid "Objects in the DOM"
-msgstr ""
+msgstr "Αντικείμενα στο DOM"
 
 #: library/xml.dom.rst:155
 msgid ""
 "The definitive documentation for the DOM is the DOM specification from the "
 "W3C."
-msgstr ""
+msgstr "Η οριστική τεκμηρίωση για το DOM είναι η προδιαγραφή DOM από το W3C."
 
 #: library/xml.dom.rst:157
 msgid ""
@@ -216,148 +306,155 @@ msgid ""
 "simple strings.  It is fairly rare that you must do this, however, so this "
 "usage is not yet documented."
 msgstr ""
+"Σημειώστε ότι τα χαρακτηριστικά του DOM μπορεί να χειρίζονται και ως κόμβοι "
+"αντί για απλές συμβολοσειρές. Ωστόσο, είναι αρκετά σπάνιο να πρέπει να το "
+"κάνετε αυτό, οπότε αυτή η χρήση δεν έχει τεκμηριωθεί ακόμα."
 
 #: library/xml.dom.rst:162
 msgid "Interface"
-msgstr ""
+msgstr "Διεπαφή"
 
 #: library/xml.dom.rst:162
 msgid "Section"
-msgstr ""
+msgstr "Ενότητα"
 
 #: library/xml.dom.rst:162
 msgid "Purpose"
-msgstr ""
+msgstr "Σκοπός"
 
 #: library/xml.dom.rst:164
 msgid ":class:`DOMImplementation`"
-msgstr ""
+msgstr ":class:`DOMImplementation`"
 
 #: library/xml.dom.rst:164
 msgid ":ref:`dom-implementation-objects`"
-msgstr ""
+msgstr ":ref:`dom-implementation-objects`"
 
 #: library/xml.dom.rst:164
 msgid "Interface to the underlying implementation."
-msgstr ""
+msgstr "Διεπαφή με την υποκείμενη υλοποίηση."
 
 #: library/xml.dom.rst:167
 msgid ":class:`Node`"
-msgstr ""
+msgstr ":class:`Node`"
 
 #: library/xml.dom.rst:167
 msgid ":ref:`dom-node-objects`"
-msgstr ""
+msgstr ":ref:`dom-node-objects`"
 
 #: library/xml.dom.rst:167
 msgid "Base interface for most objects in a document."
-msgstr ""
+msgstr "Βασική διεπαφή για τα περισσότερα αντικείμενα σε ένα έγγραφο."
 
 #: library/xml.dom.rst:170
 msgid ":class:`NodeList`"
-msgstr ""
+msgstr ":class:`NodeList`"
 
 #: library/xml.dom.rst:170
 msgid ":ref:`dom-nodelist-objects`"
-msgstr ""
+msgstr ":ref:`dom-nodelist-objects`"
 
 #: library/xml.dom.rst:170
 msgid "Interface for a sequence of nodes."
-msgstr ""
+msgstr "Διεπαφή για μια ακολουθία κόμβων."
 
 #: library/xml.dom.rst:173
 msgid ":class:`DocumentType`"
-msgstr ""
+msgstr ":class:`DocumentType`"
 
 #: library/xml.dom.rst:173
 msgid ":ref:`dom-documenttype-objects`"
-msgstr ""
+msgstr ":ref:`dom-documenttype-objects`"
 
 #: library/xml.dom.rst:173
 msgid "Information about the declarations needed to process a document."
 msgstr ""
+"Πληροφορίες για τις δηλώσεις που απαιτούνται για την επεξεργασία ενός "
+"εγγράφου."
 
 #: library/xml.dom.rst:177
 msgid ":class:`Document`"
-msgstr ""
+msgstr ":class:`Document`"
 
 #: library/xml.dom.rst:177
 msgid ":ref:`dom-document-objects`"
-msgstr ""
+msgstr ":ref:`dom-document-objects`"
 
 #: library/xml.dom.rst:177
 msgid "Object which represents an entire document."
-msgstr ""
+msgstr "Αντικείμενο που αναπαριστά ολόκληρο το έγγραφο."
 
 #: library/xml.dom.rst:180
 msgid ":class:`Element`"
-msgstr ""
+msgstr ":class:`Element`"
 
 #: library/xml.dom.rst:180
 msgid ":ref:`dom-element-objects`"
-msgstr ""
+msgstr ":ref:`dom-element-objects`"
 
 #: library/xml.dom.rst:180
 msgid "Element nodes in the document hierarchy."
-msgstr ""
+msgstr "Κόμβοι στοιχείων στην ιεραρχία του εγγράφου."
 
 #: library/xml.dom.rst:183
 msgid ":class:`Attr`"
-msgstr ""
+msgstr ":class:`Attr`"
 
 #: library/xml.dom.rst:183
 msgid ":ref:`dom-attr-objects`"
-msgstr ""
+msgstr ":ref:`dom-attr-objects`"
 
 #: library/xml.dom.rst:183
 msgid "Attribute value nodes on element nodes."
-msgstr ""
+msgstr "Κόμβοι τιμών χαρακτηριστικών στους κόμβους στοιχείων."
 
 #: library/xml.dom.rst:186
 msgid ":class:`Comment`"
-msgstr ""
+msgstr ":class:`Comment`"
 
 #: library/xml.dom.rst:186
 msgid ":ref:`dom-comment-objects`"
-msgstr ""
+msgstr ":ref:`dom-comment-objects`"
 
 #: library/xml.dom.rst:186
 msgid "Representation of comments in the source document."
-msgstr ""
+msgstr "Αναπαράσταση σχολίων στο αρχικό έγγραφο."
 
 #: library/xml.dom.rst:189
 msgid ":class:`Text`"
-msgstr ""
+msgstr ":class:`Text`"
 
 #: library/xml.dom.rst:189
 msgid ":ref:`dom-text-objects`"
-msgstr ""
+msgstr ":ref:`dom-text-objects`"
 
 #: library/xml.dom.rst:189
 msgid "Nodes containing textual content from the document."
-msgstr ""
+msgstr "Κόμβοι που περιέχουν το κειμενικό περιεχόμενο του εγγράφου."
 
 #: library/xml.dom.rst:192
 msgid ":class:`ProcessingInstruction`"
-msgstr ""
+msgstr ":class:`ProcessingInstruction`"
 
 #: library/xml.dom.rst:192
 msgid ":ref:`dom-pi-objects`"
-msgstr ""
+msgstr ":ref:`dom-pi-objects`"
 
 #: library/xml.dom.rst:192
 msgid "Processing instruction representation."
-msgstr ""
+msgstr "Αναπαράσταση εντολής επεξεργασίας."
 
 #: library/xml.dom.rst:196
 msgid ""
 "An additional section describes the exceptions defined for working with the "
 "DOM in Python."
 msgstr ""
+"Μια επιπλέον ενότητα περιγράφει τις εξαιρέσεις που ορίζονται για την εργασία "
+"με το DOM στην Python."
 
 #: library/xml.dom.rst:203
 msgid "DOMImplementation Objects"
-msgstr ""
+msgstr "Αντικείμενα DOMImplementation"
 
 #: library/xml.dom.rst:205
 msgid ""
@@ -366,12 +463,19 @@ msgid ""
 "DOM Level 2 added the ability to create new :class:`Document` and :class:"
 "`DocumentType` objects using the :class:`DOMImplementation` as well."
 msgstr ""
+"Η διεπαφή :class:`DOMImplementation` παρέχει έναν τρόπο για τις εφαρμογές να "
+"προσδιορίζουν τη διαθεσιμότητα συγκεκριμένων δυνατοτήτων στο DOM που "
+"χρησιμοποιούν. Το DOM Επιπέδου 2 πρόσθεσε τη δυνατότητα δημιουργίας νέων "
+"αντικειμένων :class:`Document` και :class:`DocumentType` μέσω της :class:"
+"`DOMImplementation`."
 
 #: library/xml.dom.rst:213
 msgid ""
 "Return ``True`` if the feature identified by the pair of strings *feature* "
 "and *version* is implemented."
 msgstr ""
+"Επιστρέφει ``True`` αν η δυνατότητα που προσδιορίζεται από το ζεύγος των "
+"συμβολοσειρών *feature* και *version* είναι υλοποιημένη."
 
 #: library/xml.dom.rst:219
 msgid ""
@@ -382,6 +486,13 @@ msgid ""
 "arguments can also be ``None`` in order to indicate that no :class:`Element` "
 "child is to be created."
 msgstr ""
+"Επιστρέφει ένα νέο αντικείμενο :class:`Document` (η ρίζα του DOM), με ένα "
+"παιδικό αντικείμενο :class:`Element` που έχει τα δοσμένα *namespaceUri* και "
+"*qualifiedName*. Η παράμετρος *doctype* πρέπει να είναι ένα αντικείμενο :"
+"class:`DocumentType` που έχει δημιουργηθεί με τη μέθοδο :meth:"
+"`createDocumentType`, ή ``None``. Στο API του DOM για την Python. τα δύο "
+"πρώτα ορίσματα μπορούν επίσης να είναι ``None`` ώστε να δηλώνουν ότι δεν θα "
+"δημιουργηθεί παιδί :class:`Element`."
 
 #: library/xml.dom.rst:229
 msgid ""
@@ -389,15 +500,20 @@ msgid ""
 "*qualifiedName*, *publicId*, and *systemId* strings, representing the "
 "information contained in an XML document type declaration."
 msgstr ""
+"Επιστρέφει ένα νέο αντικείμενο :class:`DocumentType` που περιλαμβάνει τις "
+"δοσμένες συμβολοσειρές *qualifiedName*, *publicId* και *systemId*, οι οποίες "
+"αντιπροσωπεύουν τις πληροφορίες που περιέχονται σε μια δήλωση τύπου εγγράφου "
+"XML."
 
 #: library/xml.dom.rst:237
 msgid "Node Objects"
-msgstr ""
+msgstr "Αντικείμενα κόμβων"
 
 #: library/xml.dom.rst:239
 msgid ""
 "All of the components of an XML document are subclasses of :class:`Node`."
 msgstr ""
+"Όλα τα συστατικά ενός εγγράφου XML είναι υποκλάσεις της κλάσης :class:`Node`."
 
 #: library/xml.dom.rst:244
 msgid ""
@@ -408,6 +524,12 @@ msgid ""
 "const:`DOCUMENT_NODE`, :const:`DOCUMENT_TYPE_NODE`, :const:`NOTATION_NODE`. "
 "This is a read-only attribute."
 msgstr ""
+"Ένας ακέραιος που αντιπροσωπεύει τον τύπο του κόμβου. Συμβολικές σταθερές "
+"για τους τύπους βρίσκονται στην κλάση :class:`None`: :const:`ELEMENT_NODE`, :"
+"const:`ATTRIBUTE_NODE`, :const:`TEXT_NODE`, :const:`CDATA_SECTION_NODE`, :"
+"const:`ENTITY_NODE`, :const:`PROCESSING_INSTRUCTION_NODE`, :const:"
+"`COMMENT_NODE`, :const:`DOCUMENT_NODE, :const:`DOCUMENT_TYPE_NODE`, :const:"
+"`NOTATION_NODE`. Αυτό είναι ένα χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:254
 msgid ""
@@ -417,6 +539,12 @@ msgid ""
 "it will be the :class:`Document` object. For :class:`Attr` nodes, this is "
 "always ``None``. This is a read-only attribute."
 msgstr ""
+"Ο γονέας του τρέχοντος κόμβου, ή ``None`` για τον κόμβο εγγράφου. Η τιμή "
+"είναι πάντα ένα αντικείμενο της κλάσης :class:`Node` ή ``None``. Για "
+"κόμβους :class:`Element`, αυτός θα είναι το γονικό στοιχείο, εκτός από το "
+"ριζικό στοιχείο, οπότε σε αυτή την περίπτωση θα είναι το αντικείμενο :class:"
+"`Document`. Για κόμβους :class:`Attr`, αυτό είναι πάντα ``None``. Αυτό είναι "
+"ένα χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:263
 msgid ""
@@ -424,6 +552,10 @@ msgid ""
 "values for this; others provide ``None`` for this attribute. This is a read-"
 "only attribute."
 msgstr ""
+"Ένα :class:`NamedNodeMap` που περιέχει αντικείμενα χαρακτηριστικών. Μόνο τα "
+"στοιχεία έχουν πραγματικές τιμές για αυτό το χαρακτηριστικό· οι υπόλοιποι "
+"τύποι κόμβων επιστρέφουν ``None``. Αυτό είναι ένα χαρακτηριστικό για "
+"ανάγνωση μόνο."
 
 #: library/xml.dom.rst:270
 msgid ""
@@ -434,6 +566,13 @@ msgid ""
 "else. If this node is the first child of the parent, this attribute will be "
 "``None``. This is a read-only attribute."
 msgstr ""
+"Ο κόμβος που προηγείται αμέσως αυτού με τον ίδιο γονέα. Για παράδειγμα, το "
+"στοιχείο του οποίου η ετικέτα κλεισίματος προηγείται ακριβώς της ετικέτας "
+"έναρξης του *self* στοιχείου. Φυσικά, τα έγγραφα XML αποτελούνται και από "
+"άλλα στοιχεία εκτός από tags, οπότε ο προηγούμενος αδελφικός κόμβος μπορεί "
+"να είναι κείμενο, σχόλιο ή κάτι άλλο. Αν αυτός ο κόμβος είναι το πρώτο παιδί "
+"του γονέα, αυτό το χαρακτηριστικό θα είναι ``None``. Αυτό είναι ένα "
+"χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:280
 msgid ""
@@ -441,41 +580,58 @@ msgid ""
 "attr:`previousSibling`.  If this is the last child of the parent, this "
 "attribute will be ``None``. This is a read-only attribute."
 msgstr ""
+"Ο κόμβος που ακολουθεί αμέσως αυτόν με τον ίδιο γονέα. Δείτε επίσης :attr:"
+"`previousSibling`. Αν αυτός είναι το τελευταίο παιδί του γονέα, αυτό το "
+"χαρακτηριστικό θα είναι ``None``. Αυτό είναι ένα χαρακτηριστικό για ανάγνωση "
+"μόνο."
 
 #: library/xml.dom.rst:287
 msgid ""
 "A list of nodes contained within this node. This is a read-only attribute."
 msgstr ""
+"Μια λίστα από κόμβους που περιέχονται σε αυτόν τον κόμβο. Αυτό είναι ένα "
+"χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:292
 msgid ""
 "The first child of the node, if there are any, or ``None``. This is a read-"
 "only attribute."
 msgstr ""
+"Το πρώτο παιδί του κόμβου, αν υπάρχει, διαφορετικά ``None``. Αυτό είναι ένα "
+"χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:298
 msgid ""
 "The last child of the node, if there are any, or ``None``. This is a read-"
 "only attribute."
 msgstr ""
+"Το τελευταίο παιδί του κόμβου, αν υπάρχει, διαφορετικά ``None``. Αυτό είναι "
+"ένα χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:304
 msgid ""
 "The part of the :attr:`tagName` following the colon if there is one, else "
 "the entire :attr:`tagName`.  The value is a string."
 msgstr ""
+"Το τμήμα του :attr:`tagName` που ακολουθεί μετά την άνω κάτω τελεία, αν "
+"υπάρχει, αλλιώς ολόκληρο το :attr:`tagName`. Η τιμή είναι μια συμβολοσειρά."
 
 #: library/xml.dom.rst:310
 msgid ""
 "The part of the :attr:`tagName` preceding the colon if there is one, else "
 "the empty string.  The value is a string, or ``None``."
 msgstr ""
+"Το τμήμα του :attr:`tagName` που προηγείται της άνω κάτω τελείας, αν "
+"υπάρχει, αλλιώς η κενή συμβολοσειρά. Η τιμή είναι μια συμβολοσειρά."
 
 #: library/xml.dom.rst:316
 msgid ""
 "The namespace associated with the element name.  This will be a string or "
 "``None``.  This is a read-only attribute."
 msgstr ""
+"Ο χώρος ονομάτων που σχετίζεται με το όνομα του στοιχείου. Αυτή η τιμή θα "
+"είναι μια συμβολοσειρά ή ``None``. Αυτό είναι ένα χαρακτηριστικό για "
+"ανάγνωση μόνο."
 
 #: library/xml.dom.rst:322
 msgid ""
@@ -486,6 +642,12 @@ msgid ""
 "attribute will be either a string or ``None``.  This is a read-only "
 "attribute."
 msgstr ""
+"Αυτό έχει διαφορετική σημασία ανάλογα με τον τύπο του κόμβου· δείτε τις "
+"προδιαγραφές του DOM για λεπτομέρειες. Μπορείτε πάντοτε να λάβετε τις ίδιες "
+"πληροφορίες μέσω άλλων ιδιοτήτων όπως η :attr:`tagName` για στοιχεία ή η :"
+"attr:`name` για ιδιότητες. Για όλους τους τύπους κόμβων, η τιμή αυτού του "
+"χαρακτηριστικού θα είναι είτε συμβολοσειρά είτε ``None``. Αυτό είναι ένα "
+"χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:331
 msgid ""
@@ -493,14 +655,17 @@ msgid ""
 "for details.  The situation is similar to that with :attr:`nodeName`.  The "
 "value is a string or ``None``."
 msgstr ""
+"Αυτή η ιδιότητα έχει διαφορετική σημασία ανάλογα με τον τύπο του κόμβου· "
+"δείτε τις προδιαγραφές του DOM για λεπτομέρειες. Η περίπτωση είναι παρόμοια "
+"με αυτή της :attr:`nodeName`. Η τιμή είναι συμβολοσειρά ή ``None``."
 
 #: library/xml.dom.rst:338
 msgid "Return ``True`` if the node has any attributes."
-msgstr ""
+msgstr "Επιστρέφει ``True`` αν ο κόμβος έχει οποιαδήποτε ιδιότητα."
 
 #: library/xml.dom.rst:343
 msgid "Return ``True`` if the node has any child nodes."
-msgstr ""
+msgstr "Επιστρέφει ``True`` αν ο κόμβος έχει οποιονδήποτε παιδικό κόμβο."
 
 #: library/xml.dom.rst:348
 msgid ""
@@ -508,6 +673,10 @@ msgid ""
 "especially useful for DOM implementations which use any sort of proxy "
 "architecture (because more than one object can refer to the same node)."
 msgstr ""
+"Επιστρέφει ``True`` αν το *other* αναφέρεται στον ίδιο κόμβο με αυτόν τον "
+"κόμβο. Αυτό είναι ιδιαίτερα χρήσιμο για υλοποιήσεις DOM που χρησιμοποιούν "
+"αρχιτεκτονική proxy (καθώς περισσότερα από ένα αντικείμενα μπορούν να "
+"αναφέρονται στον ίδιο κόμβο)."
 
 #: library/xml.dom.rst:354
 msgid ""
@@ -516,6 +685,11 @@ msgid ""
 "Changes from the W3C will not necessarily affect this method in the Python "
 "DOM interface (though any new W3C API for this would also be supported)."
 msgstr ""
+"Αυτό βασίζεται σε μια προτεινόμενη διεπαφή του DOM Επιπέδου 3 που βρίσκεται "
+"ακόμη στο στάδιο του \"working draft\", αλλά αυτή η συγκεκριμένη διεπαφή "
+"φαίνεται να είναι ανεπίμαχη. Οι αλλαγές από το W3C δεν θα επηρεάσουν "
+"απαραίτητα αυτή την μέθοδο στην διεπαφή DOM της Python (αν και οποιοδήποτε "
+"νέο API του W3C για αυτό θα υποστηρίζεται επίσης)."
 
 #: library/xml.dom.rst:362
 msgid ""
@@ -523,6 +697,9 @@ msgid ""
 "returning *newChild*. If the node was already in the tree, it is removed "
 "first."
 msgstr ""
+"Προσθέτει έναν νέο παιδικό κόμβο σε αυτόν τον κόμβο στο τέλος της λίστας των "
+"παιδιών, επιστρέφοντας το *newChild*. Αν ο κόμβος υπήρχε ήδη στο δέντρο, "
+"αφαιρείται πρώτα."
 
 #: library/xml.dom.rst:369
 msgid ""
@@ -531,6 +708,11 @@ msgid ""
 "*newChild* is returned. If *refChild* is ``None``, it inserts *newChild* at "
 "the end of the children's list."
 msgstr ""
+"Εισάγει έναν νέο παιδικό κόμβο πριν από έναν υπάρχοντα παιδικό κόμβο. Το "
+"*refChild* πρέπει να είναι παιδί αυτού του κόμβου· διαφορετικά, γίνεται "
+"raise μια εξαίρεση :exc:`ValueError`. Επιστρέφεται το *newChild*. Αν το "
+"*refChild* είναι ``None``, το *newChild* εισάγεται στο τέλος της λίστας των "
+"παιδιών."
 
 #: library/xml.dom.rst:377
 msgid ""
@@ -538,12 +720,20 @@ msgid ""
 "`ValueError` is raised.  *oldChild* is returned on success.  If *oldChild* "
 "will not be used further, its :meth:`unlink` method should be called."
 msgstr ""
+"Αφαιρεί έναν παιδικό κόμβο. Το *oldChild* πρέπει να είναι παιδί αυτού του "
+"κόμβου· διαφορετικά, γίνεται raise μια εξαίρεση :exc:`ValueError`. "
+"Επιστρέφεται το *oldChild* σε περίπτωση επιτυχίας. Αν το *oldChild* δεν "
+"πρόκειται να χρησιμοποιηθεί ξανά, θα πρέπει να κληθεί η μέθοδος :meth:"
+"`unlink`."
 
 #: library/xml.dom.rst:384
 msgid ""
 "Replace an existing node with a new node. It must be the case that  "
 "*oldChild* is a child of this node; if not, :exc:`ValueError` is raised."
 msgstr ""
+"Αντικαθιστά έναν υπάρχοντα κόμβο με νέο κόμβο. Το *oldChild* πρέπει να είναι "
+"παιδί αυτού του κόμβου· διαφορετικά, γίνεται raise μια εξαίρεση :exc:"
+"`ValueError`."
 
 #: library/xml.dom.rst:390
 msgid ""
@@ -551,16 +741,21 @@ msgid ""
 "class:`Text` instances.  This simplifies processing text from a DOM tree for "
 "many applications."
 msgstr ""
+"Συγκεντρώνει γειτονικούς κόμβους κειμένου έτσι ώστε όλα τα τμήματα κειμένου "
+"να αποθηκεύονται ως μεμονωμένα αντικείμενα :class:`Text`. Αυτό απλοποιεί την "
+"επεξεργασία του κειμένου από ένα DOM δέντρο για πολλές εφαρμογές."
 
 #: library/xml.dom.rst:397
 msgid ""
 "Clone this node.  Setting *deep* means to clone all child nodes as well.  "
 "This returns the clone."
 msgstr ""
+"Κλωνοποιεί αυτόν τον κόμβο. Η ρύθμιση του *deep* σημαίνει την κλωνοποίηση "
+"όλων των παιδικών κόμβων επίσης. Επιστρέφει τον κλώνο."
 
 #: library/xml.dom.rst:404
 msgid "NodeList Objects"
-msgstr ""
+msgstr "Αντικείμενα NodeList"
 
 #: library/xml.dom.rst:406
 msgid ""
@@ -570,12 +765,20 @@ msgid ""
 "`getElementsByTagName` and :meth:`getElementsByTagNameNS` methods of :class:"
 "`Node` return objects with this interface to represent query results."
 msgstr ""
+"Μια :class:`NodeList` αντιπροσωπεύει μια ακολουθία κόμβων. Αυτά τα "
+"αντικείμενα χρησιμοποιούνται με δύο τρόπους στην σύσταση του DOM Core: ένα "
+"αντικείμενο :class:`Element` παρέχει μια ως τη λίστα των παιδικών κόμβων "
+"του, και οι μέθοδοι :meth:`getElementsByTagName` και :meth:"
+"`getElementsByTagNameNS` του :class:`Node` επιστρέφουν αντικείμενα με αυτή "
+"τη διεπαφή για να αντιπροσωπεύσουν τα αποτελέσματα ενός ερωτήματος."
 
 #: library/xml.dom.rst:412
 msgid ""
 "The DOM Level 2 recommendation defines one method and one attribute for "
 "these objects:"
 msgstr ""
+"Η σύσταση DOM Επιπέδου 2 ορίζει μια μέθοδο και ένα χαρακτηριστικό για αυτά "
+"τα αντικείμενα:"
 
 #: library/xml.dom.rst:418
 msgid ""
@@ -583,10 +786,13 @@ msgid ""
 "index *i* is not allowed to be less than zero or greater than or equal to "
 "the length of the sequence."
 msgstr ""
+"Επιστρέφει το *i*-οστό στοιχείο από τη σειρά, αν υπάρχει, ή ``None``. O "
+"δείκτης *i* δεν επιτρέπεται να είναι μικρότερος από το μηδέν ή ίσος με το "
+"μήκος της σειράς."
 
 #: library/xml.dom.rst:425
 msgid "The number of nodes in the sequence."
-msgstr ""
+msgstr "Ο αριθμός των κόμβων στη σειρά."
 
 #: library/xml.dom.rst:427
 msgid ""
@@ -597,6 +803,13 @@ msgid ""
 "iteration over the :class:`NodeList` in :keyword:`for` statements and proper "
 "support for the :func:`len` built-in function."
 msgstr ""
+"Επιπλέον, η διεπαφή Python DOM απαιτεί να παρέχεται κάποια επιπλέον "
+"υποστήριξη για να επιτρέπεται η χρήση των αντικειμένων :class:`NodeList` ως "
+"ακολουθίες Python. Όλες οι υλοποιήσεις :class:`NodeList` πρέπει να "
+"περιλαμβάνουν υποστήριξη για τις μεθόδους :meth:`~object.__len__` και :meth:"
+"`~object.__getitem__``· αυτό επιτρέπει την επανάληψη μέσω του :class:"
+"`NodeList` σε δηλώσεις :keyword:`for` και την κατάλληλη υποστήριξη για τη "
+"συνάρτηση :func:`len`."
 
 #: library/xml.dom.rst:435
 msgid ""
@@ -604,10 +817,13 @@ msgid ""
 "`NodeList` implementation must also support the :meth:`~object.__setitem__` "
 "and :meth:`~object.__delitem__` methods."
 msgstr ""
+"Αν μια υλοποίηση του DOM υποστηρίζει την τροποποίηση του εγγράφου, η "
+"υλοποίηση της :class:`NodeList` πρέπει επίσης να υποστηρίζει τις μεθόδους :"
+"meth:`~object.__setitem__`και :meth:`~object.__delitem__`."
 
 #: library/xml.dom.rst:443
 msgid "DocumentType Objects"
-msgstr ""
+msgstr "Αντικείμενα DocumentType"
 
 #: library/xml.dom.rst:445
 msgid ""
@@ -619,24 +835,38 @@ msgid ""
 "for the document, the document's :attr:`doctype` attribute will be set to "
 "``None`` instead of an instance of this interface."
 msgstr ""
+"Πληροφορίες σχετικά με τις σημειώσεις και τις οντότητες που δηλώνονται από "
+"ένα έγγραφο (συμπεριλαμβανομένου του εξωτερικού υποσυνόλου, εφόσον ο "
+"αναλυτής το χρησιμοποιεί και μπορεί να παρέχει τις πληροφορίες) είναι "
+"διαθέσιμες μέσω ενός αντικειμένου :class:`DocumentType`. Το :class:"
+"`DocumentType` ενός εγγράφου είναι προσβάσιμο από το χαρακτηριστικό :attr:"
+"`doctype` του αντικειμένου :class:`Document`. Αν δεν υπάρχει δήλωση "
+"``DOCTYPE`` στο έγγραφο, το χαρακτηριστικό :attr:`doctype` του εγγράφου θα "
+"έχει τιμή ``None`` αντί για μια παρουσία αυτής της διεπαφής."
 
 #: library/xml.dom.rst:453
 msgid ""
 ":class:`DocumentType` is a specialization of :class:`Node`, and adds the "
 "following attributes:"
 msgstr ""
+"Η κλάση :class:`DocumentType` είναι μια εξειδίκευση της κλάσης :class:`Node` "
+"και προσθέτει τις παρακάτω ιδιότητες:"
 
 #: library/xml.dom.rst:459
 msgid ""
 "The public identifier for the external subset of the document type "
 "definition. This will be a string or ``None``."
 msgstr ""
+"Ο δημόσιος αναγνωριστικός χαρακτήρας για το εξωτερικό υποσύνολο του ορισμού "
+"τύπου εγγράφου. Θα είναι μια συμβολοσειρά ή ``None``."
 
 #: library/xml.dom.rst:465
 msgid ""
 "The system identifier for the external subset of the document type "
 "definition. This will be a URI as a string, or ``None``."
 msgstr ""
+"Ο αναγνωριστικός χαρακτήρας συστήματος για το εξωτερικό υποσύνολο του "
+"ορισμού τύπου εγγράφου. Θα είναι ένα URI ως συμβολοσειρά ή ``None``."
 
 #: library/xml.dom.rst:471
 msgid ""
@@ -644,12 +874,16 @@ msgid ""
 "not include the brackets which enclose the subset.  If the document has no "
 "internal subset, this should be ``None``."
 msgstr ""
+"Μια συμβολοσειρά που παρέχει το πλήρες εσωτερικό υποσύνολο από το έγγραφο. "
+"Δεν περιλαμβάνει τις αγκύλες που περικλείουν το υποσύνολο. Αν το έγγραφο δεν "
+"έχει εσωτερικό υποσύνολο, αυτή η τιμή πρέπει να είναι ``None``."
 
 #: library/xml.dom.rst:478
 msgid ""
 "The name of the root element as given in the ``DOCTYPE`` declaration, if "
 "present."
 msgstr ""
+"Το όνομα του ριζικού αρχείου όπως δίνεται στη δήλωση ``DOCTYPE``, αν υπάρχει."
 
 #: library/xml.dom.rst:484
 msgid ""
@@ -659,6 +893,11 @@ msgid ""
 "may be ``None`` if the information is not provided by the parser, or if no "
 "entities are defined."
 msgstr ""
+"Αυτό είναι ένα αντικείμενο :class:`NamedNodeMap` που περιέχει τους ορισμούς "
+"των εξωτερικών οντοτήτων. Για ονόματα οντοτήτων που ορίζονται περισσότερες "
+"από μία φορές, παρέχεται μόνο ο πρώτος ορισμός (οι υπόλοιποι αγνοούνται, "
+"όπως απαιτείται από τη σύσταση XML). Αυτό μπορεί να είναι ``None`` αν οι "
+"πληροφορίες δεν παρέχονται από τον αναλυτή ή αν δεν έχουν οριστεί οντότητες."
 
 #: library/xml.dom.rst:493
 msgid ""
@@ -668,10 +907,15 @@ msgid ""
 "``None`` if the information is not provided by the parser, or if no "
 "notations are defined."
 msgstr ""
+"Αυτό είναι ένα αντικείμενο :class:`NamedNodeMap` που περιέχει τους ορισμούς "
+"των σημειώσεων. Για ονόματα σημειώσεων που ορίζονται περισσότερες από μια "
+"φορές, παρέχεται μόνο ο πρώτος ορισμός (οι υπόλοιποι αγνοούνται, όπως "
+"απαιτείται από τη σύσταση XML). Αυτό μπορεί να είναι ``None`` αν οι "
+"πληροφορίες δεν παρέχονται από τον αναλυτή ή αν δεν έχουν οριστεί σημειώσεις."
 
 #: library/xml.dom.rst:503
 msgid "Document Objects"
-msgstr ""
+msgstr "Αντικείμενα Document"
 
 #: library/xml.dom.rst:505
 msgid ""
@@ -679,10 +923,14 @@ msgid ""
 "constituent elements, attributes, processing instructions, comments etc.  "
 "Remember that it inherits properties from :class:`Node`."
 msgstr ""
+"Ένα :class:`Document` αντιπροσωπεύει ένα ολόκληρο XML έγγραφο, "
+"συμπεριλαμβανομένων των συστατικών του στοιχείων, των χαρακτηριστικών, των "
+"οδηγιών επεξεργασίας, των σχολίων κ.λπ. Να θυμάστε ότι κληρονομεί ιδιότητες "
+"από την :class:`Node`."
 
 #: library/xml.dom.rst:512
 msgid "The one and only root element of the document."
-msgstr ""
+msgstr "Το μοναδικό στοιχείο ρίζας του εγγράφου."
 
 #: library/xml.dom.rst:517
 msgid ""
@@ -690,6 +938,9 @@ msgid ""
 "document when it is created.  You need to explicitly insert it with one of "
 "the other methods such as :meth:`insertBefore` or :meth:`appendChild`."
 msgstr ""
+"Δημιουργεί και επιστρέφει ένα νέο κόμβο στοιχείου. Το στοιχείο δεν εισάγεται "
+"στο έγγραφο όταν δημιουργείται. Πρέπει να το εισάγετε ρητά με μία από τις "
+"άλλες μεθόδους όπως :meth:`insertBefore` ή :meth:`appendChild`."
 
 #: library/xml.dom.rst:524
 msgid ""
@@ -698,6 +949,10 @@ msgid ""
 "You need to explicitly insert it with one of the other methods such as :meth:"
 "`insertBefore` or :meth:`appendChild`."
 msgstr ""
+"Δημιουργεί και επιστρέφει ένα νέο στοιχείο με έναν χώρο ονομάτων. Το "
+"*tagName* μπορεί να έχει πρόθεμα. Το στοιχείο δεν εισάγεται στο έγγραφο όταν "
+"δημιουργείται. Πρέπει να το εισάγετε ρητά με μια από τις άλλες μεθόδους "
+"όπως :meth:`insertBefore` ή :meth:`appendChild`."
 
 #: library/xml.dom.rst:532
 msgid ""
@@ -705,6 +960,9 @@ msgid ""
 "with the other creation methods, this one does not insert the node into the "
 "tree."
 msgstr ""
+"Δημιουργεί και επιστρέφει έναν κόμβο κειμένου που περιέχει τα δεδομένα που "
+"περνιούνται ως παράμετρος. Όπως και με τις άλλες μεθόδους δημιουργίας, αυτή "
+"η μέθοδος δεν εισάγει τον κόμβο στο δέντρο."
 
 #: library/xml.dom.rst:539
 msgid ""
@@ -712,6 +970,9 @@ msgid ""
 "As with the other creation methods, this one does not insert the node into "
 "the tree."
 msgstr ""
+"Δημιουργεί και επιστρέφει έναν κόμβο σχολίου που περιέχει τα δεδομένα που "
+"περνιούνται ως παράμετρος. Όπως και με τις άλλες μεθόδους δημιουργίας, αυτή "
+"η μέθοδος δεν εισάγει τον κόμβο στο δέντρο."
 
 #: library/xml.dom.rst:546
 msgid ""
@@ -719,6 +980,9 @@ msgid ""
 "*data* passed as parameters.  As with the other creation methods, this one "
 "does not insert the node into the tree."
 msgstr ""
+"Δημιουργεί και επιστρέφει έναν κόμβο οδηγίας επεξεργασίας που περιέχει το "
+"*target* και τα *data* που περνιούνται ως παράμετροι. Όπως και με τις άλλες "
+"μεθόδους δημιουργίας, αυτή η μέθοδος δεν εισάγει τον κόμβο στο δέντρο."
 
 #: library/xml.dom.rst:553
 msgid ""
@@ -727,6 +991,11 @@ msgid ""
 "`setAttributeNode` on the appropriate :class:`Element` object to use the "
 "newly created attribute instance."
 msgstr ""
+"Δημιουργεί και επιστρέφει έναν κόμβο χαρακτηριστικού. Αυτή η μέθοδος δεν "
+"συνδέει τον κόμβο χαρακτηριστικού με κάποιο συγκεκριμένο στοιχείο. Πρέπει να "
+"χρησιμοποιήσετε τη μέθοδο :meth:`setAttributeNode` στο κατάλληλο "
+"αντικείμενο :class:`Element` για να χρησιμοποιήσετε το νέο δημιουργημένο "
+"χαρακτηριστικό."
 
 #: library/xml.dom.rst:561
 msgid ""
@@ -736,12 +1005,19 @@ msgid ""
 "appropriate :class:`Element` object to use the newly created attribute "
 "instance."
 msgstr ""
+"Δημιουργεί και επιστρέφει έναν κόμβο χαρακτηριστικού με ένα namespace. Το "
+"*tagName* μπορεί να έχει πρόθεμα. Αυτή η μέθοδος δεν συνδέει τον κόμβο "
+"χαρακτηριστικού με κάποιο συγκεκριμένο στοιχείο. Πρέπει να χρησιμοποιήσετε "
+"τη μέθοδο :meth:`setAttributeNode` στο κατάλληλο αντικείμενο :class:"
+"`Element` για να χρησιμοποιήσετε το νέο δημιουργημένο χαρακτηριστικό."
 
 #: library/xml.dom.rst:569
 msgid ""
 "Search for all descendants (direct children, children's children, etc.) with "
 "a particular element type name."
 msgstr ""
+"Αναζητήστε όλους τους απογόνους (άμεσα παιδιά, παιδιά των παιδιών κ.λπ.) με "
+"ένα συγκεκριμένο όνομα τύπου στοιχείου."
 
 #: library/xml.dom.rst:575
 msgid ""
@@ -749,36 +1025,46 @@ msgid ""
 "a particular namespace URI and localname.  The localname is the part of the "
 "namespace after the prefix."
 msgstr ""
+"Αναζητήστε όλους τους απογόνους (άμεσα παιδιά, παιδιά των παιδιών κ.λπ.) με "
+"ένα συγκεκριμένο URI ονόματος χώρου ονομάτων και τοπικό όνομα. Το τοπικό "
+"όνομα είναι το μέρος του ονόματος χώρου μετά το πρόθεμα."
 
 #: library/xml.dom.rst:583
 msgid "Element Objects"
-msgstr ""
+msgstr "Αντικείμενα Element"
 
 #: library/xml.dom.rst:585
 msgid ""
 ":class:`Element` is a subclass of :class:`Node`, so inherits all the "
 "attributes of that class."
 msgstr ""
+"Η :class:`Element` είναι υποκλάση της :class:`Node`, επομένως κληρονομεί όλα "
+"τα χαρακτηριστικά αυτής της κλάσης."
 
 #: library/xml.dom.rst:591
 msgid ""
 "The element type name.  In a namespace-using document it may have colons in "
 "it. The value is a string."
 msgstr ""
+"Το όνομα του τύπου του στοιχείου. Σε έγγραφα που χρησιμοποιούν namespace "
+"μπορεί να περιέχει άνω κάτω τελείες. Η τιμή είναι μια συμβολοσειρά."
 
 #: library/xml.dom.rst:602
 msgid "Same as equivalent method in the :class:`Document` class."
-msgstr ""
+msgstr "Ίδιο με την αντίστοιχο μέθοδο στην κλάση :class:`Document`."
 
 #: library/xml.dom.rst:607
 msgid "Return ``True`` if the element has an attribute named by *name*."
 msgstr ""
+"Επιστρέφει ``True`` αν το στοιχείο έχει ένα χαρακτηριστικό με όνομα *name*."
 
 #: library/xml.dom.rst:612
 msgid ""
 "Return ``True`` if the element has an attribute named by *namespaceURI* and "
 "*localName*."
 msgstr ""
+"Επιστρέφει ``True`` αν το στοιχείο έχει ένα χαρακτηριστικό με όνομα που "
+"προσδιορίζεται από το *namespaceURI* και το *localName*."
 
 #: library/xml.dom.rst:618
 msgid ""
@@ -786,10 +1072,14 @@ msgid ""
 "attribute exists, an empty string is returned, as if the attribute had no "
 "value."
 msgstr ""
+"Επιστρέφει την τιμή του χαρακτηριστικού με όνομα *name* ως συμβολοσειρά. Αν "
+"δεν υπάρχει τέτοια ιδιότητα, επιστρέφεται η κενή συμβολοσειρά, σαν το "
+"χαρακτηριστικό να μην είχε τιμή."
 
 #: library/xml.dom.rst:624
 msgid "Return the :class:`Attr` node for the attribute named by *attrname*."
 msgstr ""
+"Επιστρέφει τον κόμβο :class:`Attr` για το χαρακτηριστικό με όνομα *attrname*."
 
 #: library/xml.dom.rst:629
 msgid ""
@@ -797,33 +1087,47 @@ msgid ""
 "a string. If no such attribute exists, an empty string is returned, as if "
 "the attribute had no value."
 msgstr ""
+"Επιστρέφει την τιμή του χαρακτηριστικού που ορίζεται από το *namespaceURI* "
+"και το *localName* ως συμβολοσειρά. Αν δεν υπάρχει τέτοιο χαρακτηριστικό, "
+"επιστρέφεται μια κενή συμβολοσειρά, σαν το χαρακτηριστικό να μην είχε καμία "
+"τιμή."
 
 #: library/xml.dom.rst:636
 msgid ""
 "Return an attribute value as a node, given a *namespaceURI* and *localName*."
 msgstr ""
+"Επιστρέφει την τιμή του χαρακτηριστικού ως κόμβο, δίνοντας ένα "
+"*namespaceURI* και ένα *localName*."
 
 #: library/xml.dom.rst:641
 msgid ""
 "Remove an attribute by name.  If there is no matching attribute, a :exc:"
 "`NotFoundErr` is raised."
 msgstr ""
+"Αφαιρεί ένα χαρακτηριστικό με βάση το όνομα του. Αν δεν υπάρχει αντίστοιχη "
+"ιδιότητα, γίνεται raise μια εξαίρεση :exc:`NotFoundErr`."
 
 #: library/xml.dom.rst:647
 msgid ""
 "Remove and return *oldAttr* from the attribute list, if present. If "
 "*oldAttr* is not present, :exc:`NotFoundErr` is raised."
 msgstr ""
+"Αφαιρεί και επιστρέφει το *oldAttr* από την λίστα των χαρακτηριστικών, εάν "
+"υπάρχει. Αν το *oldAttr* δεν υπάρχει, γίνεται raise μια εξαίρεση :exc:"
+"`NotFoundErr`."
 
 #: library/xml.dom.rst:653
 msgid ""
 "Remove an attribute by name.  Note that it uses a localName, not a qname.  "
 "No exception is raised if there is no matching attribute."
 msgstr ""
+"Αφαιρεί ένα χαρακτηριστικό με το όνομα. Σημειώστε ότι χρησιμοποιεί το "
+"localName, όχι το qname. Δεν γίνεται raise μια εξαίρεση αν δεν υπάρχει το "
+"αντίστοιχο χαρακτηριστικό."
 
 #: library/xml.dom.rst:659
 msgid "Set an attribute value from a string."
-msgstr ""
+msgstr "Ορίζει μια τιμή χαρακτηριστικού από μια συμβολοσειρά."
 
 #: library/xml.dom.rst:664
 msgid ""
@@ -832,6 +1136,11 @@ msgid ""
 "the old attribute node will be returned.  If *newAttr* is already in use, :"
 "exc:`InuseAttributeErr` will be raised."
 msgstr ""
+"Προσθέτει ένα νέο κόμβο χαρακτηριστικού στο στοιχείο, αντικαθιστώντας ένα "
+"υπάρχον χαρακτηριστικό αν είναι απαραίτητο, εάν το χαρακτηριστικό :attr:"
+"`name` ταιριάζει. Εάν γίνει αντικατάσταση, ο παλιός κόμβος χαρακτηριστικού "
+"θα επιστραφεί. Εάν το *newAttr* είναι ήδη σε χρήση, θα γίνει raise η "
+"εξαίρεση :exc:`InuseAttributeErr`."
 
 #: library/xml.dom.rst:672
 msgid ""
@@ -840,56 +1149,75 @@ msgid ""
 "match. If a replacement occurs, the old attribute node will be returned.  If "
 "*newAttr* is already in use, :exc:`InuseAttributeErr` will be raised."
 msgstr ""
+"Προσθέτει ένα νέο κόμβο χαρακτηριστικού στο στοιχείο, αντικαθιστώντας ένα "
+"υπάρχον χαρακτηριστικό αν είναι απαραίτητο, εάν τα χαρακτηριστικά :attr:"
+"`namespaceURI` και :attr:`localName` ταιριάζουν. Εάν γίνει αντικατάσταση, ο "
+"παλιός κόμβος χαρακτηριστικού θα επιστραφεί. Εάν το *newAttr* είναι ήδη σε "
+"χρήση, θα γίνει raise μια εξαίρεση :exc:`InuseAttributeErr`."
 
 #: library/xml.dom.rst:680
 msgid ""
 "Set an attribute value from a string, given a *namespaceURI* and a *qname*. "
 "Note that a qname is the whole attribute name.  This is different than above."
 msgstr ""
+"Ορίζει την τιμή ενός χαρακτηριστικού από μια συμβολοσειρά, δεδομένα τα "
+"*namespaceURI* και *qname*. Σημειώστε ότι το qname είναι το πλήρες όνομα του "
+"χαρακτηριστικού. Αυτό διαφέρει από τα παραπάνω."
 
 #: library/xml.dom.rst:687
 msgid "Attr Objects"
-msgstr ""
+msgstr "Αντικείμενα Attr"
 
 #: library/xml.dom.rst:689
 msgid ""
 ":class:`Attr` inherits from :class:`Node`, so inherits all its attributes."
 msgstr ""
+"Η :class:`Attr` κληρονομεί από την :class:`Node`, οπότε κληρονομεί όλα τα "
+"χαρακτηριστικά της."
 
 #: library/xml.dom.rst:694
 msgid ""
 "The attribute name. In a namespace-using document it may include a colon."
 msgstr ""
+"Το όνομα του χαρακτηριστικού. Σε έγγραφο που χρησιμοποιεί namespaces μπορεί "
+"να περιλαμβάνει άνω κάτω τελεία."
 
 #: library/xml.dom.rst:700
 msgid ""
 "The part of the name following the colon if there is one, else the entire "
 "name. This is a read-only attribute."
 msgstr ""
+"Το μέρος του ονόματος μετά την άνω κάτω τελεία αν υπάρχει, αλλιώς το πλήρες "
+"όνομα. Αυτό είναι ένα χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:707
 msgid ""
 "The part of the name preceding the colon if there is one, else the empty "
 "string."
 msgstr ""
+"Το μέρος του ονόματος πριν την άνω κάτω τελεία αν υπάρχει, αλλιώς η κενή "
+"συμβολοσειρά."
 
 #: library/xml.dom.rst:713
 msgid ""
 "The text value of the attribute.  This is a synonym for the :attr:"
 "`nodeValue` attribute."
 msgstr ""
+"Η τιμή κειμένου του χαρακτηριστικού. Αυτό είναι συνώνυμο με το "
+"χαρακτηριστικό :attr:`nodeValue`."
 
 #: library/xml.dom.rst:720
 msgid "NamedNodeMap Objects"
-msgstr ""
+msgstr "Αντικείμενα NamedNodeMap"
 
 #: library/xml.dom.rst:722
 msgid ":class:`NamedNodeMap` does *not* inherit from :class:`Node`."
 msgstr ""
+"Η κλάση :class:`NamedNodeMap` *δεν* κληρονομεί από την κλάση :class:`Node`."
 
 #: library/xml.dom.rst:727
 msgid "The length of the attribute list."
-msgstr ""
+msgstr "Το μήκος της λίστας των χαρακτηριστικών."
 
 #: library/xml.dom.rst:732
 msgid ""
@@ -898,6 +1226,10 @@ msgid ""
 "Each item is an attribute node.  Get its value with the :attr:`value` "
 "attribute."
 msgstr ""
+"Επιστρέφει ένα χαρακτηριστικό με έναν συγκεκριμένο δείκτη. Η σειρά με την "
+"οποία παίρνετε τα χαρακτηριστικά είναι αυθαίρετη, αλλά θα παραμείνει συνεπής "
+"κατά τη διάρκεια ζωής του DOM. Κάθε στοιχείο είναι ένας κόμβος "
+"χαρακτηριστικού. Αποκτήστε την τιμή του με το χαρακτηριστικό :attr:`value`."
 
 #: library/xml.dom.rst:736
 msgid ""
@@ -905,16 +1237,22 @@ msgid ""
 "behavior. You can use them or you can use the standardized :meth:`!"
 "getAttribute\\*` family of methods on the :class:`Element` objects."
 msgstr ""
+"Υπάρχουν επίσης πειραματικές μέθοδοι που παρέχουν αυτή την κλάση περισσότερη "
+"χαρτογράφηση συμπεριφοράς. Μπορείτε να τις χρησιμοποιήσετε ή να "
+"χρησιμοποιήσετε τις τυποποιημένες μεθόδους :meth:`!getAttribute\\*` στην "
+"κλάση :class:`Element`."
 
 #: library/xml.dom.rst:744
 msgid "Comment Objects"
-msgstr ""
+msgstr "Αντικείμενα Comment"
 
 #: library/xml.dom.rst:746
 msgid ""
 ":class:`Comment` represents a comment in the XML document.  It is a subclass "
 "of :class:`Node`, but cannot have child nodes."
 msgstr ""
+"Η κλάση :class:`Comment` αναπαριστά ένα σχόλιο στο XML έγγραφο. Είναι "
+"υποκλάση της κλάσης :class:`Node`, αλλά δεν μπορεί να έχει κόμβους παιδιών."
 
 #: library/xml.dom.rst:752
 msgid ""
@@ -922,10 +1260,13 @@ msgid ""
 "characters between the leading ``<!-``\\ ``-`` and trailing ``-``\\ ``->``, "
 "but does not include them."
 msgstr ""
+"Το περιεχόμενο του σχολίου ως συμβολοσειρά. Το χαρακτηριστικό περιέχει όλους "
+"τους χαρακτήρες μεταξύ του αρχικού ``<-``\\ ``-`` και του τελικού ``-`` ``-"
+">``, αλλά δεν τους περιλαμβάνει."
 
 #: library/xml.dom.rst:760
 msgid "Text and CDATASection Objects"
-msgstr ""
+msgstr "Αντικείμενα Text και CDATASection"
 
 #: library/xml.dom.rst:762
 msgid ""
@@ -935,16 +1276,24 @@ msgid ""
 "`CDATASection` objects. These two interfaces are identical, but provide "
 "different values for the :attr:`nodeType` attribute."
 msgstr ""
+"Η διεπαφή :class:`Text` αντιπροσωπεύει το κείμενο στο έγγραφο XML. Εάν ο "
+"αναλυτής και η υλοποίηση του DOM υποστηρίζουν την επέκταση XML του DOM, τα "
+"μέρη του κειμένου που περιβάλλονται από τμήματα που έχουν σημειωθεί ως CDATA "
+"αποθηκεύονται σε αντικείμενα :class:`CDATASection`. Αυτές οι δύο διεπαφές "
+"είναι ταυτόσημες, αλλά παρέχουν διαφορετικές τιμές για την ιδιότητα :attr:"
+"`nodeType`."
 
 #: library/xml.dom.rst:768
 msgid ""
 "These interfaces extend the :class:`Node` interface.  They cannot have child "
 "nodes."
 msgstr ""
+"Αυτές οι διεπαφές επεκτείνουν τη διεπαφή :class:`Node`. Δεν μπορούν να έχουν "
+"κόμβους παιδιά."
 
 #: library/xml.dom.rst:774
 msgid "The content of the text node as a string."
-msgstr ""
+msgstr "Το περιεχόμενο του κόμβου κειμένου ως συμβολοσειρά."
 
 #: library/xml.dom.rst:778
 msgid ""
@@ -955,32 +1304,44 @@ msgid ""
 "whether two adjacent :class:`CDATASection` nodes represent different CDATA "
 "marked sections."
 msgstr ""
+"Η χρήση ενός κόμβου :class:`CDATASection` δεν υποδηλώνει ότι ο κόμβος "
+"αντιπροσωπεύει ένα πλήρες τμήμα CDATA, αλλά μόνο ότι το περιεχόμενο του ήταν "
+"μέρος ενός τμήματος CDATA. Ένα μόνο τμήμα CDATA μπορεί να αναπαρασταθεί από "
+"περισσότερους από έναν κόμβους στο δέντρο του εγγράφου. Δεν υπάρχει τρόπος "
+"να προσδιοριστεί εάν δύο γειτονικοί κόμβοι :class:`CDATASection` "
+"αντιπροσωπεύουν διαφορετικά τμήματα CDATA."
 
 #: library/xml.dom.rst:788
 msgid "ProcessingInstruction Objects"
-msgstr ""
+msgstr "Αντικείμενα ProcessingInstruction"
 
 #: library/xml.dom.rst:790
 msgid ""
 "Represents a processing instruction in the XML document; this inherits from "
 "the :class:`Node` interface and cannot have child nodes."
 msgstr ""
+"Αντιπροσωπεύει μια εντολή επεξεργασίας στο έγγραφο XML· αυτή κληρονομεί από "
+"τη διεπαφή :class:`Node` και δεν μπορεί να έχει κόμβους παιδιά."
 
 #: library/xml.dom.rst:796
 msgid ""
 "The content of the processing instruction up to the first whitespace "
 "character. This is a read-only attribute."
 msgstr ""
+"Το περιεχόμενο της εντολής επεξεργασίας μέχρι τον πρώτο χαρακτήρα κενού. "
+"Αυτό είναι ένα χαρακτηριστικό για ανάγνωση μόνο."
 
 #: library/xml.dom.rst:802
 msgid ""
 "The content of the processing instruction following the first whitespace "
 "character."
 msgstr ""
+"Το περιεχόμενο της εντολής επεξεργασίας που ακολουθεί τον πρώτο χαρακτήρα "
+"κενού."
 
 #: library/xml.dom.rst:809
 msgid "Exceptions"
-msgstr ""
+msgstr "Εξαιρέσεις"
 
 #: library/xml.dom.rst:811
 msgid ""
@@ -990,6 +1351,11 @@ msgid ""
 "a :attr:`code` attribute that provides the appropriate value for the "
 "specific exception."
 msgstr ""
+"Η σύσταση του DOM Επιπέδου 2 ορίζει μία μόνο εξαίρεση, την :exc:"
+"`DOMException`, και μια σειρά από σταθερές που επιτρέπουν στις εφαρμογές να "
+"προσδιορίσουν το είδος του σφάλματος που προέκυψε. Τα στιγμιότυπα :exc:"
+"`DOMException` μεταφέρουν ένα χαρακτηριστικό :attr:`code` που παρέχει την "
+"κατάλληλη τιμή για την συγκεκριμένη εξαίρεση."
 
 #: library/xml.dom.rst:816
 msgid ""
@@ -999,12 +1365,19 @@ msgid ""
 "specific exception, each of which carries the appropriate value for the :"
 "attr:`code` attribute."
 msgstr ""
+"Η διεπαφή Python DOM παρέχει τις σταθερές, αλλά επεκτείνει επίσης το σύνολο "
+"των εξαιρέσεων, ώστε να υπάρχει μια συγκεκριμένη εξαίρεση για κάθε έναν από "
+"τους κωδικούς εξαιρέσεων που ορίζονται από το DOM. Οι υλοποιήσεις πρέπει να "
+"κάνουν raise την κατάλληλη εξαίρεση, καθεμία από τις οποίες μεταφέρει την "
+"κατάλληλη τιμή για το χαρακτηριστικό :attr:`code`."
 
 #: library/xml.dom.rst:825
 msgid ""
 "Base exception class used for all specific DOM exceptions.  This exception "
 "class cannot be directly instantiated."
 msgstr ""
+"Βασική κλάση εξαίρεσης που χρησιμοποιείται για όλες τις συγκεκριμένες "
+"εξαιρέσεις DOM. Αυτή η κλάση εξαίρεσης δεν μπορεί να δημιουργηθεί άμεσα."
 
 #: library/xml.dom.rst:831
 msgid ""
@@ -1012,30 +1385,42 @@ msgid ""
 "not known to be used in the Python DOM implementations, but may be received "
 "from DOM implementations not written in Python."
 msgstr ""
+"Γίνεται raise όταν μια καθορισμένη περιοχή κειμένου δεν χωράει σε μία "
+"συμβολοσειρά. Αυτό δεν είναι γνωστό ότι χρησιμοποιείται στις υλοποιήσεις "
+"Python DOM, αλλά μπορεί να ληφθεί από υλοποιήσεις DOM που δεν είναι "
+"γραμμένες σε Python."
 
 #: library/xml.dom.rst:838
 msgid ""
 "Raised when an attempt is made to insert a node where the node type is not "
 "allowed."
 msgstr ""
+"Γίνεται raise όταν γίνεται προσπάθεια εισαγωγής ενός κόμβου όπου ο τύπος του "
+"κόμβου δεν επιτρέπεται."
 
 #: library/xml.dom.rst:844
 msgid ""
 "Raised when an index or size parameter to a method is negative or exceeds "
 "the allowed values."
 msgstr ""
+"Γίνεται raise όταν μια παράμετρος ευρετηρίου ή μεγέθους σε μια μέθοδο είναι "
+"αρνητική ή υπερβαίνει τις επιτρεπόμενες τιμές."
 
 #: library/xml.dom.rst:850
 msgid ""
 "Raised when an attempt is made to insert an :class:`Attr` node that is "
 "already present elsewhere in the document."
 msgstr ""
+"Γίνεται raise όταν γίνεται προσπάθεια εισαγωγής ενός κόμβου :class:`Attr` "
+"που υπάρχει ήδη αλλού στο έγγραφο."
 
 #: library/xml.dom.rst:856
 msgid ""
 "Raised if a parameter or an operation is not supported on the underlying "
 "object."
 msgstr ""
+"Γίνεται raise εάν μια παράμετρος ή μια λειτουργία δεν υποστηρίζεται στο "
+"υποκείμενο αντικείμενο."
 
 #: library/xml.dom.rst:861
 msgid ""
@@ -1044,16 +1429,23 @@ msgid ""
 "recommendation. For example, attempting to create an :class:`Element` node "
 "with a space in the element type name will cause this error to be raised."
 msgstr ""
+"Αυτή η παράμετρος γίνεται raise όταν μια παράμετρος συμβολοσειράς περιέχει "
+"έναν χαρακτήρα που δεν επιτρέπεται στο πλαίσιο χρήσης του σύμφωνα με τη "
+"σύσταση XML 1.0. Για παράδειγμα, η προσπάθεια δημιουργίας ενός κόμβου :class:"
+"`Element` με κενό στο όνομα του τύπου του στοιχείου θα προκαλέσει αυτό το "
+"σφάλμα."
 
 #: library/xml.dom.rst:869
 msgid "Raised when an attempt is made to modify the type of a node."
-msgstr ""
+msgstr "Γίνεται raise όταν γίνεται προσπάθεια τροποποίησης ενός κόμβου."
 
 #: library/xml.dom.rst:874
 msgid ""
 "Raised when an attempt is made to use an object that is not defined or is no "
 "longer usable."
 msgstr ""
+"Γίνεται raise όταν γίνεται προσπάθεια χρήσης ενός αντικειμένου που δεν είναι "
+"ορισμένο ή δεν είναι πλέον χρησιμοποιήσιμο."
 
 #: library/xml.dom.rst:880
 msgid ""
@@ -1061,6 +1453,9 @@ msgid ""
 "with regard to the `Namespaces in XML <https://www.w3.org/TR/REC-xml-names/"
 ">`_ recommendation, this exception is raised."
 msgstr ""
+"Εάν γίνει προσπάθεια αλλαγής οποιουδήποτε αντικειμένου με τρόπο που δεν "
+"επιτρέπεται σύμφωνα με τη σύσταση `Namespaces in XML <https://www.w3.org/TR/"
+"REC-xml-names/>`_, γίνεται raise αυτή η εξαίρεση."
 
 #: library/xml.dom.rst:887
 msgid ""
@@ -1068,27 +1463,36 @@ msgid ""
 "example, :meth:`NamedNodeMap.removeNamedItem` will raise this if the node "
 "passed in does not exist in the map."
 msgstr ""
+"Εξαίρεση όταν ένας κόμβος δεν υπάρχει στο αναφερόμενο πλαίσιο. Για "
+"παράδειγμα το :meth:`NamedNodeMap.removeNamedItem` θα κάνει raise αυτή την "
+"εξαίρεση αν ο κόμβος που περνάει δεν υπάρχει στο χάρτη."
 
 #: library/xml.dom.rst:894
 msgid ""
 "Raised when the implementation does not support the requested type of object "
 "or operation."
 msgstr ""
+"Γίνεται raise όταν η υλοποίηση δεν υποστηρίζει τον ζητούμενο τύπο "
+"αντικειμένου ή λειτουργίας."
 
 #: library/xml.dom.rst:900
 msgid ""
 "This is raised if data is specified for a node which does not support data."
 msgstr ""
+"Γίνεται raise εάν καθορίζονται δεδομένα για έναν κόμβο που δεν υποστηρίζει "
+"δεδομένα."
 
 #: library/xml.dom.rst:907
 msgid ""
 "Raised on attempts to modify an object where modifications are not allowed "
 "(such as for read-only nodes)."
 msgstr ""
+"Γίνεται raise σε προσπάθειες τροποποίησης ενός αντικειμένου όπου οι "
+"τροποποιήσεις δεν επιτρέπονται (όπως για κόμβους μόνο για ανάγνωση)."
 
 #: library/xml.dom.rst:913
 msgid "Raised when an invalid or illegal string is specified."
-msgstr ""
+msgstr "Γίνεται raise όταν καθορίζεται μια μη έγκυρη ή παράνομη συμβολοσειρά."
 
 #: library/xml.dom.rst:920
 msgid ""
@@ -1096,144 +1500,149 @@ msgid ""
 "belongs to, and the implementation does not support migrating the node from "
 "one document to the other."
 msgstr ""
+"Γίνεται raise όταν ένας κόμβος εισάγεται σε διαφορετικό έγγραφο από αυτό που "
+"ανήκει, και η υλοποίηση δεν υποστηρίζει τη μετεγκατάσταση του κόμβου από το "
+"ένα έγγραφο στο άλλο."
 
 #: library/xml.dom.rst:924
 msgid ""
 "The exception codes defined in the DOM recommendation map to the exceptions "
 "described above according to this table:"
 msgstr ""
+"Οι κωδικοί εξαιρέσεων που ορίζονται στη σύσταση DOM αντιστοιχούν στις "
+"εξαιρέσεις που περιγράφονται παραπάνω σύμφωνα με τον παρακάτω πίνακα:"
 
 #: library/xml.dom.rst:928
 msgid "Constant"
-msgstr ""
+msgstr "Σταθερά"
 
 #: library/xml.dom.rst:928
 msgid "Exception"
-msgstr ""
+msgstr "Εξαίρεση"
 
 #: library/xml.dom.rst:930
 msgid ":const:`DOMSTRING_SIZE_ERR`"
-msgstr ""
+msgstr ":const:`DOMSTRING_SIZE_ERR`"
 
 #: library/xml.dom.rst:930
 msgid ":exc:`DomstringSizeErr`"
-msgstr ""
+msgstr ":exc:`DomstringSizeErr`"
 
 #: library/xml.dom.rst:932
 msgid ":const:`HIERARCHY_REQUEST_ERR`"
-msgstr ""
+msgstr ":const:`HIERARCHY_REQUEST_ERR`"
 
 #: library/xml.dom.rst:932
 msgid ":exc:`HierarchyRequestErr`"
-msgstr ""
+msgstr ":exc:`HierarchyRequestErr`"
 
 #: library/xml.dom.rst:934
 msgid ":const:`INDEX_SIZE_ERR`"
-msgstr ""
+msgstr "const:`INDEX_SIZE_ERR`"
 
 #: library/xml.dom.rst:934
 msgid ":exc:`IndexSizeErr`"
-msgstr ""
+msgstr ":exc:`IndexSizeErr`"
 
 #: library/xml.dom.rst:936
 msgid ":const:`INUSE_ATTRIBUTE_ERR`"
-msgstr ""
+msgstr ":const:`INUSE_ATTRIBUTE_ERR`"
 
 #: library/xml.dom.rst:936
 msgid ":exc:`InuseAttributeErr`"
-msgstr ""
+msgstr ":exc:`InuseAttributeErr`"
 
 #: library/xml.dom.rst:938
 msgid ":const:`INVALID_ACCESS_ERR`"
-msgstr ""
+msgstr ":const:`INVALID_ACCESS_ERR`"
 
 #: library/xml.dom.rst:938
 msgid ":exc:`InvalidAccessErr`"
-msgstr ""
+msgstr ":exc:`InvalidAccessErr`"
 
 #: library/xml.dom.rst:940
 msgid ":const:`INVALID_CHARACTER_ERR`"
-msgstr ""
+msgstr ":const:`INVALID_CHARACTER_ERR`"
 
 #: library/xml.dom.rst:940
 msgid ":exc:`InvalidCharacterErr`"
-msgstr ""
+msgstr ":exc:`InvalidCharacterErr`"
 
 #: library/xml.dom.rst:942
 msgid ":const:`INVALID_MODIFICATION_ERR`"
-msgstr ""
+msgstr ":const:`INVALID_MODIFICATION_ERR`"
 
 #: library/xml.dom.rst:942
 msgid ":exc:`InvalidModificationErr`"
-msgstr ""
+msgstr ":exc:`InvalidModificationErr`"
 
 #: library/xml.dom.rst:944
 msgid ":const:`INVALID_STATE_ERR`"
-msgstr ""
+msgstr ":const:`INVALID_STATE_ERR`"
 
 #: library/xml.dom.rst:944
 msgid ":exc:`InvalidStateErr`"
-msgstr ""
+msgstr ":exc:`InvalidStateErr`"
 
 #: library/xml.dom.rst:946
 msgid ":const:`NAMESPACE_ERR`"
-msgstr ""
+msgstr ":const:`NAMESPACE_ERR`"
 
 #: library/xml.dom.rst:946
 msgid ":exc:`NamespaceErr`"
-msgstr ""
+msgstr ":exc:`NamespaceErr`"
 
 #: library/xml.dom.rst:948
 msgid ":const:`NOT_FOUND_ERR`"
-msgstr ""
+msgstr ":const:`NOT_FOUND_ERR`"
 
 #: library/xml.dom.rst:948
 msgid ":exc:`NotFoundErr`"
-msgstr ""
+msgstr ":exc:`NotFoundErr`"
 
 #: library/xml.dom.rst:950
 msgid ":const:`NOT_SUPPORTED_ERR`"
-msgstr ""
+msgstr ":const:`NOT_SUPPORTED_ERR`"
 
 #: library/xml.dom.rst:950
 msgid ":exc:`NotSupportedErr`"
-msgstr ""
+msgstr ":exc:`NotSupportedErr`"
 
 #: library/xml.dom.rst:952
 msgid ":const:`NO_DATA_ALLOWED_ERR`"
-msgstr ""
+msgstr ":const:`NO_DATA_ALLOWED_ERR`"
 
 #: library/xml.dom.rst:952
 msgid ":exc:`NoDataAllowedErr`"
-msgstr ""
+msgstr ":exc:`NoDataAllowedErr`"
 
 #: library/xml.dom.rst:954
 msgid ":const:`NO_MODIFICATION_ALLOWED_ERR`"
-msgstr ""
+msgstr ":const:`NO_MODIFICATION_ALLOWED_ERR`"
 
 #: library/xml.dom.rst:954
 msgid ":exc:`NoModificationAllowedErr`"
-msgstr ""
+msgstr ":exc:`NoModificationAllowedErr`"
 
 #: library/xml.dom.rst:956
 msgid ":const:`SYNTAX_ERR`"
-msgstr ""
+msgstr ":const:`SYNTAX_ERR`"
 
 #: library/xml.dom.rst:956
 msgid ":exc:`SyntaxErr`"
-msgstr ""
+msgstr ":exc:`SyntaxErr`"
 
 #: library/xml.dom.rst:958
 msgid ":const:`WRONG_DOCUMENT_ERR`"
-msgstr ""
+msgstr ":const:`WRONG_DOCUMENT_ERR`"
 
 #: library/xml.dom.rst:958
 msgid ":exc:`WrongDocumentErr`"
-msgstr ""
+msgstr ":exc:`WrongDocumentErr`"
 
 #: library/xml.dom.rst:965
 msgid "Conformance"
-msgstr ""
+msgstr "Συμμόρφωση"
 
 #: library/xml.dom.rst:967
 msgid ""
@@ -1241,64 +1650,69 @@ msgid ""
 "between the Python DOM API, the W3C DOM recommendations, and the OMG IDL "
 "mapping for Python."
 msgstr ""
+"Αυτή η ενότητα περιγράφει τις απαιτήσεις συμμόρφωσης και τις σχέσεις μεταξύ "
+"της Python DOM API, των συστάσεων W3C DOM και της αντιστοίχισης OMG IDL για "
+"την Python."
 
 #: library/xml.dom.rst:975
 msgid "Type Mapping"
-msgstr ""
+msgstr "Αντιστοίχηση Τύπων"
 
 #: library/xml.dom.rst:977
 msgid ""
 "The IDL types used in the DOM specification are mapped to Python types "
 "according to the following table."
 msgstr ""
+"Οι τύποι IDL που χρησιμοποιούνται στις προδιαγραφές DOM αντιστοιχίζονται σε "
+"τύπους Python σύμφωνα με τον παρακάτω πίνακα."
 
 #: library/xml.dom.rst:981
 msgid "IDL Type"
-msgstr ""
+msgstr "Τύπος IDL"
 
 #: library/xml.dom.rst:981
 msgid "Python Type"
-msgstr ""
+msgstr "Τύπος Python"
 
 #: library/xml.dom.rst:983
 msgid "``boolean``"
-msgstr ""
+msgstr "``boolean``"
 
 #: library/xml.dom.rst:983
 msgid "``bool`` or ``int``"
-msgstr ""
+msgstr "``bool`` ή ``int``"
 
 #: library/xml.dom.rst:987 library/xml.dom.rst:989
 msgid "``int``"
-msgstr ""
+msgstr "``int``"
 
 #: library/xml.dom.rst:987
 msgid "``long int``"
-msgstr ""
+msgstr "``long int``"
 
 #: library/xml.dom.rst:989
 msgid "``unsigned int``"
-msgstr ""
+msgstr "``unsigned int``"
 
 #: library/xml.dom.rst:991
 msgid "``DOMString``"
-msgstr ""
+msgstr "``DOMString``"
 
 #: library/xml.dom.rst:991
 msgid "``str`` or ``bytes``"
-msgstr ""
+msgstr "``str`` ή ``bytes``"
 
 #: library/xml.dom.rst:993
 msgid "``null``"
-msgstr ""
+msgstr "``null``"
 
 #: library/xml.dom.rst:993
 msgid "``None``"
-msgstr ""
+msgstr "``None``"
 
 #: library/xml.dom.rst:999
 msgid "Accessor Methods"
-msgstr ""
+msgstr "Μέθοδοι Πρόσβασης"
 
 #: library/xml.dom.rst:1001
 msgid ""
@@ -1306,12 +1720,17 @@ msgid ""
 "``attribute`` declarations in much the way the Java mapping does. Mapping "
 "the IDL declarations ::"
 msgstr ""
+"Η αντιστοίχιση από OMG IDL σε Python ορίζει συναρτήσεις πρόσβασης για "
+"δηλώσεις IDL ``attribute`` με παρόμοιο τρόπο όπως γίνεται και στην "
+"αντιστοίχιση Java. Αντιστοίχιση των δηλώσεων IDL::"
 
 #: library/xml.dom.rst:1005
 msgid ""
 "readonly attribute string someValue;\n"
 "         attribute string anotherValue;"
 msgstr ""
+"readonly attribute string someValue;\n"
+"         attribute string anotherValue;"
 
 #: library/xml.dom.rst:1008
 msgid ""
@@ -1322,6 +1741,13 @@ msgid ""
 "accessible as normal Python attributes:  ``object.someValue`` is *not* "
 "required to work, and may raise an :exc:`AttributeError`."
 msgstr ""
+"παράγει τρεις συναρτήσεις πρόσβασης: μια μέθοδο \"get\" για το :attr:"
+"`someValue` (:meth:`_get_someValue`), και μεθόδους \"get\" και \"set\" για "
+"το :attr:`anotherValue` (:meth:`_get_anotherValue` και :meth:"
+"`_set_anotherValue`).Η αντιστοίχιση, συγκεκριμένα, δεν απαιτεί τα IDL "
+"χαρακτηριστικά να είναι προσβάσιμα ως συνηθισμένα Python χαρακτηριστικά: το "
+"``object.someValue`` *δεν* απαιτείται να λειτουργεί και μπορεί να κάνει "
+"raise :exc:`AttributeError`."
 
 #: library/xml.dom.rst:1015
 msgid ""
@@ -1334,6 +1760,15 @@ msgid ""
 "Attributes that are declared ``readonly`` may not restrict write access in "
 "all DOM implementations."
 msgstr ""
+"Ωστόσο, η Python DOM API *απαιτεί* η κανονική πρόσβαση στα χαρακτηριστικά να "
+"λειτουργεί. Αυτό σημαίνει ότι οι τυπικοί εκπρόσωποι που δημιουργούνται από "
+"μεταγλωττιστές Python IDL πιθανόν να μην λειτουργούν, και ενδέχεται να "
+"απαιτούνται wrapper αντικείμενα από την πλευρά του client εάν τα DOM "
+"αντικείμενα προσπελαύνονται μέσω CORBA. Παρόλο που αυτό απαιτεί κάποια "
+"επιπλέον προσοχή για CORBA DOM clients, οι υλοποιητές με εμπειρία στη χρήση "
+"DOM μέσω CORBA από Python δεν το θεωρούν πρόβλημα. Τα χαρακτηριστικά που "
+"δηλώνονται ως ``readon`` ενδέχεται να μην περιορίζουν την εγγραφή σε όλες "
+"τις DOM υλοποιήσεις."
 
 #: library/xml.dom.rst:1024
 msgid ""
@@ -1343,6 +1778,12 @@ msgid ""
 "directly from Python. \"Set\" accessors should never be provided for "
 "``readonly`` attributes."
 msgstr ""
+"Στην Python DOM API, οι συναρτήσεις πρόσβασης δεν απαιτούνται. Εάν "
+"παρέχονται, θα πρέπει να ακολουθούν τη μορφή που ορίζεται από την "
+"αντιστοίχιση Python IDL, αλλά αυτές οι μέθοδοι θεωρούνται αναγκαίες μόνο "
+"όταν τα attributes δεν είναι άμεσα προσβάσιμα από Python. Για ``readonly`` "
+"χαρακτηριστικά, δεν θα πρέπει ποτέ να παρέχονται συναρτήσεις \"Set\" "
+"πρόσβασης."
 
 #: library/xml.dom.rst:1029
 msgid ""
@@ -1351,3 +1792,7 @@ msgid ""
 "`getElementsByTagName`, being \"live\".  The Python DOM API does not require "
 "implementations to enforce such requirements."
 msgstr ""
+"Οι ορισμοί IDL δεν ενσωματώνουν πλήρως τις απαιτήσεις της W3C DOM API, όπως "
+"η ιδέα ορισμένων αντικειμένων (π.χ. η επιστρεφόμενη τιμή της :meth:"
+"`getElementsByTagName`) να είναι \"live\". Η Python DOM API δεν απαιτεί από "
+"τις υλοποιήσεις να εφαρμόζουν τέτοιες απαιτήσεις."
