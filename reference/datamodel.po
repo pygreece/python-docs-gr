@@ -2456,6 +2456,10 @@ msgid ""
 "may already be taken by the code that gets interrupted to execute :meth:"
 "`__del__`."
 msgstr ""
+"Η :meth:`__del__` μπορεί να καλεστεί, όταν καλείται αυθαίρετος κώδικα, συμπεριλαμβανομένου οποιουδήποτε "
+"αυθαίρετου νήματος.  Εάν η :meth:`__del__` χρειάζεται να κλειδώσει ή να επικαλεστεί οποιονδήποτε άλλο πόρο "
+"αποκλεισμού, μπορεί να είναι αδιέξοδο καθώς ο πόρος μπορεί να έχει ήδη ληφθεί από τον κώδικα που διακόπτεται για να "
+"εκτελεστεί :meth:`__del__`."
 
 #: reference/datamodel.rst:1678
 msgid ""
@@ -2467,6 +2471,12 @@ msgid ""
 "such globals exist, this may help in assuring that imported modules are "
 "still available at the time when the :meth:`__del__` method is called."
 msgstr ""
+"Η :meth:`__del__` μπορεί να εκτελεστεία κατά τη διάρκεια του τερματισμού λειτουργίας του διερμηνέα.  Κατά συνέπεια, "
+"οι καθολικές μεταβλητές στις οποίες χρειάζεται πρόσβαση (συμπεριλαμβανομένων άλλως modules) μπορεί να έχουν ήδη "
+"διαγραφεί ή να έχουν οριστεί σε ``None``. Η Python εγγυάται ότι τα καθολικά των οποίων το όνομα αρχίζει με μία μόνο "
+"υπογράμμιση διαγράφονται από το module τους πριν διαγραφούν άλλα καθολικά∙ εάν δεν υπάρχουν άλλες αναφορές σε τέτοια "
+"καθολικά, αυτό μπορεί να βοηθήσει στη διασφάλιση ότι τα εισαγόμενα modules εξακολουθούν να είναι διαθέσιμες τη στιμγή που καλείται "
+"η μέθοδος :meth:`__del__`."
 
 #: reference/datamodel.rst:1693
 msgid ""
@@ -2479,12 +2489,21 @@ msgid ""
 "`__repr__` but not :meth:`__str__`, then :meth:`__repr__` is also used when "
 "an \"informal\" string representation of instances of that class is required."
 msgstr ""
+"Καλείται από την ενσωματωμένη συνάρτηση :func:`repr` για τον υπολογισμό της \"official\" "
+"αναπαράστασης συμβολοσειράς ενός αντικειμένου. Εάν είναι δυνατόν, αυτό θα πρέπει να μοιάζει με μια έγκυρη "
+"έκφραση Python που θα μπορούσε να χρησιμοποιηθεί για την αναδημιουργία ενός αντικειμένου με την ίδια τιμή (δεδομένου ενός κατάλληλου περιβάλλοντος). "
+"Εάν αυτό δεν είναι δυνατό, θα πρέπει να επιστραφεί μια συμβολοσειρά της μορφής ``<...κάποια χρήσιμη περιγραφή...>``. "
+"Η τιμή επιστροφής πρέπει να είναι αντικείμενο συμβολοσειράς. Εάν μια κλάση ορίζει :meth:"
+"`__repr__` αλλά όχι :meth:`__str__`, τότε η :meth:`__repr__` χρησιμοποιείται επίσης όταν απαιτείται μια "
+"\"ανεπίσημη\" αναπαράσταση συμβολοσειράς στιγμιοτύπων αυτής της κλάσης."
 
 #: reference/datamodel.rst:1702
 msgid ""
 "This is typically used for debugging, so it is important that the "
 "representation is information-rich and unambiguous."
 msgstr ""
+"Αυτό χρησιμοποιείται συνήθως για εντοπισμός σφαλμάτων, επομένως είναι σημαντικό η αναπαράσταση να είναι πλούσια "
+"σε πληροφορίες και ξεκάθαρη."
 
 #: reference/datamodel.rst:1713
 msgid ""
@@ -2493,6 +2512,10 @@ msgid ""
 "string representation of an object.  The return value must be a :ref:`string "
 "<textseq>` object."
 msgstr ""
+"Καλείται από :func:`str(object) <str>` και τις ενσωματωμένες συναρτήσεις "
+":func:`format` και :func:`print` για τον υπολογισμό της \"ανεπίσημης\" ή ωραίας εκτύπωσης "
+"συμβολοσειράς ενός αντικειμένου. Η τιμή που επιστρέφεται πρέπει να είναι ένα αντικείμενο "
+":ref:`string <textseq>`."
 
 #: reference/datamodel.rst:1718
 msgid ""
@@ -2500,18 +2523,24 @@ msgid ""
 "expectation that :meth:`__str__` return a valid Python expression: a more "
 "convenient or concise representation can be used."
 msgstr ""
+"Αυτή η μέθοδος διαφέρει από τη :meth:`object.__repr__` στο ότι δεν υπάρχει καμία προσδοκία ότι η "
+":meth:`__str__` θα επιστρέψει μια έγκυρη έκφραση Python: μπορεί να χρησιμοποιηθεί μια πιο βολική ή συνοπτική αναπαράσταση."
 
 #: reference/datamodel.rst:1722
 msgid ""
 "The default implementation defined by the built-in type :class:`object` "
 "calls :meth:`object.__repr__`."
 msgstr ""
+"Η προεπιλεγμένη υλοποίηση που ορίζεται από τον ενσωματωμένο τύπο :class:`object` "
+"καλεί την :meth:`object.__repr__`."
 
 #: reference/datamodel.rst:1732
 msgid ""
 "Called by :ref:`bytes <func-bytes>` to compute a byte-string representation "
 "of an object. This should return a :class:`bytes` object."
 msgstr ""
+"Καλείται από :ref:`bytes <func-bytes>` για να υπολογιστεί μια παράσταση συμβολοσειράς byte ενός αντικειμένου. Αυτό θα "
+"πρέπει να επιστρέψει ένα :class:`bytes` αντικείμενο."
 
 #: reference/datamodel.rst:1743
 msgid ""
@@ -2524,27 +2553,36 @@ msgid ""
 "either delegate formatting to one of the built-in types, or use a similar "
 "formatting option syntax."
 msgstr ""
+"Καλείται από την ενσωματωμένη συνάρτηση :func:`format` και κατ' επέκταση, αξιολόγηση των "
+":ref:`formatted string literals <f-strings>` και της μεθόδου :meth:`str.format`, για την παραγωγή μιας \"μορφοποιημένης\" συμβολοσειράς "
+"αναπαράστασης ενός αντικειμένου. Το όρισμα *format_spec* είναι μια συμβολοσειρά που περιέχει μια περιγραφή των επιλογών μορφοποίησης "
+"που επιθυμείτε. Η ερμηνεία του ορίσματος *format_spec* εξαρτάται από τον τύπο που υλοποιεί τη :meth:`__format__`, "
+"ωστόσο οι περισσότερες κλάσεις είτε θα αναθέσουν τη μορφοποίηση σε έναν από τους ενσωματωμένους τύπους είτε θα χρησιμοποιήσουν παρόμοια σύνταξη επιλογής μορφορποίησης."
 
 #: reference/datamodel.rst:1753
 msgid ""
 "See :ref:`formatspec` for a description of the standard formatting syntax."
 msgstr ""
+"Δείτε το :ref:`formatspec` για μια περιγραφή της τυπικής σύνταξης μορφοποίησης."
 
 #: reference/datamodel.rst:1755
 msgid "The return value must be a string object."
-msgstr ""
+msgstr "Η τιμή επιστροφής πρέπει να είναι αντικείμενο συμβολοσειράς."
 
 #: reference/datamodel.rst:1757
 msgid ""
 "The __format__ method of ``object`` itself raises a :exc:`TypeError` if "
 "passed any non-empty string."
 msgstr ""
+"Η ίδια μέθοδος __format__ του ``object`` κάνει raise μια :exc:`TypeError` εάν περάσει οποιαδήποτε μη κενή "
+"συμβολοσειρά."
 
 #: reference/datamodel.rst:1761
 msgid ""
 "``object.__format__(x, '')`` is now equivalent to ``str(x)`` rather than "
 "``format(str(x), '')``."
 msgstr ""
+"Το ``object.__format__(x, '')`` είναι πλέον ισοδύναμο με το ``str(x)`` αντί για το ``format(str(x), '')``."
 
 #: reference/datamodel.rst:1777
 msgid ""
@@ -2554,6 +2592,11 @@ msgid ""
 "``x!=y`` calls ``x.__ne__(y)``, ``x>y`` calls ``x.__gt__(y)``, and ``x>=y`` "
 "calls ``x.__ge__(y)``."
 msgstr ""
+"Αυτές είναι οι λεγόμενες μέθοδοι \"πλούσιας σύγκρισης (rich comparison)\". Η αντιστοιχία μεταξύ των συμβόλων των τελεστών και "
+"των ονομάτων των μεθόδων έχει ως εξής: ``x<y`` καλεί ``x."
+"__lt__(y)``, ``x<=y`` καλεί ``x.__le__(y)``, ``x==y`` καλεί ``x.__eq__(y)``, "
+"``x!=y`` καλεί ``x.__ne__(y)``, ``x>y`` καλεί ``x.__gt__(y)``, και ``x>=y`` "
+"καλεί ``x.__ge__(y)``."
 
 #: reference/datamodel.rst:1783
 msgid ""
@@ -2565,6 +2608,11 @@ msgid ""
 "statement), Python will call :func:`bool` on the value to determine if the "
 "result is true or false."
 msgstr ""
+"Μια μέθοδος πλούσια σύγκρισης μπορεί να επιστρέψει το singleton :data:`NotImplemented` εάν δεν υλοποιήσει τη "
+"λειτουργία για ένα δεδομένο ζεύγος ορισμάτων. Σύμφωνα με τη σύμβαση, επιστρέφοτναι οι τιμές ``False`` και ``True`` για μια επιτυχημένη σύγκριση. "
+"Ωστόσο, αυτές οι μέθοδοι μπορούν αν επιστρέψουν οποιαδήποτε τιμή, επομένως εάν ο τελεστής σύγκρισης χρησιμοποιείται σε ένα Boolean περιβάλλον "
+"(π.χ., στη συνθήκη μιας πρότασης ``if``), η Python θα καλέσει τη συνάρτηση :func:`bool` στην τιμή για να προσδιορίσει εάν το αποτέλεσμα είναι "
+"αληθές ή ψευδές."
 
 #: reference/datamodel.rst:1790
 msgid ""
@@ -2577,6 +2625,13 @@ msgid ""
 "``x<=y``. To automatically generate ordering operations from a single root "
 "operation, see :func:`functools.total_ordering`."
 msgstr ""
+"Από προεπιλογή, το ``object`` υλοποιεί την :meth:`__eq__` χρησιμοποιώντας την ``is``, επιστρέφοντας "
+":data:`NotImplemented` σε περίπτωση ψευδούς σύγκρισης: ``True if x is y "
+"else NotImplemented``. Για την :meth:`__ne__`, από προεπιλογή αναθέτει σε :meth:"
+"`__eq__` και αντιστρέφει το αποτέλεσμα εκτός αν είναι :data:`!NotImplemented`. Δεν υπάρχουν άλλες "
+"σιωπηρές σχέσεις μεταξύ των τελεστών σύγκρισης ή των προεπιλεγμένων υλοποιήσεων∙ για παράδειγμα, το αληθές "
+"του ``(x<y or x==y)`` δεν συνεπάγεται ``x<=y``. Για να δημιουργήσετε αυτόματα λειτουργίες ταξινόμησης από μία μόνο "
+"ριζική λειτουργία, ανατρέξτε στο :func:`functools.total_ordering`."
 
 #: reference/datamodel.rst:1799
 msgid ""
@@ -2584,6 +2639,9 @@ msgid ""
 "term:`hashable` objects which support custom comparison operations and are "
 "usable as dictionary keys."
 msgstr ""
+"Δείτε την παράγραφο σχετικά με το :meth:`__hash__` για μερικές σημαντικές σημειώσεις σχετικά με τη δημιουργία "
+"αντικειμένων :term:`hashable` τα οποία υποστηρίζουν προσαρμοσμένες λειτουργίες σύγκρισης και μπορούν να χρησιμοποιηθούν ως "
+"κλειδιά λεξικού."
 
 #: reference/datamodel.rst:1803
 msgid ""
@@ -2597,6 +2655,14 @@ msgid ""
 "operand has priority, otherwise the left operand's method has priority.  "
 "Virtual subclassing is not considered."
 msgstr ""
+"Δεν υπάρχουν εκδόσεις αυτών των μεθόδων με εναλλασσόμενα ορίσματα (που χρησιμοποιούνται όταν το αριστερό "
+"όρισμα δεν υποστηρίζει τη λειτουργία, αλλά το δεξί όρισμα υποστηρίζει)∙ αντίθετα, "
+"οι :meth:`__lt__` και :meth:`__gt__` είναι η αντανάκλση η μία της άλλης, οι :meth:"
+"`__le__` και :meth:`__ge__` είναι η αντανάκλαση η μία της άλλης, και οι :meth:`__eq__` "
+"και :meth:`__ne__` είναι η δική τους αντανάκλαση. Εάν οι τελεστέοι είναι διαφορετικών τύπως και ο τύπος του "
+"δεξιού τελεστέου είναι μια άμεση ή έμμεση υποκλάση του τύπου του αριστερού τελεστέου, η ανακλώμενη μέθοδος του δεξιού "
+"τελεστέου έχει προτεραιότητα, διαφορετικά η μέθοδος του αριστερού τελεστέου έχει προτεραιότητα. Η εικονική υποκλάση "
+"δεν λαμβάνεται υπόχη."
 
 #: reference/datamodel.rst:1814
 msgid ""
@@ -2604,6 +2670,9 @@ msgid ""
 "`NotImplemented`, the ``==`` and ``!=`` operators will fall back to ``is`` "
 "and ``is not``, respectively."
 msgstr ""
+"Όταν καμία κατάλληλη μέθοδος δεν επιστρέφει καμία τιμή εκτός από την :data:"
+"`NotImplemented`, οι τελεστές ``==`` και ``!=`` θα επιστρέψουν σττις τιμές ``is`` "
+"και ``is not``, αντίστοιχα."
 
 #: reference/datamodel.rst:1823
 msgid ""
@@ -2615,6 +2684,12 @@ msgid ""
 "the object that also play a part in comparison of objects by packing them "
 "into a tuple and hashing the tuple. Example::"
 msgstr ""
+"Καλείται από την ενσωματωμένη συνάρτηση :func:`hash` και για λειτουργίες σε μέλη κατακερματισμένων συλλόγων, "
+"συμπεριλαμβανομένων των :class:`set`, :class:`frozenset`, and :class:"
+"`dict`. Η μέθοδος ``__hash__()`` θα πρέπει να επιστρέφει έναν ακέραιο αριθμό. Η μόνη απαιτούμενη ιδιότητα έιναι ότι τα αντικείμενα "
+"που συγκρίνονται ίσα έχουν την ίδια τιμή κατακερματισμού. Συνίσταται να αναμειγνύετε τις τιμές κατακερματισμού των "
+"στοιχείων του αντικειμένου που παίζουν επίσης ρόλο στη σύγκριση αντικειμένων, συσκευάζοντάς τα σε μια πλειάδα και κατακερματίζοντας την πλειάδα. "
+"Παράδειγμα::"
 
 #: reference/datamodel.rst:1836
 msgid ""
@@ -2625,6 +2700,12 @@ msgid ""
 "to check the width on all supported builds.  An easy way to do this is with "
 "``python -c \"import sys; print(sys.hash_info.width)\"``."
 msgstr ""
+"Η :func:`hash` περικόπτει την τιμή που επιστρέφεται από την προσαρμοσμένη μέθοδο :meth:"
+"`__hash__` ενός αντικειμένου στο μέγεθος :c:type:`Py_ssize_t`.  Αυτό είναι συνήθως 8 byte "
+"σε εκδόσεις 64-bit και 4 byte σε εκδόσεις 32-bit.  Εάν η :"
+"meth:`__hash__` ενός αντικειμένου πρέπει να διαλειτουργήσει σε εκδόσεις διαφορικών μεγεθών bit, φροντίστε να ελέγξετε "
+"το πλάτος σε όλες τις υποστηριζόμενες εκδόσεις.  Ένας εύκολος τρόπος για να το κάνετε αυτό είναι με την "
+"``python -c \"import sys; print(sys.hash_info.width)\"``."
 
 #: reference/datamodel.rst:1844
 msgid ""
@@ -2637,6 +2718,12 @@ msgid ""
 "value is immutable (if the object's hash value changes, it will be in the "
 "wrong hash bucket)."
 msgstr ""
+"Εάν μια κλάση δεν ορίζει μια μέθοδο :meth:`__eq__`, δεν θα πρέπει να ορίζει ούτε μια λειτουργία :"
+"meth:`__hash__` ∙ εάν ορίζει τη :meth:`__eq__` αλλά όχι τη :meth:"
+"`__hash__`, τα στιγμιότυπα της δεν θα είναι χρησιμοποιήσιμες ως στοιχεία σε συλλογές που μπορούν να κατακερματιστούν.  "
+"Εάν μια κλάση ορίζει αντικείμενα που μπορούν να μεταβληθούν και υλοποιεί μια μέθοδο :meth:"
+"`__eq__`, δεν θα πρέπει να υλοποιεί τη :meth:`__hash__`, καθώς η υλοποίηση των συλλογών :term:`hashable` "
+"απαιτεί η τιμή hash ενός κλειδιού να είναι αμετάβλητη (εάν η τιμή hash του αντικειμένου αλλάξει, θα βρίσκεται σε λάθος κάδο hash)."
 
 #: reference/datamodel.rst:1853
 msgid ""
@@ -2645,6 +2732,10 @@ msgid ""
 "``x.__hash__()`` returns an appropriate value such that ``x == y`` implies "
 "both that ``x is y`` and ``hash(x) == hash(y)``."
 msgstr ""
+"Οι κλάσεις που ορίζονται από τον χρήστη έχουν από προεπιλογή τις μεθόδους "
+":meth:`__eq__` και :meth:`__hash__`. Με αυτές, όλα τα αντικείμενα συγκρίνονται άνισα (εκτός από τον ευατό τους) και το "
+"``x.__hash__()`` επιστρέφει μια κατάλληλη τιμή έτσι ώστε το ``x == y`` να υπονοεί ότι το "
+"``x is y`` και ``hash(x) == hash(y)``."
 
 #: reference/datamodel.rst:1858
 msgid ""
@@ -2655,6 +2746,12 @@ msgid ""
 "hash value, and will also be correctly identified as unhashable when "
 "checking ``isinstance(obj, collections.abc.Hashable)``."
 msgstr ""
+"Μια κλάση που παρακάμπτει τη :meth:`__eq__` και δεν ορίζει τη :meth:`__hash__` "
+"θα έχει τη :meth:`__hash__` της έμμεσα ορισμένο σε ``None``. Όταν η μέθοδος "
+":meth:`__hash__` μιας κλάσης είναι ``None``, τα στιγμιότυπα της κλάσης θα κάνουν raise μια "
+"κατάλληλη :exc:`TypeError` όταν ένα πρόγραμμα επιχειρήσει να ανακτήσει την τιμή "
+"κατακερματισμού τους και θα αναγνωρίσουν επίσης σωστά ως μη κατακερματιζόμενες κατά τον έλεγχο του "
+"``isinstance(obj, collections.abc.Hashable)``."
 
 #: reference/datamodel.rst:1865
 msgid ""
@@ -2662,6 +2759,9 @@ msgid ""
 "of :meth:`__hash__` from a parent class, the interpreter must be told this "
 "explicitly by setting ``__hash__ = <ParentClass>.__hash__``."
 msgstr ""
+"Εάν μια κλάση που παρακάμπτει την :meth:`__eq__` χρειάζεται να διατηρήσει την υλοποίηση της "
+":meth:`__hash__` από μια γονική κλάση, ο διερμηνέας πρέπει να ενημερωθεί ρητά για αυτό "
+"ορίζονται την ``__hash__ = <ParentClass>.__hash__``."
 
 #: reference/datamodel.rst:1869
 msgid ""
@@ -2671,6 +2771,10 @@ msgid ""
 "`TypeError` would be incorrectly identified as hashable by an "
 "``isinstance(obj, collections.abc.Hashable)`` call."
 msgstr ""
+"Εάν μια κλάση που δεν παρακάμπτει τη :meth:`__eq__` επιθυμεί να καταστείλει την υποστήριξη "
+"κατακερματισμού, θα πρέπει να συμπεριλάβει το ``__hash__ = None`` στον ορισμός της κλάσης. Μια κλάση που ορίζει τη δικιά της "
+":meth:`__hash__` που κάνει raise μια :exc:`TypeError` θα αναγνωριστεί εσφαλμένα ως κατακερματίσιμη από μια κλήση "
+"``isinstance(obj, collections.abc.Hashable)``."
 
 #: reference/datamodel.rst:1878
 msgid ""
@@ -2679,6 +2783,9 @@ msgid ""
 "constant within an individual Python process, they are not predictable "
 "between repeated invocations of Python."
 msgstr ""
+"Από προεπιλογή, οι τιμές :meth:`__hash__` των αντικειμένων str και bytes είναι "
+"\"salted\" με μια απρόβλεπτη τυχαία τιμή.  Παρόλου που παραμένουν σταθερές μέσα σε μια μεμονωμένη διεργασία "
+"Python, δεν είναι πρόβλέψιμες μεταξύ επαναλαμβανόμενων κλήσεων της Python."
 
 #: reference/datamodel.rst:1883
 msgid ""
@@ -2687,6 +2794,9 @@ msgid ""
 "insertion, *O*\\ (*n*\\ :sup:`2`) complexity.  See http://ocert.org/"
 "advisories/ocert-2011-003.html for details."
 msgstr ""
+"Αυτό έχει ως στόχο να παρέχει προστασία από άρνηση υπηρεσίας που προκαλείται από προσεκτικά επιλεγμένες εισόδους "
+"που εκμεταλλεύονται τη χειρότερη περίπτωση απόδοσης μιας εισαγωγής ψηφίου, πολυπλοκότητας *O*\\ (*n*\\ :sup:`2`).  Δείτε "
+"http://ocert.org/advisories/ocert-2011-003.html για λεπτομέρειες."
 
 #: reference/datamodel.rst:1888
 msgid ""
@@ -2694,14 +2804,16 @@ msgid ""
 "made guarantees about this ordering (and it typically varies between 32-bit "
 "and 64-bit builds)."
 msgstr ""
+"Η αλλαγή των τιμών κατακερματισμού επηρεάζει τη σειρά επανάληψης των συνόλων. Η Python δεν έχει δώσει ποτέ εγγυήσεις "
+"σχετικά με αυτήν τη σειρά (και συνήθως ποικίλει μεταξύ εκδόσεων 32-bit και 64-bit)."
 
 #: reference/datamodel.rst:1892
 msgid "See also :envvar:`PYTHONHASHSEED`."
-msgstr ""
+msgstr "Δείτε επίσης :envvar:`PYTHONHASHSEED`."
 
 #: reference/datamodel.rst:1894
 msgid "Hash randomization is enabled by default."
-msgstr ""
+msgstr "Η τυχαιοποίηση κατακερματισμού είναι ενεργοποιημένη από προεπιλογή."
 
 #: reference/datamodel.rst:1902
 msgid ""
@@ -2711,10 +2823,14 @@ msgid ""
 "is considered true if its result is nonzero.  If a class defines neither :"
 "meth:`!__len__` nor :meth:`!__bool__`, all its instances are considered true."
 msgstr ""
+"Καλείται για την υλοποίηση ελέγχου τιμών αλήθειας και την ενσωματωμένη λειτουργία ``bool()`` ∙ "
+"θα πρέπει να επιστρέφει ``False`` ή ``True``.  Όταν αυτή η μέθοδος δεν έχει οριστεί, καλείται η "
+":meth:`~object.__len__`, εάν έχει οριστεί, και το αντικείμενο θεωρείται αληθές εάν το αποτέλεσμα του είναι μη μηδενικό.  Εάν "
+"μια κλάση δεν ορίζει ούτε :meth:`!__len__` ούτε :meth:`!__bool__`, όλα τα στιγμιότυπα της θεωρούνται αληθείς."
 
 #: reference/datamodel.rst:1913
 msgid "Customizing attribute access"
-msgstr ""
+msgstr "Προσαρμογή πρόσβασης χαρακτηριστικών"
 
 #: reference/datamodel.rst:1915
 msgid ""
@@ -2722,6 +2838,8 @@ msgid ""
 "access (use of, assignment to, or deletion of ``x.name``) for class "
 "instances."
 msgstr ""
+"Οι ακόλουθες μέθοδοι μπορούν αν οριστούν για την προσαρμογή της έννοιας της πρόσβασης χαρακτηριστικών "
+"(χρήση, ανάθεση ή διαγραφή του ``x.name``) για στιγμιότυπα κλάσης."
 
 #: reference/datamodel.rst:1923
 msgid ""
@@ -2732,6 +2850,12 @@ msgid ""
 "`AttributeError`).  This method should either return the (computed) "
 "attribute value or raise an :exc:`AttributeError` exception."
 msgstr ""
+"Καλείται όταν η πρόσβαση προεπιλεγμένου χαρακτηριστικού αποτυγχάνει με μια "
+":exc:`AttributeError` (είτε η :meth:`__getattribute__` κάνει raise μια "
+":exc:`AttributeError` επειδή το *name* δεν είναι χαρακτηριστικό στιγμιοτύπου ή χαρακτηριστικό στο δέντρο κλάσης "
+"για το ``self`` ∙ ή η :meth:`__get__` μια ιδιότητας *name* κάνει raise μια "
+":exc:`AttributeError`).  Αυτή η μέθοδος θα πρέπει είτε να επιστρέψει την (υπολογισμένη) τιμή του "
+"χαρακτηριστικού είτε να κάνει raise μια εξαίρεση :exc:`AttributeError`."
 
 #: reference/datamodel.rst:1930
 msgid ""
@@ -2745,6 +2869,13 @@ msgid ""
 "object).  See the :meth:`__getattribute__` method below for a way to "
 "actually get total control over attribute access."
 msgstr ""
+"Σημειώστε ότι αν το χαρακτηριστικό βρεθεί μέσω του κανονικού μηχανισμού, η μέθοδος "
+":meth:__getattr__ δεν καλείται. (Αυτή είναι μια σκόπιμη ασυμμετρία μεταξύ των :meth:__getattr__ και "
+":meth:__setattr__.) Αυτό γίνεται τόσο για λόγους απόδοσης όσο και επειδή διαφορετικά η :meth:__getattr__ δεν θα "
+"είχε τρόπο να αποκτήσει πρόσβαση σε όλα τα χαρακτηριστικά του στιγμιοτύπου. Σημειώστε ότι, τουλάχιστον για μεταβλητές στιγμιοτύπου, "
+"μπορείτε να προσομοιώσετε πλήρη έλεγχο χωρίς να εισάγετε τιμές στο λεξικό χαρακτηριστικών του στιγμιοτύπου (αλλά αντί αυτού να "
+"τις εισάγετε σε κάποιο άλλο αντικείμενο). Δείτε τη μέθοδο :meth:__getattribute__ παρακάτω για έναν τρόπο να αποκτήσετε "
+"πραγματικό πλήρη έλεγχο στην πρόσβαση των χαρακτηριστικών."
 
 #: reference/datamodel.rst:1943
 msgid ""
@@ -2757,6 +2888,11 @@ msgid ""
 "base class method with the same name to access any attributes it needs, for "
 "example, ``object.__getattribute__(self, name)``."
 msgstr ""
+"Καλείται χωρίς προϋποθέσεις για την υλοποίηση της πρόσβασης σε χαρακτηριστικά για στιγμιότυπα κλάσης. Αν η κλάση "
+"ορίζει επίσης τη μέθοδο :meth:`__getattr__`, αυτή δεν θα κληθεί εκτός αν η :meth:`__getattribute__` την καλέσει ρητά ή "
+"κάνει raise μια εξαίρεση :exc:`AttributeError`. Αυτή η μέθοδος πρέπει να επιστρέφει την (υπολογισμένη) τιμή του χαρακτηριστικού ή να κάνει "
+"raise μια εξαίρεση :exc:`AttributeError`. Για να αποφευχθεί η άπειρη αναδρομή μέσα σε αυτή τη μέθοδο, η υλοποίηση της πρέπει πάντα να καλεί τη μέθοδο "
+"της βασικής κλάσης με το ίδιο όνομα για να έχει πρόσβαση σε οποιαδήποτε ιδιότητα χρειάζεται, για παράδειγμα ``object.__getattribute__(self, name)``."
 
 #: reference/datamodel.rst:1954
 msgid ""
@@ -2764,18 +2900,25 @@ msgid ""
 "result of implicit invocation via language syntax or :ref:`built-in "
 "functions <builtin-functions>`. See :ref:`special-lookup`."
 msgstr ""
+"Αυτή η μέθοδος μπορεί ακόμα να παρακαμφθεί κατά την αναζήτηση ειδικών μεθόδων ως αποτέλεσμα "
+"σιωπηρής επίκλησης μέσω σύνταξης γλώσσας ή :ref:`built-in "
+"functions <builtin-functions>`. Βλ. :ref:`special-lookup`."
 
 #: reference/datamodel.rst:1959
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__getattr__`` with "
 "arguments ``obj``, ``name``."
 msgstr ""
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``object.__getattr__`` με "
+"ορίσματα ``obj``, ``name``."
 
 #: reference/datamodel.rst:1961
 msgid ""
 "For certain sensitive attribute accesses, raises an :ref:`auditing event "
 "<auditing>` ``object.__getattr__`` with arguments ``obj`` and ``name``."
 msgstr ""
+"Για συγκεκριμένες προσβάσεις ευαίσθητων χαρακτηριστικών, δημιουργεί ένα :ref:`auditing event "
+"<auditing>` ``object.__getattr__`` με ορίσματα ``obj`` και ``name``."
 
 #: reference/datamodel.rst:1968
 msgid ""
@@ -2783,6 +2926,9 @@ msgid ""
 "the normal mechanism (i.e. store the value in the instance dictionary). "
 "*name* is the attribute name, *value* is the value to be assigned to it."
 msgstr ""
+"Καλείται όταν επιχειρείται εκχώρηση χαρακτηριστικού.  Αυτό καλείται αντί για τον κανονικό μηχανισμό (δηλαδή "
+"αποθήκευση της τιμής στο λεξικό στιγμιοτύπου). Το *name* είναι το όνομα του χαρακτηριστικού, *value* "
+"είναι η τιμή που θα του εκχωρηθεί."
 
 #: reference/datamodel.rst:1972
 msgid ""
@@ -2790,12 +2936,17 @@ msgid ""
 "call the base class method with the same name, for example, ``object."
 "__setattr__(self, name, value)``."
 msgstr ""
+"Εάν η :meth:`__setattr__` θέλει να εκχωρήσει σε ένα χαρακτηριστικό στιγμιοτύπου, θα πρέπει να καλέσει τη μέθοδο "
+"της βασικής κλάσης με το ίδιο όνομα, για παράδειγμα, ``object."
+"__setattr__(self, name, value)``."
 
 #: reference/datamodel.rst:1976
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__setattr__`` with "
 "arguments ``obj``, ``name``, ``value``."
 msgstr ""
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``object.__setattr__`` με "
+"ορίσματα ``obj``, ``name``, ``value``."
 
 #: reference/datamodel.rst:1978
 msgid ""
@@ -2803,6 +2954,9 @@ msgid ""
 "<auditing>` ``object.__setattr__`` with arguments ``obj``, ``name``, "
 "``value``."
 msgstr ""
+"Για ορισμένες εκχωρήσεις ευαίσθητων χαρακτηριστικών, γίνεται raise μια :ref:`auditing event "
+"<auditing>` ``object.__setattr__`` με ορίσματα ``obj``, ``name``, "
+"``value``."
 
 #: reference/datamodel.rst:1985
 msgid ""
@@ -2810,28 +2964,36 @@ msgid ""
 "This should only be implemented if ``del obj.name`` is meaningful for the "
 "object."
 msgstr ""
+"Όπως η :meth:`__setattr__` αλλά για διαγραφή χαρακτηριστικών αντί για ανάθεση.  "
+"Αυτό θα πρέπει να εφαρμοστεί μόνο εάν το ``del obj.name`` έχει νόημα για το αντικείμενο."
 
 #: reference/datamodel.rst:1988
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__delattr__`` with "
 "arguments ``obj``, ``name``."
 msgstr ""
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``object.__delattr__`` με "
+"ορίσματα ``obj``, ``name``."
 
 #: reference/datamodel.rst:1990
 msgid ""
 "For certain sensitive attribute deletions, raises an :ref:`auditing event "
 "<auditing>` ``object.__delattr__`` with arguments ``obj`` and ``name``."
 msgstr ""
+"Για ορισμένες διαγραφές ευαίσθητων χαρακτηριστικών, κάνει raise ένα :ref:`auditing event "
+"<auditing>` ``object.__delattr__`` με ορίσματα ``obj`` και ``name``."
 
 #: reference/datamodel.rst:1997
 msgid ""
 "Called when :func:`dir` is called on the object. An iterable must be "
 "returned. :func:`dir` converts the returned iterable to a list and sorts it."
 msgstr ""
+"Καλείται όταν η :func:`dir` καλείται στο αντικείμενο. Πρέπει να επιστραφεί ένα iterable. Η :func:`dir` "
+"μετατρέπει το iterable που επιστρέφεται σε λίστα και τον ταξινομεί."
 
 #: reference/datamodel.rst:2002
 msgid "Customizing module attribute access"
-msgstr ""
+msgstr "Προσαρμογή πρόσβασης χαρακτηριστικών module"
 
 #: reference/datamodel.rst:2009
 msgid ""
@@ -2844,6 +3006,12 @@ msgid ""
 "``__dict__`` before raising an :exc:`AttributeError`. If found, it is called "
 "with the attribute name and the result is returned."
 msgstr ""
+"Οι ειδικές ονομασίες ``__getattr__`` και ``__dir__`` μπορούν επίσης να χρησιμοποιηθούν για την "
+"προσαρμογή της πρόσβασης στα χαρακτηριστικά του module. Η συνάρτηση ``__getattr__`` στο επίπεδο του module "
+"πρέπει να δέχεται ένα όρισμα, το οποίο είναι το όνομα ενός χαρακτηριστικού, και να επιστρέφει την υπολογισμένη τιμή ή να κάνει "
+"raise μια εξαίρεση :exc:`AttributeError`. Εάν ένα χαρακτηριστικό δεν βρεθεί σε ένα αντικείμενο module μέσω της κανονικής αναζήτησης, δηλαδή "
+"με τη μέθοδο :meth:`object.__getattribute__`, τότε η μέθοδος ``__getattr__`` αναζητείται στο λεξικό ``__dict__`` του module πριν γίνει raise "
+"η εξαίρεση :exc:`AttributeError`. Αν βρεθεί, καλείται με το όνομα της ιδιότητας και το αποτέλεσμα επιστρέφεται."
 
 #: reference/datamodel.rst:2018
 msgid ""
@@ -2851,6 +3019,8 @@ msgid ""
 "of strings that represents the names accessible on module. If present, this "
 "function overrides the standard :func:`dir` search on a module."
 msgstr ""
+"Η συνάρτηση ``__dir__`` δεν πρέπει να δέχεται ορίσματα και να επιστρέφει μια επαναλαμβανόμενη σειρά συμβολοσειρών που αντιπροσωπεύει "
+"τα ονόματα που είναι προσβάσιμα στο module. Εάν υπάρχει, αυτή η συνάρτηση παρακάμπτει την τυπική αναζήτηση :func:`dir` σε ένα module."
 
 #: reference/datamodel.rst:2022
 msgid ""
@@ -2858,6 +3028,8 @@ msgid ""
 "attributes, properties, etc.), one can set the ``__class__`` attribute of a "
 "module object to a subclass of :class:`types.ModuleType`. For example::"
 msgstr ""
+"Για μια πιο λεπτομερή προσμαρμογή της συμπεριφοράς του module (ρύθμιση χαρακτηριστικών, ιδιοτήτων κλπ.), μπορεί κανείς να ορίσει "
+"το χαρακτηριστικό ``__class__`` ενός αντικειμένου module σε μια υποκλάση :class:`types.ModuleType`. Για παράδειγμα::"
 
 #: reference/datamodel.rst:2040
 msgid ""
@@ -2866,26 +3038,29 @@ msgid ""
 "module globals (whether by code within the module, or via a reference to the "
 "module's globals dictionary) is unaffected."
 msgstr ""
+"Ο καθορισμός του module ``__getattr__`` και η ρύθμιση του module ``__class__`` επηρεάζουν μόνο "
+"τις αναζητήσεις που πραγματοποιούνται με χρήση της σύνταξης πρόσβασης χαρακτηριστικών -- η απευθείας πρόσβαση στα "
+"καθολικά του module (είτε μέσω κώδικας εντός του module, είτε μέσω αναφοράς στο λεξικό καθολικών του module) δεν επηρεάζεται."
 
 #: reference/datamodel.rst:2045
 msgid "``__class__`` module attribute is now writable."
-msgstr ""
+msgstr "Το χαρακτηριστικό ``__class__`` του module είναι πλέον εγγράψιμο."
 
 #: reference/datamodel.rst:2048
 msgid "``__getattr__`` and ``__dir__`` module attributes."
-msgstr ""
+msgstr "Τα χαρακτηριστικά ``__getattr__`` και ``__dir__`` του module."
 
 #: reference/datamodel.rst:2053
 msgid ":pep:`562` - Module __getattr__ and __dir__"
-msgstr ""
+msgstr ":pep:`562` - Module __getattr__ και __dir__"
 
 #: reference/datamodel.rst:2054
 msgid "Describes the ``__getattr__`` and ``__dir__`` functions on modules."
-msgstr ""
+msgstr "Περιγράφει τις συναρτήσεις ``__getattr__`` και ``__dir__`` σε modules."
 
 #: reference/datamodel.rst:2060
 msgid "Implementing Descriptors"
-msgstr ""
+msgstr "Υλοποίηση Περιγραφέων"
 
 #: reference/datamodel.rst:2062
 msgid ""
@@ -2896,6 +3071,10 @@ msgid ""
 "attribute\" refers to the attribute whose name is the key of the property in "
 "the owner class' :attr:`~object.__dict__`."
 msgstr ""
+"Οι παρακάτων μέθοδοι ισχύουν μόνο όταν ένα στιγμιότυπο της κλάσης που περιέχει τη μέθοδο (μια λεγόμενη "
+"κλάση *περιγραφέα*) εμφανίζεται μια *ιδιοκτήτρια* κλάση (ο περιγραφέας πρέπει να βρίσκεται είτε στο λεξικό της κλάσης "
+"της ιδιοκτήτριας είτε στο λεξικό κλάσης κάποιου από τους γονείς της).  Στα παρακάτω παραδείγματα, \"το χαρακτηριστικό\" αναφέρεται "
+"στο χαρακτηριστικό του οποίου το όνομα είναι το κλειδί της ιδιότητας στο :attr:`~object.__dict__` της ιδιοκτήτριας κλάσης."
 
 #: reference/datamodel.rst:2072
 msgid ""
@@ -2905,12 +3084,17 @@ msgid ""
 "the attribute was accessed through, or ``None`` when the attribute is "
 "accessed through the *owner*."
 msgstr ""
+"Καλείται για να ληφθεί η ιδιότητα της ιδιοκτήτρια κλάσης (πρόσβαση σε χαρακτηριστικό κλάσης) ή ενός στιγμιοτύπου αυτή της κλάση "
+"(πρόσβαση σε χαρακτηριστικό στιγμιοτύπου). Η προαιρετική παράμετρος *owner* είναι η ιδιοκτήτρια κλάση, ενώ η "
+"*instance* είναι το στιγμιότυπο μέσως της οποίας έγινε πρόσβαση στο χαρακτηριστικό, ή ``None`` όταν η πρόσβαση στο χαρακτηριστικό έγινε μέσω της *owner*."
 
 #: reference/datamodel.rst:2078
 msgid ""
 "This method should return the computed attribute value or raise an :exc:"
 "`AttributeError` exception."
 msgstr ""
+"Αυτή η μέθοδος πρέπει να επιστρέφει την υπολογισμένη τιμή του χαρακτηριστικού ή να κάνει raise μια "
+":exc:`AttributeError` εξαίρεση."
 
 #: reference/datamodel.rst:2081
 msgid ""
@@ -2921,12 +3105,17 @@ msgid ""
 "implementation always passes in both arguments whether they are required or "
 "not."
 msgstr ""
+"Το :PEP:`252` ορίζει ότι η μέθοδος :meth:`__get__` μπορεί να καλείται με ένα ή δύο ορίσματα.  Οι ενσωματεωμένοι περιγραφείς της Python "
+"υποστηρίζουν αυτή την προδιαγραφή∙ ωστόσο, είναι πιθανό κάποια εργαλεία τρίτων να έχουν περιγραφείς που απαιτούν και τα δύο ορίσματα. Η ενσωματωμένη υλοποίηση "
+"της Python για τη μέθοδο :meth:`__getattribute__` "
+"περνάει πάντα και τα δύο ορίσματα, είτε είναι απαραίτητα είτε όχι."
 
 #: reference/datamodel.rst:2090
 msgid ""
 "Called to set the attribute on an instance *instance* of the owner class to "
 "a new value, *value*."
 msgstr ""
+"Καλείται για να οριστεί το χαρακτηριστικό σε ένα στιγμιότυπο *instance* της ιδιοκτήτρια κλάσης σε μια νέα τιμή, *value*."
 
 #: reference/datamodel.rst:2093
 msgid ""
@@ -2934,17 +3123,21 @@ msgid ""
 "descriptor to a \"data descriptor\".  See :ref:`descriptor-invocation` for "
 "more details."
 msgstr ""
+"Σημείωση, η προσθήκη της :meth:`__set__` ή :meth:`__delete__` αλλάζει το είδος του περιγραφέα σε "
+"έναν \"περιγραφέα δεδομένων\".  Δείτε το :ref:`descriptor-invocation` για περισσότερες λεπτομέρειες."
 
 #: reference/datamodel.rst:2099
 msgid ""
 "Called to delete the attribute on an instance *instance* of the owner class."
 msgstr ""
+"Καλείται για να διαγραφεί το χαρακτηριστικό σε ένα στιμγιότυπο *instance* της ιδιοκτήτρια κλάσης."
 
 #: reference/datamodel.rst:2101
 msgid ""
 "Instances of descriptors may also have the :attr:`!__objclass__` attribute "
 "present:"
 msgstr ""
+"Τα στιγμιότυπα περιγραφέων μπορείς επίσης να έχουν διαθέσιμο το χαρακτηριστικό :attr:`!__objclass__`:"
 
 #: reference/datamodel.rst:2106
 msgid ""
@@ -2956,10 +3149,14 @@ msgid ""
 "argument (for example, CPython sets this attribute for unbound methods that "
 "are implemented in C)."
 msgstr ""
+"Το χαρακτηριστικό :attr:`!__objclass__` ερμηνεύεται από το module :mod:`inspect` ως ένδειξη κλάσης στην οποία "
+"ορίστηκε το αντικείμενο (η κατάλληλη ρύθμιση αυτής μπορεί να βοηθήσει στην ανάκτηση πληροφοριών κατά την εκτέλεση για δυναμικά "
+"χαρακτηριστικά κλάσεων). Για τα καλέσιμα, μπορεί να υποδεικνύει ότι ένα στιγμιότυπο του δωσμένου τύπου (ή μιας υποκλάσης του) αναμένεται ή απαιτείται "
+"ως το πρώτο όρισμα θέσεως (για παράδειγμα, η CPython θέτει αυτήν την ιδιότητα για μη δεσμευμένες μεθόδους που έχουν υλοποιηθεί σε C)."
 
 #: reference/datamodel.rst:2117
 msgid "Invoking Descriptors"
-msgstr ""
+msgstr "Κλήση Περιγραφέων"
 
 #: reference/datamodel.rst:2119
 msgid ""
@@ -2969,6 +3166,10 @@ msgid ""
 "`~object.__delete__`. If any of those methods are defined for an object, it "
 "is said to be a descriptor."
 msgstr ""
+"Γενικά, ένας περιγραφέας είναι ένα χαρακτηριστικό αντικειμένου με \"συμπεριφορά δέσμευσης\", δηλαδή "
+"μια ιδιότητα της οποίας η πρόσβαση έχει παρακαμφθεί μέσω μεθόδων του πρωτοκόλλου περιγραφέα "
+":meth:`~object.__get__`, :meth:`~object.__set__`, και :meth:`~object.__delete__`. Αν οποιαδήποτε από αυτές τις μεθόδους έχει οριστεί για ένα αντικείμενο, "
+"τότε το αντικείμενο αυτό θεωρείται περιγραφέας."
 
 #: reference/datamodel.rst:2125
 msgid ""
@@ -2977,6 +3178,9 @@ msgid ""
 "chain starting with ``a.__dict__['x']``, then ``type(a).__dict__['x']``, and "
 "continuing through the base classes of ``type(a)`` excluding metaclasses."
 msgstr ""
+"Η προεπιλεγμένη συμπεριφορά για την πρόσβαση χαρακτηριστικών είναι η ανάκτηση, ο ορισμός, ή η διαγραφή του χαρακτηριστικού από το "
+"λεξικό ενός αντικειμένου. Για παράδειγμα, το ``a.x`` έχει μια αλυσίδα αναζήτησης που ξεκινά με ``a.__dict__['x']``, στη συνέχεια με "
+"``type(a).__dict__['x']`` και συνεχίζει στις βασικές κατηγορίες του ``type(a)`` εξαιρουμένων των μετακλάσεων."
 
 #: reference/datamodel.rst:2130
 msgid ""
@@ -2985,46 +3189,57 @@ msgid ""
 "descriptor method instead.  Where this occurs in the precedence chain "
 "depends on which descriptor methods were defined and how they were called."
 msgstr ""
+"Ωστόσο, εάν η τιμή αναζήτησης είναι ένα αντικείμενο που ορίζει μία από τις μεθόδους περιγραφής, τότε η Python μπορεί να παρακάμψει την "
+"προεπιλεγμένη συμπεριφορά και να επικαλεστεί τη μέθοδο περιγραφής. Το πού συμβαίνει αυτό στην αλυσίδα προτεραιότητας εξαρτάται από το ποιες μέθοδοι "
+"περιγραφής ορίστηκαν και πώς ονομάστηκαν."
 
 #: reference/datamodel.rst:2135
 msgid ""
 "The starting point for descriptor invocation is a binding, ``a.x``. How the "
 "arguments are assembled depends on ``a``:"
 msgstr ""
+"Το σημείο εκκίνηση για την επίκληση του περιγραφέα είναι ένα δεσμευτικό, ``a.x``. Ο τρόπος "
+"συναρμολόγησης των ορισμάτων εξαρτάται από το ``a``:"
 
 #: reference/datamodel.rst:2140
 msgid "Direct Call"
-msgstr ""
+msgstr "Απευθείας Κλήση"
 
 #: reference/datamodel.rst:2139
 msgid ""
 "The simplest and least common call is when user code directly invokes a "
 "descriptor method:    ``x.__get__(a)``."
 msgstr ""
+"Η απλούστερη και λιγότερο συνηθισμένη κλήση είναι όταν ο κωδικός χρήστη καλεί απευθείας μια μέθοδο "
+"περιγραφής:    ``x.__get__(a)``."
 
 #: reference/datamodel.rst:2144
 msgid "Instance Binding"
-msgstr ""
+msgstr "Δέσμευση Στιγμιοτύπου"
 
 #: reference/datamodel.rst:2143
 msgid ""
 "If binding to an object instance, ``a.x`` is transformed into the call: "
 "``type(a).__dict__['x'].__get__(a, type(a))``."
 msgstr ""
+"Εάν δεσμεύεται σε ένα στιμγιότυπο αντικειμένου, το ``a.x`` μετατρέπεται στην κλήση: "
+"``type(a).__dict__['x'].__get__(a, type(a))``."
 
 #: reference/datamodel.rst:2148
 msgid "Class Binding"
-msgstr ""
+msgstr "Δέσμευση Κλάσης"
 
 #: reference/datamodel.rst:2147
 msgid ""
 "If binding to a class, ``A.x`` is transformed into the call: ``A."
 "__dict__['x'].__get__(None, A)``."
 msgstr ""
+"Εάν δεσμεύεται σε μια κλάση, το ``A.x`` μετατρέπται στην κλήση: ``A."
+"__dict__['x'].__get__(None, A)``."
 
 #: reference/datamodel.rst:2154
 msgid "Super Binding"
-msgstr ""
+msgstr "Υπερ-Δέσμευση"
 
 #: reference/datamodel.rst:2151
 msgid ""
@@ -3032,6 +3247,9 @@ msgid ""
 "for a base class ``B`` following ``A`` and then returns ``B.__dict__['x']."
 "__get__(a, A)``.  If not a descriptor, ``x`` is returned unchanged."
 msgstr ""
+"Μια διακεκομμένη αναζήτηση όπως ``super(A, a).x`` αναζητά το ``a.__class__.__mro__`` "
+"για μια βασική κλάση ``B`` μετά το ``A`` και, στη συνέχεια, επιστρέφει το ``B.__dict__['x']."
+"__get__(a, A)``.  Εάν δεν είναι περιγραφέας, το ``x`` επιστρέφεται αμετάβλητο."
 
 #: reference/datamodel.rst:2188
 msgid ""
@@ -3050,6 +3268,13 @@ msgid ""
 "dictionary.  In contrast, non-data descriptors can be overridden by "
 "instances."
 msgstr ""
+"Για δεσμεύσεις στιγμιοτύπου, η προτεραιότητα της κλήση του περιγραφέα εξαρτάται από το ποιες μέθοδοι περιγραφέα έχουν οριστεί.  Ένα περιγραφέας "
+"μπορεί να ορίσει οποιονδήποτε συνδυασμό των :meth:`~object.__get__`, :meth:`~object.__set__` και :meth:"
+"`~object.__delete__`. Αν δεν ορίσει τη μέθοδο :meth:`!__get__`, τότε η πρόσβαση στην ιδιότητα θα επιστρέψει το ίδιο το αντικείμενο του περιγραφέα, εκτός "
+"αν υπάρχει τιμή στο λεξικό στιγμιοτύπου του αντικειμένου. Αν ο περιγραφέας ορίζει τη μέθοδο :meth:`!__set__` και/ή :meth:`!__delete__`, θεωρείται περιγραφέας δεδομένων∙ "
+"αν δεν ορίζει καμία από τις δύο, είναι μη-περιγραφέας δεδομένων. Συνήθως, οι περιγραφείς δεδομένων ορίζουν και τις δύο :meth:`!__get__` και :meth:`!__set__`, "
+"ενώ οι μη-περιγραφείς δεδομένων έχουν μόνο τη μέθοδο :meth:`!__get__`. Οι περιγραφείς δεδομένων που έχουν ορίσει :meth:`!__get__` και :meth:`!__set__` (και/ή :meth:`!"
+"__delete__`) υπερισχύουν πάντα από έναν επαναορισμό στο λεξικό στιγμιοτύπου. Αντίθετα, οι μη περιγραφείς δεδομένων μπορούν να παρακαμφθούν από στιγμιότυπα."
 
 #: reference/datamodel.rst:2203
 msgid ""
@@ -3059,16 +3284,22 @@ msgid ""
 "methods.  This allows individual instances to acquire behaviors that differ "
 "from other instances of the same class."
 msgstr ""
+"Οι μέθοδοι Python (συμπεριλαμβανομένων εκείνων που είναι διακοσμημένες με :func:`@staticmethod "
+"<staticmethod>` και :func:`@classmethod <classmethod>`) υλοποιούνται ως περιγραφεία χωρίς δεδομένα. Αντίστοιχα, τα "
+"στιγμιότυπα μπορούν να επαναπροσδιορίσουν και να παρακάμψουν μεθόδους. Αυτό επιτρέπει σε μεμονωμένα στιγμιότυπα να αποκτήσουν συμπεριφορές που διαφέρουν από άλλα "
+"στιγμιότυπα της ίδιας κλάσης."
 
 #: reference/datamodel.rst:2209
 msgid ""
 "The :func:`property` function is implemented as a data descriptor. "
 "Accordingly, instances cannot override the behavior of a property."
 msgstr ""
+"Η συνάρτηση :func:`property` υλοποιείται ως περιγραφέας δεδομένων. Συνεπώς, οι περιπτώσεις δεν μπορούν να "
+"παρακάμψουν τη συμπεριφορά μιας ιδιότητας."
 
 #: reference/datamodel.rst:2216
 msgid "__slots__"
-msgstr ""
+msgstr "__slots__"
 
 #: reference/datamodel.rst:2218
 msgid ""
@@ -3076,12 +3307,17 @@ msgid ""
 "and deny the creation of :attr:`~object.__dict__` and *__weakref__* (unless "
 "explicitly declared in *__slots__* or available in a parent.)"
 msgstr ""
+"Το *__slots__* μας επιτρέπει να δηλώνουμε ρητά τα μέλη δεδομένων (όπως ιδιότητες) και να αρνηθούμε τη "
+"δημιουργία των :attr:`~object.__dict__` και *__weakref__* (εκτός εάν δηλώνεται ρητά στο *__slots__* ή είναι "
+"διαθέσιμο σε έναν γονέα.)"
 
 #: reference/datamodel.rst:2222
 msgid ""
 "The space saved over using :attr:`~object.__dict__` can be significant. "
 "Attribute lookup speed can be significantly improved as well."
 msgstr ""
+"Ο χώρος που εξοικονομείται χρησιμοποιώντας :attr:`~object.__dict__` μπορεί να είναι σημαντικός. "
+"Η ταχύτητα αναζήτησης χαρακτηριστικών μπορεί επίσης να βελτιωθέι σημαντικά."
 
 #: reference/datamodel.rst:2227
 msgid ""
@@ -3090,10 +3326,14 @@ msgid ""
 "for the declared variables and prevents the automatic creation of :attr:"
 "`~object.__dict__` and *__weakref__* for each instance."
 msgstr ""
+"Σε αυτήν την μεταβλητή κλάσης μπορεί να εκχωρηθεί μια συμβολοσειρά, iterable ή ακολουθία "
+"συμβολοσειρών με ονόματα μεταβλητών που χρησιμοποιούνται από στιγμιότυπα. Το *__slots__* διατηρεί χώρο "
+"γιας τις δηλωμένες μεταβλητές και αποτρέπει την αυτόματη δημιουργία των :attr:"
+"`~object.__dict__` και *__weakref__* για κάθε περίπτωση."
 
 #: reference/datamodel.rst:2236
 msgid "Notes on using *__slots__*:"
-msgstr ""
+msgstr "Σημειώσεις σχετικά με τη χρήση *__slots__*:"
 
 #: reference/datamodel.rst:2238
 msgid ""
@@ -3101,6 +3341,8 @@ msgid ""
 "__dict__` and *__weakref__* attribute of the instances will always be "
 "accessible."
 msgstr ""
+"Όταν γίενται κλήρονομιά παό μια κλάση χωρίς *__slots__*, το χαρακτηρισιτκό :attr:`~object."
+"__dict__` και *__weakref__* των στιγμιοτύπων θα είναι πάντα προσβάσιμο."
 
 #: reference/datamodel.rst:2242
 msgid ""
@@ -3110,6 +3352,11 @@ msgid ""
 "assignment of new variables is desired, then add ``'__dict__'`` to the "
 "sequence of strings in the *__slots__* declaration."
 msgstr ""
+"Χωρίς μια μεταβλητή :attr:`~object.__dict__`, τα στιγμιότυπα δεν μπορύν να αντιστοιχιστούν σε "
+"νέες μεταβλητές που δεν αναφέρονται στον ορισμό *__slots__*.  Οι προσπάθειες αντιστοίχισης σε ένα "
+"όνομα μεταβλητής εκτός λίστας κάνουν raise τη :exc:`AttributeError`. Εάν είναι επιθυμητή η δυναμική "
+"αντιστοίχιση νέων μεταβλητών, τότε προσθέστε το ``'__dict__'`` στην ακολουθία συμβολοσειρών στη δήλωση "
+"*__slots__*."
 
 #: reference/datamodel.rst:2249
 msgid ""
@@ -3118,6 +3365,10 @@ msgid ""
 "instances. If weak reference support is needed, then add ``'__weakref__'`` "
 "to the sequence of strings in the *__slots__* declaration."
 msgstr ""
+"Χωρίς μια μεταβλητή *__weakref__* για κάθε στιγμιότυπο, οι κλάσεις που ορίζουν *__slots__* "
+"δεν υποστηρίζουν :mod:`weak references <weakref>` στα στιγμιότυπά τους. Εάν απαιτείται αδύναμη "
+"υποστήριξη για αδύναμες αναφορές, τότε προσθέστε το ``'__weakref__'`` "
+"στην ακολουθία των συμβολοσειρών στη δήλωση των *__slots__*."
 
 #: reference/datamodel.rst:2255
 msgid ""
@@ -3126,6 +3377,11 @@ msgid ""
 "be used to set default values for instance variables defined by *__slots__*; "
 "otherwise, the class attribute would overwrite the descriptor assignment."
 msgstr ""
+"Τα *__slots__* υλοποιούνται σε επίπεδα κλάσης με τη δημιουργία :ref:`descriptors "
+"<descriptors>` για κάθε όνομα μεταβλητής.  Ως ένα αποτέλεσμα, οι ιδιότητες της κλάσης "
+"δεν μπορούν να χρησιμοποιηθούν για να ορίσουν προεπιλεγμένες τιμές για μεταβλητές στιγμιοτύπων "
+"που έχουν δηλωθεί μέσω  *__slots__*∙ διαφορετικά, το χαρακτηριστικό της κλάσης θα αντικαθιστούσε την ανάθεση του "
+"descriptor."
 
 #: reference/datamodel.rst:2261
 msgid ""
@@ -3135,6 +3391,10 @@ msgid ""
 "*__weakref__* unless they also define *__slots__* (which should only contain "
 "names of any *additional* slots)."
 msgstr ""
+"Η ενέργεια μιας δήλωσης *__slots__* δεν περιορίζεται μόνο στην κλάση όπου ορίζεται. Τα *__slots__* "
+"που δηλώνονται σε γονικές κλάσεις είναι διαθέσιμα και στις θυγατρικές κλάσεις. Ωστόσο, οι θυγρατρικές κλάσεις "
+"θα αποκτήσουν ένα :attr:`~object.__dict__` και "
+"*__weakref__*, εκτός αν δηλώσουν και οι ίδιες *__slots__* (τα οποία θα πρέπει να περιέχουν μόνο τα *επιπλέον* ονόματα slots)."
 
 #: reference/datamodel.rst:2267
 msgid ""
@@ -3144,6 +3404,9 @@ msgid ""
 "meaning of the program undefined.  In the future, a check may be added to "
 "prevent this."
 msgstr ""
+"Αν μια κλάση ορίσει ένα slot που έχει ήδη οριστεί σε μια γονική κλάση, τότε η μεταβλητή στιγμιοτύπου "
+"που ορίζεται από το slot της γονικής κλάσης γινεται μη προσβάσιμη (εκτός αν ανακτηθεί απευθείας ο descriptor "
+"της από τη γονική κλάση). Αυτό καθιστά το νόημα του προγράμματος ασαφές.  Στο μέλλον, μπορεί να προστεθεί έλεγχος που να αποτρέπει κάτι τέτοιο."
 
 #: reference/datamodel.rst:2272
 msgid ""
@@ -3152,10 +3415,14 @@ msgid ""
 "<PyTypeObject.tp_itemsize>` such as :class:`int`, :class:`bytes`, and :class:"
 "`tuple`."
 msgstr ""
+"Θα γίνει raise :exc:`TypeError` αν οριστούν μη κενά *__slots__* σε μια κλάση που προέρχεται "
+"από έναν :c:member:`\"variable-length\" ενσωματωμένο τύπο "
+"<PyTypeObject.tp_itemsize>`, όπως οι :class:`int`, :class:`bytes`, και :class:"
+"`tuple`."
 
 #: reference/datamodel.rst:2277
 msgid "Any non-string :term:`iterable` may be assigned to *__slots__*."
-msgstr ""
+msgstr "Οποιαδήποτε μη συμβολοσειρά :term:`iterable` μπορεί να εκχωρηθεί σε *__slots__*."
 
 #: reference/datamodel.rst:2279
 msgid ""
@@ -3164,12 +3431,18 @@ msgid ""
 "can be used to provide per-attribute docstrings that will be recognised by :"
 "func:`inspect.getdoc` and displayed in the output of :func:`help`."
 msgstr ""
+"Αν χρησιμοποιηθεί μια :class:`dictionary <dict>` για την ανάθεση των *__slots__*, τα κλειδιά του λεξικού "
+"θα χρησιμοποιηθούν ως ονόματα των slots. Οι τιμές του λεξικού μπορούν να χρησιμοποιηθούν για να παρέχουν "
+"τεκμηριώση (docstrings) για κάθε ιδιότητα ξεχωριστά, η οποία θα αναγνωρίζεται από τη συνάρτηση :"
+"func:`inspect.getdoc` και θα εμφανίζεται στην έξοδο της :func:`help`."
 
 #: reference/datamodel.rst:2284
 msgid ""
 ":attr:`~instance.__class__` assignment works only if both classes have the "
 "same *__slots__*."
 msgstr ""
+"Η ανάθση στη :attr:`~instance.__class__` λειτουργεί μόνο αν και οι δύο κλάσεις έχουν τα ίδια "
+"*__slots__*."
 
 #: reference/datamodel.rst:2287
 msgid ""
@@ -3178,6 +3451,10 @@ msgid ""
 "created by slots (the other bases must have empty slot layouts) - violations "
 "raise :exc:`TypeError`."
 msgstr ""
+"Το :ref:`Multiple inheritance <tut-multiple>` με πολλαπλές γονικές κλάσεις που χρησιμοποιούν "
+"__slots__ μπορεί να χρησιμοποιηθεί, αλλά επιτρέπεται μόνο ένας γονέας να έχει ορίσει ιδιότητες μέσω "
+"των slots (οι υπόλοιπες γονικές κλάσεις πρέπει να έχουν κενή διάταξη slots) - παραβιάσεις αυτού "
+"κάνουν raise :exc:`TypeError`."
 
 #: reference/datamodel.rst:2293
 msgid ""
@@ -3185,10 +3462,13 @@ msgid ""
 "created for each of the iterator's values. However, the *__slots__* "
 "attribute will be an empty iterator."
 msgstr ""
+"Εάν χρησιμοποιείται ένας :term:`iterator` για *__slots__* τότε δημιουργείται ένας "
+":term:`descriptor` για κάθεμια από τις τιμές του iterator. Ωστόσο, το χαρακτηρισιτκό *__slots__* "
+"θα είναι ένας κενός επαναλήπτης."
 
 #: reference/datamodel.rst:2301
 msgid "Customizing class creation"
-msgstr ""
+msgstr "Προσαρμογή δημιουργίας κλάσης"
 
 #: reference/datamodel.rst:2303
 msgid ""
@@ -3199,6 +3479,11 @@ msgid ""
 "specific class they're applied to, ``__init_subclass__`` solely applies to "
 "future subclasses of the class defining the method."
 msgstr ""
+"Όποτε μια κλάση κληρονομεί απο μια άλλη κλάση, τη :meth:`~object."
+"__init_subclass__` καλείται μια γονική κλάση. Με αυτόν τον τρόπο, είναι δυνατόν να γραφτούν κλάσεις που αλλάζουν "
+"τη συμπεριφορά των υποκλάσεων. Αυτό σχετίζεται στενά με τους decorators των κλάσεων, αλλά όπου οι decorators "
+"κλάσεων επηρεάζουν μόνο τη συγκεκριμένη κλάση στην οποία εφαρμόζοτναι, το ``__init_subclass__`` ισχύει αποκλειστικά για "
+"μελλοντικές υποκλάσεις της κλάσης που ορίζουν τη μέθοδο."
 
 #: reference/datamodel.rst:2312
 msgid ""
@@ -3206,6 +3491,9 @@ msgid ""
 "then the new subclass. If defined as a normal instance method, this method "
 "is implicitly converted to a class method."
 msgstr ""
+"Αυτή η μέθοδος καλείται κάθε φορά που η κλάση περιέχει υποκλάση. Το *cls* είναι "
+"τότε η νέα υποκλάση. Εάν οριστεί ως μια κανονική μέθοδος στιγμιοτύπου, αυτή η μέθοδος μετατρέπεται "
+"σιωπηρά σε μέθοδο κλάσης."
 
 #: reference/datamodel.rst:2316
 msgid ""
@@ -3214,12 +3502,17 @@ msgid ""
 "``__init_subclass__``, one should take out the needed keyword arguments and "
 "pass the others over to the base class, as in::"
 msgstr ""
+"Τα ορίσματα λέξεων-κλειδιών που δίνονται σε μια νέα κλάση μεταβιβάζονται στη ``__init_subclass__``. "
+"Για συμβατότητα με άλλες κλάσεις που χρησιμοποιούν ``__init_subclass__``, θα πρέπει να αφαιρεθούν τα απαραίτητα "
+"ορίσματα λέξεων-κλειδιών και να περάσουν τα άλλα στη βασική κλάση, όπως στο::"
 
 #: reference/datamodel.rst:2330
 msgid ""
 "The default implementation ``object.__init_subclass__`` does nothing, but "
 "raises an error if it is called with any arguments."
 msgstr ""
+"Η προεπιλεγμένη υλοποίηση ``object.__init_subclass__`` δεν κάνει τίποτα, αλλά δημιουργεί "
+"ένα σφάλμα εάν καλείται με οποιαδήποτε ορίσματα."
 
 #: reference/datamodel.rst:2335
 msgid ""
@@ -3228,18 +3521,25 @@ msgid ""
 "actual metaclass (rather than the explicit hint) can be accessed as "
 "``type(cls)``."
 msgstr ""
+"Η υπόδειξη μετακλάσης ``metaclass`` καταναλώνεται από τα υπόλοιπα μηχανήματα τύπου και δεν μεταβιβάζεται "
+"ποτέ στις υλοποιήσεις ``__init_subclass__``. Η πραγματική μετακλάση (και όχι η ρητή υπόδειξη) μπορεί να "
+"προσπελαστεί ως ``type(cls)``."
 
 #: reference/datamodel.rst:2343
 msgid ""
 "When a class is created, :meth:`type.__new__` scans the class variables and "
 "makes callbacks to those with a :meth:`~object.__set_name__` hook."
 msgstr ""
+"Όταν δημιουργείται μια κλάση, η :meth:`type.__new__` σαρώνει τις μεταβλητές κλάσης "
+"και πραγματοποιεί επανάκληση σε εκείνες με ένα :meth:`~object.__set_name__` hook."
 
 #: reference/datamodel.rst:2348
 msgid ""
 "Automatically called at the time the owning class *owner* is created. The "
 "object has been assigned to *name* in that class::"
 msgstr ""
+"Καλείται αυτόματα τη στιγμή που δημιουργείται η ιδιοκτήτρια κλάση *owner*. Το αντικείμενο "
+"έχει εκχωρηθεί στο *name* σε αυτήν την κλάση::"
 
 #: reference/datamodel.rst:2354
 msgid ""
@@ -3247,10 +3547,13 @@ msgid ""
 "`__set_name__` will not be called automatically. If needed, :meth:"
 "`__set_name__` can be called directly::"
 msgstr ""
+"Εάν η μεταβλητή κλάσης εκχωρηθεί μετά τη δημιουργία της κλάσης, η :meth:"
+"`__set_name__` δεν θα κληθεί αυτόματα. Εάν χρειάζεται, η :meth:"
+"`__set_name__` μπορεί να κληθεί απευθείας::"
 
 #: reference/datamodel.rst:2365
 msgid "See :ref:`class-object-creation` for more details."
-msgstr ""
+msgstr "Δείτε το :ref:`class-object-creation` για περισσότερες λεπτομέρειες."
 
 #: reference/datamodel.rst:2373
 msgid "Metaclasses"
@@ -3262,6 +3565,8 @@ msgid ""
 "executed in a new namespace and the class name is bound locally to the "
 "result of ``type(name, bases, namespace)``."
 msgstr ""
+"Από προεπιλογή, οι κλάσεις κατασκευάζονται χρησιμοποιώντας :func:`type`. Το σώμα κλάσης εκτελείται "
+"σε νέο χώρο ονομάτων και το όνομα της κλάσης συνδέεται τοπικά με το αποτέλεσμα του ``type(name, bases, namespace)``."
 
 #: reference/datamodel.rst:2384
 msgid ""
@@ -3270,40 +3575,45 @@ msgid ""
 "existing class that included such an argument. In the following example, "
 "both ``MyClass`` and ``MySubclass`` are instances of ``Meta``::"
 msgstr ""
+"Η διαδικασία δημιουργία κλάσης μπορεί να προσαρμοστεί μεταβιβάζοντας το όρισμα λέξης-κλειδιού "
+"``metaclass`` στη γραμμή ορισμού κλάσης ή κληρονομώντας από μια υπάρχουσα κλάση που περιλάμβανε ένα τέτοιο όρισμα. "
+"Στο παρακάτω παράδειγμα, τόσο το ``MyClass`` και ``MySubclass`` είναι περιπτώσεις του ``Meta``::"
 
 #: reference/datamodel.rst:2398
 msgid ""
 "Any other keyword arguments that are specified in the class definition are "
 "passed through to all metaclass operations described below."
 msgstr ""
+"Οποιαδήποτε άλλα ορίσματα λέξης-κλειδιού που καθορίζονται στον ορισμό κλάσης μεταβιβάζονται σε όλες τις λειτουργίες "
+"μετακλάσης που περιγράφονται παρακάτων."
 
 #: reference/datamodel.rst:2401
 msgid "When a class definition is executed, the following steps occur:"
-msgstr ""
+msgstr "Όταν εκτελείται ένας ορισμός κλάσης, εμφανίζονται τα ακόλουθα βήματα:"
 
 #: reference/datamodel.rst:2403
 msgid "MRO entries are resolved;"
-msgstr ""
+msgstr "Οι εγγραφές MRO επιλύονται∙"
 
 #: reference/datamodel.rst:2404
 msgid "the appropriate metaclass is determined;"
-msgstr ""
+msgstr "καθορίζεται η κατάλληλη μετακλάση∙"
 
 #: reference/datamodel.rst:2405
 msgid "the class namespace is prepared;"
-msgstr ""
+msgstr "προετοιμάζεται ο χώρος ονομάττων της κλάσης∙"
 
 #: reference/datamodel.rst:2406
 msgid "the class body is executed;"
-msgstr ""
+msgstr "εκτελείται το σώμα της κλάσης∙"
 
 #: reference/datamodel.rst:2407
 msgid "the class object is created."
-msgstr ""
+msgstr "δημιουργείται το αντικείμενο της κλάσης."
 
 #: reference/datamodel.rst:2411
 msgid "Resolving MRO entries"
-msgstr ""
+msgstr "Επίλυση εγγραφών MRO"
 
 #: reference/datamodel.rst:2415
 msgid ""
@@ -3316,6 +3626,12 @@ msgid ""
 "the base. The returned tuple may be empty: in these cases, the original base "
 "is ignored."
 msgstr ""
+"Εάν μια βάση που εμφανίζεται σε ένα ορισμό κλάσης δεν είναι ένα στιγμιότυπο της :class:"
+"`type`, τότε γίνεται αναζήτηση στη βάση μιας :meth:`!__mro_entries__` μεθόδου. Εάν βρεθεί μια μέθοδος "
+":meth:`!__mro_entries__`, η βάση αντικαθίσταται με το αποτέλεσμα μιας κλήσης στο :meth:`!__mro_entries__` "
+"κατά τη δημιουργία της κλάσης. Η μέθοδος καλείται με την αρχική πλειάδα βάσεων μεταβιβασμένη στην παράμετρο "
+"*bases* και πρέπει να επιστρέψει μια πλειάδα κλάσεων που θα χρησιμοποιηθούν αντί για τη βάση. Η πλειάδα που επιστράφηκε "
+"μπορεί να είναι κενή: σε αυτές τις περιπτώσεις, η αρχική βάση αγνοείται."
 
 #: reference/datamodel.rst:2427
 msgid ":func:`types.resolve_bases`"
@@ -3323,7 +3639,7 @@ msgstr ":func:`types.resolve_bases`"
 
 #: reference/datamodel.rst:2427
 msgid "Dynamically resolve bases that are not instances of :class:`type`."
-msgstr ""
+msgstr "Επιλύστε δυναμικά βάσεις που δεν είναι στιγμιότυπα του :class:`type`."
 
 #: reference/datamodel.rst:2431
 msgid ":func:`types.get_original_bases`"
@@ -3334,6 +3650,8 @@ msgid ""
 "Retrieve a class's \"original bases\" prior to modifications by :meth:"
 "`~object.__mro_entries__`."
 msgstr ""
+"Ανακτήστε τις \"αρχικές βάσεις\" μιας κλάσης πριν από τις τροποποιήσεις από :meth:"
+"`~object.__mro_entries__`."
 
 #: reference/datamodel.rst:2433
 msgid ":pep:`560`"
@@ -3341,33 +3659,39 @@ msgstr ":pep:`560`"
 
 #: reference/datamodel.rst:2434
 msgid "Core support for typing module and generic types."
-msgstr ""
+msgstr "Βασική υποστήριξη για modules τύπων και γενικούς τύπους."
 
 #: reference/datamodel.rst:2438
 msgid "Determining the appropriate metaclass"
-msgstr ""
+msgstr "Προσδιορισμός της κατάλληλης μετακλάσης"
 
 #: reference/datamodel.rst:2442
 msgid ""
 "The appropriate metaclass for a class definition is determined as follows:"
 msgstr ""
+"Η κατάλληλη μετακλάση για έναν ορισμό κλάσης καθορίζεται ως εξής: "
 
 #: reference/datamodel.rst:2444
 msgid ""
 "if no bases and no explicit metaclass are given, then :func:`type` is used;"
 msgstr ""
+"εάν δεν δίνονται βάσεις και καμία ρητή μετακλάση, τότε χρησιμοποιείται η :func:`type` ∙"
 
 #: reference/datamodel.rst:2445
 msgid ""
 "if an explicit metaclass is given and it is *not* an instance of :func:"
 "`type`, then it is used directly as the metaclass;"
 msgstr ""
+"εάν δοθεί μια ρητή μετακλάση και *δεν* είναι ένα στιγμιότυπο της :func:"
+"`type`, τότε χρησιμοποιείται απυθείας ως μετακλάση∙"
 
 #: reference/datamodel.rst:2447
 msgid ""
 "if an instance of :func:`type` is given as the explicit metaclass, or bases "
 "are defined, then the most derived metaclass is used."
 msgstr ""
+"εάν ένα στιγμιότυπο της :func:`type` δίνετια ως ρητή μετακλάση ή ορίζονται βάσεις, τότε χρησιμοποιείται η πιο "
+"παραγόμενη μετακλάση."
 
 #: reference/datamodel.rst:2450
 msgid ""
@@ -3377,10 +3701,14 @@ msgid ""
 "of these candidate metaclasses. If none of the candidate metaclasses meets "
 "that criterion, then the class definition will fail with ``TypeError``."
 msgstr ""
+"Η πιο παραγόμενη μετακλάση επιλέγεται από τη ρητά καθορισμένη μετακλάση (εάν υπάρχει) και τις "
+"μετακλάσεις (δηλαδή ``type(cls)``) όλων των καθορισμένων βασικώ κλάσεων. Η πιο παραγόμενη μετακλάση είναι αυτή που "
+"είναι υπότυπος *όλων* αυτών των υποψήφιων μετακλάσεων. Εάν καμία από τις υποψήφισες μετακλάσεις δεν πληροί αυτό το κριτήριο, τότε "
+"ο ορισμός της κλάσης θα αποτύχει με ``TypeError``."
 
 #: reference/datamodel.rst:2460
 msgid "Preparing the class namespace"
-msgstr ""
+msgstr "Προετοιμασί του χώρου ονομάτων της κλάσης"
 
 #: reference/datamodel.rst:2465
 msgid ""
@@ -3393,24 +3721,32 @@ msgid ""
 "``__new__``, but when the final class object is created the namespace is "
 "copied into a new ``dict``."
 msgstr ""
+"Μόλις εντοπιστεί η κατάλληλη μετακλάση, τότε προετοιμάζεται ο χώρος ονομάτων της κλάσης. Εάν η μετακλάση "
+"έχει ένα χαρακτηριστικό ``__prepare__``, ονομάζεται ``namespace = metaclass.__prepare__(name, bases, **kwds)`` "
+"(όπου τα πρόσθετα ορίσματα λέξης-κλειδιού, εάν υπάρχουν, προέρχονται από τον ορισμό της κλάσης). Η μέθοδος "
+"``__prepare__`` θα πρέπει να υλοποιηθεί ως μέθοδος :func:`classmethod "
+"<classmethod>`. Ο χώρος ονομάτων που επιστρέφεται από το ``__prepare__`` μεταβιβάζεται στο ``__new__``, αλλά όταν δημιουργείται το τελικό αντικείμενο "
+"κλάσης, ο χώρος ονομάτων αντιγράφεται σε ένα νέο ``dict``."
 
 #: reference/datamodel.rst:2474
 msgid ""
 "If the metaclass has no ``__prepare__`` attribute, then the class namespace "
 "is initialised as an empty ordered mapping."
 msgstr ""
+"Εάν η μετακλάση δεν έχει χαρακτηριστικό ``__prepare__``, τότε ο χώρος ονομάτων κλάσης αρχικοποιείται ως κενή "
+"ταξινομημένη αντιστοίχιση."
 
 #: reference/datamodel.rst:2479
 msgid ":pep:`3115` - Metaclasses in Python 3000"
-msgstr ""
+msgstr ":pep:`3115` - Μετακλάσεις στην Python 3000"
 
 #: reference/datamodel.rst:2480
 msgid "Introduced the ``__prepare__`` namespace hook"
-msgstr ""
+msgstr "Παρουσιάστηκε το άγκριστο χώρου ονομάτων ``__prepare__``"
 
 #: reference/datamodel.rst:2484
 msgid "Executing the class body"
-msgstr ""
+msgstr "Εκτέλεση του σώματος της κλάσης"
 
 #: reference/datamodel.rst:2489
 msgid ""
@@ -3420,6 +3756,11 @@ msgid ""
 "names from the current and outer scopes when the class definition occurs "
 "inside a function."
 msgstr ""
+"Το σώμα της κλάσης εκτελείται (περίπου) ως ``exec(body, globals(), "
+"namespace)``. Η βασική διαφορά από μια κανονική κλήση στην :func:`exec` είναι ότι το λεξικό "
+"πεδίο εφαρμογής επιτρέπει στο σώμα της κλάσης (συμπεριλαμβανομένων οποιωνδήποτε μεθόδων) να παραπέμπει "
+"σε ονόματα από το τρέχον και το εξωτερικό πεδίο εφαρμογής όταν ο ορισμός κλάσης εμφανσίζεται μέσα σε "
+"μια συνάρτηση."
 
 #: reference/datamodel.rst:2495
 msgid ""
@@ -3429,10 +3770,14 @@ msgid ""
 "class methods, or through the implicit lexically scoped ``__class__`` "
 "reference described in the next section."
 msgstr ""
+"Ωστόσο, ακόμα και όταν ο ορισμός της κλάσης εμφανίζεται μέσα στη συνάρτηση, οι μέθοδοι που ορίζονται "
+"μέσα στην κλάση εξακολουθούν να μην μπορούν να δουν ονόματα που ορίζονται στο πεδίο της κλάσης. "
+"Οι μεταβλητές κλάσης πρέπει να είναι προσβάσιμες μέσω της πρώτης παραμέτρου των μεθόδων στιγμιοτύπου ή κλάσης ή μέσω "
+"της σιωπηρής αναφοράς ``__class__`` με λεξικό που περιγράφεται στην επόμενη ενότητα."
 
 #: reference/datamodel.rst:2504
 msgid "Creating the class object"
-msgstr ""
+msgstr "Δημιουργία αντικειμένου κλάσης"
 
 #: reference/datamodel.rst:2511
 msgid ""
@@ -3441,6 +3786,9 @@ msgid ""
 "**kwds)`` (the additional keywords passed here are the same as those passed "
 "to ``__prepare__``)."
 msgstr ""
+"Μόλις ο χώρος ονομάτων της κλάσης έχει συμπληρωθεί εκτελώντας το σώμα της κλάσης, το αντικείμενο "
+"της κλάσης δημιουργείται καλώντας ``metaclass(name, bases, namespace, "
+"**kwds)`` (οι πρόσθετε λέξεις-κλειδιά που μεταβιβάζονται εδώ είναι οι ίδιες με αυτές που διαβιβάζονται στο ``__prepare__``)."
 
 #: reference/datamodel.rst:2516
 msgid ""
@@ -3452,6 +3800,12 @@ msgid ""
 "scoping, while the class or instance that was used to make the current call "
 "is identified based on the first argument passed to the method."
 msgstr ""
+"Αυτό το αντικείμενο κλάσης είναι αυτό που θα αναφέρεται με τη μορφή μηδενικού ορίσματος "
+"του :func:`super`. Το ``__class__`` είναι μια σιωπηρή αναφορά κλεισίματος που δημιουργείται "
+"από τον μεταγλωττιστή εάν οποιεσδήποτε μέθοδοι σε ένα σώμα κλάσης αναφέρονται είτε σε ``__class__`` είτε σε ``super``. "
+"Αυτό επιτρέπει στη μορφή μηδενικού ορίσματος του :func:"
+"`super` να προσδιορίζει σωστά την κλάση που ορίζεται με βάση το λεξικό πεδίο εφαρμογής, ενώ η κλάση ή το παράδειγμα που χρησιμοποιήθηκε για την πραγματοποίηση "
+"της τρέχουσας κλήσης προσδιορίζεται με βάση το πρώτο όρισμα που μεταβιβάστηκε στη μέθοδο."
 
 #: reference/datamodel.rst:2526
 msgid ""
@@ -3461,6 +3815,10 @@ msgid ""
 "initialised correctly. Failing to do so will result in a :exc:`RuntimeError` "
 "in Python 3.8."
 msgstr ""
+"Στη CPython 3.6 και μεταγενέστερα, το κελί ``__class__`` μεταβιβάζεται στην μετακλάση ως μια καταχώρηση "
+"``__classcell__`` στον χώρο ονομάτων της κλάσης. Εάν υπάρχει, αυτό πρέπει να διαδοθεί μέχρι την κλήση "
+"``type.__new__``, προκειμένου η κλάση να έχει ως αποτέλεσμα να αρχικοποιηθεί σωστά ώστε να γίνει σωστά. "
+"Αν δεν το κάνετε αυτό θα έχει ως αποτέλεσμα μια :exc:`RuntimeError` στην Python 3.8."
 
 #: reference/datamodel.rst:2532
 msgid ""
@@ -3468,24 +3826,30 @@ msgid ""
 "ultimately calls ``type.__new__``, the following additional customization "
 "steps are invoked after creating the class object:"
 msgstr ""
+"Κατά τη χρήση της προεπιλεγμένης μετακλάσης :class:`type` ή οποιασδήποτε μετακλάσης "
+"που τελικά καλεί ``type.__new__``, τα ακόλουθα πρόσθετα βήματα πρόσαρμογής καλούνται μετά τη δημιουργία του αντικείμενου κλάσης:"
 
 #: reference/datamodel.rst:2536
 msgid ""
 "The ``type.__new__`` method collects all of the attributes in the class "
 "namespace that define a :meth:`~object.__set_name__` method;"
 msgstr ""
+"Η μέθοδος ``type.__new__`` συλλέγει όλα τα χαρακτηριστικά στον χώρο ονομάτων της κλάσης "
+"που ορίζουν μια μέθοδο :meth:`~object.__set_name__` ∙"
 
 #: reference/datamodel.rst:2538
 msgid ""
 "Those ``__set_name__`` methods are called with the class being defined and "
 "the assigned name of that particular attribute;"
 msgstr ""
+"Αυτές οι μέθοδοι ``__set_name__`` καλούνται με την κλάση που ορίζεται και το εκχωρημένο όνομα του συγκεκριμένου χαρακτηριστικού∙"
 
 #: reference/datamodel.rst:2540
 msgid ""
 "The :meth:`~object.__init_subclass__` hook is called on the immediate parent "
 "of the new class in its method resolution order."
 msgstr ""
+"Το άγκιστρο :meth:`~object.__init_subclass__` καλείται στον άμεσο γονέα της νέας κλάσης στη σειρά ανάλυσης της μεθόδου."
 
 #: reference/datamodel.rst:2543
 msgid ""
@@ -3493,6 +3857,9 @@ msgid ""
 "included in the class definition (if any) and the resulting object is bound "
 "in the local namespace as the defined class."
 msgstr ""
+"Αφού δημιουργηθεί το αντικείμενο κλάσης, μεταβιβάζεται στους decorators κλάσης που περιλαμβάνονται "
+"στον ορισμό της κλάσης (εάν υπάρχει) και το αντικείμενο που προκύπτει δεσμεύεται στον τοπικό χώρο ονομάτων "
+"ως η καθορισμένη κλάση."
 
 #: reference/datamodel.rst:2547
 msgid ""
@@ -3501,18 +3868,22 @@ msgid ""
 "object is discarded. The new copy is wrapped in a read-only proxy, which "
 "becomes the :attr:`~object.__dict__` attribute of the class object."
 msgstr ""
+"Όταν δημιουργείται μια νέα κλάση από ``type.__new__``, το αντικείμενο που παρέχεται ως παράμετρος στο "
+"χώρο ονομάτων αντιγράφεται σε μια νέα ταξινομημένη αντιστοίχιση και το αρχικό αντικείμενο απορρίπτεται. Το νέο "
+"αντίγραφο τυλίγεται σε έναν διακομιστή μεσολάβησης μόνο για ανάγνωση, ο οποίος γίνεται το χαρακτηριστικό "
+":attr:`~object.__dict__` του αντικειμένου κλάσης."
 
 #: reference/datamodel.rst:2554
 msgid ":pep:`3135` - New super"
-msgstr ""
+msgstr ":pep:`3135` - Νέο super"
 
 #: reference/datamodel.rst:2555
 msgid "Describes the implicit ``__class__`` closure reference"
-msgstr ""
+msgstr "Περιγράφει την σιωπηρή αναφορά κλεισίματος ``__class__``"
 
 #: reference/datamodel.rst:2559
 msgid "Uses for metaclasses"
-msgstr ""
+msgstr "Χρήσεις για μετακλάσεις"
 
 #: reference/datamodel.rst:2561
 msgid ""
@@ -3521,16 +3892,22 @@ msgid ""
 "automatic property creation, proxies, frameworks, and automatic resource "
 "locking/synchronization."
 msgstr ""
+"Οι πιθανές χρήσεις για μετακλάσεις είναι απεριόριστες. Ορισμένες ιδέες που έχουν "
+"διερευνηθεί περιλαμβάνουν το enum, την καταγραφή, τον έλεχο διεπαφής, την αυτόματα ανάθεση "
+"την αυτόματη δημιουργία ιδιοτήτων, τους διακομιστές μεσολάβησης, τα πλαίσια και το αυτόματο "
+"κλείδωμα/συγχρονισμό πόρων."
 
 #: reference/datamodel.rst:2568
 msgid "Customizing instance and subclass checks"
-msgstr ""
+msgstr "Προσαρμογή ελέγχων παρουσίας και υποκλάσης"
 
 #: reference/datamodel.rst:2570
 msgid ""
 "The following methods are used to override the default behavior of the :func:"
 "`isinstance` and :func:`issubclass` built-in functions."
 msgstr ""
+"Οι ακόλουθες μέθοδοι χρησιμοποιούνται για την παράκαμψη της προεπιλεγμένης συμπεριφοράς "
+"των ενσωματωμένων συναρτήσεων :func:`isinstance` και :func:`issubclass`."
 
 #: reference/datamodel.rst:2573
 msgid ""
@@ -3539,6 +3916,9 @@ msgid ""
 "base classes\" to any class or type (including built-in types), including "
 "other ABCs."
 msgstr ""
+"Συγκεκριμένα, η μετακλάση :class:`abc.ABCMeta` υλοποιεί αυτές τις μεθόδους προκειμένου να επιτρέψει "
+"την προσθήκη Αφηρημένων Βασικών Κλάσεων (ABCs) ως \"εικονικές βασικές κλάσεις\" σε οποιαδήποτε κλάση ή "
+"τύπο (συμπεριλαμβανομένων των ενσωματωμένων τύπων), συμπεριλαμβανομένων άλλων ABCs."
 
 #: reference/datamodel.rst:2580
 msgid ""
@@ -3546,6 +3926,9 @@ msgid ""
 "instance of *class*. If defined, called to implement ``isinstance(instance, "
 "class)``."
 msgstr ""
+"Επιστρέφετε true εάν το *instance* θα πρέπει να θεωρείται ένα (άμεσο ή έμμεσο) "
+"στιγμιότυπο της *class*. Εάν ορίζεται, καλείται να υλοποιήσει ``isinstance(instance, "
+"class)``."
 
 #: reference/datamodel.rst:2587
 msgid ""
@@ -3553,6 +3936,9 @@ msgid ""
 "subclass of *class*.  If defined, called to implement ``issubclass(subclass, "
 "class)``."
 msgstr ""
+"Επιστρέφετε true εάν η *subclass* πρέπει να θεωρείται μια (άμεση ή έμμεση) υποκλάση της *class*.  Εάν ορίζεται, καλείται "
+"να υλοποιήσει ``issubclass(subclass, "
+"class)``."
 
 #: reference/datamodel.rst:2592
 msgid ""
@@ -3561,10 +3947,13 @@ msgid ""
 "consistent with the lookup of special methods that are called on instances, "
 "only in this case the instance is itself a class."
 msgstr ""
+"Λάβετε υπόψη ότι αυτές οι μέθοδοι αναζητούνται στον τύπο (μετακλάση) μιας κλάσης.  "
+"Δεν μπορούν να οριστούν ως μέθοδοι κλάσης στην πραγματική κλάση.  Αυτό είναι σύμφωνο με την "
+"αναζήτηση ειδικών μεθόδων που καλούνται σε στιγμιότυπα, μόνο σε αυτήν την περίπτωση το ίδιο στιγμιότυπο είναι μια κλάση."
 
 #: reference/datamodel.rst:2603
 msgid ":pep:`3119` - Introducing Abstract Base Classes"
-msgstr ""
+msgstr ":pep:`3119` - Εισάγοντας τις Αφηρημένες Βασικές Κλάσεις"
 
 #: reference/datamodel.rst:2600
 msgid ""
@@ -3574,10 +3963,14 @@ msgid ""
 "context of adding Abstract Base Classes (see the :mod:`abc` module) to the "
 "language."
 msgstr ""
+"Περιλαμβάνει την προδιαγραφή για την προσαρμογή της συμπεριφορά της :func:`isinstance` και της "
+":func:`issubclass` μέσω των :meth:`~class.__instancecheck__` και :meth:"
+"`~class.__subclasscheck__`, με κίνητρο για αυτήν τη λειτουργικότητα στο πλαίσιο της προσθήκης Αφηρημένης Βασικής Κλάσης "
+"(δείτε το module :mod:`abc`) στη γλώσσα."
 
 #: reference/datamodel.rst:2608
 msgid "Emulating generic types"
-msgstr ""
+msgstr "Εξομοίωση γενικών τύπων"
 
 #: reference/datamodel.rst:2610
 msgid ""
@@ -3586,46 +3979,57 @@ msgid ""
 "notation. For example, the annotation ``list[int]`` might be used to signify "
 "a :class:`list` in which all the elements are of type :class:`int`."
 msgstr ""
+"Όταν χρησιμοποιείτε το :term:`type annotations<annotation>`, είναι συχνά χρήσιμο "
+"να *παραμετροποιήσετε* έναν :term:`generic type` χρησιμοποιώντας τον συμβολισμό σε αγκύλες της "
+"Python. Για παράδειγμα, το annotation ``list[int]`` μπορεί να χρησιμοποιηθεί για να υποδηλώσει μια "
+":class:`list` στην οποία όλα τα στοιχεία της κλάσης είναι τύπου :class:`int`."
 
 #: reference/datamodel.rst:2618
 msgid ":pep:`484` - Type Hints"
-msgstr ""
+msgstr ":pep:`484` - Τύπος Hints"
 
 #: reference/datamodel.rst:2618
 msgid "Introducing Python's framework for type annotations"
-msgstr ""
+msgstr "Εισάγοντας το πλαίσιο της Python για τύπους annotations"
 
 #: reference/datamodel.rst:2621
 msgid ":ref:`Generic Alias Types<types-genericalias>`"
-msgstr ""
+msgstr ":ref:`Generic Alias Types<types-genericalias>`"
 
 #: reference/datamodel.rst:2621
 msgid "Documentation for objects representing parameterized generic classes"
-msgstr ""
+msgstr "Τεκμηρίωση για αντικείμενα που αντιπροσωπεύουν παραμετροποιημένες γενικές κλάσεις"
 
 #: reference/datamodel.rst:2624
 msgid ""
 ":ref:`Generics`, :ref:`user-defined generics<user-defined-generics>` and :"
 "class:`typing.Generic`"
 msgstr ""
+":ref:`Generics`, :ref:`user-defined generics<user-defined-generics>` και :"
+"class:`typing.Generic`"
 
 #: reference/datamodel.rst:2624
 msgid ""
 "Documentation on how to implement generic classes that can be parameterized "
 "at runtime and understood by static type-checkers."
 msgstr ""
+"Τεκμηρίωση για τον τρόπο υλοποίησης γενικών κλάσεων που μπορούν να παραμετροποιηθούν κατά το χρόνο εκτέλεσης "
+"και να κατανοηθούν από στατικούς ελεγκτές τύπων."
 
 #: reference/datamodel.rst:2627
 msgid ""
 "A class can *generally* only be parameterized if it defines the special "
 "class method ``__class_getitem__()``."
 msgstr ""
+"Μια κλάση *γενικά* μπορεί να παραμετροποιηθεί μόνο εάν ορίζει την ειδική μέθοδο κλάσης "
+"``__class_getitem__()``."
 
 #: reference/datamodel.rst:2632
 msgid ""
 "Return an object representing the specialization of a generic class by type "
 "arguments found in *key*."
 msgstr ""
+"Επιστρέφετε ένα αντικέιμενο που αντιπροσωπεύει την εξειδίκευση μιας γενικής κλάσης κατά ορίσματα τύπου που βρίσκονται στο *key*."
 
 #: reference/datamodel.rst:2635
 msgid ""
@@ -3633,10 +4037,13 @@ msgid ""
 "method. As such, there is no need for it to be decorated with :func:"
 "`@classmethod<classmethod>` when it is defined."
 msgstr ""
+"Όταν ορίζεται σε μια κλάση, το ``__class_getitem__()`` είναι αυτόματα μέθοδος "
+"κλάσης. Ως εκ τούτου, δεν χρειάζεται να γίνει decorated με :func:"
+"`@classmethod<classmethod>` όταν ορίζεται."
 
 #: reference/datamodel.rst:2641
 msgid "The purpose of *__class_getitem__*"
-msgstr ""
+msgstr "Ο σκοπός του *__class_getitem__*"
 
 #: reference/datamodel.rst:2643
 msgid ""
@@ -3644,6 +4051,8 @@ msgid ""
 "parameterization of standard-library generic classes in order to more easily "
 "apply :term:`type hints<type hint>` to these classes."
 msgstr ""
+"Ο σκοπός της :meth:`~object.__class_getitem__` είναι να επιτρέψει την παραμετροποίηση χρόνου εκτέλεσης των "
+"γενικών κλάσεων τυπικής βιβλιοθήκης προκειμένου να εφαρμοστούν πιο εύκολα :term:`type hints<type hint>` σε αυτές τις κλάσεις."
 
 #: reference/datamodel.rst:2647
 msgid ""
@@ -3653,6 +4062,11 @@ msgid ""
 "__class_getitem__`, or inherit from :class:`typing.Generic`, which has its "
 "own implementation of ``__class_getitem__()``."
 msgstr ""
+"Για να εφαρμόσουν προσαρμοσμένες γενικές κλάσεις που μπορούν να παραμετροποιηθούν κατά το χρόνο "
+"εκτέλεσης και να κατανοηθούν από στατικούς ελεγκτές τύπως, οι χρήστες θα πρέπει είτε να κληρονομήσουν από μια τυπική "
+"κλάση βιβλιοθήκης που ήδη υλοποιεί τη :meth:`~object."
+"__class_getitem__`, είτε να κληρονομήσουν από την :class:`typing.Generic`, η οποία έχει τη δική της υλοποίηση του "
+"``__class_getitem__()``."
 
 #: reference/datamodel.rst:2653
 msgid ""
@@ -3661,10 +4075,13 @@ msgid ""
 "type-checkers such as mypy. Using ``__class_getitem__()`` on any class for "
 "purposes other than type hinting is discouraged."
 msgstr ""
+"Προσαρμοσμένες υλοποιήσεις της :meth:`~object.__class_getitem__` σε κλάσεις που ορίζονται εκτός της τυπικής βιβλιοθήκης "
+"ενδέχεται να μην είναι κατανοητές από ελεγκτές τύπων τρίτου μέρους, όπως το mypy. Η χρήση ``__class_getitem__()`` "
+"σε οποιαδήποτε κλάση για άλλους σκοπούς εκτός από την υπόδειξη τύπων δεν ενθαρρύνεται."
 
 #: reference/datamodel.rst:2663
 msgid "*__class_getitem__* versus *__getitem__*"
-msgstr ""
+msgstr "*__class_getitem__* έναντι *__getitem__*"
 
 #: reference/datamodel.rst:2665
 msgid ""
@@ -3675,6 +4092,11 @@ msgid ""
 "instead. ``__class_getitem__()`` should return a :ref:`GenericAlias<types-"
 "genericalias>` object if it is properly defined."
 msgstr ""
+"Συνήθως, η :ref:`subscription<subscriptions>` ενός αντικειμένου που χρησιμοποιεί αγκύλες θα καλεί τη μέθοδο "
+"του στιγμιοτύπου :meth:`~object.__getitem__` που ορίζεται στην κλάση του αντικειμένου. Ωστόσο, εάν το αντικείμενο "
+"που εγγράφεται είναι το ίδιο μια κλάση, η μέθοδος της κλάσης :meth:`~object.__class_getitem__` μπορεί να κληθεί αντί να γίνει. "
+"Το ``__class_getitem__()`` θα πρέπει να επιστρέψει ένα αντικείμενο :ref:`GenericAlias<types-"
+"genericalias>`, εάν έχει οριστεί σωστά."
 
 #: reference/datamodel.rst:2672
 msgid ""
@@ -3682,6 +4104,9 @@ msgid ""
 "follows something like the following process to decide whether :meth:"
 "`~object.__getitem__` or :meth:`~object.__class_getitem__` should be called::"
 msgstr ""
+"Παρουσιάζεται με το :term:`expression` ``obj[x]``, ο διερμηνέας Python ακολουθεί κάτι σαν την ακόλουθη "
+"διαδικασία για να αποφασίσει εάν θα πρέπει να κληθεί :meth:"
+"`~object.__getitem__` ή :meth:`~object.__class_getitem__`::"
 
 #: reference/datamodel.rst:2700
 msgid ""
@@ -3692,6 +4117,11 @@ msgid ""
 "``dict[str, float]`` and ``tuple[str, bytes]`` all result in :meth:`~object."
 "__class_getitem__` being called::"
 msgstr ""
+"Στην Python, όλες οι κλάσεις είναι οι ίδιες παρουσίες άλλων κλάσεων. Η κλάση μιας κλάσης είναι γνωστή "
+"ως :term:`metaclass` αυτής της κλάσης, και οι περισσότερες κλάσεις έχουν ως μετκλάση την κλάση :class:`type`. "
+"Η :class:`type` δεν ορίζει το :meth:`~object.__getitem__`, πράγμα που σημαίνει ότι εκφράσεις όπως ``list[int]``, "
+"``dict[str, float]`` και ``tuple[str, bytes]`` έχουν ως αποτέλεσμα την κλήση της :meth:`~object."
+"__class_getitem__`::"
 
 #: reference/datamodel.rst:2719
 msgid ""
@@ -3699,10 +4129,14 @@ msgid ""
 "__getitem__`, subscribing the class may result in different behaviour. An "
 "example of this can be found in the :mod:`enum` module::"
 msgstr ""
+"Ωστόσο, εάν μια κλάση έχει μια προσαρμοσμένη μετακλάση που ορίζει :meth:`~object."
+"__getitem__`, η εγγραφή στην κλάση μπορεί να οδηγήσει σε διαφορετική συμπεριφορά. Ένα "
+"παράδειγμα αυτού μπορεί να βρεθεί στο module :meth:`~object."
+"__getitem__`::"
 
 #: reference/datamodel.rst:2744
 msgid ":pep:`560` - Core Support for typing module and generic types"
-msgstr ""
+msgstr ":pep:`560` - Βασική υποστήριξη για module πληκτρολόγησης και γενικούς τύπους"
 
 #: reference/datamodel.rst:2743
 msgid ""
@@ -3710,10 +4144,13 @@ msgid ""
 "`subscription<subscriptions>` results in ``__class_getitem__()`` being "
 "called instead of :meth:`~object.__getitem__`"
 msgstr ""
+"Παρουσίαση της :meth:`~object.__class_getitem__`, και περιγραφή του πότε ένα "
+":ref:`subscription<subscriptions>` έχει ως αποτέλεσμα την κλήση ``__class_getitem__()`` "
+"αντί για :meth:`~object.__getitem__`"
 
 #: reference/datamodel.rst:2751
 msgid "Emulating callable objects"
-msgstr ""
+msgstr "Εξομοίωση καλόυμενων αντικειμένων"
 
 #: reference/datamodel.rst:2758
 msgid ""
@@ -3721,10 +4158,13 @@ msgid ""
 "defined, ``x(arg1, arg2, ...)`` roughly translates to ``type(x).__call__(x, "
 "arg1, ...)``."
 msgstr ""
+"Καλείται όταν το στιγμιότυπο \"καλείται\" ως συνάρτηση∙ εάν αυτή η μέθοδος οριστεί, το "
+"``x(arg1, arg2, ...)`` μεταφράζεται χονδρικά σε ``type(x).__call__(x, "
+"arg1, ...)``."
 
 #: reference/datamodel.rst:2765
 msgid "Emulating container types"
-msgstr ""
+msgstr "Εξομοίωση τύπων κοντέινερ"
 
 #: reference/datamodel.rst:2767
 msgid ""
@@ -3761,6 +4201,24 @@ msgid ""
 "meth:`!__iter__` should iterate through the object's keys; for sequences, it "
 "should iterate through the values."
 msgstr ""
+"Οι ακόλουθες μέθοδοι μπορούν να οριστούν για την υλοποίηση αντικειμένων κοντέινερ. "
+"Τα κοντέινερ είναι συνήθως :term:`sequences <sequence>` (όπως :class:`lists "
+"<list>` ή :class:`tuples <tuple>`) ή :term:`mappings <mapping>` (όπως :"
+"class:`dictionaries <dict>`), αλλά τα λεξικά μπορούν επίσης να αντιπροσωπεύουν άλλα κοντέινερ.  "
+"Το πρώτο σύνολο μεθόδων χρησιμοποιείται είτε για την εξομοίωση μιας ακολουθίας είτε για την εξομοίωση "
+"μιας αντιστοίχισης∙ η διαφορά είναι ότι για μια ακολουθία, τα επιτρεπόμενα κλειδιά θα πρέπει να είναι οι ακέραιοι "
+"*k* για τους οποίους ``0 <= k < N`` όπου *N* είναι το μήκος της ακολουθίας, ή αντικείμενα :class:`slice`, τα οποία ορίζουν ένα εύρος στοιχείων.  Συνίσταται επίσης "
+"οι αντιστοιχίσεις να παρέχουν τις μεθόδους :meth:`!keys`, :meth:`!values`, :meth:`!items`, :meth:`!get`, :meth:`!clear`, :meth:`!setdefault`, :meth:`!pop`, :meth:`!popitem`, :meth:`!copy`, και :meth:`!update` "
+"όπου συμπεριφέρονται παρόμοια με εκείνα για τα τυπικά αντικείμενα :class:`dictionary <dict>` της Python.  Το module :mod:`collections.abc` "
+"παρέχει μια :class:`~collections.abc.MutableMapping` :term:`abstract base class` για να βοηθήσει στη δημιουργία αυτών των μεθόδων από ένα βασικό σύνολο "
+":meth:`~object.__getitem__`, :meth:`~object.__setitem__`, :meth:`~object.__delitem__`, και :meth:`!keys`. Οι μεταβλητές ακολουθίες θα πρέπει να παρέχουν "
+"μεθόδους :meth:`!append`, :meth:`!count`, :meth:`!index`, :meth:`!extend`, :meth:`!insert`, :meth:`!pop`, :meth:`!remove`, :meth:`!reverse` και :meth:`!sort`, "
+"όπως τα πρότυπα Python :class:`list` αντικείμενα. Τέλος, οι τύποι ακολουθιών θα πρέπει να υλοποιούν πρόσθεση (που σημαίνει συνένωση) και πολλαπλασιασμό (δηλαδή επανάληψη) ορίζοντας τις "
+"μεθόδους :meth:`~object.__add__`, :meth:`~object.__radd__`, :meth:`~object.__iadd__`, :meth:`~object.__mul__`, :meth:`~object.__rmul__` και :meth:`~object.__imul__` που περιγράφονται παρακάτω∙ "
+"δεν θα πρέπει να ορίζουν άλλους αριθμητικούς τελεστές. Συνίσταται τόσο οι αντιστοιχίσεις όσο και οι ακολουθίες να εφαρμόζουν τη μέθοδο :meth:`~object.__contains__` "
+"για να επιτρέπεται η αποτελεσματική χρήση του τελεστή ``in`` ∙ για αντιστοιχίσεις, το ``in`` θα πρέπει να αναζητήσει τα κλειδιά της αντιστοίχισης∙ για ακολουθίες θα πρέπει να αναζητήσει τις τιμές.  "
+"Συνίσταται περαιτέρω τόσο οι αντιστοιχίσεις όσο και οι ακολουθίες να εφαρμόζουν τη μέθοδο :meth:`~object.__iter__` για να επιτρέπεται η αποτελεσματική επανάληψη μέσω του κοντέινερ∙ για αντιστοιχίσεις, η "
+":meth:`!__iter__` θα πρέπει να επαναλαμβάνεται μέσω των κλειδιών του αντικειμένου∙ για ακολουθίες, θα πρέπει να επαναλαμβάνεται μέσω των τιμών."
 
 #: reference/datamodel.rst:2808
 msgid ""
@@ -3769,6 +4227,9 @@ msgid ""
 "define a :meth:`~object.__bool__` method and whose :meth:`!__len__` method "
 "returns zero is considered to be false in a Boolean context."
 msgstr ""
+"Καλείται για την υλοποίηση της ενσωματωμένης συνάρτησης :func:`len`.  Θα πρέπει να επιστρέψει το μήκος "
+"του αντικειμένου, ένας ακέραιος αριθμός ``>=`` 0.  Επίσης, ένα αντικείμενο που δεν ορίζει μια μέθοδο "
+":meth:`~object.__bool__` και του οποίου η μέθοδος :meth:`!__len__` επιστρέφει μηδέν, θεωρείται ψευδές σε ένα Boolean περιβάλλον."
 
 #: reference/datamodel.rst:2815
 msgid ""
@@ -3778,6 +4239,11 @@ msgid ""
 "OverflowError` by truth value testing, an object must define a :meth:"
 "`~object.__bool__` method."
 msgstr ""
+"Στο CPython, το μήκος απαιτείται να είναι το πολύ data:`sys.maxsize`. Εάν το μήκος είναι μεγαλύτερο "
+"από :data:`!sys.maxsize` ορισμένες δυνατότητες (όπως :func:"
+"`len`) ενδέχεται να αυξήσουν το :exc:`OverflowError`.  Για να αποφευχθεί να γίνει raise "
+":exc:`!OverflowError` από τον έλεγχο τιμής αλήθειας, ένα αντικείμενο πρέπει να ορίσει μια μέθοδο "
+":meth:`~object.__bool__`."
 
 #: reference/datamodel.rst:2824
 msgid ""
@@ -3788,19 +4254,25 @@ msgid ""
 "method didn't exist at all. This method is purely an optimization and is "
 "never required for correctness."
 msgstr ""
+"Καλείται για υλοποίηση :func:`operator.length_hint`. Θα πρέπει να επιστρέψει ένα εκτιμώμενο μήκος για το "
+"αντικείμενο (το οποίο μπορεί να είναι μεγαλύτερο ή μικρότερο από το πραγματικό μήκος). Το μήκος πρέπει να είναι ένας "
+"ακέραιος αριθμός ``>=`` 0. Η τιμή επιστροφής μπορεί επίσης να είναι :data:"
+"`NotImplemented`, η οποία αντιμετωπίζεται με τον ίδιο τρόπο σαν να μην υπήρχε καθόλου η μέθοδος ``__length_hint__``. "
+"Αυτή η μέθοδος είναι καθαρά βελτιστοποίηση και δεν απαιτείται ποτέ για ορθότητα."
 
 #: reference/datamodel.rst:2838
 msgid ""
 "Slicing is done exclusively with the following three methods.  A call like ::"
 msgstr ""
+"Η διαδικασία τμηματοποίησης γίνεται αποκλειστικά με τις ακόλουθες τρεις μεθόδους.  Μια κλήση όπως ::"
 
 #: reference/datamodel.rst:2842
 msgid "is translated to ::"
-msgstr ""
+msgstr "μεταφράζεται σε ::"
 
 #: reference/datamodel.rst:2846
 msgid "and so forth.  Missing slice items are always filled in with ``None``."
-msgstr ""
+msgstr "και ούτω καθεξής.  Τα στοιχεία τμήματος που λείπουν συμπληρώνονται πάντα με ``None``."
 
 #: reference/datamodel.rst:2851
 msgid ""
@@ -3943,7 +4415,7 @@ msgstr ""
 
 #: reference/datamodel.rst:2939
 msgid "Emulating numeric types"
-msgstr "Προσομοίωση αριθμητικών τύπων"
+msgstr "Εξομοίωση αριθμητικών τύπων"
 
 #: reference/datamodel.rst:2941
 msgid ""
