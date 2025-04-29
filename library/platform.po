@@ -8,37 +8,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
+"PO-Revision-Date: 2025-02-14 17:10+0200\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <pygreece@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/platform.rst:2
-msgid ":mod:`platform` ---  Access to underlying platform's identifying data"
+msgid ":mod:`!platform` ---  Access to underlying platform's identifying data"
 msgstr ""
+":mod:`platform` --- Πρόσβαση στα αναγνωριστικά δεδομένα της υποκείμενης "
+"πλατφόρμας"
 
 #: library/platform.rst:10
 msgid "**Source code:** :source:`Lib/platform.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/platform.py`"
 
 #: library/platform.rst:16
 msgid ""
 "Specific platforms listed alphabetically, with Linux included in the Unix "
 "section."
 msgstr ""
+"Συγκεκριμένες πλατφόρμες καταγεγραμμένες αλφαβητικά, με το Linux να "
+"περιλαμβάνεται στην ενότητα Unix."
 
 #: library/platform.rst:21
 msgid "Cross Platform"
-msgstr ""
+msgstr "Cross Platform"
 
 #: library/platform.rst:26
 msgid ""
 "Queries the given executable (defaults to the Python interpreter binary) for "
 "various architecture information."
 msgstr ""
+"Υποβάλλει ερώτημα στο δεδομένο εκτελέσιμο αρχείο (προεπιλογή είναι το "
+"εκτελέσιμο του δυαδικού διερμηνέα Python) για διάφορες πληροφορίες "
+"αρχιτεκτονικής."
 
 #: library/platform.rst:29
 msgid ""
@@ -46,6 +54,9 @@ msgid ""
 "architecture and the linkage format used for the executable. Both values are "
 "returned as strings."
 msgstr ""
+"Επιστρέφει μια πλειάδα ``(bits, linkage)`` που περιέχει πληροφορίες για την "
+"αρχιτεκτονική των bit και την μορφή σύνδεσης που χρησιμοποιείται για το "
+"εκτελέσιμο αρχείο. Και οι δύο τιμές επιστρέφονται ως συμβολοσειρές."
 
 #: library/platform.rst:33
 msgid ""
@@ -54,6 +65,10 @@ msgid ""
 "``sizeof(long)`` on Python version < 1.5.2) is used as indicator for the "
 "supported pointer size."
 msgstr ""
+"Οι τιμές που δεν μπορούν να προσδιοριστούν επιστρέφονται όπως δίνονται από "
+"τις προκαθορισμένες παραμέτρους. Αν η τιμή του bits δοθεί ως ``''``, τότε "
+"χρησιμοποιείται το ``sizeof(pointer)`` (ή το ``sizeof(long)`` στην έκδοση "
+"Python < 1.5.2) ως δείκτης για το υποστηριζόμενο μέγεθος δεικτών."
 
 #: library/platform.rst:38
 msgid ""
@@ -62,42 +77,65 @@ msgid ""
 "platforms and then only if the executable points to the Python interpreter.  "
 "Reasonable defaults are used when the above needs are not met."
 msgstr ""
+"Η συνάρτηση βασίζεται στην εντολή του συστήματος :file:`file` για την "
+"εκτέλεση της πραγματικής εργασίας. Αυτή είναι διαθέσιμη στα περισσότερα αν "
+"όχι σε όλα τα συστήματα Unix και σε ορισμένα μη-Unix συστήματα, και μόνο αν "
+"το εκτελέσιμο δείχνει στον διερμηνέα της Python. Χρησιμοποιούνται εύλογες "
+"προεπιλεγμένες τιμές όταν οι παραπάνω προϋποθέσεις δεν πληρούνται."
 
 #: library/platform.rst:45
 msgid ""
 "On macOS (and perhaps other platforms), executable files may be universal "
 "files containing multiple architectures."
 msgstr ""
+"Στο macOS (και ίσως και σε άλλες πλατφόρμες), τα εκτελέσιμα αρχεία μπορεί να "
+"είναι καθολικά αρχεία που περιέχουν μέσα πολλαπλές αρχιτεκτονικές."
 
 #: library/platform.rst:48
 msgid ""
 "To get at the \"64-bitness\" of the current interpreter, it is more reliable "
 "to query the :data:`sys.maxsize` attribute::"
 msgstr ""
+"Για να προσδιορίσετε αν ο τρέχων διερμηνέας είναι 64-bit, είναι πιο "
+"αξιόπιστο να ελέγξετε το χαρακτηριστικό :data:`sys.maxsize`::"
+
+#: library/platform.rst:51
+msgid "is_64bits = sys.maxsize > 2**32"
+msgstr "is_64bits = sys.maxsize > 2**32"
 
 #: library/platform.rst:56
 msgid ""
 "Returns the machine type, e.g. ``'AMD64'``. An empty string is returned if "
 "the value cannot be determined."
 msgstr ""
+"Επιστρέφει τον τύπο του μηχανήματος, π.χ. ``'AMD64'``. Επιστρέφει μια κενή "
+"συμβολοσειρά αν η τιμή δεν μπορεί να προσδιοριστεί."
 
 #: library/platform.rst:62
 msgid ""
 "Returns the computer's network name (may not be fully qualified!). An empty "
 "string is returned if the value cannot be determined."
 msgstr ""
+"Επιστρέφει το όνομα δικτύου του υπολογιστή (ενδέχεται να μην είναι πλήρως "
+"καθορισμένο!). Επιστρέφει μια κενή συμβολοσειρά, αν η τιμή δεν μπορεί να "
+"προσδιοριστεί."
 
 #: library/platform.rst:68
 msgid ""
 "Returns a single string identifying the underlying platform with as much "
 "useful information as possible."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που προσδιορίζει την υποκείμενη πλατφόρμα με όσο "
+"το δυνατόν περισσότερες χρήσιμες πληροφορίες."
 
 #: library/platform.rst:71
 msgid ""
 "The output is intended to be *human readable* rather than machine parseable. "
 "It may look different on different platforms and this is intended."
 msgstr ""
+"Η έξοδος προορίζεται να είναι *φιλική - ευανάγνωστη από τον άνθρωπο* και όχι "
+"αναγνώσιμη από μηχανή. Μπορεί να φαίνεται διαφορετική σε διαφορετικές "
+"πλατφόρμες και αυτό είναι σκόπιμο."
 
 #: library/platform.rst:74
 msgid ""
@@ -106,22 +144,31 @@ msgid ""
 "SunOS will be reported as Solaris.  The :func:`system_alias` function is "
 "used to implement this."
 msgstr ""
+"Αν το *aliased* είναι αληθές, η συνάρτηση θα χρησιμοποιήσει ψευδώνυμα για "
+"διάφορες πλατφόρμες που αναφέρουν ονόματα συστημάτων διαφορετικά από τα "
+"κοινά τους ονόματα, για παράδειγμα το SunOS θα αναφέρεται ως Solaris. Η "
+"συνάρτηση :func:`system_alias` χρησιμοποιείται για την υλοποίηση αυτού."
 
 #: library/platform.rst:79
 msgid ""
 "Setting *terse* to true causes the function to return only the absolute "
 "minimum information needed to identify the platform."
 msgstr ""
+"Αν το *terse* οριστεί σε αληθές, η συνάρτηση επιστρέφει μόνο τις απολύτως "
+"απαραίτητες πληροφορίες για την αναγνώριση της πλατφόρμας."
 
 #: library/platform.rst:82
 msgid ""
 "On macOS, the function now uses :func:`mac_ver`, if it returns a non-empty "
 "release string, to get the macOS version rather than the darwin version."
 msgstr ""
+"Στο macOS, η συνάρτηση χρησιμοποιεί τώρα την :func:`mac_ver`, αν αυτή "
+"επιστρέψει μη κενή συμβολοσειρά έκδοσης, για να λάβει την έκδοση του macOS "
+"αντί για την έκδοση Darwin."
 
 #: library/platform.rst:90
 msgid "Returns the (real) processor name, e.g. ``'amdk6'``."
-msgstr ""
+msgstr "Επιστρέφει το (πραγματικό) όνομα του επεξεργαστή, π.χ. ``'amdk6'``."
 
 #: library/platform.rst:92
 msgid ""
@@ -129,64 +176,93 @@ msgid ""
 "many platforms do not provide this information or simply return the same "
 "value as for :func:`machine`.  NetBSD does this."
 msgstr ""
+"Επιστρέφεται μια κενή συμβολοσειρά εάν η τιμή δεν μπορεί να προσδιοριστεί. "
+"Σημειώστε ότι πολλές πλατφόρμες δεν παρέχουν αυτή την πληροφορία ή απλώς "
+"επιστρέφουν την ίδια τιμή με αυτή της :func:`machine`. Το NetBSD το κάνει "
+"αυτό."
 
 #: library/platform.rst:99
 msgid ""
 "Returns a tuple ``(buildno, builddate)`` stating the Python build number and "
 "date as strings."
 msgstr ""
+"Επιστρέφει μια πλειάδα ``(buildno, builddate)`` που δηλώνει τον αριθμό "
+"κατασκευής και την ημερομηνία κατασκευής της Python ως συμβολοσειρές."
 
 #: library/platform.rst:105
 msgid "Returns a string identifying the compiler used for compiling Python."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που προσδιορίζει τον μεταγλωττιστή που "
+"χρησιμοποιήθηκε για την μεταγλώττιση της Python."
 
 #: library/platform.rst:110
 msgid "Returns a string identifying the Python implementation SCM branch."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που προσδιορίζει το branch του συστήματος "
+"ελέγχου εκδόσεων (SCM) της υλοποίησης της Python."
 
 #: library/platform.rst:115
 msgid ""
 "Returns a string identifying the Python implementation. Possible return "
 "values are: 'CPython', 'IronPython', 'Jython', 'PyPy'."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που προσδιορίζει την υλοποίηση της Python. "
+"Πιθανές τιμές είναι: 'CPython', 'IronPython', 'Jython', 'PyPy'."
 
 #: library/platform.rst:121
 msgid "Returns a string identifying the Python implementation SCM revision."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που προσδιορίζει την αναθεώρηση SCM της "
+"υλοποίησης της Python."
 
 #: library/platform.rst:126
 msgid "Returns the Python version as string ``'major.minor.patchlevel'``."
 msgstr ""
+"Επιστρέφει την έκδοση της Python ως συμβολοσειρά ``'major.minor."
+"patchlevel'``."
 
 #: library/platform.rst:128
 msgid ""
 "Note that unlike the Python ``sys.version``, the returned value will always "
 "include the patchlevel (it defaults to 0)."
 msgstr ""
+"Σημειώστε ότι σε αντίθεση με το ``sys.version`` της Python, η επιστρεφόμενη "
+"τιμή θα περιλαμβάνει πάντα το επίπεδο διόρθωσης (το οποίο προεπιλεγμένα "
+"είναι 0)."
 
 #: library/platform.rst:134
 msgid ""
 "Returns the Python version as tuple ``(major, minor, patchlevel)`` of "
 "strings."
 msgstr ""
+"Επιστρέφει την έκδοση της Python ως πλειάδα ``(major, minor, patchlevel)`` "
+"από συμβολοσειρές. "
 
 #: library/platform.rst:136
 msgid ""
 "Note that unlike the Python ``sys.version``, the returned value will always "
 "include the patchlevel (it defaults to ``'0'``)."
 msgstr ""
+"Σημειώστε ότι, σε αντίθεση με την ``sys.version`` της Python, η "
+"επιστρεφόμενη τιμή θα περιλαμβάνει πάντα το επίπεδο ενημέρωσης (με "
+"προεπιλογή το ``'0'``)."
 
 #: library/platform.rst:142
 msgid ""
 "Returns the system's release, e.g. ``'2.2.0'`` or ``'NT'``. An empty string "
 "is returned if the value cannot be determined."
 msgstr ""
+"Επιστρέφει την έκδοση του συστήματος, π.χ. ``'2.2.0'`` ή ``'NT'``. "
+"Επιστρέφεται μια κενή συμβολοσειρά αν η τιμή δεν μπορεί να καθοριστεί."
 
 #: library/platform.rst:148
 msgid ""
 "Returns the system/OS name, such as ``'Linux'``, ``'Darwin'``, ``'Java'``, "
 "``'Windows'``. An empty string is returned if the value cannot be determined."
 msgstr ""
+"Επιστρέφει το όνομα του συστήματος/λειτουργικού, όπως ``'Linux'``, "
+"``'Darwin'``, ``'Java'``, ``'Windows'``. Επιστρέφεται μια κενή συμβολοσειρά "
+"αν η τιμή δεν μπορεί να καθοριστεί."
 
 #: library/platform.rst:154
 msgid ""
@@ -194,12 +270,17 @@ msgid ""
 "used for some systems.  It also does some reordering of the information in "
 "some cases where it would otherwise cause confusion."
 msgstr ""
+"Επιστρέφει μια πλειάδα ``(system, release, version)`` με ονόματα εμπορικής "
+"χρήσης που χρησιμοποιούνται για ορισμένα συστήματα. Επίσης, αναδιατάσσει "
+"ορισμένες πληροφορίες σε περιπτώσεις που διαφορετικά θα προκαλούσαν σύγχυση."
 
 #: library/platform.rst:161
 msgid ""
 "Returns the system's release version, e.g. ``'#3 on degas'``. An empty "
 "string is returned if the value cannot be determined."
 msgstr ""
+"Επιστρέφει την έκδοση κυκλοφορίας του συστήματος, π.χ. ``'#3 on degas'``. "
+"Επιστρέφεται μια κενή συμβολοσειρά εάν η τιμή δεν μπορεί να προσδιοριστεί."
 
 #: library/platform.rst:167
 msgid ""
@@ -207,36 +288,43 @@ msgid ""
 "containing six attributes: :attr:`system`, :attr:`node`, :attr:`release`, :"
 "attr:`version`, :attr:`machine`, and :attr:`processor`."
 msgstr ""
+"Αρκετά φορητή διεπαφή uname. Επιστρέφει ένα :func:`~collections.namedtuple` "
+"που περιέχει έξι ιδιότητες: :attr:`system`, :attr:`node`, :attr:`release`, :"
+"attr:`version`, :attr:`machine` και :attr:`processor`."
 
 #: library/platform.rst:171
 msgid ":attr:`processor` is resolved late, on demand."
-msgstr ""
+msgstr "Το :attr:`processor` επιλύεται αργά, κατόπιν αιτήματος."
 
 #: library/platform.rst:173
 msgid ""
 "Note: the first two attribute names differ from the names presented by :func:"
 "`os.uname`, where they are named :attr:`sysname` and :attr:`nodename`."
 msgstr ""
+"Σημείωση: τα ονόματα των πρώτων δύο ιδιοτήτων διαφέρουν από αυτά που "
+"παρουσιάζονται από την συνάρτηση :func:`os.uname`, όπου ονομάζονται :attr:"
+"`sysname` και :attr:`nodename`."
 
 #: library/platform.rst:177
 msgid "Entries which cannot be determined are set to ``''``."
-msgstr ""
+msgstr "Οι τιμές που δεν μπορούν να προσδιοριστούν ορίζονται σε ``''``."
 
 #: library/platform.rst:179
 msgid "Result changed from a tuple to a :func:`~collections.namedtuple`."
 msgstr ""
+"Το αποτέλεσμα άλλαξε από μια πλειάδα σε :func:`~collections.namedtuple`."
 
 #: library/platform.rst:182
 msgid ":attr:`processor` is resolved late instead of immediately."
-msgstr ""
+msgstr "Το :attr:`processor` αναλύεται καθυστερημένα αντί άμεσα."
 
 #: library/platform.rst:187
 msgid "Java Platform"
-msgstr ""
+msgstr "Πλατφόρμα Java"
 
 #: library/platform.rst:192
 msgid "Version interface for Jython."
-msgstr ""
+msgstr "Διεπαφή έκδοσης για Jython."
 
 #: library/platform.rst:194
 msgid ""
@@ -245,10 +333,15 @@ msgid ""
 "``(os_name, os_version, os_arch)``. Values which cannot be determined are "
 "set to the defaults given as parameters (which all default to ``''``)."
 msgstr ""
+"Επιστρέφει μια πλειάδα ``(release, vendor, vminfo, osinfo)`` όπου το "
+"*vminfo* είναι μια πλειάδα ``(vm_name, vm_release, vm_vendor)`` και το "
+"*osinfo* είναι μια πλειάδα ``(os_name, os_version, os_arch)``. Τιμές που δεν "
+"μπορούν να προσδιοριστούν ορίζονται στα προεπιλεγμένα που δίνονται ως "
+"παράμετροι (τα οποία προεπιλεγμένα είναι όλα ``''``)."
 
 #: library/platform.rst:201
 msgid "Windows Platform"
-msgstr ""
+msgstr "Πλατφόρμα Windows"
 
 #: library/platform.rst:206
 msgid ""
@@ -258,15 +351,29 @@ msgid ""
 "Values which cannot be determined are set to the defaults given as "
 "parameters (which all default to an empty string)."
 msgstr ""
+"Λαμβάνει επιπλέον πληροφορίες έκδοσης από το Μητρώο των Windows και "
+"επιστρέφει μια πλειάδα ``(release, version, csd, ptype)`` που αναφέρεται "
+"στην έκδοση του λειτουργικού συστήματος, τον αριθμό έκδοσης, το επίπεδο CSD "
+"(service pack) και τον τύπο λειτουργικού συστήματος (πολυεπεξεργαστικό/"
+"μονοεπεξεργαστικό). Τιμές που δεν μπορούν να προσδιοριστούν ορίζονται στα "
+"προεπιλεγμένα που δίνονται ως παράμετροι (όλα προεπιλέγονται σε κενές "
+"συμβολοσειρές)."
 
 #: library/platform.rst:212
 msgid ""
 "As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT "
 "machines and ``'Multiprocessor Free'`` on multi processor machines. The "
-"*'Free'* refers to the OS version being free of debugging code. It could "
-"also state *'Checked'* which means the OS version uses debugging code, i.e. "
-"code that checks arguments, ranges, etc."
+"``'Free'`` refers to the OS version being free of debugging code. It could "
+"also state ``'Checked'`` which means the OS version uses debugging code, i."
+"e. code that checks arguments, ranges, etc."
 msgstr ""
+"Ως υπόδειξη: το *ptype* είναι ``'Uniprocessor Free'`` σε μηχανές NT με έναν "
+"επεξεργαστή και ``'Multiprocessor Free'`` σε μηχανές με πολλαπλούς "
+"επεξεργαστές. Ο όρος *'Free'* αναφέρεται σε έκδοση του λειτουργικού "
+"συστήματος χωρίς κώδικα αποσφαλμάτωσης. Θα μπορούσε επίσης να αναφέρει "
+"*'Checked'* που σημαίνει ότι η έκδοση του λειτουργικού συστήματος "
+"χρησιμοποιεί κώδικα αποσφαλμάτωσης, δηλαδή κώδικα που ελέγχει ορίσματα, εύρη "
+"κ.λπ."
 
 #: library/platform.rst:220
 msgid ""
@@ -275,16 +382,22 @@ msgid ""
 "to ``'Enterprise'``, ``'IoTUAP'``, ``'ServerStandard'``, and "
 "``'nanoserver'``."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που αναπαριστά την τρέχουσα έκδοση των Windows ή "
+"``None`` αν δεν μπορεί να καθοριστεί η τιμή. Πιθανές τιμές περιλαμβάνουν, "
+"αλλά δεν περιορίζονται σε ``'Enterprise'``, ``'IoTUAP'``, "
+"``'ServerStandard'`` και ``'nanoserver'``."
 
 #: library/platform.rst:228
 msgid ""
 "Return ``True`` if the Windows edition returned by :func:`win32_edition` is "
 "recognized as an IoT edition."
 msgstr ""
+"Επιστρέφει ``True`` αν η έκδοση των Windows που επιστρέφεται από την :func:"
+"`win32_edition` αναγνωρίζεται ως έκδοση IoT."
 
 #: library/platform.rst:235
 msgid "macOS Platform"
-msgstr ""
+msgstr "Πλατφόρμα macOS"
 
 #: library/platform.rst:240
 msgid ""
@@ -292,16 +405,21 @@ msgid ""
 "versioninfo, machine)`` with *versioninfo* being a tuple ``(version, "
 "dev_stage, non_release_version)``."
 msgstr ""
+"Λαμβάνει πληροφορίες έκδοσης macOS και τις επιστρέφει ως πλειάδα ``(release, "
+"versioninfo, machine)`` όπου το *versioninfo* είναι μια πλειάδα ``(version, "
+"dev_stage, non_release_version)``."
 
 #: library/platform.rst:244
 msgid ""
 "Entries which cannot be determined are set to ``''``.  All tuple entries are "
 "strings."
 msgstr ""
+"Οι τιμές που δεν μπορούν να προσδιοριστούν ορίζονται ως ``''``. Όλα τα "
+"στοιχεία της πλειάδας είναι συμβολοσειρές."
 
 #: library/platform.rst:249
 msgid "Unix Platforms"
-msgstr ""
+msgstr "Πλατφόρμες Unix"
 
 #: library/platform.rst:253
 msgid ""
@@ -310,6 +428,10 @@ msgid ""
 "``(lib, version)`` which default to the given parameters in case the lookup "
 "fails."
 msgstr ""
+"Προσπαθεί να προσδιορίσει την έκδοση της libc με την οποία είναι συνδεδεμένο "
+"το εκτελέσιμο αρχείο (προεπιλογή είναι ο διερμηνέας της Python). Επιστρέφει "
+"μια πλειάδα συμβολοσειρών ``(lib, version)``, η οποία ορίζεται στις δοθείσες "
+"παραμέτρους σε περίπτωση αποτυχίας της αναζήτησης."
 
 #: library/platform.rst:257
 msgid ""
@@ -317,14 +439,19 @@ msgid ""
 "versions add symbols to the executable is probably only usable for "
 "executables compiled using :program:`gcc`."
 msgstr ""
+"Σημειώστε ότι αυτή η συνάρτηση έχει λεπτομερή γνώση του τρόπου με τον οποίο "
+"οι διάφορες εκδόσεις της libc προσθέτουν σύμβολα στο εκτελέσιμο και πιθανώς "
+"μπορεί να χρησιμοποιηθεί μόνο για εκτελέσιμα που έχουν μεταγλωττιστεί με το :"
+"program:`gcc`."
 
 #: library/platform.rst:261
 msgid "The file is read and scanned in chunks of *chunksize* bytes."
 msgstr ""
+"Το αρχείο διαβάζεται και σαρώνονται τμήματά του μεγέθους *chunksize* bytes."
 
 #: library/platform.rst:265
 msgid "Linux Platforms"
-msgstr ""
+msgstr "Πλατφόρμες Linux"
 
 #: library/platform.rst:269
 msgid ""
@@ -334,12 +461,20 @@ msgid ""
 "in most Linux distributions. A noticeable exception is Android and Android-"
 "based distributions."
 msgstr ""
+"Λαμβάνει την ταυτότητα του λειτουργικού συστήματος από το αρχείο ``os-"
+"release`` και την επιστρέφει ως λεξικό. Το αρχείο ``os-release`` είναι ένα "
+"`πρότυπο του freedesktop.org <https://www.freedesktop.org/software/systemd/"
+"man/os-release.html>`_ και είναι διαθέσιμο στις περισσότερες διανομές Linux. "
+"Μια αξιοσημείωτη εξαίρεση είναι το Android και οι διανομές που βασίζονται σε "
+"Android."
 
 #: library/platform.rst:275
 msgid ""
 "Raises :exc:`OSError` or subclass when neither ``/etc/os-release`` nor ``/"
 "usr/lib/os-release`` can be read."
 msgstr ""
+"Κάνει raise εξαίρεση :exc:`OSError` ή την υποκλάση όταν δεν είναι δυνατή η "
+"ανάγνωση ούτε του ``/etc/os-release`` ούτε του ``/usr/lib/os-release``."
 
 #: library/platform.rst:278
 msgid ""
@@ -349,6 +484,11 @@ msgid ""
 "defined according to the standard. All other fields are optional. Vendors "
 "may include additional fields."
 msgstr ""
+"Σε περίπτωση επιτυχίας, η συνάρτηση επιστρέφει ένα λεξικό όπου τα κλειδιά "
+"και οι τιμές είναι συμβολοσειρές. Οι τιμές έχουν τους ειδικούς χαρακτήρες "
+"του, όπως ``\"`` και ``$``, χωρίς εισαγωγικά. Τα πεδία ``NAME``, ``ID`` και "
+"``PRETTY_NAME`` ορίζονται πάντα σύμφωνα με το πρότυπο. Όλα τα άλλα πεδία "
+"είναι προαιρετικά. Οι προμηθευτές μπορεί να περιλαμβάνουν πρόσθετα πεδία."
 
 #: library/platform.rst:284
 msgid ""
@@ -357,7 +497,29 @@ msgid ""
 "``ID_LIKE``, ``VERSION_ID``, or ``VARIANT_ID`` to identify Linux "
 "distributions."
 msgstr ""
+"Σημειώστε ότι πεδία όπως τα ``NAME``, ``VERSION`` και ``VARIANT`` είναι "
+"συμβολοσειρές κατάλληλες για παρουσίαση στους χρήστες. Τα προγράμματα θα "
+"πρέπει να χρησιμοποιούν πεδία όπως τα ``ID``, ``ID_LIKE``, ``VERSION_ID`` ή "
+"``VARIANT_ID`` για την αναγνώριση διανομών Linux."
 
 #: library/platform.rst:289
 msgid "Example::"
+msgstr "Παράδειγμα::"
+
+#: library/platform.rst:291
+msgid ""
+"def get_like_distro():\n"
+"    info = platform.freedesktop_os_release()\n"
+"    ids = [info[\"ID\"]]\n"
+"    if \"ID_LIKE\" in info:\n"
+"        # ids are space separated and ordered by precedence\n"
+"        ids.extend(info[\"ID_LIKE\"].split())\n"
+"    return ids"
 msgstr ""
+"def get_like_distro():\n"
+"    info = platform.freedesktop_os_release()\n"
+"    ids = [info[\"ID\"]]\n"
+"    if \"ID_LIKE\" in info:\n"
+"        # ids are space separated and ordered by precedence\n"
+"        ids.extend(info[\"ID_LIKE\"].split())\n"
+"    return ids"

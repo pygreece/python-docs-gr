@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/posix.rst:2
-msgid ":mod:`posix` --- The most common POSIX system calls"
+msgid ":mod:`!posix` --- The most common POSIX system calls"
 msgstr ""
 
 #: library/posix.rst:10
@@ -28,7 +29,7 @@ msgid ""
 msgstr ""
 
 #: library/posix.rst:14
-msgid ":ref:`Availability <availability>`: Unix."
+msgid "Availability"
 msgstr ""
 
 #: library/posix.rst:18
@@ -72,8 +73,21 @@ msgid ""
 "Solaris 2.6 and 2.7 you need to do something like::"
 msgstr ""
 
+#: library/posix.rst:55
+msgid ""
+"CFLAGS=\"`getconf LFS_CFLAGS`\" OPT=\"-g -O2 $CFLAGS\" \\\n"
+"        ./configure"
+msgstr ""
+
 #: library/posix.rst:58
 msgid "On large-file-capable Linux systems, this might work::"
+msgstr ""
+
+#: library/posix.rst:60
+msgid ""
+"CFLAGS='-D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64' OPT=\"-g -O2 $CFLAGS\" "
+"\\\n"
+"        ./configure"
 msgstr ""
 
 #: library/posix.rst:67

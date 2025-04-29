@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,9 +140,45 @@ msgid ""
 "valid:"
 msgstr ""
 
+#: whatsnew/3.10.rst:105
+msgid ""
+"with (CtxManager() as example):\n"
+"    ...\n"
+"\n"
+"with (\n"
+"    CtxManager1(),\n"
+"    CtxManager2()\n"
+"):\n"
+"    ...\n"
+"\n"
+"with (CtxManager1() as example,\n"
+"      CtxManager2()):\n"
+"    ...\n"
+"\n"
+"with (CtxManager1(),\n"
+"      CtxManager2() as example):\n"
+"    ...\n"
+"\n"
+"with (\n"
+"    CtxManager1() as example1,\n"
+"    CtxManager2() as example2\n"
+"):\n"
+"    ..."
+msgstr ""
+
 #: whatsnew/3.10.rst:130
 msgid ""
 "it is also possible to use a trailing comma at the end of the enclosed group:"
+msgstr ""
+
+#: whatsnew/3.10.rst:133
+msgid ""
+"with (\n"
+"    CtxManager1() as example1,\n"
+"    CtxManager2() as example2,\n"
+"    CtxManager3() as example3,\n"
+"):\n"
+"    ..."
 msgstr ""
 
 #: whatsnew/3.10.rst:142
@@ -173,14 +210,37 @@ msgid ""
 "code (notice the unclosed '{'):"
 msgstr ""
 
+#: whatsnew/3.10.rst:160
+msgid ""
+"expected = {9: 1, 18: 2, 19: 2, 27: 3, 28: 3, 29: 3, 36: 4, 37: 4,\n"
+"            38: 4, 39: 4, 45: 5, 46: 5, 47: 5, 48: 5, 49: 5, 54: 6,\n"
+"some_other_code = foo()"
+msgstr ""
+
 #: whatsnew/3.10.rst:166
 msgid ""
 "Previous versions of the interpreter reported confusing places as the "
 "location of the syntax error:"
 msgstr ""
 
+#: whatsnew/3.10.rst:169
+msgid ""
+"File \"example.py\", line 3\n"
+"    some_other_code = foo()\n"
+"                    ^\n"
+"SyntaxError: invalid syntax"
+msgstr ""
+
 #: whatsnew/3.10.rst:176
 msgid "but in Python 3.10 a more informative error is emitted:"
+msgstr ""
+
+#: whatsnew/3.10.rst:178
+msgid ""
+"File \"example.py\", line 1\n"
+"    expected = {9: 1, 18: 2, 19: 2, 27: 3, 28: 3, 29: 3, 36: 4, 37: 4,\n"
+"               ^\n"
+"SyntaxError: '{' was never closed"
 msgstr ""
 
 #: whatsnew/3.10.rst:186
@@ -209,8 +269,26 @@ msgid ""
 "of displaying (before Python 3.10):"
 msgstr ""
 
+#: whatsnew/3.10.rst:199
+msgid ""
+">>> foo(x, z for z in range(10), t, w)\n"
+"  File \"<stdin>\", line 1\n"
+"    foo(x, z for z in range(10), t, w)\n"
+"           ^\n"
+"SyntaxError: Generator expression must be parenthesized"
+msgstr ""
+
 #: whatsnew/3.10.rst:207
 msgid "now Python 3.10 will display the exception as:"
+msgstr ""
+
+#: whatsnew/3.10.rst:209
+msgid ""
+">>> foo(x, z for z in range(10), t, w)\n"
+"  File \"<stdin>\", line 1\n"
+"    foo(x, z for z in range(10), t, w)\n"
+"           ^^^^^^^^^^^^^^^^^^^^\n"
+"SyntaxError: Generator expression must be parenthesized"
 msgstr ""
 
 #: whatsnew/3.10.rst:217
@@ -228,12 +306,30 @@ msgstr ""
 msgid "Missing ``:`` before blocks:"
 msgstr ""
 
+#: whatsnew/3.10.rst:224
+msgid ""
+">>> if rocket.position > event_horizon\n"
+"  File \"<stdin>\", line 1\n"
+"    if rocket.position > event_horizon\n"
+"                                      ^\n"
+"SyntaxError: expected ':'"
+msgstr ""
+
 #: whatsnew/3.10.rst:232
 msgid "(Contributed by Pablo Galindo in :issue:`42997`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:234
 msgid "Unparenthesised tuples in comprehensions targets:"
+msgstr ""
+
+#: whatsnew/3.10.rst:236
+msgid ""
+">>> {x,y for x,y in zip('abcd', '1234')}\n"
+"  File \"<stdin>\", line 1\n"
+"    {x,y for x,y in zip('abcd', '1234')}\n"
+"     ^\n"
+"SyntaxError: did you forget parentheses around the comprehension target?"
 msgstr ""
 
 #: whatsnew/3.10.rst:244
@@ -244,12 +340,35 @@ msgstr ""
 msgid "Missing commas in collection literals and between expressions:"
 msgstr ""
 
+#: whatsnew/3.10.rst:248
+msgid ""
+">>> items = {\n"
+"... x: 1,\n"
+"... y: 2\n"
+"... z: 3,\n"
+"  File \"<stdin>\", line 3\n"
+"    y: 2\n"
+"       ^\n"
+"SyntaxError: invalid syntax. Perhaps you forgot a comma?"
+msgstr ""
+
 #: whatsnew/3.10.rst:259
 msgid "(Contributed by Pablo Galindo in :issue:`43822`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:261
 msgid "Multiple Exception types without parentheses:"
+msgstr ""
+
+#: whatsnew/3.10.rst:263
+msgid ""
+">>> try:\n"
+"...     build_dyson_sphere()\n"
+"... except NotEnoughScienceError, NotEnoughResourcesError:\n"
+"  File \"<stdin>\", line 3\n"
+"    except NotEnoughScienceError, NotEnoughResourcesError:\n"
+"           ^\n"
+"SyntaxError: multiple exception types must be parenthesized"
 msgstr ""
 
 #: whatsnew/3.10.rst:273
@@ -260,12 +379,42 @@ msgstr ""
 msgid "Missing ``:`` and values in dictionary literals:"
 msgstr ""
 
+#: whatsnew/3.10.rst:277
+msgid ""
+">>> values = {\n"
+"... x: 1,\n"
+"... y: 2,\n"
+"... z:\n"
+"... }\n"
+"  File \"<stdin>\", line 4\n"
+"    z:\n"
+"     ^\n"
+"SyntaxError: expression expected after dictionary key and ':'\n"
+"\n"
+">>> values = {x:1, y:2, z w:3}\n"
+"  File \"<stdin>\", line 1\n"
+"    values = {x:1, y:2, z w:3}\n"
+"                        ^\n"
+"SyntaxError: ':' expected after dictionary key"
+msgstr ""
+
 #: whatsnew/3.10.rst:295
 msgid "(Contributed by Pablo Galindo in :issue:`43823`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:297
 msgid "``try`` blocks without ``except`` or ``finally`` blocks:"
+msgstr ""
+
+#: whatsnew/3.10.rst:299
+msgid ""
+">>> try:\n"
+"...     x = 2\n"
+"... something = 3\n"
+"  File \"<stdin>\", line 3\n"
+"    something  = 3\n"
+"    ^^^^^^^^^\n"
+"SyntaxError: expected 'except' or 'finally' block"
 msgstr ""
 
 #: whatsnew/3.10.rst:309
@@ -276,12 +425,31 @@ msgstr ""
 msgid "Usage of ``=`` instead of ``==`` in comparisons:"
 msgstr ""
 
+#: whatsnew/3.10.rst:313
+msgid ""
+">>> if rocket.position = event_horizon:\n"
+"  File \"<stdin>\", line 1\n"
+"    if rocket.position = event_horizon:\n"
+"                       ^\n"
+"SyntaxError: cannot assign to attribute here. Maybe you meant '==' instead "
+"of '='?"
+msgstr ""
+
 #: whatsnew/3.10.rst:321
 msgid "(Contributed by Pablo Galindo in :issue:`43797`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:323
 msgid "Usage of ``*`` in f-strings:"
+msgstr ""
+
+#: whatsnew/3.10.rst:325
+msgid ""
+">>> f\"Black holes {*all_black_holes} and revelations\"\n"
+"  File \"<stdin>\", line 1\n"
+"    (*all_black_holes)\n"
+"     ^\n"
+"SyntaxError: f-string: cannot use starred expression here"
 msgstr ""
 
 #: whatsnew/3.10.rst:333
@@ -299,15 +467,35 @@ msgid ""
 "statement:"
 msgstr ""
 
+#: whatsnew/3.10.rst:341
+msgid ""
+">>> def foo():\n"
+"...    if lel:\n"
+"...    x = 2\n"
+"  File \"<stdin>\", line 3\n"
+"    x = 2\n"
+"    ^\n"
+"IndentationError: expected an indented block after 'if' statement in line 2"
+msgstr ""
+
 #: whatsnew/3.10.rst:353
 msgid "AttributeErrors"
 msgstr ""
 
 #: whatsnew/3.10.rst:355
 msgid ""
-"When printing :exc:`AttributeError`, :c:func:`PyErr_Display` will offer "
+"When printing :exc:`AttributeError`, :c:func:`!PyErr_Display` will offer "
 "suggestions of similar attribute names in the object that the exception was "
 "raised from:"
+msgstr ""
+
+#: whatsnew/3.10.rst:359
+msgid ""
+">>> collections.namedtoplo\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"AttributeError: module 'collections' has no attribute 'namedtoplo'. Did you "
+"mean: namedtuple?"
 msgstr ""
 
 #: whatsnew/3.10.rst:388
@@ -316,7 +504,7 @@ msgstr ""
 
 #: whatsnew/3.10.rst:369
 msgid ""
-"Notice this won't work if :c:func:`PyErr_Display` is not called to display "
+"Notice this won't work if :c:func:`!PyErr_Display` is not called to display "
 "the error which can happen if some other custom error display function is "
 "used. This is a common scenario in some REPLs like IPython."
 msgstr ""
@@ -327,14 +515,24 @@ msgstr ""
 
 #: whatsnew/3.10.rst:376
 msgid ""
-"When printing :exc:`NameError` raised by the interpreter, :c:func:"
-"`PyErr_Display` will offer suggestions of similar variable names in the "
+"When printing :exc:`NameError` raised by the interpreter, :c:func:`!"
+"PyErr_Display` will offer suggestions of similar variable names in the "
 "function that the exception was raised from:"
+msgstr ""
+
+#: whatsnew/3.10.rst:380
+msgid ""
+">>> schwarzschild_black_hole = None\n"
+">>> schwarschild_black_hole\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"NameError: name 'schwarschild_black_hole' is not defined. Did you mean: "
+"schwarzschild_black_hole?"
 msgstr ""
 
 #: whatsnew/3.10.rst:391
 msgid ""
-"Notice this won't work if :c:func:`PyErr_Display` is not called to display "
+"Notice this won't work if :c:func:`!PyErr_Display` is not called to display "
 "the error, which can happen if some other custom error display function is "
 "used. This is a common scenario in some REPLs like IPython."
 msgstr ""
@@ -385,6 +583,19 @@ msgstr ""
 
 #: whatsnew/3.10.rst:424
 msgid "The generic syntax of pattern matching is::"
+msgstr ""
+
+#: whatsnew/3.10.rst:426
+msgid ""
+"match subject:\n"
+"    case <pattern_1>:\n"
+"        <action_1>\n"
+"    case <pattern_2>:\n"
+"        <action_2>\n"
+"    case <pattern_3>:\n"
+"        <action_3>\n"
+"    case _:\n"
+"        <action_wildcard>"
 msgstr ""
 
 #: whatsnew/3.10.rst:436
@@ -466,6 +677,20 @@ msgid ""
 "status codes. The associated action to the case is executed after a match::"
 msgstr ""
 
+#: whatsnew/3.10.rst:481
+msgid ""
+"def http_error(status):\n"
+"    match status:\n"
+"        case 400:\n"
+"            return \"Bad request\"\n"
+"        case 404:\n"
+"            return \"Not found\"\n"
+"        case 418:\n"
+"            return \"I'm a teapot\"\n"
+"        case _:\n"
+"            return \"Something's wrong with the internet\""
+msgstr ""
+
 #: whatsnew/3.10.rst:492
 msgid ""
 "If the above function is passed a ``status`` of 418, \"I'm a teapot\" is "
@@ -481,6 +706,12 @@ msgid ""
 "You can combine several literals in a single pattern using ``|`` (\"or\")::"
 msgstr ""
 
+#: whatsnew/3.10.rst:501
+msgid ""
+"case 401 | 403 | 404:\n"
+"    return \"Not allowed\""
+msgstr ""
+
 #: whatsnew/3.10.rst:505
 msgid "Behavior without the wildcard"
 msgstr ""
@@ -489,6 +720,18 @@ msgstr ""
 msgid ""
 "If we modify the above example by removing the last case block, the example "
 "becomes::"
+msgstr ""
+
+#: whatsnew/3.10.rst:510
+msgid ""
+"def http_error(status):\n"
+"    match status:\n"
+"        case 400:\n"
+"            return \"Bad request\"\n"
+"        case 404:\n"
+"            return \"Not found\"\n"
+"        case 418:\n"
+"            return \"I'm a teapot\""
 msgstr ""
 
 #: whatsnew/3.10.rst:519
@@ -507,6 +750,22 @@ msgid ""
 "Patterns can look like unpacking assignments, and a pattern may be used to "
 "bind variables. In this example, a data point can be unpacked to its x-"
 "coordinate and y-coordinate::"
+msgstr ""
+
+#: whatsnew/3.10.rst:530
+msgid ""
+"# point is an (x, y) tuple\n"
+"match point:\n"
+"    case (0, 0):\n"
+"        print(\"Origin\")\n"
+"    case (0, y):\n"
+"        print(f\"Y={y}\")\n"
+"    case (x, 0):\n"
+"        print(f\"X={x}\")\n"
+"    case (x, y):\n"
+"        print(f\"X={x}, Y={y}\")\n"
+"    case _:\n"
+"        raise ValueError(\"Not a point\")"
 msgstr ""
 
 #: whatsnew/3.10.rst:543
@@ -529,6 +788,26 @@ msgid ""
 "pattern has the ability to capture class attributes into variables::"
 msgstr ""
 
+#: whatsnew/3.10.rst:556
+msgid ""
+"class Point:\n"
+"    x: int\n"
+"    y: int\n"
+"\n"
+"def location(point):\n"
+"    match point:\n"
+"        case Point(x=0, y=0):\n"
+"            print(\"Origin is the point's location.\")\n"
+"        case Point(x=0, y=y):\n"
+"            print(f\"Y={y} and the point is on the y-axis.\")\n"
+"        case Point(x=x, y=0):\n"
+"            print(f\"X={x} and the point is on the x-axis.\")\n"
+"        case Point():\n"
+"            print(\"The point is located somewhere else on the plane.\")\n"
+"        case _:\n"
+"            print(\"Not a point\")"
+msgstr ""
+
 #: whatsnew/3.10.rst:574
 msgid "Patterns with positional parameters"
 msgstr ""
@@ -543,6 +822,14 @@ msgid ""
 "attribute to the ``var`` variable)::"
 msgstr ""
 
+#: whatsnew/3.10.rst:582
+msgid ""
+"Point(1, var)\n"
+"Point(1, y=var)\n"
+"Point(x=1, y=var)\n"
+"Point(y=var, x=1)"
+msgstr ""
+
 #: whatsnew/3.10.rst:588
 msgid "Nested patterns"
 msgstr ""
@@ -551,6 +838,21 @@ msgstr ""
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if our data is a short "
 "list of points, it could be matched like this::"
+msgstr ""
+
+#: whatsnew/3.10.rst:593
+msgid ""
+"match points:\n"
+"    case []:\n"
+"        print(\"No points in the list.\")\n"
+"    case [Point(0, 0)]:\n"
+"        print(\"The origin is the only point in the list.\")\n"
+"    case [Point(x, y)]:\n"
+"        print(f\"A single point {x}, {y} is in the list.\")\n"
+"    case [Point(0, y1), Point(0, y2)]:\n"
+"        print(f\"Two points on the Y axis at {y1}, {y2} are in the list.\")\n"
+"    case _:\n"
+"        print(\"Something else is found in the list.\")"
 msgstr ""
 
 #: whatsnew/3.10.rst:606
@@ -562,6 +864,15 @@ msgid ""
 "To this point, the examples have used ``_`` alone in the last case "
 "statement. A wildcard can be used in more complex patterns, such as "
 "``('error', code, _)``. For example::"
+msgstr ""
+
+#: whatsnew/3.10.rst:612
+msgid ""
+"match test_variable:\n"
+"    case ('warning', code, 40):\n"
+"        print(\"A warning has been received.\")\n"
+"    case ('error', code, _):\n"
+"        print(f\"An error {code} occurred.\")"
 msgstr ""
 
 #: whatsnew/3.10.rst:618
@@ -579,6 +890,15 @@ msgid ""
 "We can add an ``if`` clause to a pattern, known as a \"guard\".  If the "
 "guard is false, ``match`` goes on to try the next case block.  Note that "
 "value capture happens before the guard is evaluated::"
+msgstr ""
+
+#: whatsnew/3.10.rst:628
+msgid ""
+"match point:\n"
+"    case Point(x, y) if x == y:\n"
+"        print(f\"The point is located on the diagonal Y=X at {x}.\")\n"
+"    case Point(x, y):\n"
+"        print(f\"Point is not on the diagonal.\")"
 msgstr ""
 
 #: whatsnew/3.10.rst:635
@@ -618,6 +938,10 @@ msgstr ""
 msgid "Subpatterns may be captured using the ``as`` keyword::"
 msgstr ""
 
+#: whatsnew/3.10.rst:657
+msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
+msgstr ""
+
 #: whatsnew/3.10.rst:659
 msgid ""
 "This binds x1, y1, x2, y2 like you would expect without the ``as`` clause, "
@@ -637,6 +961,24 @@ msgid ""
 "variable::"
 msgstr ""
 
+#: whatsnew/3.10.rst:669
+msgid ""
+"from enum import Enum\n"
+"class Color(Enum):\n"
+"    RED = 0\n"
+"    GREEN = 1\n"
+"    BLUE = 2\n"
+"\n"
+"color = Color.GREEN\n"
+"match color:\n"
+"    case Color.RED:\n"
+"        print(\"I see red!\")\n"
+"    case Color.GREEN:\n"
+"        print(\"Grass is green\")\n"
+"    case Color.BLUE:\n"
+"        print(\"I'm feeling the blues :(\")"
+msgstr ""
+
 #: whatsnew/3.10.rst:684
 msgid ""
 "For the full specification see :pep:`634`.  Motivation and rationale are in :"
@@ -649,10 +991,17 @@ msgstr ""
 
 #: whatsnew/3.10.rst:693
 msgid ""
-"The default encoding of :class:`TextIOWrapper` and :func:`open` is platform "
-"and locale dependent. Since UTF-8 is used on most Unix platforms, omitting "
-"``encoding`` option when opening UTF-8 files (e.g. JSON, YAML, TOML, "
-"Markdown) is a very common bug. For example::"
+"The default encoding of :class:`~io.TextIOWrapper` and :func:`open` is "
+"platform and locale dependent. Since UTF-8 is used on most Unix platforms, "
+"omitting ``encoding`` option when opening UTF-8 files (e.g. JSON, YAML, "
+"TOML, Markdown) is a very common bug. For example::"
+msgstr ""
+
+#: whatsnew/3.10.rst:698
+msgid ""
+"# BUG: \"rb\" mode or encoding=\"utf-8\" should be used.\n"
+"with open(\"data.json\") as f:\n"
+"    data = json.load(f)"
 msgstr ""
 
 #: whatsnew/3.10.rst:702
@@ -699,14 +1048,32 @@ msgid ""
 "arguments of multiple types, :data:`typing.Union` was used::"
 msgstr ""
 
+#: whatsnew/3.10.rst:730
+msgid ""
+"def square(number: Union[int, float]) -> Union[int, float]:\n"
+"    return number ** 2"
+msgstr ""
+
 #: whatsnew/3.10.rst:734
 msgid "Type hints can now be written in a more succinct manner::"
+msgstr ""
+
+#: whatsnew/3.10.rst:736
+msgid ""
+"def square(number: int | float) -> int | float:\n"
+"    return number ** 2"
 msgstr ""
 
 #: whatsnew/3.10.rst:740
 msgid ""
 "This new syntax is also accepted as the second argument to :func:"
 "`isinstance` and :func:`issubclass`::"
+msgstr ""
+
+#: whatsnew/3.10.rst:743
+msgid ""
+">>> isinstance(1, int | str)\n"
+"True"
 msgstr ""
 
 #: whatsnew/3.10.rst:746
@@ -772,10 +1139,22 @@ msgid ""
 "involved. Compare::"
 msgstr ""
 
+#: whatsnew/3.10.rst:785
+msgid ""
+"StrCache = 'Cache[str]'  # a type alias\n"
+"LOG_PREFIX = 'LOG[DEBUG]'  # a module constant"
+msgstr ""
+
 #: whatsnew/3.10.rst:788
 msgid ""
-"Now the :mod:`typing` module has a special value :data:`TypeAlias` which "
-"lets you declare type aliases more explicitly::"
+"Now the :mod:`typing` module has a special value :data:`~typing.TypeAlias` "
+"which lets you declare type aliases more explicitly::"
+msgstr ""
+
+#: whatsnew/3.10.rst:791
+msgid ""
+"StrCache: TypeAlias = 'Cache[str]'  # a type alias\n"
+"LOG_PREFIX = 'LOG[DEBUG]'  # a module constant"
 msgstr ""
 
 #: whatsnew/3.10.rst:794
@@ -792,10 +1171,10 @@ msgstr ""
 
 #: whatsnew/3.10.rst:801
 msgid ""
-":data:`TypeGuard` has been added to the :mod:`typing` module to annotate "
-"type guard functions and improve information provided to static type "
-"checkers during type narrowing.  For more information, please see :data:"
-"`TypeGuard`\\ 's documentation, and :pep:`647`."
+":data:`~typing.TypeGuard` has been added to the :mod:`typing` module to "
+"annotate type guard functions and improve information provided to static "
+"type checkers during type narrowing.  For more information, please see :data:"
+"`~typing.TypeGuard`\\ 's documentation, and :pep:`647`."
 msgstr ""
 
 #: whatsnew/3.10.rst:806
@@ -1070,8 +1449,8 @@ msgstr ""
 
 #: whatsnew/3.10.rst:975
 msgid ""
-"Add :class:`AsyncContextDecorator`, for supporting usage of async context "
-"managers as decorators."
+"Add :class:`~contextlib.AsyncContextDecorator`, for supporting usage of "
+"async context managers as decorators."
 msgstr ""
 
 #: whatsnew/3.10.rst:979
@@ -1124,6 +1503,16 @@ msgstr ""
 msgid "You can say that every field is keyword-only:"
 msgstr ""
 
+#: whatsnew/3.10.rst:1010
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"@dataclass(kw_only=True)\n"
+"class Birthday:\n"
+"    name: str\n"
+"    birthday: datetime.date"
+msgstr ""
+
 #: whatsnew/3.10.rst:1019
 msgid ""
 "Both ``name`` and ``birthday`` are keyword-only parameters to the generated "
@@ -1132,6 +1521,16 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1022
 msgid "You can specify keyword-only on a per-field basis:"
+msgstr ""
+
+#: whatsnew/3.10.rst:1024
+msgid ""
+"from dataclasses import dataclass, field\n"
+"\n"
+"@dataclass\n"
+"class Birthday:\n"
+"    name: str\n"
+"    birthday: datetime.date = field(kw_only=True)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1033
@@ -1146,6 +1545,19 @@ msgstr ""
 msgid ""
 "You can also specify that all fields following a KW_ONLY marker are keyword-"
 "only.  This will probably be the most common usage:"
+msgstr ""
+
+#: whatsnew/3.10.rst:1041
+msgid ""
+"from dataclasses import dataclass, KW_ONLY\n"
+"\n"
+"@dataclass\n"
+"class Point:\n"
+"    x: float\n"
+"    y: float\n"
+"    _: KW_ONLY\n"
+"    z: float = 0.0\n"
+"    t: float = 0.0"
 msgstr ""
 
 #: whatsnew/3.10.rst:1053
@@ -1204,10 +1616,10 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1092
 msgid ""
-":class:`Enum` :func:`__repr__` now returns ``enum_name.member_name`` and :"
-"func:`__str__` now returns ``member_name``.  Stdlib enums available as "
-"module constants have a :func:`repr` of ``module_name.member_name``. "
-"(Contributed by Ethan Furman in :issue:`40066`.)"
+":class:`~enum.Enum` :func:`~object.__repr__` now returns ``enum_name."
+"member_name`` and :func:`~object.__str__` now returns ``member_name``.  "
+"Stdlib enums available as module constants have a :func:`repr` of "
+"``module_name.member_name``. (Contributed by Ethan Furman in :issue:`40066`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1097
@@ -1228,8 +1640,8 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1107
 msgid ""
-":func:`fileinput.hook_compressed` now returns :class:`TextIOWrapper` object "
-"when *mode* is \"r\" and file is compressed, like uncompressed files. "
+":func:`fileinput.hook_compressed` now returns :class:`~io.TextIOWrapper` "
+"object when *mode* is \"r\" and file is compressed, like uncompressed files. "
 "(Contributed by Inada Naoki in :issue:`5758`.)"
 msgstr ""
 
@@ -1381,16 +1793,16 @@ msgstr ""
 #: whatsnew/3.10.rst:1202
 msgid ""
 ":ref:`importlib.metadata entry points <entry-points>` now provide a nicer "
-"experience for selecting entry points by group and name through a new :class:"
-"`importlib.metadata.EntryPoints` class. See the Compatibility Note in the "
-"docs for more info on the deprecation and usage."
+"experience for selecting entry points by group and name through a new :ref:"
+"`importlib.metadata.EntryPoints <entry-points>` class. See the Compatibility "
+"Note in the docs for more info on the deprecation and usage."
 msgstr ""
 
 #: whatsnew/3.10.rst:1208
 msgid ""
-"Added :func:`importlib.metadata.packages_distributions` for resolving top-"
-"level Python modules and packages to their :class:`importlib.metadata."
-"Distribution`."
+"Added :ref:`importlib.metadata.packages_distributions() <package-"
+"distributions>` for resolving top-level Python modules and packages to "
+"their :ref:`importlib.metadata.Distribution <distributions>`."
 msgstr ""
 
 #: whatsnew/3.10.rst:1213
@@ -1408,7 +1820,7 @@ msgid ""
 "annotations dict defined on any Python object; for more information on best "
 "practices for working with annotations, please see :ref:`annotations-howto`. "
 "Relatedly, :func:`inspect.signature`, :func:`inspect.Signature."
-"from_callable`, and :func:`inspect.Signature.from_function` now call :func:"
+"from_callable`, and :func:`!inspect.Signature.from_function` now call :func:"
 "`inspect.get_annotations` to retrieve annotations. This means :func:`inspect."
 "signature` and :func:`inspect.Signature.from_callable` can also now un-"
 "stringize stringized annotations. (Contributed by Larry Hastings in :issue:"
@@ -1421,8 +1833,8 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1236
 msgid ""
-"Add :func:`itertools.pairwise()`. (Contributed by Raymond Hettinger in :"
-"issue:`38200`.)"
+"Add :func:`itertools.pairwise`. (Contributed by Raymond Hettinger in :issue:"
+"`38200`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1240
@@ -1435,7 +1847,7 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1248
 msgid ""
-"Add :func:`os.cpu_count()` support for VxWorks RTOS. (Contributed by Peixing "
+"Add :func:`os.cpu_count` support for VxWorks RTOS. (Contributed by Peixing "
 "Xin in :issue:`41440`.)"
 msgstr ""
 
@@ -1448,10 +1860,10 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1255
 msgid ""
-"Add :func:`os.splice()` that allows to move data between two file "
-"descriptors without copying between kernel address space and user address "
-"space, where one of the file descriptors must refer to a pipe. (Contributed "
-"by Pablo Galindo in :issue:`41625`.)"
+"Add :func:`os.splice` that allows to move data between two file descriptors "
+"without copying between kernel address space and user address space, where "
+"one of the file descriptors must refer to a pipe. (Contributed by Pablo "
+"Galindo in :issue:`41625`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1260
@@ -1510,7 +1922,7 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1295
 msgid ""
-"Add :func:`platform.freedesktop_os_release()` to retrieve operation system "
+"Add :func:`platform.freedesktop_os_release` to retrieve operation system "
 "identification from `freedesktop.org os-release <https://www.freedesktop.org/"
 "software/systemd/man/os-release.html>`_ standard file. (Contributed by "
 "Christian Heimes in :issue:`28468`.)"
@@ -1786,6 +2198,16 @@ msgid ""
 "error::"
 msgstr ""
 
+#: whatsnew/3.10.rst:1472
+msgid ""
+">>> from typing import Literal\n"
+">>> Literal[{0}]\n"
+">>> Literal[{0}] == Literal[{False}]\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: unhashable type: 'set'"
+msgstr ""
+
 #: whatsnew/3.10.rst:1479
 msgid "(Contributed by Yurii Karabas in :issue:`42345`.)"
 msgstr ""
@@ -1801,10 +2223,10 @@ msgstr ""
 msgid ""
 "Subclasses of ``typing.Protocol`` which only have data variables declared "
 "will now raise a ``TypeError`` when checked with ``isinstance`` unless they "
-"are decorated with :func:`runtime_checkable`.  Previously, these checks "
-"passed silently.  Users should decorate their subclasses with the :func:"
-"`runtime_checkable` decorator if they want runtime protocols. (Contributed "
-"by Yurii Karabas in :issue:`38908`.)"
+"are decorated with :func:`~typing.runtime_checkable`.  Previously, these "
+"checks passed silently.  Users should decorate their subclasses with the :"
+"func:`!runtime_checkable` decorator if they want runtime protocols. "
+"(Contributed by Yurii Karabas in :issue:`38908`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1493
@@ -1970,11 +2392,11 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1598
 msgid ""
-":class:`BZ2File` performance is improved by removing internal ``RLock``. "
-"This makes :class:`BZ2File` thread unsafe in the face of multiple "
-"simultaneous readers or writers, just like its equivalent classes in :mod:"
-"`gzip` and :mod:`lzma` have always been.  (Contributed by Inada Naoki in :"
-"issue:`43785`.)"
+":class:`~bz2.BZ2File` performance is improved by removing internal "
+"``RLock``. This makes :class:`!BZ2File` thread unsafe in the face of "
+"multiple simultaneous readers or writers, just like its equivalent classes "
+"in :mod:`gzip` and :mod:`lzma` have always been.  (Contributed by Inada "
+"Naoki in :issue:`43785`.)"
 msgstr ""
 
 #: whatsnew/3.10.rst:2212
@@ -1999,7 +2421,7 @@ msgid ""
 "Starting in this release, there will be a concerted effort to begin cleaning "
 "up old import semantics that were kept for Python 2.7 compatibility. "
 "Specifically, :meth:`!find_loader`/:meth:`!find_module` (superseded by :meth:"
-"`~importlib.abc.Finder.find_spec`), :meth:`~importlib.abc.Loader."
+"`~importlib.abc.MetaPathFinder.find_spec`), :meth:`~importlib.abc.Loader."
 "load_module` (superseded by :meth:`~importlib.abc.Loader.exec_module`), :"
 "meth:`!module_repr` (which the import system takes care of for you), the "
 "``__package__`` attribute (superseded by ``__spec__.parent``), the "
@@ -2035,7 +2457,7 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1650
 msgid ""
-":meth:`zimport.zipimporter.load_module` has been deprecated in preference "
+":meth:`!zimport.zipimporter.load_module` has been deprecated in preference "
 "for :meth:`~zipimport.zipimporter.exec_module`. (Contributed by Brett Cannon "
 "in :issue:`26131`.)"
 msgstr ""
@@ -2197,32 +2619,30 @@ msgstr ""
 
 #: whatsnew/3.10.rst:1762
 msgid ""
-":data:`~ssl.OP_NO_SSLv2`, :data:`~ssl.OP_NO_SSLv3`, :data:`~ssl."
-"OP_NO_TLSv1`, :data:`~ssl.OP_NO_TLSv1_1`, :data:`~ssl.OP_NO_TLSv1_2`, and :"
-"data:`~ssl.OP_NO_TLSv1_3` are replaced by :attr:`sslSSLContext."
-"minimum_version` and :attr:`sslSSLContext.maximum_version`."
+":data:`!OP_NO_SSLv2`, :data:`!OP_NO_SSLv3`, :data:`!OP_NO_TLSv1`, :data:`!"
+"OP_NO_TLSv1_1`, :data:`!OP_NO_TLSv1_2`, and :data:`!OP_NO_TLSv1_3` are "
+"replaced by :attr:`~ssl.SSLContext.minimum_version` and :attr:`~ssl."
+"SSLContext.maximum_version`."
 msgstr ""
 
 #: whatsnew/3.10.rst:1768
 msgid ""
-":data:`~ssl.PROTOCOL_SSLv2`, :data:`~ssl.PROTOCOL_SSLv3`, :data:`~ssl."
-"PROTOCOL_SSLv23`, :data:`~ssl.PROTOCOL_TLSv1`, :data:`~ssl."
-"PROTOCOL_TLSv1_1`, :data:`~ssl.PROTOCOL_TLSv1_2`, and :const:`~ssl."
-"PROTOCOL_TLS` are deprecated in favor of :const:`~ssl.PROTOCOL_TLS_CLIENT` "
-"and :const:`~ssl.PROTOCOL_TLS_SERVER`"
+":data:`!PROTOCOL_SSLv2`, :data:`!PROTOCOL_SSLv3`, :data:`!PROTOCOL_SSLv23`, :"
+"data:`!PROTOCOL_TLSv1`, :data:`!PROTOCOL_TLSv1_1`, :data:`!"
+"PROTOCOL_TLSv1_2`, and :const:`!PROTOCOL_TLS` are deprecated in favor of :"
+"const:`~ssl.PROTOCOL_TLS_CLIENT` and :const:`~ssl.PROTOCOL_TLS_SERVER`"
 msgstr ""
 
 #: whatsnew/3.10.rst:1774
-msgid ""
-":func:`~ssl.wrap_socket` is replaced by :meth:`ssl.SSLContext.wrap_socket`"
+msgid ":func:`!wrap_socket` is replaced by :meth:`ssl.SSLContext.wrap_socket`"
 msgstr ""
 
 #: whatsnew/3.10.rst:1776
-msgid ":func:`~ssl.match_hostname`"
+msgid ":func:`!match_hostname`"
 msgstr ""
 
 #: whatsnew/3.10.rst:1778
-msgid ":func:`~ssl.RAND_pseudo_bytes`, :func:`~ssl.RAND_egd`"
+msgid ":func:`!RAND_pseudo_bytes`, :func:`!RAND_egd`"
 msgstr ""
 
 #: whatsnew/3.10.rst:1780
@@ -2428,8 +2848,20 @@ msgstr ""
 msgid "A coroutine that currently looks like this::"
 msgstr ""
 
+#: whatsnew/3.10.rst:1915
+msgid ""
+"async def foo(loop):\n"
+"    await asyncio.sleep(1, loop=loop)"
+msgstr ""
+
 #: whatsnew/3.10.rst:1918
 msgid "Should be replaced with this::"
+msgstr ""
+
+#: whatsnew/3.10.rst:1920
+msgid ""
+"async def foo():\n"
+"    await asyncio.sleep(1)"
 msgstr ""
 
 #: whatsnew/3.10.rst:1923
@@ -2494,6 +2926,17 @@ msgid ""
 "module with :c:func:`PyImport_ImportModule`, :c:func:`PyObject_CallMethod`, :"
 "c:func:`PyBytes_AsString` and :c:func:`Py_CompileString`, as sketched below. "
 "(Declarations and error handling are omitted.) ::"
+msgstr ""
+
+#: whatsnew/3.10.rst:1966
+msgid ""
+"io_module = Import_ImportModule(\"io\");\n"
+"fileobject = PyObject_CallMethod(io_module, \"open\", \"ss\", filename, "
+"\"rb\");\n"
+"source_bytes_object = PyObject_CallMethod(fileobject, \"read\", \"\");\n"
+"result = PyObject_CallMethod(fileobject, \"close\", \"\");\n"
+"source_buf = PyBytes_AsString(source_bytes_object);\n"
+"code = Py_CompileString(source_buf, filename, Py_file_input);"
 msgstr ""
 
 #: whatsnew/3.10.rst:1973
@@ -2775,6 +3218,13 @@ msgid ""
 "``Py_REFCNT(obj) = new_refcnt`` must be replaced with ``Py_SET_REFCNT(obj, "
 "new_refcnt)``: see :c:func:`Py_SET_REFCNT()` (available since Python 3.9). "
 "For backward compatibility, this macro can be used::"
+msgstr ""
+
+#: whatsnew/3.10.rst:2160
+msgid ""
+"#if PY_VERSION_HEX < 0x030900A4\n"
+"#  define Py_SET_REFCNT(obj, refcnt) ((Py_REFCNT(obj) = (refcnt)), (void)0)\n"
+"#endif"
 msgstr ""
 
 #: whatsnew/3.10.rst:2164
@@ -3099,19 +3549,18 @@ msgid ""
 "(binary), 4, 8 (octal), 16 (hexadecimal), or 32 such as base 10 (decimal) "
 "now raises a :exc:`ValueError` if the number of digits in string form is "
 "above a limit to avoid potential denial of service attacks due to the "
-"algorithmic complexity. This is a mitigation for `CVE-2020-10735 <https://"
-"cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735>`_. This limit can be "
-"configured or disabled by environment variable, command line flag, or :mod:"
-"`sys` APIs. See the :ref:`integer string conversion length limitation "
-"<int_max_str_digits>` documentation.  The default limit is 4300 digits in "
-"string form."
+"algorithmic complexity. This is a mitigation for :cve:`2020-10735`. This "
+"limit can be configured or disabled by environment variable, command line "
+"flag, or :mod:`sys` APIs. See the :ref:`integer string conversion length "
+"limitation <int_max_str_digits>` documentation.  The default limit is 4300 "
+"digits in string form."
 msgstr ""
 
-#: whatsnew/3.10.rst:2342
+#: whatsnew/3.10.rst:2341
 msgid "Notable security feature in 3.10.8"
 msgstr ""
 
-#: whatsnew/3.10.rst:2344
+#: whatsnew/3.10.rst:2343
 msgid ""
 "The deprecated :mod:`!mailcap` module now refuses to inject unsafe text "
 "(filenames, MIME types, parameters) into shell commands. Instead of using "
@@ -3120,15 +3569,15 @@ msgid ""
 "`98966`.)"
 msgstr ""
 
-#: whatsnew/3.10.rst:2351
+#: whatsnew/3.10.rst:2350
 msgid "Notable changes in 3.10.12"
 msgstr ""
 
-#: whatsnew/3.10.rst:2354
+#: whatsnew/3.10.rst:2353
 msgid "tarfile"
 msgstr ""
 
-#: whatsnew/3.10.rst:2356
+#: whatsnew/3.10.rst:2355
 msgid ""
 "The extraction methods in :mod:`tarfile`, and :func:`shutil.unpack_archive`, "
 "have a new a *filter* argument that allows limiting tar features than may be "

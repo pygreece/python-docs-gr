@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -257,7 +258,19 @@ msgid ""
 "protocol::"
 msgstr ""
 
-#: whatsnew/3.6.rst:204
+#: whatsnew/3.6.rst:192
+msgid ""
+">>> name = \"Fred\"\n"
+">>> f\"He said his name is {name}.\"\n"
+"'He said his name is Fred.'\n"
+">>> width = 10\n"
+">>> precision = 4\n"
+">>> value = decimal.Decimal(\"12.34567\")\n"
+">>> f\"result: {value:{width}.{precision}}\"  # nested fields\n"
+"'result:      12.35'"
+msgstr ""
+
+#: whatsnew/3.6.rst:203
 msgid ":pep:`498` -- Literal String Interpolation."
 msgstr ""
 
@@ -280,6 +293,16 @@ msgid ""
 "the types of variables including class variables and instance variables::"
 msgstr ""
 
+#: whatsnew/3.6.rst:218
+msgid ""
+"primes: List[int] = []\n"
+"\n"
+"captain: str  # Note: no initial value!\n"
+"\n"
+"class Starship:\n"
+"    stats: Dict[str, int] = {}"
+msgstr ""
+
 #: whatsnew/3.6.rst:225
 msgid ""
 "Just as for function annotations, the Python interpreter does not attach any "
@@ -295,7 +318,7 @@ msgid ""
 "and the ``__annotations__`` attribute."
 msgstr ""
 
-#: whatsnew/3.6.rst:238
+#: whatsnew/3.6.rst:236
 msgid ":pep:`526` -- Syntax for variable annotations."
 msgstr ""
 
@@ -321,6 +344,14 @@ msgid ""
 "improved readability.  For example::"
 msgstr ""
 
+#: whatsnew/3.6.rst:253
+msgid ""
+">>> 1_000_000_000_000_000\n"
+"1000000000000000\n"
+">>> 0x_FF_FF_FF_FF\n"
+"4294967295"
+msgstr ""
+
 #: whatsnew/3.6.rst:258
 msgid ""
 "Single underscores are allowed between digits and after any base specifier.  "
@@ -331,9 +362,17 @@ msgstr ""
 msgid ""
 "The :ref:`string formatting <formatspec>` language also now has support for "
 "the ``'_'`` option to signal the use of an underscore for a thousands "
-"separator for floating point presentation types and for integer presentation "
+"separator for floating-point presentation types and for integer presentation "
 "type ``'d'``.  For integer presentation types ``'b'``, ``'o'``, ``'x'``, and "
 "``'X'``, underscores will be inserted every 4 digits::"
+msgstr ""
+
+#: whatsnew/3.6.rst:269
+msgid ""
+">>> '{:_}'.format(1000000)\n"
+"'1_000_000'\n"
+">>> '{:_x}'.format(0xFFFFFFFF)\n"
+"'ffff_ffff'"
 msgstr ""
 
 #: whatsnew/3.6.rst:276
@@ -355,6 +394,15 @@ msgid ""
 "implementation is that it was not possible to use ``await`` and ``yield`` in "
 "the same function body.  In Python 3.6 this restriction has been lifted, "
 "making it possible to define *asynchronous generators*::"
+msgstr ""
+
+#: whatsnew/3.6.rst:291
+msgid ""
+"async def ticker(delay, to):\n"
+"    \"\"\"Yield numbers from 0 to *to* every *delay* seconds.\"\"\"\n"
+"    for i in range(to):\n"
+"        yield i\n"
+"        await asyncio.sleep(delay)"
 msgstr ""
 
 #: whatsnew/3.6.rst:297
@@ -379,10 +427,18 @@ msgid ""
 "comprehensions and generator expressions::"
 msgstr ""
 
+#: whatsnew/3.6.rst:313
+msgid "result = [i async for i in aiter() if i % 2]"
+msgstr ""
+
 #: whatsnew/3.6.rst:315
 msgid ""
 "Additionally, ``await`` expressions are supported in all kinds of "
 "comprehensions::"
+msgstr ""
+
+#: whatsnew/3.6.rst:318
+msgid "result = [await fun() for fun in funcs if await condition()]"
 msgstr ""
 
 #: whatsnew/3.6.rst:322
@@ -400,6 +456,22 @@ msgid ""
 "whenever a new subclass is created::"
 msgstr ""
 
+#: whatsnew/3.6.rst:335
+msgid ""
+"class PluginBase:\n"
+"    subclasses = []\n"
+"\n"
+"    def __init_subclass__(cls, **kwargs):\n"
+"        super().__init_subclass__(**kwargs)\n"
+"        cls.subclasses.append(cls)\n"
+"\n"
+"class Plugin1(PluginBase):\n"
+"    pass\n"
+"\n"
+"class Plugin2(PluginBase):\n"
+"    pass"
+msgstr ""
+
 #: whatsnew/3.6.rst:348
 msgid ""
 "In order to allow zero-argument :func:`super` calls to work correctly from :"
@@ -408,7 +480,7 @@ msgid ""
 "``type.__new__`` (as described in :ref:`class-object-creation`)."
 msgstr ""
 
-#: whatsnew/3.6.rst:394
+#: whatsnew/3.6.rst:393
 msgid ":pep:`487` -- Simpler customization of class creation"
 msgstr ""
 
@@ -433,6 +505,25 @@ msgid ""
 "given to the descriptor within the class namespace.  In other words, "
 "instances of descriptors can now know the attribute name of the descriptor "
 "in the owner class::"
+msgstr ""
+
+#: whatsnew/3.6.rst:374
+msgid ""
+"class IntField:\n"
+"    def __get__(self, instance, owner):\n"
+"        return instance.__dict__[self.name]\n"
+"\n"
+"    def __set__(self, instance, value):\n"
+"        if not isinstance(value, int):\n"
+"            raise ValueError(f'expecting integer in {self.name}')\n"
+"        instance.__dict__[self.name] = value\n"
+"\n"
+"    # this is the new initializer:\n"
+"    def __set_name__(self, owner, name):\n"
+"        self.name = name\n"
+"\n"
+"class Model:\n"
+"    int_field = IntField()"
 msgstr ""
 
 #: whatsnew/3.6.rst:396
@@ -492,6 +583,22 @@ msgid ""
 "Path` to be used more easily and transparently with pre-existing code::"
 msgstr ""
 
+#: whatsnew/3.6.rst:444
+msgid ""
+">>> import pathlib\n"
+">>> with open(pathlib.Path(\"README\")) as f:\n"
+"...     contents = f.read()\n"
+"...\n"
+">>> import os.path\n"
+">>> os.path.splitext(pathlib.Path(\"some_file.txt\"))\n"
+"('some_file', '.txt')\n"
+">>> os.path.join(\"/a/b\", pathlib.Path(\"c\"))\n"
+"'/a/b/c'\n"
+">>> import os\n"
+">>> os.fspath(pathlib.Path(\"some_file.txt\"))\n"
+"'some_file.txt'"
+msgstr ""
+
 #: whatsnew/3.6.rst:457
 msgid ""
 "(Implemented by Brett Cannon, Ethan Furman, Dusty Phillips, and Jelle "
@@ -526,6 +633,20 @@ msgid ""
 "moments in time for which local times are the same::"
 msgstr ""
 
+#: whatsnew/3.6.rst:480
+msgid ""
+">>> u0 = datetime(2016, 11, 6, 4, tzinfo=timezone.utc)\n"
+">>> for i in range(4):\n"
+"...     u = u0 + i*HOUR\n"
+"...     t = u.astimezone(Eastern)\n"
+"...     print(u.time(), 'UTC =', t.time(), t.tzname(), t.fold)\n"
+"...\n"
+"04:00:00 UTC = 00:00:00 EDT 0\n"
+"05:00:00 UTC = 01:00:00 EDT 0\n"
+"06:00:00 UTC = 01:00:00 EST 1\n"
+"07:00:00 UTC = 02:00:00 EST 0"
+msgstr ""
+
 #: whatsnew/3.6.rst:491
 msgid ""
 "The values of the :attr:`fold <datetime.datetime.fold>` attribute have the "
@@ -533,7 +654,7 @@ msgid ""
 "(chronologically) moment in time in an ambiguous case."
 msgstr ""
 
-#: whatsnew/3.6.rst:498
+#: whatsnew/3.6.rst:497
 msgid ":pep:`495` -- Local Time Disambiguation"
 msgstr ""
 
@@ -559,13 +680,13 @@ msgid ""
 "Prior to Python 3.6, data loss could result when using bytes paths on "
 "Windows. With this change, using bytes to represent paths is now supported "
 "on Windows, provided those bytes are encoded with the encoding returned by :"
-"func:`sys.getfilesystemencoding()`, which now defaults to ``'utf-8'``."
+"func:`sys.getfilesystemencoding`, which now defaults to ``'utf-8'``."
 msgstr ""
 
 #: whatsnew/3.6.rst:516
 msgid ""
 "Applications that do not use str to represent paths should use :func:`os."
-"fsencode()` and :func:`os.fsdecode()` to ensure their bytes are correctly "
+"fsencode` and :func:`os.fsdecode` to ensure their bytes are correctly "
 "encoded. To revert to the previous behaviour, set :envvar:"
 "`PYTHONLEGACYWINDOWSFSENCODING` or call :func:`sys."
 "_enablelegacywindowsfsencoding`."
@@ -611,7 +732,7 @@ msgstr ""
 msgid ""
 "Attributes in a class definition body have a natural ordering: the same "
 "order in which the names appear in the source.  This order is now preserved "
-"in the new class's :attr:`~object.__dict__` attribute."
+"in the new class's :attr:`~type.__dict__` attribute."
 msgstr ""
 
 #: whatsnew/3.6.rst:554
@@ -790,6 +911,44 @@ msgid ""
 "tracemalloc=5`` (store 5 frames in traces)::"
 msgstr ""
 
+#: whatsnew/3.6.rst:673
+msgid ""
+"Debug memory block at address p=0x7fbcd41666f8: API 'o'\n"
+"    4 bytes originally requested\n"
+"    The 7 pad bytes at p-7 are FORBIDDENBYTE, as expected.\n"
+"    The 8 pad bytes at tail=0x7fbcd41666fc are not all FORBIDDENBYTE "
+"(0xfb):\n"
+"        at tail+0: 0x02 *** OUCH\n"
+"        at tail+1: 0xfb\n"
+"        at tail+2: 0xfb\n"
+"        at tail+3: 0xfb\n"
+"        at tail+4: 0xfb\n"
+"        at tail+5: 0xfb\n"
+"        at tail+6: 0xfb\n"
+"        at tail+7: 0xfb\n"
+"    The block was made by call #1233329 to debug malloc/realloc.\n"
+"    Data at p: 1a 2b 30 00\n"
+"\n"
+"Memory block allocated at (most recent call first):\n"
+"  File \"test/test_bytes.py\", line 323\n"
+"  File \"unittest/case.py\", line 600\n"
+"  File \"unittest/case.py\", line 648\n"
+"  File \"unittest/suite.py\", line 122\n"
+"  File \"unittest/suite.py\", line 84\n"
+"\n"
+"Fatal Python error: bad trailing pad byte\n"
+"\n"
+"Current thread 0x00007fbcdbd32700 (most recent call first):\n"
+"  File \"test/test_bytes.py\", line 323 in test_hex\n"
+"  File \"unittest/case.py\", line 600 in run\n"
+"  File \"unittest/case.py\", line 648 in __call__\n"
+"  File \"unittest/suite.py\", line 122 in run\n"
+"  File \"unittest/suite.py\", line 84 in __call__\n"
+"  File \"unittest/suite.py\", line 122 in run\n"
+"  File \"unittest/suite.py\", line 84 in __call__\n"
+"  ..."
+msgstr ""
+
 #: whatsnew/3.6.rst:707
 msgid "(Contributed by Victor Stinner in :issue:`26516` and :issue:`26564`.)"
 msgstr ""
@@ -904,7 +1063,7 @@ msgstr ""
 msgid ""
 "Note that the pseudo-random generators in the :mod:`random` module should "
 "*NOT* be used for security purposes.  Use :mod:`secrets` on Python 3.6+ and :"
-"func:`os.urandom()` on Python 3.5 and earlier."
+"func:`os.urandom` on Python 3.5 and earlier."
 msgstr ""
 
 #: whatsnew/3.6.rst:787
@@ -1136,9 +1295,9 @@ msgstr ""
 #: whatsnew/3.6.rst:935
 msgid ""
 "The :func:`~collections.namedtuple` function now accepts an optional keyword "
-"argument *module*, which, when specified, is used for the ``__module__`` "
-"attribute of the returned named tuple class. (Contributed by Raymond "
-"Hettinger in :issue:`17941`.)"
+"argument *module*, which, when specified, is used for the :attr:`~type."
+"__module__` attribute of the returned named tuple class. (Contributed by "
+"Raymond Hettinger in :issue:`17941`.)"
 msgstr ""
 
 #: whatsnew/3.6.rst:2295
@@ -1228,6 +1387,12 @@ msgid ""
 "positive denominator::"
 msgstr ""
 
+#: whatsnew/3.6.rst:1004
+msgid ""
+">>> Decimal('-3.14').as_integer_ratio()\n"
+"(-157, 50)"
+msgstr ""
+
 #: whatsnew/3.6.rst:1007
 msgid "(Contributed by Stefan Krah amd Mark Dickinson in :issue:`25928`.)"
 msgstr ""
@@ -1313,6 +1478,18 @@ msgstr ""
 msgid ""
 "The new :class:`enum.auto` value can be used to assign values to enum "
 "members automatically::"
+msgstr ""
+
+#: whatsnew/3.6.rst:1065
+msgid ""
+">>> from enum import Enum, auto\n"
+">>> class Color(Enum):\n"
+"...     red = auto()\n"
+"...     blue = auto()\n"
+"...     green = auto()\n"
+"...\n"
+">>> list(Color)\n"
+"[<Color.red: 1>, <Color.blue: 2>, <Color.green: 3>]"
 msgstr ""
 
 #: whatsnew/3.6.rst:1076
@@ -1670,7 +1847,7 @@ msgstr ""
 
 #: whatsnew/3.6.rst:1319
 msgid ""
-":func:`pickletools.dis()` now outputs the implicit memo index for the "
+":func:`pickletools.dis` now outputs the implicit memo index for the "
 "``MEMOIZE`` opcode. (Contributed by Serhiy Storchaka in :issue:`25382`.)"
 msgstr ""
 
@@ -2026,6 +2203,20 @@ msgid ""
 "the following example::"
 msgstr ""
 
+#: whatsnew/3.6.rst:1573
+msgid ""
+">>> def f(): f()\n"
+"...\n"
+">>> f()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  [Previous line repeated 995 more times]\n"
+"RecursionError: maximum recursion depth exceeded"
+msgstr ""
+
 #: whatsnew/3.6.rst:1584
 msgid "(Contributed by Emanuel Barry in :issue:`26823`.)"
 msgstr ""
@@ -2104,6 +2295,14 @@ msgstr ""
 msgid ""
 "A new :func:`~typing.NewType` helper function has been added to create "
 "lightweight distinct types for annotations::"
+msgstr ""
+
+#: whatsnew/3.6.rst:1637
+msgid ""
+"from typing import NewType\n"
+"\n"
+"UserId = NewType('UserId', int)\n"
+"some_id = UserId(524313)"
 msgstr ""
 
 #: whatsnew/3.6.rst:1642
@@ -2204,8 +2403,31 @@ msgstr ""
 msgid "Example with the script ``example.py``::"
 msgstr ""
 
+#: whatsnew/3.6.rst:1712
+msgid ""
+"import warnings\n"
+"\n"
+"def func():\n"
+"    return open(__file__)\n"
+"\n"
+"f = func()\n"
+"f = None"
+msgstr ""
+
 #: whatsnew/3.6.rst:1720
 msgid "Output of the command ``python3.6 -Wd -X tracemalloc=5 example.py``::"
+msgstr ""
+
+#: whatsnew/3.6.rst:1722
+msgid ""
+"example.py:7: ResourceWarning: unclosed file <_io.TextIOWrapper "
+"name='example.py' mode='r' encoding='UTF-8'>\n"
+"  f = None\n"
+"Object allocated at (most recent call first):\n"
+"  File \"example.py\", lineno 4\n"
+"    return open(__file__)\n"
+"  File \"example.py\", lineno 6\n"
+"    f = func()"
 msgstr ""
 
 #: whatsnew/3.6.rst:1730
@@ -2507,6 +2729,13 @@ msgstr ""
 msgid ""
 "When :option:`--version` (short form: :option:`-V`) is supplied twice, "
 "Python prints :data:`sys.version` for detailed information."
+msgstr ""
+
+#: whatsnew/3.6.rst:1919
+msgid ""
+"$ ./python -VV\n"
+"Python 3.6.0b4+ (3.6:223967b49e49+, Nov 21 2016, 20:55:04)\n"
+"[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)]"
 msgstr ""
 
 #: whatsnew/3.6.rst:1927
@@ -2974,6 +3203,12 @@ msgid ""
 "containing the following:"
 msgstr ""
 
+#: whatsnew/3.6.rst:2270
+msgid ""
+"[sdist]\n"
+"formats=zip"
+msgstr ""
+
 #: whatsnew/3.6.rst:2275
 msgid ""
 "This behavior has also been backported to earlier Python versions by "
@@ -3066,9 +3301,9 @@ msgid ""
 "may start expecting import system replacements to raise that more specific "
 "exception when appropriate, rather than the less-specific :exc:"
 "`ImportError`. To provide future compatibility with such consumers, "
-"implementors of alternative import systems that completely replace :func:"
+"implementers of alternative import systems that completely replace :func:"
 "`__import__` will need to update their implementations to raise the new "
-"subclass when a module can't be found at all. Implementors of compliant "
+"subclass when a module can't be found at all. Implementers of compliant "
 "plugins to the default import system shouldn't need to make any changes, as "
 "the default import system will raise the new subclass when appropriate."
 msgstr ""
@@ -3126,10 +3361,10 @@ msgstr ""
 #: whatsnew/3.6.rst:2378
 msgid ""
 "The function call opcodes have been heavily reworked for better performance "
-"and simpler implementation. The :opcode:`MAKE_FUNCTION`, :opcode:"
-"`CALL_FUNCTION`, :opcode:`CALL_FUNCTION_KW` and :opcode:"
-"`BUILD_MAP_UNPACK_WITH_CALL` opcodes have been modified, the new :opcode:"
-"`CALL_FUNCTION_EX` and :opcode:`BUILD_TUPLE_UNPACK_WITH_CALL` have been "
+"and simpler implementation. The :opcode:`MAKE_FUNCTION`, :opcode:`!"
+"CALL_FUNCTION`, :opcode:`!CALL_FUNCTION_KW` and :opcode:`!"
+"BUILD_MAP_UNPACK_WITH_CALL` opcodes have been modified, the new :opcode:"
+"`CALL_FUNCTION_EX` and :opcode:`!BUILD_TUPLE_UNPACK_WITH_CALL` have been "
 "added, and ``CALL_FUNCTION_VAR``, ``CALL_FUNCTION_VAR_KW`` and "
 "``MAKE_CLOSURE`` opcodes have been removed. (Contributed by Demur Rumed in :"
 "issue:`27095`, and Serhiy Storchaka in :issue:`27213`, :issue:`28257`.)"
@@ -3137,7 +3372,7 @@ msgstr ""
 
 #: whatsnew/3.6.rst:2389
 msgid ""
-"The new :opcode:`SETUP_ANNOTATIONS` and :opcode:`STORE_ANNOTATION` opcodes "
+"The new :opcode:`SETUP_ANNOTATIONS` and :opcode:`!STORE_ANNOTATION` opcodes "
 "have been added to support the new :term:`variable annotation` syntax. "
 "(Contributed by Ivan Levkivskyi in :issue:`27985`.)"
 msgstr ""

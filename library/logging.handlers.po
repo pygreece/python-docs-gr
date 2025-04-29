@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/logging.handlers.rst:2
-msgid ":mod:`logging.handlers` --- Logging handlers"
+msgid ":mod:`!logging.handlers` --- Logging handlers"
 msgstr ""
 
 #: library/logging.handlers.rst:10
@@ -102,7 +103,7 @@ msgid "Returns"
 msgstr ""
 
 #: library/logging.handlers.rst:69
-msgid "the old stream, if the stream was changed, or *None* if it wasn't."
+msgid "the old stream, if the stream was changed, or ``None`` if it wasn't."
 msgstr ""
 
 #: library/logging.handlers.rst:75
@@ -661,6 +662,13 @@ msgid ""
 "Pickles the record's attribute dictionary in binary format with a length "
 "prefix, and returns it ready for transmission across the socket. The details "
 "of this operation are equivalent to::"
+msgstr ""
+
+#: library/logging.handlers.rst:517
+msgid ""
+"data = pickle.dumps(record_attr_dict, 1)\n"
+"datalen = struct.pack('>L', len(data))\n"
+"return datalen + data"
 msgstr ""
 
 #: library/logging.handlers.rst:521
@@ -1603,7 +1611,7 @@ msgid ""
 "if you want to use timeouts or work with custom queue implementations."
 msgstr ""
 
-#: library/logging.handlers.rst:1196
+#: library/logging.handlers.rst:1195
 msgid "Module :mod:`logging`"
 msgstr ""
 

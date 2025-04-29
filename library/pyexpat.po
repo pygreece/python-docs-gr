@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:51+0000\n"
+"POT-Creation-Date: 2025-02-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/pyexpat.rst:2
-msgid ":mod:`xml.parsers.expat` --- Fast XML parsing using Expat"
+msgid ":mod:`!xml.parsers.expat` --- Fast XML parsing using Expat"
 msgstr ""
 
 #: library/pyexpat.rst:21
@@ -101,10 +102,27 @@ msgid ""
 "and the following document is parsed:"
 msgstr ""
 
+#: library/pyexpat.rst:91
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<root xmlns    = \"http://default-namespace.org/\"\n"
+"      xmlns:py = \"http://www.python.org/ns/\">\n"
+"  <py:elem1 />\n"
+"  <elem2 xmlns=\"\" />\n"
+"</root>"
+msgstr ""
+
 #: library/pyexpat.rst:100
 msgid ""
 ":attr:`StartElementHandler` will receive the following strings for each "
 "element::"
+msgstr ""
+
+#: library/pyexpat.rst:103
+msgid ""
+"http://default-namespace.org/ root\n"
+"http://www.python.org/ns/ elem1\n"
+"elem2"
 msgstr ""
 
 #: library/pyexpat.rst:107
@@ -227,8 +245,8 @@ msgid ""
 "default until a sufficient amount of input is reached. Due to this delay, "
 "registered handlers may — depending of the sizing of input chunks pushed to "
 "Expat — no longer be called right after pushing new input to the parser.  "
-"Where immediate feedback and taking over responsiblity of protecting against "
-"denial of service from large tokens are both wanted, calling "
+"Where immediate feedback and taking over responsibility of protecting "
+"against denial of service from large tokens are both wanted, calling "
 "``SetReparseDeferralEnabled(False)`` disables reparse deferral for the "
 "current Expat parser instance, temporarily or altogether. Calling "
 "``SetReparseDeferralEnabled(True)`` allows re-enabling reparse deferral."
@@ -558,6 +576,17 @@ msgid ""
 "numbers to Expat's error messages.  For example::"
 msgstr ""
 
+#: library/pyexpat.rst:541
+msgid ""
+"from xml.parsers.expat import ParserCreate, ExpatError, errors\n"
+"\n"
+"p = ParserCreate()\n"
+"try:\n"
+"    p.Parse(some_xml_document)\n"
+"except ExpatError as err:\n"
+"    print(\"Error:\", errors.messages[err.code])"
+msgstr ""
+
 #: library/pyexpat.rst:549
 msgid ""
 "The :mod:`~xml.parsers.expat.errors` module also provides error message "
@@ -587,8 +616,46 @@ msgid ""
 "arguments. ::"
 msgstr ""
 
+#: library/pyexpat.rst:573
+msgid ""
+"import xml.parsers.expat\n"
+"\n"
+"# 3 handler functions\n"
+"def start_element(name, attrs):\n"
+"    print('Start element:', name, attrs)\n"
+"def end_element(name):\n"
+"    print('End element:', name)\n"
+"def char_data(data):\n"
+"    print('Character data:', repr(data))\n"
+"\n"
+"p = xml.parsers.expat.ParserCreate()\n"
+"\n"
+"p.StartElementHandler = start_element\n"
+"p.EndElementHandler = end_element\n"
+"p.CharacterDataHandler = char_data\n"
+"\n"
+"p.Parse(\"\"\"<?xml version=\"1.0\"?>\n"
+"<parent id=\"top\"><child1 name=\"paul\">Text goes here</child1>\n"
+"<child2 name=\"fred\">More text</child2>\n"
+"</parent>\"\"\", 1)"
+msgstr ""
+
 #: library/pyexpat.rst:594
 msgid "The output from this program is::"
+msgstr ""
+
+#: library/pyexpat.rst:596
+msgid ""
+"Start element: parent {'id': 'top'}\n"
+"Start element: child1 {'name': 'paul'}\n"
+"Character data: 'Text goes here'\n"
+"End element: child1\n"
+"Character data: '\\n'\n"
+"Start element: child2 {'name': 'fred'}\n"
+"Character data: 'More text'\n"
+"End element: child2\n"
+"Character data: '\\n'\n"
+"End element: parent"
 msgstr ""
 
 #: library/pyexpat.rst:611
