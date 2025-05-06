@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Get the *frame* code."
 msgstr ""
 
-#: c-api/frame.rst:125
+#: c-api/frame.rst:130
 msgid "Return a :term:`strong reference`."
 msgstr ""
 
@@ -146,34 +146,70 @@ msgid ""
 msgstr ""
 
 #: c-api/frame.rst:123
-msgid "Get the *frame*'s :attr:`~frame.f_locals` attribute (:class:`dict`)."
+msgid ""
+"Get the *frame*'s :attr:`~frame.f_locals` attribute. If the frame refers to "
+"an :term:`optimized scope`, this returns a write-through proxy object that "
+"allows modifying the locals. In all other cases (classes, modules, :func:"
+"`exec`, :func:`eval`) it returns the mapping representing the frame locals "
+"directly (as described for :func:`locals`)."
 msgstr ""
 
-#: c-api/frame.rst:132
+#: c-api/frame.rst:134
+msgid ""
+"As part of :pep:`667`, return an instance of :c:var:"
+"`PyFrameLocalsProxy_Type`."
+msgstr ""
+
+#: c-api/frame.rst:140
 msgid "Return the line number that *frame* is currently executing."
 msgstr ""
 
-#: c-api/frame.rst:137
+#: c-api/frame.rst:144
+msgid "Frame Locals Proxies"
+msgstr ""
+
+#: c-api/frame.rst:148
+msgid ""
+"The :attr:`~frame.f_locals` attribute on a :ref:`frame object <frame-"
+"objects>` is an instance of a \"frame-locals proxy\". The proxy object "
+"exposes a write-through view of the underlying locals dictionary for the "
+"frame. This ensures that the variables exposed by ``f_locals`` are always up "
+"to date with the live local variables in the frame itself."
+msgstr ""
+
+#: c-api/frame.rst:154
+msgid "See :pep:`667` for more information."
+msgstr ""
+
+#: c-api/frame.rst:158
+msgid "The type of frame :func:`locals` proxy objects."
+msgstr ""
+
+#: c-api/frame.rst:162
+msgid "Return non-zero if *obj* is a frame :func:`locals` proxy."
+msgstr ""
+
+#: c-api/frame.rst:165
 msgid "Internal Frames"
 msgstr ""
 
-#: c-api/frame.rst:139
+#: c-api/frame.rst:167
 msgid "Unless using :pep:`523`, you will not need this."
 msgstr ""
 
-#: c-api/frame.rst:143
+#: c-api/frame.rst:171
 msgid "The interpreter's internal frame representation."
 msgstr ""
 
-#: c-api/frame.rst:149
+#: c-api/frame.rst:177
 msgid "Return a :term:`strong reference` to the code object for the frame."
 msgstr ""
 
-#: c-api/frame.rst:156
+#: c-api/frame.rst:184
 msgid "Return the byte offset into the last executed instruction."
 msgstr ""
 
-#: c-api/frame.rst:163
+#: c-api/frame.rst:191
 msgid ""
 "Return the currently executing line number, or -1 if there is no line number."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,7 +99,7 @@ msgid ""
 "    # access shared state"
 msgstr ""
 
-#: library/asyncio-sync.rst:201 library/asyncio-sync.rst:304
+#: library/asyncio-sync.rst:201 library/asyncio-sync.rst:309
 msgid "which is equivalent to::"
 msgstr ""
 
@@ -115,8 +115,8 @@ msgid ""
 "    lock.release()"
 msgstr ""
 
-#: library/asyncio-sync.rst:113 library/asyncio-sync.rst:292
-#: library/asyncio-sync.rst:348
+#: library/asyncio-sync.rst:113 library/asyncio-sync.rst:297
+#: library/asyncio-sync.rst:353
 msgid "Removed the *loop* parameter."
 msgstr ""
 
@@ -180,7 +180,7 @@ msgid ""
 "*true*.  The flag is set to *false* initially."
 msgstr ""
 
-#: library/asyncio-sync.rst:372
+#: library/asyncio-sync.rst:377
 msgid "Example::"
 msgstr ""
 
@@ -307,8 +307,8 @@ msgstr ""
 
 #: library/asyncio-sync.rst:222
 msgid ""
-"Wake up at most *n* tasks (1 by default) waiting on this condition.  The "
-"method is no-op if no tasks are waiting."
+"Wake up *n* tasks (1 by default) waiting on this condition.  If fewer than "
+"*n* tasks are waiting they are all awakened."
 msgstr ""
 
 #: library/asyncio-sync.rst:240
@@ -355,26 +355,34 @@ msgid ""
 "Condition re-acquires its lock and this method returns ``True``."
 msgstr ""
 
-#: library/asyncio-sync.rst:267
+#: library/asyncio-sync.rst:264
+msgid ""
+"Note that a task *may* return from this call spuriously, which is why the "
+"caller should always re-check the state and be prepared to :meth:`~Condition."
+"wait` again. For this reason, you may prefer to use :meth:`~Condition."
+"wait_for` instead."
+msgstr ""
+
+#: library/asyncio-sync.rst:272
 msgid "Wait until a predicate becomes *true*."
 msgstr ""
 
-#: library/asyncio-sync.rst:269
+#: library/asyncio-sync.rst:274
 msgid ""
 "The predicate must be a callable which result will be interpreted as a "
 "boolean value.  The method will repeatedly :meth:`~Condition.wait` until the "
 "predicate evaluates to *true*. The final value is the return value."
 msgstr ""
 
-#: library/asyncio-sync.rst:276
+#: library/asyncio-sync.rst:281
 msgid "Semaphore"
 msgstr ""
 
-#: library/asyncio-sync.rst:280
+#: library/asyncio-sync.rst:285
 msgid "A Semaphore object.  Not thread-safe."
 msgstr ""
 
-#: library/asyncio-sync.rst:282
+#: library/asyncio-sync.rst:287
 msgid ""
 "A semaphore manages an internal counter which is decremented by each :meth:"
 "`acquire` call and incremented by each :meth:`release` call. The counter can "
@@ -382,19 +390,19 @@ msgid ""
 "waiting until some task calls :meth:`release`."
 msgstr ""
 
-#: library/asyncio-sync.rst:288
+#: library/asyncio-sync.rst:293
 msgid ""
 "The optional *value* argument gives the initial value for the internal "
 "counter (``1`` by default). If the given value is less than ``0`` a :exc:"
 "`ValueError` is raised."
 msgstr ""
 
-#: library/asyncio-sync.rst:295
+#: library/asyncio-sync.rst:300
 msgid ""
 "The preferred way to use a Semaphore is an :keyword:`async with` statement::"
 msgstr ""
 
-#: library/asyncio-sync.rst:298
+#: library/asyncio-sync.rst:303
 msgid ""
 "sem = asyncio.Semaphore(10)\n"
 "\n"
@@ -403,7 +411,7 @@ msgid ""
 "    # work with shared resource"
 msgstr ""
 
-#: library/asyncio-sync.rst:306
+#: library/asyncio-sync.rst:311
 msgid ""
 "sem = asyncio.Semaphore(10)\n"
 "\n"
@@ -415,57 +423,57 @@ msgid ""
 "    sem.release()"
 msgstr ""
 
-#: library/asyncio-sync.rst:318
+#: library/asyncio-sync.rst:323
 msgid "Acquire a semaphore."
 msgstr ""
 
-#: library/asyncio-sync.rst:320
+#: library/asyncio-sync.rst:325
 msgid ""
 "If the internal counter is greater than zero, decrement it by one and return "
 "``True`` immediately.  If it is zero, wait until a :meth:`release` is called "
 "and return ``True``."
 msgstr ""
 
-#: library/asyncio-sync.rst:326
+#: library/asyncio-sync.rst:331
 msgid "Returns ``True`` if semaphore can not be acquired immediately."
 msgstr ""
 
-#: library/asyncio-sync.rst:330
+#: library/asyncio-sync.rst:335
 msgid ""
 "Release a semaphore, incrementing the internal counter by one. Can wake up a "
 "task waiting to acquire the semaphore."
 msgstr ""
 
-#: library/asyncio-sync.rst:333
+#: library/asyncio-sync.rst:338
 msgid ""
 "Unlike :class:`BoundedSemaphore`, :class:`Semaphore` allows making more "
 "``release()`` calls than ``acquire()`` calls."
 msgstr ""
 
-#: library/asyncio-sync.rst:338
+#: library/asyncio-sync.rst:343
 msgid "BoundedSemaphore"
 msgstr ""
 
-#: library/asyncio-sync.rst:342
+#: library/asyncio-sync.rst:347
 msgid "A bounded semaphore object.  Not thread-safe."
 msgstr ""
 
-#: library/asyncio-sync.rst:344
+#: library/asyncio-sync.rst:349
 msgid ""
 "Bounded Semaphore is a version of :class:`Semaphore` that raises a :exc:"
 "`ValueError` in :meth:`~Semaphore.release` if it increases the internal "
 "counter above the initial *value*."
 msgstr ""
 
-#: library/asyncio-sync.rst:353
+#: library/asyncio-sync.rst:358
 msgid "Barrier"
 msgstr ""
 
-#: library/asyncio-sync.rst:357
+#: library/asyncio-sync.rst:362
 msgid "A barrier object.  Not thread-safe."
 msgstr ""
 
-#: library/asyncio-sync.rst:359
+#: library/asyncio-sync.rst:364
 msgid ""
 "A barrier is a simple synchronization primitive that allows to block until "
 "*parties* number of tasks are waiting on it. Tasks can wait on the :meth:"
@@ -474,17 +482,17 @@ msgid ""
 "waiting tasks would unblock simultaneously."
 msgstr ""
 
-#: library/asyncio-sync.rst:365
+#: library/asyncio-sync.rst:370
 msgid ""
 ":keyword:`async with` can be used as an alternative to awaiting on :meth:"
 "`~Barrier.wait`."
 msgstr ""
 
-#: library/asyncio-sync.rst:368
+#: library/asyncio-sync.rst:373
 msgid "The barrier can be reused any number of times."
 msgstr ""
 
-#: library/asyncio-sync.rst:374
+#: library/asyncio-sync.rst:379
 msgid ""
 "async def example_barrier():\n"
 "   # barrier with 3 parties\n"
@@ -508,11 +516,11 @@ msgid ""
 "asyncio.run(example_barrier())"
 msgstr ""
 
-#: library/asyncio-sync.rst:395
+#: library/asyncio-sync.rst:400
 msgid "Result of this example is::"
 msgstr ""
 
-#: library/asyncio-sync.rst:397
+#: library/asyncio-sync.rst:402
 msgid ""
 "<asyncio.locks.Barrier object at 0x... [filling, waiters:2/3]>\n"
 "<asyncio.locks.Barrier object at 0x... [draining, waiters:0/3]>\n"
@@ -520,27 +528,27 @@ msgid ""
 "<asyncio.locks.Barrier object at 0x... [filling, waiters:0/3]>"
 msgstr ""
 
-#: library/asyncio-sync.rst:407
+#: library/asyncio-sync.rst:412
 msgid ""
 "Pass the barrier. When all the tasks party to the barrier have called this "
 "function, they are all unblocked simultaneously."
 msgstr ""
 
-#: library/asyncio-sync.rst:410
+#: library/asyncio-sync.rst:415
 msgid ""
 "When a waiting or blocked task in the barrier is cancelled, this task exits "
 "the barrier which stays in the same state. If the state of the barrier is "
 "\"filling\", the number of waiting task decreases by 1."
 msgstr ""
 
-#: library/asyncio-sync.rst:415
+#: library/asyncio-sync.rst:420
 msgid ""
 "The return value is an integer in the range of 0 to ``parties-1``, different "
 "for each task. This can be used to select a task to do some special "
 "housekeeping, e.g.::"
 msgstr ""
 
-#: library/asyncio-sync.rst:419
+#: library/asyncio-sync.rst:424
 msgid ""
 "...\n"
 "async with barrier as position:\n"
@@ -549,26 +557,26 @@ msgid ""
 "      print('End of *draining phase*')"
 msgstr ""
 
-#: library/asyncio-sync.rst:425
+#: library/asyncio-sync.rst:430
 msgid ""
 "This method may raise a :class:`BrokenBarrierError` exception if the barrier "
 "is broken or reset while a task is waiting. It could raise a :exc:"
 "`CancelledError` if a task is cancelled."
 msgstr ""
 
-#: library/asyncio-sync.rst:432
+#: library/asyncio-sync.rst:437
 msgid ""
 "Return the barrier to the default, empty state.  Any tasks waiting on it "
 "will receive the :class:`BrokenBarrierError` exception."
 msgstr ""
 
-#: library/asyncio-sync.rst:435
+#: library/asyncio-sync.rst:440
 msgid ""
 "If a barrier is broken it may be better to just leave it and create a new "
 "one."
 msgstr ""
 
-#: library/asyncio-sync.rst:440
+#: library/asyncio-sync.rst:445
 msgid ""
 "Put the barrier into a broken state.  This causes any active or future calls "
 "to :meth:`~Barrier.wait` to fail with the :class:`BrokenBarrierError`. Use "
@@ -576,25 +584,25 @@ msgid ""
 "waiting tasks."
 msgstr ""
 
-#: library/asyncio-sync.rst:447
+#: library/asyncio-sync.rst:452
 msgid "The number of tasks required to pass the barrier."
 msgstr ""
 
-#: library/asyncio-sync.rst:451
+#: library/asyncio-sync.rst:456
 msgid "The number of tasks currently waiting in the barrier while filling."
 msgstr ""
 
-#: library/asyncio-sync.rst:455
+#: library/asyncio-sync.rst:460
 msgid "A boolean that is ``True`` if the barrier is in the broken state."
 msgstr ""
 
-#: library/asyncio-sync.rst:460
+#: library/asyncio-sync.rst:465
 msgid ""
 "This exception, a subclass of :exc:`RuntimeError`, is raised when the :class:"
 "`Barrier` object is reset or broken."
 msgstr ""
 
-#: library/asyncio-sync.rst:468
+#: library/asyncio-sync.rst:473
 msgid ""
 "Acquiring a lock using ``await lock`` or ``yield from lock`` and/or :keyword:"
 "`with` statement (``with await lock``, ``with (yield from lock)``) was "

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
-"PO-Revision-Date: 2024-09-20 11:30+0300\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"PO-Revision-Date: 2025-05-04 22:12+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: el\n"
@@ -107,30 +107,42 @@ msgid ""
 ">>> 10 * (1/0)\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    10 * (1/0)\n"
+"          ~^~\n"
 "ZeroDivisionError: division by zero\n"
 ">>> 4 + spam*3\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    4 + spam*3\n"
+"        ^^^^\n"
 "NameError: name 'spam' is not defined\n"
 ">>> '2' + 2\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    '2' + 2\n"
+"    ~~~~^~~\n"
 "TypeError: can only concatenate str (not \"int\") to str"
 msgstr ""
 ">>> 10 * (1/0)\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    10 * (1/0)\n"
+"          ~^~\n"
 "ZeroDivisionError: division by zero\n"
 ">>> 4 + spam*3\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    4 + spam*3\n"
+"        ^^^^\n"
 "NameError: name 'spam' is not defined\n"
 ">>> '2' + 2\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    '2' + 2\n"
+"    ~~~~^~~\n"
 "TypeError: can only concatenate str (not \"int\") to str"
 
-#: tutorial/errors.rst:59
+#: tutorial/errors.rst:65
 msgid ""
 "The last line of the error message indicates what happened. Exceptions come "
 "in different types, and the type is printed as part of the message: the "
@@ -151,7 +163,7 @@ msgstr ""
 "σύμβαση). Οι standard εξαιρέσεις είναι ενσωματωμένα (built-in) αναγνωριστικά "
 "(όχι δεσμευμένες λέξεις-κλειδιά)."
 
-#: tutorial/errors.rst:67
+#: tutorial/errors.rst:73
 msgid ""
 "The rest of the line provides detail based on the type of exception and what "
 "caused it."
@@ -159,7 +171,7 @@ msgstr ""
 "Η υπόλοιπη γραμμή παρέχει λεπτομέρειες με βάση τον τύπο της εξαίρεσης και το "
 "τι την προκάλεσε."
 
-#: tutorial/errors.rst:70
+#: tutorial/errors.rst:76
 msgid ""
 "The preceding part of the error message shows the context where the "
 "exception occurred, in the form of a stack traceback. In general it contains "
@@ -171,18 +183,18 @@ msgstr ""
 "στοίβα ανίχνευσης γραμμών πηγής∙ ωστόσο, δεν θα εμφανίζει γραμμές που "
 "διαβάζονται από standard είσοδο."
 
-#: tutorial/errors.rst:75
+#: tutorial/errors.rst:81
 msgid ""
 ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
 "Το :ref:`bltin-exceptions` παραθέτει τις ενσωματωμένες εξαιρέσεις και τις "
 "έννοιές τους."
 
-#: tutorial/errors.rst:81
+#: tutorial/errors.rst:87
 msgid "Handling Exceptions"
 msgstr "Διαχείριση Εξαιρέσεων"
 
-#: tutorial/errors.rst:83
+#: tutorial/errors.rst:89
 msgid ""
 "It is possible to write programs that handle selected exceptions. Look at "
 "the following example, which asks the user for input until a valid integer "
@@ -199,7 +211,7 @@ msgstr ""
 "χρήστη σηματοδοτείται κάνοντας raise την εξαίρεση :exc:"
 "`KeyboardInterrupt`. ::"
 
-#: tutorial/errors.rst:89
+#: tutorial/errors.rst:95
 msgid ""
 ">>> while True:\n"
 "...     try:\n"
@@ -217,11 +229,11 @@ msgstr ""
 "...         print(\"Oops!  That was no valid number.  Try again...\")\n"
 "..."
 
-#: tutorial/errors.rst:97
+#: tutorial/errors.rst:103
 msgid "The :keyword:`try` statement works as follows."
 msgstr "Η δήλωση :keyword:`try` λειτουργεί ως εξής."
 
-#: tutorial/errors.rst:99
+#: tutorial/errors.rst:105
 msgid ""
 "First, the *try clause* (the statement(s) between the :keyword:`try` and :"
 "keyword:`except` keywords) is executed."
@@ -229,7 +241,7 @@ msgstr ""
 "Πρώτον, εκτελείται η *try clause* (η πρόταση(εις) μεταξύ των λέξεων-"
 "κλειδιών :keyword:`try` and :keyword:`except`)."
 
-#: tutorial/errors.rst:102
+#: tutorial/errors.rst:108
 msgid ""
 "If no exception occurs, the *except clause* is skipped and execution of the :"
 "keyword:`try` statement is finished."
@@ -237,7 +249,7 @@ msgstr ""
 "Εάν δεν προκύψει εξαίρεση, η *except clause* παραλείπεται και η εκτέλεση της "
 "πρότασης :keyword:`try` ολοκληρώνεται."
 
-#: tutorial/errors.rst:105
+#: tutorial/errors.rst:111
 msgid ""
 "If an exception occurs during execution of the :keyword:`try` clause, the "
 "rest of the clause is skipped.  Then, if its type matches the exception "
@@ -250,7 +262,7 @@ msgstr ""
 "clause* εκτελείται, και στη συνέχεια η εκτέλεση συνεχίζεται μετά το μπλοκ "
 "try/except."
 
-#: tutorial/errors.rst:110
+#: tutorial/errors.rst:116
 msgid ""
 "If an exception occurs which does not match the exception named in the "
 "*except clause*, it is passed on to outer :keyword:`try` statements; if no "
@@ -262,7 +274,7 @@ msgstr ""
 "εάν δεν βρεθεί κανένας χειριστής, είναι μια *unhandled exception* και η "
 "εκτέλεση σταματά με μήνυμα σφάλματος."
 
-#: tutorial/errors.rst:114
+#: tutorial/errors.rst:120
 msgid ""
 "A :keyword:`try` statement may have more than one *except clause*, to "
 "specify handlers for different exceptions.  At most one handler will be "
@@ -278,7 +290,7 @@ msgstr ""
 "πρότασης :keyword:`!try`.  Μια *except clause* μπορεί να ονομάσει πολλαπλές "
 "εξαιρέσεις ως πλειάδα (tuple) σε παρένθεση, για παράδειγμα::"
 
-#: tutorial/errors.rst:120
+#: tutorial/errors.rst:126
 msgid ""
 "... except (RuntimeError, TypeError, NameError):\n"
 "...     pass"
@@ -286,7 +298,7 @@ msgstr ""
 "... except (RuntimeError, TypeError, NameError):\n"
 "...     pass"
 
-#: tutorial/errors.rst:123
+#: tutorial/errors.rst:129
 msgid ""
 "A class in an :keyword:`except` clause matches exceptions which are "
 "instances of the class itself or one of its derived classes (but not the "
@@ -300,7 +312,7 @@ msgstr ""
 "κλάση δεν ταιριάζει με τις παρουσίες των βασικών της κλάσεων). Για "
 "παράδειγμα, ο ακόλουθος κώδικας θα εκτυπώσει τα B, C, D με αυτή τη σειρά::"
 
-#: tutorial/errors.rst:128
+#: tutorial/errors.rst:134
 msgid ""
 "class B(Exception):\n"
 "    pass\n"
@@ -340,7 +352,7 @@ msgstr ""
 "    except B:\n"
 "        print(\"B\")"
 
-#: tutorial/errors.rst:147
+#: tutorial/errors.rst:153
 msgid ""
 "Note that if the *except clauses* were reversed (with ``except B`` first), "
 "it would have printed B, B, B --- the first matching *except clause* is "
@@ -350,7 +362,7 @@ msgstr ""
 "πρώτα), θα είχε εκτυπωθεί B, B, B --- ενεργοποιείται η πρώτη αντιστοίχιση "
 "*except clause*."
 
-#: tutorial/errors.rst:150
+#: tutorial/errors.rst:156
 msgid ""
 "When an exception occurs, it may have associated values, also known as the "
 "exception's *arguments*. The presence and types of the arguments depend on "
@@ -360,7 +372,7 @@ msgstr ""
 "ως *ορίσματα* της εξαίρεσης. Η παρουσία και οι τύποι των ορισμάτων "
 "εξαρτώνται από τον τύπο εξαίρεσης."
 
-#: tutorial/errors.rst:154
+#: tutorial/errors.rst:160
 msgid ""
 "The *except clause* may specify a variable after the exception name.  The "
 "variable is bound to the exception instance which typically has an ``args`` "
@@ -375,7 +387,7 @@ msgstr ""
 "__str__` για να εκτυπώσετε όλα τα ορίσματα χωρίς ρητή πρόσβαση στο ``."
 "args``.  ::"
 
-#: tutorial/errors.rst:160
+#: tutorial/errors.rst:166
 msgid ""
 ">>> try:\n"
 "...     raise Exception('spam', 'eggs')\n"
@@ -413,7 +425,7 @@ msgstr ""
 "x = spam\n"
 "y = eggs"
 
-#: tutorial/errors.rst:177
+#: tutorial/errors.rst:183
 msgid ""
 "The exception's :meth:`~object.__str__` output is printed as the last part "
 "('detail') of the message for unhandled exceptions."
@@ -421,7 +433,7 @@ msgstr ""
 "Η έξοδος της εξαίρεσης :meth:`~object.__str__` εκτυπώνεται ως το τελευταίο "
 "μέρος ('λεπτομέρεια') του μηνύματος για μη χειριζόμενες εξαιρέσεις."
 
-#: tutorial/errors.rst:180
+#: tutorial/errors.rst:186
 msgid ""
 ":exc:`BaseException` is the common base class of all exceptions. One of its "
 "subclasses, :exc:`Exception`, is the base class of all the non-fatal "
@@ -440,7 +452,7 @@ msgstr ""
 "`KeyboardInterrupt` το οποίο γίνεται raise όταν ο χρήστης επιθυμεί να "
 "διακόψει την εκτέλεση του προγράμματος."
 
-#: tutorial/errors.rst:188
+#: tutorial/errors.rst:194
 msgid ""
 ":exc:`Exception` can be used as a wildcard that catches (almost) everything. "
 "However, it is good practice to be as specific as possible with the types of "
@@ -452,7 +464,7 @@ msgstr ""
 "συγκεκριμένοι με τους τύπους εξαιρέσεων που σκοπεύουμε να χειριστούμε και να "
 "επιτρέπουμε τυχόν απροσδόκητες εξαιρέσεις που εξαπλώνονται."
 
-#: tutorial/errors.rst:193
+#: tutorial/errors.rst:199
 msgid ""
 "The most common pattern for handling :exc:`Exception` is to print or log the "
 "exception and then re-raise it (allowing a caller to handle the exception as "
@@ -462,7 +474,7 @@ msgstr ""
 "να καταγράψετε την εξαίρεση και στη συνέχεια να την επαναφέρετε "
 "(επιτρέποντας σε έναν καλούντα να χειριστεί και την εξαίρεση)::"
 
-#: tutorial/errors.rst:197
+#: tutorial/errors.rst:203
 msgid ""
 "import sys\n"
 "\n"
@@ -492,7 +504,7 @@ msgstr ""
 "    print(f\"Unexpected {err=}, {type(err)=}\")\n"
 "    raise"
 
-#: tutorial/errors.rst:211
+#: tutorial/errors.rst:217
 msgid ""
 "The :keyword:`try` ... :keyword:`except` statement has an optional *else "
 "clause*, which, when present, must follow all *except clauses*.  It is "
@@ -504,7 +516,7 @@ msgstr ""
 "clauses*.  Είναι χρήσιμο για κώδικα που πρέπει να εκτελεστεί εάν το *try "
 "clause* δεν κάνει raise μια εξαίρεση. Για παράδειγμα::"
 
-#: tutorial/errors.rst:216
+#: tutorial/errors.rst:222
 msgid ""
 "for arg in sys.argv[1:]:\n"
 "    try:\n"
@@ -524,7 +536,7 @@ msgstr ""
 "        print(arg, 'has', len(f.readlines()), 'lines')\n"
 "        f.close()"
 
-#: tutorial/errors.rst:225
+#: tutorial/errors.rst:231
 msgid ""
 "The use of the :keyword:`!else` clause is better than adding additional code "
 "to the :keyword:`try` clause because it avoids accidentally catching an "
@@ -536,7 +548,7 @@ msgstr ""
 "λάθος σύλληψη μιας εξαίρεσης που δεν προέκυψε από τον κώδικα που "
 "προστατεύεται από την πρόταση :keyword:`!try` ... :keyword:`!except`."
 
-#: tutorial/errors.rst:230
+#: tutorial/errors.rst:236
 msgid ""
 "Exception handlers do not handle only exceptions that occur immediately in "
 "the *try clause*, but also those that occur inside functions that are called "
@@ -547,7 +559,7 @@ msgstr ""
 "συναρτήσεις που καλούνται (ακόμη και έμμεσα) στην *try clause*. Για "
 "παράδειγμα::"
 
-#: tutorial/errors.rst:234
+#: tutorial/errors.rst:240
 msgid ""
 ">>> def this_fails():\n"
 "...     x = 1/0\n"
@@ -569,11 +581,11 @@ msgstr ""
 "...\n"
 "Handling run-time error: division by zero"
 
-#: tutorial/errors.rst:248
+#: tutorial/errors.rst:254
 msgid "Raising Exceptions"
 msgstr "Raising Εξαιρέσεων"
 
-#: tutorial/errors.rst:250
+#: tutorial/errors.rst:256
 msgid ""
 "The :keyword:`raise` statement allows the programmer to force a specified "
 "exception to occur. For example::"
@@ -581,19 +593,21 @@ msgstr ""
 "Η δήλωση :keyword:`raise` επιτρέπει στον προγραμματιστή να αναγκάσει να "
 "εμφανιστεί μια καθορισμένη εξαίρεση. Για  παράδειγμα::"
 
-#: tutorial/errors.rst:253
+#: tutorial/errors.rst:259
 msgid ""
 ">>> raise NameError('HiThere')\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    raise NameError('HiThere')\n"
 "NameError: HiThere"
 msgstr ""
 ">>> raise NameError('HiThere')\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    raise NameError('HiThere')\n"
 "NameError: HiThere"
 
-#: tutorial/errors.rst:258
+#: tutorial/errors.rst:265
 msgid ""
 "The sole argument to :keyword:`raise` indicates the exception to be raised. "
 "This must be either an exception instance or an exception class (a class "
@@ -608,11 +622,11 @@ msgstr ""
 "εξαίρεσης, θα δημιουργηθεί σιωπηρά καλώντας τον constructor της χωρίς "
 "ορίσματα::"
 
-#: tutorial/errors.rst:264
+#: tutorial/errors.rst:271
 msgid "raise ValueError  # shorthand for 'raise ValueError()'"
 msgstr "κάνει raise ένα ValueError # συντομογραφία για το 'raise ValueError()'"
 
-#: tutorial/errors.rst:266
+#: tutorial/errors.rst:273
 msgid ""
 "If you need to determine whether an exception was raised but don't intend to "
 "handle it, a simpler form of the :keyword:`raise` statement allows you to re-"
@@ -622,7 +636,7 @@ msgstr ""
 "σκοπεύετε να τη χειριστείτε, μια απλούστερη μορφή της δήλωσης :keyword:"
 "`raise` σας επιτρέπει να κάνετε ξανά raise την εξαίρεση::"
 
-#: tutorial/errors.rst:270
+#: tutorial/errors.rst:277
 msgid ""
 ">>> try:\n"
 "...     raise NameError('HiThere')\n"
@@ -633,6 +647,7 @@ msgid ""
 "An exception flew by!\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise NameError('HiThere')\n"
 "NameError: HiThere"
 msgstr ""
 ">>> try:\n"
@@ -644,13 +659,14 @@ msgstr ""
 "An exception flew by!\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise NameError('HiThere')\n"
 "NameError: HiThere"
 
-#: tutorial/errors.rst:285
+#: tutorial/errors.rst:293
 msgid "Exception Chaining"
 msgstr "Αλυσιδωτές Εξαιρέσεις"
 
-#: tutorial/errors.rst:287
+#: tutorial/errors.rst:295
 msgid ""
 "If an unhandled exception occurs inside an :keyword:`except` section, it "
 "will have the exception being handled attached to it and included in the "
@@ -660,7 +676,7 @@ msgstr ""
 "ενότητα :keyword:`except`, θα επισυνάψει την εξαίρεση που θα χειριστεί και "
 "θα συμπεριληφθεί στο μήνυμα σφάλματος::"
 
-#: tutorial/errors.rst:291
+#: tutorial/errors.rst:299
 msgid ""
 ">>> try:\n"
 "...     open(\"database.sqlite\")\n"
@@ -669,12 +685,15 @@ msgid ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    open(\"database.sqlite\")\n"
+"    ~~~~^^^^^^^^^^^^^^^^^^^\n"
 "FileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n"
 "\n"
 "During handling of the above exception, another exception occurred:\n"
 "\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError(\"unable to handle error\")\n"
 "RuntimeError: unable to handle error"
 msgstr ""
 ">>> try:\n"
@@ -684,15 +703,18 @@ msgstr ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    open(\"database.sqlite\")\n"
+"    ~~~~^^^^^^^^^^^^^^^^^^^\n"
 "FileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n"
 "\n"
 "During handling of the above exception, another exception occurred:\n"
 "\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError(\"unable to handle error\")\n"
 "RuntimeError: unable to handle error"
 
-#: tutorial/errors.rst:306
+#: tutorial/errors.rst:317
 msgid ""
 "To indicate that an exception is a direct consequence of another, the :"
 "keyword:`raise` statement allows an optional :keyword:`from<raise>` clause::"
@@ -701,7 +723,7 @@ msgstr ""
 "πρόταση :keyword:`raise` επιτρέπει μια προαιρετική πρόταση :keyword:"
 "`from<raise>`::"
 
-#: tutorial/errors.rst:309
+#: tutorial/errors.rst:320
 msgid ""
 "# exc must be exception instance or None.\n"
 "raise RuntimeError from exc"
@@ -709,13 +731,13 @@ msgstr ""
 "# Το exc πρέπει να είναι παράδειγμα εξαίρεσης ή None.\n"
 "κάνει raise το RuntimeError από exc"
 
-#: tutorial/errors.rst:312
+#: tutorial/errors.rst:323
 msgid "This can be useful when you are transforming exceptions. For example::"
 msgstr ""
 "Αυτό μπορεί να είναι χρήσιμο όταν μετασχηματίζεται εξαιρέσεις. Για "
 "παράδειγμα::"
 
-#: tutorial/errors.rst:314
+#: tutorial/errors.rst:325
 msgid ""
 ">>> def func():\n"
 "...     raise ConnectionError\n"
@@ -727,6 +749,8 @@ msgid ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    func()\n"
+"    ~~~~^^\n"
 "  File \"<stdin>\", line 2, in func\n"
 "ConnectionError\n"
 "\n"
@@ -734,6 +758,7 @@ msgid ""
 "\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError('Failed to open database') from exc\n"
 "RuntimeError: Failed to open database"
 msgstr ""
 ">>> def func():\n"
@@ -746,6 +771,8 @@ msgstr ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    func()\n"
+"    ~~~~^^\n"
 "  File \"<stdin>\", line 2, in func\n"
 "ConnectionError\n"
 "\n"
@@ -753,9 +780,10 @@ msgstr ""
 "\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError('Failed to open database') from exc\n"
 "RuntimeError: Failed to open database"
 
-#: tutorial/errors.rst:333
+#: tutorial/errors.rst:347
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
@@ -763,7 +791,7 @@ msgstr ""
 "Επιτρέπει επίσης την απενεργοποίηση της αυτόματης αλυσίδας εξαιρέσεων "
 "χρησιμοποιώντας ``from None`` idiom::"
 
-#: tutorial/errors.rst:336
+#: tutorial/errors.rst:350
 msgid ""
 ">>> try:\n"
 "...     open('database.sqlite')\n"
@@ -772,6 +800,7 @@ msgid ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError from None\n"
 "RuntimeError"
 msgstr ""
 ">>> try:\n"
@@ -781,20 +810,21 @@ msgstr ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError from None\n"
 "RuntimeError"
 
-#: tutorial/errors.rst:345
+#: tutorial/errors.rst:360
 msgid ""
 "For more information about chaining mechanics, see :ref:`bltin-exceptions`."
 msgstr ""
 "Για περισσότερες πληροφορίες σχετικά με την μηχανική αλυσίδων, δείτε :ref:"
 "`bltin-exceptions`."
 
-#: tutorial/errors.rst:351
+#: tutorial/errors.rst:366
 msgid "User-defined Exceptions"
 msgstr "Εξαιρέσεις που καθορίζονται από το χρήστη"
 
-#: tutorial/errors.rst:353
+#: tutorial/errors.rst:368
 msgid ""
 "Programs may name their own exceptions by creating a new exception class "
 "(see :ref:`tut-classes` for more about Python classes).  Exceptions should "
@@ -806,7 +836,7 @@ msgstr ""
 "με τις κλάσεις Python).  Οι εξαιρέσεις θα πρέπει συνήθως να προέρχονται από "
 "την κλάση :exc:`Exception`, είτε άμεσα είτε έμμεσα."
 
-#: tutorial/errors.rst:357
+#: tutorial/errors.rst:372
 msgid ""
 "Exception classes can be defined which do anything any other class can do, "
 "but are usually kept simple, often only offering a number of attributes that "
@@ -818,7 +848,7 @@ msgstr ""
 "μόνο έναν αριθμό χαρακτηριστικών που επιτρέπουν την εξαγωγή πληροφοριών "
 "σχετικά με το σφάλμα από τους χειριστές για την εξαίρεση."
 
-#: tutorial/errors.rst:361
+#: tutorial/errors.rst:376
 msgid ""
 "Most exceptions are defined with names that end in \"Error\", similar to the "
 "naming of the standard exceptions."
@@ -826,7 +856,7 @@ msgstr ""
 "Οι περισσότερες εξαιρέσεις ορίζονται με ονόματα που τελειώνουν σε \"Error\", "
 "παρόμοια με την ονομασία των τυπικών εξαιρέσεων."
 
-#: tutorial/errors.rst:364
+#: tutorial/errors.rst:379
 msgid ""
 "Many standard modules define their own exceptions to report errors that may "
 "occur in functions they define."
@@ -834,11 +864,11 @@ msgstr ""
 "Πολλά standard modules ορίζουν τις δικές τους εξαιρέσεις για την αναφορά "
 "σφαλμάτων που μπορεί να προκύψουν σε συναρτήσεις που ορίζουν."
 
-#: tutorial/errors.rst:371
+#: tutorial/errors.rst:386
 msgid "Defining Clean-up Actions"
 msgstr "Καθορισμός ενεργειών καθαρισμού"
 
-#: tutorial/errors.rst:373
+#: tutorial/errors.rst:388
 msgid ""
 "The :keyword:`try` statement has another optional clause which is intended "
 "to define clean-up actions that must be executed under all circumstances.  "
@@ -848,7 +878,7 @@ msgstr ""
 "ορίσει ενέργειες καθαρισμού που πρέπει να εκτελεστούν υπό οποιεσδήποτε "
 "συνθήκες.  Για παράδειγμα::"
 
-#: tutorial/errors.rst:377
+#: tutorial/errors.rst:392
 msgid ""
 ">>> try:\n"
 "...     raise KeyboardInterrupt\n"
@@ -858,6 +888,7 @@ msgid ""
 "Goodbye, world!\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise KeyboardInterrupt\n"
 "KeyboardInterrupt"
 msgstr ""
 ">>> try:\n"
@@ -868,9 +899,10 @@ msgstr ""
 "Goodbye, world!\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise KeyboardInterrupt\n"
 "KeyboardInterrupt"
 
-#: tutorial/errors.rst:387
+#: tutorial/errors.rst:403
 msgid ""
 "If a :keyword:`finally` clause is present, the :keyword:`!finally` clause "
 "will execute as the last task before the :keyword:`try` statement completes. "
@@ -884,7 +916,7 @@ msgstr ""
 "keyword:`!try` παράγει μια εξαίρεση. Τα ακόλουθα σημεία συζητούν πιο "
 "περίπλοκες περιπτώσεις όταν εμφανίζεται μια εξαίρεση:"
 
-#: tutorial/errors.rst:393
+#: tutorial/errors.rst:409
 msgid ""
 "If an exception occurs during execution of the :keyword:`!try` clause, the "
 "exception may be handled by an :keyword:`except` clause. If the exception is "
@@ -897,7 +929,7 @@ msgstr ""
 "εξαίρεση γίνεται ξανά raise μετά την εκτέλεση της πρότασης :keyword:`!"
 "finally`."
 
-#: tutorial/errors.rst:399
+#: tutorial/errors.rst:415
 msgid ""
 "An exception could occur during execution of an :keyword:`!except` or :"
 "keyword:`!else` clause. Again, the exception is re-raised after the :keyword:"
@@ -907,7 +939,7 @@ msgstr ""
 "keyword:`!except` ή :keyword:`!else`. Και πάλι, η εξαίρεση τίθεται ξανά μετά "
 "την εκτέλεση της πρότασης :keyword:`!finally`."
 
-#: tutorial/errors.rst:403
+#: tutorial/errors.rst:419
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, exceptions are not re-raised."
@@ -915,7 +947,7 @@ msgstr ""
 "Εάν η πρόταση :keyword:`!finally` εκτελέσει μια πρόταση :keyword:`break`, :"
 "keyword:`continue` ή :keyword:`return`, οι εξαιρέσεις δεν αυξάνονται εκ νέου."
 
-#: tutorial/errors.rst:407
+#: tutorial/errors.rst:423
 msgid ""
 "If the :keyword:`!try` statement reaches a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, the :keyword:`!finally` clause "
@@ -927,7 +959,7 @@ msgstr ""
 "εκτελεστεί ακριβώς πριν από τα :keyword:`!break`, :keyword:`!continue` or :"
 "keyword:`!return` της εκτέλεσης της δήλωσης."
 
-#: tutorial/errors.rst:413
+#: tutorial/errors.rst:429
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the "
 "returned value will be the one from the :keyword:`!finally` clause's :"
@@ -939,11 +971,11 @@ msgstr ""
 "finally` της δήλωσης της :keyword:`!return`, και όχι η τιμή από τη δήλωση :"
 "keyword:`!try` της πρότασης :keyword:`!return`."
 
-#: tutorial/errors.rst:419
+#: tutorial/errors.rst:435
 msgid "For example::"
 msgstr "Για παράδειγμα::"
 
-#: tutorial/errors.rst:421
+#: tutorial/errors.rst:437
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -963,11 +995,11 @@ msgstr ""
 ">>> bool_return()\n"
 "False"
 
-#: tutorial/errors.rst:430
+#: tutorial/errors.rst:446
 msgid "A more complicated example::"
 msgstr "Ένα πιο περίπλοκο παράδειγμα::"
 
-#: tutorial/errors.rst:432
+#: tutorial/errors.rst:448
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -989,7 +1021,11 @@ msgid ""
 "executing finally clause\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    divide(\"2\", \"1\")\n"
+"    ~~~~~~^^^^^^^^^^\n"
 "  File \"<stdin>\", line 3, in divide\n"
+"    result = x / y\n"
+"             ~~^~~\n"
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 msgstr ""
 ">>> def divide(x, y):\n"
@@ -1012,10 +1048,14 @@ msgstr ""
 "executing finally clause\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
+"    divide(\"2\", \"1\")\n"
+"    ~~~~~~^^^^^^^^^^\n"
 "  File \"<stdin>\", line 3, in divide\n"
+"    result = x / y\n"
+"             ~~^~~\n"
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 
-#: tutorial/errors.rst:455
+#: tutorial/errors.rst:475
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  "
 "The :exc:`TypeError` raised by dividing two strings is not handled by the :"
@@ -1027,7 +1067,7 @@ msgstr ""
 "δύο συμβολοσειρών δεν χειρίζεται από την πρόταση :keyword:`except` και "
 "επομένως γίνεται ξανά raise μετά την εκτέλεση του όρου :keyword:`!finally`."
 
-#: tutorial/errors.rst:460
+#: tutorial/errors.rst:480
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
@@ -1037,11 +1077,11 @@ msgstr ""
 "χρήσιμη για την απελευθέρωση εξωτερικών πόρων (όπως αρχεία ή συνδέσεις "
 "δικτύου), ανεξάρτητα από το εάν η χρήση του πόρου ήταν επιτυχής."
 
-#: tutorial/errors.rst:468
+#: tutorial/errors.rst:488
 msgid "Predefined Clean-up Actions"
 msgstr "Προκαθορισμένες ενέργειες καθαρισμού"
 
-#: tutorial/errors.rst:470
+#: tutorial/errors.rst:490
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation using "
@@ -1054,7 +1094,7 @@ msgstr ""
 "το ακόλουθο αντικείμενο, το οποίο προσπαθεί να ανοίξει ένα αρχείο και να "
 "εκτυπώσει τα περιεχόμενα του στην οθόνη. ::"
 
-#: tutorial/errors.rst:475
+#: tutorial/errors.rst:495
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
@@ -1062,7 +1102,7 @@ msgstr ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 
-#: tutorial/errors.rst:478
+#: tutorial/errors.rst:498
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -1078,7 +1118,7 @@ msgstr ""
 "σε αντικείμενα όπως αρχεία να χρησιμοποιούνται με τρόπο που διασφαλίζει ότι "
 "καθαρίζονται πάντα άμεσα και σωστά. ::"
 
-#: tutorial/errors.rst:484
+#: tutorial/errors.rst:504
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
@@ -1088,7 +1128,7 @@ msgstr ""
 "    for line in f:\n"
 "        print(line, end=\"\")"
 
-#: tutorial/errors.rst:488
+#: tutorial/errors.rst:508
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a "
 "problem was encountered while processing the lines. Objects which, like "
@@ -1100,11 +1140,11 @@ msgstr ""
 "που, όπως τα αρχεία παρέχουν προκαθορισμένες ενέργειες καθαρισμού θα το "
 "υποδεικνύουν στην τεκμηρίωση τους."
 
-#: tutorial/errors.rst:496
+#: tutorial/errors.rst:516
 msgid "Raising and Handling Multiple Unrelated Exceptions"
 msgstr "Raising και Χειρισμός Πολλαπλών Άσχετων Εξαιρέσεων"
 
-#: tutorial/errors.rst:498
+#: tutorial/errors.rst:518
 msgid ""
 "There are situations where it is necessary to report several exceptions that "
 "have occurred. This is often the case in concurrency frameworks, when "
@@ -1118,7 +1158,7 @@ msgstr ""
 "περιπτώσεις χρήσης όπου είναι επιθυμητό να συνεχιστεί η εκτέλεση και η "
 "συλλογή πολλαπλών σφαλμάτων αντί να κάνει raise την πρώτη εξαίρεση."
 
-#: tutorial/errors.rst:504
+#: tutorial/errors.rst:524
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be "
@@ -1128,7 +1168,7 @@ msgstr ""
 "παρουσίες εξαιρέσεων ώστε να μπορούν να αυξηθούν μαζί. Είναι μια εξαίρεση "
 "από μόνη της, επομένως μπορεί να συλληφθεί όπως κάθε άλλη εξαίρεση. ::"
 
-#: tutorial/errors.rst:508
+#: tutorial/errors.rst:528
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -1137,8 +1177,11 @@ msgid ""
 ">>> f()\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     f()\n"
+"  |     ~^^\n"
 "  |   File \"<stdin>\", line 3, in f\n"
-"  | ExceptionGroup: there were problems\n"
+"  |     raise ExceptionGroup('there were problems', excs)\n"
+"  | ExceptionGroup: there were problems (2 sub-exceptions)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | OSError: error 1\n"
 "    +---------------- 2 ----------------\n"
@@ -1159,8 +1202,11 @@ msgstr ""
 ">>> f()\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     f()\n"
+"  |     ~^^\n"
 "  |   File \"<stdin>\", line 3, in f\n"
-"  | ExceptionGroup: there were problems\n"
+"  |     raise ExceptionGroup('there were problems', excs)\n"
+"  | ExceptionGroup: there were problems (2 sub-exceptions)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | OSError: error 1\n"
 "    +---------------- 2 ----------------\n"
@@ -1174,7 +1220,7 @@ msgstr ""
 "caught <class 'ExceptionGroup'>: e\n"
 ">>>"
 
-#: tutorial/errors.rst:530
+#: tutorial/errors.rst:553
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle only "
 "the exceptions in the group that match a certain type. In the following "
@@ -1189,7 +1235,7 @@ msgstr ""
 "ομάδας ενός συγκεκριμένου τύπου, ενώ αφήνει όλες τις άλλες εξαιρέσεις να "
 "διαδοθούν σε άλλες προτάσεις και τελικά να ξαναγίνουν raise. ::"
 
-#: tutorial/errors.rst:537
+#: tutorial/errors.rst:560
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -1218,10 +1264,15 @@ msgid ""
 "There were SystemErrors\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 2, in <module>\n"
+"  |     f()\n"
+"  |     ~^^\n"
 "  |   File \"<stdin>\", line 2, in f\n"
-"  | ExceptionGroup: group1\n"
+"  |     raise ExceptionGroup(\n"
+"  |     ...<12 lines>...\n"
+"  |     )\n"
+"  | ExceptionGroup: group1 (1 sub-exception)\n"
 "  +-+---------------- 1 ----------------\n"
-"    | ExceptionGroup: group2\n"
+"    | ExceptionGroup: group2 (1 sub-exception)\n"
 "    +-+---------------- 1 ----------------\n"
 "      | RecursionError: 4\n"
 "      +------------------------------------\n"
@@ -1254,16 +1305,21 @@ msgstr ""
 "There were SystemErrors\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 2, in <module>\n"
+"  |     f()\n"
+"  |     ~^^\n"
 "  |   File \"<stdin>\", line 2, in f\n"
-"  | ExceptionGroup: group1\n"
+"  |     raise ExceptionGroup(\n"
+"  |     ...<12 lines>...\n"
+"  |     )\n"
+"  | ExceptionGroup: group1 (1 sub-exception)\n"
 "  +-+---------------- 1 ----------------\n"
-"    | ExceptionGroup: group2\n"
+"    | ExceptionGroup: group2 (1 sub-exception)\n"
 "    +-+---------------- 1 ----------------\n"
 "      | RecursionError: 4\n"
 "      +------------------------------------\n"
 ">>>"
 
-#: tutorial/errors.rst:573
+#: tutorial/errors.rst:601
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, not "
 "types. This is because in practice the exceptions would typically be ones "
@@ -1275,7 +1331,7 @@ msgstr ""
 "εξαιρέσεις θα ήταν συνήθως αυτές που έχουν ήδη αναφερθεί και καταγραφεί από "
 "το πρόγραμμα, σύμφωνα με το ακόλουθο μοτίβο::"
 
-#: tutorial/errors.rst:578
+#: tutorial/errors.rst:606
 msgid ""
 ">>> excs = []\n"
 "... for test in tests:\n"
@@ -1299,11 +1355,11 @@ msgstr ""
 "...    raise ExceptionGroup(\"Test Failures\", excs)\n"
 "..."
 
-#: tutorial/errors.rst:593
+#: tutorial/errors.rst:621
 msgid "Enriching Exceptions with Notes"
 msgstr "Εμπλουτίζοντας τις Εξαιρέσεις με Σημειώσεις"
 
-#: tutorial/errors.rst:595
+#: tutorial/errors.rst:623
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -1321,7 +1377,7 @@ msgstr ""
 "σημειώσεων της εξαίρεσης. Η standard απόδοση παρακολούθησης περιλαμβάνει "
 "όλες τις σημειώσεις, με τη σειρά που προστέθηκα, μετά την εξαίρεση. ::"
 
-#: tutorial/errors.rst:602
+#: tutorial/errors.rst:630
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -1332,6 +1388,7 @@ msgid ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise TypeError('bad type')\n"
 "TypeError: bad type\n"
 "Add some information\n"
 "Add some more information\n"
@@ -1346,12 +1403,13 @@ msgstr ""
 "...\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 2, in <module>\n"
+"    raise TypeError('bad type')\n"
 "TypeError: bad type\n"
 "Add some information\n"
 "Add some more information\n"
 ">>>"
 
-#: tutorial/errors.rst:616
+#: tutorial/errors.rst:645
 msgid ""
 "For example, when collecting exceptions into an exception group, we may want "
 "to add context information for the individual errors. In the following each "
@@ -1362,7 +1420,7 @@ msgstr ""
 "σφάλματα. Στην συνέχεια κάθε εξαίρεση στην ομάδα έχει μια σημείωση που "
 "υποδεικνύει πότε έχει συμβεί αυτό το σφάλμα. ::"
 
-#: tutorial/errors.rst:620
+#: tutorial/errors.rst:649
 msgid ""
 ">>> def f():\n"
 "...     raise OSError('operation failed')\n"
@@ -1378,23 +1436,33 @@ msgid ""
 ">>> raise ExceptionGroup('We have some problems', excs)\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     raise ExceptionGroup('We have some problems', excs)\n"
 "  | ExceptionGroup: We have some problems (3 sub-exceptions)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 1\n"
 "    +---------------- 2 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 2\n"
 "    +---------------- 3 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 3\n"
 "    +------------------------------------\n"
@@ -1414,23 +1482,33 @@ msgstr ""
 ">>> raise ExceptionGroup('We have some problems', excs)\n"
 "  + Exception Group Traceback (most recent call last):\n"
 "  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     raise ExceptionGroup('We have some problems', excs)\n"
 "  | ExceptionGroup: We have some problems (3 sub-exceptions)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 1\n"
 "    +---------------- 2 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 2\n"
 "    +---------------- 3 ----------------\n"
 "    | Traceback (most recent call last):\n"
 "    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     f()\n"
+"    |     ~^^\n"
 "    |   File \"<stdin>\", line 2, in f\n"
+"    |     raise OSError('operation failed')\n"
 "    | OSError: operation failed\n"
 "    | Happened in Iteration 3\n"
 "    +------------------------------------\n"

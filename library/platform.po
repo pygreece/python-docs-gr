@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
-"PO-Revision-Date: 2025-02-14 17:10+0200\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"PO-Revision-Date: 2025-05-05 21:41+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
@@ -36,7 +36,7 @@ msgstr ""
 "περιλαμβάνεται στην ενότητα Unix."
 
 #: library/platform.rst:21
-msgid "Cross Platform"
+msgid "Cross platform"
 msgstr "Cross Platform"
 
 #: library/platform.rst:26
@@ -264,7 +264,18 @@ msgstr ""
 "``'Darwin'``, ``'Java'``, ``'Windows'``. Επιστρέφεται μια κενή συμβολοσειρά "
 "αν η τιμή δεν μπορεί να καθοριστεί."
 
-#: library/platform.rst:154
+#: library/platform.rst:151
+msgid ""
+"On iOS and Android, this returns the user-facing OS name (i.e, ``'iOS``, "
+"``'iPadOS'`` or ``'Android'``). To obtain the kernel name (``'Darwin'`` or "
+"``'Linux'``), use :func:`os.uname`."
+msgstr ""
+"Στο iOS και το Android, αυτό επιστρέφει το όνομα του λειτουργικό συστήματος "
+"που βλέπει ο χρήστης δηλαδή, ``'iOS``, "
+"``'iPadOS'`` ή ``'Android'``). Για να λάβετε το όνομα του πυρήνα (``'Darwin'`` ή "
+"``'Linux'``), χρησιμοποιήστε τη :func:`os.uname`."
+
+#: library/platform.rst:157
 msgid ""
 "Returns ``(system, release, version)`` aliased to common marketing names "
 "used for some systems.  It also does some reordering of the information in "
@@ -274,7 +285,7 @@ msgstr ""
 "χρήσης που χρησιμοποιούνται για ορισμένα συστήματα. Επίσης, αναδιατάσσει "
 "ορισμένες πληροφορίες σε περιπτώσεις που διαφορετικά θα προκαλούσαν σύγχυση."
 
-#: library/platform.rst:161
+#: library/platform.rst:164
 msgid ""
 "Returns the system's release version, e.g. ``'#3 on degas'``. An empty "
 "string is returned if the value cannot be determined."
@@ -284,6 +295,15 @@ msgstr ""
 
 #: library/platform.rst:167
 msgid ""
+"On iOS and Android, this is the user-facing OS version. To obtain the Darwin "
+"or Linux kernel version, use :func:`os.uname`."
+msgstr ""
+"Στο iOS και το Android, αυτή είναι η έκδοση του λειτουργικό συστήματος που βλέπει ο χρήστης. Για να λάβετε "
+"την έκδοση του πυρήνα Darwin "
+"ή Linux, χησιμοποιήστε τη :func:`os.uname`."
+
+#: library/platform.rst:172
+msgid ""
 "Fairly portable uname interface. Returns a :func:`~collections.namedtuple` "
 "containing six attributes: :attr:`system`, :attr:`node`, :attr:`release`, :"
 "attr:`version`, :attr:`machine`, and :attr:`processor`."
@@ -292,11 +312,11 @@ msgstr ""
 "που περιέχει έξι ιδιότητες: :attr:`system`, :attr:`node`, :attr:`release`, :"
 "attr:`version`, :attr:`machine` και :attr:`processor`."
 
-#: library/platform.rst:171
+#: library/platform.rst:176
 msgid ":attr:`processor` is resolved late, on demand."
 msgstr "Το :attr:`processor` επιλύεται αργά, κατόπιν αιτήματος."
 
-#: library/platform.rst:173
+#: library/platform.rst:178
 msgid ""
 "Note: the first two attribute names differ from the names presented by :func:"
 "`os.uname`, where they are named :attr:`sysname` and :attr:`nodename`."
@@ -305,28 +325,28 @@ msgstr ""
 "παρουσιάζονται από την συνάρτηση :func:`os.uname`, όπου ονομάζονται :attr:"
 "`sysname` και :attr:`nodename`."
 
-#: library/platform.rst:177
+#: library/platform.rst:182
 msgid "Entries which cannot be determined are set to ``''``."
 msgstr "Οι τιμές που δεν μπορούν να προσδιοριστούν ορίζονται σε ``''``."
 
-#: library/platform.rst:179
+#: library/platform.rst:184
 msgid "Result changed from a tuple to a :func:`~collections.namedtuple`."
 msgstr ""
 "Το αποτέλεσμα άλλαξε από μια πλειάδα σε :func:`~collections.namedtuple`."
 
-#: library/platform.rst:182
+#: library/platform.rst:187
 msgid ":attr:`processor` is resolved late instead of immediately."
 msgstr "Το :attr:`processor` αναλύεται καθυστερημένα αντί άμεσα."
 
-#: library/platform.rst:187
-msgid "Java Platform"
+#: library/platform.rst:192
+msgid "Java platform"
 msgstr "Πλατφόρμα Java"
 
-#: library/platform.rst:192
+#: library/platform.rst:197
 msgid "Version interface for Jython."
 msgstr "Διεπαφή έκδοσης για Jython."
 
-#: library/platform.rst:194
+#: library/platform.rst:199
 msgid ""
 "Returns a tuple ``(release, vendor, vminfo, osinfo)`` with *vminfo* being a "
 "tuple ``(vm_name, vm_release, vm_vendor)`` and *osinfo* being a tuple "
@@ -339,11 +359,19 @@ msgstr ""
 "μπορούν να προσδιοριστούν ορίζονται στα προεπιλεγμένα που δίνονται ως "
 "παράμετροι (τα οποία προεπιλεγμένα είναι όλα ``''``)."
 
-#: library/platform.rst:201
-msgid "Windows Platform"
+#: library/platform.rst:204
+msgid ""
+"It was largely untested, had a confusing API, and was only useful for Jython "
+"support."
+msgstr ""
+"Ήταν σε μεγάλο βαθμό ακατάλληλο για δοκιμές, είχε μια μπερδεμένη διεπαφή API και ήταν χρήσιμο "
+"μόνο για την υποστήριξη του Jython."
+
+#: library/platform.rst:210
+msgid "Windows platform"
 msgstr "Πλατφόρμα Windows"
 
-#: library/platform.rst:206
+#: library/platform.rst:215
 msgid ""
 "Get additional version information from the Windows Registry and return a "
 "tuple ``(release, version, csd, ptype)`` referring to OS release, version "
@@ -359,7 +387,7 @@ msgstr ""
 "προεπιλεγμένα που δίνονται ως παράμετροι (όλα προεπιλέγονται σε κενές "
 "συμβολοσειρές)."
 
-#: library/platform.rst:212
+#: library/platform.rst:221
 msgid ""
 "As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT "
 "machines and ``'Multiprocessor Free'`` on multi processor machines. The "
@@ -375,7 +403,7 @@ msgstr ""
 "χρησιμοποιεί κώδικα αποσφαλμάτωσης, δηλαδή κώδικα που ελέγχει ορίσματα, εύρη "
 "κ.λπ."
 
-#: library/platform.rst:220
+#: library/platform.rst:229
 msgid ""
 "Returns a string representing the current Windows edition, or ``None`` if "
 "the value cannot be determined.  Possible values include but are not limited "
@@ -387,7 +415,7 @@ msgstr ""
 "αλλά δεν περιορίζονται σε ``'Enterprise'``, ``'IoTUAP'``, "
 "``'ServerStandard'`` και ``'nanoserver'``."
 
-#: library/platform.rst:228
+#: library/platform.rst:237
 msgid ""
 "Return ``True`` if the Windows edition returned by :func:`win32_edition` is "
 "recognized as an IoT edition."
@@ -395,11 +423,11 @@ msgstr ""
 "Επιστρέφει ``True`` αν η έκδοση των Windows που επιστρέφεται από την :func:"
 "`win32_edition` αναγνωρίζεται ως έκδοση IoT."
 
-#: library/platform.rst:235
-msgid "macOS Platform"
+#: library/platform.rst:244
+msgid "macOS platform"
 msgstr "Πλατφόρμα macOS"
 
-#: library/platform.rst:240
+#: library/platform.rst:248
 msgid ""
 "Get macOS version information and return it as tuple ``(release, "
 "versioninfo, machine)`` with *versioninfo* being a tuple ``(version, "
@@ -409,7 +437,7 @@ msgstr ""
 "versioninfo, machine)`` όπου το *versioninfo* είναι μια πλειάδα ``(version, "
 "dev_stage, non_release_version)``."
 
-#: library/platform.rst:244
+#: library/platform.rst:252
 msgid ""
 "Entries which cannot be determined are set to ``''``.  All tuple entries are "
 "strings."
@@ -417,11 +445,55 @@ msgstr ""
 "Οι τιμές που δεν μπορούν να προσδιοριστούν ορίζονται ως ``''``. Όλα τα "
 "στοιχεία της πλειάδας είναι συμβολοσειρές."
 
-#: library/platform.rst:249
-msgid "Unix Platforms"
+#: library/platform.rst:256
+msgid "iOS platform"
+msgstr "Πλατφόρμα iOS"
+
+#: library/platform.rst:260
+msgid ""
+"Get iOS version information and return it as a :func:`~collections."
+"namedtuple` with the following attributes:"
+msgstr ""
+"Λάβετε πληροφορίες για την έκδοση του iOS και επιστρέψτε τις ως "
+"μια :func:`~collections.namedtuple` με τα εξής χαρακτηριστικά:"
+
+#: library/platform.rst:263
+msgid "``system`` is the OS name; either ``'iOS'`` or ``'iPadOS'``."
+msgstr "``system`` είναι το όνομα του λειτουργικού συστήματος; είτε ``'iOS'`` ή ``'iPadOS'``."
+
+#: library/platform.rst:264
+msgid "``release`` is the iOS version number as a string (e.g., ``'17.2'``)."
+msgstr "``release`` είναι ο αριθμός έκδοσης iOS ως μια συμβολοσειρά (π.χ., ``'17.2'``)."
+
+#: library/platform.rst:265
+msgid ""
+"``model`` is the device model identifier; this will be a string like "
+"``'iPhone13,2'`` for a physical device, or ``'iPhone'`` on a simulator."
+msgstr ""
+"Το ``model`` είναι ο αναγνωριστικό αριθμός μοντέλου της συσκευής. Αυτό θα είναι μια συμβολοσειρά "
+"όπως ``'iPhone13,2'`` για μια φυσική συσκευή, ή ``'iPhone'`` για έναν εξομοιωτή."
+
+#: library/platform.rst:267
+msgid ""
+"``is_simulator`` is a boolean describing if the app is running on a "
+"simulator or a physical device."
+msgstr ""
+"Το ``is_simulator`` είναι μια δυαδική τιμή που περιγράφει αν η εφαρμογή εκτελείται "
+"σε εξομοιωτή ή σε φυσική συσκευή."
+
+#: library/platform.rst:270
+msgid ""
+"Entries which cannot be determined are set to the defaults given as "
+"parameters."
+msgstr ""
+"Οι καταχωρήσεις που δεν μπορούν να προσδιοριστούν ορίζονται στις προεπιλεγμένες "
+"τιμές που δίνονται ως παράμετροι."
+
+#: library/platform.rst:275
+msgid "Unix platforms"
 msgstr "Πλατφόρμες Unix"
 
-#: library/platform.rst:253
+#: library/platform.rst:279
 msgid ""
 "Tries to determine the libc version against which the file executable "
 "(defaults to the Python interpreter) is linked.  Returns a tuple of strings "
@@ -433,7 +505,7 @@ msgstr ""
 "μια πλειάδα συμβολοσειρών ``(lib, version)``, η οποία ορίζεται στις δοθείσες "
 "παραμέτρους σε περίπτωση αποτυχίας της αναζήτησης."
 
-#: library/platform.rst:257
+#: library/platform.rst:283
 msgid ""
 "Note that this function has intimate knowledge of how different libc "
 "versions add symbols to the executable is probably only usable for "
@@ -444,16 +516,16 @@ msgstr ""
 "μπορεί να χρησιμοποιηθεί μόνο για εκτελέσιμα που έχουν μεταγλωττιστεί με το :"
 "program:`gcc`."
 
-#: library/platform.rst:261
+#: library/platform.rst:287
 msgid "The file is read and scanned in chunks of *chunksize* bytes."
 msgstr ""
 "Το αρχείο διαβάζεται και σαρώνονται τμήματά του μεγέθους *chunksize* bytes."
 
-#: library/platform.rst:265
-msgid "Linux Platforms"
+#: library/platform.rst:291
+msgid "Linux platforms"
 msgstr "Πλατφόρμες Linux"
 
-#: library/platform.rst:269
+#: library/platform.rst:295
 msgid ""
 "Get operating system identification from ``os-release`` file and return it "
 "as a dict. The ``os-release`` file is a `freedesktop.org standard <https://"
@@ -468,7 +540,7 @@ msgstr ""
 "Μια αξιοσημείωτη εξαίρεση είναι το Android και οι διανομές που βασίζονται σε "
 "Android."
 
-#: library/platform.rst:275
+#: library/platform.rst:301
 msgid ""
 "Raises :exc:`OSError` or subclass when neither ``/etc/os-release`` nor ``/"
 "usr/lib/os-release`` can be read."
@@ -476,7 +548,7 @@ msgstr ""
 "Κάνει raise εξαίρεση :exc:`OSError` ή την υποκλάση όταν δεν είναι δυνατή η "
 "ανάγνωση ούτε του ``/etc/os-release`` ούτε του ``/usr/lib/os-release``."
 
-#: library/platform.rst:278
+#: library/platform.rst:304
 msgid ""
 "On success, the function returns a dictionary where keys and values are "
 "strings. Values have their special characters like ``\"`` and ``$`` "
@@ -490,7 +562,7 @@ msgstr ""
 "``PRETTY_NAME`` ορίζονται πάντα σύμφωνα με το πρότυπο. Όλα τα άλλα πεδία "
 "είναι προαιρετικά. Οι προμηθευτές μπορεί να περιλαμβάνουν πρόσθετα πεδία."
 
-#: library/platform.rst:284
+#: library/platform.rst:310
 msgid ""
 "Note that fields like ``NAME``, ``VERSION``, and ``VARIANT`` are strings "
 "suitable for presentation to users. Programs should use fields like ``ID``, "
@@ -502,11 +574,11 @@ msgstr ""
 "πρέπει να χρησιμοποιούν πεδία όπως τα ``ID``, ``ID_LIKE``, ``VERSION_ID`` ή "
 "``VARIANT_ID`` για την αναγνώριση διανομών Linux."
 
-#: library/platform.rst:289
+#: library/platform.rst:315
 msgid "Example::"
 msgstr "Παράδειγμα::"
 
-#: library/platform.rst:291
+#: library/platform.rst:317
 msgid ""
 "def get_like_distro():\n"
 "    info = platform.freedesktop_os_release()\n"
@@ -523,3 +595,119 @@ msgstr ""
 "        # ids are space separated and ordered by precedence\n"
 "        ids.extend(info[\"ID_LIKE\"].split())\n"
 "    return ids"
+
+#: library/platform.rst:329
+msgid "Android platform"
+msgstr "Πλατφόρμα Android"
+
+#: library/platform.rst:334
+msgid ""
+"Get Android device information. Returns a :func:`~collections.namedtuple` "
+"with the following attributes. Values which cannot be determined are set to "
+"the defaults given as parameters."
+msgstr ""
+"Λάβετε πληροφορίες για τη συσκευή Android. Επιστρέφει μια :func:`~collections.namedtuple` "
+"με τα εξής χαρακτηριστικά. Οι τιμές που δεν μπορούν να προσδιοριστούν ορίζονται στις προεπιλεγμένες τιμές που "
+"δίνονται ως παράμετροι."
+
+#: library/platform.rst:338
+msgid "``release`` - Android version, as a string (e.g. ``\"14\"``)."
+msgstr "``release`` - Η έκδοση του Android, ως συμβολοσειρά (π.χ. ``\"14\"``)."
+
+#: library/platform.rst:340
+msgid ""
+"``api_level`` - API level of the running device, as an integer (e.g. ``34`` "
+"for Android 14). To get the API level which Python was built against, see :"
+"func:`sys.getandroidapilevel`."
+msgstr ""
+"``api_level`` - Το επίπεδο API της εκτελούμενης συσκευής, ως ακέραιος αριθμός "
+"(π.χ. ``34`` για Android 14). Για να λάβετε το επίπεδο API με το οποίο έχει κατασκευαστεί η "
+"Python, δείτε τη :func:`sys.getandroidapilevel`."
+
+#: library/platform.rst:344
+msgid ""
+"``manufacturer`` - `Manufacturer name <https://developer.android.com/"
+"reference/android/os/Build#MANUFACTURER>`__."
+msgstr ""
+"``manufacturer`` - `Το όνομα του κατασκευαστή <https://developer.android.com/"
+"reference/android/os/Build#MANUFACTURER>`__."
+
+#: library/platform.rst:347
+msgid ""
+"``model`` - `Model name <https://developer.android.com/reference/android/os/"
+"Build#MODEL>`__ – typically the marketing name or model number."
+msgstr ""
+"``model`` - `Το όνομα του μοντέλου <https://developer.android.com/reference/android/os/"
+"Build#MODEL>`__ – συνήθως το εμπορικό όνομα ή ο αριθμός μοντέλου."
+
+#: library/platform.rst:351
+msgid ""
+"``device`` - `Device name <https://developer.android.com/reference/android/"
+"os/Build#DEVICE>`__ – typically the model number or a codename."
+msgstr ""
+"``device`` - `Το όνομα της συσκευής <https://developer.android.com/reference/android/"
+"os/Build#DEVICE>`__ – συνήθως ο αριθμός μοντέλου ή ένα κωδικό όνομα."
+
+#: library/platform.rst:355
+msgid ""
+"``is_emulator`` - ``True`` if the device is an emulator; ``False`` if it's a "
+"physical device."
+msgstr ""
+"``is_emulator`` - ``True`` αν η συσκευή είναι εξομοιωτής; ``False`` αν είναι φυσική "
+"συσκευή."
+
+#: library/platform.rst:358
+msgid ""
+"Google maintains a `list of known model and device names <https://storage."
+"googleapis.com/play_public/supported_devices.html>`__."
+msgstr ""
+"Η Google διατηρεί μια `λίστα με γνωστά ονόματα μοντέλων συσκευών <https://storage."
+"googleapis.com/play_public/supported_devices.html>`__."
+
+#: library/platform.rst:366
+msgid "Command-line usage"
+msgstr "Χρήση από γραμμή εντολών"
+
+#: library/platform.rst:368
+msgid ""
+":mod:`platform` can also be invoked directly using the :option:`-m` switch "
+"of the interpreter::"
+msgstr ""
+"Το :mod:`platform` μπορεί επίσης να κληθεί απευθείας χρησιμοποιώντας την επιλογή "
+":option:`-m` του διερμηνέα::"
+
+#: library/platform.rst:371
+msgid "python -m platform [--terse] [--nonaliased] [{nonaliased,terse} ...]"
+msgstr "python -m platform [--terse] [--nonaliased] [{nonaliased,terse} ...]"
+
+#: library/platform.rst:373
+msgid "The following options are accepted:"
+msgstr "Οι εξής επιλογές γίνονται αποδεκτές:"
+
+#: library/platform.rst:379
+msgid ""
+"Print terse information about the platform. This is equivalent to calling :"
+"func:`platform.platform` with the *terse* argument set to ``True``."
+msgstr ""
+"Εκτυπώνει συνοπτικές πληροφορίες για την πλατφόρμα. Αυτό είναι ισοδύναμο με την κλήση "
+":func:`platform.platform` με το όρισμα *terse* ορισμένο σε ``True``."
+
+#: library/platform.rst:384
+msgid ""
+"Print platform information without system/OS name aliasing. This is "
+"equivalent to calling :func:`platform.platform` with the *aliased* argument "
+"set to ``True``."
+msgstr ""
+"Εκτυπώνει πληροφορίες για την πλατφόρμα χωρίς την αντικατάσταση του ονόματος "
+"του συστήματος/ λειτουργικού. Αυτό είναι ισοδύναμο με την κλήση της "
+":func:`platform.platform` με το όρισμα *aliased* ορισμένο σε ``True``."
+
+#: library/platform.rst:388
+msgid ""
+"You can also pass one or more positional arguments (``terse``, "
+"``nonaliased``) to explicitly control the output format. These behave "
+"similarly to their corresponding options."
+msgstr ""
+"Μπορείτε επίσης να περάσετε ένα ή περισσότερα ορίσματα θέσης (``terse``, "
+"``nonaliased``) για να ελέγξετε ρητά τη μορφή της εξόδου. Αυτά συμπεριφέρονται όπως "
+"οι αντίστοιχες επιλογές τους."

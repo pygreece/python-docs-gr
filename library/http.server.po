@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,9 +41,8 @@ msgstr ""
 
 #: includes/wasm-notavail.rst:5
 msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
 msgstr ""
 
 #: library/http.server.rst:27
@@ -582,36 +581,45 @@ msgid ""
 "reasons.  Problems with the CGI script will be translated to error 403."
 msgstr ""
 
-#: library/http.server.rst:466
+#: library/http.server.rst:464
+msgid ""
+":class:`CGIHTTPRequestHandler` is being removed in 3.15.  CGI has not been "
+"considered a good way to do things for well over a decade. This code has "
+"been unmaintained for a while now and sees very little practical use. "
+"Retaining it could lead to further :ref:`security considerations <http."
+"server-security>`."
+msgstr ""
+
+#: library/http.server.rst:474
 msgid "Command-line interface"
 msgstr ""
 
-#: library/http.server.rst:468
+#: library/http.server.rst:476
 msgid ""
 ":mod:`http.server` can also be invoked directly using the :option:`-m` "
 "switch of the interpreter.  The following example illustrates how to serve "
 "files relative to the current directory::"
 msgstr ""
 
-#: library/http.server.rst:472
+#: library/http.server.rst:480
 msgid "python -m http.server [OPTIONS] [port]"
 msgstr ""
 
-#: library/http.server.rst:474
+#: library/http.server.rst:482
 msgid "The following options are accepted:"
 msgstr ""
 
-#: library/http.server.rst:480
+#: library/http.server.rst:488
 msgid ""
 "The server listens to port 8000 by default. The default can be overridden by "
 "passing the desired port number as an argument::"
 msgstr ""
 
-#: library/http.server.rst:483
+#: library/http.server.rst:491
 msgid "python -m http.server 9000"
 msgstr ""
 
-#: library/http.server.rst:487
+#: library/http.server.rst:495
 msgid ""
 "Specifies a specific address to which it should bind. Both IPv4 and IPv6 "
 "addresses are supported. By default, the server binds itself to all "
@@ -619,65 +627,71 @@ msgid ""
 "localhost only::"
 msgstr ""
 
-#: library/http.server.rst:492
+#: library/http.server.rst:500
 msgid "python -m http.server --bind 127.0.0.1"
 msgstr ""
 
-#: library/http.server.rst:496
+#: library/http.server.rst:504
 msgid "Support IPv6 in the ``--bind`` option."
 msgstr ""
 
-#: library/http.server.rst:501
+#: library/http.server.rst:509
 msgid ""
 "Specifies a directory to which it should serve the files. By default, the "
 "server uses the current directory. For example, the following command uses a "
 "specific directory::"
 msgstr ""
 
-#: library/http.server.rst:505
+#: library/http.server.rst:513
 msgid "python -m http.server --directory /tmp/"
 msgstr ""
 
-#: library/http.server.rst:511
+#: library/http.server.rst:519
 msgid ""
 "Specifies the HTTP version to which the server is conformant. By default, "
 "the server is conformant to HTTP/1.0. For example, the following command "
 "runs an HTTP/1.1 conformant server::"
 msgstr ""
 
-#: library/http.server.rst:515
+#: library/http.server.rst:523
 msgid "python -m http.server --protocol HTTP/1.1"
 msgstr ""
 
-#: library/http.server.rst:521
+#: library/http.server.rst:529
 msgid ""
 ":class:`CGIHTTPRequestHandler` can be enabled in the command line by passing "
 "the ``--cgi`` option::"
 msgstr ""
 
-#: library/http.server.rst:524
+#: library/http.server.rst:532
 msgid "python -m http.server --cgi"
 msgstr ""
 
-#: library/http.server.rst:528
+#: library/http.server.rst:536
+msgid ""
+":mod:`http.server` command line ``--cgi`` support is being removed because :"
+"class:`CGIHTTPRequestHandler` is being removed."
+msgstr ""
+
+#: library/http.server.rst:541
 msgid ""
 ":class:`CGIHTTPRequestHandler` and the ``--cgi`` command-line option are not "
 "intended for use by untrusted clients and may be vulnerable to exploitation. "
 "Always use within a secure environment."
 msgstr ""
 
-#: library/http.server.rst:536
+#: library/http.server.rst:549
 msgid "Security considerations"
 msgstr ""
 
-#: library/http.server.rst:540
+#: library/http.server.rst:553
 msgid ""
 ":class:`SimpleHTTPRequestHandler` will follow symbolic links when handling "
 "requests, this makes it possible for files outside of the specified "
 "directory to be served."
 msgstr ""
 
-#: library/http.server.rst:544
+#: library/http.server.rst:557
 msgid ""
 "Earlier versions of Python did not scrub control characters from the log "
 "messages emitted to stderr from ``python -m http.server`` or the default :"
@@ -686,7 +700,7 @@ msgid ""
 "codes to your terminal."
 msgstr ""
 
-#: library/http.server.rst:550
+#: library/http.server.rst:563
 msgid "Control characters are scrubbed in stderr logs."
 msgstr ""
 
@@ -714,10 +728,10 @@ msgstr ""
 msgid "httpd"
 msgstr ""
 
-#: library/http.server.rst:538
+#: library/http.server.rst:551
 msgid "http.server"
 msgstr ""
 
-#: library/http.server.rst:538
+#: library/http.server.rst:551
 msgid "security"
 msgstr ""

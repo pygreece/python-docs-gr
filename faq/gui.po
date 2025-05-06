@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 23:29+0300\n"
+"POT-Creation-Date: 2025-05-04 22:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,24 +76,15 @@ msgstr ""
 
 #: faq/gui.rst:49
 msgid ""
-"To get truly stand-alone applications, the Tcl scripts that form the library "
-"have to be integrated into the application as well. One tool supporting that "
-"is SAM (stand-alone modules), which is part of the Tix distribution (https://"
-"tix.sourceforge.net/)."
+"Various third-party freeze libraries such as py2exe and cx_Freeze have "
+"handling for Tkinter applications built-in."
 msgstr ""
 
 #: faq/gui.rst:54
-msgid ""
-"Build Tix with SAM enabled, perform the appropriate call to :c:func:`!"
-"Tclsam_init`, etc. inside Python's :file:`Modules/tkappinit.c`, and link "
-"with libtclsam and libtksam (you might include the Tix libraries as well)."
-msgstr ""
-
-#: faq/gui.rst:61
 msgid "Can I have Tk events handled while waiting for I/O?"
 msgstr ""
 
-#: faq/gui.rst:63
+#: faq/gui.rst:56
 msgid ""
 "On platforms other than Windows, yes, and you don't even need threads!  But "
 "you'll have to restructure your I/O code a bit.  Tk has the equivalent of "
@@ -102,18 +93,18 @@ msgid ""
 "file descriptor.  See :ref:`tkinter-file-handlers`."
 msgstr ""
 
-#: faq/gui.rst:71
+#: faq/gui.rst:64
 msgid "I can't get key bindings to work in Tkinter: why?"
 msgstr ""
 
-#: faq/gui.rst:73
+#: faq/gui.rst:66
 msgid ""
 "An often-heard complaint is that event handlers :ref:`bound <bindings-and-"
 "events>` to events with the :meth:`!bind` method don't get handled even when "
 "the appropriate key is pressed."
 msgstr ""
 
-#: faq/gui.rst:77
+#: faq/gui.rst:70
 msgid ""
 "The most common cause is that the widget to which the binding applies "
 "doesn't have \"keyboard focus\".  Check out the Tk documentation for the "
