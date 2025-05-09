@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 21:03+0100\n"
-"PO-Revision-Date: 2024-06-12 23:09+0300\n"
+"POT-Creation-Date: 2025-05-02 23:29+0300\n"
+"PO-Revision-Date: 2025-05-02 23:51+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -2133,11 +2133,11 @@ msgstr ""
 
 #: faq/programming.rst:990
 msgid ""
-"Is there an equivalent to Perl's chomp() for removing trailing newlines from "
-"strings?"
+"Is there an equivalent to Perl's ``chomp()`` for removing trailing newlines "
+"from strings?"
 msgstr ""
-"Υπάρχει ισοδύναμο με το Perl's chomp() για την αφαίρεση των νέων γραμμών από "
-"τις συμβολοσειρές;"
+"Υπάρχει ισοδύναμο με το Perl's ``chomp()`` για την αφαίρεση των νέων γραμμών "
+"από τις συμβολοσειρές;"
 
 #: faq/programming.rst:992
 msgid ""
@@ -2176,8 +2176,8 @@ msgstr ""
 "μία γραμμή τη φορά, η χρήση του ``S.rstrip()`` λειτουργεί καλά."
 
 #: faq/programming.rst:1009
-msgid "Is there a scanf() or sscanf() equivalent?"
-msgstr "Υπάρχει αντίστοιχο scanf() ή sscanf();"
+msgid "Is there a ``scanf()`` or ``sscanf()`` equivalent?"
+msgstr "Υπάρχει αντίστοιχο ``scanf()`` ή ``sscanf()``;"
 
 #: faq/programming.rst:1011
 msgid "Not as such."
@@ -2209,8 +2209,8 @@ msgstr ""
 "από τις ``sscanf`` της C και είναι πιο κατάλληλες για την εργασία."
 
 #: faq/programming.rst:1024
-msgid "What does 'UnicodeDecodeError' or 'UnicodeEncodeError' error  mean?"
-msgstr "Τι σημαίνει το σφάλμα 'UnicodeDecodeError' ή 'UnicodeEncodeError';"
+msgid "What does ``UnicodeDecodeError`` or ``UnicodeEncodeError`` error mean?"
+msgstr "Τι σημαίνει το σφάλμα ``UnicodeDecodeError`` ή ``UnicodeEncodeError``;"
 
 #: faq/programming.rst:1026
 msgid "See the :ref:`unicode-howto`."
@@ -2235,13 +2235,13 @@ msgid ""
 ">>> r'C:\\this\\will\\not\\work\\'\n"
 "  File \"<stdin>\", line 1\n"
 "    r'C:\\this\\will\\not\\work\\'\n"
-"         ^\n"
+"    ^\n"
 "SyntaxError: unterminated string literal (detected at line 1)"
 msgstr ""
 ">>> r'C:\\this\\will\\not\\work\\'\n"
 "  File \"<stdin>\", line 1\n"
 "    r'C:\\this\\will\\not\\work\\'\n"
-"         ^\n"
+"    ^\n"
 "SyntaxError: unterminated string literal (detected at line 1)"
 
 #: faq/programming.rst:1042
@@ -4061,30 +4061,30 @@ msgstr ""
 
 #: faq/programming.rst:1870
 msgid ""
-"1) Assignments create new names but do not change object identity.  After "
-"the assignment ``new = old``, it is guaranteed that ``new is old``."
+"Assignments create new names but do not change object identity.  After the "
+"assignment ``new = old``, it is guaranteed that ``new is old``."
 msgstr ""
-"1) Οι εκχωρήσεις δημιουργούν νέα ονόματα αλλά δεν αλλάζουν την ταυτότητα "
+"Οι εκχωρήσεις δημιουργούν νέα ονόματα αλλά δεν αλλάζουν την ταυτότητα "
 "αντικειμένου.  Μετά την ανάθεση ``new = old``, είναι εγγυημένο ότι το ``new "
 "is old``."
 
 #: faq/programming.rst:1873
 msgid ""
-"2) Putting an object in a container that stores object references does not "
+"Putting an object in a container that stores object references does not "
 "change object identity.  After the list assignment ``s[0] = x``, it is "
 "guaranteed that ``s[0] is x``."
 msgstr ""
-"2) Η τοποθέτηση ενός αντικειμένου σε ένα κοντέινερ που αποθηκεύει αναφορές "
+"Η τοποθέτηση ενός αντικειμένου σε ένα κοντέινερ που αποθηκεύει αναφορές "
 "αντικειμένων δεν αλλάζει την ταυτότητα αντικειμένου.  Μετά την ανάθεση "
 "λίστας ``s[0] = x``, είναι εγγυημένο ότι το ``s[0] is x``."
 
 #: faq/programming.rst:1877
 msgid ""
-"3) If an object is a singleton, it means that only one instance of that "
-"object can exist.  After the assignments ``a = None`` and ``b = None``, it "
-"is guaranteed that ``a is b`` because ``None`` is a singleton."
+"If an object is a singleton, it means that only one instance of that object "
+"can exist.  After the assignments ``a = None`` and ``b = None``, it is "
+"guaranteed that ``a is b`` because ``None`` is a singleton."
 msgstr ""
-"3) Εάν ένα αντικείμενο είναι singleton, σημαίνει ότι μόνο μία παρουσία αυτού "
+"Εάν ένα αντικείμενο είναι singleton, σημαίνει ότι μόνο ένα στιγμιότυπο αυτού "
 "του αντικειμένου μπορεί να υπάρχει.  Μετά τις εκχωρήσεις ``a = None`` και "
 "``b = None``, είναι εγγυημένο ότι το ``a is b`` επειδή το ``None`` είναι "
 "singleton."
@@ -4596,10 +4596,10 @@ msgstr ""
 #: faq/programming.rst:2112
 msgid ""
 ">>> import py_compile\n"
-">>> py_compile.compile('foo.py')                 "
+">>> py_compile.compile('foo.py')"
 msgstr ""
 ">>> import py_compile\n"
-">>> py_compile.compile('foo.py')                 "
+">>> py_compile.compile('foo.py')"
 
 #: faq/programming.rst:2115
 msgid ""
