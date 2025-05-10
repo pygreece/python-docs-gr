@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,25 +72,20 @@ msgid ""
 msgstr ""
 
 #: c-api/allocation.rst:63
-msgid ""
-"Releases memory allocated to an object using :c:macro:`PyObject_New` or :c:"
-"macro:`PyObject_NewVar`.  This is normally called from the :c:member:"
-"`~PyTypeObject.tp_dealloc` handler specified in the object's type.  The "
-"fields of the object should not be accessed after this call as the memory is "
-"no longer a valid Python object."
+msgid "Same as :c:func:`PyObject_Free`."
 msgstr ""
 
-#: c-api/allocation.rst:72
+#: c-api/allocation.rst:67
 msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed "
 "using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
 "object."
 msgstr ""
 
-#: c-api/allocation.rst:79
+#: c-api/allocation.rst:74
 msgid ":c:func:`PyModule_Create`"
 msgstr ""
 
-#: c-api/allocation.rst:80
+#: c-api/allocation.rst:75
 msgid "To allocate and create extension modules."
 msgstr ""

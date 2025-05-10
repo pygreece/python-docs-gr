@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,26 +46,26 @@ msgstr ""
 #: library/cmath.rst:26
 msgid ""
 "For example, the :func:`cmath.sqrt` function has a branch cut along the "
-"negative real axis. An argument of ``complex(-2.0, -0.0)`` is treated as "
-"though it lies *below* the branch cut, and so gives a result on the negative "
-"imaginary axis::"
+"negative real axis. An argument of ``-2-0j`` is treated as though it lies "
+"*below* the branch cut, and so gives a result on the negative imaginary "
+"axis::"
 msgstr ""
 
 #: library/cmath.rst:31
 msgid ""
-">>> cmath.sqrt(complex(-2.0, -0.0))\n"
+">>> cmath.sqrt(-2-0j)\n"
 "-1.4142135623730951j"
 msgstr ""
 
 #: library/cmath.rst:34
 msgid ""
-"But an argument of ``complex(-2.0, 0.0)`` is treated as though it lies above "
-"the branch cut::"
+"But an argument of ``-2+0j`` is treated as though it lies above the branch "
+"cut::"
 msgstr ""
 
 #: library/cmath.rst:37
 msgid ""
-">>> cmath.sqrt(complex(-2.0, 0.0))\n"
+">>> cmath.sqrt(-2+0j)\n"
 "1.4142135623730951j"
 msgstr ""
 
@@ -371,9 +371,9 @@ msgstr ""
 
 #: library/cmath.rst:117
 msgid ""
-">>> phase(complex(-1.0, 0.0))\n"
+">>> phase(-1+0j)\n"
 "3.141592653589793\n"
-">>> phase(complex(-1.0, -0.0))\n"
+">>> phase(-1-0j)\n"
 "-3.141592653589793"
 msgstr ""
 

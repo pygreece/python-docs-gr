@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,26 +125,19 @@ msgid ""
 "subprocesses, whereas :class:`SelectorEventLoop` does not."
 msgstr ""
 
-#: library/asyncio-platforms.rst:80
-msgid ""
-"The :meth:`policy.set_child_watcher() <AbstractEventLoopPolicy."
-"set_child_watcher>` function is also not supported, as :class:"
-"`ProactorEventLoop` has a different mechanism to watch child processes."
-msgstr ""
-
-#: library/asyncio-platforms.rst:87
+#: library/asyncio-platforms.rst:82
 msgid "macOS"
 msgstr ""
 
-#: library/asyncio-platforms.rst:89
+#: library/asyncio-platforms.rst:84
 msgid "Modern macOS versions are fully supported."
 msgstr ""
 
-#: library/asyncio-platforms.rst:92
+#: library/asyncio-platforms.rst:87
 msgid "macOS <= 10.8"
 msgstr ""
 
-#: library/asyncio-platforms.rst:93
+#: library/asyncio-platforms.rst:88
 msgid ""
 "On macOS 10.6, 10.7 and 10.8, the default event loop uses :class:`selectors."
 "KqueueSelector`, which does not support character devices on these "
@@ -153,7 +146,7 @@ msgid ""
 "support character devices on these older versions of macOS.  Example::"
 msgstr ""
 
-#: library/asyncio-platforms.rst:100
+#: library/asyncio-platforms.rst:95
 msgid ""
 "import asyncio\n"
 "import selectors\n"

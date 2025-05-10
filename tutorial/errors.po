@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: 2025-05-04 22:12+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -940,14 +940,17 @@ msgstr ""
 "την εκτέλεση της πρότασης :keyword:`!finally`."
 
 #: tutorial/errors.rst:419
+#, fuzzy
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
-"`continue` or :keyword:`return` statement, exceptions are not re-raised."
+"`continue` or :keyword:`return` statement, exceptions are not re-raised. "
+"This can be confusing and is therefore discouraged. From version 3.14 the "
+"compiler emits a :exc:`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 "Εάν η πρόταση :keyword:`!finally` εκτελέσει μια πρόταση :keyword:`break`, :"
 "keyword:`continue` ή :keyword:`return`, οι εξαιρέσεις δεν αυξάνονται εκ νέου."
 
-#: tutorial/errors.rst:423
+#: tutorial/errors.rst:425
 msgid ""
 "If the :keyword:`!try` statement reaches a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, the :keyword:`!finally` clause "
@@ -959,23 +962,26 @@ msgstr ""
 "εκτελεστεί ακριβώς πριν από τα :keyword:`!break`, :keyword:`!continue` or :"
 "keyword:`!return` της εκτέλεσης της δήλωσης."
 
-#: tutorial/errors.rst:429
+#: tutorial/errors.rst:431
+#, fuzzy
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the "
 "returned value will be the one from the :keyword:`!finally` clause's :"
 "keyword:`!return` statement, not the value from the :keyword:`!try` "
-"clause's :keyword:`!return` statement."
+"clause's :keyword:`!return` statement. This can be confusing and is "
+"therefore discouraged. From version 3.14 the compiler emits a :exc:"
+"`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 "Εάν μια πρόταση :keyword:`!finally` περιλαμβάνει μια δήλωση :keyword:`!"
 "return`, η τιμή που επιστρέφεται θα είναι αυτή από την πρόταση :keyword:`!"
 "finally` της δήλωσης της :keyword:`!return`, και όχι η τιμή από τη δήλωση :"
 "keyword:`!try` της πρότασης :keyword:`!return`."
 
-#: tutorial/errors.rst:435
+#: tutorial/errors.rst:439
 msgid "For example::"
 msgstr "Για παράδειγμα::"
 
-#: tutorial/errors.rst:437
+#: tutorial/errors.rst:441
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -995,11 +1001,11 @@ msgstr ""
 ">>> bool_return()\n"
 "False"
 
-#: tutorial/errors.rst:446
+#: tutorial/errors.rst:450
 msgid "A more complicated example::"
 msgstr "Ένα πιο περίπλοκο παράδειγμα::"
 
-#: tutorial/errors.rst:448
+#: tutorial/errors.rst:452
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -1055,7 +1061,7 @@ msgstr ""
 "             ~~^~~\n"
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 
-#: tutorial/errors.rst:475
+#: tutorial/errors.rst:479
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  "
 "The :exc:`TypeError` raised by dividing two strings is not handled by the :"
@@ -1067,7 +1073,7 @@ msgstr ""
 "δύο συμβολοσειρών δεν χειρίζεται από την πρόταση :keyword:`except` και "
 "επομένως γίνεται ξανά raise μετά την εκτέλεση του όρου :keyword:`!finally`."
 
-#: tutorial/errors.rst:480
+#: tutorial/errors.rst:484
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
@@ -1077,11 +1083,11 @@ msgstr ""
 "χρήσιμη για την απελευθέρωση εξωτερικών πόρων (όπως αρχεία ή συνδέσεις "
 "δικτύου), ανεξάρτητα από το εάν η χρήση του πόρου ήταν επιτυχής."
 
-#: tutorial/errors.rst:488
+#: tutorial/errors.rst:492
 msgid "Predefined Clean-up Actions"
 msgstr "Προκαθορισμένες ενέργειες καθαρισμού"
 
-#: tutorial/errors.rst:490
+#: tutorial/errors.rst:494
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation using "
@@ -1094,7 +1100,7 @@ msgstr ""
 "το ακόλουθο αντικείμενο, το οποίο προσπαθεί να ανοίξει ένα αρχείο και να "
 "εκτυπώσει τα περιεχόμενα του στην οθόνη. ::"
 
-#: tutorial/errors.rst:495
+#: tutorial/errors.rst:499
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
@@ -1102,7 +1108,7 @@ msgstr ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 
-#: tutorial/errors.rst:498
+#: tutorial/errors.rst:502
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -1118,7 +1124,7 @@ msgstr ""
 "σε αντικείμενα όπως αρχεία να χρησιμοποιούνται με τρόπο που διασφαλίζει ότι "
 "καθαρίζονται πάντα άμεσα και σωστά. ::"
 
-#: tutorial/errors.rst:504
+#: tutorial/errors.rst:508
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
@@ -1128,7 +1134,7 @@ msgstr ""
 "    for line in f:\n"
 "        print(line, end=\"\")"
 
-#: tutorial/errors.rst:508
+#: tutorial/errors.rst:512
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a "
 "problem was encountered while processing the lines. Objects which, like "
@@ -1140,11 +1146,11 @@ msgstr ""
 "που, όπως τα αρχεία παρέχουν προκαθορισμένες ενέργειες καθαρισμού θα το "
 "υποδεικνύουν στην τεκμηρίωση τους."
 
-#: tutorial/errors.rst:516
+#: tutorial/errors.rst:520
 msgid "Raising and Handling Multiple Unrelated Exceptions"
 msgstr "Raising και Χειρισμός Πολλαπλών Άσχετων Εξαιρέσεων"
 
-#: tutorial/errors.rst:518
+#: tutorial/errors.rst:522
 msgid ""
 "There are situations where it is necessary to report several exceptions that "
 "have occurred. This is often the case in concurrency frameworks, when "
@@ -1158,7 +1164,7 @@ msgstr ""
 "περιπτώσεις χρήσης όπου είναι επιθυμητό να συνεχιστεί η εκτέλεση και η "
 "συλλογή πολλαπλών σφαλμάτων αντί να κάνει raise την πρώτη εξαίρεση."
 
-#: tutorial/errors.rst:524
+#: tutorial/errors.rst:528
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be "
@@ -1168,7 +1174,7 @@ msgstr ""
 "παρουσίες εξαιρέσεων ώστε να μπορούν να αυξηθούν μαζί. Είναι μια εξαίρεση "
 "από μόνη της, επομένως μπορεί να συλληφθεί όπως κάθε άλλη εξαίρεση. ::"
 
-#: tutorial/errors.rst:528
+#: tutorial/errors.rst:532
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -1220,7 +1226,7 @@ msgstr ""
 "caught <class 'ExceptionGroup'>: e\n"
 ">>>"
 
-#: tutorial/errors.rst:553
+#: tutorial/errors.rst:557
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle only "
 "the exceptions in the group that match a certain type. In the following "
@@ -1235,7 +1241,7 @@ msgstr ""
 "ομάδας ενός συγκεκριμένου τύπου, ενώ αφήνει όλες τις άλλες εξαιρέσεις να "
 "διαδοθούν σε άλλες προτάσεις και τελικά να ξαναγίνουν raise. ::"
 
-#: tutorial/errors.rst:560
+#: tutorial/errors.rst:564
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -1319,7 +1325,7 @@ msgstr ""
 "      +------------------------------------\n"
 ">>>"
 
-#: tutorial/errors.rst:601
+#: tutorial/errors.rst:605
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, not "
 "types. This is because in practice the exceptions would typically be ones "
@@ -1331,7 +1337,7 @@ msgstr ""
 "εξαιρέσεις θα ήταν συνήθως αυτές που έχουν ήδη αναφερθεί και καταγραφεί από "
 "το πρόγραμμα, σύμφωνα με το ακόλουθο μοτίβο::"
 
-#: tutorial/errors.rst:606
+#: tutorial/errors.rst:610
 msgid ""
 ">>> excs = []\n"
 "... for test in tests:\n"
@@ -1355,11 +1361,11 @@ msgstr ""
 "...    raise ExceptionGroup(\"Test Failures\", excs)\n"
 "..."
 
-#: tutorial/errors.rst:621
+#: tutorial/errors.rst:625
 msgid "Enriching Exceptions with Notes"
 msgstr "Εμπλουτίζοντας τις Εξαιρέσεις με Σημειώσεις"
 
-#: tutorial/errors.rst:623
+#: tutorial/errors.rst:627
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -1377,7 +1383,7 @@ msgstr ""
 "σημειώσεων της εξαίρεσης. Η standard απόδοση παρακολούθησης περιλαμβάνει "
 "όλες τις σημειώσεις, με τη σειρά που προστέθηκα, μετά την εξαίρεση. ::"
 
-#: tutorial/errors.rst:630
+#: tutorial/errors.rst:634
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -1409,7 +1415,7 @@ msgstr ""
 "Add some more information\n"
 ">>>"
 
-#: tutorial/errors.rst:645
+#: tutorial/errors.rst:649
 msgid ""
 "For example, when collecting exceptions into an exception group, we may want "
 "to add context information for the individual errors. In the following each "
@@ -1420,7 +1426,7 @@ msgstr ""
 "σφάλματα. Στην συνέχεια κάθε εξαίρεση στην ομάδα έχει μια σημείωση που "
 "υποδεικνύει πότε έχει συμβεί αυτό το σφάλμα. ::"
 
-#: tutorial/errors.rst:649
+#: tutorial/errors.rst:653
 msgid ""
 ">>> def f():\n"
 "...     raise OSError('operation failed')\n"

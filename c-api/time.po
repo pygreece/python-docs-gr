@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -90,7 +91,7 @@ msgstr ""
 #: c-api/time.rst:58
 msgid ""
 "As any other C API (unless otherwise specified), the functions must be "
-"called with the :term:`GIL` held."
+"called with an :term:`attached thread state`."
 msgstr ""
 
 #: c-api/time.rst:63
@@ -118,7 +119,7 @@ msgstr ""
 #: c-api/time.rst:80
 msgid ""
 "Similar to clock functions, but don't set an exception on error and don't "
-"require the caller to hold the GIL."
+"require the caller to have an :term:`attached thread state`."
 msgstr ""
 
 #: c-api/time.rst:83
@@ -128,27 +129,28 @@ msgstr ""
 #: c-api/time.rst:85
 msgid ""
 "On failure, they set ``*result`` to ``0`` and return ``-1``, *without* "
-"setting an exception. To get the cause of the error, acquire the GIL and "
-"call the regular (non-``Raw``) function. Note that the regular function may "
-"succeed after the ``Raw`` one failed."
+"setting an exception. To get the cause of the error, :term:`attach <attached "
+"thread state>` a :term:`thread state`, and call the regular (non-``Raw``) "
+"function. Note that the regular function may succeed after the ``Raw`` one "
+"failed."
 msgstr ""
 
 #: c-api/time.rst:92
 msgid ""
 "Similar to :c:func:`PyTime_Monotonic`, but don't set an exception on error "
-"and don't require holding the GIL."
+"and don't require an :term:`attached thread state`."
 msgstr ""
 
 #: c-api/time.rst:97
 msgid ""
 "Similar to :c:func:`PyTime_PerfCounter`, but don't set an exception on error "
-"and don't require holding the GIL."
+"and don't require an :term:`attached thread state`."
 msgstr ""
 
 #: c-api/time.rst:102
 msgid ""
 "Similar to :c:func:`PyTime_Time`, but don't set an exception on error and "
-"don't require holding the GIL."
+"don't require an :term:`attached thread state`."
 msgstr ""
 
 #: c-api/time.rst:107

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -434,51 +434,33 @@ msgstr ""
 
 #: library/asyncio-subprocess.rst:323
 msgid ""
-"On UNIX *child watchers* are used for subprocess finish waiting, see :ref:"
-"`asyncio-watchers` for more info."
-msgstr ""
-
-#: library/asyncio-subprocess.rst:329
-msgid ""
-"UNIX switched to use :class:`ThreadedChildWatcher` for spawning subprocesses "
-"from different threads without any limitation."
-msgstr ""
-
-#: library/asyncio-subprocess.rst:332
-msgid ""
-"Spawning a subprocess with *inactive* current child watcher raises :exc:"
-"`RuntimeError`."
-msgstr ""
-
-#: library/asyncio-subprocess.rst:335
-msgid ""
 "Note that alternative event loop implementations might have own limitations; "
 "please refer to their documentation."
 msgstr ""
 
-#: library/asyncio-subprocess.rst:340
+#: library/asyncio-subprocess.rst:328
 msgid ""
 "The :ref:`Concurrency and multithreading in asyncio <asyncio-"
 "multithreading>` section."
 msgstr ""
 
-#: library/asyncio-subprocess.rst:345
+#: library/asyncio-subprocess.rst:333
 msgid "Examples"
 msgstr ""
 
-#: library/asyncio-subprocess.rst:347
+#: library/asyncio-subprocess.rst:335
 msgid ""
 "An example using the :class:`~asyncio.subprocess.Process` class to control a "
 "subprocess and the :class:`StreamReader` class to read from its standard "
 "output."
 msgstr ""
 
-#: library/asyncio-subprocess.rst:353
+#: library/asyncio-subprocess.rst:341
 msgid ""
 "The subprocess is created by the :func:`create_subprocess_exec` function::"
 msgstr ""
 
-#: library/asyncio-subprocess.rst:356
+#: library/asyncio-subprocess.rst:344
 msgid ""
 "import asyncio\n"
 "import sys\n"
@@ -504,7 +486,7 @@ msgid ""
 "print(f\"Current date: {date}\")"
 msgstr ""
 
-#: library/asyncio-subprocess.rst:380
+#: library/asyncio-subprocess.rst:368
 msgid ""
 "See also the :ref:`same example <asyncio_example_subprocess_proto>` written "
 "using low-level APIs."

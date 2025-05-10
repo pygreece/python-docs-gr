@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,19 +143,27 @@ msgstr ""
 
 #: library/fnmatch.rst:95
 msgid ""
+"Construct a list from those elements of the :term:`iterable` of filename "
+"strings *names* that do not match the pattern string *pat*. It is the same "
+"as ``[n for n in names if not fnmatch(n, pat)]``, but implemented more "
+"efficiently."
+msgstr ""
+
+#: library/fnmatch.rst:105
+msgid ""
 "Return the shell-style pattern *pat* converted to a regular expression for "
 "using with :func:`re.match`. The pattern is expected to be a :class:`str`."
 msgstr ""
 
-#: library/fnmatch.rst:98
+#: library/fnmatch.rst:108
 msgid "Example:"
 msgstr ""
 
-#: library/fnmatch.rst:112
+#: library/fnmatch.rst:122
 msgid "Module :mod:`glob`"
 msgstr ""
 
-#: library/fnmatch.rst:113
+#: library/fnmatch.rst:123
 msgid "Unix shell-style path expansion."
 msgstr ""
 

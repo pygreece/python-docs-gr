@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,4 +254,43 @@ msgid ""
 "expected to be reduced in upcoming Python release.   We are aiming for an "
 "overhead of 10% or less on the pyperformance suite compared to the default "
 "GIL-enabled build."
+msgstr ""
+
+#: howto/free-threading-python.rst:158
+msgid "Behavioral changes"
+msgstr ""
+
+#: howto/free-threading-python.rst:160
+msgid ""
+"This section describes CPython behavioural changes with the free-threaded "
+"build."
+msgstr ""
+
+#: howto/free-threading-python.rst:165
+msgid "Context variables"
+msgstr ""
+
+#: howto/free-threading-python.rst:167
+msgid ""
+"In the free-threaded build, the flag :data:`~sys.flags."
+"thread_inherit_context` is set to true by default which causes threads "
+"created with :class:`threading.Thread` to start with a copy of the :class:"
+"`~contextvars.Context()` of the caller of :meth:`~threading.Thread.start`.  "
+"In the default GIL-enabled build, the flag defaults to false so threads "
+"start with an empty :class:`~contextvars.Context()`."
+msgstr ""
+
+#: howto/free-threading-python.rst:177
+msgid "Warning filters"
+msgstr ""
+
+#: howto/free-threading-python.rst:179
+msgid ""
+"In the free-threaded build, the flag :data:`~sys.flags."
+"context_aware_warnings` is set to true by default.  In the default GIL-"
+"enabled build, the flag defaults to false.  If the flag is true then the :"
+"class:`warnings.catch_warnings` context manager uses a context variable for "
+"warning filters.  If the flag is false then :class:`~warnings."
+"catch_warnings` modifies the global filters list, which is not thread-safe.  "
+"See the :mod:`warnings` module for more details."
 msgstr ""

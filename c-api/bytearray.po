@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,22 +82,29 @@ msgid ""
 msgstr ""
 
 #: c-api/bytearray.rst:76
-msgid "Resize the internal buffer of *bytearray* to *len*."
+msgid ""
+"Resize the internal buffer of *bytearray* to *len*. Failure is a ``-1`` "
+"return with an exception set."
 msgstr ""
 
 #: c-api/bytearray.rst:79
+msgid ""
+"A negative *len* will now result in an exception being set and -1 returned."
+msgstr ""
+
+#: c-api/bytearray.rst:84
 msgid "Macros"
 msgstr ""
 
-#: c-api/bytearray.rst:81
+#: c-api/bytearray.rst:86
 msgid "These macros trade safety for speed and they don't check pointers."
 msgstr ""
 
-#: c-api/bytearray.rst:85
+#: c-api/bytearray.rst:90
 msgid "Similar to :c:func:`PyByteArray_AsString`, but without error checking."
 msgstr ""
 
-#: c-api/bytearray.rst:90
+#: c-api/bytearray.rst:95
 msgid "Similar to :c:func:`PyByteArray_Size`, but without error checking."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-05-10 10:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 
 #: library/pickletools.rst:23
-msgid "Command line usage"
+msgid "Command-line usage"
 msgstr ""
 
 #: library/pickletools.rst:27
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 
 #: library/pickletools.rst:52
-msgid "Command line options"
+msgid "Command-line options"
 msgstr ""
 
 #: library/pickletools.rst:58
@@ -91,15 +91,20 @@ msgstr ""
 
 #: library/pickletools.rst:75
 msgid ""
-"When more than one pickle file are specified, print given preamble before "
+"When more than one pickle file is specified, print given preamble before "
 "each disassembly."
 msgstr ""
 
-#: library/pickletools.rst:81
-msgid "Programmatic Interface"
+#: library/pickletools.rst:80
+msgid ""
+"A pickle file to read, or ``-`` to indicate reading from standard input."
 msgstr ""
 
-#: library/pickletools.rst:86
+#: library/pickletools.rst:85
+msgid "Programmatic interface"
+msgstr ""
+
+#: library/pickletools.rst:90
 msgid ""
 "Outputs a symbolic disassembly of the pickle to the file-like object *out*, "
 "defaulting to ``sys.stdout``.  *pickle* can be a string or a file-like "
@@ -112,11 +117,11 @@ msgid ""
 "where annotation should start."
 msgstr ""
 
-#: library/pickletools.rst:97
+#: library/pickletools.rst:101
 msgid "Added the *annotate* parameter."
 msgstr ""
 
-#: library/pickletools.rst:102
+#: library/pickletools.rst:106
 msgid ""
 "Provides an :term:`iterator` over all of the opcodes in a pickle, returning "
 "a sequence of ``(opcode, arg, pos)`` triples.  *opcode* is an instance of "
@@ -125,7 +130,7 @@ msgid ""
 "is located. *pickle* can be a string or a file-like object."
 msgstr ""
 
-#: library/pickletools.rst:110
+#: library/pickletools.rst:114
 msgid ""
 "Returns a new equivalent pickle string after eliminating unused ``PUT`` "
 "opcodes. The optimized pickle is shorter, takes less transmission time, "
