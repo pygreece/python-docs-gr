@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: 2025-05-03 18:04+0300\n"
+"PO-Revision-Date: 2025-05-10 22:47+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -89,9 +89,8 @@ msgstr ""
 "abc`). Μπορείτε να δημιουργήσετε τα δικά σας ABC με το module :mod:`abc`."
 
 #: glossary.rst:38
-#, fuzzy
 msgid "annotate function"
-msgstr "annotation"
+msgstr "συνάρτηση annotation"
 
 #: glossary.rst:40
 msgid ""
@@ -101,6 +100,11 @@ msgid ""
 "Annotate functions are a subset of :term:`evaluate functions <evaluate "
 "function>`."
 msgstr ""
+"Μια συνάρτηση που μπορεί να κληθεί για να ανακτήσει το :term:`annotations "
+"<annotation>` ενός αντικειμένου. Αυτή η συνάρτηση είναι προσβάσιμη ως το "
+"χαρακτηριστικό :attr:`~object.__annotate__` των συναρτήσεων, των κλάσεων και "
+"των modules. Οι συναρτήσεις annotate είναι ένα υποσύνολο του :term:`evaluate "
+"functions <evaluate function>`."
 
 #: glossary.rst:44
 msgid "annotation"
@@ -116,7 +120,6 @@ msgstr ""
 "σύμβαση ως :term:`type hint`."
 
 #: glossary.rst:50
-#, fuzzy
 msgid ""
 "Annotations of local variables cannot be accessed at runtime, but "
 "annotations of global variables, class attributes, and functions can be "
@@ -125,20 +128,20 @@ msgid ""
 msgstr ""
 "Δεν είναι δυνατή η πρόσβαση στα annotations των τοπικών μεταβλητών κατά το "
 "χρόνο εκτέλεσης, αλλά τα annotations των global μεταβλητών, των "
-"χαρακτηριστικών κλάσης και των συναρτήσεων αποθηκεύονται στο ειδικό "
-"χαρακτηριστικό :attr:`__annotations__` των modules, των κλάσεων και των "
-"συναρτήσεων, αντίστοιχα."
+"χαρακτηριστικών κλάσης και των συναρτήσεων μπορούν να ανακτηθούν καλώντας "
+"την εντολή :func:`annotationlib.get_annotations` σε modules, κλάσεις και "
+"συναρτήσεις, αντίστοιχα."
 
 #: glossary.rst:55
-#, fuzzy
 msgid ""
 "See :term:`variable annotation`, :term:`function annotation`, :pep:`484`, :"
 "pep:`526`, and :pep:`649`, which describe this functionality. Also see :ref:"
 "`annotations-howto` for best practices on working with annotations."
 msgstr ""
-"Βλ. :term:`variable annotation`, :term:`function annotation`, :pep:`484` "
-"και :pep:`526`, τα οποία περιγράφουν την λειτουργικότητα. Επίσης βλ. :ref:"
-"`annotations-howto` για τις βέλτιστες πρακτικές δουλεύοντας με annotations."
+"Βλ. τα :term:`variable annotation`, :term:`function annotation`, :pep:"
+"`484`, :pep:`526` και :pep:`649`, τα οποία περιγράφουν την λειτουργικότητα. "
+"Δείτε επίσης τα :ref:`annotations-howto` για τις βέλτιστες πρακτικές "
+"δουλεύοντας με annotations."
 
 #: glossary.rst:59
 msgid "argument"
@@ -338,17 +341,22 @@ msgstr ""
 
 #: glossary.rst:134
 msgid "attached thread state"
-msgstr ""
+msgstr "κατάσταση συνδεδεμένου νήματος"
 
 #: glossary.rst:137
 msgid "A :term:`thread state` that is active for the current OS thread."
 msgstr ""
+"Ένα :term:`thread state` που είναι ενεργή για το τρέχον νήμα του "
+"λειτουργικού συστήματος."
 
 #: glossary.rst:139
 msgid ""
 "When a :term:`thread state` is attached, the OS thread has access to the "
 "full Python C API and can safely invoke the bytecode interpreter."
 msgstr ""
+"Όταν επισυνάπτεται ένας :term:`thread state`, το νήμα του λειτουργικού "
+"συστήματος έχει πρόσβαση στο πλήρες Python C API και μπορεί να καλέσει με "
+"ασφάλεια τον διερμηνέα bytecode."
 
 #: glossary.rst:143
 msgid ""
@@ -358,6 +366,12 @@ msgid ""
 "user through the C API, or implicitly by the runtime, including during "
 "blocking C calls and by the bytecode interpreter in between calls."
 msgstr ""
+"Εκτός εάν μια συνάρτηση αναφέρει ρητά το αντίθετο, η προσπάθεια κλήσης του C "
+"API χωρίς μια συνημμένη κατάσταση νήματος θα οδηγήσει ένα μοιραίο σφάλμα ή "
+"σε απροσδιόριστη συμπεριφορά.  Μια κατάσταση νήματος μπορεί να συνδεθεί και "
+"να αποσυνδεθεί ρητά από τον χρήση μέσω του C API ή έμμεσα από τον χρόνο "
+"εκτέλεσης, συμπεριλαμβανομένων των κλήσεων αποκλεισμού C και από τον "
+"διερμηνέα bytecode μεταξύ των κλήσεων."
 
 #: glossary.rst:150
 msgid ""
@@ -368,6 +382,13 @@ msgid ""
 "an attached thread state, allowing for true parallelism of the bytecode "
 "interpreter."
 msgstr ""
+"Στις περισσότερες εκδόσεις της Python, η ύπαρξη μιας κατάσταση συνδεδεμένου "
+"νήματος υπονοεί ότι ο καλών διατηρεί την :term:`GIL` για τον τρέχοντα "
+"διερμηνέα, επομένως μόνο ένα νήμα λειτουργικού συστήματος μπορεί να έχει μια "
+"κατάσταση συνδεδεμένου νήματος σε μια δεδομένη στιγμή. Στις εκδόσεις :term:"
+"`free-threaded <free threading>` της Python, τα νήματα μπορούν να διατηρούν "
+"ταυτόχρονα μια κατάσταση συνδεδεμένου νήματος, επιτρέποντας την πραγματική "
+"παραλληλία του διερμηνέα bytecode."
 
 #: glossary.rst:156
 msgid "attribute"
@@ -1089,9 +1110,8 @@ msgstr ""
 "όπως η C."
 
 #: glossary.rst:439
-#, fuzzy
 msgid "evaluate function"
-msgstr "συνάρτηση key"
+msgstr "αξιολόγηση συνάρτησης"
 
 #: glossary.rst:441
 msgid ""
@@ -1099,6 +1119,9 @@ msgid ""
 "object, such as the value of type aliases created with the :keyword:`type` "
 "statement."
 msgstr ""
+"Μια συνάρτηση που μπορεί να κληθεί για να αξιολογήσει ένα αδρανές "
+"χαρακτηριστικό ενός αντικειμένου, όπως η τιμή των ψευδωνύμων τύπου που "
+"δημιουργούνται με την πρόταση :keyword:`type`."
 
 #: glossary.rst:444
 msgid "expression"
@@ -1621,6 +1644,9 @@ msgid ""
 "requires the GIL to be held in order to use it. This refers to having an :"
 "term:`attached thread state`."
 msgstr ""
+"Σε προηγούμενες εκδόσεις του C API της Python, μια συνάρτηση μπορεί να "
+"δηλώνει ότι απαιτεί την τήρηση του GIL για να χρησιμοποιηθεί. Αυτό "
+"αναφέρεται στην ύπαρξη μιας κατάστασης :term:`attached thread state`."
 
 #: glossary.rst:650
 msgid "hash-based pyc"
@@ -1721,6 +1747,8 @@ msgid ""
 "Immortal objects can be identified via :func:`sys._is_immortal`, or via :c:"
 "func:`PyUnstable_IsImmortal` in the C API."
 msgstr ""
+"Τα αθάνατα αντικείμενα μπορούν να αναγνωριστούν μέσω της :func:`sys."
+"_is_immortal`, ή μέσω της :c:func:`PyUnstable_IsImmortal` στο C API."
 
 #: glossary.rst:689
 msgid "immutable"
@@ -3294,7 +3322,7 @@ msgstr ""
 
 #: glossary.rst:1323
 msgid "thread state"
-msgstr ""
+msgstr "κατάσταση νήματος"
 
 #: glossary.rst:1326
 msgid ""
@@ -3302,6 +3330,10 @@ msgid ""
 "For example, this includes the current exception, if any, and the state of "
 "the bytecode interpreter."
 msgstr ""
+"Οι πληροφορίες που χρησιμοποιούνται από τη ροή εκτέλεσης της :term:`CPython` "
+"για την εκτέλεση σε ένα νήμα λειτουργικού συστήματος. Για παράδειγμα, αυτό "
+"περιλαμβάνει την τρέχουσα εξαίρεση, εάν υπάρχει, και την κατάσταση του "
+"διερμηνέα bytecode."
 
 #: glossary.rst:1330
 msgid ""
@@ -3309,6 +3341,10 @@ msgid ""
 "thread states available.  At most, one of them may be :term:`attached "
 "<attached thread state>` at once."
 msgstr ""
+"Κάθε κατάσταση νήματος είναι συνδεδεμένη με ένα μόνο νήμα λειτουργικού "
+"συστήματος, αλλά τα νήματα μπορεί να έχουν πολλές διαθέσιμες καταστάσεις "
+"νήματος.  Το πολύ, μία από αυτές μπορεί να είναι :term:`attached <attached "
+"thread state>` ταυτόχρονα."
 
 #: glossary.rst:1334
 msgid ""
@@ -3316,6 +3352,10 @@ msgid ""
 "unless a function explicitly documents otherwise. The bytecode interpreter "
 "only runs under an attached thread state."
 msgstr ""
+"Απαιτείται ένα :term:`attached thread state` για την κλήση του μεγαλύτερου "
+"μέρους του C API της Python, εκτός εάν μια συνάρτηση τεκμηριώνεται ρητά από "
+"το αντίθετο. Ο διερμηνέας bytecode εκτελείται μόνο υπό κατάσταση συνημμένου "
+"νήματος."
 
 #: glossary.rst:1338
 msgid ""
@@ -3325,12 +3365,20 @@ msgid ""
 "one can be :term:`attached <attached thread state>` in that thread at any "
 "given moment."
 msgstr ""
+"Κάθε κατάσταση νήματος ανήκει σε έναν μόνο διερμηνέα, αλλά κάθε διερμηνέα "
+"μπορεί να έχει πολλές καταστάσεις νήματος, συμπεριλαμβανομένων πολλαπλών για "
+"το ίδιο νήμα λειτουργικού συστήματος. Οι καταστάσεις νήματος από πολλαπλούς "
+"διερμηνείς μπορεί να είναι συνδεδεμένος με το ίδιο νήμα, αλλά μόνο μία "
+"μπορεί να είναι :term:`attached <attached thread state>` σε αυτό το νήμα σε "
+"οποιαδήποτε δεδομένη στιγμή."
 
 #: glossary.rst:1344
 msgid ""
 "See :ref:`Thread State and the Global Interpreter Lock <threads>` for more "
 "information."
 msgstr ""
+"Δείτε το :ref:`Thread State and the Global Interpreter Lock <threads>` για "
+"περισσότερες πληροφορίες."
 
 #: glossary.rst:1346
 msgid "token"

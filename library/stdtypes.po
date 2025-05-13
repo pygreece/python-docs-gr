@@ -432,7 +432,6 @@ msgstr ""
 "func:`complex` για να παράγουν αριθμούς συγκεκριμένου τύπου."
 
 #: library/stdtypes.rst:266
-#, fuzzy
 msgid ""
 "Python fully supports mixed arithmetic: when a binary arithmetic operator "
 "has operands of different numeric types, the operand with the \"narrower\" "
@@ -443,22 +442,25 @@ msgstr ""
 "Η Python υποστηρίζει πλήρως τα μικτά αριθμητικά: όταν ένας δυαδικός "
 "αριθμητικός τελεστής έχει τελεστές διαφορετικών αριθμητικών τύπων, ο "
 "τελεστής με το \"στενότερο\" τύπο διευρύνεται σε αυτόν του άλλου, όπου ένας "
-"ακέραιος αριθμός είναι στενότερος από έναν με κινητή υποδιαστολή, που είναι "
-"στενότερο από ένα μιγαδικό. Η σύγκριση μεταξύ αριθμών διαφορετικών τύπων "
-"συμπεριφέρεται σαν να ήταν οι ακριβείς τιμές αυτών των αριθμών σε σύγκριση. "
-"[2]_"
+"ακέραιος αριθμός είναι στενότερος από έναν με κινητή υποδιαστολή. Η "
+"αριθμητική με μιγαδικούς και πραγματικούς τελεστές ορίζεται από τον συνήθη "
+"μαθηματικό τύπο, για παράδειγμα::"
 
 #: library/stdtypes.rst:272
 msgid ""
 "x + complex(u, v) = complex(x + u, v)\n"
 "x * complex(u, v) = complex(x * u, x * v)"
 msgstr ""
+"x + complex(u, v) = complex(x + u, v)\n"
+"x * complex(u, v) = complex(x * u, x * v)"
 
 #: library/stdtypes.rst:275
 msgid ""
 "A comparison between numbers of different types behaves as though the exact "
 "values of those numbers were being compared. [2]_"
 msgstr ""
+"Μια σύγκριση μεταξύ αριθμών διαφορετικών τύπων συμπεριφέρεται σαν να "
+"συγκρίνονται οι ακριβείς τιμές αυτών των αριθμών. [2]_"
 
 #: library/stdtypes.rst:278
 msgid ""
@@ -1196,6 +1198,8 @@ msgstr ""
 msgid ""
 "Class method to return a floating-point number constructed from a number *x*."
 msgstr ""
+"Μέθοδος κλάσης για την επιστροφή ενός αριθμού κινητής υποδιαστολής που "
+"κατασκευάζεται από έναν αριθμό *x*."
 
 #: library/stdtypes.rst:638
 msgid ""
@@ -1204,6 +1208,10 @@ msgid ""
 "returned.  If the argument is outside the range of a Python float, an :exc:"
 "`OverflowError` will be raised."
 msgstr ""
+"Εάν το όρισμα είναι ακέραιος ή αριθμός κινητής υποδιαστολής, επιστρέφεται "
+"ένας αριθμός κινητής υποδιαστολής με την ίδια τιμή (εντός της ακρίβειας "
+"κινητής υποδιαστολής της Python). Εάν το όρισμα βρίσκεται εκτός του εύρους "
+"ενός Python float, θα κάνει raise μια :exc:`OverflowError`."
 
 #: library/stdtypes.rst:643
 msgid ""
@@ -1211,6 +1219,9 @@ msgid ""
 "__float__()``. If :meth:`~object.__float__` is not defined then it falls "
 "back to :meth:`~object.__index__`."
 msgstr ""
+"Για ένα γενικό αντικείμενο Python ``x``, ``float.from_number(x)`` ανατίθεται "
+"στο ``x.__float__()``. Εάν η :meth:`~object.__float__` δεν έχει οριστεί, "
+"τότε επιστρέφει στη :meth:`~object.__index__`."
 
 #: library/stdtypes.rst:653
 msgid ""
@@ -1359,24 +1370,22 @@ msgstr ""
 "'0x1.d380000000000p+11'"
 
 #: library/stdtypes.rst:730
-#, fuzzy
 msgid "Additional Methods on Complex"
-msgstr "Περαιτέρω Μέθοδοι για Float"
+msgstr "Περαιτέρω Μέθοδοι για Μιγαδικούς"
 
 #: library/stdtypes.rst:732
-#, fuzzy
 msgid ""
 "The :class:`!complex` type implements the :class:`numbers.Complex` :term:"
 "`abstract base class`. :class:`!complex` also has the following additional "
 "methods."
 msgstr ""
-"Ο τύπος float (κινητής υποδιαστολής) υλοποιεί την :class:`numbers.Real` :"
-"term:`abstract base class`. Ο float έχει επίσης τις ακόλουθες πρόσθετες "
-"μεθόδους."
+"Ο τύπος :class:`!complex` υλοποιεί την :class:`numbers.Complex` :term:"
+"`abstract base class`. Η :class:`!complex` έχει επίσης τις ακόλουθες "
+"πρόσθετε μεθόδους."
 
 #: library/stdtypes.rst:738
 msgid "Class method to convert a number to a complex number."
-msgstr ""
+msgstr "Μέθοδος κλάσης για τη μετατροπή ενός αριθμούς σε ένα μιγαδικό αριθμός."
 
 #: library/stdtypes.rst:740
 msgid ""
@@ -1385,6 +1394,10 @@ msgid ""
 "falls back to :meth:`~object.__float__`.  If :meth:`!__float__` is not "
 "defined then it falls back to :meth:`~object.__index__`."
 msgstr ""
+"Για ένα γενικό αντικείμενο Python ``x``, ``complex.from_number(x)`` "
+"ανατίθεται στο ``x.__complex__()``. Εάν η :meth:`~object.__complex__` δεν "
+"έχει οριστεί, τότε επιστρέφει :meth:`~object.__float__`. Εάν η :meth:`!"
+"__float__` δεν έχει οριστεί, τότε επιστρέφει στη :meth:`~object.__index__`."
 
 #: library/stdtypes.rst:751
 msgid "Hashing of numeric types"
@@ -2928,374 +2941,367 @@ msgstr ""
 
 #: library/stdtypes.rst:1554
 msgid "Text and Binary Sequence Type Methods Summary"
-msgstr ""
+msgstr "Σύνοψη μεθόδων τύπου κειμένου και δυαδική ακολουθίας"
 
 #: library/stdtypes.rst:1555
 msgid ""
 "The following table summarizes the text and binary sequence types methods by "
 "category."
 msgstr ""
+"Ο παρακάτω πίνακας συνοψίζει τις μεθόδους τύπων κειμένου και δυαδική "
+"ακολουθίας ανά κατηγορία."
 
 #: library/stdtypes.rst:1560
 msgid "Category"
-msgstr ""
+msgstr "Κατηγορία"
 
 #: library/stdtypes.rst:1560
-#, fuzzy
 msgid ":class:`str` methods"
-msgstr ":class:`set`"
+msgstr ":class:`str` methods"
 
 #: library/stdtypes.rst:1560
-#, fuzzy
 msgid ":class:`bytes` and :class:`bytearray` methods"
-msgstr "το :class:`memoryview` έχει διάφορες μεθόδους:"
+msgstr "οι μέθοδοι :class:`bytes` και :class:`bytearray`"
 
 #: library/stdtypes.rst:1562
-#, fuzzy
 msgid "Formatting"
-msgstr "μορφοποίηση"
+msgstr "Μορφοποίηση"
 
 #: library/stdtypes.rst:1562
 msgid ":meth:`str.format`"
-msgstr ""
+msgstr ":meth:`str.format`"
 
 #: library/stdtypes.rst:1564
 msgid ":meth:`str.format_map`"
-msgstr ""
+msgstr ":meth:`str.format_map`"
 
 #: library/stdtypes.rst:1566
-#, fuzzy
 msgid ":ref:`f-strings`"
-msgstr "string"
+msgstr ":ref:`f-strings`"
 
 #: library/stdtypes.rst:1568
-#, fuzzy
 msgid ":ref:`old-string-formatting`"
-msgstr "``printf``-style String Formatting"
+msgstr ":ref:`old-string-formatting`"
 
 #: library/stdtypes.rst:1568
-#, fuzzy
 msgid ":ref:`bytes-formatting`"
-msgstr "μορφοποίηση σε στυλ printf"
+msgstr ":ref:`bytes-formatting`"
 
 #: library/stdtypes.rst:1570
 msgid "Searching and Replacing"
-msgstr ""
+msgstr "Αναζήτηση και Αντικατάσταση"
 
 #: library/stdtypes.rst:1570
 msgid ":meth:`str.find`"
-msgstr ""
+msgstr ":meth:`str.find`"
 
 #: library/stdtypes.rst:1570
 msgid ":meth:`str.rfind`"
-msgstr ""
+msgstr ":meth:`str.rfind`"
 
 #: library/stdtypes.rst:1570
 msgid ":meth:`bytes.find`"
-msgstr ""
+msgstr ":meth:`bytes.find`"
 
 #: library/stdtypes.rst:1570
 msgid ":meth:`bytes.rfind`"
-msgstr ""
+msgstr ":meth:`bytes.rfind`"
 
 #: library/stdtypes.rst:1572
 msgid ":meth:`str.index`"
-msgstr ""
+msgstr ":meth:`str.index`"
 
 #: library/stdtypes.rst:1572
 msgid ":meth:`str.rindex`"
-msgstr ""
+msgstr ":meth:`str.rindex`"
 
 #: library/stdtypes.rst:1572
 msgid ":meth:`bytes.index`"
-msgstr ""
+msgstr ":meth:`bytes.index`"
 
 #: library/stdtypes.rst:1572
 msgid ":meth:`bytes.rindex`"
-msgstr ""
+msgstr ":meth:`bytes.rindex`"
 
 #: library/stdtypes.rst:1574
 msgid ":meth:`str.startswith`"
-msgstr ""
+msgstr ":meth:`str.startswith`"
 
 #: library/stdtypes.rst:1574
 msgid ":meth:`bytes.startswith`"
-msgstr ""
+msgstr ":meth:`bytes.startswith`"
 
 #: library/stdtypes.rst:1576
 msgid ":meth:`str.endswith`"
-msgstr ""
+msgstr ":meth:`str.endswith`"
 
 #: library/stdtypes.rst:1576
 msgid ":meth:`bytes.endswith`"
-msgstr ""
+msgstr ":meth:`bytes.endswith`"
 
 #: library/stdtypes.rst:1578
 msgid ":meth:`str.count`"
-msgstr ""
+msgstr ":meth:`str.count`"
 
 #: library/stdtypes.rst:1578
 msgid ":meth:`bytes.count`"
-msgstr ""
+msgstr ":meth:`bytes.count`"
 
 #: library/stdtypes.rst:1580
 msgid ":meth:`str.replace`"
-msgstr ""
+msgstr ":meth:`str.replace`"
 
 #: library/stdtypes.rst:1580
 msgid ":meth:`bytes.replace`"
-msgstr ""
+msgstr ":meth:`bytes.replace`"
 
 #: library/stdtypes.rst:1582
 msgid "Splitting and Joining"
-msgstr ""
+msgstr "Διαχωρισμός και Ένωση"
 
 #: library/stdtypes.rst:1582
 msgid ":meth:`str.split`"
-msgstr ""
+msgstr ":meth:`str.split`"
 
 #: library/stdtypes.rst:1582
 msgid ":meth:`str.rsplit`"
-msgstr ""
+msgstr ":meth:`str.rsplit`"
 
 #: library/stdtypes.rst:1582
 msgid ":meth:`bytes.split`"
-msgstr ""
+msgstr ":meth:`bytes.split`"
 
 #: library/stdtypes.rst:1582
 msgid ":meth:`bytes.rsplit`"
-msgstr ""
+msgstr ":meth:`bytes.rsplit`"
 
 #: library/stdtypes.rst:1584
-#, fuzzy
 msgid ":meth:`str.splitlines`"
-msgstr "μέθοδος str.splitlines"
+msgstr ":meth:`str.splitlines`"
 
 #: library/stdtypes.rst:1584
-#, fuzzy
 msgid ":meth:`bytes.splitlines`"
-msgstr "bytes.splitlines μέθοδος"
+msgstr ":meth:`bytes.splitlines`"
 
 #: library/stdtypes.rst:1586
 msgid ":meth:`str.partition`"
-msgstr ""
+msgstr ":meth:`str.partition`"
 
 #: library/stdtypes.rst:1586
 msgid ":meth:`bytes.partition`"
-msgstr ""
+msgstr ":meth:`bytes.partition`"
 
 #: library/stdtypes.rst:1588
 msgid ":meth:`str.rpartition`"
-msgstr ""
+msgstr ":meth:`str.rpartition`"
 
 #: library/stdtypes.rst:1588
 msgid ":meth:`bytes.rpartition`"
-msgstr ""
+msgstr ":meth:`bytes.rpartition`"
 
 #: library/stdtypes.rst:1590
 msgid ":meth:`str.join`"
-msgstr ""
+msgstr ":meth:`str.join`"
 
 #: library/stdtypes.rst:1590
 msgid ":meth:`bytes.join`"
-msgstr ""
+msgstr ":meth:`bytes.join`"
 
 #: library/stdtypes.rst:1592
 msgid "String Classification"
-msgstr ""
+msgstr "Ταξινόμηση Συμβολοσειρών"
 
 #: library/stdtypes.rst:1592
 msgid ":meth:`str.isalpha`"
-msgstr ""
+msgstr ":meth:`str.isalpha`"
 
 #: library/stdtypes.rst:1592
 msgid ":meth:`bytes.isalpha`"
-msgstr ""
+msgstr ":meth:`bytes.isalpha`"
 
 #: library/stdtypes.rst:1594
 msgid ":meth:`str.isdecimal`"
-msgstr ""
+msgstr ":meth:`str.isdecimal`"
 
 #: library/stdtypes.rst:1596
 msgid ":meth:`str.isdigit`"
-msgstr ""
+msgstr ":meth:`str.isdigit`"
 
 #: library/stdtypes.rst:1596
 msgid ":meth:`bytes.isdigit`"
-msgstr ""
+msgstr ":meth:`bytes.isdigit`"
 
 #: library/stdtypes.rst:1598
 msgid ":meth:`str.isnumeric`"
-msgstr ""
+msgstr ":meth:`str.isnumeric`"
 
 #: library/stdtypes.rst:1600
 msgid ":meth:`str.isalnum`"
-msgstr ""
+msgstr ":meth:`str.isalnum`"
 
 #: library/stdtypes.rst:1600
 msgid ":meth:`bytes.isalnum`"
-msgstr ""
+msgstr ":meth:`bytes.isalnum`"
 
 #: library/stdtypes.rst:1602
 msgid ":meth:`str.isidentifier`"
-msgstr ""
+msgstr ":meth:`str.isidentifier`"
 
 #: library/stdtypes.rst:1604
 msgid ":meth:`str.islower`"
-msgstr ""
+msgstr ":meth:`str.islower`"
 
 #: library/stdtypes.rst:1604
 msgid ":meth:`bytes.islower`"
-msgstr ""
+msgstr ":meth:`bytes.islower`"
 
 #: library/stdtypes.rst:1606
 msgid ":meth:`str.isupper`"
-msgstr ""
+msgstr ":meth:`str.isupper`"
 
 #: library/stdtypes.rst:1606
 msgid ":meth:`bytes.isupper`"
-msgstr ""
+msgstr ":meth:`bytes.isupper`"
 
 #: library/stdtypes.rst:1608
 msgid ":meth:`str.istitle`"
-msgstr ""
+msgstr ":meth:`str.istitle`"
 
 #: library/stdtypes.rst:1608
 msgid ":meth:`bytes.istitle`"
-msgstr ""
+msgstr ":meth:`bytes.istitle`"
 
 #: library/stdtypes.rst:1610
 msgid ":meth:`str.isspace`"
-msgstr ""
+msgstr ":meth:`str.isspace`"
 
 #: library/stdtypes.rst:1610
 msgid ":meth:`bytes.isspace`"
-msgstr ""
+msgstr ":meth:`bytes.isspace`"
 
 #: library/stdtypes.rst:1612
 msgid ":meth:`str.isprintable`"
-msgstr ""
+msgstr ":meth:`str.isprintable`"
 
 #: library/stdtypes.rst:1614
-#, fuzzy
 msgid "Case Manipulation"
-msgstr "Line Tabulation"
+msgstr "Χειρισμός υποθέσεων"
 
 #: library/stdtypes.rst:1614
 msgid ":meth:`str.lower`"
-msgstr ""
+msgstr ":meth:`str.lower`"
 
 #: library/stdtypes.rst:1614
 msgid ":meth:`bytes.lower`"
-msgstr ""
+msgstr ":meth:`bytes.lower`"
 
 #: library/stdtypes.rst:1616
 msgid ":meth:`str.upper`"
-msgstr ""
+msgstr ":meth:`str.upper`"
 
 #: library/stdtypes.rst:1616
 msgid ":meth:`bytes.upper`"
-msgstr ""
+msgstr ":meth:`bytes.upper`"
 
 #: library/stdtypes.rst:1618
 msgid ":meth:`str.casefold`"
-msgstr ""
+msgstr ":meth:`str.casefold`"
 
 #: library/stdtypes.rst:1620
 msgid ":meth:`str.capitalize`"
-msgstr ""
+msgstr ":meth:`str.capitalize`"
 
 #: library/stdtypes.rst:1620
 msgid ":meth:`bytes.capitalize`"
-msgstr ""
+msgstr ":meth:`bytes.capitalize`"
 
 #: library/stdtypes.rst:1622
 msgid ":meth:`str.title`"
-msgstr ""
+msgstr ":meth:`str.title`"
 
 #: library/stdtypes.rst:1622
 msgid ":meth:`bytes.title`"
-msgstr ""
+msgstr ":meth:`bytes.title`"
 
 #: library/stdtypes.rst:1624
 msgid ":meth:`str.swapcase`"
-msgstr ""
+msgstr ":meth:`str.swapcase`"
 
 #: library/stdtypes.rst:1624
 msgid ":meth:`bytes.swapcase`"
-msgstr ""
+msgstr ":meth:`bytes.swapcase`"
 
 #: library/stdtypes.rst:1626
 msgid "Padding and Stripping"
-msgstr ""
+msgstr "Συμπλήρωση και Αφαίρεση"
 
 #: library/stdtypes.rst:1626
 msgid ":meth:`str.ljust`"
-msgstr ""
+msgstr ":meth:`str.ljust`"
 
 #: library/stdtypes.rst:1626
 msgid ":meth:`str.rjust`"
-msgstr ""
+msgstr ":meth:`str.rjust`"
 
 #: library/stdtypes.rst:1626
 msgid ":meth:`bytes.ljust`"
-msgstr ""
+msgstr ":meth:`bytes.ljust`"
 
 #: library/stdtypes.rst:1626
 msgid ":meth:`bytes.rjust`"
-msgstr ""
+msgstr ":meth:`bytes.rjust`"
 
 #: library/stdtypes.rst:1628
 msgid ":meth:`str.center`"
-msgstr ""
+msgstr ":meth:`str.center`"
 
 #: library/stdtypes.rst:1628
 msgid ":meth:`bytes.center`"
-msgstr ""
+msgstr ":meth:`bytes.center`"
 
 #: library/stdtypes.rst:1630
 msgid ":meth:`str.expandtabs`"
-msgstr ""
+msgstr ":meth:`str.expandtabs`"
 
 #: library/stdtypes.rst:1630
 msgid ":meth:`bytes.expandtabs`"
-msgstr ""
+msgstr ":meth:`bytes.expandtabs`"
 
 #: library/stdtypes.rst:1632
 msgid ":meth:`str.strip`"
-msgstr ""
+msgstr ":meth:`str.strip`"
 
 #: library/stdtypes.rst:1632
 msgid ":meth:`bytes.strip`"
-msgstr ""
+msgstr ":meth:`bytes.strip`"
 
 #: library/stdtypes.rst:1634
 msgid ":meth:`str.lstrip`"
-msgstr ""
+msgstr ":meth:`str.lstrip`"
 
 #: library/stdtypes.rst:1634
 msgid ":meth:`str.rstrip`"
-msgstr ""
+msgstr ":meth:`str.rstrip`"
 
 #: library/stdtypes.rst:1634
 msgid ":meth:`bytes.lstrip`"
-msgstr ""
+msgstr ":meth:`bytes.lstrip`"
 
 #: library/stdtypes.rst:1634
 msgid ":meth:`bytes.rstrip`"
-msgstr ""
+msgstr ":meth:`bytes.rstrip`"
 
 #: library/stdtypes.rst:1636
 msgid "Translation and Encoding"
-msgstr ""
+msgstr "Μετάφραση και Κωδικοποίηση"
 
 #: library/stdtypes.rst:1636
 msgid ":meth:`str.translate`"
-msgstr ""
+msgstr ":meth:`str.translate`"
 
 #: library/stdtypes.rst:1636
 msgid ":meth:`bytes.translate`"
-msgstr ""
+msgstr ":meth:`bytes.translate`"
 
 #: library/stdtypes.rst:1638
 msgid ":meth:`str.maketrans`"
@@ -3303,15 +3309,15 @@ msgstr ""
 
 #: library/stdtypes.rst:1638
 msgid ":meth:`bytes.maketrans`"
-msgstr ""
+msgstr ":meth:`bytes.maketrans`"
 
 #: library/stdtypes.rst:1640
 msgid ":meth:`str.encode`"
-msgstr ""
+msgstr ":meth:`str.encode`"
 
 #: library/stdtypes.rst:1642
 msgid ":meth:`bytes.decode`"
-msgstr ""
+msgstr ":meth:`bytes.decode`"
 
 #: library/stdtypes.rst:1648
 msgid "Text Sequence Type --- :class:`str`"
@@ -3574,15 +3580,14 @@ msgstr ""
 "τίποτα στο ``'ß'``· η :meth:`casefold` το μετατρέπει σε ``\"ss\"``."
 
 #: library/stdtypes.rst:1780
-#, fuzzy
 msgid ""
 "The casefolding algorithm is `described in section 3.13 'Default Case "
 "Folding' of the Unicode Standard <https://www.unicode.org/versions/"
 "Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 msgstr ""
-"Ο αλγόριθμος casefolding περιγράφεται στην ενότητα 3.13 'Default Case "
+"Ο αλγόριθμος casefolding `περιγράφεται στην ενότητα 3.13 'Default Case "
 "Folding' του προτύπου Unicode <https://www.unicode.org/versions/"
-"Unicode15.0.0/ch03.pdf>`__."
+"Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 
 #: library/stdtypes.rst:1789
 msgid ""
@@ -3820,7 +3825,6 @@ msgstr ""
 "isdigit()``, ή ``c.isnumeric()``."
 
 #: library/stdtypes.rst:1940
-#, fuzzy
 msgid ""
 "Return ``True`` if all characters in the string are alphabetic and there is "
 "at least one character, ``False`` otherwise.  Alphabetic characters are "
@@ -3838,7 +3842,7 @@ msgstr ""
 "ιδιότητα μία από τα \"Lm\", \"Lt\", \"Lu\", \"Ll\", ή \"Lo\".  Σημειώστε ότι "
 "αυτό είναι διαφορετικό από το `Αλφαβητικό που ορίζεται στην ενότητα 4.10 "
 "'Letters, Alphabetic, and Ideographic' του προτύπου Unicode <https://www."
-"unicode.org/versions/Unicode15.1.0/ch04.pdf>`_."
+"unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G91002>`_."
 
 #: library/stdtypes.rst:1951
 msgid ""
@@ -3945,13 +3949,12 @@ msgstr ""
 "Numeric_Type=Numeric."
 
 #: library/stdtypes.rst:2015
-#, fuzzy
 msgid ""
 "Return ``True`` if all characters in the string are printable, ``False`` if "
 "it contains at least one non-printable character."
 msgstr ""
-"Επιστρέφει true αν όλοι οι χαρακτήρες στη συμβολοσειρά μπορεί να εκτυπωθεί, "
-"false εάν περιέχει τουλάχιστον έναν μη εκτυπώσιμο χαρακτήρα."
+"Επιστρέφει ``True`` αν όλοι οι χαρακτήρες στη συμβολοσειρά μπορούν να "
+"εκτυπωθούν, ``False`` εάν περιέχει τουλάχιστον έναν μη εκτυπώσιμο χαρακτήρα."
 
 #: library/stdtypes.rst:2018
 msgid ""
@@ -4055,15 +4058,14 @@ msgstr ""
 "χαρακτήρες [4]_ να έχουν μετατραπεί σε πεζούς."
 
 #: library/stdtypes.rst:2086
-#, fuzzy
 msgid ""
 "The lowercasing algorithm used is `described in section 3.13 'Default Case "
 "Folding' of the Unicode Standard <https://www.unicode.org/versions/"
 "Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 msgstr ""
-"Ο αλγόριθμος που χρησιμοποιείται για την πεζογράμμιση περιγράφεται στην "
+"Ο αλγόριθμος που χρησιμοποιείται για την πεζογράμμιση `περιγράφεται στην "
 "ενότητα 3.13 'Default Case Folding' του προτύπου Unicode <https://www."
-"unicode.org/versions/Unicode15.1.0/ch03.pdf>`__."
+"unicode.org/versions/Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 
 #: library/stdtypes.rst:2093
 msgid ""
@@ -4785,15 +4787,15 @@ msgstr ""
 "είναι  \"Lu\" (Γράμμα, κεφαλαίο), αλλά π.χ. \"Lt\" (Γράμμα, titlecase)."
 
 #: library/stdtypes.rst:2438
-#, fuzzy
 msgid ""
 "The uppercasing algorithm used is `described in section 3.13 'Default Case "
 "Folding' of the Unicode Standard <https://www.unicode.org/versions/"
 "Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 msgstr ""
-"Ο uppercasing αλγόριθμος που χρησιμοποιείται `περιγράφεται στην ενότητα 3.13 "
-"'Default Case Folding' του προτύπου Unicode <https://www.unicode.org/"
-"versions/Unicode15.1.0/ch03.pdf>`__."
+"Ο αλγόριθμος που κάνει τα γράμματα κεφαλαία που χρησιμοποιείται "
+"`περιγράφεται στην ενότητα 3.13 'Default Case Folding' του προτύπου Unicode "
+"<https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-3/"
+"#G33992>`__."
 
 #: library/stdtypes.rst:2445
 msgid ""
@@ -5701,6 +5703,8 @@ msgid ""
 ":meth:`bytes.fromhex` now accepts ASCII :class:`bytes` and :term:`bytes-like "
 "objects <bytes-like object>` as input."
 msgstr ""
+"Η :meth:`bytes.fromhex` δέχεται πλέον ASCII :class:`bytes` και :term:`bytes-"
+"like objects <bytes-like object>` ως είσοδο."
 
 #: library/stdtypes.rst:2891
 msgid ""
@@ -5881,27 +5885,31 @@ msgid ""
 "Resize the :class:`bytearray` to contain *size* bytes. *size* must be "
 "greater than or equal to 0."
 msgstr ""
+"Αλλάζει το μέγεθος του :class:`bytearray` ώστε αν περιέχει *size* bytes. Το "
+"*size* πρέπει να είναι μεγαλύτερο ή ίσο με το 0."
 
 #: library/stdtypes.rst:3003
 msgid ""
 "If the :class:`bytearray` needs to shrink, bytes beyond *size* are truncated."
 msgstr ""
+"Εάν η :class:`bytearray` χρειάζεται να συρρικνωθεί, τα bytes πέραν του "
+"*size* περικόπτονται."
 
 #: library/stdtypes.rst:3005
 msgid ""
 "If the :class:`bytearray` needs to grow, all new bytes, those beyond *size*, "
 "will be set to null bytes."
 msgstr ""
+"Εάν η :class:`bytearray` χρειάζεται να αυξηθεί, όλα τα νέα bytes, αυτά που "
+"είναι πέρα από το *size*, θα οριστούν σε null bytes."
 
 #: library/stdtypes.rst:3009
-#, fuzzy
 msgid "This is equivalent to:"
-msgstr "Ισοδύναμο με::"
+msgstr "Ισοδύναμο με:"
 
 #: library/stdtypes.rst:3017
-#, fuzzy
 msgid "Examples:"
-msgstr "Παράδειγμα::"
+msgstr "Παραδείγματα:"
 
 #: library/stdtypes.rst:3030
 msgid ""
@@ -7455,7 +7463,7 @@ msgstr ""
 
 #: library/stdtypes.rst:4178
 msgid "memoryview is now a :term:`generic type`."
-msgstr ""
+msgstr "Το memoryview είναι πλέον ένα :term:`generic type`."
 
 #: library/stdtypes.rst:4181
 msgid ":class:`memoryview` has several methods:"
@@ -7969,25 +7977,21 @@ msgstr ""
 "byte."
 
 #: library/stdtypes.rst:4434
-#, fuzzy
 msgid "Count the number of occurrences of *value*."
-msgstr "συνολικές εμφανίσεις του *x* στο *s*"
+msgstr "Μετράει τον αριθμό των εμφανίσεων του *value*."
 
 #: library/stdtypes.rst:4440
-#, fuzzy
 msgid ""
 "Return the index of the first occurrence of *value* (at or after index "
 "*start* and before index *stop*)."
 msgstr ""
-"δείκτης της πρώτης εμφάνισης του *x* στο *s* (μετά από τον ή στον δείκτη *i* "
-"και πριν από το δείκτη *j*)"
+"Επιστρέφει τον δείκτη της πρώτης εμφάνισης του *value* (στην ή μετά τον "
+"δείκτη *start* και πριν από τον δείκτη *stop*)."
 
 #: library/stdtypes.rst:4443
-#, fuzzy
 msgid "Raises a :exc:`ValueError` if *value* cannot be found."
 msgstr ""
-"η :meth:`remove` κάνει raise :exc:`ValueError` όταν το *x* δεν βρίσκεται στο "
-"*s*."
+"Κάνει raise μια :exc:`ValueError` αν δεν μπορεί να βρεθεί η τιμή *value*."
 
 #: library/stdtypes.rst:4447
 msgid "There are also several readonly attributes available:"
@@ -8635,7 +8639,6 @@ msgstr ""
 "χρησιμοποιηθούν οποιαδήποτε έγκυρα κλειδιά."
 
 #: library/stdtypes.rst:4829
-#, fuzzy
 msgid ""
 "Dictionaries compare equal if and only if they have the same ``(key, "
 "value)`` pairs (regardless of ordering). Order comparisons ('<', '<=', '>=', "
@@ -8645,7 +8648,9 @@ msgid ""
 msgstr ""
 "Τα λεξικά συγκρίνονται ως ίσα εάν και μόνο εάν έχουν τα ίδια ζεύγη ``(key, "
 "value)`` (ανεξάρτητα από τη σειρά). Οι συγκρίσεις διάταξης ('<', '<=', '>=', "
-"'>') κάνουν raise την :exc:`TypeError`."
+"'>') κάνουν raise την :exc:`TypeError`.  Για να επεξηγηθεί η δημιουργία "
+"λεξικού και η ισότητα, τα ακόλουθα παραδείγματα επιστρέφουν όλα ένα λεξικό "
+"ίσο με ``{\"one\": 1, \"two\": 2, \"three\": 3}``::"
 
 #: library/stdtypes.rst:4835
 msgid ""
@@ -10050,7 +10055,6 @@ msgid "Union Type"
 msgstr "Τύπος Ένωσης"
 
 #: library/stdtypes.rst:5515
-#, fuzzy
 msgid ""
 "A union object holds the value of the ``|`` (bitwise or) operation on "
 "multiple :ref:`type objects <bltin-type-objects>`.  These types are intended "
@@ -10058,11 +10062,11 @@ msgid ""
 "expression enables cleaner type hinting syntax compared to subscripting :"
 "class:`typing.Union`."
 msgstr ""
-"Ένα αντικείμενο ένωσης διατηρεί την τιμή της λειτουργίας ``|`` (κατά bit or) "
+"Ένα αντικείμενο ένωσης διατηρεί την τιμή της λειτουργίας ``|`` (bitwise or) "
 "σε πολλαπλά αντικείμενα :ref:`type objects <bltin-type-objects>`.  Αυτοί οι "
 "τύποι προορίζονται κυρίως για :term:`type annotations <annotation>`. Η "
-"έκφραση τύπου ένωσης επιτρέπει την καθαρότερη σύνταξη υπόδειξης σε σύγκριση "
-"με το :data:`typing.Union`."
+"έκφραση τύπου ένωσης επιτρέπει την καθαρότερη σύνταξη υποδείξεων σε σύγκριση "
+"με την εγγραφή :class:`typing.Union`."
 
 #: library/stdtypes.rst:5522
 msgid ""
@@ -10131,16 +10135,16 @@ msgid "int | str == str | int"
 msgstr "int | str == str | int"
 
 #: library/stdtypes.rst:5554
-#, fuzzy
 msgid "It creates instances of :class:`typing.Union`::"
-msgstr "Είναι συμβατό με το :data:`typing.Union`::"
+msgstr "Δημιουργεί στιγμιότυπα της :class:`typing.Union`::"
 
 #: library/stdtypes.rst:5556
-#, fuzzy
 msgid ""
 "int | str == typing.Union[int, str]\n"
 "type(int | str) is typing.Union"
-msgstr "int | str == typing.Union[int, str]"
+msgstr ""
+"int | str == typing.Union[int, str]\n"
+"type(int | str) is typing.Union"
 
 #: library/stdtypes.rst:5559
 msgid "Optional types can be spelled as a union with ``None``::"
@@ -10191,18 +10195,15 @@ msgstr ""
 "TypeError: isinstance() argument 2 cannot be a parameterized generic"
 
 #: library/stdtypes.rst:5582
-#, fuzzy
 msgid ""
 "The user-exposed type for the union object can be accessed from :class:"
 "`typing.Union` and used for :func:`isinstance` checks::"
 msgstr ""
 "Ο τύπος που εκτίθεται από τον χρήστη για το αντικείμενο ένωσης μπορεί να "
 "προσπελαστεί από το :data:`types.UnionType` και να χρησιμοποιηθεί για "
-"ελέγχους :func:`isinstance`.  Δεν είναι δυνατή η δημιουργία ενός "
-"αντικειμένου από τον τύπο::"
+"ελέγχους :func:`isinstance`."
 
 #: library/stdtypes.rst:5585
-#, fuzzy
 msgid ""
 ">>> import typing\n"
 ">>> isinstance(int | str, typing.Union)\n"
@@ -10212,13 +10213,13 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: cannot create 'typing.Union' instances"
 msgstr ""
-">>> import types\n"
-">>> isinstance(int | str, types.UnionType)\n"
+">>> import typing\n"
+">>> isinstance(int | str, typing.Union)\n"
 "True\n"
-">>> types.UnionType()\n"
+">>> typing.Union()\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"TypeError: cannot create 'types.UnionType' instances"
+"TypeError: cannot create 'typing.Union' instances"
 
 #: library/stdtypes.rst:5594
 msgid ""
@@ -10267,6 +10268,9 @@ msgid ""
 "were instances of :class:`types.UnionType`, which remains an alias for :"
 "class:`typing.Union`."
 msgstr ""
+"Τα αντικείμενα Union είναι πλέον στιγμιότυπα του :class:`typing.Union`. "
+"Προηγουμένως, ήταν στιγμιότυπα της :class:`types.UnionType`, το οποίο "
+"παραμείνει ένα ψευδώνυμο για τη :class:`typing.Union`."
 
 #: library/stdtypes.rst:5627
 msgid "Other Built-in Types"

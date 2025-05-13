@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: 2025-05-06 13:54+0200\n"
+"PO-Revision-Date: 2025-05-10 22:33+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.g>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
@@ -384,7 +384,6 @@ msgstr ""
 "χαρακτηριστικό :attr:`~GzipFile.name` αντ' αυτού."
 
 #: library/gzip.rst:187
-#, fuzzy
 msgid ""
 "Compress the *data*, returning a :class:`bytes` object containing the "
 "compressed data.  *compresslevel* and *mtime* have the same meaning as in "
@@ -393,7 +392,8 @@ msgid ""
 msgstr ""
 "Συμπιέζει τα *data* και επιστρέφει ένα αντικείμενο :class:`bytes` που "
 "περιέχει τα συμπιεσμένα δεδομένα. Οι παράμετροι *compresslevel* και *mtime* "
-"έχουν την ίδια σημασία όπως στον κατασκευαστή της κλάσης :class:`GzipFile`."
+"έχουν την ίδια σημασία όπως στον κατασκευαστή της κλάσης :class:`GzipFile`, "
+"αλλά το *mtime* έχει προεπιλεγμένη τιμή 0 για αναπαραγώγιμη έξοδο."
 
 #: library/gzip.rst:193
 msgid "Added the *mtime* parameter for reproducible output."
@@ -427,6 +427,9 @@ msgid ""
 "The *mtime* parameter now defaults to 0 for reproducible output. For the "
 "previous behaviour of using the current time, pass ``None`` to *mtime*."
 msgstr ""
+"Η παράμετρος *mtime* έχει πλέον την προεπιλεγμένη τιμή 0 για αναπαραγώγιμη "
+"έξοδο. Για την προηγούμενη συμπεριφορά χρήστης της τρέχουσας ώρας, "
+"μεταβιβάστε στην παράμετρο *mtime* την τιμή ``None``."
 
 #: library/gzip.rst:212
 msgid ""

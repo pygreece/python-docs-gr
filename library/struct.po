@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: 2025-05-05 20:53+0200\n"
+"PO-Revision-Date: 2025-05-10 22:42+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
@@ -654,34 +654,31 @@ msgstr ":c:expr:`double`"
 
 #: library/struct.rst:263
 msgid "``F``"
-msgstr ""
+msgstr "``F``"
 
 #: library/struct.rst:263
-#, fuzzy
 msgid ":c:expr:`float complex`"
-msgstr ":c:expr:`float`"
+msgstr ":c:expr:`float complex`"
 
 #: library/struct.rst:265
 msgid "complex"
-msgstr ""
+msgstr "μιγαδικός"
 
 #: library/struct.rst:265
 msgid "\\(10)"
-msgstr ""
+msgstr "\\(10)"
 
 #: library/struct.rst:265
 msgid "``D``"
-msgstr ""
+msgstr "``D``"
 
 #: library/struct.rst:265
-#, fuzzy
 msgid ":c:expr:`double complex`"
-msgstr ":c:expr:`double`"
+msgstr ":c:expr:`double complex`"
 
 #: library/struct.rst:265
-#, fuzzy
 msgid "16"
-msgstr "1"
+msgstr "16"
 
 #: library/struct.rst:267
 msgid "``s``"
@@ -728,9 +725,8 @@ msgid "Added support for the ``'e'`` format."
 msgstr "Προστέθηκε υποστήριξη για τη μορφή ``'e'``."
 
 #: library/struct.rst:280
-#, fuzzy
 msgid "Added support for the ``'F'`` and ``'D'`` formats."
-msgstr "Προστέθηκε υποστήριξη για τις μορφές ``'n'`` και ``'N'``."
+msgstr "Προστέθηκε υποστήριξη για τις μορφές ``'F'`` και ``'D'``."
 
 #: library/struct.rst:289
 msgid ""
@@ -886,6 +882,14 @@ msgid ""
 "standard, each complex type is represented by a two-element C array "
 "containing, respectively, the real and imaginary parts."
 msgstr ""
+"Για τους χαρακτήρες μορφής ``'F'`` and ``'D'``, η πακεταρισμένη αναπαράσταση "
+"χρησιμοποιεί τη μορφή IEEE 754 binary32 και binary64 για τα στοιχεία του "
+"μιγαδικού αριθμού, ανεξάρτητα από τη μορφή κινητής υποδιαστολής που "
+"χρησιμοποιείται από την πλατφόρμα. Σημειώστε ότι οι μιγαδικοί τύποι (``F`` "
+"και ``D``) είναι διαθέσιμοι άνευ όρων, παρά το γεγονός ότι οι μιγαδικοί "
+"τύποι αποτελούν προαιρετικό χαρακτηριστικό στη C. Όπως ορίζεται στο πρότυπο "
+"C11, κάθε μιγαδικός τύπος αναπαρίσταται από έναν πίνακα C δύο στοιχείων που "
+"περιέχει αντίστοιχα, τα πραγματικά και τα φανταστικά μέρη."
 
 #: library/struct.rst:369
 msgid ""

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: 2024-05-05 22:38+0300\n"
+"PO-Revision-Date: 2024-05-10 22:23+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -1107,6 +1107,8 @@ msgid ""
 "See also :meth:`complex.from_number` which only accepts a single numeric "
 "argument."
 msgstr ""
+"Δείτε επίσης την :meth:`complex.from_number` που δέχεται μόνο ένα αριθμητικό "
+"όρισμα."
 
 #: library/functions.rst:445
 msgid "If all arguments are omitted, returns ``0j``."
@@ -1134,6 +1136,8 @@ msgid ""
 "Passing a complex number as the *real* or *imag* argument is now deprecated; "
 "it should only be passed as a single positional argument."
 msgstr ""
+"Η διαβίβαση ενός μιγαδικού αριθμού ως το *real* ή *imag* όρισμα έχει πλέον "
+"καταργηθεί∙ θα πρέπει να διαβιβάζεται μόνο ως ένα μοναδικό όρισμα θέσης."
 
 #: library/functions.rst:463
 msgid ""
@@ -1689,6 +1693,7 @@ msgstr ""
 msgid ""
 "See also :meth:`float.from_number` which only accepts a numeric argument."
 msgstr ""
+"Δείτε επίσης τη :meth:`float.from_number` που δέχεται μόνο αριθμητικό όρισμα."
 
 #: library/functions.rst:808
 msgid "If no argument is given, ``0.0`` is returned."
@@ -2039,7 +2044,6 @@ msgstr ""
 "115"
 
 #: library/functions.rst:1023
-#, fuzzy
 msgid ""
 "If the argument defines :meth:`~object.__int__`, ``int(x)`` returns ``x."
 "__int__()``.  If the argument defines :meth:`~object.__index__`, it returns "
@@ -2047,9 +2051,8 @@ msgid ""
 msgstr ""
 "Εάν το όρισμα ορίζει :meth:`~object.__int__`, ``int(x)`` επιστρέφει ``x."
 "__int__()``.  Εάν το όρισμα ορίζει :meth:`~object.__index__`, επιστρέφει ``x."
-"__index__()``.  Εάν το όρισμα ορίζει το :meth:`~object.__trunc__`, "
-"επιστρέφει ``x.__trunc__()``. Για αριθμούς κινητής υποδιαστολής, αυτό "
-"περικόπτεται προς το μηδέν."
+"__index__()``. Για αριθμούς κινητής υποδιαστολής, αυτό περικόπτεται προς το "
+"μηδέν."
 
 #: library/functions.rst:1028
 msgid ""
@@ -2138,10 +2141,9 @@ msgstr ""
 "ref:`integer string conversion length limitation <int_max_str_digits>`."
 
 #: library/functions.rst:1071
-#, fuzzy
 msgid ""
 ":func:`int` no longer delegates to the :meth:`~object.__trunc__` method."
-msgstr "Η ανάθεση στη :meth:`~object.__trunc__` έχει καταργηθεί."
+msgstr "Η :func:`int` δεν αναθέτει πλέον στη μέθοδο :meth:`~object.__trunc__`."
 
 #: library/functions.rst:1076
 msgid ""
@@ -2393,7 +2395,6 @@ msgstr ""
 "προηγούμενες εκδόσεις."
 
 #: library/functions.rst:1210
-#, fuzzy
 msgid ""
 "Return an iterator that applies *function* to every item of *iterable*, "
 "yielding the results.  If additional *iterables* arguments are passed, "
@@ -2408,14 +2409,15 @@ msgstr ""
 "*iterable*, δίνοντας τα αποτελέσματα.  Εάν περάσουν επιπλέον ορίσματα "
 "*iterables*, η *function* πρέπει να λάβει τόσα ορίσματα και να εφαρμόζεται "
 "στα στοιχεία από όλα τα iterables παράλληλα.  Με πολλαπλούς iterables, ο "
-"iterator σταματά όταν εξαντληθεί ο συντομότερος iterable.  Για περιπτώσεις "
-"όπου οι είσοδοι συνάρτησης είναι ήδη διατεταγμένες σε πλειάδες ορισμάτων, "
-"βλέπε :func:`itertools.starmap`\\."
+"iterator σταματά όταν εξαντληθεί ο συντομότερος iterable. Εάν το *strict* "
+"είναι ``True`` και μία από τα iterables εξαντληθεί πριν από τις άλλες, "
+"γίνεται raise μια :exc:`ValueError`. Για περιπτώσεις όπου οι είσοδοι "
+"συνάρτησης είναι ήδη διατεταγμένες σε πλειάδες ορισμάτων, βλέπε :func:"
+"`itertools.starmap`\\."
 
 #: library/functions.rst:1219
-#, fuzzy
 msgid "Added the *strict* parameter."
-msgstr "Προστέθηκε η παράμετρος *closure*."
+msgstr "Προστέθηκε η παράμετρος *strict*."
 
 #: library/functions.rst:1227
 msgid ""
@@ -2746,7 +2748,6 @@ msgstr ""
 "λειτουργεί ως εξής:"
 
 #: library/functions.rst:1408
-#, fuzzy
 msgid ""
 "Binary files are buffered in fixed-size chunks; the size of the buffer is "
 "``max(min(blocksize, 8 MiB), DEFAULT_BUFFER_SIZE)`` when the device block "
@@ -2754,10 +2755,9 @@ msgid ""
 "kilobytes long."
 msgstr ""
 "Τα δυαδικά αρχεία αποθηκεύονται στην προσωρινή μνήμη σε κομμάτια σταθερού "
-"μεγέθους∙ το μέγεθος του buffer επιλέγεται χρησιμοποιώντας μια ευρετική που "
-"προσπαθεί να προσδιορίσει το \"μέγεθος του μπλοκ\" της υποκείμενης συσκευής "
-"και επανέρχεται σε :const:`io.DEFAULT_BUFFER_SIZE`.  Σε πολλά συστήματα, η "
-"προσωρινή μνήμη θα έχει συνήθως μήκος 4096 ή 8192 bytes."
+"μεγέθους∙ το μέγεθος του buffer είναι ``max(min(blocksize, 8 MiB), "
+"DEFAULT_BUFFER_SIZE)`` όταν το μέγεθος μπλοκ της συσκευής είναι διαθέσιμο. "
+"Στα περισσότερα συστήματα, το buffer θα έχει συνήθως μήκος 128 kilobytes."
 
 #: library/functions.rst:1413
 msgid ""
