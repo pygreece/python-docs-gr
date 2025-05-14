@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: 2025-05-04 22:27+0200\n"
+"PO-Revision-Date: 2025-05-13 19:59+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: \n"
@@ -374,18 +374,14 @@ msgid "Annotation scopes"
 msgstr "Σημειογραφία πεδία"
 
 #: reference/executionmodel.rst:193
-#, fuzzy
 msgid ""
 ":term:`Annotations <annotation>`, :ref:`type parameter lists <type-params>` "
 "and :keyword:`type` statements introduce *annotation scopes*, which behave "
 "mostly like function scopes, but with some exceptions discussed below."
 msgstr ""
-":ref:`Οι λίστες παραμέτρων τύπου <type-params>` και οι δηλώσεις :keyword:"
+"Τα :term:`Annotations <annotation>`, :ref:`Οι λίστες παραμέτρων τύπου <type-params>` και οι δηλώσεις :keyword:"
 "`type` εισάγουν *πεδία σημειογραφίας*, τα οποία συμπεριφέρονται κυρίως όπως "
-"τα πεδία συναρτήσεων, αλλά με κάποιες εξαιρέσεις που συζητούνται παρακάτω. :"
-"term:`Annotations <annotation>` προς το παρόν δεν χρησιμοποιούν πεδία "
-"σημειώσεων, αλλά αναμένεται να τα χρησιμοποιήσουν στην Python 3.13, όταν "
-"υλοποιηθεί το :pep:`649`."
+"τα πεδία συναρτήσεων, αλλά με κάποιες εξαιρέσεις που συζητούνται παρακάτω."
 
 #: reference/executionmodel.rst:198
 msgid "Annotation scopes are used in the following contexts:"
@@ -393,11 +389,11 @@ msgstr "Τα πεδία σημειογραφίας χρησιμοποιούντ�
 
 #: reference/executionmodel.rst:200
 msgid ":term:`Function annotations <function annotation>`."
-msgstr ""
+msgstr ":term:`Function annotations <function annotation>`."
 
 #: reference/executionmodel.rst:201
 msgid ":term:`Variable annotations <variable annotation>`."
-msgstr ""
+msgstr ":term:`Variable annotations <variable annotation>`."
 
 #: reference/executionmodel.rst:202
 msgid ""
@@ -514,20 +510,18 @@ msgstr ""
 "τιμές παραμέτρων τύπου, όπως εισάγεται από το :pep:`696`."
 
 #: reference/executionmodel.rst:240
-#, fuzzy
 msgid ""
 "Annotation scopes are now also used for annotations, as specified in :pep:"
 "`649` and :pep:`749`."
 msgstr ""
-"Οι περιοχές σχολίων τύπου χρησιμοποιούνται επίσης για τις προεπιλεγμένες "
-"τιμές παραμέτρων τύπου, όπως εισάγεται από το :pep:`696`."
+"Οι περιοχές σχολίων τύπου χρησιμοποιούνται επίσης για τα annotations, "
+"όπως εισάγεται από το :pep:`649` and :pep:`749`."
 
 #: reference/executionmodel.rst:247
 msgid "Lazy evaluation"
 msgstr "Καθυστερημένη εκτίμηση"
 
 #: reference/executionmodel.rst:249
-#, fuzzy
 msgid ""
 "Most annotation scopes are *lazily evaluated*. This includes annotations, "
 "the values of type aliases created through the :keyword:`type` statement, "
@@ -538,13 +532,13 @@ msgid ""
 "when necessary, for example when the ``__value__`` attribute on a type alias "
 "is accessed."
 msgstr ""
-"Οι τιμές των ψευδωνύμων τύπου που δημιουργούνται μέσω της δήλωσης :keyword:"
-"`type` αξιολογούνται *καθυστερημένα*. Το ίδιο ισχύει και για τα όρια, τους "
-"περιορισμούς και τις προεπιλεγμένες τιμές των μεταβλητών τύπου που "
-"δημιουργούνται μέσω της :ref:`σύνταξης παραμέτρων τύπου <type-params>`. Αυτό "
-"σημαίνει ότι δεν αξιολογούνται κατά τη δημιουργία του ψευδωνύμου τύπου ή της "
-"μεταβλητής τύπου. Αντίθετα, αξιολογούνται μόνο όταν αυτό είναι απαραίτητο "
-"για την επίλυση μιας πρόσβασης χαρακτηριστικού."
+"Τα περισσότερα πεδία annotation *αξιολογούνται νωχελικά*. Αυτό περιλαμβάνει annotations, "
+"τις τιμές των ψευδωνύμων τύπου που δημιουργούνται μέσω της δήλωσης :keyword:`type` και τα "
+"όρια, τους περιορισμούς και τις προεπιλεγμένηες τιμές των μεταβλητών τύπου που δημιουργούνται "
+"μέσω της σύνταξης παραμέτρων :ref:`type parameter syntax <type-params>`. Αυτό σημαίνει ότι "
+"δεν αξιολογούνται όταν δημιουργείται το ψευδώνυμο τύπου ή η μεταβλητή τύπου ή όταν δημιουργείται "
+"το αντικείμενο που φέρει σχολιασμούς. Αντίθετα, αξιολογούνται μόνο όταν είναι απαραίτητο, για παράδειγμα όταν "
+"γίνεται πρόσβαση στο χαρακτηριστικό ``__value__`` σε ένα ψευδώνυμο τύπου."
 
 #: reference/executionmodel.rst:258
 msgid "Example:"

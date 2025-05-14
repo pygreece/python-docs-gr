@@ -613,7 +613,6 @@ msgid ":keyword:`!match` Statements"
 msgstr "Προτάσεις :keyword:`!match`"
 
 #: tutorial/controlflow.rst:286
-#, fuzzy
 msgid ""
 "A :keyword:`match` statement takes an expression and compares its value to "
 "successive patterns given as one or more case blocks.  This is superficially "
@@ -629,7 +628,8 @@ msgstr ""
 "Java ή JavaScript (και πολλές άλλες γλώσσες), αλλά είναι πιο παρόμοια με την "
 "αντιστοίχιση προτύπων σε γλώσσες όπως η Rust ή η Haskell. Εκτελείται μόνο το "
 "πρώτο μοτίβο που ταιριάζει και μπορεί επίσης να εξαγάγει στοιχεία (στοιχεία "
-"ακολουθίας ή ιδιότητες αντικειμένου) από την τιμή σε μεταβλητές."
+"ακολουθίας ή ιδιότητες αντικειμένου) από την τιμή σε μεταβλητές. Εάν καμία περίπτωση δεν ταιριάζει, "
+"κανένας από τους κλάδους δεν εκτελείται."
 
 #: tutorial/controlflow.rst:295
 msgid ""
@@ -662,14 +662,12 @@ msgstr ""
 "            return \"Something's wrong with the internet\""
 
 #: tutorial/controlflow.rst:308
-#, fuzzy
 msgid ""
 "Note the last block: the \"variable name\" ``_`` acts as a *wildcard* and "
 "never fails to match."
 msgstr ""
 "Σημειώστε το τελευταίο μπλοκ: το \"variable name\" ``_`` λειτουργεί ως "
-"*μπαλαντέρ* και δεν αποτυγχάνει ποτέ να ταιριάζει. Εάν δεν ταιριάζει κανένα "
-"case, κανένας από τους κλάδους δεν εκτελείται."
+"*μπαλαντέρ* και δεν αποτυγχάνει ποτέ να ταιριάζει."
 
 #: tutorial/controlflow.rst:311
 msgid ""

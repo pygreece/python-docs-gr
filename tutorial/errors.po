@@ -940,7 +940,6 @@ msgstr ""
 "την εκτέλεση της πρότασης :keyword:`!finally`."
 
 #: tutorial/errors.rst:419
-#, fuzzy
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, exceptions are not re-raised. "
@@ -948,7 +947,9 @@ msgid ""
 "compiler emits a :exc:`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 "Εάν η πρόταση :keyword:`!finally` εκτελέσει μια πρόταση :keyword:`break`, :"
-"keyword:`continue` ή :keyword:`return`, οι εξαιρέσεις δεν αυξάνονται εκ νέου."
+"keyword:`continue` ή :keyword:`return`, οι εξαιρέσεις δεν γίνονται raise εκ νέου. "
+"Αυτό μπορεί να προκαλέσει σύγχυση και ως εκ τούτου αποθαρρύνεται. Από την έκδοση 3.14, "
+"ο μεταγλωττιστής εκπέμπει μια :exc:`SyntaxWarning` για αυτό (δείτε :pep:`765`)."
 
 #: tutorial/errors.rst:425
 msgid ""
@@ -963,7 +964,6 @@ msgstr ""
 "keyword:`!return` της εκτέλεσης της δήλωσης."
 
 #: tutorial/errors.rst:431
-#, fuzzy
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the "
 "returned value will be the one from the :keyword:`!finally` clause's :"
@@ -975,7 +975,9 @@ msgstr ""
 "Εάν μια πρόταση :keyword:`!finally` περιλαμβάνει μια δήλωση :keyword:`!"
 "return`, η τιμή που επιστρέφεται θα είναι αυτή από την πρόταση :keyword:`!"
 "finally` της δήλωσης της :keyword:`!return`, και όχι η τιμή από τη δήλωση :"
-"keyword:`!try` της πρότασης :keyword:`!return`."
+"keyword:`!try` της πρότασης :keyword:`!return`. Αυτό μπορεί να προκαλέσει σύγχυση "
+"και επομένως αποθαρρύνεται. Από την έκδοση 3.14, ο μεταγλωττιστής εκπέμπει ένα "
+":exc:`SyntaxWarning` για αυτό (δείτε :pep:`765`)."
 
 #: tutorial/errors.rst:439
 msgid "For example::"
