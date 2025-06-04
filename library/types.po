@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-05-22 18:56+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,16 +20,20 @@ msgstr ""
 #: library/types.rst:2
 msgid ":mod:`!types` --- Dynamic type creation and names for built-in types"
 msgstr ""
+":mod:`!types` --- Δημιουργία δυναμικών τύπων και ονόματα για ενσωματωμένους "
+"τύπους"
 
 #: library/types.rst:7
 msgid "**Source code:** :source:`Lib/types.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/types.py`"
 
 #: library/types.rst:11
 msgid ""
 "This module defines utility functions to assist in dynamic creation of new "
 "types."
 msgstr ""
+"Αυτό το module ορίζει συναρτήσεις βοηθητικού προγράμματος για να διευκολύνει "
+"τη δυναμική δημιουργία νέων τύπων."
 
 #: library/types.rst:14
 msgid ""
@@ -37,20 +41,27 @@ msgid ""
 "Python interpreter, but not exposed as builtins like :class:`int` or :class:"
 "`str` are."
 msgstr ""
+"Ορίζει επίσης ονόματα για κάποιους τύπους αντικειμένων που χρησιμοποιούνται "
+"από τον τυπικό διερμηνέα Python, αλλά δεν εκτίθενται ως ενσωματωμένα όπως "
+"οι :class:`int` ή :class:`str`."
 
 #: library/types.rst:18
 msgid ""
 "Finally, it provides some additional type-related utility classes and "
 "functions that are not fundamental enough to be builtins."
 msgstr ""
+"Τέλος, παρέχει κάποιες πρόσθετες κλάσεις και συναρτήσεις σχετικές με τους "
+"τύπους που δεν είναι αρκετά θεμελιώδεις ώστε να είναι ενσωματωμένες."
 
 #: library/types.rst:23
 msgid "Dynamic Type Creation"
-msgstr ""
+msgstr "Δημιουργία Δυναμικών Τύπων"
 
 #: library/types.rst:27
 msgid "Creates a class object dynamically using the appropriate metaclass."
 msgstr ""
+"Δημιουργεί ένα αντικείμενο κλάσης δυναμικά χρησιμοποιώντας την κατάλληλη "
+"μετακλάση."
 
 #: library/types.rst:29
 msgid ""
@@ -58,6 +69,9 @@ msgid ""
 "header: the class name, the base classes (in order), the keyword arguments "
 "(such as ``metaclass``)."
 msgstr ""
+"Τα τρία πρώτα ορίσματα είναι τα στοιχεία που αποτελούν την επικεφαλίδα του "
+"ορισμού κλάσης: το όνομα της κλάσης, οι βάσεις κλάσης (με τη σειρά), τα "
+"ορίσματα λέξεων-κλειδιών (όπως ``metaclass``)."
 
 #: library/types.rst:33
 msgid ""
@@ -67,10 +81,16 @@ msgid ""
 "callback is provided, it has the same effect as passing in ``lambda ns: "
 "None``."
 msgstr ""
+"Το όρισμα *exec_body* είναι μια συνάρτηση που χρησιμοποιείται για να γεμίσει "
+"το φρέσκο δημιουργημένο namespace κλάσης. Πρέπει να δέχεται το namespace της "
+"κλάσης ως μοναδικό όρισμα και να ενημερώνει άμεσα το namespace με τα "
+"περιεχόμενα της κλάσης. Αν δεν παρέχεται καμία συνάρτηση, έχει το ίδιο "
+"αποτέλεσμα με την παράδοση ``lambda ns: None``."
 
 #: library/types.rst:43
 msgid "Calculates the appropriate metaclass and creates the class namespace."
 msgstr ""
+"Υπολογίζει την κατάλληλη μετακλάση και δημιουργεί το namespace της κλάσης."
 
 #: library/types.rst:45
 msgid ""
@@ -78,10 +98,14 @@ msgid ""
 "class name, the base classes (in order) and the keyword arguments (such as "
 "``metaclass``)."
 msgstr ""
+"Τα ορίσματα είναι τα στοιχεία που αποτελούν την επικεφαλίδα του ορισμού "
+"κλάσης: το όνομα της κλάσης, οι βάσεις κλάσης (με τη σειρά) και τα ορίσματα "
+"λέξεων-κλειδιών (όπως ``metaclass``)."
 
 #: library/types.rst:49
 msgid "The return value is a 3-tuple: ``metaclass, namespace, kwds``"
 msgstr ""
+"Η επιστρεφόμενη τιμή είναι μια 3-πλειάδα: ``metaclass, namespace, kwds``"
 
 #: library/types.rst:51
 msgid ""
@@ -90,6 +114,10 @@ msgid ""
 "with any ``'metaclass'`` entry removed. If no *kwds* argument is passed in, "
 "this will be an empty dict."
 msgstr ""
+"*metaclass* είναι η κατάλληλη μετακλάση, *namespace* είναι το προετοιμασμένο "
+"namespace κλάσης και *kwds* είναι μια ενημερωμένη αντιγραφή του περασμένου "
+"ορίσματος *kwds* με οποιαδήποτε είσοδο ``'metaclass'`` αφαιρεθεί. Αν δεν "
+"περαστεί κανένα όρισμα *kwds*, αυτό θα είναι ένα κενό dict."
 
 #: library/types.rst:60
 msgid ""
@@ -97,26 +125,32 @@ msgid ""
 "changed.  Now an insertion-order-preserving mapping is used when the "
 "metaclass does not have a ``__prepare__`` method."
 msgstr ""
+"Η προεπιλεγμένη τιμή για το στοιχείο ``namespace`` της επιστρεφόμενης "
+"πλειάδας έχει αλλάξει. Τώρα χρησιμοποιείται μια χαρτογράφηση που διατηρεί τη "
+"σειρά εισαγωγής όταν η μετακλάση δεν έχει μέθοδο ``__prepare__``."
 
 #: library/types.rst:66
 msgid ":ref:`metaclasses`"
-msgstr ""
+msgstr ":ref:`metaclasses`"
 
 #: library/types.rst:67
 msgid "Full details of the class creation process supported by these functions"
 msgstr ""
+"Πλήρεις λεπτομέρειες της διαδικασίας δημιουργίας κλάσης που υποστηρίζεται "
+"από αυτές τις συναρτήσεις"
 
 #: library/types.rst:69
 msgid ":pep:`3115` - Metaclasses in Python 3000"
-msgstr ""
+msgstr ":pep:`3115` - Μετακλάσεις στην Python 3000"
 
 #: library/types.rst:70
 msgid "Introduced the ``__prepare__`` namespace hook"
-msgstr ""
+msgstr "Εισήγαγε το hook namespace ``__prepare__``"
 
 #: library/types.rst:74
 msgid "Resolve MRO entries dynamically as specified by :pep:`560`."
 msgstr ""
+"Επιλύει τις καταχωρήσεις MRO δυναμικά όπως καθορίζεται από την :pep:`560`."
 
 #: library/types.rst:76
 msgid ""
@@ -127,6 +161,13 @@ msgid ""
 "it doesn't have an :meth:`!__mro_entries__` method, then it is included in "
 "the return tuple unchanged."
 msgstr ""
+"Αυτή η συνάρτηση αναζητά στοιχεία στις *bases* που δεν είναι στιγμιότυπα "
+"της :class:`type`, και επιστρέφει μια πλειάδα όπου κάθε τέτοιο αντικείμενο "
+"που έχει μια μέθοδο :meth:`~object.__mro_entries__` αντικαθίσταται με ένα "
+"αποσυσκευασμένο αποτέλεσμα της κλήσης αυτής της μεθόδου. Αν ένα στοιχείο "
+"*bases* είναι στιγμιότυπο της :class:`type`, ή δεν έχει μια μέθοδο :meth:`!"
+"__mro_entries__`, τότε περιλαμβάνεται στην επιστρεφόμενη πλειάδα χωρίς "
+"αλλαγές."
 
 #: library/types.rst:87
 msgid ""
@@ -135,6 +176,10 @@ msgid ""
 "(following the mechanisms laid out in :pep:`560`). This is useful for "
 "introspecting :ref:`Generics <user-defined-generics>`."
 msgstr ""
+"Επιστρέφει την πλειάδα αντικειμένων που δόθηκαν αρχικά ως βάσεις του *cls* "
+"πριν κληθεί η μέθοδος :meth:`~object.__mro_entries__` σε οποιαδήποτε βάση "
+"(ακολουθώντας τους μηχανισμούς που καθορίζονται στην :pep:`560`). Αυτό είναι "
+"χρήσιμο για την ανάλυση των :ref:`Generics <user-defined-generics>`."
 
 #: library/types.rst:92
 msgid ""
@@ -143,10 +188,14 @@ msgid ""
 "``__orig_bases__`` attribute, :attr:`cls.__bases__ <type.__bases__>` is "
 "returned."
 msgstr ""
+"Για κλάσεις που έχουν ένα χαρακτηριστικό ``__orig_bases__``, αυτή η "
+"συνάρτηση επιστρέφει την τιμή του ``cls.__orig_bases__``. Για κλάσεις χωρίς "
+"το χαρακτηριστικό ``__orig_bases__``, επιστρέφεται :attr:`cls.__bases__ "
+"<type.__bases__>`."
 
 #: library/types.rst:97
 msgid "Examples::"
-msgstr ""
+msgstr "Παραδείγματα::"
 
 #: library/types.rst:99
 msgid ""
@@ -174,14 +223,38 @@ msgid ""
 "assert int.__bases__ == (object,)\n"
 "assert get_original_bases(int) == (object,)"
 msgstr ""
+"from typing import TypeVar, Generic, NamedTuple, TypedDict\n"
+"\n"
+"T = TypeVar(\"T\")\n"
+"class Foo(Generic[T]): ...\n"
+"class Bar(Foo[int], float): ...\n"
+"class Baz(list[str]): ...\n"
+"Eggs = NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\n"
+"Spam = TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n"
+"\n"
+"assert Bar.__bases__ == (Foo, float)\n"
+"assert get_original_bases(Bar) == (Foo[int], float)\n"
+"\n"
+"assert Baz.__bases__ == (list,)\n"
+"assert get_original_bases(Baz) == (list[str],)\n"
+"\n"
+"assert Eggs.__bases__ == (tuple,)\n"
+"assert get_original_bases(Eggs) == (NamedTuple,)\n"
+"\n"
+"assert Spam.__bases__ == (dict,)\n"
+"assert get_original_bases(Spam) == (TypedDict,)\n"
+"\n"
+"assert int.__bases__ == (object,)\n"
+"assert get_original_bases(int) == (object,)"
 
 #: library/types.rst:127
 msgid ":pep:`560` - Core support for typing module and generic types"
 msgstr ""
+":pep:`560` - Βασική υποστήριξη για το module typing και γενικούς τύπους"
 
 #: library/types.rst:131
 msgid "Standard Interpreter Types"
-msgstr ""
+msgstr "Τυπικοί Τύποι Διερμηνέα"
 
 #: library/types.rst:133
 msgid ""
@@ -190,68 +263,91 @@ msgid ""
 "types that arise only incidentally during processing such as the "
 "``listiterator`` type."
 msgstr ""
+"Αυτό το module παρέχει ονόματα για πολλούς από τους τύπους που απαιτούνται "
+"για να υλοποιηθεί ένας διερμηνέας Python. Αποφεύγει σκόπιμα να συμπεριλάβει "
+"κάποιους από τους τύπους που προκύπτουν μόνο παρεμπιπτόντως κατά τη διάρκεια "
+"της επεξεργασίας, όπως ο τύπος ``listiterator``."
 
 #: library/types.rst:138
 msgid ""
 "Typical use of these names is for :func:`isinstance` or :func:`issubclass` "
 "checks."
 msgstr ""
+"Τυπική χρήση αυτών των ονομάτων είναι για ελέγχους :func:`isinstance` ή :"
+"func:`issubclass`."
 
 #: library/types.rst:142
 msgid ""
 "If you instantiate any of these types, note that signatures may vary between "
 "Python versions."
 msgstr ""
+"Αν δημιουργήσετε στιγμιότυπα από αυτούς τους τύπους, σημειώστε ότι οι "
+"υπογραφές μπορεί να διαφέρουν μεταξύ εκδόσεων Python."
 
 #: library/types.rst:144
 msgid "Standard names are defined for the following types:"
-msgstr ""
+msgstr "Τυπικά ονόματα ορίζονται για τους παρακάτω τύπους:"
 
 #: library/types.rst:148
 msgid "The type of :data:`None`."
-msgstr ""
+msgstr "Ο τύπος του :data:`None`."
 
 #: library/types.rst:156
 msgid ""
 "The type of user-defined functions and functions created by :keyword:"
 "`lambda`  expressions."
 msgstr ""
+"Ο τύπος των συναρτήσεων που ορίζονται από τον χρήστη και των συναρτήσεων που "
+"δημιουργούνται από εκφράσεις :keyword:`lambda`."
 
 #: library/types.rst:159
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``function.__new__`` with "
 "argument ``code``."
 msgstr ""
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``function.__new__`` με το "
+"όρισμα ``code``."
 
 #: library/types.rst:161
 msgid ""
 "The audit event only occurs for direct instantiation of function objects, "
 "and is not raised for normal compilation."
 msgstr ""
+"Το audit event συμβαίνει μόνο για άμεσες δημιουργίες αντικειμένων "
+"συναρτήσεων και δεν γίνεται raise κατά τη διάρκεια της κανονικής "
+"μεταγλώττισης."
 
 #: library/types.rst:167
 msgid ""
 "The type of :term:`generator`-iterator objects, created by generator "
 "functions."
 msgstr ""
+"Ο τύπος των αντικειμένων :term:`generator`-iterator, που δημιουργούνται από "
+"συναρτήσεις γεννητριών."
 
 #: library/types.rst:173
 msgid ""
 "The type of :term:`coroutine` objects, created by :keyword:`async def` "
 "functions."
 msgstr ""
+"Ο τύπος των αντικειμένων :term:`coroutine`, που δημιουργούνται από "
+"συναρτήσεις :keyword:`async def`."
 
 #: library/types.rst:181
 msgid ""
 "The type of :term:`asynchronous generator`-iterator objects, created by "
 "asynchronous generator functions."
 msgstr ""
+"Ο τύπος των αντικειμένων :term:`asynchronous generator`-iterator, που "
+"δημιουργούνται από ασύγχρονες συναρτήσεις γεννητριών."
 
 #: library/types.rst:191
 msgid ""
 "The type of :ref:`code objects <code-objects>` such as returned by :func:"
 "`compile`."
 msgstr ""
+"Ο τύπος των :ref:`code objects <code-objects>` όπως επιστρέφεται από τη :"
+"func:`compile`."
 
 #: library/types.rst:193
 msgid ""
@@ -259,6 +355,10 @@ msgid ""
 "``code``, ``filename``, ``name``, ``argcount``, ``posonlyargcount``, "
 "``kwonlyargcount``, ``nlocals``, ``stacksize``, ``flags``."
 msgstr ""
+"Κάνει raise ένα :ref:`auditing event <auditing>` ``code.__new__`` με τα "
+"ορίσματα ``code``, ``filename``, ``name``, ``argcount``, "
+"``posonlyargcount``, ``kwonlyargcount``, ``nlocals``, ``stacksize``, "
+"``flags``."
 
 #: library/types.rst:195
 msgid ""
@@ -266,16 +366,23 @@ msgid ""
 "required by the initializer.  The audit event only occurs for direct "
 "instantiation of code objects, and is not raised for normal compilation."
 msgstr ""
+"Σημειώστε ότι τα ελεγχόμενα ορίσματα μπορεί να μην ταιριάζουν με τα ονόματα "
+"ή τις θέσεις που απαιτούνται από τον αρχικοποιητή. Το audit event συμβαίνει "
+"μόνο για άμεσες δημιουργίες αντικειμένων κώδικα και δεν γίνεται raise κατά "
+"τη διάρκεια της κανονικής μεταγλώττισης."
 
 #: library/types.rst:201
 msgid ""
 "The type for cell objects: such objects are used as containers for a "
 "function's :term:`closure variables <closure variable>`."
 msgstr ""
+"Ο τύπος για τα αντικείμενα κελιών: τέτοια αντικείμενα χρησιμοποιούνται ως "
+"δοχεία για τις :term:`closure variables <closure variable>` μιας συνάρτησης."
 
 #: library/types.rst:209
 msgid "The type of methods of user-defined class instances."
 msgstr ""
+"Ο τύπος των μεθόδων των στιγμιοτύπων κλάσεων που ορίζονται από τον χρήστη."
 
 #: library/types.rst:215
 msgid ""
@@ -283,53 +390,68 @@ msgid ""
 "methods of built-in classes.  (Here, the term \"built-in\" means \"written "
 "in C\".)"
 msgstr ""
+"Ο τύπος των ενσωματωμένων συναρτήσεων όπως :func:`len` ή :func:`sys.exit`, "
+"και μεθόδων ενσωματωμένων κλάσεων. (Εδώ, ο όρος \"built-in\" σημαίνει "
+"\"γραμμένος σε C\".)"
 
 #: library/types.rst:222
 msgid ""
 "The type of methods of some built-in data types and base classes such as :"
 "meth:`object.__init__` or :meth:`object.__lt__`."
 msgstr ""
+"Ο τύπος των μεθόδων κάποιων ενσωματωμένων τύπων δεδομένων και βάσεων κλάσεων "
+"όπως :meth:`object.__init__` ή :meth:`object.__lt__`."
 
 #: library/types.rst:230
 msgid ""
 "The type of *bound* methods of some built-in data types and base classes. "
 "For example it is the type of :code:`object().__str__`."
 msgstr ""
+"Ο τύπος των *bound* μεθόδων κάποιων ενσωματωμένων τύπων δεδομένων και βάσεων "
+"κλάσεων. Για παράδειγμα είναι ο τύπος του :code:`object().__str__`."
 
 #: library/types.rst:238
 msgid "The type of :data:`NotImplemented`."
-msgstr ""
+msgstr "Ο τύπος του :data:`NotImplemented`."
 
 #: library/types.rst:245
 msgid ""
 "The type of methods of some built-in data types such as :meth:`str.join`."
 msgstr ""
+"Ο τύπος των μεθόδων κάποιων ενσωματωμένων τύπων δεδομένων όπως :meth:`str."
+"join`."
 
 #: library/types.rst:252
 msgid ""
 "The type of *unbound* class methods of some built-in data types such as "
 "``dict.__dict__['fromkeys']``."
 msgstr ""
+"Ο τύπος των *unbound* μεθόδων κλάσης κάποιων ενσωματωμένων τύπων δεδομένων "
+"όπως ``dict.__dict__['fromkeys']``."
 
 #: library/types.rst:260
 msgid ""
 "The type of :term:`modules <module>`. The constructor takes the name of the "
 "module to be created and optionally its :term:`docstring`."
 msgstr ""
+"Ο τύπος των :term:`modules <module>`. Ο κατασκευαστής δέχεται το όνομα του "
+"module που θα δημιουργηθεί και προαιρετικά την :term:`docstring` του."
 
 #: library/types.rst:265
 msgid ":ref:`Documentation on module objects <module-objects>`"
-msgstr ""
+msgstr ":ref:`Documentation on module objects <module-objects>`"
 
 #: library/types.rst:266
 msgid ""
 "Provides details on the special attributes that can be found on instances "
 "of :class:`!ModuleType`."
 msgstr ""
+"Παρέχει λεπτομέρειες για τα ειδικά χαρακτηριστικά που μπορούν να βρεθούν σε "
+"στιγμιότυπα της :class:`!ModuleType`."
 
 #: library/types.rst:269
 msgid ":func:`importlib.util.module_from_spec`"
-msgstr ""
+msgstr ":func:`importlib.util.module_from_spec`"
 
 #: library/types.rst:270
 msgid ""
@@ -339,16 +461,24 @@ msgid ""
 "ModuleType` instances which ensures the various attributes are set "
 "appropriately."
 msgstr ""
+"Τα modules που δημιουργούνται χρησιμοποιώντας τον κατασκευαστή :class:`!"
+"ModuleType` δημιουργούνται με πολλά από τα ειδικά χαρακτηριστικά τους μη "
+"ρυθμισμένα ή ρυθμισμένα σε προεπιλεγμένες τιμές. Η :func:`!module_from_spec` "
+"παρέχει έναν πιο ανθεκτικό τρόπο δημιουργίας στιγμιοτύπων :class:`!"
+"ModuleType` που διασφαλίζει ότι τα διάφορα χαρακτηριστικά είναι ρυθμισμένα "
+"κατάλληλα."
 
 #: library/types.rst:278
 msgid "The type of :data:`Ellipsis`."
-msgstr ""
+msgstr "Ο τύπος του :data:`Ellipsis`."
 
 #: library/types.rst:284
 msgid ""
 "The type of :ref:`parameterized generics <types-genericalias>` such as "
 "``list[int]``."
 msgstr ""
+"O τύπος των :ref:`parameterized generics <types-genericalias>` όπως το "
+"``list[int]``."
 
 #: library/types.rst:287
 msgid ""
@@ -356,6 +486,9 @@ msgid ""
 "``tuple`` or ``dict``.  ``t_args`` should be a :class:`tuple` (possibly of "
 "length 1) of types which parameterize ``t_origin``::"
 msgstr ""
+"``t_origin`` θα πρέπει να είναι μια μη παραμετροποιημένη γενική κλάση, όπως "
+"``list``, ``tuple`` ή ``dict``. ``t_args`` θα πρέπει να είναι μια :class:"
+"`tuple` (πιθανώς μήκους 1) τύπων που παραμετροποιούν το ``t_origin``::"
 
 #: library/types.rst:291
 msgid ""
@@ -366,40 +499,49 @@ msgid ""
 ">>> dict[str, int] == GenericAlias(dict, (str, int))\n"
 "True"
 msgstr ""
+">>> from types import GenericAlias\n"
+"\n"
+">>> list[int] == GenericAlias(list, (int,))\n"
+"True\n"
+">>> dict[str, int] == GenericAlias(dict, (str, int))\n"
+"True"
 
 #: library/types.rst:300
 msgid "This type can now be subclassed."
-msgstr ""
+msgstr "Αυτός ο τύπος μπορεί πλέον να κληρονομείται."
 
 #: library/types.rst:305
 msgid ":ref:`Generic Alias Types<types-genericalias>`"
-msgstr ""
+msgstr ":ref:`Generic Alias Types<types-genericalias>`"
 
 #: library/types.rst:306
 msgid "In-depth documentation on instances of :class:`!types.GenericAlias`"
 msgstr ""
+"Λεπτομερής τεκμηρίωση για τα στιγμιότυπα της :class:`!types.GenericAlias`"
 
 #: library/types.rst:308
 msgid ":pep:`585` - Type Hinting Generics In Standard Collections"
-msgstr ""
+msgstr ":pep:`585` - Υποδείξεις τύπου Generics σε τυπικές συλλογές"
 
 #: library/types.rst:309
 msgid "Introducing the :class:`!types.GenericAlias` class"
-msgstr ""
+msgstr "Εισαγωγή στην κλάση :class:`!types.GenericAlias`"
 
 #: library/types.rst:313
 msgid "The type of :ref:`union type expressions<types-union>`."
-msgstr ""
+msgstr "Ο τύπος των :ref:`union type expressions<types-union>`."
 
 #: library/types.rst:319
 msgid "This is now an alias for :class:`typing.Union`."
-msgstr ""
+msgstr "Αυτό είναι τώρα ένα ψευδώνυμο για την κλάση :class:`typing.Union`."
 
 #: library/types.rst:323
 msgid ""
 "The type of traceback objects such as found in ``sys.exception()."
 "__traceback__``."
 msgstr ""
+"Ο τύπος των αντικειμένων traceback όπως αυτά που βρίσκονται στο ``sys."
+"exception().__traceback__``."
 
 #: library/types.rst:325
 msgid ""
@@ -407,12 +549,18 @@ msgid ""
 "available attributes and operations, and guidance on creating tracebacks "
 "dynamically."
 msgstr ""
+"Δείτε :ref:`the language reference <traceback-objects>` για λεπτομέρειες "
+"σχετικά με τα διαθέσιμα χαρακτηριστικά και τις λειτουργίες, καθώς και "
+"οδηγίες για τη δυναμική δημιουργία tracebacks."
 
 #: library/types.rst:332
 msgid ""
 "The type of :ref:`frame objects <frame-objects>` such as found in :attr:`tb."
 "tb_frame <traceback.tb_frame>` if ``tb`` is a traceback object."
 msgstr ""
+"Ο τύπος των :ref:`frame objects <frame-objects>` όπως αυτά που βρίσκονται "
+"στο :attr:`tb.tb_frame <traceback.tb_frame>` αν το ``tb`` είναι ένα "
+"αντικείμενο traceback."
 
 #: library/types.rst:338
 msgid ""
@@ -422,6 +570,11 @@ msgid ""
 "purpose as the :class:`property` type, but for classes defined in extension "
 "modules."
 msgstr ""
+"Ο τύπος των αντικειμένων που ορίζονται σε επεκτάσιμα modules με "
+"``PyGetSetDef``, όπως :attr:`FrameType.f_locals <frame.f_locals>` ή ``array."
+"array.typecode``. Αυτός ο τύπος χρησιμοποιείται ως περιγραφέας για τα "
+"χαρακτηριστικά του αντικειμένου. Έχει τον ίδιο σκοπό με τον τύπο :class:"
+"`property`, αλλά για κλάσεις που ορίζονται σε επεκτάσιμα modules."
 
 #: library/types.rst:347
 msgid ""
@@ -431,6 +584,11 @@ msgid ""
 "purpose as the :class:`property` type, but for classes defined in extension "
 "modules."
 msgstr ""
+"Ο τύπος των αντικειμένων που ορίζονται σε επεκτάσιμα modules με "
+"``PyMemberDef``, όπως το ``datetime.timedelta.days``. Αυτός ο τύπος "
+"χρησιμοποιείται ως περιγραφέας για απλά μέλη δεδομένων C που χρησιμοποιούν "
+"τυπικές συναρτήσεις μετατροπής. Έχει τον ίδιο σκοπό με τον τύπο :class:"
+"`property`, αλλά για κλάσεις που ορίζονται σε επεκτάσιμα modules."
 
 #: library/types.rst:352
 msgid ""
@@ -439,12 +597,18 @@ msgid ""
 "will be added as an attribute on the class. This allows the slot to appear "
 "in the class's :attr:`~type.__dict__`."
 msgstr ""
+"Επιπλέον, όταν μια κλάση ορίζεται με ένα χαρακτηριστικό :attr:`~object."
+"__slots__`, τότε για κάθε slot, θα προστεθεί ένα στιγμιότυπο της :class:`!"
+"MemberDescriptorType` ως χαρακτηριστικό στην κλάση. Αυτό επιτρέπει στο slot "
+"να εμφανίζεται στο :attr:`~type.__dict__` της κλάσης."
 
 #: library/types.rst:358
 msgid ""
 "In other implementations of Python, this type may be identical to "
 "``GetSetDescriptorType``."
 msgstr ""
+"Σε άλλες υλοποιήσεις της Python, αυτός ο τύπος μπορεί να είναι ταυτόσημος με "
+"το ``GetSetDescriptorType``."
 
 #: library/types.rst:363
 msgid ""
@@ -452,37 +616,49 @@ msgid ""
 "entries, which means that when the mapping changes, the view reflects these "
 "changes."
 msgstr ""
+"Read-only αναγνωριστικό για μια αντιστοίχιση. Παρέχει μια δυναμική προβολή "
+"στις καταχωρήσεις της αντιστοίχισης, που σημαίνει ότι όταν η αντιστοίχιση "
+"αλλάζει, η προβολή αντικατοπτρίζει αυτές τις αλλαγές."
 
 #: library/types.rst:371
 msgid ""
 "Updated to support the new union (``|``) operator from :pep:`584`, which "
 "simply delegates to the underlying mapping."
 msgstr ""
+"Ενημερώθηκε για να υποστηρίζει τον νέο τελεστή ένωσης (``|``) από την :pep:"
+"`584`, ο οποίος απλά αναθέτει στην υποκείμενη αντιστοίχιση."
 
 #: library/types.rst:376
 msgid ""
 "Return ``True`` if the underlying mapping has a key *key*, else ``False``."
 msgstr ""
+"Επιστρέφει ``True`` αν η υποκείμενη αντιστοίχιση έχει το κλειδί *key*, "
+"αλλιώς ``False``."
 
 #: library/types.rst:381
 msgid ""
 "Return the item of the underlying mapping with key *key*.  Raises a :exc:"
 "`KeyError` if *key* is not in the underlying mapping."
 msgstr ""
+"Επιστρέφει το στοιχείο της υποκείμενης αντιστοίχισης με το κλειδί *key*. "
+"Κάνει raise μια :exc:`KeyError` αν το *key* δεν είναι στην υποκείμενη "
+"αντιστοίχιση."
 
 #: library/types.rst:386
 msgid ""
 "Return an iterator over the keys of the underlying mapping.  This is a "
 "shortcut for ``iter(proxy.keys())``."
 msgstr ""
+"Επιστρέφει έναν iterator πάνω από τα κλειδιά της υποκείμενης αντιστοίχισης. "
+"Αυτό είναι μια συντόμευση για ``iter(proxy.keys())``."
 
 #: library/types.rst:391
 msgid "Return the number of items in the underlying mapping."
-msgstr ""
+msgstr "Επιστρέφει τον αριθμό των στοιχείων στην υποκείμενη αντιστοίχιση."
 
 #: library/types.rst:395
 msgid "Return a shallow copy of the underlying mapping."
-msgstr ""
+msgstr "Επιστρέφει ένα ρηχό αντίγραφο της υποκείμενης αντιστοίχισης."
 
 #: library/types.rst:399
 msgid ""
@@ -490,47 +666,59 @@ msgid ""
 "*default*.  If *default* is not given, it defaults to ``None``, so that this "
 "method never raises a :exc:`KeyError`."
 msgstr ""
+"Επιστρέφει την τιμή για το *key* αν το *key* είναι στην υποκείμενη "
+"αντιστοίχιση, αλλιώς *default*. Αν το *default* δεν δοθεί, προεπιλέγεται σε "
+"``None``, έτσι ώστε αυτή η μέθοδος να μην κάνει ποτέ raise μια :exc:"
+"`KeyError`."
 
 #: library/types.rst:405
 msgid ""
 "Return a new view of the underlying mapping's items (``(key, value)`` pairs)."
 msgstr ""
+"Επιστρέφει μια νέα προβολή των στοιχείων της υποκείμενης αντιστοίχισης "
+"(ζεύγη ``(key, value)``)."
 
 #: library/types.rst:410
 msgid "Return a new view of the underlying mapping's keys."
-msgstr ""
+msgstr "Επιστρέφει μια νέα προβολή των κλειδιών της υποκείμενης αντιστοίχισης."
 
 #: library/types.rst:414
 msgid "Return a new view of the underlying mapping's values."
-msgstr ""
+msgstr "Επιστρέφει μια νέα προβολή των τιμών της υποκείμενης αντιστοίχισης."
 
 #: library/types.rst:418
 msgid "Return a reverse iterator over the keys of the underlying mapping."
 msgstr ""
+"Επιστρέφει έναν αντίστροφο iterator πάνω από τα κλειδιά της υποκείμενης "
+"αντιστοίχισης."
 
 #: library/types.rst:424
 msgid "Return a hash of the underlying mapping."
-msgstr ""
+msgstr "Επιστρέφει ένα hash της υποκείμενης αντιστοίχισης."
 
 #: library/types.rst:430
 msgid "The type of :ref:`capsule objects <capsules>`."
-msgstr ""
+msgstr "Ο τύπος των :ref:`capsule objects <capsules>`."
 
 #: library/types.rst:436
 msgid "Additional Utility Classes and Functions"
-msgstr ""
+msgstr "Πρόσθετες βοηθητικές κλάσεις και συναρτήσεις"
 
 #: library/types.rst:440
 msgid ""
 "A simple :class:`object` subclass that provides attribute access to its "
 "namespace, as well as a meaningful repr."
 msgstr ""
+"Απλή υποκλάση :class:`object` που παρέχει πρόσβαση χαρακτηριστικών στο χώρο "
+"ονομάτων της, καθώς και μια σημαντική αναπαράσταση."
 
 #: library/types.rst:443
 msgid ""
 "Unlike :class:`object`, with :class:`!SimpleNamespace` you can add and "
 "remove attributes."
 msgstr ""
+"Σε αντίθεση με την :class:`object`, με την :class:`!SimpleNamespace` "
+"μπορείτε να προσθέσετε και να αφαιρέσετε χαρακτηριστικά."
 
 #: library/types.rst:446
 msgid ""
@@ -542,10 +730,19 @@ msgid ""
 "key-value pairs from that argument (either a mapping object or an :term:"
 "`iterable` object producing key-value pairs). All such keys must be strings."
 msgstr ""
+"Τα αντικείμενα :py:class:`SimpleNamespace` μπορούν να αρχικοποιηθούν με τον "
+"ίδιο τρόπο όπως η :class:`dict`: είτε με ονόματα χαρακτηριστικών, είτε με "
+"ένα μόνο οριστικό όρισμα, είτε και με τα δύο. Όταν αρχικοποιούνται με "
+"ονόματα χαρακτηριστικών, αυτά προστίθενται απευθείας στο υποκείμενο χώρο "
+"ονομάτων. Εναλλακτικά, όταν αρχικοποιούνται με ένα οριστικό όρισμα, το "
+"υποκείμενο χώρο ονομάτων θα ενημερωθεί με ζεύγη κλειδιού-τιμής από αυτό το "
+"όρισμα (είτε ένα αντικείμενο αντιστοίχισης είτε ένα :term:`iterable` "
+"αντικείμενο που παράγει ζεύγη κλειδιού-τιμής). Όλα αυτά τα κλειδιά πρέπει να "
+"είναι συμβολοσειρές."
 
 #: library/types.rst:457
 msgid "The type is roughly equivalent to the following code::"
-msgstr ""
+msgstr "Ο τύπος είναι περίπου ισοδύναμος με τον παρακάτω κώδικα::"
 
 #: library/types.rst:459
 msgid ""
@@ -564,6 +761,20 @@ msgid ""
 "           return self.__dict__ == other.__dict__\n"
 "        return NotImplemented"
 msgstr ""
+"class SimpleNamespace:\n"
+"    def __init__(self, mapping_or_iterable=(), /, **kwargs):\n"
+"        self.__dict__.update(mapping_or_iterable)\n"
+"        self.__dict__.update(kwargs)\n"
+"\n"
+"    def __repr__(self):\n"
+"        items = (f\"{k}={v!r}\" for k, v in self.__dict__.items())\n"
+"        return \"{}({})\".format(type(self).__name__, \", \".join(items))\n"
+"\n"
+"    def __eq__(self, other):\n"
+"        if isinstance(self, SimpleNamespace) and isinstance(other, "
+"SimpleNamespace):\n"
+"           return self.__dict__ == other.__dict__\n"
+"        return NotImplemented"
 
 #: library/types.rst:473
 msgid ""
@@ -571,25 +782,32 @@ msgid ""
 "However, for a structured record type use :func:`~collections.namedtuple` "
 "instead."
 msgstr ""
+"Το ``SimpleNamespace`` μπορεί να είναι χρήσιμο ως αντικατάσταση για το "
+"``class NS: pass``. Ωστόσο, για έναν δομημένο τύπο εγγραφής χρησιμοποιήστε :"
+"func:`~collections.namedtuple` αντί αυτού."
 
 #: library/types.rst:477
 msgid ""
 ":class:`!SimpleNamespace` objects are supported by :func:`copy.replace`."
 msgstr ""
+":class:`!SimpleNamespace` αντικείμενα υποστηρίζονται από την :func:`copy."
+"replace`."
 
 #: library/types.rst:481
 msgid ""
 "Attribute order in the repr changed from alphabetical to insertion (like "
 "``dict``)."
 msgstr ""
+"Η σειρά των χαρακτηριστικών στην αναπαράσταση άλλαξε από αλφαβητική σε "
+"εισαγωγή (όπως το ``dict``)."
 
 #: library/types.rst:485
 msgid "Added support for an optional positional argument."
-msgstr ""
+msgstr "Προστέθηκε υποστήριξη για ένα προαιρετικό οριστικό όρισμα."
 
 #: library/types.rst:490
 msgid "Route attribute access on a class to __getattr__."
-msgstr ""
+msgstr "Δρομολόγηση πρόσβασης χαρακτηριστικών σε μια κλάση στο __getattr__."
 
 #: library/types.rst:492
 msgid ""
@@ -598,6 +816,12 @@ msgid ""
 "normal, but access to an attribute through a class will be routed to the "
 "class's __getattr__ method; this is done by raising AttributeError."
 msgstr ""
+"Αυτός είναι ένας περιγραφέας, που χρησιμοποιείται για τον ορισμό "
+"χαρακτηριστικών που δρουν διαφορετικά όταν προσπελάζονται μέσω ενός "
+"στιγμιότυπου και μέσω μιας κλάσης. Η πρόσβαση στο στιγμιότυπο παραμένει "
+"κανονική, αλλά η πρόσβαση σε ένα χαρακτηριστικό μέσω μιας κλάσης θα "
+"δρομολογηθεί στη μέθοδο __getattr__ της κλάσης. Αυτό γίνεται κάνοντας raise "
+"ένα AttributeError."
 
 #: library/types.rst:497
 msgid ""
@@ -605,10 +829,13 @@ msgid ""
 "attributes on the class with the same name (see :class:`enum.Enum` for an "
 "example)."
 msgstr ""
+"Αυτό επιτρέπει να έχετε ιδιότητες ενεργές σε ένα στιγμιότυπο και να έχετε "
+"εικονικά χαρακτηριστικά στην κλάση με το ίδιο όνομα (βλ. :class:`enum.Enum` "
+"για παράδειγμα)."
 
 #: library/types.rst:504
 msgid "Coroutine Utility Functions"
-msgstr ""
+msgstr "Βοηθητικές Συναρτήσεις Coroutine"
 
 #: library/types.rst:508
 msgid ""
@@ -619,10 +846,17 @@ msgid ""
 "However, it may not necessarily implement the :meth:`~object.__await__` "
 "method."
 msgstr ""
+"Αυτή η συνάρτηση μετατρέπει μια :term:`generator` συνάρτηση σε μια :term:"
+"`coroutine function` που επιστρέφει μια coroutine βασισμένη σε γεννήτρια. Η "
+"coroutine βασισμένη σε γεννήτρια είναι ακόμα ένας :term:`generator "
+"iterator`, αλλά θεωρείται επίσης ότι είναι ένα αντικείμενο :term:`coroutine` "
+"και είναι :term:`awaitable`. Ωστόσο, δεν είναι απαραίτητο να υλοποιεί τη "
+"μέθοδο :meth:`~object.__await__`."
 
 #: library/types.rst:515
 msgid "If *gen_func* is a generator function, it will be modified in-place."
 msgstr ""
+"Αν το *gen_func* είναι μια γεννήτρια συνάρτηση, θα τροποποιηθεί επιτόπου."
 
 #: library/types.rst:517
 msgid ""
@@ -631,11 +865,15 @@ msgid ""
 "wrapped in an *awaitable* proxy object.  All other types of objects will be "
 "returned as is."
 msgstr ""
+"Αν το *gen_func* δεν είναι μια γεννήτρια συνάρτηση, θα τυλιχθεί. Αν "
+"επιστρέφει μια παρουσία της :class:`collections.abc.Generator`, το "
+"στιγμιότυπο θα τυλιχθεί σε ένα *awaitable* αντικείμενο proxy. Όλοι οι άλλοι "
+"τύποι αντικειμένων θα επιστραφούν όπως είναι."
 
 #: library/types.rst:189
 msgid "built-in function"
-msgstr ""
+msgstr "built-in συνάρτηση"
 
 #: library/types.rst:189
 msgid "compile"
-msgstr ""
+msgstr "compile"
