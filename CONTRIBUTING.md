@@ -171,7 +171,7 @@ git checkout -b ft/library-set
 
 ![metadata](/public/assets/metadata-po.png)
 
-Στο **Language-Team** metadata γράφετε: `"Language-Team: PyGreece <pygreece@gmail.com>\n"`
+Στο **Language-Team** metadata γράφετε: `"Language-Team: PyGreece <organizers@pygreece.org>\n"`
 
 5. Όταν ολοκληρώσετε τη μετάφραση σας, πρέπει να αποθηκεύσετε τις αλλαγές σας και να κάνετε push στο GitHub (Μην ξεχάσετε να προσθέσετε το όνομά σας στο αρχείο `TRANSLATORS`). Για παράδειγμα, εάν εργαζόσασταν στο αρχείο `library/ast.po` τα βήματα θα ήταν:
 
