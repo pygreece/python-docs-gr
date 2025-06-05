@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 21:03+0100\n"
+"POT-Creation-Date: 2025-05-02 23:29+0300\n"
 "PO-Revision-Date: 2025-01-22 13:33+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -105,7 +105,7 @@ msgstr ""
 "Αν η ουρά αρχικοποιήθηκε με ``maxsize=0`` (προεπιλογή), τότε η :meth:`full` "
 "δεν επιστρέφει ποτέ ``True``."
 
-#: library/asyncio-queue.rst:62
+#: library/asyncio-queue.rst:63
 msgid ""
 "Remove and return an item from the queue. If queue is empty, wait until an "
 "item is available."
@@ -113,20 +113,20 @@ msgstr ""
 "Αφαίρεση και επιστροφή ενός αντικειμένου από την ουρά. Αν η ουρά είναι κενή, "
 "περιμένετε μέχρι να είναι διαθέσιμο ένα αντικείμενο."
 
-#: library/asyncio-queue.rst:67
+#: library/asyncio-queue.rst:68
 msgid ""
 "Return an item if one is immediately available, else raise :exc:`QueueEmpty`."
 msgstr ""
 "Επιστρέφει ένα αντικείμενο, αν είναι άμεσα διαθέσιμο, αλλιώς κάνε raise την :"
 "exc:`QueueEmpty`."
 
-#: library/asyncio-queue.rst:72
+#: library/asyncio-queue.rst:74
 msgid "Block until all items in the queue have been received and processed."
 msgstr ""
 "Αποκλείει μέχρι να ληφθούν και να υποβληθούν σε επεξεργασία όλα τα στοιχεία "
 "στην ουρά."
 
-#: library/asyncio-queue.rst:74
+#: library/asyncio-queue.rst:76
 msgid ""
 "The count of unfinished tasks goes up whenever an item is added to the "
 "queue. The count goes down whenever a consumer coroutine calls :meth:"
@@ -140,7 +140,7 @@ msgstr ""
 "λήφθηκε και η εργασία πάνω του έχει ολοκληρωθεί.  Όταν ο αριθμός των "
 "ατελείωτων εργασιών μειωθεί στο μηδέν, η μέθοδος :meth:`join` αποδεσμεύεται."
 
-#: library/asyncio-queue.rst:82
+#: library/asyncio-queue.rst:85
 msgid ""
 "Put an item into the queue. If the queue is full, wait until a free slot is "
 "available before adding the item."
@@ -148,26 +148,26 @@ msgstr ""
 "Τοποθετεί ένα αντικείμενο στην ουρά. Αν η ουρά είναι γεμάτη, περιμένετε "
 "μέχρι να είναι διαθέσιμη μια ελεύθερη θέση, πριν προσθέσετε το αντικείμενο."
 
-#: library/asyncio-queue.rst:87
+#: library/asyncio-queue.rst:90
 msgid "Put an item into the queue without blocking."
 msgstr "Τοποθετεί ένα αντικείμενο στην ουρά χωρίς να μπλοκάρει."
 
-#: library/asyncio-queue.rst:89
+#: library/asyncio-queue.rst:92
 msgid "If no free slot is immediately available, raise :exc:`QueueFull`."
 msgstr ""
 "Αν δεν είναι διαθέσιμη μια ελεύθερη θέση αμέσως, γίνεται raise η :exc:"
 "`QueueFull`."
 
-#: library/asyncio-queue.rst:93
+#: library/asyncio-queue.rst:96
 msgid "Return the number of items in the queue."
 msgstr "Επιστρέφει τον αριθμό των αντικειμένων στην ουρά."
 
-#: library/asyncio-queue.rst:97
+#: library/asyncio-queue.rst:100
 msgid "Indicate that a formerly enqueued work item is complete."
 msgstr ""
 "Υποδεικνύει ότι μια εργασία που είχε προστεθεί στην ουρά έχει ολοκληρωθεί."
 
-#: library/asyncio-queue.rst:99
+#: library/asyncio-queue.rst:102
 msgid ""
 "Used by queue consumers. For each :meth:`~Queue.get` used to fetch a work "
 "item, a subsequent call to :meth:`task_done` tells the queue that the "
@@ -178,7 +178,7 @@ msgstr ""
 "`task_done` ενημερώνει την ουρά ότι η επεξεργασία της εργασίας έχει "
 "ολοκληρωθεί."
 
-#: library/asyncio-queue.rst:103
+#: library/asyncio-queue.rst:106
 msgid ""
 "If a :meth:`join` is currently blocking, it will resume when all items have "
 "been processed (meaning that a :meth:`task_done` call was received for every "
@@ -189,7 +189,7 @@ msgstr ""
 "meth:`task_done` για κάθε αντικείμενο που είχε προστεθεί με :meth:`~Queue."
 "put` στην ουρά)."
 
-#: library/asyncio-queue.rst:108
+#: library/asyncio-queue.rst:111
 msgid ""
 "Raises :exc:`ValueError` if called more times than there were items placed "
 "in the queue."
@@ -197,11 +197,11 @@ msgstr ""
 "Κάνει raise την :exc:`ValueError` εάν κληθεί περισσότερες φορές από όσες τα "
 "αντικείμενα που είχαν τοποθετηθεί στην ουρά."
 
-#: library/asyncio-queue.rst:113
+#: library/asyncio-queue.rst:116
 msgid "Priority Queue"
 msgstr "Σειρά Προτεραιότητας"
 
-#: library/asyncio-queue.rst:117
+#: library/asyncio-queue.rst:120
 msgid ""
 "A variant of :class:`Queue`; retrieves entries in priority order (lowest "
 "first)."
@@ -209,15 +209,15 @@ msgstr ""
 "Μια παραλλαγή της :class:`Queue`; η οποία ανακτά τις καταχωρήσεις με σειρά "
 "προτεραιότητας (οι χαμηλότερες πρώτες)."
 
-#: library/asyncio-queue.rst:120
+#: library/asyncio-queue.rst:123
 msgid "Entries are typically tuples of the form ``(priority_number, data)``."
 msgstr "Οι καταχωρήσεις είναι συνήθως της μορφής ``(priority_number, data)``."
 
-#: library/asyncio-queue.rst:125
+#: library/asyncio-queue.rst:128
 msgid "LIFO Queue"
 msgstr "Ουρά LIFO"
 
-#: library/asyncio-queue.rst:129
+#: library/asyncio-queue.rst:132
 msgid ""
 "A variant of :class:`Queue` that retrieves most recently added entries first "
 "(last in, first out)."
@@ -225,11 +225,11 @@ msgstr ""
 "Μια παραλλαγή της κλάσης :class:`Queue` που ανακτά τις πιο πρόσφατα "
 "προστιθέμενες καταχωρίσεις πρώτες (με τη λογική τελευταίος μέσα, πρώτος έξω)."
 
-#: library/asyncio-queue.rst:134
+#: library/asyncio-queue.rst:137
 msgid "Exceptions"
 msgstr "Εξαιρέσεις"
 
-#: library/asyncio-queue.rst:138
+#: library/asyncio-queue.rst:141
 msgid ""
 "This exception is raised when the :meth:`~Queue.get_nowait` method is called "
 "on an empty queue."
@@ -237,7 +237,7 @@ msgstr ""
 "Αυτή η εξαίρεση γίνεται raise όταν η μέθοδος :meth:`~Queue.get_nowait` "
 "καλείται σε μια άδεια ουρά."
 
-#: library/asyncio-queue.rst:144
+#: library/asyncio-queue.rst:147
 msgid ""
 "Exception raised when the :meth:`~Queue.put_nowait` method is called on a "
 "queue that has reached its *maxsize*."
@@ -245,18 +245,18 @@ msgstr ""
 "Εξαίρεση που γίνεται raise όταν η μέθοδος :meth:`~Queue.put_nowait` καλείται "
 "σε μια ουρά που έχει φτάσει στο *maxsize* της."
 
-#: library/asyncio-queue.rst:149
+#: library/asyncio-queue.rst:152
 msgid "Examples"
 msgstr "Παραδείγματα"
 
-#: library/asyncio-queue.rst:153
+#: library/asyncio-queue.rst:156
 msgid ""
 "Queues can be used to distribute workload between several concurrent tasks::"
 msgstr ""
 "Οι ουρές μπορούν να χρησιμοποιηθούν για τη διανομή εργασίας μεταξύ αρκετών "
 "παράλληλων εργασιών::"
 
-#: library/asyncio-queue.rst:156
+#: library/asyncio-queue.rst:159
 msgid ""
 "import asyncio\n"
 "import random\n"
