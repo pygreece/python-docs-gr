@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-06-04 11:27+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: c-api/allocation.rst:6
 msgid "Allocating Objects on the Heap"
-msgstr ""
+msgstr "Δέσμευση Αντικειμένων στο Σωρό"
 
 #: c-api/allocation.rst:17
 msgid ""
@@ -27,12 +27,17 @@ msgid ""
 "reference.  Returns the initialized object.  Other fields of the object are "
 "not affected."
 msgstr ""
+"Αρχικοποιεί ένα νεοδεσμευμένο αντικείμενο *op* με τον τύπο και την αρχική "
+"αναφορά του. Επιστρέφει το αρχικοποιημένο αντικείμενο. Άλλα πεδία του "
+"αντικειμένου δεν επηρεάζονται."
 
 #: c-api/allocation.rst:24
 msgid ""
 "This does everything :c:func:`PyObject_Init` does, and also initializes the "
 "length information for a variable-size object."
 msgstr ""
+"Αυτό κάνει τα πάντα που κάνει η :c:func:`PyObject_Init`, και επίσης "
+"αρχικοποιεί τις πληροφορίες μήκους για ένα αντικείμενο μεταβλητού μεγέθους."
 
 #: c-api/allocation.rst:30
 msgid ""
@@ -43,6 +48,12 @@ msgid ""
 "the memory allocation is determined from the :c:member:`~PyTypeObject."
 "tp_basicsize` field of the type object."
 msgstr ""
+"Δεσμεύει ένα νέο αντικείμενο Python χρησιμοποιώντας τον τύπο δομής C *TYPE* "
+"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``). Τα πεδία που "
+"δεν ορίζονται από την κεφαλίδα αντικειμένου Python δεν αρχικοποιούνται. Ο "
+"καλών θα έχει την μοναδική αναφορά στο αντικείμενο (δηλαδή, η μέτρηση "
+"αναφορών του θα είναι ένα). Το μέγεθος της δέσμευσης μνήμης καθορίζεται από "
+"το πεδίο :c:member:`~PyTypeObject.tp_basicsize` του αντικειμένου τύπου."
 
 #: c-api/allocation.rst:38
 msgid ""
@@ -50,6 +61,9 @@ msgid ""
 "`Py_TPFLAGS_HAVE_GC` set. For such objects, use :c:func:`PyObject_GC_New` "
 "instead."
 msgstr ""
+"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
+"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
+"c:func:`PyObject_GC_New` αντ' αυτού."
 
 #: c-api/allocation.rst:45
 msgid ""
@@ -63,6 +77,16 @@ msgid ""
 "same allocation decreases the number of allocations, improving the memory "
 "management efficiency."
 msgstr ""
+"Δεσμεύει ένα νέο αντικείμενο Python χρησιμοποιώντας τον τύπο δομής C *TYPE* "
+"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``). Τα πεδία που "
+"δεν ορίζονται από την κεφαλίδα αντικειμένου Python δεν αρχικοποιούνται. Η "
+"δεσμευμένη μνήμη επιτρέπει τη δομή *TYPE* συν *size* (``Py_ssize_t``) πεδία "
+"του μεγέθους που δίνεται από το πεδίο :c:member:`~PyTypeObject.tp_itemsize` "
+"του *typeobj*. Αυτό είναι χρήσιμο για την υλοποίηση αντικειμένων όπως τις "
+"πλειάδες (tuples), τα οποία είναι σε θέση να προσδιορίσουν το μέγεθός τους "
+"κατά τη διάρκεια της κατασκευής. Η ενσωμάτωση του πίνακα πεδίων στην ίδια "
+"δέσμευση μειώνει τον αριθμό των δεσμεύσεων, βελτιώνοντας την αποδοτικότητα "
+"της διαχείρισης μνήμης."
 
 #: c-api/allocation.rst:56
 msgid ""
@@ -70,10 +94,13 @@ msgid ""
 "`Py_TPFLAGS_HAVE_GC` set. For such objects, use :c:func:`PyObject_GC_NewVar` "
 "instead."
 msgstr ""
+"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
+"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
+"c:func:`PyObject_GC_NewVar` αντ' αυτού."
 
 #: c-api/allocation.rst:63
 msgid "Same as :c:func:`PyObject_Free`."
-msgstr ""
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
 
 #: c-api/allocation.rst:67
 msgid ""
@@ -81,11 +108,14 @@ msgid ""
 "using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
 "object."
 msgstr ""
+"Αντικείμενο που είναι ορατό στην Python ως ``None``. Αυτό θα πρέπει να "
+"προσπελαύνεται μόνο χρησιμοποιώντας τη μακροεντολή :c:macro:`Py_None`, η "
+"οποία αξιολογείται σε έναν δείκτη σε αυτό το αντικείμενο."
 
 #: c-api/allocation.rst:74
 msgid ":c:func:`PyModule_Create`"
-msgstr ""
+msgstr ":c:func:`PyModule_Create`"
 
 #: c-api/allocation.rst:75
 msgid "To allocate and create extension modules."
-msgstr ""
+msgstr "Για να δεσμεύσετε και να δημιουργήσετε επεκτάσεις modules."
