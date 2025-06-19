@@ -21,7 +21,7 @@
 # (optional) GITHUB_MVP_MILESTONE: the id of the milestone for required translated
 # files of this version. Default is 2.
 # (optional) GITHUB_REPO: the github repo of the greek python translation. Default
-# is pygreece/python-docs-gr.
+# is pygreece/python-docs-el.
 # (optional) PYTHON_VERSION: the python version that all the issues created will
 # scope.
 #
@@ -53,10 +53,10 @@ GITHUB_ISSUE_BODY = """/type translation
 
 Παρακαλούμε, σχολιάστε μέσα στο issue εάν θέλετε αυτό το αρχείο να ανατεθεί σε σας. Ένα μέλος της διαχειριστικής ομάδας θα σας το αναθέσει το συντομότερο δυνατό, ώστε να μπορέσεται να το δουλέψετε.
 
-Θυμηθείτε να ακουληθείσεται τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-gr/blob/main/CONTRIBUTING.md)
+Θυμηθείτε να ακουληθείσεται τις οδηγίες στον [οδηγό συνεισφοράς](https://github.com/pygreece/python-docs-el/blob/main/CONTRIBUTING.md)
 """
 GITHUB_MVP_MILESTONE = int(os.getenv("GITHUB_MVP_MILESTONE", 2))
-GITHUB_REPO = os.getenv("GITHUB_REPO", "pygreece/python-docs-gr")
+GITHUB_REPO = os.getenv("GITHUB_REPO", "python/python-docs-el")
 GITHUB_SEVERITY_MAJOR_LABEL = "severity/major"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 PYTHON_VERSION = os.getenv("PYTHON_VERSION", "3.12")
