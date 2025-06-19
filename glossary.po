@@ -907,7 +907,7 @@ msgstr ""
 
 #: glossary.rst:357
 msgid "cyclic isolate"
-msgstr ""
+msgstr "κυκλική απομόνωση"
 
 #: glossary.rst:359
 msgid ""
@@ -917,6 +917,11 @@ msgid ""
 "these groups and break the reference cycles so that the memory can be "
 "reclaimed."
 msgstr ""
+"Μια υποομάδα ενός ή περισσότερων αντικειμένων που αναφέρονται μεταξύ τους "
+"σχηματίζοντας έναν  κύκλο αναφορών, αλλά δεν αναφέρονται από άλλα "
+"αντικείμενα εκτός της ομάδας.  Ο σκοπός του :term:`cyclic garbage collector "
+"<garbage collection>` είναι να εντοπίζει αυτές τις ομάδες και να σπάει του "
+"κύκλος αναφορών ώστε να μπορεί να αποδεσμευτεί η μνήμη."
 
 #: glossary.rst:363
 msgid "decorator"

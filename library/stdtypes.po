@@ -1899,9 +1899,8 @@ msgid "*i*\\ th item of *s*, origin 0"
 msgstr "*i*\\ ο στοιχείο του *s*, αρχή το 0"
 
 #: library/stdtypes.rst:1021
-#, fuzzy
 msgid "(3)(9)"
-msgstr "(3)(4)"
+msgstr "(3)(9)"
 
 #: library/stdtypes.rst:1023
 msgid "``s[i:j]``"
@@ -2217,6 +2216,8 @@ msgstr ""
 #: library/stdtypes.rst:1154
 msgid "An :exc:`IndexError` is raised if *i* is outside the sequence range."
 msgstr ""
+"Μια :exc:`IndexError` γίνεται raise εάν το *i* βρίσκεται εκτός του εύρους "
+"ακολουθίας."
 
 #: library/stdtypes.rst:1160
 msgid "Immutable Sequence Types"
@@ -2287,14 +2288,12 @@ msgid "item *i* of *s* is replaced by *x*"
 msgstr "το στοιχείο *i* του *s* αντικαθίσταται από το *x*"
 
 #: library/stdtypes.rst:1220
-#, fuzzy
 msgid "``del s[i]``"
-msgstr "``del s[i:j]``"
+msgstr "``del s[i]``"
 
 #: library/stdtypes.rst:1220
-#, fuzzy
 msgid "removes item *i* of *s*"
-msgstr "μεγαλύτερο αντικείμενο του *s*"
+msgstr "αφαιρεί το στοιχείο *i* από το *s*"
 
 #: library/stdtypes.rst:1222
 msgid "``s[i:j] = t``"
@@ -3609,16 +3608,15 @@ msgstr ""
 "Unicode16.0.0/core-spec/chapter-3/#G33992>`__."
 
 #: library/stdtypes.rst:1794
-#, fuzzy
 msgid ""
 "Return centered in a string of length *width*. Padding is done using the "
 "specified *fillchar* (default is an ASCII space). The original string is "
 "returned if *width* is less than or equal to ``len(s)``.  For example::"
 msgstr ""
-"Επιστρέφει ένα κεντραρισμένο σε μια συμβολοσειρά (string) μήκους *πλάτος*. "
-"Το padding γίνεται με τη χρήση του καθορισμένου *fillchar* (το default είναι "
+"Επιστρέφει ένα κεντραρισμένο σε μια συμβολοσειρά (string) μήκους *width*. Το "
+"padding γίνεται με τη χρήση του καθορισμένου *fillchar* (το default είναι "
 "ένα κενό ASCII). Η αρχική συμβολοσειρά επιστρέφεται εάν το *width* είναι "
-"μικρότερο ή ίσο με το ``len(s)``."
+"μικρότερο ή ίσο με το ``len(s)``.  Για παράδειγμα::"
 
 #: library/stdtypes.rst:1798
 msgid ""
@@ -3629,6 +3627,12 @@ msgid ""
 ">>> 'Python'.center(4)\n"
 "'Python'"
 msgstr ""
+">>> 'Python'.center(10)\n"
+"'  Python  '\n"
+">>> 'Python'.center(10, '-')\n"
+"'--Python--'\n"
+">>> 'Python'.center(4)\n"
+"'Python'"
 
 #: library/stdtypes.rst:1808
 msgid ""
@@ -3641,13 +3645,13 @@ msgstr ""
 "*start* και *end* ερμηνεύονται όπως στο slice notation."
 
 #: library/stdtypes.rst:1812
-#, fuzzy
 msgid ""
 "If *sub* is empty, returns the number of empty strings between characters "
 "which is the length of the string plus one. For example::"
 msgstr ""
 "Αν το *sub* είναι κενό, επιστρέφει τον αριθμό των κενών συμβολοσειρών "
-"(strings) μεταξύ των χαρακτήρων που είναι το μήκος της συμβολοσειράς συν ένα."
+"(strings) μεταξύ των χαρακτήρων που είναι το μήκος της συμβολοσειράς συν "
+"ένα. Για παράδειγμα::"
 
 #: library/stdtypes.rst:1815
 msgid ""
@@ -3662,6 +3666,16 @@ msgid ""
 ">>> 'spam, spam, spam'.count('')\n"
 "17"
 msgstr ""
+">>> 'spam, spam, spam'.count('spam')\n"
+"3\n"
+">>> 'spam, spam, spam'.count('spam', 5)\n"
+"2\n"
+">>> 'spam, spam, spam'.count('spam', 5, 10)\n"
+"1\n"
+">>> 'spam, spam, spam'.count('eggs')\n"
+"0\n"
+">>> 'spam, spam, spam'.count('')\n"
+"17"
 
 #: library/stdtypes.rst:1828
 msgid "Return the string encoded to :class:`bytes`."
@@ -3691,7 +3705,6 @@ msgstr ""
 "`error-handlers` για λεπτομέρειες."
 
 #: library/stdtypes.rst:1840
-#, fuzzy
 msgid ""
 "For performance reasons, the value of *errors* is not checked for validity "
 "unless an encoding error actually occurs, :ref:`devmode` is enabled or a :"
@@ -3700,7 +3713,7 @@ msgstr ""
 "Για λόγους απόδοσης, η τιμή των *errors* δεν ελέγχεται ως προς την "
 "εγκυρότητα εκτός αν όντως προκύψει σφάλμα κωδικοποίησης, αν το :ref:"
 "`devmode` είναι ενεργοποιημένο ή αν ένα :ref:`debug build <debug-build>` "
-"χρησιμοποιείται."
+"χρησιμοποιείται. Για παράδειγμα::"
 
 #: library/stdtypes.rst:1846
 msgid ""
@@ -3710,6 +3723,11 @@ msgid ""
 ">>> encoded_str_to_bytes\n"
 "b'Python'"
 msgstr ""
+">>> encoded_str_to_bytes = 'Python'.encode()\n"
+">>> type(encoded_str_to_bytes)\n"
+"<class 'bytes'>\n"
+">>> encoded_str_to_bytes\n"
+"b'Python'"
 
 #: library/stdtypes.rst:3221
 msgid "Added support for keyword arguments."
@@ -3724,7 +3742,6 @@ msgstr ""
 "`debug mode <debug-build>`."
 
 #: library/stdtypes.rst:1863
-#, fuzzy
 msgid ""
 "Return ``True`` if the string ends with the specified *suffix*, otherwise "
 "return ``False``.  *suffix* can also be a tuple of suffixes to look for.  "
@@ -3736,7 +3753,8 @@ msgstr ""
 "*suffix*, αλλιώς επιστρέφει ``False``.  Το *suffix* μπορεί επίσης να είναι "
 "ένα tuple (πλειάδα) από επιθέματα που πρέπει να αναζητηθούν.  Με το "
 "προαιρετικό *start*, το τεστ αρχίζει από αυτή τη θέση.  Με το προαιρετικό "
-"*end*, η σύγκριση σταματά σε αυτή τη θέση."
+"*end*, η σύγκριση σταματά σε αυτή τη θέση. Χρησιμοποιώντας *start* και *end* "
+"είναι ισοδύναμο με την ``str[start:end].endswith(suffix)``. Για παράδειγμα::"
 
 #: library/stdtypes.rst:1869
 msgid ""
@@ -3749,13 +3767,20 @@ msgid ""
 ">>> 'Python is amazing'.endswith('is', 0, 9)\n"
 "True"
 msgstr ""
+">>> 'Python'.endswith('on')\n"
+"True\n"
+">>> 'a tuple of suffixes'.endswith(('at', 'in'))\n"
+"False\n"
+">>> 'a tuple of suffixes'.endswith(('at', 'es'))\n"
+"True\n"
+">>> 'Python is amazing'.endswith('is', 0, 9)\n"
+"True"
 
 #: library/stdtypes.rst:1878
 msgid "See also :meth:`startswith` and :meth:`removesuffix`."
-msgstr ""
+msgstr "Δείτε επίσης :meth:`startswith` και :meth:`removesuffix`."
 
 #: library/stdtypes.rst:1883
-#, fuzzy
 msgid ""
 "Return a copy of the string where all tab characters are replaced by one or "
 "more spaces, depending on the current column and the given tab size.  Tab "
@@ -3782,10 +3807,9 @@ msgstr ""
 "γραμμή (``\\n``) ή return (``\\r``), αντιγράφεται και η τρέχουσα στήλη "
 "επαναφέρεται στο μηδέν.  Οποιοσδήποτε άλλος χαρακτήρας αντιγράφεται "
 "αμετάβλητος και η τρέχουσα στήλη αυξάνεται κατά ένα, ανεξάρτητα από τον "
-"τρόπο αναπαράστασης του χαρακτήρα όταν τυπώνεται."
+"τρόπο αναπαράστασης του χαρακτήρα όταν τυπώνεται. Για παράδειγμα::"
 
 #: library/stdtypes.rst:1896
-#, fuzzy
 msgid ""
 ">>> '01\\t012\\t0123\\t01234'.expandtabs()\n"
 "'01      012     0123    01234'\n"
@@ -3795,10 +3819,13 @@ msgid ""
 "01  012\n"
 "0123    01234"
 msgstr ""
-">>> b'01\\t012\\t0123\\t01234'.expandtabs()\n"
-"b'01      012     0123    01234'\n"
-">>> b'01\\t012\\t0123\\t01234'.expandtabs(4)\n"
-"b'01  012 0123    01234'"
+">>> '01\\t012\\t0123\\t01234'.expandtabs()\n"
+"'01      012     0123    01234'\n"
+">>> '01\\t012\\t0123\\t01234'.expandtabs(4)\n"
+"'01  012 0123    01234'\n"
+">>> print('01\\t012\\n0123\\t01234'.expandtabs(4))\n"
+"01  012\n"
+"0123    01234"
 
 #: library/stdtypes.rst:1907
 msgid ""
@@ -4513,6 +4540,8 @@ msgid ""
 "If *sep* is not specified or is ``None`` and  *maxsplit* is ``0``, only "
 "leading runs of consecutive whitespace are considered."
 msgstr ""
+"Εάν δεν καθοριστεί *sep* ή είναι ``None`` και το *maxsplit* είναι ``0``, "
+"λαμβάνοντας υπόψη μόνο οι πρώτες εκτελέσεις διαδοχικού κενού διαστήματος."
 
 #: library/stdtypes.rst:2321
 msgid ""
@@ -4523,6 +4552,12 @@ msgid ""
 ">>> \"   foo   \".split(maxsplit=0)\n"
 "['foo   ']"
 msgstr ""
+">>> \"\".split(None, 0)\n"
+"[]\n"
+">>> \"   \".split(None, 0)\n"
+"[]\n"
+">>> \"   foo   \".split(maxsplit=0)\n"
+"['foo   ']"
 
 #: library/stdtypes.rst:2334
 msgid ""

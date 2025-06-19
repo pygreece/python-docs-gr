@@ -2219,7 +2219,6 @@ msgstr ""
 "43"
 
 #: tutorial/controlflow.rst:1001
-#, fuzzy
 msgid ""
 "The above example uses a lambda expression to return a function.  Another "
 "use is to pass a small function as an argument.  For instance, :meth:`list."
@@ -2227,7 +2226,8 @@ msgid ""
 msgstr ""
 "Το παραπάνω παράδειγμα χρησιμοποιεί μια έκφραση lambda για να επιστρέψει μια "
 "συνάρτηση.  Μια άλλη χρήση είναι η μετάδοση μιας μικρής συνάρτησης ως "
-"όρισμα::"
+"όρισμα.  Για παράδειγμα, η :meth:`list.sort` δέχεται μια συνάρτηση "
+"ταξινόμησης κλειδιού *key* η οποία μπορεί να είναι μια συνάρτηση lambda::"
 
 #: tutorial/controlflow.rst:1005
 msgid ""
@@ -2313,7 +2313,6 @@ msgid "Here is an example of a multi-line docstring::"
 msgstr "Ακολουθεί ένα παράδειγμα ενός πολλαπλών γραμμών docstring::"
 
 #: tutorial/controlflow.rst:1049
-#, fuzzy
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
@@ -2337,7 +2336,7 @@ msgstr ""
 ">>> print(my_function.__doc__)\n"
 "Do nothing, but document it.\n"
 "\n"
-"    No, really, it doesn't do anything."
+"No, really, it doesn't do anything."
 
 #: tutorial/controlflow.rst:1065
 msgid "Function Annotations"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2025-05-21 21:25+0300\n"
+"PO-Revision-Date: 2025-06-19 17:58+0300\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -122,8 +122,7 @@ msgstr ""
 "καταγράφει ποια έκδοση Python πρόκειται να εγκατασταθεί και σε ποιες "
 "εκδόσεις macOS υποστηρίζεται. Ίσως χρειαστεί να κάνετε κύλιση για να "
 "διαβάσετε ολόκληρο το αρχείο. Από προεπιλογή, αυτό το **Read Me** θα "
-"εγκατασταθεί επίσης στο |"
-"applications_python_version_literal| και θα είναι "
+"εγκατασταθεί επίσης στο |applications_python_version_literal| και θα είναι "
 "διαθέσιμο για ανάγνωση οποιαδήποτε στιγμή."
 
 #: using/mac.rst:64
@@ -159,8 +158,8 @@ msgstr ""
 "Πατώντας το κουμπί **Customize**, μπορείτε να επιλέξετε να παραλείψετε ή να "
 "επιλέξετε ορισμένα πακέτα του εγκαταστάτη. Κάντε κλικ σε κάθε όνομα πακέτου "
 "για να δείτε μια περιγραφή του τι εγκαθιστά. Για να εγκαταστήσετε επίσης "
-"υποστήριξη για την προαιρετική δυνατότητα χωρίς νήματα, δείτε :"
-"ref:`install-freethreaded-macos`."
+"υποστήριξη για την προαιρετική δυνατότητα χωρίς νήματα, δείτε :ref:`install-"
+"freethreaded-macos`."
 
 #: using/mac.rst:84
 msgid ""
@@ -180,14 +179,13 @@ msgstr ""
 "Όταν ολοκληρωθεί η εγκατάσταση, θα εμφανιστεί το παράθυρο **Περίληψη**."
 
 #: using/mac.rst:92
-#, fuzzy
 msgid ""
 "Double-click on the :command:`Install Certificates.command` icon or file in "
 "the |applications_python_version_literal| window to complete the "
 "installation."
 msgstr ""
 "Διπλό κλικ στο εικονίδιο ή το αρχείο :command:`Install Certificates.command` "
-"στο παράθυρο |usemac_applications_folder_version| για να ολοκληρώσετε την "
+"στο παράθυρο |applications_python_version_literal| για να ολοκληρώσετε την "
 "εγκατάσταση."
 
 #: using/mac.rst:98
@@ -214,7 +212,6 @@ msgid "A default install will include:"
 msgstr "Μια προεπιλεγμένη εγκατάσταση θα περιλαμβάνει:"
 
 #: using/mac.rst:110
-#, fuzzy
 msgid ""
 "A |python_version_literal| folder in your :file:`Applications` folder. In "
 "here you find :program:`IDLE`, the development environment that is a "
@@ -222,11 +219,11 @@ msgid ""
 "Launcher`, which handles double-clicking Python scripts from the macOS "
 "`Finder <https://support.apple.com/en-us/HT201732>`_."
 msgstr ""
-"Ένα φάκελο |usemac_applications_folder_name| στο φάκελο :file:"
-"`Applications`. Εδώ θα βρείτε το :program:`IDLE`, το περιβάλλον ανάπτυξης "
-"που είναι τυπικό μέρος των επίσημων διανομών Python. και το :program:`Python "
-"Launcher`, το οποίο χειρίζεται τα διπλά κλικ σε Python scripts από το macOS "
-"`Finder <https://support.apple.com/en-us/HT201732>`_."
+"Ένας |python_version_literal| φάκελος στον φάκελο :file:`Applications`. Εδώ "
+"θα βρείτε το :program:`IDLE`, το περιβάλλον ανάπτυξης που είναι τυπικό μέρος "
+"των επίσημων διανομών Python∙ και το :program:`Python Launcher`, το οποίο "
+"χειρίζεται τα διπλά κλικ σε Python scripts από το macOS `Finder <https://"
+"support.apple.com/en-us/HT201732>`_."
 
 #: using/mac.rst:115
 msgid ""
@@ -273,7 +270,6 @@ msgid "How to run a Python script"
 msgstr "Πώς να εκτελέσετε ένα σενάριο Python"
 
 #: using/mac.rst:135
-#, fuzzy
 msgid ""
 "There are two ways to invoke the Python interpreter. If you are familiar "
 "with using a Unix shell in a terminal window, you can invoke |"
@@ -282,13 +278,13 @@ msgid ""
 "tutorial also has a useful section on :ref:`using Python interactively from "
 "a shell <tut-interac>`."
 msgstr ""
-"Υπάρχουν δύο τρόποι για να καλέσετε τον ερμηνευτή Python. Εάν είστε "
+"Υπάρχουν δύο τρόποι για να καλέσετε τον διερμηνέα Python. Εάν είστε "
 "εξοικειωμένοι με τη χρήση ενός κελύφους Unix σε ένα παράθυρο τερματικού, "
-"μπορείτε να καλέσετε |usemac_python_x_dot_y_literal| ή ``python3`` "
-"προαιρετικά ακολουθούμενο από μία ή περισσότερες επιλογές γραμμής εντολών "
-"(περιγράφεται στο :ref:`using-on-general`). Το εγχειρίδιο Python έχει επίσης "
-"μια χρήσιμη ενότητα σχετικά με :ref:`using Python interactively from a shell "
-"<tut-interac>`."
+"μπορείτε να καλέσετε |python_x_dot_y_literal| ή ``python3`` προαιρετικά "
+"ακολουθούμενο από μία ή περισσότερες επιλογές γραμμής εντολών (περιγράφεται "
+"στο :ref:`using-on-general`). Το εγχειρίδιο Python έχει επίσης μια χρήσιμη "
+"ενότητα σχετικά με :ref:`using Python interactively from a shell <tut-"
+"interac>`."
 
 #: using/mac.rst:142
 msgid ""
@@ -324,9 +320,8 @@ msgstr ""
 "μπορείτε να καλέσετε τον ερμηνευτή με το όνομα του αρχείου script:"
 
 #: using/mac.rst:156
-#, fuzzy
 msgid "|python_x_dot_y_literal| ``myscript.py``"
-msgstr "|usemac_python_x_dot_y_literal| ``myscript.py``"
+msgstr "|python_x_dot_y_literal| ``myscript.py``"
 
 #: using/mac.rst:158
 msgid "To run your script from the Finder, you can either:"
@@ -531,7 +526,6 @@ msgid "Installing Free-threaded Binaries"
 msgstr "Εγκατάσταση εκδόσεων Free-threaded"
 
 #: using/mac.rst:257
-#, fuzzy
 msgid ""
 "The ``python.org`` :ref:`Python for macOS <getting-and-installing-"
 "macpython>` installer package can optionally install an additional build of "
@@ -541,13 +535,12 @@ msgid ""
 msgstr ""
 "Το πακέτο εγκατάστασης ``python.org`` :ref:`Python for macOS <getting-and-"
 "installing-macpython>` μπορεί προαιρετικά να εγκαταστήσει μια επιπλέον "
-"έκδοση της Python |usemac_x_dot_y| που υποστηρίζει :pep:`703`, την "
-"πειραματική δυνατότητα ελεύθερης νηματοποίησης (threading) (εκτέλεση με το :"
-"term:`global interpreter lock` απενεργοποιημένο). Ελέγξτε τη σελίδα "
-"κυκλοφορίας στο ``python.org`` για πιθανές ενημερωμένες πληροφορίες."
+"έκδοση της Python |version| που υποστηρίζει :pep:`703`, την πειραματική "
+"δυνατότητα ελεύθερης νηματοποίησης (threading) (εκτέλεση με το :term:`global "
+"interpreter lock` απενεργοποιημένο). Ελέγξτε τη σελίδα κυκλοφορίας στο "
+"``python.org`` για πιθανές ενημερωμένες πληροφορίες."
 
 #: using/mac.rst:263
-#, fuzzy
 msgid ""
 "The free-threaded mode is working and continues to be improved, but there is "
 "some additional overhead in single-threaded workloads compared to the "
@@ -558,13 +551,17 @@ msgid ""
 "option, available by clicking the **Customize** button on the **Installation "
 "Type** step of the installer as described above."
 msgstr ""
-"Επειδή αυτή η δυνατότητα εξακολουθεί να θεωρείται πειραματική, η υποστήριξή "
-"της δεν εγκαθίσταται από προεπιλογή. Είναι συσκευασμένο ως ξεχωριστή επιλογή "
-"εγκατάστασης, διαθέσιμη κάνοντας κλικ στο κουμπί **Προσαρμογή** στο βήμα "
-"**Τύπος εγκατάστασης** του εγκαταστάτη όπως περιγράφεται παραπάνω."
+"Η λειτουργία ελεύθερου νήματος λειτουργεί και συνεχίζει να βελτιώνεται, αλλά "
+"υπάρχει κάποια πρόσθετη επιβάρυνση στα φορτία εργασίας μονού νήματος σε "
+"σύγκριση με την κανονική έκδοση. Επιπλέον, τα πακέτα τρίτων κατασκευαστών, "
+"ιδίως αυτά με :term:`extension module`, ενδέχεται να μην είναι έτοιμα για "
+"χρήση σε μια έκδοση ελεύθερου νήματος και θα ενεργοποιήσουν ξανά το :term:"
+"`GIL`. Επομένως, η υποστήριξη για ελεύθερη νηματοποποίησης δεν εγκαθίστανται "
+"από προεπιλογή. Είναι συσκευασμένη ως ξεχωριστή επιλογή εγκατάστασης, "
+"διαθέσιμη κάνοντας κλικ το κουμπί **Customize** στο βήμα **Installation "
+"Type** του προγράμματος εγκατάστασης όπως περιγράφεται παραπάνω."
 
 #: using/mac.rst:275
-#, fuzzy
 msgid ""
 "If the box next to the **Free-threaded Python** package name is checked, a "
 "separate :file:`PythonT.framework` will also be installed alongside the "
@@ -577,9 +574,9 @@ msgstr ""
 "Εάν το πλαίσιο δίπλα στο όνομα πακέτου **Free-threaded Python** είναι "
 "επιλεγμένο, θα εγκατασταθεί επίσης ένα ξεχωριστό :file:`PythonT.framework` "
 "δίπλα στο κανονικό :file:`Python.framework` στο :file:`/Library/Frameworks`. "
-"Αυτή η διαμόρφωση επιτρέπει σε μια έκδοση Python |usemac_x_dot_y| ελεύθερης "
+"Αυτή η διαμόρφωση επιτρέπει σε μια έκδοση Python |version| ελεύθερης "
 "νηματοποίησης να συγκατοικεί στο σύστημά σας με μια παραδοσιακή (μόνο GIL) "
-"Python |usemac_x_dot_y| έκδοση με ελάχιστο κίνδυνο κατά την εγκατάσταση ή τη "
+"Python |version| έκδοση με ελάχιστο κίνδυνο κατά την εγκατάσταση ή τη "
 "δοκιμή. Αυτή η διάταξη εγκατάστασης είναι πειραματική και υπόκειται σε "
 "αλλαγές σε μελλοντικές εκδόσεις."
 
@@ -588,7 +585,6 @@ msgid "Known cautions and limitations:"
 msgstr "Γνωστές προφυλάξεις και περιορισμοί:"
 
 #: using/mac.rst:285
-#, fuzzy
 msgid ""
 "The **UNIX command-line tools** package, which is selected by default, will "
 "install links in :file:`/usr/local/bin` for |python_x_dot_y_t_literal|, the "
@@ -600,27 +596,25 @@ msgid ""
 msgstr ""
 "To **UNIX command-line tools** πακέτο, το οποίο επιλέγεται από προεπιλογή, "
 "θα εγκαταστήσει συνδέσμους στο :file:`/usr/local/bin` για |"
-"usemac_python_x_dot_y_t_literal|, τον ερμηνευτή ελεύθερης νηματοποίησης και |"
-"usemac_python_x_dot_y_t_literal_config|, ένα βοηθητικό πρόγραμμα διαμόρφωσης "
-"που μπορεί να είναι χρήσιμο για κατασκευαστές πακέτων. Δεδομένου ότι το :"
-"file:`/usr/local/bin` περιλαμβάνεται συνήθως στη μεταβλητή περιβάλλοντος "
-"``PATH`` του κελύφους σας, στις περισσότερες περιπτώσεις δεν θα χρειαστούν "
-"αλλαγές στις μεταβλητές περιβάλλοντος ``PATH`` για να χρησιμοποιήσετε |"
-"usemac_python_x_dot_y_t_literal|."
+"python_x_dot_y_t_literal|, τον ερμηνευτή ελεύθερης νηματοποίησης και |"
+"python_x_dot_y_t_literal_config|, ένα βοηθητικό πρόγραμμα διαμόρφωσης που "
+"μπορεί να είναι χρήσιμο για κατασκευαστές πακέτων. Δεδομένου ότι το :file:`/"
+"usr/local/bin` περιλαμβάνεται συνήθως στη μεταβλητή περιβάλλοντος ``PATH`` "
+"του κελύφους σας, στις περισσότερες περιπτώσεις δεν θα χρειαστούν αλλαγές "
+"στις μεταβλητές περιβάλλοντος ``PATH`` για να χρησιμοποιήσετε |"
+"python_x_dot_y_t_literal|."
 
 #: using/mac.rst:293
-#, fuzzy
 msgid ""
 "For this release, the **Shell profile updater** package and the :file:"
 "`Update Shell Profile.command` in |applications_python_version_literal| do "
 "not support the free-threaded package."
 msgstr ""
 "Για αυτήν την έκδοση, το πακέτο **Shell profile updater** και το :file:"
-"`Update Shell Profile.command` στο |usemac_applications_folder_version| δεν "
-"υποστηρίζουν το πακέτο ελεύθερης νηματοποίησης."
+"`Update Shell Profile.command` στο |applications_python_version_literal|  "
+"δεν υποστηρίζουν το πακέτο ελεύθερης νηματοποίησης."
 
 #: using/mac.rst:297
-#, fuzzy
 msgid ""
 "The free-threaded build and the traditional build have separate search paths "
 "and separate :file:`site-packages` directories so, by default, if you need a "
@@ -633,7 +627,7 @@ msgstr ""
 "οπότε, από προεπιλογή, εάν χρειάζεστε ένα πακέτο διαθέσιμο και στις δύο "
 "εκδόσεις, μπορεί να χρειαστεί να εγκατασταθεί και στις δύο. Το πακέτο "
 "ελεύθερης νηματοποίησης θα εγκαταστήσει μια ξεχωριστή έκδοση του :program:"
-"`pip` για χρήση με |usemac_python_x_dot_y_t_literal|."
+"`pip` για χρήση με |python_x_dot_y_t_literal|."
 
 #: using/mac.rst:303
 msgid "To install a package using :command:`pip` without a :command:`venv`:"
@@ -642,9 +636,8 @@ msgstr ""
 "command:`venv`:"
 
 #: using/mac.rst:307
-#, fuzzy
 msgid "python\\ |version|\\ t -m pip install <package_name>"
-msgstr "|usemac_python_x_dot_y_t_literal| ``-m pip install <package_name>``"
+msgstr "python\\ |version|\\ t -m pip install <package_name>"
 
 #: using/mac.rst:309
 msgid ""
@@ -660,7 +653,7 @@ msgstr ""
 
 #: using/mac.rst:315
 msgid "python\\ |version|\\ t -m venv <venv_name>"
-msgstr ""
+msgstr "python\\ |version|\\ t -m venv <venv_name>"
 
 #: using/mac.rst:318
 msgid "then :command:`activate`."
@@ -672,7 +665,7 @@ msgstr "Για να εκτελέσετε μια έκδοση ελεύθερης 
 
 #: using/mac.rst:324
 msgid "python\\ |version|\\ t -m idlelib"
-msgstr ""
+msgstr "python\\ |version|\\ t -m idlelib"
 
 #: using/mac.rst:327
 msgid ""
@@ -705,7 +698,6 @@ msgstr ""
 "εκτελείται μόνο μία φορά."
 
 #: using/mac.rst:340
-#, fuzzy
 msgid ""
 "If you cannot depend on the link in ``/usr/local/bin`` pointing to the "
 "``python.org`` free-threaded |python_x_dot_y_t_literal| (for example, if you "
@@ -714,23 +706,21 @@ msgid ""
 "``PythonT`` framework ``bin`` directory:"
 msgstr ""
 "Εάν δεν μπορείτε να εξαρτηθείτε από το σύνδεσμο στο ``/usr/local/bin`` που "
-"δείχνει στην έκδοση |usemac_python_x_dot_y_t_literal| ελεύθερης "
-"νηματοποίησης (για παράδειγμα, εάν θέλετε να εγκαταστήσετε τη δική σας "
-"έκδοση εκεί ή κάποια άλλη διανομή το κάνει), μπορείτε να ορίσετε ρητά τη "
-"μεταβλητή περιβάλλοντος ``PATH`` του κελύφους σας για να περιλαμβάνει το "
-"κατάλογο ``bin`` του πλαισίου ``PythonT``:"
+"δείχνει στην έκδοση |python_x_dot_y_t_literal|ελεύθερης νηματοποίησης (για "
+"παράδειγμα, εάν θέλετε να εγκαταστήσετε τη δική σας έκδοση εκεί ή κάποια "
+"άλλη διανομή το κάνει), μπορείτε να ορίσετε ρητά τη μεταβλητή περιβάλλοντος "
+"``PATH`` του κελύφους σας για να περιλαμβάνει το κατάλογο ``bin`` του "
+"πλαισίου ``PythonT``:"
 
 #: using/mac.rst:348
-#, fuzzy
 msgid ""
 "export PATH=\"/Library/Frameworks/PythonT.framework/Versions/\\ |version|\\ /"
 "bin\":\"$PATH\""
 msgstr ""
-"export PATH=\"/Library/Frameworks/PythonT.framework/Versions/3.13/bin\":"
-"\"$PATH\""
+"export PATH=\"/Library/Frameworks/PythonT.framework/Versions/\\ |version|\\ /"
+"bin\":\"$PATH\""
 
 #: using/mac.rst:350
-#, fuzzy
 msgid ""
 "The traditional framework installation by default does something similar, "
 "except for :file:`Python.framework`. Be aware that having both framework "
@@ -744,33 +734,31 @@ msgstr ""
 "Η παραδοσιακή εγκατάσταση πλαισίου από προεπιλογή κάνει κάτι παρόμοιο, εκτός "
 "από το :file:`Python.framework`. Να είστε προσεκτικοί ότι η παρουσία και των "
 "δύο καταλόγων ``bin`` πλαισίου στο ``PATH`` μπορεί να οδηγήσει σε σύγχυση "
-"εάν υπάρχουν διπλά ονόματα όπως ``python3.13`` και στις δύο. Ποιο "
+"εάν υπάρχουν διπλά ονόματα όπως |python_x_dot_y_literal| και στις δύο∙ ποιο "
 "χρησιμοποιείται στην πραγματικότητα εξαρτάται από τη σειρά που εμφανίζονται "
 "στο ``PATH``. Οι εντολές ``which python3.x`` ή ``which python3.xt`` μπορούν "
 "να δείξουν ποια διαδρομή χρησιμοποιείται. Η χρήση εικονικών περιβαλλόντων "
 "μπορεί να βοηθήσει στην αποφυγή τέτοιων αμφισημιών. Μια άλλη επιλογή μπορεί "
 "να είναι η δημιουργία ενός κελύφους :command:`alias` στον επιθυμητό "
-"ερμηνευτή, όπως:"
+"διερμηνέα, όπως:"
 
 #: using/mac.rst:361
-#, fuzzy
 msgid ""
 "alias py\\ |version|\\ =\"/Library/Frameworks/Python.framework/Versions/\\ |"
 "version|\\ /bin/python\\ |version|\\ \"\n"
 "alias py\\ |version|\\ t=\"/Library/Frameworks/PythonT.framework/Versions/\\ "
 "|version|\\ /bin/python\\ |version|\\ t\""
 msgstr ""
-"alias py3.13=\"/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-"python3.13\"\n"
-"alias py3.13t=\"/Library/Frameworks/PythonT.framework/Versions/3.13/bin/"
-"python3.13t\""
+"alias py\\ |version|\\ =\"/Library/Frameworks/Python.framework/Versions/\\ |"
+"version|\\ /bin/python\\ |version|\\ \"\n"
+"alias py\\ |version|\\ t=\"/Library/Frameworks/PythonT.framework/Versions/\\ "
+"|version|\\ /bin/python\\ |version|\\ t\""
 
 #: using/mac.rst:365
 msgid "Installing using the command line"
 msgstr "Εγκατάσταση χρησιμοποιώντας τη γραμμή εντολών"
 
 #: using/mac.rst:367
-#, fuzzy
 msgid ""
 "If you want to use automation to install the ``python.org`` installer "
 "package (rather than by using the familiar macOS :program:`Installer` GUI "
@@ -788,11 +776,10 @@ msgstr ""
 "επίσης. Εάν δεν είστε εξοικειωμένοι με το :command:`installer`, μπορεί να "
 "είναι κάπως κρυπτικό (βλ. :command:`man installer` για περισσότερες "
 "πληροφορίες). Ως παράδειγμα, το παρακάτω απόσπασμα κώδικα δείχνει έναν τρόπο "
-"να το κάνετε, χρησιμοποιώντας την έκδοση ``3.13.0b2`` και επιλέγοντας την "
-"επιλογή ερμηνευτή ελεύθερης νηματοποίησης:"
+"να το κάνετε, χρησιμοποιώντας την έκδοση |x_dot_y_b2_literal| και "
+"επιλέγοντας την επιλογή διερμηνέα ελεύθερης νηματοποίησης:"
 
 #: using/mac.rst:378
-#, fuzzy
 msgid ""
 "RELEASE=\"python-\\ |version|\\ 0b2-macos11.pkg\"\n"
 "\n"
@@ -824,17 +811,17 @@ msgid ""
 "sudo installer -pkg ./${RELEASE} -applyChoiceChangesXML ./choicechanges."
 "plist -target /"
 msgstr ""
-"RELEASE=\"python-3.13.0b2-macos11.pkg\"\n"
+"RELEASE=\"python-\\ |version|\\ 0b2-macos11.pkg\"\n"
 "\n"
 "# download installer pkg\n"
-"curl -O https://www.python.org/ftp/python/3.13.0/${RELEASE}\n"
+"curl -O \\https://www.python.org/ftp/python/\\ |version|\\ .0/${RELEASE}\n"
 "\n"
 "# create installer choicechanges to customize the install:\n"
-"#    enable the PythonTFramework-3.13 package\n"
+"#    enable the PythonTFramework-\\ |version|\\  package\n"
 "#    while accepting the other defaults (install all other packages)\n"
 "cat > ./choicechanges.plist <<EOF\n"
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-"<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple."
+"<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"\\http://www.apple."
 "com/DTDs/PropertyList-1.0.dtd\">\n"
 "<plist version=\"1.0\">\n"
 "<array>\n"
@@ -844,7 +831,8 @@ msgstr ""
 "                <key>choiceAttribute</key>\n"
 "                <string>selected</string>\n"
 "                <key>choiceIdentifier</key>\n"
-"                <string>org.python.Python.PythonTFramework-3.13</string>\n"
+"                <string>org.python.Python.PythonTFramework-\\ |version|\\ </"
+"string>\n"
 "        </dict>\n"
 "</array>\n"
 "</plist>\n"
@@ -862,7 +850,6 @@ msgstr ""
 "διαθέσιμοι με κάτι σαν:"
 
 #: using/mac.rst:410
-#, fuzzy
 msgid ""
 "$ # test that the free-threaded interpreter was installed if the Unix "
 "Command Tools package was enabled\n"
@@ -886,21 +873,23 @@ msgid ""
 msgstr ""
 "$ # test that the free-threaded interpreter was installed if the Unix "
 "Command Tools package was enabled\n"
-"$ /usr/local/bin/python3.13t -VV\n"
-"Python 3.13.0b2 experimental free-threading build (v3.13.0b2:3a83b172af, "
-"Jun  5 2024, 12:57:31) [Clang 15.0.0 (clang-1500.3.9.4)]\n"
-"$ #    and the traditional interpreter\n"
-"$ /usr/local/bin/python3.13 -VV\n"
-"Python 3.13.0b2 (v3.13.0b2:3a83b172af, Jun  5 2024, 12:50:24) [Clang 15.0.0 "
+"$ /usr/local/bin/python\\ |version|\\ t -VV\n"
+"Python \\ |version|\\ .0b2 free-threading build (v\\ |version|"
+"\\ .0b2:3a83b172af, Jun  5 2024, 12:57:31) [Clang 15.0.0 "
 "(clang-1500.3.9.4)]\n"
+"$ #    and the traditional interpreter\n"
+"$ /usr/local/bin/python\\ |version|\\  -VV\n"
+"Python \\ |version|\\ .0b2 (v\\ |version|\\ .0b2:3a83b172af, Jun  5 2024, "
+"12:50:24) [Clang 15.0.0 (clang-1500.3.9.4)]\n"
 "$ # test that they are also available without the prefix if /usr/local/bin "
 "is on $PATH\n"
-"$ python3.13t -VV\n"
-"Python 3.13.0b2 experimental free-threading build (v3.13.0b2:3a83b172af, "
-"Jun  5 2024, 12:57:31) [Clang 15.0.0 (clang-1500.3.9.4)]\n"
-"$ python3.13 -VV\n"
-"Python 3.13.0b2 (v3.13.0b2:3a83b172af, Jun  5 2024, 12:50:24) [Clang 15.0.0 "
-"(clang-1500.3.9.4)]"
+"$ python\\ |version|\\ t -VV\n"
+"Python \\ |version|\\ .0b2 free-threading build (v\\ |version|"
+"\\ .0b2:3a83b172af, Jun  5 2024, 12:57:31) [Clang 15.0.0 "
+"(clang-1500.3.9.4)]\n"
+"$ python\\ |version|\\  -VV\n"
+"Python \\ |version|\\ .0b2 (v\\ |version|\\ .0b2:3a83b172af, Jun  5 2024, "
+"12:50:24) [Clang 15.0.0 (clang-1500.3.9.4)]"
 
 #: using/mac.rst:424
 msgid ""
