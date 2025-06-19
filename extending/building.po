@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2025-05-21 21:57+0300\n"
+"PO-Revision-Date: 2025-06-19 17:57+0300\n"
 "Last-Translator: ALEXANDROS TZIORAS alextzioras23@gmail.com\n"
 "Language-Team: Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: \n"
@@ -22,18 +22,17 @@ msgid "Building C and C++ Extensions"
 msgstr "Κατασκευή Επεκτάσεων C και C++"
 
 #: extending/building.rst:9
-#, fuzzy
 msgid ""
 "A C extension for CPython is a shared library (for example, a ``.so`` file "
 "on Linux, ``.pyd`` on Windows), which exports an *initialization function*."
 msgstr ""
 "Μια επέκταση C για τη CPython είναι μια κοινόχρηστη βιβλιοθήκη (π.χ. ένα "
-"αρχείο ``.so`` στο Linux, ή ``.pyd`` στα Windows), η οποία εξάγει μια "
+"αρχείο ``.so`` στο Linux, ``.pyd`` στα Windows), η οποία εξάγει μια "
 "*συνάρτηση αρχικοποίησης*."
 
 #: extending/building.rst:12
 msgid "See :ref:`extension-modules` for details."
-msgstr ""
+msgstr "Δείτε το :ref:`extension-modules` για περισσότερες λεπτομέρειες."
 
 #: extending/building.rst:21
 msgid "Building C and C++ Extensions with setuptools"
@@ -46,12 +45,18 @@ msgid ""
 "is Setuptools, whose documentation can be found at https://setuptools.pypa."
 "io/en/latest/setuptools.html."
 msgstr ""
+"Η κατασκευή, η συσκευασία και η διανομή modules επέκτασης γίνεται καλύτερα με εργαλεία "
+"τρίτων και είναι εκτός πεδίου εφαρμογής αυτού του εγγράφου. Ένα κατάλληλο εργαλείο "
+"είναι το Setuptools, η τεκμηρίωση του οποίου βρίσκεται στη διεύθυνση "
+"https://setuptools.pypa.io/en/latest/setuptools.html."
 
 #: extending/building.rst:29
 msgid ""
 "The :mod:`distutils` module, which was included in the standard library "
 "until Python 3.12, is now maintained as part of Setuptools."
 msgstr ""
+"Το module :mod:`distutils`, η οποία περιλαμβανόταν στην τυπική βιβλιοθήκη μέχρι την "
+"Python 3.12, διατηρείται πλέον ως μέρος του Setuptools."
 
 #~ msgid ""
 #~ "To be importable, the shared library must be available on :envvar:"
