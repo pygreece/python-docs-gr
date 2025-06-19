@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 10:19+0300\n"
+"POT-Creation-Date: 2025-06-19 17:36+0300\n"
 "PO-Revision-Date: 2025-05-21 21:30+0300\n"
 "Last-Translator: ALEXANDROS TZIORAS alextzioras23@gmail.com\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
@@ -69,12 +69,12 @@ msgid "Recommended third party tools"
 msgstr "Προτεινόμενα εργαλεία τρίτων"
 
 #: extending/index.rst:28
+#, fuzzy
 msgid ""
 "This guide only covers the basic tools for creating extensions provided as "
-"part of this version of CPython. Third party tools like `Cython <https://"
-"cython.org/>`_, `cffi <https://cffi.readthedocs.io>`_, `SWIG <https://www."
-"swig.org>`_ and `Numba <https://numba.pydata.org/>`_ offer both simpler and "
-"more sophisticated approaches to creating C and C++ extensions for Python."
+"part of this version of CPython. Some :ref:`third party tools <c-api-tools>` "
+"offer both simpler and more sophisticated approaches to creating C and C++ "
+"extensions for Python."
 msgstr ""
 "Αυτός ο οδηγός καλύπτει μόνο τα βασικά εργαλεία για τη δημιουργία επεκτάσεων "
 "που παρέχονται ως μέρος αυτής της έκδοσης της CPython. Εργαλεία τρίτων όπως "
@@ -83,30 +83,11 @@ msgstr ""
 "προσφέρουν τόσο απλούστερες όσο και πιο εξελιγμένες προσεγγίσεις για τη "
 "δημιουργία επεκτάσεων σε C και C++ για την Python."
 
-#: extending/index.rst:37
-msgid ""
-"`Python Packaging User Guide: Binary Extensions <https://packaging.python."
-"org/guides/packaging-binary-extensions/>`_"
-msgstr ""
-"`Οδηγός Χρήστη για Δημιουργία πακέτων Python: Δυαδικές Επεκτάσεις <https://"
-"packaging.python.org/guides/packaging-binary-extensions/>`_"
-
-#: extending/index.rst:38
-msgid ""
-"The Python Packaging User Guide not only covers several available tools that "
-"simplify the creation of binary extensions, but also discusses the various "
-"reasons why creating an extension module may be desirable in the first place."
-msgstr ""
-"Ο Οδηγός Χρήστη για Δημιουργία πακέτων της Python δεν καλύπτει μόνο διάφορα "
-"διαθέσιμα εργαλεία που απλοποιούν τη δημιουργία δυαδικών επεκτάσεων, αλλά "
-"επίσης συζητά και τους διάφορους λόγους για τους οποίους μπορεί να είναι "
-"επιθυμητή η δημιουργία ενός module επέκτασης σε πρώτη φάση."
-
-#: extending/index.rst:45
+#: extending/index.rst:35
 msgid "Creating extensions without third party tools"
 msgstr "Δημιουργία επεκτάσεων χωρίς εργαλεία τρίτων"
 
-#: extending/index.rst:47
+#: extending/index.rst:37
 msgid ""
 "This section of the guide covers creating C and C++ extensions without "
 "assistance from third party tools. It is intended primarily for creators of "
@@ -118,11 +99,15 @@ msgstr ""
 "των εργαλείων, παρά ως προτεινόμενη μέθοδος για τη δημιουργία δικών σας "
 "επεκτάσεων σε C."
 
-#: extending/index.rst:63
+#: extending/index.rst:44
+msgid ":pep:`489` -- Multi-phase extension module initialization"
+msgstr ""
+
+#: extending/index.rst:57
 msgid "Embedding the CPython runtime in a larger application"
 msgstr "Ενσωμάτωση του χρόνου εκτέλεσης της CPython σε μεγαλύτερη εφαρμογή"
 
-#: extending/index.rst:65
+#: extending/index.rst:59
 msgid ""
 "Sometimes, rather than creating an extension that runs inside the Python "
 "interpreter as the main application, it is desirable to instead embed the "
@@ -133,3 +118,22 @@ msgstr ""
 "διερμηνέα της Python ως κύρια εφαρμογή, είναι προτιμότερο να ενσωματώσουμε "
 "τον χρόνο εκτέλεσης της CPython σε μια μεγαλύτερη εφαρμογή. Αυτή η ενότητα "
 "καλύπτει μερικές λεπτομέρειες για το πώς να το κάνετε αυτό με επιτυχία."
+
+#~ msgid ""
+#~ "`Python Packaging User Guide: Binary Extensions <https://packaging.python."
+#~ "org/guides/packaging-binary-extensions/>`_"
+#~ msgstr ""
+#~ "`Οδηγός Χρήστη για Δημιουργία πακέτων Python: Δυαδικές Επεκτάσεις "
+#~ "<https://packaging.python.org/guides/packaging-binary-extensions/>`_"
+
+#~ msgid ""
+#~ "The Python Packaging User Guide not only covers several available tools "
+#~ "that simplify the creation of binary extensions, but also discusses the "
+#~ "various reasons why creating an extension module may be desirable in the "
+#~ "first place."
+#~ msgstr ""
+#~ "Ο Οδηγός Χρήστη για Δημιουργία πακέτων της Python δεν καλύπτει μόνο "
+#~ "διάφορα διαθέσιμα εργαλεία που απλοποιούν τη δημιουργία δυαδικών "
+#~ "επεκτάσεων, αλλά επίσης συζητά και τους διάφορους λόγους για τους οποίους "
+#~ "μπορεί να είναι επιθυμητή η δημιουργία ενός module επέκτασης σε πρώτη "
+#~ "φάση."
