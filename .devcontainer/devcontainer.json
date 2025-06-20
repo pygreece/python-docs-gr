@@ -37,8 +37,8 @@
     },
     "ghcr.io/devcontainers/features/common-utils:2": {}
   },
-  "workspaceFolder": "/python-docs-gr",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/python-docs-gr,type=bind,consistency=cached",
+  "workspaceFolder": "/python-docs-el",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/python-docs-el,type=bind,consistency=cached",
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y hunspell hunspell-el && pip install -r ./requirements.txt",
   "mounts": [
     "source=pip-cache,target=/home/translator/.cache/pip,type=volume"
