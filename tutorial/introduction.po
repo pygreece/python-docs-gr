@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 10:19+0300\n"
+"POT-Creation-Date: 2025-06-19 17:36+0300\n"
 "PO-Revision-Date: 2025-02-13 17:17+0001\n"
 "Last-Translator: Lysandros Nikolaou <lysandros@pygreece.org>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
@@ -40,17 +40,17 @@ msgstr ""
 
 #: tutorial/introduction.rst:16
 msgid ""
-"You can toggle the display of prompts and output by clicking on ``>>>`` in "
-"the upper-right corner of an example box.  If you hide the prompts and "
-"output for an example, then you can easily copy and paste the input lines "
-"into your interpreter."
+"You can use the \"Copy\" button (it appears in the upper-right corner when "
+"hovering over or tapping a code example), which strips prompts and omits "
+"output, to copy and paste the input lines into your interpreter."
 msgstr ""
-"Μπορείτε να αλλάξετε την εμφάνιση των prompts και της εξόδου κάνοντας κλικ "
-"στο ``>>>>`` στην επάνω δεξιά γωνία ενός πλαισίου παραδείγματος.  Εάν "
-"αποκρύψετε τα prompts και την έξοδο για ένα παράδειγμα, τότε μπορείτε εύκολα "
-"να αντιγράψετε και να επικολλήσετε τις γραμμές εισαγωγής στον διερμηνέα σας."
+"Μπορείτε να χρησιμοποιήσετε το κουμπί \"Copy\" (εμφανίζεται στην επάνω δεξιά "
+"γωνία όταν τοποθετείτε τον δείκτη του ποντικιού πάνω από ένα παράδειγμα "
+"κώδικα ή πατάτε αυτό), το οποίο αφαιρεί τις προτροπές και παραλείπει την "
+"έξοδο, για να αντιγράψετε και να επικολλήσετε τις γραμμές εισόδου στον "
+"διερμηνέα σας."
 
-#: tutorial/introduction.rst:23
+#: tutorial/introduction.rst:22
 msgid ""
 "Many of the examples in this manual, even those entered at the interactive "
 "prompt, include comments.  Comments in Python start with the hash character, "
@@ -70,11 +70,11 @@ msgstr ""
 "ερμηνεύονται από την Python, μπορούν να παραλείπονται κατά την πληκτρολόγηση "
 "παραδειγμάτων."
 
-#: tutorial/introduction.rst:31
+#: tutorial/introduction.rst:30
 msgid "Some examples::"
 msgstr "Μερικά παραδείγματα::"
 
-#: tutorial/introduction.rst:33
+#: tutorial/introduction.rst:32
 msgid ""
 "# this is the first comment\n"
 "spam = 1  # and this is the second comment\n"
@@ -86,11 +86,11 @@ msgstr ""
 "          # ... and now a third!\n"
 "text = \"# This is not a comment because it's inside quotes.\""
 
-#: tutorial/introduction.rst:42
+#: tutorial/introduction.rst:41
 msgid "Using Python as a Calculator"
 msgstr "Χρησιμοποιώντας την Python ως Αριθμομηχανή"
 
-#: tutorial/introduction.rst:44
+#: tutorial/introduction.rst:43
 msgid ""
 "Let's try some simple Python commands.  Start the interpreter and wait for "
 "the primary prompt, ``>>>``.  (It shouldn't take long.)"
@@ -98,11 +98,11 @@ msgstr ""
 "Ας δοκιμάσουμε μερικές απλές εντολές της Python. Ξεκινήστε τον διερμηνέα και "
 "περιμένετε το πρώτο prompt, ```>>>```.  (Δεν θα πάρει πολύ χρόνο.)"
 
-#: tutorial/introduction.rst:51
+#: tutorial/introduction.rst:50
 msgid "Numbers"
 msgstr "Αριθμοί"
 
-#: tutorial/introduction.rst:53
+#: tutorial/introduction.rst:52
 msgid ""
 "The interpreter acts as a simple calculator: you can type an expression at "
 "it and it will write the value.  Expression syntax is straightforward: the "
@@ -115,7 +115,7 @@ msgstr ""
 "να χρησιμοποιηθούν για την εκτέλεση αριθμητικών πράξεων∙ οι παρενθέσεις "
 "(``()``) μπορούν να χρησιμοποιηθούν για ομαδοποίηση. Για παράδειγμα::"
 
-#: tutorial/introduction.rst:59
+#: tutorial/introduction.rst:58
 msgid ""
 ">>> 2 + 2\n"
 "4\n"
@@ -135,7 +135,7 @@ msgstr ""
 ">>> 8 / 5  # division always returns a floating-point number\n"
 "1.6"
 
-#: tutorial/introduction.rst:68
+#: tutorial/introduction.rst:67
 msgid ""
 "The integer numbers (e.g. ``2``, ``4``, ``20``) have type :class:`int`, the "
 "ones with a fractional part (e.g. ``5.0``, ``1.6``) have type :class:"
@@ -146,7 +146,7 @@ msgstr ""
 "`float`.  Θα δούμε περισσότερα για τους αριθμητικούς τύπους αργότερα σε "
 "αυτόν τον οδηγό."
 
-#: tutorial/introduction.rst:72
+#: tutorial/introduction.rst:71
 msgid ""
 "Division (``/``) always returns a float.  To do :term:`floor division` and "
 "get an integer result you can use the ``//`` operator; to calculate the "
@@ -157,7 +157,7 @@ msgstr ""
 "να χρησιμοποιήσετε τον τελεστή ``//``∙ για να υπολογίσετε το το υπόλοιπο "
 "μίας διαίρεσης, χρησιμοποιήστε τον τελεστή ``%``::"
 
-#: tutorial/introduction.rst:76
+#: tutorial/introduction.rst:75
 msgid ""
 ">>> 17 / 3  # classic division returns a float\n"
 "5.666666666666667\n"
@@ -179,7 +179,7 @@ msgstr ""
 ">>> 5 * 3 + 2  # floored quotient * divisor + remainder\n"
 "17"
 
-#: tutorial/introduction.rst:86
+#: tutorial/introduction.rst:85
 msgid ""
 "With Python, it is possible to use the ``**`` operator to calculate powers "
 "[#]_::"
@@ -187,7 +187,7 @@ msgstr ""
 "Στην Python, είναι εφικτό να χρησιμοποιήσετε τον τελεστή ``**`` για να "
 "υπολογίσετε δυνάμεις [#]_::"
 
-#: tutorial/introduction.rst:88
+#: tutorial/introduction.rst:87
 msgid ""
 ">>> 5 ** 2  # 5 squared\n"
 "25\n"
@@ -199,7 +199,7 @@ msgstr ""
 ">>> 2 ** 7  # 2 to the power of 7\n"
 "128"
 
-#: tutorial/introduction.rst:93
+#: tutorial/introduction.rst:92
 msgid ""
 "The equal sign (``=``) is used to assign a value to a variable. Afterwards, "
 "no result is displayed before the next interactive prompt::"
@@ -208,7 +208,7 @@ msgstr ""
 "σε μια μεταβλητή. Στη συνέχεια, δεν εμφανίζεται αποτέλεσμα πριν από το "
 "επόμενο διαδραστικό prompt::"
 
-#: tutorial/introduction.rst:96
+#: tutorial/introduction.rst:95
 msgid ""
 ">>> width = 20\n"
 ">>> height = 5 * 9\n"
@@ -220,7 +220,7 @@ msgstr ""
 ">>> width * height\n"
 "900"
 
-#: tutorial/introduction.rst:101
+#: tutorial/introduction.rst:100
 msgid ""
 "If a variable is not \"defined\" (assigned a value), trying to use it will "
 "give you an error::"
@@ -228,7 +228,7 @@ msgstr ""
 "Αν μία μεταβλητή δεν έχει «οριστεί» (δεν της έχει αποδοθεί κάποια τιμή), η "
 "προσπάθεια χρήσης της θα σας δώσει ένα σφάλμα::"
 
-#: tutorial/introduction.rst:104
+#: tutorial/introduction.rst:103
 msgid ""
 ">>> n  # try to access an undefined variable\n"
 "Traceback (most recent call last):\n"
@@ -240,7 +240,7 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "NameError: name 'n' is not defined"
 
-#: tutorial/introduction.rst:109
+#: tutorial/introduction.rst:108
 msgid ""
 "There is full support for floating point; operators with mixed type operands "
 "convert the integer operand to floating point::"
@@ -248,7 +248,7 @@ msgstr ""
 "Υπάρχει πλήρης υποστήριξη για δεκαδικά ψηφία∙ τελεστές με τελεστέους μικτού "
 "τύπου μετατρέπουν τον ακέραιο τελεστέο σε δεκαδικό::"
 
-#: tutorial/introduction.rst:112
+#: tutorial/introduction.rst:111
 msgid ""
 ">>> 4 * 3.75 - 1\n"
 "14.0"
@@ -256,7 +256,7 @@ msgstr ""
 ">>> 4 * 3.75 - 1\n"
 "14.0"
 
-#: tutorial/introduction.rst:115
+#: tutorial/introduction.rst:114
 msgid ""
 "In interactive mode, the last printed expression is assigned to the variable "
 "``_``.  This means that when you are using Python as a desk calculator, it "
@@ -267,7 +267,7 @@ msgstr ""
 "αριθμομηχανή γραφείου, είναι κάπως πιο εύκολο να συνεχίσετε προηγούμενους "
 "υπολογισμούς, για παράδειγμα:"
 
-#: tutorial/introduction.rst:119
+#: tutorial/introduction.rst:118
 msgid ""
 ">>> tax = 12.5 / 100\n"
 ">>> price = 100.50\n"
@@ -287,7 +287,7 @@ msgstr ""
 ">>> round(_, 2)\n"
 "113.06"
 
-#: tutorial/introduction.rst:128
+#: tutorial/introduction.rst:127
 msgid ""
 "This variable should be treated as read-only by the user.  Don't explicitly "
 "assign a value to it --- you would create an independent local variable with "
@@ -298,7 +298,7 @@ msgstr ""
 "ανεξάρτητη τοπική μεταβλητή με το ίδιο όνομα αποκρύπτοντας την ενσωματωμένη "
 "μεταβλητή με τη μαγική της συμπεριφορά."
 
-#: tutorial/introduction.rst:132
+#: tutorial/introduction.rst:131
 msgid ""
 "In addition to :class:`int` and :class:`float`, Python supports other types "
 "of numbers, such as :class:`~decimal.Decimal` and :class:`~fractions."
@@ -312,11 +312,11 @@ msgstr ""
 "numbers <typesnumeric>` (μιγαδικούς αριθμούς), και χρησιμοποιεί την κατάληξη "
 "``j`` ή ``J`` για να δηλώσει το φανταστικό μέρος (π.χ. ``3+5j``)."
 
-#: tutorial/introduction.rst:142
+#: tutorial/introduction.rst:141
 msgid "Text"
 msgstr "Κείμενο"
 
-#: tutorial/introduction.rst:144
+#: tutorial/introduction.rst:143
 msgid ""
 "Python can manipulate text (represented by type :class:`str`, so-called "
 "\"strings\") as well as numbers.  This includes characters \"``!``\", words "
@@ -331,7 +331,7 @@ msgstr ""
 "περικλείονται σε μονά εισαγωγικά (``'...'``) ή διπλά εισαγωγικά (``\"..."
 "\"``) με το ίδιο αποτέλεσμα [#]_."
 
-#: tutorial/introduction.rst:150
+#: tutorial/introduction.rst:149
 msgid ""
 ">>> 'spam eggs'  # single quotes\n"
 "'spam eggs'\n"
@@ -347,7 +347,7 @@ msgstr ""
 ">>> '1975'  # digits and numerals enclosed in quotes are also strings\n"
 "'1975'"
 
-#: tutorial/introduction.rst:159
+#: tutorial/introduction.rst:158
 msgid ""
 "To quote a quote, we need to \"escape\" it, by preceding it with ``\\``. "
 "Alternatively, we can use the other type of quotation marks::"
@@ -356,7 +356,7 @@ msgstr ""
 "προτάσσοντάς του μία ``\\``. Εναλλακτικά, μπορούμε να χρησιμοποιήσουμε τον "
 "άλλο τύπο εισαγωγικών::"
 
-#: tutorial/introduction.rst:162
+#: tutorial/introduction.rst:161
 msgid ""
 ">>> 'doesn\\'t'  # use \\' to escape the single quote...\n"
 "\"doesn't\"\n"
@@ -380,7 +380,7 @@ msgstr ""
 ">>> '\"Isn\\'t,\" they said.'\n"
 "'\"Isn\\'t,\" they said.'"
 
-#: tutorial/introduction.rst:173
+#: tutorial/introduction.rst:172
 msgid ""
 "In the Python shell, the string definition and output string can look "
 "different.  The :func:`print` function produces a more readable output, by "
@@ -392,7 +392,7 @@ msgstr ""
 "ευανάγνωστη έξοδο, παραλείποντας τα εισαγωγικά που περικλείουν την "
 "συμβολοσειρά και εκτυπώνοντας escaped και ειδικούς χαρακτήρες::"
 
-#: tutorial/introduction.rst:177
+#: tutorial/introduction.rst:176
 msgid ""
 ">>> s = 'First line.\\nSecond line.'  # \\n means newline\n"
 ">>> s  # without print(), special characters are included in the string\n"
@@ -410,7 +410,7 @@ msgstr ""
 "First line.\n"
 "Second line."
 
-#: tutorial/introduction.rst:184
+#: tutorial/introduction.rst:183
 msgid ""
 "If you don't want characters prefaced by ``\\`` to be interpreted as special "
 "characters, you can use *raw strings* by adding an ``r`` before the first "
@@ -420,7 +420,7 @@ msgstr ""
 "ως ειδικοί χαρακτήρες, μπορείτε να χρησιμοποιήσετε *ακατέργαστες "
 "συμβολοσειρές* προσθέτοντας ένα ``r`` πριν από το πρώτο εισαγωγικό::"
 
-#: tutorial/introduction.rst:188
+#: tutorial/introduction.rst:187
 msgid ""
 ">>> print('C:\\some\\name')  # here \\n means newline!\n"
 "C:\\some\n"
@@ -434,7 +434,7 @@ msgstr ""
 ">>> print(r'C:\\some\\name')  # note the r before the quote\n"
 "C:\\some\\name"
 
-#: tutorial/introduction.rst:194
+#: tutorial/introduction.rst:193
 msgid ""
 "There is one subtle aspect to raw strings: a raw string may not end in an "
 "odd number of ``\\`` characters; see :ref:`the FAQ entry <faq-programming-"
@@ -445,7 +445,7 @@ msgstr ""
 "χαρακτήρων ``\\``' δείτε :ref:`το λήμμα των Συχνών Ερωτήσεων <faq-"
 "programming-raw-string-backslash>` για περισσότερες πληροφορίες και λύσεις."
 
-#: tutorial/introduction.rst:199
+#: tutorial/introduction.rst:198
 msgid ""
 "String literals can span multiple lines.  One way is using triple-quotes: "
 "``\"\"\"...\"\"\"`` or ``'''...'''``.  End-of-line characters are "
@@ -460,7 +460,7 @@ msgstr ""
 "προσθέτοντας μία ``\\`` στο τέλος της γραμμής.  Στο ακόλουθο παράδειγμα, η "
 "αρχική νέα γραμμή δεν περιλαμβάνεται::"
 
-#: tutorial/introduction.rst:205
+#: tutorial/introduction.rst:204
 msgid ""
 ">>> print(\"\"\"\\\n"
 "... Usage: thingy [OPTIONS]\n"
@@ -484,7 +484,7 @@ msgstr ""
 "\n"
 ">>>"
 
-#: tutorial/introduction.rst:216
+#: tutorial/introduction.rst:215
 msgid ""
 "Strings can be concatenated (glued together) with the ``+`` operator, and "
 "repeated with ``*``::"
@@ -492,7 +492,7 @@ msgstr ""
 "Οι συμβολοσειρές μπορούν να συνδεθούν (κολληθούν η μία στην άλλη) με τον "
 "τελεστή ``+``, και να επαναληφθούν με τον τελεστή ``*``::"
 
-#: tutorial/introduction.rst:219
+#: tutorial/introduction.rst:218
 msgid ""
 ">>> # 3 times 'un', followed by 'ium'\n"
 ">>> 3 * 'un' + 'ium'\n"
@@ -502,7 +502,7 @@ msgstr ""
 ">>> 3 * 'un' + 'ium'\n"
 "'unununium'"
 
-#: tutorial/introduction.rst:223
+#: tutorial/introduction.rst:222
 msgid ""
 "Two or more *string literals* (i.e. the ones enclosed between quotes) next "
 "to each other are automatically concatenated. ::"
@@ -510,7 +510,7 @@ msgstr ""
 "Δύο ή παραπάνω *συμβολοσειρές* (που περικλείονται σε εισαγωγικά) η μία δίπλα "
 "στην άλλη συνδέονται αυτόματα. ::"
 
-#: tutorial/introduction.rst:226
+#: tutorial/introduction.rst:225
 msgid ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
@@ -518,14 +518,14 @@ msgstr ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
 
-#: tutorial/introduction.rst:229
+#: tutorial/introduction.rst:228
 msgid ""
 "This feature is particularly useful when you want to break long strings::"
 msgstr ""
 "Αυτή η λειτουργία είναι ιδιαίτερα χρήσιμη όταν θέλετε να σπάσετε μεγάλες "
 "συμβολοσειρές::"
 
-#: tutorial/introduction.rst:231
+#: tutorial/introduction.rst:230
 msgid ""
 ">>> text = ('Put several strings within parentheses '\n"
 "...         'to have them joined together.')\n"
@@ -537,14 +537,14 @@ msgstr ""
 ">>> text\n"
 "'Put several strings within parentheses to have them joined together.'"
 
-#: tutorial/introduction.rst:236
+#: tutorial/introduction.rst:235
 msgid ""
 "This only works with two literals though, not with variables or expressions::"
 msgstr ""
 "Ωστόσο, αυτό λειτουργεί μόνο με κυριολεκτικές συμβολοσειρές, όχι με "
 "μεταβλητές ή εκφράσεις::"
 
-#: tutorial/introduction.rst:238
+#: tutorial/introduction.rst:237
 msgid ""
 ">>> prefix = 'Py'\n"
 ">>> prefix 'thon'  # can't concatenate a variable and a string literal\n"
@@ -570,14 +570,14 @@ msgstr ""
 "               ^^^^^\n"
 "SyntaxError: invalid syntax"
 
-#: tutorial/introduction.rst:250
+#: tutorial/introduction.rst:249
 msgid ""
 "If you want to concatenate variables or a variable and a literal, use ``+``::"
 msgstr ""
 "Αν θέλετε να συνδέσετε μεταβλητές ή μία μεταβλητή και μία κυριολεκτική "
 "συμβολοσειρά, χρησιμοποιήστε το ``+``::"
 
-#: tutorial/introduction.rst:252
+#: tutorial/introduction.rst:251
 msgid ""
 ">>> prefix + 'thon'\n"
 "'Python'"
@@ -585,7 +585,7 @@ msgstr ""
 ">>> prefix + 'thon'\n"
 "'Python'"
 
-#: tutorial/introduction.rst:255
+#: tutorial/introduction.rst:254
 msgid ""
 "Strings can be *indexed* (subscripted), with the first character having "
 "index 0. There is no separate character type; a character is simply a string "
@@ -595,7 +595,7 @@ msgstr ""
 "πρώτο χαρακτήρα να έχει τον δείκτη 0. Δεν υπάρχει ξεχωριστός τύπος για "
 "χαρακτήρες∙ ένας χαρακτήρας είναι απλώς μία συμβολοσειρά με μέγεθος ένα::"
 
-#: tutorial/introduction.rst:259
+#: tutorial/introduction.rst:258
 msgid ""
 ">>> word = 'Python'\n"
 ">>> word[0]  # character in position 0\n"
@@ -609,14 +609,14 @@ msgstr ""
 ">>> word[5]  # character in position 5\n"
 "'n'"
 
-#: tutorial/introduction.rst:265
+#: tutorial/introduction.rst:264
 msgid ""
 "Indices may also be negative numbers, to start counting from the right::"
 msgstr ""
 "Οι δείκτες μπορούν να είναι και αρνητικοί αριθμοί, για να ξεκινήσετε την "
 "αρίθμηση από τα δεξιά::"
 
-#: tutorial/introduction.rst:267
+#: tutorial/introduction.rst:266
 msgid ""
 ">>> word[-1]  # last character\n"
 "'n'\n"
@@ -632,13 +632,13 @@ msgstr ""
 ">>> word[-6]\n"
 "'P'"
 
-#: tutorial/introduction.rst:274
+#: tutorial/introduction.rst:273
 msgid "Note that since -0 is the same as 0, negative indices start from -1."
 msgstr ""
 "Σημειώστε ότι αφού το -0 είναι το ίδιο με το 0, οι αρνητικοί δείκτες "
 "ξεκινούν από το -1."
 
-#: tutorial/introduction.rst:276
+#: tutorial/introduction.rst:275
 msgid ""
 "In addition to indexing, *slicing* is also supported.  While indexing is "
 "used to obtain individual characters, *slicing* allows you to obtain a "
@@ -648,7 +648,7 @@ msgstr ""
 "ευρετηρίαση χρησιμοποιείται για την απόκτηση μεμονομένων χαρακτήρων, ο "
 "*τεμαχισμός* σας επιτρέπει να αποκτήσετε ένας μέρος της συμβολοσειράς::"
 
-#: tutorial/introduction.rst:279
+#: tutorial/introduction.rst:278
 msgid ""
 ">>> word[0:2]  # characters from position 0 (included) to 2 (excluded)\n"
 "'Py'\n"
@@ -660,7 +660,7 @@ msgstr ""
 ">>> word[2:5]  # characters from position 2 (included) to 5 (excluded)\n"
 "'tho'"
 
-#: tutorial/introduction.rst:284
+#: tutorial/introduction.rst:283
 msgid ""
 "Slice indices have useful defaults; an omitted first index defaults to zero, "
 "an omitted second index defaults to the size of the string being sliced. ::"
@@ -669,7 +669,7 @@ msgstr ""
 "πρώτου δείκτη έχει ως προεπιλογή το μηδέν, η παράλειψη του δεύτερου δείκτη "
 "έχει ως προεπιλογή το μέγεθος της συμβολοσειράς που τεμαχίζεται. ::"
 
-#: tutorial/introduction.rst:287
+#: tutorial/introduction.rst:286
 msgid ""
 ">>> word[:2]   # character from the beginning to position 2 (excluded)\n"
 "'Py'\n"
@@ -685,7 +685,7 @@ msgstr ""
 ">>> word[-2:]  # characters from the second-last (included) to the end\n"
 "'on'"
 
-#: tutorial/introduction.rst:294
+#: tutorial/introduction.rst:293
 msgid ""
 "Note how the start is always included, and the end always excluded.  This "
 "makes sure that ``s[:i] + s[i:]`` is always equal to ``s``::"
@@ -693,7 +693,7 @@ msgstr ""
 "Προσέξτε πώς η αρχή περιλαμβάνεται πάντα, ενώ το τέλος πάντα εξαιρείται.  "
 "Αυτό εξασφαλίζει ότι το ``s[:i] + s[i:]`` είναι πάντα ίσο με ``s``::"
 
-#: tutorial/introduction.rst:297
+#: tutorial/introduction.rst:296
 msgid ""
 ">>> word[:2] + word[2:]\n"
 "'Python'\n"
@@ -705,7 +705,7 @@ msgstr ""
 ">>> word[:4] + word[4:]\n"
 "'Python'"
 
-#: tutorial/introduction.rst:302
+#: tutorial/introduction.rst:301
 msgid ""
 "One way to remember how slices work is to think of the indices as pointing "
 "*between* characters, with the left edge of the first character numbered 0. "
@@ -717,7 +717,7 @@ msgstr ""
 "χαρακτήρα να αριθμείται με 0. Τότε το δεξιό άκρο του τελευταίου χαρακτήρα "
 "μιας συμβολοσειράς *ν* χαρακτήρων έχει δείκτη *ν*, για παράδειγμα::"
 
-#: tutorial/introduction.rst:307
+#: tutorial/introduction.rst:306
 msgid ""
 " +---+---+---+---+---+---+\n"
 " | P | y | t | h | o | n |\n"
@@ -731,7 +731,7 @@ msgstr ""
 " 0   1   2   3   4   5   6\n"
 "-6  -5  -4  -3  -2  -1"
 
-#: tutorial/introduction.rst:313
+#: tutorial/introduction.rst:312
 msgid ""
 "The first row of numbers gives the position of the indices 0...6 in the "
 "string; the second row gives the corresponding negative indices. The slice "
@@ -743,7 +743,7 @@ msgstr ""
 "*i* έως *j* αποτελείται από όλους τους χαρακτήρες μεταξύ των άκρων με "
 "ετικέτες *i* και *j*, αντίστοιχα."
 
-#: tutorial/introduction.rst:318
+#: tutorial/introduction.rst:317
 msgid ""
 "For non-negative indices, the length of a slice is the difference of the "
 "indices, if both are within bounds.  For example, the length of "
@@ -753,11 +753,11 @@ msgstr ""
 "δεικτών, εάν και οι δύο είναι εντός των ορίων.  Για παράδειγμα, το μήκος του "
 "``word[1:3]`` είναι 2."
 
-#: tutorial/introduction.rst:322
+#: tutorial/introduction.rst:321
 msgid "Attempting to use an index that is too large will result in an error::"
 msgstr "Η απόπειρα χρήσης ενός πολύ μεγάλου δείκτη θα οδηγήσει σε σφάλμα::"
 
-#: tutorial/introduction.rst:324
+#: tutorial/introduction.rst:323
 msgid ""
 ">>> word[42]  # the word only has 6 characters\n"
 "Traceback (most recent call last):\n"
@@ -769,7 +769,7 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "IndexError: string index out of range"
 
-#: tutorial/introduction.rst:329
+#: tutorial/introduction.rst:328
 msgid ""
 "However, out of range slice indexes are handled gracefully when used for "
 "slicing::"
@@ -777,7 +777,7 @@ msgstr ""
 "Ωστόσο, οι δείκτες εκτός εύρους αντιμετωπίζονται χωρίς σφάλμα όταν "
 "χρησιμοποιούνται για τεμαχισμούς::"
 
-#: tutorial/introduction.rst:332
+#: tutorial/introduction.rst:331
 msgid ""
 ">>> word[4:42]\n"
 "'on'\n"
@@ -789,7 +789,7 @@ msgstr ""
 ">>> word[42:]\n"
 "''"
 
-#: tutorial/introduction.rst:337
+#: tutorial/introduction.rst:336
 msgid ""
 "Python strings cannot be changed --- they are :term:`immutable`. Therefore, "
 "assigning to an indexed position in the string results in an error::"
@@ -798,7 +798,7 @@ msgstr ""
 "`immutable`. Επομένως, η ανάθεση σε μια συγκεκριμένη θέση στη συμβολοσειρά "
 "οδηγεί σε σφάλμα::"
 
-#: tutorial/introduction.rst:340
+#: tutorial/introduction.rst:339
 msgid ""
 ">>> word[0] = 'J'\n"
 "Traceback (most recent call last):\n"
@@ -818,13 +818,13 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: 'str' object does not support item assignment"
 
-#: tutorial/introduction.rst:349
+#: tutorial/introduction.rst:348
 msgid "If you need a different string, you should create a new one::"
 msgstr ""
 "Εάν χρειάζεστε μια διαφορετική συμβολοσειρά, θα πρέπει να δημιουργήσετε μια "
 "νέα::"
 
-#: tutorial/introduction.rst:351
+#: tutorial/introduction.rst:350
 msgid ""
 ">>> 'J' + word[1:]\n"
 "'Jython'\n"
@@ -836,12 +836,12 @@ msgstr ""
 ">>> word[:2] + 'py'\n"
 "'Pypy'"
 
-#: tutorial/introduction.rst:356
+#: tutorial/introduction.rst:355
 msgid "The built-in function :func:`len` returns the length of a string::"
 msgstr ""
 "Η ενσωματωμένη συνάρτηση :func:`len` επιστρέφει το μήκος μιας συμβολοσειράς::"
 
-#: tutorial/introduction.rst:358
+#: tutorial/introduction.rst:357
 msgid ""
 ">>> s = 'supercalifragilisticexpialidocious'\n"
 ">>> len(s)\n"
@@ -851,11 +851,11 @@ msgstr ""
 ">>> len(s)\n"
 "34"
 
-#: tutorial/introduction.rst:365
+#: tutorial/introduction.rst:364
 msgid ":ref:`textseq`"
 msgstr ":ref:`textseq`"
 
-#: tutorial/introduction.rst:366
+#: tutorial/introduction.rst:365
 msgid ""
 "Strings are examples of *sequence types*, and support the common operations "
 "supported by such types."
@@ -863,11 +863,11 @@ msgstr ""
 "Οι συμβολοσειρές είναι παραδείγματα *τύπων ακολουθίας* και υποστηρίζουν τις "
 "κοινές πράξεις που υποστηρίζονται από τέτοιους τύπους."
 
-#: tutorial/introduction.rst:369
+#: tutorial/introduction.rst:368
 msgid ":ref:`string-methods`"
 msgstr ":ref:`string-methods`"
 
-#: tutorial/introduction.rst:370
+#: tutorial/introduction.rst:369
 msgid ""
 "Strings support a large number of methods for basic transformations and "
 "searching."
@@ -875,29 +875,29 @@ msgstr ""
 "Οι συμβολοσειρές υποστηρίζουν έναν μεγάλο αριθμό μεθόδων για βασικούς "
 "μετασχηματισμούς και αναζήτηση."
 
-#: tutorial/introduction.rst:373
+#: tutorial/introduction.rst:372
 msgid ":ref:`f-strings`"
 msgstr ":ref:`f-strings`"
 
-#: tutorial/introduction.rst:374
+#: tutorial/introduction.rst:373
 msgid "String literals that have embedded expressions."
 msgstr "Κυριολεκτικές συμβολοσειρές που έχουν ενσωματωμένες εκφράσεις."
 
-#: tutorial/introduction.rst:376
+#: tutorial/introduction.rst:375
 msgid ":ref:`formatstrings`"
 msgstr ":ref:`formatstrings`"
 
-#: tutorial/introduction.rst:377
+#: tutorial/introduction.rst:376
 msgid "Information about string formatting with :meth:`str.format`."
 msgstr ""
 "Πληροφορίες σχετικά με τη μορφοποίηση συμβολοσειρών με τη μέθοδο :meth:`str."
 "format`."
 
-#: tutorial/introduction.rst:379
+#: tutorial/introduction.rst:378
 msgid ":ref:`old-string-formatting`"
 msgstr ":ref:`old-string-formatting`"
 
-#: tutorial/introduction.rst:380
+#: tutorial/introduction.rst:379
 msgid ""
 "The old formatting operations invoked when strings are the left operand of "
 "the ``%`` operator are described in more detail here."
@@ -905,11 +905,11 @@ msgstr ""
 "Οι παλιές λειτουργίες μορφοποίησης που καλούνται όταν οι συμβολοσειρές είναι "
 "ο αριστερός τελεστέος του τελεστή ``%`` περιγράφονται λεπτομερέστερα εδώ."
 
-#: tutorial/introduction.rst:387
+#: tutorial/introduction.rst:386
 msgid "Lists"
 msgstr "Λίστες"
 
-#: tutorial/introduction.rst:389
+#: tutorial/introduction.rst:388
 msgid ""
 "Python knows a number of *compound* data types, used to group together other "
 "values.  The most versatile is the *list*, which can be written as a list of "
@@ -923,7 +923,7 @@ msgstr ""
 "περιέχουν στοιχεία διαφορετικών τύπων, αλλά συνήθως όλα τα στοιχεία έχουν "
 "τον ίδιο τύπο. ::"
 
-#: tutorial/introduction.rst:394
+#: tutorial/introduction.rst:393
 msgid ""
 ">>> squares = [1, 4, 9, 16, 25]\n"
 ">>> squares\n"
@@ -933,7 +933,7 @@ msgstr ""
 ">>> squares\n"
 "[1, 4, 9, 16, 25]"
 
-#: tutorial/introduction.rst:398
+#: tutorial/introduction.rst:397
 msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can be "
 "indexed and sliced::"
@@ -941,7 +941,7 @@ msgstr ""
 "Όπως οι συμβολοσειρές (και όλοι οι άλλοι ενσωματωμένοι τύποι :term:"
 "`sequence`), οι λίστες μπορούν να δεικτοδοτηθούν και να τεμαχιστούν::"
 
-#: tutorial/introduction.rst:401
+#: tutorial/introduction.rst:400
 msgid ""
 ">>> squares[0]  # indexing returns the item\n"
 "1\n"
@@ -957,11 +957,11 @@ msgstr ""
 ">>> squares[-3:]  # slicing returns a new list\n"
 "[9, 16, 25]"
 
-#: tutorial/introduction.rst:408
+#: tutorial/introduction.rst:407
 msgid "Lists also support operations like concatenation::"
 msgstr "Οι λίστες υποστηρίζουν επίσης λειτουργίες όπως σύνδεση::"
 
-#: tutorial/introduction.rst:410
+#: tutorial/introduction.rst:409
 msgid ""
 ">>> squares + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
@@ -969,7 +969,7 @@ msgstr ""
 ">>> squares + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
 
-#: tutorial/introduction.rst:413
+#: tutorial/introduction.rst:412
 msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
@@ -978,7 +978,7 @@ msgstr ""
 "λίστες είναι :term:`mutable` τύπος, δηλαδή είναι δυνατόν να αλλάξετε το "
 "περιεχόμενό τους::"
 
-#: tutorial/introduction.rst:416
+#: tutorial/introduction.rst:415
 msgid ""
 ">>> cubes = [1, 8, 27, 65, 125]  # something's wrong here\n"
 ">>> 4 ** 3  # the cube of 4 is 64, not 65!\n"
@@ -994,7 +994,7 @@ msgstr ""
 ">>> cubes\n"
 "[1, 8, 27, 64, 125]"
 
-#: tutorial/introduction.rst:423
+#: tutorial/introduction.rst:422
 msgid ""
 "You can also add new items at the end of the list, by using the :meth:`!list."
 "append` *method* (we will see more about methods later)::"
@@ -1003,7 +1003,7 @@ msgstr ""
 "χρησιμοποιώντας την *μέθοδο* :meth:`!list.append` (θα δούμε περισσότερα για "
 "τις μεθόδους αργότερα)::"
 
-#: tutorial/introduction.rst:426
+#: tutorial/introduction.rst:425
 msgid ""
 ">>> cubes.append(216)  # add the cube of 6\n"
 ">>> cubes.append(7 ** 3)  # and the cube of 7\n"
@@ -1015,7 +1015,7 @@ msgstr ""
 ">>> cubes\n"
 "[1, 8, 27, 64, 125, 216, 343]"
 
-#: tutorial/introduction.rst:431
+#: tutorial/introduction.rst:430
 msgid ""
 "Simple assignment in Python never copies data. When you assign a list to a "
 "variable, the variable refers to the *existing list*. Any changes you make "
@@ -1027,7 +1027,7 @@ msgstr ""
 "Οποιεσδήποτε αλλαγές κάνετε στη λίστα μέσω μιας μεταβλητής θα γίνουν "
 "αντιληπτές από όλες τις άλλες μεταβλητές που αναφέρονται σε αυτήν::"
 
-#: tutorial/introduction.rst:436
+#: tutorial/introduction.rst:435
 msgid ""
 ">>> rgb = [\"Red\", \"Green\", \"Blue\"]\n"
 ">>> rgba = rgb\n"
@@ -1045,7 +1045,7 @@ msgstr ""
 ">>> rgb\n"
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 
-#: tutorial/introduction.rst:444
+#: tutorial/introduction.rst:443
 msgid ""
 "All slice operations return a new list containing the requested elements.  "
 "This means that the following slice returns a :ref:`shallow copy "
@@ -1055,7 +1055,7 @@ msgstr ""
 "στοιχεία.  Αυτό σημαίνει ότι ο ακόλουθος τεμαχισμός επιστρέφει ένα :ref:"
 "`shallow copy <shallow_vs_deep_copy>` (ρηχό αντίγραφο) της λίστας::"
 
-#: tutorial/introduction.rst:448
+#: tutorial/introduction.rst:447
 msgid ""
 ">>> correct_rgba = rgba[:]\n"
 ">>> correct_rgba[-1] = \"Alpha\"\n"
@@ -1071,7 +1071,7 @@ msgstr ""
 ">>> rgba\n"
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 
-#: tutorial/introduction.rst:455
+#: tutorial/introduction.rst:454
 msgid ""
 "Assignment to slices is also possible, and this can even change the size of "
 "the list or clear it entirely::"
@@ -1079,7 +1079,7 @@ msgstr ""
 "Η ανάθεση σε τεμαχισμούς είναι επίσης δυνατή, και αυτό μπορεί ακόμη και να "
 "αλλάξει το μέγεθος της λίστας ή να τη διαγράψει εντελώς::"
 
-#: tutorial/introduction.rst:458
+#: tutorial/introduction.rst:457
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
 ">>> letters\n"
@@ -1113,11 +1113,11 @@ msgstr ""
 ">>> letters\n"
 "[]"
 
-#: tutorial/introduction.rst:474
+#: tutorial/introduction.rst:473
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr "Η ενσωματωμένη συνάρτηση :func:`len` εφαρμόζεται επίσης στις λίστες::"
 
-#: tutorial/introduction.rst:476
+#: tutorial/introduction.rst:475
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd']\n"
 ">>> len(letters)\n"
@@ -1127,7 +1127,7 @@ msgstr ""
 ">>> len(letters)\n"
 "4"
 
-#: tutorial/introduction.rst:480
+#: tutorial/introduction.rst:479
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
@@ -1135,7 +1135,7 @@ msgstr ""
 "Είναι δυνατό να εμφωλεύσετε λίστες (να δημιουργήσετε λίστες που περιέχουν "
 "άλλες λίστες), για παράδειγμα::"
 
-#: tutorial/introduction.rst:483
+#: tutorial/introduction.rst:482
 msgid ""
 ">>> a = ['a', 'b', 'c']\n"
 ">>> n = [1, 2, 3]\n"
@@ -1157,11 +1157,11 @@ msgstr ""
 ">>> x[0][1]\n"
 "'b'"
 
-#: tutorial/introduction.rst:496
+#: tutorial/introduction.rst:495
 msgid "First Steps Towards Programming"
 msgstr "Πρώτα Βήματα Προς Τον Προγραμματισμό"
 
-#: tutorial/introduction.rst:498
+#: tutorial/introduction.rst:497
 msgid ""
 "Of course, we can use Python for more complicated tasks than adding two and "
 "two together.  For instance, we can write an initial sub-sequence of the "
@@ -1173,7 +1173,7 @@ msgstr ""
 "αρχική υπο-σειρά της `Σειράς Fibonacci <https://en.wikipedia.org/wiki/"
 "Fibonacci_sequence>`_ ως ακολουθεί::"
 
-#: tutorial/introduction.rst:503
+#: tutorial/introduction.rst:502
 msgid ""
 ">>> # Fibonacci series:\n"
 ">>> # the sum of two elements defines the next\n"
@@ -1205,11 +1205,11 @@ msgstr ""
 "5\n"
 "8"
 
-#: tutorial/introduction.rst:518
+#: tutorial/introduction.rst:517
 msgid "This example introduces several new features."
 msgstr "Αυτό το παράδειγμα εισάγει διάφορα νέα χαρακτηριστικά."
 
-#: tutorial/introduction.rst:520
+#: tutorial/introduction.rst:519
 msgid ""
 "The first line contains a *multiple assignment*: the variables ``a`` and "
 "``b`` simultaneously get the new values 0 and 1.  On the last line this is "
@@ -1223,7 +1223,7 @@ msgstr ""
 "αξιολογούνται όλες πρώτα πριν γίνει οποιαδήποτε ανάθεση.  Οι εκφράσεις στην "
 "δεξιά πλευρά αξιολογούνται  από αριστερά προς τα δεξιά."
 
-#: tutorial/introduction.rst:526
+#: tutorial/introduction.rst:525
 msgid ""
 "The :keyword:`while` loop executes as long as the condition (here: ``a < "
 "10``) remains true.  In Python, like in C, any non-zero integer value is "
@@ -1244,7 +1244,7 @@ msgstr ""
 "(μικρότερο από), ``>`` (μεγαλύτερο από), ``==`` (ίσο με), ``<=`` (μικρότερο "
 "ή ίσο με), ``>=`` (μεγαλύτερο ή ίσο με) και ``!=`` (μη ίσο με)."
 
-#: tutorial/introduction.rst:535
+#: tutorial/introduction.rst:534
 msgid ""
 "The *body* of the loop is *indented*: indentation is Python's way of "
 "grouping statements.  At the interactive prompt, you have to type a tab or "
@@ -1266,7 +1266,7 @@ msgstr ""
 "τελευταία γραμμή).  Σημείωση ότι κάθε γραμμή μέσα σε ένα βασικό μπλοκ πρέπει "
 "να έχει την ίδια εσοχή."
 
-#: tutorial/introduction.rst:544
+#: tutorial/introduction.rst:543
 msgid ""
 "The :func:`print` function writes the value of the argument(s) it is given. "
 "It differs from just writing the expression you want to write (as we did "
@@ -1283,7 +1283,7 @@ msgstr ""
 "παρεμβάλλεται μεταξύ των στοιχείων, ώστε να μπορείτε να μορφοποιήσετε τα "
 "πράγματα όμορφα, όπως εδώ::"
 
-#: tutorial/introduction.rst:551
+#: tutorial/introduction.rst:550
 msgid ""
 ">>> i = 256*256\n"
 ">>> print('The value of i is', i)\n"
@@ -1293,7 +1293,7 @@ msgstr ""
 ">>> print('The value of i is', i)\n"
 "The value of i is 65536"
 
-#: tutorial/introduction.rst:555
+#: tutorial/introduction.rst:554
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
@@ -1302,7 +1302,7 @@ msgstr ""
 "γραμμής μετά την έξοδο, ή για να τελειώσετε την έξοδο με μια διαφορετική "
 "συμβολοσειρά::"
 
-#: tutorial/introduction.rst:558
+#: tutorial/introduction.rst:557
 msgid ""
 ">>> a, b = 0, 1\n"
 ">>> while a < 1000:\n"
@@ -1318,11 +1318,11 @@ msgstr ""
 "...\n"
 "0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
 
-#: tutorial/introduction.rst:567
+#: tutorial/introduction.rst:566
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/introduction.rst:568
+#: tutorial/introduction.rst:567
 msgid ""
 "Since ``**`` has higher precedence than ``-``, ``-3**2`` will be interpreted "
 "as ``-(3**2)`` and thus result in ``-9``.  To avoid this and get ``9``, you "
@@ -1333,7 +1333,7 @@ msgstr ""
 "το αποφύγετε αυτό και να πάρετε ``9``, μπορείτε να χρησιμοποιήσετε "
 "``(-3)**2``."
 
-#: tutorial/introduction.rst:572
+#: tutorial/introduction.rst:571
 msgid ""
 "Unlike other languages, special characters such as ``\\n`` have the same "
 "meaning with both single (``'...'``) and double (``\"...\"``) quotes. The "
@@ -1346,11 +1346,11 @@ msgstr ""
 "δεν χρειάζεται να αποφύγετε το ``\"`` (αλλά πρέπει να αποφύγετε το ``\\'``) "
 "και το αντίστροφο."
 
-#: tutorial/introduction.rst:21
+#: tutorial/introduction.rst:20
 msgid "# (hash)"
 msgstr "# (hash)"
 
-#: tutorial/introduction.rst:21
+#: tutorial/introduction.rst:20
 msgid "comment"
 msgstr "σχόλιο"
 
