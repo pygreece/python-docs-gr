@@ -9,21 +9,21 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 10:19+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-06-14 12:23+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/zipapp.rst:2
 msgid ":mod:`!zipapp` --- Manage executable Python zip archives"
-msgstr ""
+msgstr ":mod:`!zipapp` --- Διαχείριση εκτελέσιμων αρχείων zip Python"
 
 #: library/zipapp.rst:9
 msgid "**Source code:** :source:`Lib/zipapp.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/zipapp.py`"
 
 #: library/zipapp.rst:16
 msgid ""
@@ -32,10 +32,15 @@ msgid ""
 "<using-on-interface-options>`.  The module provides both a :ref:`zipapp-"
 "command-line-interface` and a :ref:`zipapp-python-api`."
 msgstr ""
+"Το παρόν module παρέχει εργαλεία για τη διαχείριση της δημιουργίας αρχείων "
+"zip που περιέχουν κώδικα Python, τα οποία μπορούν να :ref:`executed directly "
+"by the Python interpreter <using-on-interface-options>`. Το module παρέχει "
+"τόσο μια :ref:`zipapp-command-line-interface` όσο και ένα  :ref:`zipapp-"
+"python-api`."
 
 #: library/zipapp.rst:23
 msgid "Basic Example"
-msgstr ""
+msgstr "Βασικό Παράδειγμα"
 
 #: library/zipapp.rst:25
 msgid ""
@@ -44,6 +49,10 @@ msgid ""
 "code.  When run, the archive will execute the ``main`` function from the "
 "module ``myapp`` in the archive."
 msgstr ""
+"Το παρακάτω παράδειγμα δείχνει πώς μπορεί να χρησιμοποιηθεί η :ref:`zipapp-"
+"command-line-interface` για να δημιουργήσει ένα εκτελέσιμο αρχείο από έναν "
+"φάκελο που περιέχει κώδικα Python. Όταν εκτελείται, το αρχείο θα εκτελέσει "
+"τη συνάρτηση ``main`` από το module ``myapp`` στο αρχείο."
 
 #: library/zipapp.rst:30
 msgid ""
@@ -51,19 +60,24 @@ msgid ""
 "$ python myapp.pyz\n"
 "<output from myapp>"
 msgstr ""
+"$ python -m zipapp myapp -m \"myapp:main\"\n"
+"$ python myapp.pyz\n"
+"<output from myapp>"
 
 #: library/zipapp.rst:40
 msgid "Command-Line Interface"
-msgstr ""
+msgstr "Διεπαφή Γραμμής Εντολών"
 
 #: library/zipapp.rst:42
 msgid ""
 "When called as a program from the command line, the following form is used:"
 msgstr ""
+"Όταν καλείται ως πρόγραμμα από τη γραμμή εντολών, χρησιμοποιείται η παρακάτω "
+"μορφή:"
 
 #: library/zipapp.rst:44
 msgid "$ python -m zipapp source [options]"
-msgstr ""
+msgstr "$ python -m zipapp source [options]"
 
 #: library/zipapp.rst:48
 msgid ""
@@ -72,10 +86,14 @@ msgid ""
 "copied to the target archive (or the contents of its shebang line will be "
 "displayed if the --info option is specified)."
 msgstr ""
+"Αν το *source* είναι ένας φάκελος, αυτό θα δημιουργήσει ένα αρχείο από τα "
+"περιεχόμενα του *source*. Αν το *source* είναι ένα αρχείο, θα πρέπει να "
+"είναι ένα αρχείο, και θα αντιγραφεί στο αρχείο προορισμού (ή το περιεχόμενο "
+"της γραμμής shebang θα εμφανιστεί αν έχει καθοριστεί η επιλογή --info)."
 
 #: library/zipapp.rst:53
 msgid "The following options are understood:"
-msgstr ""
+msgstr "Οι παρακάτω επιλογές γίνονται κατανοητές:"
 
 #: library/zipapp.rst:59
 msgid ""
@@ -84,12 +102,20 @@ msgid ""
 "extension ``.pyz`` added.  If an explicit filename is given, it is used as "
 "is (so a ``.pyz`` extension should be included if required)."
 msgstr ""
+"Γράφει την έξοδο σε ένα αρχείο με όνομα *output*. Αν αυτή η επιλογή δεν "
+"καθοριστεί, το όνομα του αρχείου εξόδου θα είναι το ίδιο με το εισαγωγικό "
+"*source*, με την προσθήκη της επέκτασης ``.pyz``. Αν καθοριστεί ένα ρητό "
+"όνομα αρχείου, χρησιμοποιείται όπως είναι (έτσι θα πρέπει να συμπεριληφθεί "
+"μια επέκταση ``.pyz`` αν απαιτείται)."
 
 #: library/zipapp.rst:64
 msgid ""
 "An output filename must be specified if the *source* is an archive (and in "
 "that case, *output* must not be the same as *source*)."
 msgstr ""
+"Ένα όνομα αρχείου εξόδου πρέπει να καθοριστεί αν το *source* είναι ένα "
+"αρχείο (και σε αυτή την περίπτωση, το *output* δεν πρέπει να είναι το ίδιο "
+"με το *source*)."
 
 #: library/zipapp.rst:69
 msgid ""
@@ -97,6 +123,10 @@ msgid ""
 "run.  Also, on POSIX, make the archive executable.  The default is to write "
 "no ``#!`` line, and not make the file executable."
 msgstr ""
+"Προσθέτει μια γραμμή ``#!`` στο αρχείο που καθορίζει το *interpreter* ως την "
+"εντολή που θα εκτελεστεί. Επίσης, σε POSIX, καθιστά το αρχείο εκτελέσιμο. Η "
+"προεπιλογή είναι να μην γράφεται καμία γραμμή ``#!`` και να μην καθίσταται "
+"το αρχείο εκτελέσιμο."
 
 #: library/zipapp.rst:75
 msgid ""
@@ -105,20 +135,30 @@ msgid ""
 "a package/module in the archive, and \"fn\" is a callable in the given "
 "module. The ``__main__.py`` file will execute that callable."
 msgstr ""
+"Γράφει ένα αρχείο ``__main__.py`` στο αρχείο που εκτελεί το *mainfn*. Το "
+"*mainfn* πρέπει να έχει τη μορφή \"pkg.mod:fn\", όπου \"pkg.mod\" είναι ένα "
+"πακέτο/module στο αρχείο, και \"fn\" είναι μια καλούμενη συνάρτηση στο "
+"δεδομένο module. Το αρχείο ``__main__.py`` θα εκτελέσει αυτή τη συνάρτηση."
 
 #: library/zipapp.rst:80
 msgid ":option:`--main` cannot be specified when copying an archive."
 msgstr ""
+"Η επιλογή :option:`--main` δεν μπορεί να καθοριστεί κατά την αντιγραφή ενός "
+"αρχείου."
 
 #: library/zipapp.rst:84
 msgid ""
 "Compress files with the deflate method, reducing the size of the output "
 "file. By default, files are stored uncompressed in the archive."
 msgstr ""
+"Συμπιέζει τα αρχεία με τη μέθοδο deflate, μειώνοντας το μέγεθος του αρχείου "
+"εξόδου. Από προεπιλογή, τα αρχεία αποθηκεύονται χωρίς συμπίεση στο αρχείο."
 
 #: library/zipapp.rst:87
 msgid ":option:`--compress` has no effect when copying an archive."
 msgstr ""
+"Η επιλογή :option:`--compress` δεν έχει καμία επίδραση κατά την αντιγραφή "
+"ενός αρχείου."
 
 #: library/zipapp.rst:93
 msgid ""
@@ -126,24 +166,29 @@ msgid ""
 "In this case, any other options are ignored and SOURCE must be an archive, "
 "not a directory."
 msgstr ""
+"Εμφανίζει τον ενσωματωμένο διερμηνέα στο αρχείο, για διαγνωστικούς σκοπούς. "
+"Σε αυτή την περίπτωση, αγνοούνται όλες οι άλλες επιλογές και το SOURCE "
+"πρέπει να είναι ένα αρχείο, όχι ένας φάκελος."
 
 #: library/zipapp.rst:99
 msgid "Print a short usage message and exit."
-msgstr ""
+msgstr "Εκτυπώνει ένα σύντομο μήνυμα χρήσης και εξέρχεται."
 
 #: library/zipapp.rst:105
 msgid "Python API"
-msgstr ""
+msgstr "Διεπαφή Python"
 
 #: library/zipapp.rst:107
 msgid "The module defines two convenience functions:"
-msgstr ""
+msgstr "Το module ορίζει δύο συναρτήσεις ευκολίας:"
 
 #: library/zipapp.rst:112
 msgid ""
 "Create an application archive from *source*.  The source can be any of the "
 "following:"
 msgstr ""
+"Δημιουργεί ένα αρχείο εφαρμογής από το *source*. Η πηγή μπορεί να είναι "
+"οποιοδήποτε από τα παρακάτω:"
 
 #: library/zipapp.rst:115
 msgid ""
@@ -151,6 +196,9 @@ msgid ""
 "directory, in which case a new application archive will be created from the "
 "content of that directory."
 msgstr ""
+"Το όνομα ενός φακέλου, ή ένα :term:`path-like object` που αναφέρεται σε έναν "
+"φάκελο, οπότε θα δημιουργηθεί ένα νέο αρχείο εφαρμογής από το περιεχόμενο "
+"αυτού του φακέλου."
 
 #: library/zipapp.rst:118
 msgid ""
@@ -159,6 +207,11 @@ msgid ""
 "target (modifying it to reflect the value given for the *interpreter* "
 "argument).  The file name should include the ``.pyz`` extension, if required."
 msgstr ""
+"Το όνομα ενός υπάρχοντος αρχείου εφαρμογής, ή ένα :term:`path-like object` "
+"που αναφέρεται σε ένα τέτοιο αρχείο, οπότε το αρχείο αντιγράφεται στο "
+"προορισμό (τροποποιώντας το για να αντικατοπτρίζει την τιμή που δίνεται για "
+"το όρισμα *interpreter*). Το όνομα του αρχείου θα πρέπει να περιλαμβάνει την "
+"επέκταση ``.pyz``, αν απαιτείται."
 
 #: library/zipapp.rst:122
 msgid ""
@@ -166,23 +219,31 @@ msgid ""
 "should be an application archive, and the file object is assumed to be "
 "positioned at the start of the archive."
 msgstr ""
+"Ένα αντικείμενο αρχείου ανοιχτό για ανάγνωση σε λειτουργία bytes. Το "
+"περιεχόμενο του αρχείου θα πρέπει να είναι ένα αρχείο εφαρμογής, και το "
+"αντικείμενο αρχείου θεωρείται ότι είναι τοποθετημένο στην αρχή του αρχείου."
 
 #: library/zipapp.rst:126
 msgid ""
 "The *target* argument determines where the resulting archive will be written:"
-msgstr ""
+msgstr "Το όρισμα *target* καθορίζει που θα γραφτεί το αποτέλεσμα του αρχείου:"
 
 #: library/zipapp.rst:129
 msgid ""
 "If it is the name of a file, or a :term:`path-like object`, the archive will "
 "be written to that file."
 msgstr ""
+"Αν είναι το όνομα ενός αρχείου, ή ένα :term:`path-like object`, το αρχείο θα "
+"γραφτεί σε αυτό το αρχείο."
 
 #: library/zipapp.rst:131
 msgid ""
 "If it is an open file object, the archive will be written to that file "
 "object, which must be open for writing in bytes mode."
 msgstr ""
+"Αν είναι ένα ανοιχτό αντικείμενο αρχείου, το αρχείο θα γραφτεί σε αυτό το "
+"αντικείμενο αρχείου, το οποίο πρέπει να είναι ανοιχτό για εγγραφή σε "
+"λειτουργία bytes."
 
 #: library/zipapp.rst:133
 msgid ""
@@ -190,6 +251,9 @@ msgid ""
 "the target will be a file with the same name as the source, with a ``.pyz`` "
 "extension added."
 msgstr ""
+"Αν το όρισμα προορισμού παραλειφθεί (ή είναι ``None``), η πηγή πρέπει να "
+"είναι ένας φάκελος και ο προορισμός θα είναι ένα αρχείο με το ίδιο όνομα με "
+"την πηγή, με μια επέκταση ``.pyz`` προστιθέμενη."
 
 #: library/zipapp.rst:137
 msgid ""
@@ -201,6 +265,13 @@ msgid ""
 "is specified, and the target is a filename, the executable bit of the target "
 "file will be set."
 msgstr ""
+"Το όρισμα *interpreter* καθορίζει το όνομα του διερμηνέα Python με τον οποίο "
+"θα εκτελείται το αρχείο. Γράφεται ως μια γραμμή \"shebang\" στην αρχή του "
+"αρχείου. Σε POSIX, αυτό θα ερμηνευτεί από το λειτουργικό σύστημα, και σε "
+"Windows θα διαχειριστεί από τον διερμηνέα Python. Η παράλειψη του "
+"*interpreter* έχει ως αποτέλεσμα να μην γραφτεί καμία γραμμή shebang. Αν "
+"καθοριστεί ένας διερμηνέας, και ο προορισμός είναι ένα όνομα αρχείου, θα "
+"τεθεί το εκτελέσιμο bit του αρχείου προορισμού."
 
 #: library/zipapp.rst:145
 msgid ""
@@ -213,6 +284,15 @@ msgid ""
 "a directory and does not contain a ``__main__.py`` file, as otherwise the "
 "resulting archive would not be executable."
 msgstr ""
+"Το όρισμα *main* καθορίζει το όνομα μιας καλούμενης συνάρτησης που θα "
+"χρησιμοποιηθεί ως το κύριο πρόγραμμα για το αρχείο. Μπορεί να καθοριστεί "
+"μόνο αν η πηγή είναι ένας φάκελος, και η πηγή δεν περιέχει ήδη ένα αρχείο "
+"``__main__.py``. Το όρισμα *main* θα πρέπει να έχει τη μορφή \"pkg.module:"
+"callable\" και το αρχείο θα εκτελείται με την εισαγωγή \"pkg.module\" και "
+"την εκτέλεση της δεδομένης καλούμενης συνάρτησης χωρίς ορίσματα. Είναι "
+"σφάλμα να παραλειφθεί το *main* αν η πηγή είναι ένας φάκελος και δεν "
+"περιέχει ένα αρχείο ``__main__.py``, καθώς διαφορετικά το παραγόμενο αρχείο "
+"δεν θα ήταν εκτελέσιμο."
 
 #: library/zipapp.rst:155
 msgid ""
@@ -220,6 +300,10 @@ msgid ""
 "a Path object representing the path to the file being added (relative to the "
 "source directory).  It should return ``True`` if the file is to be added."
 msgstr ""
+"Το προαιρετικό όρισμα *filter* καθορίζει μια συνάρτηση callback που περνάει "
+"ένα αντικείμενο Path που αναπαριστά το μονοπάτι του αρχείου που προστίθεται "
+"(σχετικό με τον φάκελο πηγής). Θα πρέπει να επιστρέφει ``True`` αν το αρχείο "
+"πρέπει να προστεθεί."
 
 #: library/zipapp.rst:160
 msgid ""
@@ -228,12 +312,18 @@ msgid ""
 "method; otherwise, files are stored uncompressed. This argument has no "
 "effect when copying an existing archive."
 msgstr ""
+"Το προαιρετικό όρισμα *compressed* καθορίζει αν τα αρχεία συμπιέζονται. Αν "
+"οριστεί σε ``True``, τα αρχεία στο αρχείο συμπιέζονται με τη μέθοδο deflate. "
+"Διαφορετικά, τα αρχεία αποθηκεύονται χωρίς συμπίεση. Αυτό το όρισμα δεν έχει "
+"καμία επίδραση κατά την αντιγραφή ενός υπάρχοντος αρχείου."
 
 #: library/zipapp.rst:165
 msgid ""
 "If a file object is specified for *source* or *target*, it is the caller's "
 "responsibility to close it after calling create_archive."
 msgstr ""
+"Αν ένα αντικείμενο αρχείου καθοριστεί για το *source* ή το *target*, είναι "
+"ευθύνη του καλούντος να το κλείσει μετά την κλήση της create_archive."
 
 #: library/zipapp.rst:168
 msgid ""
@@ -242,10 +332,15 @@ msgid ""
 "directory, if the target is a file object it will be passed to the ``zipfile."
 "ZipFile`` class, and must supply the methods needed by that class."
 msgstr ""
+"Κατά την αντιγραφή ενός υπάρχοντος αρχείου, τα αντικείμενα αρχείων που "
+"παρέχονται χρειάζονται μόνο τις μεθόδους ``read`` και ``readline``, ή "
+"``write``. Όταν δημιουργείται ένα αρχείο από έναν φάκελο, αν το target είναι "
+"ένα αντικείμενο αρχείου, θα περαστεί στην κλάση ``zipfile.ZipFile`` και "
+"πρέπει να παρέχει τις μεθόδους που χρειάζεται αυτή η κλάση."
 
 #: library/zipapp.rst:174
 msgid "Added the *filter* and *compressed* parameters."
-msgstr ""
+msgstr "Προστέθηκαν οι παράμετροι *filter* και *compressed*."
 
 #: library/zipapp.rst:179
 msgid ""
@@ -254,14 +349,18 @@ msgid ""
 "argument can be a filename or a file-like object open for reading in bytes "
 "mode.  It is assumed to be at the start of the archive."
 msgstr ""
+"Επιστρέφει τον διερμηνέα που καθορίζεται στη γραμμή ``#!`` στην αρχή του "
+"αρχείου. Αν δεν υπάρχει γραμμή ``#!``, επιστρέφει :const:`None`. Το "
+"*archive* μπορεί να είναι ένα όνομα αρχείου ή ένα αντικείμενο που μοιάζει με "
+"αρχείο και είναι ανοιχτό για ανάγνωση σε bytes."
 
 #: library/zipapp.rst:188
 msgid "Examples"
-msgstr ""
+msgstr "Παραδείγματα"
 
 #: library/zipapp.rst:190
 msgid "Pack up a directory into an archive, and run it."
-msgstr ""
+msgstr "Συσκευάζει έναν φάκελο σε ένα αρχείο, και το εκτελεί."
 
 #: library/zipapp.rst:192
 msgid ""
@@ -269,22 +368,30 @@ msgid ""
 "$ python myapp.pyz\n"
 "<output from myapp>"
 msgstr ""
+"$ python -m zipapp myapp\n"
+"$ python myapp.pyz\n"
+"<output from myapp>"
 
 #: library/zipapp.rst:198
 msgid "The same can be done using the :func:`create_archive` function::"
 msgstr ""
+"Το ίδιο μπορεί να γίνει χρησιμοποιώντας τη συνάρτηση :func:`create_archive`::"
 
 #: library/zipapp.rst:200
 msgid ""
 ">>> import zipapp\n"
 ">>> zipapp.create_archive('myapp', 'myapp.pyz')"
 msgstr ""
+">>> import zipapp\n"
+">>> zipapp.create_archive('myapp', 'myapp.pyz')"
 
 #: library/zipapp.rst:203
 msgid ""
 "To make the application directly executable on POSIX, specify an interpreter "
 "to use."
 msgstr ""
+"Για να κάνετε την εφαρμογή άμεσα εκτελέσιμη σε POSIX, καθορίστε έναν "
+"διερμηνέα που θα χρησιμοποιηθεί."
 
 #: library/zipapp.rst:206
 msgid ""
@@ -292,12 +399,18 @@ msgid ""
 "$ ./myapp.pyz\n"
 "<output from myapp>"
 msgstr ""
+"$ python -m zipapp myapp -p \"/usr/bin/env python\"\n"
+"$ ./myapp.pyz\n"
+"<output from myapp>"
 
 #: library/zipapp.rst:212
 msgid ""
 "To replace the shebang line on an existing archive, create a modified "
 "archive using the :func:`create_archive` function::"
 msgstr ""
+"Για να αντικαταστήσετε τη γραμμή shebang σε ένα υπάρχον αρχείο, δημιουργήστε "
+"ένα τροποποιημένο αρχείο χρησιμοποιώντας τη συνάρτηση :func:"
+"`create_archive`::"
 
 #: library/zipapp.rst:215
 msgid ""
@@ -305,6 +418,9 @@ msgid ""
 ">>> zipapp.create_archive('old_archive.pyz', 'new_archive.pyz', '/usr/bin/"
 "python3')"
 msgstr ""
+">>> import zipapp\n"
+">>> zipapp.create_archive('old_archive.pyz', 'new_archive.pyz', '/usr/bin/"
+"python3')"
 
 #: library/zipapp.rst:218
 msgid ""
@@ -315,6 +431,13 @@ msgid ""
 "errors, but production code should do so.  Also, this method will only work "
 "if the archive fits in memory::"
 msgstr ""
+"Για να ενημερώσετε το αρχείο στη θέση του, κάντε την αντικατάσταση στη μνήμη "
+"χρησιμοποιώντας ένα αντικείμενο :class:`~io.BytesIO`, και στη συνέχεια "
+"αντικαταστήστε την πηγή. Σημειώστε ότι υπάρχει κίνδυνος κατά την "
+"αντικατάσταση ενός αρχείου στη θέση του ότι ένα σφάλμα θα οδηγήσει στην "
+"απώλεια του αρχικού αρχείου. Αυτός ο κώδικας δεν προστατεύει από τέτοια "
+"σφάλματα, αλλά ο κώδικας παραγωγής θα πρέπει να το κάνει. Επίσης, αυτή η "
+"μέθοδος θα λειτουργήσει μόνο αν το αρχείο χωράει στη μνήμη::"
 
 #: library/zipapp.rst:225
 msgid ""
@@ -325,10 +448,16 @@ msgid ""
 ">>> with open('myapp.pyz', 'wb') as f:\n"
 ">>>     f.write(temp.getvalue())"
 msgstr ""
+">>> import zipapp\n"
+">>> import io\n"
+">>> temp = io.BytesIO()\n"
+">>> zipapp.create_archive('myapp.pyz', temp, '/usr/bin/python2')\n"
+">>> with open('myapp.pyz', 'wb') as f:\n"
+">>>     f.write(temp.getvalue())"
 
 #: library/zipapp.rst:236
 msgid "Specifying the Interpreter"
-msgstr ""
+msgstr "Καθορισμός του Διερμηνέα"
 
 #: library/zipapp.rst:238
 msgid ""
@@ -337,6 +466,11 @@ msgid ""
 "Python launcher for Windows supports most common forms of POSIX ``#!`` line, "
 "but there are other issues to consider:"
 msgstr ""
+"Σημειώστε ότι αν καθορίσετε έναν διερμηνέα και στη συνέχεια διανείμετε το "
+"αρχείο εφαρμογής σας, πρέπει να διασφαλίσετε ότι ο διερμηνέας που "
+"χρησιμοποιείται είναι φορητός. Ο διερμηνέας Python για Windows υποστηρίζει "
+"τις περισσότερες κοινές μορφές γραμμής ``#!`` POSIX, αλλά υπάρχουν και άλλα "
+"ζητήματα που πρέπει να ληφθούν υπόψη:"
 
 #: library/zipapp.rst:243
 msgid ""
@@ -345,6 +479,10 @@ msgid ""
 "may have either Python 2 or Python 3 as their default, and write your code "
 "to work under both versions."
 msgstr ""
+"Αν χρησιμοποιήσετε \"/usr/bin/env python\" (ή άλλες μορφές της εντολής "
+"\"python\", όπως \"/usr/bin/python\"), πρέπει να λάβετε υπόψη ότι οι χρήστες "
+"σας μπορεί να έχουν είτε Python 2 είτε Python 3 ως προεπιλογή, και να "
+"γράψετε τον κώδικά σας ώστε να λειτουργεί και στις δύο εκδόσεις."
 
 #: library/zipapp.rst:247
 msgid ""
@@ -352,6 +490,10 @@ msgid ""
 "application will not work for users who do not have that version.  (This may "
 "be what you want if you have not made your code Python 2 compatible)."
 msgstr ""
+"Αν χρησιμοποιήσετε μια ρητή έκδοση, για παράδειγμα \"/usr/bin/env python3\", "
+"η εφαρμογή σας δεν θα λειτουργήσει για χρήστες που δεν έχουν αυτή την "
+"έκδοση. (Αυτό μπορεί να είναι αυτό που θέλετε αν δεν έχετε κάνει τον κώδικά "
+"σας συμβατό με την Python 2)."
 
 #: library/zipapp.rst:250
 msgid ""
@@ -359,16 +501,23 @@ msgid ""
 "exact version like \"/usr/bin/env python3.4\" as you will need to change "
 "your shebang line for users of Python 3.5, for example."
 msgstr ""
+"Δεν υπάρχει τρόπος να πείτε \"python X.Y ή νεότερη\", οπότε να είστε "
+"προσεκτικοί όταν χρησιμοποιείτε μια ακριβή έκδοση όπως \"/usr/bin/env "
+"python3.4\", καθώς θα χρειαστεί να αλλάξετε τη γραμμή shebang για χρήστες "
+"της Python 3.5, για παράδειγμα."
 
 #: library/zipapp.rst:254
 msgid ""
 "Typically, you should use an \"/usr/bin/env python2\" or \"/usr/bin/env "
 "python3\", depending on whether your code is written for Python 2 or 3."
 msgstr ""
+"Συνήθως, θα πρέπει να χρησιμοποιήσετε ένα \"/usr/bin/env python2\" ή \"/usr/"
+"bin/env python3\", ανάλογα με το αν ο κώδικάς σας είναι γραμμένος για την "
+"Python 2 ή 3."
 
 #: library/zipapp.rst:259
 msgid "Creating Standalone Applications with zipapp"
-msgstr ""
+msgstr "Δημιουργία Αυτόνομων Εφαρμογών με το zipapp"
 
 #: library/zipapp.rst:261
 msgid ""
@@ -378,10 +527,16 @@ msgid ""
 "this is to bundle all of the application's dependencies into the archive, "
 "along with the application code."
 msgstr ""
+"Χρησιμοποιώντας το module :mod:`zipapp`, είναι δυνατό να δημιουργηθούν "
+"αυτόνομες εφαρμογές Python, οι οποίες μπορούν να διανεμηθούν σε τελικούς "
+"χρήστες που χρειάζονται μόνο να έχουν εγκατεστημένη μια κατάλληλη έκδοση της "
+"Python στο σύστημά τους. Το κλειδί για να γίνει αυτό είναι να συμπεριληφθούν "
+"όλες οι εξαρτήσεις της εφαρμογής στο αρχείο, μαζί με τον κώδικα της "
+"εφαρμογής."
 
 #: library/zipapp.rst:267
 msgid "The steps to create a standalone archive are as follows:"
-msgstr ""
+msgstr "Τα βήματα για τη δημιουργία ενός αυτόνομου αρχείου είναι τα εξής:"
 
 #: library/zipapp.rst:269
 msgid ""
@@ -389,16 +544,21 @@ msgid ""
 "directory containing a ``__main__.py`` file, and any supporting application "
 "code."
 msgstr ""
+"Δημιουργήστε την εφαρμογή σας σε έναν φάκελο όπως συνήθως, έτσι ώστε να "
+"έχετε έναν φάκελο ``myapp`` που περιέχει ένα αρχείο ``__main__.py`` και "
+"οποιονδήποτε υποστηρικτικό κώδικα εφαρμογής."
 
 #: library/zipapp.rst:273
 msgid ""
 "Install all of your application's dependencies into the ``myapp`` directory, "
 "using pip:"
 msgstr ""
+"Εγκαταστήστε όλες τις εξαρτήσεις της εφαρμογής σας στον φάκελο ``myapp``, "
+"χρησιμοποιώντας το pip:"
 
 #: library/zipapp.rst:276
 msgid "$ python -m pip install -r requirements.txt --target myapp"
-msgstr ""
+msgstr "$ python -m pip install -r requirements.txt --target myapp"
 
 #: library/zipapp.rst:280
 msgid ""
@@ -406,14 +566,17 @@ msgid ""
 "file - if not, you can just list the dependencies manually on the pip "
 "command line)."
 msgstr ""
+"(αυτό υποθέτει ότι έχετε τις απαιτήσεις του έργου σας σε ένα αρχείο "
+"``requirements.txt`` - αν όχι, μπορείτε απλώς να καταγράψετε τις εξαρτήσεις "
+"χειροκίνητα στη γραμμή εντολών του pip)."
 
 #: library/zipapp.rst:284
 msgid "Package the application using:"
-msgstr ""
+msgstr "Συσκευάστε την εφαρμογή χρησιμοποιώντας:"
 
 #: library/zipapp.rst:286
 msgid "$ python -m zipapp -p \"interpreter\" myapp"
-msgstr ""
+msgstr "$ python -m zipapp -p \"interpreter\" myapp"
 
 #: library/zipapp.rst:290
 msgid ""
@@ -421,6 +584,10 @@ msgid ""
 "with the appropriate interpreter available. See :ref:`zipapp-specifying-the-"
 "interpreter` for details. It can be shipped to users as a single file."
 msgstr ""
+"Αυτό θα παράγει ένα αυτόνομο εκτελέσιμο, το οποίο μπορεί να εκτελεστεί σε "
+"οποιαδήποτε μηχανή με τον κατάλληλο διερμηνέα διαθέσιμο. Δείτε :ref:`zipapp-"
+"specifying-the-interpreter` για λεπτομέρειες. Μπορεί να αποσταλεί στους "
+"χρήστες ως ένα μόνο αρχείο."
 
 #: library/zipapp.rst:294
 msgid ""
@@ -430,10 +597,15 @@ msgid ""
 "fact that the Python interpreter registers the ``.pyz`` and ``.pyzw`` file "
 "extensions when installed."
 msgstr ""
+"Σε Unix, το αρχείο ``myapp.pyz`` είναι εκτελέσιμο όπως είναι. Μπορείτε να "
+"μετονομάσετε το αρχείο για να αφαιρέσετε την επέκταση ``.pyz`` αν προτιμάτε "
+"ένα \"καθαρό\" όνομα εντολής. Σε Windows, το αρχείο ``myapp.pyz[w]`` είναι "
+"εκτελέσιμο λόγω του γεγονότος ότι ο διερμηνέας Python καταχωρεί τις "
+"επεκτάσεις αρχείων ``.pyz`` και ``.pyzw`` κατά την εγκατάσταση."
 
 #: library/zipapp.rst:302
 msgid "Caveats"
-msgstr ""
+msgstr "Προειδοποιήσεις"
 
 #: library/zipapp.rst:304
 msgid ""
@@ -448,10 +620,23 @@ msgid ""
 "(and potentially pick the correct version to add to ``sys.path`` at runtime, "
 "based on the user's machine)."
 msgstr ""
+"Αν η εφαρμογή σας εξαρτάται από ένα πακέτο που περιλαμβάνει μια επέκταση C, "
+"αυτό το πακέτο δεν μπορεί να εκτελεστεί από ένα αρχείο zip (αυτό είναι "
+"περιορισμός του λειτουργικού συστήματος, καθώς ο εκτελέσιμος κώδικας πρέπει "
+"να είναι παρών στο σύστημα αρχείων για να τον φορτώσει ο φορτωτής του "
+"λειτουργικού συστήματος). Σε αυτή την περίπτωση, μπορείτε να εξαιρέσετε αυτή "
+"την εξάρτηση από το αρχείο zip, και είτε να απαιτήσετε από τους χρήστες σας "
+"να το έχουν εγκατεστημένο, είτε να το αποστείλετε μαζί με το αρχείο zip και "
+"να προσθέσετε κώδικα στο ``__main__.py`` για να συμπεριλάβετε τον φάκελο που "
+"περιέχει το αποσυμπιεσμένο module στο ``sys.path``. Σε αυτή την περίπτωση, "
+"θα πρέπει να διασφαλίσετε ότι θα αποστείλετε κατάλληλα δυαδικά αρχεία για "
+"την αρχιτεκτονική/αρχιτεκτονικές (και ενδεχομένως να επιλέξετε την κατάλληλη "
+"έκδοση για να προσθέσετε στο ``sys.path`` κατά τη διάρκεια εκτέλεσης, με "
+"βάση τη μηχανή του χρήστη)."
 
 #: library/zipapp.rst:316
 msgid "The Python Zip Application Archive Format"
-msgstr ""
+msgstr "Η Μορφή Αρχείου Εφαρμογής Zip της Python"
 
 #: library/zipapp.rst:318
 msgid ""
@@ -463,6 +648,13 @@ msgid ""
 "be placed on :data:`sys.path` and thus further modules can be imported from "
 "the zip file."
 msgstr ""
+"Η Python μπορεί να εκτελεί αρχεία zip που περιέχουν ένα αρχείο ``__main__."
+"py`` από την έκδοση 2.6. Για να εκτελεστεί από την Python, ένα αρχείο "
+"εφαρμογής απλά πρέπει να είναι ένα τυπικό αρχείο zip που περιέχει ένα αρχείο "
+"``__main__.py`` το οποίο θα εκτελείται ως το σημείο εισόδου για την "
+"εφαρμογή. Όπως συνήθως για οποιοδήποτε Python script, ο γονέας του script "
+"(σε αυτή την περίπτωση το αρχείο zip) θα τοποθετηθεί στο :data:`sys.path` "
+"και έτσι περαιτέρω modules μπορούν να εισαχθούν από το αρχείο zip."
 
 #: library/zipapp.rst:325
 msgid ""
@@ -470,10 +662,14 @@ msgid ""
 "The zip application format uses this ability to prepend a standard POSIX "
 "\"shebang\" line to the file (``#!/path/to/interpreter``)."
 msgstr ""
+"Η μορφή αρχείου zip επιτρέπει την προσθήκη αυθαίρετων δεδομένων στην αρχή "
+"ενός αρχείου zip. Η μορφή αρχείου εφαρμογής zip χρησιμοποιεί αυτή την "
+"ικανότητα για να προσθέσει μια τυπική γραμμή \"shebang\" POSIX στην αρχή του "
+"αρχείου (``#!/path/to/interpreter``)."
 
 #: library/zipapp.rst:329
 msgid "Formally, the Python zip application format is therefore:"
-msgstr ""
+msgstr "Επίσημα, η μορφή αρχείου εφαρμογής zip της Python είναι επομένως:"
 
 #: library/zipapp.rst:331
 msgid ""
@@ -484,6 +680,12 @@ msgid ""
 "encoded in UTF-8 on Windows, and in :func:`sys.getfilesystemencoding` on "
 "POSIX."
 msgstr ""
+"Μια προαιρετική γραμμή shebang, που περιέχει τους χαρακτήρες ``b'#!'`` "
+"ακολουθούμενους από ένα όνομα διερμηνέα, και στη συνέχεια έναν χαρακτήρα "
+"newline (``b'\\n'``). Το όνομα του διερμηνέα μπορεί να είναι οτιδήποτε "
+"αποδεκτό από την επεξεργασία \"shebang\" του λειτουργικού συστήματος, ή τον "
+"διερμηνέα Python σε Windows. Ο διερμηνέας θα πρέπει να κωδικοποιείται σε "
+"UTF-8 σε Windows, και σε :func:`sys.getfilesystemencoding` σε POSIX."
 
 #: library/zipapp.rst:336
 msgid ""
@@ -492,12 +694,19 @@ msgid ""
 "in the \"root\" of the zipfile - i.e., it cannot be in a subdirectory).  The "
 "zipfile data can be compressed or uncompressed."
 msgstr ""
+"Τυπικά δεδομένα αρχείου zip, όπως παράγονται από το module :mod:`zipfile`. "
+"Το περιεχόμενο του αρχείου zip *πρέπει* να περιλαμβάνει ένα αρχείο "
+"``__main__.py`` (το οποίο πρέπει να βρίσκεται στο \"root\" του αρχείου zip - "
+"δηλαδή, δεν μπορεί να βρίσκεται σε υποφάκελο). Τα δεδομένα του αρχείου zip "
+"μπορεί να είναι συμπιεσμένα ή μη συμπιεσμένα."
 
 #: library/zipapp.rst:341
 msgid ""
 "If an application archive has a shebang line, it may have the executable bit "
 "set on POSIX systems, to allow it to be executed directly."
 msgstr ""
+"Αν ένα αρχείο εφαρμογής έχει μια γραμμή shebang, μπορεί να έχει ρυθμιστεί το "
+"εκτελέσιμο bit σε συστήματα POSIX, για να επιτρέπεται η άμεση εκτέλεσή του."
 
 #: library/zipapp.rst:344
 msgid ""
@@ -505,7 +714,11 @@ msgid ""
 "application archives - the module is a convenience, but archives in the "
 "above format created by any means are acceptable to Python."
 msgstr ""
+"Δεν υπάρχει απαίτηση να χρησιμοποιούνται τα εργαλεία σε αυτό το module για "
+"τη δημιουργία αρχείων εφαρμογής - το module είναι μια ευκολία, αλλά τα "
+"αρχεία σε παραπάνω μορφή που δημιουργούνται με οποιονδήποτε τρόπο είναι "
+"αποδεκτά από την Python."
 
 #: library/zipapp.rst:11
 msgid "Executable Zip Files"
-msgstr ""
+msgstr "Εκτελέσιμα Αρχεία Zip"
