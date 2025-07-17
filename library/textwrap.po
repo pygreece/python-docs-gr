@@ -9,21 +9,21 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-07-06 08:46+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/textwrap.rst:2
 msgid ":mod:`!textwrap` --- Text wrapping and filling"
-msgstr ""
+msgstr ":mod:`!textwrap` --- Περιτύλιγμα και γέμισμα κειμένου"
 
 #: library/textwrap.rst:10
 msgid "**Source code:** :source:`Lib/textwrap.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/textwrap.py`"
 
 #: library/textwrap.rst:14
 msgid ""
@@ -33,6 +33,11 @@ msgid ""
 "should be good enough; otherwise, you should use an instance of :class:"
 "`TextWrapper` for efficiency."
 msgstr ""
+"Το module :mod:`textwrap` παρέχει μερικές συναρτήσεις ευκολίας, καθώς και "
+"την :class:`TextWrapper`, την κλάση που κάνει όλη τη δουλειά. Αν απλά "
+"περιτυλίγετε ή γεμίζετε ένα ή δύο κείμενα, οι συναρτήσεις ευκολίας θα είναι "
+"αρκετές· διαφορετικά, θα πρέπει να χρησιμοποιήσετε ένα στιγμιότυπο της :"
+"class:`TextWrapper` για αποδοτικότητα."
 
 #: library/textwrap.rst:27
 msgid ""
@@ -40,38 +45,51 @@ msgid ""
 "*width* characters long.  Returns a list of output lines, without final "
 "newlines."
 msgstr ""
+"Περιτυλίγει την ενιαία παράγραφο στο *text* (μία συμβολοσειρά) έτσι ώστε "
+"κάθε γραμμή να έχει το πολύ *width* αριθμό χαρακτήρες. Επιστρέφει μια λίστα "
+"με τις γραμμές εξόδου, χωρίς τελικούς χαρακτήρες νέας γραμμής."
 
 #: library/textwrap.rst:31
 msgid ""
 "Optional keyword arguments correspond to the instance attributes of :class:"
 "`TextWrapper`, documented below."
 msgstr ""
+"Προαιρετικά ορίσματα λέξεων-κλειδιών αντιστοιχούν στις ιδιότητες "
+"στιγμιότυπου της :class:`TextWrapper`, που τεκμηριώνονται παρακάτω."
 
 #: library/textwrap.rst:34
 msgid ""
 "See the :meth:`TextWrapper.wrap` method for additional details on how :func:"
 "`wrap` behaves."
 msgstr ""
+"Δείτε τη μέθοδο :meth:`TextWrapper.wrap` για πρόσθετες λεπτομέρειες σχετικά "
+"με το πώς συμπεριφέρεται η :func:`wrap`."
 
 #: library/textwrap.rst:45
 msgid ""
 "Wraps the single paragraph in *text*, and returns a single string containing "
 "the wrapped paragraph.  :func:`fill` is shorthand for  ::"
 msgstr ""
+"Γεμίζει την ενιαία παράγραφο στο *text* και επιστρέφει μια μοναδική "
+"συμβολοσειρά που περιέχει την γεμισμένη παράγραφο. Η :func:`fill` είναι "
+"συντομογραφία για  ::"
 
 #: library/textwrap.rst:48
 msgid "\"\\n\".join(wrap(text, ...))"
-msgstr ""
+msgstr "\"\\n\".join(wrap(text, ...))"
 
 #: library/textwrap.rst:50
 msgid ""
 "In particular, :func:`fill` accepts exactly the same keyword arguments as :"
 "func:`wrap`."
 msgstr ""
+"Συγκεκριμένα, η :func:`fill` δέχεται ακριβώς τα ίδια ορίσματα λέξεων-"
+"κλειδιών με την :func:`wrap`."
 
 #: library/textwrap.rst:58
 msgid "Collapse and truncate the given *text* to fit in the given *width*."
 msgstr ""
+"Συμπτύξτε και περικόψτε το δοθέν *text* ώστε να χωράει στο δοθέν *width*."
 
 #: library/textwrap.rst:60
 msgid ""
@@ -80,6 +98,10 @@ msgid ""
 "Otherwise, enough words are dropped from the end so that the remaining words "
 "plus the *placeholder* fit within *width*::"
 msgstr ""
+"Αρχικά, ο χώρος στο *text* συμπτύσσεται (όλος ο χώρος αντικαθίσταται με μονά "
+"κενά). Αν το αποτέλεσμα χωράει στο *width*, επιστρέφεται. Διαφορετικά, "
+"αρκετές λέξεις απορρίπτονται από το τέλος ώστε οι υπόλοιπες λέξεις συν το "
+"*placeholder* να χωρούν μέσα στο *width*::"
 
 #: library/textwrap.rst:65
 msgid ""
@@ -90,6 +112,12 @@ msgid ""
 ">>> textwrap.shorten(\"Hello world\", width=10, placeholder=\"...\")\n"
 "'Hello...'"
 msgstr ""
+">>> textwrap.shorten(\"Hello  world!\", width=12)\n"
+"'Hello world!'\n"
+">>> textwrap.shorten(\"Hello  world!\", width=11)\n"
+"'Hello [...]'\n"
+">>> textwrap.shorten(\"Hello world\", width=10, placeholder=\"...\")\n"
+"'Hello...'"
 
 #: library/textwrap.rst:72
 msgid ""
@@ -99,16 +127,25 @@ msgid ""
 "so changing the value of :attr:`.tabsize`, :attr:`.expand_tabs`, :attr:`."
 "drop_whitespace`, and :attr:`.replace_whitespace` will have no effect."
 msgstr ""
+"Προαιρετικά ορίσματα λέξεων-κλειδιών αντιστοιχούν στις ιδιότητες "
+"στιγμιότυπου της :class:`TextWrapper`, που τεκμηριώνονται παρακάτω. "
+"Σημειώστε ότι ο χώρος συμπτύσσεται πριν το κείμενο περαστεί στη συνάρτηση :"
+"meth:`fill` της :class:`TextWrapper`, έτσι ώστε η αλλαγή της τιμής των :attr:"
+"`.tabsize`, :attr:`.expand_tabs`, :attr:`.drop_whitespace` και :attr:`."
+"replace_whitespace` να μην έχει καμία επίδραση."
 
 #: library/textwrap.rst:82
 msgid "Remove any common leading whitespace from every line in *text*."
-msgstr ""
+msgstr "Αφαιρεί οποιοδήποτε κοινό αρχικό κενό από κάθε γραμμή στο *text*."
 
 #: library/textwrap.rst:84
 msgid ""
 "This can be used to make triple-quoted strings line up with the left edge of "
 "the display, while still presenting them in the source code in indented form."
 msgstr ""
+"Αυτό μπορεί να χρησιμοποιηθεί για να ευθυγραμμίσετε τις τριπλές παραθέσεις "
+"με την αριστερή άκρη της οθόνης, ενώ παρουσιάζονται στον πηγαίο κώδικα σε "
+"μορφή εσοχής."
 
 #: library/textwrap.rst:87
 msgid ""
@@ -116,16 +153,21 @@ msgid ""
 "equal: the lines ``\"  hello\"`` and ``\"\\thello\"`` are considered to have "
 "no common leading whitespace."
 msgstr ""
+"Σημειώστε ότι τα tab και τα κενά θεωρούνται και τα δύο ως κενό, αλλά δεν "
+"είναι ίσα: οι γραμμές ``\"  hello\"`` και ``\"\\thello\"`` θεωρούνται ότι "
+"δεν έχουν κοινό αρχικό κενό."
 
 #: library/textwrap.rst:91
 msgid ""
 "Lines containing only whitespace are ignored in the input and normalized to "
 "a single newline character in the output."
 msgstr ""
+"Οι γραμμές που περιέχουν μόνο κενό αγνοούνται στην είσοδο και "
+"κανονικοποιούνται σε έναν μόνο χαρακτήρα νέας γραμμής στην έξοδο."
 
 #: library/textwrap.rst:115
 msgid "For example::"
-msgstr ""
+msgstr "Για παράδειγμα::"
 
 #: library/textwrap.rst:96
 msgid ""
@@ -138,20 +180,31 @@ msgid ""
 "    print(repr(s))          # prints '    hello\\n      world\\n    '\n"
 "    print(repr(dedent(s)))  # prints 'hello\\n  world\\n'"
 msgstr ""
+"def test():\n"
+"    # end first line with \\ to avoid the empty line!\n"
+"    s = '''\\\n"
+"    hello\n"
+"      world\n"
+"    '''\n"
+"    print(repr(s))          # prints '    hello\\n      world\\n    '\n"
+"    print(repr(dedent(s)))  # prints 'hello\\n  world\\n'"
 
 #: library/textwrap.rst:108
 msgid "Add *prefix* to the beginning of selected lines in *text*."
-msgstr ""
+msgstr "Προσθέτει το *prefix* στην αρχή των επιλεγμένων γραμμών στο *text*."
 
 #: library/textwrap.rst:110
 msgid "Lines are separated by calling ``text.splitlines(True)``."
-msgstr ""
+msgstr "Οι γραμμές διαχωρίζονται καλώντας ``text.splitlines(True)``."
 
 #: library/textwrap.rst:112
 msgid ""
 "By default, *prefix* is added to all lines that do not consist solely of "
 "whitespace (including any line endings)."
 msgstr ""
+"Από προεπιλογή, το *prefix* προστίθεται σε όλες τις γραμμές που δεν "
+"αποτελούνται μόνο από κενό (συμπεριλαμβανομένων των χαρακτήρων τέλους "
+"γραμμής)."
 
 #: library/textwrap.rst:117
 msgid ""
@@ -159,6 +212,9 @@ msgid ""
 ">>> indent(s, '  ')\n"
 "'  hello\\n\\n \\n  world'"
 msgstr ""
+">>> s = 'hello\\n\\n \\nworld'\n"
+">>> indent(s, '  ')\n"
+"'  hello\\n\\n \\n  world'"
 
 #: library/textwrap.rst:121
 msgid ""
@@ -166,6 +222,9 @@ msgid ""
 "indented. For example, it is easy to add *prefix* to even empty and "
 "whitespace-only lines::"
 msgstr ""
+"Το προαιρετικό όρισμα *predicate* μπορεί να χρησιμοποιηθεί για έλεγχο του "
+"ποια γραμμή θα έχει εσοχή. Για παράδειγμα, είναι εύκολο να προσθέσετε το "
+"*prefix* ακόμη και σε κενές γραμμές και γραμμές που περιέχουν μόνο κενό::"
 
 #: library/textwrap.rst:125
 msgid ""
@@ -175,6 +234,11 @@ msgid ""
 "+\n"
 "+ world"
 msgstr ""
+">>> print(indent(s, '+ ', lambda line: True))\n"
+"+ hello\n"
+"+\n"
+"+\n"
+"+ world"
 
 #: library/textwrap.rst:134
 msgid ""
@@ -184,6 +248,12 @@ msgid ""
 "`wrap` and/or :func:`fill`, it may be more efficient to create your own :"
 "class:`TextWrapper` object."
 msgstr ""
+"Οι :func:`wrap`, :func:`fill` και :func:`shorten` λειτουργούν δημιουργώντας "
+"ένα στιγμιότυπο της :class:`TextWrapper` και καλώντας μια μόνο μέθοδο σε "
+"αυτό. Αυτό το στιγμιότυπο δεν επαναχρησιμοποιείται, οπότε για εφαρμογές που "
+"επεξεργάζονται πολλά κείμενα χρησιμοποιώντας :func:`wrap` και/ή :func:"
+"`fill`, μπορεί να είναι πιο αποδοτικό να δημιουργήσετε το δικό σας "
+"αντικείμενο :class:`TextWrapper`."
 
 #: library/textwrap.rst:140
 msgid ""
@@ -191,6 +261,9 @@ msgid ""
 "hyphenated words; only then will long words be broken if necessary, unless :"
 "attr:`TextWrapper.break_long_words` is set to false."
 msgstr ""
+"Το κείμενο προτιμάται να περιτυλίγεται σε κενά και αμέσως μετά τις παύλες σε "
+"λέξεις με παύλες· μόνο τότε θα σπάσουν οι μακριές λέξεις αν είναι αναγκαίο, "
+"εκτός εάν η :attr:`TextWrapper.break_long_words` οριστεί σε false."
 
 #: library/textwrap.rst:146
 msgid ""
@@ -198,20 +271,25 @@ msgid ""
 "arguments.  Each keyword argument corresponds to an instance attribute, so "
 "for example ::"
 msgstr ""
+"Ο κατασκευαστής της :class:`TextWrapper` δέχεται αρκετά προαιρετικά ορίσματα "
+"λέξεων-κλειδιών. Κάθε όρισμα λέξης-κλειδιού αντιστοιχεί σε μια ιδιότητα "
+"στιγμιότυπου, οπότε για παράδειγμα ::"
 
 #: library/textwrap.rst:150
 msgid "wrapper = TextWrapper(initial_indent=\"* \")"
-msgstr ""
+msgstr "wrapper = TextWrapper(initial_indent=\"* \")"
 
 #: library/textwrap.rst:152
 msgid "is the same as  ::"
-msgstr ""
+msgstr "είναι το ίδιο με  ::"
 
 #: library/textwrap.rst:154
 msgid ""
 "wrapper = TextWrapper()\n"
 "wrapper.initial_indent = \"* \""
 msgstr ""
+"wrapper = TextWrapper()\n"
+"wrapper.initial_indent = \"* \""
 
 #: library/textwrap.rst:157
 msgid ""
@@ -219,12 +297,17 @@ msgid ""
 "change any of its options through direct assignment to instance attributes "
 "between uses."
 msgstr ""
+"Μπορείτε να επαναχρησιμοποιήσετε το ίδιο αντικείμενο :class:`TextWrapper` "
+"πολλές φορές, και μπορείτε να αλλάξετε οποιαδήποτε από τις επιλογές του μέσω "
+"άμεσης ανάθεσης σε ιδιότητες στιγμιότυπου μεταξύ των χρήσεων."
 
 #: library/textwrap.rst:161
 msgid ""
 "The :class:`TextWrapper` instance attributes (and keyword arguments to the "
 "constructor) are as follows:"
 msgstr ""
+"Οι ιδιότητες στιγμιότυπου της :class:`TextWrapper` (και τα ορίσματα λέξεων-"
+"κλειδιών στον κατασκευαστή) είναι οι εξής:"
 
 #: library/textwrap.rst:167
 msgid ""
@@ -233,12 +316,19 @@ msgid ""
 "`TextWrapper` guarantees that no output line will be longer than :attr:"
 "`width` characters."
 msgstr ""
+"(προεπιλογή: ``70``) Το μέγιστο μήκος των περιτυλιγμένων γραμμών. Εφόσον δεν "
+"υπάρχουν μεμονωμένες λέξεις στο εισαγόμενο κείμενο μεγαλύτερες από :attr:"
+"`width`, η :class:`TextWrapper` εγγυάται ότι καμία γραμμή εξόδου δεν θα "
+"είναι μεγαλύτερη από :attr:`width` χαρακτήρες."
 
 #: library/textwrap.rst:175
 msgid ""
 "(default: ``True``) If true, then all tab characters in *text* will be "
 "expanded to spaces using the :meth:`~str.expandtabs` method of *text*."
 msgstr ""
+"(προεπιλογή: ``True``) Αν είναι true, τότε όλοι οι χαρακτήρες tab στο *text* "
+"θα επεκταθούν σε κενά χρησιμοποιώντας τη μέθοδο :meth:`~str.expandtabs` του "
+"*text*."
 
 #: library/textwrap.rst:181
 msgid ""
@@ -246,6 +336,9 @@ msgid ""
 "*text* will be expanded to zero or more spaces, depending on the current "
 "column and the given tab size."
 msgstr ""
+"(προεπιλογή: ``8``) Αν :attr:`expand_tabs` είναι true, τότε όλοι οι "
+"χαρακτήρες tab στο *text* θα επεκταθούν σε μηδέν ή περισσότερα κενά, ανάλογα "
+"με την τρέχουσα στήλη και το δεδομένο μέγεθος tab."
 
 #: library/textwrap.rst:190
 msgid ""
@@ -254,6 +347,11 @@ msgid ""
 "space.  The whitespace characters replaced are as follows: tab, newline, "
 "vertical tab, formfeed, and carriage return (``'\\t\\n\\v\\f\\r'``)."
 msgstr ""
+"(προεπιλογή: ``True``) Αν είναι true, μετά την επέκταση των tab αλλά πριν το "
+"περιτύλιγμα, η μέθοδος :meth:`wrap` θα αντικαταστήσει κάθε χαρακτήρα κενών "
+"με ένα μόνο κενό. Οι χαρακτήρες κενών που αντικαθίστανται είναι οι εξής: "
+"tab, νέα γραμμή, κάθετος, τροφοδότης μορφής και carriage return "
+"(``'\\t\\n\\v\\f\\r'``)."
 
 #: library/textwrap.rst:198
 msgid ""
@@ -261,6 +359,9 @@ msgid ""
 "tab character will be replaced by a single space, which is *not* the same as "
 "tab expansion."
 msgstr ""
+"(προεπιλογή: ``True``) Αν το :attr:`expand_tabs` είναι false και το :attr:"
+"`replace_whitespace` είναι true, κάθε χαρακτήρας tab θα αντικατασταθεί από "
+"ένα μόνο κενό, το οποίο *δεν είναι* το ίδιο με την επέκταση των tab."
 
 #: library/textwrap.rst:204
 msgid ""
@@ -269,6 +370,11 @@ msgid ""
 "paragraphs (using :meth:`str.splitlines` or similar) which are wrapped "
 "separately."
 msgstr ""
+"Αν το :attr:`replace_whitespace` είναι false, οι νέες γραμμές μπορεί να "
+"εμφανιστούν στη μέση μιας γραμμής και να προκαλέσουν παράξενα αποτελέσματα. "
+"Για αυτόν τον λόγο, το κείμενο θα πρέπει να διαχωρίζεται σε παραγράφους "
+"(χρησιμοποιώντας :meth:`str.splitlines` ή παρόμοια) οι οποίες περιτυλίγονται "
+"ξεχωριστά."
 
 #: library/textwrap.rst:212
 msgid ""
@@ -278,6 +384,11 @@ msgid ""
 "follows it.  If whitespace being dropped takes up an entire line, the whole "
 "line is dropped."
 msgstr ""
+"(προεπιλογή: ``True``) Αν είναι true, το κενό στην αρχή και στο τέλος κάθε "
+"γραμμής (μετά το περιτύλιγμα αλλά πριν την εσοχή) αφαιρείται. Το κενό στην "
+"αρχή της παραγράφου, ωστόσο, δεν αφαιρείται αν ακολουθείται από μη κενό. Αν "
+"το κενό που αφαιρείται καταλαμβάνει ολόκληρη τη γραμμή, ολόκληρη η γραμμή "
+"αφαιρείται."
 
 #: library/textwrap.rst:221
 msgid ""
@@ -285,6 +396,9 @@ msgid ""
 "output.  Counts towards the length of the first line.  The empty string is "
 "not indented."
 msgstr ""
+"(προεπιλογή: ``''``) Συμβολοσειρά που θα προστεθεί στην αρχή της πρώτης "
+"γραμμής της περιτυλιγμένης εξόδου. Μετράει προς το μήκος της πρώτης γραμμής. "
+"Η κενή συμβολοσειρά δεν έχει εσοχή."
 
 #: library/textwrap.rst:228
 msgid ""
@@ -292,6 +406,9 @@ msgid ""
 "output except the first.  Counts towards the length of each line except the "
 "first."
 msgstr ""
+"(προεπιλογή: ``''``) Συμβολοσειρά που θα προστεθεί στην αρχή όλων των "
+"γραμμών της περιτυλιγμένης εξόδου εκτός από την πρώτη. Μετράει προς το μήκος "
+"κάθε γραμμής εκτός από την πρώτη."
 
 #: library/textwrap.rst:235
 msgid ""
@@ -304,22 +421,31 @@ msgid ""
 "followed by a space.  One problem with this algorithm is that it is unable "
 "to detect the difference between \"Dr.\" in ::"
 msgstr ""
+"(προεπιλογή: ``False``) Αν είναι true, η :class:`TextWrapper` προσπαθεί να "
+"ανιχνεύσει τα τέλη προτάσεων και να διασφαλίσει ότι οι προτάσεις "
+"διαχωρίζονται πάντα από ακριβώς δύο κενά. Αυτό είναι γενικά επιθυμητό για "
+"κείμενα σε γραμματοσειρά μονού διαστήματος. Ωστόσο, ο αλγόριθμος ανίχνευσης "
+"προτάσεων δεν είναι τέλειος: υποθέτει ότι ένα τέλος πρότασης αποτελείται από "
+"ένα πεζό γράμμα ακολουθούμενο από ένα από τα ``'.'``, ``'!'`` ή ``'?'``, "
+"πιθανώς ακολουθούμενο από ένα από τα ``'\"'`` ή ``\"'\"``, ακολουθούμενο από "
+"ένα κενό. Ένα πρόβλημα με αυτόν τον αλγόριθμο είναι ότι δεν μπορεί να "
+"ανιχνεύσει τη διαφορά μεταξύ \"Dr.\" στο ::"
 
 #: library/textwrap.rst:244
 msgid "[...] Dr. Frankenstein's monster [...]"
-msgstr ""
+msgstr "[...] Dr. Frankenstein's monster [...]"
 
 #: library/textwrap.rst:246
 msgid "and \"Spot.\" in ::"
-msgstr ""
+msgstr "and \"Spot.\" in ::"
 
 #: library/textwrap.rst:248
 msgid "[...] See Spot. See Spot run [...]"
-msgstr ""
+msgstr "[...] See Spot. See Spot run [...]"
 
 #: library/textwrap.rst:250
 msgid ":attr:`fix_sentence_endings` is false by default."
-msgstr ""
+msgstr ":attr:`fix_sentence_endings` είναι false από προεπιλογή."
 
 #: library/textwrap.rst:252
 msgid ""
@@ -328,6 +454,10 @@ msgid ""
 "after a period to separate sentences on the same line, it is specific to "
 "English-language texts."
 msgstr ""
+"Δεδομένου ότι ο αλγόριθμος ανίχνευσης προτάσεων βασίζεται στο ``string."
+"lowercase`` για τον ορισμό του \"πεζού γράμματος\", και μια σύμβαση χρήσης "
+"δύο κενών μετά από μια τελεία για τον διαχωρισμό των προτάσεων στην ίδια "
+"γραμμή, είναι συγκεκριμένος για κείμενα στα αγγλικά."
 
 #: library/textwrap.rst:260
 msgid ""
@@ -337,6 +467,12 @@ msgid ""
 "than :attr:`width`.  (Long words will be put on a line by themselves, in "
 "order to minimize the amount by which :attr:`width` is exceeded.)"
 msgstr ""
+"(προεπιλογή: ``True``) Αν είναι true, τότε οι λέξεις μεγαλύτερες από :attr:"
+"`width` θα σπάσουν για να διασφαλιστεί ότι καμία γραμμή δεν θα είναι "
+"μεγαλύτερη από :attr:`width`. Αν είναι false, οι μακριές λέξεις δεν θα "
+"σπάσουν, και μερικές γραμμές μπορεί να είναι μεγαλύτερες από :attr:`width`. "
+"(Οι μακριές λέξεις θα τοποθετηθούν σε μια γραμμή από μόνες τους, για να "
+"ελαχιστοποιηθεί το ποσό κατά το οποίο ξεπερνάται το :attr:`width`)."
 
 #: library/textwrap.rst:269
 msgid ""
@@ -347,24 +483,38 @@ msgid ""
 "want truly insecable words.  Default behaviour in previous versions was to "
 "always allow breaking hyphenated words."
 msgstr ""
+"(προεπιλογή: ``True``) Αν είναι true, το περιτύλιγμα θα συμβαίνει "
+"προτιμότερα σε κενά και αμέσως μετά τις παύλες σε σύνθετες λέξεις, όπως "
+"είναι συνηθισμένο στα αγγλικά. Αν είναι false, μόνο τα κενά θα θεωρούνται ως "
+"πιθανές καλές θέσεις για διακοπές γραμμής, αλλά πρέπει να ορίσετε το :attr:"
+"`break_long_words` σε false αν θέλετε πραγματικά αδιάσπαστες λέξεις. Η "
+"προεπιλεγμένη συμπεριφορά στις προηγούμενες εκδόσεις ήταν να επιτρέπεται "
+"πάντα η διάσπαση των λέξεων με παύλες."
 
 #: library/textwrap.rst:279
 msgid ""
 "(default: ``None``) If not ``None``, then the output will contain at most "
 "*max_lines* lines, with *placeholder* appearing at the end of the output."
 msgstr ""
+"(προεπιλογή: ``None``) Αν δεν είναι ``None``, τότε η έξοδος θα περιέχει το "
+"πολύ *max_lines* γραμμές, με το *placeholder* να εμφανίζεται στο τέλος της "
+"εξόδου."
 
 #: library/textwrap.rst:289
 msgid ""
 "(default: ``' [...]'``) String that will appear at the end of the output "
 "text if it has been truncated."
 msgstr ""
+"(προεπιλογή: ``' [...]'``) Συμβολοσειρά που θα εμφανίζεται στο τέλος του "
+"κειμένου εξόδου αν έχει περικοπεί."
 
 #: library/textwrap.rst:295
 msgid ""
 ":class:`TextWrapper` also provides some public methods, analogous to the "
 "module-level convenience functions:"
 msgstr ""
+"Η :class:`TextWrapper` παρέχει επίσης μερικές δημόσιες μεθόδους, παρόμοιες "
+"με τις συναρτήσεις ευκολίας σε επίπεδο module:"
 
 #: library/textwrap.rst:300
 msgid ""
@@ -374,17 +524,25 @@ msgid ""
 "lines, without final newlines.  If the wrapped output has no content, the "
 "returned list is empty."
 msgstr ""
+"Περιτυλίγει την ενιαία παράγραφο στο *text* (μία συμβολοσειρά) έτσι ώστε "
+"κάθε γραμμή να έχει το πολύ :attr:`width` χαρακτήρες. Όλες οι επιλογές "
+"περιτυλίγματος λαμβάνονται από τις ιδιότητες στιγμιότυπου της :class:"
+"`TextWrapper` κλάσης. Επιστρέφει μια λίστα με τις γραμμές εξόδου, χωρίς "
+"τελικούς χαρακτήρες νέας γραμμής. Αν η περιτυλιγμένη έξοδος δεν έχει "
+"περιεχόμενο, η επιστρεφόμενη λίστα είναι κενή."
 
 #: library/textwrap.rst:309
 msgid ""
 "Wraps the single paragraph in *text*, and returns a single string containing "
 "the wrapped paragraph."
 msgstr ""
+"Γεμίζει την ενιαία παράγραφο στο *text* και επιστρέφει μια μοναδική "
+"συμβολοσειρά που περιέχει την γεμισμένη παράγραφο."
 
 #: library/textwrap.rst:285
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: library/textwrap.rst:285
 msgid "placeholder"
-msgstr ""
+msgstr "placeholder"
