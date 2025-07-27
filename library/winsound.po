@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-07-20 18:58+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/winsound.rst:2
 msgid ":mod:`!winsound` --- Sound-playing interface for Windows"
-msgstr ""
+msgstr ":mod:`!winsound` --- Διεπαφή αναπαραγωγής ήχου για Windows"
 
 #: library/winsound.rst:13
 msgid ""
@@ -27,6 +27,9 @@ msgid ""
 "machinery provided by Windows platforms.  It includes functions and several "
 "constants."
 msgstr ""
+"Το module :mod:`winsound` παρέχει πρόσβαση στην βασική μηχανή αναπαραγωγής "
+"ήχου που παρέχεται από τις πλατφόρμες Windows. Περιλαμβάνει συναρτήσεις και "
+"αρκετές σταθερές."
 
 #: library/winsound.rst:19
 msgid ""
@@ -36,6 +39,11 @@ msgid ""
 "last.  If the system is not able to beep the speaker, :exc:`RuntimeError` is "
 "raised."
 msgstr ""
+"Εκπέμπει ηχητικό σήμα από το ηχείο του υπολογιστή. Η παράμετρος *frequency* "
+"καθορίζει τη συχνότητα, σε hertz, του ήχου και πρέπει να είναι στο εύρος 37 "
+"έως 32.767. Η παράμετρος *duration* καθορίζει τον αριθμό των χιλιοστών του "
+"δευτερολέπτου που θα διαρκέσει ο ήχος. Εάν το σύστημα δεν μπορεί να κάνει "
+"ηχητικό σήμα στο ηχείο, γίνεται raise μια :exc:`RuntimeError`."
 
 #: library/winsound.rst:27
 msgid ""
@@ -47,6 +55,14 @@ msgid ""
 "waveform sound is stopped. If the system indicates an error, :exc:"
 "`RuntimeError` is raised."
 msgstr ""
+"Καλεί την υποκείμενη συνάρτηση :c:func:`!PlaySound` από το API της "
+"πλατφόρμας. Η παράμετρος *sound* μπορεί να είναι ένα όνομα αρχείου, ένα "
+"ψευδώνυμο συστήματος ήχου, δεδομένα ήχου ως :term:`bytes-like object`, ή "
+"``None``. Η ερμηνεία της εξαρτάται από την τιμή των *flags*, τα οποία "
+"μπορούν να είναι ένας bitwise ORed συνδυασμός των σταθερών που περιγράφονται "
+"παρακάτω. Εάν η παράμετρος *sound* είναι ``None``, οποιοσδήποτε ήχος κύματος "
+"που παίζει αυτή τη στιγμή σταματά. Εάν το σύστημα υποδεικνύει σφάλμα, κάνει "
+"raise μια εξαίρεση :exc:`RuntimeError`."
 
 #: library/winsound.rst:38
 msgid ""
@@ -59,12 +75,22 @@ msgid ""
 "played otherwise.  If the system indicates an error, :exc:`RuntimeError` is "
 "raised."
 msgstr ""
+"Καλεί την υποκείμενη συνάρτηση :c:func:`!MessageBeep` από το API της "
+"πλατφόρμας. Αυτό αναπαράγει έναν ήχο όπως καθορίζεται στο μητρώο. Το όρισμα "
+"*type* καθορίζει ποιος ήχος θα αναπαραχθεί. Οι δυνατές τιμές είναι ``-1``, "
+"``MB_ICONASTERISK``, ``MB_ICONEXCLAMATION``, ``MB_ICONHAND``, "
+"``MB_ICONQUESTION`` και ``MB_OK``, όλες περιγράφονται παρακάτω. Η τιμή "
+"``-1`` παράγει ένα \"απλό ηχητικό σήμα\". Αυτό είναι το τελικό εφεδρικό αν "
+"δεν μπορεί να αναπαραχθεί άλλος ήχος. Εάν το σύστημα υποδεικνύει σφάλμα, "
+"γίνεται raise μια :exc:`RuntimeError`."
 
 #: library/winsound.rst:49
 msgid ""
 "The *sound* parameter is the name of a WAV file. Do not use with :const:"
 "`SND_ALIAS`."
 msgstr ""
+"The *sound* παράμετρος είναι το όνομα ενός αρχείου WAV. Μην το "
+"χρησιμοποιείτε με :const:`SND_ALIAS`."
 
 #: library/winsound.rst:55
 msgid ""
@@ -73,64 +99,71 @@ msgid ""
 "`SND_NODEFAULT` is also specified. If no default sound is registered, raise :"
 "exc:`RuntimeError`. Do not use with :const:`SND_FILENAME`."
 msgstr ""
+"Η παράμετρος *sound* είναι ένα όνομα συσχέτισης ήχου από το μητρώο. Εάν το "
+"μητρώο δεν περιέχει τέτοιο όνομα, αναπαράγει τον προεπιλεγμένο ήχο του "
+"συστήματος, εκτός εάν έχει καθοριστεί επίσης :const:`SND_NODEFAULT`. Εάν δεν "
+"είναι εγγεγραμμένος κανένας προεπιλεγμένος ήχος, γίνεται raise μια :exc:"
+"`RuntimeError`. Μην το χρησιμοποιείτε με :const:`SND_FILENAME`."
 
 #: library/winsound.rst:60
 msgid ""
 "All Win32 systems support at least the following; most systems support many "
 "more:"
 msgstr ""
+"Όλα τα συστήματα Win32 υποστηρίζουν τουλάχιστον τα παρακάτω. Τα περισσότερα "
+"συστήματα υποστηρίζουν πολύ περισσότερα:"
 
 #: library/winsound.rst:64
 msgid ":func:`PlaySound` *name*"
-msgstr ""
+msgstr ":func:`PlaySound` *name*"
 
 #: library/winsound.rst:64
 msgid "Corresponding Control Panel Sound name"
-msgstr ""
+msgstr "Αντίστοιχο όνομα ήχου στον Πίνακα Ελέγχου"
 
 #: library/winsound.rst:66
 msgid "``'SystemAsterisk'``"
-msgstr ""
+msgstr "``'SystemAsterisk'``"
 
 #: library/winsound.rst:66
 msgid "Asterisk"
-msgstr ""
+msgstr "Αστερίσκος"
 
 #: library/winsound.rst:68
 msgid "``'SystemExclamation'``"
-msgstr ""
+msgstr "``'SystemExclamation'``"
 
 #: library/winsound.rst:68
 msgid "Exclamation"
-msgstr ""
+msgstr "Αναφώνηση"
 
 #: library/winsound.rst:70
 msgid "``'SystemExit'``"
-msgstr ""
+msgstr "``'SystemExit'``"
 
 #: library/winsound.rst:70
 msgid "Exit Windows"
-msgstr ""
+msgstr "Έξοδος από τα Windows"
 
 #: library/winsound.rst:72
 msgid "``'SystemHand'``"
-msgstr ""
+msgstr "``'SystemHand'``"
 
 #: library/winsound.rst:72
 msgid "Critical Stop"
-msgstr ""
+msgstr "Κρίσιμη Διακοπή"
 
 #: library/winsound.rst:74
 msgid "``'SystemQuestion'``"
-msgstr ""
+msgstr "``'SystemQuestion'``"
 
 #: library/winsound.rst:74
 msgid "Question"
-msgstr ""
+msgstr "Ερώτηση"
 
 #: library/winsound.rst:77
 msgid "For example::"
-msgstr ""
+msgstr "Για παράδειγμα::"
 
 #: library/winsound.rst:79
 msgid ""
@@ -142,18 +175,30 @@ msgid ""
 "# \"*\" probably isn't the registered name of any sound).\n"
 "winsound.PlaySound(\"*\", winsound.SND_ALIAS)"
 msgstr ""
+"import winsound\n"
+"# Play Windows exit sound.\n"
+"winsound.PlaySound(\"SystemExit\", winsound.SND_ALIAS)\n"
+"\n"
+"# Probably play Windows default sound, if any is registered (because\n"
+"# \"*\" probably isn't the registered name of any sound).\n"
+"winsound.PlaySound(\"*\", winsound.SND_ALIAS)"
 
 #: library/winsound.rst:90
 msgid ""
 "Play the sound repeatedly.  The :const:`SND_ASYNC` flag must also be used to "
 "avoid blocking.  Cannot be used with :const:`SND_MEMORY`."
 msgstr ""
+"Αναπαράγει τον ήχο επανειλημμένα. Η σημαία :const:`SND_ASYNC` πρέπει επίσης "
+"να χρησιμοποιηθεί για να αποφευχθεί το μπλοκάρισμα. Δεν μπορεί να "
+"χρησιμοποιηθεί με :const:`SND_MEMORY`."
 
 #: library/winsound.rst:96
 msgid ""
 "The *sound* parameter to :func:`PlaySound` is a memory image of a WAV file, "
 "as a :term:`bytes-like object`."
 msgstr ""
+"The *sound* παράμετρος της :func:`PlaySound` είναι μια εικόνα μνήμης ενός "
+"αρχείου WAV, ως :term:`bytes-like object`."
 
 #: library/winsound.rst:101
 msgid ""
@@ -161,31 +206,36 @@ msgid ""
 "a combination of this flag and :const:`SND_ASYNC` will raise :exc:"
 "`RuntimeError`."
 msgstr ""
+"Αυτό το module δεν υποστηρίζει την αναπαραγωγή από μια εικόνα μνήμης "
+"ασύγχρονα, οπότε ένας συνδυασμός αυτής της σημαίας και της :const:"
+"`SND_ASYNC` θα εγείρει :exc:`RuntimeError`."
 
 #: library/winsound.rst:107
 msgid "Stop playing all instances of the specified sound."
-msgstr ""
+msgstr "Σταματά την αναπαραγωγή όλων των περιπτώσεων του καθορισμένου ήχου."
 
 #: library/winsound.rst:135
 msgid "This flag is not supported on modern Windows platforms."
-msgstr ""
+msgstr "Αυτή η σημαία δεν υποστηρίζεται σε σύγχρονες πλατφόρμες Windows."
 
 #: library/winsound.rst:116
 msgid "Return immediately, allowing sounds to play asynchronously."
-msgstr ""
+msgstr "Επιστρέφει άμεσα, επιτρέποντας στους ήχους να αναπαράγονται ασύγχρονα."
 
 #: library/winsound.rst:121
 msgid ""
 "If the specified sound cannot be found, do not play the system default sound."
 msgstr ""
+"Εάν ο καθορισμένος ήχος δεν μπορεί να βρεθεί, μην αναπαράγετε τον "
+"προεπιλεγμένο ήχο του συστήματος."
 
 #: library/winsound.rst:126
 msgid "Do not interrupt sounds currently playing."
-msgstr ""
+msgstr "Μην διακόπτετε τους ήχους που παίζουν αυτή τη στιγμή."
 
 #: library/winsound.rst:131
 msgid "Return immediately if the sound driver is busy."
-msgstr ""
+msgstr "Επιστρέφει άμεσα εάν ο οδηγός ήχου είναι απασχολημένος."
 
 #: library/winsound.rst:140
 msgid ""
@@ -193,31 +243,35 @@ msgid ""
 "flag can be combined with the :const:`SND_ALIAS` flag to specify an "
 "application-defined sound alias."
 msgstr ""
+"Η παράμετρος *sound* είναι ένα ψευδώνυμο συγκεκριμένης εφαρμογής στο μητρώο. "
+"Αυτή η σημαία μπορεί να συνδυαστεί με τη σημαία :const:`SND_ALIAS` για να "
+"καθορίσει ένα ψευδώνυμο ήχου που ορίζεται από την εφαρμογή."
 
 #: library/winsound.rst:147
 msgid "Triggers a SoundSentry event when the sound is played."
-msgstr ""
+msgstr "Πυροδοτεί ένα γεγονός SoundSentry όταν αναπαράγεται ο ήχος."
 
 #: library/winsound.rst:154
 msgid "The sound is played synchronously.  This is the default behavior."
 msgstr ""
+"Ο ήχος αναπαράγεται συγχρονισμένα. Αυτή είναι η προεπιλεγμένη συμπεριφορά."
 
 #: library/winsound.rst:161
 msgid "Assign the sound to the audio session for system notification sounds."
-msgstr ""
+msgstr "Αναθέτει τον ήχο στην συνεδρία ήχου για ήχους ειδοποίησης συστήματος."
 
 #: library/winsound.rst:188 library/winsound.rst:200
 msgid "Play the ``SystemDefault`` sound."
-msgstr ""
+msgstr "Αναπαράγει τον ήχο ``SystemDefault``."
 
 #: library/winsound.rst:214
 msgid "Play the ``SystemExclamation`` sound."
-msgstr ""
+msgstr "Αναπαράγει τον ήχο ``SystemExclamation``."
 
 #: library/winsound.rst:193 library/winsound.rst:207
 msgid "Play the ``SystemHand`` sound."
-msgstr ""
+msgstr "Αναπαράγει τον ήχο ``SystemHand``."
 
 #: library/winsound.rst:183
 msgid "Play the ``SystemQuestion`` sound."
-msgstr ""
+msgstr "Αναπαράγει τον ήχο ``SystemQuestion``."
