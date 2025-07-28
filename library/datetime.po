@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 17:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,80 +19,85 @@ msgstr ""
 
 #: library/datetime.rst:2
 msgid ":mod:`!datetime` --- Basic date and time types"
-msgstr ""
+msgstr ":mod:`!datetime` --- Βασικοί τύποι ημερομηνίας και ώρας"
 
 #: library/datetime.rst:11
 msgid "**Source code:** :source:`Lib/datetime.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/datetime.py`"
 
 #: library/datetime.rst:17
 msgid ""
 "The :mod:`!datetime` module supplies classes for manipulating dates and "
 "times."
 msgstr ""
+"Το module :mod:`!datetime` παρέχει κλάσεις για την επεξεργασία ημερομηνιών και ωρών."
 
 #: library/datetime.rst:19
 msgid ""
 "While date and time arithmetic is supported, the focus of the implementation "
 "is on efficient attribute extraction for output formatting and manipulation."
 msgstr ""
+"Ενώ υποστηρίζεται η αριθμητική ημερομηνίας και ώρας, η υλοποίηση εστιάζει στην αποδοτική εξαγωγή χαρακτηριστικών για τη μορφοποίηση και τον χειρισμό της εξόδου."
 
 #: library/datetime.rst:24
 msgid "Skip to :ref:`the format codes <format-codes>`."
-msgstr ""
+msgstr "Μετάβαση στους :ref:`κωδικούς μορφοποίησης <format-codes>`."
 
 #: library/datetime.rst:28
 msgid "Module :mod:`calendar`"
-msgstr ""
+msgstr "Module :mod:`calendar`"
 
 #: library/datetime.rst:29
 msgid "General calendar related functions."
-msgstr ""
+msgstr "Γενικές συναρτήσεις που σχετίζονται με το ημερολόγιο."
 
 #: library/datetime.rst:31
 msgid "Module :mod:`time`"
-msgstr ""
+msgstr "Module :mod:`time`"
 
 #: library/datetime.rst:32
 msgid "Time access and conversions."
-msgstr ""
+msgstr "Πρόσβαση και μετατροπές χρόνου."
 
 #: library/datetime.rst:34
 msgid "Module :mod:`zoneinfo`"
-msgstr ""
+msgstr "Module :mod:`zoneinfo`"
 
 #: library/datetime.rst:35
 msgid "Concrete time zones representing the IANA time zone database."
-msgstr ""
+msgstr "Συγκεκριμένες ζώνες ώρας που αντιπροσωπεύουν τη βάση δεδομένων ζωνών ώρας IANA."
 
 #: library/datetime.rst:37
 msgid "Package `dateutil <https://dateutil.readthedocs.io/en/stable/>`_"
-msgstr ""
+msgstr "Πακέτο `dateutil <https://dateutil.readthedocs.io/en/stable/>`_"
 
 #: library/datetime.rst:38
 msgid "Third-party library with expanded time zone and parsing support."
-msgstr ""
+msgstr "Βιβλιοθήκη τρίτου μέρους με επεκτείνουσα υποστήριξη ζωνών ώρας και ανάλυσης."
 
 #: library/datetime.rst:40
 msgid "Package :pypi:`DateType`"
-msgstr ""
+msgstr "Πακέτο :pypi:`DateType`"
 
 #: library/datetime.rst:41
 msgid ""
 "Third-party library that introduces distinct static types to e.g. allow :"
 "term:`static type checkers <static type checker>` to differentiate between "
 "naive and aware datetimes."
-msgstr ""
+msgstr "Βιβλιοθήκη τρίτου μέρους που εισάγει διακριτούς στατικούς τύπους, για να επιτρέπει, π.χ., στους "
+"term:`static type checkers <static type checker>` να διακρίνουν μεταξύ αδαών και ενήμερων ημερομηνιών και ωρών."
 
 #: library/datetime.rst:48
 msgid "Aware and Naive Objects"
-msgstr ""
+msgstr "Ενήμερα και Αδαή Αντικείμενα"
 
 #: library/datetime.rst:50
 msgid ""
 "Date and time objects may be categorized as \"aware\" or \"naive\" depending "
 "on whether or not they include time zone information."
 msgstr ""
+"Τα αντικείμενα ημερομηνίας και ώρας μπορούν να κατηγοριοποιηθούν ως \"ενήμερα\" ή \"αδαή\" ανάλογα "
+"με το αν περιλαμβάνουν ή όχι πληροφορίες ζώνης ώρας."
 
 #: library/datetime.rst:53
 msgid ""
@@ -102,6 +107,10 @@ msgid ""
 "object represents a specific moment in time that is not open to "
 "interpretation. [#]_"
 msgstr ""
+"Με επαρκή γνώση των εφαρμοστέων αλγοριθμικών και πολιτικών ρυθμίσεων χρόνου, "
+"όπως πληροφορίες ζώνης ώρας και θερινής ώρας, ένα **ενήμερο** "
+"αντικείμενο μπορεί να εντοπίσει τη θέση του σε σχέση με άλλα ενήμερα αντικείμενα. "
+"Ένα ενήμερο αντικείμενο αντιπροσωπεύει μια συγκεκριμένη στιγμή στο χρόνο που δεν υπόκειται σε ερμηνεία. [#]_"
 
 #: library/datetime.rst:59
 msgid ""
@@ -113,6 +122,11 @@ msgid ""
 "objects are easy to understand and to work with, at the cost of ignoring "
 "some aspects of reality."
 msgstr ""
+"Ένα **αδαές** αντικείμενο δεν περιέχει αρκετές πληροφορίες για να εντοπίσει "
+"με σαφήνεια τον εαυτό του σε σχέση με άλλα αντικείμενα ημρομηνίας/ώρα. Το αν ένα αδαές αντικείμενο "
+"αντιπροσωπεύει Συντονισμένη Παγκόσμια Ώρα (UTC), τοπική ώρα, ή ώρα σε κάποια άλλη ζώνη ώρας εξαρτάται "
+"αποκλειστικά από το πρόγραμμα, όπως ακριβώς εξαρτάται από το πρόγραμμα εάν ένας συγκεκριμένος αριθμός αντιπροσωπεύει μέτρα, μίλια ή μάζα. "
+"Τα αδαή αντιίμενα είναι εύκολο να κατανοηθούν και ναι χρησιμοποιηθούν, με κόστος την αγνόηση ορισμένων πτυχών της πραγματικότητας."
 
 #: library/datetime.rst:66
 msgid ""
@@ -123,6 +137,11 @@ msgid ""
 "offset from UTC time, the time zone name, and whether daylight saving time "
 "is in effect."
 msgstr ""
+"Για εφαρμογές που απαιτούν ενήμερα αντικείμενα, οι :class:`.datetime` και :class:`.time` "
+"αντικείμενα διαθέτουν ένα προαιρετικό χαρακτηριστικό πληροφοριών ζώνης ώρας, :attr:`tzinfo`, "
+"που μπορεί να ρυθμιστεί σε ένα στιγμιότυπο υποκλάσης της αφηρημένης κλάσης :class:`tzinfo`. "
+"Αυτά τα αντικείμενα :class:`tzinfo` καταγράφουν πληροφορίες σχετικά με την "
+"απόκλιση από την ώρα UTC, το όνομα ζώνης ώρας και το αν ισχύει η θερινή ώρα."
 
 #: library/datetime.rst:72
 msgid ""
@@ -134,34 +153,42 @@ msgid ""
 "across the world are more political than rational, change frequently, and "
 "there is no standard suitable for every application aside from UTC."
 msgstr ""
+"Μόνο μία συγκεκριμένη κλάση :class:`tzinfo`, η κλάση :class:`timezone`, παρέχεται από το "
+":mod:`!datetime` module. Η κλάση :class:`!timezone` μπορεί να "
+"αντιπροσωπεύει απλές ζώνες ώρας με σταθερές αποκλίσεις από την UTC, όπως η ίδια η UTC "
+"ή οι ζώνες ώρας EST και EDT της Βόρειας Αμερικής. Η υποστήριξη ζωνών ώρας σε βαθύτερα "
+"επίπεδα λεπτομέρειας είναι ευθύνη της εφαρμογής. Οι κανόνες για την προσαρμογή του χρόνου "
+"σε όλο τον κόσμο είναι περισσότερο πολιτικοί παρά λογικοί, αλλάζουν συχνά και "
+"δεν υπάρχει πρότυπο κατάλληλο για κάθε εφαρμογή εκτός από την UTC."
 
 #: library/datetime.rst:81
 msgid "Constants"
-msgstr ""
+msgstr "Σταθερές"
 
 #: library/datetime.rst:83
 msgid "The :mod:`!datetime` module exports the following constants:"
-msgstr ""
+msgstr "Το :mod:`!datetime` module εξάγει τις παρακάτω σταθερές:"
 
 #: library/datetime.rst:87
 msgid ""
 "The smallest year number allowed in a :class:`date` or :class:`.datetime` "
 "object. :const:`MINYEAR` is 1."
-msgstr ""
+msgstr "Ο μικρότερος αριθμός έτους που επιτρέπεται σε ένα αντικείμενο :class:`date` ή :class:`.datetime`. Το :const:`MINYEAR` είναι 1."
 
 #: library/datetime.rst:93
 msgid ""
 "The largest year number allowed in a :class:`date` or :class:`.datetime` "
 "object. :const:`MAXYEAR` is 9999."
 msgstr ""
+"Ο μεγαλύτερος αριθμός έτους που επιτρέπεται σε ένα αντικείμενο :class:`date` ή :class:`.datetime`. Το :const:`MAXYEAR` είναι 9999."
 
 #: library/datetime.rst:98
 msgid "Alias for the UTC time zone singleton :attr:`datetime.timezone.utc`."
-msgstr ""
+msgstr "Ψευδώνυμο για το μοναδικό αντικείμενο ζώνης ώρας UTC :attr:`datetime.timezone.utc`."
 
 #: library/datetime.rst:103
 msgid "Available Types"
-msgstr ""
+msgstr "Διαθέσιμοι Τύποι"
 
 #: library/datetime.rst:108
 msgid ""
@@ -169,6 +196,8 @@ msgid ""
 "and always will be, in effect. Attributes: :attr:`year`, :attr:`month`, and :"
 "attr:`day`."
 msgstr ""
+"Μια ιδανική αδαής ημερομηνία, υποθέτοντας ότι το τρέχον Γρηγοριανό ημερολόγιο ήταν πάντα σε ισχύ "
+"και θα είναι πάντα σε ισχύ. Χαρακτηριστικά: :attr:`year`, :attr:`month` και :attr:`day`."
 
 #: library/datetime.rst:116
 msgid ""
@@ -177,6 +206,10 @@ msgid ""
 "seconds\" here.) Attributes: :attr:`hour`, :attr:`minute`, :attr:`second`, :"
 "attr:`microsecond`, and :attr:`.tzinfo`."
 msgstr ""
+"Μια ιδανική ώρα, ανεξάρτητη από οποιαδήποτε συγκεκριμένη ημέρα, υποθέτοντας ότι κάθε "
+"ημέρα έχει ακριβώς 24\\*60\\*60 δευτερόλεπτα. (Δεν υπάρχει έννοια \"δευτερόλεπτα "
+"διακοπής\" εδώ.) Χαρακτηριστικά: :attr:`hour`, :attr:`minute`, :attr:`second`, :"
+"attr:`microsecond`, και :attr:`.tzinfo`."
 
 #: library/datetime.rst:125
 msgid ""
@@ -184,12 +217,16 @@ msgid ""
 "`month`, :attr:`day`, :attr:`hour`, :attr:`minute`, :attr:`second`, :attr:"
 "`microsecond`, and :attr:`.tzinfo`."
 msgstr ""
+"Μια συνδυασμένη ημερομηνία και ώρα. Χαρακτηριστικά: :attr:`year`, :attr:`month`, :attr:`day`, "
+":attr:`hour`, :attr:`minute`, :attr:`second`, :attr:`microsecond`, και :attr:`.tzinfo`."
 
 #: library/datetime.rst:133
 msgid ""
 "A duration expressing the difference between two :class:`.datetime` or :"
 "class:`date` instances to microsecond resolution."
 msgstr ""
+"Μια διάρκεια που εκφράζει τη διαφορά μεταξύ δύο στιγμιοτύπων :class:`.datetime` ή :class:`date` "
+"με ακρίβεια μικροδευτερολέπτου."
 
 #: library/datetime.rst:140
 msgid ""
@@ -198,20 +235,24 @@ msgid ""
 "notion of time adjustment (for example, to account for time zone and/or "
 "daylight saving time)."
 msgstr ""
+"Μια αφηρημένη κλάση βάσης για αντικείμενα πληροφοριών ζώνης ώρας. Αυτά χρησιμοποιούνται από τις κλάσεις :class:`.datetime` "
+"και :class:`.time` για να παρέχουν μια προσαρμόσιμη έννοια προσαρμογής χρόνου (για παράδειγμα, για να ληφθούν υπόψη η ζώνη ώρας και/ή η θερινή ώρα)."
 
 #: library/datetime.rst:148
 msgid ""
 "A class that implements the :class:`tzinfo` abstract base class as a fixed "
 "offset from the UTC."
 msgstr ""
+"Μια κλάση που υλοποιεί την αφηρημένη κλάση βάσης :class:`tzinfo` ως μια σταθερή "
+"απόκλιση από την UTC."
 
 #: library/datetime.rst:171
 msgid "Objects of these types are immutable."
-msgstr ""
+msgstr "Αντικείμενα αυτών των τύπων είναι αμετάβλητα."
 
 #: library/datetime.rst:155
 msgid "Subclass relationships::"
-msgstr ""
+msgstr "Σχέσεις υποκλάσεις::"
 
 #: library/datetime.rst:157
 msgid ""
@@ -223,136 +264,153 @@ msgid ""
 "    date\n"
 "        datetime"
 msgstr ""
+"object\n"
+"    timedelta\n"
+"    tzinfo\n"
+"        timezone\n"
+"    time\n"
+"    date\n"
+"        datetime"
 
 #: library/datetime.rst:166
 msgid "Common Properties"
-msgstr ""
+msgstr "Κοινά Χαρακτηριστικά"
 
 #: library/datetime.rst:168
 msgid ""
 "The :class:`date`, :class:`.datetime`, :class:`.time`, and :class:`timezone` "
 "types share these common features:"
 msgstr ""
+"Οι :class:`date`, :class:`.datetime`, :class:`.time` και :class:`timezone` τύποι έχουν κάποια κοινά χαρακτηριστικά:"
 
 #: library/datetime.rst:172
 msgid ""
 "Objects of these types are :term:`hashable`, meaning that they can be used "
 "as dictionary keys."
 msgstr ""
+"Αντικείμενα αυτών των τύπων είναι :term:`hashable`, πράγμα που σημαίνει ότι μπορούν να χρησιμοποιηθούν ως κλειδιά λεξικού."
 
 #: library/datetime.rst:174
 msgid ""
 "Objects of these types support efficient pickling via the :mod:`pickle` "
 "module."
 msgstr ""
+"Αντικείμενα αυτών των τύπων υποστηρίζουν αποδοτικό pickling μέσω του module :mod:`pickle`."
 
 #: library/datetime.rst:177
 msgid "Determining if an Object is Aware or Naive"
-msgstr ""
+msgstr "Προσδιορίζοντας αν ένα αντικείμενο είναι ενήμερο ή αδαές"
 
 #: library/datetime.rst:179
 msgid "Objects of the :class:`date` type are always naive."
-msgstr ""
+msgstr "Αντικείμενα της κλάσης :class:`date` είναι πάντα αφελή."
 
 #: library/datetime.rst:181
 msgid ""
 "An object of type :class:`.time` or :class:`.datetime` may be aware or naive."
 msgstr ""
+"Ένα αντικείμενο της :class:`.time` ή :class:`.datetime` μπορεί να είναι ενήμερο ή αδαές."
 
 #: library/datetime.rst:183
 msgid ""
 "A :class:`.datetime` object ``d`` is aware if both of the following hold:"
 msgstr ""
+"Ένα αντικείμενα της κλάσης :class:`.datetime` ``d`` είναι ενήμερο αν ισχύουν και τα δύο παρακάτω:"
 
 #: library/datetime.rst:185
 msgid "``d.tzinfo`` is not ``None``"
-msgstr ""
+msgstr "``d.tzinfo`` δεν είναι ``None``"
 
 #: library/datetime.rst:186
 msgid "``d.tzinfo.utcoffset(d)`` does not return ``None``"
-msgstr ""
+msgstr "``d.tzinfo.utcoffset(d)`` δεν επιστρέφει ``None``"
 
 #: library/datetime.rst:188
 msgid "Otherwise, ``d`` is naive."
-msgstr ""
+msgstr "Διαφορετικά, το ``d`` είναι αδαές."
 
 #: library/datetime.rst:190
 msgid "A :class:`.time` object ``t`` is aware if both of the following hold:"
-msgstr ""
+msgstr "Ένα αντικείμενο :class:`.time` ``t`` είναι ενήμερο αν ισχύουν και τα δύο παρακάτω:"
 
 #: library/datetime.rst:192
 msgid "``t.tzinfo`` is not ``None``"
-msgstr ""
+msgstr "``t.tzinfo`` δεν είναι ``None``"
 
 #: library/datetime.rst:193
 msgid "``t.tzinfo.utcoffset(None)`` does not return ``None``."
-msgstr ""
+msgstr "``t.tzinfo.utcoffset(None)`` δεν επιστρέφει ``None``."
 
 #: library/datetime.rst:195
 msgid "Otherwise, ``t`` is naive."
-msgstr ""
+msgstr "Διαφορετικά, το ``t`` είναι αδαές."
 
 #: library/datetime.rst:197
 msgid ""
 "The distinction between aware and naive doesn't apply to :class:`timedelta` "
 "objects."
 msgstr ""
+"Ο διαχωρισμός μεταξύ ενήμερων και αδαών δεν ισχύει για τα αντικείμενα :class:`timedelta`."
 
 #: library/datetime.rst:203
 msgid ":class:`timedelta` Objects"
-msgstr ""
+msgstr ":class:`timedelta` Αντικείμενα"
 
 #: library/datetime.rst:205
 msgid ""
 "A :class:`timedelta` object represents a duration, the difference between "
 "two :class:`.datetime` or :class:`date` instances."
 msgstr ""
+"Ένα αντικείμενο :class:`timedelta` αντιπροσωπεύει μια διάρκεια, τη διαφορά μεταξύ δύο στιγμιοτύπων :class:`.datetime` ή :class:`date`."
 
 #: library/datetime.rst:210
 msgid ""
 "All arguments are optional and default to 0. Arguments may be integers or "
 "floats, and may be positive or negative."
 msgstr ""
+"Όλα τα ορίσματα είναι προαιρετικά και με προεπιλογή 0. Τα ορίσματα μπορεί να είναι ακέραιοι ή αριθμοί κινητής υποδιαστολής, και μπορεί να είναι θετικά ή αρνητικά."
 
 #: library/datetime.rst:213
 msgid ""
 "Only *days*, *seconds* and *microseconds* are stored internally. Arguments "
 "are converted to those units:"
 msgstr ""
+"Μόνο τα *days*, *seconds* και *microseconds* αποθηκεύονται εσωτερικά. Τα ορίσματα μετατρέπονται σε αυτές τις μονάδες:"
 
 #: library/datetime.rst:216
 msgid "A millisecond is converted to 1000 microseconds."
-msgstr ""
+msgstr "Ένα χιλιοστό του δευτερολέπτου μετατρέπεται σε 1000 μικροδευτερόλεπτα."
 
 #: library/datetime.rst:217
 msgid "A minute is converted to 60 seconds."
-msgstr ""
+msgstr "Ένα λετπό μετατρέπεται σε 60 δευτερόλεπτα."
 
 #: library/datetime.rst:218
 msgid "An hour is converted to 3600 seconds."
-msgstr ""
+msgstr "Μια ώρα μετατρέπται σε 3600 δευτερόλεπτα."
 
 #: library/datetime.rst:219
 msgid "A week is converted to 7 days."
-msgstr ""
+msgstr "Μια εβδομάδα μετατρέπεται σε 7 ημέρες."
 
 #: library/datetime.rst:221
 msgid ""
 "and days, seconds and microseconds are then normalized so that the "
 "representation is unique, with"
 msgstr ""
+"και ημέρες, δευτερόλεπτα και μικροδευτερόλεπτα κανονικοποιούνται ώστε η αναπαράσταση είναι μοναδική με"
 
 #: library/datetime.rst:224
 msgid "``0 <= microseconds < 1000000``"
-msgstr ""
+msgstr "``0 <= microseconds < 1000000``"
 
 #: library/datetime.rst:225
 msgid "``0 <= seconds < 3600*24`` (the number of seconds in one day)"
-msgstr ""
+msgstr "``0 <= seconds < 3600*24`` (ο αριθμός των δευτερολέπτων σε μια μέρα)"
 
 #: library/datetime.rst:226
 msgid "``-999999999 <= days <= 999999999``"
-msgstr ""
+msgstr "``-999999999 <= days <= 999999999``"
 
 #: library/datetime.rst:228
 msgid ""
@@ -360,6 +418,9 @@ msgid ""
 "*seconds* and *microseconds* are \"merged\" and normalized into those three "
 "resulting attributes::"
 msgstr ""
+"Το παρακάτω παράδειγμα δείχνει πώς οποιαδήποτε ορίσματα εκτός από *days*, "
+"*seconds* και *microseconds* \"συγχωνεύονται\" και κανονικοποιούνται σε αυτά τα τρία "
+"τελικά γνωρίσματα::"
 
 #: library/datetime.rst:232
 msgid ""
@@ -377,6 +438,19 @@ msgid ""
 ">>> delta\n"
 "datetime.timedelta(days=64, seconds=29156, microseconds=10)"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> delta = timedelta(\n"
+"...     days=50,\n"
+"...     seconds=27,\n"
+"...     microseconds=10,\n"
+"...     milliseconds=29000,\n"
+"...     minutes=5,\n"
+"...     hours=8,\n"
+"...     weeks=2\n"
+"... )\n"
+">>> # Only days, seconds, and microseconds remain\n"
+">>> delta\n"
+"datetime.timedelta(days=64, seconds=29156, microseconds=10)"
 
 #: library/datetime.rst:246
 msgid ""
@@ -386,18 +460,26 @@ msgid ""
 "tiebreaker. If no argument is a float, the conversion and normalization "
 "processes are exact (no information is lost)."
 msgstr ""
+"Εάν κάποιο από τα ορίσματα είναι αριθμός κινητής υποδιαστολής και υπάρχουν δεκαδικά μικροδευτερόλεπτα, τα "
+"δεκαδικά μικροδευτερόλεπτα που απομένουν από όλα τα ορίσματα συνδυάζονται και το άθροισμά τους στρογγυλοποιείται "
+"στο πλησιέστερο μικροδευτερόλεπτο χρησιμοποιώντας τον κανόνα σπασίματος ισοπαλίας \"round-half-to-even\". "
+"Εάν κανένα από τα ορίσματα δεν είναι αριθμός κινητής υποδιαστολής, οι διαδικασίες μετατροπής και κανονικοποίησης είναι ακριβείς (δεν χάνεται πληροφορία)."
 
 #: library/datetime.rst:253
 msgid ""
 "If the normalized value of days lies outside the indicated range, :exc:"
 "`OverflowError` is raised."
 msgstr ""
+"Εάν η κανονικοποιημένη τιμή των ημερών βρίσκεται εκτός του καθορισμένου εύρους, "
+"γίνεται raise η :exc:`OverflowError`."
 
 #: library/datetime.rst:256
 msgid ""
 "Note that normalization of negative values may be surprising at first. For "
 "example::"
 msgstr ""
+"Σημειώστε ότι η κανονικοποίηση των αρνητικών τιμών μπορεί να είναι "
+"απροσδόκητη στην αρχή. Για παράδειγμα::"
 
 #: library/datetime.rst:259
 msgid ""
@@ -406,6 +488,10 @@ msgid ""
 ">>> (d.days, d.seconds, d.microseconds)\n"
 "(-1, 86399, 999999)"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> d = timedelta(microseconds=-1)\n"
+">>> (d.days, d.seconds, d.microseconds)\n"
+"(-1, 86399, 999999)"
 
 #: library/datetime.rst:264
 msgid ""
@@ -426,6 +512,16 @@ msgid ""
 ">>> pretty_timedelta(d)\n"
 "'-(1:00:00)'"
 msgstr ""
+">>> def pretty_timedelta(td):\n"
+"...     if td.days >= 0:\n"
+"...         return str(td)\n"
+"...     return f'-({-td!s})'\n"
+"...\n"
+">>> d = timedelta(hours=-1)\n"
+">>> str(d)  # not human-friendly\n"
+"'-1 day, 23:00:00'\n"
+">>> pretty_timedelta(d)\n"
+"'-(1:00:00)'"
 
 #: library/datetime.rst:615 library/datetime.rst:1813 library/datetime.rst:2434
 msgid "Class attributes:"
@@ -482,6 +578,12 @@ msgid ""
 ">>> duration.total_seconds()\n"
 "11235813.0"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> duration = timedelta(seconds=11235813)\n"
+">>> duration.days, duration.seconds\n"
+"(130, 3813)\n"
+">>> duration.total_seconds()\n"
+"11235813.0"
 
 #: library/datetime.rst:331
 msgid "Between 0 and 999,999 inclusive."
@@ -501,7 +603,7 @@ msgstr ""
 
 #: library/datetime.rst:341
 msgid "``t1 = t2 + t3``"
-msgstr ""
+msgstr "``t1 = t2 + t3``"
 
 #: library/datetime.rst:341
 msgid ""
@@ -511,7 +613,7 @@ msgstr ""
 
 #: library/datetime.rst:345
 msgid "``t1 = t2 - t3``"
-msgstr ""
+msgstr "``t1 = t2 - t3``"
 
 #: library/datetime.rst:345
 msgid ""
@@ -521,7 +623,7 @@ msgstr ""
 
 #: library/datetime.rst:349
 msgid "``t1 = t2 * i or t1 = i * t2``"
-msgstr ""
+msgstr "``t1 = t2 * i or t1 = i * t2``"
 
 #: library/datetime.rst:349
 msgid ""
@@ -535,7 +637,7 @@ msgstr ""
 
 #: library/datetime.rst:356
 msgid "``t1 = t2 * f or t1 = f * t2``"
-msgstr ""
+msgstr "``t1 = t2 * f or t1 = f * t2``"
 
 #: library/datetime.rst:356
 msgid ""
@@ -545,7 +647,7 @@ msgstr ""
 
 #: library/datetime.rst:360
 msgid "``f = t2 / t3``"
-msgstr ""
+msgstr "``f = t2 / t3``"
 
 #: library/datetime.rst:360
 msgid ""
@@ -555,7 +657,7 @@ msgstr ""
 
 #: library/datetime.rst:364
 msgid "``t1 = t2 / f or t1 = t2 / i``"
-msgstr ""
+msgstr "``t1 = t2 / f or t1 = t2 / i``"
 
 #: library/datetime.rst:364
 msgid ""
@@ -565,7 +667,7 @@ msgstr ""
 
 #: library/datetime.rst:368
 msgid "``t1 = t2 // i`` or ``t1 = t2 // t3``"
-msgstr ""
+msgstr "``t1 = t2 // i`` or ``t1 = t2 // t3``"
 
 #: library/datetime.rst:368
 msgid ""
@@ -575,7 +677,7 @@ msgstr ""
 
 #: library/datetime.rst:372
 msgid "``t1 = t2 % t3``"
-msgstr ""
+msgstr "``t1 = t2 % t3``"
 
 #: library/datetime.rst:372
 msgid "The remainder is computed as a :class:`timedelta` object. (3)"
@@ -583,7 +685,7 @@ msgstr ""
 
 #: library/datetime.rst:375
 msgid "``q, r = divmod(t1, t2)``"
-msgstr ""
+msgstr "``q, r = divmod(t1, t2)``"
 
 #: library/datetime.rst:375
 msgid ""
@@ -593,7 +695,7 @@ msgstr ""
 
 #: library/datetime.rst:380
 msgid "``+t1``"
-msgstr ""
+msgstr "``+t1``"
 
 #: library/datetime.rst:380
 msgid "Returns a :class:`timedelta` object with the same value. (2)"
@@ -601,7 +703,7 @@ msgstr ""
 
 #: library/datetime.rst:383
 msgid "``-t1``"
-msgstr ""
+msgstr "``-t1``"
 
 #: library/datetime.rst:383
 msgid ""
@@ -611,7 +713,7 @@ msgstr ""
 
 #: library/datetime.rst:387
 msgid "``abs(t)``"
-msgstr ""
+msgstr "``abs(t)``"
 
 #: library/datetime.rst:387
 msgid ""
@@ -621,7 +723,7 @@ msgstr ""
 
 #: library/datetime.rst:390
 msgid "``str(t)``"
-msgstr ""
+msgstr "``str(t)``"
 
 #: library/datetime.rst:390
 msgid ""
@@ -631,7 +733,7 @@ msgstr ""
 
 #: library/datetime.rst:394
 msgid "``repr(t)``"
-msgstr ""
+msgstr "``repr(t)``"
 
 #: library/datetime.rst:394
 msgid ""
@@ -673,6 +775,10 @@ msgid ""
 ">>> print(_)\n"
 "-1 day, 19:00:00"
 msgstr ""
+">>> timedelta(hours=-5)\n"
+"datetime.timedelta(days=-1, seconds=68400)\n"
+">>> print(_)\n"
+"-1 day, 19:00:00"
 
 #: library/datetime.rst:425
 msgid ""
@@ -743,6 +849,15 @@ msgid ""
 ">>> year.total_seconds()\n"
 "31536000.0"
 msgstr ""
+">>> # Components of another_year add up to exactly 365 days\n"
+">>> from datetime import timedelta\n"
+">>> year = timedelta(days=365)\n"
+">>> another_year = timedelta(weeks=40, days=84, hours=23,\n"
+"...                          minutes=50, seconds=600)\n"
+">>> year == another_year\n"
+"True\n"
+">>> year.total_seconds()\n"
+"31536000.0"
 
 #: library/datetime.rst:472
 msgid "Examples of :class:`timedelta` arithmetic::"
@@ -764,10 +879,23 @@ msgid ""
 ">>> three_years, three_years.days // 365\n"
 "(datetime.timedelta(days=1095), 3)"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> year = timedelta(days=365)\n"
+">>> ten_years = 10 * year\n"
+">>> ten_years\n"
+"datetime.timedelta(days=3650)\n"
+">>> ten_years.days // 365\n"
+"10\n"
+">>> nine_years = ten_years - year\n"
+">>> nine_years\n"
+"datetime.timedelta(days=3285)\n"
+">>> three_years = nine_years // 3\n"
+">>> three_years, three_years.days // 365\n"
+"(datetime.timedelta(days=1095), 3)"
 
 #: library/datetime.rst:491
 msgid ":class:`date` Objects"
-msgstr ""
+msgstr "Αντικείμενα :class:`date`"
 
 #: library/datetime.rst:493
 msgid ""
@@ -876,7 +1004,7 @@ msgstr ""
 
 #: library/datetime.rst:1103 library/datetime.rst:1569
 msgid "Examples::"
-msgstr ""
+msgstr "Παραδείγματα::"
 
 #: library/datetime.rst:562
 msgid ""
@@ -888,6 +1016,13 @@ msgid ""
 ">>> date.fromisoformat('2021-W01-1')\n"
 "datetime.date(2021, 1, 4)"
 msgstr ""
+">>> from datetime import date\n"
+">>> date.fromisoformat('2019-12-04')\n"
+"datetime.date(2019, 12, 4)\n"
+">>> date.fromisoformat('20191204')\n"
+"datetime.date(2019, 12, 4)\n"
+">>> date.fromisoformat('2021-W01-1')\n"
+"datetime.date(2021, 1, 4)"
 
 #: library/datetime.rst:571
 msgid "Previously, this method only supported the format ``YYYY-MM-DD``."
@@ -937,6 +1072,12 @@ msgid ""
 ">>> when.strftime(\"%B %d\")\n"
 "'February 29'"
 msgstr ""
+">>> from datetime import date\n"
+">>> date_string = \"02/29\"\n"
+">>> when = date.strptime(f\"{date_string};1984\", \"%m/%d;%Y\")  # Avoids "
+"leap year bug.\n"
+">>> when.strftime(\"%B %d\")\n"
+"'February 29'"
 
 #: library/datetime.rst:619
 msgid "The earliest representable date, ``date(MINYEAR, 1, 1)``."
@@ -966,7 +1107,7 @@ msgstr ""
 
 #: library/datetime.rst:655
 msgid "``date2 = date1 + timedelta``"
-msgstr ""
+msgstr "``date2 = date1 + timedelta``"
 
 #: library/datetime.rst:655
 msgid "``date2`` will be ``timedelta.days`` days after ``date1``. (1)"
@@ -974,7 +1115,7 @@ msgstr ""
 
 #: library/datetime.rst:658
 msgid "``date2 = date1 - timedelta``"
-msgstr ""
+msgstr "``date2 = date1 - timedelta``"
 
 #: library/datetime.rst:658
 msgid "Computes ``date2`` such that ``date2 + timedelta == date1``. (2)"
@@ -982,19 +1123,19 @@ msgstr ""
 
 #: library/datetime.rst:661
 msgid "``timedelta = date1 - date2``"
-msgstr ""
+msgstr "``timedelta = date1 - date2``"
 
 #: library/datetime.rst:1257
 msgid "\\(3)"
-msgstr ""
+msgstr "\\(3)"
 
 #: library/datetime.rst:0
 msgid "``date1 == date2``"
-msgstr ""
+msgstr "``date1 == date2``"
 
 #: library/datetime.rst:0
 msgid "``date1 != date2``"
-msgstr ""
+msgstr "``date1 != date2``"
 
 #: library/datetime.rst:1259
 msgid "Equality comparison. (4)"
@@ -1002,19 +1143,19 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "``date1 < date2``"
-msgstr ""
+msgstr "``date1 < date2``"
 
 #: library/datetime.rst:0
 msgid "``date1 > date2``"
-msgstr ""
+msgstr "``date1 > date2``"
 
 #: library/datetime.rst:0
 msgid "``date1 <= date2``"
-msgstr ""
+msgstr "``date1 <= date2``"
 
 #: library/datetime.rst:0
 msgid "``date1 >= date2``"
-msgstr ""
+msgstr "``date1 >= date2``"
 
 #: library/datetime.rst:1262
 msgid "Order comparison. (5)"
@@ -1094,6 +1235,10 @@ msgid ""
 ">>> d.replace(day=26)\n"
 "datetime.date(2002, 12, 26)"
 msgstr ""
+">>> from datetime import date\n"
+">>> d = date(2002, 12, 31)\n"
+">>> d.replace(day=26)\n"
+"datetime.date(2002, 12, 26)"
 
 #: library/datetime.rst:728
 msgid ""
@@ -1181,6 +1326,11 @@ msgid ""
 ">>> date(2004, 1, 4).isocalendar()\n"
 "datetime.IsoCalendarDate(year=2004, week=1, weekday=7)"
 msgstr ""
+">>> from datetime import date\n"
+">>> date(2003, 12, 29).isocalendar()\n"
+"datetime.IsoCalendarDate(year=2004, week=1, weekday=1)\n"
+">>> date(2004, 1, 4).isocalendar()\n"
+"datetime.IsoCalendarDate(year=2004, week=1, weekday=7)"
 
 #: library/datetime.rst:788
 msgid "Result changed from a tuple to a :term:`named tuple`."
@@ -1197,6 +1347,9 @@ msgid ""
 ">>> date(2002, 12, 4).isoformat()\n"
 "'2002-12-04'"
 msgstr ""
+">>> from datetime import date\n"
+">>> date(2002, 12, 4).isoformat()\n"
+"'2002-12-04'"
 
 #: library/datetime.rst:801
 msgid "For a date ``d``, ``str(d)`` is equivalent to ``d.isoformat()``."
@@ -1212,6 +1365,9 @@ msgid ""
 ">>> date(2002, 12, 4).ctime()\n"
 "'Wed Dec  4 00:00:00 2002'"
 msgstr ""
+">>> from datetime import date\n"
+">>> date(2002, 12, 4).ctime()\n"
+"'Wed Dec  4 00:00:00 2002'"
 
 #: library/datetime.rst:1640
 msgid "``d.ctime()`` is equivalent to::"
@@ -1219,7 +1375,7 @@ msgstr ""
 
 #: library/datetime.rst:1642
 msgid "time.ctime(time.mktime(d.timetuple()))"
-msgstr ""
+msgstr "time.ctime(time.mktime(d.timetuple()))"
 
 #: library/datetime.rst:816
 msgid ""
@@ -1271,10 +1427,26 @@ msgid ""
 ">>> time_to_birthday.days\n"
 "202"
 msgstr ""
+">>> import time\n"
+">>> from datetime import date\n"
+">>> today = date.today()\n"
+">>> today\n"
+"datetime.date(2007, 12, 5)\n"
+">>> today == date.fromtimestamp(time.time())\n"
+"True\n"
+">>> my_birthday = date(today.year, 6, 24)\n"
+">>> if my_birthday < today:\n"
+"...     my_birthday = my_birthday.replace(year=today.year + 1)\n"
+"...\n"
+">>> my_birthday\n"
+"datetime.date(2008, 6, 24)\n"
+">>> time_to_birthday = abs(my_birthday - today)\n"
+">>> time_to_birthday.days\n"
+"202"
 
 #: library/datetime.rst:857
 msgid "More examples of working with :class:`date`:"
-msgstr ""
+msgstr "Περισσότερα παραδείγματα χρήσης της :class:`date`:"
 
 #: library/datetime.rst:859
 msgid ""
@@ -1319,16 +1491,57 @@ msgid ""
 ">>> d.replace(year=2005)\n"
 "datetime.date(2005, 3, 11)"
 msgstr ""
+">>> from datetime import date\n"
+">>> d = date.fromordinal(730920) # 730920th day after 1. 1. 0001\n"
+">>> d\n"
+"datetime.date(2002, 3, 11)\n"
+"\n"
+">>> # Methods related to formatting string output\n"
+">>> d.isoformat()\n"
+"'2002-03-11'\n"
+">>> d.strftime(\"%d/%m/%y\")\n"
+"'11/03/02'\n"
+">>> d.strftime(\"%A %d. %B %Y\")\n"
+"'Monday 11. March 2002'\n"
+">>> d.ctime()\n"
+"'Mon Mar 11 00:00:00 2002'\n"
+">>> 'The {1} is {0:%d}, the {2} is {0:%B}.'.format(d, \"day\", \"month\")\n"
+"'The day is 11, the month is March.'\n"
+"\n"
+">>> # Methods for to extracting 'components' under different calendars\n"
+">>> t = d.timetuple()\n"
+">>> for i in t:\n"
+"...     print(i)\n"
+"2002                # year\n"
+"3                   # month\n"
+"11                  # day\n"
+"0\n"
+"0\n"
+"0\n"
+"0                   # weekday (0 = Monday)\n"
+"70                  # 70th day in the year\n"
+"-1\n"
+">>> ic = d.isocalendar()\n"
+">>> for i in ic:\n"
+"...     print(i)\n"
+"2002                # ISO year\n"
+"11                  # ISO week number\n"
+"1                   # ISO day number ( 1 = Monday )\n"
+"\n"
+">>> # A date object is immutable; all operations produce a new object\n"
+">>> d.replace(year=2005)\n"
+"datetime.date(2005, 3, 11)"
 
 #: library/datetime.rst:906
 msgid ":class:`.datetime` Objects"
-msgstr ""
+msgstr ":class:`.datetime` Αντικείμενα"
 
 #: library/datetime.rst:908
 msgid ""
 "A :class:`.datetime` object is a single object containing all the "
 "information from a :class:`date` object and a :class:`.time` object."
 msgstr ""
+"Ένα αντικείμενο :class:`.datetime` είναι ένα μόνο αντικείμενο που περιέχει όλες τις πληροφορίες από ένα αντικείμενο :class:`date` και ένα αντικείμενο :class:`.time`."
 
 #: library/datetime.rst:911
 msgid ""
@@ -1351,35 +1564,35 @@ msgstr ""
 
 #: library/datetime.rst:923
 msgid "``MINYEAR <= year <= MAXYEAR``,"
-msgstr ""
+msgstr "``MINYEAR <= year <= MAXYEAR``,"
 
 #: library/datetime.rst:924
 msgid "``1 <= month <= 12``,"
-msgstr ""
+msgstr "``1 <= month <= 12``,"
 
 #: library/datetime.rst:925
 msgid "``1 <= day <= number of days in the given month and year``,"
-msgstr ""
+msgstr "``1 <= day <= number of days in the given month and year``,"
 
 #: library/datetime.rst:1804
 msgid "``0 <= hour < 24``,"
-msgstr ""
+msgstr "``0 <= hour < 24``,"
 
 #: library/datetime.rst:1805
 msgid "``0 <= minute < 60``,"
-msgstr ""
+msgstr "``0 <= minute < 60``,"
 
 #: library/datetime.rst:1806
 msgid "``0 <= second < 60``,"
-msgstr ""
+msgstr "``0 <= second < 60``,"
 
 #: library/datetime.rst:1807
 msgid "``0 <= microsecond < 1000000``,"
-msgstr ""
+msgstr "``0 <= microsecond < 1000000``,"
 
 #: library/datetime.rst:1808
 msgid "``fold in [0, 1]``."
-msgstr ""
+msgstr "``fold in [0, 1]``."
 
 #: library/datetime.rst:1375 library/datetime.rst:1969
 msgid "Added the *fold* parameter."
@@ -1629,6 +1842,27 @@ msgid ""
 "datetime.datetime(2011, 11, 4, 0, 5, 23,\n"
 "    tzinfo=datetime.timezone(datetime.timedelta(seconds=14400)))"
 msgstr ""
+">>> from datetime import datetime\n"
+">>> datetime.fromisoformat('2011-11-04')\n"
+"datetime.datetime(2011, 11, 4, 0, 0)\n"
+">>> datetime.fromisoformat('20111104')\n"
+"datetime.datetime(2011, 11, 4, 0, 0)\n"
+">>> datetime.fromisoformat('2011-11-04T00:05:23')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23)\n"
+">>> datetime.fromisoformat('2011-11-04T00:05:23Z')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23, tzinfo=datetime.timezone.utc)\n"
+">>> datetime.fromisoformat('20111104T000523')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23)\n"
+">>> datetime.fromisoformat('2011-W01-2T00:05:23.283')\n"
+"datetime.datetime(2011, 1, 4, 0, 5, 23, 283000)\n"
+">>> datetime.fromisoformat('2011-11-04 00:05:23.283')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23, 283000)\n"
+">>> datetime.fromisoformat('2011-11-04 00:05:23.283+00:00')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23, 283000, tzinfo=datetime.timezone."
+"utc)\n"
+">>> datetime.fromisoformat('2011-11-04T00:05:23+04:00')\n"
+"datetime.datetime(2011, 11, 4, 0, 5, 23,\n"
+"    tzinfo=datetime.timezone(datetime.timedelta(seconds=14400)))"
 
 #: library/datetime.rst:1127
 msgid ""
@@ -1688,6 +1922,12 @@ msgid ""
 ">>> when.strftime(\"%B %d\")\n"
 "'February 29'"
 msgstr ""
+">>> from datetime import datetime\n"
+">>> date_string = \"02/29\"\n"
+">>> when = datetime.strptime(f\"{date_string};1984\", \"%m/%d;%Y\")  # "
+"Avoids leap year bug.\n"
+">>> when.strftime(\"%B %d\")\n"
+"'February 29'"
 
 #: library/datetime.rst:1179
 msgid ""
@@ -1737,48 +1977,48 @@ msgstr ""
 
 #: library/datetime.rst:1253
 msgid "``datetime2 = datetime1 + timedelta``"
-msgstr ""
+msgstr "``datetime2 = datetime1 + timedelta``"
 
 #: library/datetime.rst:2490 library/datetime.rst:2507
 #: library/datetime.rst:2572 library/datetime.rst:2581
 msgid "\\(1)"
-msgstr ""
+msgstr "\\(1)"
 
 #: library/datetime.rst:1255
 msgid "``datetime2 = datetime1 - timedelta``"
-msgstr ""
+msgstr "``datetime2 = datetime1 - timedelta``"
 
 #: library/datetime.rst:2523
 msgid "\\(2)"
-msgstr ""
+msgstr "\\(2)"
 
 #: library/datetime.rst:1257
 msgid "``timedelta = datetime1 - datetime2``"
-msgstr ""
+msgstr "``timedelta = datetime1 - datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 == datetime2``"
-msgstr ""
+msgstr "``datetime1 == datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 != datetime2``"
-msgstr ""
+msgstr "``datetime1 != datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 < datetime2``"
-msgstr ""
+msgstr "``datetime1 < datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 > datetime2``"
-msgstr ""
+msgstr "``datetime1 > datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 <= datetime2``"
-msgstr ""
+msgstr "``datetime1 <= datetime2``"
 
 #: library/datetime.rst:0
 msgid "``datetime1 >= datetime2``"
-msgstr ""
+msgstr "``datetime1 >= datetime2``"
 
 #: library/datetime.rst:1269
 msgid ""
@@ -1963,6 +2203,13 @@ msgid ""
 "    # Convert from UTC to tz's local time.\n"
 "    return tz.fromutc(utc)"
 msgstr ""
+"def astimezone(self, tz):\n"
+"    if self.tzinfo is tz:\n"
+"        return self\n"
+"    # Convert self to UTC, and attach the new timezone object.\n"
+"    utc = (self - self.utcoffset()).replace(tzinfo=tz)\n"
+"    # Convert from UTC to tz's local time.\n"
+"    return tz.fromutc(utc)"
 
 #: library/datetime.rst:1417
 msgid "*tz* now can be omitted."
@@ -2010,6 +2257,9 @@ msgid ""
 "                  d.hour, d.minute, d.second,\n"
 "                  d.weekday(), yday, dst))"
 msgstr ""
+"time.struct_time((d.year, d.month, d.day,\n"
+"                  d.hour, d.minute, d.second,\n"
+"                  d.weekday(), yday, dst))"
 
 #: library/datetime.rst:1462
 msgid ""
@@ -2163,6 +2413,11 @@ msgid ""
 ">>> datetime(2019, 5, 18, 15, 17, tzinfo=timezone.utc).isoformat()\n"
 "'2019-05-18T15:17:00+00:00'"
 msgstr ""
+">>> from datetime import datetime, timezone\n"
+">>> datetime(2019, 5, 18, 15, 17, 8, 132263).isoformat()\n"
+"'2019-05-18T15:17:08.132263'\n"
+">>> datetime(2019, 5, 18, 15, 17, tzinfo=timezone.utc).isoformat()\n"
+"'2019-05-18T15:17:00+00:00'"
 
 #: library/datetime.rst:1577
 msgid ""
@@ -2183,6 +2438,16 @@ msgid ""
 ">>> datetime(2009, 11, 27, microsecond=100, tzinfo=TZ()).isoformat()\n"
 "'2009-11-27T00:00:00.000100-06:39'"
 msgstr ""
+">>> from datetime import tzinfo, timedelta, datetime\n"
+">>> class TZ(tzinfo):\n"
+"...     \"\"\"A time zone with an arbitrary, constant -06:39 offset.\"\"\"\n"
+"...     def utcoffset(self, dt):\n"
+"...         return timedelta(hours=-6, minutes=-39)\n"
+"...\n"
+">>> datetime(2002, 12, 25, tzinfo=TZ()).isoformat(' ')\n"
+"'2002-12-25 00:00:00-06:39'\n"
+">>> datetime(2009, 11, 27, microsecond=100, tzinfo=TZ()).isoformat()\n"
+"'2009-11-27T00:00:00.000100-06:39'"
 
 #: library/datetime.rst:1982
 msgid ""
@@ -2239,6 +2504,12 @@ msgid ""
 ">>> dt.isoformat(timespec='microseconds')\n"
 "'2015-01-01T12:30:59.000000'"
 msgstr ""
+">>> from datetime import datetime\n"
+">>> datetime.now().isoformat(timespec='minutes')\n"
+"'2002-12-25T00:00'\n"
+">>> dt = datetime(2015, 1, 1, 12, 30, 59, 0)\n"
+">>> dt.isoformat(timespec='microseconds')\n"
+"'2015-01-01T12:30:59.000000'"
 
 #: library/datetime.rst:2013
 msgid "Added the *timespec* parameter."
@@ -2260,6 +2531,9 @@ msgid ""
 ">>> datetime(2002, 12, 4, 20, 30, 40).ctime()\n"
 "'Wed Dec  4 20:30:40 2002'"
 msgstr ""
+">>> from datetime import datetime\n"
+">>> datetime(2002, 12, 4, 20, 30, 40).ctime()\n"
+"'Wed Dec  4 20:30:40 2002'"
 
 #: library/datetime.rst:1637
 msgid ""
@@ -2350,6 +2624,56 @@ msgid ""
 "format(dt, \"day\", \"month\", \"time\")\n"
 "'The day is 21, the month is November, the time is 04:30PM.'"
 msgstr ""
+">>> from datetime import datetime, date, time, timezone\n"
+"\n"
+">>> # Using datetime.combine()\n"
+">>> d = date(2005, 7, 14)\n"
+">>> t = time(12, 30)\n"
+">>> datetime.combine(d, t)\n"
+"datetime.datetime(2005, 7, 14, 12, 30)\n"
+"\n"
+">>> # Using datetime.now()\n"
+">>> datetime.now()\n"
+"datetime.datetime(2007, 12, 6, 16, 29, 43, 79043)   # GMT +1\n"
+">>> datetime.now(timezone.utc)\n"
+"datetime.datetime(2007, 12, 6, 15, 29, 43, 79060, tzinfo=datetime.timezone."
+"utc)\n"
+"\n"
+">>> # Using datetime.strptime()\n"
+">>> dt = datetime.strptime(\"21/11/06 16:30\", \"%d/%m/%y %H:%M\")\n"
+">>> dt\n"
+"datetime.datetime(2006, 11, 21, 16, 30)\n"
+"\n"
+">>> # Using datetime.timetuple() to get tuple of all attributes\n"
+">>> tt = dt.timetuple()\n"
+">>> for it in tt:\n"
+"...     print(it)\n"
+"...\n"
+"2006    # year\n"
+"11      # month\n"
+"21      # day\n"
+"16      # hour\n"
+"30      # minute\n"
+"0       # second\n"
+"1       # weekday (0 = Monday)\n"
+"325     # number of days since 1st January\n"
+"-1      # dst - method tzinfo.dst() returned None\n"
+"\n"
+">>> # Date in ISO format\n"
+">>> ic = dt.isocalendar()\n"
+">>> for it in ic:\n"
+"...     print(it)\n"
+"...\n"
+"2006    # ISO year\n"
+"47      # ISO week\n"
+"2       # ISO weekday\n"
+"\n"
+">>> # Formatting a datetime\n"
+">>> dt.strftime(\"%A, %d. %B %Y %I:%M%p\")\n"
+"'Tuesday, 21. November 2006 04:30PM'\n"
+">>> 'The {1} is {0:%d}, the {2} is {0:%B}, the {3} is {0:%I:%M%p}.'."
+"format(dt, \"day\", \"month\", \"time\")\n"
+"'The day is 21, the month is November, the time is 04:30PM.'"
 
 #: library/datetime.rst:1720
 msgid ""
@@ -2404,6 +2728,49 @@ msgid ""
 "            return \"+04:30\"\n"
 "        return \"+04\""
 msgstr ""
+"from datetime import timedelta, datetime, tzinfo, timezone\n"
+"\n"
+"class KabulTz(tzinfo):\n"
+"    # Kabul used +4 until 1945, when they moved to +4:30\n"
+"    UTC_MOVE_DATE = datetime(1944, 12, 31, 20, tzinfo=timezone.utc)\n"
+"\n"
+"    def utcoffset(self, dt):\n"
+"        if dt.year < 1945:\n"
+"            return timedelta(hours=4)\n"
+"        elif (1945, 1, 1, 0, 0) <= dt.timetuple()[:5] < (1945, 1, 1, 0, "
+"30):\n"
+"            # An ambiguous (\"imaginary\") half-hour range representing\n"
+"            # a 'fold' in time due to the shift from +4 to +4:30.\n"
+"            # If dt falls in the imaginary range, use fold to decide how\n"
+"            # to resolve. See PEP495.\n"
+"            return timedelta(hours=4, minutes=(30 if dt.fold else 0))\n"
+"        else:\n"
+"            return timedelta(hours=4, minutes=30)\n"
+"\n"
+"    def fromutc(self, dt):\n"
+"        # Follow same validations as in datetime.tzinfo\n"
+"        if not isinstance(dt, datetime):\n"
+"            raise TypeError(\"fromutc() requires a datetime argument\")\n"
+"        if dt.tzinfo is not self:\n"
+"            raise ValueError(\"dt.tzinfo is not self\")\n"
+"\n"
+"        # A custom implementation is required for fromutc as\n"
+"        # the input to this function is a datetime with utc values\n"
+"        # but with a tzinfo set to self.\n"
+"        # See datetime.astimezone or fromtimestamp.\n"
+"        if dt.replace(tzinfo=timezone.utc) >= self.UTC_MOVE_DATE:\n"
+"            return dt + timedelta(hours=4, minutes=30)\n"
+"        else:\n"
+"            return dt + timedelta(hours=4)\n"
+"\n"
+"    def dst(self, dt):\n"
+"        # Kabul does not observe daylight saving time.\n"
+"        return timedelta(0)\n"
+"\n"
+"    def tzname(self, dt):\n"
+"        if dt >= self.UTC_MOVE_DATE:\n"
+"            return \"+04:30\"\n"
+"        return \"+04\""
 
 #: library/datetime.rst:1767
 msgid "Usage of ``KabulTz`` from above::"
@@ -2432,6 +2799,26 @@ msgid ""
 ">>> dt2 == dt3\n"
 "True"
 msgstr ""
+">>> tz1 = KabulTz()\n"
+"\n"
+">>> # Datetime before the change\n"
+">>> dt1 = datetime(1900, 11, 21, 16, 30, tzinfo=tz1)\n"
+">>> print(dt1.utcoffset())\n"
+"4:00:00\n"
+"\n"
+">>> # Datetime after the change\n"
+">>> dt2 = datetime(2006, 6, 14, 13, 0, tzinfo=tz1)\n"
+">>> print(dt2.utcoffset())\n"
+"4:30:00\n"
+"\n"
+">>> # Convert datetime to another time zone\n"
+">>> dt3 = dt2.astimezone(timezone.utc)\n"
+">>> dt3\n"
+"datetime.datetime(2006, 6, 14, 8, 30, tzinfo=datetime.timezone.utc)\n"
+">>> dt2\n"
+"datetime.datetime(2006, 6, 14, 13, 0, tzinfo=KabulTz())\n"
+">>> dt2 == dt3\n"
+"True"
 
 #: library/datetime.rst:1793
 msgid ":class:`.time` Objects"
@@ -2564,6 +2951,24 @@ msgid ""
 ">>> time.fromisoformat('04:23:01+00:00')\n"
 "datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)"
 msgstr ""
+">>> from datetime import time\n"
+">>> time.fromisoformat('04:23:01')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('T04:23:01')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('T042301')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('04:23:01.000384')\n"
+"datetime.time(4, 23, 1, 384)\n"
+">>> time.fromisoformat('04:23:01,000384')\n"
+"datetime.time(4, 23, 1, 384)\n"
+">>> time.fromisoformat('04:23:01+04:00')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone(datetime."
+"timedelta(seconds=14400)))\n"
+">>> time.fromisoformat('04:23:01Z')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)\n"
+">>> time.fromisoformat('04:23:01+00:00')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)"
 
 #: library/datetime.rst:1935
 msgid ""
@@ -2649,6 +3054,15 @@ msgid ""
 ">>> dt.isoformat(timespec='auto')\n"
 "'12:34:56'"
 msgstr ""
+">>> from datetime import time\n"
+">>> time(hour=12, minute=34, second=56, microsecond=123456)."
+"isoformat(timespec='minutes')\n"
+"'12:34'\n"
+">>> dt = time(hour=12, minute=34, second=56, microsecond=0)\n"
+">>> dt.isoformat(timespec='microseconds')\n"
+"'12:34:56.000000'\n"
+">>> dt.isoformat(timespec='auto')\n"
+"'12:34:56'"
 
 #: library/datetime.rst:2019
 msgid "For a time ``t``, ``str(t)`` is equivalent to ``t.isoformat()``."
@@ -2725,6 +3139,30 @@ msgid ""
 ">>> 'The {} is {:%H:%M}.'.format(\"time\", t)\n"
 "'The time is 12:10.'"
 msgstr ""
+">>> from datetime import time, tzinfo, timedelta\n"
+">>> class TZ1(tzinfo):\n"
+"...     def utcoffset(self, dt):\n"
+"...         return timedelta(hours=1)\n"
+"...     def dst(self, dt):\n"
+"...         return timedelta(0)\n"
+"...     def tzname(self,dt):\n"
+"...         return \"+01:00\"\n"
+"...     def  __repr__(self):\n"
+"...         return f\"{self.__class__.__name__}()\"\n"
+"...\n"
+">>> t = time(12, 10, 30, tzinfo=TZ1())\n"
+">>> t\n"
+"datetime.time(12, 10, 30, tzinfo=TZ1())\n"
+">>> t.isoformat()\n"
+"'12:10:30+01:00'\n"
+">>> t.dst()\n"
+"datetime.timedelta(0)\n"
+">>> t.tzname()\n"
+"'+01:00'\n"
+">>> t.strftime(\"%H:%M:%S %Z\")\n"
+"'12:10:30 +01:00'\n"
+">>> 'The {} is {:%H:%M}.'.format(\"time\", t)\n"
+"'The time is 12:10.'"
 
 #: library/datetime.rst:2095
 msgid ":class:`tzinfo` Objects"
@@ -2861,6 +3299,9 @@ msgid ""
 "    # a fixed-offset class:  doesn't account for DST\n"
 "    return timedelta(0)"
 msgstr ""
+"def dst(self, dt):\n"
+"    # a fixed-offset class:  doesn't account for DST\n"
+"    return timedelta(0)"
 
 #: library/datetime.rst:2189
 msgid "or::"
@@ -2878,6 +3319,15 @@ msgid ""
 "    else:\n"
 "        return timedelta(0)"
 msgstr ""
+"def dst(self, dt):\n"
+"    # Code to set dston and dstoff to the time zone's DST\n"
+"    # transition times based on the input dt.year, and expressed\n"
+"    # in standard local time.\n"
+"\n"
+"    if dston <= dt.replace(tzinfo=None) < dstoff:\n"
+"        return timedelta(hours=1)\n"
+"    else:\n"
+"        return timedelta(0)"
 
 #: library/datetime.rst:2201
 msgid ""
@@ -2986,6 +3436,20 @@ msgid ""
 "    else:\n"
 "        return dt"
 msgstr ""
+"def fromutc(self, dt):\n"
+"    # raise ValueError error if dt.tzinfo is not self\n"
+"    dtoff = dt.utcoffset()\n"
+"    dtdst = dt.dst()\n"
+"    # raise ValueError if dtoff is None or dtdst is None\n"
+"    delta = dtoff - dtdst  # this is self's standard offset\n"
+"    if delta:\n"
+"        dt += delta   # convert to standard local time\n"
+"        dtdst = dt.dst()\n"
+"        # raise ValueError if dtdst is None\n"
+"    if dtdst:\n"
+"        return dt + dtdst\n"
+"    else:\n"
+"        return dt"
 
 #: library/datetime.rst:2280
 msgid ""
@@ -3172,6 +3636,182 @@ msgid ""
 "Mountain = USTimeZone(-7, \"Mountain\", \"MST\", \"MDT\")\n"
 "Pacific  = USTimeZone(-8, \"Pacific\",  \"PST\", \"PDT\")\n"
 msgstr ""
+"from datetime import tzinfo, timedelta, datetime\n"
+"\n"
+"ZERO = timedelta(0)\n"
+"HOUR = timedelta(hours=1)\n"
+"SECOND = timedelta(seconds=1)\n"
+"\n"
+"# A class capturing the platform's idea of local time.\n"
+"# (May result in wrong values on historical times in\n"
+"#  timezones where UTC offset and/or the DST rules had\n"
+"#  changed in the past.)\n"
+"import time as _time\n"
+"\n"
+"STDOFFSET = timedelta(seconds = -_time.timezone)\n"
+"if _time.daylight:\n"
+"    DSTOFFSET = timedelta(seconds = -_time.altzone)\n"
+"else:\n"
+"    DSTOFFSET = STDOFFSET\n"
+"\n"
+"DSTDIFF = DSTOFFSET - STDOFFSET\n"
+"\n"
+"class LocalTimezone(tzinfo):\n"
+"\n"
+"    def fromutc(self, dt):\n"
+"        assert dt.tzinfo is self\n"
+"        stamp = (dt - datetime(1970, 1, 1, tzinfo=self)) // SECOND\n"
+"        args = _time.localtime(stamp)[:6]\n"
+"        dst_diff = DSTDIFF // SECOND\n"
+"        # Detect fold\n"
+"        fold = (args == _time.localtime(stamp - dst_diff))\n"
+"        return datetime(*args, microsecond=dt.microsecond,\n"
+"                        tzinfo=self, fold=fold)\n"
+"\n"
+"    def utcoffset(self, dt):\n"
+"        if self._isdst(dt):\n"
+"            return DSTOFFSET\n"
+"        else:\n"
+"            return STDOFFSET\n"
+"\n"
+"    def dst(self, dt):\n"
+"        if self._isdst(dt):\n"
+"            return DSTDIFF\n"
+"        else:\n"
+"            return ZERO\n"
+"\n"
+"    def tzname(self, dt):\n"
+"        return _time.tzname[self._isdst(dt)]\n"
+"\n"
+"    def _isdst(self, dt):\n"
+"        tt = (dt.year, dt.month, dt.day,\n"
+"              dt.hour, dt.minute, dt.second,\n"
+"              dt.weekday(), 0, 0)\n"
+"        stamp = _time.mktime(tt)\n"
+"        tt = _time.localtime(stamp)\n"
+"        return tt.tm_isdst > 0\n"
+"\n"
+"Local = LocalTimezone()\n"
+"\n"
+"\n"
+"# A complete implementation of current DST rules for major US time zones.\n"
+"\n"
+"def first_sunday_on_or_after(dt):\n"
+"    days_to_go = 6 - dt.weekday()\n"
+"    if days_to_go:\n"
+"        dt += timedelta(days_to_go)\n"
+"    return dt\n"
+"\n"
+"\n"
+"# US DST Rules\n"
+"#\n"
+"# This is a simplified (i.e., wrong for a few cases) set of rules for US\n"
+"# DST start and end times. For a complete and up-to-date set of DST rules\n"
+"# and timezone definitions, visit the Olson Database (or try pytz):\n"
+"# http://www.twinsun.com/tz/tz-link.htm\n"
+"# https://sourceforge.net/projects/pytz/ (might not be up-to-date)\n"
+"#\n"
+"# In the US, since 2007, DST starts at 2am (standard time) on the second\n"
+"# Sunday in March, which is the first Sunday on or after Mar 8.\n"
+"DSTSTART_2007 = datetime(1, 3, 8, 2)\n"
+"# and ends at 2am (DST time) on the first Sunday of Nov.\n"
+"DSTEND_2007 = datetime(1, 11, 1, 2)\n"
+"# From 1987 to 2006, DST used to start at 2am (standard time) on the first\n"
+"# Sunday in April and to end at 2am (DST time) on the last\n"
+"# Sunday of October, which is the first Sunday on or after Oct 25.\n"
+"DSTSTART_1987_2006 = datetime(1, 4, 1, 2)\n"
+"DSTEND_1987_2006 = datetime(1, 10, 25, 2)\n"
+"# From 1967 to 1986, DST used to start at 2am (standard time) on the last\n"
+"# Sunday in April (the one on or after April 24) and to end at 2am (DST "
+"time)\n"
+"# on the last Sunday of October, which is the first Sunday\n"
+"# on or after Oct 25.\n"
+"DSTSTART_1967_1986 = datetime(1, 4, 24, 2)\n"
+"DSTEND_1967_1986 = DSTEND_1987_2006\n"
+"\n"
+"def us_dst_range(year):\n"
+"    # Find start and end times for US DST. For years before 1967, return\n"
+"    # start = end for no DST.\n"
+"    if 2006 < year:\n"
+"        dststart, dstend = DSTSTART_2007, DSTEND_2007\n"
+"    elif 1986 < year < 2007:\n"
+"        dststart, dstend = DSTSTART_1987_2006, DSTEND_1987_2006\n"
+"    elif 1966 < year < 1987:\n"
+"        dststart, dstend = DSTSTART_1967_1986, DSTEND_1967_1986\n"
+"    else:\n"
+"        return (datetime(year, 1, 1), ) * 2\n"
+"\n"
+"    start = first_sunday_on_or_after(dststart.replace(year=year))\n"
+"    end = first_sunday_on_or_after(dstend.replace(year=year))\n"
+"    return start, end\n"
+"\n"
+"\n"
+"class USTimeZone(tzinfo):\n"
+"\n"
+"    def __init__(self, hours, reprname, stdname, dstname):\n"
+"        self.stdoffset = timedelta(hours=hours)\n"
+"        self.reprname = reprname\n"
+"        self.stdname = stdname\n"
+"        self.dstname = dstname\n"
+"\n"
+"    def __repr__(self):\n"
+"        return self.reprname\n"
+"\n"
+"    def tzname(self, dt):\n"
+"        if self.dst(dt):\n"
+"            return self.dstname\n"
+"        else:\n"
+"            return self.stdname\n"
+"\n"
+"    def utcoffset(self, dt):\n"
+"        return self.stdoffset + self.dst(dt)\n"
+"\n"
+"    def dst(self, dt):\n"
+"        if dt is None or dt.tzinfo is None:\n"
+"            # An exception may be sensible here, in one or both cases.\n"
+"            # It depends on how you want to treat them.  The default\n"
+"            # fromutc() implementation (called by the default astimezone()\n"
+"            # implementation) passes a datetime with dt.tzinfo is self.\n"
+"            return ZERO\n"
+"        assert dt.tzinfo is self\n"
+"        start, end = us_dst_range(dt.year)\n"
+"        # Can't compare naive to aware objects, so strip the timezone from\n"
+"        # dt first.\n"
+"        dt = dt.replace(tzinfo=None)\n"
+"        if start + HOUR <= dt < end - HOUR:\n"
+"            # DST is in effect.\n"
+"            return HOUR\n"
+"        if end - HOUR <= dt < end:\n"
+"            # Fold (an ambiguous hour): use dt.fold to disambiguate.\n"
+"            return ZERO if dt.fold else HOUR\n"
+"        if start <= dt < start + HOUR:\n"
+"            # Gap (a non-existent hour): reverse the fold rule.\n"
+"            return HOUR if dt.fold else ZERO\n"
+"        # DST is off.\n"
+"        return ZERO\n"
+"\n"
+"    def fromutc(self, dt):\n"
+"        assert dt.tzinfo is self\n"
+"        start, end = us_dst_range(dt.year)\n"
+"        start = start.replace(tzinfo=self)\n"
+"        end = end.replace(tzinfo=self)\n"
+"        std_time = dt + self.stdoffset\n"
+"        dst_time = std_time + HOUR\n"
+"        if end <= dst_time < end + HOUR:\n"
+"            # Repeated hour\n"
+"            return std_time.replace(fold=1)\n"
+"        if std_time < start or dst_time >= end:\n"
+"            # Standard time\n"
+"            return std_time\n"
+"        if start <= std_time < end - HOUR:\n"
+"            # Daylight saving time\n"
+"            return dst_time\n"
+"\n"
+"\n"
+"Eastern  = USTimeZone(-5, \"Eastern\",  \"EST\", \"EDT\")\n"
+"Central  = USTimeZone(-6, \"Central\",  \"CST\", \"CDT\")\n"
+"Mountain = USTimeZone(-7, \"Mountain\", \"MST\", \"MDT\")\n"
+"Pacific  = USTimeZone(-8, \"Pacific\",  \"PST\", \"PDT\")\n"
 
 #: library/datetime.rst:2286
 msgid ""
@@ -3192,6 +3832,13 @@ msgid ""
 "\n"
 "  end  23:MM  0:MM  1:MM  1:MM  2:MM  3:MM"
 msgstr ""
+"  UTC   3:MM  4:MM  5:MM  6:MM  7:MM  8:MM\n"
+"  EST  22:MM 23:MM  0:MM  1:MM  2:MM  3:MM\n"
+"  EDT  23:MM  0:MM  1:MM  2:MM  3:MM  4:MM\n"
+"\n"
+"start  22:MM 23:MM  0:MM  1:MM  3:MM  4:MM\n"
+"\n"
+"  end  23:MM  0:MM  1:MM  1:MM  2:MM  3:MM"
 
 #: library/datetime.rst:2300
 msgid ""
@@ -3217,6 +3864,18 @@ msgid ""
 "07:00:00 UTC = 03:00:00 EDT\n"
 "08:00:00 UTC = 04:00:00 EDT"
 msgstr ""
+">>> from datetime import datetime, timezone\n"
+">>> from tzinfo_examples import HOUR, Eastern\n"
+">>> u0 = datetime(2016, 3, 13, 5, tzinfo=timezone.utc)\n"
+">>> for i in range(4):\n"
+"...     u = u0 + i*HOUR\n"
+"...     t = u.astimezone(Eastern)\n"
+"...     print(u.time(), 'UTC =', t.time(), t.tzname())\n"
+"...\n"
+"05:00:00 UTC = 00:00:00 EST\n"
+"06:00:00 UTC = 01:00:00 EST\n"
+"07:00:00 UTC = 03:00:00 EDT\n"
+"08:00:00 UTC = 04:00:00 EDT"
 
 #: library/datetime.rst:2319
 msgid ""
@@ -3246,6 +3905,16 @@ msgid ""
 "06:00:00 UTC = 01:00:00 EST 1\n"
 "07:00:00 UTC = 02:00:00 EST 0"
 msgstr ""
+">>> u0 = datetime(2016, 11, 6, 4, tzinfo=timezone.utc)\n"
+">>> for i in range(4):\n"
+"...     u = u0 + i*HOUR\n"
+"...     t = u.astimezone(Eastern)\n"
+"...     print(u.time(), 'UTC =', t.time(), t.tzname(), t.fold)\n"
+"...\n"
+"04:00:00 UTC = 00:00:00 EDT 0\n"
+"05:00:00 UTC = 01:00:00 EDT 0\n"
+"06:00:00 UTC = 01:00:00 EST 1\n"
+"07:00:00 UTC = 02:00:00 EST 0"
 
 #: library/datetime.rst:2341
 msgid ""
@@ -3265,7 +3934,7 @@ msgstr ""
 
 #: library/datetime.rst:2352
 msgid ":mod:`zoneinfo`"
-msgstr ""
+msgstr ":mod:`zoneinfo`"
 
 #: library/datetime.rst:2353
 msgid ""
@@ -3452,6 +4121,11 @@ msgid ""
 ">>> _.strftime('%a %d %b %Y, %I:%M%p')\n"
 "'Mon 31 Jan 2022, 11:59PM'"
 msgstr ""
+">>> datetime.strptime('31/01/22 23:59:59.999999',\n"
+"...                   '%d/%m/%y %H:%M:%S.%f')\n"
+"datetime.datetime(2022, 1, 31, 23, 59, 59, 999999)\n"
+">>> _.strftime('%a %d %b %Y, %I:%M%p')\n"
+"'Mon 31 Jan 2022, 11:59PM'"
 
 #: library/datetime.rst:2484
 msgid ""
@@ -3477,7 +4151,7 @@ msgstr ""
 
 #: library/datetime.rst:2490
 msgid "``%a``"
-msgstr ""
+msgstr "``%a``"
 
 #: library/datetime.rst:2490
 msgid "Weekday as locale's abbreviated name."
@@ -3493,7 +4167,7 @@ msgstr ""
 
 #: library/datetime.rst:2495
 msgid "``%A``"
-msgstr ""
+msgstr "``%A``"
 
 #: library/datetime.rst:2495
 msgid "Weekday as locale's full name."
@@ -3509,7 +4183,7 @@ msgstr ""
 
 #: library/datetime.rst:2500
 msgid "``%w``"
-msgstr ""
+msgstr "``%w``"
 
 #: library/datetime.rst:2500
 msgid "Weekday as a decimal number, where 0 is Sunday and 6 is Saturday."
@@ -3517,11 +4191,11 @@ msgstr ""
 
 #: library/datetime.rst:2500
 msgid "0, 1, ..., 6"
-msgstr ""
+msgstr "0, 1, ..., 6"
 
 #: library/datetime.rst:2504
 msgid "``%d``"
-msgstr ""
+msgstr "``%d``"
 
 #: library/datetime.rst:2504
 msgid "Day of the month as a zero-padded decimal number."
@@ -3529,16 +4203,16 @@ msgstr ""
 
 #: library/datetime.rst:2504
 msgid "01, 02, ..., 31"
-msgstr ""
+msgstr "01, 02, ..., 31"
 
 #: library/datetime.rst:2517 library/datetime.rst:2526
 #: library/datetime.rst:2535 library/datetime.rst:2553
 msgid "\\(9)"
-msgstr ""
+msgstr "\\(9)"
 
 #: library/datetime.rst:2507
 msgid "``%b``"
-msgstr ""
+msgstr "``%b``"
 
 #: library/datetime.rst:2507
 msgid "Month as locale's abbreviated name."
@@ -3546,15 +4220,15 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "Jan, Feb, ..., Dec (en_US);"
-msgstr ""
+msgstr "Jan, Feb, ..., Dec (en_US);"
 
 #: library/datetime.rst:0
 msgid "Jan, Feb, ..., Dez (de_DE)"
-msgstr ""
+msgstr "Jan, Feb, ..., Dez (de_DE)"
 
 #: library/datetime.rst:2512
 msgid "``%B``"
-msgstr ""
+msgstr "``%B``"
 
 #: library/datetime.rst:2512
 msgid "Month as locale's full name."
@@ -3562,15 +4236,15 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "January, February, ..., December (en_US);"
-msgstr ""
+msgstr "January, February, ..., December (en_US);"
 
 #: library/datetime.rst:0
 msgid "Januar, Februar, ..., Dezember (de_DE)"
-msgstr ""
+msgstr "Januar, Februar, ..., Dezember (de_DE) "
 
 #: library/datetime.rst:2517
 msgid "``%m``"
-msgstr ""
+msgstr "``%m``"
 
 #: library/datetime.rst:2517
 msgid "Month as a zero-padded decimal number."
@@ -3578,11 +4252,11 @@ msgstr ""
 
 #: library/datetime.rst:2529
 msgid "01, 02, ..., 12"
-msgstr ""
+msgstr "01, 02, ..., 12"
 
 #: library/datetime.rst:2520
 msgid "``%y``"
-msgstr ""
+msgstr "``%y``"
 
 #: library/datetime.rst:2520
 msgid "Year without century as a zero-padded decimal number."
@@ -3590,11 +4264,11 @@ msgstr ""
 
 #: library/datetime.rst:2520
 msgid "00, 01, ..., 99"
-msgstr ""
+msgstr "00, 01, ..., 99"
 
 #: library/datetime.rst:2523
 msgid "``%Y``"
-msgstr ""
+msgstr "``%Y``"
 
 #: library/datetime.rst:2523
 msgid "Year with century as a decimal number."
@@ -3602,11 +4276,11 @@ msgstr ""
 
 #: library/datetime.rst:2593
 msgid "0001, 0002, ..., 2013, 2014, ..., 9998, 9999"
-msgstr ""
+msgstr "0001, 0002, ..., 2013, 2014, ..., 9998, 9999"
 
 #: library/datetime.rst:2526
 msgid "``%H``"
-msgstr ""
+msgstr "``%H``"
 
 #: library/datetime.rst:2526
 msgid "Hour (24-hour clock) as a zero-padded decimal number."
@@ -3614,11 +4288,11 @@ msgstr ""
 
 #: library/datetime.rst:2526
 msgid "00, 01, ..., 23"
-msgstr ""
+msgstr "00, 01, ..., 23"
 
 #: library/datetime.rst:2529
 msgid "``%I``"
-msgstr ""
+msgstr "``%I``"
 
 #: library/datetime.rst:2529
 msgid "Hour (12-hour clock) as a zero-padded decimal number."
@@ -3626,7 +4300,7 @@ msgstr ""
 
 #: library/datetime.rst:2532
 msgid "``%p``"
-msgstr ""
+msgstr "``%p``"
 
 #: library/datetime.rst:2532
 msgid "Locale's equivalent of either AM or PM."
@@ -3634,19 +4308,19 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "AM, PM (en_US);"
-msgstr ""
+msgstr "AM, PM (en_US);"
 
 #: library/datetime.rst:0
 msgid "am, pm (de_DE)"
-msgstr ""
+msgstr "am, pm (de_DE)"
 
 #: library/datetime.rst:2532
 msgid "\\(1), \\(3)"
-msgstr ""
+msgstr "\\(1), \\(3)"
 
 #: library/datetime.rst:2535
 msgid "``%M``"
-msgstr ""
+msgstr "``%M``"
 
 #: library/datetime.rst:2535
 msgid "Minute as a zero-padded decimal number."
@@ -3654,11 +4328,11 @@ msgstr ""
 
 #: library/datetime.rst:2538
 msgid "00, 01, ..., 59"
-msgstr ""
+msgstr "00, 01, ..., 59"
 
 #: library/datetime.rst:2538
 msgid "``%S``"
-msgstr ""
+msgstr "``%S``"
 
 #: library/datetime.rst:2538
 msgid "Second as a zero-padded decimal number."
@@ -3666,11 +4340,11 @@ msgstr ""
 
 #: library/datetime.rst:2538
 msgid "\\(4), \\(9)"
-msgstr ""
+msgstr "\\(4), \\(9)"
 
 #: library/datetime.rst:2541
 msgid "``%f``"
-msgstr ""
+msgstr "``%f``"
 
 #: library/datetime.rst:2541
 msgid "Microsecond as a decimal number, zero-padded to 6 digits."
@@ -3678,15 +4352,15 @@ msgstr ""
 
 #: library/datetime.rst:2541
 msgid "000000, 000001, ..., 999999"
-msgstr ""
+msgstr "000000, 000001, ..., 999999"
 
 #: library/datetime.rst:2541
 msgid "\\(5)"
-msgstr ""
+msgstr "\\(5)"
 
 #: library/datetime.rst:2704
 msgid "``%z``"
-msgstr ""
+msgstr "``%z``"
 
 #: library/datetime.rst:2545
 msgid ""
@@ -3696,15 +4370,15 @@ msgstr ""
 
 #: library/datetime.rst:2545
 msgid "(empty), +0000, -0400, +1030, +063415, -030712.345216"
-msgstr ""
+msgstr "(empty), +0000, -0400, +1030, +063415, -030712.345216"
 
 #: library/datetime.rst:2550 library/datetime.rst:2607
 msgid "\\(6)"
-msgstr ""
+msgstr "\\(6)"
 
 #: library/datetime.rst:2730
 msgid "``%Z``"
-msgstr ""
+msgstr "``%Z``"
 
 #: library/datetime.rst:2550
 msgid "Time zone name (empty string if the object is naive)."
@@ -3712,11 +4386,11 @@ msgstr ""
 
 #: library/datetime.rst:2550
 msgid "(empty), UTC, GMT"
-msgstr ""
+msgstr "(empty), UTC, GMT"
 
 #: library/datetime.rst:2553
 msgid "``%j``"
-msgstr ""
+msgstr "``%j``"
 
 #: library/datetime.rst:2553
 msgid "Day of the year as a zero-padded decimal number."
@@ -3724,11 +4398,11 @@ msgstr ""
 
 #: library/datetime.rst:2553
 msgid "001, 002, ..., 366"
-msgstr ""
+msgstr "001, 002, ..., 366"
 
 #: library/datetime.rst:2556
 msgid "``%U``"
-msgstr ""
+msgstr "``%U``"
 
 #: library/datetime.rst:2556
 msgid ""
@@ -3739,15 +4413,15 @@ msgstr ""
 
 #: library/datetime.rst:2564
 msgid "00, 01, ..., 53"
-msgstr ""
+msgstr "00, 01, ..., 53"
 
 #: library/datetime.rst:2564
 msgid "\\(7), \\(9)"
-msgstr ""
+msgstr "\\(7), \\(9)"
 
 #: library/datetime.rst:2564
 msgid "``%W``"
-msgstr ""
+msgstr "``%W``"
 
 #: library/datetime.rst:2564
 msgid ""
@@ -3758,7 +4432,7 @@ msgstr ""
 
 #: library/datetime.rst:2572
 msgid "``%c``"
-msgstr ""
+msgstr "``%c``"
 
 #: library/datetime.rst:2572
 msgid "Locale's appropriate date and time representation."
@@ -3766,15 +4440,15 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "Tue Aug 16 21:30:00 1988 (en_US);"
-msgstr ""
+msgstr "Tue Aug 16 21:30:00 1988 (en_US);"
 
 #: library/datetime.rst:0
 msgid "Di 16 Aug 21:30:00 1988 (de_DE)"
-msgstr ""
+msgstr "Di 16 Aug 21:30:00 1988 (de_DE)"
 
 #: library/datetime.rst:2577
 msgid "``%x``"
-msgstr ""
+msgstr "``%x``"
 
 #: library/datetime.rst:2577
 msgid "Locale's appropriate date representation."
@@ -3782,19 +4456,19 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "08/16/88 (None);"
-msgstr ""
+msgstr "08/16/88 (None);"
 
 #: library/datetime.rst:0
 msgid "08/16/1988 (en_US);"
-msgstr ""
+msgstr "08/16/1988 (en_US);"
 
 #: library/datetime.rst:0
 msgid "16.08.1988 (de_DE)"
-msgstr ""
+msgstr "16.08.1988 (de_DE)"
 
 #: library/datetime.rst:2581
 msgid "``%X``"
-msgstr ""
+msgstr "``%X``"
 
 #: library/datetime.rst:2581
 msgid "Locale's appropriate time representation."
@@ -3802,15 +4476,15 @@ msgstr ""
 
 #: library/datetime.rst:0
 msgid "21:30:00 (en_US);"
-msgstr ""
+msgstr "21:30:00 (en_US);"
 
 #: library/datetime.rst:0
 msgid "21:30:00 (de_DE)"
-msgstr ""
+msgstr "21:30:00 (de_DE)"
 
 #: library/datetime.rst:2584
 msgid "``%%``"
-msgstr ""
+msgstr "``%%``"
 
 #: library/datetime.rst:2584
 msgid "A literal ``'%'`` character."
@@ -3818,7 +4492,7 @@ msgstr ""
 
 #: library/datetime.rst:2584
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: library/datetime.rst:2587
 msgid ""
@@ -3828,7 +4502,7 @@ msgstr ""
 
 #: library/datetime.rst:2593
 msgid "``%G``"
-msgstr ""
+msgstr "``%G``"
 
 #: library/datetime.rst:2593
 msgid ""
@@ -3838,11 +4512,11 @@ msgstr ""
 
 #: library/datetime.rst:2593
 msgid "\\(8)"
-msgstr ""
+msgstr "\\(8)"
 
 #: library/datetime.rst:2598
 msgid "``%u``"
-msgstr ""
+msgstr "``%u``"
 
 #: library/datetime.rst:2598
 msgid "ISO 8601 weekday as a decimal number where 1 is Monday."
@@ -3850,11 +4524,11 @@ msgstr ""
 
 #: library/datetime.rst:2598
 msgid "1, 2, ..., 7"
-msgstr ""
+msgstr "1, 2, ..., 7"
 
 #: library/datetime.rst:2601
 msgid "``%V``"
-msgstr ""
+msgstr "``%V``"
 
 #: library/datetime.rst:2601
 msgid ""
@@ -3872,7 +4546,7 @@ msgstr ""
 
 #: library/datetime.rst:2726
 msgid "``%:z``"
-msgstr ""
+msgstr "``%:z``"
 
 #: library/datetime.rst:2607
 msgid ""
@@ -4121,6 +4795,10 @@ msgid ""
 "bug.\n"
 "datetime.datetime(1984, 2, 29, 0, 0)"
 msgstr ""
+">>> month_day = \"02/29\"\n"
+">>> datetime.strptime(f\"{month_day};1984\", \"%m/%d;%Y\")  # No leap year "
+"bug.\n"
+"datetime.datetime(1984, 2, 29, 0, 0)"
 
 #: library/datetime.rst:2778
 msgid ""
@@ -4132,7 +4810,7 @@ msgstr ""
 
 #: library/datetime.rst:2785
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημείωσεισς"
 
 #: library/datetime.rst:2786
 msgid "If, that is, we ignore the effects of Relativity"
@@ -4162,8 +4840,8 @@ msgstr ""
 
 #: library/datetime.rst:2441
 msgid "% (percent)"
-msgstr ""
+msgstr "% (ποσοστιαία)"
 
 #: library/datetime.rst:2441
 msgid "datetime format"
-msgstr ""
+msgstr "μορφή ημερομηνίας και ώρας"
