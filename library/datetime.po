@@ -463,7 +463,7 @@ msgstr ""
 "Εάν κάποιο από τα ορίσματα είναι αριθμός κινητής υποδιαστολής και υπάρχουν δεκαδικά μικροδευτερόλεπτα, τα "
 "δεκαδικά μικροδευτερόλεπτα που απομένουν από όλα τα ορίσματα συνδυάζονται και το άθροισμά τους στρογγυλοποιείται "
 "στο πλησιέστερο μικροδευτερόλεπτο χρησιμοποιώντας τον κανόνα σπασίματος ισοπαλίας \"round-half-to-even\". "
-"Εάν κανένα από τα ορίσματα δεν είναι αριθμός κινητής υποδιαστολής, οι διαδικασίες μετατροπής και κανονικοποίησης είναι ακριβείς (δεν χάνεται πληροφορία)."
+"Εάν κανένα από τα ορίσματα δεν είναι αριθμός κινητής υποδιαστολής, οι πράξεις μετατροπής και κανονικοποίησης είναι ακριβείς (δεν χάνεται πληροφορία)."
 
 #: library/datetime.rst:253
 msgid ""
@@ -498,6 +498,8 @@ msgid ""
 "Since the string representation of :class:`!timedelta` objects can be "
 "confusing, use the following recipe to produce a more readable format:"
 msgstr ""
+"Δεδομένου ότι η συμβολοσειρά αναπαράστασης των αντικειμένων :class:`!timedelta` μπορεί να είναι "
+"μπερδευτική, χρησιμοποιήστε την παρακάτω συνταγή για να παραγάγετε μια πιο αναγνώσιμη μορφή:"
 
 #: library/datetime.rst:267
 msgid ""
@@ -525,23 +527,26 @@ msgstr ""
 
 #: library/datetime.rst:615 library/datetime.rst:1813 library/datetime.rst:2434
 msgid "Class attributes:"
-msgstr ""
+msgstr "Χαρακτηριστικά Κλάσης:"
 
 #: library/datetime.rst:285
 msgid "The most negative :class:`timedelta` object, ``timedelta(-999999999)``."
-msgstr ""
+msgstr "Το πιο αρνητικό αντικείμενο της :class:`timedelta`, ``timedelta(-999999999)``."
 
 #: library/datetime.rst:290
 msgid ""
 "The most positive :class:`timedelta` object, ``timedelta(days=999999999, "
 "hours=23, minutes=59, seconds=59, microseconds=999999)``."
 msgstr ""
+"Το πιο θετικό αντικείμενο της :class:`timedelta`, ``timedelta(days=999999999, "
+"hours=23, minutes=59, seconds=59, microseconds=999999)``."
 
 #: library/datetime.rst:296
 msgid ""
 "The smallest possible difference between non-equal :class:`timedelta` "
 "objects, ``timedelta(microseconds=1)``."
 msgstr ""
+"Η μικρότερη δυνατή διαφορά μεταξύ μη ίσων αντικειμένων :class:`timedelta`, ``timedelta(microseconds=1)``."
 
 #: library/datetime.rst:299
 msgid ""
@@ -549,18 +554,21 @@ msgid ""
 "timedelta.min``. ``-timedelta.max`` is not representable as a :class:"
 "`timedelta` object."
 msgstr ""
+"Σημειώστε ότι, λόγω της κανονικοποιήσης, το ``timedelta.max``είναι μεγαλύτερο από το ``-"
+"timedelta.min``. ``-timedelta.max`` δεν μπορεί να αναπαρασταθεί ως ένα αντικείμενο :class:"
+"`timedelta`."
 
 #: library/datetime.rst:633 library/datetime.rst:1833
 msgid "Instance attributes (read-only):"
-msgstr ""
+msgstr "Χαρακτηριστικά στιγμιοτύπου (μόνο για ανάγνωση):"
 
 #: library/datetime.rst:307
 msgid "Between -999,999,999 and 999,999,999 inclusive."
-msgstr ""
+msgstr "Μεταξύ -999,999,999 και 999,999,999 συμπεριλαμβανομένου."
 
 #: library/datetime.rst:312
 msgid "Between 0 and 86,399 inclusive."
-msgstr ""
+msgstr "Μεταξύ 0 και 86,399 συμπεριλαμβανομένου."
 
 #: library/datetime.rst:316
 msgid ""
@@ -568,6 +576,8 @@ msgid ""
 "when it is actually intended to get a :meth:`~timedelta.total_seconds` value "
 "instead:"
 msgstr ""
+"Είναι ένα σχετικά συνηθισμένο σφάλμα ο κώδικας να χρησιμοποιεί κατά λάθος αυτό το χαρακτηριστικό, "
+"όταν στην πραγματικότητα προορίζεται να πάρει την τιμή της :meth:`~timedelta.total_seconds`:"
 
 #: library/datetime.rst:320
 msgid ""
@@ -587,19 +597,19 @@ msgstr ""
 
 #: library/datetime.rst:331
 msgid "Between 0 and 999,999 inclusive."
-msgstr ""
+msgstr "Μεταξύ 0 και 999,999 συμπεριλαμβανομένου."
 
 #: library/datetime.rst:650 library/datetime.rst:1248
 msgid "Supported operations:"
-msgstr ""
+msgstr "Υποστηριζόμενες πράξεις:"
 
 #: library/datetime.rst:653 library/datetime.rst:1251
 msgid "Operation"
-msgstr ""
+msgstr "Πράξη"
 
 #: library/datetime.rst:653 library/datetime.rst:1251
 msgid "Result"
-msgstr ""
+msgstr "Αποτέλεσμα"
 
 #: library/datetime.rst:341
 msgid "``t1 = t2 + t3``"
@@ -610,6 +620,8 @@ msgid ""
 "Sum of ``t2`` and ``t3``. Afterwards ``t1 - t2 == t3`` and ``t1 - t3 == t2`` "
 "are true. (1)"
 msgstr ""
+"Το άθροισμα των ``t2`` και ``t3``. Στη συνέχεια το ``t1 - t2 == t3`` και το ``t1 - t3 == t2`` "
+"είναι αληθές. (1)"
 
 #: library/datetime.rst:345
 msgid "``t1 = t2 - t3``"
@@ -620,6 +632,8 @@ msgid ""
 "Difference of ``t2``  and ``t3``. Afterwards ``t1 == t2 - t3`` and ``t2 == "
 "t1 + t3`` are true. (1)(6)"
 msgstr ""
+"Η διαφορά του ``t2`` και ``t3``. Στη συνέχεια το ``t1 == t2 - t3`` και ``t2 == "
+"t1 + t3`` είναι αληθές. (1)(6)"
 
 #: library/datetime.rst:349
 msgid "``t1 = t2 * i or t1 = i * t2``"
@@ -630,10 +644,11 @@ msgid ""
 "Delta multiplied by an integer. Afterwards ``t1 // i == t2`` is true, "
 "provided ``i != 0``."
 msgstr ""
+"Διπλασιασμός του διαστήματος με έναν ακέραιο. Στη συνέχεια το ``t1 // i == t2`` είναι αληθές, εφόσον ``i != 0``."
 
 #: library/datetime.rst:353
 msgid "In general, ``t1  * i == t1 * (i-1) + t1`` is true. (1)"
-msgstr ""
+msgstr "Γενικά, το ``t1  * i == t1 * (i-1) + t1`` είναι αληθές. (1)"
 
 #: library/datetime.rst:356
 msgid "``t1 = t2 * f or t1 = f * t2``"
@@ -644,6 +659,9 @@ msgid ""
 "Delta multiplied by a float. The result is rounded to the nearest multiple "
 "of timedelta.resolution using round-half-to-even."
 msgstr ""
+"Διπλασιασμός του διαστήματος με έναν αριθμό κινητής υποδιαστολής. "
+"Το αποτέλεσμα στρογγυλοποιείται στο πλησιέστερο πολλαπλάσιο της timedelta.resolution "
+"χρησιμοποιώντας τον κανόνα σπασίματος ισοπαλίας \"round-half-to-even\"."
 
 #: library/datetime.rst:360
 msgid "``f = t2 / t3``"
@@ -654,6 +672,8 @@ msgid ""
 "Division (3) of overall duration ``t2`` by interval unit ``t3``. Returns a :"
 "class:`float` object."
 msgstr ""
+"Διαίρεση (3) της συνολικής διάρκειας ``t2`` με τη μονάδα διαστήματος ``t3``. Επιστρέφει ένα "
+":class:`float` αντικείμενο."
 
 #: library/datetime.rst:364
 msgid "``t1 = t2 / f or t1 = t2 / i``"
@@ -664,6 +684,9 @@ msgid ""
 "Delta divided by a float or an int. The result is rounded to the nearest "
 "multiple of timedelta.resolution using round-half-to-even."
 msgstr ""
+"Διαίρεση του διαστήρματος με έναν αριθμό κινητής υποδιαστολής ή έναν ακέραιο. Το αποτέλεσμα θα "
+"στρογγυλοποιηθεί στο πλησιέστερο πολλαπλάσιο της timedelta.resolution "
+"χρησιμοποιώντας τον κανόνα σπασίματος ισοπαλίας \"round-half-to-even\"."
 
 #: library/datetime.rst:368
 msgid "``t1 = t2 // i`` or ``t1 = t2 // t3``"
@@ -674,6 +697,8 @@ msgid ""
 "The floor is computed and the remainder (if any) is thrown away. In the "
 "second case, an integer is returned. (3)"
 msgstr ""
+"Η ακέραια διαίρεση υπολογίζεται και το υπόλοιπο (εάν υπάρχει) παραλείπεται. Στην δεύτερη περίπτωση, "
+"ένα ακέραιος επιστρέφεται. (3)"
 
 #: library/datetime.rst:372
 msgid "``t1 = t2 % t3``"
@@ -681,7 +706,7 @@ msgstr "``t1 = t2 % t3``"
 
 #: library/datetime.rst:372
 msgid "The remainder is computed as a :class:`timedelta` object. (3)"
-msgstr ""
+msgstr "Το υπόλοιπο υπολογίζεται ως ένα :class:`timedelta` αντικείμενο. (3)"
 
 #: library/datetime.rst:375
 msgid "``q, r = divmod(t1, t2)``"
@@ -692,6 +717,8 @@ msgid ""
 "Computes the quotient and the remainder: ``q = t1 // t2`` (3) and ``r = t1 % "
 "t2``. ``q`` is an integer and ``r`` is a :class:`timedelta` object."
 msgstr ""
+"Υπολογίζει το πηλίκο και το υπόλοιπο: ``q = t1 // t2`` (3) και ``r = t1 % "
+"t2``. Το ``q`` είναι ένας ακέραιος και το ``r`` είναι ένα :class:`timedelta` αντικείμενο."
 
 #: library/datetime.rst:380
 msgid "``+t1``"
@@ -699,7 +726,7 @@ msgstr "``+t1``"
 
 #: library/datetime.rst:380
 msgid "Returns a :class:`timedelta` object with the same value. (2)"
-msgstr ""
+msgstr "Επιστρέφει ένα :class:`timedelta` αντικείμενο με την ίδια τιμή. (2)"
 
 #: library/datetime.rst:383
 msgid "``-t1``"
@@ -710,6 +737,8 @@ msgid ""
 "Equivalent to ``timedelta(-t1.days, -t1.seconds, -t1.microseconds)``, and to "
 "``t1 * -1``. (1)(4)"
 msgstr ""
+"Ισοδύναμο με ``timedelta(-t1.days, -t1.seconds, -t1.microseconds)``, και με "
+"``t1 * -1``. (1)(4)"
 
 #: library/datetime.rst:387
 msgid "``abs(t)``"
@@ -720,6 +749,8 @@ msgid ""
 "Equivalent to ``+t`` when ``t.days >= 0``, and to ``-t`` when ``t.days < "
 "0``. (2)"
 msgstr ""
+"Ισοδύναμο με ``+t`` όταν ``t.days >= 0`` και με ``-t`` όταν ``t.days < "
+"0``. (2)"
 
 #: library/datetime.rst:390
 msgid "``str(t)``"
@@ -729,6 +760,9 @@ msgstr "``str(t)``"
 msgid ""
 "Returns a string in the form ``[D day[s], ][H]H:MM:SS[.UUUUUU]``, where D is "
 "negative for negative ``t``. (5)"
+msgstr ""
+"Επιστρέφει μια συμβολοσειρά στη φόρμα ``[D day[s], ][H]H:MM:SS[.UUUUUU]``, όπου D είναι "
+"αρνητικό για αρνητικό ``t``. (5)"
 msgstr ""
 
 #: library/datetime.rst:394
@@ -740,26 +774,28 @@ msgid ""
 "Returns a string representation of the :class:`timedelta` object as a "
 "constructor call with canonical attribute values."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά αναπαράστασης του :class:`timedelta` αντικειμένου ως μια "
+"κλήση κατασκευαστή με κανονικές τιμές χαρακτηριστικών."
 
 #: library/datetime.rst:672 library/datetime.rst:2663
 msgid "Notes:"
-msgstr ""
+msgstr "Σημειώσεις:"
 
 #: library/datetime.rst:403
 msgid "This is exact but may overflow."
-msgstr ""
+msgstr "Αυτό είναι ακριβές αλλά μπορεί να υπερχειλίσει."
 
 #: library/datetime.rst:406
 msgid "This is exact and cannot overflow."
-msgstr ""
+msgstr "Αυτό είναι ακριβές και δεν μπορεί να υπερχειλίσει."
 
 #: library/datetime.rst:409
 msgid "Division by zero raises :exc:`ZeroDivisionError`."
-msgstr ""
+msgstr "Η διαίρεση με το μηδέν κάνει raise :exc:`ZeroDivisionError`."
 
 #: library/datetime.rst:412
 msgid "``-timedelta.max`` is not representable as a :class:`timedelta` object."
-msgstr ""
+msgstr "Το ``-timedelta.max`` δεν μπορεί να αναπαρασταθεί ως ένα :class:`timedelta` αντικείμενο."
 
 #: library/datetime.rst:415
 msgid ""
@@ -767,6 +803,9 @@ msgid ""
 "similarly to their internal representation. This leads to somewhat unusual "
 "results for negative timedeltas. For example::"
 msgstr ""
+"Οι αναπαραστάσεις συμβολοσειράς :class:`timedelta` αντικειμένων είναι κανονικοποιημένα "
+"παρόμοια με την εσωτερική τους αναπαράσταση. Αυτό οδηγεί κάπως σε ασυνήθη αποτελέσματα για "
+"αρνητικά timedeltas. Για παράδειγμα::"
 
 #: library/datetime.rst:419
 msgid ""
@@ -786,6 +825,9 @@ msgid ""
 "t3)`` except when t3 is equal to ``timedelta.max``; in that case the former "
 "will produce a result while the latter will overflow."
 msgstr ""
+"Η έκφραση ``t2 - t3`` θα είναι συνέχεια ίση με την έκφραση ``t2 + (-"
+"t3)`` εκτός όταν το t3 είναι ίσο με ``timedelta.max``∙ σε αυτή τη περίπτωση το πρώτο θα παράγει "
+"ένα αποτέλεσμα ενώ το δεύτερο θα υπερχειλίσει."
 
 #: library/datetime.rst:429
 msgid ""
@@ -793,6 +835,9 @@ msgid ""
 "support certain additions and subtractions with :class:`date` and :class:`."
 "datetime` objects (see below)."
 msgstr ""
+"Εκτός από τις παραπάνω λειτουργίες, τα αντικείμενα :class:`timedelta` υποστηρίζουν "
+"ορισμένες προσθέσεις και αφαιρέσεις με αντικείμενα :class:`date` και :class:`datetime` (δείτε παρακάτω)."
+
 
 #: library/datetime.rst:433
 msgid ""
@@ -800,42 +845,49 @@ msgid ""
 "class:`timedelta` object are now supported, as are remainder operations and "
 "the :func:`divmod` function. True division and multiplication of a :class:"
 "`timedelta` object by a :class:`float` object are now supported."
-msgstr ""
+msgstr "" 
+"Υποστηρίζονται πλέον η ακέραια και η πραγματική διαίρεση ενός αντικειμένου :class:`timedelta` με άλλο "
+"αντικείμενο :class:`timedelta`, καθώς και οι πράξεις υπολοίπου και η συνάρτηση :func:`divmod`. "
+"Υποστηρίζονται επίσης η πραγματική διαίρεση και ο πολλαπλασιασμός ενός αντικειμένου :class:`timedelta` με αντικείμενο :class:`float`."
 
 #: library/datetime.rst:439
 msgid ":class:`timedelta` objects support equality and order comparisons."
-msgstr ""
+msgstr "Τα αντικείμενα :class:`timedelta` υποστηρίζουν συγκρίσεις ισότητας και διάταξης."
 
 #: library/datetime.rst:441
 msgid ""
 "In Boolean contexts, a :class:`timedelta` object is considered to be true if "
 "and only if it isn't equal to ``timedelta(0)``."
-msgstr ""
+msgstr "Σε Boolean συμφραζόμενα, ένα αντικείμενο :class:`timedelta` θεωρείται αληθές μόνο αν δεν είναι ίσο με ``timedelta(0)``."
 
 #: library/datetime.rst:714 library/datetime.rst:1956
 msgid "Instance methods:"
-msgstr ""
+msgstr "Μέθοδοι στιγμιοτύπου:"
 
 #: library/datetime.rst:448
 msgid ""
 "Return the total number of seconds contained in the duration. Equivalent to "
 "``td / timedelta(seconds=1)``. For interval units other than seconds, use "
 "the division form directly (e.g. ``td / timedelta(microseconds=1)``)."
-msgstr ""
+msgstr "Επιστρέφει το συνολικό αριθμό δευτερολέπτων που περιέχονται στη διάρκεια. "
+"Ισοδύναμο με ``td / timedelta(seconds=1)``. Για μονάδες διαστήματος εκτός από δευτερόλεπτα"
+", χρησιμοποιήστε απευθείας τη μορφή διαίρεσης (π.χ. ``td / timedelta(microseconds=1)``)."
+
 
 #: library/datetime.rst:452
 msgid ""
 "Note that for very large time intervals (greater than 270 years on most "
 "platforms) this method will lose microsecond accuracy."
-msgstr ""
+msgstr "Σημειώστε ότι για πολύ μεγάλα χρονικά διαστήματα (πάνω από 270 χρόνια στις "
+"περισσότερες πλατφόρμες) αυτή η μέθοδος θα χάσει ακρίβεια στα microseconds."
 
 #: library/datetime.rst:458
 msgid "Examples of usage: :class:`timedelta`"
-msgstr ""
+msgstr "Παραδείγματα χρήσης: :class:`timedelta`"
 
 #: library/datetime.rst:460
 msgid "An additional example of normalization::"
-msgstr ""
+msgstr "Ένα επιπλέον παράδειγμα κανονικοποίησης::"
 
 #: library/datetime.rst:462
 msgid ""
@@ -861,7 +913,7 @@ msgstr ""
 
 #: library/datetime.rst:472
 msgid "Examples of :class:`timedelta` arithmetic::"
-msgstr ""
+msgstr "Παραδείγματα αριθμητικών πράξεων με :class:`timedelta`::"
 
 #: library/datetime.rst:474
 msgid ""
@@ -902,54 +954,56 @@ msgid ""
 "A :class:`date` object represents a date (year, month and day) in an "
 "idealized calendar, the current Gregorian calendar indefinitely extended in "
 "both directions."
-msgstr ""
+msgstr "Ένα αντικείμενο :class:`date` αναπαριστά μια ημερομηνία (έτος, μήνα και ημέρα) σε ένα ιδεατό ημερολόγιο, "
+"το τρέχον Γρηγοριανό ημερολόγιο επεκτεταμένο επ' αόριστον και προς τις δύο κατευθύνσεις."
 
 #: library/datetime.rst:497
 msgid ""
 "January 1 of year 1 is called day number 1, January 2 of year 1 is called "
 "day number 2, and so on. [#]_"
-msgstr ""
+msgstr "Η 1η Ιανουαρίου του έτους 1 ονομάζεται ημέρα 1, η 2η Ιανουαρίου του έτους 1 ονομάζεται ημέρα 2, και ούτω καθεξής. [#]_"
 
 #: library/datetime.rst:502
 msgid ""
 "All arguments are required. Arguments must be integers, in the following "
 "ranges:"
-msgstr ""
+msgstr "Όλα τα ορίσματα είναι υποχρεωτικά. Τα ορίσματα πρέπει να είναι ακέραιοι αριθμοί, στα παρακάτω εύρη:"
 
 #: library/datetime.rst:505
 msgid "``MINYEAR <= year <= MAXYEAR``"
-msgstr ""
+msgstr "``MINYEAR <= year <= MAXYEAR``"
 
 #: library/datetime.rst:506
 msgid "``1 <= month <= 12``"
-msgstr ""
+msgstr "``1 <= month <= 12``"
 
 #: library/datetime.rst:507
 msgid "``1 <= day <= number of days in the given month and year``"
-msgstr ""
+msgstr "``1 <= day <= number of days in the given month and year``"
 
 #: library/datetime.rst:932
 msgid ""
 "If an argument outside those ranges is given, :exc:`ValueError` is raised."
 msgstr ""
+"Εάν ένα όρισμα εκτός αυτών των εύρων δοθεί, γίνεται raise :exc:`ValueError`."
 
 #: library/datetime.rst:937
 msgid "Other constructors, all class methods:"
-msgstr ""
+msgstr "Άλλοι κατασκευαστές, όλες οι μέθοδοι της κλάσης:"
 
 #: library/datetime.rst:516
 msgid "Return the current local date."
-msgstr ""
+msgstr "Επιστρέφει την τρέχουσα τοπική ημερομηνία."
 
 #: library/datetime.rst:518
 msgid "This is equivalent to ``date.fromtimestamp(time.time())``."
-msgstr ""
+msgstr "Αυτό είναι ισοδύναμο με ``date.fromtimestamp(time.time())``."
 
 #: library/datetime.rst:522
 msgid ""
 "Return the local date corresponding to the POSIX timestamp, such as is "
 "returned by :func:`time.time`."
-msgstr ""
+msgstr "Επιστρέφει την τοπική ημερομηνία που αντιστοιχεί στο POSIX timestamp, όπως επιστρέφεται από τη :func:`time.time`."
 
 #: library/datetime.rst:525
 msgid ""
@@ -960,6 +1014,11 @@ msgid ""
 "that include leap seconds in their notion of a timestamp, leap seconds are "
 "ignored by :meth:`fromtimestamp`."
 msgstr ""
+"Αυτό μπορεί να κάνει raise :exc:`OverflowError`, εάν το timestamp είναι εκτός του εύρους τιμών που υποστηρίζεται από τη "
+"πλατφόρμα C :c:func:`localtime` συνάρτηση, και :exc:`OSError` σε περίπτωση αποτυχίας της :c:func:`localtime`. "
+"Είναι κοινό αυτό να περιορίζεται σε έτη από το 1970 έως το 2038. Σημειώστε ότι σε μη POSIX συστήματα που περιλαμβάνουν "
+"δευτερόλεπτα διαλείμματος στην έννοια τους για ένα timestamp, τα δευτερόλεπτα διαλείμματος αγνοούνται από τη "
+":meth:`fromtimestamp`."
 
 #: library/datetime.rst:532
 msgid ""
@@ -968,39 +1027,45 @@ msgid ""
 "function. Raise :exc:`OSError` instead of :exc:`ValueError` on :c:func:"
 "`localtime` failure."
 msgstr ""
+"Κάνει raise :exc:`OverflowError` αντί για :exc:`ValueError` εάν το timestamp είναι εκτός του εύρους τιμών που υποστηρίζεται από τη "
+"πλατφόρμα C :c:func:`localtime` συνάρτηση. Κάνει raise :exc:`OSError` αντί για :exc:`ValueError` σε περίπτωση αποτυχίας της :c:func:`localtime`."
 
 #: library/datetime.rst:541
 msgid ""
 "Return the date corresponding to the proleptic Gregorian ordinal, where "
 "January 1 of year 1 has ordinal 1."
 msgstr ""
+"Επιστρέφει την ημερομηνία που αντιστοιχεί στο προληπτικό Γρηγοριανό αριθμό, όπου η 1η Ιανουαρίου του έτους 1 έχει αριθμό 1."
 
 #: library/datetime.rst:544
 msgid ""
 ":exc:`ValueError` is raised unless ``1 <= ordinal <= date.max.toordinal()``. "
 "For any date ``d``, ``date.fromordinal(d.toordinal()) == d``."
 msgstr ""
+"Γίνεται raise η :exc:`ValueError` εκτός εάν ``1 <= ordinal <= date.max.toordinal()``. "
+"Για οποιαδήποτε ημέρα ``d``, ``date.fromordinal(d.toordinal()) == d``."
 
 #: library/datetime.rst:551
 msgid ""
 "Return a :class:`date` corresponding to a *date_string* given in any valid "
 "ISO 8601 format, with the following exceptions:"
-msgstr ""
+msgstr "Επιστρέφει ένα αντικείμενο :class:`date` που αντιστοιχεί σε ένα *date_string* "
+"δοσμένο σε οποιαδήποτε έγκυρη μορφή ISO 8601, με τις εξής εξαιρέσεις:"
 
 #: library/datetime.rst:1097
 msgid ""
 "Reduced precision dates are not currently supported (``YYYY-MM``, ``YYYY``)."
-msgstr ""
+msgstr "Οι ημερομηνίες μειωμένης ακρίβειας δεν υποστηρίζονται προς το παρόν (``YYYY-MM``, ``YYYY``)."
 
 #: library/datetime.rst:1099
 msgid ""
 "Extended date representations are not currently supported (``±YYYYYY-MM-"
 "DD``)."
-msgstr ""
+msgstr "Οι εκτεταμένες αναπαραστάσεις ημερομηνίας δεν υποστηρίζονται προς το παρόν (``±YYYYYY-MM-DD``)."
 
 #: library/datetime.rst:1101
 msgid "Ordinal dates are not currently supported (``YYYY-OOO``)."
-msgstr ""
+msgstr "Οι διατακτικές ημερομηνίες δεν υποστηρίζονται προς το παρόν (``YYYY-OOO``)."
 
 #: library/datetime.rst:1103 library/datetime.rst:1569
 msgid "Examples::"
@@ -4806,15 +4871,18 @@ msgid ""
 "month without a year now emit a :exc:`DeprecationWarning`. In 3.15 or later "
 "we may change this into an error or change the default year to a leap year. "
 "See :gh:`70647`."
-msgstr ""
+msgstr "Κλήσεις της :meth:`~.datetime.strptime` με format string που περιέχει "
+"ημέρα του μήνα χωρίς έτος εμφανίζουν πλέον :exc:`DeprecationWarning`. Στην έκδοση 3.15 ή "
+"μεταγενέστερη αυτό μπορεί να μετατραπεί σε σφάλμα ή να αλλάξει "
+"το προεπιλεγμένο έτος σε δίσεκτο. Δείτε :gh:`70647`."
 
 #: library/datetime.rst:2785
 msgid "Footnotes"
-msgstr "Υποσημείωσεισς"
+msgstr "Υποσημειώσεις"
 
 #: library/datetime.rst:2786
 msgid "If, that is, we ignore the effects of Relativity"
-msgstr ""
+msgstr "Αν, δηλαδή, αγνοήσουμε τις επιδράσεις της Σχετικότητας"
 
 #: library/datetime.rst:2788
 msgid ""
@@ -4823,20 +4891,24 @@ msgid ""
 "base calendar for all computations. See the book for algorithms for "
 "converting between proleptic Gregorian ordinals and many other calendar "
 "systems."
-msgstr ""
+msgstr "Αυτό ταιριάζει με τον ορισμό του \"proleptic Gregorian\" "
+"ημερολογίου στο βιβλίο των Dershowitz και Reingold *Calendrical Calculations*, "
+"όπου αποτελεί τη βασική μέθοδο για όλους τους υπολογισμούς. Δείτε το βιβλίο "
+"για αλγορίθμους μετατροπής μεταξύ προλεπτικών Γρηγοριανών αριθμών και πολλών άλλων συστημάτων ημερολογίου."
 
 #: library/datetime.rst:2794
 msgid ""
 "See R. H. van Gent's `guide to the mathematics of the ISO 8601 calendar "
 "<https://web.archive.org/web/20220531051136/https://webspace.science.uu.nl/"
 "~gent0113/calendar/isocalendar.htm>`_ for a good explanation."
-msgstr ""
+msgstr "Δείτε τον οδηγό του R. H. van Gent για τα μαθηματικά του ημερολογίου "
+"ISO 8601 <https://web.archive.org/web/20220531051136/https://webspace.science.uu.nl/~gent0113/calendar/isocalendar.htm> για μια καλή εξήγηση."
 
 #: library/datetime.rst:2798
 msgid ""
 "Passing ``datetime.strptime('Feb 29', '%b %d')`` will fail since 1900 is not "
 "a leap year."
-msgstr ""
+msgstr "Η κλήση ``datetime.strptime('Feb 29', '%b %d')`` θα αποτύχει επειδή το 1900 δεν είναι δίσεκτο έτος."
 
 #: library/datetime.rst:2441
 msgid "% (percent)"
