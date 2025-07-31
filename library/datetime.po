@@ -4389,7 +4389,7 @@ msgstr "``%M``"
 
 #: library/datetime.rst:2535
 msgid "Minute as a zero-padded decimal number."
-msgstr ""
+msgstr "Λεπτό ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2538
 msgid "00, 01, ..., 59"
@@ -4401,7 +4401,7 @@ msgstr "``%S``"
 
 #: library/datetime.rst:2538
 msgid "Second as a zero-padded decimal number."
-msgstr ""
+msgstr "Δευτερόλεπτο ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2538
 msgid "\\(4), \\(9)"
@@ -4413,7 +4413,7 @@ msgstr "``%f``"
 
 #: library/datetime.rst:2541
 msgid "Microsecond as a decimal number, zero-padded to 6 digits."
-msgstr ""
+msgstr "Μικροδευτερόλεπτο ως δεκαδικό νούμερο, μηδενικά-γεμισμένο σε 6 ψηφία."
 
 #: library/datetime.rst:2541
 msgid "000000, 000001, ..., 999999"
@@ -4432,6 +4432,7 @@ msgid ""
 "UTC offset in the form ``±HHMM[SS[.ffffff]]`` (empty string if the object is "
 "naive)."
 msgstr ""
+"Διαφορά UTC σε μορφή ``±HHMM[SS[.ffffff]]`` (κενή συμβολοσειρά αν το αντικείμενο είναι αδαές)."
 
 #: library/datetime.rst:2545
 msgid "(empty), +0000, -0400, +1030, +063415, -030712.345216"
@@ -4447,11 +4448,11 @@ msgstr "``%Z``"
 
 #: library/datetime.rst:2550
 msgid "Time zone name (empty string if the object is naive)."
-msgstr ""
+msgstr "Όνομα ζώνης ώρας (κενή συμβολοσειρά αν το αντικείμενο είναι αδαές)."
 
 #: library/datetime.rst:2550
 msgid "(empty), UTC, GMT"
-msgstr "(empty), UTC, GMT"
+msgstr "(κενό), UTC, GMT"
 
 #: library/datetime.rst:2553
 msgid "``%j``"
@@ -4459,7 +4460,7 @@ msgstr "``%j``"
 
 #: library/datetime.rst:2553
 msgid "Day of the year as a zero-padded decimal number."
-msgstr ""
+msgstr "Ημέρα του έτους ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2553
 msgid "001, 002, ..., 366"
@@ -4475,6 +4476,8 @@ msgid ""
 "padded decimal number. All days in a new year preceding the first Sunday are "
 "considered to be in week 0."
 msgstr ""
+"Αριθμός εβδομάδας του έτους (Κυριακή ως την πρώτη ημέρα της εβδομάδας) ως μηδενικά-γεμισμένο "
+"δεκαδικό νούμερο. Όλες οι ημέρες σε ένα νέο έτος που προηγούνται της πρώτης Κυριακής θεωρούνται ότι είναι στην εβδομάδα 0."
 
 #: library/datetime.rst:2564
 msgid "00, 01, ..., 53"
@@ -4494,6 +4497,9 @@ msgid ""
 "padded decimal number. All days in a new year preceding the first Monday are "
 "considered to be in week 0."
 msgstr ""
+"Αριθμός εβδομάδας του έτους (Δευτέρα ως την πρώτη ημέρα της εβδομάδας) ως μηδενικά-γεμισμένο"
+"δεκαδικό νούμερο. Όλες οι ημέρες σε ένα νέο έτος που προηγούνται της πρώτης "
+"Δευτέρας θεωρούνται ότι είναι στην εβδομάδα 0."
 
 #: library/datetime.rst:2572
 msgid "``%c``"
@@ -4501,7 +4507,7 @@ msgstr "``%c``"
 
 #: library/datetime.rst:2572
 msgid "Locale's appropriate date and time representation."
-msgstr ""
+msgstr "Το τοπικά κατάλληλο για την αναπαράσταση ημερομηνίας και ώρας."
 
 #: library/datetime.rst:0
 msgid "Tue Aug 16 21:30:00 1988 (en_US);"
@@ -4517,7 +4523,7 @@ msgstr "``%x``"
 
 #: library/datetime.rst:2577
 msgid "Locale's appropriate date representation."
-msgstr ""
+msgstr "Το τοπικά κατάλληλο για την αναπαράσταση ημερομηνίας."
 
 #: library/datetime.rst:0
 msgid "08/16/88 (None);"
@@ -4537,7 +4543,7 @@ msgstr "``%X``"
 
 #: library/datetime.rst:2581
 msgid "Locale's appropriate time representation."
-msgstr ""
+msgstr "Το τοπικά κατάλληλο για την αναπαράσταση ώρας."
 
 #: library/datetime.rst:0
 msgid "21:30:00 (en_US);"
@@ -4553,7 +4559,7 @@ msgstr "``%%``"
 
 #: library/datetime.rst:2584
 msgid "A literal ``'%'`` character."
-msgstr ""
+msgstr "Ένας κυριολεκτικός χαρακτήρας ``'%'``."
 
 #: library/datetime.rst:2584
 msgid "%"
@@ -4564,6 +4570,8 @@ msgid ""
 "Several additional directives not required by the C89 standard are included "
 "for convenience. These parameters all correspond to ISO 8601 date values."
 msgstr ""
+"Ορισμένες επιπλέον οδηγίες που δεν απαιτούνται από το πρότυπο C89 περιλαμβάνονται για λόγους ευκολίας. "
+"Αυτές οι παράμετροι αντιστοιχούν όλες σε τιμές ημερομηνίας ISO 8601."
 
 #: library/datetime.rst:2593
 msgid "``%G``"
@@ -4574,6 +4582,7 @@ msgid ""
 "ISO 8601 year with century representing the year that contains the greater "
 "part of the ISO week (``%V``)."
 msgstr ""
+"ISO 8601 έτος με αιώνα που αντιπροσωπεύει το έτος που περιέχει το μεγαλύτερο μέρος της ISO εβδομάδας (``%V``)."
 
 #: library/datetime.rst:2593
 msgid "\\(8)"
@@ -4585,7 +4594,7 @@ msgstr "``%u``"
 
 #: library/datetime.rst:2598
 msgid "ISO 8601 weekday as a decimal number where 1 is Monday."
-msgstr ""
+msgstr "ISO 8601 ημέρα της εβδομάδας ως δεκαδικό νούμερο όπου 1 είναι η Δευτέρα."
 
 #: library/datetime.rst:2598
 msgid "1, 2, ..., 7"
@@ -4599,15 +4608,15 @@ msgstr "``%V``"
 msgid ""
 "ISO 8601 week as a decimal number with Monday as the first day of the week. "
 "Week 01 is the week containing Jan 4."
-msgstr ""
+msgstr "ISO 8601 βδομάδα ως δεκαδικό νούμε με την Δευτέρα ως την πρώτη μέρα της εβδομάδας. Η εβδομάδα 01 είναι η εβδομάδα που περιέχει την 4η Ιανουαρίου."
 
 #: library/datetime.rst:2601
 msgid "01, 02, ..., 53"
-msgstr ""
+msgstr "01, 02, ..., 53"
 
 #: library/datetime.rst:2601
 msgid "\\(8), \\(9)"
-msgstr ""
+msgstr "\\(8), \\(9)"
 
 #: library/datetime.rst:2726
 msgid "``%:z``"
@@ -4621,7 +4630,7 @@ msgstr ""
 
 #: library/datetime.rst:2607
 msgid "(empty), +00:00, -04:00, +10:30, +06:34:15, -03:07:12.345216"
-msgstr ""
+msgstr "(empty), +00:00, -04:00, +10:30, +06:34:15, -03:07:12.345216"
 
 #: library/datetime.rst:2613
 msgid ""
@@ -4631,6 +4640,11 @@ msgid ""
 "Calling :meth:`~.datetime.strptime` with incomplete or ambiguous ISO 8601 "
 "directives will raise a :exc:`ValueError`."
 msgstr ""
+"Aυτές οι παράμετροι ενδέχεται να μην είναι διαθέσιμες σε όλες τις "
+"πλατφόρμες όταν χρησιμοποιούνται με τη μέθοδο :meth:`~.datetime.strftime`. "
+"Οι οδηγίες ISO 8601 έτους και ISO 8601 εβδομάδας δεν είναι εναλλάξιμες με τις "
+"παραπάνω οδηγίες έτους και αριθμού εβδομάδας. Η κλήση της :meth:`~.datetime.strptime` με "
+"ατελείς ή ασαφείς οδηγίες ISO 8601 θα προκαλέσει την εμφάνιση μιας :exc:`ValueError`."
 
 #: library/datetime.rst:2618
 msgid ""
@@ -4641,18 +4655,24 @@ msgid ""
 "documentation. There are also differences between platforms in handling of "
 "unsupported format specifiers."
 msgstr ""
+"Το πλήρες σύνολο των κωδικών μορφοποίησης που υποστηρίζονται διαφέρει μεταξύ των πλατφορμών, "
+"επειδή η Python καλεί τη λειτουργία :c:func:`strftime` της βιβλιοθήκης C της πλατφόρμας, "
+"και οι παραλλαγές πλατφόρμας είναι συχνές. Για να δείτε το πλήρες σύνολο των κωδικών "
+"μορφοποίησης που υποστηρίζονται στην πλατφόρμα σας, "
+"συμβουλευτείτε την τεκμηρίωση :manpage:`strftime(3)`. Υπάρχουν επίσης διαφορές μεταξύ των πλατφορμών "
+"στην επεξεργασία μη υποστηριζόμενων προδιαγραφών μορφοποίησης."
 
 #: library/datetime.rst:2624
 msgid "``%G``, ``%u`` and ``%V`` were added."
-msgstr ""
+msgstr "``%G``, ``%u`` και ``%V`` προστέθηκαν."
 
 #: library/datetime.rst:2627
 msgid "``%:z`` was added."
-msgstr ""
+msgstr "``%:z`` προστέθηκε."
 
 #: library/datetime.rst:2631
 msgid "Technical Detail"
-msgstr ""
+msgstr "Τεχνική Λεπτομέρεια"
 
 #: library/datetime.rst:2633
 msgid ""
@@ -4660,6 +4680,8 @@ msgid ""
 "``time.strftime(fmt, d.timetuple())`` although not all objects support a :"
 "meth:`~date.timetuple` method."
 msgstr ""
+"Σε γενικές γραμμές, το ``d.strftime(fmt)`` λειτουργεί όπως το ``time.strftime(fmt, d.timetuple())`` "
+"αν και, όχι όλα τα αντικείμενα υποστηρίζουν μια μέθοδο :meth:`~date.timetuple`."
 
 #: library/datetime.rst:2637
 msgid ""
@@ -4667,10 +4689,12 @@ msgid ""
 "``1900-01-01T00:00:00.000``: any components not specified in the format "
 "string will be pulled from the default value. [#]_"
 msgstr ""
+"Για τη μέθοδο κλάσης :meth:`.datetime.strptime`, η προεπιλεγμένη τιμή είναι ``1900-01-01T00:00:00.000``: "
+"οποιαδήποτε στοιχεία δεν καθορίζονται στη μορφή θα αντληθούν από την προεπιλεγμένη τιμή. [#]_"
 
 #: library/datetime.rst:2641
 msgid "Using ``datetime.strptime(date_string, format)`` is equivalent to::"
-msgstr ""
+msgstr "Χρησιμοποιώντας ``datetime.strptime(date_string, format)`` είναι ισοδύναμο με::"
 
 #: library/datetime.rst:2645
 msgid ""
@@ -4678,6 +4702,8 @@ msgid ""
 "information, which are supported in ``datetime.strptime`` but are discarded "
 "by ``time.strptime``."
 msgstr ""
+"εκτός αν η μορφή περιλαμβάνει υπο-δευτερόλεπτα ή πληροφορίες ζώνης ώρας, οι οποίες "
+"υποστηρίζονται στο ``datetime.strptime`` αλλά απορρίπτονται από το ``time.strptime``."
 
 #: library/datetime.rst:2649
 msgid ""
@@ -4685,6 +4711,9 @@ msgid ""
 "not be used, as :class:`!time` objects have no such values. If they're used "
 "anyway, 1900 is substituted for the year, and 1 for the month and day."
 msgstr ""
+"Για τα αντικείμενα :class:`.time`, οι κωδικοί μορφοποίησης για το έτος, τον μήνα και "
+"την ημέρα δεν πρέπει να χρησιμοποιούνται, καθώς τα αντικείμενα :class:`!time` δεν έχουν τέτοιες τιμές. "
+"Εάν χρησιμοποιηθούν ούτως ή άλλως, το έτος αντικαθίσταται με το 1900, και ο μήνας και η ημέρα με το 1."
 
 #: library/datetime.rst:2653
 msgid ""
@@ -4692,6 +4721,11 @@ msgid ""
 "microseconds should not be used, as :class:`date` objects have no such "
 "values. If they're used anyway, 0 is substituted for them."
 msgstr ""
+"Για :class:`date` αντικείμενα, οι κωδικοί μορφοποίησης για τις ώρες, "
+"τα λεπτά, τα δευτερόλεπτα και "
+"τα μικροδευτερόλεπτα δεν πρέπει να χρησιμοποιούνται, "
+"καθώς τα αντικείμενα :class:`date` δεν έχουν τέτοιες "
+"τιμές. Εάν χρησιμοποιηθούν ούτως ή άλλως, το 0 αντικαθίσταται γι' αυτά."
 
 #: library/datetime.rst:2657
 msgid ""
@@ -4701,6 +4735,11 @@ msgid ""
 "intact in the output, while on others ``strftime`` may raise :exc:"
 "`UnicodeError` or return an empty string instead."
 msgstr ""
+"Για τον ίδιο λόγο, η επεξεργασία συμβολοσειρών μορφοποίησης που περιέχουν "
+"σημεία κώδικα Unicode που δεν μπορούν να αναπαρασταθούν στο charset της "
+"τρέχουσας τοποθεσίας είναι επίσης εξαρτώμενη από την πλατφόρμα. Σε ορισμένες "
+"πλατφόρμες, τέτοια σημεία κώδικα διατηρούνται άθικτα στην έξοδο, ενώ σε άλλες το "
+"`strftime` μπορεί να κάνει raise μια :exc:`UnicodeError` ή να επιστρέψει μια κενή συμβολοσειρά."
 
 #: library/datetime.rst:2666
 msgid ""
@@ -4709,24 +4748,32 @@ msgid ""
 "example, \"month/day/year\" versus \"day/month/year\"), and the output may "
 "contain non-ASCII characters."
 msgstr ""
+"Επειδή η μορφή εξαρτάται από την τρέχουσα τοποθεσία, θα πρέπει να προσέχετε όταν "
+"κάνετε υποθέσεις σχετικά με την τιμή εξόδου. Οι διατάξεις πεδίων θα διαφέρουν (για "
+"παράδειγμα, \"μήνας/ημέρα/έτος\" σε σύγκριση με \"ημέρα/μήνας/έτος\"), και η έξοδος μπορεί να "
+"περιέχει μη-ASCII χαρακτήρες."
 
 #: library/datetime.rst:2672
 msgid ""
 "The :meth:`~.datetime.strptime` method can parse years in the full [1, 9999] "
 "range, but years < 1000 must be zero-filled to 4-digit width."
 msgstr ""
+"Η μέθοδος :meth:`~.datetime.strptime` μπορεί να αναλύσει έτη στο πλήρες εύρος [1, 9999], αλλά τα έτη < 1000 "
+"πρέπει να είναι μηδενικά γεμισμένα σε πλάτος 4 ψηφίων."
 
 #: library/datetime.rst:2675
 msgid ""
 "In previous versions, :meth:`~.datetime.strftime` method was restricted to "
 "years >= 1900."
 msgstr ""
+"Σε προηγούμενες εκδόσεις, η μέθοδος :meth:`~.datetime.strftime` περιορίζεται σε έτη >= 1900."
 
 #: library/datetime.rst:2679
 msgid ""
 "In version 3.2, :meth:`~.datetime.strftime` method was restricted to years "
 ">= 1000."
 msgstr ""
+"Στην έκδοση 3.2, η μέθοδος :meth:`~.datetime.strftime` περιορίζεται σε έτη >= 1000."
 
 #: library/datetime.rst:2684
 msgid ""
@@ -4734,12 +4781,16 @@ msgid ""
 "only affects the output hour field if the ``%I`` directive is used to parse "
 "the hour."
 msgstr ""
+"Όταν χρησιμοποιείται με τη μέθοδο :meth:`~.datetime.strptime`, η οδηγία ``%p`` "
+"επηρεάζει μόνο το πεδίο έξόδου ώρα εάν η οδηγία ``%I`` χρησιμοποιείται για να "
+"αναλύσει την ώρα."
 
 #: library/datetime.rst:2688
 msgid ""
 "Unlike the :mod:`time` module, the :mod:`!datetime` module does not support "
 "leap seconds."
 msgstr ""
+"Σε αντίθεση με το :mod:`time`, το :mod:`!datetime` δεν υποστηρίζει δευτερόλεπτα άλματος (leap seconds)."
 
 #: library/datetime.rst:2692
 msgid ""
@@ -4748,16 +4799,21 @@ msgid ""
 "extension to the set of format characters in the C standard (but implemented "
 "separately in datetime objects, and therefore always available)."
 msgstr ""
+"Όταν χρησιμοποιείται με τη μέθοδο :meth:`~.datetime.strptime`, η οδηγία ``%f`` "
+"αποδέχεται από ένα έως έξι ψηφία και γεμίζει με μηδενικά στα δεξιά. ``%f`` είναι μια "
+"επέκταση του συνόλου χαρακτήρων μορφοποίησης στο C standard (αλλά υλοποιημένη "
+"χωριστά σε αντικείμενα datetime, και επομένως πάντα διαθέσιμη)."
 
 #: library/datetime.rst:2699
 msgid ""
 "For a naive object, the ``%z``, ``%:z`` and ``%Z`` format codes are replaced "
 "by empty strings."
 msgstr ""
+"Για ενα αδαές αντικείμενο, οι κωδικοί μορφοποίησης ``%z``, ``%:z`` και ``%Z`` αντικαθίστονται με κενές συμβολοσειρές."
 
 #: library/datetime.rst:2702
 msgid "For an aware object:"
-msgstr ""
+msgstr "Για ένα ευαίσθητο αντικείμενο:"
 
 #: library/datetime.rst:2705
 msgid ""
@@ -4772,6 +4828,13 @@ msgid ""
 "datetime.utcoffset` returns ``timedelta(hours=-3, minutes=-30)``, ``%z`` is "
 "replaced with the string ``'-0330'``."
 msgstr ""
+"Η :meth:`~.datetime.utcoffset` μετατρέπεται σε μια συμβολοσειρά της μορφής ``±HHMM[SS[.ffffff]]``, όπου ``HH`` είναι μια "
+"2-ψηφιαία συμβολοσειρά που δίνει τον αριθμό των ωρών διαφοράς UTC, ``MM`` είναι μια 2-ψηφιαία συμβολοσειρά που δίνει τον αριθμό "
+"των λεπτών διαφοράς UTC, ``SS`` είναι μια 2-ψηφιαία συμβολοσειρά που δίνει τον αριθμό των δευτερολέπτων διαφοράς UTC και "
+"``ffffff`` είναι μια 6-ψηφιαία συμβολοσειρά που δίνει τον αριθμό των μικροδευτερολέπτων διαφοράς UTC. Το τμήμα ``ffffff`` "
+"παραλείπεται όταν η διαφορά είναι ένας ακέραιος αριθμός δευτερολέπτων και τόσο το τμήμα ``ffffff`` όσο και το τμήμα ``SS`` "
+"παραλείπονται όταν η διαφορά είναι ένας ακέραιος αριθμός λεπτών. Για παράδειγμα, εάν η :meth:`~.datetime.utcoffset` "
+"επιστρέφει ``timedelta(hours=-3, minutes=-30)``, το ``%z`` αντικαθίσταται με τη συμβολοσειρά ``'-0330'``."
 
 #: library/datetime.rst:2719
 msgid ""
@@ -4781,12 +4844,18 @@ msgid ""
 "offset of one hour. In addition, providing ``'Z'`` is identical to "
 "``'+00:00'``."
 msgstr ""
+"Όταν η οδηγία ``%z`` παρέχεται στη μέθοδο :meth:`~.datetime.strptime`, οι διαφορές UTC "
+"μπορούν να έχουν μια άνω κάτω τελία ως διαχωριστικό μεταξύ ωρών, "
+"λεπτών και δευτερολέπτων. Για παράδειγμα, ``'+01:00:00'`` θα αναλυθεί ως μια "
+"διαφορά μίας ώρας. Επιπλέον, η παροχή ``'Z'`` είναι ταυτόσημη με ``'+00:00'``."
 
 #: library/datetime.rst:2727
 msgid ""
 "Behaves exactly as ``%z``, but has a colon separator added between hours, "
 "minutes and seconds."
 msgstr ""
+"Συμπεριφέρεται ακριβώς ως ``%z``, αλλά έχει μια άνω κάτω τελία ως διαχωριστικό "
+"μεταξύ ωρών, λεπτών και δευτερολέπτων."
 
 #: library/datetime.rst:2731
 msgid ""
@@ -4794,18 +4863,21 @@ msgid ""
 "meth:`~.datetime.tzname` returns ``None``; otherwise ``%Z`` is replaced by "
 "the returned value, which must be a string."
 msgstr ""
+"Στην :meth:`~.datetime.strftime`, το ``%Z`` αντικαθίσταται με μια κενή "
+"συμβολοσειρά αν η :meth:`~.datetime.tzname` επισρέφει ``None`` · διαφορετικά το ``%Z`` αντικαθίσταται με την "
+"επιστρεφόμενη τιμή, η οποία πρέπει να είναι μια συμβολοσειρά."
 
 #: library/datetime.rst:2735
 msgid ":meth:`~.datetime.strptime` only accepts certain values for ``%Z``:"
-msgstr ""
+msgstr "Η :meth:`~.datetime.strptime` δέχεται μόνο συγκεκριμένες τιμές για το ``%Z``:"
 
 #: library/datetime.rst:2737
 msgid "any value in ``time.tzname`` for your machine's locale"
-msgstr ""
+msgstr "οποιαδήποτε τιμή στο ``time.tzname` για την τοποθεσία του μηχανήματός σας"
 
 #: library/datetime.rst:2738
 msgid "the hard-coded values ``UTC`` and ``GMT``"
-msgstr ""
+msgstr "οι σταθερές τιμές ``UTC`` και ``GMT``"
 
 #: library/datetime.rst:2740
 msgid ""
@@ -4813,6 +4885,8 @@ msgid ""
 "values, but probably not ``EST``. It will raise ``ValueError`` for invalid "
 "values."
 msgstr ""
+"Έτσι, κάποιος που ζει στην Ιαπωνία μπορεί να έχει ``JST``, ``UTC`` και ``GMT`` ως έγκυρες "
+"τιμές, αλλά πιθανότατα όχι ``EST``. Θα γίνει raise ``ValueError`` για μη έγκυρες τιμές."
 
 #: library/datetime.rst:2744
 msgid ""
@@ -4820,6 +4894,9 @@ msgid ""
 "method, an aware :class:`.datetime` object will be produced. The ``tzinfo`` "
 "of the result will be set to a :class:`timezone` instance."
 msgstr ""
+"Όταν η οδηγία ``%z`` παρέχεται στη μέθοδο :meth:`~.datetime.strptime`, ένα "
+"αντίκείμενο :class:`.datetime` με γνώση ζώνης θα παραχθεί. Το ``tzinfo`` "
+"του αποτελέσματος θα ρυθμιστεί σε μια :class:`timezone` παρουσία."
 
 #: library/datetime.rst:2750
 msgid ""
@@ -4827,6 +4904,8 @@ msgid ""
 "only used in calculations when the day of the week and the calendar year "
 "(``%Y``) are specified."
 msgstr ""
+"Όταν χρησιμοποιείται με τη μέθοδο :meth:`~.datetime.strptime`, το ``%U`` και το ``%W`` "
+"χρησιμοποιούνται μόνο σε υπολογισμούς όταν η ημέρα της εβδομάδας και το ημερολογιακό έτος (``%Y``) είναι καθορισμένα."
 
 #: library/datetime.rst:2755
 msgid ""
@@ -4835,6 +4914,11 @@ msgid ""
 "datetime.strptime` format string. Also note that ``%G`` and ``%Y`` are not "
 "interchangeable."
 msgstr ""
+"Παρόμοια με ``%U`` και ``%W``, το ``%V`` χρησιμοποιείται μόνο σε "
+"υπολογισμούς όταν η ημέρα της εβδομάδας και το ISO έτος (``%G``) είναι "
+"καθορισμένα σε μια συμβολοσειρά μορφής :meth:`~.datetime.strptime`. "
+"Σημειώστε επίσης ότι ``%G`` και ``%Y`` δεν είναι "
+"ανταλλάξιμα."
 
 #: library/datetime.rst:2761
 msgid ""
@@ -4843,6 +4927,9 @@ msgid ""
 "``%j``, ``%U``, ``%W``, and ``%V``. Format ``%y`` does require a leading "
 "zero."
 msgstr ""
+"Όταν χρησιμοποιείται με τη μέθοδο :meth:`~.datetime.strptime`, το μηδενικό "
+"ψηφίο μπροστά είναι προαιρετικό για τις μορφές ``%d``, ``%m``, ``%H``, "
+"``%I``, ``%M``, ``%S``, ``%j``, ``%U``, ``%W`` και ``%V``. Η μορφή ``%y`` απαιτεί μπροστά μηδενικό ψηφίο."
 
 #: library/datetime.rst:2766
 msgid ""
@@ -4852,6 +4939,12 @@ msgid ""
 "exception when it encounters leap day because the default year used by the "
 "parser is not a leap year.  Users run into this bug every four years..."
 msgstr ""
+"Όταν αναλύετε μήνα και ημέρα χρησιμοποιώντας :meth:`~.datetime.strptime`, "
+"πάντα συμπεριλάβετε ένα έτος στη μορφή. Εάν η τιμή που πρέπει να αναλύσετε "
+"δεν περιέχει έτος, προσθέστε ένα ρητό ψευδο δίσεκτο έτος. "
+"Διαφορετικά, ο κώδικάς σας θα κάνει raise μια εξαίρεση όταν συναντήσει την "
+"ημέρα του δίσεκτου επειδή το προεπιλεγμένο έτος που χρησιμοποιείται από τον "
+"αναλυτή δεν είναι δίσεκτο. Οι χρήστες συναντούν αυτό το σφάλμα κάθε τέσσερα χρόνια..."
 
 #: library/datetime.rst:2772
 msgid ""
