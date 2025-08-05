@@ -1091,7 +1091,7 @@ msgstr ""
 
 #: library/datetime.rst:571
 msgid "Previously, this method only supported the format ``YYYY-MM-DD``."
-msgstr ""
+msgstr "Προηγουμένως, αυτή η μέθοδος υποστήριζε μόνο τη μορφή ``YYYY-MM-DD``."
 
 #: library/datetime.rst:576
 msgid ""
@@ -1099,16 +1099,19 @@ msgid ""
 "year, week and day. This is the inverse of the function :meth:`date."
 "isocalendar`."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο :class:`date` που αντιστοιχεί στην ημερομηνία του ISO ημερολογίου που καθορίζεται από το έτος, την εβδομάδα και την ημέρα."
+"Αυτό είναι το αντίστροφο της συνάρτησης :meth:`date.isocalendar`."
 
 #: library/datetime.rst:583
 msgid ""
 "Return a :class:`.date` corresponding to *date_string*, parsed according to "
 "*format*. This is equivalent to::"
-msgstr ""
+msgstr "Επιστρέφει ένα αντικείμενο :class:`.date` που αντιστοιχεί σε *date_string*, αναλυμένο σύμφωνα με "
+"*format*. Αυτό είναι ισοδύναμο με::"
 
 #: library/datetime.rst:586
 msgid "date(*(time.strptime(date_string, format)[0:3]))"
-msgstr ""
+msgstr "date(*(time.strptime(date_string, format)[0:3]))"
 
 #: library/datetime.rst:588
 msgid ""
@@ -1116,6 +1119,9 @@ msgid ""
 "by :func:`time.strptime` or if it returns a value which isn't a time tuple.  "
 "See also :ref:`strftime-strptime-behavior` and :meth:`date.fromisoformat`."
 msgstr ""
+"Η :exc:`ValueError` γίνεται raise εάν το date_string και το format δεν μπορούν να αναλυθούν από τη "
+":func:`time.strptime` ή εάν επιστρέφει μια τιμή που δεν είναι τουλάχιστον μια πλειάδα χρόνου. "
+"Δείτε επίσης :ref:`strftime-strptime-behavior` και :meth:`date.fromisoformat`."
 
 #: library/datetime.rst:595
 msgid ""
@@ -1127,6 +1133,12 @@ msgid ""
 "year in your *format*.  If parsing *date_string* values that do not have a "
 "year, explicitly add a year that is a leap year before parsing:"
 msgstr ""
+"Εάν το *format* καθορίζει μια ημέρα του μήνα χωρίς έτος, γίνεται emit μια :exc:`DeprecationWarning`. "
+"Αυτό γίνεται για να αποφευχθεί ένα σφάλμα τετραετούς δίσεκτου έτους στον κώδικα που προσπαθεί να αναλύσει "
+"μόνο έναν μήνα και μια ημέρα, καθώς το προεπιλεγμένο έτος που χρησιμοποιείται σε περίπτωση απουσίας του στη μορφή δεν είναι δίσεκτο έτος. "
+"Τέτοιες τιμές *format* μπορεί να προκαλέσουν σφάλμα από την έκδοση 3.15 του Python. "
+"Η λύση είναι να συμπεριλάβετε πάντα ένα έτος στη μορφή σας. "
+"Εάν αναλύετε τιμές *date_string* που δεν έχουν έτος, προσθέστε ρητά ένα έτος που είναι δίσεκτο πριν από την ανάλυση:"
 
 #: library/datetime.rst:604
 msgid ""
@@ -1146,29 +1158,30 @@ msgstr ""
 
 #: library/datetime.rst:619
 msgid "The earliest representable date, ``date(MINYEAR, 1, 1)``."
-msgstr ""
+msgstr "Το νωρίτερο αναπαραστάσιμο έτος, ``date(MINYEAR, 1, 1)``."
 
 #: library/datetime.rst:624
 msgid "The latest representable date, ``date(MAXYEAR, 12, 31)``."
-msgstr ""
+msgstr "Το πιο πρόσφατο αναπαραστάσιμο έτος, ``date(MAXYEAR, 12, 31)``."
 
 #: library/datetime.rst:629
 msgid ""
 "The smallest possible difference between non-equal date objects, "
 "``timedelta(days=1)``."
 msgstr ""
+"Η μικρότερη δυνατή διαφορά μεταξύ μη-ίσως αντικειμένων ημέρα, ``timedelta(days=1)``."
 
 #: library/datetime.rst:1199
 msgid "Between :const:`MINYEAR` and :const:`MAXYEAR` inclusive."
-msgstr ""
+msgstr "Μεταξύ :const:`MINYEAR` και :const:`MAXYEAR` συμπεριλαμβανομένων."
 
 #: library/datetime.rst:1204
 msgid "Between 1 and 12 inclusive."
-msgstr ""
+msgstr "Μεταξύ 1 και 12 συμπεριλαμβανομένων."
 
 #: library/datetime.rst:1209
 msgid "Between 1 and the number of days in the given month of the given year."
-msgstr ""
+msgstr "Μεταξύ 1 και του αριθμού των ημερών στον δεδομένο μήνα του δεδομένου έτους."
 
 #: library/datetime.rst:655
 msgid "``date2 = date1 + timedelta``"
@@ -1176,7 +1189,7 @@ msgstr "``date2 = date1 + timedelta``"
 
 #: library/datetime.rst:655
 msgid "``date2`` will be ``timedelta.days`` days after ``date1``. (1)"
-msgstr ""
+msgstr "``date2`` θα είναι ``timedelta.days`` ημέρες μετά το ``date1``. (1)"
 
 #: library/datetime.rst:658
 msgid "``date2 = date1 - timedelta``"
@@ -1184,7 +1197,7 @@ msgstr "``date2 = date1 - timedelta``"
 
 #: library/datetime.rst:658
 msgid "Computes ``date2`` such that ``date2 + timedelta == date1``. (2)"
-msgstr ""
+msgstr "Υπολογίζει το ``date2`` έτσι ώστε ``date2 + timedelta == date1``. (2)"
 
 #: library/datetime.rst:661
 msgid "``timedelta = date1 - date2``"
@@ -1204,7 +1217,7 @@ msgstr "``date1 != date2``"
 
 #: library/datetime.rst:1259
 msgid "Equality comparison. (4)"
-msgstr ""
+msgstr "Σύγκριση ισότητας. (4)"
 
 #: library/datetime.rst:0
 msgid "``date1 < date2``"
@@ -1224,7 +1237,7 @@ msgstr "``date1 >= date2``"
 
 #: library/datetime.rst:1262
 msgid "Order comparison. (5)"
-msgstr ""
+msgstr "Σύγκριση σειράς. (5)"
 
 #: library/datetime.rst:675
 msgid ""
@@ -1234,20 +1247,25 @@ msgid ""
 "`OverflowError` is raised if ``date2.year`` would be smaller than :const:"
 "`MINYEAR` or larger than :const:`MAXYEAR`."
 msgstr ""
+"Το *date2* μετακινείται προς τα εμπρός στο χρόνο εάν ``timedelta.days > 0``, ή προς τα πίσω εάν "
+"``timedelta.days < 0``. Έπειτα ``date2 - date1 == timedelta.days``. "
+"Τα ``timedelta.seconds`` και ``timedelta.microseconds`` αγνοούνται. Η :exc:`OverflowError` γίνεται "
+"raise εάν το ``date2.year`` θα ήταν μικρότερο από :const:`MINYEAR` ή μεγαλύτερο από :const:`MAXYEAR`."
 
 #: library/datetime.rst:682
 msgid "``timedelta.seconds`` and ``timedelta.microseconds`` are ignored."
-msgstr ""
+msgstr "τα ``timedelta.seconds`` και ``timedelta.microseconds`` αγνοούνται."
 
 #: library/datetime.rst:685
 msgid ""
 "This is exact, and cannot overflow. ``timedelta.seconds`` and ``timedelta."
 "microseconds`` are 0, and ``date2 + timedelta == date1`` after."
 msgstr ""
+"Αυτό είναι ακριβές και δεν μπορεί να υπερχειλίσει. Τα ``timedelta.seconds`` και ``timedelta.microseconds`` είναι 0, και ``date2 + timedelta == date1`` μετά."
 
 #: library/datetime.rst:689
 msgid ":class:`date` objects are equal if they represent the same date."
-msgstr ""
+msgstr "Τα :class:`date` αντικείμενα είναι ίσα εάν αναπαριστούν την ίδια ημερομηνία."
 
 #: library/datetime.rst:691
 msgid ""
@@ -1255,6 +1273,7 @@ msgid ""
 "never equal to :class:`!datetime` objects, even if they represent the same "
 "date."
 msgstr ""
+"Τα :class:`!date` αντικείμενα που δεν είναι επίσης :class:`.datetime` στιγμιότυπα δεν είναι ποτέ ίσα με :class:`!datetime` αντικείμενα, ακόμη και αν αναπαριστούν την ίδια ημερομηνία."
 
 #: library/datetime.rst:696
 msgid ""
@@ -1262,12 +1281,14 @@ msgid ""
 "time. In other words, ``date1 < date2`` if and only if ``date1.toordinal() < "
 "date2.toordinal()``."
 msgstr ""
+"Το *date1* θεωρείται μικρότερο από το *date2* όταν το *date1* προηγείται του *date2* στο χρόνο. Με άλλα λόγια, ``date1 < date2`` αν και μόνο αν ``date1.toordinal() < date2.toordinal()``."
 
 #: library/datetime.rst:700
 msgid ""
 "Order comparison between a :class:`!date` object that is not also a :class:`."
 "datetime` instance and a :class:`!datetime` object raises :exc:`TypeError`."
-msgstr ""
+msgstr "Η σύγκριση σειράς μεταξύ ενός αντικειμένου :class:`!date` που δεν είναι "
+"επίσης στιγμιότυπο :class:`.datetime` και ενός αντικειμένου :class:`!datetime` προκαλεί :exc:`TypeError`."
 
 #: library/datetime.rst:1330
 msgid ""
@@ -1277,21 +1298,29 @@ msgid ""
 "default behavior can be changed by overriding the special comparison methods "
 "in subclasses."
 msgstr ""
+"Η σύγκριση μεταξύ ενός αντικειμένου :class:`.datetime` και ενός στιγμιοτύπου της "
+"υποκλάσης :class:`date` που δεν είναι υποκλάση του :class:`!datetime` δεν μετατρέπει πλέον "
+"το τελευταίο σε :class:`!date`, αγνοώντας το μέρος χρόνου και τη ζώνη ώρας. "
+"Η προεπιλεγμένη συμπεριφορά μπορεί να αλλάξει με την υπερκάλυψη των ειδικών μεθόδων σύγκρισης "
+"σε υποκλάσεις."
 
 #: library/datetime.rst:712
 msgid ""
 "In Boolean contexts, all :class:`date` objects are considered to be true."
 msgstr ""
+"Στα Boolean περιεχόμενα, όλα τα αντικείμενα :class:`date` θεωρούνται αληθή."
 
 #: library/datetime.rst:718
 msgid ""
 "Return a new :class:`date` object with the same values, but with specified "
 "parameters updated."
 msgstr ""
+"Επιστρέφει ένα νέο αντικείμενο της :class:`date` με τις ίδιες τιμές, αλλά με "
+"ενημερωμένες παραμέτρους."
 
 #: library/datetime.rst:2002
 msgid "Example::"
-msgstr ""
+msgstr "Παράδειγμα::"
 
 #: library/datetime.rst:723
 msgid ""
@@ -1309,32 +1338,36 @@ msgstr ""
 msgid ""
 "The generic function :func:`copy.replace` also supports :class:`date` "
 "objects."
-msgstr ""
+msgstr "Η γενική συνάρτηση :func:`copy.replace` υποστηρίζει επίσης τα :class:`date` αντικείμενα."
 
 #: library/datetime.rst:1454
 msgid ""
 "Return a :class:`time.struct_time` such as returned by :func:`time."
 "localtime`."
 msgstr ""
+"Επιστρέφει μια :class:`time.struct_time` όπως επιστρέφετια από την :func:`time."
+"localtime`."
 
 #: library/datetime.rst:736
 msgid "The hours, minutes and seconds are 0, and the DST flag is -1."
-msgstr ""
+msgstr "Οι ώρες, τα λεπτά και τα δευτερόλεπτα είναι 0, και το DST flag είναι -1."
 
 #: library/datetime.rst:1456
 msgid "``d.timetuple()`` is equivalent to::"
-msgstr ""
+msgstr "Το ``d.timetuple()`` είναι ισοδύναμο με::"
 
 #: library/datetime.rst:740
 msgid ""
 "time.struct_time((d.year, d.month, d.day, 0, 0, 0, d.weekday(), yday, -1))"
 msgstr ""
+"time.struct_time((d.year, d.month, d.day, 0, 0, 0, d.weekday(), yday, -1))"
 
 #: library/datetime.rst:742
 msgid ""
 "where ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` is the "
 "day number within the current year starting with 1 for January 1st."
 msgstr ""
+"όπου ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` είναι ο αριθμός της ημέρας εντός του τρέχοντος έτους ξεκινώντας από 1 για την 1η Ιανουαρίου."
 
 #: library/datetime.rst:748
 msgid ""
@@ -1342,6 +1375,8 @@ msgid ""
 "1 has ordinal 1. For any :class:`date` object ``d``, ``date.fromordinal(d."
 "toordinal()) == d``."
 msgstr ""
+"Επιστρέφει το προληπτικό Γρηγοριανό αριθμό της ημερομηνίας, όπου η 1η Ιανουαρίου "
+"του έτους 1 έχει αριθμό 1. Για οποιοδήποτε αντικείμενο :class:`date` ``d``, ``date.fromordinal(d.toordinal()) == d``."
 
 #: library/datetime.rst:755
 msgid ""
@@ -1349,6 +1384,9 @@ msgid ""
 "For example, ``date(2002, 12, 4).weekday() == 2``, a Wednesday. See also :"
 "meth:`isoweekday`."
 msgstr ""
+"Επιστρέφει την ημέρα του έτους ως έναν ακέραιο, όπου η Δευτέρα είναι 0 και η Κυριακή είναι 6. "
+"Για παράδειγμα, ``date(2002, 12, 4).weekday() == 2``, ως Τετάρτη. Δείτε επίσης :"
+"meth:`isoweekday`."
 
 #: library/datetime.rst:762
 msgid ""
@@ -1356,17 +1394,23 @@ msgid ""
 "For example, ``date(2002, 12, 4).isoweekday() == 3``, a Wednesday. See also :"
 "meth:`weekday`, :meth:`isocalendar`."
 msgstr ""
+"Επιστρέφει την ημέρα της εβδομάδα ως έναν ακέραιο, όπου η Δευτέρα είναι 1 και η Κυρικαή είναι 7. "
+"Για παράδειγμα, ``date(2002, 12, 4).isoweekday() == 3``, μια Τετάρτη. Δείτε επίσης :"
+"meth:`weekday`, :meth:`isocalendar`."
 
 #: library/datetime.rst:769
 msgid ""
 "Return a :term:`named tuple` object with three components: ``year``, "
 "``week`` and ``weekday``."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο :term:`named tuple` με τρία στοιχεία ``year``, "
+"``week`` και ``weekday``."
 
 #: library/datetime.rst:772
 msgid ""
 "The ISO calendar is a widely used variant of the Gregorian calendar. [#]_"
 msgstr ""
+"Το ημερολόγιο ISO είναι μια ευρέως χρησιμοποιούμενη εκδοχή τους Γρηγοριανού ημερολογίου. [#]_"
 
 #: library/datetime.rst:774
 msgid ""
@@ -1376,12 +1420,18 @@ msgid ""
 "week number 1, and the ISO year of that Thursday is the same as its "
 "Gregorian year."
 msgstr ""
+"Το ISO έτος αποτελείται από 52 ή 53 πλήρες εβδομάδες, όπου μια εβδομάδα ξεκινάει από την ημέρα "
+"Δευτέρα και τελειώνει με την ημέρα Κυριακή. Η πρώτη εβδομάδα ενός ISO έτους είναι η πρώτη "
+"(Γρηγοριανή) ημερολογιακή εβδομάδα ενός έτους που περιλαμβάνει μια Πέμπτη. Αυτό καλείται εβδομάδα νούμερο 1, και το "
+"ISO έτος αυτής της Πέμπτης είναι ίδο με το Γρηγοριανό έτος."
 
 #: library/datetime.rst:779
 msgid ""
 "For example, 2004 begins on a Thursday, so the first week of ISO year 2004 "
 "begins on Monday, 29 Dec 2003 and ends on Sunday, 4 Jan 2004::"
 msgstr ""
+"Για παράδειγμα, το 2004 ξεκινά με Πέμπτη, συνεπώς η πρώτη εβδομάδα του ISO έτους 2004 "
+"ξεκινάει την Δευτέρα 29 Δεκεμβρίου 200, και τελειώνει με Κυριακή, 4 Ιανουαρίου 2004::"
 
 #: library/datetime.rst:782
 msgid ""
@@ -3231,7 +3281,7 @@ msgstr ""
 
 #: library/datetime.rst:2095
 msgid ":class:`tzinfo` Objects"
-msgstr ""
+msgstr "Αντικείμενα :class:`tzinfo`"
 
 #: library/datetime.rst:2099
 msgid ""
@@ -3239,6 +3289,9 @@ msgid ""
 "instantiated directly.  Define a subclass of :class:`tzinfo` to capture "
 "information about a particular time zone."
 msgstr ""
+"Αυτό είναι μια αφηρημένη βασική κλάση, πράγμα που σημαίνει ότι αυτή η κλάση "
+"δεν πρέπει να δημιουργείται άμεσα. Ορίζει μια υποκλάση της :class:`tzinfo` για να καταγράψει πληροφορίες "
+"σχετικά με μια συγκεκριμένη ζώνη ώρας."
 
 #: library/datetime.rst:2103
 msgid ""
@@ -3249,6 +3302,11 @@ msgid ""
 "the name of the time zone, and DST offset, all relative to a date or time "
 "object passed to them."
 msgstr ""
+"Ένα στιγμιότυπο (μια συγκεκριμένη υποκλάση της) :class:`tzinfo` μπορεί να περαστεί στους "
+"κατασκευαστές των αντικειμένων :class:`.datetime` και :class:`.time`. Τα τελευταία "
+"αντικείμενα βλέπουν τα χαρακτηριστικά τους ως τοπική ώρα, και το αντικείμενο :class:"
+"`tzinfo` υποστηρίζει μεθόδους που αποκαλύπτουν την απόκλιση της τοπικής ώρας από το UTC, "
+"το όνομα της ζώνης ώρας και την απόκλιση DST, όλα σχετικά με ένα αντικείμενο ημερομηνίας ή ώρας που περνά σε αυτά."
 
 #: library/datetime.rst:2109
 msgid ""
@@ -3259,13 +3317,11 @@ msgid ""
 "represent time zones with fixed offset from UTC such as UTC itself or North "
 "American EST and EDT."
 msgstr ""
-
-#: library/datetime.rst:2116
-msgid ""
-"Special requirement for pickling:  A :class:`tzinfo` subclass must have an :"
-"meth:`~object.__init__` method that can be called with no arguments, "
-"otherwise it can be pickled but possibly not unpickled again. This is a "
-"technical requirement that may be relaxed in the future."
+"Θα χρειαστεί να παράγετε μια συγκεκριμένη υποκλάση και (τουλάχιστον) να παρέχετε "
+"υλοποιήσεις των μεθόδων :class:`tzinfo` που απαιτούνται από τις μεθόδους :class:`.datetime` που χρησιμοποιείτε. "
+"Η μονάδα :mod:`!datetime` παρέχει την :class:`timezone`, μια απλή συγκεκριμένη υποκλάση της :class:`tzinfo` "
+"που μπορεί να αντιπροσωπεύει ζώνες ώρας με σταθερή απόκλιση από το UTC, όπως το ίδιο το UTC ή η Βόρεια Αμερική "
+"EST και EDT."
 msgstr ""
 
 #: library/datetime.rst:2122
@@ -3274,12 +3330,17 @@ msgid ""
 "methods. Exactly which methods are needed depends on the uses made of aware :"
 "mod:`!datetime` objects. If in doubt, simply implement all of them."
 msgstr ""
+"Μια συγκεκριμένη υποκλάση της :class:`tzinfo` μπορεί να χρειαστεί να υλοποιήσει τις παρακάτω μεθόδους. "
+"Ακριβώς ποιες μέθοδοι χρειάζονται εξαρτάται από τις χρήσεις που γίνονται σε αντικείμενα :mod:`!datetime` που είναι "
+"ενήμερα για τη ζώνη ώρας. Εάν έχετε αμφιβολίες, απλά υλοποιήστε όλες αυτές."
 
 #: library/datetime.rst:2129
 msgid ""
 "Return offset of local time from UTC, as a :class:`timedelta` object that is "
 "positive east of UTC. If local time is west of UTC, this should be negative."
 msgstr ""
+"Επιστρέφει την απόκλιση της τοπικής ώρας από το UTC, ως αντικείμενο :class:`timedelta` που είναι θετικό ανατολικά του UTC. "
+"Εάν η τοπική ώρα είναι δυτικά του UTC, αυτό θα πρέπει να είναι αρνητικό."
 
 #: library/datetime.rst:2132
 msgid ""
@@ -3297,24 +3358,29 @@ msgid ""
 "return CONSTANT                 # fixed-offset class\n"
 "return CONSTANT + self.dst(dt)  # daylight-aware class"
 msgstr ""
+"return CONSTANT                 # fixed-offset class\n"
+"return CONSTANT + self.dst(dt)  # daylight-aware class"
 
 #: library/datetime.rst:2143
 msgid ""
 "If :meth:`utcoffset` does not return ``None``, :meth:`dst` should not return "
 "``None`` either."
 msgstr ""
+"Εάν η :meth:`utcoffset` δεν επιστρέφει ``None``, τότε ούτε η :meth:`dst` δεν θα πρέπει να επιστρέφει ``None``."
 
 #: library/datetime.rst:2146
 msgid ""
 "The default implementation of :meth:`utcoffset` raises :exc:"
 "`NotImplementedError`."
 msgstr ""
+"Η προεπιλεγμένη υλοποίηση της :meth:`utcoffset` κάνει raise :exc:`NotImplementedError`."
 
 #: library/datetime.rst:2155
 msgid ""
 "Return the daylight saving time (DST) adjustment, as a :class:`timedelta` "
 "object or ``None`` if DST information isn't known."
 msgstr ""
+"Επιστρέφει την προσαρμογή της θερινής ώρας (DST), ως αντικείμενο :class:`timedelta` ή ``None`` εάν οι πληροφορίες για τη θερινή ώρα δεν είναι γνωστές."
 
 #: library/datetime.rst:2159
 msgid ""
@@ -3337,7 +3403,7 @@ msgstr ""
 
 #: library/datetime.rst:2172
 msgid "``tz.utcoffset(dt) - tz.dst(dt)``"
-msgstr ""
+msgstr "``tz.utcoffset(dt) - tz.dst(dt)``"
 
 #: library/datetime.rst:2174
 msgid ""
@@ -3370,7 +3436,7 @@ msgstr ""
 
 #: library/datetime.rst:2189
 msgid "or::"
-msgstr ""
+msgstr "ή::"
 
 #: library/datetime.rst:2191
 msgid ""
@@ -3398,6 +3464,7 @@ msgstr ""
 msgid ""
 "The default implementation of :meth:`dst` raises :exc:`NotImplementedError`."
 msgstr ""
+"Η προεπιλεγμένη υλοποίηση της :meth:`dst` κάνει raise :exc:`NotImplementedError`."
 
 #: library/datetime.rst:2209
 msgid ""
@@ -3418,6 +3485,7 @@ msgid ""
 "The default implementation of :meth:`tzname` raises :exc:"
 "`NotImplementedError`."
 msgstr ""
+"Η προεπιλεγμένη υλοποίηση της :meth:`tzname` κάνει raise :exc:`NotImplementedError`."
 
 #: library/datetime.rst:2222
 msgid ""
@@ -3428,15 +3496,14 @@ msgid ""
 "prepared to accept a *dt* argument of ``None``, or of class :class:`."
 "datetime`."
 msgstr ""
-
-#: library/datetime.rst:2228
-msgid ""
-"When ``None`` is passed, it's up to the class designer to decide the best "
-"response. For example, returning ``None`` is appropriate if the class wishes "
-"to say that time objects don't participate in the :class:`tzinfo` protocols. "
-"It may be more useful for ``utcoffset(None)`` to return the standard UTC "
-"offset, as there is no other convention for discovering the standard offset."
-msgstr ""
+"Αυτές οι μέθοδοι καλούνται από ένα αντικείμενο :class:`.datetime` ή :class:`.time`, "
+"σε απάντηση στις μεθόδους τους με τα ίδια ονόματα. Ένα αντικείμενο :class:`.datetime` "
+"περνά τον εαυτό του ως παράμετρο, και ένα αντικείμενο :class:`.time` περνά ``None`` "
+"ως παράμετρο. Οι μέθοδοι μιας υποκλάσης :class:`tzinfo` θα πρέπει επομένως να είναι "
+"έτοιμες να αποδεχτούν ένα επιχείρημα *dt* που είναι ``None``, ή της κλάσης :class:`.datetime`."
+"Αυτό σημαίνει ότι τα αντικείμενα χρόνου δεν συμμετέχουν στα πρωτόκολλα :class:`tzinfo`. "
+"Μπορεί να είναι πιο χρήσιμο για το ``utcoffset(None)`` να επιστρέφει την κανονική UTC "
+"προσαρμογή, καθώς δεν υπάρχει άλλη σύμβαση για την ανακάλυψη της κανονικής προσαρμογής."
 
 #: library/datetime.rst:2234
 msgid ""
@@ -3447,12 +3514,18 @@ msgid ""
 "*dt* as being in local time, and not need worry about objects in other time "
 "zones."
 msgstr ""
+"Όταν ένα αντικείμενο :class:`.datetime` περνά ως απάντηση σε μια μέθοδο :class:`.datetime`, το ``dt.tzinfo`` "
+"είναι το ίδιο αντικείμενο με το *self*. Οι μέθοδοι :class:`tzinfo` μπορούν "
+"να βασίζονται σε αυτό, εκτός αν ο κώδικας του χρήστη καλεί τις μεθόδους :class:`tzinfo` απευθείας. "
+"Η πρόθεση είναι οι μέθοδοι :class:`tzinfo` να ερμηνεύουν το *dt* ως τοπικό χρόνο, "
+"και να μην χρειάζεται να ανησυχούν για αντικείμενα σε άλλες ζώνες ώρας."
 
 #: library/datetime.rst:2240
 msgid ""
 "There is one more :class:`tzinfo` method that a subclass may wish to "
 "override:"
 msgstr ""
+"Υπάρχει μια ακόμη μέθοδος :class:`tzinfo` που μια υποκλάση μπορεί να θέλει να την παρακάμψει:"
 
 #: library/datetime.rst:2245
 msgid ""
@@ -3462,6 +3535,11 @@ msgid ""
 "`fromutc` is to adjust the date and time data, returning an equivalent "
 "datetime in *self*'s local time."
 msgstr ""
+"Αυτό καλείται από την προεπιλεγμένη υλοποίηση της :meth:`datetime.astimezone`. "
+"Όταν καλείται από αυτήν, το ``dt.tzinfo`` είναι *self*, και τα δεδομένα ημερομηνίας και ώρας του *dt* "
+"πρέπει να θεωρούνται ότι εκφράζουν μια ώρα UTC. Ο σκοπός της :meth:`fromutc` είναι να προσαρμόσει "
+"τα δεδομένα ημερομηνίας και ώρας, επιστρέφοντας ένα ισοδύναμο "
+"αντικείμενο ημερομηνίας και ώρας στην τοπική ώρα του *self*."
 
 #: library/datetime.rst:2251
 msgid ""
@@ -3477,12 +3555,25 @@ msgid ""
 "want if the result is one of the hours straddling the moment the standard "
 "offset changes."
 msgstr ""
+"Οι περισσότερες υποκλάσεις :class:`tzinfo` θα πρέπει να μπορούν να κληρονομήσουν "
+"την προεπιλεγμένη υλοποίηση της :meth:`fromutc` χωρίς προβλήματα. "
+"Είναι αρκετά ισχυρή για να χειριστεί ζώνες ώρας με σταθερή απόκλιση, "
+"καθώς και ζώνες ώρας που λογαριάζουν τόσο την κανονική όσο και τη θερινή ώρα, "
+"και το τελευταίο ακόμη και αν οι χρόνοι μετάβασης της θερινής ώρας διαφέρουν σε διαφορετικά έτη. "
+"Ένα παράδειγμα ζώνης ώρας που η προεπιλεγμένη υλοποίηση της :meth:`fromutc` "
+"μπορεί να μην χειρίζεται σωστά σε όλες τις περιπτώσεις είναι μια όπου "
+"η κανονική απόκλιση (από το UTC) εξαρτάται από την συγκεκριμένη ημερομηνία και ώρα "
+"που περνά, κάτι που μπορεί να συμβεί για πολιτικούς λόγους. Οι προεπιλεγμένες "
+"υλοποιήσεις των :meth:`~.datetime.astimezone` και :meth:`fromutc` μπορεί να μην "
+"παράγουν το αποτέλεσμα που θέλετε εάν το αποτέλεσμα είναι μία από τις ώρες που περικλείουν τη στιγμή που "
+"αλλάζει η κανονική απόκλιση."
 
 #: library/datetime.rst:2262
 msgid ""
 "Skipping code for error cases, the default :meth:`fromutc` implementation "
 "acts like::"
 msgstr ""
+"Παραλείποντας τον κώδικα για περιπτώσεις σφαλμάτων, η προεπιλεγμένη υλοποίηση της :meth:`fromutc` λειτουργεί ως εξής::"
 
 #: library/datetime.rst:2265
 msgid ""
@@ -3521,6 +3612,7 @@ msgid ""
 "In the following :download:`tzinfo_examples.py <../includes/tzinfo_examples."
 "py>` file there are some examples of :class:`tzinfo` classes:"
 msgstr ""
+"Στο παρακάτω αρχείο :download:`tzinfo_examples.py <../includes/tzinfo_examples.py>` υπάρχουν μερικά παραδείγματα κλάσεων :class:`tzinfo`:"
 
 #: library/datetime.rst:2284
 msgid ""
@@ -3913,6 +4005,11 @@ msgid ""
 "day DST begins. For example, at the Spring forward transition of 2016, we "
 "get::"
 msgstr ""
+"Όταν ξεκινάει το DST (η γραμμή \"start\"), το τοπικό ρολόι πηδάει από "
+"1:59 σε 3:00. Μια τοπική ώρα της μορφής 2:MM δεν έχει νόημα σε αυτή την ημέρα, "
+"έτσι η ``astimezone(Eastern)`` δεν θα επιστρέψει αποτέλεσμα με ``hour == 2`` "
+"την ημέρα που ξεκινάει το DST. Για παράδειγμα, κατά τον μετασχηματισμό "
+"Spring forward του 2016, παίρνουμε::"
 
 #: library/datetime.rst:2305
 msgid ""
@@ -3956,6 +4053,18 @@ msgid ""
 "attribute set to 0 and the later times have it set to 1. For example, at the "
 "Fall back transition of 2016, we get::"
 msgstr ""
+"Όταν τελειώνει το DST (η γραμμή \"end\"), υπάρχει ένα δυνητικά χειρότερο πρόβλημα: "
+"υπάρχει μια ώρα που δεν μπορεί να γραφτεί με σαφήνεια στην τοπική ώρα: η "
+"τελευταία ώρα της θερινής ώρας. Στην Ανατολική ζώνη, αυτές είναι οι ώρες της "
+"μορφής 5:MM UTC την ημέρα που τελειώνει η θερινή ώρα. Το τοπικό ρολόι πηδάει "
+"από 1:59 (θερινή ώρα) πίσω σε 1:00 (κανονική ώρα) ξανά. Οι τοπικές ώρες της "
+"μορφής 1:MM είναι ασαφείς. Η :meth:`~.datetime.astimezone` μιμείται τη "
+"συμπεριφορά του τοπικού ρολογιού χαρτογραφώντας δύο γειτονικές ώρες UTC στην "
+"ίδια τοπική ώρα τότε. Στο παράδειγμα της Ανατολής, οι ώρες UTC της μορφής "
+"5:MM και 6:MM χαρτογραφούνται και οι δύο σε 1:MM όταν μετατραπούν σε "
+"Ανατολική, αλλά οι προηγούμενες ώρες έχουν την ιδιότητα :attr:`~.datetime.fold` "
+"ρυθμισμένη σε 0 και οι μεταγενέστερες ώρες έχουν ρυθμισμένη σε 1. Για παράδειγμα, "
+"κατά τη μετάβαση Fall back του 2016, παίρνουμε::"
 
 #: library/datetime.rst:2330
 msgid ""
@@ -3986,6 +4095,8 @@ msgid ""
 "Note that the :class:`.datetime` instances that differ only by the value of "
 "the :attr:`~.datetime.fold` attribute are considered equal in comparisons."
 msgstr ""
+"Σημειώστε ότι τα στιγμιότυπα της :class:`.datetime` όπου διαφέρουν μόνο από την τιμή του χαρακτηριστικού "
+":attr:`~.datetime.fold` θεωρούνται ίσα στις συγκρίσεις."
 
 #: library/datetime.rst:2344
 msgid ""
@@ -3996,6 +4107,12 @@ msgid ""
 "class representing only EST (fixed offset -5 hours), or only EDT (fixed "
 "offset -4 hours))."
 msgstr ""
+"Εφαρμογές που δεν μπορούν να αντέξουν τις ασαφείς ώρες θα πρέπει να ελέγχουν την "
+"τιμή του χαρακτηριστικού :attr:`~.datetime.fold` ή να αποφεύγουν τη χρήση "
+"υβριδικών υποκλάσεων :class:`tzinfo` ∙ δεν υπάρχουν ασαφείς περιπτώσεις όταν "
+"χρησιμοποιείται η :class:`timezone`, ή οποιαδήποτε άλλη υποκλάση :class:`tzinfo` "
+"με σταθερή μετατόπιση (όπως μια κλάση που αντιπροσωπεύει μόνο την "
+"EST (σταθερή μετατόπιση -5 ώρες), ή μόνο την EDT (σταθερή μετατόπιση -4 ώρες))."
 
 #: library/datetime.rst:2352
 msgid ":mod:`zoneinfo`"
@@ -4029,13 +4146,15 @@ msgstr ""
 
 #: library/datetime.rst:2371
 msgid ":class:`timezone` Objects"
-msgstr ""
+msgstr "Αντικείμενα :class:`timezone`"
 
 #: library/datetime.rst:2373
 msgid ""
 "The :class:`timezone` class is a subclass of :class:`tzinfo`, each instance "
 "of which represents a time zone defined by a fixed offset from UTC."
 msgstr ""
+"Η κλάση :class:`timezone` είναι μια υποκλάση της :class:`tzinfo`, κάθε στιγμιότυπο "
+"της οποίας αντιπροσωπεύει μια ζώνη ώρας που ορίζεται από μια σταθερή μετατόπιση από το UTC."
 
 #: library/datetime.rst:2377
 msgid ""
@@ -4043,6 +4162,9 @@ msgid ""
 "the locations where different offsets are used in different days of the year "
 "or where historical changes have been made to civil time."
 msgstr ""
+"Αντικείμενα αυτής της κλάσης δεν μπορούν να χρησιμοποιηθούν για να αναπαραστήσουν πληροφορίες ζώνης ώρας "
+"στις τοποθεσίες όπου χρησιμοποιούνται διαφορετικές μετατοπίσεις σε διαφορετικές ημέρες του έτους "
+"ή όπου έχουν γίνει ιστορικές αλλαγές στην πολιτική ώρα."
 
 #: library/datetime.rst:2384
 msgid ""
@@ -4051,24 +4173,32 @@ msgid ""
 "strictly between ``-timedelta(hours=24)`` and ``timedelta(hours=24)``, "
 "otherwise :exc:`ValueError` is raised."
 msgstr ""
+"Το όρισμα *offset* πρέπει να καθοριστεί ως ένα αντικείμενο :class:`timedelta` που "
+"αντιπροσωπεύει τη διαφορά μεταξύ της τοπικής ώρας και του UTC. Πρέπει να είναι "
+"αυστηρά μεταξύ ``-timedelta(hours=24)`` και ``timedelta(hours=24)``, "
+"διαφορετικά θα γίνει raise μια :exc:`ValueError`."
 
 #: library/datetime.rst:2389
 msgid ""
 "The *name* argument is optional. If specified it must be a string that will "
 "be used as the value returned by the :meth:`datetime.tzname` method."
-msgstr ""
+msgstr "Το όρισμα *name* είναι προαιρετικό. Εάν καθοριστεί, πρέπει να είναι μια συμβολοσειρά που θα "
+"χρησιμοποιηθεί ως η τιμή που επιστρέφεται από τη μέθοδο :meth:`datetime.tzname`."
 
 #: library/datetime.rst:2411
 msgid ""
 "Return the fixed value specified when the :class:`timezone` instance is "
 "constructed."
 msgstr ""
+"Επιστρέφει την σταθερή τιμή που καθορίστηκε κατά τη δημιουργία του στιγμιότυπου :class:`timezone`."
 
 #: library/datetime.rst:2403
 msgid ""
 "The *dt* argument is ignored. The return value is a :class:`timedelta` "
 "instance equal to the difference between the local time and UTC."
 msgstr ""
+"Το όρισμα *dt* αγνοείται. Η επιστρεφόμενη τιμή είναι ένα στιγμιότυπο της :class:`timedelta` που "
+"είναι ίσο με τη διαφορά μεταξύ της τοπικής ώρας και του UTC."
 
 #: library/datetime.rst:2414
 msgid ""
@@ -4078,30 +4208,38 @@ msgid ""
 "in the format ``UTC±HH:MM``, where ± is the sign of ``offset``, HH and MM "
 "are two digits of ``offset.hours`` and ``offset.minutes`` respectively."
 msgstr ""
+"Εάν το *name* δεν παρέχεται στον κατασκευαστή, το όνομα που επιστρέφεται από "
+"``tzname(dt)`` παράγεται από την τιμή του ``offset`` ως εξής. Εάν το "
+"*offset* είναι ``timedelta(0)``, το όνομα είναι \"UTC\", διαφορετικά είναι μια συμβολοσειρά "
+"στη μορφή ``UTC±HH:MM``, όπου ± είναι το πρόσημο του ``offset``, HH και MM "
+"είναι δύο ψηφία του ``offset.hours`` και ``offset.minutes`` αντίστοιχα."
 
 #: library/datetime.rst:2420
 msgid ""
 "Name generated from ``offset=timedelta(0)`` is now plain ``'UTC'``, not "
 "``'UTC+00:00'``."
 msgstr ""
+"Το όνομα που παράγεται από ``offset=timedelta(0)`` είναι τώρα απλώς ``'UTC'``, όχι ``'UTC+00:00'``."
 
 #: library/datetime.rst:2427
 msgid "Always returns ``None``."
-msgstr ""
+msgstr "Πάντα επιστρέφει ``None``."
 
 #: library/datetime.rst:2431
 msgid ""
 "Return ``dt + offset``. The *dt* argument must be an aware :class:`."
 "datetime` instance, with ``tzinfo`` set to ``self``."
 msgstr ""
+"Επιστρέφει ``dt + offset``. Το όρισμα *dt* πρέπει να είναι ένα συνειδητό στιγμιότυπο :class:`."
+"datetime`, με το ``tzinfo`` να έχει οριστεί σε ``self``."
 
 #: library/datetime.rst:2438
 msgid "The UTC time zone, ``timezone(timedelta(0))``."
-msgstr ""
+msgstr "Η ζώνη ώρας UTC, ``timezone(timedelta(0))``."
 
 #: library/datetime.rst:2447
 msgid ":meth:`~.datetime.strftime` and :meth:`~.datetime.strptime` Behavior"
-msgstr ""
+msgstr ":meth:`~.datetime.strftime` και :meth:`~.datetime.strptime` Συμπεριφορά"
 
 #: library/datetime.rst:2449
 msgid ""
@@ -4109,6 +4247,9 @@ msgid ""
 "``strftime(format)`` method, to create a string representing the time under "
 "the control of an explicit format string."
 msgstr ""
+"Τα αντικείμενα :class:`date`, :class:`.datetime` και :class:`.time` υποστηρίζουν "
+"όλα μια μέθοδο ``strftime(format)``, για να δημιουργήσουν μια συμβολοσειρά που "
+"αντιπροσωπεύει την ώρα υπό τον έλεγχο μιας ρητής μορφής συμβολοσειράς."
 
 #: library/datetime.rst:2453
 msgid ""
@@ -4116,67 +4257,72 @@ msgid ""
 "`time.strptime` class methods create an object from a string representing "
 "the time and a corresponding format string."
 msgstr ""
+"Αντίστροφα, οι μέθοδοι κλάσης :meth:`date.strptime`, :meth:`datetime.strptime` και :meth:`time.strptime` "
+"δημιουργούν ένα αντικείμενο από μια συμβολοσειρά που αντιπροσωπεύει "
+"την ώρα και μια αντίστοιχη μορφή συμβολοσειράς."
 
 #: library/datetime.rst:2457
 msgid ""
 "The table below provides a high-level comparison of :meth:`~.datetime."
 "strftime` versus :meth:`~.datetime.strptime`:"
 msgstr ""
+"Ο παρακάτω πίνακας παρέχει μια γενική σύγκριση μεταξύ της :meth:`~.datetime.strftime` και της :meth:`~.datetime.strptime`:"
 
 #: library/datetime.rst:2461
 msgid "``strftime``"
-msgstr ""
+msgstr "``strftime``"
 
 #: library/datetime.rst:2461
 msgid "``strptime``"
-msgstr ""
+msgstr "``strptime``"
 
 #: library/datetime.rst:2463
 msgid "Usage"
-msgstr ""
+msgstr "Χρήση"
 
 #: library/datetime.rst:2463
 msgid "Convert object to a string according to a given format"
-msgstr ""
+msgstr "Μετατροπή αντικειμένου σε συμβολοσειρά σύμφωνα με μια δεδομένη μορφή"
 
 #: library/datetime.rst:2463
 msgid "Parse a string into an object given a corresponding format"
-msgstr ""
+msgstr "Ανάλυση μιας συμβολοσειράς σε ένα αντικείμενο δεδομένης μορφής"
 
 #: library/datetime.rst:2465
 msgid "Type of method"
-msgstr ""
+msgstr "Τύπος μεθόδου"
 
 #: library/datetime.rst:2465
 msgid "Instance method"
-msgstr ""
+msgstr "Μέθοδος στιγμής"
 
 #: library/datetime.rst:2465
 msgid "Class method"
-msgstr ""
+msgstr "Μέθοδος κλάσης"
 
 #: library/datetime.rst:2467
 msgid "Signature"
-msgstr ""
+msgstr "Υπογραφή"
 
 #: library/datetime.rst:2467
 msgid "``strftime(format)``"
-msgstr ""
+msgstr "``strftime(format)``"
 
 #: library/datetime.rst:2467
 msgid "``strptime(date_string, format)``"
-msgstr ""
+msgstr "``strptime(date_string, format)``"
 
 #: library/datetime.rst:2474
 msgid ""
 ":meth:`~.datetime.strftime` and :meth:`~.datetime.strptime` Format Codes"
-msgstr ""
+msgstr "Οι κωδικοί μορφής :meth:`~.datetime.strftime` και :meth:`~.datetime.strptime`"
 
 #: library/datetime.rst:2476
 msgid ""
 "These methods accept format codes that can be used to parse and format "
 "dates::"
 msgstr ""
+"Αυτοί οι μέθοδοι δέχονται κωδικούς μορφής που μπορούν να χρησιμοποιηθούν για την ανάλυση και τη μορφοποίηση ημερομηνιών::"
 
 #: library/datetime.rst:2478
 msgid ""
@@ -4197,22 +4343,24 @@ msgid ""
 "The following is a list of all the format codes that the 1989 C standard "
 "requires, and these work on all platforms with a standard C implementation."
 msgstr ""
+"Η ακόλουθη είναι μια λίστα με όλους τους κωδικούς μορφής που απαιτεί το πρότυπο C του 1989, "
+"και αυτοί λειτουργούν σε όλες τις πλατφόρμες με μια τυπική υλοποίηση C."
 
 #: library/datetime.rst:2591
 msgid "Directive"
-msgstr ""
+msgstr "Οδηγία"
 
 #: library/datetime.rst:2591
 msgid "Meaning"
-msgstr ""
+msgstr "Σημασία"
 
 #: library/datetime.rst:2591
 msgid "Example"
-msgstr ""
+msgstr "Παράδειγμα"
 
 #: library/datetime.rst:2591
 msgid "Notes"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: library/datetime.rst:2490
 msgid "``%a``"
@@ -4220,15 +4368,15 @@ msgstr "``%a``"
 
 #: library/datetime.rst:2490
 msgid "Weekday as locale's abbreviated name."
-msgstr ""
+msgstr "Ημέρα της εβδομάδας ως τοπική συντομογραφία."
 
 #: library/datetime.rst:0
 msgid "Sun, Mon, ..., Sat (en_US);"
-msgstr ""
+msgstr "Sun, Mon, ..., Sat (en_US);"
 
 #: library/datetime.rst:0
 msgid "So, Mo, ..., Sa (de_DE)"
-msgstr ""
+msgstr "So, Mo, ..., Sa (de_DE)"
 
 #: library/datetime.rst:2495
 msgid "``%A``"
@@ -4236,15 +4384,15 @@ msgstr "``%A``"
 
 #: library/datetime.rst:2495
 msgid "Weekday as locale's full name."
-msgstr ""
+msgstr "Ημέρα της εβδομάδας ως τοπική πλήρης ονομασία."
 
 #: library/datetime.rst:0
 msgid "Sunday, Monday, ..., Saturday (en_US);"
-msgstr ""
+msgstr "Sunday, Monday, ..., Saturday (en_US);"
 
 #: library/datetime.rst:0
 msgid "Sonntag, Montag, ..., Samstag (de_DE)"
-msgstr ""
+msgstr "Sonntag, Montag, ..., Samstag (de_DE)"
 
 #: library/datetime.rst:2500
 msgid "``%w``"
@@ -4252,7 +4400,7 @@ msgstr "``%w``"
 
 #: library/datetime.rst:2500
 msgid "Weekday as a decimal number, where 0 is Sunday and 6 is Saturday."
-msgstr ""
+msgstr "Η ημέρα της εβδομάδας ως δικαδικός αριθμός, όπου 0 είναι η Κυρικάη και 6 είναι το Σάββατο."
 
 #: library/datetime.rst:2500
 msgid "0, 1, ..., 6"
@@ -4264,7 +4412,7 @@ msgstr "``%d``"
 
 #: library/datetime.rst:2504
 msgid "Day of the month as a zero-padded decimal number."
-msgstr ""
+msgstr "Ημέρα του μήνα ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2504
 msgid "01, 02, ..., 31"
@@ -4281,7 +4429,7 @@ msgstr "``%b``"
 
 #: library/datetime.rst:2507
 msgid "Month as locale's abbreviated name."
-msgstr ""
+msgstr "Μήνας ως τοπική συντομογραφία."
 
 #: library/datetime.rst:0
 msgid "Jan, Feb, ..., Dec (en_US);"
@@ -4297,7 +4445,7 @@ msgstr "``%B``"
 
 #: library/datetime.rst:2512
 msgid "Month as locale's full name."
-msgstr ""
+msgstr "Μήνας ως τοπικη πλήρης ονομασία."
 
 #: library/datetime.rst:0
 msgid "January, February, ..., December (en_US);"
@@ -4313,7 +4461,7 @@ msgstr "``%m``"
 
 #: library/datetime.rst:2517
 msgid "Month as a zero-padded decimal number."
-msgstr ""
+msgstr "Μήνας ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2529
 msgid "01, 02, ..., 12"
@@ -4325,7 +4473,7 @@ msgstr "``%y``"
 
 #: library/datetime.rst:2520
 msgid "Year without century as a zero-padded decimal number."
-msgstr ""
+msgstr "Έτος χωρίς αιώνα ως ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2520
 msgid "00, 01, ..., 99"
@@ -4337,7 +4485,7 @@ msgstr "``%Y``"
 
 #: library/datetime.rst:2523
 msgid "Year with century as a decimal number."
-msgstr ""
+msgstr "Έτος με αιώνα ως δεκαδικός αριθμός."
 
 #: library/datetime.rst:2593
 msgid "0001, 0002, ..., 2013, 2014, ..., 9998, 9999"
@@ -4349,7 +4497,7 @@ msgstr "``%H``"
 
 #: library/datetime.rst:2526
 msgid "Hour (24-hour clock) as a zero-padded decimal number."
-msgstr ""
+msgstr "Ώρα (24-ωρο ρολόι) ως μηδενικά-γεμισμένο δεκαδικό νούμερο."
 
 #: library/datetime.rst:2526
 msgid "00, 01, ..., 23"
@@ -4369,7 +4517,7 @@ msgstr "``%p``"
 
 #: library/datetime.rst:2532
 msgid "Locale's equivalent of either AM or PM."
-msgstr ""
+msgstr "Τοπικά ισοδύναμο είτε του AM είτε του PM."
 
 #: library/datetime.rst:0
 msgid "AM, PM (en_US);"
@@ -4627,6 +4775,7 @@ msgid ""
 "UTC offset in the form ``±HH:MM[:SS[.ffffff]]`` (empty string if the object "
 "is naive)."
 msgstr ""
+"UTC διαφορά σε μορφή ``±HH:MM[:SS[.ffffff]]`` (κενή συμβολοσειρά αν το αντικείμενο είναι αδαές)."
 
 #: library/datetime.rst:2607
 msgid "(empty), +00:00, -04:00, +10:30, +06:34:15, -03:07:12.345216"
