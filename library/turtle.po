@@ -35,11 +35,13 @@ msgid ""
 "introduced in Logo <https://en.wikipedia.org/wiki/Turtle_ (robot)>`_, "
 "developed by Wally Feurzeig, Seymour Papert and Cynthia Solomon in 1967."
 msgstr ""
-"Τα γραφικά χελώνας είναι μια υλοποίηση "
+"Τα γραφικά χελώνας είναι μια υλοποίηση του `δημοφιλούς γεωμετρικού εργαλείου "
+"<https://en.wikipedia.org/wiki/Turtle_graphics>`_, που εισήχθη στο "
+"Logo από τους Wally Feurzeig, Seymour Papert και Cynthia Solomon το 1967."
 
 #: library/turtle.rst:34
 msgid "Get started"
-msgstr ""
+msgstr "Ξεκινώντας"
 
 #: library/turtle.rst:36
 msgid ""
@@ -49,11 +51,17 @@ msgid ""
 "moves.  Give it the command ``turtle.right(25)``, and it rotates in-place 25 "
 "degrees clockwise."
 msgstr ""
+"Φανταστείτε μια ρομποτική χελώνα που ξεκινά από το (0, 0) στο επίπεδο x-y. Μετά από ένα "
+"``import turtle``, δώστε της την εντολή ``turtle.forward(15)``, και αυτή κινείται "
+"(στην οθόνη!) 15 pixel στην κατεύθυνση που κοιτάει, σχεδιάζοντας μια γραμμή καθώς "
+"κινείται. Δώστε της την εντολή ``turtle.right(25)``, και αυτή περιστρέφεται "
+"κατά 25 μοίρες δεξιόστροφα."
 
 #: library/turtle.rst:43
 msgid ""
 "Turtle can draw intricate shapes using programs that repeat simple moves."
 msgstr ""
+"Η χελώνα μπορεί να σχεδιάσει περίπλοκα σχήματα χρησιμοποιώντας προγράμματα που επαναλαμβάνουν απλές κινήσεις."
 
 #: library/turtle.rst:49
 msgid ""
@@ -61,6 +69,8 @@ msgid ""
 "\"turtle\" (a little robot with a pen) that draws on a sheet of paper on the "
 "floor."
 msgstr ""
+"Στην Python, τα γραφικά χελώνας παρέχουν μια αναπαράστση μιας φυσικής \"χελώνας\" "
+"(ένα μικρό ρομπότ με ένα στυλό) που σχεδιάζει σε ένα φύλλο χαρτί στο πάτωμα."
 
 #: library/turtle.rst:52
 msgid ""
@@ -68,6 +78,9 @@ msgid ""
 "concepts and interaction with software, as it provides instant, visible "
 "feedback. It also provides convenient access to graphical output in general."
 msgstr ""
+"Αυτός είναι ένας αποτελεσματικός και αποδεδειγμένος τρόπος για τα άτομα που μαθαίνουν να έρθουν σε επαφή "
+"με προγραμματιστικά σενάρια και να αλληλεπιδράσουν με το λογισμικό, καθώς παρέχει ένα άμεση, ορατή ανατροφοδότηση. "
+"Παρέχει επίσης εύκολη πρόσβαση σε γραφική έξοδο γενικά."
 
 #: library/turtle.rst:57
 msgid ""
@@ -76,42 +89,50 @@ msgid ""
 "graphical output it can be a way to do that without the overhead of "
 "introducing more complex or external libraries into their work."
 msgstr ""
+"Η σχεδίαση με χελώνα δημιουργήθηκε αρχικά ως εκπαιδευτικό εργαλείο, για να χρησιμοποιείται από "
+"καθηγητές στην τάξη. Για τον προγραμματιστή που χρειάζεται να παράγει κάποια "
+"γραφική έξοδο, μπορεί να είναι ένας τρόπος να το κάνει αυτό χωρίς την επιβάρυνση της "
+"εισαγωγής πιο σύνθετων ή εξωτερικών βιβλιοθηκών στη δουλειά του."
 
 #: library/turtle.rst:66
 msgid "Tutorial"
-msgstr ""
+msgstr "Εκπαιδευτικό υλικό"
 
 #: library/turtle.rst:68
 msgid ""
 "New users should start here. In this tutorial we'll explore some of the "
 "basics of turtle drawing."
 msgstr ""
+"Οι νέοι χρήστες θα πρέπει να ξεκινήσουν εδώ. Σε αυτό το εκπαιδευτικό υλικό θα εξερευνήσουμε μερικά από τα "
+"βασικά της σχεδίασης με χελώνα."
 
 #: library/turtle.rst:73
 msgid "Starting a turtle environment"
-msgstr ""
+msgstr "Έναρξη περιβάλλοντος χελώνας"
 
 #: library/turtle.rst:75
 msgid "In a Python shell, import all the objects of the ``turtle`` module::"
-msgstr ""
+msgstr "Σε ένα κέλυφος Python, εισάγετε όλα τα αντικείμενα του module ``turtle``::"
 
 #: library/turtle.rst:77
 msgid "from turtle import *"
-msgstr ""
+msgstr "from turtle import *"
 
 #: library/turtle.rst:79
 msgid ""
 "If you run into a ``No module named '_tkinter'`` error, you'll have to "
 "install the :mod:`Tk interface package <tkinter>` on your system."
 msgstr ""
+"Εάν συναντήσετε ένα σφάλμα ``No module named '_tkinter'``, θα πρέπει να "
+"εγκαταστήσετε το :mod:`Tk interface package <tkinter>` στο σύστημά σας."
 
 #: library/turtle.rst:84
 msgid "Basic drawing"
-msgstr ""
+msgstr "Βασική σχεδίαση"
 
 #: library/turtle.rst:86
 msgid "Send the turtle forward 100 steps::"
-msgstr ""
+msgstr "Στείλτε τη χελώνα προς τα εμπρός 100 βήματα::"
 
 #: library/turtle.rst:88
 msgid "forward(100)"
@@ -123,6 +144,8 @@ msgid ""
 "by the turtle, heading East. Change the direction of the turtle, so that it "
 "turns 120 degrees left (anti-clockwise)::"
 msgstr ""
+"Θα πρέπει να δείτε (πιθανότατα, σε ένα νέο παράθυρο στην οθόνη σας) μια γραμμή που σχεδιάστηκε από τη χελώνα, "
+"κατευθυνόμενη προς τα Ανατολικά. Αλλάξτε την κατεύθυνση της χελώνας, έτσι ώστε να στρίψει 120 μοίρες αριστερά (αντίθετα με τη φορά των δεικτών του ρολογιού)::"
 
 #: library/turtle.rst:94
 msgid "left(120)"
@@ -147,37 +170,44 @@ msgid ""
 "Notice how the turtle, represented by an arrow, points in different "
 "directions as you steer it."
 msgstr ""
+"Σημειώστε πώς η χελώνα, που αναπαρίσταται από ένα βέλος, δείχνει σε διαφορετικές κατευθύνσεις καθώς της αλλάζετε την πορεία."
 
 #: library/turtle.rst:105
 msgid ""
 "Experiment with those commands, and also with ``backward()`` and ``right()``."
 msgstr ""
+"Πειραματιστείτε με αυτές τις εντολές, καθώς και με τις ``backward()`` και ``right()``."
 
 #: library/turtle.rst:364 library/turtle.rst:1058
 msgid "Pen control"
-msgstr ""
+msgstr "Έλεγχος πένας"
 
 #: library/turtle.rst:112
 msgid ""
 "Try changing the color - for example, ``color('blue')`` - and width of the "
 "line - for example, ``width(3)`` - and then drawing again."
 msgstr ""
+"Δοκιμάστε να αλλάξετε το χρώμα - για παράδειγμα, ``color('blue')`` - και το πλάτος της γραμμής - για παράδειγμα, ``width(3)`` - και στη συνέχεια σχεδιάστε ξανά."
 
 #: library/turtle.rst:115
 msgid ""
 "You can also move the turtle around without drawing, by lifting up the pen: "
 "``up()`` before moving. To start drawing again, use ``down()``."
 msgstr ""
+"Μπορείτε επίσης να μετακινήσετε την χελώνα τριγύρω χωρίς να σχεδιάζετε, σηκώντας το στυλό: "
+"``up()`` προτού μετακινηθεί. Για να ξεκινήσετε να σχεδιάζετε ξανά, χρησιμοποιήστε το ``down()``."
 
 #: library/turtle.rst:120
 msgid "The turtle's position"
-msgstr ""
+msgstr "Η θέση της χελώνας"
 
 #: library/turtle.rst:122
 msgid ""
 "Send your turtle back to its starting-point (useful if it has disappeared "
 "off-screen)::"
 msgstr ""
+"Στείλτε τη χελώνα πίσω στο σημείο εκκίνησής της (χρήσιμο αν έχει εξαφανιστεί "
+"εκτός οθόνης)::"
 
 #: library/turtle.rst:125
 msgid "home()"
@@ -188,6 +218,7 @@ msgid ""
 "The home position is at the center of the turtle's screen. If you ever need "
 "to know them, get the turtle's x-y coordinates with::"
 msgstr ""
+"Η αρχική θέση είναι στο κέντρο της οθόνης της χελώνας. Αν ποτέ χρειαστεί να τις γνωρίζετε, πάρτε τις x-y συντεταγμένες της χελώνας με::"
 
 #: library/turtle.rst:130
 msgid "pos()"
@@ -202,6 +233,7 @@ msgid ""
 "And after a while, it will probably help to clear the window so we can start "
 "anew::"
 msgstr ""
+"Και μετά από λίγο, πιθανότατα θα βοηθήσει να καθαρίσουμε το παράθυρο ώστε να μπορέσουμε να ξεκινήσουμε από την αρχή::"
 
 #: library/turtle.rst:137
 msgid "clearscreen()"
@@ -253,6 +285,7 @@ msgid ""
 "Just as ``up()`` and ``down()`` determine whether lines will be drawn, "
 "filling can be turned on and off::"
 msgstr ""
+"Όπως τα ``up()`` και ``down()`` καθορίζουν αν θα σχεδιαστούν γραμμές, έτσι και το γέμισμα μπορεί να ενεργοποιηθεί και να απενεργοποιηθεί::"
 
 #: library/turtle.rst:163
 msgid "begin_fill()"
@@ -260,7 +293,7 @@ msgstr "begin_fill()"
 
 #: library/turtle.rst:165
 msgid "Next we'll create a loop::"
-msgstr ""
+msgstr "Στη συνέχεια θα δημιουργήσουμε έναν βρόχο::"
 
 #: library/turtle.rst:167
 msgid ""
@@ -281,10 +314,11 @@ msgid ""
 "``abs(pos()) < 1`` is a good way to know when the turtle is back at its home "
 "position."
 msgstr ""
+"Το ``abs(pos()) < 1`` είναι ένας καλός τρόπος για να γνωρίζετε πότε η χελώνα είναι πίσω στην αρχική της θέση."
 
 #: library/turtle.rst:176
 msgid "Finally, complete the filling::"
-msgstr ""
+msgstr "Τέλος, ολοκληρώστε το γέμισμα::"
 
 #: library/turtle.rst:178
 msgid "end_fill()"
@@ -295,18 +329,20 @@ msgid ""
 "(Note that filling only actually takes place when you give the "
 "``end_fill()`` command.)"
 msgstr ""
+"(Σημειώστε ότι το γέμισμα πραγματικά πραγματοποιείται μόνο όταν δώσετε την "
+"εντολή ``end_fill()``.)"
 
 #: library/turtle.rst:187
 msgid "How to..."
-msgstr ""
+msgstr "Πως να..."
 
 #: library/turtle.rst:189
 msgid "This section covers some typical turtle use-cases and approaches."
-msgstr ""
+msgstr "Αυτό το τμήμα καλύπτει μερικές τυπικές περιπτώσεις χρήσης και προσεγγίσεις της χελώνας."
 
 #: library/turtle.rst:193
 msgid "Get started as quickly as possible"
-msgstr ""
+msgstr "Ξεκινήστε όσο το δυνατόν πιο γρήγορα"
 
 #: library/turtle.rst:195
 msgid ""
@@ -315,6 +351,8 @@ msgid ""
 "to programming ideas, with a minimum of overhead (not just children, of "
 "course)."
 msgstr ""
+"Ένα από τα χαρίσματα των γραφικών χελώνας είναι η άμεση, οπτική ανατροφοδότηση που είναι διαθέσιμη από απλές εντολές - "
+"είναι ένας εξαιρετικός τρόπος για να εισαγάγετε τα παιδιά σε ιδέες προγραμματισμού, με ελάχιστη επιβάρυνση (όχι μόνο τα παιδιά, φυσικά)."
 
 #: library/turtle.rst:200
 msgid ""
@@ -322,6 +360,9 @@ msgid ""
 "functionality as functions, available with ``from turtle import *``. The :"
 "ref:`turtle graphics tutorial <turtle-tutorial>` covers this approach."
 msgstr ""
+"Το module χελώνας κάνει αυτό δυνατό εκθέτοντας όλη τη βασική του λειτουργικότητα "
+"ως συναρτήσεις, διαθέσιμες με το ``from turtle import *``. "
+"Το :ref:`turtle graphics tutorial <turtle-tutorial>` καλύπτει αυτή την προσέγγιση."
 
 #: library/turtle.rst:204
 msgid ""
@@ -329,6 +370,7 @@ msgid ""
 "equivalents, such as ``fd()`` for :func:`forward`. These are especially "
 "useful when working with learners for whom typing is not a skill."
 msgstr ""
+""
 
 #: library/turtle.rst:210
 msgid ""
@@ -1111,23 +1153,26 @@ msgstr ""
 
 #: library/turtle.rst:576
 msgid "a number or a pair/vector of numbers"
-msgstr ""
+msgstr "ένας αριθμός ή ένα ζεύγος/διάνυσμα αριθμών"
 
 #: library/turtle.rst:610 library/turtle.rst:611
 msgid "a number or ``None``"
-msgstr ""
+msgstr "ένας αριθμός ή ``None``"
 
 #: library/turtle.rst:579
 msgid ""
 "If *y* is ``None``, *x* must be a pair of coordinates or a :class:`Vec2D` (e."
 "g. as returned by :func:`pos`)."
 msgstr ""
+"Εάν το *y* είναι ``None``, το *x* πρέπει να είναι ένα ζεύγος "
+"συντεταγμένων ή μια :class:`Vec2D` (π.χ. όπως επιστρέφεται από την :func:`pos`)."
 
 #: library/turtle.rst:582
 msgid ""
 "Move turtle to an absolute position.  If the pen is down, draw line.  Do not "
 "change the turtle's orientation."
 msgstr ""
+"Μετακινεί τη χελώνα σε μια απόλυτη θέση. Εάν η πένα είναι κάτω, σχεδιάζει μια γραμμή. Δεν αλλάζει τον προσανατολισμό της χελώνας."
 
 #: library/turtle.rst:591
 msgid ""
@@ -1159,7 +1204,7 @@ msgstr ""
 
 #: library/turtle.rst:612
 msgid "a boolean"
-msgstr ""
+msgstr "μια λογική τιμή"
 
 #: library/turtle.rst:614
 msgid ""
@@ -1170,6 +1215,12 @@ msgid ""
 "which makes the imaginary line traveled during teleporting act as a fill "
 "barrier like in goto(x, y)."
 msgstr ""
+"Μετακινεί τη χελώνα σε μια απόλυτη θέση. Σε αντίθεση με το goto(x, y), "
+"δεν θα σχεδιαστεί γραμμή. Ο προσανατολισμός της χελώνας δεν αλλάζει. "
+"Εάν γεμίζει αυτήν τη στιγμή, το/τα πολύγωνο/α από τα οποία τηλεμεταφέρεται "
+"θα γεμίσουν μετά την έξοδο, και η γέμιση θα ξεκινήσει ξανά μετά την τηλεμεταφορά. "
+"Αυτό μπορεί να απενεργοποιηθεί με το fill_gap=True, που κάνει τη φανταστική γραμμή που "
+"διανύεται κατά την τηλεμεταφορά να λειτουργεί ως φράγμα γέμισης όπως στο goto(x, y)."
 
 #: library/turtle.rst:627
 msgid ""
@@ -1203,6 +1254,7 @@ msgstr ""
 msgid ""
 "Set the turtle's first coordinate to *x*, leave second coordinate unchanged."
 msgstr ""
+"Ορίζει την πρώτη συντεταγμένη της χελώνας σε *x*, αφήνοντας τη δεύτερη συντεταγμένη αμετάβλητη."
 
 #: library/turtle.rst:659
 msgid ""
@@ -1222,6 +1274,7 @@ msgstr ""
 msgid ""
 "Set the turtle's second coordinate to *y*, leave first coordinate unchanged."
 msgstr ""
+"Ορίζει τη δεύτερη συντεταγμένη της χελώνας σε *y*, αφήνοντας την πρώτη συντεταγμένη αμετάβλητη."
 
 #: library/turtle.rst:681
 msgid ""
@@ -1242,46 +1295,47 @@ msgid ""
 "Set the orientation of the turtle to *to_angle*.  Here are some common "
 "directions in degrees:"
 msgstr ""
+"Ορίζει τον προσανατολισμό της χελώνας σε *to_angle*. Εδώ είναι μερικές κοινές κατευθύνσεις σε μοίρες:"
 
 #: library/turtle.rst:700
 msgid "standard mode"
-msgstr ""
+msgstr "κανονική λειτουργία"
 
 #: library/turtle.rst:700
 msgid "logo mode"
-msgstr ""
+msgstr "λειτουργία logo"
 
 #: library/turtle.rst:702
 msgid "0 - east"
-msgstr ""
+msgstr "0 - ανατολικά"
 
 #: library/turtle.rst:702
 msgid "0 - north"
-msgstr ""
+msgstr "0 - βόρεια"
 
 #: library/turtle.rst:703
 msgid "90 - north"
-msgstr ""
+msgstr "90 - βόρεια"
 
 #: library/turtle.rst:703
 msgid "90 - east"
-msgstr ""
+msgstr "90 - ανατολικά"
 
 #: library/turtle.rst:704
 msgid "180 - west"
-msgstr ""
+msgstr "180 - δυτικά"
 
 #: library/turtle.rst:704
 msgid "180 - south"
-msgstr ""
+msgstr "180 - νότια"
 
 #: library/turtle.rst:705
 msgid "270 - south"
-msgstr ""
+msgstr "270 - νότια"
 
 #: library/turtle.rst:705
 msgid "270 - west"
-msgstr ""
+msgstr "270 - δυτικά"
 
 #: library/turtle.rst:708
 msgid ""
@@ -1298,6 +1352,9 @@ msgid ""
 "Move turtle to the origin -- coordinates (0,0) -- and set its heading to its "
 "start-orientation (which depends on the mode, see :func:`mode`)."
 msgstr ""
+"Μετακινεί την χελώνα στην αρχή -- συντεταγμένες (0,0) -- και ορίζει "
+"τον προσανατολισμό της στην αρχική κατεύθυνση (που εξαρτάται από τη λειτουργία, "
+"βλέπε :func:`mode`)."
 
 #: library/turtle.rst:728
 msgid ""
