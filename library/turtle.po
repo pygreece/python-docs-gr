@@ -1434,6 +1434,12 @@ msgid ""
 "otherwise in clockwise direction.  Finally the direction of the turtle is "
 "changed by the amount of *extent*."
 msgstr ""
+"Σχεδιάζει έναν κύκλο με την δοσμένη *ακτίνα*.  Το κέντρο είναι μονάδες *ακτίνας* αριστερά της χελώνας∙ "
+"*extent* -- μια γωνία -- καθορίζει ποιο μέρος του κύκλου σχεδιάζεται.  Εάν το *extent* δεν δοθεί, σχεδιάζει ολόκληρο τον κύκλο.  "
+"Εάν το *extent* δεν είναι πλήρης κύκλος, ένα άκρο του τόξου είναι η τρέχουσα θέση της πένας. "
+"Σχεδιάζει το τόξο σε αντίθετη κατεύθυνση από την φορά των δεικτών του ρολογιού εάν η *ακτίνα* "
+"είναι θετική, διαφορετικά σε κατεύθυνση των δεικτών του ρολογιού.  "
+"Τέλος, η κατεύθυνση της χελώνας αλλάζει κατά το ποσό του *extent*."
 
 #: library/turtle.rst:756
 msgid ""
@@ -1441,6 +1447,9 @@ msgid ""
 "determines the number of steps to use.  If not given, it will be calculated "
 "automatically.  May be used to draw regular polygons."
 msgstr ""
+"Καθώς ο κύκλος προσεγγίζεται από ένα εγγεγραμμένο κανονικό πολύγωνο, το *steps* "
+"καθορίζει τον αριθμό των βημάτων που θα χρησιμοποιηθούν.  "
+"Εάν δεν δοθεί, θα υπολογιστεί αυτόματα.  Μπορεί να χρησιμοποιηθεί για να σχεδιάσει κανονικά πολύγωνα."
 
 #: library/turtle.rst:760
 msgid ""
@@ -1478,17 +1487,19 @@ msgstr ""
 
 #: library/turtle.rst:782
 msgid "an integer >= 1 (if given)"
-msgstr ""
+msgstr "ένας ακέραιος αριθμός >= 1 (εάν δοθεί)"
 
 #: library/turtle.rst:783
 msgid "a colorstring or a numeric color tuple"
-msgstr ""
+msgstr "μια συμβολοσειρά χρώματος ή ένα αριθμητικό χρωματικό τουίπλ"
 
 #: library/turtle.rst:785
 msgid ""
 "Draw a circular dot with diameter *size*, using *color*.  If *size* is not "
 "given, the maximum of pensize+4 and 2*pensize is used."
 msgstr ""
+"Σχεδιάζει μια κυκλική κουκκίδα με διάμετρο *size*, χρησιμοποιώντας *color*.  "
+"Εάν το *size* δεν δοθεί, χρησιμοποιείται το μέγιστο του pensize+4 και 2*pensize."
 
 #: library/turtle.rst:789
 msgid ""
@@ -1514,6 +1525,9 @@ msgid ""
 "position.  Return a stamp_id for that stamp, which can be used to delete it "
 "by calling ``clearstamp(stamp_id)``."
 msgstr ""
+"Σφραγίζει ένα αντίγραφο του σχήματος της χελώνας στον καμβά στην τρέχουσα θέση της χελώνας.  "
+"Επιστρέφει ένα stamp_id για αυτή τη σφραγίδα, το οποίο μπορεί να χρησιμοποιηθεί για να τη "
+"διαγράψει καλώντας ``clearstamp(stamp_id)``."
 
 #: library/turtle.rst:807
 msgid ""
@@ -1527,11 +1541,11 @@ msgstr ""
 
 #: library/turtle.rst:817
 msgid "an integer, must be return value of previous :func:`stamp` call"
-msgstr ""
+msgstr "ένας ακέραιος αριθμός, πρέπει να είναι η τιμή επιστροφής της προηγούμενης κλήσης :func:`stamp`"
 
 #: library/turtle.rst:820
 msgid "Delete stamp with given *stampid*."
-msgstr ""
+msgstr "Διαγράφει τη σφραγίδα με το δοθέν *stampid*."
 
 #: library/turtle.rst:822
 msgid ""
@@ -1563,6 +1577,9 @@ msgid ""
 "all stamps, if *n* > 0 delete first *n* stamps, else if *n* < 0 delete last "
 "*n* stamps."
 msgstr ""
+"Διαγράφει όλες ή τις πρώτες/τελευταίες *n* σφραγίδες της χελώνας.  "
+"Εάν το *n* είναι ``None``, διαγράφει όλες τις σφραγίδες, εάν το *n* > 0 "
+"διαγράφει τις πρώτες *n* σφραγίδες, αλλιώς εάν το *n* < 0 διαγράφει τις τελευταίες *n* σφραγίδες."
 
 #: library/turtle.rst:845
 msgid ""
@@ -1585,6 +1602,8 @@ msgid ""
 "Undo (repeatedly) the last turtle action(s).  Number of available undo "
 "actions is determined by the size of the undobuffer."
 msgstr ""
+"Αναίρεση (επανειλημμένα) της τελευταίας ενέργειας/ενεργειών της χελώνας.  "
+"Ο αριθμός των διαθέσιμων ενεργειών αναίρεσης καθορίζεται από το μέγεθος του undobuffer."
 
 #: library/turtle.rst:860
 msgid ""
@@ -1602,51 +1621,56 @@ msgstr ""
 
 #: library/turtle.rst:872
 msgid "an integer in the range 0..10 or a speedstring (see below)"
-msgstr ""
+msgstr "ένας ακέραιος αριθμός στην περιοχή 0..10 ή μια συμβολοσειρά ταχύτητας (βλ. παρακάτω)"
 
 #: library/turtle.rst:874
 msgid ""
 "Set the turtle's speed to an integer value in the range 0..10.  If no "
 "argument is given, return current speed."
 msgstr ""
+"Ορίζει την ταχύτητα της χελώνας σε μια ακέραια τιμή στην περιοχή 0..10.  Εάν δεν δοθεί κανένα όρισμα, επιστρέφει την τρέχουσα ταχύτητα."
 
 #: library/turtle.rst:877
 msgid ""
 "If input is a number greater than 10 or smaller than 0.5, speed is set to "
 "0.  Speedstrings are mapped to speedvalues as follows:"
 msgstr ""
+"Εάν η είσοδος είναι ένας αριθμός μεγαλύτερος από 10 ή μικρότερος από 0.5, η ταχύτητα ορίζεται σε 0.  Οι συμβολοσειρές ταχύτητας αντιστοιχίζονται σε τιμές ταχύτητας ως εξής:"
 
 #: library/turtle.rst:880
 msgid "\"fastest\":  0"
-msgstr ""
+msgstr "\"fastest\":  0"
 
 #: library/turtle.rst:881
 msgid "\"fast\":  10"
-msgstr ""
+msgstr "\"fast\":  10"
 
 #: library/turtle.rst:882
 msgid "\"normal\":  6"
-msgstr ""
+msgstr "\"normal\":  6"
 
 #: library/turtle.rst:883
 msgid "\"slow\":  3"
-msgstr ""
+msgstr "\"slow\":  3"
 
 #: library/turtle.rst:884
 msgid "\"slowest\":  1"
-msgstr ""
+msgstr "\"slowest\":  1"
 
 #: library/turtle.rst:886
 msgid ""
 "Speeds from 1 to 10 enforce increasingly faster animation of line drawing "
 "and turtle turning."
 msgstr ""
+"Οι ταχύτητες από 1 έως 10 επιβάλλουν όλο και πιο γρήγορη κινούμενη εικόνα του σχεδίου γραμμής και της στροφής της χελώνας."
 
 #: library/turtle.rst:889
 msgid ""
 "Attention: *speed* = 0 means that *no* animation takes place. forward/back "
 "makes turtle jump and likewise left/right make the turtle turn instantly."
 msgstr ""
+"Προσοχή: *speed* = 0 σημαίνει ότι δεν λαμβάνει χώρα καμία κινούμενη εικόνα. "
+"Το forward/back κάνει τη χελώνα να πηδήξει και παρομοίως το left/right κάνει τη χελώνα να στρίψει αμέσως."
 
 #: library/turtle.rst:893
 msgid ""
@@ -1672,6 +1696,7 @@ msgstr ""
 msgid ""
 "Return the turtle's current location (x,y) (as a :class:`Vec2D` vector)."
 msgstr ""
+"Επιστρέφει την τρέχουσα θέση της χελώνας (x,y) (ως διάνυσμα :class:`Vec2D`)."
 
 #: library/turtle.rst:914
 msgid ""
@@ -1683,11 +1708,11 @@ msgstr ""
 
 #: library/turtle.rst:986
 msgid "a number or a pair/vector of numbers or a turtle instance"
-msgstr ""
+msgstr "ένας αριθμός ή ένα ζεύγος/διάνυσμα αριθμών ή μια περίπτωση χελώνας"
 
 #: library/turtle.rst:987
 msgid "a number if *x* is a number, else ``None``"
-msgstr ""
+msgstr "ένας αριθμός αν το *x* είναι αριθμός, αλλιώς ``None``"
 
 #: library/turtle.rst:926
 msgid ""
@@ -1696,6 +1721,8 @@ msgid ""
 "start orientation which depends on the mode - \"standard\"/\"world\" or "
 "\"logo\"."
 msgstr ""
+"Επιστρέφει τη γωνία μεταξύ της γραμμής από τη θέση της χελώνας στη θέση που καθορίζεται από (x,y), το διάνυσμα ή την άλλη χελώνα.  "
+"Αυτό εξαρτάται από τον αρχικό προσανατολισμό της χελώνας που εξαρτάται από τη λειτουργία - \"standard\"/\"world\" ή \"logo\"."
 
 #: library/turtle.rst:930
 msgid ""
@@ -1709,7 +1736,7 @@ msgstr ""
 
 #: library/turtle.rst:940
 msgid "Return the turtle's x coordinate."
-msgstr ""
+msgstr "Επιστρέφει την x συντεταγμένη της χελώνας."
 
 #: library/turtle.rst:942
 msgid ""
@@ -1731,7 +1758,7 @@ msgstr ""
 
 #: library/turtle.rst:956
 msgid "Return the turtle's y coordinate."
-msgstr ""
+msgstr "Επιστρέφει την y συντεταγμένη της χελώνας."
 
 #: library/turtle.rst:958
 msgid ""
@@ -1756,6 +1783,7 @@ msgid ""
 "Return the turtle's current heading (value depends on the turtle mode, see :"
 "func:`mode`)."
 msgstr ""
+"Επιστρέφει τον τρέχοντα προσανατολισμό της χελώνας (η τιμή εξαρτάται από τη λειτουργία της χελώνας, δείτε :func:`mode`)."
 
 #: library/turtle.rst:975
 msgid ""
@@ -1774,6 +1802,8 @@ msgid ""
 "Return the distance from the turtle to (x,y), the given vector, or the given "
 "other turtle, in turtle step units."
 msgstr ""
+"Επιστρέφει την απόσταση από τη χελώνα στο (x,y), "
+"το δοσμένο διάνυσμα ή την άλλη χελώνα, σε μονάδες βημάτων της χελώνας."
 
 #: library/turtle.rst:992
 msgid ""
@@ -1799,13 +1829,15 @@ msgstr ""
 
 #: library/turtle.rst:1007
 msgid "Settings for measurement"
-msgstr ""
+msgstr "Ρυθμίσεις για τη μέτρηση"
 
 #: library/turtle.rst:1013
 msgid ""
 "Set angle measurement units, i.e. set number of \"degrees\" for a full "
 "circle. Default value is 360 degrees."
 msgstr ""
+"Ορίστε τις μονάδες μέτρησης γωνίας, δηλαδή ορίστε τον αριθμό των \"μοίρων\" για μια πλήρη "
+"κύκλο. Η προεπιλεγμένη τιμή είναι 360 μοίρες."
 
 #: library/turtle.rst:1016
 msgid ""
@@ -1842,6 +1874,7 @@ msgid ""
 "Set the angle measurement units to radians.  Equivalent to ``degrees(2*math."
 "pi)``."
 msgstr ""
+"Orίζει τις μονάδες μέτρησης γωνίας σε ακτίνια.  Ισοδύναμο με ``degrees(2*math.pi)``."
 
 #: library/turtle.rst:1039
 msgid ""
@@ -1863,15 +1896,15 @@ msgstr ""
 
 #: library/turtle.rst:1067
 msgid "Pull the pen down -- drawing when moving."
-msgstr ""
+msgstr "Κατεβάστε το στυλό -- σχεδιάζοντας κατά την κίνηση."
 
 #: library/turtle.rst:1074
 msgid "Pull the pen up -- no drawing when moving."
-msgstr ""
+msgstr "Σηκώστε το στυλό -- χωρίς σχέδιο κατά την κίνηση."
 
 #: library/turtle.rst:1080
 msgid "a positive number"
-msgstr ""
+msgstr "ένας θετικός αριθμός"
 
 #: library/turtle.rst:1082
 msgid ""
@@ -1879,6 +1912,9 @@ msgid ""
 "\"auto\" and turtleshape is a polygon, that polygon is drawn with the same "
 "line thickness.  If no argument is given, the current pensize is returned."
 msgstr ""
+"Ορίζει το πάχος της γραμμής σε *width* ή το επιστρέφει.  Εάν το resizemode έχει "
+"οριστεί σε \"auto\" και το turtleshape είναι ένα πολύγωνο, αυτό το πολύγωνο σχεδιάζεται με το ίδιο πάχος γραμμής.  "
+"Εάν δεν δοθεί κανένα όρισμα, επιστρέφεται το τρέχον pensize."
 
 #: library/turtle.rst:1086
 msgid ""
@@ -1892,57 +1928,58 @@ msgstr ""
 
 #: library/turtle.rst:1096
 msgid "a dictionary with some or all of the below listed keys"
-msgstr ""
+msgstr "ένα λεξικό με ένα ή περισσότερα από τα παρακάτω αναφερόμενα κλειδιά"
 
 #: library/turtle.rst:1097
 msgid "one or more keyword-arguments with the below listed keys as keywords"
-msgstr ""
+msgstr "ένα ή περισσότερα ορίσματα-κλειδιά με τα παρακάτω αναφερόμενα κλειδιά ως λέξεις-κλειδιά"
 
 #: library/turtle.rst:1099
 msgid ""
 "Return or set the pen's attributes in a \"pen-dictionary\" with the "
 "following key/value pairs:"
 msgstr ""
+"Επιστρέφει ή ορίζει τα χαρακτηριστικά της πένας σε ένα \"λεξικό πένας\" με τα ακόλουθα ζεύγη κλειδιού/τιμής:"
 
 #: library/turtle.rst:1102
 msgid "\"shown\": True/False"
-msgstr ""
+msgstr "\"shown\": True/False"
 
 #: library/turtle.rst:1103
 msgid "\"pendown\": True/False"
-msgstr ""
+msgstr "\"pendown\": True/False"
 
 #: library/turtle.rst:1104
 msgid "\"pencolor\": color-string or color-tuple"
-msgstr ""
+msgstr "\"pencolor\": συμβολοσειρά-χρώματος ή πλειάδα-χρώματος"
 
 #: library/turtle.rst:1105
 msgid "\"fillcolor\": color-string or color-tuple"
-msgstr ""
+msgstr "\"fillcolor\": συμβολοσειρά-χρώματος ή πλειάδα-χρώματος"
 
 #: library/turtle.rst:1106
 msgid "\"pensize\": positive number"
-msgstr ""
+msgstr "\"pensize\": θετικός αριθμός"
 
 #: library/turtle.rst:1107
 msgid "\"speed\": number in range 0..10"
-msgstr ""
+msgstr "\"speed\": αριθμός στο εύρος 0..10"
 
 #: library/turtle.rst:1108
 msgid "\"resizemode\": \"auto\" or \"user\" or \"noresize\""
-msgstr ""
+msgstr "\"resizemode\": \"auto\" ή \"user\" ή \"noresize\""
 
 #: library/turtle.rst:1109
 msgid "\"stretchfactor\": (positive number, positive number)"
-msgstr ""
+msgstr "\"stretchfactor\": (θετικός αριθμός, θετικός αριθμός)"
 
 #: library/turtle.rst:1110
 msgid "\"outline\": positive number"
-msgstr ""
+msgstr "\"outline\": θετικός αριθμός"
 
 #: library/turtle.rst:1111
 msgid "\"tilt\": number"
-msgstr ""
+msgstr "\"tilt\": αριθμός"
 
 #: library/turtle.rst:1113
 msgid ""
@@ -1951,6 +1988,10 @@ msgid ""
 "can be provided as keyword-arguments.  This can be used to set several pen "
 "attributes in one statement."
 msgstr ""
+"Το λεξικό αυτό μπορεί να χρησιμοποιηθεί ως όρισμα για μια επόμενη κλήση "
+"στην :func:`pen` για να αποκαταστήσει την προηγούμενη κατάσταση της πένας.  "
+"Επιπλέον, ένα ή περισσότερα από αυτά τα χαρακτηριστικά μπορούν να παρέχονται ως ορίσματα-κλειδιά.  "
+"Αυτό μπορεί να χρησιμοποιηθεί για να ορίσει αρκετά χαρακτηριστικά της πένας σε μία δήλωση."
 
 #: library/turtle.rst:1118
 msgid ""
@@ -1986,7 +2027,7 @@ msgstr ""
 
 #: library/turtle.rst:1139
 msgid "Return ``True`` if pen is down, ``False`` if it's up."
-msgstr ""
+msgstr "Επιστρέφει ``True`` αν η πένα είναι κάτω, ``False`` αν είναι επάνω."
 
 #: library/turtle.rst:1141
 msgid ""
@@ -2006,11 +2047,11 @@ msgstr ""
 
 #: library/turtle.rst:1157
 msgid "Return or set the pencolor."
-msgstr ""
+msgstr "Επιστρέφει ή ορίζει το χρώμα πένας."
 
 #: library/turtle.rst:1208
 msgid "Four input formats are allowed:"
-msgstr ""
+msgstr "Επιτρέπονται τέσσερις μορφές εισόδου:"
 
 #: library/turtle.rst:1161
 msgid "``pencolor()``"
@@ -2021,6 +2062,8 @@ msgid ""
 "Return the current pencolor as color specification string or as a tuple (see "
 "example).  May be used as input to another color/pencolor/fillcolor call."
 msgstr ""
+"Επιστρέφει το τρέχον χρώμα πένας ως συμβολοσειρά προδιαγραφής χρώματος ή ως πλειάδα (βλ. παράδειγμα).  "
+"Μπορεί να χρησιμοποιηθεί ως είσοδος σε άλλη κλήση color/pencolor/fillcolor."
 
 #: library/turtle.rst:1166
 msgid "``pencolor(colorstring)``"
@@ -2031,6 +2074,8 @@ msgid ""
 "Set pencolor to *colorstring*, which is a Tk color specification string, "
 "such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
 msgstr ""
+"Ορίζει το pencolor σε *colorstring*, το οποίο είναι μια συμβολοσειρά προδιαγραφής χρώματος Tk, όπως "
+"``\"red\"``, ``\"yellow\"``, ή ``\"#33cc8c\"``."
 
 #: library/turtle.rst:1170
 msgid "``pencolor((r, g, b))``"
@@ -2042,6 +2087,9 @@ msgid ""
 "*b*.  Each of *r*, *g*, and *b* must be in the range 0..colormode, where "
 "colormode is either 1.0 or 255 (see :func:`colormode`)."
 msgstr ""
+"Ορίζει το χρώμα pencolor στο χρώμα RGB που αντιπροσωπεύεται από την πλειάδα των *r*, *g*, και "
+"*b*.  Κάθε ένα από τα *r*, *g*, και *b* πρέπει να βρίσκεται στην περιοχή 0..colormode, όπου το "
+"colormode, όπου το colormode είναι είτε 1.0 είτε 255 (βλ. :func:`colormode`)."
 
 #: library/turtle.rst:1175
 msgid "``pencolor(r, g, b)``"
@@ -2052,12 +2100,14 @@ msgid ""
 "Set pencolor to the RGB color represented by *r*, *g*, and *b*.  Each of "
 "*r*, *g*, and *b* must be in the range 0..colormode."
 msgstr ""
+"Ορίζει το χρώμα pencolor στο χρώμα RGB που αντιπροσωπεύεται από τα *r*, *g*, και *b*.  Κάθε ένα από τα *r*, *g*, και *b* πρέπει να βρίσκεται στην περιοχή 0..colormode."
 
 #: library/turtle.rst:1179
 msgid ""
 "If turtleshape is a polygon, the outline of that polygon is drawn with the "
 "newly set pencolor."
 msgstr ""
+"Εάν το turtleshape είναι ένα πολύγωνο, το περίγραμμα αυτού του πολυγώνου σχεδιάζεται με το νεορυθμισμένο pencolor."
 
 #: library/turtle.rst:1182
 msgid ""
@@ -2099,7 +2149,7 @@ msgstr ""
 
 #: library/turtle.rst:1206
 msgid "Return or set the fillcolor."
-msgstr ""
+msgstr "Επιστρέφει ή ορίζει το fillcolor."
 
 #: library/turtle.rst:1210
 msgid "``fillcolor()``"
@@ -2111,6 +2161,9 @@ msgid ""
 "tuple format (see example).  May be used as input to another color/pencolor/"
 "fillcolor call."
 msgstr ""
+"Επιστρέφει το τρέχον fillcolor ως συμβολοσειρά προδιαγραφής χρώματος, "
+"πιθανώς σε μορφή πλειάδας (βλ. παράδειγμα).  "
+"Μπορεί να χρησιμοποιηθεί ως είσοδος σε άλλη κλήση color/pencolor/fillcolor."
 
 #: library/turtle.rst:1215
 msgid "``fillcolor(colorstring)``"
@@ -2121,6 +2174,7 @@ msgid ""
 "Set fillcolor to *colorstring*, which is a Tk color specification string, "
 "such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
 msgstr ""
+"Ορίζει το fillcolor σε *colorstring*, το οποίο είναι μια συμβολοσειρά προδιαγραφής χρώματος Tk, όπως ``\"red\"``, ``\"yellow\"``, ή ``\"#33cc8c\"``."
 
 #: library/turtle.rst:1219
 msgid "``fillcolor((r, g, b))``"
@@ -2132,6 +2186,9 @@ msgid ""
 "*b*.  Each of *r*, *g*, and *b* must be in the range 0..colormode, where "
 "colormode is either 1.0 or 255 (see :func:`colormode`)."
 msgstr ""
+"Ορίζει το fillcolor στο χρώμα RGB που αντιπροσωπεύεται από την πλειάδα των *r*, *g*, και *b*.  "
+"Κάθε ένα από τα *r*, *g*, και *b* πρέπει να βρίσκεται "
+"στην περιοχή 0..colormode., όπου το colormode είναι είτε 1.0 είτε 255 (βλ. :func:`colormode`)."
 
 #: library/turtle.rst:1224
 msgid "``fillcolor(r, g, b)``"
@@ -2142,12 +2199,15 @@ msgid ""
 "Set fillcolor to the RGB color represented by *r*, *g*, and *b*.  Each of "
 "*r*, *g*, and *b* must be in the range 0..colormode."
 msgstr ""
+"Ορίζει το fillcolor στο χρώμα RGB που αντιπροσωπεύεται από τα *r*, *g*, και *b*.  "
+"Κάθε ένα από τα *r*, *g*, και *b* πρέπει να βρίσκεται στην περιοχή 0..colormode."
 
 #: library/turtle.rst:1228
 msgid ""
 "If turtleshape is a polygon, the interior of that polygon is drawn with the "
 "newly set fillcolor."
 msgstr ""
+"Αν το turtleshape είναι ένα πολύγωνο, το εσωτερικό αυτού του πολυγώνου σχεδιάζεται με το νεορυθμισμένο fillcolor."
 
 #: library/turtle.rst:1231
 msgid ""
@@ -2177,12 +2237,13 @@ msgstr ""
 
 #: library/turtle.rst:1249
 msgid "Return or set pencolor and fillcolor."
-msgstr ""
+msgstr "Επιστρέφει ή ορίζει το pencolor και το fillcolor."
 
 #: library/turtle.rst:1251
 msgid ""
 "Several input formats are allowed.  They use 0 to 3 arguments as follows:"
 msgstr ""
+"Επιτρέπονται αρκετές μορφές εισόδου.  Χρησιμοποιούν από 0 έως 3 ορίσματα ως εξής:"
 
 #: library/turtle.rst:1254
 msgid "``color()``"
@@ -2194,6 +2255,9 @@ msgid ""
 "specification strings or tuples as returned by :func:`pencolor` and :func:"
 "`fillcolor`."
 msgstr ""
+"Επιστρέφει το τρέχον pencolor και το τρέχον fillcolor ως ζεύγος "
+"συμβολοσειρών προδιαγραφής χρώματος ή πλειάδων όπως επιστρέφονται "
+"από :func:`pencolor` και :func:`fillcolor`."
 
 #: library/turtle.rst:1259
 msgid "``color(colorstring)``, ``color((r,g,b))``, ``color(r,g,b)``"
@@ -2204,6 +2268,8 @@ msgid ""
 "Inputs as in :func:`pencolor`, set both, fillcolor and pencolor, to the "
 "given value."
 msgstr ""
+"Είσοδοι όπως στο :func:`pencolor`, ορίζει τόσο το fillcolor όσο και το pencolor στην "
+"δοσμένη τιμή."
 
 #: library/turtle.rst:1263
 msgid ""
@@ -2216,12 +2282,15 @@ msgid ""
 "Equivalent to ``pencolor(colorstring1)`` and ``fillcolor(colorstring2)`` and "
 "analogously if the other input format is used."
 msgstr ""
+"Ισοδύναμο με ``pencolor(colorstring1)`` και ``fillcolor(colorstring2)`` και "
+"αναλόγως αν χρησιμοποιηθεί η άλλη μορφή εισόδου."
 
 #: library/turtle.rst:1267
 msgid ""
 "If turtleshape is a polygon, outline and interior of that polygon is drawn "
 "with the newly set colors."
 msgstr ""
+"Εάν το turtleshape είναι ένα πολύγωνο, το περίγραμμα και το εσωτερικό αυτού του πολυγώνου σχεδιάζεται με τα νεορυθμισμένα χρώματα."
 
 #: library/turtle.rst:1270
 msgid ""
@@ -2241,11 +2310,11 @@ msgstr ""
 
 #: library/turtle.rst:1281
 msgid "See also: Screen method :func:`colormode`."
-msgstr ""
+msgstr "Δείτε επίσης: Μέθοδος Screen :func:`colormode`."
 
 #: library/turtle.rst:1295
 msgid "Return fillstate (``True`` if filling, ``False`` else)."
-msgstr ""
+msgstr "Επιστρέφει την κατάσταση πλήρωσης (``True`` αν γεμίζει, ``False`` αλλιώς)."
 
 #: library/turtle.rst:1297
 msgid ""
@@ -2263,7 +2332,7 @@ msgstr ""
 
 #: library/turtle.rst:1308
 msgid "Fill the shape drawn in the ``with turtle.fill():`` block."
-msgstr ""
+msgstr "Γεμίζει το σχήμα που σχεδιάστηκε στο μπλοκ ``with turtle.fill():``."
 
 #: library/turtle.rst:1310
 msgid ""
@@ -2280,6 +2349,8 @@ msgid ""
 "Using :func:`!fill` is equivalent to adding the :func:`begin_fill` before "
 "the fill-block and :func:`end_fill` after the fill-block:"
 msgstr ""
+"Χρησιμοποιώντας :func:`!fill` είναι ισοδύναμο με την προσθήκη της :func:`begin_fill` "
+"πριν από το μπλοκ πλήρωσης και της :func:`end_fill` μετά το μπλοκ πλήρωσης:"
 
 #: library/turtle.rst:1345
 msgid ""
@@ -2295,11 +2366,11 @@ msgstr ""
 
 #: library/turtle.rst:1333
 msgid "To be called just before drawing a shape to be filled."
-msgstr ""
+msgstr "Να καλείται ακριβώς πριν από το σχέδιο ενός σχήματος που θα γεμίσει."
 
 #: library/turtle.rst:1338
 msgid "Fill the shape drawn after the last call to :func:`begin_fill`."
-msgstr ""
+msgstr "Γεμίζει το σχήμα που σχεδιάστηκε μετά την τελευταία κλήση της :func:`begin_fill`."
 
 #: library/turtle.rst:1340
 msgid ""
@@ -2308,12 +2379,17 @@ msgid ""
 "and number of overlaps.  For example, the Turtle star above may be either "
 "all yellow or have some white regions."
 msgstr ""
+"Εάν οι περιοχές επικάλυψης για αυτοτομείς πολυγώνους ή πολλαπλά σχήματα γεμίζονται "
+"ή όχι εξαρτάται από τα γραφικά του λειτουργικού συστήματος, τον τύπο επικάλυψης και τον "
+"αριθμό των επικαλύψεων.  Για παράδειγμα, το αστέρι Turtle παραπάνω μπορεί να είναι "
+"είτε όλο κίτρινο είτε να έχει κάποιες λευκές περιοχές."
 
 #: library/turtle.rst:1359
 msgid ""
 "Delete the turtle's drawings from the screen, re-center the turtle and set "
 "variables to the default values."
 msgstr ""
+"Διαγράφει τα σχέδια της χελώνας από την οθόνη, επανακεντρά τη χελώνα και ορίζει τις μεταβλητές στις προεπιλεγμένες τιμές."
 
 #: library/turtle.rst:1362
 msgid ""
@@ -2347,22 +2423,24 @@ msgid ""
 "and position of the turtle as well as drawings of other turtles are not "
 "affected."
 msgstr ""
+"Διαγράφει τα σχέδια της χελώνας από την οθόνη.  Δεν μετακινεί τη χελώνα.  "
+"Η κατάσταση και η θέση της χελώνας καθώς και τα σχέδια άλλων χελωνών δεν επηρεάζονται."
 
 #: library/turtle.rst:1386
 msgid "object to be written to the TurtleScreen"
-msgstr ""
+msgstr "αντικείμενο που θα γραφτεί στο TurtleScreen"
 
 #: library/turtle.rst:1387
 msgid "True/False"
-msgstr ""
+msgstr "True/False"
 
 #: library/turtle.rst:1388
 msgid "one of the strings \"left\", \"center\" or right\""
-msgstr ""
+msgstr "μία από τις συμβολοσειρές \"left\", \"center\" ή \"right\""
 
 #: library/turtle.rst:1389
 msgid "a triple (fontname, fontsize, fonttype)"
-msgstr ""
+msgstr "μία τριάδα (fontname, fontsize, fonttype)"
 
 #: library/turtle.rst:1391
 msgid ""
@@ -2371,6 +2449,10 @@ msgid ""
 "the given font.  If *move* is true, the pen is moved to the bottom-right "
 "corner of the text.  By default, *move* is ``False``."
 msgstr ""
+"Γράφει κείμενο - την αναπαράσταση συμβολοσειράς του *arg* - στην τρέχουσα "
+"θέση της χελώνας σύμφωνα με το *align* (\"left\", \"center\" ή \"right\") και με τη "
+"δεδομένη γραμματοσειρά.  Αν το *move* είναι true, η πένα μετακινείται στην κάτω δεξιά "
+"γωνία του κειμένου.  Από προεπιλογή, το *move* είναι ``False``."
 
 #: library/turtle.rst:1409
 msgid ""
@@ -2378,6 +2460,8 @@ msgid ""
 "middle of doing some complex drawing, because hiding the turtle speeds up "
 "the drawing observably."
 msgstr ""
+"Κάνει τη χελώνα αόρατη.  Είναι καλή ιδέα να το κάνετε αυτό ενώ βρίσκεστε στη μέση "
+"κάποιου σύνθετου σχεδίου, επειδή η απόκρυψη τηςς χελώνας επιταχύνει το σχέδιο παρατηρητά."
 
 #: library/turtle.rst:1413
 msgid ">>> turtle.hideturtle()"
@@ -2385,7 +2469,7 @@ msgstr ">>> turtle.hideturtle()"
 
 #: library/turtle.rst:1422
 msgid "Make the turtle visible."
-msgstr ""
+msgstr "Κάνει τη χελώνα ορατή."
 
 #: library/turtle.rst:1424
 msgid ">>> turtle.showturtle()"
@@ -2393,11 +2477,11 @@ msgstr ">>> turtle.showturtle()"
 
 #: library/turtle.rst:1432
 msgid "Return ``True`` if the Turtle is shown, ``False`` if it's hidden."
-msgstr ""
+msgstr "Επιστρέφει ``True`` αν η Χελώνα είναι ορατή, ``False`` αν είναι κρυφή."
 
 #: library/turtle.rst:1447
 msgid "a string which is a valid shapename"
-msgstr ""
+msgstr "μια συμβολοσειρά η οποία είναι ένα έγκυρο όνομα σχήματος"
 
 #: library/turtle.rst:1449
 msgid ""
@@ -2408,6 +2492,11 @@ msgid ""
 "To learn about how to deal with shapes see Screen method :func:"
 "`register_shape`."
 msgstr ""
+"Ορίζει το σχήμα της χελώνας στο σχήμα με το δοσμένο *name* ή, αν δεν "
+"δοθεί όνομα, επιστρέφει το όνομα του τρέχοντος σχήματος.  Το σχήμα με "
+"το *name* πρέπει να υπάρχει στο λεξικό σχημάτων του TurtleScreen.  "
+"Αρχικά υπάρχουν τα ακόλουθα σχήματα πολυγώνου: \"arrow\", \"turtle\", \"circle\", \"square\", \"triangle\", \"classic\".  "
+"Για να μάθετε πώς να χειρίζεστε σχήματα, δείτε τη μέθοδο Screen :func:`register_shape`."
 
 #: library/turtle.rst:1455
 msgid ""
@@ -2425,7 +2514,7 @@ msgstr ""
 
 #: library/turtle.rst:1467
 msgid "one of the strings \"auto\", \"user\", \"noresize\""
-msgstr ""
+msgstr "μία από τις συμβολοσειρές \"auto\", \"user\", \"noresize\""
 
 #: library/turtle.rst:1469
 msgid ""
@@ -2433,28 +2522,35 @@ msgid ""
 "*rmode* is not given, return current resizemode.  Different resizemodes have "
 "the following effects:"
 msgstr ""
+"Ορίζει το resizemode σε μία από τις τιμές: \"auto\", \"user\", \"noresize\".  "
+"Αν δεν δοθεί το *rmode*, επιστρέφει το τρέχον resizemode.  Διαφορετικά resizemodes "
+"έχουν τις ακόλουθες επιδράσεις:"
 
 #: library/turtle.rst:1473
 msgid ""
 "\"auto\": adapts the appearance of the turtle corresponding to the value of "
 "pensize."
 msgstr ""
+"\"auto\": προσαρμόζει την εμφάνιση της χελώνας σύμφωνα με την τιμή του pensize."
 
 #: library/turtle.rst:1474
 msgid ""
 "\"user\": adapts the appearance of the turtle according to the values of "
 "stretchfactor and outlinewidth (outline), which are set by :func:`shapesize`."
 msgstr ""
+"\"user\": προσαρμόζει την εμφάνιση της χελώνας σύμφωνα με τις τιμές του stretchfactor και του outlinewidth (περίγραμμα), "
+"τα οποία ορίζονται από την :func:`shapesize`."
 
 #: library/turtle.rst:1477
 msgid "\"noresize\": no adaption of the turtle's appearance takes place."
-msgstr ""
+msgstr "\"noresize\": δεν γίνεται προσαρμογή της εμφάνισης της χελώνας."
 
 #: library/turtle.rst:1479
 msgid ""
 "``resizemode(\"user\")`` is called by :func:`shapesize` when used with "
 "arguments."
 msgstr ""
+"``resizemode(\"user\")`` καλείται από την :func:`shapesize` όταν χρησιμοποιείται με ορίσματα."
 
 #: library/turtle.rst:1481
 msgid ""
@@ -2472,7 +2568,7 @@ msgstr ""
 
 #: library/turtle.rst:1495 library/turtle.rst:1496
 msgid "positive number"
-msgstr ""
+msgstr "θετικός αριθμός"
 
 #: library/turtle.rst:1498
 msgid ""
