@@ -2929,7 +2929,8 @@ msgid ""
 "Create and return a clone of the turtle with same position, heading and "
 "turtle properties."
 msgstr ""
-""
+"Δημιουργεί και επιστρέφει ένα κλώνο της χελώνας με την ίδια θέση, κατεύθυνση "
+"ιδιότητες χελώνας."
 
 #: library/turtle.rst:1755
 msgid ""
@@ -2944,6 +2945,8 @@ msgid ""
 "Return the Turtle object itself.  Only reasonable use: as a function to "
 "return the \"anonymous turtle\":"
 msgstr ""
+"Επιστρέφει το ίδιο το Turtle αντικείμενο.  Η μόνη λογική χρήση: ως μια συνάρτηση που επιστρέφει "
+"την \"anonymous turtle\":"
 
 #: library/turtle.rst:1768
 msgid ""
@@ -2962,6 +2965,8 @@ msgid ""
 "Return the :class:`TurtleScreen` object the turtle is drawing on. "
 "TurtleScreen methods can then be called for that object."
 msgstr ""
+"Επιστρέφει το αντικείμενο της :class:`TurtleScreen` που η χελώνα σχεδιάζει πάνω. "
+"Στη συνέχεια, μπορούν να κληθούν μέθοδοι του TurtleScreen για αυτό το αντικείμενο."
 
 #: library/turtle.rst:1782
 msgid ""
@@ -2986,6 +2991,10 @@ msgid ""
 "that can be undone by the :func:`undo` method/function.  If *size* is "
 "``None``, the undobuffer is disabled."
 msgstr ""
+"Ορίζει ή απενεργοποιεί το undobuffer.  Αν το *size* είναι ακέραιος, εγκαθίσταται "
+"ένα κενό undobuffer του δοσμένου μεγέθους.  Το *size* δίνει τον μέγιστο αριθμό "
+"ενεργειών της χελώνας που μπορούν να αναιρεθούν με τη μέθοδο/συνάρτηση :func:`undo`.  "
+"Αν το *size* είναι ``None``, το undobuffer απενεργοποιείται."
 
 #: library/turtle.rst:1800
 msgid ">>> turtle.setundobuffer(42)"
@@ -2993,7 +3002,7 @@ msgstr ">>> turtle.setundobuffer(42)"
 
 #: library/turtle.rst:1808
 msgid "Return number of entries in the undobuffer."
-msgstr ""
+msgstr "Επιστρέφει τον αριθμό των καταχωρήσεων στο undobuffer."
 
 #: library/turtle.rst:1810
 msgid ""
@@ -3005,7 +3014,7 @@ msgstr ""
 
 #: library/turtle.rst:1821
 msgid "Compound shapes"
-msgstr ""
+msgstr "Σύνθετα σχήματα"
 
 #: library/turtle.rst:1823
 msgid ""
@@ -3013,16 +3022,20 @@ msgid ""
 "different color, you must use the helper class :class:`Shape` explicitly as "
 "described below:"
 msgstr ""
+"Για να χρησιμοποιήσετε σύνθετα σχήματα χελώνας, τα οποία αποτελούνται από "
+"πολλά πολύγωνα διαφορετικού χρώματος, πρέπει να χρησιμοποιήσετε την βοηθητική "
+"κλάση :class:`Shape` ρητά όπως περιγράφεται παρακάτω:"
 
 #: library/turtle.rst:1827
 msgid "Create an empty Shape object of type \"compound\"."
-msgstr ""
+msgstr "Δημιουργεί ένα κενό αντικείμενο Shape του τύπου \"compound\"."
 
 #: library/turtle.rst:1828
 msgid ""
 "Add as many components to this object as desired, using the :meth:`~Shape."
 "addcomponent` method."
 msgstr ""
+"Προσθέτει όσες συνιστώσες σε αυτό το αντικείμενο επιθυμείτε, χρησιμοποιώντας τη μέθοδο :meth:`~Shape.addcomponent`."
 
 #: library/turtle.rst:1831
 msgid "For example:"
@@ -3044,7 +3057,7 @@ msgstr ""
 
 #: library/turtle.rst:1842
 msgid "Now add the Shape to the Screen's shapelist and use it:"
-msgstr ""
+msgstr "Τώρα προσθέστε το Shape στη λίστα σχημάτων της Οθόνης και χρησιμοποιήστε το:"
 
 #: library/turtle.rst:1844
 msgid ""
@@ -3060,26 +3073,32 @@ msgid ""
 "method in different ways.  The application programmer has to deal with the "
 "Shape class *only* when using compound shapes like shown above!"
 msgstr ""
+"Η κλάση :class:`Shape` χρησιμοποιείται εσωτερικά από τη μέθοδο :func:`register_shape` "
+"με διαφορετικούς τρόπους.  Ο προγραμματιστής εφαρμογών πρέπει να ασχοληθεί "
+"με την κλάση Shape *μόνο* όταν χρησιμοποιεί σύνθετα σχήματα όπως φαίνεται παραπάνω!"
 
 #: library/turtle.rst:1859
 msgid "Methods of TurtleScreen/Screen and corresponding functions"
-msgstr ""
+msgstr "Μέθοδοι του TurtleScreen/Screen και αντίστοιχες συναρτήσεις"
 
 #: library/turtle.rst:1861
 msgid ""
 "Most of the examples in this section refer to a TurtleScreen instance called "
 "``screen``."
 msgstr ""
+"Τα περισσότερα παραδείγματα σε αυτή την ενότητα αναφέρονται σε ένα αντικείμενο "
+"της TurtleScreen που ονομάζεται ``screen``."
 
 #: library/turtle.rst:1875
 msgid ""
 "a color string or three numbers in the range 0..colormode or a 3-tuple of "
 "such numbers"
 msgstr ""
+"μια συμβολοσειρά χρώματος ή τρεις αριθμοί στο εύρος 0..colormode ή μια 3-πλειάδα τέτοιων αριθμών"
 
 #: library/turtle.rst:1879
 msgid "Set or return background color of the TurtleScreen."
-msgstr ""
+msgstr "Ορίζει ή επιστρέφει το χρώμα φόντου της TurtleScreen."
 
 #: library/turtle.rst:1881
 msgid ""
@@ -3102,6 +3121,8 @@ msgid ""
 "a string, name of an image file (PNG, GIF, PGM, and PPM) or ``\"nopic\"``, "
 "or ``None``"
 msgstr ""
+"μια συμβολοσειρά, όνομα αρχείου εικόνας (PNG, GIF, PGM και PPM) ή ``\"nopic\"``, "
+"ή ``None``"
 
 #: library/turtle.rst:1897
 msgid ""
@@ -3110,6 +3131,10 @@ msgid ""
 "*picname* is ``\"nopic\"``, delete background image, if present.  If "
 "*picname* is ``None``, return the filename of the current backgroundimage. ::"
 msgstr ""
+"Ορίζει την εικόνα φόντου ή επιστρέφει το όνομα της τρέχουσας εικόνας φόντου. Αν το "
+"*picname* είναι ένα όνομα αρχείου, ορίζει την αντίστοιχη εικόνα ως φόντο.  Αν το "
+"*picname* είναι ``\"nopic\"``, διαγράφει την εικόνα φόντου, αν υπάρχει. Αν το "
+"*picname* είναι ``None``, επιστρέφει το όνομα του αρχείου της τρέχουσας εικόνας φόντου. ::"
 
 #: library/turtle.rst:1902
 msgid ""
@@ -3131,6 +3156,9 @@ msgid ""
 "name ``clearscreen``.  The global function ``clear`` is a different one "
 "derived from the Turtle method ``clear``."
 msgstr ""
+"Αυτή η μέθοδος της TurtleScreen είναι διαθέσιμη ως παγκόσμια συνάρτηση μόνο με το "
+"όνομα ``clearscreen``.  Η παγκόσμια συνάρτηση ``clear`` είναι μια διαφορετική που "
+"προέρχεται από τη μέθοδο ``clear`` της Χελώνας."
 
 #: library/turtle.rst:1920
 msgid ""
@@ -3138,6 +3166,9 @@ msgid ""
 "empty TurtleScreen to its initial state: white background, no background "
 "image, no event bindings and tracing on."
 msgstr ""
+"Διαγράφει όλα τα σχέδια και όλες τις χελώνες από την TurtleScreen.  Επαναφέρει την "
+"τώρα κενή TurtleScreen στην αρχική της κατάσταση: λευκό φόντο, χωρίς εικόνα φόντου, "
+"χωρίς συνδέσεις γεγονότων και με ενεργοποίηση της παρακολούθησης."
 
 #: library/turtle.rst:1929
 msgid ""
@@ -3145,22 +3176,25 @@ msgid ""
 "name ``resetscreen``.  The global function ``reset`` is another one derived "
 "from the Turtle method ``reset``."
 msgstr ""
+"Αυτή η μέθοδος της TurtleScreen είναι διαθέσιμη ως παγκόσμια συνάρτηση μόνο με το "
+"όνομα ``resetscreen``.  Η παγκόσμια συνάρτηση ``reset`` είναι μια άλλη που "
+"προέρχεται από τη μέθοδο ``reset`` της Χελώνας."
 
 #: library/turtle.rst:1936
 msgid "Reset all Turtles on the Screen to their initial state."
-msgstr ""
+msgstr "Επαναφέρει όλες τις χελώνες στην οθόνη στην αρχική τους κατάσταση."
 
 #: library/turtle.rst:1941
 msgid "positive integer, new width of canvas in pixels"
-msgstr ""
+msgstr "θετικός ακέραιος, νέο πλάτος καμβά σε πίξελ"
 
 #: library/turtle.rst:1942
 msgid "positive integer, new height of canvas in pixels"
-msgstr ""
+msgstr "θετικός ακέραιος, νέο ύψος καμβά σε πίξελ"
 
 #: library/turtle.rst:1943
 msgid "colorstring or color-tuple, new background color"
-msgstr ""
+msgstr "συμβολοσειρά χρώματος ή πλειάδα χρωμάτων, νέο χρώμα φόντου"
 
 #: library/turtle.rst:1945
 msgid ""
@@ -3170,26 +3204,31 @@ msgid ""
 "this method, one can make visible those parts of a drawing which were "
 "outside the canvas before."
 msgstr ""
+"Αν δεν δοθούν ορίσματα, επιστρέφει το τρέχον (canvaswidth, canvasheight).  "
+"Διαφορετικά, αλλάζει το μέγεθος του καμβά πάνω στον οποίο σχεδιάζουν οι χελώνες.  "
+"Δεν αλλάζει το παράθυρο σχεδίασης.  Για να δείτε κρυμμένα μέρη του καμβά, χρησιμοποιήστε τις "
+"γραμμές κύλισης.  Με αυτή τη μέθοδο, μπορεί κανείς να κάνει ορατά εκείνα τα μέρη ενός σχεδίου "
+"που ήταν εκτός του καμβά πριν."
 
 #: library/turtle.rst:1957
 msgid "e.g. to search for an erroneously escaped turtle ;-)"
-msgstr ""
+msgstr "π.χ. για να αναζητήσετε μια χελώνα που έχει διαφύγει κατά λάθος ;-)"
 
 #: library/turtle.rst:1962
 msgid "a number, x-coordinate of lower left corner of canvas"
-msgstr ""
+msgstr "ένας αριθμός, x-συντεταγμένη της κάτω αριστερής γωνίας του καμβά"
 
 #: library/turtle.rst:1963
 msgid "a number, y-coordinate of lower left corner of canvas"
-msgstr ""
+msgstr "ένας αριθμός, y-συντεταγμένη της κάτω αριστερής γωνίας του καμβά"
 
 #: library/turtle.rst:1964
 msgid "a number, x-coordinate of upper right corner of canvas"
-msgstr ""
+msgstr "ένας αριθμός, x-συντεταγμένη της πάνω δεξιάς γωνίας του καμβά"
 
 #: library/turtle.rst:1965
 msgid "a number, y-coordinate of upper right corner of canvas"
-msgstr ""
+msgstr "ένας αριθμός, y-συντεταγμένη της πάνω δεξιάς γωνίας του καμβά"
 
 #: library/turtle.rst:1967
 msgid ""
@@ -3197,12 +3236,17 @@ msgid ""
 "necessary.  This performs a ``screen.reset()``.  If mode \"world\" is "
 "already active, all drawings are redrawn according to the new coordinates."
 msgstr ""
+"Ορίζει ένα προσαρμοσμένο σύστημα συντεταγμένων και αλλάζει στη λειτουργία \"world\" αν "
+"είναι απαραίτητο.  Αυτό εκτελεί μια ``screen.reset()``.  Αν η λειτουργία \"world\" είναι "
+"ήδη ενεργή, όλα τα σχέδια ξανασχεδιάζονται σύμφωνα με τις νέες συντεταγμένες."
 
 #: library/turtle.rst:1971
 msgid ""
 "**ATTENTION**: in user-defined coordinate systems angles may appear "
 "distorted."
 msgstr ""
+"**ΠΡΟΣΟΧΗ**: σε προσαρμοσμένα συστήματα συντεταγμένων οι γωνίες μπορεί να φαίνονται "
+"παραμορφωμένες."
 
 #: library/turtle.rst:1974
 msgid ""
@@ -3228,6 +3272,9 @@ msgid ""
 "``no_animation`` block will not be animated; once the code block is exited, "
 "the drawing will appear."
 msgstr ""
+"Απενεργοποιεί προσωρινά την κινούμενη εικόνα της χελώνας.  Ο κώδικας που γράφεται "
+"μέσα στο μπλοκ ``no_animation`` δεν θα είναι κινούμενος.  Μόλις βγει κανείς από το "
+"μπλοκ κώδικα, το σχέδιο θα εμφανιστεί."
 
 #: library/turtle.rst:2003
 msgid ""
@@ -3251,6 +3298,9 @@ msgid ""
 "the time interval between two consecutive canvas updates.)  The longer the "
 "drawing delay, the slower the animation."
 msgstr ""
+"Ορίζει ή επιστρέφει την *καθυστέρηση* σχεδίασης σε χιλιοστά του δευτερολέπτου.  "
+"(Αυτό είναι περίπου το χρονικό διάστημα μεταξύ δύο διαδοχικών ενημερώσεων καμβά.)  "
+"Όσο μεγαλύτερη είναι η καθυστέρηση σχεδίασης, τόσο πιο αργή είναι η κινούμενη εικόνα."
 
 #: library/turtle.rst:2022
 msgid "Optional argument:"
@@ -3282,6 +3332,11 @@ msgid ""
 "arguments, returns the currently stored value of n. Second argument sets "
 "delay value (see :func:`delay`)."
 msgstr ""
+"Ενεργοποιεί/απενεργοποιεί την κινούμενη εικόνα της χελώνας και ορίζει την καθυστέρηση για την "
+"ενημέρωση των σχεδίων.  Αν δοθεί το *n*, εκτελείται μόνο κάθε n-οστή κανονική "
+"ενημέρωση οθόνης.  (Μπορεί να χρησιμοποιηθεί για να επιταχύνει το σχέδιο σύνθετων γραφικών.)  "
+"Όταν καλείται χωρίς ορίσματα, επιστρέφει την τρέχουσα αποθηκευμένη τιμή του n.  Το δεύτερο όρισμα "
+"ορίζει την *τιμή καθυστέρησης* (δείτε τη :func:`delay`)."
 
 #: library/turtle.rst:2046
 msgid ""
@@ -3425,7 +3480,7 @@ msgstr "ένα αριθμός >= 0"
 
 #: library/turtle.rst:2147
 msgid "Install a timer that calls *fun* after *t* milliseconds."
-msgstr ""
+msgstr "Εγκαθιστά ένα χρονόμετρο που καλεί το *fun* μετά από *t* χιλιοστά του δευτερολέπτου."
 
 #: library/turtle.rst:2149
 msgid ""
@@ -3454,6 +3509,10 @@ msgid ""
 "run from within IDLE in -n mode (No subprocess) - for interactive use of "
 "turtle graphics. ::"
 msgstr ""
+"Ξεκινάει τον βρόχο γεγονότων - καλώντας τη συνάρτηση mainloop του Tkinter.  "
+"Πρέπει να είναι η τελευταία δήλωση σε ένα πρόγραμμα γραφικών χελώνας.  "
+"Δεν πρέπει να χρησιμοποιείται αν ένα σενάριο εκτελείται από το IDLE σε -n mode "
+"(χωρίς υποδιαδικασία) - για διαδραστική χρήση των γραφικών χελώνας. ::"
 
 #: library/turtle.rst:2170
 msgid ">>> screen.mainloop()"
@@ -3470,6 +3529,10 @@ msgid ""
 "input. Return the string input. If the dialog is canceled, return "
 "``None``. ::"
 msgstr ""
+"Εμφανίζει ένα αναδυόμενο παράθυρο διαλόγου για την εισαγωγή μιας συμβολοσειράς.  "
+"Ο παράμετρος title είναι ο τίτλος του παραθύρου διαλόγου, το prompt είναι ένα κείμενο που "
+"περιγράφει κυρίως ποια πληροφορία πρέπει να εισαχθεί.  Επιστρέφει τη συμβολοσειρά που εισήχθη.  "
+"Αν ο διάλογος ακυρωθεί, επιστρέφει ``None``. ::"
 
 #: library/turtle.rst:2186
 msgid ">>> screen.textinput(\"NIM\", \"Name of first player:\")"
@@ -3485,6 +3548,13 @@ msgid ""
 "open for correction. Return the number input. If the dialog is canceled,  "
 "return ``None``. ::"
 msgstr ""
+"Εμφανίζει ένα αναδυόμενο παράθυρο διαλόγου για την εισαγωγή ενός αριθμού.  "
+"Ο τίτλος είναι ο τίτλος του παραθύρου διαλόγου, το prompt είναι ένα κείμενο που περιγράφει "
+"κυρίως ποια αριθμητική πληροφορία πρέπει να εισαχθεί.  Το default: είναι η προεπιλεγμένη τιμή, "
+"minval: η ελάχιστη τιμή για την είσοδο, maxval: η μέγιστη τιμή για την είσοδο.  "
+"Η αριθμητική είσοδος πρέπει να είναι στην περιοχή minval .. maxval αν αυτές οι τιμές έχουν δοθεί. "
+"Αν όχι, εκδίδεται μια υπόδειξη και το παράθυρο διαλόγου παραμένει ανοιχτό για διόρθωση.  "
+"Επιστρέφει την αριθμητική είσοδο.  Αν ο διάλογος ακυρωθεί, επιστρέφει ``None``. ::"
 
 #: library/turtle.rst:2206
 msgid ""
@@ -3503,6 +3573,8 @@ msgid ""
 "Set turtle mode (\"standard\", \"logo\" or \"world\") and perform reset.  If "
 "mode is not given, current mode is returned."
 msgstr ""
+"Ορίζει τη λειτουργία της χελώνας (\"standard\", \"logo\" ή \"world\") και εκτελεί επαναφορά.  "
+"Αν δεν δοθεί λειτουργία, επιστρέφεται η τρέχουσα λειτουργία."
 
 #: library/turtle.rst:2219
 msgid ""
@@ -3511,14 +3583,19 @@ msgid ""
 "\"world coordinates\". **Attention**: in this mode angles appear distorted "
 "if ``x/y`` unit-ratio doesn't equal 1."
 msgstr ""
+"Λειτουργία \"standard\" είναι συμβατή με την παλιά :mod:`turtle`.  "
+"Λειτουργία \"logo\" είναι συμβατή με τα περισσότερα γραφικά χελώνας Logo.  "
+"Λειτουργία \"world\" χρησιμοποιεί προσαρμοσμένες \"παγκόσμιες συντεταγμένες\".  "
+"**Προσοχή**: σε αυτή τη λειτουργία οι γωνίες φαίνονται παραμορφωμένες αν η "
+"αναλογία μονάδων ``x/y`` δεν ισούται με 1."
 
 #: library/turtle.rst:2225
 msgid "Mode"
-msgstr ""
+msgstr "Λειτουργία"
 
 #: library/turtle.rst:2225
 msgid "Initial turtle heading"
-msgstr ""
+msgstr "Αρχικός προσανατολισμός της χελώνας"
 
 #: library/turtle.rst:2225
 msgid "positive angles"
@@ -3530,7 +3607,7 @@ msgstr "\"standard\""
 
 #: library/turtle.rst:2227
 msgid "to the right (east)"
-msgstr ""
+msgstr "δεξιά (ανατολικά)"
 
 #: library/turtle.rst:2227
 msgid "counterclockwise"
@@ -3542,7 +3619,7 @@ msgstr "\"logo\""
 
 #: library/turtle.rst:2228
 msgid "upward    (north)"
-msgstr ""
+msgstr "πάνω    (βόρεια)"
 
 #: library/turtle.rst:2228
 msgid "clockwise"
@@ -3567,6 +3644,8 @@ msgid ""
 "Return the colormode or set it to 1.0 or 255.  Subsequently *r*, *g*, *b* "
 "values of color triples have to be in the range 0..*cmode*."
 msgstr ""
+"Επιστρέφει το colormode ή το ορίζει σε 1.0 ή 255.  Στη συνέχεια, οι τιμές *r*, *g*, *b* "
+"των τριπλών χρωμάτων πρέπει να είναι στο εύρος 0..*cmode*."
 
 #: library/turtle.rst:2246
 msgid ""
@@ -3599,6 +3678,8 @@ msgid ""
 "Return the Canvas of this TurtleScreen.  Useful for insiders who know what "
 "to do with a Tkinter Canvas."
 msgstr ""
+"Επιστρέφει τον Καμβά (Canvas) αυτής της TurtleScreen.  Χρήσιμο για έμπειρους χρήστες που "
+"ξέρουν τι να κάνουν με έναν Καμβά (Canvas) του Tkinter."
 
 #: library/turtle.rst:2267
 msgid ""
@@ -3612,7 +3693,7 @@ msgstr ""
 
 #: library/turtle.rst:2277
 msgid "Return a list of names of all currently available turtle shapes."
-msgstr ""
+msgstr "Επιστρέφει μια λίστα με ονόματα όλων των διαθέσιμων σχημάτων χελώνας."
 
 #: library/turtle.rst:2279
 msgid ""
@@ -3631,6 +3712,8 @@ msgid ""
 "*name* is the name of an image file (PNG, GIF, PGM, and PPM) and *shape* is "
 "``None``: Install the corresponding image shape. ::"
 msgstr ""
+"*name* είναι το όνομα ενός αρχείου εικόνας (PNG, GIF, PGM, και PPM) και το *shape* είναι "
+"``None``: Εγκαθιστά το αντίστοιχο σχήμα εικόνας. ::"
 
 #: library/turtle.rst:2294
 msgid ">>> screen.register_shape(\"turtle.gif\")"
@@ -3641,12 +3724,16 @@ msgid ""
 "Image shapes *do not* rotate when turning the turtle, so they do not display "
 "the heading of the turtle!"
 msgstr ""
+"Τα σχήματα εικόνας *δεν* περιστρέφονται όταν η χελώνα στρίβει, οπότε δεν εμφανίζουν "
+"τον προσανατολισμό της χελώνας!"
 
 #: library/turtle.rst:2300
 msgid ""
 "*name* is an arbitrary string and *shape* is the name of an image file (PNG, "
 "GIF, PGM, and PPM): Install the corresponding image shape. ::"
 msgstr ""
+"*name* είναι μια αυθαίρετη συμβολοσειρά και το *shape* είναι το όνομα ενός αρχείου εικόνας (PNG, "
+"GIF, PGM, και PPM): Εγκαθιστά το αντίστοιχο σχήμα εικόνας. ::"
 
 #: library/turtle.rst:2303
 msgid ">>> screen.register_shape(\"turtle\", \"turtle.gif\")"
@@ -3657,6 +3744,8 @@ msgid ""
 "*name* is an arbitrary string and *shape* is a tuple of pairs of "
 "coordinates: Install the corresponding polygon shape."
 msgstr ""
+"*name* είναι μια αυθαίρετη συμβολοσειρά και το *shape* είναι μια πλειάδα ζευγών "
+"συντεταγμένων: Εγκαθιστά το αντίστοιχο σχήμα πολυγώνου."
 
 #: library/turtle.rst:2312
 msgid ">>> screen.register_shape(\"triangle\", ((5,-3), (0,5), (-5,-3)))"
@@ -3667,18 +3756,25 @@ msgid ""
 "*name* is an arbitrary string and *shape* is a (compound) :class:`Shape` "
 "object: Install the corresponding compound shape."
 msgstr ""
+"*name* είναι μια αυθαίρετη συμβολοσειρά και το *shape* είναι ένα (σύνθετο) αντικείμενο :class:`Shape`: "
+"Εγκαθιστά το αντίστοιχο σύνθετο σχήμα."
 
 #: library/turtle.rst:2320
 msgid ""
 "Add a turtle shape to TurtleScreen's shapelist.  Only thusly registered "
 "shapes can be used by issuing the command ``shape(shapename)``."
 msgstr ""
+"Προσθέτει ένα σχήμα χελώνας στη λίστα σχημάτων του TurtleScreen.  Μόνο τα σχήματα που "
+"έχουν καταχωρηθεί με αυτόν τον τρόπο μπορούν να χρησιμοποιηθούν "
+"εκδίδοντας την εντολή ``shape(shapename)``."
 
 #: library/turtle.rst:2323
 msgid ""
 "Added support for PNG, PGM, and PPM image formats. Both a shape name and an "
 "image file name can be specified."
 msgstr ""
+"Προστέθηκε υποστήριξη για τις μορφές εικόνας PNG, PGM, και PPM.  "
+"Μπορεί να καθοριστεί τόσο ένα όνομα σχήματος όσο και ένα όνομα αρχείου εικόνας."
 
 #: library/turtle.rst:2330
 msgid "Return the list of turtles on the screen."
@@ -3694,7 +3790,7 @@ msgstr ""
 
 #: library/turtle.rst:2341
 msgid "Return the height of the turtle window. ::"
-msgstr ""
+msgstr "Επιστρέφει το ύψος του παραθύρου της χελώνας. ::"
 
 #: library/turtle.rst:2343
 msgid ""
@@ -3706,7 +3802,7 @@ msgstr ""
 
 #: library/turtle.rst:2349
 msgid "Return the width of the turtle window. ::"
-msgstr ""
+msgstr "Επιστρέφει το μήκος του παραθύρου της χελώνας. ::"
 
 #: library/turtle.rst:2351
 msgid ""
@@ -3718,15 +3814,15 @@ msgstr ""
 
 #: library/turtle.rst:2358
 msgid "Methods specific to Screen, not inherited from TurtleScreen"
-msgstr ""
+msgstr "Μέθοδοι συγκεκριμένες για την οθόνη (Screen), που δεν κληρονομούνται από το TurtleScreen"
 
 #: library/turtle.rst:2362
 msgid "Shut the turtlegraphics window."
-msgstr ""
+msgstr "Κλείνει το παράθυρο γραφικών της χελώνας."
 
 #: library/turtle.rst:2367
 msgid "Bind ``bye()`` method to mouse clicks on the Screen."
-msgstr ""
+msgstr "Συνδέει τη μέθοδο ``bye()`` με κλικ του ποντικιού στην Οθόνη (Screen)."
 
 #: library/turtle.rst:2370
 msgid ""
@@ -3736,14 +3832,19 @@ msgid ""
 "file:`turtle.cfg`.  In this case IDLE's own mainloop is active also for the "
 "client script."
 msgstr ""
+"Εάν η τιμή \"using_IDLE\" στο λεξικό ρυθμίσεων είναι ``False`` (προεπιλεγμένη τιμή), "
+"εισέρχεται επίσης στον κύριο βρόχο (mainloop).  Σημείωση: Αν το IDLE με την επιλογή ``-n`` "
+"(χωρίς υποδιαδικασία) χρησιμοποιείται, αυτή η τιμή θα πρέπει να οριστεί σε ``True`` στο :"
+"file:`turtle.cfg`.  Σε αυτή την περίπτωση, ο δικός του κύριος βρόχος (mainloop) του IDLE είναι ενεργός "
+"επίσης για το σενάριο-πελάτη."
 
 #: library/turtle.rst:2379
 msgid "Save the current turtle drawing (and turtles) as a PostScript file."
-msgstr ""
+msgstr "Αποθηκεύει το τρέχον σχέδιο χελώνας (και τις χελώνες) ως αρχείο PostScript."
 
 #: library/turtle.rst:2381
 msgid "the path of the saved PostScript file"
-msgstr ""
+msgstr "η διαδρομή του αποθηκευμένου αρχείου PostScript"
 
 #: library/turtle.rst:2382
 msgid ""
@@ -3751,6 +3852,8 @@ msgid ""
 "the function will raise a ``FileExistsError``. If it is ``True``, the file "
 "will be overwritten."
 msgstr ""
+"αν είναι ``False`` και υπάρχει ήδη ένα αρχείο με το δοσμένο όνομα αρχείου, τότε η συνάρτηση θα "
+"προκαλέσει ένα ``FileExistsError``.  Αν είναι ``True``, το αρχείο θα αντικατασταθεί."
 
 #: library/turtle.rst:2387
 msgid ""
@@ -3766,30 +3869,40 @@ msgid ""
 "are stored in the configuration dictionary and can be changed via a :file:"
 "`turtle.cfg` file."
 msgstr ""
+"Ορίζει το μέγεθος και τη θέση του κύριου παραθύρου.  Οι προεπιλεγμένες τιμές των "
+"ορισμάτων αποθηκεύονται στο λεξικό ρυθμίσεων και μπορούν να αλλάξουν μέσω ενός :file:`turtle.cfg` αρχείου."
 
 #: library/turtle.rst:2401
 msgid ""
 "if an integer, a size in pixels, if a float, a fraction of the screen; "
 "default is 50% of screen"
 msgstr ""
+"αν είναι ακέραιος, ένα μέγεθος σε pixels, αν είναι float, ένα κλάσμα της οθόνης;  "
+"η προεπιλεγμένη τιμή είναι 50% της οθόνης"
 
 #: library/turtle.rst:2403
 msgid ""
 "if an integer, the height in pixels, if a float, a fraction of the screen; "
 "default is 75% of screen"
 msgstr ""
+"αν είναι ακέραιος, το ύψος σε pixels, αν είναι float, ένα κλάσμα της οθόνης;  "
+"η προεπιλεγμένη τιμή είναι 75% της οθόνης"
 
 #: library/turtle.rst:2405
 msgid ""
 "if positive, starting position in pixels from the left edge of the screen, "
 "if negative from the right edge, if ``None``, center window horizontally"
 msgstr ""
+"αν είναι θετικός, αρχική θέση σε pixels από την αριστερή άκρη της οθόνης, "
+"αν είναι αρνητικός από τη δεξιά άκρη, αν είναι ``None``, κεντράρει το παράθυρο οριζόντια"
 
 #: library/turtle.rst:2408
 msgid ""
 "if positive, starting position in pixels from the top edge of the screen, if "
 "negative from the bottom edge, if ``None``, center window vertically"
 msgstr ""
+"αν είναι θετικός, αρχική θέση σε pixels από την πάνω άκρη της οθόνης, αν είναι "
+"αρνητικός από την κάτω άκρη, αν είναι ``None``, κεντράρει το παράθυρο κάθετα"
 
 #: library/turtle.rst:2412
 msgid ""
@@ -3805,11 +3918,11 @@ msgstr ""
 
 #: library/turtle.rst:2423
 msgid "a string that is shown in the titlebar of the turtle graphics window"
-msgstr ""
+msgstr "ένα κείμενο που εμφανίζεται στη γραμμή τίτλου του παραθύρου γραφικών της χελώνας"
 
 #: library/turtle.rst:2426
 msgid "Set title of turtle window to *titlestring*."
-msgstr ""
+msgstr "Ορίζει τον τίτλο του παραθύρου της χελώνας στο *titlestring*."
 
 #: library/turtle.rst:2428
 msgid ">>> screen.title(\"Welcome to the turtle zoo!\")"
@@ -3832,6 +3945,8 @@ msgid ""
 "Create a turtle.  The turtle has all methods described above as \"methods of "
 "Turtle/RawTurtle\"."
 msgstr ""
+"Δημιουργεί μια χελώνα.  Η χελώνας έχει όλες τις μεθόδους που περιγράφονται παραπάνω ως \"μέθοδοι του "
+"Turtle/RawTurtle\"."
 
 #: library/turtle.rst:2450
 msgid ""
