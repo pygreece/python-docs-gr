@@ -3953,6 +3953,8 @@ msgid ""
 "Subclass of RawTurtle, has the same interface but draws on a default :class:"
 "`Screen` object created automatically when needed for the first time."
 msgstr ""
+"Υποκλάση της RawTurtle, έχει την ίδια διεπαφή αλλά σχεδιάζει σε ένα προεπιλεγμένο :class:`Screen` "
+"αντικείμενο που δημιουργείται αυτόματα όταν χρειάζεται για πρώτη φορά."
 
 #: library/turtle.rst:2456
 msgid "a :class:`!tkinter.Canvas`"
@@ -3963,23 +3965,29 @@ msgid ""
 "Provides screen oriented methods like :func:`bgcolor` etc. that are "
 "described above."
 msgstr ""
+"Παρέχει μεθόδους προσανατολισμένες στην οθόνη όπως :func:`bgcolor` κ.λπ. που περιγράφονται παραπάνω."
 
 #: library/turtle.rst:2463
 msgid ""
 "Subclass of TurtleScreen, with :ref:`four methods added <screenspecific>`."
 msgstr ""
+"Υποκλάση της TurtleScreen, με :ref:`τέσσερις πρόσθετες μεθόδους <screenspecific>`."
 
 #: library/turtle.rst:2468
 msgid ""
 "some Tkinter widget to contain the ScrolledCanvas, i.e. a Tkinter-canvas "
 "with scrollbars added"
 msgstr ""
+"κάποιο widget του Tkinter για να περιέχει τον ScrolledCanvas, δηλ. έναν καμβά (canvas) "
+"του Tkinter με προστιθέμενες γραμμές κύλισης (scrollbars)"
 
 #: library/turtle.rst:2471
 msgid ""
 "Used by class Screen, which thus automatically provides a ScrolledCanvas as "
 "playground for the turtles."
 msgstr ""
+"Χρησιμοποιείται από την κλάση Screen, που έτσι παρέχει αυτόματα έναν ScrolledCanvas ως "
+"χώρο παιχνιδιού για τις χελώνες."
 
 #: library/turtle.rst:2476
 msgid "one of the strings \"polygon\", \"image\", \"compound\""
@@ -3990,6 +3998,8 @@ msgid ""
 "Data structure modeling shapes.  The pair ``(type_, data)`` must follow this "
 "specification:"
 msgstr ""
+"Δομή δεδομένων που μοντελοποιεί σχήματα.  Το ζεύγος ``(type_, data)`` πρέπει να ακολουθεί "
+"αυτή την προδιαγραφή:"
 
 #: library/turtle.rst:2483
 msgid "*type_*"
@@ -4116,6 +4126,8 @@ msgid ""
 "A :class:`Turtle` instance will automatically create a :class:`Screen` "
 "instance if one is not already present."
 msgstr ""
+"Ένα στιγμιότυπο :class:`Turtle` θα δημιουργήσει αυτόματα ένα στιγμιότυπο :class:`Screen` "
+"αν δεν υπάρχει ήδη."
 
 #: library/turtle.rst:2538
 msgid ""
@@ -4124,6 +4136,10 @@ msgid ""
 "or created for it. The *canvas* can be a :class:`!tkinter.Canvas`, :class:"
 "`ScrolledCanvas` or :class:`TurtleScreen`."
 msgstr ""
+"``Turtle`` είναι μια υποκλάση της :class:`RawTurtle`, που *δεν* "
+"δημιουργεί αυτόματα μια επιφάνεια σχεδίασης - πρέπει να παρασχεθεί ή να "
+"δημιουργηθεί μια *καμβάς* (canvas) γι' αυτήν.  Ο *καμβάς* μπορεί "
+"να είναι μια :class:`!tkinter.Canvas`, :class:`ScrolledCanvas` ή :class:`TurtleScreen`."
 
 #: library/turtle.rst:2544
 msgid ""
@@ -4133,6 +4149,11 @@ msgid ""
 "size and title) and behaviour. ``TurtleScreen``'s constructor needs a :class:"
 "`!tkinter.Canvas` or a :class:`ScrolledCanvas` as an argument."
 msgstr ""
+"Η :class:`TurtleScreen` είναι η βασική επιφάνεια σχεδίασης για μια χελώνα.  Η :class:`Screen` "
+"είναι μια υποκλάση της ``TurtleScreen``, και περιλαμβάνει :ref:`μερικές πρόσθετες μεθόδους <screenspecific>` "
+"για τη διαχείριση της εμφάνισης (συμπεριλαμβανομένου του μεγέθους και του τίτλου) και της συμπεριφοράς της. "
+"Ο κατασκευαστής της ``TurtleScreen`` χρειάζεται μια :class:`!tkinter.Canvas` ή μια :class:`ScrolledCanvas` "
+"ως όρισμα."
 
 #: library/turtle.rst:2551
 msgid ""
@@ -4142,20 +4163,27 @@ msgid ""
 "``Screen`` method is called. Similarly, a turtle object is automatically "
 "created whenever any of the functions derived from a Turtle method is called."
 msgstr ""
+"Η λειτουργική διεπαφή για τα γραφικά χελώνας χρησιμοποιεί τις διάφορες μεθόδους της "
+"``Turtle`` και ``TurtleScreen``/``Screen``.  Πίσω από τις σκηνές, ένα αντικείμενο οθόνης "
+"δημιουργείται αυτόματα όποτε καλείται μια συνάρτηση που προέρχεται από μια "
+"μέθοδο της ``Screen``.  Ομοίως, ένα αντικείμενο χελώνας δημιουργείται αυτόματα "
+"όποτε καλείται οποιαδήποτε από τις συναρτήσεις που προέρχονται από μια μέθοδο της Turtle."
 
 #: library/turtle.rst:2557
 msgid ""
 "To use multiple turtles on a screen, the object-oriented interface must be "
 "used."
 msgstr ""
+"Για να χρησιμοποιήσετε πολλαπλές χελώνες σε μια οθόνη, πρέπει να χρησιμοποιηθεί η "
+"αντικειμενοστραφής διεπαφή."
 
 #: library/turtle.rst:2562
 msgid "Help and configuration"
-msgstr ""
+msgstr "Βοήθεια και ρύθμιση"
 
 #: library/turtle.rst:2565
 msgid "How to use help"
-msgstr ""
+msgstr "Πώς να χρησιμοποιήσετε τη βοήθεια"
 
 #: library/turtle.rst:2567
 msgid ""
@@ -4163,16 +4191,20 @@ msgid ""
 "extensively via docstrings.  So these can be used as online-help via the "
 "Python help facilities:"
 msgstr ""
+"Οι δημόσιες μέθοδοι των κλάσεων Screen και Turtle τεκμηριώνονται εκτενώς μέσω docstrings.  "
+"Έτσι, μπορούν να χρησιμοποιηθούν ως διαδικτυακή βοήθεια μέσω των λειτουργιών βοήθειας της Python:"
 
 #: library/turtle.rst:2571
 msgid ""
 "When using IDLE, tooltips show the signatures and first lines of the "
 "docstrings of typed in function-/method calls."
 msgstr ""
+"Όταν χρησιμοποιείτε το IDLE, τα tooltips δείχνουν τις υπογραφές και τις πρώτες γραμμές των docstrings "
+"των συναρτήσεων/μεθόδων που πληκτρολογούνται."
 
 #: library/turtle.rst:2574
 msgid "Calling :func:`help` on methods or functions displays the docstrings::"
-msgstr ""
+msgstr "Η κλήση της :func:`help` σε μεθόδους ή συναρτήσεις εμφανίζει τα docstrings::"
 
 #: library/turtle.rst:2576
 msgid ""
@@ -4239,6 +4271,7 @@ msgid ""
 "The docstrings of the functions which are derived from methods have a "
 "modified form::"
 msgstr ""
+"Τα docstrings των συναρτήσεων που προέρχονται από μεθόδους έχουν μια τροποποιημένη μορφή::"
 
 #: library/turtle.rst:2608
 msgid ""
@@ -4309,10 +4342,12 @@ msgid ""
 "These modified docstrings are created automatically together with the "
 "function definitions that are derived from the methods at import time."
 msgstr ""
+"Αυτά τα τροποποιημένα docstrings δημιουργούνται αυτόματα μαζί με τους ορισμούς συναρτήσεων "
+"που προέρχονται από τις μεθόδους κατά το χρόνο εισαγωγής."
 
 #: library/turtle.rst:2644
 msgid "Translation of docstrings into different languages"
-msgstr ""
+msgstr "Μετάφραση των docstrings σε διαφορετικές γλώσσες"
 
 #: library/turtle.rst:2646
 msgid ""
@@ -4320,10 +4355,13 @@ msgid ""
 "names and the values of which are the docstrings of the public methods of "
 "the classes Screen and Turtle."
 msgstr ""
+"Υπάρχει ένα βοηθητικό πρόγραμμα για τη δημιουργία ενός λεξικού, "
+"τα κλειδιά του οποίου είναι τα ονόματα των μεθόδων και οι τιμές "
+"του είναι τα docstrings των δημόσιων μεθόδων των κλάσεων Screen και Turtle."
 
 #: library/turtle.rst:2652
 msgid "a string, used as filename"
-msgstr ""
+msgstr "μια συμβολοσειρά, που χρησιμοποιείται ως όνομα αρχείου"
 
 #: library/turtle.rst:2654
 msgid ""
@@ -4333,6 +4371,10 @@ msgid ""
 "Python script :file:`{filename}.py`.  It is intended to serve as a template "
 "for translation of the docstrings into different languages."
 msgstr ""
+"Δημιουργεί και γράφει το λεξικό docstring σε ένα σενάριο Python με το δοσμένο όνομα αρχείου.  "
+"Αυτή η συνάρτηση πρέπει να κληθεί ρητά (δεν χρησιμοποιείται από τις κλάσεις γραφικών χελώνας).  "
+"Το λεξικό docstring θα γραφτεί στο σενάριο Python :file:`{filename}.py`.  "
+"Προορίζεται να χρησιμεύσει ως πρότυπο για τη μετάφραση των docstrings σε διαφορετικές γλώσσες."
 
 #: library/turtle.rst:2660
 msgid ""
@@ -4340,6 +4382,10 @@ msgid ""
 "native language, you have to translate the docstrings and save the resulting "
 "file as e.g. :file:`turtle_docstringdict_german.py`."
 msgstr ""
+"Αν εσείς (ή οι μαθητές σας) θέλετε να χρησιμοποιήσετε "
+"το :mod:`turtle` με διαδικτυακή βοήθεια στη μητρική σας γλώσσα, "
+"πρέπει να μεταφράσετε τα docstrings και να "
+"αποθηκεύσετε το προκύπτον αρχείο ως π.χ. :file:`turtle_docstringdict_german.py`."
 
 #: library/turtle.rst:2664
 msgid ""
@@ -4347,22 +4393,29 @@ msgid ""
 "dictionary will be read in at import time and will replace the original "
 "English docstrings."
 msgstr ""
+"Αν έχετε μια κατάλληλη καταχώριση στο :file:`turtle.cfg` αρχείο σας, "
+"αυτό το λεξικό θα διαβαστεί κατά το χρόνο εισαγωγής και θα αντικαταστήσει τα πρωτότυπα "
+"αγγλικά docstrings."
 
 #: library/turtle.rst:2667
 msgid ""
 "At the time of this writing there are docstring dictionaries in German and "
 "in Italian.  (Requests please to glingl@aon.at.)"
 msgstr ""
+"Κατά το χρόνο αυτής της γραφής υπάρχουν λεξικά docstring στα γερμανικά και "
+"στα ιταλικά.  (Αιτήματα παρακαλώ στο glingl@aon.at.)"
 
 #: library/turtle.rst:2673
 msgid "How to configure Screen and Turtles"
-msgstr ""
+msgstr "Πώς να ρυθμίσετε την Οθόνη και τις Χελώνες"
 
 #: library/turtle.rst:2675
 msgid ""
 "The built-in default configuration mimics the appearance and behaviour of "
 "the old turtle module in order to retain best possible compatibility with it."
 msgstr ""
+"Η ενσωματωμένη προεπιλεγμένη ρύθμιση μιμείται την εμφάνιση και τη συμπεριφορά του παλιού "
+"module της χελώνας για να διατηρήσει την καλύτερη δυνατή συμβατότητα με αυτό."
 
 #: library/turtle.rst:2678
 msgid ""
@@ -4372,11 +4425,17 @@ msgid ""
 "be read at import time and modify the configuration according to its "
 "settings."
 msgstr ""
+"Αν θέλετε να χρησιμοποιήσετε μια διαφορετική ρύθμιση που να αντανακλά καλύτερα "
+"τα χαρακτηριστικά αυτού του module ή που να ταιριάζει καλύτερα στις ανάγκες σας, "
+"π.χ. για χρήση σε μια τάξη, μπορείτε να προετοιμάσετε "
+"ένα αρχείο ρύθμισης ``turtle.cfg`` που θα διαβαστεί κατά "
+"το χρόνο εισαγωγής και θα τροποποιήσει τη ρύθμιση σύμφωνα με τις ρυθμίσεις του."
 
 #: library/turtle.rst:2683
 msgid ""
 "The built in configuration would correspond to the following ``turtle.cfg``:"
 msgstr ""
+"Η ενσωματωμένη ρύθμιση θα αντιστοιχούσε στο ακόλουθο ``turtle.cfg``:"
 
 #: library/turtle.rst:2685
 msgid ""
@@ -4424,25 +4483,29 @@ msgstr ""
 
 #: library/turtle.rst:2708
 msgid "Short explanation of selected entries:"
-msgstr ""
+msgstr "Σύντομη εξήγηση επιλεγμένων καταχωρήσεων:"
 
 #: library/turtle.rst:2710
 msgid ""
 "The first four lines correspond to the arguments of the :func:`Screen.setup "
 "<setup>` method."
 msgstr ""
+"Οι πρώτες τέσσερις γραμμές αντιστοιχούν στα ορίσματα της μεθόδου :func:`Screen.setup <setup>`."
 
 #: library/turtle.rst:2712
 msgid ""
 "Line 5 and 6 correspond to the arguments of the method :func:`Screen."
 "screensize <screensize>`."
 msgstr ""
+"Η γραμμή 5 και 6 αντιστοιχούν στα ορίσματα της μεθόδου :func:`Screen.screensize <screensize>`."
 
 #: library/turtle.rst:2714
 msgid ""
 "*shape* can be any of the built-in shapes, e.g: arrow, turtle, etc.  For "
 "more info try ``help(shape)``."
 msgstr ""
+"*shape* μπορεί να είναι οποιοδήποτε από τα ενσωματωμένα σχήματα, π.χ.: arrow, turtle, κ.λπ.  "
+"Για περισσότερες πληροφορίες δοκιμάστε ``help(shape)``."
 
 #: library/turtle.rst:2716
 msgid ""
@@ -4450,12 +4513,17 @@ msgid ""
 "have to write ``fillcolor = \"\"`` (but all nonempty strings must not have "
 "quotes in the cfg file)."
 msgstr ""
+"Αν θέλετε να χρησιμοποιήσετε κανένα χρώμα γεμίσματος (δηλ. να κάνετε τη χελώνα διαφανή), "
+"πρέπει να γράψετε ``fillcolor = \"\"`` (αλλά όλες οι μη κενές συμβολοσειρές δεν πρέπει να έχουν "
+"εισαγωγικά στο αρχείο cfg)."
 
 #: library/turtle.rst:2719
 msgid ""
 "If you want to reflect the turtle its state, you have to use ``resizemode = "
 "auto``."
 msgstr ""
+"Αν θέλετε να αντικατοπτρίζεται η κατάσταση της χελώνας, "
+"πρέπει να χρησιμοποιήσετε ``resizemode = auto``."
 
 #: library/turtle.rst:2721
 msgid ""
@@ -4463,6 +4531,10 @@ msgid ""
 "`turtle_docstringdict_italian.py` will be loaded at import time (if present "
 "on the import path, e.g. in the same directory as :mod:`turtle`)."
 msgstr ""
+"Αν ορίσετε π.χ. ``language = italian`` το λεξικό "
+"docstring :file:`turtle_docstringdict_italian.py` "
+"θα φορτωθεί κατά το χρόνο εισαγωγής (αν "
+"υπάρχει στη διαδρομή εισαγωγής, π.χ. στον ίδιο κατάλογο με το :mod:`turtle`)."
 
 #: library/turtle.rst:2724
 msgid ""
@@ -4471,6 +4543,10 @@ msgid ""
 "docstrings to function-docstrings will delete these names from the "
 "docstrings."
 msgstr ""
+"Οι καταχωρήσεις *exampleturtle* και *examplescreen* ορίζουν "
+"τα ονόματα αυτών των αντικειμένων όπως εμφανίζονται στα docstrings.  "
+"Η μετατροπή των docstrings μεθόδων σε docstrings συναρτήσεων θα "
+"διαγράψει αυτά τα ονόματα από τα docstrings."
 
 #: library/turtle.rst:2728
 msgid ""
@@ -4478,6 +4554,9 @@ msgid ""
 "``-n`` switch (\"no subprocess\").  This will prevent :func:`exitonclick` to "
 "enter the mainloop."
 msgstr ""
+"*using_IDLE*: Ορίστε το σε ``True`` αν εργάζεστε τακτικά με το IDLE και το "
+"διακόπτη ``-n`` (\"χωρίς υποδιαδικασία\").  Αυτό θα αποτρέψει την :func:`exitonclick` "
+"από το να εισέλθει στο mainloop."
 
 #: library/turtle.rst:2732
 msgid ""
@@ -4485,6 +4564,10 @@ msgid ""
 "is stored and an additional one in the current working directory.  The "
 "latter will override the settings of the first one."
 msgstr ""
+"Μπορεί να υπάρχει ένα αρχείο :file:`turtle.cfg` στον κατάλογο "
+"όπου αποθηκεύεται το :mod:`turtle` και ένα επιπλέον "
+"στον τρέχοντα κατάλογο εργασίας.  Το δεύτερο "
+"θα υπερισχύσει των ρυθμίσεων του πρώτου."
 
 #: library/turtle.rst:2736
 msgid ""
@@ -4492,6 +4575,10 @@ msgid ""
 "You can study it as an example and see its effects when running the demos "
 "(preferably not from within the demo-viewer)."
 msgstr ""
+"Ο κατάλογος :file:`Lib/turtledemo` περιέχει ένα αρχείο :file:`turtle.cfg`.  "
+"Μπορείτε να το μελετήσετε ως παράδειγμα και να δείτε τις επιπτώσεις "
+"του όταν εκτελείτε τις επιδείξεις (κατά προτίμηση όχι "
+"από το εσωτερικό του προγράμματος προβολής επίδειξης)."
 
 #: library/turtle.rst:2742
 msgid ":mod:`turtledemo` --- Demo scripts"
@@ -4502,6 +4589,9 @@ msgid ""
 "The :mod:`turtledemo` package includes a set of demo scripts.  These scripts "
 "can be run and viewed using the supplied demo viewer as follows::"
 msgstr ""
+"Το πακέτο :mod:`turtledemo` περιλαμβάνει ένα σύνολο σεναρίων επίδειξης.  "
+"Αυτά τα σενάρια μπορούν να εκτελεστούν και να προβαλλούν χρησιμοποιώντας "
+"τον παρεχόμενο προβολέα επίδειξης ως εξής::"
 
 #: library/turtle.rst:2750
 msgid "python -m turtledemo"
@@ -4511,6 +4601,7 @@ msgstr "python -m turtledemo"
 msgid ""
 "Alternatively, you can run the demo scripts individually.  For example, ::"
 msgstr ""
+"Εναλλακτικά, μπορείτε να εκτελέσετε τα σενάρια επίδειξης μεμονωμένα.  Για παράδειγμα, ::"
 
 #: library/turtle.rst:2754
 msgid "python -m turtledemo.bytedesign"
@@ -4518,13 +4609,15 @@ msgstr "python -m turtledemo.bytedesign"
 
 #: library/turtle.rst:2756
 msgid "The :mod:`turtledemo` package directory contains:"
-msgstr ""
+msgstr "Το πακέτο :mod:`turtledemo` περιέχει:"
 
 #: library/turtle.rst:2758
 msgid ""
 "A demo viewer :file:`__main__.py` which can be used to view the sourcecode "
 "of the scripts and run them at the same time."
 msgstr ""
+"Ένας προβολέας επίδειξης :file:`__main__.py` που μπορεί να χρησιμοποιηθεί για "
+"να δείτε τον πηγαίο κώδικα των σεναρίων και να τα εκτελέσετε ταυτόχρονα."
 
 #: library/turtle.rst:2760
 msgid ""
@@ -4532,36 +4625,41 @@ msgid ""
 "module.  Examples can be accessed via the Examples menu.  They can also be "
 "run standalone."
 msgstr ""
+"Πολλαπλά σενάρια που δείχνουν διαφορετικά χαρακτηριστικά του module :mod:`turtle`.  "
+"Τα παραδείγματα μπορούν να προσεγγιστούν μέσω του μενού Παραδείγματα.  "
+"Μπορούν επίσης να εκτελεστούν αυτόνομα."
 
 #: library/turtle.rst:2763
 msgid ""
 "A :file:`turtle.cfg` file which serves as an example of how to write and use "
 "such files."
 msgstr ""
+"Ένα αρχείο :file:`turtle.cfg` που χρησιμεύει ως παράδειγμα για "
+"το πώς να γράψετε και να χρησιμοποιήσετε τέτοια αρχεία."
 
 #: library/turtle.rst:2766
 msgid "The demo scripts are:"
-msgstr ""
+msgstr "Τα scripts επίδειξης είναι:"
 
 #: library/turtle.rst:2773
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: library/turtle.rst:2773
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: library/turtle.rst:2773
 msgid "Features"
-msgstr ""
+msgstr "Χαρακτηριστικά"
 
 #: library/turtle.rst:2775
 msgid "bytedesign"
-msgstr ""
+msgstr "bytedesign"
 
 #: library/turtle.rst:2775
 msgid "complex classical turtle graphics pattern"
-msgstr ""
+msgstr "πολύπλοκο κλασικό σχέδιο γραφικών χελώνας"
 
 #: library/turtle.rst:2775
 msgid ":func:`tracer`, delay, :func:`update`"
@@ -4569,146 +4667,148 @@ msgstr ":func:`tracer`, delay, :func:`update`"
 
 #: library/turtle.rst:2778
 msgid "chaos"
-msgstr ""
+msgstr "χάος"
 
 #: library/turtle.rst:2778
 msgid ""
 "graphs Verhulst dynamics, shows that computer's computations can generate "
 "results sometimes against the common sense expectations"
 msgstr ""
+"γράφημα δυναμικής Verhulst, δείχνει ότι οι υπολογισμοί του υπολογιστή μπορούν "
+"να παράγουν αποτελέσματα μερικές φορές ενάντια στις προσδοκίες της κοινής λογικής"
 
 #: library/turtle.rst:2778
 msgid "world coordinates"
-msgstr ""
+msgstr "συντεταγμένες κόσμου"
 
 #: library/turtle.rst:2784
 msgid "clock"
-msgstr ""
+msgstr "ρολόι"
 
 #: library/turtle.rst:2784
 msgid "analog clock showing time of your computer"
-msgstr ""
+msgstr "αναλογικό ρολόι που δείχνει την ώρα του υπολογιστή σας"
 
 #: library/turtle.rst:2784
 msgid "turtles as clock's hands, ontimer"
-msgstr ""
+msgstr "χελώνες ως δείκτες του ρολογιού, ontimer"
 
 #: library/turtle.rst:2787
 msgid "colormixer"
-msgstr ""
+msgstr "μείγμα χρωμάτων"
 
 #: library/turtle.rst:2787
 msgid "experiment with r, g, b"
-msgstr ""
+msgstr " πειραματιστείτε με τα r, g, b"
 
 #: library/turtle.rst:2789
 msgid "forest"
-msgstr ""
+msgstr "δάσος"
 
 #: library/turtle.rst:2789
 msgid "3 breadth-first trees"
-msgstr ""
+msgstr "3 δέντρα πρώτου εύρους"
 
 #: library/turtle.rst:2789
 msgid "randomization"
-msgstr ""
+msgstr "τυχαία διάταξη"
 
 #: library/turtle.rst:2791
 msgid "fractalcurves"
-msgstr ""
+msgstr "fractalcurves"
 
 #: library/turtle.rst:2791
 msgid "Hilbert & Koch curves"
-msgstr ""
+msgstr "καμπύλες Hilbert & Koch"
 
 #: library/turtle.rst:2791
 msgid "recursion"
-msgstr ""
+msgstr "αναδρομή"
 
 #: library/turtle.rst:2793
 msgid "lindenmayer"
-msgstr ""
+msgstr "lindenmayer"
 
 #: library/turtle.rst:2793
 msgid "ethnomathematics (indian kolams)"
-msgstr ""
+msgstr "εθνομαθηματικά (ινδικά κολάμ)"
 
 #: library/turtle.rst:2793
 msgid "L-System"
-msgstr ""
+msgstr "L-Σύστημα"
 
 #: library/turtle.rst:2796
 msgid "minimal_hanoi"
-msgstr ""
+msgstr "minimal_hanoi"
 
 #: library/turtle.rst:2796
 msgid "Towers of Hanoi"
-msgstr ""
+msgstr "Πύργοι του Χανοϊ"
 
 #: library/turtle.rst:2796
 msgid "Rectangular Turtles as Hanoi discs (shape, shapesize)"
-msgstr ""
+msgstr "Ορθογώνιες Χελώνες ως δίσκοι του Χανοϊ (σχήμα, μέγεθος σχήματος)"
 
 #: library/turtle.rst:2800
 msgid "nim"
-msgstr ""
+msgstr "nim"
 
 #: library/turtle.rst:2800
 msgid ""
 "play the classical nim game with three heaps of sticks against the computer."
-msgstr ""
+msgstr "παίξτε το κλασικό παιχνίδι nim με τρεις σωρούς ξύλων κατά του υπολογιστή."
 
 #: library/turtle.rst:2800
 msgid "turtles as nimsticks, event driven (mouse, keyboard)"
-msgstr ""
+msgstr "χελώνες ως nimsticks, με βάση γεγονότα (ποντίκι, πληκτρολόγιο)"
 
 #: library/turtle.rst:2804
 msgid "paint"
-msgstr ""
+msgstr "ζωγραφική"
 
 #: library/turtle.rst:2804
 msgid "super minimalistic drawing program"
-msgstr ""
+msgstr "υπερ μινιμαλιστικό πρόγραμμα ζωγραφικής"
 
 #: library/turtle.rst:2807
 msgid "peace"
-msgstr ""
+msgstr "ειρήνη"
 
 #: library/turtle.rst:2807
 msgid "elementary"
-msgstr ""
+msgstr "στοιχειώδες"
 
 #: library/turtle.rst:2807
 msgid "turtle: appearance and animation"
-msgstr ""
+msgstr "χελώνα: εμφάνιση και κινούμενα σχέδια"
 
 #: library/turtle.rst:2810
 msgid "penrose"
-msgstr ""
+msgstr "penrose"
 
 #: library/turtle.rst:2810
 msgid "aperiodic tiling with kites and darts"
-msgstr ""
+msgstr "απεριοδική επένδυση με αετούς και βέλη"
 
 #: library/turtle.rst:2813
 msgid "planet_and_moon"
-msgstr ""
+msgstr "planet_and_moon"
 
 #: library/turtle.rst:2813
 msgid "simulation of gravitational system"
-msgstr ""
+msgstr "προσομοίωση βαρυτικού συστήματος"
 
 #: library/turtle.rst:2813
 msgid "compound shapes, :class:`Vec2D`"
-msgstr ""
+msgstr "σύνθετα σχήματα, :class:`Vec2D`"
 
 #: library/turtle.rst:2816
 msgid "rosette"
-msgstr ""
+msgstr "ροζέτα"
 
 #: library/turtle.rst:2816
 msgid "a pattern from the wikipedia article on turtle graphics"
-msgstr ""
+msgstr "ένα μοτίβο από το άρθρο της wikipedia για τα γραφικά χελώνας"
 
 #: library/turtle.rst:2816
 msgid ":func:`clone`, :func:`undo`"
@@ -4784,6 +4884,14 @@ msgid ""
 "duplications of the corresponding :class:`TurtleScreen`/:class:`Screen` "
 "methods.)"
 msgstr ""
+"Οι μέθοδοι :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width <window_width>` "
+"και :func:`Turtle.window_height <window_height>` έχουν καταργηθεί. "
+"Οι μέθοδοι με αυτά τα ονόματα και λειτουργικότητα είναι πλέον "
+"διαθέσιμες μόνο ως μέθοδοι της :class:`Screen`. "
+"Οι συναρτήσεις που προέρχονται από αυτές παραμένουν διαθέσιμες. "
+"(Στην πραγματικότητα ήδη στην έκδοση Python 2.6 "
+"αυτές οι μέθοδοι ήταν απλώς διπλασιασμοί των "
+"αντίστοιχων μεθόδων :class:`TurtleScreen`/:class:`Screen`.)"
 
 #: library/turtle.rst:2849
 msgid ""
@@ -4791,6 +4899,9 @@ msgid ""
 "`begin_fill` and :func:`end_fill` have changed slightly: now every filling "
 "process must be completed with an ``end_fill()`` call."
 msgstr ""
+"Η μέθοδος :func:`!Turtle.fill` έχει καταργηθεί. Η συμπεριφορά των :func:`begin_fill` "
+"και :func:`end_fill` έχει αλλάξει ελαφρώς: τώρα κάθε διαδικασία γεμίσματος "
+"πρέπει να ολοκληρωθεί με μια κλήση ``end_fill()``."
 
 #: library/turtle.rst:2854
 msgid ""
@@ -4799,6 +4910,10 @@ msgid ""
 "otherwise. This behaviour corresponds to a ``fill()`` call without arguments "
 "in Python 2.6."
 msgstr ""
+"Μια μέθοδος :func:`Turtle.filling <filling>` έχει προστεθεί. Επιστρέφει μια "
+"λογική τιμή: ``True`` αν μια διαδικασία γεμίσματος είναι σε εξέλιξη, ``False`` "
+"διαφορετικά. Αυτή η συμπεριφορά αντιστοιχεί σε μια κλήση ``fill()`` χωρίς ορίσματα "
+"στην έκδοση Python 2.6."
 
 #: library/turtle.rst:2860
 msgid "Changes since Python 3.0"
