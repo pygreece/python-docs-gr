@@ -310,7 +310,7 @@ msgid ""
 msgstr ""
 "Η αξιολόγηση του :data:`NotImplemented` σε ένα boolean πλαίσιο τώρα κάνει "
 "raise μια :exc:`TypeError`. Προηγουμένως αξιολογούνταν σε :const:`True` και "
-"εκπέμπε μια :exc:`DeprecationWarning` από την Python 3.9."
+"εξέπεμπε μια :exc:`DeprecationWarning` από την Python 3.9."
 
 #: reference/datamodel.rst:187
 msgid "Ellipsis"
@@ -1633,6 +1633,8 @@ msgid ""
 ":attr:`!__package__` will cease to be set or taken into consideration by the "
 "import system or standard library."
 msgstr ""
+"Το :attr:`!__package__` θα πάψει να ορίζεται ή να λαμβάνεται υπόψη από το "
+"σύστημα εισαγωγής ή την τυπική βιβλιοθήκη."
 
 #: reference/datamodel.rst:1013
 msgid ""
@@ -1786,6 +1788,10 @@ msgid ""
 "cease to be set or taken into consideration by the import system or standard "
 "library."
 msgstr ""
+"Ο ορισμός του :attr:`!__cached__` σε ένα module χωρίς τον αντίστοιχο ορισμό "
+"του :attr:`!__spec__.cached` θεωρείται παρωχημένος. Στην Python 3.15, το :"
+"attr:`!__cached__` θα πάψει να ορίζεται η να λαμβάνεται υπόψη από το σύστημα "
+"εισαγωγής ή την τυπική βιβλιοθήκη."
 
 #: reference/datamodel.rst:1089
 msgid "Other writable attributes on module objects"
@@ -1814,12 +1820,18 @@ msgid ""
 "collected during module body execution.  For best practices on working with :"
 "attr:`!__annotations__`, see :mod:`annotationlib`."
 msgstr ""
+"Ένα λεξικό που περιέχει :term:`variable annotations <variable annotation>` "
+"που συλλέγονται κατά την εκτέλεση του σώματος του module.  Για τις βέλτιστες "
+"πρακτικές σχετικά με την εργασία με :attr:`!__annotations__`, δείτε το :mod:"
+"`annotationlib`."
 
 #: reference/datamodel.rst:1111
 msgid ""
 "The :term:`annotate function` for this module, or ``None`` if the module has "
 "no annotations. See also: :attr:`~object.__annotate__` attributes."
 msgstr ""
+"Η :term:`annotate function` για αυτό το module, ή ``None`` εάν το module δεν "
+"έχει annotations. Δείτε επίσης: :attr:`~object.__annotate__` attributes."
 
 #: reference/datamodel.rst:1117
 msgid "Module dictionaries"
@@ -1953,6 +1965,9 @@ msgid ""
 "of the class's namespace. See also: :attr:`__dict__ attributes <object."
 "__dict__>`."
 msgstr ""
+"Μια :class:`mapping proxy <types.MappingProxyType>` που παρέχει μια προβολή "
+"μόνο για ανάγνωση του χώρου ονομάτων της κλάσης. Δείτε επίσης: :attr:"
+"`__dict__ attributes <object.__dict__>`."
 
 #: reference/datamodel.rst:1218
 msgid ""
@@ -1978,6 +1993,9 @@ msgid ""
 "collected during class body execution. See also: :attr:`__annotations__ "
 "attributes <object.__annotations__>`."
 msgstr ""
+"Ένα λεξικό που περιέχει :term:`variable annotations <variable annotation>` "
+"που συλλέγονται κατά την εκτέλεση του σώματος της κλάσης. Δείτε επίσης: :"
+"attr:`__annotations__ attributes <object.__annotations__>`."
 
 #: reference/datamodel.rst:1232
 msgid ""
@@ -1985,6 +2003,10 @@ msgid ""
 "see :mod:`annotationlib`. Use :func:`annotationlib.get_annotations` instead "
 "of accessing this attribute directly."
 msgstr ""
+"Για βέλτιστες πρακτικές σχετικά με την εργασία με :attr:`~object."
+"__annotations__`, δείτε το :mod:`annotationlib`. Χρησιμοποιήστε την :func:"
+"`annotationlib.get_annotations` αντί να έχετε άμεση πρόσβαση σε αυτό το "
+"χαρακτηριστικό."
 
 #: reference/datamodel.rst:1239
 msgid ""
@@ -1994,12 +2016,19 @@ msgid ""
 "__future__ import annotations``. See :pep:`749 <749#pep749-metaclasses>` for "
 "details."
 msgstr ""
+"Η πρόσβαση στο χαρακτηριστικό :attr:`!__annotations__` απευθείας σε ένα "
+"αντικείμενο κλάσης ενδέχεται να επιστρέψει annotations για τη λάθος κλάση, "
+"συγκεκριμένα σε ορισμένες περιπτώσεις όπου η κλάση, η βασική της κλάση ή μια "
+"μετακλάση ορίζεται με το ``from __future__ import annotations``. Δείτε το :"
+"pep:`749 <749#pep749-metaclasses>` για λεπτομέρειες."
 
 #: reference/datamodel.rst:1245
 msgid ""
 "This attribute does not exist on certain builtin classes. On user-defined "
 "classes without ``__annotations__``, it is an empty dictionary."
 msgstr ""
+"Αυτό το χαρακτηριστικό δεν υπάρχει σε ορισμένες ενσωματωμένες κλάσεις. Σε "
+"προσαρμοσμένες κλάσεις χωρίς ``__annotations__``, είναι ένα κενό λεξικό."
 
 #: reference/datamodel.rst:1254
 msgid ""
@@ -2007,6 +2036,9 @@ msgid ""
 "no annotations. See also: :attr:`__annotate__ attributes <object."
 "__annotate__>`."
 msgstr ""
+"Η :term:`annotate function` για αυτή την κλάση, ή ``None`` εάν η κλάση δεν "
+"έχει annotations. Δείτε επίσης: :attr:`__annotate__ attributes <object."
+"__annotate__>`."
 
 #: reference/datamodel.rst:1261
 msgid ""
@@ -2021,6 +2053,8 @@ msgid ""
 "A :class:`tuple` containing names of attributes of this class which are "
 "assigned through ``self.X`` from any function in its body."
 msgstr ""
+"Ένα :class:`tuple` που περιέχει ονόματα χαρακτηριστικών αυτής της κλάσης τα "
+"οποία ανατίθενται μέσω του ``self.X`` από οποιαδήποτε συνάρτηση στο σώμα της."
 
 #: reference/datamodel.rst:1273
 msgid ""
@@ -2028,6 +2062,9 @@ msgid ""
 "decorators. Setting the :attr:`__module__` attribute removes the :attr:`!"
 "__firstlineno__` item from the type's dictionary."
 msgstr ""
+"Ο αριθμός γραμμής της πρώτης γραμμής του ορισμού της κλάσης, "
+"συμπεριλαμβανομένων των διακοσμητών. Ο ορισμός του χαρακτηριστικού :attr:"
+"`__module__` αφαιρεί το :attr:`!__firstlineno__` από το λεξικό του τύπου."
 
 #: reference/datamodel.rst:1281
 msgid ""
@@ -2284,6 +2321,9 @@ msgid ""
 "that are referenced from at least one :term:`nested scope` inside the "
 "function"
 msgstr ""
+"Ένα :class:`tuple` που περιέχει τα ονόματα των :ref:`local variables "
+"<naming>` που αναφέρονται από τουλάχιστον ένα :term:`nested scope` μέσα στη "
+"συνάρτηση"
 
 #: reference/datamodel.rst:1481
 msgid ""
@@ -2291,10 +2331,15 @@ msgid ""
 "<closure variable>` that a :term:`nested scope` references in an outer "
 "scope. See also :attr:`function.__closure__`."
 msgstr ""
+"Ένα :class:`tuple` που περιέχει τα ονόματα των :term:`free (closure) "
+"variables <closure variable>` που αναφέρεται από ένα :term:`nested scope` σε "
+"ένα εξωτερικό πλαίσιο. Δείτε επίσης το :attr:`function.__closure__`."
 
 #: reference/datamodel.rst:1485
 msgid "Note: references to global and builtin names are *not* included."
 msgstr ""
+"Σημείωση: οι αναφορές σε καθολικά και ενσωματωμένα ονόματα *δεν* "
+"περιλαμβάνονται."
 
 #: reference/datamodel.rst:1488
 msgid ""
@@ -2381,6 +2426,11 @@ msgid ""
 "whether a code object was compiled with a particular feature enabled. See :"
 "attr:`~__future__._Feature.compiler_flag`."
 msgstr ""
+"Οι δηλώσεις μελλοντικών δυνατοτήτων (για παράδειγμα, ``from __future__ "
+"import division``) χρησιμοποιούν επίσης bits στο :attr:`~codeobject."
+"co_flags` για να υποδείξουν εάν ένα αντικείμενο κώδικα έχει συνταχθεί με μια "
+"συγκεκριμένη ενεργοποιημένη δυνατότητα. Δείτε το :attr:`~__future__._Feature."
+"compiler_flag`."
 
 #: reference/datamodel.rst:1534
 msgid ""
@@ -2396,6 +2446,10 @@ msgid ""
 "the first item in :attr:`~codeobject.co_consts` is the docstring of the "
 "function."
 msgstr ""
+"Εάν ένα αντικείμενο κώδικα αντιπροσωπεύει μια συνάρτηση και έχει μια "
+"συμβολοσειρά τεκμηρίωσης, το bit :data:`~inspect.CO_HAS_DOCSTRING` ορίζεται "
+"στο :attr:`~codeobject.co_flags` και το πρώτο στοιχείο στο :attr:"
+"`~codeobject.co_consts` είναι η συμβολοσειρά τεκμηρίωσης της συνάρτησης."
 
 #: reference/datamodel.rst:1544
 msgid "Methods on code objects"
@@ -2576,6 +2630,8 @@ msgstr ""
 msgid ""
 "Code objects are also supported by the generic function :func:`copy.replace`."
 msgstr ""
+"Τα αντικείμενα κώδικα υποστηρίζονται επίσης από τη γενική συνάρτηση :func:"
+"`copy.replace`."
 
 #: reference/datamodel.rst:1626
 msgid "Frame objects"
@@ -2616,10 +2672,14 @@ msgid ""
 "the frame refers to an :term:`optimized scope`, this may return a write-"
 "through proxy object."
 msgstr ""
+"Η αντιστοίχιση που χρησιμοποιείται από το πλαίσιο για την αναζήτηση :ref:"
+"`local variables <naming>`. Εάν το πλαίσιο αναφέρεται σε ένα :term:"
+"`optimized scope`, αυτό μπορεί να επιστρέψει ένα αντικείμενο proxy write-"
+"through."
 
 #: reference/datamodel.rst:1662
 msgid "Return a proxy for optimized scopes."
-msgstr ""
+msgstr "Επιστρέφει ένα proxy για βελτιστοποιημένα πλαίσια."
 
 #: reference/datamodel.rst:1666
 msgid ""
@@ -2716,12 +2776,15 @@ msgid ""
 ":exc:`RuntimeError` is raised if the frame is currently executing or "
 "suspended."
 msgstr ""
+"Η :exc:`RuntimeError` γίνεται raise εάν το πλαίσιο εκτελείται ή αναστέλλεται."
 
 #: reference/datamodel.rst:1728
 msgid ""
 "Attempting to clear a suspended frame raises :exc:`RuntimeError` (as has "
 "always been the case for executing frames)."
 msgstr ""
+"Η προσπάθεια εκκαθάρισης ενός ανασταλμένου πλαισίου κάνει raise :exc:"
+"`RuntimeError` (όπως πάντα συμβαίνει για τα εκτελούμενα πλαίσια)."
 
 #: reference/datamodel.rst:1736
 msgid "Traceback objects"
@@ -3670,6 +3733,15 @@ msgid ""
 "object).  See the :meth:`__getattribute__` method below for a way to "
 "actually get total control over attribute access."
 msgstr ""
+"Σημειώστε ότι εάν το χαρακτηριστικό βρεθεί μέσω του κανονικού μηχανισμού, η :"
+"meth:`__getattr__` δεν καλείται.  (Αυτή είναι μια σκόπιμη ασυμμετρία μεταξύ "
+"της :meth:`__getattr__` και της :meth:`__setattr__`.) Αυτό γίνεται τόσο για "
+"λόγους αποδοτικότητας όσο και επειδή διαφορετικά η :meth:`__getattr__` δεν "
+"θα είχε κανέναν τρόπο να έχει πρόσβαση σε άλλα χαρακτηριστικά του "
+"στιγμιοτύπου.  Σημειώστε ότι τουλάχιστον για τις μεταβλητές στιγμιοτύπου, "
+"μπορείτε να αναλάβετε πλήρη έλεγχο εισάγοντας καμία τιμή στο λεξικό "
+"χαρακτηριστικών στιγμιοτύπου (αλλά αντίθετα εισάγοντάς τις σε ένα άλλο "
+"αντικείμενο).  "
 
 #: reference/datamodel.rst:2288
 msgid ""
@@ -5586,6 +5658,17 @@ msgid ""
 "optional third argument if the three-argument version of the built-in :func:"
 "`pow` function is to be supported."
 msgstr ""
+"Αυτές οι μέθοδοι καλούνται να υλοποιήσουν τις δυαδικές αριθμητικές "
+"λειτουργίες (``+``, ``-``, ``*``, ``@``, ``/``, ``//``, ``%``, :func:"
+"`divmod`, :func:`pow`, ``**``, ``<<``, ``>>``, ``&``, ``^``, ``|``). Για "
+"παράδειγμα, για να αξιολογηθεί η έκφραση ``x + y``, όπου *x* είναι ένα "
+"στιγμιότυπο μιας κλάσης που έχει μια μέθοδο :meth:`__add__`, καλείται το "
+"``type(x).__add__(x, y)``.  Η μέθοδος :meth:`__divmod__` θα πρέπει να είναι "
+"ισοδύναμη με τη χρήση των :meth:`__floordiv__` και :meth:`__mod__`; δεν θα "
+"πρέπει να σχετίζεται με τη :meth:`__truediv__`. Σημειώστε ότι η :meth:"
+"`__pow__` θα πρέπει να ορίζεται ώστε να δέχεται ένα προαιρετικό τρίτο όρισμα "
+"εάν υποστηρίζεται η τριών ορισμάτων έκδοση της ενσωματωμένης συνάρτησης :"
+"func:`pow`."
 
 #: reference/datamodel.rst:3325
 msgid ""
@@ -5608,6 +5691,17 @@ msgid ""
 "__rsub__(y, x)`` is called if ``type(x).__sub__(x, y)`` returns :data:"
 "`NotImplemented` or ``type(y)`` is a subclass of ``type(x)``. [#]_"
 msgstr ""
+"Αυτές οι μέθοδοι καλούνται να υλοποιήσουν τις δυαδικές αριθμητικές "
+"λειτουργίες (``+``, ``-``, ``*``, ``@``, ``/``, ``//``, ``%``, :func:"
+"`divmod`, :func:`pow`, ``**``, ``<<``, ``>>``, ``&``, ``^``, ``|``) με "
+"ανακλώμενους (ανταλλαγμένους) τελεστές.  Αυτές οι λειτουργίες καλούνται μόνο "
+"εάν οι τελεστές είναι διαφορετικών τύπων, όταν ο αριστερός τελεστής δεν "
+"υποστηρίζει την αντίστοιχη λειτουργία [#]_, ή η κλάση του δεξιού τελεστή "
+"προέρχεται από την κλάση του αριστερού τελεστή. [#]_ Για παράδειγμα, για να "
+"αξιολογηθεί η έκφραση ``x - y``, όπου *y* είναι ένα στιγμιότυπο μιας κλάσης "
+"που έχει μια μέθοδο :meth:`__rsub__`, καλείται το ``type(y).__rsub__(y, x)`` "
+"εάν το ``type(x).__sub__(x, y)`` επιστρέψει :data:`NotImplemented` ή το "
+"``type(y)`` είναι υποκλάση του ``type(x)``. [#]_"
 
 #: reference/datamodel.rst:3359
 msgid ""
@@ -5615,6 +5709,9 @@ msgid ""
 "argument if the three-argument version of the built-in :func:`pow` function "
 "is to be supported."
 msgstr ""
+"Σημειώστε ότι η :meth:`__rpow__` θα πρέπει να ορίζεται ώστε να δέχεται ένα "
+"προαιρετικό τρίτο όρισμα εάν υποστηρίζεται η τριών ορισμάτων έκδοση της "
+"ενσωματωμένης συνάρτησης :func:`pow`."
 
 #: reference/datamodel.rst:3365
 msgid ""
@@ -5622,6 +5719,9 @@ msgid ""
 "necessary. Previously it was only called in two-argument :func:`!pow` and "
 "the binary power operator."
 msgstr ""
+"Η τριών ορισμάτων :func:`pow` τώρα προσπαθεί να καλέσει τη :meth:`~object."
+"__rpow__` εάν είναι απαραίτητο. Παλαιότερα καλούνταν μόνο στη δύο ορισμάτων :"
+"func:`!pow` και στον δυαδικό τελεστή δύναμης."
 
 #: reference/datamodel.rst:3371
 msgid ""
@@ -5730,7 +5830,7 @@ msgstr ""
 #: reference/datamodel.rst:3458
 msgid ""
 ":func:`int` no longer delegates to the :meth:`~object.__trunc__` method."
-msgstr ""
+msgstr "Η :func:`int` δεν αναθέτει πλέον στη μέθοδο :meth:`~object.__trunc__`."
 
 #: reference/datamodel.rst:3465
 msgid "With Statement Context Managers"
@@ -5958,7 +6058,7 @@ msgstr "ABC για τύπους buffer."
 
 #: reference/datamodel.rst:3587
 msgid "Annotations"
-msgstr ""
+msgstr "Annotations"
 
 #: reference/datamodel.rst:3589
 msgid ""
@@ -5966,6 +6066,9 @@ msgid ""
 "<annotation>`, which are a way to associate information (usually :term:`type "
 "hints <type hint>`) with a symbol."
 msgstr ""
+"Οι συναρτήσεις, οι κλάσεις και τα προγράμματα μπορεί να περιέχουν :term:"
+"`annotations <annotation>`, που είναι ένας τρόπος να συσχετιστεί πληροφορία "
+"(συνήθως :term:`type hints <type hint>`) με ένα σύμβολο."
 
 #: reference/datamodel.rst:3595
 msgid ""
@@ -5974,16 +6077,24 @@ msgid ""
 "arbitrary code and raise exceptions. If evaluation is successful, the "
 "attribute is set to a dictionary mapping from variable names to annotations."
 msgstr ""
+"Αυτό το χαρακτηριστικό περιέχει τα annotations για ένα αντικείμενο. Είναι :"
+"ref:`lazily evaluated <lazy-evaluation>`, οπότε η πρόσβαση στο "
+"χαρακτηριστικό μπορεί να εκτελέσει αυθαίρετο κώδικα και να κάνει raise "
+"εξαιρέσεις. Εάν η αξιολόγηση είναι επιτυχής, το χαρακτηριστικό ορίζεται σε "
+"ένα λεξικό που αντιστοιχεί από ονόματα μεταβλητών σε annotations."
 
 #: reference/datamodel.rst:3600
 msgid "Annotations are now lazily evaluated."
-msgstr ""
+msgstr "Τα annotations αξιολογούνται πλέον τεμπέλικα."
 
 #: reference/datamodel.rst:3605
 msgid ""
 "An :term:`annotate function`. Returns a new dictionary object mapping "
 "attribute/parameter names to their annotation values."
 msgstr ""
+"Ένα :term:`annotate function`. Επιστρέφει ένα νέο αντικείμενο λεξικού που "
+"αντιστοιχεί ονόματα χαρακτηριστικών/παραμέτρων στις τιμές των annotations "
+"τους."
 
 #: reference/datamodel.rst:3608
 msgid ""
@@ -5991,6 +6102,10 @@ msgid ""
 "should be provided. It must be a member of the :class:`annotationlib.Format` "
 "enum, or an integer with a value corresponding to a member of the enum."
 msgstr ""
+"Λαμβάνει μια παράμετρο μορφής που καθορίζει τη μορφή στην οποία θα πρέπει να "
+"παρέχονται οι τιμές των annotations. Πρέπει να είναι μέλος της :class:"
+"`annotationlib.Format` enum, ή ένας ακέραιος αριθμός με τιμή που αντιστοιχεί "
+"σε μέλος της enum."
 
 #: reference/datamodel.rst:3612
 msgid ""
@@ -5999,6 +6114,10 @@ msgid ""
 "`~annotationlib.Format.VALUE` format; they must not raise :exc:"
 "`NotImplementedError()` when called with this format."
 msgstr ""
+"Εάν μια annotate συνάρτηση δεν υποστηρίζει την ζητούμενη μορφή, πρέπει να "
+"κάνει raise :exc:`NotImplementedError`. Οι annotate συναρτήσεις πρέπει πάντα "
+"να υποστηρίζουν τη μορφή :attr:`~annotationlib.Format.VALUE`∙ δεν πρέπει να "
+"κάνουν raise :exc:`NotImplementedError()` όταν καλούνται με αυτή τη μορφή."
 
 #: reference/datamodel.rst:3617
 msgid ""
@@ -6006,6 +6125,9 @@ msgid ""
 "function may raise :exc:`NameError`; it must not raise :exc:`!NameError` "
 "when called requesting any other format."
 msgstr ""
+"Όταν καλείται με τη μορφή :attr:`~annotationlib.Format.VALUE`, μια annotate "
+"συνάρτηση μπορεί να κάνει raise :exc:`NameError`∙ δεν πρέπει να κάνει raise :"
+"exc:`!NameError` όταν καλείται ζητώντας οποιαδήποτε άλλη μορφή."
 
 #: reference/datamodel.rst:3620
 msgid ""
@@ -6013,15 +6135,22 @@ msgid ""
 "should preferably be set to ``None`` (it can’t be deleted), rather than set "
 "to a function that returns an empty dict."
 msgstr ""
+"Εάν ένα αντικείμενο δεν έχει κανένα annotation, το :attr:`~object."
+"__annotate__` θα πρέπει κατά προτίμηση να ορίζεται σε ``None`` (δεν μπορεί "
+"να διαγραφεί), αντί να ορίζεται σε μια συνάρτηση που επιστρέφει ένα κενό "
+"dict."
 
 #: reference/datamodel.rst:3627
 msgid ":pep:`649` --- Deferred evaluation of annotation using descriptors"
 msgstr ""
+":pep:`649` --- Τεμπέλικη αξιολόγηση annotation χρησιμοποιώντας descriptors"
 
 #: reference/datamodel.rst:3628
 msgid ""
 "Introduces lazy evaluation of annotations and the ``__annotate__`` function."
 msgstr ""
+"Παρουσιάζει την τεμπέλικη αξιολόγηση των annotations και τη συνάρτηση "
+"``__annotate__``."
 
 #: reference/datamodel.rst:3634
 msgid "Special method lookup"
@@ -6521,6 +6650,12 @@ msgid ""
 "handling for this. Others will still raise a :exc:`TypeError`, but may do so "
 "by relying on the behavior that ``None`` is not callable."
 msgstr ""
+"Οι μέθοδοι :meth:`~object.__hash__`, :meth:`~object.__iter__`, :meth:"
+"`~object.__reversed__`, :meth:`~object.__contains__`, :meth:`~object."
+"__class_getitem__` και :meth:`~os.PathLike.__fspath__` έχουν ειδικό χειρισμό "
+"για αυτό. Άλλες θα εξακολουθούν να κάνουν raise ένα :exc:`TypeError`, αλλά "
+"μπορεί να το κάνουν με την αξιοποίηση της συμπεριφοράς ότι το ``None`` δεν "
+"είναι καλούμενο."
 
 #: reference/datamodel.rst:3905
 msgid ""
@@ -6541,6 +6676,9 @@ msgid ""
 "method (such as :meth:`~object.__add__`) fails then the operation is not "
 "supported, which is why the reflected method is not called."
 msgstr ""
+"Για τελεστές του ίδιου τύπου, θεωρείται ότι εάν η μη ανακλώμενη μέθοδος "
+"(όπως :meth:`~object.__add__`) αποτύχει τότε η λειτουργία δεν υποστηρίζεται, "
+"γι' αυτό δεν καλείται η ανακλώμενη μέθοδος."
 
 #: reference/datamodel.rst:3915
 msgid ""
@@ -6548,6 +6686,9 @@ msgid ""
 "reflected method having precedence allows subclasses to override their "
 "ancestors' operations."
 msgstr ""
+"Εάν ο τύπος του δεξιού τελεστή είναι υποκλάση του τύπου του αριστερού "
+"τελεστή, η προτεραιότητα της ανακλώμενης μεθόδου επιτρέπει στις υποκλάσεις "
+"να υπερισχύουν των λειτουργιών των προγόνων τους."
 
 #: reference/datamodel.rst:152 reference/datamodel.rst:187
 #: reference/datamodel.rst:232 reference/datamodel.rst:270

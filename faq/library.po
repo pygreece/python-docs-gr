@@ -102,7 +102,7 @@ msgstr ""
 msgid ""
 "import sys\n"
 "print(sys.builtin_module_names)"
-msgstr 
+msgstr ""
 "import sys\n"
 "print(sys.builtin_module_names)"
 
@@ -328,14 +328,16 @@ msgstr ""
 
 #: faq/library.rst:152
 msgid "The \"global main logic\" of your program may be as simple as ::"
-msgstr "Η \"παγκόσμια κύρια λογική\" του προγράμματος σας μπορεί να είναι τόσο απλή "
+msgstr ""
+"Η \"παγκόσμια κύρια λογική\" του προγράμματος σας μπορεί να είναι τόσο απλή "
 "όσο ::"
 
 #: faq/library.rst:154
 msgid ""
 "if __name__ == \"__main__\":\n"
 "    main_logic()"
-msgstr "if __name__ == \"__main__\":\n"
+msgstr ""
+"if __name__ == \"__main__\":\n"
 "    main_logic()"
 
 #: faq/library.rst:157
@@ -516,8 +518,6 @@ msgid ""
 "\n"
 "time.sleep(10)"
 msgstr ""
-"import threading, time\n"
-"\n"
 "def thread_task(name, n):\n"
 "    time.sleep(0.001)  # <--------------------!\n"
 "    for i in range(n):\n"
@@ -546,7 +546,8 @@ msgstr ""
 
 #: faq/library.rst:290
 msgid "How do I parcel out work among a bunch of worker threads?"
-msgstr "Πως μπορώ να μοιράσω την εργασία σε ένα σωρό από νήματα για αυτήν την "
+msgstr ""
+"Πως μπορώ να μοιράσω την εργασία σε ένα σωρό από νήματα για αυτήν την "
 "εργασία;"
 
 #: faq/library.rst:292
@@ -818,13 +819,14 @@ msgid ""
 "release."
 msgstr ""
 "Με την έγκριση του :pep:`703` έχει ξεκινήσει η εργασία για την αφαίρεση του "
-"GIL από την υλοποίηση CPython της Python.  Αρχικά θα υλοποιηθεί ως μια προαιρετική "
-"σημαία μεταγλωττιστή κατά την κατασκευή του διερμηνευτή, και έτσι θα είναι "
-"διαθέσιμες ξεχωριστές κατασκευές με και χωρίς το GIL.  Μακροπρόθεσμα, η "
-"ελπίδα είναι να καταλήξουμε σε μια ενιαία κατασκευή, μόλις οι επιπτώσεις στην απόδοση της "
-"αφαίρεσης του GIL να γίνουν πλήρως κατανοητές.  Η Python 3.13 είναι πιθανό να είναι η πρώτη "
-"έκδοση που θα περιέχει αυτήν την εργασία, αν και μπορεί να μην είναι "
-"πλήρως λειτουργική σε αυτήν την έκδοση."
+"GIL από την υλοποίηση CPython της Python.  Αρχικά θα υλοποιηθεί ως μια "
+"προαιρετική σημαία μεταγλωττιστή κατά την κατασκευή του διερμηνευτή, και "
+"έτσι θα είναι διαθέσιμες ξεχωριστές κατασκευές με και χωρίς το GIL.  "
+"Μακροπρόθεσμα, η ελπίδα είναι να καταλήξουμε σε μια ενιαία κατασκευή, μόλις "
+"οι επιπτώσεις στην απόδοση της αφαίρεσης του GIL να γίνουν πλήρως "
+"κατανοητές.  Η Python 3.13 είναι πιθανό να είναι η πρώτη έκδοση που θα "
+"περιέχει αυτήν την εργασία, αν και μπορεί να μην είναι πλήρως λειτουργική σε "
+"αυτήν την έκδοση."
 
 #: faq/library.rst:422
 msgid ""
@@ -840,17 +842,18 @@ msgid ""
 "compensate for the removal of the GIL.  The Python 3.9 fork is the first "
 "attempt at removing the GIL with an acceptable performance impact."
 msgstr ""
-"Η τρέχουσα εργασία για την αφαίρεση του GIL βασίζεται σε ένα "
-"`fork της Python 3.9 με το GIL αφαιρεμένο <https://github.com/colesbury/nogil>`_ "
-"από τον Sam Gross. Πριν από αυτό, στις ημέρες της Python 1.5, ο Greg Stein "
-"υλοποίησε στην πραγματικότητα ένα ολοκληρωμένο σύνολο διορθώσεων (τα \"free threading\" patches) "
-"που αφαίρεσαν το GIL και το αντικατέστησαν με λεπτομερή κλείδωμα.  "
-"Ο Adam Olsen έκανε ένα παρόμοιο πείραμα στο έργο του `python-safethread "
-"<https://code.google.com/archive/p/python-safethread>`_. Δυστυχώς, και "
-"τα δύο αυτά προηγούμενα πειράματα παρουσίασαν απότομη πτώση στην απόδοση ενός "
-"νήματος (τουλάχιστον 30% πιο αργά), λόγω της ποσότητας λεπτομερούς κλειδώματος "
-"που απαιτείται για να αντισταθμιστεί η αφαίρεση του GIL.  Το fork της Python 3.9 είναι η πρώτη "
-"προσπάθεια αφαίρεσης του GIL με αποδεκτή επίδραση στην απόδοση."
+"Η τρέχουσα εργασία για την αφαίρεση του GIL βασίζεται σε ένα `fork της "
+"Python 3.9 με το GIL αφαιρεμένο <https://github.com/colesbury/nogil>`_ από "
+"τον Sam Gross. Πριν από αυτό, στις ημέρες της Python 1.5, ο Greg Stein "
+"υλοποίησε στην πραγματικότητα ένα ολοκληρωμένο σύνολο διορθώσεων (τα \"free "
+"threading\" patches) που αφαίρεσαν το GIL και το αντικατέστησαν με λεπτομερή "
+"κλείδωμα.  Ο Adam Olsen έκανε ένα παρόμοιο πείραμα στο έργο του `python-"
+"safethread <https://code.google.com/archive/p/python-safethread>`_. "
+"Δυστυχώς, και τα δύο αυτά προηγούμενα πειράματα παρουσίασαν απότομη πτώση "
+"στην απόδοση ενός νήματος (τουλάχιστον 30% πιο αργά), λόγω της ποσότητας "
+"λεπτομερούς κλειδώματος που απαιτείται για να αντισταθμιστεί η αφαίρεση του "
+"GIL.  Το fork της Python 3.9 είναι η πρώτη προσπάθεια αφαίρεσης του GIL με "
+"αποδεκτή επίδραση στην απόδοση."
 
 #: faq/library.rst:437
 msgid ""
@@ -863,12 +866,13 @@ msgid ""
 "case you want more control over dispatching of tasks."
 msgstr ""
 "Η παρουσία του GIL στις τρέχουσες εκδόσεις της Python δεν σημαίνει ότι δεν "
-"μπορείτε να κάνετε καλή χρήση της Python σε μηχανές με πολλαπλές CPU! Απλώς πρέπει να "
-"είστε δημιουργικοί με τον διαχωρισμό της εργασίας μεταξύ πολλαπλών *processes* "
-"αντί για πολλαπλά *threads*.  Η κλάση :class:`~concurrent.futures.ProcessPoolExecutor` "
-"στο νέο module :mod:`concurrent.futures` παρέχει έναν εύκολο τρόπο για να το κάνετε αυτό· το "
-"module :mod:`multiprocessing` παρέχει μια χαμηλότερου επιπέδου API σε περίπτωση "
-"που θέλετε περισσότερο έλεγχο στην αποστολή εργασιών."
+"μπορείτε να κάνετε καλή χρήση της Python σε μηχανές με πολλαπλές CPU! Απλώς "
+"πρέπει να είστε δημιουργικοί με τον διαχωρισμό της εργασίας μεταξύ πολλαπλών "
+"*processes* αντί για πολλαπλά *threads*.  Η κλάση :class:`~concurrent."
+"futures.ProcessPoolExecutor` στο νέο module :mod:`concurrent.futures` "
+"παρέχει έναν εύκολο τρόπο για να το κάνετε αυτό· το module :mod:"
+"`multiprocessing` παρέχει μια χαμηλότερου επιπέδου API σε περίπτωση που "
+"θέλετε περισσότερο έλεγχο στην αποστολή εργασιών."
 
 #: faq/library.rst:446
 msgid ""
@@ -894,14 +898,14 @@ msgid ""
 "since these must be written with multiple interpreters in mind in order to "
 "be usable, so many older extension modules will not be usable."
 msgstr ""
-"Μια εναλλακτική προσέγγιση για τη μείωση της επίδρασης του GIL είναι να γίνει "
-"το GIL ένα κλείδωμα ανά κατάσταση διερμηνευτή αντί για πραγματικά παγκόσμιο. "
-"Αυτό :ref:`υλοποιήθηκε πρώτα στην Python 3.12 <whatsnew312-pep684>` και είναι "
-"διαθέσιμο στο C API. Μια διεπαφή Python σε αυτό αναμένεται στην Python 3.13. Ο "
-"κύριος περιορισμός προς το παρόν είναι πιθανό να είναι τα 3rd party extension "
-"modules, καθώς αυτά πρέπει να γράφονται με πολλαπλούς διερμηνευτές στο μυαλό για να "
-"είναι χρησιμοποιήσιμα, οπότε πολλά παλαιότερα extension modules δεν θα είναι "
-"χρησιμοποιήσιμα."
+"Μια εναλλακτική προσέγγιση για τη μείωση της επίδρασης του GIL είναι να "
+"γίνει το GIL ένα κλείδωμα ανά κατάσταση διερμηνευτή αντί για πραγματικά "
+"παγκόσμιο. Αυτό :ref:`υλοποιήθηκε πρώτα στην Python 3.12 <whatsnew312-"
+"pep684>` και είναι διαθέσιμο στο C API. Μια διεπαφή Python σε αυτό "
+"αναμένεται στην Python 3.13. Ο κύριος περιορισμός προς το παρόν είναι πιθανό "
+"να είναι τα 3rd party extension modules, καθώς αυτά πρέπει να γράφονται με "
+"πολλαπλούς διερμηνευτές στο μυαλό για να είναι χρησιμοποιήσιμα, οπότε πολλά "
+"παλαιότερα extension modules δεν θα είναι χρησιμοποιήσιμα."
 
 #: faq/library.rst:462
 msgid "Input and Output"
@@ -1059,7 +1063,6 @@ msgstr ""
 "Δεν μπορώ να χρησιμοποιήσω το os.read() σε ένα pipe που δημιουργήθηκε με το "
 "os.popen()∙ γιατί;"
 
-
 #: faq/library.rst:537
 msgid ""
 ":func:`os.read` is a low-level function which takes a file descriptor, a "
@@ -1098,7 +1101,8 @@ msgstr "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 
 #: faq/library.rst:557
 msgid "Why doesn't closing sys.stdout (stdin, stderr) really close it?"
-msgstr "Γιατί το κλείσιμο του sys.stdout (stdin, stderr) δεν το κλείνει πραγματικά;"
+msgstr ""
+"Γιατί το κλείσιμο του sys.stdout (stdin, stderr) δεν το κλείνει πραγματικά;"
 
 #: faq/library.rst:559
 msgid ""
@@ -1430,7 +1434,6 @@ msgid "This returns a random floating-point number in the range [0, 1)."
 msgstr ""
 "Αυτό επιστρέφει έναν τυχαίο αριθμό κινητής υποδιαστολής στο εύρος [0, 1)."
 
-
 #: faq/library.rst:723
 msgid ""
 "There are also many other specialized generators in this module, such as:"
@@ -1444,7 +1447,8 @@ msgstr "Το ``randrange(a, b)`` επιλέγει έναν ακέραιο στο
 
 #: faq/library.rst:726
 msgid "``uniform(a, b)`` chooses a floating-point number in the range [a, b)."
-msgstr "Το ``uniform(a, b)`` επιλέγει έναν αριθμό κινητής υποδιαστολής στο εύρος [a, "
+msgstr ""
+"Το ``uniform(a, b)`` επιλέγει έναν αριθμό κινητής υποδιαστολής στο εύρος [a, "
 "b)."
 
 #: faq/library.rst:727
