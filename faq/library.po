@@ -953,8 +953,11 @@ msgid ""
 "There's also ``os.ftruncate(fd, offset)`` for files opened with :func:`os."
 "open`, where *fd* is the file descriptor (a small integer)."
 msgstr ""
-"Για να μετονομάσετε ένα αρχείο, χρησιμοποιήστε το ``os.rename(old_path, "
-"new_path)``."
+"Για να περικόψετε ένα αρχείο, ανοίξτε το χρησιμοποιώντας ``f = "
+"open(filename, \"rb+\")``, και χρησιμοποιήστε το ``f.truncate(offset)``∙ το "
+"offset προεπιλέγεται στη τρέχουσα θέση αναζήτησης.  Υπάρχει επίσης το ``os."
+"ftruncate(fd, offset)`` για αρχεία που έχουν ανοιχτεί με :func:`os.open`, "
+"όπου *fd* είναι ο περιγραφέας αρχείου (ένας μικρός ακέραιος)."
 
 #: faq/library.rst:484
 msgid ""

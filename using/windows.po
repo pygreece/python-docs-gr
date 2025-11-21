@@ -63,7 +63,7 @@ msgstr ""
 "Python διαθέσιμη ως παγκόσμιες εντολές στον υπολογιστή σας με Windows, "
 "ενσωματώνεται με το σύστημα και υποστηρίζει ενημερώσεις με την πάροδο του "
 "χρόνου. Μπορείτε να κατεβάσετε τον Python Install Manager από το `python.org/"
-"downloads`_ ή μέσω της εφαρμογής `Microsoft Store`_."
+"downloads`_ ή μέσω του `Microsoft Store app`_."
 
 #: using/windows.rst:32
 msgid ""
@@ -2589,8 +2589,8 @@ msgid ""
 "c:func:`Py_InitializeFromConfig`."
 msgstr ""
 "Εάν φορτώνετε το :file:`python3.dll` ή το :file:`python37.dll` στο δικό σας "
-"εκτελέσιμο αρχείο, καλέστε ρητά το :c:func:`Py_SetPath` ή (τουλάχιστον) το :"
-"c:func:`Py_SetProgramName` πριν από :c:func:`Py_Initialize`."
+"εκτελέσιμο αρχείο, ορίστε ρητά το :c:member:`PyConfig.module_search_paths` "
+"πριν από το :c:func:`Py_InitializeFromConfig`."
 
 #: using/windows.rst:1113
 msgid ""
