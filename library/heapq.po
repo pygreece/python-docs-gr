@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,25 +76,25 @@ msgid "The following functions are provided:"
 msgstr ""
 
 #: library/heapq.rst:47
-msgid "Push the value *item* onto the *heap*, maintaining the heap invariant."
+msgid "Transform list *x* into a heap, in-place, in linear time."
 msgstr ""
 
 #: library/heapq.rst:52
+msgid "Push the value *item* onto the *heap*, maintaining the heap invariant."
+msgstr ""
+
+#: library/heapq.rst:57
 msgid ""
 "Pop and return the smallest item from the *heap*, maintaining the heap "
 "invariant.  If the heap is empty, :exc:`IndexError` is raised.  To access "
 "the smallest item without popping it, use ``heap[0]``."
 msgstr ""
 
-#: library/heapq.rst:59
+#: library/heapq.rst:64
 msgid ""
 "Push *item* on the heap, then pop and return the smallest item from the "
 "*heap*.  The combined action runs more efficiently than :func:`heappush` "
 "followed by a separate call to :func:`heappop`."
-msgstr ""
-
-#: library/heapq.rst:66
-msgid "Transform list *x* into a heap, in-place, in linear time."
 msgstr ""
 
 #: library/heapq.rst:71

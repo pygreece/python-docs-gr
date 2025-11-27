@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,24 +73,61 @@ msgstr ""
 
 #: c-api/allocation.rst:63
 msgid ""
-"Releases memory allocated to an object using :c:macro:`PyObject_New` or :c:"
-"macro:`PyObject_NewVar`.  This is normally called from the :c:member:"
-"`~PyTypeObject.tp_dealloc` handler specified in the object's type.  The "
-"fields of the object should not be accessed after this call as the memory is "
-"no longer a valid Python object."
-msgstr ""
-
-#: c-api/allocation.rst:72
-msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed "
 "using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
 "object."
 msgstr ""
 
-#: c-api/allocation.rst:79
-msgid ":c:func:`PyModule_Create`"
+#: c-api/allocation.rst:70
+msgid ":ref:`moduleobjects`"
 msgstr ""
 
-#: c-api/allocation.rst:80
+#: c-api/allocation.rst:71
 msgid "To allocate and create extension modules."
+msgstr ""
+
+#: c-api/allocation.rst:75
+msgid "Deprecated aliases"
+msgstr ""
+
+#: c-api/allocation.rst:77
+msgid ""
+"These are :term:`soft deprecated` aliases to existing functions and macros. "
+"They exist solely for backwards compatibility."
+msgstr ""
+
+#: c-api/allocation.rst:85
+msgid "Deprecated alias"
+msgstr ""
+
+#: c-api/allocation.rst:86
+msgid "Function"
+msgstr ""
+
+#: c-api/allocation.rst:88
+msgid ":c:macro:`PyObject_New`"
+msgstr ""
+
+#: c-api/allocation.rst:90
+msgid ":c:macro:`PyObject_NewVar`"
+msgstr ""
+
+#: c-api/allocation.rst:92
+msgid ":c:func:`PyObject_Init`"
+msgstr ""
+
+#: c-api/allocation.rst:94
+msgid ":c:func:`PyObject_InitVar`"
+msgstr ""
+
+#: c-api/allocation.rst:96
+msgid ":c:func:`PyObject_Malloc`"
+msgstr ""
+
+#: c-api/allocation.rst:98
+msgid ":c:func:`PyObject_Realloc`"
+msgstr ""
+
+#: c-api/allocation.rst:102 c-api/allocation.rst:104
+msgid ":c:func:`PyObject_Free`"
 msgstr ""
