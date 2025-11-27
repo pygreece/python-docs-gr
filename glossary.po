@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-27 09:00+0200\n"
-"PO-Revision-Date: 2025-05-03 18:04+0300\n"
+"PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -59,6 +59,7 @@ msgstr ""
 msgid ""
 "The three dots form of the :ref:`Ellipsis <bltin-ellipsis-object>` object."
 msgstr ""
+"Οι τρεις τελείες σχηματίζουν το αντικείμενο :ref:`Ellipsis <bltin-ellipsis-object>`."
 
 #: glossary.rst:27
 msgid "abstract base class"
@@ -256,7 +257,6 @@ msgid "asynchronous generator iterator"
 msgstr "ασύγχρονος generator iterator"
 
 #: glossary.rst:107
-#, fuzzy
 msgid "An object created by an :term:`asynchronous generator` function."
 msgstr ""
 "Ένα αντικείμενο που δημιουργήθηκε από μια συνάρτηση :term:`asynchronous "
@@ -1021,9 +1021,8 @@ msgstr ""
 "χρησιμοποιεί δοκιμές :func:`hasattr` ή προγραμματισμό :term:`EAFP`."
 
 #: glossary.rst:406
-#, fuzzy
 msgid "dunder"
-msgstr "finder"
+msgstr "dunder"
 
 #: glossary.rst:408
 msgid ""
@@ -1031,6 +1030,9 @@ msgid ""
 "term:`special method`. For example, ``__init__`` is often pronounced "
 "\"dunder init\"."
 msgstr ""
+"Ένας ανεπίσημος συντομογραφικός όρος για το \"double underscore\", που "
+"χρησιμοποιείται όταν μιλάμε για μια :term:`special method`. Για παράδειγμα, "
+"``__init__`` προφέρεται συχνά ως \"dunder init\"."
 
 #: glossary.rst:411
 msgid "EAFP"
@@ -2937,6 +2939,10 @@ msgid ""
 "defined values; the number of references to an object, and how that number "
 "is affected by Python code, may be different between versions."
 msgstr ""
+"Στο :term:`CPython`, τα πλήθη αναφοράς δεν θεωρούνται σταθερές ή καλά "
+"ορισμένες τιμές· ο αριθμός των αναφορών σε ένα αντικείμενο, και το πώς "
+"αυτός ο αριθμός επηρεάζεται από τον κώδικα της Python, μπορεί να είναι διαφορετικός "
+"μεταξύ εκδόσεων."
 
 #: glossary.rst:1177
 msgid "regular package"
@@ -3010,7 +3016,6 @@ msgstr ""
 "κλειδιά παρά ακέραιοι."
 
 #: glossary.rst:1205
-#, fuzzy
 msgid ""
 "The :class:`collections.abc.Sequence` abstract base class defines a much "
 "richer interface that goes beyond just :meth:`~object.__getitem__` and :meth:"
@@ -3022,7 +3027,7 @@ msgid ""
 msgstr ""
 "Η αφηρημένη βασική κλάση :class:`collections.abc.Sequence` ορίζει μια πολύ "
 "πιο πλούσια διεπαφή που ξεπερνά τα απλά :meth:`~object.__getitem__` και :"
-"meth:`~object.__len__`, adding :meth:`!count`, :meth:`!index`, :meth:"
+"meth:`~object.__len__`, προσθέτοντας τις :meth:`!count`, :meth:`!index`, :meth:"
 "`~object.__contains__`, και :meth:`~object.__reversed__`. Οι τύποι που "
 "υλοποιούν αυτήν την διευρυμένη διεπαφή μπορούν να καταχωρηθούν ρητά "
 "χρησιμοποιώντας :func:`~abc.ABCMeta.register`. Για περισσότερη τεκμηρίωση "
@@ -3122,7 +3127,7 @@ msgstr ""
 
 #: glossary.rst:1250
 msgid "standard library"
-msgstr ""
+msgstr "τυπική βιβλιοθήκη"
 
 #: glossary.rst:1252
 msgid ""
@@ -3132,12 +3137,19 @@ msgid ""
 "may vary based on platform, available system libraries, or other criteria.  "
 "Documentation can be found at :ref:`library-index`."
 msgstr ""
+"Η συλλογή από :term:`πακέτα <package>`, :term:`μονάδες <module>` και :term:`"
+"επεκτάσεις μονάδων <extension module>` που διανέμονται ως μέρος του επίσημου "
+"πακέτου διερμηνέα Python. Η ακριβής σύνθεση της συλλογής μπορεί να διαφέρει "
+"ανάλογα με την πλατφόρμα, τις διαθέσιμες βιβλιοθήκες συστήματος ή άλλα κριτήρια. "
+"Η τεκμηρίωση μπορεί να βρεθεί στο :ref:`library-index`."
 
 #: glossary.rst:1258
 msgid ""
 "See also :data:`sys.stdlib_module_names` for a list of all possible standard "
 "library module names."
 msgstr ""
+"Δείτε επίσης :data:`sys.stdlib_module_names` για μια λίστα με όλα τα "
+"πιθανά ονόματα μονάδων τυπικής βιβλιοθήκης."
 
 #: glossary.rst:1260
 msgid "statement"
@@ -3169,11 +3181,11 @@ msgstr ""
 
 #: glossary.rst:1270
 msgid "stdlib"
-msgstr ""
+msgstr "stdlib"
 
 #: glossary.rst:1272
 msgid "An abbreviation of :term:`standard library`."
-msgstr ""
+msgstr "Μια συντομογραφία του :term:`standard library`."
 
 #: glossary.rst:1273
 msgid "strong reference"
@@ -3513,9 +3525,8 @@ msgstr ""
 "bytecode."
 
 #: glossary.rst:1409
-#, fuzzy
 msgid "walrus operator"
-msgstr "ασύγχρονος iterator"
+msgstr "τελεστής walrus"
 
 #: glossary.rst:1411
 msgid ""
@@ -3523,6 +3534,9 @@ msgid ""
 "expressions>` operator ``:=`` because it looks a bit like a walrus if you "
 "turn your head."
 msgstr ""
+"Ένας ελαφρώς χιουμοριστικός τρόπος να αναφερθούμε στον τελεστή :ref:`"
+"assignment expression <assignment-expressions>` ``:=`` επειδή μοιάζει λίγο με "
+"ένα θαλάσσιο ίππο αν γυρίσετε το κεφάλι σας."
 
 #: glossary.rst:1414
 msgid "Zen of Python"
@@ -3539,13 +3553,12 @@ msgstr ""
 "πληκτρολογώντας \"``import this``\" στην διαδραστική κονσόλα."
 
 #: glossary.rst:24
-#, fuzzy
 msgid "..."
-msgstr "``...``"
+msgstr "..."
 
 #: glossary.rst:24
 msgid "ellipsis literal"
-msgstr ""
+msgstr "γραμματική παράσταση αποσιωπητικών"
 
 #: glossary.rst:294
 msgid "C-contiguous"

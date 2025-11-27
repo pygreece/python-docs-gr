@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-27 09:00+0200\n"
-"PO-Revision-Date: 2024-05-08 09:17+0300\n"
+"PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -27,26 +27,22 @@ msgid "In development"
 msgstr "Υπό ανάπτυξη"
 
 #: tools/templates/customsourcelink.html:3
-#, fuzzy
 msgid "This page"
 msgstr "Αυτή η Σελίδα"
 
 #: tools/templates/customsourcelink.html:5
-#, fuzzy
 msgid "Report a bug"
 msgstr "Ανέφερε ένα Bug"
 
 #: tools/templates/customsourcelink.html:8
-#, fuzzy
 msgid "Show source"
-msgstr "Εμφάνιση Πηγής"
+msgstr "Εμφάνιση πηγαίου"
 
 #: tools/templates/download.html:2 tools/templates/indexsidebar.html:1
 msgid "Download"
 msgstr "Κατεβάστε"
 
 #: tools/templates/download.html:30
-#, fuzzy
 msgid "Download Python %(dl_version)s documentation"
 msgstr "Κατεβάστε την τεκμηρίωση της Python %(dl_version)s"
 
@@ -55,14 +51,11 @@ msgid "Last updated on: %(last_updated)s."
 msgstr "Τελευταία ενημέρωση στις: %(last_updated)s."
 
 #: tools/templates/download.html:34
-#, fuzzy
 msgid ""
 "Download an archive containing all the documentation for this version of "
 "Python:"
 msgstr ""
-"Για λήψη ενός αρχείου που περιέχει όλα τα έγγραφα για αυτήν την έκδοση της\n"
-"Python σε μία από τις διάφορες μορφές, ακολουθήστε έναν από τους συνδέσμου "
-"σε αυτόν τον πίνακα.σ"
+"Για λήψη ενός αρχείου που περιέχει όλα τα έγγραφα για αυτήν την έκδοση της Python:"
 
 #: tools/templates/download.html:38
 msgid "Format"
@@ -81,72 +74,58 @@ msgid "HTML"
 msgstr "HTML"
 
 #: tools/templates/download.html:44
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
 
 #: tools/templates/download.html:45
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a>"
 
 #: tools/templates/download.html:48
 msgid "Plain text"
 msgstr "Απλό κείμενο"
 
 #: tools/templates/download.html:49
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
 
 #: tools/templates/download.html:50
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a>"
 
 #: tools/templates/download.html:53
 msgid "Texinfo"
 msgstr "Texinfo"
 
 #: tools/templates/download.html:54
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a>"
 
 #: tools/templates/download.html:55
-#, fuzzy
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar.bz2\">Download</"
 "a>"
 msgstr ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar.bz2\">Download</"
-"a> (ca. %(download_size)s MiB)"
+"a>"
 
 #: tools/templates/download.html:58
 msgid "EPUB"
 msgstr "EPUB"
 
 #: tools/templates/download.html:59
-#, fuzzy
 msgid "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a>"
-msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a> (ca. "
-"%(download_size)s MiB)"
+msgstr "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a>"
 
 #: tools/templates/download.html:64
 msgid ""
@@ -163,6 +142,20 @@ msgid ""
 "and run <code>make dist-pdf</code> in the <code>Doc/</code> directory of a "
 "copy of the CPython repository.\n"
 msgstr ""
+"\n"
+"Δεν παρέχουμε πλέον ενημερώσεις για τα προ-κατασκευασμένα PDF της "
+"τεκμηρίωσης.\n"
+"Τα προηγουμένως κατασκευασμένα αρχεία είναι ακόμα διαθέσιμα και μπορεί να είναι "
+"χρήσιμα:\n"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.zip\">PDF (.zip "
+"archive)</a>;\n"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.tar.bz2\">PDF (.tar."
+"bz2 archive)</a>.\n"
+"Για να δημιουργήσετε ένα αρχείο PDF, ακολουθήστε τις οδηγίες στο\n"
+"<a href=\"https://devguide.python.org/documentation/start-documenting/"
+"#building-the-documentation\">Developer's Guide</a>\n"
+"και εκτελέστε <code>make dist-pdf</code> στον κατάλογο <code>Doc/</code> "
+"μιας αντιγραφής του αποθετηρίου CPython.\n"
 
 #: tools/templates/download.html:74
 msgid ""
@@ -171,6 +164,10 @@ msgid ""
 "listing</a>\n"
 "for file sizes."
 msgstr ""
+"\n"
+"Δείτε το <a href=\"https://docs.python.org/%(version)s/archives/\">directory "
+"listing</a>\n"
+"για τα μεγέθη των αρχείων."
 
 #: tools/templates/download.html:78
 msgid "Problems"
@@ -180,7 +177,8 @@ msgstr "Προβλήματα"
 msgid ""
 "<a href=\"%(bugs)s\">Open an issue</a>\n"
 "if you have comments or suggestions for the Python documentation."
-msgstr ""
+msgstr "<a href=\"%(bugs)s\">Ανοίξτε ένα θέμα</a>\n"
+"αν έχετε σχόλια ή προτάσεις για την τεκμηρίωση της Python."
 
 #: tools/templates/dummy.html:6
 msgid "Availability"
@@ -243,15 +241,12 @@ msgid "CPython implementation detail:"
 msgstr "Λεπτομέρεια υλοποίησης CPython:"
 
 #: tools/templates/dummy.html:30
-#, fuzzy
 msgid "Deprecated since version %s, will be removed in version %s"
-msgstr ""
-"Καταργήθηκε στην έκδοση {deprecated}, θα αφαιρεθεί στην έκδοση {removed}"
+msgstr "Καταργήθηκε στην έκδοση %s, θα αφαιρεθεί στην έκδοση %s"
 
 #: tools/templates/dummy.html:31
-#, fuzzy
 msgid "Deprecated since version %s, removed in version %s"
-msgstr "Καταργήθηκε στην έκδοση {deprecated}, αφαιρέθηκε στην έκδοση {removed}"
+msgstr "Καταργήθηκε στην έκδοση %s, αφαιρέθηκε στην έκδοση %s"
 
 #: tools/templates/dummy.html:35
 msgid "in development"
@@ -436,7 +431,6 @@ msgid "Reporting issues"
 msgstr "Αναφορά ζητημάτων"
 
 #: tools/templates/indexcontent.html:75
-#, fuzzy
 msgid "Contributing to docs"
 msgstr "Συμβολή στην Τεκμηρίωση"
 
@@ -473,27 +467,22 @@ msgid "Other resources"
 msgstr "Άλλες πηγές"
 
 #: tools/templates/indexsidebar.html:12
-#, fuzzy
 msgid "PEP index"
 msgstr "Ευρετήριο PEP"
 
 #: tools/templates/indexsidebar.html:13
-#, fuzzy
 msgid "Beginner's guide"
 msgstr "Οδηγός για αρχάριους"
 
 #: tools/templates/indexsidebar.html:14
-#, fuzzy
 msgid "Book list"
 msgstr "Λίστα Βιβλίων"
 
 #: tools/templates/indexsidebar.html:15
-#, fuzzy
 msgid "Audio/visual talks"
 msgstr "Οπτικοακουστικές Ομιλίες"
 
 #: tools/templates/indexsidebar.html:16
-#, fuzzy
 msgid "Python developer’s guide"
 msgstr "Οδηγός Προγραμματιστή Python"
 

@@ -665,7 +665,6 @@ msgstr ""
 "ABCs μόνο για ανάγνωση (read-only) και mutable :term:`sequences <sequence>`."
 
 #: library/collections.abc.rst:270
-#, fuzzy
 msgid ""
 "Implementation note: Some of the mixin methods, such as :meth:`~container."
 "__iter__`, :meth:`~object.__reversed__`, and :meth:`~sequence.index` make "
@@ -676,7 +675,7 @@ msgid ""
 "mixins will have quadratic performance and will likely need to be overridden."
 msgstr ""
 "Σημείωση υλοποίησης: Μερικές από τις μεθόδους mixin, όπως :meth:`~container."
-"__iter__`, :meth:`~object.__reversed__` και :meth:`index`, κάνουν "
+"__iter__`, :meth:`~object.__reversed__` και :meth:`~sequence.index`, κάνουν "
 "επανειλημμένες κλήσεις στην μέθοδο :meth:`~object.__getitem__`. Ως "
 "αποτέλεσμα, αν η :meth:`~object.__getitem__` είναι υλοποιημένη με σταθερή "
 "ταχύτητα πρόσβασης, οι μέθοδοι mixin θα έχουν γραμμική απόδοση. Ωστόσο, αν η "
@@ -686,28 +685,29 @@ msgstr ""
 
 #: library/collections.abc.rst:282
 msgid "Return first index of *value*."
-msgstr ""
+msgstr "Επιστρέφει τον πρώτο δείκτη του *value*."
 
 #: library/collections.abc.rst:284
 msgid "Raises :exc:`ValueError` if the value is not present."
-msgstr ""
+msgstr "Κάνει raise :exc:`ValueError` αν η τιμή δεν είναι παρούσα."
 
 #: library/collections.abc.rst:286
 msgid ""
 "Supporting the *start* and *stop* arguments is optional, but recommended."
 msgstr ""
+"Η υποστήριξη των ορισμάτων *start* και *stop* είναι προαιρετική, αλλά συνιστάται."
 
 #: library/collections.abc.rst:288
-#, fuzzy
 msgid ""
 "The :meth:`~sequence.index` method gained support for the *stop* and *start* "
 "arguments."
 msgstr ""
-"Η μέθοδος index() πρόσθεσε υποστήριξη για τα ορίσματα *stop* και *start*."
+"Η μέθοδος :meth:`~sequence.index` απέκτησε υποστήριξη για τα "
+"*stop* και *start* ορίσματα."
 
 #: library/collections.abc.rst:292
 msgid "The :class:`ByteString` ABC has been deprecated."
-msgstr ""
+msgstr "Η ABC :class:`ByteString` έχει αποσυρθεί."
 
 #: library/collections.abc.rst:295
 msgid ""
@@ -717,6 +717,11 @@ msgid ""
 "specifies the types your code supports (e.g., ``bytes | bytearray | "
 "memoryview``)."
 msgstr ""
+"Χρησιμοποιήστε ``isinstance(obj, collections.abc.Buffer)`` για να ελέγξετε αν "
+"το ``obj`` υλοποιεί το :ref:`buffer protocol <bufferobjects>` κατά το "
+"runtime. Για χρήση σε type annotations, είτε χρησιμοποιήστε την κλάση "
+"Buffer είτε μια ένωση που να καθορίζει ρητά τους τύπους που υποστηρίζει ο "
+"κώδικάς σας (π.χ., ``bytes | bytearray | memoryview``)."
 
 #: library/collections.abc.rst:301
 msgid ""
@@ -728,10 +733,17 @@ msgid ""
 "also never understood as subtypes of :class:`!ByteString` (either at runtime "
 "or by static type checkers)."
 msgstr ""
+"Η κλάση :class:`!ByteString` προοριζόταν αρχικά να είναι μια αφηρημένη κλάση "
+"που θα λειτουργούσε ως υπερτύπος τόσο για την :class:`bytes` όσο και για την "
+":class:`bytearray`. Ωστόσο, δεδομένου ότι η ABC δεν είχε καμία μέθοδο, το "
+"να γνωρίζετε ότι ένα αντικείμενο ήταν στιγμιότυπο της :class:`!ByteString` δεν "
+"σας έλεγε ποτέ κάτι χρήσιμο για το αντικείμενο. Άλλοι κοινοί τύποι buffer "
+"όπως η :class:`memoryview` επίσης δεν θεωρούνταν ποτέ υποτύποι της :class:`!ByteString` "
+"(ούτε κατά το runtime ούτε από στατικούς ελεγκτές τύπών)."
 
 #: library/collections.abc.rst:309
 msgid "See :pep:`PEP 688 <688#current-options>` for more details."
-msgstr ""
+msgstr "Δείτε :pep:`PEP 688 <688#current-options>` για περισσότερες λεπτομέρειες."
 
 #: library/collections.abc.rst:314
 msgid "ABCs for read-only and mutable :ref:`sets <types-set>`."
@@ -769,7 +781,6 @@ msgstr ""
 "class:`~collections.abc.Coroutine` είναι όλα παραδείγματα αυτής της ABC."
 
 #: library/collections.abc.rst:338
-#, fuzzy
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :deco:`types.coroutine`) are *awaitables*, even though they "
@@ -778,7 +789,7 @@ msgid ""
 "to detect them."
 msgstr ""
 "Στην CPython, οι generator-based coroutines (:term:`generators <generator>` "
-"που είναι decorated με :func:`@types.coroutine <types.coroutine>`) είναι "
+"που είναι decorated με :deco:`types.coroutine`) είναι "
 "*awaitables*, αν και δεν διαθέτουν μέθοδο :meth:`~object.__await__`. Η χρήση "
 "της ``isinstance(gencoro, Awaitable)`` γι' αυτές θα επιστρέψει ``False``. "
 "Χρησιμοποιείτε τη συνάρτηση :func:`inspect.isawaitable` για να τις "
@@ -800,7 +811,6 @@ msgstr ""
 "στιγμιότυπα της κλάσης :class:`Awaitable`."
 
 #: library/collections.abc.rst:356
-#, fuzzy
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :deco:`types.coroutine`) are *awaitables*, even though they "
@@ -809,7 +819,7 @@ msgid ""
 "to detect them."
 msgstr ""
 "Στην CPython, οι generator-based coroutines (:term:`generators <generator>` "
-"που είναι διακοσμημένες με :func:`@types.coroutine <types.coroutine>`) είναι "
+"που είναι διακοσμημένες με :deco:`types.coroutine`) είναι "
 "*awaitables*, αν και δεν έχουν τη μέθοδο :meth:`~object.__await__`. Η χρήση "
 "της ``isinstance (gencoro, Coroutine)`` γι' αυτές θα επιστρέψει ``False``. "
 "Χρησιμοποιείται η συνάρτηση :func:`inspect.isawaitable` για να εντοπιστούν."

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-27 09:00+0200\n"
-"PO-Revision-Date: 2025-05-05 22:13+0300\n"
+"PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -976,13 +976,12 @@ msgstr ""
 "περιεχόμενό τους."
 
 #: faq/programming.rst:457
-#, fuzzy
 msgid ""
 "After the call to :meth:`~sequence.append`, the content of the mutable "
 "object has changed from ``[]`` to ``[10]``.  Since both the variables refer "
 "to the same object, using either name accesses the modified value ``[10]``."
 msgstr ""
-"Μετά την κλήση στο :meth:`!append`, το περιεχόμενο του μεταβλητού "
+"Μετά την κλήση στο :meth:`~sequence.append`, το περιεχόμενο του μεταβλητού "
 "αντικειμένου έχει αλλάξει από ``[]`` σε ``[10]``.  Επειδή και οι δύο "
 "μεταβλητές αναφέρονται στο ίδιο αντικείμενο, χρησιμοποιώντας οποιοδήποτε "
 "όνομα αποκτά πρόσβαση στην τροποποιημένη τιμή ``[10]``."
@@ -3047,7 +3046,6 @@ msgstr ""
 "['foo', 'item']"
 
 #: faq/programming.rst:1396
-#, fuzzy
 msgid ""
 "To see why this happens, you need to know that (a) if an object implements "
 "an :meth:`~object.__iadd__` magic method, it gets called when the ``+=`` "
@@ -3061,9 +3059,9 @@ msgstr ""
 "αντικείμενο υλοποιεί μια μαγική μέθοδο :meth:`~object.__iadd__`, που "
 "καλείται όταν εκτελείται η επαυξημένη ανάθεση ``+=`` και η τιμή επιστροφής "
 "είναι αυτή που χρησιμοποιείται στη δήλωση εκχώρησης∙ και (β) για λίστες, :"
-"meth:`!__iadd__` ισοδυναμεί με την κλήση του :meth:`!extend` στη λίστα και "
+"meth:`!__iadd__` ισοδυναμεί με την κλήση του :meth:`~sequence.extend` στη λίστα και "
 "επιστρέφει τη λίστα.  Για αυτό λέμε ότι για λίστες ``+=`` είναι μια "
-"\"συντομογραφία\" για :meth:`!list.extend`::"
+"\"συντομογραφία\" για :meth:`list.extend`::"
 
 #: faq/programming.rst:1404
 msgid ""

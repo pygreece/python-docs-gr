@@ -719,25 +719,23 @@ msgstr ""
 "στην Python 3.2."
 
 #: library/functions.rst:247
-#, fuzzy
 msgid ""
 "Return the string representing a character with the specified Unicode code "
 "point. For example, ``chr(97)`` returns the string ``'a'``, while "
 "``chr(8364)`` returns the string ``'€'``. This is the inverse of :func:`ord`."
 msgstr ""
-"Επιστρέφει τη συμβολοσειρά που αντιπροσωπεύει έναν χαρακτήρα του οποίου ο "
-"κωδικός σημείου Unicode είναι ο ακέραιος *i*.  Για παράδειγμα, ``chr(97)`` "
+"Επιστρέφει τη συμβολοσειρά που αναπαριστά έναν χαρακτήρα με το καθορισμένο "
+"Unicode code point. Για παράδειγμα, ``chr(97)`` "
 "επιστρέφει τη συμβολοσειρά ``'a'``, ενώ το ``chr(8364)`` επιστρέφει τη "
 "συμβολοσειρά ``'€'``. Αυτό είναι το αντίστροφο του :func:`ord`."
 
 #: library/functions.rst:251
-#, fuzzy
 msgid ""
 "The valid range for the argument is from 0 through 1,114,111 (0x10FFFF in "
 "base 16).  :exc:`ValueError` will be raised if it is outside that range."
 msgstr ""
 "Το έγκυρο εύρος για το όρισμα είναι από 0 έως 1,114,111 (0x10FFFF στη βάση "
-"16).  Το :exc:`ValueError` θα γίνει raise εάν το *i* είναι εκτός αυτού του "
+"16).  Το :exc:`ValueError` θα γίνει raise εάν είναι εκτός αυτού του "
 "εύρους."
 
 #: library/functions.rst:257
@@ -1877,16 +1875,15 @@ msgstr ""
 "υπογραφές για callables είναι πλέον πιο ολοκληρωμένες και συνεπείς."
 
 #: library/functions.rst:921
-#, fuzzy
 msgid ""
 "Convert an integer number to a lowercase hexadecimal string prefixed with "
 "\"0x\". If *integer* is not a Python :class:`int` object, it has to define "
 "an :meth:`~object.__index__` method that returns an integer. Some examples:"
 msgstr ""
-"Μετατροπή ενός ακεραίου αριθμού σε μια πεζή δεκαεξαδική συμβολοσειρά "
-"(string) με πρόθεμα το \"0x\". Εάν το *x* δεν είναι αντικείμενο Python :"
-"class:`int`, πρέπει να ορίσει μια μέθοδο :meth:`~object.__index__` που "
-"επιστρέφει έναν ακέραιο αριθμό. Κάποια παραδείγματα:"
+"Μετατρέπει έναν ακέραιο αριθμό σε μια πεζή δεκαεξαδική συμβολοσειρά (string) "
+"με πρόθεμα \"0x\". Εάν το *integer* δεν είναι ένα αντικείμενο :class:`int` της "
+"Python, πρέπει να ορίσει μια μέθοδο :meth:`~object.__index__` που επιστρέφει "
+"έναν ακέραιο. Μερικά παραδείγματα:"
 
 #: library/functions.rst:930
 msgid ""
@@ -2174,7 +2171,6 @@ msgstr ""
 "μια εξαίρεση :exc:`TypeError`."
 
 #: library/functions.rst:1100
-#, fuzzy
 msgid ""
 "Return an :term:`iterator` object.  The first argument is interpreted very "
 "differently depending on the presence of the second argument. Without a "
@@ -2189,19 +2185,18 @@ msgid ""
 "the value returned is equal to *sentinel*, :exc:`StopIteration` will be "
 "raised, otherwise the value will be returned."
 msgstr ""
-"Επιστρέφετε ένα αντικείμενο :term:`iterator`.  Το πρώτο όρισμα ερμηνεύεται "
-"πολύ διαφορετικά ανάλογα με την παρουσία του δεύτερου ορίσματος. Χωρίς "
-"δεύτερο όρισμα, το *object* πρέπει να είναι ένα αντικείμενο συλλογής που να "
-"υποστηρίζει το πρωτόκολλο :term:`iterable` (η μέθοδος :meth:`~object."
-"__iter__`), ή πρέπει να υποστηρίζει το πρωτόκολλο ακολουθίας (η μέθοδος :"
-"meth:`~object.__getitem__` με ακέραια ορίσματα που ξεκινούν από ``0``).  Εάν "
-"δεν υποστηρίζει κανένα από αυτά τα πρωτόκολλα, γίνεται raise μια :exc:"
-"`TypeError`. Εάν δοθεί το δεύτερο όρισμα *sentinel*, τότε το *object* πρέπει "
-"να είναι ένα callable αντικείμενο.  Ο iterator που δημιουργήθηκε σε αυτή την "
-"περίπτωση θα καλέσει το *object* χωρίς ορίσματα για κάθε κλήση στη μέθοδο :"
-"meth:`~iterator.__next__` ∙ εάν η τιμή που επιστρέφεται είναι ίση με "
-"*sentinel*, θα γίνει raise η :exc:`StopIteration`, διαφορετικά θα επιστραφεί "
-"η τιμή."
+"Επιστρέφει ένα αντικείμενο :term:`iterator`.  Το πρώτο όρισμα ερμηνεύεται "
+"πολύ διαφορετικά ανάλογα με την παρουσία του δεύτερου ορίσματος. Χωρίς το ""
+"δεύτερο όρισμα, το μόνο όρισμα πρέπει να είναι ένα αντικείμενο συλλογής που "
+"υποστηρίζει το πρωτόκολλο :term:`iterable` (τη :meth:`~object.__iter__` μέθοδο), ή "
+"πρέπει να υποστηρίζει το πρωτόκολλο ακολουθίας (τη :meth:`~object.__getitem__` μέθοδο "
+"με ακέραια ορίσματα που ξεκινούν από το ``0``).  Εάν δεν υποστηρίζει κανένα από "
+"αυτά τα πρωτόκολλα, γίνεται raise μια :exc:`TypeError`. Εάν το δεύτερο όρισμα, *sentinel*, "
+"δίνεται, τότε το πρώτο όρισμα πρέπει να είναι ένα callable αντικείμενο.  Ο "
+"iterator που δημιουργείται σε αυτή την περίπτωση θα καλεί το *callable* χωρίς "
+"ορίσματα για κάθε κλήση της :meth:`~iterator.__next__` μεθόδου του; εάν η τιμή που "
+"επιστρέφεται είναι ίση με το *sentinel*, θα γίνει raise η :exc:`StopIteration`, "
+"διαφορετικά η τιμή θα επιστραφεί."
 
 #: library/functions.rst:1114
 msgid "See also :ref:`typeiter`."
@@ -2519,7 +2514,6 @@ msgstr ""
 "ένα στιγμιότυπο του :class:`object`."
 
 #: library/functions.rst:1301
-#, fuzzy
 msgid ""
 "Convert an integer number to an octal string prefixed with \"0o\".  The "
 "result is a valid Python expression. If *integer* is not a Python :class:"
@@ -2527,9 +2521,9 @@ msgid ""
 "returns an integer. For example:"
 msgstr ""
 "Μετατρέπει έναν ακέραιο αριθμό σε μια οκταδική συμβολοσειρά με πρόθεμα "
-"\"0o\". Το αποτέλεσμα είναι μια έγκυρη έκφραση Python. Εάν το *x*  δεν είναι "
-"ένα αντικείμενο Python :class:`int`, πρέπει να ορίσει μια μέθοδο :meth:"
-"`~object.__index__` που επιστρέφει έναν ακέραιο αριθμό. Για παράδειγμα:"
+"\"0o\". Το αποτέλεσμα είναι μια έγκυρη έκφραση Python. Εάν το *integer* δεν "
+"είναι ένα αντικείμενο :class:`int` της Python, πρέπει να ορίζει μια μέθοδο "
+":meth:`~object.__index__` που επιστρέφει έναν ακέραιο."
 
 #: library/functions.rst:1311
 msgid ""
@@ -3069,20 +3063,18 @@ msgstr "Η λειτουργία ``'U'`` έχει αφαιρεθεί."
 
 #: library/functions.rst:1553
 msgid "Return the ordinal value of a character."
-msgstr ""
+msgstr "Επιστρέφει την αριθμητική τιμή ενός χαρακτήρα."
 
 #: library/functions.rst:1555
-#, fuzzy
 msgid ""
 "If the argument is a one-character string, return the Unicode code point of "
 "that character.  For example, ``ord('a')`` returns the integer ``97`` and "
 "``ord('€')`` (Euro sign) returns ``8364``.  This is the inverse of :func:"
 "`chr`."
 msgstr ""
-"Δεδομένου μιας συμβολοσειράς που αντιπροσωπεύει έναν χαρακτήρα Unicode, "
-"επιστρέφει έναν ακέραιο που αντιπροσωπεύει το σημείο κωδικού Unicode αυτού "
-"του χαρακτήρα.  Για παράδειγμα, το ``ord('a')`` επιστρέφει τον ακέραιο "
-"αριθμό ``97`` και ``ord('€')`` (σύμβολο του ευρώ) επιστρέφει ``8364``.  Αυτό "
+"Εάν το όρισμα είναι μια συμβολοσειρά ενός χαρακτήρα, επιστρέφει το σημείο κώδικα "
+"Unicode αυτού του χαρακτήρα.  Για παράδειγμα, το ``ord('a')`` επιστρέφει τον "
+"ακέραιο ``97`` και το ``ord('€')`` (σήμα ευρώ) επιστρέφει το ``8364``.  Αυτό "
 "είναι το αντίστροφο του :func:`chr`."
 
 #: library/functions.rst:1560
@@ -3091,6 +3083,8 @@ msgid ""
 "1, return its single byte value. For example, ``ord(b'a')`` returns the "
 "integer ``97``."
 msgstr ""
+"Εάν το όρισμα είναι ένα αντικείμενο :class:`bytes` ή :class:`bytearray` μήκους 1, "
+"επιστρέφει την τιμή του μεμονωμένου byte. Για παράδειγμα, το ``ord(b'a')`` επιστρέφει τον ακέραιο ``97``."
 
 #: library/functions.rst:1567
 msgid ""
@@ -3105,7 +3099,6 @@ msgstr ""
 "ισοδυναμεί με τη χρήση του τελεστή δύναμης: ``base**exp``."
 
 #: library/functions.rst:1572
-#, fuzzy
 msgid ""
 "When arguments are builtin numeric types with mixed operand types, the "
 "coercion rules for binary arithmetic operators apply.  For :class:`int` "
@@ -3119,9 +3112,9 @@ msgid ""
 "`float` with an integral exponent, a float result is delivered. For example, "
 "``pow(-9, 2.0)`` returns ``81.0``."
 msgstr ""
-"Τα ορίσματα πρέπει να έχουνε αριθμητικούς τύπους.  Με μεικτούς τύπους "
-"τελεστών, ισχύουν οι κανόνες εξαναγκασμού για δυαδικούς τελεστές "
-"αριθμητικής.  Για του τελεστές :class:`int`, το αποτέλεσμα έχει τον ίδιο "
+"Όταν τα ορίσματα είναι ενσωματωμένοι αριθμητικοί τύποι με μικτούς τύπους "
+"τελεστών, εφαρμόζονται οι κανόνες εξαναγκασμού για τους δυαδικούς αριθμητικούς τελεστές. "
+"Για του τελεστές :class:`int`, το αποτέλεσμα έχει τον ίδιο "
 "τύπο με τους τελεστές (μετά τον εξαναγκασμό), εκτός εάν το δεύτερο όρισμα "
 "είναι αρνητικό∙ σε αυτή την περίπτωση, όλα τα ορίσματα μετατρέπονται σε "
 "float και επιστρέφεται ένα αποτέλεσμα τύπους float.  Για παράδειγμα, "
@@ -3470,17 +3463,16 @@ msgstr ""
 "      return f\"Person('{self.name}', {self.age})\""
 
 #: library/functions.rst:1758
-#, fuzzy
 msgid ""
 "Return a reverse :term:`iterator`.  The argument must be an object which has "
 "a :meth:`~object.__reversed__` method or supports the sequence protocol "
 "(the :meth:`~object.__len__` method and the :meth:`~object.__getitem__` "
 "method with integer arguments starting at ``0``)."
 msgstr ""
-"Επιστρέφει ένα αντίστροφο :term:`iterator`.  Το *seq* πρέπει να είναι ένα "
-"αντικείμενο που έχει μια μέθοδο :meth:`~object.__reversed__` ή υποστηρίζει "
-"το πρωτόκολλο ακολουθίας (η μέθοδος :meth:`~object.__len__` και η μέθοδος :"
-"meth:`~object.__getitem__` με ακέραια ορίσματα που ξεκινούν από ``0``)."
+"Επιστρέφει ένα αντίστροφο :term:`iterator`. Το όρισμα πρέπει να είναι ένα "
+"αντικείμενο που έχει μια μέθοδο :meth:`~object.__reversed__` ή υποστηρίζει το "
+"πρωτόκολλο ακολουθίας (τη μέθοδο :meth:`~object.__len__` και τη μέθοδο "
+":meth:`~object.__getitem__` με ακέραια ορίσματα που ξεκινούν από το ``0``)."
 
 #: library/functions.rst:1766
 msgid ""
@@ -3689,7 +3681,6 @@ msgstr ""
 "μισθολογικό βαθμό)."
 
 #: library/functions.rst:1872
-#, fuzzy
 msgid ""
 "The sort algorithm uses only ``<`` comparisons between items.  While "
 "defining an :meth:`~object.__lt__` method will suffice for sorting, :PEP:`8` "
@@ -3700,14 +3691,15 @@ msgid ""
 "mixed type comparisons which can call the reflected :meth:`~object.__gt__` "
 "method."
 msgstr ""
-"Ο αλγόριθμος ταξινόμησης χρησιμοποιεί μόνο συγκρίσεις ``<`` μεταξύ "
-"στοιχείων.  Ενώ ο ορισμός μιας μεθόδου :meth:`~object.__lt__` αρκεί για την "
-"ταξινόμηση, το :PEP:`8` συνιστά και τις έξι :ref:`rich comparisons "
-"<comparisons>` που θα εφαρμοστούν.  Αυτό θα βοηθήσει στην αποφυγή σφαλμάτων "
-"κατά τη χρήση των ίδιων δεδομένων με άλλα εργαλεία διάταξης, όπως :func:"
-"`max` που βασίζονται σε διαφορετική υποκείμενη μέθοδο.  Η υλοποίηση και των "
-"έξι συγκρίσεων βοηθά επίσης στην αποφυγή σύγχυσης για συγκρίσεις μικτού "
-"τύπου που μπορούν να καλέσουν την ανακλώμενη μέθοδο :meth:`~object.__gt__`."
+"Ο αλγόριθμος ταξινόμησης χρησιμοποιεί μόνο συγκρίσεις ``<`` μεταξύ των "
+"αντικειμένων.  Ενώ ο ορισμός μιας μεθόδου :meth:`~object.__lt__` θα "
+"αρκούσε για την ταξινόμηση, το :PEP:`8` συνιστά να υλοποιηθούν και οι έξι :ref:`"
+"πλούσιες συγκρίσεις <comparisons>`.  Αυτό θα βοηθήσει στην αποφυγή σφαλμάτων "
+"όταν χρησιμοποιούνται τα ίδια δεδομένα με άλλα εργαλεία ταξινόμησης όπως η "
+":func:`max` που βασίζονται σε μια διαφορετική υποκείμενη μέθοδο.  Η "
+"υλοποίηση και των έξι συγκρίσεων βοηθά επίσης στην αποφυγή σύγχυσης για "
+"συγκρίσεις μικτών τύπων που μπορούν να καλέσουν την αντανακλαστική μέθοδο :"
+"`~object.__gt__`."
 
 #: library/functions.rst:1881
 msgid ""
