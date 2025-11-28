@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-27 09:00+0200\n"
-"PO-Revision-Date: 2025-11-27 09:00+0200\n"
+"PO-Revision-Date: 2025-11-28 22:51+0200\n"
 "Last-Translator: Theofanis Petkos <thepetk@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: library/stdtypes.rst:8
 msgid "Built-in Types"
@@ -2100,7 +2100,9 @@ msgstr ""
 
 #: library/stdtypes.rst:1095
 msgid "An :exc:`IndexError` is raised if *i* is outside the sequence range."
-msgstr "Μια :exc:`IndexError` γίνεται raise εάν το *i* είναι εκτός του εύρους της ακολουθίας."
+msgstr ""
+"Μια :exc:`IndexError` γίνεται raise εάν το *i* είναι εκτός του εύρους της "
+"ακολουθίας."
 
 #: library/stdtypes.rst:1098
 msgid "Sequence Methods"
@@ -2120,7 +2122,8 @@ msgstr "Επιστρέφει τον δείκτη της πρώτης εμφάν�
 
 #: library/stdtypes.rst:1305
 msgid "Raises :exc:`ValueError` if *value* is not found in *sequence*."
-msgstr "Κάνει raise μια :exc:`ValueError` εάν το *value* δεν βρεθεί στο *sequence*."
+msgstr ""
+"Κάνει raise μια :exc:`ValueError` εάν το *value* δεν βρεθεί στο *sequence*."
 
 #: library/stdtypes.rst:1123
 msgid ""
@@ -2138,7 +2141,8 @@ msgstr ""
 msgid ""
 "Not all sequence types support passing the *start* and *stop* arguments."
 msgstr ""
-"Δεν υποστηρίζουν όλοι οι τύποι ακολουθίας τη μετάδοση των *start* και *stop* ορισμάτων."
+"Δεν υποστηρίζουν όλοι οι τύποι ακολουθίας τη μετάδοση των *start* και *stop* "
+"ορισμάτων."
 
 #: library/stdtypes.rst:1135
 msgid "Immutable Sequence Types"
@@ -2234,7 +2238,9 @@ msgstr "``del s[i:j]``"
 #: library/stdtypes.rst:1193
 msgid ""
 "removes the elements of ``s[i:j]`` from the list (same as ``s[i:j] = []``)"
-msgstr "αφαιρεί τα στοιχεία του  ``s[i:j]`` από τη λίστα (παρόμοιο με ``s[i:j] = []``)"
+msgstr ""
+"αφαιρεί τα στοιχεία του  ``s[i:j]`` από τη λίστα (παρόμοιο με ``s[i:j] = "
+"[]``)"
 
 #: library/stdtypes.rst:1197
 msgid "``s[i:j:k] = t``"
@@ -2299,28 +2305,32 @@ msgstr "Μέθοδοι Μεταβλητών Ακολουθιών (Sequences)"
 
 #: library/stdtypes.rst:1225
 msgid "Mutable sequence types also support the following methods:"
-msgstr "Οι τύποι μεταβλητών ακολουθιών υποστηρίζουν επίσης τις παρακάτω μεθόδους:"
+msgstr ""
+"Οι τύποι μεταβλητών ακολουθιών υποστηρίζουν επίσης τις παρακάτω μεθόδους:"
 
 #: library/stdtypes.rst:1234
 msgid ""
 "Append *value* to the end of the sequence This is equivalent to writing "
 "``seq[len(seq):len(seq)] = [value]``."
 msgstr ""
-"Προσθέτει το *value* στο τέλος της ακολουθείας Αυτό είναι παρόμοιο με το να γράψουμε "
-"``seq[len(seq):len(seq)] = [value]``."
+"Προσθέτει το *value* στο τέλος της ακολουθίας Αυτό είναι παρόμοιο με το να "
+"γράψουμε ``seq[len(seq):len(seq)] = [value]``."
 
 #: library/stdtypes.rst:1246
 msgid ""
 "Remove all items from *sequence*. This is equivalent to writing ``del "
 "sequence[:]``."
-msgstr "Αφαιρεί όλα τα αντικείμενα από το *sequence*. Αυτό είναι ισοδύναμο με το να γράψουμε "
-"``del sequence[:]``."
+msgstr ""
+"Αφαιρεί όλα τα αντικείμενα από το *sequence*. Αυτό είναι ισοδύναμο με το να "
+"γράψουμε ``del sequence[:]``."
 
 #: library/stdtypes.rst:1258
 msgid ""
 "Create a shallow copy of *sequence*. This is equivalent to writing "
 "``sequence[:]``."
-msgstr "Δημιουργεί ένα shallow αντίγραφο του *sequence*. Αυτό είναι ισοδύναμο με το να γράψουμε ``sequence[:]``."
+msgstr ""
+"Δημιουργεί ένα shallow αντίγραφο του *sequence*. Αυτό είναι ισοδύναμο με το "
+"να γράψουμε ``sequence[:]``."
 
 #: library/stdtypes.rst:1261
 msgid ""
@@ -2328,9 +2338,9 @@ msgid ""
 "MutableSequence` :class:`~abc.ABC`, but most concrete mutable sequence types "
 "provide it."
 msgstr ""
-"Η μέθοδος :meth:`!copy` δενε ίναι μέρος της :class:`~collections.abc.MutableSequence` "
-":class:`~abc.ABC`, αλλά οι περισσότερες συγκεκριμένες μεταβλητές "
-"τύποι ακολουθίας την παρέχουν."
+"Η μέθοδος :meth:`!copy` δεν είναι μέρος της :class:`~collections.abc."
+"MutableSequence` :class:`~abc.ABC`, αλλά οι περισσότερες συγκεκριμένες "
+"μεταβλητές τύποι ακολουθίας την παρέχουν."
 
 #: library/stdtypes.rst:1272
 msgid ""
@@ -2338,7 +2348,8 @@ msgid ""
 "is the same as writing ``seq[len(seq):len(seq)] = iterable``."
 msgstr ""
 "Επεκτείνει το *sequence* με τα περιεχόμενα του *iterable*. Για το μεγαλύτερο "
-"μέρος, αυτό είναι το ίδιο με το να γράψουμε ``seq[len(seq):len(seq)] = iterable``."
+"μέρος, αυτό είναι το ίδιο με το να γράψουμε ``seq[len(seq):len(seq)] = "
+"iterable``."
 
 #: library/stdtypes.rst:1283
 msgid ""
@@ -2353,12 +2364,14 @@ msgid ""
 "Retrieve the item at *index* and also removes it from *sequence*. By "
 "default, the last item in *sequence* is removed and returned."
 msgstr ""
-"Ανακτά το αντικείμενο στη θέση *index* και το αφαιρεί από το *sequence*. "
-"Εξ ορισμού, το τελευταίο αντικείμενο στο *sequence* αφαιρείται και επιστρέφεται."
+"Ανακτά το αντικείμενο στη θέση *index* και το αφαιρεί από το *sequence*. Εξ "
+"ορισμού, το τελευταίο αντικείμενο στο *sequence* αφαιρείται και επιστρέφεται."
 
 #: library/stdtypes.rst:1303
 msgid "Remove the first item from *sequence* where ``sequence[i] == value``."
-msgstr "Αφαιρεί το πρώτο στοιχείο από το *sequence* όπου ``sequence[i]`` είναι ίσο με *value*"
+msgstr ""
+"Αφαιρεί το πρώτο στοιχείο από το *sequence* όπου ``sequence[i]`` είναι ίσο "
+"με *value*."
 
 #: library/stdtypes.rst:1314
 msgid ""
@@ -2368,8 +2381,8 @@ msgid ""
 msgstr ""
 "Αντιστρέφει τα στοιχεία του *sequence* στη θέση τους. Αυτή η μέθοδος "
 "διατηρεί την οικονομία χώρου κατά την αντιστροφή μιας μεγάλης ακολουθίας. "
-"Για να υπενθυμίσει στους χρήστες ότι λειτουργεί με παρενέργεια, επιστρέφει το "
-"``None``."
+"Για να υπενθυμίσει στους χρήστες ότι λειτουργεί με παρενέργεια, επιστρέφει "
+"το ``None``."
 
 #: library/stdtypes.rst:1322
 msgid "Lists"
@@ -3166,7 +3179,8 @@ msgid ""
 "which is the length of the string plus one. For example::"
 msgstr ""
 "Αν το *sub* είναι κενό, επιστρέφει τον αριθμό των κενών συμβολοσειρών "
-"(strings) μεταξύ των χαρακτήρων που είναι το μήκος της συμβολοσειράς συν ένα. Για παράδειγμα"
+"(strings) μεταξύ των χαρακτήρων που είναι το μήκος της συμβολοσειράς συν "
+"ένα. Για παράδειγμα::"
 
 #: library/stdtypes.rst:1740
 msgid ""
@@ -3351,7 +3365,7 @@ msgstr ""
 "Επιστρέφει τον χαμηλότερο δείκτη στη συμβολοσειρά (string) όπου η υπό-"
 "συμβολοσειρά *sub* βρίσκεται μέσα στο υποσύνολο (slice) ``s[start:end]``.  "
 "Τα προαιρετικά ορίσματα *start* και *end* ερμηνεύονται όπως στο notation του "
-"υποσυνόλου.  Επιστρέφει ``-1`` αν δεν βρεθεί το *sub*. Για παράδειγμα"
+"υποσυνόλου.  Επιστρέφει ``-1`` αν δεν βρεθεί το *sub*. Για παράδειγμα:"
 
 #: library/stdtypes.rst:1837
 msgid ""
@@ -3897,10 +3911,10 @@ msgid ""
 "must be a string, whose characters will be mapped to ``None`` in the result."
 msgstr ""
 "Εάν υπάρχουν δύο ορίσματα, πρέπει να είναι συμβολοσειρές (strings) ίσου "
-"μήκους και στο λεξικό (dictionary) που θα προκύψει, κάθε χαρακτήρας στο *from* θα "
-"αντιστοιχιστεί στο χαρακτήρα στην ίδια θέση στο *to*. Αν υπάρχει τρίτο όρισμα, "
-"πρέπει να είναι συμβολοσειρά, του οποίου οι χαρακτήρες θα αντιστοιχιστούν "
-"στο αποτέλεσμα σε ``None``."
+"μήκους και στο λεξικό (dictionary) που θα προκύψει, κάθε χαρακτήρας στο "
+"*from* θα αντιστοιχιστεί στο χαρακτήρα στην ίδια θέση στο *to*. Αν υπάρχει "
+"τρίτο όρισμα, πρέπει να είναι συμβολοσειρά, του οποίου οι χαρακτήρες θα "
+"αντιστοιχιστούν στο αποτέλεσμα σε ``None``."
 
 #: library/stdtypes.rst:2163
 msgid ""
@@ -4177,8 +4191,8 @@ msgid ""
 "If *sep* is not specified or is ``None`` and  *maxsplit* is ``0``, only "
 "leading runs of consecutive whitespace are considered."
 msgstr ""
-"Εάν το *sep* δεν καθοριστεί ή είναι ``None`` και το *maxsplit* είναι "
-"``0``, μόνο οι αρχικές εμφανίσεις διαδοχικών κενών θεωρούνται."
+"Εάν το *sep* δεν καθοριστεί ή είναι ``None`` και το *maxsplit* είναι ``0``, "
+"μόνο οι αρχικές εμφανίσεις διαδοχικών κενών θεωρούνται."
 
 #: library/stdtypes.rst:2311
 msgid ""
@@ -6153,10 +6167,11 @@ msgid ""
 "all combinations of its values are stripped::"
 msgstr ""
 "Επιστρέφει ένα αντίγραφο της ακολουθίας με καθορισμένα βασικά byte που έχουν "
-"αφαιρεθεί.  Το όρισμα *bytes* είναι μια δυαδική ακολουθία που καθορίζει το σύνολο των byte τιμών "
-"που θα αφαιρεθούν. Αν παραλειφθεί ή είναι ``None``, το όρισμα *bytes* προεπιλέγεται στο αν αφαιρεί τους " 
-"χαρακτήρες ASCII κενού διαστήματος. Το όρισμα *bytes* δεν είναι πρόθεμα∙ αντίθετα, όλοιοι συνδυασμόι των τιμών "
-"του αφαιρούνται::"
+"αφαιρεθεί.  Το όρισμα *bytes* είναι μια δυαδική ακολουθία που καθορίζει το "
+"σύνολο των byte τιμών που θα αφαιρεθούν. Αν παραλειφθεί ή είναι ``None``, το "
+"όρισμα *bytes* προεπιλέγεται στο αν αφαιρεί τους χαρακτήρες ASCII κενού "
+"διαστήματος. Το όρισμα *bytes* δεν είναι πρόθεμα∙ αντίθετα, όλοι συνδυασμοί "
+"των τιμών του αφαιρούνται::"
 
 #: library/stdtypes.rst:3402
 msgid ""
@@ -6233,10 +6248,10 @@ msgid ""
 msgstr ""
 "Επιστρέφει ένα αντίγραφο της ακολουθίας με τα καθορισμένα δευτερεύοντα byte "
 "που έχουν αφαιρεθεί.  Το όρισμα *bytes* είναι μια δυαδική ακολουθία που "
-"καθορίζει το σύνολο των τιμών byte που πρέπει να αφαιρεθούν. "
-"Εάν παραληφθεί ή είναι ``None``, το όρισμα *chars* έχει "
-"ως προεπιλογή την αφαίρεση του κενού διαστήματος ASCII.  Το όρισμα *bytes* "
-"δεν είναι επίθημα, αλλά αφαιρούνται όλοι οι συνδυασμοί των τιμών του::"
+"καθορίζει το σύνολο των τιμών byte που πρέπει να αφαιρεθούν. Εάν παραληφθεί "
+"ή είναι ``None``, το όρισμα *chars* έχει ως προεπιλογή την αφαίρεση του "
+"κενού διαστήματος ASCII.  Το όρισμα *bytes* δεν είναι επίθημα, αλλά "
+"αφαιρούνται όλοι οι συνδυασμοί των τιμών του::"
 
 #: library/stdtypes.rst:3457
 msgid ""
@@ -6369,9 +6384,10 @@ msgid ""
 msgstr ""
 "Επιστρέφει ένα αντίγραφο της ακολουθίας με τα καθορισμένα bytes που "
 "προηγούνται και τα bytes που έπονται. Το όρισμα *bytes* είναι μια δυαδική "
-"ακολουθία που καθορίζει το σύνολο των τιμών byte που πρέπει να αφαιρεθούν. Εάν παραλείπεται ή είναι ``None``, το όρισμα *bytes* "
-"από προεπιλογή αφαιρεί το ASCII λευκό διάστημα. To όρισμα *bytes* δεν είναι "
-"πρόθεμα ή επίθημα, αλλά αφαιρούνται όλοι οι συνδυασμοί των τιμών του::"
+"ακολουθία που καθορίζει το σύνολο των τιμών byte που πρέπει να αφαιρεθούν. "
+"Εάν παραλείπεται ή είναι ``None``, το όρισμα *bytes* από προεπιλογή αφαιρεί "
+"το ASCII λευκό διάστημα. To όρισμα *bytes* δεν είναι πρόθεμα ή επίθημα, αλλά "
+"αφαιρούνται όλοι οι συνδυασμοί των τιμών του::"
 
 #: library/stdtypes.rst:3534
 msgid ""
@@ -8359,8 +8375,9 @@ msgid ""
 msgstr ""
 "Τα λεξικά συγκρίνονται ως ίσα εάν και μόνο εάν έχουν τα ίδια ζεύγη ``(key, "
 "value)`` (ανεξάρτητα από τη σειρά). Οι συγκρίσεις διάταξης ('<', '<=', '>=', "
-"'>') κάνουν raise την :exc:`TypeError`. Για να απεικονιστεί η δημιουργία και η ισότητα, "
-"τα ακόλουθα παραδείγματα επιστρέφουν όλα ένα λεξικό ίσο με ``{\"one\": 1, \"two\": 2, \"three\": 3}``::"
+"'>') κάνουν raise την :exc:`TypeError`. Για να απεικονιστεί η δημιουργία και "
+"η ισότητα, τα ακόλουθα παραδείγματα επιστρέφουν όλα ένα λεξικό ίσο με "
+"``{\"one\": 1, \"two\": 2, \"three\": 3}``::"
 
 #: library/stdtypes.rst:4830
 msgid ""
@@ -8651,8 +8668,9 @@ msgid ""
 "Update the dictionary with the key/value pairs from *mapping* or *iterable* "
 "and *kwargs*, overwriting existing keys.  Return ``None``."
 msgstr ""
-"Ενημερώνει το λεξικό με τα ζεύγη κλειδιών/τιμών από το *mapping* ή το *iterable* και *kwargs*, "
-"αντικαθιστώντας τα υπάρχοντα κλειδιά.  Επιστρέφει ``None``."
+"Ενημερώνει το λεξικό με τα ζεύγη κλειδιών/τιμών από το *mapping* ή το "
+"*iterable* και *kwargs*, αντικαθιστώντας τα υπάρχοντα κλειδιά.  Επιστρέφει "
+"``None``."
 
 #: library/stdtypes.rst:5001
 msgid ""
@@ -10276,41 +10294,54 @@ msgid ""
 "In typical use, ``...`` as the ``Ellipsis`` object appears in a few "
 "different places, for instance:"
 msgstr ""
+"Στην τυπική χρήση, το ``...`` ως αντικείμενο ``Ellipsis`` εμφανίζεται σε "
+"μερικά διαφορετικά μέρη, για παράδειγμα:"
 
 #: library/stdtypes.rst:5801
 msgid ""
 "In type annotations, such as :ref:`callable arguments <annotating-"
 "callables>` or :ref:`tuple elements <annotating-tuples>`."
 msgstr ""
+"Στους τύπους annotations, όπως :ref:`callable arguments <annotating-"
+"callables>` ή :ref:`tuple elements <annotating-tuples>`."
 
 #: library/stdtypes.rst:5804
 msgid ""
 "As the body of a function instead of a :ref:`pass statement <tut-pass>`."
 msgstr ""
+"Ως το σώμα μιας συνάρτησης αντί για μια :ref:`pass statement <tut-pass>`."
 
 #: library/stdtypes.rst:5806
 msgid ""
 "In third-party libraries, such as `Numpy's slicing and striding <https://"
 "numpy.org/doc/stable/user/basics.indexing.html#slicing-and-striding>`_."
 msgstr ""
+"Σε βιβλιοθήκες τρίτων, όπως `Numpy's slicing and striding <https://numpy.org/"
+"doc/stable/user/basics.indexing.html#slicing-and-striding>`_."
 
 #: library/stdtypes.rst:5809
 msgid ""
 "Python also uses three dots in ways that are not ``Ellipsis`` objects, for "
 "instance:"
 msgstr ""
+"Η Python επίσης χρησιμοποιεί τρεις τελείες με τρόπους που δεν είναι "
+"αντικείμενα ``Ellipsis``, για παράδειγμα:"
 
 #: library/stdtypes.rst:5811
 msgid ""
 "Doctest's :const:`ELLIPSIS <doctest.ELLIPSIS>`, as a pattern for missing "
 "content."
 msgstr ""
+"Το :const:`ELLIPSIS <doctest.ELLIPSIS>` του Doctest, ως πρότυπο για ελλείπον "
+"περιεχόμενο."
 
 #: library/stdtypes.rst:5813
 msgid ""
 "The default Python prompt of the :term:`interactive` shell when partial "
 "input is incomplete."
 msgstr ""
+"Η προεπιλεγμένη εντολή της Python του :term:`interactive` shell όταν η "
+"μερική είσοδος είναι ελλιπής."
 
 #: library/stdtypes.rst:5815
 msgid ""
@@ -10318,6 +10349,9 @@ msgid ""
 "English usage to mean omitted content, even in code examples that also use "
 "them as the ``Ellipsis``."
 msgstr ""
+"Τέλος, η τεκμηρίωση της Python χρησιμοποιεί συχνά τρεις τελείες στην "
+"συμβατική αγγλική χρήση για να σημαίνει παραλειπόμενο περιεχόμενο, ακόμη και "
+"σε παραδείγματα κώδικα που τα χρησιμοποιούν επίσης ως ``Ellipsis``."
 
 #: library/stdtypes.rst:5823
 msgid "The NotImplemented Object"
