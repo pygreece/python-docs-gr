@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2025-06-27 12:23+0300\n"
+"POT-Creation-Date: 2025-11-29 09:18+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -121,8 +121,8 @@ msgstr ""
 "namespace-prefixes; προεπιλογή)."
 
 #: library/xml.sax.handler.rst:76 library/xml.sax.handler.rst:94
-#: library/xml.sax.handler.rst:102 library/xml.sax.handler.rst:112
-#: library/xml.sax.handler.rst:144
+#: library/xml.sax.handler.rst:110 library/xml.sax.handler.rst:120
+#: library/xml.sax.handler.rst:152
 msgid "access: (parsing) read-only; (not parsing) read/write"
 msgstr "access: (ανάλυση) μόνο για ανάγνωση; (μη ανάλυση) ανάγνωση/εγγραφή"
 
@@ -182,23 +182,36 @@ msgstr ""
 msgid "false: Do not report validation errors."
 msgstr "false: Μη αναφορά σφαλμάτων επικύρωσης."
 
-#: library/xml.sax.handler.rst:99
+#: library/xml.sax.handler.rst:101
+msgid ""
+"Enabling opens a vulnerability to `external entity attacks <https://en."
+"wikipedia.org/wiki/XML_external_entity_attack>`_ if the parser is used with "
+"user-provided XML content. Please reflect on your `threat model <https://en."
+"wikipedia.org/wiki/Threat_model>`_ before enabling this feature."
+msgstr ""
+"Η ενεργοποίηση ανοίγει μια ευπάθεια σε `επιθέσεις εξωτερικών οντοτήτων "
+"<https://en.wikipedia.org/wiki/XML_external_entity_attack>`_ εάν ο αναλυτής "
+"χρησιμοποιείται με περιεχόμενο XML που παρέχεται από τον χρήστη. Παρακαλώ "
+"σκεφτείτε το `μοντέλο απειλών σας <https://en.wikipedia.org/wiki/"
+"Threat_model>`_ πριν ενεργοποιήσετε αυτό το χαρακτηριστικό."
+
+#: library/xml.sax.handler.rst:107
 msgid "value: ``\"http://xml.org/sax/features/external-general-entities\"``"
 msgstr "value: ``\"http://xml.org/sax/features/external-general-entities\"``"
 
-#: library/xml.sax.handler.rst:100
+#: library/xml.sax.handler.rst:108
 msgid "true: Include all external general (text) entities."
 msgstr "true: Συμπερίληψη όλων των εξωτερικών γενικών (κείμενο) οντοτήτων."
 
-#: library/xml.sax.handler.rst:101
+#: library/xml.sax.handler.rst:109
 msgid "false: Do not include external general entities."
 msgstr "false: Μη συμπερίληψη εξωτερικών γενικών οντοτήτων."
 
-#: library/xml.sax.handler.rst:107
+#: library/xml.sax.handler.rst:115
 msgid "value: ``\"http://xml.org/sax/features/external-parameter-entities\"``"
 msgstr "value: ``\"http://xml.org/sax/features/external-parameter-entities\"``"
 
-#: library/xml.sax.handler.rst:109
+#: library/xml.sax.handler.rst:117
 msgid ""
 "true: Include all external parameter entities, including the external DTD "
 "subset."
@@ -206,7 +219,7 @@ msgstr ""
 "true: Συμπερίληψη όλων των εξωτερικών παραμέτρων οντοτήτων, "
 "συμπεριλαμβανομένου του εξωτερικού υποσυνόλου DTD."
 
-#: library/xml.sax.handler.rst:111
+#: library/xml.sax.handler.rst:119
 msgid ""
 "false: Do not include any external parameter entities, even the external DTD "
 "subset."
@@ -214,40 +227,40 @@ msgstr ""
 "false: Μη συμπερίληψη εξωτερικών παραμέτρων οντοτήτων, ακόμη και του "
 "εξωτερικού υποσυνόλου DTD."
 
-#: library/xml.sax.handler.rst:117
+#: library/xml.sax.handler.rst:125
 msgid "List of all features."
 msgstr "Λίστα όλων των χαρακτηριστικών."
 
-#: library/xml.sax.handler.rst:122
+#: library/xml.sax.handler.rst:130
 msgid "value: ``\"http://xml.org/sax/properties/lexical-handler\"``"
 msgstr "value: ``\"http://xml.org/sax/properties/lexical-handler\"``"
 
-#: library/xml.sax.handler.rst:123
+#: library/xml.sax.handler.rst:131
 msgid "data type: xml.sax.handler.LexicalHandler (not supported in Python 2)"
 msgstr ""
 "data type: xml.sax.handler.LexicalHandler (δεν υποστηρίζεται στην Python 2)"
 
-#: library/xml.sax.handler.rst:125
+#: library/xml.sax.handler.rst:133
 msgid ""
 "description: An optional extension handler for lexical events like comments."
 msgstr ""
 "description: Ένας προαιρετικός χειριστής επέκτασης για λεξικά συμβάντα όπως "
 "τα σχόλια."
 
-#: library/xml.sax.handler.rst:126 library/xml.sax.handler.rst:135
+#: library/xml.sax.handler.rst:134 library/xml.sax.handler.rst:143
 msgid "access: read/write"
 msgstr "access: read/write"
 
-#: library/xml.sax.handler.rst:131
+#: library/xml.sax.handler.rst:139
 msgid "value: ``\"http://xml.org/sax/properties/declaration-handler\"``"
 msgstr "value: ``\"http://xml.org/sax/properties/declaration-handler\"``"
 
-#: library/xml.sax.handler.rst:132
+#: library/xml.sax.handler.rst:140
 msgid "data type: xml.sax.sax2lib.DeclHandler (not supported in Python 2)"
 msgstr ""
 "data type: xml.sax.sax2lib.DeclHandler (δεν υποστηρίζεται στην Python 2)"
 
-#: library/xml.sax.handler.rst:134
+#: library/xml.sax.handler.rst:142
 msgid ""
 "description: An optional extension handler for DTD-related events other than "
 "notations and unparsed entities."
@@ -255,15 +268,15 @@ msgstr ""
 "description: Ένας προαιρετικός χειριστής επέκτασης για γεγονότα που "
 "σχετίζονται με το DTD εκτός από τις δηλώσεις και τις μη αναλυμένες οντότητες."
 
-#: library/xml.sax.handler.rst:140
+#: library/xml.sax.handler.rst:148
 msgid "value: ``\"http://xml.org/sax/properties/dom-node\"``"
 msgstr "value: ``\"http://xml.org/sax/properties/dom-node\"``"
 
-#: library/xml.sax.handler.rst:141
+#: library/xml.sax.handler.rst:149
 msgid "data type: org.w3c.dom.Node (not supported in Python 2)"
 msgstr "data type: org.w3c.dom.Node (δεν υποστηρίζεται στην Python 2)"
 
-#: library/xml.sax.handler.rst:143
+#: library/xml.sax.handler.rst:151
 msgid ""
 "description: When parsing, the current DOM node being visited if this is a "
 "DOM iterator; when not parsing, the root DOM node for iteration."
@@ -272,15 +285,15 @@ msgstr ""
 "αυτός είναι ένας επαναληπτικός DOM κόμβος∙ όταν δεν αναλύεται, ο ριζικός DOM "
 "κόμβος για την επανάληψη."
 
-#: library/xml.sax.handler.rst:149
+#: library/xml.sax.handler.rst:157
 msgid "value: ``\"http://xml.org/sax/properties/xml-string\"``"
 msgstr "value: ``\"http://xml.org/sax/properties/xml-string\"``"
 
-#: library/xml.sax.handler.rst:150
+#: library/xml.sax.handler.rst:158
 msgid "data type: Bytes"
 msgstr "data type: Bytes"
 
-#: library/xml.sax.handler.rst:152
+#: library/xml.sax.handler.rst:160
 msgid ""
 "description: The literal string of characters that was the source for the "
 "current event."
@@ -288,19 +301,19 @@ msgstr ""
 "description: Η κυριολεκτική συμβολοσειρά χαρακτήρων που ήταν η πηγή για το "
 "τρέχον γεγονός."
 
-#: library/xml.sax.handler.rst:153
+#: library/xml.sax.handler.rst:161
 msgid "access: read-only"
 msgstr "access: μόνο για ανάγνωση"
 
-#: library/xml.sax.handler.rst:158
+#: library/xml.sax.handler.rst:166
 msgid "List of all known property names."
 msgstr "Λίστα όλων των γνωστών ονομάτων ιδιοτήτων."
 
-#: library/xml.sax.handler.rst:164
+#: library/xml.sax.handler.rst:172
 msgid "ContentHandler Objects"
 msgstr "ContentHandler Αντικείμενα"
 
-#: library/xml.sax.handler.rst:166
+#: library/xml.sax.handler.rst:174
 msgid ""
 "Users are expected to subclass :class:`ContentHandler` to support their "
 "application.  The following methods are called by the parser on the "
@@ -310,7 +323,7 @@ msgstr ""
 "να υποστηρίξουν την εφαρμογή τους.  Οι ακόλουθες μέθοδοι καλούνται από τον "
 "αναλυτή στα κατάλληλα γεγονότα στο έγγραφο εισόδου:"
 
-#: library/xml.sax.handler.rst:173
+#: library/xml.sax.handler.rst:181
 msgid ""
 "Called by the parser to give the application a locator for locating the "
 "origin of document events."
@@ -318,7 +331,7 @@ msgstr ""
 "Καλείται από τον αναλυτή για να δώσει στην εφαρμογή έναν εντοπιστή για τον "
 "εντοπισμό της προέλευσης των γεγονότων του εγγράφου."
 
-#: library/xml.sax.handler.rst:176
+#: library/xml.sax.handler.rst:184
 msgid ""
 "SAX parsers are strongly encouraged (though not absolutely required) to "
 "supply a locator: if it does so, it must supply the locator to the "
@@ -330,7 +343,7 @@ msgstr ""
 "στην εφαρμογή καλώντας αυτή τη μέθοδο πριν από την κλήση οποιωνδήποτε άλλων "
 "μεθόδων στη διεπαφή DocumentHandler."
 
-#: library/xml.sax.handler.rst:181
+#: library/xml.sax.handler.rst:189
 msgid ""
 "The locator allows the application to determine the end position of any "
 "document-related event, even if the parser is not reporting an error. "
@@ -347,7 +360,7 @@ msgstr ""
 "εφαρμογής). Οι πληροφορίες που επιστρέφονται από τον εντοπιστή πιθανώς δεν "
 "είναι αρκετές για χρήση με μια μηχανή αναζήτησης."
 
-#: library/xml.sax.handler.rst:188
+#: library/xml.sax.handler.rst:196
 msgid ""
 "Note that the locator will return correct information only during the "
 "invocation of the events in this interface. The application should not "
@@ -357,11 +370,11 @@ msgstr ""
 "κλήση των γεγονότων σε αυτή τη διεπαφή. Η εφαρμογή δεν θα πρέπει να "
 "προσπαθήσει να τον χρησιμοποιήσει σε οποιαδήποτε άλλη στιγμή."
 
-#: library/xml.sax.handler.rst:195
+#: library/xml.sax.handler.rst:203
 msgid "Receive notification of the beginning of a document."
 msgstr "Λήψη ειδοποίησης για την αρχή ενός εγγράφου."
 
-#: library/xml.sax.handler.rst:197
+#: library/xml.sax.handler.rst:205
 msgid ""
 "The SAX parser will invoke this method only once, before any other methods "
 "in this interface or in DTDHandler (except for :meth:`setDocumentLocator`)."
@@ -370,11 +383,11 @@ msgstr ""
 "άλλη μέθοδο σε αυτή τη διεπαφή ή σε DTDHandler (εκτός από :meth:"
 "`setDocumentLocator`)."
 
-#: library/xml.sax.handler.rst:203
+#: library/xml.sax.handler.rst:211
 msgid "Receive notification of the end of a document."
 msgstr "Λήψη ειδοποίησης για το τέλος ενός εγγράφου."
 
-#: library/xml.sax.handler.rst:205
+#: library/xml.sax.handler.rst:213
 msgid ""
 "The SAX parser will invoke this method only once, and it will be the last "
 "method invoked during the parse. The parser shall not invoke this method "
@@ -386,11 +399,11 @@ msgstr ""
 "δεν θα καλέσει αυτή τη μέθοδο μέχρι να εγκαταλείψει την ανάλυση (εξαιτίας "
 "ενός μη ανακτήσιμου σφάλματος) ή να φτάσει στο τέλος της εισόδου."
 
-#: library/xml.sax.handler.rst:213
+#: library/xml.sax.handler.rst:221
 msgid "Begin the scope of a prefix-URI Namespace mapping."
 msgstr "Αρχή της έκτασης ενός προθέματος-URI χαρτογράφησης ονόματος χώρου."
 
-#: library/xml.sax.handler.rst:215
+#: library/xml.sax.handler.rst:223
 msgid ""
 "The information from this event is not necessary for normal Namespace "
 "processing: the SAX XML reader will automatically replace prefixes for "
@@ -402,7 +415,7 @@ msgstr ""
 "τα προθέματα για τα ονόματα στοιχείων και ιδιοτήτων όταν είναι "
 "ενεργοποιημένο το χαρακτηριστικό ``feature_namespaces`` (η προεπιλογή)."
 
-#: library/xml.sax.handler.rst:220
+#: library/xml.sax.handler.rst:228
 msgid ""
 "There are cases, however, when applications need to use prefixes in "
 "character data or in attribute values, where they cannot safely be expanded "
@@ -416,7 +429,7 @@ msgstr ""
 "meth:`endPrefixMapping` παρέχουν στις εφαρμογές τις πληροφορίες για να "
 "επεκτείνουν τα προθέματα σε αυτά τα συμφραζόμενα, εάν είναι απαραίτητο."
 
-#: library/xml.sax.handler.rst:228
+#: library/xml.sax.handler.rst:236
 msgid ""
 "Note that :meth:`startPrefixMapping` and :meth:`endPrefixMapping` events are "
 "not guaranteed to be properly nested relative to each-other: all :meth:"
@@ -432,11 +445,11 @@ msgstr ""
 "meth:`endPrefixMapping` θα συμβούν μετά το αντίστοιχο :meth:`endElement` "
 "γεγονός, αλλά η σειρά τους δεν είναι εγγυημένη."
 
-#: library/xml.sax.handler.rst:238
+#: library/xml.sax.handler.rst:246
 msgid "End the scope of a prefix-URI mapping."
 msgstr "Τέλος της έκτασης μιας χαρτογράφησης προθέματος-URI."
 
-#: library/xml.sax.handler.rst:240
+#: library/xml.sax.handler.rst:248
 msgid ""
 "See :meth:`startPrefixMapping` for details. This event will always occur "
 "after the corresponding :meth:`endElement` event, but the order of :meth:"
@@ -446,34 +459,34 @@ msgstr ""
 "πάντα μετά το αντίστοιχο γεγονός :meth:`endElement`, αλλά η σειρά των "
 "γεγονότων :meth:`endPrefixMapping` δεν είναι εγγυημένη."
 
-#: library/xml.sax.handler.rst:247
+#: library/xml.sax.handler.rst:255
 msgid "Signals the start of an element in non-namespace mode."
 msgstr "Σηματοδοτεί την αρχή ενός στοιχείου σε λειτουργία χωρίς ονόματα χώρου."
 
-#: library/xml.sax.handler.rst:249
+#: library/xml.sax.handler.rst:257
 msgid ""
 "The *name* parameter contains the raw XML 1.0 name of the element type as a "
-"string and the *attrs* parameter holds an object of the :class:`~xml.sax."
-"xmlreader.Attributes` interface (see :ref:`attributes-objects`) containing "
-"the attributes of the element.  The object passed as *attrs* may be re-used "
-"by the parser; holding on to a reference to it is not a reliable way to keep "
-"a copy of the attributes. To keep a copy of the attributes, use the :meth:"
-"`copy` method of the *attrs* object."
+"string and the *attrs* parameter holds an object of the :ref:`Attributes "
+"<attributes-objects>` interface containing the attributes of the element.  "
+"The object passed as *attrs* may be re-used by the parser; holding on to a "
+"reference to it is not a reliable way to keep a copy of the attributes. To "
+"keep a copy of the attributes, use the :meth:`copy` method of the *attrs* "
+"object."
 msgstr ""
 "Η παράμετρος *name* περιέχει το ακατέργαστο όνομα XML 1.0 του τύπου "
 "στοιχείου ως συμβολοσειρά και η παράμετρος *attrs* περιέχει ένα αντικείμενο "
-"της :class:`~xml.sax.xmlreader.Attributes` διεπαφής (βλ. :ref:`attributes-"
-"objects`) που περιέχει τις ιδιότητες του στοιχείου. Το αντικείμενο που "
-"περιέχεται στην παράμετρο *attrs* μπορεί να χρησιμοποιηθεί ξανά από τον "
-"αναλυτή. Η διατήρηση αναφοράς σε αυτό δεν είναι αξιόπιστος τρόπος για να "
-"διατηρήσετε αντίγραφο των ιδιοτήτων. Για να διατηρήσετε ένα αντίγραφο των "
-"ιδιοτήτων, χρησιμοποιήστε τη μέθοδο :meth:`copy` του αντικειμένου *attrs*."
+"της :ref:`Attributes <attributes-objects>` διεπαφής που περιέχει τις "
+"ιδιότητες του στοιχείου. Το αντικείμενο που περιέχεται στην παράμετρο "
+"*attrs* μπορεί να χρησιμοποιηθεί ξανά από τον αναλυτή∙ η διατήρηση αναφοράς "
+"σε αυτό δεν είναι αξιόπιστος τρόπος για να διατηρήσετε αντίγραφο των "
+"ιδιοτήτων. Για να διατηρήσετε ένα αντίγραφο των ιδιοτήτων, χρησιμοποιήστε τη "
+"μέθοδο :meth:`copy` του αντικειμένου *attrs*."
 
-#: library/xml.sax.handler.rst:261
+#: library/xml.sax.handler.rst:268
 msgid "Signals the end of an element in non-namespace mode."
 msgstr "Σηματοδοτεί το τέλος ενός στοιχείου σε λειτουργία χωρίς ονόματα χώρου."
 
-#: library/xml.sax.handler.rst:263
+#: library/xml.sax.handler.rst:270
 msgid ""
 "The *name* parameter contains the name of the element type, just as with "
 "the :meth:`startElement` event."
@@ -481,36 +494,35 @@ msgstr ""
 "Η παράμετρος *name* περιέχει το όνομα του τύπου στοιχείου, όπως και με το :"
 "meth:`startElement` γεγονός."
 
-#: library/xml.sax.handler.rst:269
+#: library/xml.sax.handler.rst:276
 msgid "Signals the start of an element in namespace mode."
 msgstr "Σηματοδοτεί την αρχή ενός στοιχείου σε λειτουργία ονομάτων χώρου."
 
-#: library/xml.sax.handler.rst:271
+#: library/xml.sax.handler.rst:278
 msgid ""
 "The *name* parameter contains the name of the element type as a ``(uri, "
 "localname)`` tuple, the *qname* parameter contains the raw XML 1.0 name used "
 "in the source document, and the *attrs* parameter holds an instance of the :"
-"class:`~xml.sax.xmlreader.AttributesNS` interface (see :ref:`attributes-ns-"
-"objects`) containing the attributes of the element.  If no namespace is "
-"associated with the element, the *uri* component of *name* will be "
-"``None``.  The object passed as *attrs* may be re-used by the parser; "
-"holding on to a reference to it is not a reliable way to keep a copy of the "
-"attributes.  To keep a copy of the attributes, use the :meth:`copy` method "
-"of the *attrs* object."
+"ref:`AttributesNS <attributes-ns-objects>` interface containing the "
+"attributes of the element.  If no namespace is associated with the element, "
+"the *uri* component of *name* will be ``None``.  The object passed as "
+"*attrs* may be re-used by the parser; holding on to a reference to it is not "
+"a reliable way to keep a copy of the attributes.  To keep a copy of the "
+"attributes, use the :meth:`copy` method of the *attrs* object."
 msgstr ""
 "Η παράμετρος *name* περιέχει το όνομα του τύπου στοιχείου ως ``(uri, "
 "localname)`` πλειάδα, η παράμετρος *qname* περιέχει το ακατέργαστο όνομα XML "
 "1.0 που χρησιμοποιείται στο έγγραφο προέλευσης, και η παράμετρος *attrs* "
-"περιέχει μια παρουσία της διεπαφής :class:`~xml.sax.xmlreader.AttributesNS` "
-"(βλ. :ref:`attributes-ns-objects`) που περιέχει τις ιδιότητες του στοιχείου. "
-"Εάν δεν συσχετίζεται κανένα όνομα χώρου με το στοιχείο, το *uri* συστατικό "
-"του *name* θα είναι ``None``. Το αντικείμενο που περιέχεται στην παράμετρο "
-"*attrs* μπορεί να χρησιμοποιηθεί ξανά από τον αναλυτή. Η διατήρηση αναφοράς "
-"σε αυτό δεν είναι αξιόπιστος τρόπος για να διατηρήσετε αντίγραφο των "
-"ιδιοτήτων. Για να διατηρήσετε ένα αντίγραφο των ιδιοτήτων, χρησιμοποιήστε τη "
-"μέθοδο :meth:`copy` του αντικειμένου *attrs*."
+"περιέχει μια παρουσία της διεπαφής :ref:`AttributesNS <attributes-ns-"
+"objects>` που περιέχει τις ιδιότητες του στοιχείου. Εάν δεν συσχετίζεται "
+"κανένα όνομα χώρου με το στοιχείο, το *uri* συστατικό του *name* θα είναι "
+"``None``. Το αντικείμενο που περιέχεται στην παράμετρο *attrs* μπορεί να "
+"χρησιμοποιηθεί ξανά από τον αναλυτή. Η διατήρηση αναφοράς σε αυτό δεν είναι "
+"αξιόπιστος τρόπος για να διατηρήσετε αντίγραφο των ιδιοτήτων. Για να "
+"διατηρήσετε ένα αντίγραφο των ιδιοτήτων, χρησιμοποιήστε τη μέθοδο :meth:"
+"`copy` του αντικειμένου *attrs*."
 
-#: library/xml.sax.handler.rst:282
+#: library/xml.sax.handler.rst:288
 msgid ""
 "Parsers may set the *qname* parameter to ``None``, unless the "
 "``feature_namespace_prefixes`` feature is activated."
@@ -518,11 +530,11 @@ msgstr ""
 "Οι αναλυτές μπορούν να ορίσουν την παράμετρο *qname* σε ``None``, εκτός εάν "
 "είναι ενεργοποιημένο το χαρακτηριστικό ``feature_namespace_prefixes``."
 
-#: library/xml.sax.handler.rst:288
+#: library/xml.sax.handler.rst:294
 msgid "Signals the end of an element in namespace mode."
 msgstr "Σηματοδοτεί το τέλος ενός στοιχείου σε λειτουργία ονομάτων χώρου."
 
-#: library/xml.sax.handler.rst:290
+#: library/xml.sax.handler.rst:296
 msgid ""
 "The *name* parameter contains the name of the element type, just as with "
 "the :meth:`startElementNS` method, likewise the *qname* parameter."
@@ -530,11 +542,11 @@ msgstr ""
 "Η παράμετρος *name* περιέχει το όνομα του τύπου στοιχείου, όπως και με τη :"
 "meth:`startElementNS` μέθοδο, όπως και η παράμετρος *qname*."
 
-#: library/xml.sax.handler.rst:296
+#: library/xml.sax.handler.rst:302
 msgid "Receive notification of character data."
 msgstr "Λήψη ειδοποίησης για δεδομένα χαρακτήρων."
 
-#: library/xml.sax.handler.rst:298
+#: library/xml.sax.handler.rst:304
 msgid ""
 "The Parser will call this method to report each chunk of character data. SAX "
 "parsers may return all contiguous character data in a single chunk, or they "
@@ -549,7 +561,7 @@ msgstr ""
 "πρέπει να προέρχονται από την ίδια εξωτερική οντότητα, έτσι ώστε ο "
 "Εντοπιστής να παρέχει χρήσιμες πληροφορίες."
 
-#: library/xml.sax.handler.rst:304
+#: library/xml.sax.handler.rst:310
 msgid ""
 "*content* may be a string or bytes instance; the ``expat`` reader module "
 "always produces strings."
@@ -557,7 +569,7 @@ msgstr ""
 "Το *content* μπορεί να είναι μια συμβολοσειρά ή ένα στιγμιότυπο bytes. Το "
 "αναγνωστικό ``expat`` παράγει πάντα συμβολοσειρές."
 
-#: library/xml.sax.handler.rst:309
+#: library/xml.sax.handler.rst:315
 msgid ""
 "The earlier SAX 1 interface provided by the Python XML Special Interest "
 "Group used a more Java-like interface for this method.  Since most parsers "
@@ -574,11 +586,11 @@ msgstr ""
 "κώδικα στη νέα διεπαφή, χρησιμοποιήστε *content* αντί να τεμαχίζετε το "
 "περιεχόμενο με τις παλιές παραμέτρους *offset* και *length*."
 
-#: library/xml.sax.handler.rst:318
+#: library/xml.sax.handler.rst:324
 msgid "Receive notification of ignorable whitespace in element content."
 msgstr "Λήψη ειδοποίησης για αγνοήσιμα κενά σε περιεχόμενο στοιχείου."
 
-#: library/xml.sax.handler.rst:320
+#: library/xml.sax.handler.rst:326
 msgid ""
 "Validating Parsers must use this method to report each chunk of ignorable "
 "whitespace (see the W3C XML 1.0 recommendation, section 2.10): non-"
@@ -591,7 +603,7 @@ msgstr ""
 "μέθοδο εάν είναι ικανοί να αναλύουν και να χρησιμοποιούν μοντέλα "
 "περιεχομένου."
 
-#: library/xml.sax.handler.rst:325
+#: library/xml.sax.handler.rst:331
 msgid ""
 "SAX parsers may return all contiguous whitespace in a single chunk, or they "
 "may split it into several chunks; however, all of the characters in any "
@@ -604,11 +616,11 @@ msgstr ""
 "ίδια εξωτερική οντότητα, έτσι ώστε ο Εντοπιστής να παρέχει χρήσιμες "
 "πληροφορίες."
 
-#: library/xml.sax.handler.rst:333
+#: library/xml.sax.handler.rst:339
 msgid "Receive notification of a processing instruction."
 msgstr "Λήψη ειδοποίησης για μια οδηγία επεξεργασίας."
 
-#: library/xml.sax.handler.rst:335
+#: library/xml.sax.handler.rst:341
 msgid ""
 "The Parser will invoke this method once for each processing instruction "
 "found: note that processing instructions may occur before or after the main "
@@ -618,7 +630,7 @@ msgstr ""
 "που βρέθηκε: σημειώστε ότι οι οδηγίες επεξεργασίας μπορεί να εμφανίζονται "
 "πριν ή μετά το κύριο στοιχείο του εγγράφου."
 
-#: library/xml.sax.handler.rst:339
+#: library/xml.sax.handler.rst:345
 msgid ""
 "A SAX parser should never report an XML declaration (XML 1.0, section 2.8) "
 "or a text declaration (XML 1.0, section 4.3.1) using this method."
@@ -627,11 +639,11 @@ msgstr ""
 "2.8) ή μια δήλωση κειμένου (XML  1.0, τμήμα 4.3.1) χρησιμοποιώντας αυτή τη "
 "μέθοδο."
 
-#: library/xml.sax.handler.rst:345
+#: library/xml.sax.handler.rst:351
 msgid "Receive notification of a skipped entity."
 msgstr "Λήψη ειδοποίησης για μια παράλειψη οντότητας."
 
-#: library/xml.sax.handler.rst:347
+#: library/xml.sax.handler.rst:353
 msgid ""
 "The Parser will invoke this method once for each entity skipped. Non-"
 "validating processors may skip entities if they have not seen the "
@@ -647,27 +659,27 @@ msgstr ""
 "οντότητες, ανάλογα με τις τιμές των ιδιοτήτων ``feature_external_ges`` και "
 "``feature_external_pes``."
 
-#: library/xml.sax.handler.rst:357
+#: library/xml.sax.handler.rst:363
 msgid "DTDHandler Objects"
 msgstr "DTDHandler Αντικείμενα"
 
-#: library/xml.sax.handler.rst:359
+#: library/xml.sax.handler.rst:365
 msgid ":class:`DTDHandler` instances provide the following methods:"
 msgstr "Τα :class:`DTDHandler` αντικείμενα παρέχουν τις ακόλουθες μεθόδους:"
 
-#: library/xml.sax.handler.rst:364
+#: library/xml.sax.handler.rst:370
 msgid "Handle a notation declaration event."
 msgstr "Χειρισμός ενός γεγονότος δήλωσης σημείωσης."
 
-#: library/xml.sax.handler.rst:369
+#: library/xml.sax.handler.rst:375
 msgid "Handle an unparsed entity declaration event."
 msgstr "Χειρισμός ενός γεγονότος δήλωσης μη αναλυμένης οντότητας."
 
-#: library/xml.sax.handler.rst:375
+#: library/xml.sax.handler.rst:381
 msgid "EntityResolver Objects"
 msgstr "EntityResolver Αντικείμενα"
 
-#: library/xml.sax.handler.rst:380
+#: library/xml.sax.handler.rst:386
 msgid ""
 "Resolve the system identifier of an entity and return either the system "
 "identifier to read from as a string, or an InputSource to read from. The "
@@ -677,11 +689,11 @@ msgstr ""
 "αναγνωριστικό συστήματος για ανάγνωση ως συμβολοσειρά, είτε μια InputSource "
 "για ανάγνωση. Η προεπιλεγμένη υλοποίηση επιστρέφει το *systemId*."
 
-#: library/xml.sax.handler.rst:388
+#: library/xml.sax.handler.rst:394
 msgid "ErrorHandler Objects"
 msgstr "ErrorHandler Αντικείμενα"
 
-#: library/xml.sax.handler.rst:390
+#: library/xml.sax.handler.rst:396
 msgid ""
 "Objects with this interface are used to receive error and warning "
 "information from the :class:`~xml.sax.xmlreader.XMLReader`.  If you create "
@@ -705,7 +717,7 @@ msgstr ""
 "μπορούν να μετατραπούν σε εξαίρεση κάνοντας raise το αντικείμενο της "
 "εξαίρεσης που περιέχεται."
 
-#: library/xml.sax.handler.rst:403
+#: library/xml.sax.handler.rst:409
 msgid ""
 "Called when the parser encounters a recoverable error.  If this method does "
 "not raise an exception, parsing may continue, but further document "
@@ -719,7 +731,7 @@ msgstr ""
 "Η επιτρεπόμενη συνέχιση του αναλυτή μπορεί να επιτρέψει την ανακάλυψη "
 "πρόσθετων σφαλμάτων στο έγγραφο εισόδου."
 
-#: library/xml.sax.handler.rst:411
+#: library/xml.sax.handler.rst:417
 msgid ""
 "Called when the parser encounters an error it cannot recover from; parsing "
 "is expected to terminate when this method returns."
@@ -728,7 +740,7 @@ msgstr ""
 "ανακάμψει. Η ανάλυση αναμένεται να τερματιστεί όταν αυτή η μέθοδος "
 "επιστρέψει."
 
-#: library/xml.sax.handler.rst:417
+#: library/xml.sax.handler.rst:423
 msgid ""
 "Called when the parser presents minor warning information to the "
 "application. Parsing is expected to continue when this method returns, and "
@@ -741,15 +753,15 @@ msgstr ""
 "Κάνοντας raise μια εξαίρεση σε αυτή τη μέθοδο, θα οδηγήσει στον τερματισμό "
 "της ανάλυσης."
 
-#: library/xml.sax.handler.rst:426
+#: library/xml.sax.handler.rst:432
 msgid "LexicalHandler Objects"
 msgstr "LexicalHandler Αντικείμενα"
 
-#: library/xml.sax.handler.rst:427
+#: library/xml.sax.handler.rst:433
 msgid "Optional SAX2 handler for lexical events."
 msgstr "Προαιρετικός χειριστής SAX2 για λεξικά γεγονότα."
 
-#: library/xml.sax.handler.rst:429
+#: library/xml.sax.handler.rst:435
 msgid ""
 "This handler is used to obtain lexical information about an XML document. "
 "Lexical information includes information describing the document encoding "
@@ -764,7 +776,7 @@ msgstr ""
 "DTD και για τυχόν τμήματα CDATA. Οι λεξικοί χειριστές χρησιμοποιούνται με "
 "τον ίδιο τρόπο όπως οι χειριστές περιεχομένου."
 
-#: library/xml.sax.handler.rst:435
+#: library/xml.sax.handler.rst:441
 msgid ""
 "Set the LexicalHandler of an XMLReader by using the setProperty method with "
 "the property identifier ``'http://xml.org/sax/properties/lexical-handler'``."
@@ -773,7 +785,7 @@ msgstr ""
 "setProperty με τον αναγνωριστικό ιδιότητας ``'http://xml.org/sax/properties/"
 "lexical-handler'``."
 
-#: library/xml.sax.handler.rst:442
+#: library/xml.sax.handler.rst:448
 msgid ""
 "Reports a comment anywhere in the document (including the DTD and outside "
 "the document element)."
@@ -781,22 +793,22 @@ msgstr ""
 "Αναφέρει ένα σχόλιο οπουδήποτε στο έγγραφο (συμπεριλαμβανομένου του DTD και "
 "εκτός του στοιχείου εγγράφου)."
 
-#: library/xml.sax.handler.rst:447
+#: library/xml.sax.handler.rst:453
 msgid ""
 "Reports the start of the DTD declarations if the document has an associated "
 "DTD."
 msgstr ""
 "Αναφέρει την αρχή των δηλώσεων DTD εάν το έγγραφο έχει συσχετισμένο DTD."
 
-#: library/xml.sax.handler.rst:452
+#: library/xml.sax.handler.rst:458
 msgid "Reports the end of DTD declaration."
 msgstr "Αναφέρει το τέλος της δήλωσης DTD."
 
-#: library/xml.sax.handler.rst:456
+#: library/xml.sax.handler.rst:462
 msgid "Reports the start of a CDATA marked section."
 msgstr "Αναφέρει την αρχή ενός τμήματος σημειωμένου ως CDATA."
 
-#: library/xml.sax.handler.rst:458
+#: library/xml.sax.handler.rst:464
 msgid ""
 "The contents of the CDATA marked section will be reported through the "
 "characters handler."
@@ -804,6 +816,6 @@ msgstr ""
 "Τα περιεχόμενα του τμήματος σημειωμένου ως CDATA θα αναφερθούν μέσω του "
 "χειριστή χαρακτήρων."
 
-#: library/xml.sax.handler.rst:463
+#: library/xml.sax.handler.rst:469
 msgid "Reports the end of a CDATA marked section."
 msgstr "Αναφέρει το τέλος ενός τμήματος σημειωμένου ως CDATA."

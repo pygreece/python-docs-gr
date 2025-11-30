@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2024-11-25 12:27+0200\n"
+"POT-Creation-Date: 2025-11-29 09:18+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Stelios Rotas <steliosrotas@yahoo.com> \n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el_GR\n"
@@ -353,34 +353,58 @@ msgstr ""
 msgid "``(e)``: Parentheses are used for grouping."
 msgstr "``(e)``: Οι παρενθέσεις χρησιμοποιούνται για ομαδοποίηση."
 
-#: reference/introduction.rst:148
+#: reference/introduction.rst:149
+msgid ""
+"The following notation is only used in :ref:`lexical definitions <notation-"
+"lexical-vs-syntactic>`."
+msgstr ""
+"Η ακόλουθη σημειογραφία χρησιμοποιείται μόνο σε :ref:`λεξιλογικούς ορισμούς "
+"<notation-lexical-vs-syntactic>`."
+
+#: reference/introduction.rst:152
 msgid ""
 "``\"a\"...\"z\"``: Two literal characters separated by three dots mean a "
 "choice of any single character in the given (inclusive) range of ASCII "
-"characters. This notation is only used in :ref:`lexical definitions "
-"<notation-lexical-vs-syntactic>`."
+"characters."
 msgstr ""
 "``\"a\"...\"z\"``: Δύο κυριολεκτικοί χαρακτήρες διαχωρισμένοι από τρεις "
 "τελείες σημαίνουν την επιλογή οποιουδήποτε μεμονωμένου χαρακτήρα στο "
-"δεδομένο (συμπεριλαμβανομένου) εύρος χαρακτήρων ASCII. Αυτή η σημειογραφία "
-"χρησιμοποιείται μόνο σε :ref:`lexical definitions <notation-lexical-vs-"
-"syntactic>`."
+"δεδομένο (συμπεριλαμβανομένου) εύρος χαρακτήρων ASCII."
 
-#: reference/introduction.rst:152
+#: reference/introduction.rst:154
 msgid ""
 "``<...>``: A phrase between angular brackets gives an informal description "
 "of the matched symbol (for example, ``<any ASCII character except \"\\"
 "\">``), or an abbreviation that is defined in nearby text (for example, "
-"``<Lu>``). This notation is only used in :ref:`lexical definitions <notation-"
-"lexical-vs-syntactic>`."
+"``<Lu>``)."
 msgstr ""
 "``<...>``: Μια φράση μέσα σε γωνιακές αγκύλες δίνει μια άτυπη περιγραφή του "
 "αντίστοιχου συμβόλου (για παράδειγμα ``<any ASCII character except \"\\"
 "\">``), ή μια συντομογραφία που ορίζεται σε κοντινό κείμενο (για παράδειγμα, "
-"``<Lu>``). Αυτή η σημειογραφία χρησιμοποιείται μόνο σε :ref:`lexical "
-"definitions <notation-lexical-vs-syntactic>`."
+"``<Lu>``)."
 
-#: reference/introduction.rst:158
+#: reference/introduction.rst:160
+msgid ""
+"Some definitions also use *lookaheads*, which indicate that an element must "
+"(or must not) match at a given position, but without consuming any input:"
+msgstr ""
+"Ορισμοί επίσης χρησιμοποιούν *lookaheads*, που υποδεικνύουν ότι ένα στοιχείο "
+"πρέπει (ή δεν πρέπει) να ταιριάζει σε μια δεδομένη θέση, αλλά χωρίς να "
+"καταναλώνει οποιαδήποτε είσοδο:"
+
+#: reference/introduction.rst:163
+msgid "``&e``: a positive lookahead (that is, ``e`` is required to match)"
+msgstr ""
+"``&e``: μια θετική προοπτική (δηλαδή, το ``e`` απαιτείται να ταιριάζει)"
+
+#: reference/introduction.rst:164
+msgid ""
+"``!e``: a negative lookahead (that is, ``e`` is required *not* to match)"
+msgstr ""
+"``!e``: μια αρνητική προοπτική (δηλαδή, το ``e`` απαιτείται *να μην* "
+"ταιριάζει)"
+
+#: reference/introduction.rst:166
 msgid ""
 "The unary operators (``*``, ``+``, ``?``) bind as tightly as possible; the "
 "vertical bar (``|``) binds most loosely."
@@ -388,11 +412,11 @@ msgstr ""
 "Οι μοναδιαίοι τελεστές (``*``, ``+``, ``?``) συνδέονται όσο το δυνατόν πιο "
 "σφιχτά∙ η κάθετη γραμμή (``|``) συνδέεται πιο χαλαρά."
 
-#: reference/introduction.rst:161
+#: reference/introduction.rst:169
 msgid "White space is only meaningful to separate tokens."
 msgstr "Το κενό έχει νόημα μόνο για τον διαχωρισμό των διακριτικών."
 
-#: reference/introduction.rst:163
+#: reference/introduction.rst:171
 msgid ""
 "Rules are normally contained on a single line, but rules that are too long "
 "may be wrapped:"
@@ -400,7 +424,7 @@ msgstr ""
 "Οι κανόνες συνήθως περιέχονται σε μία μόνο γραμμή, αλλά οι κανόνες που είναι "
 "πολύ μεγάλοι μπορούν να αναδιπλωθούν."
 
-#: reference/introduction.rst:172
+#: reference/introduction.rst:180
 msgid ""
 "Alternatively, rules may be formatted with the first line ending at the "
 "colon, and each alternative beginning with a vertical bar on a new line. For "
@@ -410,15 +434,15 @@ msgstr ""
 "τελειών στην άνω και κάτω τελεία και κάθε εναλλακτική να ξεκινά με μια "
 "κάθετη γραμμή σε μια νέα γραμμή. Για παράδειγμα:"
 
-#: reference/introduction.rst:187
+#: reference/introduction.rst:195
 msgid "This does *not* mean that there is an empty first alternative."
 msgstr "Αυτό *δεν* σημαίνει ότι υπάρχει μια κενή πρώτη εναλλακτική λύση."
 
-#: reference/introduction.rst:194
+#: reference/introduction.rst:202
 msgid "Lexical and Syntactic definitions"
 msgstr "Λεξικοί και Συντακτικοί ορισμοί"
 
-#: reference/introduction.rst:196
+#: reference/introduction.rst:204
 msgid ""
 "There is some difference between *lexical* and *syntactic* analysis: the :"
 "term:`lexical analyzer` operates on the individual characters of the input "
@@ -434,7 +458,7 @@ msgstr ""
 "σε ορισμένες περιπτώσεις το ακριβές όριο μεταξύ των δύο φάσεων είναι μια "
 "λεπτομέρεια υλοποίησης της CPython."
 
-#: reference/introduction.rst:203
+#: reference/introduction.rst:211
 msgid ""
 "The practical difference between the two is that in *lexical* definitions, "
 "all whitespace is significant. The lexical analyzer :ref:`discards "
@@ -448,7 +472,7 @@ msgstr ""
 "data:`~token.NEWLINE`. Οι *συντακτικοί* ορισμοί χρησιμοποιούν στη συνέχεια "
 "αυτά τα διακριτικά, αντί για τους χαρακτήρες προέλευσης."
 
-#: reference/introduction.rst:209
+#: reference/introduction.rst:217
 msgid ""
 "This documentation uses the same BNF grammar for both styles of definitions. "
 "All uses of BNF in the next chapter (:ref:`lexical`) are lexical "
@@ -475,7 +499,7 @@ msgstr "συντακτικό"
 msgid "notation"
 msgstr "σημειογραφία"
 
-#: reference/introduction.rst:189
+#: reference/introduction.rst:197
 msgid "lexical definitions"
 msgstr "λεξιλογικοί ορισμοί"
 

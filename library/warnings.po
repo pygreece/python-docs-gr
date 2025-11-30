@@ -8,7 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-10-08 23:29+0300\n"
+"POT-Creation-Date: 2025-11-29 09:18+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -200,26 +201,30 @@ msgid ":exc:`SyntaxWarning`"
 msgstr ":exc:`SyntaxWarning`"
 
 #: library/warnings.rst:82
-msgid "Base category for warnings about dubious syntactic features."
+msgid ""
+"Base category for warnings about dubious syntactic features (typically "
+"emitted when compiling Python source code, and hence may not be suppressed "
+"by runtime filters)"
 msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις σχετικά με αμφίβολες συντακτικές "
-"λειτουργίες."
+"λειτουργίες (συνήθως εκδίδονται κατά τη μεταγλώττιση κώδικα πηγής Python και "
+"επομένως δεν μπορούν να κατασταλούν από τα φίλτρα χρόνου εκτέλεσης)"
 
-#: library/warnings.rst:85
+#: library/warnings.rst:87
 msgid ":exc:`RuntimeWarning`"
 msgstr ":exc:`RuntimeWarning`"
 
-#: library/warnings.rst:85
+#: library/warnings.rst:87
 msgid "Base category for warnings about dubious runtime features."
 msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις σχετικά με αμφίβολες λειτουργίες χρόνου "
 "εκτέλεσης."
 
-#: library/warnings.rst:88
+#: library/warnings.rst:90
 msgid ":exc:`FutureWarning`"
 msgstr ":exc:`FutureWarning`"
 
-#: library/warnings.rst:88
+#: library/warnings.rst:90
 msgid ""
 "Base category for warnings about deprecated features when those warnings are "
 "intended for end users of applications that are written in Python."
@@ -228,11 +233,11 @@ msgstr ""
 "όταν αυτές οι προειδοποιήσεις προορίζονται για τελικούς χρήστες εφαρμογών "
 "που είναι γραμμένες σε Python."
 
-#: library/warnings.rst:93
+#: library/warnings.rst:95
 msgid ":exc:`PendingDeprecationWarning`"
 msgstr ":exc:`PendingDeprecationWarning`"
 
-#: library/warnings.rst:93
+#: library/warnings.rst:95
 msgid ""
 "Base category for warnings about features that will be deprecated in the "
 "future (ignored by default)."
@@ -240,11 +245,11 @@ msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις σχετικά με λειτουργίες που θα "
 "απαρχαιωθούν στο μέλλον (αγνοούνται από προεπιλογή)."
 
-#: library/warnings.rst:97
+#: library/warnings.rst:99
 msgid ":exc:`ImportWarning`"
 msgstr ":exc:`ImportWarning`"
 
-#: library/warnings.rst:97
+#: library/warnings.rst:99
 msgid ""
 "Base category for warnings triggered during the process of importing a "
 "module (ignored by default)."
@@ -252,37 +257,37 @@ msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις που ενεργοποιούνται κατά τη διαδικασία "
 "εισαγωγής ενός module (αγνοούνται από προεπιλογή)."
 
-#: library/warnings.rst:101
+#: library/warnings.rst:103
 msgid ":exc:`UnicodeWarning`"
 msgstr ":exc:`UnicodeWarning`"
 
-#: library/warnings.rst:101
+#: library/warnings.rst:103
 msgid "Base category for warnings related to Unicode."
 msgstr "Βασική κατηγορία για προειδοποιήσεις που σχετίζονται με το Unicode."
 
-#: library/warnings.rst:104
+#: library/warnings.rst:106
 msgid ":exc:`BytesWarning`"
 msgstr ":exc:`BytesWarning`"
 
-#: library/warnings.rst:104
+#: library/warnings.rst:106
 msgid ""
 "Base category for warnings related to :class:`bytes` and :class:`bytearray`."
 msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις που σχετίζονται με :class:`bytes` και :"
 "class:`bytearray`."
 
-#: library/warnings.rst:107
+#: library/warnings.rst:109
 msgid ":exc:`ResourceWarning`"
 msgstr ":exc:`ResourceWarning`"
 
-#: library/warnings.rst:107
+#: library/warnings.rst:109
 msgid ""
 "Base category for warnings related to resource usage (ignored by default)."
 msgstr ""
 "Βασική κατηγορία για προειδοποιήσεις που σχετίζονται με τη χρήση πόρων "
 "(αγνοούνται από προεπιλογή)."
 
-#: library/warnings.rst:111
+#: library/warnings.rst:113
 msgid ""
 "Previously :exc:`DeprecationWarning` and :exc:`FutureWarning` were "
 "distinguished based on whether a feature was being removed entirely or "
@@ -295,11 +300,11 @@ msgstr ""
 "και τον τρόπο με τον οποίο χειρίζονται τα προεπιλεγμένα φίλτρα "
 "προειδοποιήσεων."
 
-#: library/warnings.rst:122
+#: library/warnings.rst:124
 msgid "The Warnings Filter"
 msgstr "Το Φίλτρο Προειδοποιήσεων"
 
-#: library/warnings.rst:124
+#: library/warnings.rst:126
 msgid ""
 "The warnings filter controls whether warnings are ignored, displayed, or "
 "turned into errors (raising an exception)."
@@ -307,7 +312,7 @@ msgstr ""
 "Το φίλτρο προειδοποιήσεων ελέγχει αν οι προειδοποιήσεις αγνοούνται, "
 "εμφανίζονται ή μετατρέπονται σε σφάλματα (προκαλώντας εξαίρεση)."
 
-#: library/warnings.rst:127
+#: library/warnings.rst:129
 msgid ""
 "Conceptually, the warnings filter maintains an ordered list of filter "
 "specifications; any specific warning is matched against each filter "
@@ -322,23 +327,23 @@ msgstr ""
 "καταχώριση είναι μια πλειάδα της μορφής (*action*, *message*, *category*, "
 "*module*, *lineno*), όπου:"
 
-#: library/warnings.rst:133
+#: library/warnings.rst:135
 msgid "*action* is one of the following strings:"
 msgstr "*action* είναι μία από τις ακόλουθες συμβολοσειρές:"
 
-#: library/warnings.rst:136
+#: library/warnings.rst:138
 msgid "Value"
 msgstr "Τιμή"
 
-#: library/warnings.rst:136
+#: library/warnings.rst:138
 msgid "Disposition"
 msgstr "Διάθεση"
 
-#: library/warnings.rst:138
+#: library/warnings.rst:140
 msgid "``\"default\"``"
 msgstr "``\"default\"``"
 
-#: library/warnings.rst:138
+#: library/warnings.rst:140
 msgid ""
 "print the first occurrence of matching warnings for each location (module + "
 "line number) where the warning is issued"
@@ -346,43 +351,43 @@ msgstr ""
 "εκτυπώνει την πρώτη εμφάνιση των ταιριασμένων προειδοποιήσεων για κάθε "
 "τοποθεσία (module + αριθμός γραμμής) όπου εκδίδεται η προειδοποίηση"
 
-#: library/warnings.rst:142
+#: library/warnings.rst:144
 msgid "``\"error\"``"
 msgstr "``\"error\"``"
 
-#: library/warnings.rst:142
+#: library/warnings.rst:144
 msgid "turn matching warnings into exceptions"
 msgstr "μετατρέπει τις ταιριασμένες προειδοποιήσεις σε εξαιρέσεις"
 
-#: library/warnings.rst:144
+#: library/warnings.rst:146
 msgid "``\"ignore\"``"
 msgstr "``\"ignore\"``"
 
-#: library/warnings.rst:144
+#: library/warnings.rst:146
 msgid "never print matching warnings"
 msgstr "ποτέ δεν εκτυπώνει τις ταιριασμένες προειδοποιήσεις"
 
-#: library/warnings.rst:146
+#: library/warnings.rst:148
 msgid "``\"always\"``"
 msgstr "``\"always\"``"
 
-#: library/warnings.rst:146
+#: library/warnings.rst:148
 msgid "always print matching warnings"
 msgstr "πάντα εκτυπώνει τις ταιριασμένες προειδοποιήσεις"
 
-#: library/warnings.rst:148
+#: library/warnings.rst:150
 msgid "``\"all\"``"
 msgstr "``\"all\"``"
 
-#: library/warnings.rst:148
+#: library/warnings.rst:150
 msgid "alias to \"always\""
 msgstr "ψευδώνυμο για το \"always\""
 
-#: library/warnings.rst:150
+#: library/warnings.rst:152
 msgid "``\"module\"``"
 msgstr "``\"module\"``"
 
-#: library/warnings.rst:150
+#: library/warnings.rst:152
 msgid ""
 "print the first occurrence of matching warnings for each module where the "
 "warning is issued (regardless of line number)"
@@ -390,18 +395,18 @@ msgstr ""
 "εκτυπώνει την πρώτη εμφάνιση των ταιριασμένων προειδοποιήσεων για κάθε "
 "module όπου εκδίδεται η προειδοποίηση (ανεξάρτητα από τον αριθμό γραμμής)"
 
-#: library/warnings.rst:154
+#: library/warnings.rst:156
 msgid "``\"once\"``"
 msgstr "``\"once\"``"
 
-#: library/warnings.rst:154
+#: library/warnings.rst:156
 msgid ""
 "print only the first occurrence of matching warnings, regardless of location"
 msgstr ""
 "εκτυπώνει μόνο την πρώτη εμφάνιση των ταιριασμένων προειδοποιήσεων, "
 "ανεξάρτητα από την τοποθεσία"
 
-#: library/warnings.rst:158
+#: library/warnings.rst:160
 msgid ""
 "*message* is a string containing a regular expression that the start of the "
 "warning message must match, case-insensitively.  In :option:`-W` and :envvar:"
@@ -417,7 +422,7 @@ msgstr ""
 "πεζά ή κεφαλαία), αγνοώντας οποιοδήποτε κενό στην αρχή ή στο τέλος του "
 "*message*."
 
-#: library/warnings.rst:164
+#: library/warnings.rst:166
 msgid ""
 "*category* is a class (a subclass of :exc:`Warning`) of which the warning "
 "category must be a subclass in order to match."
@@ -425,7 +430,7 @@ msgstr ""
 "Το *category* είναι μια κλάση (μια υποκλάση της :exc:`Warning`) της οποίας η "
 "κατηγορία προειδοποίησης πρέπει να είναι υποκλάση για να ταιριάζει."
 
-#: library/warnings.rst:167
+#: library/warnings.rst:169
 msgid ""
 "*module* is a string containing a regular expression that the start of the "
 "fully qualified module name must match, case-sensitively.  In :option:`-W` "
@@ -441,7 +446,7 @@ msgstr ""
 "πεζών-κεφαλαίων), αγνοώντας οποιοδήποτε κενό στην αρχή ή στο τέλος του "
 "*module*."
 
-#: library/warnings.rst:173
+#: library/warnings.rst:175
 msgid ""
 "*lineno* is an integer that the line number where the warning occurred must "
 "match, or ``0`` to match all line numbers."
@@ -450,7 +455,7 @@ msgstr ""
 "αριθμός γραμμής όπου συνέβη η προειδοποίηση, ή ``0`` για να ταιριάζουν όλοι "
 "οι αριθμοί γραμμών."
 
-#: library/warnings.rst:176
+#: library/warnings.rst:178
 msgid ""
 "Since the :exc:`Warning` class is derived from the built-in :exc:`Exception` "
 "class, to turn a warning into an error we simply raise ``category(message)``."
@@ -459,7 +464,7 @@ msgstr ""
 "exc:`Exception`, για να μετατρέψουμε μια προειδοποίηση σε σφάλμα απλώς "
 "προκαλούμε ``category(message)``."
 
-#: library/warnings.rst:179
+#: library/warnings.rst:181
 msgid ""
 "If a warning is reported and doesn't match any registered filter then the "
 "\"default\" action is applied (hence its name)."
@@ -467,11 +472,11 @@ msgstr ""
 "Εάν αναφερθεί μια προειδοποίηση και δεν ταιριάζει με κανένα καταχωρημένο "
 "φίλτρο, τότε εφαρμόζεται η ενέργεια \"default\" (εξ ου και το όνομά της)."
 
-#: library/warnings.rst:187
+#: library/warnings.rst:189
 msgid "Repeated Warning Suppression Criteria"
 msgstr "Κριτήρια Καταστολής Επαναλαμβανόμενων Προειδοποιήσεων"
 
-#: library/warnings.rst:189
+#: library/warnings.rst:191
 msgid ""
 "The filters that suppress repeated warnings apply the following criteria to "
 "determine if a warning is considered a repeat:"
@@ -480,7 +485,7 @@ msgstr ""
 "τα ακόλουθα κριτήρια για να προσδιορίσουν αν μια προειδοποίηση θεωρείται "
 "επανάληψη:"
 
-#: library/warnings.rst:191
+#: library/warnings.rst:193
 msgid ""
 "``\"default\"``: A warning is considered a repeat only if the (*message*, "
 "*category*, *module*, *lineno*) are all the same."
@@ -488,7 +493,7 @@ msgstr ""
 "``\"default\"``: Μια προειδοποίηση θεωρείται επανάληψη μόνο αν τα "
 "(*message*, *category*, *module*, *lineno*) είναι όλα τα ίδια."
 
-#: library/warnings.rst:192
+#: library/warnings.rst:194
 msgid ""
 "``\"module\"``: A warning is considered a repeat if the (*message*, "
 "*category*, *module*) are the same, ignoring the line number."
@@ -496,7 +501,7 @@ msgstr ""
 "``\"module\"``: Μια προειδοποίηση θεωρείται επανάληψη αν τα (*message*, "
 "*category*, *module*) είναι τα ίδια, αγνοώντας τον αριθμό γραμμής."
 
-#: library/warnings.rst:193
+#: library/warnings.rst:195
 msgid ""
 "``\"once\"``: A warning is considered a repeat if the (*message*, "
 "*category*) are the same, ignoring the module and line number."
@@ -504,11 +509,11 @@ msgstr ""
 "``\"once\"``: Μια προειδοποίηση θεωρείται επανάληψη αν τα (*message*, "
 "*category*) είναι τα ίδια, αγνοώντας το module και τον αριθμό γραμμής."
 
-#: library/warnings.rst:199
+#: library/warnings.rst:201
 msgid "Describing Warning Filters"
 msgstr "Περιγραφή Φίλτρων Προειδοποιήσεων"
 
-#: library/warnings.rst:201
+#: library/warnings.rst:203
 msgid ""
 "The warnings filter is initialized by :option:`-W` options passed to the "
 "Python interpreter command line and the :envvar:`PYTHONWARNINGS` environment "
@@ -525,7 +530,7 @@ msgstr ""
 "πρώτη φορά (οι μη έγκυρες επιλογές αγνοούνται, αφού εκτυπώσουν ένα μήνυμα "
 "στο :data:`sys.stderr`)."
 
-#: library/warnings.rst:208
+#: library/warnings.rst:210
 msgid ""
 "Individual warnings filters are specified as a sequence of fields separated "
 "by colons::"
@@ -533,11 +538,11 @@ msgstr ""
 "Τα μεμονωμένα φίλτρα προειδοποιήσεων καθορίζονται ως ακολουθία πεδίων "
 "διαχωρισμένων με άνω και κάτω τελεία::"
 
-#: library/warnings.rst:211
+#: library/warnings.rst:213
 msgid "action:message:category:module:line"
 msgstr "action:message:category:module:line"
 
-#: library/warnings.rst:213
+#: library/warnings.rst:215
 msgid ""
 "The meaning of each of these fields is as described in :ref:`warning-"
 "filter`. When listing multiple filters on a single line (as for :envvar:"
@@ -554,7 +559,7 @@ msgstr ""
 "και τα πιο πρόσφατα εφαρμοσμένα φίλτρα έχουν προτεραιότητα έναντι των "
 "προηγούμενων)."
 
-#: library/warnings.rst:220
+#: library/warnings.rst:222
 msgid ""
 "Commonly used warning filters apply to either all warnings, warnings in a "
 "particular category, or warnings raised by particular modules or packages. "
@@ -565,7 +570,7 @@ msgstr ""
 "προειδοποιήσεις που προκαλούνται από συγκεκριμένα modules ή πακέτα. Μερικά "
 "παραδείγματα::"
 
-#: library/warnings.rst:224
+#: library/warnings.rst:226
 msgid ""
 "default                      # Show all warnings (even those ignored by "
 "default)\n"
@@ -590,11 +595,11 @@ msgstr ""
 "error:::mymodule             # Μετατροπή προειδοποιήσεων σε σφάλματα στο "
 "\"mymodule\""
 
-#: library/warnings.rst:236
+#: library/warnings.rst:238
 msgid "Default Warning Filter"
 msgstr "Προεπιλεγμένο φίλτρο προειδοποιήσεων"
 
-#: library/warnings.rst:238
+#: library/warnings.rst:240
 msgid ""
 "By default, Python installs several warning filters, which can be overridden "
 "by the :option:`-W` command-line option, the :envvar:`PYTHONWARNINGS` "
@@ -605,7 +610,7 @@ msgstr ""
 "μεταβλητή περιβάλλοντος :envvar:`PYTHONWARNINGS` και κλήσεις στη :func:"
 "`filterwarnings`."
 
-#: library/warnings.rst:242
+#: library/warnings.rst:244
 msgid ""
 "In regular release builds, the default warning filter has the following "
 "entries (in order of precedence)::"
@@ -613,7 +618,7 @@ msgstr ""
 "Σε κανονικές εκδόσεις, το προεπιλεγμένο φίλτρο προειδοποιήσεων έχει τις "
 "ακόλουθες καταχωρήσεις (με σειρά προτεραιότητας)::"
 
-#: library/warnings.rst:245
+#: library/warnings.rst:247
 msgid ""
 "default::DeprecationWarning:__main__\n"
 "ignore::DeprecationWarning\n"
@@ -627,7 +632,7 @@ msgstr ""
 "ignore::ImportWarning\n"
 "ignore::ResourceWarning"
 
-#: library/warnings.rst:251
+#: library/warnings.rst:253
 msgid ""
 "In a :ref:`debug build <debug-build>`, the list of default warning filters "
 "is empty."
@@ -635,7 +640,7 @@ msgstr ""
 "Σε μια :ref:`debug build <debug-build>`, η λίστα των προεπιλεγμένων φίλτρων "
 "προειδοποιήσεων είναι κενή."
 
-#: library/warnings.rst:253
+#: library/warnings.rst:255
 msgid ""
 ":exc:`DeprecationWarning` is now ignored by default in addition to :exc:"
 "`PendingDeprecationWarning`."
@@ -643,7 +648,7 @@ msgstr ""
 ":exc:`DeprecationWarning` αγνοείται πλέον από προεπιλογή επιπλέον της :exc:"
 "`PendingDeprecationWarning`."
 
-#: library/warnings.rst:257
+#: library/warnings.rst:259
 msgid ""
 ":exc:`DeprecationWarning` is once again shown by default when triggered "
 "directly by code in ``__main__``."
@@ -651,7 +656,7 @@ msgstr ""
 ":exc:`DeprecationWarning` εμφανίζεται ξανά από προεπιλογή όταν "
 "ενεργοποιείται άμεσα από κώδικα στο ``__main__``."
 
-#: library/warnings.rst:261
+#: library/warnings.rst:263
 msgid ""
 ":exc:`BytesWarning` no longer appears in the default filter list and is "
 "instead configured via :data:`sys.warnoptions` when :option:`-b` is "
@@ -661,11 +666,11 @@ msgstr ""
 "και αντ' αυτού διαμορφώνεται μέσω :data:`sys.warnoptions` όταν :option:`-b` "
 "καθορίζεται δύο φορές."
 
-#: library/warnings.rst:270
+#: library/warnings.rst:272
 msgid "Overriding the default filter"
 msgstr "Αντικατάσταση του προεπιλεγμένου φίλτρου"
 
-#: library/warnings.rst:272
+#: library/warnings.rst:274
 msgid ""
 "Developers of applications written in Python may wish to hide *all* Python "
 "level warnings from their users by default, and only display them when "
@@ -682,7 +687,7 @@ msgstr ""
 "να χρησιμοποιηθεί ως δείκτης για να υποδείξει αν οι προειδοποιήσεις πρέπει "
 "να απενεργοποιηθούν ή όχι::"
 
-#: library/warnings.rst:278
+#: library/warnings.rst:280
 msgid ""
 "import sys\n"
 "\n"
@@ -696,7 +701,7 @@ msgstr ""
 "    import warnings\n"
 "    warnings.simplefilter(\"ignore\")"
 
-#: library/warnings.rst:284
+#: library/warnings.rst:286
 msgid ""
 "Developers of test runners for Python code are advised to instead ensure "
 "that *all* warnings are displayed by default for the code under test, using "
@@ -706,7 +711,7 @@ msgstr ""
 "να διασφαλίζουν αντ' αυτού ότι *όλες* οι προειδοποιήσεις εμφανίζονται από "
 "προεπιλογή για τον κώδικα υπό δοκιμή, χρησιμοποιώντας κώδικα όπως::"
 
-#: library/warnings.rst:288
+#: library/warnings.rst:290
 msgid ""
 "import sys\n"
 "\n"
@@ -724,7 +729,7 @@ msgstr ""
 "    os.environ[\"PYTHONWARNINGS\"] = \"default\" # Επηρεάζει επίσης τις "
 "υποδιαδικασίες"
 
-#: library/warnings.rst:295
+#: library/warnings.rst:297
 msgid ""
 "Finally, developers of interactive shells that run user code in a namespace "
 "other than ``__main__`` are advised to ensure that :exc:`DeprecationWarning` "
@@ -737,7 +742,7 @@ msgstr ""
 "χρησιμοποιώντας κώδικα όπως ο παρακάτω (όπου το ``user_ns`` είναι το module "
 "που χρησιμοποιείται για την εκτέλεση κώδικα που εισάγεται διαδραστικά)::"
 
-#: library/warnings.rst:300
+#: library/warnings.rst:302
 msgid ""
 "import warnings\n"
 "warnings.filterwarnings(\"default\", category=DeprecationWarning,\n"
@@ -747,11 +752,11 @@ msgstr ""
 "warnings.filterwarnings(\"default\", category=DeprecationWarning,\n"
 "                                   module=user_ns.get(\"__name__\"))"
 
-#: library/warnings.rst:308
+#: library/warnings.rst:310
 msgid "Temporarily Suppressing Warnings"
 msgstr "Προσωρινή Καταστολή Προειδοποιήσεων"
 
-#: library/warnings.rst:310
+#: library/warnings.rst:312
 msgid ""
 "If you are using code that you know will raise a warning, such as a "
 "deprecated function, but do not want to see the warning (even when warnings "
@@ -764,7 +769,7 @@ msgstr ""
 "εντολών), τότε είναι δυνατό να καταστείλετε την προειδοποίηση "
 "χρησιμοποιώντας τον :class:`catch_warnings` context manager::"
 
-#: library/warnings.rst:315
+#: library/warnings.rst:317
 msgid ""
 "import warnings\n"
 "\n"
@@ -784,7 +789,7 @@ msgstr ""
 "    warnings.simplefilter(\"ignore\")\n"
 "    fxn()"
 
-#: library/warnings.rst:324
+#: library/warnings.rst:326
 msgid ""
 "While within the context manager all warnings will simply be ignored. This "
 "allows you to use known-deprecated code without having to see the warning "
@@ -797,7 +802,7 @@ msgstr ""
 "προειδοποίηση για άλλο κώδικα που μπορεί να μην είναι ενήμερος για τη χρήση "
 "απαρχαιωμένου κώδικα."
 
-#: library/warnings.rst:373 library/warnings.rst:623
+#: library/warnings.rst:375 library/warnings.rst:632
 msgid ""
 "See :ref:`warning-concurrent-safe` for details on the concurrency-safety of "
 "the :class:`catch_warnings` context manager when used in programs using "
@@ -808,11 +813,11 @@ msgstr ""
 "όταν χρησιμοποιείται σε προγράμματα που χρησιμοποιούν πολλαπλές νηματοειδείς "
 "διαδικασίες ή ασύγχρονες λειτουργίες."
 
-#: library/warnings.rst:338
+#: library/warnings.rst:340
 msgid "Testing Warnings"
 msgstr "Δοκιμή Προειδοποιήσεων"
 
-#: library/warnings.rst:340
+#: library/warnings.rst:342
 msgid ""
 "To test warnings raised by code, use the :class:`catch_warnings` context "
 "manager. With it you can temporarily mutate the warnings filter to "
@@ -825,7 +830,7 @@ msgstr ""
 "διευκολύνετε τις δοκιμές σας. Για παράδειγμα, κάντε το ακόλουθο για να "
 "καταγράψετε όλες τις προειδοποιήσεις που έχουν προκληθεί για έλεγχο::"
 
-#: library/warnings.rst:345
+#: library/warnings.rst:347
 msgid ""
 "import warnings\n"
 "\n"
@@ -857,7 +862,7 @@ msgstr ""
 "    assert issubclass(w[-1].category, DeprecationWarning)\n"
 "    assert \"deprecated\" in str(w[-1].message)"
 
-#: library/warnings.rst:360
+#: library/warnings.rst:362
 msgid ""
 "One can also cause all warnings to be exceptions by using ``error`` instead "
 "of ``always``. One thing to be aware of is that if a warning has already "
@@ -872,7 +877,7 @@ msgstr ""
 "οριστεί, η προειδοποίηση δεν θα εμφανιστεί ξανά εκτός εάν έχει καθαριστεί το "
 "μητρώο προειδοποιήσεων που σχετίζεται με την προειδοποίηση."
 
-#: library/warnings.rst:366
+#: library/warnings.rst:368
 msgid ""
 "Once the context manager exits, the warnings filter is restored to its state "
 "when the context was entered. This prevents tests from changing the warnings "
@@ -885,7 +890,7 @@ msgstr ""
 "τρόπους μεταξύ των δοκιμών και να οδηγούν σε απροσδιόριστα αποτελέσματα "
 "δοκιμών."
 
-#: library/warnings.rst:377
+#: library/warnings.rst:379
 msgid ""
 "When testing multiple operations that raise the same kind of warning, it is "
 "important to test them in a manner that confirms each operation is raising a "
@@ -903,11 +908,11 @@ msgstr ""
 "διαγράψτε τις προηγούμενες καταχωρίσεις από τη λίστα προειδοποιήσεων πριν "
 "από κάθε νέα λειτουργία)."
 
-#: library/warnings.rst:388
+#: library/warnings.rst:390
 msgid "Updating Code For New Versions of Dependencies"
 msgstr "Ενημέρωση κώδικα για νέες εκδόσεις εξαρτήσεων"
 
-#: library/warnings.rst:390
+#: library/warnings.rst:392
 msgid ""
 "Warning categories that are primarily of interest to Python developers "
 "(rather than end users of applications written in Python) are ignored by "
@@ -917,7 +922,7 @@ msgstr ""
 "Python (αντί για τους τελικούς χρήστες εφαρμογών γραμμένων σε Python) "
 "αγνοούνται από προεπιλογή."
 
-#: library/warnings.rst:393
+#: library/warnings.rst:395
 msgid ""
 "Notably, this \"ignored by default\" list includes :exc:`DeprecationWarning` "
 "(for every module except ``__main__``), which means developers should make "
@@ -932,7 +937,7 @@ msgstr ""
 "προκειμένου να λαμβάνουν έγκαιρες ειδοποιήσεις για μελλοντικές αλλαγές που "
 "σπάνε το API (είτε στην τυπική βιβλιοθήκη είτε σε πακέτα τρίτων)."
 
-#: library/warnings.rst:399
+#: library/warnings.rst:401
 msgid ""
 "In the ideal case, the code will have a suitable test suite, and the test "
 "runner will take care of implicitly enabling all warnings when running tests "
@@ -943,7 +948,7 @@ msgstr ""
 "προειδοποιήσεις αυτοματοποιημένα κατά την εκτέλεση δοκιμών (το εργαλείο "
 "εκτέλεσης δοκιμών που παρέχεται από το module :mod:`unittest` το κάνει αυτό)."
 
-#: library/warnings.rst:403
+#: library/warnings.rst:405
 msgid ""
 "In less ideal cases, applications can be checked for use of deprecated "
 "interfaces by passing :option:`-Wd <-W>` to the Python interpreter (this is "
@@ -965,11 +970,11 @@ msgstr ""
 "σημαία :option:`-W` για περισσότερες λεπτομέρειες σχετικά με το τι είναι "
 "δυνατό."
 
-#: library/warnings.rst:416
+#: library/warnings.rst:418
 msgid "Available Functions"
 msgstr "Διαθέσιμες λειτουργίες"
 
-#: library/warnings.rst:421
+#: library/warnings.rst:423
 msgid ""
 "Issue a warning, or maybe ignore it or raise an exception.  The *category* "
 "argument, if given, must be a :ref:`warning category class <warning-"
@@ -992,7 +997,7 @@ msgstr ""
 "filter <warning-filter>`. Το *stacklevel* επιχείρημα μπορεί να "
 "χρησιμοποιηθεί από wrapper functions γραμμένες σε Python, όπως αυτό::"
 
-#: library/warnings.rst:430
+#: library/warnings.rst:432
 msgid ""
 "def deprecated_api(message):\n"
 "    warnings.warn(message, DeprecationWarning, stacklevel=2)"
@@ -1000,7 +1005,7 @@ msgstr ""
 "def deprecated_api(message):\n"
 "    warnings.warn(message, DeprecationWarning, stacklevel=2)"
 
-#: library/warnings.rst:433
+#: library/warnings.rst:435
 msgid ""
 "This makes the warning refer to ``deprecated_api``'s caller, rather than to "
 "the source of ``deprecated_api`` itself (since the latter would defeat the "
@@ -1011,7 +1016,7 @@ msgstr ""
 "(δεδομένου ότι το δεύτερο θα αναιρούσε τον σκοπό του μηνύματος "
 "προειδοποίησης)."
 
-#: library/warnings.rst:437
+#: library/warnings.rst:439
 msgid ""
 "The *skip_file_prefixes* keyword argument can be used to indicate which "
 "stack frames are ignored when counting stack levels. This can be useful when "
@@ -1033,7 +1038,7 @@ msgstr ""
 "την απόδοση μιας προειδοποίησης στον καλούντα από εκτός του τρέχοντος "
 "πακέτου, μπορείτε να γράψετε::"
 
-#: library/warnings.rst:446
+#: library/warnings.rst:448
 msgid ""
 "# example/lower.py\n"
 "_warn_skips = (os.path.dirname(__file__),)\n"
@@ -1063,17 +1068,17 @@ msgstr ""
 "def another_way(**kw):\n"
 "    lower.one_way(**kw)"
 
-#: library/warnings.rst:460
+#: library/warnings.rst:462
 msgid ""
 "This makes the warning refer to both the ``example.lower.one_way()`` and "
-"``package.higher.another_way()`` call sites only from calling code living "
+"``example.higher.another_way()`` call sites only from calling code living "
 "outside of ``example`` package."
 msgstr ""
 "Αυτό κάνει την προειδοποίηση να αναφέρεται τόσο στα σημεία κλήσης της "
 "``example.lower.one_way()`` όσο και της ``package.higher.another_way()`` "
-"μόνο από τον καλούντα κώδικα που ζει εκτός του πακέτου ``example``."
+"μόνο από κώδικα κλήσης που ζει εκτός του πακέτου ``example``."
 
-#: library/warnings.rst:490
+#: library/warnings.rst:499
 msgid ""
 "*source*, if supplied, is the destroyed object which emitted a :exc:"
 "`ResourceWarning`."
@@ -1081,36 +1086,50 @@ msgstr ""
 "*source*, αν παρέχεται, είναι το καταστραμμένο αντικείμενο που εξέπεμψε μια :"
 "exc:`ResourceWarning`."
 
-#: library/warnings.rst:467
+#: library/warnings.rst:469
 msgid "Added *source* parameter."
 msgstr "Προστέθηκε η παράμετρος *source*."
 
-#: library/warnings.rst:470
+#: library/warnings.rst:472
 msgid "Added *skip_file_prefixes*."
 msgstr "Προστέθηκε το *skip_file_prefixes*."
 
-#: library/warnings.rst:476
+#: library/warnings.rst:478
 msgid ""
 "This is a low-level interface to the functionality of :func:`warn`, passing "
 "in explicitly the message, category, filename and line number, and "
-"optionally the module name and the registry (which should be the "
-"``__warningregistry__`` dictionary of the module).  The module name defaults "
-"to the filename with ``.py`` stripped; if no registry is passed, the warning "
-"is never suppressed. *message* must be a string and *category* a subclass "
-"of :exc:`Warning` or *message* may be a :exc:`Warning` instance, in which "
-"case *category* will be ignored."
+"optionally other arguments. *message* must be a string and *category* a "
+"subclass of :exc:`Warning` or *message* may be a :exc:`Warning` instance, in "
+"which case *category* will be ignored."
 msgstr ""
 "Αυτή είναι μια διεπαφή χαμηλού επιπέδου στη λειτουργικότητα της :func:"
 "`warn`, με την οποία περνιούνται ρητά το μήνυμα, η κατηγορία, το όνομα "
-"αρχείου και ο αριθμός γραμμής, και προαιρετικά το όνομα module και το μητρώο "
-"(που θα πρέπει να είναι το λεξικό ``__warningregistry__`` του module). Το "
-"όνομα module έχει προεπιλογή το όνομα αρχείου με το ``.py`` αφαιρεμένο· αν "
-"δεν περνιέται μητρώο, η προειδοποίηση δεν καταστέλλεται ποτέ. Το *message* "
-"πρέπει να είναι μια συμβολοσειρά και το *category* μια υποκλάση της :exc:"
+"αρχείου και ο αριθμός γραμμής, και προαιρετικά άλλα ορίσματα. Το *message* "
+"πρέπει να είναι μια συμβολοσειρά και το *category* μια υποκλάση του :exc:"
 "`Warning` ή το *message* μπορεί να είναι μια παρουσία :exc:`Warning`, στην "
 "οποία περίπτωση το *category* θα αγνοηθεί."
 
 #: library/warnings.rst:485
+msgid ""
+"*module*, if supplied, should be the module name. If no module is passed, "
+"the filename with ``.py`` stripped is used."
+msgstr ""
+"*module*, αν παρέχεται, θα πρέπει να είναι το όνομα module. Εάν δεν περνιέται "
+"module, χρησιμοποιείται το όνομα αρχείου με το ``.py`` αφαιρεμένο."
+
+#: library/warnings.rst:488
+msgid ""
+"*registry*, if supplied, should be the ``__warningregistry__`` dictionary of "
+"the module. If no registry is passed, each warning is treated as the first "
+"occurrence, that is, filter actions ``\"default\"``, ``\"module\"`` and "
+"``\"once\"`` are handled as ``\"always\"``."
+msgstr ""
+"*registry*, αν παρέχεται, θα πρέπει να είναι το ``__warningregistry__`` "
+"λεξικό του module. Εάν δεν περνιέται μητρώο, κάθε προειδοποίηση αντιμετωπίζεται ως η "
+"πρώτη εμφάνιση, δηλαδή, οι ενέργειες φίλτρου ``\"default\"``, ``\"module\"`` και "
+"``\"once\"`` αντιμετωπίζονται ως ``\"always\"``."
+
+#: library/warnings.rst:494
 msgid ""
 "*module_globals*, if supplied, should be the global namespace in use by the "
 "code for which the warning is issued.  (This argument is used to support "
@@ -1123,11 +1142,11 @@ msgstr ""
 "modules που βρίσκονται σε αρχεία zip ή άλλες πηγές εισαγωγής εκτός "
 "συστήματος αρχείων)."
 
-#: library/warnings.rst:493
+#: library/warnings.rst:502
 msgid "Add the *source* parameter."
 msgstr "Προσθήκη της παραμέτρου *source*."
 
-#: library/warnings.rst:499
+#: library/warnings.rst:508
 msgid ""
 "Write a warning to a file.  The default implementation calls "
 "``formatwarning(message, category, filename, lineno, line)`` and writes the "
@@ -1146,7 +1165,7 @@ msgstr ""
 "*line* δεν παρέχεται, η :func:`showwarning` θα προσπαθήσει να διαβάσει τη "
 "γραμμή που καθορίζεται από το *filename* και το *lineno*."
 
-#: library/warnings.rst:510
+#: library/warnings.rst:519
 msgid ""
 "Format a warning the standard way.  This returns a string which may contain "
 "embedded newlines and ends in a newline.  *line* is a line of source code to "
@@ -1161,7 +1180,7 @@ msgstr ""
 "func:`formatwarning` θα προσπαθήσει να διαβάσει τη γραμμή που καθορίζεται "
 "από το *filename* και το *lineno*."
 
-#: library/warnings.rst:519
+#: library/warnings.rst:528
 msgid ""
 "Insert an entry into the list of :ref:`warnings filter specifications "
 "<warning-filter>`.  The entry is inserted at the front by default; if "
@@ -1182,7 +1201,7 @@ msgstr ""
 "παραλειφθέντα επιχειρήματα έχουν προεπιλογή μια τιμή που ταιριάζει με τα "
 "πάντα."
 
-#: library/warnings.rst:531
+#: library/warnings.rst:540
 msgid ""
 "Insert a simple entry into the list of :ref:`warnings filter specifications "
 "<warning-filter>`.  The meaning of the function parameters is as for :func:"
@@ -1197,7 +1216,7 @@ msgstr ""
 "μήνυμα σε οποιοδήποτε module αρκεί να ταιριάζουν η κατηγορία και ο αριθμός "
 "γραμμής."
 
-#: library/warnings.rst:540
+#: library/warnings.rst:549
 msgid ""
 "Reset the warnings filter.  This discards the effect of all previous calls "
 "to :func:`filterwarnings`, including that of the :option:`-W` command line "
@@ -1207,13 +1226,13 @@ msgstr ""
 "προηγούμενων κλήσεων στην :func:`filterwarnings`, συμπεριλαμβανομένων των "
 "επιλογών γραμμής εντολών :option:`-W` και κλήσεων στην :func:`simplefilter`."
 
-#: library/warnings.rst:547
+#: library/warnings.rst:556
 msgid "Decorator to indicate that a class, function or overload is deprecated."
 msgstr ""
 "Διακοσμητής για να υποδείξει ότι μια κλάση, λειτουργία ή υπερφόρτωση είναι "
 "απαρχαιωμένη."
 
-#: library/warnings.rst:549
+#: library/warnings.rst:558
 msgid ""
 "When this decorator is applied to an object, deprecation warnings may be "
 "emitted at runtime when the object is used. :term:`static type checkers "
@@ -1225,11 +1244,11 @@ msgstr ""
 "χρησιμοποιείται. Οι :term:`static type checkers <static type checker>` θα "
 "παράγουν επίσης μια διάγνωση κατά τη χρήση του απαρχαιωμένου αντικειμένου."
 
-#: library/warnings.rst:554
+#: library/warnings.rst:563
 msgid "Usage::"
 msgstr "Χρήση::"
 
-#: library/warnings.rst:556
+#: library/warnings.rst:565
 msgid ""
 "from warnings import deprecated\n"
 "from typing import overload\n"
@@ -1265,7 +1284,7 @@ msgstr ""
 "@overload\n"
 "def g(x: str) -> int: ..."
 
-#: library/warnings.rst:573
+#: library/warnings.rst:582
 msgid ""
 "The warning specified by *category* will be emitted at runtime on use of "
 "deprecated objects. For functions, that happens on calls; for classes, on "
@@ -1287,29 +1306,29 @@ msgstr ""
 "στατικού ελεγκτή τύπων δεν επηρεάζεται από τα επιχειρήματα *category* και "
 "*stacklevel*."
 
-#: library/warnings.rst:584
+#: library/warnings.rst:593
 msgid ""
 "The deprecation message passed to the decorator is saved in the "
 "``__deprecated__`` attribute on the decorated object. If applied to an "
-"overload, the decorator must be after the :func:`@overload <typing."
-"overload>` decorator for the attribute to exist on the overload as returned "
-"by :func:`typing.get_overloads`."
+"overload, the decorator must be after the :deco:`~typing.overload` decorator "
+"for the attribute to exist on the overload as returned by :func:`typing."
+"get_overloads`."
 msgstr ""
 "Το μήνυμα απαρχαιώσεως που περνάει στον διακοσμητή αποθηκεύεται στο "
 "``__deprecated__`` χαρακτηριστικό στο διακοσμημένο αντικείμενο. Εάν "
-"εφαρμόζεται σε μια υπερφόρτωση, ο διακοσμητής πρέπει να είναι μετά τον :func:"
-"`@overload <typing.overload>` διακοσμητή για να υπάρχει το χαρακτηριστικό "
-"στην υπερφόρτωση όπως επιστρέφεται από τη :func:`typing.get_overloads`."
+"εφαρμόζεται σε μια υπερφόρτωση, ο διακοσμητής πρέπει να είναι μετά τον :deco:"
+"`~typing.overload` διακοσμητή για να υπάρχει το χαρακτηριστικό στην "
+"υπερφόρτωση όπως επιστρέφεται από τη :func:`typing.get_overloads`."
 
-#: library/warnings.rst:591
+#: library/warnings.rst:600
 msgid "See :pep:`702`."
 msgstr "Δείτε το :pep:`702`."
 
-#: library/warnings.rst:596
+#: library/warnings.rst:605
 msgid "Available Context Managers"
 msgstr "Διαθέσιμοι Context Managers"
 
-#: library/warnings.rst:600
+#: library/warnings.rst:609
 msgid ""
 "A context manager that copies and, upon exit, restores the warnings filter "
 "and the :func:`showwarning` function. If the *record* argument is :const:"
@@ -1328,7 +1347,7 @@ msgstr ""
 "την έξοδο στο ``sys.stdout``). Κάθε αντικείμενο στη λίστα έχει "
 "χαρακτηριστικά με τα ίδια ονόματα με τα επιχειρήματα της :func:`showwarning`."
 
-#: library/warnings.rst:609
+#: library/warnings.rst:618
 msgid ""
 "The *module* argument takes a module that will be used instead of the module "
 "returned when you import :mod:`warnings` whose filter will be protected. "
@@ -1339,7 +1358,7 @@ msgstr ""
 "φίλτρο θα προστατεύεται. Αυτό το επιχείρημα υπάρχει κυρίως για τη δοκιμή "
 "του :mod:`warnings` module."
 
-#: library/warnings.rst:614
+#: library/warnings.rst:623
 msgid ""
 "If the *action* argument is not ``None``, the remaining arguments are passed "
 "to :func:`simplefilter` as if it were called immediately on entering the "
@@ -1349,7 +1368,7 @@ msgstr ""
 "στην :func:`simplefilter` σαν να είχε κληθεί αμέσως κατά την είσοδο στο "
 "context."
 
-#: library/warnings.rst:618
+#: library/warnings.rst:627
 msgid ""
 "See :ref:`warning-filter` for the meaning of the *category* and *lineno* "
 "parameters."
@@ -1357,15 +1376,15 @@ msgstr ""
 "Δείτε το :ref:`warning-filter` για τη σημασία των παραμέτρων *category* και "
 "*lineno*."
 
-#: library/warnings.rst:630
+#: library/warnings.rst:639
 msgid "Added the *action*, *category*, *lineno*, and *append* parameters."
 msgstr "Προστέθηκαν οι παράμετροι *action*, *category*, *lineno* και *append*."
 
-#: library/warnings.rst:636
+#: library/warnings.rst:645
 msgid "Concurrent safety of Context Managers"
 msgstr "Συγχρονισμένη ασφάλεια των Context Managers"
 
-#: library/warnings.rst:638
+#: library/warnings.rst:647
 msgid ""
 "The behavior of :class:`catch_warnings` context manager depends on the :data:"
 "`sys.flags.context_aware_warnings` flag.  If the flag is true, the context "
@@ -1384,7 +1403,7 @@ msgstr ""
 "προβλέψιμη σε ένα πρόγραμμα με πολλαπλά νήματα. Η σημαία έχει προεπιλογή να "
 "είναι αληθής για builds με ελεύθερα νήματα και ψευδής αλλιώς."
 
-#: library/warnings.rst:646
+#: library/warnings.rst:655
 msgid ""
 "If the :data:`~sys.flags.context_aware_warnings` flag is false, then :class:"
 "`catch_warnings` will modify the global attributes of the :mod:`warnings` "
@@ -1401,7 +1420,7 @@ msgstr ""
 "χρησιμοποιούν την :class:`catch_warnings` κλάση ταυτόχρονα, η συμπεριφορά "
 "είναι απροσδιόριστη."
 
-#: library/warnings.rst:653
+#: library/warnings.rst:662
 msgid ""
 "If the flag is true, :class:`catch_warnings` will not modify global "
 "attributes and will instead use a :class:`~contextvars.ContextVar` to store "
@@ -1416,7 +1435,7 @@ msgstr ""
 "τοπική στο νήμα και καθιστά τη χρήση της :class:`catch_warnings` ασφαλή για "
 "νήματα."
 
-#: library/warnings.rst:659
+#: library/warnings.rst:668
 msgid ""
 "The *record* parameter of the context handler also behaves differently "
 "depending on the value of the flag.  When *record* is true and the flag is "
@@ -1429,7 +1448,7 @@ msgstr ""
 "αργότερα επαναφέροντας τη :func:`showwarning` λειτουργία του module. Αυτό "
 "δεν είναι ασφαλές για συγχρονισμό."
 
-#: library/warnings.rst:664
+#: library/warnings.rst:673
 msgid ""
 "When *record* is true and the flag is true, the :func:`showwarning` function "
 "is not replaced.  Instead, the recording status is indicated by an internal "
@@ -1442,7 +1461,7 @@ msgstr ""
 "context. Σε αυτή την περίπτωση, η :func:`showwarning` λειτουργία δεν θα "
 "επαναφερθεί κατά την έξοδο από τον context handler."
 
-#: library/warnings.rst:669
+#: library/warnings.rst:678
 msgid ""
 "The :data:`~sys.flags.context_aware_warnings` flag can be set the :option:`-"
 "X context_aware_warnings<-X>` command-line option or by the :envvar:"
@@ -1452,7 +1471,7 @@ msgstr ""
 "option:`-X context_aware_warnings<-X>` επιλογή γραμμής εντολών ή με τη "
 "μεταβλητή περιβάλλοντος :envvar:`PYTHON_CONTEXT_AWARE_WARNINGS`."
 
-#: library/warnings.rst:675
+#: library/warnings.rst:684
 msgid ""
 "It is likely that most programs that desire thread-safe behaviour of the "
 "warnings module will also want to set the :data:`~sys.flags."
@@ -1475,7 +1494,7 @@ msgstr ""
 "σημαίνει ότι οποιοδήποτε φιλτράρισμα που καθιερώθηκε από έναν :class:"
 "`catch_warnings` context manager δεν θα είναι πλέον ενεργό."
 
-#: library/warnings.rst:688
+#: library/warnings.rst:697
 msgid ""
 "Added the :data:`sys.flags.context_aware_warnings` flag and the use of a "
 "context variable for :class:`catch_warnings` if the flag is true.  Previous "
@@ -1489,3 +1508,8 @@ msgstr ""
 #: library/warnings.rst:9
 msgid "warnings"
 msgstr "προειδοποιήσεις"
+
+#~ msgid "Base category for warnings about dubious syntactic features."
+#~ msgstr ""
+#~ "Βασική κατηγορία για προειδοποιήσεις σχετικά με αμφίβολες συντακτικές "
+#~ "λειτουργίες."

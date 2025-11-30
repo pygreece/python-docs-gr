@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2025-08-18 18:41+0300\n"
+"POT-Creation-Date: 2025-11-29 09:18+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -815,7 +815,15 @@ msgstr ""
 "Αντικαταστήστε αυτή τη μέθοδο στις υποκλάσεις για να προσαρμόσετε τη :meth:"
 "`~random.getrandbits` συμπεριφορά των :class:`!Random` στιγμιότυπων."
 
-#: library/random.rst:453
+#: library/random.rst:452
+msgid ""
+"Override this method in subclasses to customise the :meth:`~random."
+"randbytes` behaviour of :class:`!Random` instances."
+msgstr ""
+"Αντικαταστήστε αυτή τη μέθοδο στις υποκλάσεις για να προσαρμόσετε τη :meth:"
+"`~random.randbytes` συμπεριφορά των :class:`!Random` στιγμιότυπων."
+
+#: library/random.rst:458
 msgid ""
 "Class that uses the :func:`os.urandom` function for generating random "
 "numbers from sources provided by the operating system. Not available on all "
@@ -832,11 +840,11 @@ msgstr ""
 "`getstate` και :meth:`setstate` προκαλούν :exc:`NotImplementedError` αν "
 "κληθούν."
 
-#: library/random.rst:462
+#: library/random.rst:467
 msgid "Notes on Reproducibility"
 msgstr "Σημειώσεις για την Αναπαραγωγιμότητα"
 
-#: library/random.rst:464
+#: library/random.rst:469
 msgid ""
 "Sometimes it is useful to be able to reproduce the sequences given by a "
 "pseudo-random number generator.  By reusing a seed value, the same sequence "
@@ -848,7 +856,7 @@ msgstr ""
 "τιμή seed, η ίδια ακολουθία θα πρέπει να είναι αναπαραγωγίσιμη από εκτέλεση "
 "σε εκτέλεση, εφόσον δεν τρέχουν πολλαπλά νήματα ταυτόχρονα."
 
-#: library/random.rst:468
+#: library/random.rst:473
 msgid ""
 "Most of the random module's algorithms and seeding functions are subject to "
 "change across Python versions, but two aspects are guaranteed not to change:"
@@ -857,7 +865,7 @@ msgstr ""
 "υπόκεινται σε αλλαγές μεταξύ εκδόσεων της Python, αλλά δύο πτυχές εγγυώνται "
 "ότι δεν θα αλλάξουν:"
 
-#: library/random.rst:471
+#: library/random.rst:476
 msgid ""
 "If a new seeding method is added, then a backward compatible seeder will be "
 "offered."
@@ -865,7 +873,7 @@ msgstr ""
 "Εάν προστεθεί μια νέα μέθοδος σποράς, τότε θα προσφέρεται ένας σπορέας "
 "συμβατός με παλαιότερες εκδόσεις."
 
-#: library/random.rst:474
+#: library/random.rst:479
 msgid ""
 "The generator's :meth:`~Random.random` method will continue to produce the "
 "same sequence when the compatible seeder is given the same seed."
@@ -873,15 +881,15 @@ msgstr ""
 "Η μέθοδος :meth:`~Random.random` της γεννήτριας θα συνεχίσει να παράγει την "
 "ίδια ακολουθία όταν ο συμβατός σπορέας δίνεται την ίδια τιμή seed."
 
-#: library/random.rst:480
+#: library/random.rst:485
 msgid "Examples"
 msgstr "Παραδείγματα"
 
-#: library/random.rst:482
+#: library/random.rst:487
 msgid "Basic examples::"
 msgstr "Βασικά παραδείγματα::"
 
-#: library/random.rst:484
+#: library/random.rst:489
 msgid ""
 ">>> random()                          # Random float:  0.0 <= x < 1.0\n"
 "0.37444887175646646\n"
@@ -941,11 +949,11 @@ msgstr ""
 ">>> sample([10, 20, 30, 40, 50], k=4) # Four samples without replacement\n"
 "[40, 10, 50, 30]"
 
-#: library/random.rst:510
+#: library/random.rst:515
 msgid "Simulations::"
 msgstr "Προσομοιώσεις::"
 
-#: library/random.rst:512
+#: library/random.rst:517
 msgid ""
 ">>> # Six roulette wheel spins (weighted sampling with replacement)\n"
 ">>> choices(['red', 'black', 'green'], [18, 18, 2], k=6)\n"
@@ -993,7 +1001,7 @@ msgstr ""
 ">>> sum(trial() for i in range(10_000)) / 10_000\n"
 "0.7958"
 
-#: library/random.rst:535
+#: library/random.rst:540
 msgid ""
 "Example of `statistical bootstrapping <https://en.wikipedia.org/wiki/"
 "Bootstrapping_(statistics)>`_ using resampling with replacement to estimate "
@@ -1003,7 +1011,7 @@ msgstr ""
 "Bootstrapping_(statistics)>` χρησιμοποιώντας δειγματοληψία με αντικατάσταση "
 "για να εκτιμήσει ένα διάστημα εμπιστοσύνης για τον μέσο όρο ενός δείγματος::"
 
-#: library/random.rst:539
+#: library/random.rst:544
 msgid ""
 "# https://www.thoughtco.com/example-of-bootstrapping-3126155\n"
 "from statistics import fmean as mean\n"
@@ -1023,7 +1031,7 @@ msgstr ""
 "print(f'The sample mean of {mean(data):.1f} has a 90% confidence '\n"
 "      f'interval from {means[5]:.1f} to {means[94]:.1f}')"
 
-#: library/random.rst:548
+#: library/random.rst:553
 msgid ""
 "Example of a `resampling permutation test <https://en.wikipedia.org/wiki/"
 "Resampling_(statistics)#Permutation_tests>`_ to determine the statistical "
@@ -1036,7 +1044,7 @@ msgstr ""
 "μιας παρατηρούμενης διαφοράς μεταξύ των επιδράσεων ενός φαρμάκου σε σύγκριση "
 "με ένα εικονικό φάρμακο::"
 
-#: library/random.rst:554
+#: library/random.rst:559
 msgid ""
 "# Example from \"Statistics is Easy\" by Dennis Shasha and Manda Wilson\n"
 "from statistics import fmean as mean\n"
@@ -1088,14 +1096,14 @@ msgstr ""
 "print(f'hypothesis that there is no difference between the drug and the "
 "placebo.')"
 
-#: library/random.rst:575
+#: library/random.rst:580
 msgid ""
 "Simulation of arrival times and service deliveries for a multiserver queue::"
 msgstr ""
 "Προσομοίωση χρόνων άφιξης και παραδόσεων υπηρεσιών για μια ουρά πολλαπλών "
 "διακομιστών::"
 
-#: library/random.rst:577
+#: library/random.rst:582
 msgid ""
 "from heapq import heapify, heapreplace\n"
 "from random import expovariate, gauss\n"
@@ -1149,7 +1157,7 @@ msgstr ""
 "print(f'Mean wait: {mean(waits):.1f}   Max wait: {max(waits):.1f}')\n"
 "print('Quartiles:', [round(q, 1) for q in quantiles(waits)])"
 
-#: library/random.rst:604
+#: library/random.rst:609
 msgid ""
 "`Statistics for Hackers <https://www.youtube.com/watch?v=Iq9DzN6mvYA>`_ a "
 "video tutorial by `Jake Vanderplas <https://us.pycon.org/2016/speaker/"
@@ -1162,7 +1170,7 @@ msgstr ""
 "θεμελιώδεις έννοιες όπως η προσομοίωση, η δειγματοληψία, η αναδιάταξη και η "
 "διασταύρωση επικύρωσης."
 
-#: library/random.rst:610
+#: library/random.rst:615
 msgid ""
 "`Economics Simulation <https://nbviewer.org/url/norvig.com/ipython/Economics."
 "ipynb>`_ a simulation of a marketplace by `Peter Norvig <https://norvig.com/"
@@ -1176,7 +1184,7 @@ msgstr ""
 "τις κατανομές που παρέχονται από αυτό το module (gauss, uniform, sample, "
 "betavariate, choice, triangular, και randrange)."
 
-#: library/random.rst:617
+#: library/random.rst:622
 msgid ""
 "`A Concrete Introduction to Probability (using Python) <https://nbviewer.org/"
 "url/norvig.com/ipython/Probability.ipynb>`_ a tutorial by `Peter Norvig "
@@ -1189,11 +1197,11 @@ msgstr ""
 "πιθανοτήτων, πώς να γράψετε προσομοιώσεις, και πώς να εκτελέσετε ανάλυση "
 "δεδομένων χρησιμοποιώντας Python."
 
-#: library/random.rst:625
+#: library/random.rst:630
 msgid "Recipes"
 msgstr "Συνταγές"
 
-#: library/random.rst:627
+#: library/random.rst:632
 msgid ""
 "These recipes show how to efficiently make random selections from the "
 "combinatoric iterators in the :mod:`itertools` module:"
@@ -1201,7 +1209,7 @@ msgstr ""
 "Αυτές οι συνταγές δείχνουν πώς να κάνετε αποτελεσματικές τυχαίες επιλογές "
 "από τους συνδυαστικούς επαναληπτές στο module :mod:`itertools` :"
 
-#: library/random.rst:630
+#: library/random.rst:635
 msgid ""
 "def random_product(*args, repeat=1):\n"
 "    \"Random selection from itertools.product(*args, **kwds)\"\n"
@@ -1259,7 +1267,7 @@ msgstr ""
 "    indices = sorted(random.choices(range(n), k=r))\n"
 "    return tuple(pool[i] for i in indices)"
 
-#: library/random.rst:659
+#: library/random.rst:664
 msgid ""
 "The default :func:`.random` returns multiples of 2⁻⁵³ in the range *0.0 ≤ x "
 "< 1.0*.  All such numbers are evenly spaced and are exactly representable as "
@@ -1273,7 +1281,7 @@ msgstr ""
 "αναπαραστάσιμα floats σε αυτό το διάστημα δεν είναι δυνατές επιλογές. Για "
 "παράδειγμα, ``0.05954861408025609`` δεν είναι πολλαπλάσιο του 2⁻⁵³."
 
-#: library/random.rst:665
+#: library/random.rst:670
 msgid ""
 "The following recipe takes a different approach.  All floats in the interval "
 "are possible selections.  The mantissa comes from a uniform distribution of "
@@ -1287,7 +1295,7 @@ msgstr ""
 "από μια γεωμετρική κατανομή όπου οι εκθέτες μικρότεροι από *−53* "
 "εμφανίζονται μισή φορά συχνότερα από τον επόμενο μεγαλύτερο εκθέτη."
 
-#: library/random.rst:673
+#: library/random.rst:678
 msgid ""
 "from random import Random\n"
 "from math import ldexp\n"
@@ -1317,7 +1325,7 @@ msgstr ""
 "            exponent += x.bit_length() - 32\n"
 "        return ldexp(mantissa, exponent)"
 
-#: library/random.rst:687
+#: library/random.rst:692
 msgid ""
 "All :ref:`real valued distributions <real-valued-distributions>` in the "
 "class will use the new method::"
@@ -1325,7 +1333,7 @@ msgstr ""
 "Όλες οι :ref:`πραγματικές κατανομές <real-valued-distributions>` στην κλάση "
 "θα χρησιμοποιούν τη νέα μέθοδο::"
 
-#: library/random.rst:690
+#: library/random.rst:695
 msgid ""
 ">>> fr = FullRandom()\n"
 ">>> fr.random()\n"
@@ -1339,7 +1347,7 @@ msgstr ""
 ">>> fr.expovariate(0.25)\n"
 "8.87925541791544"
 
-#: library/random.rst:696
+#: library/random.rst:701
 msgid ""
 "The recipe is conceptually equivalent to an algorithm that chooses from all "
 "the multiples of 2⁻¹⁰⁷⁴ in the range *0.0 ≤ x < 1.0*.  All such numbers are "
@@ -1354,7 +1362,7 @@ msgstr ""
 "(Η τιμή 2⁻¹⁰⁷⁴ είναι το μικρότερο θετικό μη κανονικοποιημένο float και "
 "ισούται με ``math.ulp(0.0)``.)"
 
-#: library/random.rst:705
+#: library/random.rst:710
 msgid ""
 "`Generating Pseudo-random Floating-Point Values <https://allendowney.com/"
 "research/rand/downey07randfloat.pdf>`_ a paper by Allen B. Downey describing "
@@ -1366,40 +1374,40 @@ msgstr ""
 "περιγράφει τρόπους δημιουργίας πιο λεπτομερών floats από ό,τι παράγονται "
 "συνήθως από :func:`.random`."
 
-#: library/random.rst:713
+#: library/random.rst:718
 msgid "Command-line usage"
 msgstr "Χρήση από τη γραμμή εντολών"
 
-#: library/random.rst:717
+#: library/random.rst:722
 msgid "The :mod:`!random` module can be executed from the command line."
 msgstr "Το module :mod:`!random` μπορεί να εκτελεστεί από τη γραμμή εντολών."
 
-#: library/random.rst:719
+#: library/random.rst:724
 msgid ""
 "python -m random [-h] [-c CHOICE [CHOICE ...] | -i N | -f N] [input ...]"
 msgstr ""
 "python -m random [-h] [-c CHOICE [CHOICE ...] | -i N | -f N] [input ...]"
 
-#: library/random.rst:723
+#: library/random.rst:728
 msgid "The following options are accepted:"
 msgstr "Αποδέχεται τις παρακάτω επιλογές:"
 
-#: library/random.rst:729
+#: library/random.rst:734
 msgid "Show the help message and exit."
 msgstr "Εμφανίζει το μήνυμα βοήθειας και εξέρχεται."
 
-#: library/random.rst:734
+#: library/random.rst:739
 msgid "Print a random choice, using :meth:`choice`."
 msgstr "Εκτυπώνει μια τυχαία επιλογή, χρησιμοποιώντας τη :meth:`choice`."
 
-#: library/random.rst:739
+#: library/random.rst:744
 msgid ""
 "Print a random integer between 1 and N inclusive, using :meth:`randint`."
 msgstr ""
 "Εκτυπώνει έναν τυχαίο ακέραιο μεταξύ 1 και N συμπεριλαμβανομένου, "
 "χρησιμοποιώντας τη :meth:`randint`."
 
-#: library/random.rst:744
+#: library/random.rst:749
 msgid ""
 "Print a random floating-point number between 0 and N inclusive, using :meth:"
 "`uniform`."
@@ -1407,33 +1415,33 @@ msgstr ""
 "Εκτυπώνει έναν τυχαίο αριθμό κινητής υποδιαστολής μεταξύ 0 και N "
 "συμπεριλαμβανομένου, χρησιμοποιώντας τη :meth:`uniform`."
 
-#: library/random.rst:747
+#: library/random.rst:752
 msgid "If no options are given, the output depends on the input:"
 msgstr "Εάν δεν δοθούν επιλογές, η έξοδος εξαρτάται από την είσοδο:"
 
-#: library/random.rst:749
+#: library/random.rst:754
 msgid "String or multiple: same as :option:`--choice`."
 msgstr "Συμβολοσειρά ή πολλαπλά: ίδια με την :option:`--choice`."
 
-#: library/random.rst:750
+#: library/random.rst:755
 msgid "Integer: same as :option:`--integer`."
 msgstr "Ακέραιος: ίδια με την :option:`--integer`."
 
-#: library/random.rst:751
+#: library/random.rst:756
 msgid "Float: same as :option:`--float`."
 msgstr "Αριθμός κινητής υποδιαστολής: ίδια με την :option:`--float`."
 
-#: library/random.rst:756
+#: library/random.rst:761
 msgid "Command-line example"
 msgstr "Παράδειγμα από τη γραμμή εντολών"
 
-#: library/random.rst:758
+#: library/random.rst:763
 msgid "Here are some examples of the :mod:`!random` command-line interface:"
 msgstr ""
 "Εδώ είναι μερικά παραδείγματα της διεπαφής γραμμής εντολών του :mod:`!"
 "random`:"
 
-#: library/random.rst:760
+#: library/random.rst:765
 msgid ""
 "$ # Choose one at random\n"
 "$ python -m random egg bacon sausage spam \"Lobster Thermidor aux crevettes "

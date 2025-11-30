@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-11-29 09:18+0200\n"
 "PO-Revision-Date: 2025-06-04 11:27+0300\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "PyObject *foo = PyObject_CallNoArgs((PyObject *)&PyFoo_Type);"
 msgstr ""
 
-#: c-api/allocation.rst:137
+#: c-api/allocation.rst:137 c-api/allocation.rst:184 c-api/allocation.rst:186
 #, fuzzy
 msgid ":c:func:`PyObject_Free`"
 msgstr "Ίδιο με την :c:func:`PyObject_Free`."
@@ -195,10 +195,6 @@ msgid ":c:macro:`PyObject_GC_NewVar`"
 msgstr ""
 
 #: c-api/allocation.rst:145
-msgid "Same as :c:func:`PyObject_Free`."
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
-
-#: c-api/allocation.rst:149
 msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed "
 "using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
@@ -208,13 +204,64 @@ msgstr ""
 "προσπελαύνεται μόνο χρησιμοποιώντας τη μακροεντολή :c:macro:`Py_None`, η "
 "οποία αξιολογείται σε έναν δείκτη σε αυτό το αντικείμενο."
 
-#: c-api/allocation.rst:156
+#: c-api/allocation.rst:152
 msgid ":ref:`moduleobjects`"
 msgstr ""
 
-#: c-api/allocation.rst:157
+#: c-api/allocation.rst:153
 msgid "To allocate and create extension modules."
 msgstr "Για να δεσμεύσετε και να δημιουργήσετε επεκτάσεις modules."
+
+#: c-api/allocation.rst:157
+msgid "Deprecated aliases"
+msgstr ""
+
+#: c-api/allocation.rst:159
+msgid ""
+"These are :term:`soft deprecated` aliases to existing functions and macros. "
+"They exist solely for backwards compatibility."
+msgstr ""
+
+#: c-api/allocation.rst:167
+msgid "Deprecated alias"
+msgstr ""
+
+#: c-api/allocation.rst:168
+msgid "Function"
+msgstr ""
+
+#: c-api/allocation.rst:170
+#, fuzzy
+msgid ":c:macro:`PyObject_New`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#: c-api/allocation.rst:172
+#, fuzzy
+msgid ":c:macro:`PyObject_NewVar`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#: c-api/allocation.rst:174
+#, fuzzy
+msgid ":c:func:`PyObject_Init`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#: c-api/allocation.rst:176
+#, fuzzy
+msgid ":c:func:`PyObject_InitVar`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#: c-api/allocation.rst:178
+#, fuzzy
+msgid ":c:func:`PyObject_Malloc`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#: c-api/allocation.rst:180
+#, fuzzy
+msgid ":c:func:`PyObject_Realloc`"
+msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+
+#~ msgid "Same as :c:func:`PyObject_Free`."
+#~ msgstr "Ίδιο με την :c:func:`PyObject_Free`."
 
 #~ msgid ""
 #~ "Initialize a newly allocated object *op* with its type and initial "
