@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
-"PO-Revision-Date: 2024-10-31 12:22+0200\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -70,49 +70,20 @@ msgstr "Το να γράψει C κάποιος είναι δύσκολο· υπ
 #: faq/extending.rst:39
 msgid ""
 "There are a number of alternatives to writing your own C extensions, "
-"depending on what you're trying to do."
+"depending on what you're trying to do. :ref:`Recommended third party tools "
+"<c-api-tools>` offer both simpler and more sophisticated approaches to "
+"creating C and C++ extensions for Python."
 msgstr ""
-"Υπάρχουν διάφορες εναλλακτικές λύσεις για να γράψετε τις δικές σας "
-"επεκτάσεις C, ανάλογα με το τι προσπαθείτε να κάνετε."
+"Υπάρχουν αρκετές εναλλακτικές στο να γράψετε τις δικές σας επεκτάσεις C, "
+"ανάλογα με το τι προσπαθείτε να κάνετε. :ref:`Recommended third party tools "
+"<c-api-tools>` προσφέρουν τόσο απλούστερες όσο και πιο εξελιγμένες "
+"προσεγγίσεις για τη δημιουργία επεκτάσεων C και C++ για την Python."
 
-#: faq/extending.rst:44
-msgid ""
-"`Cython <https://cython.org>`_ and its relative `Pyrex <https://www.csse."
-"canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ are compilers that accept a "
-"slightly modified form of Python and generate the corresponding C code.  "
-"Cython and Pyrex make it possible to write an extension without having to "
-"learn Python's C API."
-msgstr ""
-"Το `Cython <https://cython.org>`_ και το σχετικό του `Pyrex <https://www."
-"csse.canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ είναι μεταγλωττιστές που "
-"δέχονται ελαφρώς τροποποιημένη μορφή της Python και δημιουργούν τον "
-"αντίστοιχο C κώδικα.  Το Cython και το Pyrex καθιστούν δυνατή τη σύνταξη "
-"μιας επέκτασης χωρίς να χρειάζεται να μάθετε το C API της Python."
-
-#: faq/extending.rst:50
-msgid ""
-"If you need to interface to some C or C++ library for which no Python "
-"extension currently exists, you can try wrapping the library's data types "
-"and functions with a tool such as `SWIG <https://www.swig.org>`_.  `SIP "
-"<https://github.com/Python-SIP/sip>`__, `CXX <https://cxx.sourceforge.net/"
-">`_ `Boost <https://www.boost.org/libs/python/doc/index.html>`_, or `Weave "
-"<https://github.com/scipy/weave>`_ are also alternatives for wrapping C++ "
-"libraries."
-msgstr ""
-"Εάν χρειάζεται να συνδεθείτε με κάποια βιβλιοθήκη C ή C++ για την οποία δεν "
-"υπάρχει αυτήν τη στιγμή επέκταση Python, μπορείτε να δοκιμάσετε να "
-"αναδιπλώσετε τους τύπους δεδομένων και τις συναρτήσεις της βιβλιοθήκης με "
-"ένα εργαλείο όπως `SWIG <https://www.swig.org>`_.  `SIP <https://github.com/"
-"Python-SIP/sip>`__, `CXX <https://cxx.sourceforge.net/>`_ `Boost <https://"
-"www.boost.org/libs/python/doc/index.html>`_, ή `Weave <https://github.com/"
-"scipy/weave>`_ είναι επίσης εναλλακτικές λύσεις για την αναδίπλωση "
-"βιβλιοθηκών C++."
-
-#: faq/extending.rst:61
+#: faq/extending.rst:46
 msgid "How can I execute arbitrary Python statements from C?"
 msgstr "Πως μπορώ να εκτελέσω αυθαίρετες δηλώσεις Python από το C;"
 
-#: faq/extending.rst:63
+#: faq/extending.rst:48
 msgid ""
 "The highest-level function to do this is :c:func:`PyRun_SimpleString` which "
 "takes a single string argument to be executed in the context of the module "
@@ -125,14 +96,14 @@ msgstr ""
 "`PyRun_SimpleString` η οποία εκτελεί ένα όρισμα συμβολοσειράς στο πλαίσιο "
 "της ενότητας ``__main__`` και επιστρέφει ``0`` για επιτυχία και ``-1`` όταν "
 "συμβαίνει μια εξαίρεση (συμπεριλαμβανομένου του :exc:`SyntaxError`).  Εάν "
-"θέλετε περισσότερο έλεγχο, χρησιμοποιήστε :c:func:`PyRun_String`· δείτε τον "
-"πηγαίο κώδικα :c:func:`PyRun_SimpleString` στο``Python/pythonrun.c``."
+"θέλετε περισσότερο έλεγχο, χρησιμοποιήστε :c:func:`PyRun_String` · δείτε τον "
+"πηγαίο κώδικα :c:func:`PyRun_SimpleString` στο ``Python/pythonrun.c``."
 
-#: faq/extending.rst:72
+#: faq/extending.rst:57
 msgid "How can I evaluate an arbitrary Python expression from C?"
 msgstr "Πώς μπορώ να αξιολογήσω μια αυθαίρετη έκφραση Python από τη C;"
 
-#: faq/extending.rst:74
+#: faq/extending.rst:59
 msgid ""
 "Call the function :c:func:`PyRun_String` from the previous question with the "
 "start symbol :c:data:`Py_eval_input`; it parses an expression, evaluates it "
@@ -142,11 +113,11 @@ msgstr ""
 "το σύμβολο έναρξης :c:data:`Py_eval_input`· αναλύει μια παράσταση, την "
 "αξιολογεί και επιστρέφει την τιμή της."
 
-#: faq/extending.rst:80
+#: faq/extending.rst:65
 msgid "How do I extract C values from a Python object?"
 msgstr "Πως μπορώ να εξάγω τιμές C από ένα αντικείμενο Python;"
 
-#: faq/extending.rst:82
+#: faq/extending.rst:67
 msgid ""
 "That depends on the object's type.  If it's a tuple, :c:func:`PyTuple_Size` "
 "returns its length and :c:func:`PyTuple_GetItem` returns the item at a "
@@ -159,7 +130,7 @@ msgstr ""
 "λίστες έχουν παρόμοιες συναρτήσεις, :c:func:`PyList_Size` και :c:func:"
 "`PyList_GetItem`."
 
-#: faq/extending.rst:87
+#: faq/extending.rst:72
 msgid ""
 "For bytes, :c:func:`PyBytes_Size` returns its length and :c:func:"
 "`PyBytes_AsStringAndSize` provides a pointer to its value and its length.  "
@@ -171,7 +142,7 @@ msgstr ""
 "Λάβετε υπόψη ότι τα αντικείμενα byte της Python μπορεί να περιέχουν null "
 "byte, επομένως η :c:func:`!strlen` της C δεν πρέπει να χρησιμοποιείται."
 
-#: faq/extending.rst:92
+#: faq/extending.rst:77
 msgid ""
 "To test the type of an object, first make sure it isn't ``NULL``, and then "
 "use :c:func:`PyBytes_Check`, :c:func:`PyTuple_Check`, :c:func:"
@@ -181,7 +152,7 @@ msgstr ""
 "``NULL``, και μετά χρησιμοποιήστε τα :c:func:`PyBytes_Check`, :c:func:"
 "`PyTuple_Check`, :c:func:`PyList_Check`, κλπ."
 
-#: faq/extending.rst:95
+#: faq/extending.rst:80
 msgid ""
 "There is also a high-level API to Python objects which is provided by the so-"
 "called 'abstract' interface -- read ``Include/abstract.h`` for further "
@@ -198,21 +169,21 @@ msgstr ""
 "χρήσιμα πρωτόκολλα όπως αριθμοί (:c:func:`PyNumber_Index` et al.) και "
 "αντιστοιχίσεις στον PyMapping APIs."
 
-#: faq/extending.rst:104
+#: faq/extending.rst:89
 msgid "How do I use Py_BuildValue() to create a tuple of arbitrary length?"
 msgstr ""
 "Πώς μπορώ να χρησιμοποιήσω την Py_BuildValue() για να δημιουργήσω μια "
 "πλειάδα (tuple) αυθαίρετου μήκους;"
 
-#: faq/extending.rst:106
+#: faq/extending.rst:91
 msgid "You can't.  Use :c:func:`PyTuple_Pack` instead."
 msgstr "Δεν μπορείς.  Χρησιμοποιήστε το :c:func:`PyTuple_Pack`."
 
-#: faq/extending.rst:110
+#: faq/extending.rst:95
 msgid "How do I call an object's method from C?"
 msgstr "Πώς καλώ τη μέθοδο ενός αντικειμένου από τη C;"
 
-#: faq/extending.rst:112
+#: faq/extending.rst:97
 msgid ""
 "The :c:func:`PyObject_CallMethod` function can be used to call an arbitrary "
 "method of an object.  The parameters are the object, the name of the method "
@@ -225,7 +196,7 @@ msgstr ""
 "αυτή που χρησιμοποιείται με τη :c:func:`Py_BuildValue`, και τις τιμές "
 "ορίσματος::"
 
-#: faq/extending.rst:117
+#: faq/extending.rst:102
 msgid ""
 "PyObject *\n"
 "PyObject_CallMethod(PyObject *object, const char *method_name,\n"
@@ -235,7 +206,7 @@ msgstr ""
 "PyObject_CallMethod(PyObject *object, const char *method_name,\n"
 "                    const char *arg_format, ...);"
 
-#: faq/extending.rst:121
+#: faq/extending.rst:106
 msgid ""
 "This works for any object that has methods -- whether built-in or user-"
 "defined. You are responsible for eventually :c:func:`Py_DECREF`\\ 'ing the "
@@ -245,7 +216,7 @@ msgstr ""
 "ενσωματωμένες είτε καθορίζονται από το χρήστη. Είστε υπεύθυνοι εάν τελικά "
 "χρησιμοποιήσετε :c:func:`Py_DECREF` στην τιμή επιστροφής."
 
-#: faq/extending.rst:124
+#: faq/extending.rst:109
 msgid ""
 "To call, e.g., a file object's \"seek\" method with arguments 10, 0 "
 "(assuming the file object pointer is \"f\")::"
@@ -254,7 +225,7 @@ msgstr ""
 "ορίσματα 10, 0 (υποθέτοντας ότι ο δείκτης του αντικειμένου αρχείου είναι "
 "\"f\")::"
 
-#: faq/extending.rst:127
+#: faq/extending.rst:112
 msgid ""
 "res = PyObject_CallMethod(f, \"seek\", \"(ii)\", 10, 0);\n"
 "if (res == NULL) {\n"
@@ -272,7 +243,7 @@ msgstr ""
 "        Py_DECREF(res);\n"
 "}"
 
-#: faq/extending.rst:135
+#: faq/extending.rst:120
 msgid ""
 "Note that since :c:func:`PyObject_CallObject` *always* wants a tuple for the "
 "argument list, to call a function without arguments, pass \"()\" for the "
@@ -284,7 +255,7 @@ msgstr ""
 "ορίσματα, να περάσει \"()\" για τη μορφή και να καλέσει μια συνάρτηση με ένα "
 "όρισμα, περιβάλλουν το όρισμα σε παρένθεση, π.χ. \"(i)\"."
 
-#: faq/extending.rst:142
+#: faq/extending.rst:127
 msgid ""
 "How do I catch the output from PyErr_Print() (or anything that prints to "
 "stdout/stderr)?"
@@ -292,7 +263,7 @@ msgstr ""
 "Πώς μπορώ να κάνω catch την έξοδο από την PyErr_Print() (ή οτιδήποτε "
 "εκτυπώνεται σε stdout/stderr);"
 
-#: faq/extending.rst:144
+#: faq/extending.rst:129
 msgid ""
 "In Python code, define an object that supports the ``write()`` method.  "
 "Assign this object to :data:`sys.stdout` and :data:`sys.stderr`.  Call "
@@ -305,13 +276,13 @@ msgstr ""
 "μηχανισμό ανίχνευσης να λειτουργήσει. Στη συνέχεια, η έξοδος θα πάει "
 "οπουδήποτε την στείλει η μέθοδος ``write()``."
 
-#: faq/extending.rst:149
+#: faq/extending.rst:134
 msgid "The easiest way to do this is to use the :class:`io.StringIO` class:"
 msgstr ""
 "Ο ευκολότερος τρόπος για να το κάνετε αυτό είναι να χρησιμοποιήσετε την "
 "κλάση :class:`io.StringIO`:"
 
-#: faq/extending.rst:151
+#: faq/extending.rst:136
 msgid ""
 ">>> import io, sys\n"
 ">>> sys.stdout = io.StringIO()\n"
@@ -329,11 +300,11 @@ msgstr ""
 "foo\n"
 "hello world!"
 
-#: faq/extending.rst:161
+#: faq/extending.rst:146
 msgid "A custom object to do the same would look like this:"
 msgstr "Ένα προσαρμοσμένο αντικείμενο για να κάνει το ίδιο θα μοιάζει με αυτό:"
 
-#: faq/extending.rst:163
+#: faq/extending.rst:148
 msgid ""
 ">>> import io, sys\n"
 ">>> class StdoutCatcher(io.TextIOBase):\n"
@@ -365,20 +336,20 @@ msgstr ""
 "foo\n"
 "hello world!"
 
-#: faq/extending.rst:182
+#: faq/extending.rst:167
 msgid "How do I access a module written in Python from C?"
 msgstr ""
 "Πως μπορώ να αποκτήσω πρόσβαση σε ένα module γραμμένο σε Python από τη C;"
 
-#: faq/extending.rst:184
+#: faq/extending.rst:169
 msgid "You can get a pointer to the module object as follows::"
 msgstr "Μπορείτε να λάβετε έναν δείκτη στο αντικείμενο του module ως εξής::"
 
-#: faq/extending.rst:186
+#: faq/extending.rst:171
 msgid "module = PyImport_ImportModule(\"<modulename>\");"
 msgstr "module = PyImport_ImportModule(\"<modulename>\");"
 
-#: faq/extending.rst:188
+#: faq/extending.rst:173
 msgid ""
 "If the module hasn't been imported yet (i.e. it is not yet present in :data:"
 "`sys.modules`), this initializes the module; otherwise it simply returns the "
@@ -392,7 +363,7 @@ msgstr ""
 "module σε κανένα namespace -- διασφαλίζει μόνο ότι έχει αρχικοποιηθεί και "
 "ότι είναι αποθηκευμένη στο :data:`sys.modules`."
 
-#: faq/extending.rst:194
+#: faq/extending.rst:179
 msgid ""
 "You can then access the module's attributes (i.e. any name defined in the "
 "module) as follows::"
@@ -400,11 +371,11 @@ msgstr ""
 "Μπορείτε στη συνέχεια να αποκτήσετε πρόσβαση στα χαρακτηριστικά του module "
 "(δηλαδή οποιοδήποτε όνομα ορίζεται στο module) ως εξής::"
 
-#: faq/extending.rst:197
+#: faq/extending.rst:182
 msgid "attr = PyObject_GetAttrString(module, \"<attrname>\");"
 msgstr "attr = PyObject_GetAttrString(module, \"<attrname>\");"
 
-#: faq/extending.rst:199
+#: faq/extending.rst:184
 msgid ""
 "Calling :c:func:`PyObject_SetAttrString` to assign to variables in the "
 "module also works."
@@ -412,11 +383,11 @@ msgstr ""
 "Η κλήση :c:func:`PyObject_SetAttrString` για αντιστοίχιση σε μεταβλητές στο "
 "module λειτουργεί επίσης."
 
-#: faq/extending.rst:204
+#: faq/extending.rst:189
 msgid "How do I interface to C++ objects from Python?"
 msgstr "Πως διασυνδέομαι με αντικείμενα C++ από την Python;"
 
-#: faq/extending.rst:206
+#: faq/extending.rst:191
 msgid ""
 "Depending on your requirements, there are many approaches.  To do this "
 "manually, begin by reading :ref:`the \"Extending and Embedding\" document "
@@ -432,17 +403,17 @@ msgstr ""
 "-- επομένως η στρατηγική της δημιουργίας ενός νέου τύπου Python γύρω από "
 "έναν τύπο δομής C (δείκτη) θα λειτουργήσει επίσης για αντικείμενα C++."
 
-#: faq/extending.rst:212
+#: faq/extending.rst:197
 msgid "For C++ libraries, see :ref:`c-wrapper-software`."
 msgstr "Για βιβλιοθήκες C++, δείτε :ref:`c-wrapper-software`."
 
-#: faq/extending.rst:216
+#: faq/extending.rst:201
 msgid "I added a module using the Setup file and the make fails; why?"
 msgstr ""
 "Πρόσθεσα ένα module χρησιμοποιώντας το αρχείο Setup και το make αποτυγχάνει· "
 "γιατί;"
 
-#: faq/extending.rst:218
+#: faq/extending.rst:203
 msgid ""
 "Setup must end in a newline, if there is no newline there, the build process "
 "fails.  (Fixing this requires some ugly shell script hackery, and this bug "
@@ -453,11 +424,11 @@ msgstr ""
 "κακόβουλο script shell, και αυτό το σφάλμα είναι τόσο μικρό που δεν φαίνεται "
 "να αξίζει τον κόπο.)"
 
-#: faq/extending.rst:224
+#: faq/extending.rst:209
 msgid "How do I debug an extension?"
 msgstr "Πως κάνω debug μια επέκταση;"
 
-#: faq/extending.rst:226
+#: faq/extending.rst:211
 msgid ""
 "When using GDB with dynamically loaded extensions, you can't set a "
 "breakpoint in your extension until your extension is loaded."
@@ -466,19 +437,19 @@ msgstr ""
 "να ορίσετε σημείο διακοπής στην επέκταση σας μέχρι να φορτωθεί η επέκτασής "
 "σας."
 
-#: faq/extending.rst:229
+#: faq/extending.rst:214
 msgid "In your ``.gdbinit`` file (or interactively), add the command:"
 msgstr "Στο αρχείο σας ``.gdbinit`` (ή διαδραστικά), προσθέστε την εντολή:"
 
-#: faq/extending.rst:231
+#: faq/extending.rst:216
 msgid "br _PyImport_LoadDynamicModule"
 msgstr "br _PyImport_LoadDynamicModule"
 
-#: faq/extending.rst:235
+#: faq/extending.rst:220
 msgid "Then, when you run GDB:"
 msgstr "Στη συνέχεια, όταν εκτελείτε το GDB:"
 
-#: faq/extending.rst:237
+#: faq/extending.rst:222
 msgid ""
 "$ gdb /local/bin/python\n"
 "gdb) run myscript.py\n"
@@ -494,7 +465,7 @@ msgstr ""
 "gdb) br myfunction.c:50\n"
 "gdb) continue"
 
-#: faq/extending.rst:247
+#: faq/extending.rst:232
 msgid ""
 "I want to compile a Python module on my Linux system, but some files are "
 "missing. Why?"
@@ -502,7 +473,7 @@ msgstr ""
 "Θέλω να κάνω compile ένα Python module στο σύστημα Linux μου, αλλά λείπουν "
 "ορισμένα αρχεία. Γιατί;"
 
-#: faq/extending.rst:249
+#: faq/extending.rst:234
 msgid ""
 "Most packaged versions of Python omit some files required for compiling "
 "Python extensions."
@@ -510,22 +481,22 @@ msgstr ""
 "Οι περισσότερες συσκευασμένες εκδόσεις της Python παραλείπουν ορισμένα "
 "αρχεία που απαιτούνται για τη μεταγλώττιση των επεκτάσεων Python."
 
-#: faq/extending.rst:252
+#: faq/extending.rst:237
 msgid "For Red Hat, install the python3-devel RPM to get the necessary files."
 msgstr ""
 "Για το Red Hat, εγκαταστήστε το RPM της python3-devel για να λάβετε τα "
 "απαραίτητα αρχεία."
 
-#: faq/extending.rst:254
+#: faq/extending.rst:239
 msgid "For Debian, run ``apt-get install python3-dev``."
 msgstr "Για το Debian, εκτελέστε το ``apt-get install python3-dev``."
 
-#: faq/extending.rst:257
+#: faq/extending.rst:242
 msgid "How do I tell \"incomplete input\" from \"invalid input\"?"
 msgstr ""
 "Πώς μπορώ να ξεχωρίσω την \"ελλιπή εισαγωγή\" από την \"έγκυρη εισαγωγή\";"
 
-#: faq/extending.rst:259
+#: faq/extending.rst:244
 msgid ""
 "Sometimes you want to emulate the Python interactive interpreter's behavior, "
 "where it gives you a continuation prompt when the input is incomplete (e.g. "
@@ -539,7 +510,7 @@ msgstr ""
 "παρενθέσεις ή τα τριπλά εισαγωγικά συμβολοσειρών), αλλά σας δίνει ένα μήνυμα "
 "συντακτικού σφάλματος αμέσως όταν η εισαγωγή δεν είναι έγκυρη."
 
-#: faq/extending.rst:265
+#: faq/extending.rst:250
 msgid ""
 "In Python you can use the :mod:`codeop` module, which approximates the "
 "parser's behavior sufficiently.  IDLE uses this, for example."
@@ -548,7 +519,7 @@ msgstr ""
 "προσεγγίζει επαρκώς τη συμπεριφορά του parser.  Το IDLE χρησιμοποιεί αυτό, "
 "για παράδειγμα."
 
-#: faq/extending.rst:268
+#: faq/extending.rst:253
 msgid ""
 "The easiest way to do it in C is to call :c:func:`PyRun_InteractiveLoop` "
 "(perhaps in a separate thread) and let the Python interpreter handle the "
@@ -563,12 +534,12 @@ msgstr ""
 "προσαρμοσμένη συνάρτηση εισαγωγής. Δείτε τα ``Modules/readline.c`` και "
 "``Parser/myreadline.c`` για περισσότερες συμβουλές."
 
-#: faq/extending.rst:275
+#: faq/extending.rst:260
 msgid "How do I find undefined g++ symbols __builtin_new or __pure_virtual?"
 msgstr ""
 "Πώς μπορώ να βρω απροσδιόριστα σύμβολα g++ __builtin_new ή __pure_virtual;"
 
-#: faq/extending.rst:277
+#: faq/extending.rst:262
 msgid ""
 "To dynamically load g++ extension modules, you must recompile Python, relink "
 "it using g++ (change LINKCC in the Python Modules Makefile), and link your "
@@ -579,7 +550,7 @@ msgstr ""
 "Python Modules Makefile), και να συνδέσετε το module επέκτασης σας "
 "χρησιμοποιώντας g++ (π.χ. ``g++ -shared -o mymodule.so mymodule.o``)."
 
-#: faq/extending.rst:283
+#: faq/extending.rst:268
 msgid ""
 "Can I create an object class with some methods implemented in C and others "
 "in Python (e.g. through inheritance)?"
@@ -587,7 +558,7 @@ msgstr ""
 "Μπορώ να δημιουργήσω μια κλάση αντικειμένου με ορισμένες μεθόδους που "
 "υλοποιούνται στη C και άλλες στη Python (π.χ. μέσω κληρονομικότητας);"
 
-#: faq/extending.rst:285
+#: faq/extending.rst:270
 msgid ""
 "Yes, you can inherit from built-in classes such as :class:`int`, :class:"
 "`list`, :class:`dict`, etc."
@@ -595,7 +566,7 @@ msgstr ""
 "Ναι, μπορείτε να κληρονομήσετε από ενσωματωμένες (built-in) κλάσεις όπως :"
 "class:`int`, :class:`list`, :class:`dict`, κ.λπ."
 
-#: faq/extending.rst:288
+#: faq/extending.rst:273
 msgid ""
 "The Boost Python Library (BPL, https://www.boost.org/libs/python/doc/index."
 "html) provides a way of doing this from C++ (i.e. you can inherit from an "
@@ -605,3 +576,41 @@ msgstr ""
 "doc/index.html) παρέχει ένα τρόπο για να γίνει αυτό από την C++ (δηλαδή "
 "μπορείτε να κληρονομήσετε από μια κλάση επέκτασης γραμμένη σε C++ "
 "χρησιμοποιώντας το BPL)."
+
+#~ msgid ""
+#~ "There are a number of alternatives to writing your own C extensions, "
+#~ "depending on what you're trying to do."
+#~ msgstr ""
+#~ "Υπάρχουν διάφορες εναλλακτικές λύσεις για να γράψετε τις δικές σας "
+#~ "επεκτάσεις C, ανάλογα με το τι προσπαθείτε να κάνετε."
+
+#~ msgid ""
+#~ "`Cython <https://cython.org>`_ and its relative `Pyrex <https://www.csse."
+#~ "canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ are compilers that accept a "
+#~ "slightly modified form of Python and generate the corresponding C code.  "
+#~ "Cython and Pyrex make it possible to write an extension without having to "
+#~ "learn Python's C API."
+#~ msgstr ""
+#~ "Το `Cython <https://cython.org>`_ και το σχετικό του `Pyrex <https://www."
+#~ "csse.canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ είναι μεταγλωττιστές "
+#~ "που δέχονται ελαφρώς τροποποιημένη μορφή της Python και δημιουργούν τον "
+#~ "αντίστοιχο C κώδικα.  Το Cython και το Pyrex καθιστούν δυνατή τη σύνταξη "
+#~ "μιας επέκτασης χωρίς να χρειάζεται να μάθετε το C API της Python."
+
+#~ msgid ""
+#~ "If you need to interface to some C or C++ library for which no Python "
+#~ "extension currently exists, you can try wrapping the library's data types "
+#~ "and functions with a tool such as `SWIG <https://www.swig.org>`_.  `SIP "
+#~ "<https://github.com/Python-SIP/sip>`__, `CXX <https://cxx.sourceforge.net/"
+#~ ">`_ `Boost <https://www.boost.org/libs/python/doc/index.html>`_, or "
+#~ "`Weave <https://github.com/scipy/weave>`_ are also alternatives for "
+#~ "wrapping C++ libraries."
+#~ msgstr ""
+#~ "Εάν χρειάζεται να συνδεθείτε με κάποια βιβλιοθήκη C ή C++ για την οποία "
+#~ "δεν υπάρχει αυτήν τη στιγμή επέκταση Python, μπορείτε να δοκιμάσετε να "
+#~ "αναδιπλώσετε τους τύπους δεδομένων και τις συναρτήσεις της βιβλιοθήκης με "
+#~ "ένα εργαλείο όπως `SWIG <https://www.swig.org>`_.  `SIP <https://github."
+#~ "com/Python-SIP/sip>`__, `CXX <https://cxx.sourceforge.net/>`_ `Boost "
+#~ "<https://www.boost.org/libs/python/doc/index.html>`_, ή `Weave <https://"
+#~ "github.com/scipy/weave>`_ είναι επίσης εναλλακτικές λύσεις για την "
+#~ "αναδίπλωση βιβλιοθηκών C++."

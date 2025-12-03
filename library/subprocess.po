@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -814,7 +814,7 @@ msgstr ""
 msgid ""
 "If specified, *env* must provide any variables required for the program to "
 "execute.  On Windows, in order to run a `side-by-side assembly`_ the "
-"specified *env* **must** include a valid :envvar:`SystemRoot`."
+"specified *env* **must** include a valid ``%SystemRoot%``."
 msgstr ""
 
 #: library/subprocess.rst:656
@@ -1900,10 +1900,9 @@ msgstr ""
 
 #: library/subprocess.rst:1542
 msgid ""
-"Execute the string *cmd* in a shell with :meth:`Popen.check_output` and "
-"return a 2-tuple ``(exitcode, output)``. *encoding* and *errors* are used to "
-"decode output; see the notes on :ref:`frequently-used-arguments` for more "
-"details."
+"Execute the string *cmd* in a shell with :func:`check_output` and return a 2-"
+"tuple ``(exitcode, output)``. *encoding* and *errors* are used to decode "
+"output; see the notes on :ref:`frequently-used-arguments` for more details."
 msgstr ""
 
 #: library/subprocess.rst:1547
@@ -1960,41 +1959,68 @@ msgid "Notes"
 msgstr ""
 
 #: library/subprocess.rst:1597
-msgid "Converting an argument sequence to a string on Windows"
+msgid "Timeout Behavior"
 msgstr ""
 
 #: library/subprocess.rst:1599
+msgid ""
+"When using the ``timeout`` parameter in functions like :func:`run`, :meth:"
+"`Popen.wait`, or :meth:`Popen.communicate`, users should be aware of the "
+"following behaviors:"
+msgstr ""
+
+#: library/subprocess.rst:1603
+msgid ""
+"**Process Creation Delay**: The initial process creation itself cannot be "
+"interrupted on many platform APIs. This means that even when specifying a "
+"timeout, you are not guaranteed to see a timeout exception until at least "
+"after however long process creation takes."
+msgstr ""
+
+#: library/subprocess.rst:1608
+msgid ""
+"**Extremely Small Timeout Values**: Setting very small timeout values (such "
+"as a few milliseconds) may result in almost immediate :exc:`TimeoutExpired` "
+"exceptions because process creation and system scheduling inherently require "
+"time."
+msgstr ""
+
+#: library/subprocess.rst:1615
+msgid "Converting an argument sequence to a string on Windows"
+msgstr ""
+
+#: library/subprocess.rst:1617
 msgid ""
 "On Windows, an *args* sequence is converted to a string that can be parsed "
 "using the following rules (which correspond to the rules used by the MS C "
 "runtime):"
 msgstr ""
 
-#: library/subprocess.rst:1603
+#: library/subprocess.rst:1621
 msgid ""
 "Arguments are delimited by white space, which is either a space or a tab."
 msgstr ""
 
-#: library/subprocess.rst:1606
+#: library/subprocess.rst:1624
 msgid ""
 "A string surrounded by double quotation marks is interpreted as a single "
 "argument, regardless of white space contained within.  A quoted string can "
 "be embedded in an argument."
 msgstr ""
 
-#: library/subprocess.rst:1611
+#: library/subprocess.rst:1629
 msgid ""
 "A double quotation mark preceded by a backslash is interpreted as a literal "
 "double quotation mark."
 msgstr ""
 
-#: library/subprocess.rst:1614
+#: library/subprocess.rst:1632
 msgid ""
 "Backslashes are interpreted literally, unless they immediately precede a "
 "double quotation mark."
 msgstr ""
 
-#: library/subprocess.rst:1617
+#: library/subprocess.rst:1635
 msgid ""
 "If backslashes immediately precede a double quotation mark, every pair of "
 "backslashes is interpreted as a literal backslash.  If the number of "
@@ -2002,37 +2028,37 @@ msgid ""
 "mark as described in rule 3."
 msgstr ""
 
-#: library/subprocess.rst:1626
+#: library/subprocess.rst:1644
 msgid ":mod:`shlex`"
 msgstr ""
 
-#: library/subprocess.rst:1627
+#: library/subprocess.rst:1645
 msgid "Module which provides function to parse and escape command lines."
 msgstr ""
 
-#: library/subprocess.rst:1634
+#: library/subprocess.rst:1652
 msgid "Disabling use of ``vfork()`` or ``posix_spawn()``"
 msgstr ""
 
-#: library/subprocess.rst:1636
+#: library/subprocess.rst:1654
 msgid ""
 "On Linux, :mod:`subprocess` defaults to using the ``vfork()`` system call "
 "internally when it is safe to do so rather than ``fork()``. This greatly "
 "improves performance."
 msgstr ""
 
-#: library/subprocess.rst:1640
+#: library/subprocess.rst:1658
 msgid ""
 "If you ever encounter a presumed highly unusual situation where you need to "
 "prevent ``vfork()`` from being used by Python, you can set the :const:"
 "`subprocess._USE_VFORK` attribute to a false value."
 msgstr ""
 
-#: library/subprocess.rst:1646
+#: library/subprocess.rst:1664
 msgid "subprocess._USE_VFORK = False  # See CPython issue gh-NNNNNN."
 msgstr ""
 
-#: library/subprocess.rst:1648
+#: library/subprocess.rst:1666
 msgid ""
 "Setting this has no impact on use of ``posix_spawn()`` which could use "
 "``vfork()`` internally within its libc implementation.  There is a similar :"
@@ -2040,11 +2066,11 @@ msgid ""
 "that."
 msgstr ""
 
-#: library/subprocess.rst:1655
+#: library/subprocess.rst:1673
 msgid "subprocess._USE_POSIX_SPAWN = False  # See CPython issue gh-NNNNNN."
 msgstr ""
 
-#: library/subprocess.rst:1657
+#: library/subprocess.rst:1675
 msgid ""
 "It is safe to set these to false on any Python version. They will have no "
 "effect on older versions when unsupported. Do not assume the attributes are "
@@ -2052,18 +2078,18 @@ msgid ""
 "the corresponding function will be used, only that it may be."
 msgstr ""
 
-#: library/subprocess.rst:1662
+#: library/subprocess.rst:1680
 msgid ""
 "Please file issues any time you have to use these private knobs with a way "
 "to reproduce the issue you were seeing. Link to that issue from a comment in "
 "your code."
 msgstr ""
 
-#: library/subprocess.rst:1666
+#: library/subprocess.rst:1684
 msgid "``_USE_POSIX_SPAWN``"
 msgstr ""
 
-#: library/subprocess.rst:1667
+#: library/subprocess.rst:1685
 msgid "``_USE_VFORK``"
 msgstr ""
 

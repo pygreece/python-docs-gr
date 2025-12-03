@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -572,9 +572,9 @@ msgid ""
 "This is either ``None`` (if the mock hasn't been called), or the arguments "
 "that the mock was last called with. This will be in the form of a tuple: the "
 "first member, which can also be accessed through the ``args`` property, is "
-"any ordered arguments the mock was called with (or an empty tuple) and the "
-"second member, which can also be accessed through the ``kwargs`` property, "
-"is any keyword arguments (or an empty dictionary)."
+"any positional arguments the mock was called with (or an empty tuple) and "
+"the second member, which can also be accessed through the ``kwargs`` "
+"property, is any keyword arguments (or an empty dictionary)."
 msgstr ""
 
 #: library/unittest.mock.rst:672
@@ -2767,9 +2767,9 @@ msgstr ""
 
 #: library/unittest.mock.rst:2654
 msgid ""
-">>> mock.has_data()\n"
+">>> mock.header_items()\n"
 "<mock.Mock object at 0x...>\n"
-">>> mock.has_data.assret_called_with()  # Intentional typo!"
+">>> mock.header_items.assret_called_with()  # Intentional typo!"
 msgstr ""
 
 #: library/unittest.mock.rst:2660

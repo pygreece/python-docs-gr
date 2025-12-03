@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
-"PO-Revision-Date: 2025-05-03 18:04+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
 "Language: el\n"
@@ -55,15 +55,18 @@ msgstr ""
 "ένα ζεύγος ταιριασμένων αριστερών και δεξιών delimiters (παρενθέσεις, "
 "αγκύλες, άγκιστρα ή τριπλά εισαγωγικά), ή μετά τον καθορισμό ενός decorator."
 
-#: glossary.rst:24
-msgid "The :const:`Ellipsis` built-in constant."
-msgstr "Η ενσωματωμένη σταθερά :const:`Ellipsis`."
+#: glossary.rst:26
+msgid ""
+"The three dots form of the :ref:`Ellipsis <bltin-ellipsis-object>` object."
+msgstr ""
+"Οι τρεις τελείες σχηματίζουν το αντικείμενο :ref:`Ellipsis <bltin-ellipsis-"
+"object>`."
 
-#: glossary.rst:25
+#: glossary.rst:27
 msgid "abstract base class"
 msgstr "αφηρημένη βασική κλάση"
 
-#: glossary.rst:27
+#: glossary.rst:29
 msgid ""
 "Abstract base classes complement :term:`duck-typing` by providing a way to "
 "define interfaces when other techniques like :func:`hasattr` would be clumsy "
@@ -88,11 +91,11 @@ msgstr ""
 "μονάδα :mod:`io`), εισαγωγή finders και loaders (στο module :mod:`importlib."
 "abc`). Μπορείτε να δημιουργήσετε τα δικά σας ABC με το module :mod:`abc`."
 
-#: glossary.rst:38
+#: glossary.rst:40
 msgid "annotation"
 msgstr "annotation"
 
-#: glossary.rst:40
+#: glossary.rst:42
 msgid ""
 "A label associated with a variable, a class attribute or a function "
 "parameter or return value, used by convention as a :term:`type hint`."
@@ -101,7 +104,7 @@ msgstr ""
 "παράμετρος συνάρτησης ή τιμή που επιστρέφεται, που χρησιμοποιείται κατά "
 "σύμβαση ως :term:`type hint`."
 
-#: glossary.rst:44
+#: glossary.rst:46
 msgid ""
 "Annotations of local variables cannot be accessed at runtime, but "
 "annotations of global variables, class attributes, and functions are stored "
@@ -114,7 +117,7 @@ msgstr ""
 "χαρακτηριστικό :attr:`__annotations__` των modules, των κλάσεων και των "
 "συναρτήσεων, αντίστοιχα."
 
-#: glossary.rst:50
+#: glossary.rst:52
 msgid ""
 "See :term:`variable annotation`, :term:`function annotation`, :pep:`484` "
 "and :pep:`526`, which describe this functionality. Also see :ref:"
@@ -124,11 +127,11 @@ msgstr ""
 "και :pep:`526`, τα οποία περιγράφουν την λειτουργικότητα. Επίσης βλ. :ref:"
 "`annotations-howto` για τις βέλτιστες πρακτικές δουλεύοντας με annotations."
 
-#: glossary.rst:54
+#: glossary.rst:56
 msgid "argument"
 msgstr "όρισμα"
 
-#: glossary.rst:56
+#: glossary.rst:58
 msgid ""
 "A value passed to a :term:`function` (or :term:`method`) when calling the "
 "function.  There are two kinds of argument:"
@@ -136,7 +139,7 @@ msgstr ""
 "Μια τιμή μεταβιβάζεται σε μία :term:`function` (ή :term:`method`) κατά την "
 "κλήση της συνάρτησης.  Υπάρχουν δύο είδη ορισμάτων:"
 
-#: glossary.rst:59
+#: glossary.rst:61
 msgid ""
 ":dfn:`keyword argument`: an argument preceded by an identifier (e.g. "
 "``name=``) in a function call or passed as a value in a dictionary preceded "
@@ -148,7 +151,7 @@ msgstr ""
 "από ``**``. Για παράδειγμα, το ``3`` και το ``5`` αποτελούν ορίσματα λέξεων-"
 "κλειδιών στις ακόλουθες κλήσεις προς :func:`complex`::"
 
-#: glossary.rst:64
+#: glossary.rst:66
 msgid ""
 "complex(real=3, imag=5)\n"
 "complex(**{'real': 3, 'imag': 5})"
@@ -156,7 +159,7 @@ msgstr ""
 "complex(real=3, imag=5)\n"
 "complex(**{'real': 3, 'imag': 5})"
 
-#: glossary.rst:67
+#: glossary.rst:69
 msgid ""
 ":dfn:`positional argument`: an argument that is not a keyword argument. "
 "Positional arguments can appear at the beginning of an argument list and/or "
@@ -169,7 +172,7 @@ msgstr ""
 "παράδειγμα, το ``3`` και το ``5`` αποτελούν ορίσματα θέσης στις παρακάτω "
 "κλήσεις::"
 
-#: glossary.rst:73
+#: glossary.rst:75
 msgid ""
 "complex(3, 5)\n"
 "complex(*(3, 5))"
@@ -177,7 +180,7 @@ msgstr ""
 "complex(3, 5)\n"
 "complex(*(3, 5))"
 
-#: glossary.rst:76
+#: glossary.rst:78
 msgid ""
 "Arguments are assigned to the named local variables in a function body. See "
 "the :ref:`calls` section for the rules governing this assignment. "
@@ -190,7 +193,7 @@ msgstr ""
 "να αναπαραστήσει ένα όρισμα' η αξιολογούμενη τιμή εκχωρείται σε μια τοπική "
 "μεταβλητή."
 
-#: glossary.rst:81
+#: glossary.rst:83
 msgid ""
 "See also the :term:`parameter` glossary entry, the FAQ question on :ref:`the "
 "difference between arguments and parameters <faq-argument-vs-parameter>`, "
@@ -200,11 +203,11 @@ msgstr ""
 "ερώτηση στο :ref:`η διαφορά μεταξύ ορισμάτων και παραμέτρων <faq-argument-vs-"
 "parameter>`, και :pep:`362`."
 
-#: glossary.rst:84
+#: glossary.rst:86
 msgid "asynchronous context manager"
 msgstr "ασύγχρονος διαχειριστής context"
 
-#: glossary.rst:86
+#: glossary.rst:88
 msgid ""
 "An object which controls the environment seen in an :keyword:`async with` "
 "statement by defining :meth:`~object.__aenter__` and :meth:`~object."
@@ -214,11 +217,11 @@ msgstr ""
 "`async with` ορίζοντας τις μεθόδους :meth:`~object.__aenter__` και :meth:"
 "`~object.__aexit__`. Που εισήχθη από :pep:`492`."
 
-#: glossary.rst:89
+#: glossary.rst:91
 msgid "asynchronous generator"
 msgstr "ασύγχρονος generator"
 
-#: glossary.rst:91
+#: glossary.rst:93
 msgid ""
 "A function which returns an :term:`asynchronous generator iterator`.  It "
 "looks like a coroutine function defined with :keyword:`async def` except "
@@ -231,7 +234,7 @@ msgstr ""
 "σειράς τιμών που μπορούν να χρησιμοποιηθούν σε έναν :keyword:`async for` "
 "βρόχο."
 
-#: glossary.rst:96
+#: glossary.rst:98
 msgid ""
 "Usually refers to an asynchronous generator function, but may refer to an "
 "*asynchronous generator iterator* in some contexts.  In cases where the "
@@ -242,7 +245,7 @@ msgstr ""
 "περιπτώσεις όπου το επιδιωκόμενο νόημα δεν είναι σαφές, με την χρήση των "
 "πλήρων όρων αποφεύγεται η ασάφεια."
 
-#: glossary.rst:100
+#: glossary.rst:102
 msgid ""
 "An asynchronous generator function may contain :keyword:`await` expressions "
 "as well as :keyword:`async for`, and :keyword:`async with` statements."
@@ -250,17 +253,17 @@ msgstr ""
 "Μια συνάρτηση ασύγχρονου generator μπορεί να περιέχει εκφράσεις :keyword:"
 "`await` , καθώς και δηλώσεις :keyword:`async for`, και :keyword:`async with`."
 
-#: glossary.rst:103
+#: glossary.rst:105
 msgid "asynchronous generator iterator"
 msgstr "ασύγχρονος generator iterator"
 
-#: glossary.rst:105
-msgid "An object created by a :term:`asynchronous generator` function."
+#: glossary.rst:107
+msgid "An object created by an :term:`asynchronous generator` function."
 msgstr ""
 "Ένα αντικείμενο που δημιουργήθηκε από μια συνάρτηση :term:`asynchronous "
 "generator`."
 
-#: glossary.rst:107
+#: glossary.rst:109
 msgid ""
 "This is an :term:`asynchronous iterator` which when called using the :meth:"
 "`~object.__anext__` method returns an awaitable object which will execute "
@@ -272,7 +275,7 @@ msgstr ""
 "αναμενόμενο αντικείμενο που θα εκτελέσει στο σώμα της συνάρτησης του "
 "ασύγχρονου generator μέχρι την επόμενη :keyword:`yield` έκφραση."
 
-#: glossary.rst:112
+#: glossary.rst:114
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "execution state (including local variables and pending try-statements).  "
@@ -287,11 +290,11 @@ msgstr ""
 "`~object.__anext__ `, συνεχίζει από εκεί που σταμάτησε. Βλ. :pep:`492` και :"
 "pep:`525`."
 
-#: glossary.rst:117
+#: glossary.rst:119
 msgid "asynchronous iterable"
 msgstr "ασύγχρονος iterable"
 
-#: glossary.rst:119
+#: glossary.rst:121
 msgid ""
 "An object, that can be used in an :keyword:`async for` statement. Must "
 "return an :term:`asynchronous iterator` from its :meth:`~object.__aiter__` "
@@ -301,11 +304,11 @@ msgstr ""
 "for`. Πρέπει να επιστρέφει ένα :term:`asynchronous iterator` από την μέθοδο :"
 "meth:`~object.__aiter__`. Που εισήχθη από :pep:`492`."
 
-#: glossary.rst:122
+#: glossary.rst:124
 msgid "asynchronous iterator"
 msgstr "ασύγχρονος iterator"
 
-#: glossary.rst:124
+#: glossary.rst:126
 msgid ""
 "An object that implements the :meth:`~object.__aiter__` and :meth:`~object."
 "__anext__` methods.  :meth:`~object.__anext__` must return an :term:"
@@ -320,11 +323,11 @@ msgstr ""
 "__anext__` ενός ασύγχρονου iterator έως ότου εγείρει μια εξαίρεση :exc:"
 "`StopAsyncIteration`. Εισήχθη από :pep:`492`."
 
-#: glossary.rst:129
+#: glossary.rst:131
 msgid "attribute"
 msgstr "χαρακτηριστικό"
 
-#: glossary.rst:131
+#: glossary.rst:133
 msgid ""
 "A value associated with an object which is usually referenced by name using "
 "dotted expressions. For example, if an object *o* has an attribute *a* it "
@@ -334,7 +337,7 @@ msgstr ""
 "χρησιμοποιώντας εκφράσεις με κουκκίδες. Για παράδειγμα, εάν ένα αντικείμενο "
 "*o* έχει ένα χαρακτηριστικό *a* θα αναφέρεται ως *o.a*."
 
-#: glossary.rst:136
+#: glossary.rst:138
 msgid ""
 "It is possible to give an object an attribute whose name is not an "
 "identifier as defined by :ref:`identifiers`, for example using :func:"
@@ -349,11 +352,11 @@ msgstr ""
 "χρησιμοποιώντας τις τελείες, και αντί αυτού θα πρέπει να ανακτηθεί "
 "χρησιμοποιώντας :func:`getattr`."
 
-#: glossary.rst:141
+#: glossary.rst:143
 msgid "awaitable"
 msgstr "awaitable"
 
-#: glossary.rst:143
+#: glossary.rst:145
 msgid ""
 "An object that can be used in an :keyword:`await` expression.  Can be a :"
 "term:`coroutine` or an object with an :meth:`~object.__await__` method. See "
@@ -363,11 +366,11 @@ msgstr ""
 "Μπορεί να είναι :term:`coroutine` ή ένα αντικείμενο με μια :meth:`~object."
 "__await__` μέθοδο. Βλ. επίσης :pep:`492`."
 
-#: glossary.rst:146
+#: glossary.rst:148
 msgid "BDFL"
 msgstr "BDFL"
 
-#: glossary.rst:148
+#: glossary.rst:150
 msgid ""
 "Benevolent Dictator For Life, a.k.a. `Guido van Rossum <https://gvanrossum."
 "github.io/>`_, Python's creator."
@@ -376,11 +379,11 @@ msgstr ""
 "ζωής, δηλαδή `Guido van Rossum <https://gvanrossum.github.io/>`_, ο "
 "δημιουργός της Python."
 
-#: glossary.rst:150
+#: glossary.rst:152
 msgid "binary file"
 msgstr "δυαδικό αρχείο"
 
-#: glossary.rst:152
+#: glossary.rst:154
 msgid ""
 "A :term:`file object` able to read and write :term:`bytes-like objects "
 "<bytes-like object>`. Examples of binary files are files opened in binary "
@@ -394,7 +397,7 @@ msgstr ""
 "data:`sys.stdin.buffer <sys.stdin>`, :data:`sys.stdout.buffer <sys.stdout>`, "
 "και στιγμιοτύπων των :class:`io.BytesIO` και :class:`gzip.GzipFile`."
 
-#: glossary.rst:159
+#: glossary.rst:161
 msgid ""
 "See also :term:`text file` for a file object able to read and write :class:"
 "`str` objects."
@@ -402,11 +405,11 @@ msgstr ""
 "Βλ. επίσης :term:`text file` για ένα αντικείμενο τύπου αρχείο ικανό να "
 "διαβάσει και να γράψει :class:`str` αντικείμενα."
 
-#: glossary.rst:161
+#: glossary.rst:163
 msgid "borrowed reference"
 msgstr "δανεική αναφορά"
 
-#: glossary.rst:163
+#: glossary.rst:165
 msgid ""
 "In Python's C API, a borrowed reference is a reference to an object, where "
 "the code using the object does not own the reference. It becomes a dangling "
@@ -420,7 +423,7 @@ msgstr ""
 "αφαιρέσει το τελευταίο :term:`strong reference` από το αντικείμενο και έτσι "
 "να το καταστρέψει."
 
-#: glossary.rst:169
+#: glossary.rst:171
 msgid ""
 "Calling :c:func:`Py_INCREF` on the :term:`borrowed reference` is recommended "
 "to convert it to a :term:`strong reference` in-place, except when the object "
@@ -435,11 +438,11 @@ msgstr ""
 "c:func:`Py_NewRef` μπορεί να χρησιμοποιηθεί ώστε να δημιουργηθεί ένα :term:"
 "`ισχυρή αναφορά <strong reference>`."
 
-#: glossary.rst:174
+#: glossary.rst:176
 msgid "bytes-like object"
 msgstr "bytes-like αντικείμενα"
 
-#: glossary.rst:176
+#: glossary.rst:178
 msgid ""
 "An object that supports the :ref:`bufferobjects` and can export a C-:term:"
 "`contiguous` buffer. This includes all :class:`bytes`, :class:`bytearray`, "
@@ -456,7 +459,7 @@ msgstr ""
 "διαχειρίζονται δυαδικά δεδομένα' αυτά περιλαμβάνουν συμπίεση αποθήκευση σε "
 "δυαδικό αρχείο και αποστολή μέσω socket."
 
-#: glossary.rst:183
+#: glossary.rst:185
 msgid ""
 "Some operations need the binary data to be mutable.  The documentation often "
 "refers to these as \"read-write bytes-like objects\".  Example mutable "
@@ -475,11 +478,11 @@ msgstr ""
 "αυτών περιέχουν :class:`bytes` και ένα :class:`memoryview` ενός :class:"
 "`bytes` αντικειμένου."
 
-#: glossary.rst:191
+#: glossary.rst:193
 msgid "bytecode"
 msgstr "bytecode"
 
-#: glossary.rst:193
+#: glossary.rst:195
 msgid ""
 "Python source code is compiled into bytecode, the internal representation of "
 "a Python program in the CPython interpreter.  The bytecode is also cached in "
@@ -501,7 +504,7 @@ msgstr ""
 "εικονικών μηχανών Python, ούτε να είναι σταθερά μεταξύ των εκδόσεων της "
 "Python."
 
-#: glossary.rst:203
+#: glossary.rst:205
 msgid ""
 "A list of bytecode instructions can be found in the documentation for :ref:"
 "`the dis module <bytecodes>`."
@@ -509,11 +512,11 @@ msgstr ""
 "Μια λίστα από οδηγίες σχετικά με τα bytecode μπορεί να βρεθεί στην "
 "τεκμηρίωση για :ref:`το module dis <bytecodes>`."
 
-#: glossary.rst:205
+#: glossary.rst:207
 msgid "callable"
 msgstr "callable"
 
-#: glossary.rst:207
+#: glossary.rst:209
 msgid ""
 "A callable is an object that can be called, possibly with a set of arguments "
 "(see :term:`argument`), with the following syntax::"
@@ -521,11 +524,11 @@ msgstr ""
 "Ένα callable είναι ένα αντικείμενο που μπορεί να καλεστεί, πιθανά με ένα "
 "σύνολο ορισμάτων (βλ. :term:`argument`), με την παρακάτω σύνταξη::"
 
-#: glossary.rst:210
+#: glossary.rst:212
 msgid "callable(argument1, argument2, argumentN)"
 msgstr "callable(argument1, argument2, argumentN)"
 
-#: glossary.rst:212
+#: glossary.rst:214
 msgid ""
 "A :term:`function`, and by extension a :term:`method`, is a callable. An "
 "instance of a class that implements the :meth:`~object.__call__` method is "
@@ -535,11 +538,11 @@ msgstr ""
 "Ένα στιγμιότυπο μια κλάσης που υλοποιεί τη μέθοδο :meth:`~object.__call__` "
 "είναι επίσης callable."
 
-#: glossary.rst:215
+#: glossary.rst:217
 msgid "callback"
 msgstr "callback"
 
-#: glossary.rst:217
+#: glossary.rst:219
 msgid ""
 "A subroutine function which is passed as an argument to be executed at some "
 "point in the future."
@@ -547,11 +550,11 @@ msgstr ""
 "Μια subroutine συνάρτηση η οποία μεταβιβάζεται ως όρισμα που θα εκτελεστεί "
 "κάποια στιγμή στο μέλλον."
 
-#: glossary.rst:219
+#: glossary.rst:221
 msgid "class"
 msgstr "κλάση"
 
-#: glossary.rst:221
+#: glossary.rst:223
 msgid ""
 "A template for creating user-defined objects. Class definitions normally "
 "contain method definitions which operate on instances of the class."
@@ -560,11 +563,11 @@ msgstr ""
 "ορισμοί κλάσεων συνήθως περιέχουν ορισμούς μεθόδων που λειτουργούν σε "
 "στιγμιότυπα της κλάσης."
 
-#: glossary.rst:224
+#: glossary.rst:226
 msgid "class variable"
 msgstr "μεταβλητή κλάσης"
 
-#: glossary.rst:226
+#: glossary.rst:228
 msgid ""
 "A variable defined in a class and intended to be modified only at class "
 "level (i.e., not in an instance of the class)."
@@ -572,11 +575,11 @@ msgstr ""
 "Μια μεταβλητή που ορίζεται σε μια κλάση και προορίζεται να τροποποιηθεί μόνο "
 "σε επίπεδο κλάσης (δηλ. όχι σε ένα στιγμιότυπο μιας κλάσης)."
 
-#: glossary.rst:228
+#: glossary.rst:230
 msgid "closure variable"
 msgstr "μεταβλητή κλεισίματος"
 
-#: glossary.rst:230
+#: glossary.rst:232
 msgid ""
 "A :term:`free variable` referenced from a :term:`nested scope` that is "
 "defined in an outer scope rather than being resolved at runtime from the "
@@ -591,7 +594,7 @@ msgstr ""
 "εγγραφή, ή να θεωρηθεί ότι ορίζεται έμμεσα όταν η μεταβλητή χρησιμοποιείται "
 "μόνο για ανάγνωση."
 
-#: glossary.rst:235
+#: glossary.rst:237
 msgid ""
 "For example, in the ``inner`` function in the following code, both ``x`` and "
 "``print`` are :term:`free variables <free variable>`, but only ``x`` is a "
@@ -601,7 +604,7 @@ msgstr ""
 "και η ``print`` είναι :term:`free variables <free variable>`, αλλά μόνο η "
 "``x`` είναι μια *μεταβλητή κλεισίματος*::"
 
-#: glossary.rst:238
+#: glossary.rst:240
 msgid ""
 "def outer():\n"
 "    x = 0\n"
@@ -619,7 +622,7 @@ msgstr ""
 "        print(x)\n"
 "    return inner"
 
-#: glossary.rst:246
+#: glossary.rst:248
 msgid ""
 "Due to the :attr:`codeobject.co_freevars` attribute (which, despite its "
 "name, only includes the names of closure variables rather than listing all "
@@ -633,11 +636,11 @@ msgstr ""
 "φορές ο πιο γενικός όρος :term:`free variable` ακόμη και όταν γίνεται ειδική "
 "αναφορά σε μεταβλητές κλεισίματος."
 
-#: glossary.rst:250
+#: glossary.rst:252
 msgid "complex number"
 msgstr "μιγαδικός αριθμός"
 
-#: glossary.rst:252
+#: glossary.rst:254
 msgid ""
 "An extension of the familiar real number system in which all numbers are "
 "expressed as a sum of a real part and an imaginary part.  Imaginary numbers "
@@ -661,11 +664,11 @@ msgstr ""
 "προηγμένο μαθηματικό χαρακτηριστικό. εάν δεν γνωρίζετε την ανάγκη τους, "
 "είναι σχεδόν σίγουρο ότι μπορείτε να τα αγνοήσετε με ασφάλεια."
 
-#: glossary.rst:262
+#: glossary.rst:264
 msgid "context"
 msgstr "context"
 
-#: glossary.rst:264
+#: glossary.rst:266
 msgid ""
 "This term has different meanings depending on where and how it is used. Some "
 "common meanings:"
@@ -673,7 +676,7 @@ msgstr ""
 "Αυτό ο όρος έχει διαφορετικές σημασίες ανάλογα με το πού και πώς "
 "χρησιμοποιείται. Μερικές κοινές έννοιες:"
 
-#: glossary.rst:267
+#: glossary.rst:269
 msgid ""
 "The temporary state or environment established by a :term:`context manager` "
 "via a :keyword:`with` statement."
@@ -681,7 +684,7 @@ msgstr ""
 "Η προσωρινή κατάσταση ή το περιβάλλον που δημιουργείται από έναν :term:"
 "`context manager` μέσω μιας δήλωσης :keyword:`with`."
 
-#: glossary.rst:269
+#: glossary.rst:271
 msgid ""
 "The collection of key­value bindings associated with a particular :class:"
 "`contextvars.Context` object and accessed via :class:`~contextvars."
@@ -692,18 +695,18 @@ msgstr ""
 "αντικειμένων :class:`~contextvars.ContextVar`.  Βλ. επίσης :term:`context "
 "variable`."
 
-#: glossary.rst:273
+#: glossary.rst:275
 msgid ""
 "A :class:`contextvars.Context` object.  Also see :term:`current context`."
 msgstr ""
 "Ένα αντικείμενο :class:`contextvars.Context`.  Βλ. επίσης :term:`current "
 "context`."
 
-#: glossary.rst:275
+#: glossary.rst:277
 msgid "context management protocol"
 msgstr "πρωτόκολλο διαχείρισης περιβάλλοντος"
 
-#: glossary.rst:277
+#: glossary.rst:279
 msgid ""
 "The :meth:`~object.__enter__` and :meth:`~object.__exit__` methods called by "
 "the :keyword:`with` statement.  See :pep:`343`."
@@ -711,11 +714,11 @@ msgstr ""
 "Οι μέθοδοι :meth:`~object.__enter__` και :meth:`~object.__exit__`  καλούνται "
 "από τη δήλωση :keyword:`with`.  Βλ. :pep:`343`."
 
-#: glossary.rst:279
+#: glossary.rst:281
 msgid "context manager"
 msgstr "διαχειριστής context"
 
-#: glossary.rst:281
+#: glossary.rst:283
 msgid ""
 "An object which implements the :term:`context management protocol` and "
 "controls the environment seen in a :keyword:`with` statement.  See :pep:"
@@ -725,11 +728,11 @@ msgstr ""
 "ελέγχει το περιβάλλον που είσαι ορατό μέσα σε μια δήλωση :keyword:`with`.  "
 "Βλ. :pep:`343`."
 
-#: glossary.rst:284
+#: glossary.rst:286
 msgid "context variable"
 msgstr "context μεταβλητή"
 
-#: glossary.rst:286
+#: glossary.rst:288
 msgid ""
 "A variable whose value depends on which context is the :term:`current "
 "context`.  Values are accessed via :class:`contextvars.ContextVar` objects.  "
@@ -742,11 +745,11 @@ msgstr ""
 "κυρίως για να απομονώσουν την κατάσταση μεταξύ ταυτόχρονων ασύγχρονων "
 "εργασιών."
 
-#: glossary.rst:290
+#: glossary.rst:292
 msgid "contiguous"
 msgstr "contiguous"
 
-#: glossary.rst:294
+#: glossary.rst:296
 msgid ""
 "A buffer is considered contiguous exactly if it is either *C-contiguous* or "
 "*Fortran contiguous*.  Zero-dimensional buffers are C and Fortran "
@@ -765,11 +768,11 @@ msgstr ""
 "μνήμης. Ωστόσο, σε Fortran contiguous πίνακες, ο πρώτος δείκτης μεταβάλλεται "
 "πιο γρήγορα."
 
-#: glossary.rst:302
+#: glossary.rst:304
 msgid "coroutine"
 msgstr "coroutine"
 
-#: glossary.rst:304
+#: glossary.rst:306
 msgid ""
 "Coroutines are a more generalized form of subroutines. Subroutines are "
 "entered at one point and exited at another point.  Coroutines can be "
@@ -782,11 +785,11 @@ msgstr ""
 "Μπορούν να υλοποιήσουν με την δήλωση :keyword:`async def`. Βλ. επίσης :pep:"
 "`492`."
 
-#: glossary.rst:309
+#: glossary.rst:311
 msgid "coroutine function"
 msgstr "coroutine συνάρτηση"
 
-#: glossary.rst:311
+#: glossary.rst:313
 msgid ""
 "A function which returns a :term:`coroutine` object.  A coroutine function "
 "may be defined with the :keyword:`async def` statement, and may contain :"
@@ -798,11 +801,11 @@ msgstr ""
 "και μπορεί να περιέχει :keyword:`await`, :keyword:`async for`, και :keyword:"
 "`async with` λέξεις κλειδιά. Αυτές εισήχθησαν από το :pep:`492`."
 
-#: glossary.rst:316
+#: glossary.rst:318
 msgid "CPython"
 msgstr "CPython"
 
-#: glossary.rst:318
+#: glossary.rst:320
 msgid ""
 "The canonical implementation of the Python programming language, as "
 "distributed on `python.org <https://www.python.org>`_.  The term \"CPython\" "
@@ -814,11 +817,11 @@ msgstr ""
 "όταν είναι απαραίτητο για την διάκριση αυτής της υλοποίησης από άλλες όπως η "
 "*Jython* ή η *IronPython*."
 
-#: glossary.rst:322
+#: glossary.rst:324
 msgid "current context"
 msgstr "τρέχον πλαίσιο"
 
-#: glossary.rst:324
+#: glossary.rst:326
 msgid ""
 "The :term:`context` (:class:`contextvars.Context` object) that is currently "
 "used by :class:`~contextvars.ContextVar` objects to access (get or set) the "
@@ -835,11 +838,11 @@ msgstr ""
 "`asyncio`) συνδέουν κάθε εργασία με ένα συμφραζόμενο, το οποίο γίνεται το "
 "τρέχον συμφραζόμενο όποτε η εργασία ξεκινά ή συνεχίζει την εκτέλεση."
 
-#: glossary.rst:330
+#: glossary.rst:332
 msgid "decorator"
 msgstr "decorator"
 
-#: glossary.rst:332
+#: glossary.rst:334
 msgid ""
 "A function returning another function, usually applied as a function "
 "transformation using the ``@wrapper`` syntax.  Common examples for "
@@ -850,7 +853,7 @@ msgstr ""
 "Συνηθισμένα παραδείγματα για τους decorators είναι :func:`classmethod` και :"
 "func:`staticmethod`."
 
-#: glossary.rst:336
+#: glossary.rst:338
 msgid ""
 "The decorator syntax is merely syntactic sugar, the following two function "
 "definitions are semantically equivalent::"
@@ -858,7 +861,7 @@ msgstr ""
 "Η σύνταξη του decorator είναι απλώς καλλωπιστική, οι ακόλουθοι δύο ορισμοί "
 "συναρτήσεων είναι σημασιολογικά ισοδύναμοι::"
 
-#: glossary.rst:339
+#: glossary.rst:341
 msgid ""
 "def f(arg):\n"
 "    ...\n"
@@ -876,7 +879,7 @@ msgstr ""
 "def f(arg):\n"
 "    ..."
 
-#: glossary.rst:347
+#: glossary.rst:349
 msgid ""
 "The same concept exists for classes, but is less commonly used there.  See "
 "the documentation for :ref:`function definitions <function>` and :ref:`class "
@@ -886,11 +889,11 @@ msgstr ""
 "εκεί. Βλ. την τεκμηρίωση για :ref:`function definitions <function>` και :ref:"
 "`class definitions <class>` για περισσότερα σχετικά με τους decorators."
 
-#: glossary.rst:350
+#: glossary.rst:352
 msgid "descriptor"
 msgstr "descriptor"
 
-#: glossary.rst:352
+#: glossary.rst:354
 msgid ""
 "Any object which defines the methods :meth:`~object.__get__`, :meth:`~object."
 "__set__`, or :meth:`~object.__delete__`. When a class attribute is a "
@@ -913,7 +916,7 @@ msgstr ""
 "αποτελεί την βάση για πολλά χαρακτηριστικά όπως συναρτήσεις, μεθόδους, "
 "ιδιότητες, μέθοδοι κλάσης στατικές μέθοδοι, και αναφορά σε σούπερ κλάσεις."
 
-#: glossary.rst:363
+#: glossary.rst:365
 msgid ""
 "For more information about descriptors' methods, see :ref:`descriptors` or "
 "the :ref:`Descriptor How To Guide <descriptorhowto>`."
@@ -922,11 +925,11 @@ msgstr ""
 "see :ref:`descriptors` ή το :ref:`Πρακτικός οδηγός για τη χρήση του "
 "Descriptor <descriptorhowto>`."
 
-#: glossary.rst:365
+#: glossary.rst:367
 msgid "dictionary"
 msgstr "λεξικό"
 
-#: glossary.rst:367
+#: glossary.rst:369
 msgid ""
 "An associative array, where arbitrary keys are mapped to values.  The keys "
 "can be any object with :meth:`~object.__hash__` and :meth:`~object.__eq__` "
@@ -936,11 +939,11 @@ msgstr ""
 "τιμές. Τα κλειδιά μπορεί να είναι οποιοδήποτε αντικείμενο με μεθόδους :meth:"
 "`~object.__hash__` και :meth:`~object.__eq__`. Ονομάζεται ως hash στο Perl."
 
-#: glossary.rst:371
+#: glossary.rst:373
 msgid "dictionary comprehension"
 msgstr "κατανόηση λεξικού"
 
-#: glossary.rst:373
+#: glossary.rst:375
 msgid ""
 "A compact way to process all or part of the elements in an iterable and "
 "return a dictionary with the results. ``results = {n: n ** 2 for n in "
@@ -953,11 +956,11 @@ msgstr ""
 "κλειδί ``n`` που αντιστοιχίζεται με την τιμή ``n ** 2``. Βλ. :ref:"
 "`comprehensions`."
 
-#: glossary.rst:377
+#: glossary.rst:379
 msgid "dictionary view"
 msgstr "όψη λεξικού"
 
-#: glossary.rst:379
+#: glossary.rst:381
 msgid ""
 "The objects returned from :meth:`dict.keys`, :meth:`dict.values`, and :meth:"
 "`dict.items` are called dictionary views. They provide a dynamic view on the "
@@ -972,11 +975,11 @@ msgstr ""
 "όψη λεξικού να γίνει μια πλήρης λίστα χρησιμοποιήστε το ``list(dictview)``.  "
 "Βλ. :ref:`dict-views`."
 
-#: glossary.rst:385
+#: glossary.rst:387
 msgid "docstring"
 msgstr "docstring"
 
-#: glossary.rst:387
+#: glossary.rst:389
 msgid ""
 "A string literal which appears as the first expression in a class, function "
 "or module.  While ignored when the suite is executed, it is recognized by "
@@ -991,11 +994,11 @@ msgstr ""
 "περικλείει.  Δεδομένου ότι είναι διαθέσιμο μέσω ενδοσκόπησης, το κανονικό "
 "μέρος για την τεκμηρίωση του αντικειμένου."
 
-#: glossary.rst:393
+#: glossary.rst:395
 msgid "duck-typing"
 msgstr "duck-typing"
 
-#: glossary.rst:395
+#: glossary.rst:397
 msgid ""
 "A programming style which does not look at an object's type to determine if "
 "it has the right interface; instead, the method or attribute is simply "
@@ -1018,11 +1021,25 @@ msgstr ""
 "με :term:`abstract base classes <abstract base class>`.) Αντί αυτού, συνήθως "
 "χρησιμοποιεί δοκιμές :func:`hasattr` ή προγραμματισμό :term:`EAFP`."
 
-#: glossary.rst:404
+#: glossary.rst:406
+msgid "dunder"
+msgstr "dunder"
+
+#: glossary.rst:408
+msgid ""
+"An informal short-hand for \"double underscore\", used when talking about a :"
+"term:`special method`. For example, ``__init__`` is often pronounced "
+"\"dunder init\"."
+msgstr ""
+"Ένας ανεπίσημος συντομογραφικός όρος για το \"double underscore\", που "
+"χρησιμοποιείται όταν μιλάμε για μια :term:`special method`. Για παράδειγμα, "
+"``__init__`` προφέρεται συχνά ως \"dunder init\"."
+
+#: glossary.rst:411
 msgid "EAFP"
 msgstr "EAFP"
 
-#: glossary.rst:406
+#: glossary.rst:413
 msgid ""
 "Easier to ask for forgiveness than permission.  This common Python coding "
 "style assumes the existence of valid keys or attributes and catches "
@@ -1039,11 +1056,11 @@ msgstr ""
 "αντίθεση με το στυλ που είναι :term:`LBYL` κοινό σε πολλές άλλες γλώσσες, "
 "όπως η C."
 
-#: glossary.rst:412
+#: glossary.rst:419
 msgid "expression"
 msgstr "έκφραση"
 
-#: glossary.rst:414
+#: glossary.rst:421
 msgid ""
 "A piece of syntax which can be evaluated to some value.  In other words, an "
 "expression is an accumulation of expression elements like literals, names, "
@@ -1061,11 +1078,11 @@ msgstr ""
 "μπορούν να χρησιμοποιηθούν ως εκφράσεις, όπως το :keyword:`while`.  Οι "
 "αναθέσεις τιμών είναι επίσης δηλώσεις όχι εκφράσεις."
 
-#: glossary.rst:421
+#: glossary.rst:428
 msgid "extension module"
 msgstr "module επέκτασης"
 
-#: glossary.rst:423
+#: glossary.rst:430
 msgid ""
 "A module written in C or C++, using Python's C API to interact with the core "
 "and with user code."
@@ -1073,11 +1090,11 @@ msgstr ""
 "Ένα module γραμμένο σε C ή C++, που χρησιμοποιείται από το C API της Python "
 "για να αλληλεπιδράσουν με τον πυρήνα και με τον κώδικα του χρήστη."
 
-#: glossary.rst:425
+#: glossary.rst:432
 msgid "f-string"
 msgstr "f-string"
 
-#: glossary.rst:427
+#: glossary.rst:434
 msgid ""
 "String literals prefixed with ``'f'`` or ``'F'`` are commonly called \"f-"
 "strings\" which is short for :ref:`formatted string literals <f-strings>`.  "
@@ -1087,11 +1104,11 @@ msgstr ""
 "ονομάζονται συνήθως \"f-strings\" που είναι συντομογραφία του :ref:"
 "`formatted string literals <f-strings>`. Βλ. επίσης :pep:`498`."
 
-#: glossary.rst:430
+#: glossary.rst:437
 msgid "file object"
 msgstr "αντικείμενο αρχείου"
 
-#: glossary.rst:432
+#: glossary.rst:439
 msgid ""
 "An object exposing a file-oriented API (with methods such as :meth:`!read` "
 "or :meth:`!write`) to an underlying resource.  Depending on the way it was "
@@ -1108,7 +1125,7 @@ msgstr ""
 "buffers, sockets, pipes, κλπ.). Αντικείμενο αρχείου ονομάζονται επίσης :dfn:"
 "`file-like objects` ή :dfn:`streams`."
 
-#: glossary.rst:440
+#: glossary.rst:447
 msgid ""
 "There are actually three categories of file objects: raw :term:`binary files "
 "<binary file>`, buffered :term:`binary files <binary file>` and :term:`text "
@@ -1122,19 +1139,19 @@ msgstr ""
 "στην ενότητα :mod:`io`. Ο κανονικός τρόπος για να δημιουργήσετε ένα "
 "αντικείμενο αρχείου είναι χρησιμοποιώντας την συνάρτηση :func:`open`."
 
-#: glossary.rst:445
+#: glossary.rst:452
 msgid "file-like object"
 msgstr "αντικείμενο που μοιάζει με αρχείο"
 
-#: glossary.rst:447
+#: glossary.rst:454
 msgid "A synonym for :term:`file object`."
 msgstr "Ένα συνώνυμο με το :term:`file object`."
 
-#: glossary.rst:448
+#: glossary.rst:455
 msgid "filesystem encoding and error handler"
 msgstr "κωδικοποίηση συστήματος αρχείων και χειριστής σφαλμάτων"
 
-#: glossary.rst:450
+#: glossary.rst:457
 msgid ""
 "Encoding and error handler used by Python to decode bytes from the operating "
 "system and encode Unicode to the operating system."
@@ -1143,7 +1160,7 @@ msgstr ""
 "την αποκωδικοποίηση των bytes από το λειτουργικό σύστημα και την "
 "κωδικοποίηση σε Unicode για το λειτουργικό σύστημα."
 
-#: glossary.rst:453
+#: glossary.rst:460
 msgid ""
 "The filesystem encoding must guarantee to successfully decode all bytes "
 "below 128. If the file system encoding fails to provide this guarantee, API "
@@ -1154,7 +1171,7 @@ msgstr ""
 "αρχείων δεν παρέχει αυτήν την εγγύηση, οι συναρτήσεις API μπορούν να "
 "εγείρουν ένα :exc:`UnicodeError`."
 
-#: glossary.rst:457
+#: glossary.rst:464
 msgid ""
 "The :func:`sys.getfilesystemencoding` and :func:`sys."
 "getfilesystemencodeerrors` functions can be used to get the filesystem "
@@ -1164,7 +1181,7 @@ msgstr ""
 "getfilesystemencodeerrors` μπορούν να χρησιμοποιηθούν για να λάβετε την "
 "κωδικοποίηση του συστήματος αρχείων και του χειριστή σφαλμάτων."
 
-#: glossary.rst:461
+#: glossary.rst:468
 msgid ""
 "The :term:`filesystem encoding and error handler` are configured at Python "
 "startup by the :c:func:`PyConfig_Read` function: see :c:member:`~PyConfig."
@@ -1176,15 +1193,15 @@ msgstr ""
 "`~PyConfig.filesystem_encoding` και :c:member:`~PyConfig.filesystem_errors` "
 "μέλη του :c:type:`PyConfig`."
 
-#: glossary.rst:466
+#: glossary.rst:473
 msgid "See also the :term:`locale encoding`."
 msgstr "Βλ. επίσης το :term:`locale encoding`."
 
-#: glossary.rst:467
+#: glossary.rst:474
 msgid "finder"
 msgstr "finder"
 
-#: glossary.rst:469
+#: glossary.rst:476
 msgid ""
 "An object that tries to find the :term:`loader` for a module that is being "
 "imported."
@@ -1192,7 +1209,7 @@ msgstr ""
 "Ένα αντικείμενο που προσπαθεί να βρει το :term:`loader` για ένα module που "
 "εισήχθη."
 
-#: glossary.rst:472
+#: glossary.rst:479
 msgid ""
 "There are two types of finder: :term:`meta path finders <meta path finder>` "
 "for use with :data:`sys.meta_path`, and :term:`path entry finders <path "
@@ -1202,18 +1219,18 @@ msgstr ""
 "για χρήση με :data:`sys.meta_path`, και :term:`finders εισόδου διαδρομής "
 "<path entry finder>` για χρήση με :data:`sys.path_hooks`."
 
-#: glossary.rst:476
+#: glossary.rst:483
 msgid ""
 "See :ref:`finders-and-loaders` and :mod:`importlib` for much more detail."
 msgstr ""
 "Βλ. :ref:`finders-and-loaders` και :mod:`importlib` για περισσότερες "
 "λεπτομέρειες."
 
-#: glossary.rst:477
+#: glossary.rst:484
 msgid "floor division"
 msgstr "ακέραια διαίρεση"
 
-#: glossary.rst:479
+#: glossary.rst:486
 msgid ""
 "Mathematical division that rounds down to nearest integer.  The floor "
 "division operator is ``//``.  For example, the expression ``11 // 4`` "
@@ -1228,11 +1245,11 @@ msgstr ""
 "4`` κάνει ``-3`` επειδή αυτή είναι η στρογγυλοποίηση *προς τα κάτω* του "
 "``-2.75``. Βλ. :pep:`238`."
 
-#: glossary.rst:484
+#: glossary.rst:491
 msgid "free threading"
 msgstr "δωρεάν νήμα"
 
-#: glossary.rst:486
+#: glossary.rst:493
 msgid ""
 "A threading model where multiple threads can run Python bytecode "
 "simultaneously within the same interpreter.  This is in contrast to the :"
@@ -1244,11 +1261,11 @@ msgstr ""
 "`global interpreter lock`, το οποίο επιτρέπει σε ένα μόνο νήμα να εκτελεί "
 "Python bytecode κάθε φορά.  Δείτε το :pep:`703`."
 
-#: glossary.rst:490
+#: glossary.rst:497
 msgid "free variable"
 msgstr "δωρεάν μεταβλητή"
 
-#: glossary.rst:492
+#: glossary.rst:499
 msgid ""
 "Formally, as defined in the :ref:`language execution model <bind_names>`, a "
 "free variable is any variable used in a namespace which is not a local "
@@ -1264,11 +1281,11 @@ msgstr ""
 "χαρακτηριστικού :attr:`codeobject.co_freevars`, ο όρος χρησιμοποιείται "
 "επίσης μερικές φορές ως συνώνυμο της :term:`closure variable`."
 
-#: glossary.rst:497
+#: glossary.rst:504
 msgid "function"
 msgstr "συνάρτηση"
 
-#: glossary.rst:499
+#: glossary.rst:506
 msgid ""
 "A series of statements which returns some value to a caller. It can also be "
 "passed zero or more :term:`arguments <argument>` which may be used in the "
@@ -1280,16 +1297,16 @@ msgstr ""
 "<argument>` που μπορεί να χρησιμοποιηθεί για την εκτέλεση. Βλ. επίσης τις "
 "ενότητες :term:`parameter`, :term:`method`, και the :ref:`function`."
 
-#: glossary.rst:503
+#: glossary.rst:510
 msgid "function annotation"
 msgstr "συνάρτηση annotation"
 
-#: glossary.rst:505
+#: glossary.rst:512
 msgid "An :term:`annotation` of a function parameter or return value."
 msgstr ""
 "Ένας :term:`annotation` μιας παραμέτρου συνάρτησης ή μιας τιμής επιστροφής."
 
-#: glossary.rst:507
+#: glossary.rst:514
 msgid ""
 "Function annotations are usually used for :term:`type hints <type hint>`: "
 "for example, this function is expected to take two :class:`int` arguments "
@@ -1300,7 +1317,7 @@ msgstr ""
 "ορίσματα :class:`int` και επίσης αναμένεται να έχει μία επιστρεφόμενη τιμή :"
 "class:`int`::"
 
-#: glossary.rst:512
+#: glossary.rst:519
 msgid ""
 "def sum_two_numbers(a: int, b: int) -> int:\n"
 "   return a + b"
@@ -1308,12 +1325,12 @@ msgstr ""
 "def sum_two_numbers(a: int, b: int) -> int:\n"
 "   return a + b"
 
-#: glossary.rst:515
+#: glossary.rst:522
 msgid "Function annotation syntax is explained in section :ref:`function`."
 msgstr ""
 "Η σύνταξη συνάρτησης annotation αναλύεται στην ενότητα :ref:`function`."
 
-#: glossary.rst:517
+#: glossary.rst:524
 msgid ""
 "See :term:`variable annotation` and :pep:`484`, which describe this "
 "functionality. Also see :ref:`annotations-howto` for best practices on "
@@ -1323,11 +1340,11 @@ msgstr ""
 "λειτουργικότητα. Επίσης βλ. :ref:`annotations-howto` για τις καλύτερες "
 "πρακτικές δουλεύοντας με annotations."
 
-#: glossary.rst:521
+#: glossary.rst:528
 msgid "__future__"
 msgstr "__future__"
 
-#: glossary.rst:523
+#: glossary.rst:530
 msgid ""
 "A :ref:`future statement <future>`, ``from __future__ import <feature>``, "
 "directs the compiler to compile the current module using syntax or semantics "
@@ -1346,7 +1363,7 @@ msgstr ""
 "προστέθηκε για πρώτη φορά στην γλώσσα και πότε θα γίνει (ή έγινε) η "
 "προεπιλογή::"
 
-#: glossary.rst:531
+#: glossary.rst:538
 msgid ""
 ">>> import __future__\n"
 ">>> __future__.division\n"
@@ -1356,11 +1373,11 @@ msgstr ""
 ">>> __future__.division\n"
 "_Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)"
 
-#: glossary.rst:534
+#: glossary.rst:541
 msgid "garbage collection"
 msgstr "συλλογή απορριμάτων"
 
-#: glossary.rst:536
+#: glossary.rst:543
 msgid ""
 "The process of freeing memory when it is not used anymore.  Python performs "
 "garbage collection via reference counting and a cyclic garbage collector "
@@ -1373,11 +1390,11 @@ msgstr ""
 "τους κύκλους αναφοράς. Ο συλλέκτης απορριμάτων μπορεί να ελεγχθεί "
 "χρησιμοποιώντας το module :mod:`gc`."
 
-#: glossary.rst:542
+#: glossary.rst:549
 msgid "generator"
 msgstr "generator"
 
-#: glossary.rst:544
+#: glossary.rst:551
 msgid ""
 "A function which returns a :term:`generator iterator`.  It looks like a "
 "normal function except that it contains :keyword:`yield` expressions for "
@@ -1390,7 +1407,7 @@ msgstr ""
 "*for* ή που μπορούν να ανακτηθούν μία τη φορά με την συνάρτηση :func:`next` "
 "function."
 
-#: glossary.rst:549
+#: glossary.rst:556
 msgid ""
 "Usually refers to a generator function, but may refer to a *generator "
 "iterator* in some contexts.  In cases where the intended meaning isn't "
@@ -1401,15 +1418,15 @@ msgstr ""
 "επιδιωκόμενο νόημα δεν είναι σαφές, η χρήση των πλήρων όρων αποφεύγει την "
 "ασάφεια."
 
-#: glossary.rst:552
+#: glossary.rst:559
 msgid "generator iterator"
 msgstr "generator iterator"
 
-#: glossary.rst:554
+#: glossary.rst:561
 msgid "An object created by a :term:`generator` function."
 msgstr "Ένα αντικείμενο που δημιουργείται από μια συνάρτηση :term:`generator`."
 
-#: glossary.rst:556
+#: glossary.rst:563
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "execution state (including local variables and pending try-statements).  "
@@ -1422,11 +1439,11 @@ msgstr ""
 "συνεχίζει από εκεί που σταμάτησε (σε αντίθεση με τις συναρτήσεις που "
 "ξεκινούν από την αρχή σε κάθε επίκληση)."
 
-#: glossary.rst:563
+#: glossary.rst:570
 msgid "generator expression"
 msgstr "generator έκφραση"
 
-#: glossary.rst:565
+#: glossary.rst:572
 msgid ""
 "An :term:`expression` that returns an :term:`iterator`.  It looks like a "
 "normal expression followed by a :keyword:`!for` clause defining a loop "
@@ -1438,7 +1455,7 @@ msgstr ""
 "μια μεταβλητή βρόχου, ένα εύρος και μια προαιρετική πρόταση :keyword:`!if`. "
 "Η συνδυασμένη έκφραση δημιουργεί τιμές για μια συνάρτηση εγκλεισμού::"
 
-#: glossary.rst:570
+#: glossary.rst:577
 msgid ""
 ">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
 "285"
@@ -1446,11 +1463,11 @@ msgstr ""
 ">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
 "285"
 
-#: glossary.rst:572
+#: glossary.rst:579
 msgid "generic function"
 msgstr "γενική συνάρτηση"
 
-#: glossary.rst:574
+#: glossary.rst:581
 msgid ""
 "A function composed of multiple functions implementing the same operation "
 "for different types. Which implementation should be used during a call is "
@@ -1461,7 +1478,7 @@ msgstr ""
 "χρησιμοποιηθεί κατά τη διάρκεια μια κλήσης καθορίζεται από τον αλγόριθμο "
 "αποστολής."
 
-#: glossary.rst:578
+#: glossary.rst:585
 msgid ""
 "See also the :term:`single dispatch` glossary entry, the :func:`functools."
 "singledispatch` decorator, and :pep:`443`."
@@ -1469,11 +1486,11 @@ msgstr ""
 "Βλ. επίσης την καταχώρηση του :term:`single dispatch`, τον decorator :func:"
 "`functools.singledispatch` και :pep:`443`."
 
-#: glossary.rst:580
+#: glossary.rst:587
 msgid "generic type"
 msgstr "γενικός τύπος"
 
-#: glossary.rst:582
+#: glossary.rst:589
 msgid ""
 "A :term:`type` that can be parameterized; typically a :ref:`container "
 "class<sequence-types>` such as :class:`list` or :class:`dict`. Used for :"
@@ -1484,7 +1501,7 @@ msgstr ""
 "Χρησιμοποιείται για :term:`type hints <type hint>` και :term:`annotations "
 "<annotation>`."
 
-#: glossary.rst:587
+#: glossary.rst:594
 msgid ""
 "For more details, see :ref:`generic alias types<types-genericalias>`, :pep:"
 "`483`, :pep:`484`, :pep:`585`, and the :mod:`typing` module."
@@ -1493,19 +1510,19 @@ msgstr ""
 "genericalias>` :pep:`483`, :pep:`484`, :pep:`585`, και το module :mod:"
 "`typing`."
 
-#: glossary.rst:589
+#: glossary.rst:596
 msgid "GIL"
 msgstr "GIL"
 
-#: glossary.rst:591
+#: glossary.rst:598
 msgid "See :term:`global interpreter lock`."
 msgstr "Βλ. :term:`global interpreter lock`."
 
-#: glossary.rst:592
+#: glossary.rst:599
 msgid "global interpreter lock"
 msgstr "global interpreter lock"
 
-#: glossary.rst:594
+#: glossary.rst:601
 msgid ""
 "The mechanism used by the :term:`CPython` interpreter to assure that only "
 "one thread executes Python :term:`bytecode` at a time. This simplifies the "
@@ -1524,7 +1541,7 @@ msgstr ""
 "του μεγάλου μέρους του παραλληλισμού που παρέχουν οι μηχανές πολλαπλών "
 "επεξεργαστών."
 
-#: glossary.rst:603
+#: glossary.rst:610
 msgid ""
 "However, some extension modules, either standard or third-party, are "
 "designed so as to release the GIL when doing computationally intensive tasks "
@@ -1536,7 +1553,7 @@ msgstr ""
 "εντατικών υπολογισμών όπως συμπίεση ή κατακερματισμός. Επίσης, το GIL "
 "απελευθερώνεται πάντα όταν εκτελείτε I/O."
 
-#: glossary.rst:608
+#: glossary.rst:615
 msgid ""
 "As of Python 3.13, the GIL can be disabled using the :option:`--disable-gil` "
 "build configuration. After building Python with this option, code must be "
@@ -1554,11 +1571,11 @@ msgstr ""
 "διευκολύνει τη χρήση των επεξεργαστών πολλαπλών πυρήνων με αποδοτικό τρόπο. "
 "Για περισσότερες λεπτομέρειες, δείτε το :pep:`703`."
 
-#: glossary.rst:614
+#: glossary.rst:621
 msgid "hash-based pyc"
 msgstr "hash-based pyc"
 
-#: glossary.rst:616
+#: glossary.rst:623
 msgid ""
 "A bytecode cache file that uses the hash rather than the last-modified time "
 "of the corresponding source file to determine its validity. See :ref:`pyc-"
@@ -1568,11 +1585,11 @@ msgstr ""
 "όχι τον χρόνο τροποποίησης του αντίστοιχου αρχείου προέλευσης για να "
 "προσδιορίσει την εγκυρότητα του. Βλ. :ref:`pyc-invalidation`."
 
-#: glossary.rst:619
+#: glossary.rst:626
 msgid "hashable"
 msgstr "hashable"
 
-#: glossary.rst:621
+#: glossary.rst:628
 msgid ""
 "An object is *hashable* if it has a hash value which never changes during "
 "its lifetime (it needs a :meth:`~object.__hash__` method), and can be "
@@ -1586,7 +1603,7 @@ msgstr ""
 "που συγκρίνονται ως προς την ισότητα τους πρέπει να έχουν την ίδια τιμή "
 "κατακερματισμού."
 
-#: glossary.rst:627
+#: glossary.rst:634
 msgid ""
 "Hashability makes an object usable as a dictionary key and a set member, "
 "because these data structures use the hash value internally."
@@ -1595,7 +1612,7 @@ msgstr ""
 "κλειδί λεξικού και ως μέλος ενός συνόλου, επειδή αυτές οι δομές δεδομένων "
 "χρησιμοποιούν τιμές κατακερματισμού."
 
-#: glossary.rst:630
+#: glossary.rst:637
 msgid ""
 "Most of Python's immutable built-in objects are hashable; mutable containers "
 "(such as lists or dictionaries) are not; immutable containers (such as "
@@ -1612,11 +1629,11 @@ msgstr ""
 "μπορούν να κατακερματιστούν από προεπιλογή. Όλα συγκρίνονται άνισα εκτός από "
 "τον εαυτό τους) και η τιμή κατακερματισμού τους προέρχεται από το :func:`id`."
 
-#: glossary.rst:637
+#: glossary.rst:644
 msgid "IDLE"
 msgstr "IDLE"
 
-#: glossary.rst:639
+#: glossary.rst:646
 msgid ""
 "An Integrated Development and Learning Environment for Python. :ref:`idle` "
 "is a basic editor and interpreter environment which ships with the standard "
@@ -1626,11 +1643,11 @@ msgstr ""
 "`idle` είναι ένα βασικό περιβάλλον επεξεργασίας και διερμηνέα που "
 "συνοδεύεται από την τυπική διανομή της Python."
 
-#: glossary.rst:642
+#: glossary.rst:649
 msgid "immortal"
 msgstr "Αθάνατο"
 
-#: glossary.rst:644
+#: glossary.rst:651
 msgid ""
 "*Immortal objects* are a CPython implementation detail introduced in :pep:"
 "`683`."
@@ -1638,7 +1655,7 @@ msgstr ""
 "*Αθάνατα αντικείμενα* είναι μια λεπτομέρεια υλοποίησης της CPython που "
 "εισήχθη στην :pep:`683`."
 
-#: glossary.rst:647
+#: glossary.rst:654
 msgid ""
 "If an object is immortal, its :term:`reference count` is never modified, and "
 "therefore it is never deallocated while the interpreter is running. For "
@@ -1648,11 +1665,11 @@ msgstr ""
 "τροποποιείται, και επομένως δεν εκχωρείται ποτέ ενώ εκτελείται ο διερμηνέας. "
 "Για παράδειγμα, :const:`True` και :const:`None` είναι αθάνατα στην CPython."
 
-#: glossary.rst:650
+#: glossary.rst:657
 msgid "immutable"
 msgstr "immutable"
 
-#: glossary.rst:652
+#: glossary.rst:659
 msgid ""
 "An object with a fixed value.  Immutable objects include numbers, strings "
 "and tuples.  Such an object cannot be altered.  A new object has to be "
@@ -1666,11 +1683,11 @@ msgstr ""
 "αποθηκευτεί μια διαφορετική τιμή. Παίζουν σημαντικό ρόλο σε μέρη όπου μια "
 "σταθερά απαιτείται, για παράδειγμα ως κλειδί σε ένα λεξικό."
 
-#: glossary.rst:657
+#: glossary.rst:664
 msgid "import path"
 msgstr "εισαγόμενο path"
 
-#: glossary.rst:659
+#: glossary.rst:666
 msgid ""
 "A list of locations (or :term:`path entries <path entry>`) that are searched "
 "by the :term:`path based finder` for modules to import. During import, this "
@@ -1683,11 +1700,11 @@ msgstr ""
 "από :data:`sys.path`, αλλά για τα υποπακέτα μπορεί επίσης να έρθει από το "
 "χαρακτηριστικό του πακέτου γονέα ``__path__``."
 
-#: glossary.rst:664
+#: glossary.rst:671
 msgid "importing"
 msgstr "εισαγωγή"
 
-#: glossary.rst:666
+#: glossary.rst:673
 msgid ""
 "The process by which Python code in one module is made available to Python "
 "code in another module."
@@ -1695,11 +1712,11 @@ msgstr ""
 "Η διαδικασία κατά την οποία ο κώδικας της Python σε ένα module είναι "
 "διαθέσιμη στον κώδικα Python ενός άλλου module."
 
-#: glossary.rst:668
+#: glossary.rst:675
 msgid "importer"
 msgstr "εισαγωγέας"
 
-#: glossary.rst:670
+#: glossary.rst:677
 msgid ""
 "An object that both finds and loads a module; both a :term:`finder` and :"
 "term:`loader` object."
@@ -1707,11 +1724,11 @@ msgstr ""
 "Ένα αντικείμενο μπορεί και να αναζητεί και να φορτώνει ένα module' και ένα :"
 "term:`finder` και :term:`loader` αντικείμενο."
 
-#: glossary.rst:672
+#: glossary.rst:679
 msgid "interactive"
 msgstr "διαδραστικός"
 
-#: glossary.rst:674
+#: glossary.rst:681
 msgid ""
 "Python has an interactive interpreter which means you can enter statements "
 "and expressions at the interpreter prompt, immediately execute them and see "
@@ -1728,11 +1745,11 @@ msgstr ""
 "να εξετάστε modules και πακέτα (θυμηθείτε ``help(x)``). Για περισσότερα "
 "σχετικά με τη διαδραστική λειτουργία, δείτε :ref:`tut-interac`."
 
-#: glossary.rst:681
+#: glossary.rst:688
 msgid "interpreted"
 msgstr "interpreted"
 
-#: glossary.rst:683
+#: glossary.rst:690
 msgid ""
 "Python is an interpreted language, as opposed to a compiled one, though the "
 "distinction can be blurry because of the presence of the bytecode compiler.  "
@@ -1749,11 +1766,11 @@ msgstr ""
 "εντοπισμού σφαλμάτων από τις μεταγλωττισμένες, αν και τα προγράμματά τους "
 "γενικά εκτελούνται πιο αργά. Βλ. επίσης :term:`interactive`."
 
-#: glossary.rst:690
+#: glossary.rst:697
 msgid "interpreter shutdown"
 msgstr "τερματισμός λειτουργίας διερμηνέα"
 
-#: glossary.rst:692
+#: glossary.rst:699
 msgid ""
 "When asked to shut down, the Python interpreter enters a special phase where "
 "it gradually releases all allocated resources, such as modules and various "
@@ -1775,7 +1792,7 @@ msgstr ""
 "βασίζεται ενδέχεται να μην λειτουργούν πλέον (συνήθη παραδείγματα είναι οι "
 "λειτουργικές μονάδες βιβλιοθήκης ή ο μηχανισμός ειδοποιήσεων)."
 
-#: glossary.rst:701
+#: glossary.rst:708
 msgid ""
 "The main reason for interpreter shutdown is that the ``__main__`` module or "
 "the script being run has finished executing."
@@ -1783,11 +1800,11 @@ msgstr ""
 "Ο βασικός λόγος τερματισμού λειτουργίας του διερμηνέα είναι ότι το "
 "``__main__`` module ή ολοκληρώθηκε η εκτέλεση του κώδικα που έτρεχε."
 
-#: glossary.rst:703
+#: glossary.rst:710
 msgid "iterable"
 msgstr "iterable"
 
-#: glossary.rst:705
+#: glossary.rst:712
 msgid ""
 "An object capable of returning its members one at a time. Examples of "
 "iterables include all sequence types (such as :class:`list`, :class:`str`, "
@@ -1804,7 +1821,7 @@ msgstr ""
 "__iter__` ή με μία μέθοδο :meth:`~object.__getitem__` που υλοποιεί τη "
 "σημασιολογία :term:`sequence`."
 
-#: glossary.rst:713
+#: glossary.rst:720
 msgid ""
 "Iterables can be used in a :keyword:`for` loop and in many other places "
 "where a sequence is needed (:func:`zip`, :func:`map`, ...).  When an "
@@ -1828,11 +1845,11 @@ msgstr ""
 "του βρόχου. Βλ. επίσης :term:`iterator`, :term:`sequence`, και :term:"
 "`generator`."
 
-#: glossary.rst:723
+#: glossary.rst:730
 msgid "iterator"
 msgstr "iterator"
 
-#: glossary.rst:725
+#: glossary.rst:732
 msgid ""
 "An object representing a stream of data.  Repeated calls to the iterator's :"
 "meth:`~iterator.__next__` method (or passing it to the built-in function :"
@@ -1867,11 +1884,11 @@ msgstr ""
 "εξαντλημένο αντικείμενο iterator που χρησιμοποιήθηκε στο προηγούμενο πέρασμα "
 "iteration , κάνοντας το να φαίνεται σαν ένα άδειο κοντέινερ."
 
-#: glossary.rst:740
+#: glossary.rst:747
 msgid "More information can be found in :ref:`typeiter`."
 msgstr "Περισσότερες πληροφορίες μπορούν να βρεθούν στο :ref:`typeiter`."
 
-#: glossary.rst:744
+#: glossary.rst:751
 msgid ""
 "CPython does not consistently apply the requirement that an iterator define :"
 "meth:`~iterator.__iter__`. And also please note that the free-threading "
@@ -1882,11 +1899,11 @@ msgstr ""
 "υποστήριξη νημάτων δεν εγγυάται την ασφάλεια νημάτων για διαδικασίες με "
 "iterators."
 
-#: glossary.rst:749
+#: glossary.rst:756
 msgid "key function"
 msgstr "συνάρτηση key"
 
-#: glossary.rst:751
+#: glossary.rst:758
 msgid ""
 "A key function or collation function is a callable that returns a value used "
 "for sorting or ordering.  For example, :func:`locale.strxfrm` is used to "
@@ -1898,7 +1915,7 @@ msgstr ""
 "κλειδιού ταξινόμησης που γνωρίζει τις συμβάσεις ταξινόμησης για "
 "συγκεκριμένες τοπικές ρυθμίσεις."
 
-#: glossary.rst:756
+#: glossary.rst:763
 msgid ""
 "A number of tools in Python accept key functions to control how elements are "
 "ordered or grouped.  They include :func:`min`, :func:`max`, :func:`sorted`, :"
@@ -1911,7 +1928,7 @@ msgstr ""
 "`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq. nlargest`, και :func:"
 "`itertools.groupby`."
 
-#: glossary.rst:762
+#: glossary.rst:769
 msgid ""
 "There are several ways to create a key function.  For example. the :meth:"
 "`str.lower` method can serve as a key function for case insensitive sorts.  "
@@ -1931,19 +1948,19 @@ msgstr ""
 "TO<sortinghowto>` για παραδείγματα δημιουργίας και χρήσης βασικών "
 "συναρτήσεων."
 
-#: glossary.rst:769
+#: glossary.rst:776
 msgid "keyword argument"
 msgstr "όρισμα keyword"
 
-#: glossary.rst:1086
+#: glossary.rst:1093
 msgid "See :term:`argument`."
 msgstr "Βλ. :term:`argument`."
 
-#: glossary.rst:772
+#: glossary.rst:779
 msgid "lambda"
 msgstr "lambda"
 
-#: glossary.rst:774
+#: glossary.rst:781
 msgid ""
 "An anonymous inline function consisting of a single :term:`expression` which "
 "is evaluated when the function is called.  The syntax to create a lambda "
@@ -1954,11 +1971,11 @@ msgstr ""
 "τη δημιουργία μιας συνάρτησης lambda είναι ``lambda [parameters]: "
 "expression``"
 
-#: glossary.rst:777
+#: glossary.rst:784
 msgid "LBYL"
 msgstr "LBYL"
 
-#: glossary.rst:779
+#: glossary.rst:786
 msgid ""
 "Look before you leap.  This coding style explicitly tests for pre-conditions "
 "before making calls or lookups.  This style contrasts with the :term:`EAFP` "
@@ -1970,7 +1987,7 @@ msgstr ""
 "έρχεται σε αντίθεση με την προσέγγιση :term:`EAFP` και χαρακτηρίζεται από "
 "την παρουσία πολλών δηλώσεων :keyword:`if`."
 
-#: glossary.rst:784
+#: glossary.rst:791
 msgid ""
 "In a multi-threaded environment, the LBYL approach can risk introducing a "
 "race condition between \"the looking\" and \"the leaping\".  For example, "
@@ -1985,19 +2002,19 @@ msgstr ""
 "το *mapping* μετά τη δοκιμή, αλλά πριν από την αναζήτηση. Αυτό το πρόβλημα "
 "μπορεί να λυθεί με κλειδώματα ή χρησιμοποιώντας την προσέγγιση EAFP."
 
-#: glossary.rst:789
+#: glossary.rst:796
 msgid "lexical analyzer"
 msgstr "λεξικός αναλυτής"
 
-#: glossary.rst:792
+#: glossary.rst:799
 msgid "Formal name for the *tokenizer*; see :term:`token`."
 msgstr "Επίσημη ονομασία για τον *tokenizer* · βλ. :term:`token`."
 
-#: glossary.rst:793
+#: glossary.rst:800
 msgid "list"
 msgstr "λίστα"
 
-#: glossary.rst:795
+#: glossary.rst:802
 msgid ""
 "A built-in Python :term:`sequence`.  Despite its name it is more akin to an "
 "array in other languages than to a linked list since access to elements is "
@@ -2007,11 +2024,11 @@ msgstr ""
 "περισσότερο με έναν πίνακα σε άλλες γλώσσες παρά με μια συνδεδεμένη λίστα, "
 "καθώς η πρόσβαση στα στοιχεί είναι *O*\\ (1)."
 
-#: glossary.rst:798
+#: glossary.rst:805
 msgid "list comprehension"
 msgstr "list comprehension"
 
-#: glossary.rst:800
+#: glossary.rst:807
 msgid ""
 "A compact way to process all or part of the elements in a sequence and "
 "return a list with the results.  ``result = ['{:#04x}'.format(x) for x in "
@@ -2026,11 +2043,11 @@ msgstr ""
 "από 0 έως 255. Η πρόταση :keyword:`if` είναι προαιρετική. Εάν παραλειφθεί, "
 "όλα τα στοιχεία στο ``range(256)`` υποβάλλονται σε επεξεργασία."
 
-#: glossary.rst:806
+#: glossary.rst:813
 msgid "loader"
 msgstr "loader"
 
-#: glossary.rst:808
+#: glossary.rst:815
 msgid ""
 "An object that loads a module. It must define the :meth:`!exec_module` and :"
 "meth:`!create_module` methods to implement the :class:`~importlib.abc."
@@ -2042,23 +2059,23 @@ msgstr ""
 "class:`~importlib.abc.Loader`. Ένας loader συνήθως επιστρέφεται με ένα :term:"
 "`finder`. Δείτε επίσης:"
 
-#: glossary.rst:814
+#: glossary.rst:821
 msgid ":ref:`finders-and-loaders`"
 msgstr ":ref:`finders-and-loaders`"
 
-#: glossary.rst:815
+#: glossary.rst:822
 msgid ":class:`importlib.abc.Loader`"
 msgstr ":class:`importlib.abc.Loader`"
 
-#: glossary.rst:816
+#: glossary.rst:823
 msgid ":pep:`302`"
 msgstr ":pep:`302`"
 
-#: glossary.rst:817
+#: glossary.rst:824
 msgid "locale encoding"
 msgstr "τοπική κωδικοποίηση"
 
-#: glossary.rst:819
+#: glossary.rst:826
 msgid ""
 "On Unix, it is the encoding of the LC_CTYPE locale. It can be set with :func:"
 "`locale.setlocale(locale.LC_CTYPE, new_locale) <locale.setlocale>`."
@@ -2067,40 +2084,40 @@ msgstr ""
 "ρυθμιστεί με :func:`locale.setlocale(locale.LC_CTYPE, new_locale) <locale."
 "setlocale>`."
 
-#: glossary.rst:822
+#: glossary.rst:829
 msgid "On Windows, it is the ANSI code page (ex: ``\"cp1252\"``)."
 msgstr "Στα Windows, είναι η code page ANSI (π.χ. ``\"cp1252\"``)."
 
-#: glossary.rst:824
+#: glossary.rst:831
 msgid ""
 "On Android and VxWorks, Python uses ``\"utf-8\"`` as the locale encoding."
 msgstr ""
 "Στο Android και το VxWorks, η Python χρησιμοποιεί το ``\"utf-8\"`` ως τοπική "
 "κωδικοποίηση."
 
-#: glossary.rst:826
+#: glossary.rst:833
 msgid ":func:`locale.getencoding` can be used to get the locale encoding."
 msgstr ""
 ":func:`locale.getencoding` μπορεί να χρησιμοποιηθεί για την ανάκτηση της "
 "τοπικής κωδικοποίησης."
 
-#: glossary.rst:828
+#: glossary.rst:835
 msgid "See also the :term:`filesystem encoding and error handler`."
 msgstr "Βλ. επίσης το :term:`filesystem encoding and error handler`."
 
-#: glossary.rst:829
+#: glossary.rst:836
 msgid "magic method"
 msgstr "μαγική μέθοδος"
 
-#: glossary.rst:833
+#: glossary.rst:840
 msgid "An informal synonym for :term:`special method`."
 msgstr "Ένα άτυπο συνώνυμο για :term:`special method`."
 
-#: glossary.rst:834
+#: glossary.rst:841
 msgid "mapping"
 msgstr "mapping"
 
-#: glossary.rst:836
+#: glossary.rst:843
 msgid ""
 "A container object that supports arbitrary key lookups and implements the "
 "methods specified in the :class:`collections.abc.Mapping` or :class:"
@@ -2116,11 +2133,11 @@ msgstr ""
 "class:`dict`, :class:`collections.defaultdict`, :class:`collections."
 "OrderedDict` και :class:`collections.Counter`."
 
-#: glossary.rst:842
+#: glossary.rst:849
 msgid "meta path finder"
 msgstr "meta path finder"
 
-#: glossary.rst:844
+#: glossary.rst:851
 msgid ""
 "A :term:`finder` returned by a search of :data:`sys.meta_path`.  Meta path "
 "finders are related to, but different from :term:`path entry finders <path "
@@ -2130,7 +2147,7 @@ msgstr ""
 "Οι finders μετα-διαδρομής σχετίζονται, αλλά διαφέρουν από τα :term:`finders "
 "entry διαδρομής <path entry finder>`."
 
-#: glossary.rst:848
+#: glossary.rst:855
 msgid ""
 "See :class:`importlib.abc.MetaPathFinder` for the methods that meta path "
 "finders implement."
@@ -2138,11 +2155,11 @@ msgstr ""
 "Βλ. :class:`importlib.abc.MetaPathFinder` για τις μεθόδους που υλοποιούν οι "
 "meta path finders."
 
-#: glossary.rst:850
+#: glossary.rst:857
 msgid "metaclass"
 msgstr "μετα-κλάση"
 
-#: glossary.rst:852
+#: glossary.rst:859
 msgid ""
 "The class of a class.  Class definitions create a class name, a class "
 "dictionary, and a list of base classes.  The metaclass is responsible for "
@@ -2166,15 +2183,15 @@ msgstr ""
 "ασφάλειας νημάτων, την παρακολούθηση δημιουργίας αντικειμένων, την υλοποίηση "
 "*singletons*, και πολλές άλλες εργασίες."
 
-#: glossary.rst:862
+#: glossary.rst:869
 msgid "More information can be found in :ref:`metaclasses`."
 msgstr "Περισσότερες πληροφορίες μπορούν να βρεθούν στο :ref:`metaclasses`."
 
-#: glossary.rst:1231
+#: glossary.rst:1244
 msgid "method"
 msgstr "μέθοδος"
 
-#: glossary.rst:865
+#: glossary.rst:872
 msgid ""
 "A function which is defined inside a class body.  If called as an attribute "
 "of an instance of that class, the method will get the instance object as its "
@@ -2186,11 +2203,11 @@ msgstr ""
 "αντικείμενο περίπτωσης ως πρώτο της :term:`argument` (το οποίο συνήθως "
 "ονομάζεται ``self``). Βλ. :term:`function` και :term:`nested scope`."
 
-#: glossary.rst:869
+#: glossary.rst:876
 msgid "method resolution order"
 msgstr "σειρά ανάλυσης μεθόδων"
 
-#: glossary.rst:871
+#: glossary.rst:878
 msgid ""
 "Method Resolution Order is the order in which base classes are searched for "
 "a member during lookup. See :ref:`python_2.3_mro` for details of the "
@@ -2201,11 +2218,11 @@ msgstr ""
 "για λεπτομέρειες του αλγορίθμου που χρησιμοποιείται από τον διερμηνέα της "
 "Python από την έκδοση 2.3."
 
-#: glossary.rst:874
+#: glossary.rst:881
 msgid "module"
 msgstr "module"
 
-#: glossary.rst:876
+#: glossary.rst:883
 msgid ""
 "An object that serves as an organizational unit of Python code.  Modules "
 "have a namespace containing arbitrary Python objects.  Modules are loaded "
@@ -2216,15 +2233,15 @@ msgstr ""
 "Python.  Τα modules φορτώνονται στην Python με την διαδικασία :term:"
 "`importing`."
 
-#: glossary.rst:880
+#: glossary.rst:887
 msgid "See also :term:`package`."
 msgstr "Βλ. επίσης :term:`package`."
 
-#: glossary.rst:881
+#: glossary.rst:888
 msgid "module spec"
 msgstr "τεχνικές προδιαγραφές module"
 
-#: glossary.rst:883
+#: glossary.rst:890
 msgid ""
 "A namespace containing the import-related information used to load a module. "
 "An instance of :class:`importlib.machinery.ModuleSpec`."
@@ -2233,23 +2250,23 @@ msgstr ""
 "που χρησιμοποιούνται για την φόρτωση ενός module. Μια περίπτωση του :class:"
 "`importlib.machinery.ModuleSpec`."
 
-#: glossary.rst:886
+#: glossary.rst:893
 msgid "See also :ref:`module-specs`."
 msgstr "Βλ. επίσης :ref:`module-specs`."
 
-#: glossary.rst:887
+#: glossary.rst:894
 msgid "MRO"
 msgstr "MRO"
 
-#: glossary.rst:889
+#: glossary.rst:896
 msgid "See :term:`method resolution order`."
 msgstr "Βλ. :term:`method resolution order`."
 
-#: glossary.rst:890
+#: glossary.rst:897
 msgid "mutable"
 msgstr "mutable"
 
-#: glossary.rst:892
+#: glossary.rst:899
 msgid ""
 "Mutable objects can change their value but keep their :func:`id`.  See also :"
 "term:`immutable`."
@@ -2257,11 +2274,11 @@ msgstr ""
 "Τα ευμετάβλητα αντικείμενα μπορούν να αλλάξουν τις τιμές αλλά να κρατήσουν "
 "τα :func:`id`. Βλ. επίσης :term:`immutable`."
 
-#: glossary.rst:894
+#: glossary.rst:901
 msgid "named tuple"
 msgstr "named tuple"
 
-#: glossary.rst:896
+#: glossary.rst:903
 msgid ""
 "The term \"named tuple\" applies to any type or class that inherits from "
 "tuple and whose indexable elements are also accessible using named "
@@ -2272,7 +2289,7 @@ msgstr ""
 "ευρετηριοποιηθούν είναι προσβάσιμα χρησιμοποιώντας επώνυμα χαρακτηριστικά.  "
 "Ο τύπος ή η κλάση μπορεί να έχει και άλλα χαρακτηριστικά."
 
-#: glossary.rst:900
+#: glossary.rst:907
 msgid ""
 "Several built-in types are named tuples, including the values returned by :"
 "func:`time.localtime` and :func:`os.stat`.  Another example is :data:`sys."
@@ -2282,7 +2299,7 @@ msgstr ""
 "που επιστρέφονται από :func:`time.localtime` και :func:`os.stat`. Ένα άλλο "
 "παράδειγμα είναι το :data:`sys.float_info`::"
 
-#: glossary.rst:904
+#: glossary.rst:911
 msgid ""
 ">>> sys.float_info[1]                   # indexed access\n"
 "1024\n"
@@ -2298,7 +2315,7 @@ msgstr ""
 ">>> isinstance(sys.float_info, tuple)   # kind of tuple\n"
 "True"
 
-#: glossary.rst:911
+#: glossary.rst:918
 msgid ""
 "Some named tuples are built-in types (such as the above examples). "
 "Alternatively, a named tuple can be created from a regular class definition "
@@ -2317,11 +2334,11 @@ msgstr ""
 "τελευταίες τεχνικές προσθέτουν επίσης μερικές επιπλέον μεθόδους που μπορεί "
 "να μην βρεθούν σε χειρόγραφες ή ενσωματωμένες πλειάδες με όνομα."
 
-#: glossary.rst:919
+#: glossary.rst:926
 msgid "namespace"
 msgstr "namespace"
 
-#: glossary.rst:921
+#: glossary.rst:928
 msgid ""
 "The place where a variable is stored.  Namespaces are implemented as "
 "dictionaries.  There are the local, global and built-in namespaces as well "
@@ -2343,11 +2360,11 @@ msgstr ""
 "seed` ή :func:`itertools.islice` καθιστά σαφές ότι αυτές οι συναρτήσεις "
 "υλοποιούνται από τα module :mod:`random` και :mod:`itertools`, αντίστοιχα."
 
-#: glossary.rst:931
+#: glossary.rst:938
 msgid "namespace package"
 msgstr "πακέτο namespace"
 
-#: glossary.rst:933
+#: glossary.rst:940
 msgid ""
 "A :term:`package` which serves only as a container for subpackages. "
 "Namespace packages may have no physical representation, and specifically are "
@@ -2358,7 +2375,7 @@ msgstr ""
 "συγκεκριμένα να μην είναι σαν ένα :term:`regular package` επειδή δεν έχουν "
 "το ``__init__.py`` αρχείο."
 
-#: glossary.rst:938
+#: glossary.rst:945
 msgid ""
 "Namespace packages allow several individually installable packages to have a "
 "common parent package. Otherwise, it is recommended to use a :term:`regular "
@@ -2368,22 +2385,22 @@ msgstr ""
 "εγκατάστασης μεμονωμένα να έχουν ένα κοινό γονικό πακέτο.  Διαφορετικά, "
 "συνίσταται η χρήση ενός :term:`regular package`."
 
-#: glossary.rst:941
+#: glossary.rst:948
 msgid ""
 "For more information, see :pep:`420` and :ref:`reference-namespace-package`."
 msgstr ""
 "Για περισσότερες πληροφορίες, δείτε το :pep:`420` και το :ref:`reference-"
 "namespace-package`."
 
-#: glossary.rst:943
+#: glossary.rst:950
 msgid "See also :term:`module`."
 msgstr "Βλ. επίσης :term:`module`."
 
-#: glossary.rst:944
+#: glossary.rst:951
 msgid "nested scope"
 msgstr "nested scope"
 
-#: glossary.rst:946
+#: glossary.rst:953
 msgid ""
 "The ability to refer to a variable in an enclosing definition.  For "
 "instance, a function defined inside another function can refer to variables "
@@ -2400,11 +2417,11 @@ msgstr ""
 "Ομοίως, οι καθολικές μεταβλητές διαβάζουν και γράφουν στον καθολικό χώρο "
 "ονομάτων. Το :keyword:`nonlocal` επιτρέπει την εγγραφή σε εξωτερικά πεδία."
 
-#: glossary.rst:953
+#: glossary.rst:960
 msgid "new-style class"
 msgstr "κλάση νέου στυλ"
 
-#: glossary.rst:955
+#: glossary.rst:962
 msgid ""
 "Old name for the flavor of classes now used for all class objects.  In "
 "earlier Python versions, only new-style classes could use Python's newer, "
@@ -2417,11 +2434,11 @@ msgstr ""
 "όπως :attr:`~object.__slots__`, descriptors, ιδιότητες :meth:`~object."
 "__getattribute__`, μέθοδοι κλάσης, και στατικές μέθοδοι."
 
-#: glossary.rst:960
+#: glossary.rst:967
 msgid "object"
 msgstr "αντικείμενο"
 
-#: glossary.rst:962
+#: glossary.rst:969
 msgid ""
 "Any data with state (attributes or value) and defined behavior (methods).  "
 "Also the ultimate base class of any :term:`new-style class`."
@@ -2430,11 +2447,11 @@ msgstr ""
 "συμπεριφορά (μέθοδοι). Επίσης, η τελική βασική κλάση οποιασδήποτε :term:`new-"
 "style class`."
 
-#: glossary.rst:965
+#: glossary.rst:972
 msgid "optimized scope"
 msgstr "βελτιστοποιημένο πεδίο ορατότητας (scope)"
 
-#: glossary.rst:967
+#: glossary.rst:974
 msgid ""
 "A scope where target local variable names are reliably known to the compiler "
 "when the code is compiled, allowing optimization of read and write access to "
@@ -2454,11 +2471,11 @@ msgstr ""
 "εκείνες που βασίζονται σε γνωστό σύνολο τοπικών και μη τοπικών μεταβλητών "
 "περιορίζονται σε βελτιστοποιημένα πεδία ορατότητας."
 
-#: glossary.rst:974
+#: glossary.rst:981
 msgid "package"
 msgstr "πακέτο"
 
-#: glossary.rst:976
+#: glossary.rst:983
 msgid ""
 "A Python :term:`module` which can contain submodules or recursively, "
 "subpackages.  Technically, a package is a Python module with a ``__path__`` "
@@ -2468,15 +2485,15 @@ msgstr ""
 "υποπακέτα. Τεχνικά, ένα πακέτο είναι μια λειτουργική μονάδα Python με ένα "
 "``__path__`` χαρακτηριστικό."
 
-#: glossary.rst:980
+#: glossary.rst:987
 msgid "See also :term:`regular package` and :term:`namespace package`."
 msgstr "Βλ. επίσης :term:`regular package` και :term:`namespace package`."
 
-#: glossary.rst:981
+#: glossary.rst:988
 msgid "parameter"
 msgstr "παράμετρος"
 
-#: glossary.rst:983
+#: glossary.rst:990
 msgid ""
 "A named entity in a :term:`function` (or method) definition that specifies "
 "an :term:`argument` (or in some cases, arguments) that the function can "
@@ -2486,7 +2503,7 @@ msgstr ""
 "καθορίζει ένα :term:`argument` (ή σε ορισμένες περιπτώσεις, ορίσματα) που "
 "μπορεί να δεχθεί η συνάρτηση. Υπάρχουν πέντε είδη παραμέτρων:"
 
-#: glossary.rst:987
+#: glossary.rst:994
 msgid ""
 ":dfn:`positional-or-keyword`: specifies an argument that can be passed "
 "either :term:`positionally <argument>` or as a :term:`keyword argument "
@@ -2498,11 +2515,11 @@ msgstr ""
 "<argument>`.  Αυτό είναι το προεπιλεγμένο είδος παραμέτρου, για παράδειγμα "
 "*foo* και *bar* στα ακόλουθα::"
 
-#: glossary.rst:992
+#: glossary.rst:999
 msgid "def func(foo, bar=None): ..."
 msgstr "def func(foo, bar=None): ..."
 
-#: glossary.rst:996
+#: glossary.rst:1003
 msgid ""
 ":dfn:`positional-only`: specifies an argument that can be supplied only by "
 "position. Positional-only parameters can be defined by including a ``/`` "
@@ -2514,11 +2531,11 @@ msgstr ""
 "χαρακτήρα ``/`` στη λίστα παραμέτρων του ορισμού συνάρτησης μετά από αυτές, "
 "για παράδειγμα *posonly1* και *posonly2* στα εξής::"
 
-#: glossary.rst:1001
+#: glossary.rst:1008
 msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 msgstr "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 
-#: glossary.rst:1005
+#: glossary.rst:1012
 msgid ""
 ":dfn:`keyword-only`: specifies an argument that can be supplied only by "
 "keyword.  Keyword-only parameters can be defined by including a single var-"
@@ -2532,11 +2549,11 @@ msgstr ""
 "του ορισμού συνάρτησης πριν από αυτές, για παράδειγμα *kw_only1* και "
 "*kw_only2* στα ακόλουθα::"
 
-#: glossary.rst:1011
+#: glossary.rst:1018
 msgid "def func(arg, *, kw_only1, kw_only2): ..."
 msgstr "def func(arg, *, kw_only1, kw_only2): ..."
 
-#: glossary.rst:1013
+#: glossary.rst:1020
 msgid ""
 ":dfn:`var-positional`: specifies that an arbitrary sequence of positional "
 "arguments can be provided (in addition to any positional arguments already "
@@ -2550,11 +2567,11 @@ msgstr ""
 "προσαρτώντας το όνομα της παραμέτρου με ``*``, για παράδειγμα *args* στα "
 "ακόλουθα::"
 
-#: glossary.rst:1019
+#: glossary.rst:1026
 msgid "def func(*args, **kwargs): ..."
 msgstr "def func(*args, **kwargs): ..."
 
-#: glossary.rst:1021
+#: glossary.rst:1028
 msgid ""
 ":dfn:`var-keyword`: specifies that arbitrarily many keyword arguments can be "
 "provided (in addition to any keyword arguments already accepted by other "
@@ -2567,7 +2584,7 @@ msgstr ""
 "οριστεί προσαρτώντας το όνομα της παραμέτρου με ``**``, για παράδειγμα "
 "*kwargs* όπως παραπάνω."
 
-#: glossary.rst:1027
+#: glossary.rst:1034
 msgid ""
 "Parameters can specify both optional and required arguments, as well as "
 "default values for some optional arguments."
@@ -2576,7 +2593,7 @@ msgstr ""
 "απαιτούμενα ορίσματα , καθώς και προεπιλεγμένες τιμές για ορισμένα "
 "προαιρετικά ορίσματα."
 
-#: glossary.rst:1030
+#: glossary.rst:1037
 msgid ""
 "See also the :term:`argument` glossary entry, the FAQ question on :ref:`the "
 "difference between arguments and parameters <faq-argument-vs-parameter>`, "
@@ -2588,11 +2605,11 @@ msgstr ""
 "parameter>`, την κλάση :class:`inspect.Parameter`, την ενότητα :ref:"
 "`function` και :pep:`362`."
 
-#: glossary.rst:1034
+#: glossary.rst:1041
 msgid "path entry"
 msgstr "path entry"
 
-#: glossary.rst:1036
+#: glossary.rst:1043
 msgid ""
 "A single location on the :term:`import path` which the :term:`path based "
 "finder` consults to find modules for importing."
@@ -2600,11 +2617,11 @@ msgstr ""
 "Μια μεμονωμένη τοποθεσία στο :term:`import path` την οποία συμβουλεύεται ο :"
 "term:`path based finder` για να βρει modules για εισαγωγή."
 
-#: glossary.rst:1038
+#: glossary.rst:1045
 msgid "path entry finder"
 msgstr "path entry finder"
 
-#: glossary.rst:1040
+#: glossary.rst:1047
 msgid ""
 "A :term:`finder` returned by a callable on :data:`sys.path_hooks` (i.e. a :"
 "term:`path entry hook`) which knows how to locate modules given a :term:"
@@ -2614,7 +2631,7 @@ msgstr ""
 "path_hooks` (δηλαδή ένα :term:`path entry hook`) που ξέρει πως να εντοπίζει "
 "modules με :term:`path entry`."
 
-#: glossary.rst:1044
+#: glossary.rst:1051
 msgid ""
 "See :class:`importlib.abc.PathEntryFinder` for the methods that path entry "
 "finders implement."
@@ -2622,11 +2639,11 @@ msgstr ""
 "Βλ. :class:`importlib.abc.PathEntryFinder` για τις μεθόδους που ο entry "
 "finder διαδρομής υλοποιεί."
 
-#: glossary.rst:1046
+#: glossary.rst:1053
 msgid "path entry hook"
 msgstr "path entry hook"
 
-#: glossary.rst:1048
+#: glossary.rst:1055
 msgid ""
 "A callable on the :data:`sys.path_hooks` list which returns a :term:`path "
 "entry finder` if it knows how to find modules on a specific :term:`path "
@@ -2636,11 +2653,11 @@ msgstr ""
 "term:`path entry finder` εάν ξέρει πως να βρίσκει module σε μια "
 "συγκεκριμένη :term:`path entry`."
 
-#: glossary.rst:1051
+#: glossary.rst:1058
 msgid "path based finder"
 msgstr "path based finder"
 
-#: glossary.rst:1053
+#: glossary.rst:1060
 msgid ""
 "One of the default :term:`meta path finders <meta path finder>` which "
 "searches an :term:`import path` for modules."
@@ -2648,11 +2665,11 @@ msgstr ""
 "Ένα από τα προεπιλεγμένα :term:`meta path finders <meta path finder>` που "
 "αναζητά ένα :term:`import path` για modules."
 
-#: glossary.rst:1055
+#: glossary.rst:1062
 msgid "path-like object"
 msgstr "path-like αντικείμενο"
 
-#: glossary.rst:1057
+#: glossary.rst:1064
 msgid ""
 "An object representing a file system path. A path-like object is either a :"
 "class:`str` or :class:`bytes` object representing a path, or an object "
@@ -2673,11 +2690,11 @@ msgstr ""
 "ενός αποτελέσματος :class:`str` ή :class:`bytes`, αντίστοιχα. Εισήχθη από "
 "τον :pep:`519`."
 
-#: glossary.rst:1065
+#: glossary.rst:1072
 msgid "PEP"
 msgstr "PEP"
 
-#: glossary.rst:1067
+#: glossary.rst:1074
 msgid ""
 "Python Enhancement Proposal. A PEP is a design document providing "
 "information to the Python community, or describing a new feature for Python "
@@ -2690,7 +2707,7 @@ msgstr ""
 "μια συνοπτική τεχνική προδιαγραφή και μια λογική για τα προτεινόμενα "
 "χαρακτηριστικά."
 
-#: glossary.rst:1073
+#: glossary.rst:1080
 msgid ""
 "PEPs are intended to be the primary mechanisms for proposing major new "
 "features, for collecting community input on an issue, and for documenting "
@@ -2704,15 +2721,15 @@ msgstr ""
 "στην Python. Ο συγγραφέας του PEP είναι υπεύθυνος για την οικοδόμηση "
 "συναίνεσης εντός της κοινότητας και την τεκμηρίωση αντίθετων απόψεων."
 
-#: glossary.rst:1079
+#: glossary.rst:1086
 msgid "See :pep:`1`."
 msgstr "Βλ. :pep:`1`."
 
-#: glossary.rst:1080
+#: glossary.rst:1087
 msgid "portion"
 msgstr "τμήμα"
 
-#: glossary.rst:1082
+#: glossary.rst:1089
 msgid ""
 "A set of files in a single directory (possibly stored in a zip file) that "
 "contribute to a namespace package, as defined in :pep:`420`."
@@ -2721,15 +2738,15 @@ msgstr ""
 "αρχείο *zip*) που συμβάλλουν σε ένα namespace πακέτο, όπως ορίζεται στο :pep:"
 "`420`."
 
-#: glossary.rst:1084
+#: glossary.rst:1091
 msgid "positional argument"
 msgstr "όρισμα θέσης"
 
-#: glossary.rst:1087
+#: glossary.rst:1094
 msgid "provisional API"
 msgstr "provisional API"
 
-#: glossary.rst:1089
+#: glossary.rst:1096
 msgid ""
 "A provisional API is one which has been deliberately excluded from the "
 "standard library's backwards compatibility guarantees.  While major changes "
@@ -2748,7 +2765,7 @@ msgstr ""
 "αποκαλυφθούν σοβαρά θεμελιώδη ελαττώματα που παραλείφθηκαν πριν από τη "
 "συμπερίληψη του API."
 
-#: glossary.rst:1098
+#: glossary.rst:1105
 msgid ""
 "Even for provisional APIs, backwards incompatible changes are seen as a "
 "\"solution of last resort\" - every attempt will still be made to find a "
@@ -2758,7 +2775,7 @@ msgstr ""
 "\"λύση έσχατης ανάγκης\"- θα εξακολουθεί να γίνεται κάθε προσπάθεια για να "
 "βρεθεί μια λύση backwards συμβατή σε τυχόν εντοπισμένα προβλήματα."
 
-#: glossary.rst:1102
+#: glossary.rst:1109
 msgid ""
 "This process allows the standard library to continue to evolve over time, "
 "without locking in problematic design errors for extended periods of time.  "
@@ -2769,19 +2786,19 @@ msgstr ""
 "σφάλματα σχεδιασμού για εκτεταμένες χρονικές περιόδους. Βλ. :pep:`411` για "
 "περισσότερες λεπτομέρειες."
 
-#: glossary.rst:1105
+#: glossary.rst:1112
 msgid "provisional package"
 msgstr "provisional πακέτο"
 
-#: glossary.rst:1107
+#: glossary.rst:1114
 msgid "See :term:`provisional API`."
 msgstr "Βλ. :term:`provisional API`."
 
-#: glossary.rst:1108
+#: glossary.rst:1115
 msgid "Python 3000"
 msgstr "Python 3000"
 
-#: glossary.rst:1110
+#: glossary.rst:1117
 msgid ""
 "Nickname for the Python 3.x release line (coined long ago when the release "
 "of version 3 was something in the distant future.)  This is also abbreviated "
@@ -2791,11 +2808,11 @@ msgstr ""
 "όταν η κυκλοφορία της έκδοσης 3 ήταν κάτι στο μακρινό μέλλον.)  Αυτό "
 "ονομάζεται επίσης ως συντομογραφία \"Py3k\"."
 
-#: glossary.rst:1113
+#: glossary.rst:1120
 msgid "Pythonic"
 msgstr "Pythonic"
 
-#: glossary.rst:1115
+#: glossary.rst:1122
 msgid ""
 "An idea or piece of code which closely follows the most common idioms of the "
 "Python language, rather than implementing code using concepts common to "
@@ -2812,7 +2829,7 @@ msgstr ""
 "κατασκευής, έτσι οι άνθρωποι που δεν είναι εξοικειωμένοι με την Python "
 "χρησιμοποιούν μερικές φορές έναν αριθμητικό μετρητή::"
 
-#: glossary.rst:1122
+#: glossary.rst:1129
 msgid ""
 "for i in range(len(food)):\n"
 "    print(food[i])"
@@ -2820,11 +2837,11 @@ msgstr ""
 "for i in range(len(food)):\n"
 "    print(food[i])"
 
-#: glossary.rst:1125
+#: glossary.rst:1132
 msgid "As opposed to the cleaner, Pythonic method::"
 msgstr "Αντίθετα, μια πιο καθαρή μέθοδος Pythonic::"
 
-#: glossary.rst:1127
+#: glossary.rst:1134
 msgid ""
 "for piece in food:\n"
 "    print(piece)"
@@ -2832,11 +2849,11 @@ msgstr ""
 "for piece in food:\n"
 "    print(piece)"
 
-#: glossary.rst:1129
+#: glossary.rst:1136
 msgid "qualified name"
 msgstr "αναγνωρισμένο όνομα"
 
-#: glossary.rst:1131
+#: glossary.rst:1138
 msgid ""
 "A dotted name showing the \"path\" from a module's global scope to a class, "
 "function or method defined in that module, as defined in :pep:`3155`.  For "
@@ -2848,7 +2865,7 @@ msgstr ""
 "ενότητα, όπως ορίζεται στο :pep:`3155`. Για συναρτήσεις και κλάσεις ανώτατου "
 "επιπέδου, το αναγνωρισμένο όνομα είναι ίδιο με το όνομα του αντικειμένου::"
 
-#: glossary.rst:1136
+#: glossary.rst:1143
 msgid ""
 ">>> class C:\n"
 "...     class D:\n"
@@ -2874,7 +2891,7 @@ msgstr ""
 ">>> C.D.meth.__qualname__\n"
 "'C.D.meth'"
 
-#: glossary.rst:1148
+#: glossary.rst:1155
 msgid ""
 "When used to refer to modules, the *fully qualified name* means the entire "
 "dotted path to the module, including any parent packages, e.g. ``email.mime."
@@ -2884,7 +2901,7 @@ msgstr ""
 "όνομα* σημαίνει ολόκληρο το διακεκομμένο path προς το module, "
 "συμπεριλαμβανομένων τυχόν γονικών πακέτων π.χ. ``email.mime.text``::"
 
-#: glossary.rst:1152
+#: glossary.rst:1159
 msgid ""
 ">>> import email.mime.text\n"
 ">>> email.mime.text.__name__\n"
@@ -2894,11 +2911,11 @@ msgstr ""
 ">>> email.mime.text.__name__\n"
 "'email.mime.text'"
 
-#: glossary.rst:1155
+#: glossary.rst:1162
 msgid "reference count"
 msgstr "πλήθος αναφοράς"
 
-#: glossary.rst:1157
+#: glossary.rst:1164
 msgid ""
 "The number of references to an object.  When the reference count of an "
 "object drops to zero, it is deallocated.  Some objects are :term:`immortal` "
@@ -2917,11 +2934,22 @@ msgstr ""
 "συνάρτηση :func:`sys.getrefcount` για να επιστρέψουν το πλήθος αναφοράς για "
 "ένα συγκεκριμένο αντικείμενο."
 
-#: glossary.rst:1165
+#: glossary.rst:1173
+msgid ""
+"In :term:`CPython`, reference counts are not considered to be stable or well-"
+"defined values; the number of references to an object, and how that number "
+"is affected by Python code, may be different between versions."
+msgstr ""
+"Στο :term:`CPython`, τα πλήθη αναφοράς δεν θεωρούνται σταθερές ή καλά "
+"ορισμένες τιμές· ο αριθμός των αναφορών σε ένα αντικείμενο, και το πώς αυτός "
+"ο αριθμός επηρεάζεται από τον κώδικα της Python, μπορεί να είναι "
+"διαφορετικός μεταξύ εκδόσεων."
+
+#: glossary.rst:1177
 msgid "regular package"
 msgstr "κανονικό πακέτο"
 
-#: glossary.rst:1167
+#: glossary.rst:1179
 msgid ""
 "A traditional :term:`package`, such as a directory containing an ``__init__."
 "py`` file."
@@ -2929,15 +2957,15 @@ msgstr ""
 "Ένα παραδοσιακό :term:`package`, όπως ένας κατάλογος που περιέχει ένα "
 "``__init__.py`` αρχείο."
 
-#: glossary.rst:1170
+#: glossary.rst:1182
 msgid "See also :term:`namespace package`."
 msgstr "Βλ. επίσης :term:`namespace package`."
 
-#: glossary.rst:1171
+#: glossary.rst:1183
 msgid "REPL"
 msgstr "REPL"
 
-#: glossary.rst:1173
+#: glossary.rst:1185
 msgid ""
 "An acronym for the \"read–eval–print loop\", another name for the :term:"
 "`interactive` interpreter shell."
@@ -2945,11 +2973,11 @@ msgstr ""
 "Ακρωνύμιο του \"read–eval–print loop\", άλλη ονομασία για το :term:"
 "`interactive` περιβάλλον του διερμηνέα."
 
-#: glossary.rst:1175
+#: glossary.rst:1187
 msgid "__slots__"
 msgstr "__slots__"
 
-#: glossary.rst:1177
+#: glossary.rst:1189
 msgid ""
 "A declaration inside a class that saves memory by pre-declaring space for "
 "instance attributes and eliminating instance dictionaries.  Though popular, "
@@ -2963,11 +2991,11 @@ msgstr ""
 "σωστή και προορίζεται καλύτερα για σπάνιες περιπτώσεις όπου υπάρχει μεγάλος "
 "αριθμός στιγμιοτύπων σε μια εφαρμογή κρίσιμης-μνήμης."
 
-#: glossary.rst:1182
+#: glossary.rst:1194
 msgid "sequence"
 msgstr "ακολουθία"
 
-#: glossary.rst:1184
+#: glossary.rst:1196
 msgid ""
 "An :term:`iterable` which supports efficient element access using integer "
 "indices via the :meth:`~object.__getitem__` special method and defines a :"
@@ -2988,30 +3016,30 @@ msgstr ""
 "ακολουθία επειδή οι αναζητήσεις χρησιμοποιούν αυθαίρετα :term:`hashable` "
 "κλειδιά παρά ακέραιοι."
 
-#: glossary.rst:1193
+#: glossary.rst:1205
 msgid ""
 "The :class:`collections.abc.Sequence` abstract base class defines a much "
 "richer interface that goes beyond just :meth:`~object.__getitem__` and :meth:"
-"`~object.__len__`, adding :meth:`!count`, :meth:`!index`, :meth:`~object."
-"__contains__`, and :meth:`~object.__reversed__`. Types that implement this "
-"expanded interface can be registered explicitly using :func:`~abc.ABCMeta."
-"register`. For more documentation on sequence methods generally, see :ref:"
-"`Common Sequence Operations <typesseq-common>`."
+"`~object.__len__`, adding :meth:`~sequence.count`, :meth:`~sequence.index`, :"
+"meth:`~object.__contains__`, and :meth:`~object.__reversed__`. Types that "
+"implement this expanded interface can be registered explicitly using :func:"
+"`~abc.ABCMeta.register`. For more documentation on sequence methods "
+"generally, see :ref:`Common Sequence Operations <typesseq-common>`."
 msgstr ""
 "Η αφηρημένη βασική κλάση :class:`collections.abc.Sequence` ορίζει μια πολύ "
 "πιο πλούσια διεπαφή που ξεπερνά τα απλά :meth:`~object.__getitem__` και :"
-"meth:`~object.__len__`, adding :meth:`!count`, :meth:`!index`, :meth:"
-"`~object.__contains__`, και :meth:`~object.__reversed__`. Οι τύποι που "
-"υλοποιούν αυτήν την διευρυμένη διεπαφή μπορούν να καταχωρηθούν ρητά "
-"χρησιμοποιώντας :func:`~abc.ABCMeta.register`. Για περισσότερη τεκμηρίωση "
-"σχετικά με τις μεθόδους ακολουθίας γενικά, ανατρέξτε στο :ref:`Common "
-"Sequence Operations <typesseq-common>`."
+"meth:`~object.__len__`, προσθέτοντας τις :meth:`~sequence.count`, :meth:"
+"`~sequence.index`, :meth:`~object.__contains__`, και :meth:`~object."
+"__reversed__`. Οι τύποι που υλοποιούν αυτήν την διευρυμένη διεπαφή μπορούν "
+"να καταχωρηθούν ρητά χρησιμοποιώντας :func:`~abc.ABCMeta.register`. Για "
+"περισσότερη τεκμηρίωση σχετικά με τις μεθόδους ακολουθίας γενικά, ανατρέξτε "
+"στο :ref:`Common Sequence Operations <typesseq-common>`."
 
-#: glossary.rst:1202
+#: glossary.rst:1215
 msgid "set comprehension"
 msgstr "set comprehension"
 
-#: glossary.rst:1204
+#: glossary.rst:1217
 msgid ""
 "A compact way to process all or part of the elements in an iterable and "
 "return a set with the results. ``results = {c for c in 'abracadabra' if c "
@@ -3023,11 +3051,11 @@ msgstr ""
 "c in 'abracadabra' if c not in 'abc'}`` δημιουργεί το σύνολο συμβολοσειρών "
 "``{'r', 'd'}``. Βλ. :ref:`comprehensions`."
 
-#: glossary.rst:1208
+#: glossary.rst:1221
 msgid "single dispatch"
 msgstr "μοναδικό dispatch"
 
-#: glossary.rst:1210
+#: glossary.rst:1223
 msgid ""
 "A form of :term:`generic function` dispatch where the implementation is "
 "chosen based on the type of a single argument."
@@ -3035,11 +3063,11 @@ msgstr ""
 "Μια μορφή dispatch :term:`generic function` όπου η υλοποίηση επιλέγεται με "
 "βάση τον τύπο ενός μεμονωμένου ορίσματος."
 
-#: glossary.rst:1212
+#: glossary.rst:1225
 msgid "slice"
 msgstr "slice"
 
-#: glossary.rst:1214
+#: glossary.rst:1227
 msgid ""
 "An object usually containing a portion of a :term:`sequence`.  A slice is "
 "created using the subscript notation, ``[]`` with colons between numbers "
@@ -3052,11 +3080,11 @@ msgstr ""
 "``variable_name[1:3:5]``.  Η σημείωση αγκύλης (subscript) χρησιμοποιεί "
 "εσωτερικά αντικείμενα :class:`slice`."
 
-#: glossary.rst:1218
+#: glossary.rst:1231
 msgid "soft deprecated"
 msgstr "απαρχαιωμένη με ήπιο τρόπο"
 
-#: glossary.rst:1220
+#: glossary.rst:1233
 msgid ""
 "A soft deprecated API should not be used in new code, but it is safe for "
 "already existing code to use it. The API remains documented and tested, but "
@@ -3066,7 +3094,7 @@ msgstr ""
 "κώδικα, αλλά είναι ασφαλές σε ήδη υπάρχοντα κώδικα να το χρησιμοποιεί. Το "
 "API παραμένει τεκμηριωμένο και δοκιμασμένο, αλλά δεν θα ενισχυθεί περαιτέρω."
 
-#: glossary.rst:1224
+#: glossary.rst:1237
 msgid ""
 "Soft deprecation, unlike normal deprecation, does not plan on removing the "
 "API and will not emit warnings."
@@ -3074,7 +3102,7 @@ msgstr ""
 "Η κατάργηση με ήπιο τρόπο, σε αντίθεση με την κανονική κατάργηση, δεν "
 "σχεδιάζει την κατάργηση του API και δεν θα εκπέμπει ειδοποιήσεις"
 
-#: glossary.rst:1227
+#: glossary.rst:1240
 msgid ""
 "See `PEP 387: Soft Deprecation <https://peps.python.org/pep-0387/#soft-"
 "deprecation>`_."
@@ -3082,11 +3110,11 @@ msgstr ""
 "Δείτε `PEP 387: Soft Deprecation <https://peps.python.org/pep-0387/#soft-"
 "deprecation>`_."
 
-#: glossary.rst:1229
+#: glossary.rst:1242
 msgid "special method"
 msgstr "ειδική μέθοδος"
 
-#: glossary.rst:1233
+#: glossary.rst:1246
 msgid ""
 "A method that is called implicitly by Python to execute a certain operation "
 "on a type, such as addition.  Such methods have names starting and ending "
@@ -3098,11 +3126,37 @@ msgstr ""
 "έχουνε ονόματα που ξεκινούν και τελειώνουν με διπλές κάτω παύλες. Οι ειδικές "
 "μέθοδοι τεκμηριώνονται στο :ref:`specialnames`."
 
-#: glossary.rst:1237
+#: glossary.rst:1250
+msgid "standard library"
+msgstr "τυπική βιβλιοθήκη"
+
+#: glossary.rst:1252
+msgid ""
+"The collection of :term:`packages <package>`, :term:`modules <module>` and :"
+"term:`extension modules <extension module>` distributed as a part of the "
+"official Python interpreter package.  The exact membership of the collection "
+"may vary based on platform, available system libraries, or other criteria.  "
+"Documentation can be found at :ref:`library-index`."
+msgstr ""
+"Η συλλογή από :term:`πακέτα <package>`, :term:`μονάδες <module>` και :term:"
+"`επεκτάσεις μονάδων <extension module>` που διανέμονται ως μέρος του "
+"επίσημου πακέτου διερμηνέα Python. Η ακριβής σύνθεση της συλλογής μπορεί να "
+"διαφέρει ανάλογα με την πλατφόρμα, τις διαθέσιμες βιβλιοθήκες συστήματος ή "
+"άλλα κριτήρια. Η τεκμηρίωση μπορεί να βρεθεί στο :ref:`library-index`."
+
+#: glossary.rst:1258
+msgid ""
+"See also :data:`sys.stdlib_module_names` for a list of all possible standard "
+"library module names."
+msgstr ""
+"Δείτε επίσης :data:`sys.stdlib_module_names` για μια λίστα με όλα τα πιθανά "
+"ονόματα μονάδων τυπικής βιβλιοθήκης."
+
+#: glossary.rst:1260
 msgid "statement"
 msgstr "δήλωση"
 
-#: glossary.rst:1239
+#: glossary.rst:1262
 msgid ""
 "A statement is part of a suite (a \"block\" of code).  A statement is either "
 "an :term:`expression` or one of several constructs with a keyword, such as :"
@@ -3112,11 +3166,11 @@ msgstr ""
 "είναι είτε ένας :term:`expression` είτε μια από πολλές δομές με μια λέξη-"
 "κλειδί όπως :keyword:`if`, :keyword:`while` ή :keyword:`for`."
 
-#: glossary.rst:1242
+#: glossary.rst:1265
 msgid "static type checker"
 msgstr "ελεγκτής στατικού τύπου"
 
-#: glossary.rst:1244
+#: glossary.rst:1267
 msgid ""
 "An external tool that reads Python code and analyzes it, looking for issues "
 "such as incorrect types. See also :term:`type hints <type hint>` and the :"
@@ -3126,11 +3180,19 @@ msgstr ""
 "αναζητώντας προβλήματα όπως λανθασμένοι τύποι. Βλ. επίσης :term:`type hints "
 "<type hint>` και το module :mod:`typing`."
 
-#: glossary.rst:1247
+#: glossary.rst:1270
+msgid "stdlib"
+msgstr "stdlib"
+
+#: glossary.rst:1272
+msgid "An abbreviation of :term:`standard library`."
+msgstr "Μια συντομογραφία του :term:`standard library`."
+
+#: glossary.rst:1273
 msgid "strong reference"
 msgstr "strong reference"
 
-#: glossary.rst:1249
+#: glossary.rst:1275
 msgid ""
 "In Python's C API, a strong reference is a reference to an object which is "
 "owned by the code holding the reference.  The strong reference is taken by "
@@ -3143,7 +3205,7 @@ msgstr ""
 "δημιουργείται και απελευθερώνεται με :c:func:`Py_DECREF` όταν διαγραφεί η "
 "αναφορά."
 
-#: glossary.rst:1255
+#: glossary.rst:1281
 msgid ""
 "The :c:func:`Py_NewRef` function can be used to create a strong reference to "
 "an object. Usually, the :c:func:`Py_DECREF` function must be called on the "
@@ -3155,15 +3217,15 @@ msgstr ""
 "`Py_DECREF` πρέπει να καλείται στην ισχυρή αναφορά πριν βγει από το εύρος "
 "της ισχυρής αναφοράς, για να αποφευχθεί η διαρροή μιας αναφοράς."
 
-#: glossary.rst:1260
+#: glossary.rst:1286
 msgid "See also :term:`borrowed reference`."
 msgstr "Βλ. επίσης :term:`borrowed reference`."
 
-#: glossary.rst:1261
+#: glossary.rst:1287
 msgid "text encoding"
 msgstr "κωδικοποίηση κειμένου"
 
-#: glossary.rst:1263
+#: glossary.rst:1289
 msgid ""
 "A string in Python is a sequence of Unicode code points (in range "
 "``U+0000``--``U+10FFFF``). To store or transfer a string, it needs to be "
@@ -3173,7 +3235,7 @@ msgstr ""
 "εύρος ``U+0000``--``U+10FFFF``). Για να αποθηκεύσετε ή να μεταφέρετε μια "
 "συμβολοσειρά, πρέπει να σειριοποιηθεί ως δυαδική ακολουθία."
 
-#: glossary.rst:1267
+#: glossary.rst:1293
 msgid ""
 "Serializing a string into a sequence of bytes is known as \"encoding\", and "
 "recreating the string from the sequence of bytes is known as \"decoding\"."
@@ -3182,7 +3244,7 @@ msgstr ""
 "\"κωδικοποίηση\" , και η αναδημιουργία της συμβολοσειράς από την δυαδική "
 "ακολουθία είναι γνωστή ως \"αποκωδικοποίηση\"."
 
-#: glossary.rst:1270
+#: glossary.rst:1296
 msgid ""
 "There are a variety of different text serialization :ref:`codecs <standard-"
 "encodings>`, which are collectively referred to as \"text encodings\"."
@@ -3191,11 +3253,11 @@ msgstr ""
 "<standard-encodings>`, οι οποίοι συλλογικά αναφέρονται ως \"κωδικοποιήσεις "
 "κειμένου\"."
 
-#: glossary.rst:1273
+#: glossary.rst:1299
 msgid "text file"
 msgstr "αρχείο κειμένου"
 
-#: glossary.rst:1275
+#: glossary.rst:1301
 msgid ""
 "A :term:`file object` able to read and write :class:`str` objects. Often, a "
 "text file actually accesses a byte-oriented datastream and handles the :term:"
@@ -3210,7 +3272,7 @@ msgstr ""
 "κειμένου (``'r'`` ή ``'w'``), :data:`sys.stdin`, :data:`sys.stdout`, και "
 "στιγμιότυπα του :class:`io.StringIO`."
 
-#: glossary.rst:1282
+#: glossary.rst:1308
 msgid ""
 "See also :term:`binary file` for a file object able to read and write :term:"
 "`bytes-like objects <bytes-like object>`."
@@ -3218,11 +3280,11 @@ msgstr ""
 "Βλ. επίσης :term:`binary file` για ένα αντικείμενο αρχείου με δυνατότητα "
 "ανάγνωσης και εγγραφής :term:`δυαδικά αντικείμενα <bytes-like object>`."
 
-#: glossary.rst:1284
+#: glossary.rst:1310
 msgid "token"
 msgstr "λεκτικό σύμβολο (token)"
 
-#: glossary.rst:1287
+#: glossary.rst:1313
 msgid ""
 "A small unit of source code, generated by the :ref:`lexical analyzer "
 "<lexical>` (also called the *tokenizer*). Names, numbers, strings, "
@@ -3233,7 +3295,7 @@ msgstr ""
 "συμβολοσειρές, τελεστές αλλαγές γραμμής και παρόμοια στοιχεία αναπαρίστανται "
 "ως λεκτικά σύμβολα (tokens)."
 
-#: glossary.rst:1292
+#: glossary.rst:1318
 msgid ""
 "The :mod:`tokenize` module exposes Python's lexical analyzer. The :mod:"
 "`token` module contains information on the various types of tokens."
@@ -3242,11 +3304,11 @@ msgstr ""
 "mod:`token` περιέχει πληροφορίες για τους διάφορους τύπους λεκτικών συμβόλων "
 "(tokens)."
 
-#: glossary.rst:1295
+#: glossary.rst:1321
 msgid "triple-quoted string"
 msgstr "συμβολοσειρά τριπλών εισαγωγικών"
 
-#: glossary.rst:1297
+#: glossary.rst:1323
 msgid ""
 "A string which is bound by three instances of either a quotation mark (\") "
 "or an apostrophe (').  While they don't provide any functionality not "
@@ -3264,11 +3326,11 @@ msgstr ""
 "γραμμές χωρίς τη χρήση του χαρακτήρα συνέχεια, καθιστώντας τα ιδιαίτερα "
 "χρήσιμα κατά τη σύνταξη εγγράφων με συμβολοσειρές."
 
-#: glossary.rst:1304
+#: glossary.rst:1330
 msgid "type"
 msgstr "τύπος"
 
-#: glossary.rst:1306
+#: glossary.rst:1332
 msgid ""
 "The type of a Python object determines what kind of object it is; every "
 "object has a type.  An object's type is accessible as its :attr:`~object."
@@ -3279,17 +3341,17 @@ msgstr ""
 "το χαρακτηριστικό :attr:`~object.__class__` ή μπορεί να ανακτηθεί με "
 "``type(obj)``."
 
-#: glossary.rst:1310
+#: glossary.rst:1336
 msgid "type alias"
 msgstr "type alias"
 
-#: glossary.rst:1312
+#: glossary.rst:1338
 msgid "A synonym for a type, created by assigning the type to an identifier."
 msgstr ""
 "Ένα συνώνυμο για έναν τύπο, που δημιουργείται με την ανάθεση τύπου σε ένα "
 "αναγνωριστικό."
 
-#: glossary.rst:1314
+#: glossary.rst:1340
 msgid ""
 "Type aliases are useful for simplifying :term:`type hints <type hint>`. For "
 "example::"
@@ -3297,7 +3359,7 @@ msgstr ""
 "Τα type aliases είναι χρήσιμα για την απλοποίηση :term:`type alias <type "
 "hint>`. Για παράδειγμα::"
 
-#: glossary.rst:1317
+#: glossary.rst:1343
 msgid ""
 "def remove_gray_shades(\n"
 "        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
@@ -3307,11 +3369,11 @@ msgstr ""
 "        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
 "    pass"
 
-#: glossary.rst:1321
+#: glossary.rst:1347
 msgid "could be made more readable like this::"
 msgstr "μπορεί να γίνει πιο ευανάγνωστο όπως::"
 
-#: glossary.rst:1323
+#: glossary.rst:1349
 msgid ""
 "Color = tuple[int, int, int]\n"
 "\n"
@@ -3323,16 +3385,16 @@ msgstr ""
 "def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
 "    pass"
 
-#: glossary.rst:1342
+#: glossary.rst:1368
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
 msgstr ""
 "Βλ. :mod:`typing` και :pep:`484`, που περιγράφει αυτήν την λειτουργικότητα."
 
-#: glossary.rst:1329
+#: glossary.rst:1355
 msgid "type hint"
 msgstr "type hint"
 
-#: glossary.rst:1331
+#: glossary.rst:1357
 msgid ""
 "An :term:`annotation` that specifies the expected type for a variable, a "
 "class attribute, or a function parameter or return value."
@@ -3341,7 +3403,7 @@ msgstr ""
 "μεταβλητή, ένα χαρακτηριστικό κλάσης ή μια παράμετρο συνάρτησης ή τιμή "
 "επιστροφής."
 
-#: glossary.rst:1334
+#: glossary.rst:1360
 msgid ""
 "Type hints are optional and are not enforced by Python but they are useful "
 "to :term:`static type checkers <static type checker>`. They can also aid "
@@ -3352,7 +3414,7 @@ msgstr ""
 "checker>`. Μπορούν επίσης να βοηθήσουν τους IDEs με τη συμπλήρωση και την "
 "αναδιαμόρφωση κώδικα."
 
-#: glossary.rst:1338
+#: glossary.rst:1364
 msgid ""
 "Type hints of global variables, class attributes, and functions, but not "
 "local variables, can be accessed using :func:`typing.get_type_hints`."
@@ -3361,11 +3423,11 @@ msgstr ""
 "κλάσης και συναρτήσεις , αλλά όχι τοπικές μεταβλητές, μπορούν να "
 "προσπελαστούν χρησιμοποιώντας το :func:`typing.get_type_hints`."
 
-#: glossary.rst:1343
+#: glossary.rst:1369
 msgid "universal newlines"
 msgstr "καθολικές νέες γραμμές"
 
-#: glossary.rst:1345
+#: glossary.rst:1371
 msgid ""
 "A manner of interpreting text streams in which all of the following are "
 "recognized as ending a line: the Unix end-of-line convention ``'\\n'``, the "
@@ -3379,22 +3441,22 @@ msgstr ""
 "Βλ. :pep:`278` και :pep:`3116`, καθώς και :func:`bytes.splitlines` για "
 "πρόσθετη χρήση."
 
-#: glossary.rst:1350
+#: glossary.rst:1376
 msgid "variable annotation"
 msgstr "annotation μεταβλητής"
 
-#: glossary.rst:1352
+#: glossary.rst:1378
 msgid "An :term:`annotation` of a variable or a class attribute."
 msgstr "Ένας :term:`annotation` μια μεταβλητής ή ενός χαρακτηριστικού κλάσης."
 
-#: glossary.rst:1354
+#: glossary.rst:1380
 msgid ""
 "When annotating a variable or a class attribute, assignment is optional::"
 msgstr ""
 "Όταν annotating μια μεταβλητή ή ένα χαρακτηριστικό κλάσης, η ανάθεση είναι "
 "προαιρετική::"
 
-#: glossary.rst:1356
+#: glossary.rst:1382
 msgid ""
 "class C:\n"
 "    field: 'annotation'"
@@ -3402,7 +3464,7 @@ msgstr ""
 "class C:\n"
 "    field: 'annotation'"
 
-#: glossary.rst:1359
+#: glossary.rst:1385
 msgid ""
 "Variable annotations are usually used for :term:`type hints <type hint>`: "
 "for example this variable is expected to take :class:`int` values::"
@@ -3411,16 +3473,16 @@ msgstr ""
 "<type hint>`: για παράδειγμα αυτή η μεταβλητή αναμένεται να λάβει τιμές :"
 "class:`int`::"
 
-#: glossary.rst:1363
+#: glossary.rst:1389
 msgid "count: int = 0"
 msgstr "count: int = 0"
 
-#: glossary.rst:1365
+#: glossary.rst:1391
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."
 msgstr ""
 "Η σύνταξη annotation μεταβλητής περιγράφεται στην ενότητα :ref:`annassign`."
 
-#: glossary.rst:1367
+#: glossary.rst:1393
 msgid ""
 "See :term:`function annotation`, :pep:`484` and :pep:`526`, which describe "
 "this functionality. Also see :ref:`annotations-howto` for best practices on "
@@ -3430,11 +3492,11 @@ msgstr ""
 "αυτή τη λειτουργία. Δείτε επίσης :ref:`annotations-howto` για βέλτιστες "
 "πρακτικές σχετικά με την εργασία με σχολιασμούς."
 
-#: glossary.rst:1371
+#: glossary.rst:1397
 msgid "virtual environment"
 msgstr "virtual environment"
 
-#: glossary.rst:1373
+#: glossary.rst:1399
 msgid ""
 "A cooperatively isolated runtime environment that allows Python users and "
 "applications to install and upgrade Python distribution packages without "
@@ -3446,15 +3508,15 @@ msgstr ""
 "πακέτα διανομής Python χωρίς να παρεμβαίνουν στη συμπεριφορά άλλων εφαρμογών "
 "Python που εκτελούνται στο ίδιο σύστημα."
 
-#: glossary.rst:1378
+#: glossary.rst:1404
 msgid "See also :mod:`venv`."
 msgstr "Βλ. επίσης :mod:`venv`."
 
-#: glossary.rst:1379
+#: glossary.rst:1405
 msgid "virtual machine"
 msgstr "virtual machine"
 
-#: glossary.rst:1381
+#: glossary.rst:1407
 msgid ""
 "A computer defined entirely in software.  Python's virtual machine executes "
 "the :term:`bytecode` emitted by the bytecode compiler."
@@ -3463,11 +3525,25 @@ msgstr ""
 "της Python εκτελεί το :term:`bytecode` που εκπέμπεται από τον μεταγλωττιστή "
 "bytecode."
 
-#: glossary.rst:1383
+#: glossary.rst:1409
+msgid "walrus operator"
+msgstr "τελεστής walrus"
+
+#: glossary.rst:1411
+msgid ""
+"A light-hearted way to refer to the :ref:`assignment expression <assignment-"
+"expressions>` operator ``:=`` because it looks a bit like a walrus if you "
+"turn your head."
+msgstr ""
+"Ένας ελαφρώς χιουμοριστικός τρόπος να αναφερθούμε στον τελεστή :ref:"
+"`assignment expression <assignment-expressions>` ``:=`` επειδή μοιάζει λίγο "
+"με ένα θαλάσσιο ίππο αν γυρίσετε το κεφάλι σας."
+
+#: glossary.rst:1414
 msgid "Zen of Python"
 msgstr "Zen της Python"
 
-#: glossary.rst:1385
+#: glossary.rst:1416
 msgid ""
 "Listing of Python design principles and philosophies that are helpful in "
 "understanding and using the language.  The listing can be found by typing "
@@ -3477,21 +3553,32 @@ msgstr ""
 "κατανόηση και τη χρήση της γλώσσας. Ο κατάλογος μπορεί να βρεθεί "
 "πληκτρολογώντας \"``import this``\" στην διαδραστική κονσόλα."
 
-#: glossary.rst:292
+#: glossary.rst:24
+msgid "..."
+msgstr "..."
+
+#: glossary.rst:24
+msgid "ellipsis literal"
+msgstr "γραμματική παράσταση αποσιωπητικών"
+
+#: glossary.rst:294
 msgid "C-contiguous"
 msgstr "C-contiguous"
 
-#: glossary.rst:292
+#: glossary.rst:294
 msgid "Fortran contiguous"
 msgstr "Fortran contiguous"
 
-#: glossary.rst:831
+#: glossary.rst:838
 msgid "magic"
 msgstr "magic"
 
-#: glossary.rst:1231
+#: glossary.rst:1244
 msgid "special"
 msgstr "special"
+
+#~ msgid "The :const:`Ellipsis` built-in constant."
+#~ msgstr "Η ενσωματωμένη σταθερά :const:`Ellipsis`."
 
 #~ msgid "2to3"
 #~ msgstr "2to3"

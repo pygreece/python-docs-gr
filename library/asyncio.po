@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: library/asyncio.rst:91
+#: library/asyncio.rst:100
 msgid "High-level APIs"
 msgstr ""
 
-#: library/asyncio.rst:103
+#: library/asyncio.rst:112
 msgid "Low-level APIs"
 msgstr ""
 
-#: library/asyncio.rst:114
+#: library/asyncio.rst:123
 msgid "Guides and Tutorials"
 msgstr ""
 
@@ -68,39 +68,47 @@ msgid ""
 "network code."
 msgstr ""
 
-#: library/asyncio.rst:32
+#: library/asyncio.rst:34
+msgid ":ref:`a-conceptual-overview-of-asyncio`"
+msgstr ""
+
+#: library/asyncio.rst:35
+msgid "Explanation of the fundamentals of asyncio."
+msgstr ""
+
+#: library/asyncio.rst:37
 msgid "asyncio provides a set of **high-level** APIs to:"
 msgstr ""
 
-#: library/asyncio.rst:34
+#: library/asyncio.rst:39
 msgid ""
 ":ref:`run Python coroutines <coroutine>` concurrently and have full control "
 "over their execution;"
 msgstr ""
 
-#: library/asyncio.rst:37
+#: library/asyncio.rst:42
 msgid "perform :ref:`network IO and IPC <asyncio-streams>`;"
 msgstr ""
 
-#: library/asyncio.rst:39
+#: library/asyncio.rst:44
 msgid "control :ref:`subprocesses <asyncio-subprocess>`;"
 msgstr ""
 
-#: library/asyncio.rst:41
+#: library/asyncio.rst:46
 msgid "distribute tasks via :ref:`queues <asyncio-queues>`;"
 msgstr ""
 
-#: library/asyncio.rst:43
+#: library/asyncio.rst:48
 msgid ":ref:`synchronize <asyncio-sync>` concurrent code;"
 msgstr ""
 
-#: library/asyncio.rst:45
+#: library/asyncio.rst:50
 msgid ""
 "Additionally, there are **low-level** APIs for *library and framework "
 "developers* to:"
 msgstr ""
 
-#: library/asyncio.rst:48
+#: library/asyncio.rst:53
 msgid ""
 "create and manage :ref:`event loops <asyncio-event-loop>`, which provide "
 "asynchronous APIs for :ref:`networking <loop_create_server>`, running :ref:"
@@ -108,13 +116,13 @@ msgid ""
 "<loop_add_signal_handler>`, etc;"
 msgstr ""
 
-#: library/asyncio.rst:53
+#: library/asyncio.rst:58
 msgid ""
 "implement efficient protocols using :ref:`transports <asyncio-transports-"
 "protocols>`;"
 msgstr ""
 
-#: library/asyncio.rst:56
+#: library/asyncio.rst:61
 msgid ""
 ":ref:`bridge <asyncio-futures>` callback-based libraries and code with async/"
 "await syntax."
@@ -130,17 +138,17 @@ msgid ""
 "availability` for more information."
 msgstr ""
 
-#: library/asyncio.rst:64
+#: library/asyncio.rst:69
 msgid "asyncio REPL"
 msgstr ""
 
-#: library/asyncio.rst:65
+#: library/asyncio.rst:70
 msgid ""
 "You can experiment with an ``asyncio`` concurrent context in the :term:"
 "`REPL`:"
 msgstr ""
 
-#: library/asyncio.rst:67
+#: library/asyncio.rst:72
 msgid ""
 "$ python -m asyncio\n"
 "asyncio REPL ...\n"
@@ -152,26 +160,33 @@ msgid ""
 "'hello'"
 msgstr ""
 
-#: library/asyncio.rst:77
+#: library/asyncio.rst:82
+msgid ""
+"This REPL provides limited compatibility with :envvar:`PYTHON_BASIC_REPL`. "
+"It is recommended that the default REPL is used for full functionality and "
+"the latest features."
+msgstr ""
+
+#: library/asyncio.rst:86
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``cpython.run_stdin`` with no "
 "arguments."
 msgstr ""
 
-#: library/asyncio.rst:79
+#: library/asyncio.rst:88
 msgid "(also 3.11.10, 3.10.15, 3.9.20, and 3.8.20) Emits audit events."
 msgstr ""
 
-#: library/asyncio.rst:82
+#: library/asyncio.rst:91
 msgid ""
 "Uses PyREPL if possible, in which case :envvar:`PYTHONSTARTUP` is also "
 "executed. Emits audit events."
 msgstr ""
 
-#: library/asyncio.rst:90
+#: library/asyncio.rst:99
 msgid "Reference"
 msgstr ""
 
-#: library/asyncio.rst:123
+#: library/asyncio.rst:132
 msgid "The source code for asyncio can be found in :source:`Lib/asyncio/`."
 msgstr ""

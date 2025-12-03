@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -507,9 +507,9 @@ msgstr ""
 msgid ""
 "A constant value. The ``value`` attribute of the ``Constant`` literal "
 "contains the Python object it represents. The values represented can be "
-"simple types such as a number, string or ``None``, but also immutable "
-"container types (tuples and frozensets) if all of their elements are "
-"constant."
+"instances of :class:`str`, :class:`bytes`, :class:`int`, :class:`float`, :"
+"class:`complex`, and :class:`bool`, and the constants :data:`None` and :data:"
+"`Ellipsis`."
 msgstr ""
 
 #: library/ast.rst:279
@@ -2891,19 +2891,19 @@ msgstr ""
 
 #: library/ast.rst:2443
 msgid ""
-"If *show_empty* is ``False`` (the default), empty lists and fields that are "
-"``None`` will be omitted from the output."
+"If *show_empty* is false (the default), optional empty lists will be omitted "
+"from the output. Optional ``None`` values are always omitted."
 msgstr ""
 
-#: library/ast.rst:2446
+#: library/ast.rst:2447
 msgid "Added the *indent* option."
 msgstr ""
 
-#: library/ast.rst:2449
+#: library/ast.rst:2450
 msgid "Added the *show_empty* option."
 msgstr ""
 
-#: library/ast.rst:2452
+#: library/ast.rst:2453
 msgid ""
 ">>> print(ast.dump(ast.parse(\"\"\"\\\n"
 "... async def f():\n"
@@ -2931,93 +2931,93 @@ msgid ""
 "    type_ignores=[])"
 msgstr ""
 
-#: library/ast.rst:2483
+#: library/ast.rst:2484
 msgid "Compiler Flags"
 msgstr ""
 
-#: library/ast.rst:2485
+#: library/ast.rst:2486
 msgid ""
 "The following flags may be passed to :func:`compile` in order to change "
 "effects on the compilation of a program:"
 msgstr ""
 
-#: library/ast.rst:2490
+#: library/ast.rst:2491
 msgid ""
 "Enables support for top-level ``await``, ``async for``, ``async with`` and "
 "async comprehensions."
 msgstr ""
 
-#: library/ast.rst:2497
+#: library/ast.rst:2498
 msgid ""
 "Generates and returns an abstract syntax tree instead of returning a "
 "compiled code object."
 msgstr ""
 
-#: library/ast.rst:2502
+#: library/ast.rst:2503
 msgid ""
 "The returned AST is optimized according to the *optimize* argument in :func:"
 "`compile` or :func:`ast.parse`."
 msgstr ""
 
-#: library/ast.rst:2509
+#: library/ast.rst:2510
 msgid ""
 "Enables support for :pep:`484` and :pep:`526` style type comments (``# type: "
 "<type>``, ``# type: ignore <stuff>``)."
 msgstr ""
 
-#: library/ast.rst:2518
+#: library/ast.rst:2519
 msgid "Command-Line Usage"
 msgstr ""
 
-#: library/ast.rst:2522
+#: library/ast.rst:2523
 msgid ""
 "The :mod:`ast` module can be executed as a script from the command line. It "
 "is as simple as:"
 msgstr ""
 
-#: library/ast.rst:2525
+#: library/ast.rst:2526
 msgid "python -m ast [-m <mode>] [-a] [infile]"
 msgstr ""
 
-#: library/ast.rst:2529
+#: library/ast.rst:2530
 msgid "The following options are accepted:"
 msgstr ""
 
-#: library/ast.rst:2535
+#: library/ast.rst:2536
 msgid "Show the help message and exit."
 msgstr ""
 
-#: library/ast.rst:2540
+#: library/ast.rst:2541
 msgid ""
 "Specify what kind of code must be compiled, like the *mode* argument in :"
 "func:`parse`."
 msgstr ""
 
-#: library/ast.rst:2545
+#: library/ast.rst:2546
 msgid "Don't parse type comments."
 msgstr ""
 
-#: library/ast.rst:2549
+#: library/ast.rst:2550
 msgid "Include attributes such as line numbers and column offsets."
 msgstr ""
 
-#: library/ast.rst:2554
+#: library/ast.rst:2555
 msgid "Indentation of nodes in AST (number of spaces)."
 msgstr ""
 
-#: library/ast.rst:2556
+#: library/ast.rst:2557
 msgid ""
 "If :file:`infile` is specified its contents are parsed to AST and dumped to "
 "stdout.  Otherwise, the content is read from stdin."
 msgstr ""
 
-#: library/ast.rst:2562
+#: library/ast.rst:2563
 msgid ""
 "`Green Tree Snakes <https://greentreesnakes.readthedocs.io/>`_, an external "
 "documentation resource, has good details on working with Python ASTs."
 msgstr ""
 
-#: library/ast.rst:2565
+#: library/ast.rst:2566
 msgid ""
 "`ASTTokens <https://asttokens.readthedocs.io/en/latest/user-guide.html>`_ "
 "annotates Python ASTs with the positions of tokens and text in the source "
@@ -3025,21 +3025,21 @@ msgid ""
 "transformations."
 msgstr ""
 
-#: library/ast.rst:2570
+#: library/ast.rst:2571
 msgid ""
 "`leoAst.py <https://leo-editor.github.io/leo-editor/appendices.html#leoast-"
 "py>`_ unifies the token-based and parse-tree-based views of python programs "
 "by inserting two-way links between tokens and ast nodes."
 msgstr ""
 
-#: library/ast.rst:2575
+#: library/ast.rst:2576
 msgid ""
 "`LibCST <https://libcst.readthedocs.io/>`_ parses code as a Concrete Syntax "
 "Tree that looks like an ast tree and keeps all formatting details. It's "
 "useful for building automated refactoring (codemod) applications and linters."
 msgstr ""
 
-#: library/ast.rst:2580
+#: library/ast.rst:2581
 msgid ""
 "`Parso <https://parso.readthedocs.io>`_ is a Python parser that supports "
 "error recovery and round-trip parsing for different Python versions (in "

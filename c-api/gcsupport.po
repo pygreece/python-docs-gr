@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 22:06+0300\n"
+"POT-Creation-Date: 2025-11-27 09:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,9 +254,10 @@ msgstr ""
 
 #: c-api/gcsupport.rst:185
 msgid ""
-"If *o* is not ``NULL``, call the *visit* callback, with arguments *o* and "
-"*arg*.  If *visit* returns a non-zero value, then return it. Using this "
-"macro, :c:member:`~PyTypeObject.tp_traverse` handlers look like::"
+"If the :c:expr:`PyObject *` *o* is not ``NULL``, call the *visit* callback, "
+"with arguments *o* and *arg*.  If *visit* returns a non-zero value, then "
+"return it. Using this macro, :c:member:`~PyTypeObject.tp_traverse` handlers "
+"look like::"
 msgstr ""
 
 #: c-api/gcsupport.rst:190
