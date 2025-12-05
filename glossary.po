@@ -306,7 +306,7 @@ msgstr ""
 "κατάσταση εκτέλεσης (συμπεριλαμβανομένων των τοπικών μεταβλητών και των "
 "δηλώσεων `try` σε εκκρεμότητα). Όταν ο *ασύγχρονος generator iterator* "
 "συνεχίσει αποτελεσματικά με άλλο αναμενόμενο που επιστρέφεται από :meth:"
-"`~object.__anext__ `, συνεχίζει από εκεί που σταμάτησε. Βλ. :pep:`492` και :"
+"`~object.__anext__`, συνεχίζει από εκεί που σταμάτησε. Βλ. :pep:`492` και :"
 "pep:`525`."
 
 #: glossary.rst:124
@@ -1777,7 +1777,7 @@ msgid ""
 "therefore it is never deallocated while the interpreter is running. For "
 "example, :const:`True` and :const:`None` are immortal in CPython."
 msgstr ""
-"Εάν ένα αντικείμενο είναι αθάνατο, ο :term:`πλήθος αναφοράς` του δεν "
+"Εάν ένα αντικείμενο είναι αθάνατο, ο :term:`reference count` του δεν "
 "τροποποιείται, και επομένως δεν εκχωρείται ποτέ ενώ εκτελείται ο διερμηνέας. "
 "Για παράδειγμα, :const:`True` και :const:`None` είναι αθάνατα στην CPython."
 
@@ -2049,7 +2049,7 @@ msgstr ""
 "Ένα αριθμός εργαλείων στην Python δέχεται βασικές συναρτήσεις για τον έλεγχο "
 "του τρόπου με τον οποίο τα στοιχεία ταξινομούνται ή ομαδοποιούνται. Αυτά "
 "περιέχουν :func:`min`, :func:`max`, :func:`sorted`, :meth:`list.sort`, :func:"
-"`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq. nlargest`, και :func:"
+"`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq.nlargest`, και :func:"
 "`itertools.groupby`."
 
 #: glossary.rst:815
