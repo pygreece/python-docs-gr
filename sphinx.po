@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2024-05-08 09:17+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -52,167 +52,123 @@ msgstr "Τελευταία ενημέρωση στις: %(last_updated)s."
 
 #: tools/templates/download.html:34
 msgid ""
-"To download an archive containing all the documents for this version of\n"
-"Python in one of various formats, follow one of links in this table."
+"Download an archive containing all the documentation for this version of "
+"Python:"
 msgstr ""
-"Για λήψη ενός αρχείου που περιέχει όλα τα έγγραφα για αυτήν την έκδοση της\n"
-"Python σε μία από τις διάφορες μορφές, ακολουθήστε έναν από τους συνδέσμου "
-"σε αυτόν τον πίνακα.σ"
+"Για λήψη ενός αρχείου που περιέχει όλα τα έγγραφα για αυτήν την έκδοση της "
+"Python:"
 
-#: tools/templates/download.html:39
+#: tools/templates/download.html:38
 msgid "Format"
 msgstr "Διάταξη"
 
-#: tools/templates/download.html:40
+#: tools/templates/download.html:39
 msgid "Packed as .zip"
 msgstr "Συσκευασμένο ως .zip"
 
-#: tools/templates/download.html:41
+#: tools/templates/download.html:40
 msgid "Packed as .tar.bz2"
 msgstr "Συσκευασμένο ως .tar.bz2"
 
-#: tools/templates/download.html:44
-msgid "PDF"
-msgstr "PDF"
-
-#: tools/templates/download.html:45
-msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
-msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
-
-#: tools/templates/download.html:46
-msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.tar.bz2\">Download</"
-"a> (ca. %(download_size)s MiB)"
-msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.tar.bz2\">Download</"
-"a> (ca. %(download_size)s MiB)"
-
-#: tools/templates/download.html:49
+#: tools/templates/download.html:43
 msgid "HTML"
 msgstr "HTML"
 
-#: tools/templates/download.html:50
+#: tools/templates/download.html:44
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
 
-#: tools/templates/download.html:51
+#: tools/templates/download.html:45
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a>"
 
-#: tools/templates/download.html:54
+#: tools/templates/download.html:48
 msgid "Plain text"
 msgstr "Απλό κείμενο"
 
-#: tools/templates/download.html:55
+#: tools/templates/download.html:49
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
 
-#: tools/templates/download.html:56
+#: tools/templates/download.html:50
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a>"
 
-#: tools/templates/download.html:59
+#: tools/templates/download.html:53
 msgid "Texinfo"
 msgstr "Texinfo"
 
-#: tools/templates/download.html:60
+#: tools/templates/download.html:54
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a> "
-"(ca. %(download_size)s MiB)"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a>"
 
-#: tools/templates/download.html:61
+#: tools/templates/download.html:55
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar.bz2\">Download</"
-"a> (ca. %(download_size)s MiB)"
+"a>"
 msgstr ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar.bz2\">Download</"
-"a> (ca. %(download_size)s MiB)"
+"a>"
 
-#: tools/templates/download.html:64
+#: tools/templates/download.html:58
 msgid "EPUB"
 msgstr "EPUB"
 
-#: tools/templates/download.html:65
+#: tools/templates/download.html:59
+msgid "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a>"
+msgstr "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a>"
+
+#: tools/templates/download.html:64
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a> (ca. "
-"%(download_size)s MiB)"
+"\n"
+"We no longer provide pre-built PDFs of the documentation.\n"
+"To build a PDF archive, follow the instructions in the\n"
+"<a href=\"https://devguide.python.org/documentation/start-documenting/"
+"#building-the-documentation\">Developer's Guide</a>\n"
+"and run <code>make dist-pdf</code> in the <code>Doc/</code> directory of a "
+"copy of the CPython repository.\n"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a> (ca. "
-"%(download_size)s MiB)"
+"\n"
+"Δεν παρέχουμε πλέον προ-κατασκευασμένα PDF της τεκμηρίωσης.\n"
+"Για να δημιουργήσετε ένα αρχείο PDF, ακολουθήστε τις οδηγίες στο\n"
+"<a href=\"https://devguide.python.org/documentation/start-documenting/"
+"#building-the-documentation\">Developer's Guide</a>\n"
+"και εκτελέστε <code>make dist-pdf</code> στον κατάλογο <code>Doc/</code> "
+"ενός αντιγράφου του αποθετηρίου CPython.\n"
 
-#: tools/templates/download.html:70
-msgid "These archives contain all the content in the documentation."
-msgstr "Αυτά τα αρχεία περιέχουν όλο το περιεχόμενο της τεκμηρίωσης."
-
-#: tools/templates/download.html:73
-msgid "Unpacking"
-msgstr "Αποσυμπίεση"
+#: tools/templates/download.html:71
+msgid ""
+"\n"
+"See the <a href=\"https://docs.python.org/%(version)s/archives/\">directory "
+"listing</a>\n"
+"for file sizes."
+msgstr ""
+"\n"
+"Δείτε τον <a href=\"https://docs.python.org/%(version)s/archives/"
+"\">directory listing</a>\n"
+"για τα μεγέθη των αρχείων."
 
 #: tools/templates/download.html:75
-msgid ""
-"Unix users should download the .tar.bz2 archives; these are bzipped tar\n"
-"archives and can be handled in the usual way using tar and the bzip2\n"
-"program. The <a href=\"https://infozip.sourceforge.net\">Info-ZIP</a> unzip "
-"program can be\n"
-"used to handle the ZIP archives if desired. The .tar.bz2 archives provide "
-"the\n"
-"best compression and fastest download times."
-msgstr ""
-"Οι χρήστες Unix θα πρέπει να κατεβάσουν τα αρχεία .tar.bz2· αυτά τα αρχεία "
-"tar\n"
-"archives με μορφή bzip μπορούν να τα χειριστούν με τον συνήθη τρόπο "
-"χρησιμοποιώντας το tar και το πρόγραμμα bzip2\n"
-". Το πρόγραμμα αποσυμπίεσης <a href=\"https://infozip.sourceforge.net\">Info-"
-"ZIP</a> μπορεί να\n"
-" χρησιμοποιηθεί για το χειρισμό των αρχείων ZIP εάν το επιθυμείτε. Τα "
-"αρχεία .tar.bz2 παρέχουν την καλύτερη συμπίεση και τους ταχύτερους χρόνους "
-"λήψης."
-
-#: tools/templates/download.html:81
-msgid ""
-"Windows users can use the ZIP archives since those are customary on that\n"
-"platform. These are created on Unix using the Info-ZIP zip program."
-msgstr ""
-"Οι χρήστες των Windows μπορούν να χρησιμοποιήσουν τα αρχεία ZIP αφού αυτά "
-"είναι συνηθισμένα σε αυτήν την\n"
-"πλατφόρμα. Αυτά δημιουργούνται στο Unix χρησιμοποιώντας το πρόγραμμα zip "
-"Info-ZIP."
-
-#: tools/templates/download.html:85
 msgid "Problems"
 msgstr "Προβλήματα"
 
-#: tools/templates/download.html:87
+#: tools/templates/download.html:77
 msgid ""
-"If you have comments or suggestions for the Python documentation, please "
-"send\n"
-"email to <a href=\"mailto:docs@python.org\">docs@python.org</a>."
+"<a href=\"%(bugs)s\">Open an issue</a>\n"
+"if you have comments or suggestions for the Python documentation."
 msgstr ""
-"Εάν έχετε σχόλια ή προτάσεις για την τεκμηρίωση της Python, στείλτε\n"
-"email στη διεύθυνση <a href=\"mailto:docs@python.org\">docs@python.org</a>."
+"<a href=\"%(bugs)s\">Ανοίξτε ένα θέμα</a>\n"
+"εάν έχετε σχόλια ή προτάσεις για την τεκμηρίωση της Python."
 
 #: tools/templates/dummy.html:6
 msgid "Availability"
@@ -275,14 +231,12 @@ msgid "CPython implementation detail:"
 msgstr "Λεπτομέρεια υλοποίησης CPython:"
 
 #: tools/templates/dummy.html:30
-msgid ""
-"Deprecated since version {deprecated}, will be removed in version {removed}"
-msgstr ""
-"Καταργήθηκε στην έκδοση {deprecated}, θα αφαιρεθεί στην έκδοση {removed}"
+msgid "Deprecated since version %s, will be removed in version %s"
+msgstr "Καταργήθηκε από την έκδοση %s, θα αφαιρεθεί στην έκδοση %s"
 
 #: tools/templates/dummy.html:31
-msgid "Deprecated since version {deprecated}, removed in version {removed}"
-msgstr "Καταργήθηκε στην έκδοση {deprecated}, αφαιρέθηκε στην έκδοση {removed}"
+msgid "Deprecated since version %s, removed in version %s"
+msgstr "Καταργήθηκε από την έκδοση %s, αφαιρέθηκε στην έκδοση %s"
 
 #: tools/templates/dummy.html:35
 msgid "in development"
@@ -548,6 +502,66 @@ msgstr ""
 #: tools/templates/layout.html:16
 msgid "the current stable release"
 msgstr "η τρέχουσα σταθερή έκδοση"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid ""
+#~ "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.zip\">Download</"
+#~ "a> (ca. %(download_size)s MiB)"
+#~ msgstr ""
+#~ "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.zip\">Download</"
+#~ "a> (ca. %(download_size)s MiB)"
+
+#~ msgid ""
+#~ "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.tar."
+#~ "bz2\">Download</a> (ca. %(download_size)s MiB)"
+#~ msgstr ""
+#~ "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-pdf-a4.tar."
+#~ "bz2\">Download</a> (ca. %(download_size)s MiB)"
+
+#~ msgid "These archives contain all the content in the documentation."
+#~ msgstr "Αυτά τα αρχεία περιέχουν όλο το περιεχόμενο της τεκμηρίωσης."
+
+#~ msgid "Unpacking"
+#~ msgstr "Αποσυμπίεση"
+
+#~ msgid ""
+#~ "Unix users should download the .tar.bz2 archives; these are bzipped tar\n"
+#~ "archives and can be handled in the usual way using tar and the bzip2\n"
+#~ "program. The <a href=\"https://infozip.sourceforge.net\">Info-ZIP</a> "
+#~ "unzip program can be\n"
+#~ "used to handle the ZIP archives if desired. The .tar.bz2 archives provide "
+#~ "the\n"
+#~ "best compression and fastest download times."
+#~ msgstr ""
+#~ "Οι χρήστες Unix θα πρέπει να κατεβάσουν τα αρχεία .tar.bz2· αυτά τα "
+#~ "αρχεία tar\n"
+#~ "archives με μορφή bzip μπορούν να τα χειριστούν με τον συνήθη τρόπο "
+#~ "χρησιμοποιώντας το tar και το πρόγραμμα bzip2\n"
+#~ ". Το πρόγραμμα αποσυμπίεσης <a href=\"https://infozip.sourceforge."
+#~ "net\">Info-ZIP</a> μπορεί να\n"
+#~ " χρησιμοποιηθεί για το χειρισμό των αρχείων ZIP εάν το επιθυμείτε. Τα "
+#~ "αρχεία .tar.bz2 παρέχουν την καλύτερη συμπίεση και τους ταχύτερους "
+#~ "χρόνους λήψης."
+
+#~ msgid ""
+#~ "Windows users can use the ZIP archives since those are customary on that\n"
+#~ "platform. These are created on Unix using the Info-ZIP zip program."
+#~ msgstr ""
+#~ "Οι χρήστες των Windows μπορούν να χρησιμοποιήσουν τα αρχεία ZIP αφού αυτά "
+#~ "είναι συνηθισμένα σε αυτήν την\n"
+#~ "πλατφόρμα. Αυτά δημιουργούνται στο Unix χρησιμοποιώντας το πρόγραμμα zip "
+#~ "Info-ZIP."
+
+#~ msgid ""
+#~ "If you have comments or suggestions for the Python documentation, please "
+#~ "send\n"
+#~ "email to <a href=\"mailto:docs@python.org\">docs@python.org</a>."
+#~ msgstr ""
+#~ "Εάν έχετε σχόλια ή προτάσεις για την τεκμηρίωση της Python, στείλτε\n"
+#~ "email στη διεύθυνση <a href=\"mailto:docs@python.org\">docs@python.org</"
+#~ "a>."
 
 #~ msgid "Parts of the documentation:"
 #~ msgstr "Μέρη της τεκμηρίωσης:"

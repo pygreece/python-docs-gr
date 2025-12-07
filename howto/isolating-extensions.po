@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -509,8 +509,8 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:356
 msgid ""
-"Define a traverse function using ``Py_tp_traverse``, which visits the type "
-"(e.g. using ``Py_VISIT(Py_TYPE(self))``)."
+"Define a traverse function using :c:data:`Py_tp_traverse`, which visits the "
+"type (e.g. using ``Py_VISIT(Py_TYPE(self))``)."
 msgstr ""
 
 #: howto/isolating-extensions.rst:359
@@ -667,7 +667,7 @@ msgid "GC-tracked objects need to be allocated using GC-aware functions."
 msgstr ""
 
 #: howto/isolating-extensions.rst:456
-msgid "If you use use :c:func:`PyObject_New` or :c:func:`PyObject_NewVar`:"
+msgid "If you use :c:func:`PyObject_New` or :c:func:`PyObject_NewVar`:"
 msgstr ""
 
 #: howto/isolating-extensions.rst:458
@@ -903,16 +903,15 @@ msgstr ""
 
 #: howto/isolating-extensions.rst:629
 msgid ""
-"Discussions about improving the situation are best held on the `capi-sig "
-"mailing list <https://mail.python.org/mailman3/lists/capi-sig.python.org/"
-">`__."
+"Discussions about improving the situation are best held on the `discuss "
+"forum under c-api tag <https://discuss.python.org/c/core-dev/c-api/30>`__."
 msgstr ""
 
-#: howto/isolating-extensions.rst:634
+#: howto/isolating-extensions.rst:633
 msgid "Per-Class Scope"
 msgstr ""
 
-#: howto/isolating-extensions.rst:636
+#: howto/isolating-extensions.rst:635
 msgid ""
 "It is currently (as of Python 3.11) not possible to attach state to "
 "individual *types* without relying on CPython implementation details (which "
@@ -920,11 +919,11 @@ msgid ""
 "per-class scope)."
 msgstr ""
 
-#: howto/isolating-extensions.rst:643
+#: howto/isolating-extensions.rst:642
 msgid "Lossless Conversion to Heap Types"
 msgstr ""
 
-#: howto/isolating-extensions.rst:645
+#: howto/isolating-extensions.rst:644
 msgid ""
 "The heap type API was not designed for \"lossless\" conversion from static "
 "types; that is, creating a type that works exactly like a given static type."

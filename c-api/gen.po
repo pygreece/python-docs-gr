@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,4 +62,44 @@ msgid ""
 "``__name__`` and ``__qualname__`` set to *name* and *qualname*. A reference "
 "to *frame* is stolen by this function.  The *frame* argument must not be "
 "``NULL``."
+msgstr ""
+
+#: c-api/gen.rst:50
+msgid ""
+"Return a new :term:`strong reference` to the code object wrapped by *gen*. "
+"This function always succeeds."
+msgstr ""
+
+#: c-api/gen.rst:55
+msgid "Asynchronous Generator Objects"
+msgstr ""
+
+#: c-api/gen.rst:58
+msgid ":pep:`525`"
+msgstr ""
+
+#: c-api/gen.rst:62
+msgid ""
+"The type object corresponding to asynchronous generator objects. This is "
+"available as :class:`types.AsyncGeneratorType` in the Python layer."
+msgstr ""
+
+#: c-api/gen.rst:69
+msgid ""
+"Create a new asynchronous generator wrapping *frame*, with ``__name__`` and "
+"``__qualname__`` set to *name* and *qualname*. *frame* is stolen by this "
+"function and must not be ``NULL``."
+msgstr ""
+
+#: c-api/gen.rst:73
+msgid ""
+"On success, this function returns a :term:`strong reference` to the new "
+"asynchronous generator. On failure, this function returns ``NULL`` with an "
+"exception set."
+msgstr ""
+
+#: c-api/gen.rst:81
+msgid ""
+"Return true if *op* is an asynchronous generator object, false otherwise. "
+"This function always succeeds."
 msgstr ""
