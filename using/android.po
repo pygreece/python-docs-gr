@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-12-07 14:21+0200\n"
+"Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: using/android.rst:5
 msgid "Using Python on Android"
-msgstr ""
+msgstr "Χρήση της Python σε Android"
 
 #: using/android.rst:7
 msgid ""
@@ -29,6 +29,13 @@ msgid ""
 "running a :program:`python` executable and entering commands at an "
 "interactive prompt, or by running a Python script."
 msgstr ""
+"Η Python σε Android διαφέρει από την Python σε πλατφόρμες επιτραπέζιων "
+"υπολογιστών. Σε μια πλατφόρμα επιτραπέζιων υπολογιστών, η Python "
+"εγκαθίσταται γενικά ως πόρος συστήματος που μπορεί να χρησιμοποιηθεί από "
+"οποιονδήποτε χρήστη αυτού του υπολογιστή. Οι χρήστες στη συνέχεια "
+"αλληλεπιδρούν με την Python εκτελώντας ένα εκτελέσιμο :program:`python` και "
+"εισάγοντας εντολές σε μια διαδραστική γραμμή εντολών ή εκτελώντας ένα Python "
+"script."
 
 #: using/android.rst:13
 msgid ""
@@ -36,16 +43,27 @@ msgid ""
 "unit of software distribution is an \"app\". There is also no console where "
 "you could run a :program:`python` executable, or interact with a Python REPL."
 msgstr ""
+"Στο Android, δεν υπάρχει η έννοια της εγκατάστασης ως πόρου συστήματος. Η "
+"μόνη μονάδα διανομής λογισμικού είναι μια «εφαρμογή». Δεν υπάρχει κονσόλα "
+"όπου θα μπορούσατε να εκτελέσετε ένα εκτελέσιμο αρχείο :program:`python`, ή "
+"να αλληλεπιδράσετε με ένα Python REPL."
 
 #: using/android.rst:17
 msgid ""
 "As a result, the only way you can use Python on Android is in embedded mode "
 "– that is, by writing a native Android application, embedding a Python "
-"interpreter using ``libpython``, and invoking Python code using the :ref:"
-"`Python embedding API <embedding>`. The full Python interpreter, the "
-"standard library, and all your Python code is then packaged into your app "
-"for its own private use."
+"interpreter using ``libpython``, and invoking Python code using "
+"the :ref:`Python embedding API <embedding>`. The full Python interpreter, "
+"the standard library, and all your Python code is then packaged into your "
+"app for its own private use."
 msgstr ""
+"Ως αποτέλεσμα, ο μόνος τρόπος για να χρησιμοποιήσετε την Python σε Android "
+"είναι σε ενσωματωμένη λειτουργία – δηλαδή, γράφοντας μια εγγενή εφαρμογή "
+"Android, ενσωματώνοντας έναν διερμηνέα Python χρησιμοποιώντας το "
+"``libpython``, και καλώντας κώδικα Python χρησιμοποιώντας το :ref:`Python "
+"embedding API <embedding>`. Ο πλήρης διερμηνέας Python, η τυπική βιβλιοθήκη, "
+"και όλος ο κώδικας Python συσκευάζονται στη συνέχεια στην εφαρμογή σας για "
+"δική της ιδιωτική χρήση."
 
 #: using/android.rst:23
 msgid ""
@@ -53,38 +71,45 @@ msgid ""
 "Android. See the :ref:`API availability guide <mobile-availability>` for "
 "details."
 msgstr ""
+"Η τυπική βιβλιοθήκη της Python έχει κάποιες αξιοσημείωτες παραλείψεις και "
+"περιορισμούς στο Android. Δείτε τον :ref:`API availability guide <mobile-"
+"availability>` για λεπτομέρειες."
 
 #: using/android.rst:28
 msgid "Adding Python to an Android app"
-msgstr ""
+msgstr "Προσθήκη της Python σε μια εφαρμογή Android"
 
 #: using/android.rst:30
 msgid ""
 "Most app developers should use one of the following tools, which will "
 "provide a much easier experience:"
 msgstr ""
+"Η πλειονότητα των ατόμων που προγραμματίζουν εφαρμογές θα πρέπει να "
+"χρησιμοποιούν ένα από τα ακόλουθα εργαλεία, τα οποία παρέχουν ευκολότερη "
+"εμπειρία:"
 
 #: using/android.rst:33
 msgid ""
 "`Briefcase <https://briefcase.readthedocs.io>`__, from the BeeWare project"
-msgstr ""
+msgstr "`Briefcase <https://briefcase.readthedocs.io>`__, από το έργο BeeWare"
 
 #: using/android.rst:34
 msgid "`Buildozer <https://buildozer.readthedocs.io>`__, from the Kivy project"
-msgstr ""
+msgstr "`Buildozer <https://buildozer.readthedocs.io>`__, από το έργο Kivy"
 
 #: using/android.rst:35
 msgid "`Chaquopy <https://chaquo.com/chaquopy>`__"
-msgstr ""
+msgstr "`Chaquopy <https://chaquo.com/chaquopy>`__"
 
 #: using/android.rst:36
 msgid ""
 "`pyqtdeploy <https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/>`__"
 msgstr ""
+"`pyqtdeploy <https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/>`__"
 
 #: using/android.rst:37
 msgid "`Termux <https://termux.dev/en/>`__"
-msgstr ""
+msgstr "`Termux <https://termux.dev/en/>`__"
 
 #: using/android.rst:39
 msgid ""
@@ -92,10 +117,14 @@ msgid ""
 "the :source:`testbed app <Android/testbed>` as a guide; each step below "
 "contains a link to the relevant file."
 msgstr ""
+"Αν θέλετε να τα κάνετε όλα αυτά χειροκίνητα, συνεχίστε την ανάγνωση. "
+"Μπορείτε να χρησιμοποιήσετε την εντολή :source:`testbed app <Android/"
+"testbed>` ως οδηγό· κάθε βήμα παρακάτω περιέχει έναν σύνδεσμο προς το "
+"σχετικό αρχείο."
 
 #: using/android.rst:43
 msgid "First, acquire a build of Python for Android:"
-msgstr ""
+msgstr "Πρώτον, αποκτήστε μια έκδοση της Python για Android:"
 
 #: using/android.rst:45
 msgid ""
@@ -103,50 +132,63 @@ msgid ""
 "www.python.org/downloads/android/>`__. The ``prefix`` directory mentioned "
 "below is at the top level of the package."
 msgstr ""
+"Ο ευκολότερος τρόπος είναι να κατεβάσετε μια έκδοση Android από το "
+"`python.org <https://www.python.org/downloads/android/>`__. Ο φάκελος "
+"``prefix`` που αναφέρεται παρακάτω βρίσκεται στο ανώτατο επίπεδο του πακέτου."
 
 #: using/android.rst:49
 msgid ""
-"Or if you want to build it yourself, follow the instructions in :source:"
-"`Android/README.md`. The ``prefix`` directory will be created under :samp:"
-"`cross-build/{HOST}`."
+"Or if you want to build it yourself, follow the instructions "
+"in :source:`Android/README.md`. The ``prefix`` directory will be created "
+"under :samp:`cross-build/{HOST}`."
 msgstr ""
+"Ή αν θέλετε να το δημιουργήσετε μόνοι σας, ακολουθήστε τις οδηγίες στο "
+"αρχείο:source:`Android/README.md`. Ο φάκελος ``prefix`` θα δημιουργηθεί κάτω "
+"από το :samp:`cross-build/{HOST}`."
 
 #: using/android.rst:53
 msgid ""
-"Add code to your :source:`build.gradle <Android/testbed/app/build.gradle."
-"kts>` file to copy the following items into your project. All except your "
-"own Python code can be copied from ``prefix/lib``:"
+"Add code to your :source:`build.gradle <Android/testbed/app/"
+"build.gradle.kts>` file to copy the following items into your project. All "
+"except your own Python code can be copied from ``prefix/lib``:"
 msgstr ""
+"Προσθέστε κώδικα στο αρχείο σας :source:`build.gradle <Android/testbed/app/"
+"build.gradle.kts>` για να αντιγράψετε τα ακόλουθα στοιχεία στο έργο σας. Όλα "
+"εκτός από τον δικό σας κώδικα Python μπορούν να αντιγραφούν από το ``prefix/"
+"lib``:"
 
 #: using/android.rst:57
 msgid "In your JNI libraries:"
-msgstr ""
+msgstr "Στις JNI βιβλιοθήκες σας:"
 
 #: using/android.rst:59
 msgid "``libpython*.*.so``"
-msgstr ""
+msgstr "``libpython*.*.so``"
 
 #: using/android.rst:60
 msgid "``lib*_python.so`` (external libraries such as OpenSSL)"
-msgstr ""
+msgstr "``lib*_python.so`` (εξωτερικές βιβλιοθήκες όπως το OpenSSL)"
 
 #: using/android.rst:62
 msgid "In your assets:"
-msgstr ""
+msgstr "Στα στοιχεία σας:"
 
 #: using/android.rst:64
 msgid "``python*.*`` (the Python standard library)"
-msgstr ""
+msgstr "``python*.*`` (η τυπική βιβλιοθήκη της Python)"
 
 #: using/android.rst:65
 msgid "``python*.*/site-packages`` (your own Python code)"
-msgstr ""
+msgstr "``python*.*/site-packages`` (ο δικός σας Python κώδικας)"
 
 #: using/android.rst:67
 msgid ""
 "Add code to your app to :source:`extract the assets to the filesystem "
 "<Android/testbed/app/src/main/java/org/python/testbed/MainActivity.kt>`."
 msgstr ""
+"Προσθέστε κώδικα στην εφαρμογή σας για να :source:`εξαγάγετε τα στοιχεία στο "
+"σύστημα αρχείων <Android/testbed/app/src/main/java/org/python/testbed/"
+"MainActivity.kt>`."
 
 #: using/android.rst:70
 msgid ""
@@ -154,16 +196,25 @@ msgid ""
 "testbed/app/src/main/c/main_activity.c>`. This will need to be C code called "
 "via JNI."
 msgstr ""
+"Προσθέστε κώδικα στην εφαρμογή σας για να :source:`ξεκινήσετε την Python σε "
+"ενσωματωμένη λειτουργία <Android/testbed/app/src/main/c/main_activity.c>`. "
+"Αυτός θα πρέπει να είναι κώδικας C που καλείται μέσω JNI."
 
 #: using/android.rst:75
 msgid "Building a Python package for Android"
-msgstr ""
+msgstr "Δημιουργία ενός πακέτου Python για Android"
 
 #: using/android.rst:77
 msgid ""
 "Python packages can be built for Android as wheels and released on PyPI. The "
-"recommended tool for doing this is `cibuildwheel <https://cibuildwheel.pypa."
-"io/en/stable/platforms/#android>`__, which automates all the details of "
-"setting up a cross-compilation environment, building the wheel, and testing "
-"it on an emulator."
+"recommended tool for doing this is `cibuildwheel <https://"
+"cibuildwheel.pypa.io/en/stable/platforms/#android>`__, which automates all "
+"the details of setting up a cross-compilation environment, building the "
+"wheel, and testing it on an emulator."
 msgstr ""
+"Τα πακέτα Python μπορούν να δημιουργηθούν για Android ως wheels και να "
+"κυκλοφορήσουν στο PyPI. Το προτεινόμενο εργαλείο για αυτό είναι το "
+"`cibuildwheel <https://cibuildwheel.pypa.io/en/stable/platforms/"
+"#android>`__, το οποίο αυτοματοποιεί όλες τις λεπτομέρειες του στησίματος "
+"ενός περιβάλλοντος διασταυρούμενης μεταγλώττισης, της δημιουργίας του wheel "
+"και της δοκιμής του σε έναν εξομοιωτή."
