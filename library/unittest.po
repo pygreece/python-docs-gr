@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -676,7 +676,7 @@ msgid ""
 "Such a working environment for the testing code is called a :dfn:`test "
 "fixture`.  A new TestCase instance is created as a unique test fixture used "
 "to execute each individual test method.  Thus :meth:`~TestCase.setUp`, :meth:"
-"`~TestCase.tearDown`, and :meth:`~TestCase.__init__` will be called once per "
+"`~TestCase.tearDown`, and :meth:`!TestCase.__init__` will be called once per "
 "test."
 msgstr ""
 
@@ -805,9 +805,9 @@ msgstr ""
 #: library/unittest.rst:520
 msgid ""
 "In some cases, the existing tests may have been written using the :mod:"
-"`doctest` module.  If so, :mod:`doctest` provides a :class:`DocTestSuite` "
-"class that can automatically build :class:`unittest.TestSuite` instances "
-"from the existing :mod:`doctest`\\ -based tests."
+"`doctest` module.  If so, :mod:`doctest` provides a :class:`~doctest."
+"DocTestSuite` class that can automatically build :class:`unittest.TestSuite` "
+"instances from the existing :mod:`doctest`\\ -based tests."
 msgstr ""
 
 #: library/unittest.rst:529
@@ -1534,8 +1534,8 @@ msgstr ""
 
 #: library/unittest.rst:1025
 msgid ""
-"The context manager will store the caught exception object in its :attr:"
-"`exception` attribute.  This can be useful if the intention is to perform "
+"The context manager will store the caught exception object in its :attr:`!"
+"exception` attribute.  This can be useful if the intention is to perform "
 "additional checks on the exception raised::"
 msgstr ""
 
@@ -1553,7 +1553,7 @@ msgid "Added the ability to use :meth:`assertRaises` as a context manager."
 msgstr ""
 
 #: library/unittest.rst:1038
-msgid "Added the :attr:`exception` attribute."
+msgid "Added the :attr:`!exception` attribute."
 msgstr ""
 
 #: library/unittest.rst:1067 library/unittest.rst:1131
@@ -1622,10 +1622,10 @@ msgstr ""
 
 #: library/unittest.rst:1091
 msgid ""
-"The context manager will store the caught warning object in its :attr:"
-"`warning` attribute, and the source line which triggered the warnings in "
-"the :attr:`filename` and :attr:`lineno` attributes. This can be useful if "
-"the intention is to perform additional checks on the warning caught::"
+"The context manager will store the caught warning object in its :attr:`!"
+"warning` attribute, and the source line which triggered the warnings in the :"
+"attr:`!filename` and :attr:`!lineno` attributes. This can be useful if the "
+"intention is to perform additional checks on the warning caught::"
 msgstr ""
 
 #: library/unittest.rst:1097
@@ -2075,7 +2075,7 @@ msgstr ""
 
 #: library/unittest.rst:1433
 msgid ""
-"Fails if either of *first* or *second* does not have a :meth:`set."
+"Fails if either of *first* or *second* does not have a :meth:`~frozenset."
 "difference` method."
 msgstr ""
 
@@ -2286,17 +2286,17 @@ msgstr ""
 #: library/unittest.rst:1641
 msgid ""
 "Method called to prepare the test fixture. This is called after :meth:"
-"`setUp`. This is called immediately before calling the test method; other "
-"than :exc:`AssertionError` or :exc:`SkipTest`, any exception raised by this "
-"method will be considered an error rather than a test failure. The default "
-"implementation does nothing."
+"`TestCase.setUp`. This is called immediately before calling the test method; "
+"other than :exc:`AssertionError` or :exc:`SkipTest`, any exception raised by "
+"this method will be considered an error rather than a test failure. The "
+"default implementation does nothing."
 msgstr ""
 
 #: library/unittest.rst:1650
 msgid ""
 "Method called immediately after the test method has been called and the "
-"result recorded.  This is called before :meth:`tearDown`. This is called "
-"even if the test method raised an exception, so the implementation in "
+"result recorded.  This is called before :meth:`~TestCase.tearDown`. This is "
+"called even if the test method raised an exception, so the implementation in "
 "subclasses may need to be particularly careful about checking internal "
 "state.  Any exception, other than :exc:`AssertionError` or :exc:`SkipTest`, "
 "raised by this method will be considered an additional error rather than a "
@@ -2322,9 +2322,9 @@ msgid ""
 "Sets up a new event loop to run the test, collecting the result into the :"
 "class:`TestResult` object passed as *result*.  If *result* is omitted or "
 "``None``, a temporary result object is created (by calling the :meth:"
-"`defaultTestResult` method) and used. The result object is returned to :meth:"
-"`run`'s caller. At the end of the test all the tasks in the event loop are "
-"cancelled."
+"`~TestCase.defaultTestResult` method) and used. The result object is "
+"returned to :meth:`run`'s caller. At the end of the test all the tasks in "
+"the event loop are cancelled."
 msgstr ""
 
 #: library/unittest.rst:1685
@@ -2462,7 +2462,7 @@ msgid ""
 "repeated iterations before :meth:`TestSuite.run` must be the same for each "
 "call iteration. After :meth:`TestSuite.run`, callers should not rely on the "
 "tests returned by this method unless the caller uses a subclass that "
-"overrides :meth:`TestSuite._removeTestAtIndex` to preserve test references."
+"overrides :meth:`!TestSuite._removeTestAtIndex` to preserve test references."
 msgstr ""
 
 #: library/unittest.rst:1804
@@ -2476,13 +2476,14 @@ msgstr ""
 msgid ""
 "In earlier versions the :class:`TestSuite` held references to each :class:"
 "`TestCase` after :meth:`TestSuite.run`. Subclasses can restore that behavior "
-"by overriding :meth:`TestSuite._removeTestAtIndex`."
+"by overriding :meth:`!TestSuite._removeTestAtIndex`."
 msgstr ""
 
 #: library/unittest.rst:1814
 msgid ""
 "In the typical usage of a :class:`TestSuite` object, the :meth:`run` method "
-"is invoked by a :class:`TestRunner` rather than by the end-user test harness."
+"is invoked by a :class:`!TestRunner` rather than by the end-user test "
+"harness."
 msgstr ""
 
 #: library/unittest.rst:1819
@@ -2517,15 +2518,15 @@ msgstr ""
 #: library/unittest.rst:1848
 msgid ""
 "Return a suite of all test cases contained in the :class:`TestCase`\\ -"
-"derived :class:`testCaseClass`."
+"derived :class:`!testCaseClass`."
 msgstr ""
 
 #: library/unittest.rst:1851
 msgid ""
 "A test case instance is created for each method named by :meth:"
 "`getTestCaseNames`. By default these are the method names beginning with "
-"``test``. If :meth:`getTestCaseNames` returns no methods, but the :meth:"
-"`runTest` method is implemented, a single test case is created for that "
+"``test``. If :meth:`getTestCaseNames` returns no methods, but the :meth:`!"
+"runTest` method is implemented, a single test case is created for that "
 "method instead."
 msgstr ""
 
@@ -2583,15 +2584,15 @@ msgstr ""
 
 #: library/unittest.rst:1901
 msgid ""
-"For example, if you have a module :mod:`SampleTests` containing a :class:"
-"`TestCase`\\ -derived class :class:`SampleTestCase` with three test methods "
-"(:meth:`test_one`, :meth:`test_two`, and :meth:`test_three`), the specifier "
-"``'SampleTests.SampleTestCase'`` would cause this method to return a suite "
-"which will run all three test methods. Using the specifier ``'SampleTests."
-"SampleTestCase.test_two'`` would cause it to return a test suite which will "
-"run only the :meth:`test_two` test method. The specifier can refer to "
-"modules and packages which have not been imported; they will be imported as "
-"a side-effect."
+"For example, if you have a module :mod:`!SampleTests` containing a :class:"
+"`TestCase`\\ -derived class :class:`!SampleTestCase` with three test methods "
+"(:meth:`!test_one`, :meth:`!test_two`, and :meth:`!test_three`), the "
+"specifier ``'SampleTests.SampleTestCase'`` would cause this method to return "
+"a suite which will run all three test methods. Using the specifier "
+"``'SampleTests.SampleTestCase.test_two'`` would cause it to return a test "
+"suite which will run only the :meth:`!test_two` test method. The specifier "
+"can refer to modules and packages which have not been imported; they will be "
+"imported as a side-effect."
 msgstr ""
 
 #: library/unittest.rst:1911
@@ -2779,8 +2780,8 @@ msgstr ""
 msgid ""
 "Testing frameworks built on top of :mod:`unittest` may want access to the :"
 "class:`TestResult` object generated by running a set of tests for reporting "
-"purposes; a :class:`TestResult` instance is returned by the :meth:"
-"`TestRunner.run` method for this purpose."
+"purposes; a :class:`TestResult` instance is returned by the :meth:`!"
+"TestRunner.run` method for this purpose."
 msgstr ""
 
 #: library/unittest.rst:2056
@@ -2871,8 +2872,8 @@ msgstr ""
 #: library/unittest.rst:2138
 msgid ""
 "This method can be called to signal that the set of tests being run should "
-"be aborted by setting the :attr:`shouldStop` attribute to ``True``. :class:"
-"`TestRunner` objects should respect this flag and return without running any "
+"be aborted by setting the :attr:`shouldStop` attribute to ``True``. :class:`!"
+"TestRunner` objects should respect this flag and return without running any "
 "additional tests."
 msgstr ""
 
@@ -2880,7 +2881,7 @@ msgstr ""
 msgid ""
 "For example, this feature is used by the :class:`TextTestRunner` class to "
 "stop the test framework when the user signals an interrupt from the "
-"keyboard.  Interactive tools which provide :class:`TestRunner` "
+"keyboard.  Interactive tools which provide :class:`!TestRunner` "
 "implementations can use this in a similar manner."
 msgstr ""
 
@@ -3302,9 +3303,9 @@ msgstr ""
 #: library/unittest.rst:2464
 msgid ""
 "Class and module level fixtures are implemented in :class:`TestSuite`. When "
-"the test suite encounters a test from a new class then :meth:`tearDownClass` "
-"from the previous class (if there is one) is called, followed by :meth:"
-"`setUpClass` from the new class."
+"the test suite encounters a test from a new class then :meth:`~TestCase."
+"tearDownClass` from the previous class (if there is one) is called, followed "
+"by :meth:`~TestCase.setUpClass` from the new class."
 msgstr ""
 
 #: library/unittest.rst:2469
@@ -3396,11 +3397,11 @@ msgstr ""
 msgid "setUpModule and tearDownModule"
 msgstr ""
 
-#: library/unittest.rst:2528
+#: library/unittest.rst:2532
 msgid "These should be implemented as functions::"
 msgstr ""
 
-#: library/unittest.rst:2530
+#: library/unittest.rst:2534
 msgid ""
 "def setUpModule():\n"
 "    createConnection()\n"
@@ -3409,7 +3410,7 @@ msgid ""
 "    closeConnection()"
 msgstr ""
 
-#: library/unittest.rst:2536
+#: library/unittest.rst:2540
 msgid ""
 "If an exception is raised in a ``setUpModule`` then none of the tests in the "
 "module will be run and the ``tearDownModule`` will not be run. If the "
@@ -3417,13 +3418,13 @@ msgid ""
 "having been skipped instead of as an error."
 msgstr ""
 
-#: library/unittest.rst:2541
+#: library/unittest.rst:2545
 msgid ""
 "To add cleanup code that must be run even in the case of an exception, use "
 "``addModuleCleanup``:"
 msgstr ""
 
-#: library/unittest.rst:2547
+#: library/unittest.rst:2551
 msgid ""
 "Add a function to be called after :func:`tearDownModule` to cleanup "
 "resources used during the test class. Functions will be called in reverse "
@@ -3432,13 +3433,13 @@ msgid ""
 "`addModuleCleanup` when they are added."
 msgstr ""
 
-#: library/unittest.rst:2553
+#: library/unittest.rst:2557
 msgid ""
 "If :meth:`setUpModule` fails, meaning that :func:`tearDownModule` is not "
 "called, then any cleanup functions added will still be called."
 msgstr ""
 
-#: library/unittest.rst:2561
+#: library/unittest.rst:2565
 msgid ""
 "Enter the supplied :term:`context manager`.  If successful, also add its :"
 "meth:`~object.__exit__` method as a cleanup function by :func:"
@@ -3446,30 +3447,30 @@ msgid ""
 "method."
 msgstr ""
 
-#: library/unittest.rst:2571
+#: library/unittest.rst:2575
 msgid ""
 "This function is called unconditionally after :func:`tearDownModule`, or "
 "after :func:`setUpModule` if :func:`setUpModule` raises an exception."
 msgstr ""
 
-#: library/unittest.rst:2574
+#: library/unittest.rst:2578
 msgid ""
 "It is responsible for calling all the cleanup functions added by :func:"
 "`addModuleCleanup`. If you need cleanup functions to be called *prior* to :"
 "func:`tearDownModule` then you can call :func:`doModuleCleanups` yourself."
 msgstr ""
 
-#: library/unittest.rst:2579
+#: library/unittest.rst:2583
 msgid ""
 ":func:`doModuleCleanups` pops methods off the stack of cleanup functions one "
 "at a time, so it can be called at any time."
 msgstr ""
 
-#: library/unittest.rst:2586
+#: library/unittest.rst:2590
 msgid "Signal Handling"
 msgstr ""
 
-#: library/unittest.rst:2590
+#: library/unittest.rst:2594
 msgid ""
 "The :option:`-c/--catch <unittest -c>` command-line option to unittest, "
 "along with the ``catchbreak`` parameter to :func:`unittest.main`, provide "
@@ -3479,7 +3480,7 @@ msgid ""
 "A second control-c will raise a :exc:`KeyboardInterrupt` in the usual way."
 msgstr ""
 
-#: library/unittest.rst:2597
+#: library/unittest.rst:2601
 msgid ""
 "The control-c handling signal handler attempts to remain compatible with "
 "code or tests that install their own :const:`signal.SIGINT` handler. If the "
@@ -3491,48 +3492,48 @@ msgid ""
 "disabled the :func:`removeHandler` decorator can be used."
 msgstr ""
 
-#: library/unittest.rst:2606
+#: library/unittest.rst:2610
 msgid ""
 "There are a few utility functions for framework authors to enable control-c "
 "handling functionality within test frameworks."
 msgstr ""
 
-#: library/unittest.rst:2611
+#: library/unittest.rst:2615
 msgid ""
 "Install the control-c handler. When a :const:`signal.SIGINT` is received "
 "(usually in response to the user pressing control-c) all registered results "
 "have :meth:`~TestResult.stop` called."
 msgstr ""
 
-#: library/unittest.rst:2618
+#: library/unittest.rst:2622
 msgid ""
 "Register a :class:`TestResult` object for control-c handling. Registering a "
 "result stores a weak reference to it, so it doesn't prevent the result from "
 "being garbage collected."
 msgstr ""
 
-#: library/unittest.rst:2622
+#: library/unittest.rst:2626
 msgid ""
 "Registering a :class:`TestResult` object has no side-effects if control-c "
 "handling is not enabled, so test frameworks can unconditionally register all "
 "results they create independently of whether or not handling is enabled."
 msgstr ""
 
-#: library/unittest.rst:2629
+#: library/unittest.rst:2633
 msgid ""
 "Remove a registered result. Once a result has been removed then :meth:"
 "`~TestResult.stop` will no longer be called on that result object in "
 "response to a control-c."
 msgstr ""
 
-#: library/unittest.rst:2636
+#: library/unittest.rst:2640
 msgid ""
 "When called without arguments this function removes the control-c handler if "
 "it has been installed. This function can also be used as a test decorator to "
 "temporarily remove the handler while the test is being executed::"
 msgstr ""
 
-#: library/unittest.rst:2640
+#: library/unittest.rst:2644
 msgid ""
 "@unittest.removeHandler\n"
 "def test_signal_handling(self):\n"

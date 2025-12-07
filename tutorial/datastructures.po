@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2024-09-18 17:32+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -36,19 +36,19 @@ msgstr "Περισσότερα για τις Λίστες"
 
 #: tutorial/datastructures.rst:15
 msgid ""
-"The list data type has some more methods.  Here are all of the methods of "
-"list objects:"
+"The :ref:`list <typesseq-list>` data type has some more methods. Here are "
+"all of the methods of list objects:"
 msgstr ""
-"Ο τύπος δεδομένων λίστας έχει μερικές ακόμη μεθόδους.  Ακολουθούν όλες οι "
-"μέθοδοι αντικειμένων τύπου λίστας:"
+"Ο τύπος δεδομένων :ref:`λίστα <typesseq-list>` έχει μερικές ακόμη μεθόδους. "
+"Εδώ είναι όλες οι μέθοδοι των αντικειμένων λίστας:"
 
-#: tutorial/datastructures.rst:22
+#: tutorial/datastructures.rst:21
 msgid "Add an item to the end of the list.  Similar to ``a[len(a):] = [x]``."
 msgstr ""
 "Προσθέτει ένα στοιχείο στο τέλος της λίστας.  Παρόμοιο με ``a[len(a):] = "
 "[x]``."
 
-#: tutorial/datastructures.rst:28
+#: tutorial/datastructures.rst:27
 msgid ""
 "Extend the list by appending all the items from the iterable.  Similar to "
 "``a[len(a):] = iterable``."
@@ -56,7 +56,7 @@ msgstr ""
 "Επεκτείνει τη λίστα προσθέτοντας όλα τα στοιχεία από το iterable.  Παρόμοιο "
 "με ``a[len(a):] = iterable``."
 
-#: tutorial/datastructures.rst:35
+#: tutorial/datastructures.rst:34
 msgid ""
 "Insert an item at a given position.  The first argument is the index of the "
 "element before which to insert, so ``a.insert(0, x)`` inserts at the front "
@@ -67,7 +67,7 @@ msgstr ""
 "εισάγεται στο μπροστινό μέρος της λίστας, και το ``a.insert(len(a), x)`` "
 "ισοδυναμεί με ``a.append(x)``."
 
-#: tutorial/datastructures.rst:43
+#: tutorial/datastructures.rst:42
 msgid ""
 "Remove the first item from the list whose value is equal to *x*.  It raises "
 "a :exc:`ValueError` if there is no such item."
@@ -75,7 +75,7 @@ msgstr ""
 "Καταργεί το πρώτο στοιχείο από τη λίστα του οποίου η τιμή είναι ίση με *x*.  "
 "Κάνει raise ένα :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
 
-#: tutorial/datastructures.rst:50
+#: tutorial/datastructures.rst:49
 msgid ""
 "Remove the item at the given position in the list, and return it.  If no "
 "index is specified, ``a.pop()`` removes and returns the last item in the "
@@ -87,20 +87,19 @@ msgstr ""
 "τελευταίο στοιχείο στη λίστα. Κάνει raise ένα :exc:`IndexError` εάν η λίστα "
 "είναι κενή ή το ευρετήριο βρίσκεται εκτός του εύρους της λίστας."
 
-#: tutorial/datastructures.rst:59
+#: tutorial/datastructures.rst:58
 msgid "Remove all items from the list.  Similar to ``del a[:]``."
 msgstr "Αφαιρεί όλα τα στοιχεία από τη λίστα.  Παρόμοιο με ``del a[:]``."
 
-#: tutorial/datastructures.rst:65
+#: tutorial/datastructures.rst:64
 msgid ""
-"Return zero-based index in the list of the first item whose value is equal "
-"to *x*. Raises a :exc:`ValueError` if there is no such item."
+"Return zero-based index of the first occurrence of *x* in the list. Raises "
+"a :exc:`ValueError` if there is no such item."
 msgstr ""
-"Επιστρέφει το μηδενικό index στη λίστα του πρώτου στοιχείου του οποίου η "
-"τιμή είναι ίση με *x*. Κάνει raise ένα :exc:`ValueError` εάν δεν υπάρχει "
-"τέτοιο στοιχείο."
+"Επιστρέφει τον μηδενικό δείκτη της πρώτης εμφάνισης του *x* στη λίστα. Κάνει "
+"raise μια :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
 
-#: tutorial/datastructures.rst:68
+#: tutorial/datastructures.rst:67
 msgid ""
 "The optional arguments *start* and *end* are interpreted as in the slice "
 "notation and are used to limit the search to a particular subsequence of the "
@@ -112,11 +111,11 @@ msgstr ""
 "συγκεκριμένη υποακολουθία της λίστας.  Ο επιστρεφόμενος δείκτης υπολογίζεται "
 "σε σχέση με την αρχή της πλήρους ακολουθίας αντί για το όρισμα *start*."
 
-#: tutorial/datastructures.rst:77
+#: tutorial/datastructures.rst:76
 msgid "Return the number of times *x* appears in the list."
 msgstr "Επιστρέφει τον αριθμό των φορών που εμφανίζεται το *x* στη λίστα."
 
-#: tutorial/datastructures.rst:83
+#: tutorial/datastructures.rst:82
 msgid ""
 "Sort the items of the list in place (the arguments can be used for sort "
 "customization, see :func:`sorted` for their explanation)."
@@ -125,22 +124,22 @@ msgstr ""
 "χρησιμοποιηθούν για προσαρμογή ταξινόμησης, βλ. :func:`sorted` για την "
 "εξήγησή τους)."
 
-#: tutorial/datastructures.rst:90
+#: tutorial/datastructures.rst:89
 msgid "Reverse the elements of the list in place."
 msgstr "Αντιστρέφει τα στοιχεία της λίστας στη θέση τους."
 
-#: tutorial/datastructures.rst:96
+#: tutorial/datastructures.rst:95
 msgid "Return a shallow copy of the list.  Similar to ``a[:]``."
 msgstr ""
 "Επιστρέφει ένα shallow (ρηχό) αντίγραφο της λίστας. Παρόμοιο με ``a[:]``."
 
-#: tutorial/datastructures.rst:99
+#: tutorial/datastructures.rst:98
 msgid "An example that uses most of the list methods::"
 msgstr ""
 "Ένα παράδειγμα που χρησιμοποιεί τις περισσότερες από τις μεθόδους της "
 "λίστας::"
 
-#: tutorial/datastructures.rst:101
+#: tutorial/datastructures.rst:100
 msgid ""
 ">>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', "
 "'banana']\n"
@@ -186,7 +185,7 @@ msgstr ""
 ">>> fruits.pop()\n"
 "'pear'"
 
-#: tutorial/datastructures.rst:122
+#: tutorial/datastructures.rst:121
 msgid ""
 "You might have noticed that methods like ``insert``, ``remove`` or ``sort`` "
 "that only modify the list have no return value printed -- they return the "
@@ -198,7 +197,7 @@ msgstr ""
 "-- επιστρέφουν το προεπιλεγμένο (default) ``None``. [#]_  Αυτή είναι μια "
 "αρχή σχεδιασμού για όλες τις μεταβλητές δομές δεδομένων στην Python."
 
-#: tutorial/datastructures.rst:127
+#: tutorial/datastructures.rst:126
 msgid ""
 "Another thing you might notice is that not all data can be sorted or "
 "compared.  For instance, ``[None, 'hello', 10]`` doesn't sort because "
@@ -214,26 +213,26 @@ msgstr ""
 "καθορισμένη σχέση διάταξης.  Για παράδειγμα, το ``3+4j < 5+7j`` δεν είναι "
 "έγκυρη σύγκριση."
 
-#: tutorial/datastructures.rst:138
+#: tutorial/datastructures.rst:137
 msgid "Using Lists as Stacks"
 msgstr "Χρήστη Λιστών ως Στοίβες (Stacks)"
 
-#: tutorial/datastructures.rst:143
+#: tutorial/datastructures.rst:142
 msgid ""
 "The list methods make it very easy to use a list as a stack, where the last "
 "element added is the first element retrieved (\"last-in, first-out\").  To "
-"add an item to the top of the stack, use :meth:`!append`.  To retrieve an "
-"item from the top of the stack, use :meth:`!pop` without an explicit index.  "
-"For example::"
+"add an item to the top of the stack, use :meth:`~list.append`.  To retrieve "
+"an item from the top of the stack, use :meth:`~list.pop` without an explicit "
+"index.  For example::"
 msgstr ""
 "Οι μέθοδοι λίστας καθιστούν πιο εύκολη τη χρήση μιας λίστα ως στοίβας "
 "(stack), όπου το τελευταίο στοιχείο που προστέθηκε είναι το πρώτο στοιχείο "
 "που ανακτήθηκε (\"last-in, first-out\").  Για να προσθέσετε ένα στοιχείο "
-"στην κορυφή της στοίβας (stack), χρησιμοποιήστε τη :meth:`!append`.  Για να "
-"ανακτήσετε ένα στοιχείο από την κορυφής της στοίβας, χρησιμοποιήστε τη :meth:"
-"`!pop` χωρίς κάποιο σαφές index.  Για παράδειγμα::"
+"στην κορυφή της στοίβας, χρησιμοποιήστε την :meth:`~list.append`.  Για να "
+"ανακτήσετε ένα στοιχείο από την κορυφή της στοίβας, χρησιμοποιήστε την :meth:"
+"`~list.pop` χωρίς κάποιο σαφές index.  Για παράδειγμα::"
 
-#: tutorial/datastructures.rst:148
+#: tutorial/datastructures.rst:147
 msgid ""
 ">>> stack = [3, 4, 5]\n"
 ">>> stack.append(6)\n"
@@ -267,11 +266,11 @@ msgstr ""
 ">>> stack\n"
 "[3, 4]"
 
-#: tutorial/datastructures.rst:168
+#: tutorial/datastructures.rst:167
 msgid "Using Lists as Queues"
 msgstr "Χρήση λιστών ως Ουρές (Queues)"
 
-#: tutorial/datastructures.rst:172
+#: tutorial/datastructures.rst:171
 msgid ""
 "It is also possible to use a list as a queue, where the first element added "
 "is the first element retrieved (\"first-in, first-out\"); however, lists are "
@@ -287,7 +286,7 @@ msgstr ""
 "αφαιρέσεις (στοιχείων) στην αρχή της λίστα είναι αργό (επειδή όλα τα "
 "στοιχεία πρέπει να μετατοπιστούν κατά ένα)."
 
-#: tutorial/datastructures.rst:178
+#: tutorial/datastructures.rst:177
 msgid ""
 "To implement a queue, use :class:`collections.deque` which was designed to "
 "have fast appends and pops from both ends.  For example::"
@@ -296,7 +295,7 @@ msgstr ""
 "deque` η οποία σχεδιάστηκε για να έχει γρήγορες προσθέσεις και αφαιρέσεις "
 "και από τα δύο άκρα.  Για παράδειγμα:΅:"
 
-#: tutorial/datastructures.rst:181
+#: tutorial/datastructures.rst:180
 msgid ""
 ">>> from collections import deque\n"
 ">>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n"
@@ -320,11 +319,11 @@ msgstr ""
 ">>> queue                           # Remaining queue in order of arrival\n"
 "deque(['Michael', 'Terry', 'Graham'])"
 
-#: tutorial/datastructures.rst:196
+#: tutorial/datastructures.rst:195
 msgid "List Comprehensions"
 msgstr "Comprehensions Λίστας"
 
-#: tutorial/datastructures.rst:198
+#: tutorial/datastructures.rst:197
 msgid ""
 "List comprehensions provide a concise way to create lists. Common "
 "applications are to make new lists where each element is the result of some "
@@ -337,13 +336,13 @@ msgstr ""
 "ακολουθίας ή iterable, ή η δημιουργία μιας υποακολουθίας αυτών των στοιχείων "
 "που ικανοποιούν μια συγκεκριμένη συνθήκη."
 
-#: tutorial/datastructures.rst:203
+#: tutorial/datastructures.rst:202
 msgid "For example, assume we want to create a list of squares, like::"
 msgstr ""
 "Για παράδειγμα, ας υποθέσουμε ότι θέλουμε να δημιουργήσουμε μια λίστα "
 "τετραγώνων όπως::"
 
-#: tutorial/datastructures.rst:205
+#: tutorial/datastructures.rst:204
 msgid ""
 ">>> squares = []\n"
 ">>> for x in range(10):\n"
@@ -359,7 +358,7 @@ msgstr ""
 ">>> squares\n"
 "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
 
-#: tutorial/datastructures.rst:212
+#: tutorial/datastructures.rst:211
 msgid ""
 "Note that this creates (or overwrites) a variable named ``x`` that still "
 "exists after the loop completes.  We can calculate the list of squares "
@@ -369,23 +368,23 @@ msgstr ""
 "``x`` που εξακολουθεί να υπάρχει μετά την ολοκλήρωση της loop.  Μπορούμε να "
 "υπολογίσουμε τη λίστα των τετραγώνων χωρίς παρενέργειες χρησιμοποιώντας::"
 
-#: tutorial/datastructures.rst:216
+#: tutorial/datastructures.rst:215
 msgid "squares = list(map(lambda x: x**2, range(10)))"
 msgstr "squares = list(map(lambda x: x**2, range(10)))"
 
-#: tutorial/datastructures.rst:218
+#: tutorial/datastructures.rst:217
 msgid "or, equivalently::"
 msgstr "ή, ισοδύναμα::"
 
-#: tutorial/datastructures.rst:220
+#: tutorial/datastructures.rst:219
 msgid "squares = [x**2 for x in range(10)]"
 msgstr "squares = [x**2 for x in range(10)]"
 
-#: tutorial/datastructures.rst:222
+#: tutorial/datastructures.rst:221
 msgid "which is more concise and readable."
 msgstr "που είναι πιο συνοπτικό και ευανάγνωστο."
 
-#: tutorial/datastructures.rst:224
+#: tutorial/datastructures.rst:223
 msgid ""
 "A list comprehension consists of brackets containing an expression followed "
 "by a :keyword:`!for` clause, then zero or more :keyword:`!for` or :keyword:`!"
@@ -402,7 +401,7 @@ msgstr ""
 "Για παράδειγμα, αυτή η λίστα συνδυάζει τα στοιχεία δύο λιστών εάν δεν είναι "
 "ίσες::"
 
-#: tutorial/datastructures.rst:231
+#: tutorial/datastructures.rst:230
 msgid ""
 ">>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n"
 "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
@@ -410,11 +409,11 @@ msgstr ""
 ">>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n"
 "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 
-#: tutorial/datastructures.rst:234
+#: tutorial/datastructures.rst:233
 msgid "and it's equivalent to::"
 msgstr "και ισοδυναμεί με::"
 
-#: tutorial/datastructures.rst:236
+#: tutorial/datastructures.rst:235
 msgid ""
 ">>> combs = []\n"
 ">>> for x in [1,2,3]:\n"
@@ -434,7 +433,7 @@ msgstr ""
 ">>> combs\n"
 "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 
-#: tutorial/datastructures.rst:245
+#: tutorial/datastructures.rst:244
 msgid ""
 "Note how the order of the :keyword:`for` and :keyword:`if` statements is the "
 "same in both these snippets."
@@ -442,7 +441,7 @@ msgstr ""
 "Σημειώστε πώς η σειρά των δηλώσεων :keyword:`for` και :keyword:`if` είναι "
 "ίδια και στα δύο αποσπάσματα."
 
-#: tutorial/datastructures.rst:248
+#: tutorial/datastructures.rst:247
 msgid ""
 "If the expression is a tuple (e.g. the ``(x, y)`` in the previous example), "
 "it must be parenthesized. ::"
@@ -450,7 +449,7 @@ msgstr ""
 "Εάν η έκφραση είναι πλειάδα (π.χ. το ``(x, y)`` στο προηγούμενο παράδειγμα), "
 "πρέπει να μπει σε παρένθεση. ::"
 
-#: tutorial/datastructures.rst:251
+#: tutorial/datastructures.rst:250
 msgid ""
 ">>> vec = [-4, -2, 0, 2, 4]\n"
 ">>> # create a new list with the values doubled\n"
@@ -508,14 +507,14 @@ msgstr ""
 ">>> [num for elem in vec for num in elem]\n"
 "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
 
-#: tutorial/datastructures.rst:279
+#: tutorial/datastructures.rst:278
 msgid ""
 "List comprehensions can contain complex expressions and nested functions::"
 msgstr ""
 "Τα comprehensions λίστας μπορεί να περιέχουν σύνθετες εκφράσεις και ένθετες "
 "συναρτήσεις::"
 
-#: tutorial/datastructures.rst:281
+#: tutorial/datastructures.rst:280
 msgid ""
 ">>> from math import pi\n"
 ">>> [str(round(pi, i)) for i in range(1, 6)]\n"
@@ -525,11 +524,11 @@ msgstr ""
 ">>> [str(round(pi, i)) for i in range(1, 6)]\n"
 "['3.1', '3.14', '3.142', '3.1416', '3.14159']"
 
-#: tutorial/datastructures.rst:286
+#: tutorial/datastructures.rst:285
 msgid "Nested List Comprehensions"
 msgstr "Comprehensions Ένθετων Λιστών"
 
-#: tutorial/datastructures.rst:288
+#: tutorial/datastructures.rst:287
 msgid ""
 "The initial expression in a list comprehension can be any arbitrary "
 "expression, including another list comprehension."
@@ -537,7 +536,7 @@ msgstr ""
 "Η αρχική έκφραση σε ένα comprehension λίστας μπορεί να είναι οποιαδήποτε "
 "αυθαίρετη έκφραση, συμπεριλαμβανομένης ενός άλλου comprehension λίστας."
 
-#: tutorial/datastructures.rst:291
+#: tutorial/datastructures.rst:290
 msgid ""
 "Consider the following example of a 3x4 matrix implemented as a list of 3 "
 "lists of length 4::"
@@ -545,7 +544,7 @@ msgstr ""
 "Σκεφτείτε το ακόλουθο παράδειγμα μιας μήτρας 3x4 που υλοποιήθηκε ως μια "
 "λίστα 3 λιστών μήκους 4::"
 
-#: tutorial/datastructures.rst:294
+#: tutorial/datastructures.rst:293
 msgid ""
 ">>> matrix = [\n"
 "...     [1, 2, 3, 4],\n"
@@ -559,11 +558,11 @@ msgstr ""
 "...     [9, 10, 11, 12],\n"
 "... ]"
 
-#: tutorial/datastructures.rst:300
+#: tutorial/datastructures.rst:299
 msgid "The following list comprehension will transpose rows and columns::"
 msgstr "Το ακόλουθο comprehension λίστας θα μεταφέρει γραμμές και στήλες::"
 
-#: tutorial/datastructures.rst:302
+#: tutorial/datastructures.rst:301
 msgid ""
 ">>> [[row[i] for row in matrix] for i in range(4)]\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
@@ -571,7 +570,7 @@ msgstr ""
 ">>> [[row[i] for row in matrix] for i in range(4)]\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
-#: tutorial/datastructures.rst:305
+#: tutorial/datastructures.rst:304
 msgid ""
 "As we saw in the previous section, the inner list comprehension is evaluated "
 "in the context of the :keyword:`for` that follows it, so this example is "
@@ -581,7 +580,7 @@ msgstr ""
 "αξιολογείται στο πλαίσιο του :keyword:`for` που την ακολουθεί, επομένως αυτό "
 "το παράδειγμα είναι ισοδύναμο με::"
 
-#: tutorial/datastructures.rst:309
+#: tutorial/datastructures.rst:308
 msgid ""
 ">>> transposed = []\n"
 ">>> for i in range(4):\n"
@@ -597,11 +596,11 @@ msgstr ""
 ">>> transposed\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
-#: tutorial/datastructures.rst:316
+#: tutorial/datastructures.rst:315
 msgid "which, in turn, is the same as::"
 msgstr "το οποίο, με τη σειρά του, είναι το ίδιο με::"
 
-#: tutorial/datastructures.rst:318
+#: tutorial/datastructures.rst:317
 msgid ""
 ">>> transposed = []\n"
 ">>> for i in range(4):\n"
@@ -625,7 +624,7 @@ msgstr ""
 ">>> transposed\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
-#: tutorial/datastructures.rst:329
+#: tutorial/datastructures.rst:328
 msgid ""
 "In the real world, you should prefer built-in functions to complex flow "
 "statements. The :func:`zip` function would do a great job for this use case::"
@@ -634,7 +633,7 @@ msgstr ""
 "συναρτήσεις από τις σύνθετες εντολές ροής. Η συνάρτηση :func:`zip` θα έκανε "
 "εξαιρετική δουλειά για αυτήν την περίπτωση χρήσης::"
 
-#: tutorial/datastructures.rst:332
+#: tutorial/datastructures.rst:331
 msgid ""
 ">>> list(zip(*matrix))\n"
 "[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]"
@@ -642,33 +641,33 @@ msgstr ""
 ">>> list(zip(*matrix))\n"
 "[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]"
 
-#: tutorial/datastructures.rst:335
+#: tutorial/datastructures.rst:334
 msgid ""
 "See :ref:`tut-unpacking-arguments` for details on the asterisk in this line."
 msgstr ""
 "Δείτε :ref:`tut-unpacking-arguments` για λεπτομέρειες σχετικά με τον "
 "αστερίσκο σε αυτήν τη γραμμή."
 
-#: tutorial/datastructures.rst:340
+#: tutorial/datastructures.rst:339
 msgid "The :keyword:`!del` statement"
 msgstr "Η δήλωση :keyword:`!del`"
 
-#: tutorial/datastructures.rst:342
+#: tutorial/datastructures.rst:341
 msgid ""
 "There is a way to remove an item from a list given its index instead of its "
-"value: the :keyword:`del` statement.  This differs from the :meth:`!pop` "
-"method which returns a value.  The :keyword:`!del` statement can also be "
-"used to remove slices from a list or clear the entire list (which we did "
+"value: the :keyword:`del` statement.  This differs from the :meth:`~list."
+"pop` method which returns a value.  The :keyword:`!del` statement can also "
+"be used to remove slices from a list or clear the entire list (which we did "
 "earlier by assignment of an empty list to the slice).  For example::"
 msgstr ""
 "Υπάρχει ένας τρόπος να αφαιρέσετε ένα στοιχείο από μια λίστα με το ευρετήριο "
 "του αντί για την τιμή του: η δήλωση :keyword:`del`.  Αυτό διαφέρει από τη "
-"μέθοδο :meth:`!pop` που επιστρέφει μια τιμή.  Η δήλωση :keyword:`!del` "
+"μέθοδο :meth:`~list.pop` που επιστρέφει μια τιμή.  Η δήλωση :keyword:`!del` "
 "μπορεί επίσης να χρησιμοποιηθεί για την αφαίρεση τμημάτων από μια λίστα ή "
-"για την εκκαθάριση ολόκληρης της λίστας (κάτι που κάναμε νωρίτερα με την "
-"ανάθεση μιας κενής λίστας στο slice).  Για παράδειγμα::"
+"για να καθαρίσει ολόκληρη τη λίστα (που κάναμε νωρίτερα με την εκχώρηση μιας "
+"κενής λίστας στο τμήμα).  Για παράδειγμα::"
 
-#: tutorial/datastructures.rst:348
+#: tutorial/datastructures.rst:347
 msgid ""
 ">>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n"
 ">>> del a[0]\n"
@@ -692,17 +691,17 @@ msgstr ""
 ">>> a\n"
 "[]"
 
-#: tutorial/datastructures.rst:359
+#: tutorial/datastructures.rst:358
 msgid ":keyword:`del` can also be used to delete entire variables::"
 msgstr ""
 "Το :keyword:`del` μπορεί επίσης να χρησιμοποιηθεί για τη διαγραφή ολόκληρων "
 "μεταβλητών::"
 
-#: tutorial/datastructures.rst:361
+#: tutorial/datastructures.rst:360
 msgid ">>> del a"
 msgstr ">>> del a"
 
-#: tutorial/datastructures.rst:363
+#: tutorial/datastructures.rst:362
 msgid ""
 "Referencing the name ``a`` hereafter is an error (at least until another "
 "value is assigned to it).  We'll find other uses for :keyword:`del` later."
@@ -711,11 +710,11 @@ msgstr ""
 "του εκχωρηθεί άλλη τιμή). Θα βρούμε άλλες χρήσεις για το :keyword:`del` "
 "αργότερα."
 
-#: tutorial/datastructures.rst:370
+#: tutorial/datastructures.rst:369
 msgid "Tuples and Sequences"
 msgstr "Πλειάδες (Tuples) και Ακολουθίες"
 
-#: tutorial/datastructures.rst:372
+#: tutorial/datastructures.rst:371
 msgid ""
 "We saw that lists and strings have many common properties, such as indexing "
 "and slicing operations.  They are two examples of *sequence* data types "
@@ -730,14 +729,14 @@ msgstr ""
 "προστεθούν.  Υπάρχει επίσης ένας άλλος τυπικός τύπος δεδομένων ακολουθίας "
 "type: the *πλειάδα* (*tuple*)."
 
-#: tutorial/datastructures.rst:378
+#: tutorial/datastructures.rst:377
 msgid ""
 "A tuple consists of a number of values separated by commas, for instance::"
 msgstr ""
 "Μια πλειάδα (tuple) αποτελείται από έναν αριθμό τιμών που χωρίζονται με "
 "κόμματα, για παράδειγμα::"
 
-#: tutorial/datastructures.rst:380
+#: tutorial/datastructures.rst:379
 msgid ""
 ">>> t = 12345, 54321, 'hello!'\n"
 ">>> t[0]\n"
@@ -777,7 +776,7 @@ msgstr ""
 ">>> v\n"
 "([1, 2, 3], [3, 2, 1])"
 
-#: tutorial/datastructures.rst:400
+#: tutorial/datastructures.rst:399
 msgid ""
 "As you see, on output tuples are always enclosed in parentheses, so that "
 "nested tuples are interpreted correctly; they may be input with or without "
@@ -794,7 +793,7 @@ msgstr ""
 "στοιχεία μιας πλειάδας, ωστόσο είναι δυνατό να δημιουργηθούν πλειάδες "
 "(tuples) που περιέχουν μεταβλητά αντικείμενα, όπως λίστες."
 
-#: tutorial/datastructures.rst:407
+#: tutorial/datastructures.rst:406
 msgid ""
 "Though tuples may seem similar to lists, they are often used in different "
 "situations and for different purposes. Tuples are :term:`immutable`, and "
@@ -813,7 +812,7 @@ msgstr ""
 "namedtuple>`). Οι λίστες είναι :term:`mutable`, και τα στοιχεία τους είναι "
 "συνήθως ομοιογενή και προσπελάζονται με επανάληψη στη λίστα."
 
-#: tutorial/datastructures.rst:415
+#: tutorial/datastructures.rst:414
 msgid ""
 "A special problem is the construction of tuples containing 0 or 1 items: the "
 "syntax has some extra quirks to accommodate these.  Empty tuples are "
@@ -828,7 +827,7 @@ msgstr ""
 "μια τιμή με κόμμα (δεν αρκεί να περικλείεται μια μόνο τιμή σε παρενθέσεις). "
 "Άσχημο, αλλά αποτελεσματικό.  Για παράδειγμα::"
 
-#: tutorial/datastructures.rst:421
+#: tutorial/datastructures.rst:420
 msgid ""
 ">>> empty = ()\n"
 ">>> singleton = 'hello',    # <-- note trailing comma\n"
@@ -848,7 +847,7 @@ msgstr ""
 ">>> singleton\n"
 "('hello',)"
 
-#: tutorial/datastructures.rst:430
+#: tutorial/datastructures.rst:429
 msgid ""
 "The statement ``t = 12345, 54321, 'hello!'`` is an example of *tuple "
 "packing*: the values ``12345``, ``54321`` and ``'hello!'`` are packed "
@@ -858,11 +857,11 @@ msgstr ""
 "packing*: οι τιμές ``12345``, ``54321`` και ``'hello!'`` είναι συσκευασμένες "
 "μαζί σε μια πλειάδα (tuple). Η αντίστροφη λειτουργία είναι επίσης εφικτή::"
 
-#: tutorial/datastructures.rst:434
+#: tutorial/datastructures.rst:433
 msgid ">>> x, y, z = t"
 msgstr ">>> x, y, z = t"
 
-#: tutorial/datastructures.rst:436
+#: tutorial/datastructures.rst:435
 msgid ""
 "This is called, appropriately enough, *sequence unpacking* and works for any "
 "sequence on the right-hand side.  Sequence unpacking requires that there are "
@@ -877,23 +876,23 @@ msgstr ""
 "στην πραγματικότητα απλώς ένας συνδυασμός tuple packing και sequence "
 "unpacking."
 
-#: tutorial/datastructures.rst:446
+#: tutorial/datastructures.rst:445
 msgid "Sets"
 msgstr "Σύνολα (Sets)"
 
-#: tutorial/datastructures.rst:448
+#: tutorial/datastructures.rst:447
 msgid ""
-"Python also includes a data type for *sets*.  A set is an unordered "
-"collection with no duplicate elements.  Basic uses include membership "
-"testing and eliminating duplicate entries.  Set objects also support "
-"mathematical operations like union, intersection, difference, and symmetric "
-"difference."
+"Python also includes a data type for :ref:`sets <types-set>`.  A set is an "
+"unordered collection with no duplicate elements.  Basic uses include "
+"membership testing and eliminating duplicate entries.  Set objects also "
+"support mathematical operations like union, intersection, difference, and "
+"symmetric difference."
 msgstr ""
-"Η Python περιλαμβάνει επίσης έναν τύπο δεδομένων για *sets*.  Ένα set είναι "
-"μια μη ταξινομημένη συλλογή χωρίς διπλότυπα στοιχεία.  Οι βασικές χρήσεις "
-"περιλαμβάνουν τη δοκιμή ιδιότητας μέλους και την εξάλειψη διπλότυπων "
-"εγγραφών.  Τα αντικείμενα συνόλου υποστηρίζουν επίσης μαθηματικές πράξεις "
-"όπως ένωση, τομή, διαφορά και συμμετρική διαφορά."
+"Η Python περιλαμβάνει επίσης έναν τύπο δεδομένων για :ref:`sets <types-"
+"set>`.  Ένα set είναι μια μη ταξινομημένη συλλογή χωρίς διπλότυπα στοιχεία.  "
+"Οι βασικές χρήσεις περιλαμβάνουν τη δοκιμή ιδιότητας μέλους και την εξάλειψη "
+"διπλότυπων εγγραφών.  Τα αντικείμενα συνόλου υποστηρίζουν επίσης μαθηματικές "
+"πράξεις όπως ένωση, τομή, διαφορά και συμμετρική διαφορά."
 
 #: tutorial/datastructures.rst:453
 msgid ""
@@ -993,8 +992,8 @@ msgid ""
 "can be used as keys if they contain only strings, numbers, or tuples; if a "
 "tuple contains any mutable object either directly or indirectly, it cannot "
 "be used as a key. You can't use lists as keys, since lists can be modified "
-"in place using index assignments, slice assignments, or methods like :meth:`!"
-"append` and :meth:`!extend`."
+"in place using index assignments, slice assignments, or methods like :meth:"
+"`~list.append` and :meth:`~list.extend`."
 msgstr ""
 "Ένα άλλος χρήσιμος τύπος δεδομένων που είναι ενσωματωμένος στην Python είναι "
 "το *dictionary* (βλ. :ref:`typesmapping`). Τα λεξικά βρίσκονται μερικές "
@@ -1008,7 +1007,7 @@ msgstr ""
 "έμμεσα, δεν μπορεί να χρησιμοποιηθεί ως κλειδί. Δεν μπορείτε να "
 "χρησιμοποιήσετε λίστες ως κλειδιά, καθώς οι λίστες μπορούν να τροποποιηθούν "
 "επιτόπου χρησιμοποιώντας αναθέσεις index, αναθέσεις slice, ή μεθόδους όπως :"
-"meth:`!append` και :meth:`!.extend`."
+"meth:`~list.append` και :meth:`~list.extend`."
 
 #: tutorial/datastructures.rst:506
 msgid ""
@@ -1029,17 +1028,30 @@ msgid ""
 "The main operations on a dictionary are storing a value with some key and "
 "extracting the value given the key.  It is also possible to delete a key:"
 "value pair with ``del``. If you store using a key that is already in use, "
-"the old value associated with that key is forgotten.  It is an error to "
-"extract a value using a non-existent key."
+"the old value associated with that key is forgotten."
 msgstr ""
 "Οι κύριες λειτουργίες σε ένα λεξικό είναι η αποθήκευση μιας τιμής με κάποιο "
 "κλειδί και η εξαγωγή της τιμής που δίνεται στο κλειδί.  Είναι επίσης δυνατή "
 "η διαγραφή ενός ζεύγους key:value με ``del``. Εάν αποθηκεύετε "
 "χρησιμοποιώντας ένα κλειδί που βρίσκεται ήδη σε χρήση, η παλιά τιμή που "
-"σχετίζεται με αυτό το κλειδί έχει ξεχαστεί.  Είναι σφάλμα να εξαγάγετε μια "
-"τιμή χρησιμοποιώντας ένα ανύπαρκτο κλειδί."
+"σχετίζεται με αυτό το κλειδί έχει ξεχαστεί."
 
-#: tutorial/datastructures.rst:518
+#: tutorial/datastructures.rst:517
+msgid ""
+"Extracting a value for a non-existent key by subscripting (``d[key]``) "
+"raises a :exc:`KeyError`. To avoid getting this error when trying to access "
+"a possibly non-existent key, use the :meth:`~dict.get` method instead, which "
+"returns ``None`` (or a specified default value) if the key is not in the "
+"dictionary."
+msgstr ""
+"Η εξαγωγή μιας τιμής για ένα μη υπάρχον κλειδί με δεικτοδότηση (``d[key]``) "
+"προκαλεί ένα :exc:`KeyError`. Για να αποφύγετε αυτό το σφάλμα όταν "
+"προσπαθείτε να αποκτήσετε πρόσβαση σε ένα πιθανώς μη υπάρχον κλειδί, "
+"χρησιμοποιήστε αντίθετα τη μέθοδο :meth:`~dict.get`, η οποία επιστρέφει "
+"``None`` (ή μια καθορισμένη προεπιλεγμένη τιμή) εάν το κλειδί δεν βρίσκεται "
+"στο λεξικό."
+
+#: tutorial/datastructures.rst:522
 msgid ""
 "Performing ``list(d)`` on a dictionary returns a list of all the keys used "
 "in the dictionary, in insertion order (if you want it sorted, just use "
@@ -1052,11 +1064,11 @@ msgstr ""
 "υπάρχει ένα μεμονωμένο κλειδί στο λεξικό, χρησιμοποιήστε τη λέξη-κλειδί :"
 "keyword:`in`."
 
-#: tutorial/datastructures.rst:523
+#: tutorial/datastructures.rst:527
 msgid "Here is a small example using a dictionary::"
 msgstr "Ακολουθεί ένα μικρό παράδειγμα χρησιμοποιώντας ένα λεξικό::"
 
-#: tutorial/datastructures.rst:525
+#: tutorial/datastructures.rst:529
 msgid ""
 ">>> tel = {'jack': 4098, 'sape': 4139}\n"
 ">>> tel['guido'] = 4127\n"
@@ -1064,6 +1076,12 @@ msgid ""
 "{'jack': 4098, 'sape': 4139, 'guido': 4127}\n"
 ">>> tel['jack']\n"
 "4098\n"
+">>> tel['irv']\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"KeyError: 'irv'\n"
+">>> print(tel.get('irv'))\n"
+"None\n"
 ">>> del tel['sape']\n"
 ">>> tel['irv'] = 4127\n"
 ">>> tel\n"
@@ -1083,6 +1101,12 @@ msgstr ""
 "{'jack': 4098, 'sape': 4139, 'guido': 4127}\n"
 ">>> tel['jack']\n"
 "4098\n"
+">>> tel['irv']\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"KeyError: 'irv'\n"
+">>> print(tel.get('irv'))\n"
+"None\n"
 ">>> del tel['sape']\n"
 ">>> tel['irv'] = 4127\n"
 ">>> tel\n"
@@ -1096,7 +1120,7 @@ msgstr ""
 ">>> 'jack' not in tel\n"
 "False"
 
-#: tutorial/datastructures.rst:544
+#: tutorial/datastructures.rst:554
 msgid ""
 "The :func:`dict` constructor builds dictionaries directly from sequences of "
 "key-value pairs::"
@@ -1104,7 +1128,7 @@ msgstr ""
 "Ο constructor :func:`dict` δημιουργεί λεξικά απευθείας από ακολουθίες ζευγών "
 "key-value::"
 
-#: tutorial/datastructures.rst:547
+#: tutorial/datastructures.rst:557
 msgid ""
 ">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
@@ -1112,7 +1136,7 @@ msgstr ""
 ">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
-#: tutorial/datastructures.rst:550
+#: tutorial/datastructures.rst:560
 msgid ""
 "In addition, dict comprehensions can be used to create dictionaries from "
 "arbitrary key and value expressions::"
@@ -1120,7 +1144,7 @@ msgstr ""
 "Επιπλέον, τα comprehensions λεξικών μπορούν να χρησιμοποιηθούν για τη "
 "δημιουργία λεξικών από αυθαίρετες εκφράσεις κλειδιού και τιμών::"
 
-#: tutorial/datastructures.rst:553
+#: tutorial/datastructures.rst:563
 msgid ""
 ">>> {x: x**2 for x in (2, 4, 6)}\n"
 "{2: 4, 4: 16, 6: 36}"
@@ -1128,7 +1152,7 @@ msgstr ""
 ">>> {x: x**2 for x in (2, 4, 6)}\n"
 "{2: 4, 4: 16, 6: 36}"
 
-#: tutorial/datastructures.rst:556
+#: tutorial/datastructures.rst:566
 msgid ""
 "When the keys are simple strings, it is sometimes easier to specify pairs "
 "using keyword arguments::"
@@ -1136,7 +1160,7 @@ msgstr ""
 "Όταν τα κλειδιά είναι απλές συμβολοσειρές, μερικές φορές είναι πιο εύκολο να "
 "ορίσετε ζεύγη χρησιμοποιώντας ορίσματα λέξεων-κλειδιών::"
 
-#: tutorial/datastructures.rst:559
+#: tutorial/datastructures.rst:569
 msgid ""
 ">>> dict(sape=4139, guido=4127, jack=4098)\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
@@ -1144,11 +1168,11 @@ msgstr ""
 ">>> dict(sape=4139, guido=4127, jack=4098)\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
-#: tutorial/datastructures.rst:566
+#: tutorial/datastructures.rst:576
 msgid "Looping Techniques"
 msgstr "Τεχνικές Looping"
 
-#: tutorial/datastructures.rst:568
+#: tutorial/datastructures.rst:578
 msgid ""
 "When looping through dictionaries, the key and corresponding value can be "
 "retrieved at the same time using the :meth:`~dict.items` method. ::"
@@ -1156,7 +1180,7 @@ msgstr ""
 "Κατά το looping μέσω λεξικών, το κλειδί και η αντίστοιχη τιμή μπορούν να "
 "ανακτηθούν ταυτόχρονα χρησιμοποιώντας τη μέθοδο :meth:`~dict.items`. ::"
 
-#: tutorial/datastructures.rst:571
+#: tutorial/datastructures.rst:581
 msgid ""
 ">>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}\n"
 ">>> for k, v in knights.items():\n"
@@ -1172,7 +1196,7 @@ msgstr ""
 "gallahad the pure\n"
 "robin the brave"
 
-#: tutorial/datastructures.rst:578
+#: tutorial/datastructures.rst:588
 msgid ""
 "When looping through a sequence, the position index and corresponding value "
 "can be retrieved at the same time using the :func:`enumerate` function. ::"
@@ -1181,7 +1205,7 @@ msgstr ""
 "μπορούν να ανακτηθούν ταυτόχρονα χρησιμοποιώντας τη συνάρτηση :func:"
 "`enumerate`. ::"
 
-#: tutorial/datastructures.rst:581
+#: tutorial/datastructures.rst:591
 msgid ""
 ">>> for i, v in enumerate(['tic', 'tac', 'toe']):\n"
 "...     print(i, v)\n"
@@ -1197,7 +1221,7 @@ msgstr ""
 "1 tac\n"
 "2 toe"
 
-#: tutorial/datastructures.rst:588
+#: tutorial/datastructures.rst:598
 msgid ""
 "To loop over two or more sequences at the same time, the entries can be "
 "paired with the :func:`zip` function. ::"
@@ -1205,7 +1229,7 @@ msgstr ""
 "Για να κάνετε loop σε δύο ή περισσότερες ακολουθίες ταυτόχρονα, οι "
 "καταχωρίσεις μπορούν να αντιστοιχιστούν με τη συνάρτηση :func:`zip`. ::"
 
-#: tutorial/datastructures.rst:591
+#: tutorial/datastructures.rst:601
 msgid ""
 ">>> questions = ['name', 'quest', 'favorite color']\n"
 ">>> answers = ['lancelot', 'the holy grail', 'blue']\n"
@@ -1225,7 +1249,7 @@ msgstr ""
 "What is your quest?  It is the holy grail.\n"
 "What is your favorite color?  It is blue."
 
-#: tutorial/datastructures.rst:600
+#: tutorial/datastructures.rst:610
 msgid ""
 "To loop over a sequence in reverse, first specify the sequence in a forward "
 "direction and then call the :func:`reversed` function. ::"
@@ -1233,7 +1257,7 @@ msgstr ""
 "Για να κάνετε loop σε μια ακολουθία αντίστροφα, καθορίστε πρώτα την "
 "ακολουθία προς τα εμπρός και μετά καλέστε τη συνάρτηση :func:`reversed`. ::"
 
-#: tutorial/datastructures.rst:603
+#: tutorial/datastructures.rst:613
 msgid ""
 ">>> for i in reversed(range(1, 10, 2)):\n"
 "...     print(i)\n"
@@ -1253,7 +1277,7 @@ msgstr ""
 "3\n"
 "1"
 
-#: tutorial/datastructures.rst:612
+#: tutorial/datastructures.rst:622
 msgid ""
 "To loop over a sequence in sorted order, use the :func:`sorted` function "
 "which returns a new sorted list while leaving the source unaltered. ::"
@@ -1262,7 +1286,7 @@ msgstr ""
 "συνάρτηση :func:`sorted`, η οποία επιστρέφει μια νέα ταξινομημένη λίστα "
 "αφήνοντας την πηγή αναλλοίωτη. ::"
 
-#: tutorial/datastructures.rst:615
+#: tutorial/datastructures.rst:625
 msgid ""
 ">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
 ">>> for i in sorted(basket):\n"
@@ -1286,7 +1310,7 @@ msgstr ""
 "orange\n"
 "pear"
 
-#: tutorial/datastructures.rst:626
+#: tutorial/datastructures.rst:636
 msgid ""
 "Using :func:`set` on a sequence eliminates duplicate elements. The use of :"
 "func:`sorted` in combination with :func:`set` over a sequence is an "
@@ -1298,7 +1322,7 @@ msgstr ""
 "είναι ένας ιδιωματικός τρόπος για να κάνετε loop πάνω από μοναδικά στοιχεία "
 "της ακολουθίας σε ταξινομημένη σειρά. ::"
 
-#: tutorial/datastructures.rst:630
+#: tutorial/datastructures.rst:640
 msgid ""
 ">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
 ">>> for f in sorted(set(basket)):\n"
@@ -1318,7 +1342,7 @@ msgstr ""
 "orange\n"
 "pear"
 
-#: tutorial/datastructures.rst:639
+#: tutorial/datastructures.rst:649
 msgid ""
 "It is sometimes tempting to change a list while you are looping over it; "
 "however, it is often simpler and safer to create a new list instead. ::"
@@ -1326,7 +1350,7 @@ msgstr ""
 "Μερικές φορές είναι δελεαστικό να αλλάζετε μια λίστα ενώ την περιηγείστε∙ "
 "ωστόσο, είναι συχνά πιο απλό και ασφαλές να δημιουργήσετε μια νέα λίστα. ::"
 
-#: tutorial/datastructures.rst:642
+#: tutorial/datastructures.rst:652
 msgid ""
 ">>> import math\n"
 ">>> raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]\n"
@@ -1348,11 +1372,11 @@ msgstr ""
 ">>> filtered_data\n"
 "[56.2, 51.7, 55.3, 52.5, 47.8]"
 
-#: tutorial/datastructures.rst:656
+#: tutorial/datastructures.rst:666
 msgid "More on Conditions"
 msgstr "Περισσότερα για τις συνθήκες"
 
-#: tutorial/datastructures.rst:658
+#: tutorial/datastructures.rst:668
 msgid ""
 "The conditions used in ``while`` and ``if`` statements can contain any "
 "operators, not just comparisons."
@@ -1360,7 +1384,7 @@ msgstr ""
 "Οι συνθήκες που χρησιμοποιούνται στις δηλώσεις ``while`` και ``if`` μπορούν "
 "να περιέχουν οποιουσδήποτε τελεστές, όχι μόνο συγκρίσεις."
 
-#: tutorial/datastructures.rst:662
+#: tutorial/datastructures.rst:672
 msgid ""
 "The comparison operators ``in`` and ``not in`` are membership tests that "
 "determine whether a value is in (or not in) a container.  The operators "
@@ -1374,7 +1398,7 @@ msgstr ""
 "ίδιο αντικείμενο.  Όλοι οι τελεστές σύγκρισης έχουν την ίδια προτεραιότητα, "
 "η οποία είναι χαμηλότερη από αυτή όλων των αριθμητικών τελεστών."
 
-#: tutorial/datastructures.rst:668
+#: tutorial/datastructures.rst:678
 msgid ""
 "Comparisons can be chained.  For example, ``a < b == c`` tests whether ``a`` "
 "is less than ``b`` and moreover ``b`` equals ``c``."
@@ -1383,7 +1407,7 @@ msgstr ""
 "ελέγχει εάν το ``a`` είναι μικρότερο από ``b`` και επιπλέον το ``b`` ισούται "
 "με ``c``."
 
-#: tutorial/datastructures.rst:671
+#: tutorial/datastructures.rst:681
 msgid ""
 "Comparisons may be combined using the Boolean operators ``and`` and ``or``, "
 "and the outcome of a comparison (or of any other Boolean expression) may be "
@@ -1400,7 +1424,7 @@ msgstr ""
 "ισοδυναμεί με ``(A and (not B)) or C``. Όπως πάντα, οι παρενθέσεις μπορούν "
 "να χρησιμοποιηθούν για να εκφράσουν την επιθυμητή σύνθεση."
 
-#: tutorial/datastructures.rst:678
+#: tutorial/datastructures.rst:688
 msgid ""
 "The Boolean operators ``and`` and ``or`` are so-called *short-circuit* "
 "operators: their arguments are evaluated from left to right, and evaluation "
@@ -1417,7 +1441,7 @@ msgstr ""
 "και όχι ως λογική, η τιμή επιστροφής ενός short-circuit τελεστή είναι το "
 "τελευταίο αξιολογημένο όρισμα."
 
-#: tutorial/datastructures.rst:685
+#: tutorial/datastructures.rst:695
 msgid ""
 "It is possible to assign the result of a comparison or other Boolean "
 "expression to a variable.  For example, ::"
@@ -1425,7 +1449,7 @@ msgstr ""
 "Είναι δυνατό να αντιστοιχίσετε το αποτέλεσμα μιας σύγκρισης ή άλλη δυαδική "
 "έκφρασης σε μια μεταβλητή.  Για παράδειγμα, ::"
 
-#: tutorial/datastructures.rst:688
+#: tutorial/datastructures.rst:698
 msgid ""
 ">>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'\n"
 ">>> non_null = string1 or string2 or string3\n"
@@ -1437,7 +1461,7 @@ msgstr ""
 ">>> non_null\n"
 "'Trondheim'"
 
-#: tutorial/datastructures.rst:693
+#: tutorial/datastructures.rst:703
 msgid ""
 "Note that in Python, unlike C, assignment inside expressions must be done "
 "explicitly with the :ref:`walrus operator <why-can-t-i-use-an-assignment-in-"
@@ -1450,11 +1474,11 @@ msgstr ""
 "κοινή κατηγορία προβλημάτων που συναντώνται στα προγράμματα C: "
 "πληκτρολογώντας ``=`` σε μια έκφραση όταν προοριζόταν το ``==``."
 
-#: tutorial/datastructures.rst:703
+#: tutorial/datastructures.rst:713
 msgid "Comparing Sequences and Other Types"
 msgstr "Σύγκριση ακολουθιών και άλλων τύπων"
 
-#: tutorial/datastructures.rst:704
+#: tutorial/datastructures.rst:714
 msgid ""
 "Sequence objects typically may be compared to other objects with the same "
 "sequence type. The comparison uses *lexicographical* ordering: first the "
@@ -1483,7 +1507,7 @@ msgstr ""
 "ταξινομήσει μεμονωμένους χαρακτήρες. Μερικά παραδείγματα συγκρίσεων μεταξύ "
 "ακολουθιών του ίδιου τύπου::"
 
-#: tutorial/datastructures.rst:716
+#: tutorial/datastructures.rst:726
 msgid ""
 "(1, 2, 3)              < (1, 2, 4)\n"
 "[1, 2, 3]              < [1, 2, 4]\n"
@@ -1501,7 +1525,7 @@ msgstr ""
 "(1, 2, 3)             == (1.0, 2.0, 3.0)\n"
 "(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)"
 
-#: tutorial/datastructures.rst:724
+#: tutorial/datastructures.rst:734
 msgid ""
 "Note that comparing objects of different types with ``<`` or ``>`` is legal "
 "provided that the objects have appropriate comparison methods.  For example, "
@@ -1516,11 +1540,11 @@ msgstr ""
 "αντί να παρέχει μια αυθαίρετη παραγγελία, ο διερμηνέας θα κάνει raise μια "
 "εξαίρεση :exc:`TypeError`."
 
-#: tutorial/datastructures.rst:732
+#: tutorial/datastructures.rst:742
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/datastructures.rst:733
+#: tutorial/datastructures.rst:743
 msgid ""
 "Other languages may return the mutated object, which allows method chaining, "
 "such as ``d->insert(\"a\")->remove(\"b\")->sort();``."
