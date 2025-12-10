@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2024-09-30 23:13+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Μπορεί να υπάρχουν μηδέν ή περισσότερα μέρη :keyword:`elif` και το τμήμα :"
 "keyword:`else` είναι προαιρετικό.  To keyword ':keyword:`!elif`' είναι "
 "συντομογραφία του 'else if', και είναι χρήσιμη για να αποφύγετε την "
-"υπερβολική εσοχή.  Μια ακολουθία keyword:`!if` ... :keyword:`!elif` ... :"
+"υπερβολική εσοχή.  Μια ακολουθία :keyword:`!if` ... :keyword:`!elif` ... :"
 "keyword:`!elif` ... είναι υποκατάστατο των δηλώσεων ``switch`` ή ``case`` "
 "που υπάρχουν σε άλλες γλώσσες."
 
@@ -549,11 +549,11 @@ msgstr ""
 "υπάρχει ``break``. Για περισσότερα με τη δήλωση ``try`` και τις εξαιρέσεις, "
 "δείτε :ref:`tut-handling`."
 
-#: tutorial/controlflow.rst:257
+#: tutorial/controlflow.rst:258
 msgid ":keyword:`!pass` Statements"
 msgstr "Προτάσεις :keyword:`!pass`"
 
-#: tutorial/controlflow.rst:259
+#: tutorial/controlflow.rst:260
 msgid ""
 "The :keyword:`pass` statement does nothing. It can be used when a statement "
 "is required syntactically but the program requires no action. For example::"
@@ -562,7 +562,7 @@ msgstr ""
 "απαιτείται συντακτικά μια πρόταση, αλλά το πρόγραμμα δεν απαιτεί καμία "
 "ενέργεια. Για παράδειγμα::"
 
-#: tutorial/controlflow.rst:262
+#: tutorial/controlflow.rst:263
 msgid ""
 ">>> while True:\n"
 "...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
@@ -572,11 +572,11 @@ msgstr ""
 "...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
 "..."
 
-#: tutorial/controlflow.rst:266
+#: tutorial/controlflow.rst:267
 msgid "This is commonly used for creating minimal classes::"
 msgstr "Αυτό χρησιμοποιείται συνήθως για τη δημιουργία ελάχιστων κλάσεων::"
 
-#: tutorial/controlflow.rst:268
+#: tutorial/controlflow.rst:269
 msgid ""
 ">>> class MyEmptyClass:\n"
 "...     pass\n"
@@ -586,7 +586,7 @@ msgstr ""
 "...     pass\n"
 "..."
 
-#: tutorial/controlflow.rst:272
+#: tutorial/controlflow.rst:273
 msgid ""
 "Another place :keyword:`pass` can be used is as a place-holder for a "
 "function or conditional body when you are working on new code, allowing you "
@@ -598,7 +598,7 @@ msgstr ""
 "επιτρέποντας σας να συνεχίσετε να σκέφτεστε σε ένα πιο αφηρημένο επίπεδο.  "
 "Το :keyword:`!pass` αγνοείται σιωπηλά::"
 
-#: tutorial/controlflow.rst:276
+#: tutorial/controlflow.rst:277
 msgid ""
 ">>> def initlog(*args):\n"
 "...     pass   # Remember to implement this!\n"
@@ -608,11 +608,26 @@ msgstr ""
 "...     pass   # Remember to implement this!\n"
 "..."
 
-#: tutorial/controlflow.rst:284
+#: tutorial/controlflow.rst:281
+msgid ""
+"For this last case, many people use the ellipsis literal :code:`...` instead "
+"of :code:`pass`. This use has no special meaning to Python, and is not part "
+"of the language definition (you could use any constant expression here), "
+"but :code:`...` is used conventionally as a placeholder body as well. See :"
+"ref:`bltin-ellipsis-object`."
+msgstr ""
+"Για αυτήν την τελευταία περίπτωση, πολλοί άνθρωποι χρησιμοποιούν το literale "
+"αποσιωπητικών :code:`...` αντί για :code:`pass`. Αυτή η χρήση δεν έχει "
+"ειδική σημασία για την Python και δεν αποτελεί μέρος του ορισμού της γλώσσας "
+"(θα μπορούσατε να χρησιμοποιήσετε οποιαδήποτε σταθερή έκφραση εδώ), αλλά το :"
+"code:`...` χρησιμοποιείται συμβατικά και ως σώμα placeholder. Δείτε :ref:"
+"`bltin-ellipsis-object`."
+
+#: tutorial/controlflow.rst:291
 msgid ":keyword:`!match` Statements"
 msgstr "Προτάσεις :keyword:`!match`"
 
-#: tutorial/controlflow.rst:286
+#: tutorial/controlflow.rst:293
 msgid ""
 "A :keyword:`match` statement takes an expression and compares its value to "
 "successive patterns given as one or more case blocks.  This is superficially "
@@ -631,13 +646,13 @@ msgstr ""
 "ακολουθίας ή ιδιότητες αντικειμένου) από την τιμή σε μεταβλητές. Εάν καμία "
 "περίπτωση δεν ταιριάζει, κανένας από τους κλάδους δεν εκτελείται."
 
-#: tutorial/controlflow.rst:295
+#: tutorial/controlflow.rst:302
 msgid ""
 "The simplest form compares a subject value against one or more literals::"
 msgstr ""
 "Η απλούστερη φόρμα συγκρίνει μια τιμή θέματος με ένα ή περισσότερα literals::"
 
-#: tutorial/controlflow.rst:297
+#: tutorial/controlflow.rst:304
 msgid ""
 "def http_error(status):\n"
 "    match status:\n"
@@ -661,7 +676,7 @@ msgstr ""
 "        case _:\n"
 "            return \"Something's wrong with the internet\""
 
-#: tutorial/controlflow.rst:308
+#: tutorial/controlflow.rst:315
 msgid ""
 "Note the last block: the \"variable name\" ``_`` acts as a *wildcard* and "
 "never fails to match."
@@ -669,14 +684,14 @@ msgstr ""
 "Σημειώστε το τελευταίο μπλοκ: το \"variable name\" ``_`` λειτουργεί ως "
 "*μπαλαντέρ* και δεν αποτυγχάνει ποτέ να ταιριάζει."
 
-#: tutorial/controlflow.rst:311
+#: tutorial/controlflow.rst:318
 msgid ""
 "You can combine several literals in a single pattern using ``|`` (\"or\")::"
 msgstr ""
 "Μπορείτε να συνδυάσετε πολλά γράμματα σε ένα μόνο μοτίβο χρησιμοποιώντας το "
 "``|`` (\"ή\")::"
 
-#: tutorial/controlflow.rst:313
+#: tutorial/controlflow.rst:320
 msgid ""
 "case 401 | 403 | 404:\n"
 "    return \"Not allowed\""
@@ -684,7 +699,7 @@ msgstr ""
 "case 401 | 403 | 404:\n"
 "    return \"Not allowed\""
 
-#: tutorial/controlflow.rst:316
+#: tutorial/controlflow.rst:323
 msgid ""
 "Patterns can look like unpacking assignments, and can be used to bind "
 "variables::"
@@ -692,7 +707,7 @@ msgstr ""
 "Τα μοτίβα μπορεί να μοιάζουν με αναθέσεις unpacking, και μπορούν να "
 "χρησιμοποιηθούν για τη σύνδεση μεταβλητών::"
 
-#: tutorial/controlflow.rst:319
+#: tutorial/controlflow.rst:326
 msgid ""
 "# point is an (x, y) tuple\n"
 "match point:\n"
@@ -720,7 +735,7 @@ msgstr ""
 "    case _:\n"
 "        raise ValueError(\"Not a point\")"
 
-#: tutorial/controlflow.rst:332
+#: tutorial/controlflow.rst:339
 msgid ""
 "Study that one carefully!  The first pattern has two literals, and can be "
 "thought of as an extension of the literal pattern shown above.  But the next "
@@ -736,7 +751,7 @@ msgstr ""
 "δύο τιμές, γεγονός που το κάνει εννοιολογικά παρόμοιο με την ανάθεση "
 "unpacking ``(x, y) = point``."
 
-#: tutorial/controlflow.rst:339
+#: tutorial/controlflow.rst:346
 msgid ""
 "If you are using classes to structure your data you can use the class name "
 "followed by an argument list resembling a constructor, but with the ability "
@@ -747,7 +762,7 @@ msgstr ""
 "που μοιάζει με έναν κατασκευαστή, αλλά με τη δυνατότητα να συλλαμβάνει "
 "χαρακτηριστικά σε μεταβλητές::"
 
-#: tutorial/controlflow.rst:343
+#: tutorial/controlflow.rst:350
 msgid ""
 "class Point:\n"
 "    def __init__(self, x, y):\n"
@@ -785,7 +800,7 @@ msgstr ""
 "        case _:\n"
 "            print(\"Not a point\")"
 
-#: tutorial/controlflow.rst:361
+#: tutorial/controlflow.rst:368
 msgid ""
 "You can use positional parameters with some builtin classes that provide an "
 "ordering for their attributes (e.g. dataclasses). You can also define a "
@@ -802,7 +817,7 @@ msgstr ""
 "ακόλουθα μοτίβα είναι όλα ισοδύναμα (και όλα δεσμεύουν το χαρακτηριστικό "
 "``y`` στη μεταβλητή ``var``)::"
 
-#: tutorial/controlflow.rst:367
+#: tutorial/controlflow.rst:374
 msgid ""
 "Point(1, var)\n"
 "Point(1, y=var)\n"
@@ -814,7 +829,7 @@ msgstr ""
 "Point(x=1, y=var)\n"
 "Point(y=var, x=1)"
 
-#: tutorial/controlflow.rst:372
+#: tutorial/controlflow.rst:379
 msgid ""
 "A recommended way to read patterns is to look at them as an extended form of "
 "what you would put on the left of an assignment, to understand which "
@@ -832,7 +847,7 @@ msgstr ""
 "παραπάνω) ή ονόματα κλάσεων (αναγνωρίζονται από το \"(...)\" που βρίσκεται "
 "δίπλα όπως το ``Point`` παραπάνω) δεν ανατίθενται ποτέ."
 
-#: tutorial/controlflow.rst:379
+#: tutorial/controlflow.rst:386
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if we have a short list of "
 "Points, with ``__match_args__`` added, we could match it like this::"
@@ -841,7 +856,7 @@ msgstr ""
 "σύντομη λίστα με πόντους, με προσθήκη ``__match_args__``, θα μπορούσαμε να "
 "την αντιστοιχίσουμε ως εξής::"
 
-#: tutorial/controlflow.rst:382
+#: tutorial/controlflow.rst:389
 msgid ""
 "class Point:\n"
 "    __match_args__ = ('x', 'y')\n"
@@ -879,7 +894,7 @@ msgstr ""
 "    case _:\n"
 "        print(\"Something else\")"
 
-#: tutorial/controlflow.rst:400
+#: tutorial/controlflow.rst:407
 msgid ""
 "We can add an ``if`` clause to a pattern, known as a \"guard\".  If the "
 "guard is false, ``match`` goes on to try the next case block.  Note that "
@@ -890,7 +905,7 @@ msgstr ""
 "δοκιμάσει το επόμενο μπλοκ πεζών-κεφαλαίων.  Λάβετε υπόψη ότι η σύλληψη της "
 "τιμής γίνεται πριν ο guard αξιολογηθεί::"
 
-#: tutorial/controlflow.rst:404
+#: tutorial/controlflow.rst:411
 msgid ""
 "match point:\n"
 "    case Point(x, y) if x == y:\n"
@@ -904,11 +919,11 @@ msgstr ""
 "    case Point(x, y):\n"
 "        print(f\"Not on the diagonal\")"
 
-#: tutorial/controlflow.rst:410
+#: tutorial/controlflow.rst:417
 msgid "Several other key features of this statement:"
 msgstr "Πολλά άλλα βασικά χαρακτηριστικά αυτής της δήλωσης:"
 
-#: tutorial/controlflow.rst:412
+#: tutorial/controlflow.rst:419
 msgid ""
 "Like unpacking assignments, tuple and list patterns have exactly the same "
 "meaning and actually match arbitrary sequences.  An important exception is "
@@ -919,7 +934,7 @@ msgstr ""
 "ακολουθίες.  Μια σημαντική εξαίρεση είναι ότι δεν ταιριάζουν με iterators ή "
 "συμβολοσειρές."
 
-#: tutorial/controlflow.rst:416
+#: tutorial/controlflow.rst:423
 msgid ""
 "Sequence patterns support extended unpacking: ``[x, y, *rest]`` and ``(x, y, "
 "*rest)`` work similar to unpacking assignments.  The name after ``*`` may "
@@ -932,7 +947,7 @@ msgstr ""
 "αντιστοιχεί σε μια ακολουθία τουλάχιστον δύο στοιχείων χωρίς να δεσμεύει τα "
 "υπόλοιπα στοιχεία."
 
-#: tutorial/controlflow.rst:421
+#: tutorial/controlflow.rst:428
 msgid ""
 "Mapping patterns: ``{\"bandwidth\": b, \"latency\": l}`` captures the "
 "``\"bandwidth\"`` and ``\"latency\"`` values from a dictionary.  Unlike "
@@ -945,17 +960,17 @@ msgstr ""
 "unpacking όπως το ``**rest``.  (Αλλά το ``**_`` θα ήταν περιττό, επομένως "
 "δεν επιτρέπεται.)"
 
-#: tutorial/controlflow.rst:426
+#: tutorial/controlflow.rst:433
 msgid "Subpatterns may be captured using the ``as`` keyword::"
 msgstr ""
 "Τα δευτερεύοντα μοτίβα μπορούν να αποτυπωθούν χρησιμοποιώντας το keyword "
 "``as``::"
 
-#: tutorial/controlflow.rst:428
+#: tutorial/controlflow.rst:435
 msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
 msgstr "case (Point(x1, y1), Point(x2, y2) as p2): ..."
 
-#: tutorial/controlflow.rst:430
+#: tutorial/controlflow.rst:437
 msgid ""
 "will capture the second element of the input as ``p2`` (as long as the input "
 "is a sequence of two points)"
@@ -963,7 +978,7 @@ msgstr ""
 "θα καταγράψει το δεύτερο στοιχείο της εισόδου ως ``p2`` (εφόσον η είσοδος "
 "είναι μια ακολουθία δύο σημείων)"
 
-#: tutorial/controlflow.rst:433
+#: tutorial/controlflow.rst:440
 msgid ""
 "Most literals are compared by equality, however the singletons ``True``, "
 "``False`` and ``None`` are compared by identity."
@@ -971,7 +986,7 @@ msgstr ""
 "Τα περισσότερα literals συγκρίνονται με ισότητα, ωστόσο τα singletons "
 "``True``, ``False`` και ``None`` συγκρίνονται με ταυτότητα."
 
-#: tutorial/controlflow.rst:436
+#: tutorial/controlflow.rst:443
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
 "them from being interpreted as capture variable::"
@@ -979,7 +994,7 @@ msgstr ""
 "Τα μοτίβα μπορούν να χρησιμοποιούν ονομασμένες σταθερές.  Αυτά πρέπει να "
 "είναι ονόματα με κουκκίδες για να μην ερμηνεύονται ως capture μεταβλητή::"
 
-#: tutorial/controlflow.rst:439
+#: tutorial/controlflow.rst:446
 msgid ""
 "from enum import Enum\n"
 "class Color(Enum):\n"
@@ -1013,7 +1028,7 @@ msgstr ""
 "    case Color.BLUE:\n"
 "        print(\"I'm feeling the blues :(\")"
 
-#: tutorial/controlflow.rst:455
+#: tutorial/controlflow.rst:462
 msgid ""
 "For a more detailed explanation and additional examples, you can look into :"
 "pep:`636` which is written in a tutorial format."
@@ -1021,11 +1036,11 @@ msgstr ""
 "Για πιο λεπτομερή επεξήγηση και πρόσθετα παραδείγματα, μπορείτε να δείτε το :"
 "pep:`636` το οποίο είναι γραμμένο σε μορφή εκμάθησης."
 
-#: tutorial/controlflow.rst:461
+#: tutorial/controlflow.rst:468
 msgid "Defining Functions"
 msgstr "Καθορισμός Συναρτήσεων"
 
-#: tutorial/controlflow.rst:463
+#: tutorial/controlflow.rst:470
 msgid ""
 "We can create a function that writes the Fibonacci series to an arbitrary "
 "boundary::"
@@ -1033,7 +1048,7 @@ msgstr ""
 "Μπορούμε να δημιουργήσουμε μια συνάρτηση που γράφει τη σειρά Fibonacci σε "
 "ένα αυθαίρετο όριο::"
 
-#: tutorial/controlflow.rst:466
+#: tutorial/controlflow.rst:473
 msgid ""
 ">>> def fib(n):    # write Fibonacci series less than n\n"
 "...     \"\"\"Print a Fibonacci series less than n.\"\"\"\n"
@@ -1059,7 +1074,7 @@ msgstr ""
 ">>> fib(2000)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 
-#: tutorial/controlflow.rst:483
+#: tutorial/controlflow.rst:490
 msgid ""
 "The keyword :keyword:`def` introduces a function *definition*.  It must be "
 "followed by the function name and the parenthesized list of formal "
@@ -1071,7 +1086,7 @@ msgstr ""
 "σε παρένθεση. Οι δηλώσεις που σχηματίζουν το σώμα της συνάρτησης ξεκινούν "
 "από την επόμενη γραμμή και πρέπει να είναι εσοχές."
 
-#: tutorial/controlflow.rst:488
+#: tutorial/controlflow.rst:495
 msgid ""
 "The first statement of the function body can optionally be a string literal; "
 "this string literal is the function's documentation string, or :dfn:"
@@ -1090,7 +1105,7 @@ msgstr ""
 "στον κώδικα· είναι καλή πρακτική να συμπεριλαμβάνονται docstrings στον "
 "κώδικα που γράφετε, για αυτό κάντε το συνήθεια."
 
-#: tutorial/controlflow.rst:495
+#: tutorial/controlflow.rst:502
 msgid ""
 "The *execution* of a function introduces a new symbol table used for the "
 "local variables of the function.  More precisely, all variable assignments "
@@ -1116,7 +1131,7 @@ msgstr ""
 "μεταβλητές συναρτήσεων που περικλείουν, ονομάζονται ως μια δήλωση :keyword:"
 "`nonlocal`), αν και μπορεί να αναφέρονται."
 
-#: tutorial/controlflow.rst:506
+#: tutorial/controlflow.rst:513
 msgid ""
 "The actual parameters (arguments) to a function call are introduced in the "
 "local symbol table of the called function when it is called; thus, arguments "
@@ -1133,7 +1148,7 @@ msgstr ""
 "αναδρομικά, δημιουργείται ένας νέος πίνακας τοπικών συμβόλων για αυτήν την "
 "κλήση."
 
-#: tutorial/controlflow.rst:513
+#: tutorial/controlflow.rst:520
 msgid ""
 "A function definition associates the function name with the function object "
 "in the current symbol table.  The interpreter recognizes the object pointed "
@@ -1146,7 +1161,7 @@ msgstr ""
 "από τον χρήστη.  Άλλα ονόματα μπορούν επίσης να δείχνουν το ίδιο αντικείμενο "
 "συνάρτησης και μπορούν επίσης να χρησιμοποιηθούν για πρόσβαση στη συνάρτηση::"
 
-#: tutorial/controlflow.rst:518
+#: tutorial/controlflow.rst:525
 msgid ""
 ">>> fib\n"
 "<function fib at 10042ed0>\n"
@@ -1160,7 +1175,7 @@ msgstr ""
 ">>> f(100)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89"
 
-#: tutorial/controlflow.rst:524
+#: tutorial/controlflow.rst:531
 msgid ""
 "Coming from other languages, you might object that ``fib`` is not a function "
 "but a procedure since it doesn't return a value.  In fact, even functions "
@@ -1178,7 +1193,7 @@ msgstr ""
 "μόνη τιμή που γράφεται.  Μπορείτε να το δείτε αν το θέλετε πραγματικά "
 "χρησιμοποιώντας τη :func:`print`::"
 
-#: tutorial/controlflow.rst:531
+#: tutorial/controlflow.rst:538
 msgid ""
 ">>> fib(0)\n"
 ">>> print(fib(0))\n"
@@ -1188,7 +1203,7 @@ msgstr ""
 ">>> print(fib(0))\n"
 "None"
 
-#: tutorial/controlflow.rst:535
+#: tutorial/controlflow.rst:542
 msgid ""
 "It is simple to write a function that returns a list of the numbers of the "
 "Fibonacci series, instead of printing it::"
@@ -1196,7 +1211,7 @@ msgstr ""
 "Είναι απλό να γράψετε μια συνάρτηση που επιστρέφει μια λίστα με τους "
 "αριθμούς της σειράς Fibonacci, αντί να την εκτυπώσετε::"
 
-#: tutorial/controlflow.rst:538
+#: tutorial/controlflow.rst:545
 msgid ""
 ">>> def fib2(n):  # return Fibonacci series up to n\n"
 "...     \"\"\"Return a list containing the Fibonacci series up to n.\"\"\"\n"
@@ -1224,12 +1239,12 @@ msgstr ""
 ">>> f100                # write the result\n"
 "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 
-#: tutorial/controlflow.rst:551
+#: tutorial/controlflow.rst:558
 msgid "This example, as usual, demonstrates some new Python features:"
 msgstr ""
 "Αυτό το παράδειγμα, ως συνήθως, δείχνει μερικά νέα χαρακτηριστικά Python:"
 
-#: tutorial/controlflow.rst:553
+#: tutorial/controlflow.rst:560
 msgid ""
 "The :keyword:`return` statement returns with a value from a function. :"
 "keyword:`!return` without an expression argument returns ``None``. Falling "
@@ -1239,7 +1254,7 @@ msgstr ""
 "keyword:`!return` χωρίς όρισμα έκφρασης, επιστρέφει το ``None``. Η πτώση του "
 "τέλους μιας συνάρτησης επιστρέφει επίσης ``None``."
 
-#: tutorial/controlflow.rst:557
+#: tutorial/controlflow.rst:564
 msgid ""
 "The statement ``result.append(a)`` calls a *method* of the list object "
 "``result``.  A method is a function that 'belongs' to an object and is named "
@@ -1248,7 +1263,7 @@ msgid ""
 "the object's type. Different types define different methods.  Methods of "
 "different types may have the same name without causing ambiguity.  (It is "
 "possible to define your own object types and methods, using *classes*, see :"
-"ref:`tut-classes`) The method :meth:`!append` shown in the example is "
+"ref:`tut-classes`) The method :meth:`~list.append` shown in the example is "
 "defined for list objects; it adds a new element at the end of the list.  In "
 "this example it is equivalent to ``result = result + [a]``, but more "
 "efficient."
@@ -1261,16 +1276,16 @@ msgstr ""
 "ορίζουν διαφορετικές μεθόδους.  Μέθοδοι διαφορετικών τύπων μπορεί να έχουν "
 "το ίδιο όνομα χωρίς να προκαλούν ασάφεια.  (Είναι δυνατό να ορίσετε τους "
 "δικούς σας τύπους αντικειμένων και μεθόδους, χρησιμοποιώντας *classes*, "
-"δείτε :ref:`tut-classes`) Η μέθοδος :meth:`!append` που εμφανίζεται στο "
+"δείτε :ref:`tut-classes`) Η μέθοδος :meth:`~list.append` που εμφανίζεται στο "
 "παράδειγμα ορίζεται για αντικείμενα λίστας· προσθέτει ένα νέο στοιχείο στο "
 "τέλος της λίστας.  Σε αυτό το παράδειγμα είναι ισοδύναμο με ``result = "
 "result + [a]``, αλλά πιο αποτελεσματικό."
 
-#: tutorial/controlflow.rst:572
+#: tutorial/controlflow.rst:579
 msgid "More on Defining Functions"
 msgstr "Περισσότερο για τον Καθορισμό Συναρτήσεων"
 
-#: tutorial/controlflow.rst:574
+#: tutorial/controlflow.rst:581
 msgid ""
 "It is also possible to define functions with a variable number of arguments. "
 "There are three forms, which can be combined."
@@ -1278,11 +1293,11 @@ msgstr ""
 "Είναι επίσης δυνατός ο ορισμός συναρτήσεων με μεταβλητό αριθμό ορισμάτων. "
 "Υπάρχουν τρεις μορφές, που μπορούν να συνδυαστούν."
 
-#: tutorial/controlflow.rst:581
+#: tutorial/controlflow.rst:588
 msgid "Default Argument Values"
 msgstr "Προεπιλεγμένες Τιμές Ορίσματος"
 
-#: tutorial/controlflow.rst:583
+#: tutorial/controlflow.rst:590
 msgid ""
 "The most useful form is to specify a default value for one or more "
 "arguments. This creates a function that can be called with fewer arguments "
@@ -1292,7 +1307,7 @@ msgstr ""
 "περισσότερα ορίσματα. Αυτό δημιουργεί μια συνάρτηση που μπορεί να κληθεί με "
 "λιγότερα ορίσματα από αυτά που έχει ορίσει ότι επιτρέπει.  Για παράδειγμα::"
 
-#: tutorial/controlflow.rst:587
+#: tutorial/controlflow.rst:594
 msgid ""
 "def ask_ok(prompt, retries=4, reminder='Please try again!'):\n"
 "    while True:\n"
@@ -1318,18 +1333,18 @@ msgstr ""
 "            raise ValueError('invalid user response')\n"
 "        print(reminder)"
 
-#: tutorial/controlflow.rst:599
+#: tutorial/controlflow.rst:606
 msgid "This function can be called in several ways:"
 msgstr "Αυτή η συνάρτηση μπορεί να κληθεί με διάφορους τρόπους:"
 
-#: tutorial/controlflow.rst:601
+#: tutorial/controlflow.rst:608
 msgid ""
 "giving only the mandatory argument: ``ask_ok('Do you really want to quit?')``"
 msgstr ""
 "δίνοντας μόνο το υποχρεωτικό όρισμα: ``ask_ok('Do you really want to "
 "quit?')``"
 
-#: tutorial/controlflow.rst:603
+#: tutorial/controlflow.rst:610
 msgid ""
 "giving one of the optional arguments: ``ask_ok('OK to overwrite the file?', "
 "2)``"
@@ -1337,7 +1352,7 @@ msgstr ""
 "δίνοντας ένα από τα προαιρετικά ορίσματα: ``ask_ok('OK to overwrite the "
 "file?', 2)``"
 
-#: tutorial/controlflow.rst:605
+#: tutorial/controlflow.rst:612
 msgid ""
 "or even giving all arguments: ``ask_ok('OK to overwrite the file?', 2, 'Come "
 "on, only yes or no!')``"
@@ -1345,7 +1360,7 @@ msgstr ""
 "ή δίνοντας όλα τα ορίσματα: ``ask_ok('OK to overwrite the file?', 2, 'Come "
 "on, only yes or no!')``"
 
-#: tutorial/controlflow.rst:608
+#: tutorial/controlflow.rst:615
 msgid ""
 "This example also introduces the :keyword:`in` keyword. This tests whether "
 "or not a sequence contains a certain value."
@@ -1353,7 +1368,7 @@ msgstr ""
 "Αυτό το παράδειγμα εισάγει επίσης το keyword :keyword:`in`. Αυτό ελέγχει εάν "
 "μια ακολουθία περιέχει ή όχι μια συγκεκριμένη τιμή."
 
-#: tutorial/controlflow.rst:611
+#: tutorial/controlflow.rst:618
 msgid ""
 "The default values are evaluated at the point of function definition in the "
 "*defining* scope, so that ::"
@@ -1361,7 +1376,7 @@ msgstr ""
 "Οι προεπιλεγμένες τιμές αξιολογούνται στο σημείο του ορισμού της συνάρτησης "
 "στο πεδίο που *ορίζεται*, έτσι ώστε ::"
 
-#: tutorial/controlflow.rst:614
+#: tutorial/controlflow.rst:621
 msgid ""
 "i = 5\n"
 "\n"
@@ -1379,11 +1394,11 @@ msgstr ""
 "i = 6\n"
 "f()"
 
-#: tutorial/controlflow.rst:622
+#: tutorial/controlflow.rst:629
 msgid "will print ``5``."
 msgstr "θα εκτυπώσει ``5``."
 
-#: tutorial/controlflow.rst:624
+#: tutorial/controlflow.rst:631
 msgid ""
 "**Important warning:**  The default value is evaluated only once. This makes "
 "a difference when the default is a mutable object such as a list, "
@@ -1396,7 +1411,7 @@ msgstr ""
 "Για παράδειγμα, η ακόλουθη συνάρτηση συσσωρεύει τα ορίσματα που διαβάζονται "
 "σε αυτό σε επόμενες κλήσεις::"
 
-#: tutorial/controlflow.rst:629
+#: tutorial/controlflow.rst:636
 msgid ""
 "def f(a, L=[]):\n"
 "    L.append(a)\n"
@@ -1414,11 +1429,11 @@ msgstr ""
 "print(f(2))\n"
 "print(f(3))"
 
-#: tutorial/controlflow.rst:637
+#: tutorial/controlflow.rst:644
 msgid "This will print ::"
 msgstr "Αυτό θα εκτυπώσει ::"
 
-#: tutorial/controlflow.rst:639
+#: tutorial/controlflow.rst:646
 msgid ""
 "[1]\n"
 "[1, 2]\n"
@@ -1428,7 +1443,7 @@ msgstr ""
 "[1, 2]\n"
 "[1, 2, 3]"
 
-#: tutorial/controlflow.rst:643
+#: tutorial/controlflow.rst:650
 msgid ""
 "If you don't want the default to be shared between subsequent calls, you can "
 "write the function like this instead::"
@@ -1436,7 +1451,7 @@ msgstr ""
 "Εάν δεν θέλετε να γίνεται κοινή χρήση της προεπιλογής μεταξύ των επόμενων "
 "κλήσεων, μπορείτε να γράψετε τη συνάρτηση ως εξής::"
 
-#: tutorial/controlflow.rst:646
+#: tutorial/controlflow.rst:653
 msgid ""
 "def f(a, L=None):\n"
 "    if L is None:\n"
@@ -1450,11 +1465,11 @@ msgstr ""
 "    L.append(a)\n"
 "    return L"
 
-#: tutorial/controlflow.rst:656
+#: tutorial/controlflow.rst:663
 msgid "Keyword Arguments"
 msgstr "Ορίσματα Keyword"
 
-#: tutorial/controlflow.rst:658
+#: tutorial/controlflow.rst:665
 msgid ""
 "Functions can also be called using :term:`keyword arguments <keyword "
 "argument>` of the form ``kwarg=value``.  For instance, the following "
@@ -1464,7 +1479,7 @@ msgstr ""
 "arguments <keyword argument>` της μορφής ``kwarg=value``.  Για παράδειγμα, "
 "την ακόλουθη συνάρτηση::"
 
-#: tutorial/controlflow.rst:661
+#: tutorial/controlflow.rst:668
 msgid ""
 "def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):\n"
 "    print(\"-- This parrot wouldn't\", action, end=' ')\n"
@@ -1478,7 +1493,7 @@ msgstr ""
 "    print(\"-- Lovely plumage, the\", type)\n"
 "    print(\"-- It's\", state, \"!\")"
 
-#: tutorial/controlflow.rst:667
+#: tutorial/controlflow.rst:674
 msgid ""
 "accepts one required argument (``voltage``) and three optional arguments "
 "(``state``, ``action``, and ``type``).  This function can be called in any "
@@ -1488,7 +1503,7 @@ msgstr ""
 "(``state``, ``action``, και ``type``).  Αυτή η συνάρτηση μπορεί να κληθεί με "
 "οποιονδήποτε από τους ακόλουθους τρόπους::"
 
-#: tutorial/controlflow.rst:671
+#: tutorial/controlflow.rst:678
 msgid ""
 "parrot(1000)                                          # 1 positional "
 "argument\n"
@@ -1510,11 +1525,11 @@ msgstr ""
 "parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 "
 "keyword"
 
-#: tutorial/controlflow.rst:678
+#: tutorial/controlflow.rst:685
 msgid "but all the following calls would be invalid::"
 msgstr "αλλά όλες οι ακόλουθες κλήσεις θα ήταν άκυρες::"
 
-#: tutorial/controlflow.rst:680
+#: tutorial/controlflow.rst:687
 msgid ""
 "parrot()                     # required argument missing\n"
 "parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword "
@@ -1528,7 +1543,7 @@ msgstr ""
 "parrot(110, voltage=220)     # duplicate value for the same argument\n"
 "parrot(actor='John Cleese')  # unknown keyword argument"
 
-#: tutorial/controlflow.rst:685
+#: tutorial/controlflow.rst:692
 msgid ""
 "In a function call, keyword arguments must follow positional arguments. All "
 "the keyword arguments passed must match one of the arguments accepted by the "
@@ -1547,7 +1562,7 @@ msgstr ""
 "λάβει μια τιμή περισσότερες από μία φορές. Ακολουθεί ένα παράδειγμα που "
 "αποτυγχάνει λόγω αυτού του περιορισμού::"
 
-#: tutorial/controlflow.rst:693
+#: tutorial/controlflow.rst:700
 msgid ""
 ">>> def function(a):\n"
 "...     pass\n"
@@ -1565,7 +1580,7 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: function() got multiple values for argument 'a'"
 
-#: tutorial/controlflow.rst:701
+#: tutorial/controlflow.rst:708
 msgid ""
 "When a final formal parameter of the form ``**name`` is present, it receives "
 "a dictionary (see :ref:`typesmapping`) containing all keyword arguments "
@@ -1584,7 +1599,7 @@ msgstr ""
 "``*name`` πρέπει να εμφανίζεται πριν από το ``**name``.) Για παράδειγμα, αν "
 "ορίσουμε μια συνάρτηση όπως αυτή::"
 
-#: tutorial/controlflow.rst:709
+#: tutorial/controlflow.rst:716
 msgid ""
 "def cheeseshop(kind, *arguments, **keywords):\n"
 "    print(\"-- Do you have any\", kind, \"?\")\n"
@@ -1604,11 +1619,11 @@ msgstr ""
 "    for kw in keywords:\n"
 "        print(kw, \":\", keywords[kw])"
 
-#: tutorial/controlflow.rst:718
+#: tutorial/controlflow.rst:725
 msgid "It could be called like this::"
 msgstr "Μπορεί να καλεστεί κάπως έτσι::"
 
-#: tutorial/controlflow.rst:720
+#: tutorial/controlflow.rst:727
 msgid ""
 "cheeseshop(\"Limburger\", \"It's very runny, sir.\",\n"
 "           \"It's really very, VERY runny, sir.\",\n"
@@ -1622,11 +1637,11 @@ msgstr ""
 "           client=\"John Cleese\",\n"
 "           sketch=\"Cheese Shop Sketch\")"
 
-#: tutorial/controlflow.rst:726
+#: tutorial/controlflow.rst:733
 msgid "and of course it would print:"
 msgstr "και φυσικά θα εκτυπώσει:"
 
-#: tutorial/controlflow.rst:728
+#: tutorial/controlflow.rst:735
 msgid ""
 "-- Do you have any Limburger ?\n"
 "-- I'm sorry, we're all out of Limburger\n"
@@ -1646,7 +1661,7 @@ msgstr ""
 "client : John Cleese\n"
 "sketch : Cheese Shop Sketch"
 
-#: tutorial/controlflow.rst:739
+#: tutorial/controlflow.rst:746
 msgid ""
 "Note that the order in which the keyword arguments are printed is guaranteed "
 "to match the order in which they were provided in the function call."
@@ -1655,11 +1670,11 @@ msgstr ""
 "εγγυημένη ότι ταιριάζει με τη σειρά με την οποία δόθηκαν στην κλήση της "
 "συνάρτησης."
 
-#: tutorial/controlflow.rst:743
+#: tutorial/controlflow.rst:750
 msgid "Special parameters"
 msgstr "Ειδικές παράμετροι"
 
-#: tutorial/controlflow.rst:745
+#: tutorial/controlflow.rst:752
 msgid ""
 "By default, arguments may be passed to a Python function either by position "
 "or explicitly by keyword. For readability and performance, it makes sense to "
@@ -1674,11 +1689,11 @@ msgstr ""
 "κοιτάξει τον ορισμό της συνάρτησης για να προσδιορίσει εάν τα στοιχεία "
 "μεταβιβάζονται κατά θέση, κατά θέση ή keyword, ή κατά keyword."
 
-#: tutorial/controlflow.rst:751
+#: tutorial/controlflow.rst:758
 msgid "A function definition may look like:"
 msgstr "Ένας ορισμός συνάρτησης μπορεί να μοιάζει με αυτό:"
 
-#: tutorial/controlflow.rst:753
+#: tutorial/controlflow.rst:760
 msgid ""
 "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n"
 "      -----------    ----------     ----------\n"
@@ -1694,7 +1709,7 @@ msgstr ""
 "        |                                - Keyword only\n"
 "         -- Positional only"
 
-#: tutorial/controlflow.rst:762
+#: tutorial/controlflow.rst:769
 msgid ""
 "where ``/`` and ``*`` are optional. If used, these symbols indicate the kind "
 "of parameter by how the arguments may be passed to the function: positional-"
@@ -1707,11 +1722,11 @@ msgstr ""
 "ή keyword (positional-or-keyword), και μόνο keyword (keyword-only). Οι "
 "keyword παράμετροι αναφέρονται επίσης ως ονομασμένες παράμετροι."
 
-#: tutorial/controlflow.rst:769
+#: tutorial/controlflow.rst:776
 msgid "Positional-or-Keyword Arguments"
 msgstr "Παράμετροι Θέσης ή Keyword"
 
-#: tutorial/controlflow.rst:771
+#: tutorial/controlflow.rst:778
 msgid ""
 "If ``/`` and ``*`` are not present in the function definition, arguments may "
 "be passed to a function by position or by keyword."
@@ -1719,11 +1734,11 @@ msgstr ""
 "Εάν τα ``/`` και ``*`` δεν υπάρχουν στον ορισμό της συνάρτησης, τα ορίσματα "
 "μπορούν να μεταβιβαστούν σε μια συνάρτηση ανά θέση ή κατά keyword."
 
-#: tutorial/controlflow.rst:776
+#: tutorial/controlflow.rst:783
 msgid "Positional-Only Parameters"
 msgstr "Παράμετροι Μόνο-Θέσης"
 
-#: tutorial/controlflow.rst:778
+#: tutorial/controlflow.rst:785
 msgid ""
 "Looking at this in a bit more detail, it is possible to mark certain "
 "parameters as *positional-only*. If *positional-only*, the parameters' order "
@@ -1737,11 +1752,11 @@ msgstr ""
 "επισημάνετε ορισμένες παραμέτρους ως *μόνο θέσης*.Εάν *μόνο θέσης*, η σειρά "
 "των παραμέτρων έχει σημασία και οι παράμετροι δεν μπορούν να μεταβιβαστούν "
 "με keyword. Οι παράμετροι μόνο θέσης τοποθετούνται πριν από ένα ``/`` (προς "
-"τα εμπρός-κάθετος). Το ``/``χρησιμοποιείται για να διαχωρίσει λογικά τις "
-"παραμέτρους μόνο θέσης από τις υπόλοιπες παραμέτρους. Εάν δεν υπάερχει το ``/"
+"τα εμπρός-κάθετος). Το ``/`` χρησιμοποιείται για να διαχωρίσει λογικά τις "
+"παραμέτρους μόνο θέσης από τις υπόλοιπες παραμέτρους. Εάν δεν υπάρχει το ``/"
 "`` στον ορισμό της συνάρτησης, δεν υπάρχουν παράμετροι μόνο θέσης."
 
-#: tutorial/controlflow.rst:786
+#: tutorial/controlflow.rst:793
 msgid ""
 "Parameters following the ``/`` may be *positional-or-keyword* or *keyword-"
 "only*."
@@ -1749,11 +1764,11 @@ msgstr ""
 "Οι παράμετροι που ακολουθούν το ``/`` μπορεί να είναι *θέσης ή keyword* ή "
 "*μόνο keyword*."
 
-#: tutorial/controlflow.rst:790
+#: tutorial/controlflow.rst:797
 msgid "Keyword-Only Arguments"
 msgstr "Ορίσματα μόνο Keyword"
 
-#: tutorial/controlflow.rst:792
+#: tutorial/controlflow.rst:799
 msgid ""
 "To mark parameters as *keyword-only*, indicating the parameters must be "
 "passed by keyword argument, place an ``*`` in the arguments list just before "
@@ -1763,11 +1778,11 @@ msgstr ""
 "παράμετροι πρέπει να περάσουν από το keyword όρισμα, τοποθετήσετε ένα ``*`` "
 "στη λίστα ορισμάτων ακριβώς πριν από την πρώτη παράμετρο *μόνο keyword*."
 
-#: tutorial/controlflow.rst:798
+#: tutorial/controlflow.rst:805
 msgid "Function Examples"
 msgstr "Παραδείγματα Συναρτήσεων"
 
-#: tutorial/controlflow.rst:800
+#: tutorial/controlflow.rst:807
 msgid ""
 "Consider the following example function definitions paying close attention "
 "to the markers ``/`` and ``*``::"
@@ -1775,7 +1790,7 @@ msgstr ""
 "Σκεφτείτε τα ακόλουθα παραδείγματα ορισμών συναρτήσεων δίνοντας ιδιαίτερη "
 "προσοχή στους δείκτες ``/`` και ``*``::"
 
-#: tutorial/controlflow.rst:803
+#: tutorial/controlflow.rst:810
 msgid ""
 ">>> def standard_arg(arg):\n"
 "...     print(arg)\n"
@@ -1801,7 +1816,7 @@ msgstr ""
 ">>> def combined_example(pos_only, /, standard, *, kwd_only):\n"
 "...     print(pos_only, standard, kwd_only)"
 
-#: tutorial/controlflow.rst:816
+#: tutorial/controlflow.rst:823
 msgid ""
 "The first function definition, ``standard_arg``, the most familiar form, "
 "places no restrictions on the calling convention and arguments may be passed "
@@ -1811,7 +1826,7 @@ msgstr ""
 "περιορισμούς στη σύμβαση κλήσης και τα ορίσματα μπορούν να περάσουν από θέση "
 "ή από keyword::"
 
-#: tutorial/controlflow.rst:820
+#: tutorial/controlflow.rst:827
 msgid ""
 ">>> standard_arg(2)\n"
 "2\n"
@@ -1825,7 +1840,7 @@ msgstr ""
 ">>> standard_arg(arg=2)\n"
 "2"
 
-#: tutorial/controlflow.rst:826
+#: tutorial/controlflow.rst:833
 msgid ""
 "The second function ``pos_only_arg`` is restricted to only use positional "
 "parameters as there is a ``/`` in the function definition::"
@@ -1833,7 +1848,7 @@ msgstr ""
 "Η δεύτερη συνάρτηση ``pos_only_arg`` περιορίζεται στη χρήση μόνο παραμέτρων "
 "θέσης καθώς υπάρχει ένα ``/`` στον ορισμός της συνάρτησης::"
 
-#: tutorial/controlflow.rst:829
+#: tutorial/controlflow.rst:836
 msgid ""
 ">>> pos_only_arg(1)\n"
 "1\n"
@@ -1853,7 +1868,7 @@ msgstr ""
 "TypeError: pos_only_arg() got some positional-only arguments passed as "
 "keyword arguments: 'arg'"
 
-#: tutorial/controlflow.rst:837
+#: tutorial/controlflow.rst:844
 msgid ""
 "The third function ``kwd_only_arg`` only allows keyword arguments as "
 "indicated by a ``*`` in the function definition::"
@@ -1861,7 +1876,7 @@ msgstr ""
 "Η τρίτη συνάρτηση ``kwd_only_arg`` επιτρέπει μόνο keyword ορίσματα όπως "
 "υποδεικνύεται από ένα ``*`` στον ορισμός της συνάρτησης::"
 
-#: tutorial/controlflow.rst:840
+#: tutorial/controlflow.rst:847
 msgid ""
 ">>> kwd_only_arg(3)\n"
 "Traceback (most recent call last):\n"
@@ -1879,7 +1894,7 @@ msgstr ""
 ">>> kwd_only_arg(arg=3)\n"
 "3"
 
-#: tutorial/controlflow.rst:848
+#: tutorial/controlflow.rst:855
 msgid ""
 "And the last uses all three calling conventions in the same function "
 "definition::"
@@ -1887,7 +1902,7 @@ msgstr ""
 "Και το τελευταίο χρησιμοποιεί και τις τρεις συμβάσεις κλήσης στον ίδιο "
 "ορισμό συνάρτησης::"
 
-#: tutorial/controlflow.rst:851
+#: tutorial/controlflow.rst:858
 msgid ""
 ">>> combined_example(1, 2, 3)\n"
 "Traceback (most recent call last):\n"
@@ -1923,7 +1938,7 @@ msgstr ""
 "TypeError: combined_example() got some positional-only arguments passed as "
 "keyword arguments: 'pos_only'"
 
-#: tutorial/controlflow.rst:868
+#: tutorial/controlflow.rst:875
 msgid ""
 "Finally, consider this function definition which has a potential collision "
 "between the positional argument ``name``  and ``**kwds`` which has ``name`` "
@@ -1933,7 +1948,7 @@ msgstr ""
 "μεταξύ του ορίσματος θέσης ``name``  και ``**kwds`` που έχει ως κλειδί το "
 "``name``::"
 
-#: tutorial/controlflow.rst:870
+#: tutorial/controlflow.rst:877
 msgid ""
 "def foo(name, **kwds):\n"
 "    return 'name' in kwds"
@@ -1941,7 +1956,7 @@ msgstr ""
 "def foo(name, **kwds):\n"
 "    return 'name' in kwds"
 
-#: tutorial/controlflow.rst:873
+#: tutorial/controlflow.rst:880
 msgid ""
 "There is no possible call that will make it return ``True`` as the keyword "
 "``'name'`` will always bind to the first parameter. For example::"
@@ -1950,7 +1965,7 @@ msgstr ""
 "το keyword ``'name'`` θα συνδέεται πάντα με την πρώτη παράμετρο. Για "
 "παράδειγμα::"
 
-#: tutorial/controlflow.rst:876
+#: tutorial/controlflow.rst:883
 msgid ""
 ">>> foo(1, **{'name': 2})\n"
 "Traceback (most recent call last):\n"
@@ -1964,7 +1979,7 @@ msgstr ""
 "TypeError: foo() got multiple values for argument 'name'\n"
 ">>>"
 
-#: tutorial/controlflow.rst:882
+#: tutorial/controlflow.rst:889
 msgid ""
 "But using ``/`` (positional only arguments), it is possible since it allows "
 "``name`` as a positional argument and ``'name'`` as a key in the keyword "
@@ -1974,7 +1989,7 @@ msgstr ""
 "επιτρέπει το ``name`` ως όρισμα θέσης και το ``'name'`` ως κλειδί στα "
 "keyword ορίσματα::"
 
-#: tutorial/controlflow.rst:884
+#: tutorial/controlflow.rst:891
 msgid ""
 ">>> def foo(name, /, **kwds):\n"
 "...     return 'name' in kwds\n"
@@ -1988,7 +2003,7 @@ msgstr ""
 ">>> foo(1, **{'name': 2})\n"
 "True"
 
-#: tutorial/controlflow.rst:890
+#: tutorial/controlflow.rst:897
 msgid ""
 "In other words, the names of positional-only parameters can be used in "
 "``**kwds`` without ambiguity."
@@ -1996,11 +2011,11 @@ msgstr ""
 "Με άλλα λόγια, τα ονόματα των παραμέτρων μόνο θέσης μπορούν να "
 "χρησιμοποιηθούν σε ``**kwds`` χωρίς ασάφεια."
 
-#: tutorial/controlflow.rst:895
+#: tutorial/controlflow.rst:902
 msgid "Recap"
 msgstr "Ανακεφαλαίωση"
 
-#: tutorial/controlflow.rst:897
+#: tutorial/controlflow.rst:904
 msgid ""
 "The use case will determine which parameters to use in the function "
 "definition::"
@@ -2008,15 +2023,15 @@ msgstr ""
 "Η περίπτωση χρήσης θα καθορίσει ποιες παραμέτρους θα χρησιμοποιηθούν στον "
 "ορισμό της συνάρτησης::"
 
-#: tutorial/controlflow.rst:899
+#: tutorial/controlflow.rst:906
 msgid "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
 msgstr "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
 
-#: tutorial/controlflow.rst:901
+#: tutorial/controlflow.rst:908
 msgid "As guidance:"
 msgstr "Ως καθοδήγηση:"
 
-#: tutorial/controlflow.rst:903
+#: tutorial/controlflow.rst:910
 msgid ""
 "Use positional-only if you want the name of the parameters to not be "
 "available to the user. This is useful when parameter names have no real "
@@ -2030,7 +2045,7 @@ msgstr ""
 "όταν καλείται η συνάρτηση ή εάν πρέπει να ληφθούν ορισμένες παράμετροι θέσης "
 "και αυθαίρετα keywords."
 
-#: tutorial/controlflow.rst:908
+#: tutorial/controlflow.rst:915
 msgid ""
 "Use keyword-only when names have meaning and the function definition is more "
 "understandable by being explicit with names or you want to prevent users "
@@ -2041,7 +2056,7 @@ msgstr ""
 "αποτρέψετε τους χρήστες να βασίζονται στη θέση του επιχειρήματος που "
 "μεταβιβάζεται."
 
-#: tutorial/controlflow.rst:911
+#: tutorial/controlflow.rst:918
 msgid ""
 "For an API, use positional-only to prevent breaking API changes if the "
 "parameter's name is modified in the future."
@@ -2049,11 +2064,11 @@ msgstr ""
 "Για ένα API, χρησιμοποιήστε το μόνο θέσης για να αποτρέψετε τη διακοπή των "
 "αλλαγών τους API, εάν το όνομα της παραμέτρου τροποποιηθεί στο μέλλον."
 
-#: tutorial/controlflow.rst:917
+#: tutorial/controlflow.rst:924
 msgid "Arbitrary Argument Lists"
 msgstr "Λίστες Αυθαίρετων Ορισμάτων"
 
-#: tutorial/controlflow.rst:922
+#: tutorial/controlflow.rst:929
 msgid ""
 "Finally, the least frequently used option is to specify that a function can "
 "be called with an arbitrary number of arguments.  These arguments will be "
@@ -2066,7 +2081,7 @@ msgstr ""
 "από τον μεταβλητό αριθμό ορισμάτων ενδέχεται να προκύψουν μηδέν ή "
 "περισσότερα κανονικά ορίσματα. ::"
 
-#: tutorial/controlflow.rst:927
+#: tutorial/controlflow.rst:934
 msgid ""
 "def write_multiple_items(file, separator, *args):\n"
 "    file.write(separator.join(args))"
@@ -2074,7 +2089,7 @@ msgstr ""
 "def write_multiple_items(file, separator, *args):\n"
 "    file.write(separator.join(args))"
 
-#: tutorial/controlflow.rst:931
+#: tutorial/controlflow.rst:938
 msgid ""
 "Normally, these *variadic* arguments will be last in the list of formal "
 "parameters, because they scoop up all remaining input arguments that are "
@@ -2089,7 +2104,7 @@ msgstr ""
 "σημαίνει ότι μπορούν να χρησιμοποιηθούν μόνο ως λέξεις-κλειδιά και όχι ως "
 "ορίσματα θέσης. ::"
 
-#: tutorial/controlflow.rst:937
+#: tutorial/controlflow.rst:944
 msgid ""
 ">>> def concat(*args, sep=\"/\"):\n"
 "...     return sep.join(args)\n"
@@ -2107,11 +2122,11 @@ msgstr ""
 ">>> concat(\"earth\", \"mars\", \"venus\", sep=\".\")\n"
 "'earth.mars.venus'"
 
-#: tutorial/controlflow.rst:948
+#: tutorial/controlflow.rst:955
 msgid "Unpacking Argument Lists"
 msgstr "Unpacking Λίστες Ορισμάτων"
 
-#: tutorial/controlflow.rst:950
+#: tutorial/controlflow.rst:957
 msgid ""
 "The reverse situation occurs when the arguments are already in a list or "
 "tuple but need to be unpacked for a function call requiring separate "
@@ -2128,7 +2143,7 @@ msgstr ""
 "συνάρτησης με τον ``*``\\ -τελεστή για να αποσυμπιέσετε τα ορίσματα από μια "
 "λίστα ή πλειάδα (tuple)::"
 
-#: tutorial/controlflow.rst:957
+#: tutorial/controlflow.rst:964
 msgid ""
 ">>> list(range(3, 6))            # normal call with separate arguments\n"
 "[3, 4, 5]\n"
@@ -2144,7 +2159,7 @@ msgstr ""
 "list\n"
 "[3, 4, 5]"
 
-#: tutorial/controlflow.rst:966
+#: tutorial/controlflow.rst:973
 msgid ""
 "In the same fashion, dictionaries can deliver keyword arguments with the "
 "``**``\\ -operator::"
@@ -2152,7 +2167,7 @@ msgstr ""
 "Με τον ίδιο τρόπο, τα λεξικά μπορούν να παραδίδουν keyword ορίσματα με τον "
 "``**``\\ -τελεστή::"
 
-#: tutorial/controlflow.rst:969
+#: tutorial/controlflow.rst:976
 msgid ""
 ">>> def parrot(voltage, state='a stiff', action='voom'):\n"
 "...     print(\"-- This parrot wouldn't\", action, end=' ')\n"
@@ -2176,11 +2191,11 @@ msgstr ""
 "-- This parrot wouldn't VOOM if you put four million volts through it. E's "
 "bleedin' demised !"
 
-#: tutorial/controlflow.rst:982
+#: tutorial/controlflow.rst:989
 msgid "Lambda Expressions"
 msgstr "Εκφράσεις Lambda"
 
-#: tutorial/controlflow.rst:984
+#: tutorial/controlflow.rst:991
 msgid ""
 "Small anonymous functions can be created with the :keyword:`lambda` keyword. "
 "This function returns the sum of its two arguments: ``lambda a, b: a+b``. "
@@ -2198,7 +2213,7 @@ msgstr ""
 "κανονικής συνάρτησης.  Όπως οι ορισμοί ένθετων  συναρτήσεων, οι συναρτήσεις "
 "lambda μπορούν να παραπέμπουν σε μεταβλητές από το πεδίο που περιέχει::"
 
-#: tutorial/controlflow.rst:992
+#: tutorial/controlflow.rst:999
 msgid ""
 ">>> def make_incrementor(n):\n"
 "...     return lambda x: x + n\n"
@@ -2218,7 +2233,7 @@ msgstr ""
 ">>> f(1)\n"
 "43"
 
-#: tutorial/controlflow.rst:1001
+#: tutorial/controlflow.rst:1008
 msgid ""
 "The above example uses a lambda expression to return a function.  Another "
 "use is to pass a small function as an argument.  For instance, :meth:`list."
@@ -2229,7 +2244,7 @@ msgstr ""
 "όρισμα.  Για παράδειγμα, η :meth:`list.sort` δέχεται μια συνάρτηση "
 "ταξινόμησης κλειδιού *key* η οποία μπορεί να είναι μια συνάρτηση lambda::"
 
-#: tutorial/controlflow.rst:1005
+#: tutorial/controlflow.rst:1012
 msgid ""
 ">>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]\n"
 ">>> pairs.sort(key=lambda pair: pair[1])\n"
@@ -2241,11 +2256,11 @@ msgstr ""
 ">>> pairs\n"
 "[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]"
 
-#: tutorial/controlflow.rst:1014
+#: tutorial/controlflow.rst:1021
 msgid "Documentation Strings"
 msgstr "Συμβολοσειρές Τεκμηρίωσης"
 
-#: tutorial/controlflow.rst:1021
+#: tutorial/controlflow.rst:1028
 msgid ""
 "Here are some conventions about the content and formatting of documentation "
 "strings."
@@ -2253,7 +2268,7 @@ msgstr ""
 "Ακολουθούν ορισμένες συμβάσεις σχετικά με το περιεχόμενο και τη μορφοποίηση "
 "των συμβολοσειρών τεκμηρίωσης."
 
-#: tutorial/controlflow.rst:1024
+#: tutorial/controlflow.rst:1031
 msgid ""
 "The first line should always be a short, concise summary of the object's "
 "purpose.  For brevity, it should not explicitly state the object's name or "
@@ -2267,7 +2282,7 @@ msgstr ""
 "εάν το όνομα είναι ρήμα που περιγράφει τη λειτουργία της συνάρτησης).  Αυτή "
 "η γραμμή πρέπει να ξεκινά με κεφαλαίο γράμμα και να τελειώνει με τελεία."
 
-#: tutorial/controlflow.rst:1030
+#: tutorial/controlflow.rst:1037
 msgid ""
 "If there are more lines in the documentation string, the second line should "
 "be blank, visually separating the summary from the rest of the description.  "
@@ -2280,7 +2295,7 @@ msgstr ""
 "παράγραφοι που περιγράφουν τις συμβάσεις κλήσης του αντικειμένου, τις "
 "παρενέργειές του κ.λπ.."
 
-#: tutorial/controlflow.rst:1035
+#: tutorial/controlflow.rst:1042
 msgid ""
 "The Python parser does not strip indentation from multi-line string literals "
 "in Python, so tools that process documentation have to strip indentation if "
@@ -2308,11 +2323,11 @@ msgstr ""
 "αρχικό κενό τους.  Η ισοδυναμία των κενών διαστημάτων θα πρέπει να ελέγχεται "
 "μετά την επέκταση των καρτελών (σε 8 κενά, κανονικά)."
 
-#: tutorial/controlflow.rst:1047
+#: tutorial/controlflow.rst:1054
 msgid "Here is an example of a multi-line docstring::"
 msgstr "Ακολουθεί ένα παράδειγμα ενός πολλαπλών γραμμών docstring::"
 
-#: tutorial/controlflow.rst:1049
+#: tutorial/controlflow.rst:1056
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
@@ -2338,11 +2353,11 @@ msgstr ""
 "\n"
 "No, really, it doesn't do anything."
 
-#: tutorial/controlflow.rst:1065
+#: tutorial/controlflow.rst:1072
 msgid "Function Annotations"
 msgstr "Annotations Συναρτήσεων"
 
-#: tutorial/controlflow.rst:1073
+#: tutorial/controlflow.rst:1080
 msgid ""
 ":ref:`Function annotations <function>` are completely optional metadata "
 "information about the types used by user-defined functions (see :pep:`3107` "
@@ -2353,9 +2368,9 @@ msgstr ""
 "συναρτήσεις που καθορίζονται από το χρήστη (δείτε :pep:`3107` και :pep:`484` "
 "για περισσότερες πληροφορίες)."
 
-#: tutorial/controlflow.rst:1077
+#: tutorial/controlflow.rst:1084
 msgid ""
-":term:`Annotations <function annotation>` are stored in the :attr:`!"
+":term:`Annotations <function annotation>` are stored in the :attr:`~object."
 "__annotations__` attribute of the function as a dictionary and have no "
 "effect on any other part of the function.  Parameter annotations are defined "
 "by a colon after the parameter name, followed by an expression evaluating to "
@@ -2365,17 +2380,17 @@ msgid ""
 "a required argument, an optional argument, and the return value annotated::"
 msgstr ""
 "Το :term:`Annotations <function annotation>` αποθηκεύονται στο "
-"χαρακτηριστικό :attr:`!__annotations__` της συνάρτησης ως λεξικό και δεν "
-"έχουνε καμία επίδραση σε κανένα άλλο μέρος της συνάρτησης.  Τα annotations "
-"των παραμέτρων ορίζονται με άνω και κάτω τελεία μετά το όνομα παραμέτρου, "
-"ακολουθούμενη από μια έκφραση που αξιολογεί την τιμή του annotation.  Τα "
-"annotations επιστροφής ορίζονται από ένα literal ``->``, ακολουθούμενο από "
-"μια έκφραση, μεταξύ της λίστας παραμέτρων και της άνω και κάτω τελείας που "
-"υποδηλώνει το τέλος της δήλωσης :keyword:`def`.  Το ακόλουθο παράδειγμα έχει "
-"ένα απαιτούμενο όρισμα, ένα προαιρετικό όρισμα και την επιστρεφόμενη τιμή σε "
-"annotations::"
+"χαρακτηριστικό :attr:`~object.__annotations__` της συνάρτησης ως λεξικό και "
+"δεν έχουνε καμία επίδραση σε κανένα άλλο μέρος της συνάρτησης.  Τα "
+"annotations των παραμέτρων ορίζονται με άνω και κάτω τελεία μετά το όνομα "
+"παραμέτρου, ακολουθούμενη από μια έκφραση που αξιολογεί την τιμή του "
+"annotation.  Τα annotations επιστροφής ορίζονται από ένα literal ``->``, "
+"ακολουθούμενο από μια έκφραση, μεταξύ της λίστας παραμέτρων και της άνω και "
+"κάτω τελείας που υποδηλώνει το τέλος της δήλωσης :keyword:`def`.  Το "
+"ακόλουθο παράδειγμα έχει ένα απαιτούμενο όρισμα, ένα προαιρετικό όρισμα και "
+"την επιστρεφόμενη τιμή σε annotations::"
 
-#: tutorial/controlflow.rst:1086
+#: tutorial/controlflow.rst:1093
 msgid ""
 ">>> def f(ham: str, eggs: str = 'eggs') -> str:\n"
 "...     print(\"Annotations:\", f.__annotations__)\n"
@@ -2399,11 +2414,11 @@ msgstr ""
 "Arguments: spam eggs\n"
 "'spam and eggs'"
 
-#: tutorial/controlflow.rst:1099
+#: tutorial/controlflow.rst:1106
 msgid "Intermezzo: Coding Style"
 msgstr "Intermezzo: Στυλ Κώδικα"
 
-#: tutorial/controlflow.rst:1104
+#: tutorial/controlflow.rst:1111
 msgid ""
 "Now that you are about to write longer, more complex pieces of Python, it is "
 "a good time to talk about *coding style*.  Most languages can be written (or "
@@ -2419,7 +2434,7 @@ msgstr ""
 "πάντα μια καλή ιδέα και η υιοθέτηση ενός ωραίου στυλ κώδικα βοηθάει πάρα "
 "πολύ σε αυτό."
 
-#: tutorial/controlflow.rst:1110
+#: tutorial/controlflow.rst:1117
 msgid ""
 "For Python, :pep:`8` has emerged as the style guide that most projects "
 "adhere to; it promotes a very readable and eye-pleasing coding style.  Every "
@@ -2431,11 +2446,11 @@ msgstr ""
 "κώδικα.  Κάθε προγραμματιστής Python θα πρέπει να το διαβάσει κάποια στιγμή· "
 "εδώ είναι τα πιο σημαντικό σημεία που εξάγονται για εσάς:"
 
-#: tutorial/controlflow.rst:1115
+#: tutorial/controlflow.rst:1122
 msgid "Use 4-space indentation, and no tabs."
 msgstr "Χρησιμοποιήστε εσοχή 4 διαστημάτων και όχι tabs."
 
-#: tutorial/controlflow.rst:1117
+#: tutorial/controlflow.rst:1124
 msgid ""
 "4 spaces are a good compromise between small indentation (allows greater "
 "nesting depth) and large indentation (easier to read).  Tabs introduce "
@@ -2446,11 +2461,11 @@ msgstr ""
 "ανάγνωση).  Τα tabs δημιουργούν σύγχυση, και είναι καλύτερο να παραμείνουν "
 "απέξω."
 
-#: tutorial/controlflow.rst:1121
+#: tutorial/controlflow.rst:1128
 msgid "Wrap lines so that they don't exceed 79 characters."
 msgstr "Τυλίξτε τις γραμμές έτσι ώστε να μην υπερβαίνουν τους 79 χαρακτήρες."
 
-#: tutorial/controlflow.rst:1123
+#: tutorial/controlflow.rst:1130
 msgid ""
 "This helps users with small displays and makes it possible to have several "
 "code files side-by-side on larger displays."
@@ -2458,7 +2473,7 @@ msgstr ""
 "Αυτό βοηθά του χρήστες με μικρές οθόνες και καθιστά δυνατή την ύπαρξη πολλών "
 "αρχείων κώδικα δίπλα-δίπλα σε μεγαλύτερες οθόνες."
 
-#: tutorial/controlflow.rst:1126
+#: tutorial/controlflow.rst:1133
 msgid ""
 "Use blank lines to separate functions and classes, and larger blocks of code "
 "inside functions."
@@ -2466,15 +2481,15 @@ msgstr ""
 "Χρησιμοποιείστε κενές γραμμές για να διαχωρίσετε συναρτήσεις και κλάσεις και "
 "μεγαλύτερα μπλοκ κώδικα μέσα συναρτήσεις."
 
-#: tutorial/controlflow.rst:1129
+#: tutorial/controlflow.rst:1136
 msgid "When possible, put comments on a line of their own."
 msgstr "Όταν είναι δυνατόν, βάλτε σχόλια σε μια δική τους γραμμή."
 
-#: tutorial/controlflow.rst:1131
+#: tutorial/controlflow.rst:1138
 msgid "Use docstrings."
 msgstr "Χρησιμοποιήστε docstrings."
 
-#: tutorial/controlflow.rst:1133
+#: tutorial/controlflow.rst:1140
 msgid ""
 "Use spaces around operators and after commas, but not directly inside "
 "bracketing constructs: ``a = f(1, 2) + g(3, 4)``."
@@ -2482,7 +2497,7 @@ msgstr ""
 "Χρησιμοποιήστε κενά γύρω από τελεστές και μετά από κόμματα, αλλά όχι "
 "απευθείας μέσα δε δομές αγκύλων: ``a = f(1, 2) + g(3, 4)``."
 
-#: tutorial/controlflow.rst:1136
+#: tutorial/controlflow.rst:1143
 msgid ""
 "Name your classes and functions consistently; the convention is to use "
 "``UpperCamelCase`` for classes and ``lowercase_with_underscores`` for "
@@ -2496,7 +2511,7 @@ msgstr ""
 "(δείτε :ref:`tut-firstclasses` για περισσότερα σχετικά με τις κλάσεις και "
 "τις μεθόδους)."
 
-#: tutorial/controlflow.rst:1141
+#: tutorial/controlflow.rst:1148
 msgid ""
 "Don't use fancy encodings if your code is meant to be used in international "
 "environments.  Python's default, UTF-8, or even plain ASCII work best in any "
@@ -2506,7 +2521,7 @@ msgstr ""
 "να χρησιμοποιηθεί σε διεθνή περιβάλλοντα.  Η προεπιλογή της Python, UTF-8, ή "
 "ακόμα και το απλό ASCII λειτουργούν καλύτερα σε κάθε περίπτωση."
 
-#: tutorial/controlflow.rst:1145
+#: tutorial/controlflow.rst:1152
 msgid ""
 "Likewise, don't use non-ASCII characters in identifiers if there is only the "
 "slightest chance people speaking a different language will read or maintain "
@@ -2516,11 +2531,11 @@ msgstr ""
 "εάν υπάρχει μόνο η παραμικρή πιθανότητα οι άνθρωποι που μιλούν διαφορετική "
 "γλώσσα να διαβάσουν ή να διατηρήσουν τον κώδικα."
 
-#: tutorial/controlflow.rst:1151
+#: tutorial/controlflow.rst:1158
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/controlflow.rst:1152
+#: tutorial/controlflow.rst:1159
 msgid ""
 "Actually, *call by object reference* would be a better description, since if "
 "a mutable object is passed, the caller will see any changes the callee makes "
@@ -2539,55 +2554,63 @@ msgstr "statement"
 msgid "for"
 msgstr "for"
 
-#: tutorial/controlflow.rst:1016
+#: tutorial/controlflow.rst:254
+msgid "..."
+msgstr "..."
+
+#: tutorial/controlflow.rst:254
+msgid "ellipsis literal"
+msgstr "ellipsis literal"
+
+#: tutorial/controlflow.rst:1023
 msgid "documentation strings"
 msgstr "documentation strings"
 
-#: tutorial/controlflow.rst:1016
+#: tutorial/controlflow.rst:1023
 msgid "docstrings"
 msgstr "docstrings"
 
-#: tutorial/controlflow.rst:1016
+#: tutorial/controlflow.rst:1023
 msgid "strings, documentation"
 msgstr "strings, documentation"
 
-#: tutorial/controlflow.rst:919
+#: tutorial/controlflow.rst:926
 msgid "* (asterisk)"
 msgstr "* (αστερίσκος)"
 
-#: tutorial/controlflow.rst:963
+#: tutorial/controlflow.rst:970
 msgid "in function calls"
 msgstr "in function calls"
 
-#: tutorial/controlflow.rst:963
+#: tutorial/controlflow.rst:970
 msgid "**"
 msgstr "**"
 
-#: tutorial/controlflow.rst:1068
+#: tutorial/controlflow.rst:1075
 msgid "function"
 msgstr "function"
 
-#: tutorial/controlflow.rst:1068
+#: tutorial/controlflow.rst:1075
 msgid "annotations"
 msgstr "annotations"
 
-#: tutorial/controlflow.rst:1068
+#: tutorial/controlflow.rst:1075
 msgid "->"
 msgstr "->"
 
-#: tutorial/controlflow.rst:1068
+#: tutorial/controlflow.rst:1075
 msgid "function annotations"
 msgstr "function annotations"
 
-#: tutorial/controlflow.rst:1068
+#: tutorial/controlflow.rst:1075
 msgid ": (colon)"
 msgstr ": (colon)"
 
-#: tutorial/controlflow.rst:1102
+#: tutorial/controlflow.rst:1109
 msgid "coding"
 msgstr "coding"
 
-#: tutorial/controlflow.rst:1102
+#: tutorial/controlflow.rst:1109
 msgid "style"
 msgstr "style"
 

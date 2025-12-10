@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,4 +68,78 @@ msgid ""
 "callable object that can be called with no parameters; each call to it "
 "should return the next item in the iteration.  When *callable* returns a "
 "value equal to *sentinel*, the iteration will be terminated."
+msgstr ""
+
+#: c-api/iterator.rst:56
+msgid "Range Objects"
+msgstr ""
+
+#: c-api/iterator.rst:60
+msgid "The type object for :class:`range` objects."
+msgstr ""
+
+#: c-api/iterator.rst:65
+msgid ""
+"Return true if the object *o* is an instance of a :class:`range` object. "
+"This function always succeeds."
+msgstr ""
+
+#: c-api/iterator.rst:70
+msgid "Builtin Iterator Types"
+msgstr ""
+
+#: c-api/iterator.rst:72
+msgid ""
+"These are built-in iteration types that are included in Python's C API, but "
+"provide no additional functions. They are here for completeness."
+msgstr ""
+
+#: c-api/iterator.rst:80
+msgid "C type"
+msgstr ""
+
+#: c-api/iterator.rst:81
+msgid "Python type"
+msgstr ""
+
+#: c-api/iterator.rst:83
+msgid ":py:class:`enumerate`"
+msgstr ""
+
+#: c-api/iterator.rst:85
+msgid ":py:class:`filter`"
+msgstr ""
+
+#: c-api/iterator.rst:87
+msgid ":py:class:`map`"
+msgstr ""
+
+#: c-api/iterator.rst:89
+msgid ":py:class:`reversed`"
+msgstr ""
+
+#: c-api/iterator.rst:91
+msgid ":py:class:`zip`"
+msgstr ""
+
+#: c-api/iterator.rst:95
+msgid "Other Iterator Objects"
+msgstr ""
+
+#: c-api/iterator.rst:113
+msgid "Type objects for iterators of various built-in objects."
+msgstr ""
+
+#: c-api/iterator.rst:115
+msgid ""
+"Do not create instances of these directly; prefer calling :c:func:"
+"`PyObject_GetIter` instead."
+msgstr ""
+
+#: c-api/iterator.rst:118
+msgid ""
+"Note that there is no guarantee that a given built-in type uses a given "
+"iterator type. For example, iterating over :class:`range` will use one of "
+"two iterator types depending on the size of the range. Other types may start "
+"using a similar scheme in the future, without warning."
 msgstr ""
