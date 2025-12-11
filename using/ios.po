@@ -9,25 +9,25 @@ msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-06-24 23:36+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: using/ios.rst:5
 msgid "Using Python on iOS"
-msgstr ""
+msgstr "Χρήση Python σε iOS"
 
 #: using/ios.rst:0
 msgid "Authors"
-msgstr ""
+msgstr "Συγγραφείς"
 
 #: using/ios.rst:8
 msgid "Russell Keith-Magee (2024-03)"
-msgstr ""
+msgstr "Russell Keith-Magee (2024-03)"
 
 #: using/ios.rst:10
 msgid ""
@@ -37,6 +37,13 @@ msgid ""
 "`python` executable and entering commands at an interactive prompt, or by "
 "running a Python script."
 msgstr ""
+"Η Python σε iOS διαφέρει από την Python σε πλατφόρμες επιτραπέζιων "
+"υπολογιστών. Σε μια πλατφόρμα επιτραπέζιων υπολογιστών, η Python "
+"εγκαθίσταται γενικά ως πόρος συστήματος που μπορεί να χρησιμοποιηθεί από "
+"οποιονδήποτε χρήστη αυτού του υπολογιστή. Στη συνέχεια, οι χρήστες "
+"αλληλεπιδρούν με την Python εκτελώντας ένα εκτελέσιμο αρχείο :program:"
+"`python` και εισάγοντας εντολές σε μια διαδραστική γραμμή εντολών ή "
+"εκτελώντας ένα Python script."
 
 #: using/ios.rst:16
 msgid ""
@@ -44,6 +51,10 @@ msgid ""
 "unit of software distribution is an \"app\". There is also no console where "
 "you could run a :program:`python` executable, or interact with a Python REPL."
 msgstr ""
+"Στο iOS, δεν υπάρχει η έννοια της εγκατάστασης ως πόρου συστήματος. Η μόνη "
+"μονάδα διανομής λογισμικού είναι μια \"εφαρμογή\". Επίσης, δεν υπάρχει "
+"κονσόλα που θα μπορούσατε να εκτελέσετε ένα εκτελέσιμο αρχείο :program:"
+"`python` ή να αλληλεπιδράσετε με ένα Python REPL."
 
 #: using/ios.rst:20
 msgid ""
@@ -54,6 +65,13 @@ msgid ""
 "standard library, and all your Python code is then packaged as a standalone "
 "bundle that can be distributed via the iOS App Store."
 msgstr ""
+"Ως αποτέλεσμα, ο μόνος τρόπος για να χρησιμοποιήσετε την Python σε iOS είναι "
+"σε ενσωματωμένη λειτουργία - δηλαδή, γράφοντας μια εγγενή εφαρμογή iOS και "
+"ενσωματώνοντας έναν διερμηνέα Python χρησιμοποιώντας το ``libPython``, και "
+"καλώντας κώδικα Python χρησιμοποιώντας το :ref:`Python embedding API "
+"<embedding>`. Ο πλήρης διερμηνέας Python, η τυπική βιβλιοθήκη και όλος ο "
+"κώδικας Python σας συσκευάζονται στην συνέχεια ως αυτόνομο πακέτο που μπορεί "
+"να διανεμηθεί μέσω του iOS App Store."
 
 #: using/ios.rst:27
 msgid ""
@@ -63,14 +81,20 @@ msgid ""
 "These projects manage the complexities associated with getting an iOS "
 "project running, so you only need to deal with the Python code itself."
 msgstr ""
+"Αν θέλετε να πειραματιστείτε για πρώτη φορά με τη σύνταξη μιας εφαρμογής iOS "
+"σε Python, έργα όπως `BeeWare <https://beeware.org>`__ και `Kivy <https://"
+"kivy.org>`__ θα σας προσφέρουν μια πολύ πιο προσιτή εμπειρία χρήστη. Αυτά τα "
+"έργα διαχειρίζονται τις πολυπλοκότητες που σχετίζονται με την εκτέλεση ενός "
+"έργου iOS, επομένως χρειάζεται να ασχοληθείτε μόνο με τον ίδιο τον κώδικα "
+"Python."
 
 #: using/ios.rst:34
 msgid "Python at runtime on iOS"
-msgstr ""
+msgstr "Python κατά τον χρόνο εκτέλεσης σε iOS"
 
 #: using/ios.rst:37
 msgid "iOS version compatibility"
-msgstr ""
+msgstr "Συμβατότητα έκδοσης iOS"
 
 #: using/ios.rst:39
 msgid ""
@@ -82,10 +106,18 @@ msgid ""
 "simulator`` would compile an ARM64 simulator build with a deployment target "
 "of 15.4."
 msgstr ""
+"Η ελάχιστη υποστηριζόμενη έκδοση iOS καθορίζεται κατά τη στιγμή της "
+"μεταγλώττισης, χρησιμοποιώντας την επιλογή :option:`--host` για τη "
+"``ρύθμιση`` παραμέτρων. Από προεπιλογή, όταν μεταγλωττίζεται για iOS, η "
+"Python θα μεταγλωττίζεται με μια ελάχιστη υποστηριζόμενη έκδοση iOS 13.0. "
+"Για να χρησιμοποιήστε μια διαφορετική ελάχιστη έκδοση iOS, δώστε τον αριθμό "
+"έκδοσης ως μέρος του ορίσματος :option:`!--host` - για παράδειγμα, το ``--"
+"host=arm64-apple-ios15.4-simulator`` θα μεταγλωττίσει μια έκδοση προσομοιωτή "
+"ARM64 με στόχο ανάπτυξης 15.4."
 
 #: using/ios.rst:48
 msgid "Platform identification"
-msgstr ""
+msgstr "Αναγνώριση πλατφόρμας"
 
 #: using/ios.rst:50
 msgid ""
@@ -93,6 +125,9 @@ msgid ""
 "will be returned on an iPhone or iPad, regardless of whether the app is "
 "running on the simulator or a physical device."
 msgstr ""
+"Κατά την εκτέλεση σε iOS, το ``sys.platform`` θα αναφέρεται ως ``ios``. Αυτή "
+"η τιμή θα επιστραφεί σε ένα iPhone ή iPad, ανεξάρτητα από το αν η εφαρμογή "
+"εκτελείται στον προσομοιωτή ή σε μια φυσική συσκευή."
 
 #: using/ios.rst:54
 msgid ""
@@ -101,16 +136,23 @@ msgid ""
 "obtained using :func:`platform.ios_ver`. :func:`platform.system` will report "
 "``iOS`` or ``iPadOS``, depending on the device."
 msgstr ""
+"Πληροφορίες σχετικά με το συγκεκριμένο περιβάλλον εκτέλεσης, "
+"συμπεριλαμβανομένης της έκδοσης iOS, του μοντέλου συσκευής και του εάν η "
+"συσκευή είναι προσομοιωτής, μπορούν να ληφθούν χρησιμοποιώντας την :func:"
+"`platform.ios_ver`. Η :func:`platform.system` θα αναφέρει ``iOS`` ή "
+"``iPadOS``, ανάλογα με τη συσκευή."
 
 #: using/ios.rst:59
 msgid ""
 ":func:`os.uname` reports kernel-level details; it will report a name of "
 "``Darwin``."
 msgstr ""
+"Η :func:`os.uname` αναφέρει λεπτομέρειες σε επίπεδο πυρήνα∙ θα αναφέρει ένα "
+"όνομα ``Darwin``."
 
 #: using/ios.rst:63
 msgid "Standard library availability"
-msgstr ""
+msgstr "Διαθεσιμότητα τυπικής βιβλιοθήκης"
 
 #: using/ios.rst:65
 msgid ""
@@ -118,10 +160,13 @@ msgid ""
 "iOS. See the :ref:`API availability guide for iOS <mobile-availability>` for "
 "details."
 msgstr ""
+"Η τυπική βιβλιοθήκη Python έχει κάποιες αξιοσημείωτες παραλείψεις και "
+"περιορισμούς στο iOS. Δείτε στον οδηγό διαθεσιμότητας :ref:`API availability "
+"guide for iOS <mobile-availability>` για λεπτομέρειες."
 
 #: using/ios.rst:70
 msgid "Binary extension modules"
-msgstr ""
+msgstr "Δυαδικά modules επέκτασης"
 
 #: using/ios.rst:72
 msgid ""
@@ -130,6 +175,10 @@ msgid ""
 "One of these requirements governs how binary extension modules are "
 "distributed."
 msgstr ""
+"Μια αξιοσημείωτη διαφορά σχετικά με το iOS ως πλατφόρμα είναι ότι η διανομή "
+"του App Store επιβάλλει αυστηρές απαιτήσεις σχετικά με τη συσκευασία μιας "
+"εφαρμογής. Μία από αυτές τις απαιτήσεις διέπει τον τρόπο διανομής των "
+"δυαδικών modules επέκτασης."
 
 #: using/ios.rst:76
 msgid ""
@@ -139,6 +188,11 @@ msgid ""
 "single binary per framework, and there can be no executable binary material "
 "outside the ``Frameworks`` folder."
 msgstr ""
+"Το iOS App Store απαιτεί από *όλα* τα δυαδικά modules σε μια εφαρμογή iOS να "
+"είναι δυναμικές βιβλιοθήκες, που να περιέχονται σε ένα πλαίσιο με κατάλληλα "
+"μεταδεδομένα, αποθηκευμένα στον φάκελο ``Frameworks`` της συσκευασμένης "
+"εφαρμογής. Μπορεί να υπάρχει μόνο ένα δυαδικό αρχείο ανά πλαίσιο, και δεν "
+"μπορεί να υπάρχει εκτελέσιμο υλικό εκτός του φακέλου ``Frameworks``."
 
 #: using/ios.rst:82
 msgid ""
@@ -150,6 +204,15 @@ msgid ""
 "For details on how to perform this post-processing, see the guide for :ref:"
 "`adding Python to your project <adding-ios>`."
 msgstr ""
+"Αυτό έρχεται σε αντίθεση με τη συνήθη προσέγγιση Python για τη διανομή "
+"δυαδικών αρχείων, η οποία επιτρέπει τη φόρτωση μιας δυαδικής επέκτασης "
+"module από οποιαδήποτε τοποθεσία στο ``sys.path``. Για να διασφαλιστεί η "
+"συμμόρφωση με τις πολιτικές του App Store, ένα ενεργό iOS πρέπει να "
+"επεξεργαστεί εκ των υστέρων τυχόν πακέτα Python, μετατρέποντας τις δυαδικές "
+"μονάδες ``.so`` σε μεμονωμένα αυτόνομα πλαίσια με κατάλληλα μεταδεδομένα και "
+"υπογραφή. Για λεπτομέρειες σχετικά με τον τρόπο εκτέλεσης αυτή της μετα-"
+"επεξεργασίας, ανατρέξτε στον οδηγό :ref:`adding Python to your project "
+"<adding-ios>`."
 
 #: using/ios.rst:90
 msgid ""
@@ -160,6 +223,13 @@ msgid ""
 "framework must contain a ``.origin`` file that contains the location of the "
 "``.fwork`` file, relative to the app bundle."
 msgstr ""
+"Για να βοηθηθεί η Python στην ανακάλυψη δυαδικών αρχείων στη νέα τους θέση, "
+"το αρχικό αρχείο ``.so`` στο ``sys.path`` αντικαθίσταται με ένα αρχείο ``."
+"fwork``. Αυτό το αρχείο είναι ένα αρχείο κειμένου που περιέχει τη θέση του "
+"δυαδικού αρχείου του framework, σε σχέση με το app bundle. Για να επιτραπεί "
+"στο framework να επιστρέψει στην αρχική του θέση, το framework πρέπει να "
+"περιέχει ένα αρχείο ``.origin`` που περιέχει τη θέση του αρχείου ``.fwork``, "
+"σε σχέση με το app bundle."
 
 #: using/ios.rst:97
 msgid ""
@@ -176,6 +246,19 @@ msgid ""
 "framework would also contain ``Frameworks/foo.bar._whiz.framework/foo.bar."
 "_whiz.origin``, containing the path to the ``.fwork`` file."
 msgstr ""
+"Για παράδειγμα, εξετάστε την περίπτωση μιας εντολής εισαγωγής ``from foo.bar "
+"import _whiz``, όπου το ``_whiz`` υλοποιείται με το δυαδικό module ``sources/"
+"foo/bar/_whiz.abi3.so``, με το ``sources`` να είναι η τοποθεσία που έχει "
+"καταχωρηθεί στο ``sys.path``, σε σχέση με το bundle της εφαρμογής. Αυτό το "
+"module *πρέπει* να διανεμηθεί ως ``Frameworks/foo.bar._whiz.framework/foo."
+"bar._whiz`` (δημιουργώντας το όνομα του framework από την πλήρη διαδρομή "
+"εισαγωγής του module), με ένα αρχείο ``Info.plist`` στον φάκελο ``."
+"framework`` που να ταυτοποιεί το δυαδικό ως framework. Το module ``foo.bar."
+"_whiz`` θα εκπροσωπείται στην αρχική του τοποθεσία με ένα αρχείο δείκτη "
+"``sources/foo/bar/_whiz.abi3.fwork``, το οποίο περιέχει τη διαδρομή "
+"``Frameworks/foo.bar._whiz/foo.bar._whiz``. Το framework θα περιέχει επίσης "
+"το ``Frameworks/foo.bar._whiz.framework/foo.bar._whiz.origin``, το οποίο "
+"περιέχει τη διαδρομή προς το αρχείο ``.fwork``."
 
 #: using/ios.rst:110
 msgid ""
@@ -186,10 +269,17 @@ msgid ""
 "class:`~importlib.machinery.ModuleSpec` for the loaded module will report "
 "the ``origin`` as the location of the binary in the framework folder."
 msgstr ""
+"Κατά την εκτέλεση σε iOS, ο διερμηνέας της Python θα εγκαταστήσει μια :class:"
+"`~importlib.machinery.AppleFrameworkLoader`, η οποία μπορεί να διαβάζει και "
+"να εισάγει αρχεία ``.fwork``. Μόλις εισαχθεί, το χαρακτηριστικό ``__file__`` "
+"του δυαδικού module θα αναφέρει ως τοποθεσία το αρχείο ``.fwork``. Ωστόσο, "
+"η :class:`~importlib.machinery.ModuleSpec` για το φορτωμένο module θα "
+"αναφέρει ως ``origin`` την τοποθεσία του δυαδικού αρχείου στον φάκελο του "
+"framework."
 
 #: using/ios.rst:118
 msgid "Compiler stub binaries"
-msgstr ""
+msgstr "Δυαδικά αρχεία προσομοίωσης μεταγλωττιστή"
 
 #: using/ios.rst:120
 msgid ""
@@ -198,12 +288,20 @@ msgid ""
 "iphoneos clang`` to get the ``clang`` for an iPhone device). However, using "
 "this script poses two problems:"
 msgstr ""
+"Το Xcode δεν παρέχει άμεσα ξεχωριστούς μεταγλωττιστές για iOS· αντ’ αυτού, "
+"χρησιμοποιεί ένα script ``xcrun`` που επιλύει την πλήρη διαδρομή του "
+"μεταγλωττιστή (π.χ. ``xcrun --sdk iphoneos clang`` για να πάρετε τον "
+"``clang`` για μια συσκευή iPhone). Ωστόσο, η χρήση αυτού του script "
+"δημιουργεί δύο προβλήματα:"
 
 #: using/ios.rst:125
 msgid ""
 "The output of ``xcrun`` includes paths that are machine specific, resulting "
 "in a sysconfig module that cannot be shared between users; and"
 msgstr ""
+"Η έξοδος του ``xcrun`` περιλαμβάνει διαδρομές που εξαρτώνται από τη "
+"συγκεκριμένη μηχανή, με αποτέλεσμα ένα module sysconfig να μην μπορεί να "
+"κοινοποιηθεί μεταξύ διαφορετικών χρηστών· και"
 
 #: using/ios.rst:128
 msgid ""
@@ -212,6 +310,11 @@ msgid ""
 "command line at the first space to get the path to the compiler executable; "
 "this isn't the case when using ``xcrun``."
 msgstr ""
+"Αυτό έχει ως αποτέλεσμα οι ορισμοί των ``CC``/``CPP``/``LD``/``AR`` να "
+"περιλαμβάνουν κενά. Υπάρχουν πολλά εργαλεία στο οικοσύστημα της C που "
+"υποθέτουν ότι η εντολή μπορεί να χωριστεί στον πρώτο κενό χαρακτήρα ώστε να "
+"βρεθεί η διαδρομή προς το εκτελέσιμο του μεταγλωττιστή∙ κάτι που δεν ισχύει "
+"όταν χρησιμοποιείται το ``xcrun``."
 
 #: using/ios.rst:133
 msgid ""
@@ -224,14 +327,25 @@ msgid ""
 "users to compile their own modules. When compiling third-party Python "
 "modules for iOS, you should ensure these stub binaries are on your path."
 msgstr ""
+"Για να αποφευχθούν αυτά τα προβλήματα, η Python παρέχει stubs για αυτά τα "
+"εργαλεία. Αυτά τα stubs είναι wrapper scripts κελύφους που τυλίγουν τα "
+"υποκείμενα εργαλεία του ``xcrun``, και διανέμονται σε έναν φάκελο ``bin`` "
+"μαζί με το μεταγλωττισμένο iOS framework. Αυτά τα scripts μπορούν να "
+"προσαρμοστούν σε διαφορετικές τοποθεσίες, και πάντα θα δείχνουν στις σωστές "
+"τοπικές διαδρομές του συστήματος. Συμπεριλαμβάνοντας αυτά τα scripts στο "
+"φάκελο bin που συνοδεύει ένα framework, το περιεχόμενο του module "
+"``sysconfig`` γίνεται χρήσιμο για τους τελικούς χρήστες, ώστε να μπορούν να "
+"μεταγλωττίζουν τα δικά τους modules. Όταν μεταγλωττίζετε τρίτα modules "
+"Python για iOS, πρέπει να βεβαιωθείτε ότι αυτά τα stub binaries είναι στο "
+"path σας."
 
 #: using/ios.rst:143
 msgid "Installing Python on iOS"
-msgstr ""
+msgstr "Εγκατάσταση της Python σε iOS"
 
 #: using/ios.rst:146
 msgid "Tools for building iOS apps"
-msgstr ""
+msgstr "Εργαλεία για την κατασκευή εφαρμογών iOS"
 
 #: using/ios.rst:148
 msgid ""
@@ -242,6 +356,12 @@ msgid ""
 "Xcode Command Line Tools are not sufficient for iOS development; you need a "
 "*full* Xcode install."
 msgstr ""
+"Η κατασκευή εφαρμογών για iOS απαιτεί τη χρήση των εργαλείων Xcode της Apple."
+"Συνιστάται έντονα να χρησιμοποιείτε την πιο πρόσφατη σταθερή έκδοση του "
+"Xcode. Αυτό θα απαιτήσει να έχετε την πιο πρόσφατη (ή τη δεύτερη πιο "
+"πρόσφατη) έκδοση του macOS, καθώς η Apple δεν υποστηρίζει παλαιότερες "
+"εκδόσεις macOS με νέες εκδόσεις Xcode. Τα εργαλεία γραμμής εντολών Xcode δεν "
+"επαρκούν για ανάπτυξη iOS∙ χρειάζεται μια *πλήρης* εγκατάσταση του Xcode."
 
 #: using/ios.rst:155
 msgid ""
@@ -251,10 +371,15 @@ msgid ""
 "iOS Simulator Platform by selecting from the Platforms tab of the Xcode "
 "Settings panel."
 msgstr ""
+"Αν θέλετε να τρέξετε τον κώδικά σας στον προσομοιωτή iOS, θα χρειαστεί "
+"επίσης να εγκαταστήσετε μια Πλατφόρμα Προσομοίωσης iOS. Κατά την πρώτη "
+"εκκίνηση του Xcode, θα σας ζητηθεί να επιλέξετε μια Πλατφόρμα Προσομοίωσης "
+"iOS. Εναλλακτικά, μπορείτε να προσθέσετε μια Πλατφόρμα προσομοίωσηςiOS "
+"επιλέγοντας την από την καρτέλα Platforms στο πάνελ ρυθμίσεων του Xcode."
 
 #: using/ios.rst:163
 msgid "Adding Python to an iOS project"
-msgstr ""
+msgstr "Προσθήκη Python σε ένα έργο iOS"
 
 #: using/ios.rst:165
 msgid ""
@@ -263,10 +388,14 @@ msgid ""
 "find a library like `PythonKit <https://github.com/pvieito/PythonKit>`__ to "
 "be helpful."
 msgstr ""
+"Η Python μπορεί να προστεθεί σε οποιοδήποτε έργο iOS, χρησιμοποιώντας είτε "
+"Swift είτε Objective C. Τα ακόλουθα παραδείγματα θα χρησιμοποιήσουν "
+"Objective C∙ εάν χρησιμοποιείτε Swift, μπορεί να σας φανεί χρήσιμη μια "
+"βιβλιοθήκη όπως το `PythonKit <https://github.com/pvieito/PythonKit>`__ ."
 
 #: using/ios.rst:170
 msgid "To add Python to an iOS Xcode project:"
-msgstr ""
+msgstr "Για να προσθέσετε Python σε ένα έργο iOS Xcode:"
 
 #: using/ios.rst:172
 msgid ""
@@ -276,6 +405,12 @@ msgid ""
 "that supports ``arm64-apple-ios``, plus one of either ``arm64-apple-ios-"
 "simulator`` or ``x86_64-apple-ios-simulator``."
 msgstr ""
+"Δημιουργήστε ή αποκτήστε ένα Python ``XCFramework``. Δείτε τις οδηγίες στο :"
+"source:`iOS/README.rst` (στη διανομή πηγαίου κώδικα CPython) για "
+"λεπτομέρειες σχετικά με τον τρόπο δημιουργίας ενός Python ``XCFramework``. "
+"Κατ' ελάχιστον, θα χρειαστείτε μια έκδοση που υποστηρίζει το ``arm64-apple-"
+"ios``, καθώς και ένα από τα ``arm64-apple-ios-simulator`` ή ``x86_64-apple-"
+"ios-simulator``."
 
 #: using/ios.rst:178
 msgid ""
@@ -284,6 +419,10 @@ msgid ""
 "of your project; however, you can use any other location that you want by "
 "adjusting paths as needed."
 msgstr ""
+"Μεταφέρετε το ``XCframework`` στο iOS έργο σας. Στις ακόλουθες οδηγίες, θα "
+"υποθέσουμε ότι έχετε αποθέσει το ``XCframework`` στη ρίζα του έργου σας "
+"ωστόσο, μπορείτε να χρησιμοποιήσετε οποιαδήποτε άλλη τοποθεσία θέλετε "
+"προσαρμόζοντας τις διαδρομές όπως απαιτείται."
 
 #: using/ios.rst:183
 msgid ""
@@ -293,55 +432,68 @@ msgid ""
 "adjusting paths as needed. Ensure that this folder is associated with your "
 "app target."
 msgstr ""
+"Προσθέστε τον κώδικα της εφαρμογής σας ως φάκελο στο έργο σας στο Xcode. "
+"Στις παρακάτω οδηγίες, θα υποθέσουμε ότι ο κώδικας του χρήστη βρίσκεται σε "
+"έναν φάκελο με όνομα ``app`` στη ριζική τοποθεσία του έργου σας· μπορείτε να "
+"χρησιμοποιήσετε οποιαδήποτε άλλη τοποθεσία, προσαρμόζοντας αναλόγως τις "
+"διαδρομές. Βεβαιωθείτε ότι αυτός ο φάκελος έχει συσχετιστεί με τον στόχο "
+"(target) της εφαρμογής σας."
 
 #: using/ios.rst:189
 msgid ""
 "Select the app target by selecting the root node of your Xcode project, then "
 "the target name in the sidebar that appears."
 msgstr ""
+"Επιλέξτε τον στόχο της εφαρμογής επιλέγοντας τον ριζικό κόμβο του έργου σας "
+"στο Xcode και στη συνέχεια το όνομα του στόχου στην πλαϊνή στήλη που "
+"εμφανίζεται."
 
 #: using/ios.rst:192
 msgid ""
 "In the \"General\" settings, under \"Frameworks, Libraries and Embedded "
 "Content\", add ``Python.xcframework``, with \"Embed & Sign\" selected."
 msgstr ""
+"Στις ρυθμίσεις  \"General\" , κάτω από \"Frameworks, Libraries and Embedded "
+"Content\", προσθέστε το ``Python.xcframework``, με επιλεγμένη την επιλογή "
+"\"Embed & Sign\""
 
 #: using/ios.rst:195
 msgid "In the \"Build Settings\" tab, modify the following:"
-msgstr ""
+msgstr "Στην καρτέλα \"Build Settings\" , τροποποιήστε τα εξής"
 
 #: using/ios.rst:197
 msgid "Build Options"
-msgstr ""
+msgstr "Build Options"
 
 #: using/ios.rst:199
 msgid "User Script Sandboxing: No"
-msgstr ""
+msgstr "User Script Sandboxing: No"
 
 #: using/ios.rst:200
 msgid "Enable Testability: Yes"
-msgstr ""
+msgstr "Enable Testability: Yes"
 
 #: using/ios.rst:202
 msgid "Search Paths"
-msgstr ""
+msgstr "Search Paths"
 
 #: using/ios.rst:204
 msgid "Framework Search Paths: ``$(PROJECT_DIR)``"
-msgstr ""
+msgstr "Framework Search Paths: ``$(PROJECT_DIR)``"
 
 #: using/ios.rst:205
 msgid ""
 "Header Search Paths: ``\"$(BUILT_PRODUCTS_DIR)/Python.framework/Headers\"``"
 msgstr ""
+"Header Search Paths: ``\"$(BUILT_PRODUCTS_DIR)/Python.framework/Headers\"``"
 
 #: using/ios.rst:207
 msgid "Apple Clang - Warnings - All languages"
-msgstr ""
+msgstr "Apple Clang - Warnings - All languages"
 
 #: using/ios.rst:209
 msgid "Quoted Include In Framework Header: No"
-msgstr ""
+msgstr "Quoted Include In Framework Header: No"
 
 #: using/ios.rst:211
 msgid ""
@@ -352,6 +504,13 @@ msgid ""
 "disable the \"Based on dependency analysis\" checkbox, and set the script "
 "content to:"
 msgstr ""
+"Προσθέστε ένα βήμα κατασκευής που αντιγράφει τη βασική βιβλιοθήκη Python "
+"στην εφαρμογή σας. Στην καρτέλα \"Build Phases\", προσθέστε ένα νέο βήμα "
+"κατασκευής \"Run Script\" *πριν* από το βήμα \"Embed Frameworks\", αλλά "
+"*μετά* το βήμα \"Copy Bundle Resources\". Ονομάστε το βήμα \"Install Target "
+"Specific Python Standard Library\", απενεργοποιήστε το πλαίσιο επιλογής "
+"\"Based on dependency analysis\" και ορίστε το περιεχόμενο του script ως "
+"εξής:"
 
 #: using/ios.rst:218
 msgid ""
@@ -359,70 +518,95 @@ msgid ""
 "source $PROJECT_DIR/Python.xcframework/build/build_utils.sh\n"
 "install_python Python.xcframework app"
 msgstr ""
+"set -e\n"
+"source $PROJECT_DIR/Python.xcframework/build/build_utils.sh\n"
+"install_python Python.xcframework app"
 
 #: using/ios.rst:224
 msgid ""
 "If you have placed your XCframework somewhere other than the root of your "
 "project, modify the path to the first argument."
 msgstr ""
+"Εάν έχετε τοποθετήσει το XCframework κάπου αλλού εκτός από τη ρίζα του έργου "
+"σας, τροποποιήστε τη διαδρομή στο πρώτο όρισμα."
 
 #: using/ios.rst:227
 msgid ""
 "Add Objective C code to initialize and use a Python interpreter in embedded "
 "mode. You should ensure that:"
 msgstr ""
+"Προσθέστε κώδικα Objective C για να αρχικοποιήσετε και να χρησιμοποιήσετε "
+"έναν διερμηνέα Python σε ενσωματωμένη λειτουργία. Θα πρέπει να βεβαιωθείτε "
+"ότι:"
 
 #: using/ios.rst:230
 msgid "UTF-8 mode (:c:member:`PyPreConfig.utf8_mode`) is *enabled*;"
 msgstr ""
+"Η λειτουργία UTF-8 (:c:member:`PyPreConfig.utf8_mode`) είναι "
+"*ενεργοποιημένη* ∙"
 
 #: using/ios.rst:231
 msgid "Buffered stdio (:c:member:`PyConfig.buffered_stdio`) is *disabled*;"
 msgstr ""
+"Το Buffered stdio (:c:member:`PyConfig.buffered_stdio`) είναι "
+"*απενεργοποιημένο* ∙"
 
 #: using/ios.rst:232
 msgid "Writing bytecode (:c:member:`PyConfig.write_bytecode`) is *disabled*;"
 msgstr ""
+"Η εγγραφή bytecode (:c:member:`PyConfig.write_bytecode`) είναι "
+"*απενεργοποιημένη* ∙"
 
 #: using/ios.rst:233
 msgid ""
 "Signal handlers (:c:member:`PyConfig.install_signal_handlers`) are *enabled*;"
 msgstr ""
+"Οι χειριστές σημάτων (:c:member:`PyConfig.install_signal_handlers`) είναι "
+"*ενεργοποιημένοι* ∙"
 
 #: using/ios.rst:234
 msgid ""
 "System logging (:c:member:`PyConfig.use_system_logger`) is *enabled* "
 "(optional, but strongly recommended; this is enabled by default);"
 msgstr ""
+"Η καταγραφή συστήματος (:c:member:`PyConfig.use_system_logger`) είναι "
+"*ενεργοποιημένη* (προαιρετική, αλλά συνίσταται ανεπιφύλακτα∙ είναι "
+"ενεργοποιημένη από προεπιλογή)∙"
 
 #: using/ios.rst:236
 msgid ""
 ":envvar:`PYTHONHOME` for the interpreter is configured to point at the "
 "``python`` subfolder of your app's bundle; and"
 msgstr ""
+"Το :envvar:`PYTHONHOME` για τον διερμηνέα έχει ρυθμιστεί ώστε να δείχνει "
+"στον υποφάκελο ``python`` της δέσμης της εφαρμογής σας∙ και"
 
 #: using/ios.rst:238
 msgid "The :envvar:`PYTHONPATH` for the interpreter includes:"
-msgstr ""
+msgstr "Το :envvar:`PYTHONPATH` για τον διερμηνέα περιλαμβάνει:"
 
 #: using/ios.rst:240
 msgid "the ``python/lib/python3.X`` subfolder of your app's bundle,"
-msgstr ""
+msgstr "τον υποφάκελο ``python/lib/python3.X`` της δέσμης της εφαρμογής σας,"
 
 #: using/ios.rst:241
 msgid ""
 "the ``python/lib/python3.X/lib-dynload`` subfolder of your app's bundle, and"
 msgstr ""
+"τον υποφάκελο ``python/lib/python3.X/lib-dynload`` της δέσμης της εφαρμογής "
+"σας, και"
 
 #: using/ios.rst:242
 msgid "the ``app`` subfolder of your app's bundle"
-msgstr ""
+msgstr "τον υποφάκελο ``app`` της δέσμης της εφαρμογής σας"
 
 #: using/ios.rst:244
 msgid ""
 "Your app's bundle location can be determined using ``[[NSBundle mainBundle] "
 "resourcePath]``."
 msgstr ""
+"Η τοποθεσία της εφαρμογής σας στο πακέτο μπορεί να προσδιοριστεί "
+"χρησιμοποιώντας την εντολή ``[[NSBundle mainBundle] resourcePath]``."
 
 #: using/ios.rst:247
 msgid ""
@@ -430,6 +614,9 @@ msgid ""
 "pure Python application code, named ``app``. If you have third-party binary "
 "modules in your app, some additional steps will be required:"
 msgstr ""
+"Τα βήματα 7 και 8 αυτών των οδηγιών υποθέτουν ότι έχετε έναν μόνο φάκελο με "
+"καθαρό κώδικα εφαρμογής Python, με όνομα ``app``. Εάν έχετε δυαδικά modules "
+"τρίτων στην εφαρμογή σας, θα απαιτηθούν επιπλέον βήματα:"
 
 #: using/ios.rst:251
 msgid ""
@@ -439,6 +626,12 @@ msgid ""
 "the platform a specific build is targeting (i.e., delete any device binaries "
 "if you're building an app targeting the simulator)."
 msgstr ""
+"Πρέπει να βεβαιωθείτε ότι τυχόν φάκελοι που περιέχουν δυαδικά αρχεία τρίτων "
+"είναι είτε συσχετισμένοι με τον στόχο της εφαρμογής είτε αντιγραμμένοι ως "
+"μέρος του βήματος 7. Το βήμα 7 θα πρέπει επίσης να καθαρίσει τυχόν δυαδικά "
+"αρχεία που δεν είναι κατάλληλα για την πλατφόρμα στην οποία στοχεύει μια "
+"συγκεκριμένη έκδοση (δηλαδή, να διαγράψει τυχόν δυαδικά αρχεία συσκευής εάν "
+"δημιουργείτε μια εφαρμογή που στοχεύει τον προσομοιωτή)."
 
 #: using/ios.rst:257
 msgid ""
@@ -446,6 +639,9 @@ msgid ""
 "folder is added to the end of the call to ``install_python`` in step 7, and "
 "as part of the :envvar:`PYTHONPATH` configuration in step 8."
 msgstr ""
+"Εάν χρησιμοποιείτε ξεχωριστό φάκελο για πακέτα τρίτων, βεβαιωθείτε ότι ο "
+"φάκελος προστίθεται στο τέλος της κλήσης προς το ``install_python`` στο βήμα "
+"7, και ως μέρος της διαμόρφωσης :envvar:`PYTHONPATH` στο βήμα 8."
 
 #: using/ios.rst:261
 msgid ""
@@ -454,10 +650,14 @@ msgid ""
 "`site.addsitedir`), rather than adding to :envvar:`PYTHONPATH` or :attr:`sys."
 "path` directly."
 msgstr ""
+"Εάν οποιοιδήποτε από τους φακέλους που περιέχουν πακέτα τρίτων θα περιέχουν "
+"αρχεία ``.pth``, θα πρέπει να προσθέσετε αυτόν τον φάκελο ως *site "
+"directory* (χρησιμοποιώντας τη :meth:`site.addsitedir`), αντί να τον "
+"προσθέσετε απευθείας στο :envvar:`PYTHONPATH` ή στο :attr:`sys.path`."
 
 #: using/ios.rst:267
 msgid "Testing a Python package"
-msgstr ""
+msgstr "Δοκιμή ενός πακέτου Python"
 
 #: using/ios.rst:269
 msgid ""
@@ -466,6 +666,11 @@ msgid ""
 "This testbed can also be used as a testbed project for running your Python "
 "library's test suite on iOS."
 msgstr ""
+"Το δένδρο πηγαίου κώδικα της CPython περιέχει το :source:`a testbed project "
+"<iOS/testbed>` που χρησιμοποιείται για την εκτέλεση της σουίτας δοκιμών "
+"CPython στον προσομοιωτή iOS. Αυτό το δοκιμαστικό πλαίσιο μπορεί επίσης να "
+"χρησιμοποιηθεί ως έργο δοκιμαστικής πλατφόρμας για την εκτέλεση της σουίτας "
+"δοκιμών της βιβλιοθήκης Python σε iOS."
 
 #: using/ios.rst:273
 msgid ""
@@ -473,22 +678,30 @@ msgid ""
 "README.md` for details), create a clone of the Python iOS testbed project. "
 "If you used the ``Apple`` build script to build the XCframework, you can run:"
 msgstr ""
+"Αφού δημιουργήσετε ή αποκτήσετε ένα iOS XCFramework (δείτε το :source:`iOS/"
+"README.rst` για λεπτομέρειες), δημιουργήστε ένα κλώνο του έργου δοκιμαστικής "
+"πλατφόρμας Python iOS. Εάν χρησιμοποιήσατε το script κατασκευής ``Apple`` "
+"για να δημιουργήσετε το XCframework, μπορείτε να εκτελέσετε:"
 
 #: using/ios.rst:277
 msgid ""
 "$ python cross-build/iOS/testbed clone --app <path/to/module1> --app <path/"
 "to/module2> app-testbed"
 msgstr ""
+"$ python cross-build/iOS/testbed clone --app <path/to/module1> --app <path/"
+"to/module2> app-testbed"
 
 #: using/ios.rst:281
 msgid "Or, if you've sourced your own XCframework, by running:"
-msgstr ""
+msgstr "Ή, εάν έχετε δημιουργήσει το δικό σας XCframework, εκτελώντας:"
 
 #: using/ios.rst:283
 msgid ""
 "$ python Apple/testbed clone --platform iOS --framework <path/to/Python."
 "xcframework> --app <path/to/module1> --app <path/to/module2> app-testbed"
 msgstr ""
+"$ python Apple/testbed clone --platform iOS --framework <path/to/Python."
+"xcframework> --app <path/to/module1> --app <path/to/module2> app-testbed"
 
 #: using/ios.rst:287
 msgid ""
@@ -499,6 +712,13 @@ msgid ""
 "they can be installed into the ``app-testbed/Testbed/app_packages`` folder "
 "(using ``pip install --target app-testbed/Testbed/app_packages`` or similar)."
 msgstr ""
+"Οποιοιδήποτε φάκελοι καθοριστούν με το flag ``--app`` θα αντιγραφούν στο "
+"κλωνοποιημένο έργο testbed. Το τελικό testbed θα δημιουργηθεί στον φάκελο "
+"``app-testbed``. Σε αυτό το παράδειγμα, τα ``module1`` και ``module2`` θα "
+"είναι module που μπορούν να εισαχθούν κατά τον χρόνο εκτέλεσης. Αν το έργο "
+"σας έχει επιπλέον εξαρτήσεις μπορείτε να τις εγκαταστήσετε στον φάκελο ``app-"
+"testbed/Testbed/app_packages`` (χρησιμοποιώντας το ``pip install --target "
+"app-testbed/Testbed/app_packages`` ή παρόμοια εντολή)."
 
 #: using/ios.rst:294
 msgid ""
@@ -506,10 +726,14 @@ msgid ""
 "app, For example, if ``module1.tests`` was the entry point to your test "
 "suite, you could run:"
 msgstr ""
+"Μπορείτε στη συνέχεια να χρησιμοποιήσετε το φάκελο ``app-testbed`` για να "
+"εκτελέσετε τη σουίτα δοκιμών για την εφαρμογή σας. Για παράδειγμα, εάν το "
+"``module1.tests`` ήταν το σημείο εισόδου για τη σουίτα δοκιμών σας, θα "
+"μπορούσατε να εκτελέσετε:"
 
 #: using/ios.rst:298
 msgid "$ python app-testbed run -- module1.tests"
-msgstr ""
+msgstr "$ python app-testbed run -- module1.tests"
 
 #: using/ios.rst:302
 msgid ""
@@ -517,18 +741,26 @@ msgid ""
 "Python build. Any arguments after the ``--`` will be passed to the testbed "
 "as if they were arguments to ``python -m`` on a desktop machine."
 msgstr ""
+"Αυτό ισοδυναμεί με την εκτέλεση της εντολής ``python -m module1.tests`` σε "
+"μια έκδοση Python για επιτραπέζιους υπολογιστές. Οποιαδήποτε ορίσματα μετά "
+"το ``--`` θα περαστούν στο testbed σαν να ήταν ορίσματα στην εντολή ``python "
+"-m`` σε έναν επιτραπέζιο υπολογιστή."
 
 #: using/ios.rst:306
 msgid "You can also open the testbed project in Xcode by running:"
 msgstr ""
+"Μπορείτε επίσης να ανοίξετε το έργο δοκιμαστικής πλατφόρμας στο Xcode "
+"εκτελώντας:"
 
 #: using/ios.rst:308
 msgid "$ open app-testbed/iOSTestbed.xcodeproj"
-msgstr ""
+msgstr "$ open app-testbed/iOSTestbed.xcodeproj"
 
 #: using/ios.rst:312
 msgid "This will allow you to use the full Xcode suite of tools for debugging."
 msgstr ""
+"Αυτό θα σας επιτρέψει να χρησιμοποιήσετε την πλήρη σουίτα εργαλείων Xcode "
+"για τον εντοπισμό σφαλμάτων."
 
 #: using/ios.rst:314
 msgid ""
@@ -538,6 +770,12 @@ msgid ""
 "\"Configurations\" tab. Modify the \"Arguments Passed On Launch\" value to "
 "change the testing arguments."
 msgstr ""
+"Τα ορίσματα που χρησιμοποιούνται για την εκτέλεση της σουίτας δοκιμών "
+"ορίζονται ως μέρος του σχεδίου δοκιμών. Για να τροποποιήσετε το σχέδιο "
+"δοκιμών, επιλέξτε τον κόμβο του σχεδίου δοκιμών στο δέντρο του έργου (θα "
+"πρέπει να είναι το πρώτο παιδί του ριζικού κόμβου) και επιλέξτε την καρτέλα "
+"\"Configurations\". Τροποποιήστε την τιμή \"Arguments Passed On Launch\" για "
+"να αλλάξετε τα ορίσματα δοκιμής."
 
 #: using/ios.rst:320
 msgid ""
@@ -546,10 +784,15 @@ msgid ""
 "default debugger configuration disables automatic breakpoints on the "
 "``SIGINT``, ``SIGUSR1``, ``SIGUSR2``, and ``SIGXFSZ`` signals."
 msgstr ""
+"Το σχέδιο δοκιμών απενεργοποιεί επίσης τις παράλληλες δοκιμές και καθορίζει "
+"τη χρήση του αρχείου ``Testbed.lldbinit`` για την παροχή διαμόρφωσης του "
+"αποσφαλματωτή. Η προεπιλεγμένη διαμόρφωση του αποσφαλματωτή απενεργοποιεί "
+"τους αυτόματους σημερινούς σταθμούς (breakpoints) στα σήματα ``SIGINT``, "
+"``SIGUSR1``, ``SIGUSR2``, και ``SIGXFSZ``."
 
 #: using/ios.rst:326
 msgid "App Store Compliance"
-msgstr ""
+msgstr "Συμμόρφωση με το App Store"
 
 #: using/ios.rst:328
 msgid ""
@@ -560,10 +803,17 @@ msgid ""
 "problematic code. There are some steps that must be taken to ensure that "
 "your app will be able to pass these validation steps."
 msgstr ""
+"Ο μόνος μηχανισμός για τη διανομή εφαρμογών σε τρίτες συσκευές iOS είναι η "
+"υποβολή της εφαρμογής στο iOS App Store∙ οι εφαρμογές που υποβάλλονται για "
+"διανομή πρέπει να περάσουν τη διαδικασία αξιολόγησης εφαρμογών της Apple. "
+"Αυτή η διαδικασία περιλαμβάνει ένα σύνολο αυτοματοποιημένων κανόνων "
+"επικύρωσης που ελέγχουν τη δέσμη της υποβληθείσας εφαρμογής για προβληματικό "
+"κώδικα. Υπάρχουν ορισμένα βήματα που πρέπει να ληφθούν για να διασφαλιστεί "
+"ότι η εφαρμογή σας θα μπορεί να περάσει αυτά τα βήματα επικύρωσης."
 
 #: using/ios.rst:336
 msgid "Incompatible code in the standard library"
-msgstr ""
+msgstr "Κώδικας ασύμβατος με την τυπική βιβλιοθήκη"
 
 #: using/ios.rst:338
 msgid ""
@@ -572,6 +822,11 @@ msgid ""
 "Apple's review rules cannot be challenged; so, it is necessary to modify the "
 "Python standard library for an app to pass App Store review."
 msgstr ""
+"Η τυπική βιβλιοθήκη Python περιέχει κώδικα που είναι γνωστό ότι παραβιάζει "
+"αυτούς τους αυτοματοποιημένους κανόνες. Ενώ αυτές οι παραβιάσεις φαίνεται να "
+"είναι ψευδώς θετικές, οι κανόνες αξιολόγησης της Apple δεν μπορούν να "
+"αμφισβητηθούν∙ επομένως, είναι απαραίτητο να τροποποιήσετε την τυπική "
+"βιβλιοθήκη Python για να περάσει μια εφαρμογή την αξιολόγηση του App Store."
 
 #: using/ios.rst:343
 msgid ""
@@ -580,10 +835,14 @@ msgid ""
 "issues with the App Store review process. This patch is applied "
 "automatically when building for iOS."
 msgstr ""
+"Το δένδρο πηγαίου κώδικα της Python περιέχει :source:`a patch file <Mac/"
+"Resources/app-store-compliance.patch>` που θα αφαιρέσει όλον τον κώδικα που "
+"είναι γνωστό ότι προκαλεί προβλήματα με τη διαδικασία αξιολόγησης του App "
+"Store. Αυτό το patch εφαρμόζεται αυτόματα κατά την κατασκευή για iOS."
 
 #: using/ios.rst:349
 msgid "Privacy manifests"
-msgstr ""
+msgstr "Δηλώσεις απορρήτου"
 
 #: using/ios.rst:351
 msgid ""
@@ -594,6 +853,13 @@ msgid ""
 "file for that library. OpenSSL is one library affected by this requirement, "
 "but there are others."
 msgstr ""
+"Τον Απρίλιο του 2025, η Apple εισήγαγε μια απαίτηση για `ορισμένες "
+"βιβλιοθήκες τρίτων κατασκευαστών να παρέχουν μια Δήλωση Απορρήτου <https://"
+"developer.apple.com/support/third-party-SDK-requirements>`__. Ως αποτέλεσμα, "
+"εάν έχετε ένα δυαδικό module που χρησιμοποιεί μία από τις επηρεαζόμενες "
+"βιβλιοθήκες, πρέπει να παρέχετε ένα αρχείο ``.xcprivacy`` για αυτήν τη "
+"βιβλιοθήκη. Το OpenSSL είναι μία βιβλιοθήκη που επηρεάζεται από αυτήν την "
+"απαίτηση, αλλά υπάρχουν και άλλες."
 
 #: using/ios.rst:358
 msgid ""
@@ -603,3 +869,8 @@ msgid ""
 "installed into the required location when the binary module is converted "
 "into a framework."
 msgstr ""
+"Εάν παράγετε ένα δυαδικό module με το όνομα ``mymodule.so``, και "
+"χρησιμοποιήσετε το script κατασκευής Xcode που περιγράφεται στο βήμα 8 "
+"παραπάνω, μπορείτε να τοποθετήσετε ένα αρχείο ``mymodule.xcprivacy`` δίπλα "
+"στο ``mymodule.so``, και η δήλωση απορρήτου θα εγκατασταθεί στην απαιτούμενη "
+"τοποθεσία όταν το δυαδικό module μετατραπεί σε framework."
