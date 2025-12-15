@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,9 +53,9 @@ msgstr ""
 msgid ""
 "The *echo_char* argument controls how user input is displayed while typing. "
 "If *echo_char* is ``None`` (default), input remains hidden. Otherwise, "
-"*echo_char* must be a printable ASCII string and each typed character is "
-"replaced by it. For example, ``echo_char='*'`` will display asterisks "
-"instead of the actual input."
+"*echo_char* must be a single printable ASCII character and each typed "
+"character is replaced by it. For example, ``echo_char='*'`` will display "
+"asterisks instead of the actual input."
 msgstr ""
 
 #: library/getpass.rst:34
@@ -71,19 +71,28 @@ msgid ""
 "you launched IDLE from rather than the idle window itself."
 msgstr ""
 
-#: library/getpass.rst:42
+#: library/getpass.rst:43
+msgid ""
+"On Unix systems, when *echo_char* is set, the terminal will be configured to "
+"operate in :manpage:`noncanonical mode "
+"<termios(3)#Canonical_and_noncanonical_mode>`. In particular, this means "
+"that line editing shortcuts such as :kbd:`Ctrl+U` will not work and may "
+"insert unexpected characters into the input."
+msgstr ""
+
+#: library/getpass.rst:50
 msgid "Added the *echo_char* parameter for keyboard feedback."
 msgstr ""
 
-#: library/getpass.rst:47
+#: library/getpass.rst:55
 msgid "A :exc:`UserWarning` subclass issued when password input may be echoed."
 msgstr ""
 
-#: library/getpass.rst:52
+#: library/getpass.rst:60
 msgid "Return the \"login name\" of the user."
 msgstr ""
 
-#: library/getpass.rst:54
+#: library/getpass.rst:62
 msgid ""
 "This function checks the environment variables :envvar:`LOGNAME`, :envvar:"
 "`USER`, :envvar:`!LNAME` and :envvar:`USERNAME`, in order, and returns the "
@@ -92,10 +101,10 @@ msgid ""
 "support the :mod:`pwd` module, otherwise, an :exc:`OSError` is raised."
 msgstr ""
 
-#: library/getpass.rst:61
+#: library/getpass.rst:69
 msgid "In general, this function should be preferred over :func:`os.getlogin`."
 msgstr ""
 
-#: library/getpass.rst:63
+#: library/getpass.rst:71
 msgid "Previously, various exceptions beyond just :exc:`OSError` were raised."
 msgstr ""
