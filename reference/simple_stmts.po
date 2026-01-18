@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: 2026-01-18 14:20+0200\n"
+"PO-Revision-Date: 2026-01-18 14:54+0200\n"
 "Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -251,23 +251,23 @@ msgstr "Η πρόταση που πρόσθεσε το module :mod:`typing` γι
 
 #: reference/simple_stmts.rst:369
 msgid "Now annotated assignments allow the same expressions in the right hand side as regular assignments. Previously, some expressions (like un-parenthesized tuple expressions) caused a syntax error."
-msgstr ""
+msgstr "Πλέον, οι σχολιασμένες αναθέσεις επιτρέπουν τις ίδιες εκφράσεις στη δεξιά πλευρά με τις κανονικές αναθέσεις. Προηγουμένως, ορισμένες εκφράσεις (όπως οι εκφράσεις tuple χωρίς παρενθέσεις) προκαλούσαν σφάλμα σύνταξης."
 
 #: reference/simple_stmts.rst:374
 msgid "Annotations are now lazily evaluated in a separate :ref:`annotation scope <annotation-scopes>`. If the assignment target is not simple, annotations are never evaluated."
-msgstr ""
+msgstr "Οι σχολιασμοί αξιολογούνται πλέον νωχελικά σε ένα ξεχωριστό :ref:`εύρος σχολιασμού <annotation-scopes>`. Εάν ο στόχος της ανάθεσης δεν είναι απλός, οι σχολιασμοί δεν αξιολογούνται ποτέ."
 
 #: reference/simple_stmts.rst:382
 msgid "The :keyword:`!assert` statement"
-msgstr ""
+msgstr "Η εντολή :keyword:`!assert`"
 
 #: reference/simple_stmts.rst:389
 msgid "Assert statements are a convenient way to insert debugging assertions into a program:"
-msgstr ""
+msgstr "Οι εντολές `assert` είναι ένας βολικός τρόπος για την εισαγωγή ισχυρισμών εντοπισμού σφαλμάτων σε ένα πρόγραμμα:"
 
 #: reference/simple_stmts.rst:395
 msgid "The simple form, ``assert expression``, is equivalent to ::"
-msgstr ""
+msgstr "Η απλή μορφή, ``assert expression``, είναι ισοδύναμη με ::"
 
 #: reference/simple_stmts.rst:397
 msgid ""
@@ -303,7 +303,7 @@ msgstr "Η έκφραση :keyword:`!pass`"
 
 #: reference/simple_stmts.rst:435
 msgid ":keyword:`pass` is a null operation --- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed, for example::"
-msgstr ""
+msgstr "Η εντολή :keyword:`pass` είναι μια κενή λειτουργία --- όταν εκτελείται, δεν συμβαίνει τίποτα. Είναι χρήσιμη ως ένας placeholder όταν απαιτείται μια εντολή συντακτικά, αλλά δεν χρειάζεται να εκτελεστεί κώδικας, για παράδειγμα::"
 
 #: reference/simple_stmts.rst:439
 msgid ""
@@ -311,42 +311,45 @@ msgid ""
 "\n"
 "class C: pass       # a class with no methods (yet)"
 msgstr ""
+"def f(arg): pass    # μια συνάρτηση που δεν κάνει τίποτα (ακόμα)\n"
+"\n"
+"class C: pass       # μια κλάση χωρίς μεθόδους (ακόμα)"
 
 #: reference/simple_stmts.rst:447
 msgid "The :keyword:`!del` statement"
-msgstr ""
+msgstr "Η εντολή :keyword:`!del`"
 
 #: reference/simple_stmts.rst:457
 msgid "Deletion is recursively defined very similar to the way assignment is defined. Rather than spelling it out in full details, here are some hints."
-msgstr ""
+msgstr "Η διαγραφή ορίζεται αναδρομικά με παρόμοιο τρόπο με τον τρόπο που ορίζεται η ανάθεση. Αντί να το εξηγήσουμε λεπτομερώς, εδώ είναι μερικές συμβουλές."
 
 #: reference/simple_stmts.rst:460
 msgid "Deletion of a target list recursively deletes each target, from left to right."
-msgstr ""
+msgstr "Η διαγραφή μιας λίστας προορισμού διαγράφει αναδρομικά κάθε στόχο, από τα αριστερά προς τα δεξιά."
 
 #: reference/simple_stmts.rst:466
 msgid "Deletion of a name removes the binding of that name from the local or global namespace, depending on whether the name occurs in a :keyword:`global` statement in the same code block.  Trying to delete an unbound name raises a :exc:`NameError` exception."
-msgstr ""
+msgstr "Η διαγραφή ενός ονόματος καταργεί τη δέσμευση αυτού του ονόματος από το local ή το global namespace, ανάλογα με το αν το όνομα εμφανίζεται σε μια εντολή :keyword:`global` στο ίδιο κομμάτι κώδικα. Η προσπάθεια διαγραφής ενός μη δεσμευμένου ονόματος προκαλεί μια εξαίρεση :exc:`NameError`."
 
 #: reference/simple_stmts.rst:473
 msgid "Deletion of attribute references, subscriptions and slicings is passed to the primary object involved; deletion of a slicing is in general equivalent to assignment of an empty slice of the right type (but even this is determined by the sliced object)."
-msgstr ""
+msgstr "Η διαγραφή των αναφορών χαρακτηριστικών, των συνδρομών και των τεμαχισμών μεταβιβάζεται στο εμπλεκόμενο πρωτεύον αντικείμενο· η διαγραφή ενός τεμαχισμού είναι γενικά ισοδύναμη με την ανάθεση ενός κενού τεμαχισμού του σωστού τύπου (αλλά ακόμη και αυτό καθορίζεται από το αντικείμενο που τεμαχίζεται)."
 
 #: reference/simple_stmts.rst:478
 msgid "Previously it was illegal to delete a name from the local namespace if it occurs as a free variable in a nested block."
-msgstr ""
+msgstr "Προηγουμένως, ήταν παράνομο να διαγραφεί ένα όνομα από το τοπικό namespace εάν εμφανίζεται ως ελεύθερη μεταβλητή σε ένα εμφωλευμένο μπλοκ."
 
 #: reference/simple_stmts.rst:486
 msgid "The :keyword:`!return` statement"
-msgstr ""
+msgstr "Η εντολή :keyword:`!return`"
 
 #: reference/simple_stmts.rst:496
 msgid ":keyword:`return` may only occur syntactically nested in a function definition, not within a nested class definition."
-msgstr ""
+msgstr "Η εντολή :keyword:`return` μπορεί να εμφανιστεί μόνο συντακτικά ενσωματωμένη σε έναν ορισμό συνάρτησης, όχι μέσα σε έναν εμφωλευμένο ορισμό κλάσης."
 
 #: reference/simple_stmts.rst:499
 msgid "If an expression list is present, it is evaluated, else ``None`` is substituted."
-msgstr ""
+msgstr "Εάν υπάρχει μια λίστα εκφράσεων, αξιολογείται, αλλιώς αντικαθίσταται με το ``None``."
 
 #: reference/simple_stmts.rst:501
 msgid ":keyword:`return` leaves the current function call with the expression list (or ``None``) as return value."
@@ -370,23 +373,27 @@ msgstr "Η εντολή :keyword:`!yield`"
 
 #: reference/simple_stmts.rst:535
 msgid "A :keyword:`yield` statement is semantically equivalent to a :ref:`yield expression <yieldexpr>`. The ``yield`` statement can be used to omit the parentheses that would otherwise be required in the equivalent yield expression statement. For example, the yield statements ::"
-msgstr ""
+msgstr "Μια εντολή :keyword:`yield` είναι σημασιολογικά ισοδύναμη με μια :ref:`yield expression <yieldexpr>`. Η εντολή ``yield`` μπορεί να χρησιμοποιηθεί για την παράλειψη των παρενθέσεων που διαφορετικά θα απαιτούνταν στην ισοδύναμη εντολή έκφρασης απόδοσης. Για παράδειγμα, οι εντολές απόδοσης ::"
 
 #: reference/simple_stmts.rst:540
 msgid ""
 "yield <expr>\n"
 "yield from <expr>"
 msgstr ""
+"yield <expr>\n"
+"yield from <expr>"
 
 #: reference/simple_stmts.rst:543
 msgid "are equivalent to the yield expression statements ::"
-msgstr ""
+msgstr "είναι ισοδύναμες με τις εντολές έκφρασης απόδοσης ::"
 
 #: reference/simple_stmts.rst:545
 msgid ""
 "(yield <expr>)\n"
 "(yield from <expr>)"
 msgstr ""
+"(yield <expr>)\n"
+"(yield from <expr>)"
 
 #: reference/simple_stmts.rst:548
 msgid "Yield expressions and statements are only used when defining a :term:`generator` function, and are only used in the body of the generator function.  Using :keyword:`yield` in a function definition is sufficient to cause that definition to create a generator function instead of a normal function."
@@ -410,11 +417,11 @@ msgstr "Διαφορετικά, η :keyword:`raise` αξιολογεί την π
 
 #: reference/simple_stmts.rst:580
 msgid "The :dfn:`type` of the exception is the exception instance's class, the :dfn:`value` is the instance itself."
-msgstr ""
+msgstr "Ο :dfn:`τύπος` της εξαίρεσης είναι η κλάση του στιγμιοτύπου της εξαίρεσης, η :dfn:`τιμή` είναι το ίδιο το στιγμιότυπο."
 
 #: reference/simple_stmts.rst:585
 msgid "A traceback object is normally created automatically when an exception is raised and attached to it as the :attr:`~BaseException.__traceback__` attribute. You can create an exception and set your own traceback in one step using the :meth:`~BaseException.with_traceback` exception method (which returns the same exception instance, with its traceback set to its argument), like so::"
-msgstr ""
+msgstr "Ένα αντικείμενο ανίχνευσης (traceback) δημιουργείται κανονικά αυτόματα όταν προκαλείται μια εξαίρεση και επισυνάπτεται σε αυτήν ως το χαρακτηριστικό :attr:`~BaseException.__traceback__`. Μπορείτε να δημιουργήσετε μια εξαίρεση και να ορίσετε τη δική σας ανίχνευση σε ένα βήμα χρησιμοποιώντας τη μέθοδο εξαίρεσης :meth:`~BaseException.with_traceback` (η οποία επιστρέφει το ίδιο στιγμιότυπο εξαίρεσης, με το traceback του ορισμένο στο όρισμά του), ως εξής::"
 
 #: reference/simple_stmts.rst:591
 msgid "raise Exception(\"foo occurred\").with_traceback(tracebackobj)"
@@ -659,15 +666,15 @@ msgstr ""
 
 #: reference/simple_stmts.rst:828
 msgid "If the list of identifiers is replaced by a star (``'*'``), all public names defined in the module are bound in the local namespace for the scope where the :keyword:`import` statement occurs."
-msgstr ""
+msgstr "Εάν η λίστα των αναγνωριστικών αντικατασταθεί από έναν αστερίσκο (``'*'``), όλα τα δημόσια ονόματα που ορίζονται στο module δεσμεύονται στο τοπικό namespace για το εύρος όπου εμφανίζεται η εντολή :keyword:`import`."
 
 #: reference/simple_stmts.rst:837
 msgid "The *public names* defined by a module are determined by checking the module's namespace for a variable named ``__all__``; if defined, it must be a sequence of strings which are names defined or imported by that module.  The names given in ``__all__`` are all considered public and are required to exist.  If ``__all__`` is not defined, the set of public names includes all names found in the module's namespace which do not begin with an underscore character (``'_'``).  ``__all__`` should contain the entire public API. It is intended to avoid accidentally exporting items that are not part of the API (such as library modules which were imported and used within the module)."
-msgstr ""
+msgstr "Τα *δημόσια ονόματα* που ορίζονται από ένα module καθορίζονται ελέγχοντας το namespace του module για μια μεταβλητή με το όνομα ``__all__``· εάν οριστεί, πρέπει να είναι μια ακολουθία συμβολοσειρών που είναι ονόματα που ορίζονται ή εισάγονται από αυτό το module. Τα ονόματα που δίνονται στο ``__all__`` θεωρούνται όλα δημόσια και απαιτείται να υπάρχουν. Εάν το ``__all__`` δεν έχει οριστεί, το σύνολο των δημόσιων ονομάτων περιλαμβάνει όλα τα ονόματα που βρίσκονται στο namespace του module που δεν ξεκινούν με χαρακτήρα κάτω παύλας (``'_'``). Το ``__all__`` πρέπει να περιέχει ολόκληρο το δημόσιο API. Προορίζεται να αποφευχθεί η τυχαία εξαγωγή στοιχείων που δεν αποτελούν μέρος του API (όπως τα modules βιβλιοθηκών που εισήχθησαν και χρησιμοποιήθηκαν μέσα στο module)."
 
 #: reference/simple_stmts.rst:847
 msgid "The wild card form of import --- ``from module import *`` --- is only allowed at the module level.  Attempting to use it in class or function definitions will raise a :exc:`SyntaxError`."
-msgstr ""
+msgstr "Η μορφή εισαγωγής με χαρακτήρα μπαλαντέρ --- ``from module import *`` --- επιτρέπεται μόνο σε επίπεδο module. Η προσπάθεια χρήσης της σε ορισμούς κλάσεων ή συναρτήσεων θα προκαλέσει :exc:`SyntaxError`."
 
 #: reference/simple_stmts.rst:854
 msgid "When specifying what module to import you do not have to specify the absolute name of the module. When a module or package is contained within another package it is possible to make a relative import within the same top package without having to mention the package name. By using leading dots in the specified module or package after :keyword:`from` you can specify how high to traverse up the current package hierarchy without specifying exact names. One leading dot means the current package where the module making the import exists. Two dots means up one package level. Three dots is up two levels, etc. So if you execute ``from . import mod`` from a module in the ``pkg`` package then you will end up importing ``pkg.mod``. If you execute ``from ..subpkg2 import mod`` from within ``pkg.subpkg1`` you will import ``pkg.subpkg2.mod``. The specification for relative imports is contained in the :ref:`relativeimports` section."
