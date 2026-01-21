@@ -50,7 +50,7 @@ cd python-docs-el/
 4. Aρχικοποιήσετε το περιεχόμενο των υπο-ενοτήτων (submodules) για να κατέβουν τα απαραίτητα αρχεία.
 
 ```bash
-git submodule update --init --recursive
+git submodule update --init --recursive --depth 1
 ```
 
 5. Προσθέστε το επίσημο repository ως upstream:
