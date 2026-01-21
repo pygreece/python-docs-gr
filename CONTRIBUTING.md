@@ -47,13 +47,19 @@ git clone --recursive git@github.com:<το username σας>/python-docs-el.git
 cd python-docs-el/
 ```
 
-4. Προσθέστε το επίσημο repository ως upstream:
+4. Aρχικοποιήσετε το περιεχόμενο των υπο-ενοτήτων (submodules) για να κατέβουν τα απαραίτητα αρχεία.
+
+```bash
+git submodule update --init --recursive
+```
+
+5. Προσθέστε το επίσημο repository ως upstream:
 
 ```bash
 git remote add upstream git@github.com:python/python-docs-el.git
 ```
 
-5. Προσθέστε το κατάλληλο URL για το upstream repository σας:
+6. Προσθέστε το κατάλληλο URL για το upstream repository σας:
 
 ```bash
 git remote set-url --push upstream git@github.com:<your-username>/cpython.git
