@@ -47,7 +47,7 @@ git clone --recursive git@github.com:<το username σας>/python-docs-el.git
 cd python-docs-el/
 ```
 
-4. Aρχικοποιήσετε το περιεχόμενο των υπο-ενοτήτων (submodules) για να κατέβουν τα απαραίτητα αρχεία.
+4. Aρχικοποιήστε το περιεχόμενο των υπο-ενοτήτων (submodules) για να κατέβουν τα απαραίτητα αρχεία.
 
 ```bash
 git submodule update --init --recursive --depth 1
