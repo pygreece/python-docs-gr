@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-01-12 19:30+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,12 +20,15 @@ msgstr ""
 #: library/pyexpat.rst:2
 msgid ":mod:`!xml.parsers.expat` --- Fast XML parsing using Expat"
 msgstr ""
+":mod:`!xml.parsers.expat` --- Γρήγορη ανάλυση XML χρησιμοποιώντας το Expat"
 
 #: library/pyexpat.rst:21
 msgid ""
 "If you need to parse untrusted or unauthenticated data, see :ref:`xml-"
 "security`."
 msgstr ""
+"Εάν χρειάζεται να αναλύσετε μη αξιόπιστα ή μη πιστοποιημένα δεδομένα, δείτε :"
+"ref:`xml-security`."
 
 #: library/pyexpat.rst:27
 msgid ""
@@ -37,38 +40,54 @@ msgid ""
 "parser, the handler functions are called for the character data and markup "
 "in the XML document."
 msgstr ""
+"Το :mod:`xml.parsers.expat` module είναι μια διεπαφή Python στον μη "
+"επικυρωτικό αναλυτή XML Expat. Το module παρέχει έναν μόνο τύπο επέκτασης, :"
+"class:`xmlparser`, που αντιπροσωπεύει την τρέχουσα κατάσταση ενός αναλυτή "
+"XML. Αφού δημιουργηθεί ένα αντικείμενο :class:`xmlparser`, διάφορα "
+"χαρακτηριστικά του αντικειμένου μπορούν να οριστούν σε συναρτήσεις "
+"χειρισμού. Όταν ένα έγγραφο XML τροφοδοτείται στον αναλυτή, οι συναρτήσεις "
+"χειρισμού καλούνται για τα δεδομένα χαρακτήρων και τη σήμανση στο έγγραφο "
+"XML."
 
 #: library/pyexpat.rst:37
 msgid ""
 "This module uses the :mod:`pyexpat` module to provide access to the Expat "
 "parser.  Direct use of the :mod:`pyexpat` module is deprecated."
 msgstr ""
+"Αυτό το module χρησιμοποιεί το :mod:`pyexpat` module για να παρέχει πρόσβαση "
+"στον αναλυτή Expat. Η άμεση χρήση του :mod:`pyexpat` module δεν συνιστάται "
+"πλέον."
 
 #: library/pyexpat.rst:40
 msgid "This module provides one exception and one type object:"
-msgstr ""
+msgstr "Αυτό το module παρέχει μια εξαίρεση και έναν τύπο αντικειμένου:"
 
 #: library/pyexpat.rst:45
 msgid ""
 "The exception raised when Expat reports an error.  See section :ref:"
 "`expaterror-objects` for more information on interpreting Expat errors."
 msgstr ""
+"Η εξαίρεση γίνεται raise όταν το Expat αναφέρει ένα σφάλμα. Δείτε την "
+"ενότητα :ref:`expaterror-objects` για περισσότερες πληροφορίες σχετικά με "
+"την ερμηνεία σφαλμάτων Expat."
 
 #: library/pyexpat.rst:51
 msgid "Alias for :exc:`ExpatError`."
-msgstr ""
+msgstr "Ψευδώνυμο για :exc:`ExpatError`."
 
 #: library/pyexpat.rst:56
 msgid "The type of the return values from the :func:`ParserCreate` function."
-msgstr ""
+msgstr "Ο τύπος των τιμών επιστροφής από τη συνάρτηση :func:`ParserCreate`."
 
 #: library/pyexpat.rst:58
 msgid "The :mod:`xml.parsers.expat` module contains two functions:"
-msgstr ""
+msgstr "Το :mod:`xml.parsers.expat` module περιέχει δύο συναρτήσεις:"
 
 #: library/pyexpat.rst:63
 msgid "Returns an explanatory string for a given error number *errno*."
 msgstr ""
+"Επιστρέφει μια επεξηγηματική συμβολοσειρά για έναν δεδομένο αριθμό σφάλματος "
+"*errno*."
 
 #: library/pyexpat.rst:68
 msgid ""
@@ -79,6 +98,13 @@ msgid ""
 "(Latin1), and ASCII.  If *encoding* [1]_ is given it will override the "
 "implicit or explicit encoding of the document."
 msgstr ""
+"Δημιουργεί και επιστρέφει ένα νέο αντικείμενο :class:`xmlparser`. Το "
+"*encoding*, εάν καθοριστεί, πρέπει να είναι μια συμβολοσειρά που ονομάζει "
+"την κωδικοποίηση που χρησιμοποιείται από τα δεδομένα XML. Το Expat δεν "
+"υποστηρίζει τόσες πολλές κωδικοποιήσεις όσες η Python, και το ρεπερτόριό του "
+"από κωδικοποιήσεις δεν μπορεί να επεκταθεί· υποστηρίζει UTF-8, UTF-16, "
+"ISO-8859-1 (Latin1) και ASCII. Εάν δοθεί το *encoding* [1]_, θα "
+"αντικαταστήσει την έμμεση ή ρητή κωδικοποίηση του εγγράφου."
 
 #: library/pyexpat.rst:77
 msgid ""
@@ -87,6 +113,10 @@ msgid ""
 "parsers are created by :meth:`parser.ExternalEntityParserCreate <xmlparser."
 "ExternalEntityParserCreate>`."
 msgstr ""
+"Οι αναλυτές που δημιουργούνται μέσω :func:`!ParserCreate` ονομάζονται "
+"αναλυτές \"ρίζας\", με την έννοια ότι δεν έχουν συνδεδεμένο κανέναν γονικό "
+"αναλυτή. Οι μη ριζικοί αναλυτές δημιουργούνται από :meth:`parser."
+"ExternalEntityParserCreate <xmlparser.ExternalEntityParserCreate>`."
 
 #: library/pyexpat.rst:82
 msgid ""
@@ -102,12 +132,27 @@ msgid ""
 "zero byte (``chr(0)``) then the namespace URI and the local part will be "
 "concatenated without any separator."
 msgstr ""
+"Το Expat μπορεί προαιρετικά να κάνει επεξεργασία χώρων ονομάτων XML για "
+"εσάς, ενεργοποιημένη παρέχοντας μια τιμή για το *namespace_separator*. Η "
+"τιμή πρέπει να είναι μια συμβολοσειρά ενός χαρακτήρα· θα γίνει raise :exc:"
+"`ValueError` εάν η συμβολοσειρά έχει παράνομο μήκος (το ``None`` θεωρείται "
+"το ίδιο με την παράλειψη). Όταν είναι ενεργοποιημένη η επεξεργασία χώρων "
+"ονομάτων, τα ονόματα τύπων στοιχείων και τα ονόματα χαρακτηριστικών που "
+"ανήκουν σε έναν χώρο ονομάτων θα επεκταθούν. Το όνομα στοιχείου που περνάει "
+"στους χειριστές στοιχείων :attr:`StartElementHandler` και :attr:"
+"`EndElementHandler` θα είναι ο συνδυασμός του URI χώρου ονομάτων, του "
+"χαρακτήρα διαχωρισμού χώρου ονομάτων και του τοπικού μέρους του ονόματος. "
+"Εάν ο διαχωριστής χώρου ονομάτων είναι ένα μηδενικό byte (``chr(0)``) τότε "
+"το URI χώρου ονομάτων και το τοπικό μέρος θα συνδυαστούν χωρίς κανέναν "
+"διαχωριστή."
 
 #: library/pyexpat.rst:94
 msgid ""
 "For example, if *namespace_separator* is set to a space character (``' '``) "
 "and the following document is parsed:"
 msgstr ""
+"Για παράδειγμα, εάν το *namespace_separator* οριστεί σε χαρακτήρα κενό (``' "
+"'``) και αναλυθεί το ακόλουθο έγγραφο:"
 
 #: library/pyexpat.rst:97
 msgid ""
@@ -118,12 +163,20 @@ msgid ""
 "  <elem2 xmlns=\"\" />\n"
 "</root>"
 msgstr ""
+"<?xml version=\"1.0\"?>\n"
+"<root xmlns    = \"http://default-namespace.org/\"\n"
+"      xmlns:py = \"http://www.python.org/ns/\">\n"
+"  <py:elem1 />\n"
+"  <elem2 xmlns=\"\" />\n"
+"</root>"
 
 #: library/pyexpat.rst:106
 msgid ""
 ":attr:`StartElementHandler` will receive the following strings for each "
 "element::"
 msgstr ""
+"Το χαρακτηριστικό :attr:`StartElementHandler` θα λάβει τις ακόλουθες "
+"συμβολοσειρές για κάθε στοιχείο::"
 
 #: library/pyexpat.rst:109
 msgid ""
@@ -131,6 +184,9 @@ msgid ""
 "http://www.python.org/ns/ elem1\n"
 "elem2"
 msgstr ""
+"http://default-namespace.org/ root\n"
+"http://www.python.org/ns/ elem1\n"
+"elem2"
 
 #: library/pyexpat.rst:113
 msgid ""
@@ -139,22 +195,27 @@ msgid ""
 "document.  Call ``ParserCreate`` for each document to provide unique parser "
 "instances."
 msgstr ""
+"Λόγω περιορισμών στη βιβλιοθήκη ``Expat`` που χρησιμοποιείται από το :mod:"
+"`pyexpat`, η αντικείμενη :class:`xmlparser` που επιστρέφεται μπορεί να "
+"χρησιμοποιηθεί μόνο για την ανάλυση ενός μεμονωμένου εγγράφου XML. Καλέστε "
+"``ParserCreate`` για κάθε έγγραφο για να παρέχετε μοναδικά στιγμιότυπα "
+"αναλυτών."
 
 #: library/pyexpat.rst:121
 msgid "`The Expat XML Parser <http://www.libexpat.org/>`_"
-msgstr ""
+msgstr "`The Expat XML Parser <http://www.libexpat.org/>`_"
 
 #: library/pyexpat.rst:122
 msgid "Home page of the Expat project."
-msgstr ""
+msgstr "Αρχική σελίδα του έργου Expat."
 
 #: library/pyexpat.rst:128
 msgid "XMLParser Objects"
-msgstr ""
+msgstr "Αντικείμενα XMLParser"
 
 #: library/pyexpat.rst:130
 msgid ":class:`xmlparser` objects have the following methods:"
-msgstr ""
+msgstr "Τα :class:`xmlparser` αντικείμενα έχουν τις ακόλουθες μεθόδους:"
 
 #: library/pyexpat.rst:135
 msgid ""
@@ -164,6 +225,12 @@ msgid ""
 "not the submission of multiple files. *data* can be the empty string at any "
 "time."
 msgstr ""
+"Αναλύει τα περιεχόμενα της συμβολοσειράς *data*, καλώντας τις κατάλληλες "
+"συναρτήσεις χειρισμού για την επεξεργασία των αναλυμένων δεδομένων. Το "
+"*isfinal* πρέπει να είναι true στην τελική κλήση αυτής της μεθόδου· "
+"επιτρέπει την ανάλυση ενός μεμονωμένου αρχείου σε θραύσματα, όχι την υποβολή "
+"πολλαπλών αρχείων. Το *data* μπορεί να είναι η κενή συμβολοσειρά οποιαδήποτε "
+"στιγμή."
 
 #: library/pyexpat.rst:144
 msgid ""
@@ -171,6 +238,9 @@ msgid ""
 "the ``read(nbytes)`` method, returning the empty string when there's no more "
 "data."
 msgstr ""
+"Αναλύει δεδομένα XML διαβάζοντας από το αντικείμενο *file*. Το *file* "
+"απαιτείται μόνο να παρέχει τη μέθοδο ``read(nbytes)``, επιστρέφοντας την "
+"κενή συμβολοσειρά όταν δεν υπάρχουν άλλα δεδομένα."
 
 #: library/pyexpat.rst:151
 msgid ""
@@ -180,12 +250,20 @@ msgid ""
 "`ExternalEntityRefHandler`, :func:`NotationDeclHandler`, and :func:"
 "`UnparsedEntityDeclHandler` functions."
 msgstr ""
+"Ορίζει τη βάση που θα χρησιμοποιηθεί για την επίλυση σχετικών URI σε "
+"συστήματα αναγνωριστικά σε δηλώσεις. Η επίλυση σχετικών αναγνωριστικών "
+"αφήνεται στην εφαρμογή: αυτή η τιμή θα περαστεί ως όρισμα *base* στις "
+"συναρτήσεις :func:`ExternalEntityRefHandler`, :func:`NotationDeclHandler` "
+"και :func:`UnparsedEntityDeclHandler`."
 
 #: library/pyexpat.rst:160
 msgid ""
 "Returns a string containing the base set by a previous call to :meth:"
 "`SetBase`, or ``None`` if  :meth:`SetBase` hasn't been called."
 msgstr ""
+"Επιστρέφει μια συμβολοσειρά που περιέχει τη βάση που ορίστηκε από μια "
+"προηγούμενη κλήση στο :meth:`SetBase`, ή ``None`` εάν το :meth:`SetBase` δεν "
+"έχει κληθεί."
 
 #: library/pyexpat.rst:166
 msgid ""
@@ -193,6 +271,10 @@ msgid ""
 "data is in the encoding of the entity which contains the text. When called "
 "while an event handler is not active, the return value is ``None``."
 msgstr ""
+"Επιστρέφει τα δεδομένα εισόδου που δημιουργήθηκαν από το τρέχον γεγονός ως "
+"συμβολοσειρά. Τα δεδομένα είναι στην κωδικοποίηση της οντότητας που περιέχει "
+"το κείμενο. Όταν καλείται ενώ ένας χειριστής γεγονότος δεν είναι ενεργός, η "
+"τιμή επιστροφής είναι ``None``."
 
 #: library/pyexpat.rst:173
 msgid ""
@@ -203,6 +285,13 @@ msgid ""
 "parser is created with the :attr:`ordered_attributes` and :attr:"
 "`specified_attributes` set to the values of this parser."
 msgstr ""
+"Δημιουργεί έναν \"παιδικό\" αναλυτή που μπορεί να χρησιμοποιηθεί για την "
+"ανάλυση μιας εξωτερικής αναλυμένης οντότητας που αναφέρεται από το "
+"περιεχόμενο που αναλύεται από τον γονικό αναλυτή. Το παράμετρο *context* "
+"πρέπει να είναι η συμβολοσειρά που περνάει στη συνάρτηση χειρισμού :meth:"
+"`ExternalEntityRefHandler`, που περιγράφεται παρακάτω. Ο παιδικός αναλυτής "
+"δημιουργείται με τα :attr:`ordered_attributes` και :attr:"
+"`specified_attributes` ορισμένα στις τιμές αυτού του αναλυτή."
 
 #: library/pyexpat.rst:182
 msgid ""
@@ -212,6 +301,12 @@ msgid ""
 "`XML_PARAM_ENTITY_PARSING_ALWAYS`.  Return true if setting the flag was "
 "successful."
 msgstr ""
+"Ελέγχει την ανάλυση των οντοτήτων παραμέτρων (συμπεριλαμβανομένου του "
+"εξωτερικού υποσυνόλου DTD). Οι πιθανές τιμές *flag* είναι :const:"
+"`XML_PARAM_ENTITY_PARSING_NEVER`,:const:"
+"`XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE` και :const:"
+"`XML_PARAM_ENTITY_PARSING_ALWAYS`. Επιστρέφει true εάν ο ορισμός της σημαίας "
+"ήταν επιτυχής."
 
 #: library/pyexpat.rst:190
 msgid ""
@@ -222,12 +317,20 @@ msgid ""
 "will still be called, but the :attr:`StartDoctypeDeclHandler` and :attr:"
 "`EndDoctypeDeclHandler` will not be called."
 msgstr ""
+"Η κλήση αυτού με μια αληθή τιμή για το *flag* (η προεπιλογή) θα προκαλέσει "
+"το Expat να καλέσει το :attr:`ExternalEntityRefHandler` με :const:`None` για "
+"όλα τα επιχειρήματα για να επιτρέψει τη φόρτωση ενός εναλλακτικού DTD. Εάν "
+"το έγγραφο δεν περιέχει δήλωση τύπου εγγράφου, το :attr:"
+"`ExternalEntityRefHandler` θα κληθεί ακόμα, αλλά το :attr:"
+"`StartDoctypeDeclHandler` και :attr:`EndDoctypeDeclHandler` δεν θα κληθούν."
 
 #: library/pyexpat.rst:197
 msgid ""
 "Passing a false value for *flag* will cancel a previous call that passed a "
 "true value, but otherwise has no effect."
 msgstr ""
+"Η μετάδοση μιας ψευδούς τιμής για το *flag* θα ακυρώσει μια προηγούμενη "
+"κλήση που πέρασε μια αληθή τιμή, αλλά διαφορετικά δεν έχει καμία επίδραση."
 
 #: library/pyexpat.rst:200
 msgid ""
@@ -236,6 +339,11 @@ msgid ""
 "causes :exc:`ExpatError` to be raised with the :attr:`code` attribute set to "
 "``errors.codes[errors.XML_ERROR_CANT_CHANGE_FEATURE_ONCE_PARSING]``."
 msgstr ""
+"Αυτή η μέθοδος μπορεί να κληθεί μόνο πριν κληθούν οι μέθοδοι :meth:`Parse` "
+"ή :meth:`ParseFile`; η κλήση της μετά από οποιαδήποτε από αυτές θα "
+"προκαλέσει :exc:`ExpatError` να γίνει raise με το χαρακτηριστικό :attr:"
+"`code` ορισμένο σε ``errors.codes[errors."
+"XML_ERROR_CANT_CHANGE_FEATURE_ONCE_PARSING]``."
 
 #: library/pyexpat.rst:209
 msgid ""
@@ -243,6 +351,9 @@ msgid ""
 "detailed below; please make sure to understand these consequences prior to "
 "using the ``SetReparseDeferralEnabled`` method."
 msgstr ""
+"Η κλήση ``SetReparseDeferralEnabled(False)`` έχει επιπτώσεις στην ασφάλεια, "
+"όπως αναλυτικά παρακάτω· βεβαιωθείτε ότι κατανοείτε αυτές τις συνέπειες πριν "
+"από τη χρήση της μεθόδου ``SetReparseDeferralEnabled``."
 
 #: library/pyexpat.rst:213
 msgid ""
@@ -258,6 +369,19 @@ msgid ""
 "current Expat parser instance, temporarily or altogether. Calling "
 "``SetReparseDeferralEnabled(True)`` allows re-enabling reparse deferral."
 msgstr ""
+"Το Expat 2.6.0 εισήγαγε έναν μηχανισμό ασφάλειας που ονομάζεται \"αναβολή "
+"επανεπεξεργασίας\" όπου αντί να προκαλείται άρνηση υπηρεσίας μέσω "
+"τετραγωνικού χρόνου εκτέλεσης από την επανεπεξεργασία μεγάλων τοκεν, η "
+"επανεπεξεργασία μη ολοκληρωμένων τοκεν τώρα καθυστερείται από προεπιλογή "
+"μέχρι να φτάσει μια επαρκής ποσότητα εισόδου. Λόγω αυτής της καθυστέρησης, "
+"οι καταχωρημένοι χειριστές μπορεί — ανάλογα με το μέγεθος των τμημάτων "
+"εισόδου που ωθούνται στο Expat — να μην καλούνται αμέσως μετά την ώθηση νέας "
+"εισόδου στον αναλυτή. Όπου επιθυμείται άμεση ανατροφοδότηση και ανάληψη "
+"ευθύνης για την προστασία από την άρνηση υπηρεσίας από μεγάλα τοκεν, η κλήση "
+"``SetReparseDeferralEnabled(False)`` απενεργοποιεί την αναβολή "
+"επανεπεξεργασίας για το τρέχον στιγμιότυπο αναλυτή Expat, προσωρινά ή "
+"συνολικά. Η κλήση ``SetReparseDeferralEnabled(True)`` επιτρέπει την "
+"επανενεργοποίηση της αναβολής επανεπεξεργασίας."
 
 #: library/pyexpat.rst:226
 msgid ""
@@ -266,30 +390,43 @@ msgid ""
 "meth:`SetReparseDeferralEnabled` using :func:`hasattr` if used in code "
 "running across a variety of Python versions."
 msgstr ""
+"Σημειώστε ότι το :meth:`SetReparseDeferralEnabled` έχει μεταφερθεί σε "
+"ορισμένες προηγούμενες εκδόσεις του CPython ως διόρθωση ασφαλείας. Ελέγξτε "
+"για τη διαθεσιμότητα του :meth:`SetReparseDeferralEnabled` χρησιμοποιώντας "
+"τη :func:`hasattr` εάν χρησιμοποιείται σε κώδικα που εκτελείται σε μια "
+"ποικιλία εκδόσεων Python."
 
 #: library/pyexpat.rst:235
 msgid ""
 "Returns whether reparse deferral is currently enabled for the given Expat "
 "parser instance."
 msgstr ""
+"Επιστρέφει εάν η αναβολή επανεπεξεργασίας είναι επί του παρόντος "
+"ενεργοποιημένη για το δεδομένο στιγμιότυπο αναλυτή Expat."
 
 #: library/pyexpat.rst:241
 msgid ""
 ":class:`!xmlparser` objects have the following methods to mitigate some "
 "common XML vulnerabilities."
 msgstr ""
+":class:`!xmlparser` αντικείμενα έχουν τις ακόλουθες μεθόδους για την "
+"μετρίαση ορισμένων κοινών ευπαθειών XML."
 
 #: library/pyexpat.rst:246
 msgid ""
 "Sets the number of allocated bytes of dynamic memory needed to activate "
 "protection against disproportionate use of RAM."
 msgstr ""
+"Ορίζει τον αριθμό των δεσμευμένων byte δυναμικής μνήμης που απαιτούνται για "
+"την ενεργοποίηση της προστασίας κατά της δυσανάλογης χρήσης RAM."
 
 #: library/pyexpat.rst:249
 msgid ""
 "By default, parser objects have an allocation activation threshold of 64 "
 "MiB, or equivalently 67,108,864 bytes."
 msgstr ""
+"Από προεπιλογή, τα αντικείμενα αναλυτή έχουν ένα όριο ενεργοποίησης "
+"κατανομής 64 MiB, ή ισοδύναμα 67.108.864 byte."
 
 #: library/pyexpat.rst:252
 msgid ""
@@ -297,12 +434,18 @@ msgid ""
 "parser| parser. The corresponding :attr:`~ExpatError.lineno` and :attr:"
 "`~ExpatError.offset` should not be used as they may have no special meaning."
 msgstr ""
+"Γίνεται raise :exc:`ExpatError` εάν αυτή η μέθοδος κληθεί σε έναν |xml-non-"
+"parser| αναλυτή. Τα αντίστοιχα :attr:`~ExpatError.lineno` και :attr:"
+"`~ExpatError.offset` δεν πρέπει να χρησιμοποιούνται καθώς μπορεί να μην "
+"έχουν καμία ειδική σημασία."
 
 #: library/pyexpat.rst:261
 msgid ""
 "Sets the maximum amplification factor between direct input and bytes of "
 "dynamic memory allocated."
 msgstr ""
+"Ορίζει τον μέγιστο παράγοντα ενίσχυσης μεταξύ άμεσης εισόδου και byte "
+"δυναμικής μνήμης που έχουν δεσμευτεί."
 
 #: library/pyexpat.rst:264
 msgid ""
@@ -311,6 +454,10 @@ msgid ""
 "document in parsing and ``allocated`` is the number of bytes of dynamic "
 "memory allocated in the parser hierarchy."
 msgstr ""
+"Ο παράγοντας ενίσχυσης υπολογίζεται ως ``allocated / direct`` κατά την "
+"ανάλυση, όπου το ``direct`` είναι ο αριθμός των byte που διαβάστηκαν από το "
+"κύριο έγγραφο στην ανάλυση και το ``allocated`` είναι ο αριθμός των byte "
+"δυναμικής μνήμης που έχουν δεσμευτεί στην ιεραρχία αναλυτών."
 
 #: library/pyexpat.rst:269
 msgid ""
@@ -319,11 +466,18 @@ msgid ""
 "near the start of parsing even with benign files in practice. In particular, "
 "the activation threshold should be carefully chosen to avoid false positives."
 msgstr ""
+"Η τιμή *max_factor* πρέπει να είναι μια μη-NaN :class:`float` τιμή "
+"μεγαλύτερη ή ίση του 1.0. Παράγοντες ενίσχυσης μεγαλύτεροι από 100.0 μπορούν "
+"να παρατηρηθούν κοντά στην αρχή της ανάλυσης ακόμη και με ακίνδυνα αρχεία "
+"στην πράξη. Ειδικότερα, το όριο ενεργοποίησης πρέπει να επιλεγεί προσεκτικά "
+"για να αποφευχθούν ψευδώς θετικά."
 
 #: library/pyexpat.rst:274
 msgid ""
 "By default, parser objects have a maximum amplification factor of 100.0."
 msgstr ""
+"Από προεπιλογή, τα αντικείμενα αναλυτή έχουν μέγιστο παράγοντα ενίσχυσης "
+"100.0."
 
 #: library/pyexpat.rst:276
 msgid ""
@@ -332,16 +486,23 @@ msgid ""
 "corresponding :attr:`~ExpatError.lineno` and :attr:`~ExpatError.offset` "
 "should not be used as they may have no special meaning."
 msgstr ""
+"Γίνεται raise :exc:`ExpatError` εάν αυτή η μέθοδος κληθεί σε έναν |xml-non-"
+"parser| αναλυτή ή εάν το *max_factor* είναι εκτός του έγκυρου εύρους. Τα "
+"αντίστοιχα :attr:`~ExpatError.lineno` και :attr:`~ExpatError.offset` δεν "
+"πρέπει να χρησιμοποιούνται καθώς μπορεί να μην έχουν καμία ειδική σημασία."
 
 #: library/pyexpat.rst:283
 msgid ""
 "The maximum amplification factor is only considered if the threshold that "
 "can be adjusted by :meth:`.SetAllocTrackerActivationThreshold` is exceeded."
 msgstr ""
+"Ο μέγιστος παράγοντας ενίσχυσης λαμβάνεται υπόψη μόνο εάν ξεπεραστεί το όριο "
+"ενεργοποίησης που μπορεί να προσαρμοστεί από το :meth:`."
+"SetAllocTrackerActivationThreshold`."
 
 #: library/pyexpat.rst:290
 msgid ":class:`xmlparser` objects have the following attributes:"
-msgstr ""
+msgstr "Τα :class:`xmlparser` αντικείμενα έχουν τα ακόλουθα χαρακτηριστικά:"
 
 #: library/pyexpat.rst:295
 msgid ""
@@ -349,6 +510,10 @@ msgid ""
 "size can be set by assigning a new integer value to this attribute. When the "
 "size is changed, the buffer will be flushed."
 msgstr ""
+"Το μέγεθος του buffer που χρησιμοποιείται όταν το :attr:`buffer_text` είναι "
+"true. Ένα νέο μέγεθος buffer μπορεί να οριστεί εκχωρώντας μια νέα ακέραια "
+"τιμή σε αυτό το χαρακτηριστικό. Όταν αλλάζει το μέγεθος, το buffer θα "
+"εκκενωθεί."
 
 #: library/pyexpat.rst:303
 msgid ""
@@ -360,6 +525,15 @@ msgid ""
 "changed at any time. Note that when it is false, data that does not contain "
 "newlines may be chunked too."
 msgstr ""
+"Ο ορισμός αυτού σε true προκαλεί το αντικείμενο :class:`xmlparser` να "
+"αποθηκεύει σε buffer το κειμενικό περιεχόμενο που επιστρέφεται από το Expat "
+"για να αποφευχθούν πολλαπλές κλήσεις στην ανάκληση :meth:"
+"`CharacterDataHandler` όποτε είναι δυνατόν. Αυτό μπορεί να βελτιώσει "
+"σημαντικά την απόδοση καθώς το Expat κανονικά διασπά τα δεδομένα χαρακτήρων "
+"σε θραύσματα σε κάθε αλλαγή γραμμής. Αυτό το χαρακτηριστικό είναι false από "
+"προεπιλογή, και μπορεί να αλλάξει οποιαδήποτε στιγμή. Σημειώστε ότι όταν "
+"είναι false, τα δεδομένα που δεν περιέχουν αλλαγές γραμμών μπορεί επίσης να "
+"διασπαστούν."
 
 #: library/pyexpat.rst:314
 msgid ""
@@ -367,6 +541,10 @@ msgid ""
 "These bytes represent UTF-8 encoded text.  This attribute has no meaningful "
 "interpretation when :attr:`buffer_text` is false."
 msgstr ""
+"Εάν το :attr:`buffer_text` είναι ενεργοποιημένο, ο αριθμός των byte που "
+"αποθηκεύονται στο buffer. Αυτά τα byte αντιπροσωπεύουν κείμενο "
+"κωδικοποιημένο σε UTF-8. Αυτό το χαρακτηριστικό δεν έχει καμία ουσιαστική "
+"ερμηνεία όταν το :attr:`buffer_text` είναι false."
 
 #: library/pyexpat.rst:321
 msgid ""
@@ -377,6 +555,13 @@ msgid ""
 "versions of this module also used this format.)  By default, this attribute "
 "is false; it may be changed at any time."
 msgstr ""
+"Ο ορισμός αυτού του χαρακτηριστικού σε έναν μη μηδενικό ακέραιο προκαλεί τα "
+"χαρακτηριστικά να αναφέρονται ως λίστα αντί για λεξικό. Τα χαρακτηριστικά "
+"παρουσιάζονται με τη σειρά που βρέθηκαν στο κείμενο του εγγράφου. Για κάθε "
+"χαρακτηριστικό, παρουσιάζονται δύο καταχωρήσεις λίστας: το όνομα του "
+"χαρακτηριστικού και η τιμή του χαρακτηριστικού. (Παλαιότερες εκδόσεις αυτού "
+"του module χρησιμοποιούσαν επίσης αυτή τη μορφή.) Από προεπιλογή, αυτό το "
+"χαρακτηριστικό είναι false· μπορεί να αλλάξει οποιαδήποτε στιγμή."
 
 #: library/pyexpat.rst:331
 msgid ""
@@ -388,6 +573,13 @@ msgid ""
 "processors.  By default, this attribute is false; it may be changed at any "
 "time."
 msgstr ""
+"Εάν οριστεί σε έναν μη μηδενικό ακέραιο, ο αναλυτής θα αναφέρει μόνο εκείνα "
+"τα χαρακτηριστικά που καθορίστηκαν στο παράδειγμα εγγράφου και όχι εκείνα "
+"που προέκυψαν από δηλώσεις χαρακτηριστικών. Οι εφαρμογές που το ορίζουν αυτό "
+"πρέπει να είναι ιδιαίτερα προσεκτικές στη χρήση των πρόσθετων πληροφοριών "
+"που είναι διαθέσιμες από τις δηλώσεις όπως απαιτείται για τη συμμόρφωση με "
+"τα πρότυπα για τη συμπεριφορά των επεξεργαστών XML. Από προεπιλογή, αυτό το "
+"χαρακτηριστικό είναι false· μπορεί να αλλάξει οποιαδήποτε στιγμή."
 
 #: library/pyexpat.rst:339
 msgid ""
@@ -396,10 +588,14 @@ msgid ""
 "values once a call to :meth:`Parse` or :meth:`ParseFile` has raised an :exc:"
 "`xml.parsers.expat.ExpatError` exception."
 msgstr ""
+"Τα ακόλουθα χαρακτηριστικά περιέχουν τιμές που σχετίζονται με το πιο "
+"πρόσφατο σφάλμα που αντιμετωπίστηκε από ένα αντικείμενο :class:`xmlparser`, "
+"και θα έχουν σωστές τιμές μόνο όταν μια κλήση στο :meth:`Parse` ή :meth:"
+"`ParseFile` έχει προκαλέσει μια εξαίρεση :exc:`xml.parsers.expat.ExpatError`."
 
 #: library/pyexpat.rst:347
 msgid "Byte index at which an error occurred."
-msgstr ""
+msgstr "Δείκτης byte στον οποίο συνέβη ένα σφάλμα."
 
 #: library/pyexpat.rst:352
 msgid ""
@@ -407,14 +603,17 @@ msgid ""
 "`ErrorString` function, or compared to one of the constants defined in the "
 "``errors`` object."
 msgstr ""
+"Αριθμητικός κωδικός που προσδιορίζει το πρόβλημα. Αυτή η τιμή μπορεί να "
+"περαστεί στη συνάρτηση :func:`ErrorString`, ή να συγκριθεί με μία από τις "
+"σταθερές που ορίζονται στο αντικείμενο ``errors``."
 
 #: library/pyexpat.rst:359
 msgid "Column number at which an error occurred."
-msgstr ""
+msgstr "Αριθμός στήλης στον οποίο συνέβη ένα σφάλμα."
 
 #: library/pyexpat.rst:364
 msgid "Line number at which an error occurred."
-msgstr ""
+msgstr "Αριθμός γραμμής στον οποίο συνέβη ένα σφάλμα."
 
 #: library/pyexpat.rst:366
 msgid ""
@@ -425,18 +624,24 @@ msgid ""
 "position indicated will be just past the last parse event (regardless of "
 "whether there was an associated callback)."
 msgstr ""
+"Τα ακόλουθα χαρακτηριστικά περιέχουν τιμές που σχετίζονται με την τρέχουσα "
+"θέση ανάλυσης σε ένα αντικείμενο :class:`xmlparser`. Κατά τη διάρκεια μιας "
+"ανάκλησης που αναφέρει ένα γεγονός ανάλυσης, υποδεικνύουν τη θέση της πρώτης "
+"από τη σειρά χαρακτήρων που δημιούργησαν το γεγονός. Όταν καλείται εκτός "
+"μιας ανάκλησης, η υποδεικνυόμενη θέση θα είναι ακριβώς μετά το τελευταίο "
+"γεγονός ανάλυσης (ανεξάρτητα από το αν υπήρχε μια σχετική ανάκληση)."
 
 #: library/pyexpat.rst:376
 msgid "Current byte index in the parser input."
-msgstr ""
+msgstr "Τρέχων δείκτης byte στην είσοδο του αναλυτή."
 
 #: library/pyexpat.rst:381
 msgid "Current column number in the parser input."
-msgstr ""
+msgstr "Τρέχων αριθμός στήλης στην είσοδο του αναλυτή."
 
 #: library/pyexpat.rst:386
 msgid "Current line number in the parser input."
-msgstr ""
+msgstr "Τρέχων αριθμός γραμμής στην είσοδο του αναλυτή."
 
 #: library/pyexpat.rst:388
 msgid ""
@@ -446,6 +651,12 @@ msgid ""
 "accepting the correct number of arguments.  The arguments are all strings, "
 "unless otherwise stated."
 msgstr ""
+"Εδώ είναι η λίστα των χειριστών που μπορούν να οριστούν. Για να ορίσετε έναν "
+"χειριστή σε ένα αντικείμενο :class:`xmlparser` *o*, χρησιμοποιήστε ``o."
+"handlername = func``. Το *handlername* πρέπει να ληφθεί από την ακόλουθη "
+"λίστα, και το *func* πρέπει να είναι ένα αντικείμενο που μπορεί να κληθεί "
+"αποδεχόμενο τον σωστό αριθμό ορισμάτων. Τα ορίσματα είναι όλες "
+"συμβολοσειρές, εκτός εάν αναφέρεται διαφορετικά."
 
 #: library/pyexpat.rst:397
 msgid ""
@@ -457,6 +668,13 @@ msgid ""
 "to be standalone, or ``-1`` if the standalone clause was omitted. This is "
 "only available with Expat version 1.95.0 or newer."
 msgstr ""
+"Καλείται όταν αναλύεται η δήλωση XML. Η δήλωση XML είναι η (προαιρετική) "
+"δήλωση της εφαρμοστέας έκδοσης της σύστασης XML, της κωδικοποίησης του "
+"κειμένου του εγγράφου, και μια προαιρετική \"αυτόνομη\" δήλωση. Το *version* "
+"και το *encoding* θα είναι συμβολοσειρές, και το *standalone* θα είναι ``1`` "
+"εάν το έγγραφο δηλώνεται αυτόνομο, ``0`` εάν δηλώνεται ότι δεν είναι "
+"αυτόνομο, ή ``-1`` εάν η ρήτρα αυτόνομης παραλείφθηκε. Αυτό είναι διαθέσιμο "
+"μόνο με την έκδοση 1.95.0 ή νεότερη του Expat."
 
 #: library/pyexpat.rst:408
 msgid ""
@@ -467,18 +685,29 @@ msgid ""
 "the document contains and internal document declaration subset. This "
 "requires Expat version 1.2 or newer."
 msgstr ""
+"Καλείται όταν το Expat αρχίζει να αναλύει τη δήλωση τύπου εγγράφου (``<!"
+"DOCTYPE ...``). Το *doctypeName* παρέχεται ακριβώς όπως παρουσιάζεται. Τα "
+"*systemId* και *publicId* παράμετροι δίνουν τα συστημικά και δημόσια "
+"αναγνωριστικά εάν καθορίζονται, ή ``None`` εάν παραλείπονται. Το "
+"*has_internal_subset* θα είναι true εάν το έγγραφο περιέχει και εσωτερικό "
+"υποσύνολο δήλωσης εγγράφου. Αυτό απαιτεί Expat έκδοσης 1.2 ή νεότερης."
 
 #: library/pyexpat.rst:418
 msgid ""
 "Called when Expat is done parsing the document type declaration. This "
 "requires Expat version 1.2 or newer."
 msgstr ""
+"Καλείται όταν το Expat ολοκληρώνει την ανάλυση της δήλωσης τύπου εγγράφου. "
+"Αυτό απαιτεί Expat έκδοσης 1.2 ή νεότερης."
 
 #: library/pyexpat.rst:424
 msgid ""
 "Called once for each element type declaration.  *name* is the name of the "
 "element type, and *model* is a representation of the content model."
 msgstr ""
+"Καλείται μία φορά για κάθε δήλωση τύπου στοιχείου. Το *name* είναι το όνομα "
+"του τύπου στοιχείου, και το *model* είναι μια αναπαράσταση του μοντέλου "
+"περιεχομένου."
 
 #: library/pyexpat.rst:430
 msgid ""
@@ -494,6 +723,18 @@ msgid ""
 "document instance, *required* will be true. This requires Expat version "
 "1.95.0 or newer."
 msgstr ""
+"Καλείται για κάθε δηλωμένο χαρακτηριστικό για έναν τύπο στοιχείου. Εάν μια "
+"δήλωση λίστας χαρακτηριστικών δηλώνει τρία χαρακτηριστικά, αυτός ο χειριστής "
+"καλείται τρεις φορές, μία για κάθε χαρακτηριστικό. Το *elname* είναι το "
+"όνομα του στοιχείου στο οποίο εφαρμόζεται η δήλωση και το *attname* είναι το "
+"όνομα του δηλωμένου χαρακτηριστικού. Ο τύπος χαρακτηριστικού είναι μια "
+"συμβολοσειρά που περνάει ως *type*· οι πιθανές τιμές είναι ``'CDATA'``, "
+"``'ID'``, ``'IDREF'``, ... Το *default* δίνει την προεπιλεγμένη τιμή για το "
+"χαρακτηριστικό που χρησιμοποιείται όταν το χαρακτηριστικό δεν καθορίζεται "
+"από το παράδειγμα εγγράφου, ή ``None`` εάν δεν υπάρχει προεπιλεγμένη τιμή "
+"(τιμές ``#IMPLIED``). Εάν το χαρακτηριστικό απαιτείται να δοθεί στο "
+"παράδειγμα εγγράφου, το *required* θα είναι true. Αυτό απαιτεί Expat έκδοση "
+"1.95.0 ή νεότερης."
 
 #: library/pyexpat.rst:444
 msgid ""
@@ -502,14 +743,19 @@ msgid ""
 "`ordered_attributes` is true, this is a list (see :attr:`ordered_attributes` "
 "for a full description). Otherwise it's a dictionary mapping names to values."
 msgstr ""
+"Καλείται για την έναρξη κάθε στοιχείου. Το *name* είναι μια συμβολοσειρά που "
+"περιέχει το όνομα του στοιχείου, και το *attributes* είναι τα χαρακτηριστικά "
+"του στοιχείου. Εάν το :attr:`ordered_attributes` είναι true, αυτό είναι μια "
+"λίστα (δείτε το :attr:`ordered_attributes` για μια πλήρη περιγραφή). "
+"Διαφορετικά είναι ένα λεξικό που αντιστοιχίζει ονόματα σε τιμές."
 
 #: library/pyexpat.rst:453
 msgid "Called for the end of every element."
-msgstr ""
+msgstr "Καλείται για το τέλος κάθε στοιχείου."
 
 #: library/pyexpat.rst:458
 msgid "Called for every processing instruction."
-msgstr ""
+msgstr "Καλείται για κάθε οδηγία επεξεργασίας."
 
 #: library/pyexpat.rst:463
 msgid ""
@@ -522,6 +768,15 @@ msgid ""
 "meth:`CharacterDataHandler`. Set the :attr:`buffer_text` instance attribute "
 "to ``True`` to avoid that."
 msgstr ""
+"Καλείται για δεδομένα χαρακτήρων. Αυτό θα κληθεί για κανονικά δεδομένα "
+"χαρακτήρων, περιεχόμενο επισημασμένο ως CDATA, και αγνοήσιμο κενό χώρο. Οι "
+"εφαρμογές που πρέπει να διακρίνουν αυτές τις περιπτώσεις μπορούν να "
+"χρησιμοποιήσουν τις ανακλήσεις :attr:`StartCdataSectionHandler`, :attr:"
+"`EndCdataSectionHandler`, και :attr:`ElementDeclHandler` για να συλλέξουν "
+"τις απαιτούμενες πληροφορίες. Σημειώστε ότι τα δεδομένα χαρακτήρων μπορεί να "
+"διασπαστούν ακόμη και αν είναι μικρά και έτσι μπορεί να λάβετε περισσότερες "
+"από μία κλήσεις στο :meth:`CharacterDataHandler`. Ορίστε το χαρακτηριστικό "
+"στιγμιότυπου :attr:`buffer_text` σε ``True`` για να αποφύγετε αυτό."
 
 #: library/pyexpat.rst:475
 msgid ""
@@ -530,6 +785,10 @@ msgid ""
 "`EntityDeclHandler` instead.  (The underlying function in the Expat library "
 "has been declared obsolete.)"
 msgstr ""
+"Καλείται για δηλώσεις μη αναλυμένων (NDATA) οντοτήτων. Αυτό είναι παρόν μόνο "
+"για την έκδοση 1.2 της βιβλιοθήκης Expat· για πιο πρόσφατες εκδόσεις, "
+"χρησιμοποιήστε :attr:`EntityDeclHandler` αντ' αυτού. (Η υποκείμενη "
+"λειτουργία στη βιβλιοθήκη Expat έχει κηρυχθεί απαρχαιωμένη.)"
 
 #: library/pyexpat.rst:483
 msgid ""
@@ -542,6 +801,15 @@ msgid ""
 "concerned with general entities). This is only available starting with "
 "version 1.95.0 of the Expat library."
 msgstr ""
+"Καλείται για όλες τις δηλώσεις οντοτήτων. Για παραμετρικές και εσωτερικές "
+"οντότητες, το *value* θα είναι μια συμβολοσειρά που δίνει τα δηλωμένα "
+"περιεχόμενα της οντότητας· αυτό θα είναι ``None`` για εξωτερικές οντότητες. "
+"Η παράμετρος *notationName* θα είναι ``None`` για αναλυμένες οντότητες, και "
+"το όνομα της σημειογραφίας για μη αναλυμένες οντότητες. Το "
+"*is_parameter_entity* θα είναι true εάν η οντότητα είναι μια παραμετρική "
+"οντότητα ή false για γενικές οντότητες (οι περισσότερες εφαρμογές χρειάζεται "
+"να ασχολούνται μόνο με γενικές οντότητες). Αυτό είναι διαθέσιμο μόνο "
+"ξεκινώντας από την έκδοση 1.95.0 της βιβλιοθήκης Expat."
 
 #: library/pyexpat.rst:495
 msgid ""
@@ -549,6 +817,9 @@ msgid ""
 "and *publicId* are strings if given.  If the public identifier is omitted, "
 "*publicId* will be ``None``."
 msgstr ""
+"Καλείται για δηλώσεις σημειογραφίας. Το *notationName*, *base*, και "
+"*systemId*, και *publicId* είναι συμβολοσειρές εάν δίνονται. Εάν το δημόσιο "
+"αναγνωριστικό παραλείπεται, το *publicId* θα είναι ``None``."
 
 #: library/pyexpat.rst:502
 msgid ""
@@ -556,6 +827,9 @@ msgid ""
 "declarations are processed before the :attr:`StartElementHandler` is called "
 "for the element on which declarations are placed."
 msgstr ""
+"Καλείται όταν ένα στοιχείο περιέχει μια δήλωση ονοματοχώρου. Οι δηλώσεις "
+"ονοματοχώρων επεξεργάζονται πριν κληθεί ο :attr:`StartElementHandler` για το "
+"στοιχείο στο οποίο τοποθετούνται οι δηλώσεις."
 
 #: library/pyexpat.rst:509
 msgid ""
@@ -566,12 +840,20 @@ msgid ""
 "namespace declaration's scope.  Calls to this handler are made after the "
 "corresponding :attr:`EndElementHandler` for the end of the element."
 msgstr ""
+"Καλείται όταν επιτευχθεί η ετικέτα κλεισίματος για ένα στοιχείο που περιείχε "
+"μια δήλωση ονοματοχώρου. Αυτό καλείται μία φορά για κάθε δήλωση ονοματοχώρου "
+"στο στοιχείο με την αντίστροφη σειρά για την οποία κλήθηκε ο :attr:"
+"`StartNamespaceDeclHandler` για να υποδείξει την έναρξη της εμβέλειας κάθε "
+"δήλωσης ονοματοχώρου. Οι κλήσεις σε αυτόν τον χειριστή γίνονται μετά τον "
+"αντίστοιχο :attr:`EndElementHandler` για το τέλος του στοιχείου."
 
 #: library/pyexpat.rst:519
 msgid ""
 "Called for comments.  *data* is the text of the comment, excluding the "
 "leading ``'<!-``\\ ``-'`` and trailing ``'-``\\ ``->'``."
 msgstr ""
+"Καλείται για σχόλια. Το *data* είναι το κείμενο του σχολίου, εξαιρώντας το "
+"προκαταρκτικό ``'<!-``\\ ``-'`` και το τελικό ``'-``\\ ``->'``."
 
 #: library/pyexpat.rst:525
 msgid ""
@@ -579,10 +861,13 @@ msgid ""
 "`EndCdataSectionHandler` are needed to be able to identify the syntactical "
 "start and end for CDATA sections."
 msgstr ""
+"Καλείται στην αρχή μιας ενότητας CDATA. Αυτό και το :attr:"
+"`EndCdataSectionHandler` είναι απαραίτητα για να μπορέσουμε να αναγνωρίσουμε "
+"την συντακτική έναρξη και το τέλος για τις ενότητες CDATA."
 
 #: library/pyexpat.rst:532
 msgid "Called at the end of a CDATA section."
-msgstr ""
+msgstr "Καλείται στο τέλος μιας ενότητας CDATA."
 
 #: library/pyexpat.rst:537
 msgid ""
@@ -591,6 +876,10 @@ msgid ""
 "construct which could be reported, but for which no handler has been "
 "supplied."
 msgstr ""
+"Καλείται για οποιουσδήποτε χαρακτήρες στο έγγραφο XML για τους οποίους δεν "
+"έχει οριστεί κάποιος κατάλληλος χειριστής. Αυτό σημαίνει χαρακτήρες που "
+"είναι μέρος μιας κατασκευής που θα μπορούσε να αναφερθεί, αλλά για την οποία "
+"δεν έχει παρασχεθεί χειριστής."
 
 #: library/pyexpat.rst:544
 msgid ""
@@ -598,6 +887,9 @@ msgid ""
 "expansion of internal entities. The entity reference will not be passed to "
 "the default handler."
 msgstr ""
+"Αυτό είναι το ίδιο με το :func:`DefaultHandler`, αλλά δεν εμποδίζει την "
+"επέκταση εσωτερικών οντοτήτων. Η αναφορά οντότητας δεν θα περαστεί στον "
+"προεπιλεγμένο χειριστή."
 
 #: library/pyexpat.rst:551
 msgid ""
@@ -608,6 +900,13 @@ msgid ""
 "raise an :const:`XML_ERROR_NOT_STANDALONE` error.  If this handler is not "
 "set, no exception is raised by the parser for this condition."
 msgstr ""
+"Καλείται εάν το έγγραφο XML δεν έχει δηλωθεί ως αυτόνομο έγγραφο. Αυτό "
+"συμβαίνει όταν υπάρχει ένα εξωτερικό υποσύνολο ή μια αναφορά σε μια "
+"παραμετρική οντότητα, αλλά η δήλωση XML δεν ορίζει το standalone σε ``yes`` "
+"σε μια δήλωση XML. Εάν αυτός ο χειριστής επιστρέψει ``0``, τότε ο αναλυτής "
+"θα προκαλέσει ένα σφάλμα :const:`XML_ERROR_NOT_STANDALONE`. Εάν αυτός ο "
+"χειριστής δεν έχει οριστεί, δεν προκαλείται καμία εξαίρεση από τον αναλυτή "
+"για αυτή την κατάσταση."
 
 #: library/pyexpat.rst:563
 msgid ""
@@ -617,6 +916,12 @@ msgid ""
 "provided XML content. Please reflect on your `threat model <https://en."
 "wikipedia.org/wiki/Threat_model>`_ before implementing this handler."
 msgstr ""
+"Η υλοποίηση ενός χειριστή που έχει πρόσβαση σε τοπικά αρχεία και/ή στο "
+"δίκτυο μπορεί να δημιουργήσει μια ευπάθεια σε `external entity attacks "
+"<https://en.wikipedia.org/wiki/XML_external_entity_attack>` εάν το :class:"
+"`xmlparser` χρησιμοποιείται με περιεχόμενο XML που παρέχεται από τον χρήστη. "
+"Σκεφτείτε το `threat model <https://en.wikipedia.org/wiki/Threat_model>`_ "
+"σας πριν υλοποιήσετε αυτόν τον χειριστή."
 
 #: library/pyexpat.rst:570
 msgid ""
@@ -626,6 +931,12 @@ msgid ""
 "identifier is not given, *publicId* will be ``None``.  The *context* value "
 "is opaque and should only be used as described below."
 msgstr ""
+"Καλείται για αναφορές σε εξωτερικές οντότητες. Το *base* είναι η τρέχουσα "
+"βάση, όπως ορίζεται από μια προηγούμενη κλήση στο :meth:`SetBase`. Τα "
+"δημόσια και συστημικά αναγνωριστικά, *systemId* και *publicId*, είναι "
+"συμβολοσειρές εάν δίνονται· εάν το δημόσιο αναγνωριστικό δεν δίνεται, το "
+"*publicId* θα είναι ``None``. Η τιμή *context* είναι αδιαφανής και πρέπει να "
+"χρησιμοποιείται μόνο όπως περιγράφεται παρακάτω."
 
 #: library/pyexpat.rst:576
 msgid ""
@@ -636,20 +947,31 @@ msgid ""
 "an integer; if it returns ``0``, the parser will raise an :const:"
 "`XML_ERROR_EXTERNAL_ENTITY_HANDLING` error, otherwise parsing will continue."
 msgstr ""
+"Για να αναλυθούν εξωτερικές οντότητες, αυτός ο χειριστής πρέπει να "
+"υλοποιηθεί. Είναι υπεύθυνος για τη δημιουργία του υπο-αναλυτή "
+"χρησιμοποιώντας ``ExternalEntityParserCreate(context)``, την αρχικοποίηση "
+"του με τις κατάλληλες ανακλήσεις, και την ανάλυση της οντότητας. Αυτός ο "
+"χειριστής πρέπει να επιστρέψει έναν ακέραιο· εάν επιστρέψει ``0``, ο "
+"αναλυτής θα προκαλέσει ένα σφάλμα :const:"
+"`XML_ERROR_EXTERNAL_ENTITY_HANDLING`, διαφορετικά η ανάλυση θα συνεχιστεί."
 
 #: library/pyexpat.rst:584
 msgid ""
 "If this handler is not provided, external entities are reported by the :attr:"
 "`DefaultHandler` callback, if provided."
 msgstr ""
+"Εάν αυτός ο χειριστής δεν παρέχεται, οι εξωτερικές οντότητες αναφέρονται από "
+"την ανάκληση :attr:`DefaultHandler`, εάν παρέχεται."
 
 #: library/pyexpat.rst:591
 msgid "ExpatError Exceptions"
-msgstr ""
+msgstr "Εξαιρέσεις ExpatError"
 
 #: library/pyexpat.rst:596
 msgid ":exc:`ExpatError` exceptions have a number of interesting attributes:"
 msgstr ""
+"Οι εξαιρέσεις :exc:`ExpatError` έχουν έναν αριθμό ενδιαφερόντων "
+"χαρακτηριστικών:"
 
 #: library/pyexpat.rst:601
 msgid ""
@@ -657,6 +979,10 @@ msgid ""
 "messages <xml.parsers.expat.errors.messages>` dictionary maps these error "
 "numbers to Expat's error messages.  For example::"
 msgstr ""
+"Ο εσωτερικός αριθμός σφάλματος του Expat για το συγκεκριμένο σφάλμα. Το :"
+"data:`errors.messages <xml.parsers.expat.errors.messages>` λεξικό "
+"αντιστοιχεί αυτούς τους αριθμούς σφάλματος στα μηνύματα σφαλμάτων του Expat. "
+"Για παράδειγμα::"
 
 #: library/pyexpat.rst:605
 msgid ""
@@ -668,6 +994,13 @@ msgid ""
 "except ExpatError as err:\n"
 "    print(\"Error:\", errors.messages[err.code])"
 msgstr ""
+"from xml.parsers.expat import ParserCreate, ExpatError, errors\n"
+"\n"
+"p = ParserCreate()\n"
+"try:\n"
+"    p.Parse(some_xml_document)\n"
+"except ExpatError as err:\n"
+"    print(\"Error:\", errors.messages[err.code])"
 
 #: library/pyexpat.rst:613
 msgid ""
@@ -675,28 +1008,37 @@ msgid ""
 "constants and a dictionary :data:`~xml.parsers.expat.errors.codes` mapping "
 "these messages back to the error codes, see below."
 msgstr ""
+"Το module :mod:`~xml.parsers.expat.errors` παρέχει επίσης σταθερές μηνυμάτων "
+"σφαλμάτων και ένα λεξικό :data:`~xml.parsers.expat.errors.codes` που "
+"αντιστοιχίζει αυτά τα μηνύματα πίσω στους κωδικούς σφαλμάτων, δείτε παρακάτω."
 
 #: library/pyexpat.rst:620
 msgid ""
 "Line number on which the error was detected.  The first line is numbered "
 "``1``."
 msgstr ""
+"Αριθμός γραμμής στον οποίο ανιχνεύθηκε το σφάλμα. Η πρώτη γραμμή αριθμείται "
+"``1``."
 
 #: library/pyexpat.rst:625
 msgid ""
 "Character offset into the line where the error occurred.  The first column "
 "is numbered ``0``."
 msgstr ""
+"Χαρακτήρας μετατόπισης στη γραμμή όπου συνέβη το σφάλμα. Η πρώτη στήλη "
+"αριθμείται ``0``."
 
 #: library/pyexpat.rst:632
 msgid "Example"
-msgstr ""
+msgstr "Παράδειγμα"
 
 #: library/pyexpat.rst:634
 msgid ""
 "The following program defines three handlers that just print out their "
 "arguments. ::"
 msgstr ""
+"Το ακόλουθο πρόγραμμα ορίζει τρεις χειριστές που απλώς εκτυπώνουν τα "
+"ορίσματά τους. ::"
 
 #: library/pyexpat.rst:637
 msgid ""
@@ -721,10 +1063,30 @@ msgid ""
 "<child2 name=\"fred\">More text</child2>\n"
 "</parent>\"\"\", 1)"
 msgstr ""
+"import xml.parsers.expat\n"
+"\n"
+"# 3 handler functions\n"
+"def start_element(name, attrs):\n"
+"    print('Start element:', name, attrs)\n"
+"def end_element(name):\n"
+"    print('End element:', name)\n"
+"def char_data(data):\n"
+"    print('Character data:', repr(data))\n"
+"\n"
+"p = xml.parsers.expat.ParserCreate()\n"
+"\n"
+"p.StartElementHandler = start_element\n"
+"p.EndElementHandler = end_element\n"
+"p.CharacterDataHandler = char_data\n"
+"\n"
+"p.Parse(\"\"\"<?xml version=\"1.0\"?>\n"
+"<parent id=\"top\"><child1 name=\"paul\">Text goes here</child1>\n"
+"<child2 name=\"fred\">More text</child2>\n"
+"</parent>\"\"\", 1)"
 
 #: library/pyexpat.rst:658
 msgid "The output from this program is::"
-msgstr ""
+msgstr "Η έξοδος από αυτό το πρόγραμμα είναι::"
 
 #: library/pyexpat.rst:660
 msgid ""
@@ -739,10 +1101,20 @@ msgid ""
 "Character data: '\\n'\n"
 "End element: parent"
 msgstr ""
+"Start element: parent {'id': 'top'}\n"
+"Start element: child1 {'name': 'paul'}\n"
+"Character data: 'Text goes here'\n"
+"End element: child1\n"
+"Character data: '\\n'\n"
+"Start element: child2 {'name': 'fred'}\n"
+"Character data: 'More text'\n"
+"End element: child2\n"
+"Character data: '\\n'\n"
+"End element: parent"
 
 #: library/pyexpat.rst:675
 msgid "Content Model Descriptions"
-msgstr ""
+msgstr "Περιγραφές Μοντέλου Περιεχομένου"
 
 #: library/pyexpat.rst:681
 msgid ""
@@ -750,6 +1122,10 @@ msgid ""
 "values: the type, the quantifier, the name, and a tuple of children.  "
 "Children are simply additional content model descriptions."
 msgstr ""
+"Τα μοντέλα περιεχομένου περιγράφονται χρησιμοποιώντας εμφωλευμένες πλειάδες. "
+"Κάθε πλειάδα περιέχει τέσσερις τιμές: ο τύπος, ο ποσοδείκτης, το όνομα, και "
+"μια πλειάδα παιδιών. Τα παιδιά είναι απλώς επιπλέον περιγραφές μοντέλου "
+"περιεχομένου."
 
 #: library/pyexpat.rst:685
 msgid ""
@@ -757,26 +1133,33 @@ msgid ""
 "parsers.expat.model` module.  These constants can be collected in two "
 "groups: the model type group and the quantifier group."
 msgstr ""
+"Οι τιμές των δύο πρώτων πεδίων είναι σταθερές που ορίζονται στο module :mod:"
+"`xml.parsers.expat.model`. Αυτές οι σταθερές μπορούν να συλλεχθούν σε δύο "
+"ομάδες: την ομάδα τύπου μοντέλου και την ομάδα ποσοστοδεικτών."
 
 #: library/pyexpat.rst:689
 msgid "The constants in the model type group are:"
-msgstr ""
+msgstr "Οι σταθερές στην ομάδα τύπου μοντέλου είναι:"
 
 #: library/pyexpat.rst:695
 msgid ""
 "The element named by the model name was declared to have a content model of "
 "``ANY``."
 msgstr ""
+"Το στοιχείο που ονομάζεται από το όνομα μοντέλου δηλώθηκε ότι έχει ένα "
+"μοντέλο περιεχομένου ``ANY``."
 
 #: library/pyexpat.rst:702
 msgid ""
 "The named element allows a choice from a number of options; this is used for "
 "content models such as ``(A | B | C)``."
 msgstr ""
+"Το ονομαζόμενο στοιχείο επιτρέπει μια επιλογή από έναν αριθμό επιλογών· αυτό "
+"χρησιμοποιείται για μοντέλα περιεχομένου όπως ``(A | B | C)``."
 
 #: library/pyexpat.rst:709
 msgid "Elements which are declared to be ``EMPTY`` have this model type."
-msgstr ""
+msgstr "Στοιχεία που δηλώνονται ως ``EMPTY`` έχουν αυτόν τον τύπο μοντέλου."
 
 #: library/pyexpat.rst:723
 msgid ""
@@ -784,30 +1167,39 @@ msgid ""
 "are indicated with this model type.  This is used for models such as ``(A, "
 "B, C)``."
 msgstr ""
+"Τα μοντέλα που αντιπροσωπεύουν μια σειρά μοντέλων που ακολουθούν το ένα το "
+"άλλο υποδεικνύονται με αυτόν τον τύπο μοντέλου. Αυτό χρησιμοποιείται για "
+"μοντέλα όπως ``(A, B, C)``."
 
 #: library/pyexpat.rst:726
 msgid "The constants in the quantifier group are:"
-msgstr ""
+msgstr "Οι σταθερές στην ομάδα ποσοστοδεικτών είναι:"
 
 #: library/pyexpat.rst:732
 msgid "No modifier is given, so it can appear exactly once, as for ``A``."
 msgstr ""
+"Δεν δίνεται κανένας τροποποιητής, οπότε μπορεί να εμφανιστεί ακριβώς μία "
+"φορά, όπως για ``A``."
 
 #: library/pyexpat.rst:738
 msgid "The model is optional: it can appear once or not at all, as for ``A?``."
 msgstr ""
+"Το μοντέλο είναι προαιρετικό: μπορεί να εμφανιστεί μία φορά ή καθόλου, όπως "
+"για ``A?``."
 
 #: library/pyexpat.rst:744
 msgid "The model must occur one or more times (like ``A+``)."
 msgstr ""
+"Το μοντέλο πρέπει να εμφανίζεται μία ή περισσότερες φορές (όπως ``A+``)."
 
 #: library/pyexpat.rst:750
 msgid "The model must occur zero or more times, as for ``A*``."
 msgstr ""
+"Το μοντέλο πρέπει να εμφανίζεται μηδέν ή περισσότερες φορές, όπως για ``A*``."
 
 #: library/pyexpat.rst:756
 msgid "Expat error constants"
-msgstr ""
+msgstr "Σταθερές σφαλμάτων Expat"
 
 #: library/pyexpat.rst:760
 msgid ""
@@ -819,106 +1211,136 @@ msgid ""
 "comparing its :attr:`code` attribute with :samp:`errors.codes[errors."
 "XML_ERROR_{CONSTANT_NAME}]`."
 msgstr ""
+"Οι ακόλουθες σταθερές παρέχονται στο module :mod:`xml.parsers.expat.errors`. "
+"Αυτές οι σταθερές είναι χρήσιμες για την ερμηνεία ορισμένων από τα "
+"χαρακτηριστικά των αντικειμένων εξαίρεσης :exc:`ExpatError` που προκαλούνται "
+"όταν έχει συμβεί ένα σφάλμα. Δεδομένου ότι για λόγους συμβατότητας προς τα "
+"πίσω, η τιμή των σταθερών είναι το *μήνυμα* σφάλματος και όχι ο αριθμητικός "
+"*κωδικός* σφάλματος, το κάνετε αυτό συγκρίνοντας το χαρακτηριστικό :attr:"
+"`code` του με :samp:`errors.codes[errors.XML_ERROR_{CONSTANT_NAME}]`."
 
 #: library/pyexpat.rst:768
 msgid "The ``errors`` module has the following attributes:"
-msgstr ""
+msgstr "Το module ``errors`` έχει τα ακόλουθα χαρακτηριστικά:"
 
 #: library/pyexpat.rst:772
 msgid "A dictionary mapping string descriptions to their error codes."
 msgstr ""
+"Ένα λεξικό που αντιστοιχίζει περιγραφές συμβολοσειρών στους κωδικούς "
+"σφαλμάτων τους."
 
 #: library/pyexpat.rst:779
 msgid "A dictionary mapping numeric error codes to their string descriptions."
 msgstr ""
+"Ένα λεξικό που αντιστοιχίζει αριθμητικούς κωδικούς σφαλμάτων στις περιγραφές "
+"συμβολοσειρών τους."
 
 #: library/pyexpat.rst:789
 msgid ""
 "An entity reference in an attribute value referred to an external entity "
 "instead of an internal entity."
 msgstr ""
+"Μια αναφορά οντότητας σε μια τιμή χαρακτηριστικού αναφέρθηκε σε μια "
+"εξωτερική οντότητα αντί για μια εσωτερική οντότητα."
 
 #: library/pyexpat.rst:795
 msgid ""
 "A character reference referred to a character which is illegal in XML (for "
 "example, character ``0``, or '``&#0;``')."
 msgstr ""
+"Μια αναφορά χαρακτήρα αναφέρθηκε σε έναν χαρακτήρα που είναι παράνομος στο "
+"XML (για παράδειγμα, ο χαρακτήρας ``0``, ή '``&#0;``')."
 
 #: library/pyexpat.rst:801
 msgid ""
 "An entity reference referred to an entity which was declared with a "
 "notation, so cannot be parsed."
 msgstr ""
+"Μια αναφορά οντότητας αναφέρθηκε σε μια οντότητα που δηλώθηκε με μια "
+"σημειογραφία, οπότε δεν μπορεί να αναλυθεί."
 
 #: library/pyexpat.rst:807
 msgid "An attribute was used more than once in a start tag."
 msgstr ""
+"Ένα χαρακτηριστικό χρησιμοποιήθηκε περισσότερες από μία φορές σε μια ετικέτα "
+"έναρξης."
 
 #: library/pyexpat.rst:815
 msgid ""
 "Raised when an input byte could not properly be assigned to a character; for "
 "example, a NUL byte (value ``0``) in a UTF-8 input stream."
 msgstr ""
+"Προκαλείται όταν ένα εισερχόμενο byte δεν μπορούσε να ανατεθεί σωστά σε έναν "
+"χαρακτήρα· για παράδειγμα, ένα byte NUL (τιμή ``0``) σε μια ροή εισόδου "
+"UTF-8."
 
 #: library/pyexpat.rst:821
 msgid "Something other than whitespace occurred after the document element."
-msgstr ""
+msgstr "Κάτι άλλο εκτός από κενό χώρο συνέβη μετά το στοιχείο εγγράφου."
 
 #: library/pyexpat.rst:826
 msgid ""
 "An XML declaration was found somewhere other than the start of the input "
 "data."
 msgstr ""
+"Βρέθηκε μια δήλωση XML κάπου αλλού εκτός από την αρχή των δεδομένων εισόδου."
 
 #: library/pyexpat.rst:831
 msgid ""
 "The document contains no elements (XML requires all documents to contain "
 "exactly one top-level element).."
 msgstr ""
+"Το έγγραφο δεν περιέχει στοιχεία (το XML απαιτεί όλα τα έγγραφα να περιέχουν "
+"ακριβώς ένα στοιχείο κορυφαίου επιπέδου).."
 
 #: library/pyexpat.rst:837
 msgid "Expat was not able to allocate memory internally."
-msgstr ""
+msgstr "Το Expat δεν ήταν σε θέση να δεσμεύσει μνήμη εσωτερικά."
 
 #: library/pyexpat.rst:842
 msgid "A parameter entity reference was found where it was not allowed."
-msgstr ""
+msgstr "Βρέθηκε μια αναφορά παραμετρικής οντότητας όπου δεν επιτρέπεται."
 
 #: library/pyexpat.rst:847
 msgid "An incomplete character was found in the input."
-msgstr ""
+msgstr "Βρέθηκε ένας ατελής χαρακτήρας στην είσοδο."
 
 #: library/pyexpat.rst:852
 msgid ""
 "An entity reference contained another reference to the same entity; possibly "
 "via a different name, and possibly indirectly."
 msgstr ""
+"Μια αναφορά οντότητας περιείχε μια άλλη αναφορά στην ίδια οντότητα· πιθανώς "
+"μέσω ενός διαφορετικού ονόματος, και πιθανώς έμμεσα."
 
 #: library/pyexpat.rst:858
 msgid "Some unspecified syntax error was encountered."
-msgstr ""
+msgstr "Συνέβη κάποιο μη καθορισμένο συντακτικό σφάλμα."
 
 #: library/pyexpat.rst:863
 msgid "An end tag did not match the innermost open start tag."
 msgstr ""
+"Μια ετικέτα λήξης δεν ταιριάζει με την πιο εσωτερική ανοιχτή ετικέτα έναρξης."
 
 #: library/pyexpat.rst:868
 msgid ""
 "Some token (such as a start tag) was not closed before the end of the stream "
 "or the next token was encountered."
 msgstr ""
+"Κάποιο διακριτικό (όπως μια ετικέτα έναρξης) δεν έκλεισε πριν το τέλος της "
+"ροής ή συναντήθηκε το επόμενο διακριτικό."
 
 #: library/pyexpat.rst:874
 msgid "A reference was made to an entity which was not defined."
-msgstr ""
+msgstr "Έγινε αναφορά σε μια οντότητα που δεν ορίστηκε."
 
 #: library/pyexpat.rst:879
 msgid "The document encoding is not supported by Expat."
-msgstr ""
+msgstr "Η κωδικοποίηση εγγράφου δεν υποστηρίζεται από το Expat."
 
 #: library/pyexpat.rst:884
 msgid "A CDATA marked section was not closed."
-msgstr ""
+msgstr "Μια ενότητα με σήμανση CDATA δεν έκλεισε."
 
 #: library/pyexpat.rst:892
 msgid ""
@@ -926,6 +1348,9 @@ msgid ""
 "declared itself to be in the XML declaration, and the :attr:"
 "`NotStandaloneHandler` was set and returned ``0``."
 msgstr ""
+"Ο αναλυτής διαπίστωσε ότι το έγγραφο δεν ήταν \"αυτόνομο\" αν και το δήλωνε "
+"ότι ήταν στη δήλωση XML, και ο :attr:`NotStandaloneHandler` ορίστηκε και "
+"επέστρεψε ``0``."
 
 #: library/pyexpat.rst:905
 msgid ""
@@ -933,6 +1358,10 @@ msgid ""
 "Expat was configured without DTD support.  This should never be reported by "
 "a standard build of the :mod:`xml.parsers.expat` module."
 msgstr ""
+"Ζητήθηκε μια λειτουργία που απαιτεί την υποστήριξη DTD να είναι "
+"ενσωματωμένη, αλλά το Expat ρυθμίστηκε χωρίς υποστήριξη DTD. Αυτό δεν θα "
+"πρέπει ποτέ να αναφέρεται από μια τυπική κατασκευή του module :mod:`xml."
+"parsers.expat`."
 
 #: library/pyexpat.rst:912
 msgid ""
@@ -940,48 +1369,62 @@ msgid ""
 "changed before parsing has started.  This is (currently) only raised by :"
 "meth:`UseForeignDTD`."
 msgstr ""
+"Ζητήθηκε μια αλλαγή συμπεριφοράς μετά την έναρξη της ανάλυσης που μπορεί να "
+"αλλάξει μόνο πριν ξεκινήσει η ανάλυση. Αυτό (προς το παρόν) προκαλείται μόνο "
+"από τη :meth:`UseForeignDTD`."
 
 #: library/pyexpat.rst:919
 msgid "An undeclared prefix was found when namespace processing was enabled."
 msgstr ""
+"Βρέθηκε ένα μη δηλωμένο πρόθεμα όταν η επεξεργασία ονοματοχώρου ήταν "
+"ενεργοποιημένη."
 
 #: library/pyexpat.rst:924
 msgid ""
 "The document attempted to remove the namespace declaration associated with a "
 "prefix."
 msgstr ""
+"Το έγγραφο προσπάθησε να αφαιρέσει τη δήλωση ονοματοχώρου που σχετίζεται με "
+"ένα πρόθεμα."
 
 #: library/pyexpat.rst:930
 msgid "A parameter entity contained incomplete markup."
-msgstr ""
+msgstr "Μια παραμετρική οντότητα περιείχε ατελή σήμανση."
 
 #: library/pyexpat.rst:935
 msgid "The document contained no document element at all."
-msgstr ""
+msgstr "Το έγγραφο δεν περιείχε καθόλου στοιχείο εγγράφου."
 
 #: library/pyexpat.rst:940
 msgid "There was an error parsing a text declaration in an external entity."
 msgstr ""
+"Υπήρξε σφάλμα κατά την ανάλυση μιας δήλωσης κειμένου σε μια εξωτερική "
+"οντότητα."
 
 #: library/pyexpat.rst:945
 msgid "Characters were found in the public id that are not allowed."
-msgstr ""
+msgstr "Βρέθηκαν χαρακτήρες στο δημόσιο αναγνωριστικό που δεν επιτρέπονται."
 
 #: library/pyexpat.rst:950
 msgid ""
 "The requested operation was made on a suspended parser, but isn't allowed.  "
 "This includes attempts to provide additional input or to stop the parser."
 msgstr ""
+"Η ζητούμενη λειτουργία πραγματοποιήθηκε σε έναν αναλυτή που είχε ανασταλεί, "
+"αλλά δεν επιτρέπεται. Αυτό περιλαμβάνει προσπάθειες παροχής επιπλέον εισόδου "
+"ή διακοπής του αναλυτή."
 
 #: library/pyexpat.rst:956
 msgid ""
 "An attempt to resume the parser was made when the parser had not been "
 "suspended."
 msgstr ""
+"Έγινε μια προσπάθεια να συνεχιστεί ο αναλυτής όταν ο αναλυτής δεν είχε "
+"ανασταλεί."
 
 #: library/pyexpat.rst:994 library/pyexpat.rst:999
 msgid "This should not be reported to Python applications."
-msgstr ""
+msgstr "Αυτό δεν θα πρέπει να αναφέρεται σε εφαρμογές Python."
 
 #: library/pyexpat.rst:966
 msgid ""
@@ -989,38 +1432,49 @@ msgid ""
 "input, but isn't allowed.  This includes attempts to provide additional "
 "input or to stop the parser."
 msgstr ""
+"Η ζητούμενη λειτουργία πραγματοποιήθηκε σε έναν αναλυτή που ολοκλήρωσε την "
+"ανάλυση της εισόδου, αλλά δεν επιτρέπεται. Αυτό περιλαμβάνει προσπάθειες "
+"παροχής επιπλέον εισόδου ή διακοπής του αναλυτή."
 
 #: library/pyexpat.rst:976
 msgid ""
 "An attempt was made to undeclare reserved namespace prefix ``xml`` or to "
 "bind it to another namespace URI."
 msgstr ""
+"Έγινε μια προσπάθεια να ακυρωθεί η δήλωση του δεσμευμένου προθέματος "
+"ονοματοχώρου ``xml`` ή να το συνδέσει με ένα άλλο URI ονοματοχώρου."
 
 #: library/pyexpat.rst:983
 msgid ""
 "An attempt was made to declare or undeclare reserved namespace prefix "
 "``xmlns``."
 msgstr ""
+"Έγινε μια προσπάθεια να δηλωθεί ή να ακυρωθεί η δήλωση του δεσμευμένου "
+"προθέματος ονοματοχώρου ``xmlns``."
 
 #: library/pyexpat.rst:988
 msgid ""
 "An attempt was made to bind the URI of one the reserved namespace prefixes "
 "``xml`` and ``xmlns`` to another namespace prefix."
 msgstr ""
+"Έγινε μια προσπάθεια να δεσμευτεί το URI ενός από τα δεσμευμένα προθέματα "
+"ονοματοχώρου ``xml`` και ``xmlns`` σε ένα άλλο πρόθεμα ονοματοχώρου."
 
 #: library/pyexpat.rst:1004
 msgid ""
 "The limit on input amplification factor (from DTD and entities) has been "
 "breached."
 msgstr ""
+"Το όριο στον παράγοντα ενίσχυσης εισόδου (από DTD και οντότητες) έχει "
+"παραβιαστεί."
 
 #: library/pyexpat.rst:1010
 msgid "The parser was tried to be stopped or suspended before it started."
-msgstr ""
+msgstr "Ο αναλυτής προσπάθησε να σταματήσει ή να ανασταλεί πριν ξεκινήσει."
 
 #: library/pyexpat.rst:1016
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: library/pyexpat.rst:1017
 msgid ""
@@ -1029,15 +1483,20 @@ msgid ""
 "www.w3.org/TR/2006/REC-xml11-20060816/#NT-EncodingDecl and https://www.iana."
 "org/assignments/character-sets/character-sets.xhtml."
 msgstr ""
+"Η συμβολοσειρά κωδικοποίησης που περιλαμβάνεται στην έξοδο XML θα πρέπει να "
+"συμμορφώνεται με τα κατάλληλα πρότυπα. Για παράδειγμα, το \"UTF-8\" είναι "
+"έγκυρο, αλλά το \"UTF8\" δεν είναι. Δείτε https://www.w3.org/TR/2006/REC-"
+"xml11-20060816/#NT-EncodingDecl και https://www.iana.org/assignments/"
+"character-sets/character-sets.xhtml."
 
 #: library/pyexpat.rst:25
 msgid "Expat"
-msgstr ""
+msgstr "Expat"
 
 #: library/pyexpat.rst:35
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: library/pyexpat.rst:35
 msgid "pyexpat"
-msgstr ""
+msgstr "pyexpat"
