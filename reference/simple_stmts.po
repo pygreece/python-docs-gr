@@ -621,7 +621,7 @@ msgstr "Εάν δεν έχει καθοριστεί άλλο όνομα και �
 
 #: reference/simple_stmts.rst:794
 msgid "If the module being imported is *not* a top level module, then the name of the top level package that contains the module is bound in the local namespace as a reference to the top level package. The imported module must be accessed using its full qualified name rather than directly"
-msgstr "Εάν το module που εισάγεται *δεν* είναι ένα module ανώτατου επιπέδου, τότε το όνομα του πακέτου ανώτατου επιπέδου που περιέχει το module δεσμεύεται στο τοπικό namespace ως αναφορά στο πακέτο ανώτατου επιπέδου. Η πρόσβαση στo εισαγόμενo module πρέπει να γίνεται χρησιμοποιώντας το πλήρες ειδικευμένο όνομά του και όχι απευθείας"
+msgstr "Εάν το module που εισάγεται *δεν* είναι ένα module ανώτατου επιπέδου, τότε το όνομα του πακέτου ανώτατου επιπέδου που περιέχει το module δεσμεύεται στο τοπικό namespace ως αναφορά στο πακέτο ανώτατου επιπέδου. Η πρόσβαση στο εισαγόμενο module πρέπει να γίνεται χρησιμοποιώντας το πλήρες ειδικευμένο όνομά του και όχι απευθείας"
 
 #: reference/simple_stmts.rst:804
 msgid "The :keyword:`from` form uses a slightly more complex process:"
@@ -762,7 +762,7 @@ msgstr "Ο κώδικας που μεταγλωττίζεται από κλήσ�
 
 #: reference/simple_stmts.rst:947
 msgid "A future statement typed at an interactive interpreter prompt will take effect for the rest of the interpreter session.  If an interpreter is started with the :option:`-i` option, is passed a script name to execute, and the script includes a future statement, it will be in effect in the interactive session started after the script is executed."
-msgstr "Μια μελλοντική δήλωση που πληκτρολογείται σε μια διαδραστική γραμμή εντολών του διερμηνέα θα τεθεί σε ισχύ για το υπόλοιπο της περιόδου λειτουργίας του διερμηνέα. Εάν ένας διερμηνέας εκκινηθεί με την επιλογή :option:`-i`, του δοθεί ένα όνομα σεναρίου για εκτέλεση και το σενάριo περιλαμβάνει μια μελλοντική δήλωση, θα ισχύει στη διαδραστική συνεδρία που ξεκίνησε μετά την εκτέλεση του σεναρίου."
+msgstr "Μια μελλοντική δήλωση που πληκτρολογείται σε μια διαδραστική γραμμή εντολών του διερμηνέα θα τεθεί σε ισχύ για το υπόλοιπο της περιόδου λειτουργίας του διερμηνέα. Εάν ένας διερμηνέας εκκινηθεί με την επιλογή :option:`-i`, του δοθεί ένα όνομα σεναρίου για εκτέλεση και το σενάριο περιλαμβάνει μια μελλοντική δήλωση, θα ισχύει στη διαδραστική συνεδρία που ξεκίνησε μετά την εκτέλεση του σεναρίου."
 
 #: reference/simple_stmts.rst:955
 msgid ":pep:`236` - Back to the __future__"
@@ -786,7 +786,7 @@ msgstr "Η εντολή :keyword:`!global` ισχύει για ολόκληρο 
 
 #: reference/simple_stmts.rst:982
 msgid "At the module level, all variables are global, so a :keyword:`!global` statement has no effect. However, variables must still not be used or assigned to prior to their :keyword:`!global` declaration. This requirement is relaxed in the interactive prompt (:term:`REPL`)."
-msgstr "Σε επίπεδο module, όλες οι μεταβλητές είναι καθολικές (global), επομένως μια εντολή :keyword:`!global` δεν έχει κανένα αποτέλεσμα. Ωστόσο, οι μεταβλητές δεν πρέπει ακόμα να χρησιμοποιούνται ή να ανατίθενται πριν από τη δήλωσή τους με το :keyword:`!global`. Αυτή η απαίτηση δεν είναι τόσο ρητή στη διαδραστική γραμμή εντοлών (:term:`REPL`)."
+msgstr "Σε επίπεδο module, όλες οι μεταβλητές είναι καθολικές (global), επομένως μια εντολή :keyword:`!global` δεν έχει κανένα αποτέλεσμα. Ωστόσο, οι μεταβλητές δεν πρέπει ακόμα να χρησιμοποιούνται ή να ανατίθενται πριν από τη δήλωσή τους με το :keyword:`!global`. Αυτή η απαίτηση δεν είναι τόσο ρητή στη διαδραστική γραμμή εντολών (:term:`REPL`)."
 
 #: reference/simple_stmts.rst:993
 msgid "**Programmer's note:** :keyword:`global` is a directive to the parser.  It applies only to code parsed at the same time as the :keyword:`!global` statement. In particular, a :keyword:`!global` statement contained in a string or code object supplied to the built-in :func:`exec` function does not affect the code block *containing* the function call, and code contained in such a string is unaffected by :keyword:`!global` statements in the code containing the function call.  The same applies to the :func:`eval` and :func:`compile` functions."
