@@ -254,8 +254,9 @@ msgstr ""
 "collection` κατά τη διάρκεια της χρονομέτρησης. Το πλεονέκτημα αυτής της "
 "προσέγγισης είναι ότι καθιστά τις ανεξάρτητες χρονομετρήσεις πιο "
 "συγκρίσιμες. Το μειονέκτημα είναι ότι ο GC μπορεί να είναι σημαντικό "
-"συστατικό της απόδοσης της λειτουργίας που μετράται. Αν ισχύει αυτό, ο GC μπορεί "
-"να ενεργοποιηθεί ξανά ως η πρώτη εντολή στο *setup* string. Για παράδειγμα::"
+"συστατικό της απόδοσης της λειτουργίας που μετράται. Αν ισχύει αυτό, ο GC "
+"μπορεί να ενεργοποιηθεί ξανά ως η πρώτη εντολή στο *setup* string. Για "
+"παράδειγμα::"
 
 #: library/timeit.rst:143
 msgid "timeit.Timer('for i in range(10): oct(i)', 'gc.enable()').timeit()"
@@ -328,8 +329,7 @@ msgstr ""
 
 #: library/timeit.rst:189
 msgid "Helper to print a traceback from the timed code."
-msgstr ""
-"Βοηθός για την εκτύπωση μιας ανίχνευσης από τον χρονομετρημένο κώδικα."
+msgstr "Βοηθός για την εκτύπωση μιας ανίχνευσης από τον χρονομετρημένο κώδικα."
 
 #: library/timeit.rst:191
 msgid "Typical use::"
@@ -398,8 +398,8 @@ msgid ""
 "measure process time, not wallclock time, using :func:`time.process_time` "
 "instead of :func:`time.perf_counter`, which is the default"
 msgstr ""
-"μετράει τον χρόνο διεργασίας, όχι τον χρόνο ρολογιού, χρησιμοποιώντας την :func:"
-"`time.process_time` αντί της :func:`time.perf_counter`, που είναι η "
+"μετράει τον χρόνο διεργασίας, όχι τον χρόνο ρολογιού, χρησιμοποιώντας την :"
+"func:`time.process_time` αντί της :func:`time.perf_counter`, που είναι η "
 "προεπιλογή"
 
 #: library/timeit.rst:238
