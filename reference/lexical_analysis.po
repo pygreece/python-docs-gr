@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-02-21 21:51+0200\n"
+"Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: reference/lexical_analysis.rst:6
 msgid "Lexical analysis"
-msgstr ""
+msgstr "Λεξική ανάλυση"
 
 #: reference/lexical_analysis.rst:10
 msgid ""
@@ -28,6 +28,10 @@ msgid ""
 "the *tokenizer*). This chapter describes how the lexical analyzer produces "
 "these tokens."
 msgstr ""
+"Ένα πρόγραμμα Python διαβάζεται από έναν *αναλυτή (parser)*. Η είσοδος του "
+"αναλυτή είναι μια ροή από :term:`tokens <token>`, που παράγεται από τον "
+"*λεξικό αναλυτή* (γνωστό και ως *tokenizer*). Αυτό το κεφάλαιο περιγράφει "
+"πώς ο λεξικός αναλυτής παράγει αυτά τα tokens."
 
 #: reference/lexical_analysis.rst:15
 msgid ""
@@ -36,6 +40,10 @@ msgid ""
 "characters <lexical-source-character>`. If the text cannot be decoded, a :"
 "exc:`SyntaxError` is raised."
 msgstr ""
+"Ο λεξικός αναλυτής καθορίζει την :ref:`κωδικοποίηση <encodings>` του "
+"κειμένου του προγράμματος (UTF-8 από προεπιλογή) και αποκωδικοποιεί το "
+"κείμενο σε :ref:`χαρακτήρες πηγής <lexical-source-character>`. Αν το κείμενο "
+"δεν μπορεί να αποκωδικοποιηθεί, γίνεται raise ένα :exc:`SyntaxError`."
 
 #: reference/lexical_analysis.rst:20
 msgid ""
@@ -46,158 +54,167 @@ msgid ""
 "processed. The following table gives a quick summary of these source "
 "characters, with links to sections that contain more information."
 msgstr ""
+"Στη συνέχεια, ο λεξικός αναλυτής χρησιμοποιεί τους χαρακτήρες προέλευσης για "
+"να δημιουργήσει μια ροή από tokens. Ο τύπος ενός παραγόμενου token γενικά "
+"εξαρτάται από τον επόμενο χαρακτήρα πηγής που πρόκειται να επεξεργαστεί. "
+"Αντίστοιχα, άλλες ειδικές συμπεριφορές του αναλυτή εξαρτώνται από τον πρώτο "
+"χαρακτήρα πηγής που δεν έχει ακόμη επεξεργαστεί. Ο παρακάτω πίνακας δίνει "
+"μια σύντομη σύνοψη αυτών των χαρακτήρων πηγής, με συνδέσμους προς τις "
+"ενότητες που περιέχουν περισσότερες πληροφορίες."
 
 #: reference/lexical_analysis.rst:30
 msgid "Character"
-msgstr ""
+msgstr "Χαρακτήρας"
 
 #: reference/lexical_analysis.rst:31
 msgid "Next token (or other relevant documentation)"
-msgstr ""
+msgstr "Επόμενο token (ή άλλη σχετική τεκμηρίωση)"
 
 #: reference/lexical_analysis.rst:33 reference/lexical_analysis.rst:266
 msgid "space"
-msgstr ""
+msgstr "κενό"
 
 #: reference/lexical_analysis.rst:34 reference/lexical_analysis.rst:266
 msgid "tab"
-msgstr ""
+msgstr "tab"
 
 #: reference/lexical_analysis.rst:35
 msgid "formfeed"
-msgstr ""
+msgstr "αλλαγή σελίδας (formfeed)"
 
 #: reference/lexical_analysis.rst:36
 msgid ":ref:`Whitespace <whitespace>`"
-msgstr ""
+msgstr ":ref:`Κενά διαστήματα <whitespace>`"
 
 #: reference/lexical_analysis.rst:38
 msgid "CR, LF"
-msgstr ""
+msgstr "CR, LF"
 
 #: reference/lexical_analysis.rst:39
 msgid ":ref:`New line <line-structure>`"
-msgstr ""
+msgstr ":ref:`Νέα γραμμή <line-structure>`"
 
 #: reference/lexical_analysis.rst:40
 msgid ":ref:`Indentation <indentation>`"
-msgstr ""
+msgstr ":ref:`Εσοχή <indentation>`"
 
 #: reference/lexical_analysis.rst:42
 msgid "backslash (``\\``)"
-msgstr ""
+msgstr "ανάστροφη κάθετος (backslash) (``\\``)"
 
 #: reference/lexical_analysis.rst:43
 msgid ":ref:`Explicit line joining <explicit-joining>`"
-msgstr ""
+msgstr ":ref:`Ρητή συνένωση γραμμών <explicit-joining>`"
 
 #: reference/lexical_analysis.rst:44
 msgid "(Also significant in :ref:`string escape sequences <escape-sequences>`)"
 msgstr ""
+"(Σημαντική επίσης στις :ref:`ακολουθίες διαφυγής συμβολοσειρών <escape-"
+"sequences>`)"
 
 #: reference/lexical_analysis.rst:46
 msgid "hash (``#``)"
-msgstr ""
+msgstr "δίεση (``#``)"
 
 #: reference/lexical_analysis.rst:47
 msgid ":ref:`Comment <comments>`"
-msgstr ""
+msgstr ":ref:`Σχόλιο <comments>`"
 
 #: reference/lexical_analysis.rst:49
 msgid "quote (``'``, ``\"``)"
-msgstr ""
+msgstr "εισαγωγικό (``'``, ``\"``)"
 
 #: reference/lexical_analysis.rst:50
 msgid ":ref:`String literal <strings>`"
-msgstr ""
+msgstr ":ref:`Συμβολοσειρά <strings>`"
 
 #: reference/lexical_analysis.rst:52
 msgid "ASCII letter (``a``-``z``, ``A``-``Z``)"
-msgstr ""
+msgstr "γράμμα ASCII (``a``-``z``, ``A``-``Z``)"
 
 #: reference/lexical_analysis.rst:53
 msgid "non-ASCII character"
-msgstr ""
+msgstr "μη-ASCII χαρακτήρας"
 
 #: reference/lexical_analysis.rst:54 reference/lexical_analysis.rst:58
 msgid ":ref:`Name <identifiers>`"
-msgstr ""
+msgstr ":ref:`Όνομα <identifiers>`"
 
 #: reference/lexical_analysis.rst:55
 msgid "Prefixed :ref:`string or bytes literal <strings>`"
-msgstr ""
+msgstr "Λεκτικό :ref:`συμβολοσειράς ή bytes με πρόθεμα <strings>`"
 
 #: reference/lexical_analysis.rst:57
 msgid "underscore (``_``)"
-msgstr ""
+msgstr "κάτω παύλα (``_``)"
 
 #: reference/lexical_analysis.rst:59
 msgid "(Can also be part of :ref:`numeric literals <numbers>`)"
-msgstr ""
+msgstr "(Μπορεί επίσης να αποτελεί μέρος :ref:`αριθμητικών <numbers>`)"
 
 #: reference/lexical_analysis.rst:61
 msgid "number (``0``-``9``)"
-msgstr ""
+msgstr "αριθμός (``0``-``9``)"
 
 #: reference/lexical_analysis.rst:62 reference/lexical_analysis.rst:65
 msgid ":ref:`Numeric literal <numbers>`"
-msgstr ""
+msgstr ":ref:`Αριθμητικό <numbers>`"
 
 #: reference/lexical_analysis.rst:64
 msgid "dot (``.``)"
-msgstr ""
+msgstr "τελεία (``.``)"
 
 #: reference/lexical_analysis.rst:66
 msgid ":ref:`Operator <operators>`"
-msgstr ""
+msgstr ":ref:`Τελεστής <operators>`"
 
 #: reference/lexical_analysis.rst:68
 msgid "question mark (``?``)"
-msgstr ""
+msgstr "ερωτηματικό (``?``)"
 
 #: reference/lexical_analysis.rst:69
 msgid "dollar (``$``)"
-msgstr ""
+msgstr "σύμβολο δολαρίου (``$``)"
 
 #: reference/lexical_analysis.rst:74
 msgid "backquote (``​`​``)"
-msgstr ""
+msgstr "ανάποδο εισαγωγικό (``​`​``)"
 
 #: reference/lexical_analysis.rst:75
 msgid "control character"
-msgstr ""
+msgstr "χαρακτήρας ελέγχου"
 
 #: reference/lexical_analysis.rst:76
 msgid "Error (outside string literals and comments)"
-msgstr ""
+msgstr "Σφάλμα (εκτός λεκτικών συμβολοσειράς και σχολίων)"
 
 #: reference/lexical_analysis.rst:78
 msgid "other printing character"
-msgstr ""
+msgstr "άλλος εκτυπώσιμος χαρακτήρας"
 
 #: reference/lexical_analysis.rst:79
 msgid ":ref:`Operator or delimiter <operators>`"
-msgstr ""
+msgstr ":ref:`Τελεστής ή delimiter <operators>`"
 
 #: reference/lexical_analysis.rst:81
 msgid "end of file"
-msgstr ""
+msgstr "τέλος αρχείου"
 
 #: reference/lexical_analysis.rst:82
 msgid ":ref:`End marker <endmarker-token>`"
-msgstr ""
+msgstr ":ref:`Δείκτης τέλους <endmarker-token>`"
 
 #: reference/lexical_analysis.rst:88
 msgid "Line structure"
-msgstr ""
+msgstr "Δομή γραμμών"
 
 #: reference/lexical_analysis.rst:92
 msgid "A Python program is divided into a number of *logical lines*."
-msgstr ""
+msgstr "Ένα πρόγραμμα Python χωρίζεται σε έναν αριθμό από *λογικές γραμμές*."
 
 #: reference/lexical_analysis.rst:98
 msgid "Logical lines"
-msgstr ""
+msgstr "Λογικές γραμμές"
 
 #: reference/lexical_analysis.rst:102
 msgid ""
@@ -208,30 +225,42 @@ msgid ""
 "by following the :ref:`explicit <explicit-joining>` or :ref:`implicit "
 "<implicit-joining>` *line joining* rules."
 msgstr ""
+"Το τέλος μιας λογικής γραμμής αναπαρίσταται από το token :data:`~token."
+"NEWLINE`. Οι εντολές δεν μπορούν να διασχίσουν τα όρια λογικών γραμμών, "
+"εκτός αν το :data:`!NEWLINE` επιτρέπεται από τη σύνταξη (π.χ. μεταξύ εντολών "
+"σε σύνθετες εντολές). Μια λογική γραμμή κατασκευάζεται από μία ή "
+"περισσότερες *φυσικές γραμμές* ακολουθώντας τους κανόνες *συνένωσης "
+"γραμμών* :ref:`ρητής <explicit-joining>` ή :ref:`έμμεσης <implicit-joining>`."
 
 #: reference/lexical_analysis.rst:113
 msgid "Physical lines"
-msgstr ""
+msgstr "Φυσικές γραμμές"
 
 #: reference/lexical_analysis.rst:115
 msgid ""
 "A physical line is a sequence of characters terminated by one the following "
 "end-of-line sequences:"
 msgstr ""
+"Μια φυσική γραμμή είναι μια ακολουθία χαρακτήρων που τερματίζεται από μία "
+"από τις παρακάτω ακολουθίες τέλους γραμμής:"
 
 #: reference/lexical_analysis.rst:118
 msgid "the Unix form using ASCII LF (linefeed),"
-msgstr ""
+msgstr "τη μορφή Unix που χρησιμοποιεί ASCII LF (linefeed),"
 
 #: reference/lexical_analysis.rst:119
 msgid ""
 "the Windows form using the ASCII sequence CR LF (return followed by "
 "linefeed),"
 msgstr ""
+"τη μορφή Windows που χρησιμοποιεί την ASCII ακολουθία CR LF (return "
+"ακολουθούμενο από linefeed),"
 
 #: reference/lexical_analysis.rst:120
 msgid "the '`Classic Mac OS`__' form using the ASCII CR (return) character."
 msgstr ""
+"τη μορφή '`Classic Mac OS`__' που χρησιμοποιεί τον χαρακτήρα ASCII CR "
+"(return)."
 
 #: reference/lexical_analysis.rst:124
 msgid ""
@@ -240,20 +269,27 @@ msgid ""
 "literals <strings>`.) Each line can use any of the sequences; they do not "
 "need to be consistent within a file."
 msgstr ""
+"Ανεξάρτητα από την πλατφόρμα, καθεμία από αυτές τις ακολουθίες "
+"αντικαθίσταται από έναν μόνο χαρακτήρα ASCII LF (linefeed). (Αυτό γίνεται "
+"ακόμη και μέσα σε :ref:`συμβολοσειρές <strings>`.) Κάθε γραμμή μπορεί να "
+"χρησιμοποιεί οποιαδήποτε από τις ακολουθίες· δεν χρειάζεται να είναι "
+"συνεπείς μέσα στο ίδιο αρχείο."
 
 #: reference/lexical_analysis.rst:130
 msgid ""
 "The end of input also serves as an implicit terminator for the final "
 "physical line."
 msgstr ""
+"Το τέλος της εισόδου λειτουργεί επίσης ως έμμεσο τέλος για την τελευταία "
+"φυσική γραμμή."
 
 #: reference/lexical_analysis.rst:133
 msgid "Formally:"
-msgstr ""
+msgstr "Τυπικά:"
 
 #: reference/lexical_analysis.rst:144
 msgid "Comments"
-msgstr ""
+msgstr "Σχόλια"
 
 #: reference/lexical_analysis.rst:149
 msgid ""
@@ -262,10 +298,14 @@ msgid ""
 "end of the logical line unless the implicit line joining rules are invoked. "
 "Comments are ignored by the syntax."
 msgstr ""
+"Ένα σχόλιο ξεκινά με τον χαρακτήρα δίεσης (``#``) που δεν αποτελεί μέρος "
+"συμβολοσειράς και τελειώνει στο τέλος της φυσικής γραμμής. Ένα σχόλιο "
+"σηματοδοτεί το τέλος της λογικής γραμμής, εκτός αν εφαρμόζονται οι κανόνες "
+"έμμεσης συνένωσης γραμμών. Τα σχόλια αγνοούνται από τη σύνταξη."
 
 #: reference/lexical_analysis.rst:158
 msgid "Encoding declarations"
-msgstr ""
+msgstr "Δηλώσεις κωδικοποίησης"
 
 #: reference/lexical_analysis.rst:163
 msgid ""
@@ -276,22 +316,29 @@ msgid ""
 "line of its own. If it is the second line, the first line must also be a "
 "comment-only line. The recommended forms of an encoding expression are ::"
 msgstr ""
+"Αν ένα σχόλιο στην πρώτη ή δεύτερη γραμμή ενός Python script ταιριάζει με "
+"την κανονική έκφραση (regular expression) ``coding[=:]\\s*([-\\w.]+)``, τότε "
+"το σχόλιο επεξεργάζεται ως δήλωση κωδικοποίησης· η πρώτη ομάδα αυτής της "
+"έκφρασης ονομάζει την κωδικοποίηση του αρχείου πηγαίου κώδικα. Η δήλωση "
+"κωδικοποίησης πρέπει να εμφανίζεται μόνη της σε μια γραμμή. Αν βρίσκεται στη "
+"δεύτερη γραμμή, τότε η πρώτη γραμμή πρέπει να περιέχει μόνο σχόλιο. Οι "
+"προτεινόμενες μορφές δήλωσης κωδικοποίησης είναι ::"
 
 #: reference/lexical_analysis.rst:170
 msgid "# -*- coding: <encoding-name> -*-"
-msgstr ""
+msgstr "# -*- coding: <encoding-name> -*-"
 
 #: reference/lexical_analysis.rst:172
 msgid "which is recognized also by GNU Emacs, and ::"
-msgstr ""
+msgstr "η οποία αναγνωρίζεται επίσης από το GNU Emacs, και ::"
 
 #: reference/lexical_analysis.rst:174
 msgid "# vim:fileencoding=<encoding-name>"
-msgstr ""
+msgstr "# vim:fileencoding=<encoding-name>"
 
 #: reference/lexical_analysis.rst:176
 msgid "which is recognized by Bram Moolenaar's VIM."
-msgstr ""
+msgstr "η οποία αναγνωρίζεται από το VIM του Bram Moolenaar."
 
 #: reference/lexical_analysis.rst:178
 msgid ""
@@ -300,6 +347,10 @@ msgid ""
 "order mark (``b'\\xef\\xbb\\xbf'``) is ignored rather than being a syntax "
 "error."
 msgstr ""
+"Αν δεν βρεθεί δήλωση κωδικοποίησης, η προεπιλεγμένη κωδικοποίηση είναι "
+"UTF-8. Αν η έμμεση ή ρητή κωδικοποίηση ενός αρχείου είναι UTF-8, ένα αρχικό "
+"UTF-8 byte-order mark (``b'\\xef\\xbb\\xbf'``) αγνοείται αντί να θεωρείται "
+"σφάλμα σύνταξης."
 
 #: reference/lexical_analysis.rst:182
 msgid ""
@@ -307,6 +358,10 @@ msgid ""
 "(see :ref:`standard-encodings`). The encoding is used for all lexical "
 "analysis, including string literals, comments and identifiers."
 msgstr ""
+"Αν δηλωθεί κωδικοποίηση, το όνομά της πρέπει να αναγνωρίζεται από την Python "
+"(βλ. :ref:`standard-encodings`). Η κωδικοποίηση χρησιμοποιείται για όλη τη "
+"λεξική ανάλυση, συμπεριλαμβανομένων λεκτικών συμβολοσειράς, σχολίων και "
+"αναγνωριστικών."
 
 #: reference/lexical_analysis.rst:189
 msgid ""
@@ -314,10 +369,15 @@ msgid ""
 "works on Unicode text decoded using the source encoding. Any Unicode code "
 "point, except the NUL control character, can appear in Python source."
 msgstr ""
+"Όλη η λεξική ανάλυση, συμπεριλαμβανομένων λεκτικών συμβολοσειράς, σχολίων "
+"και αναγνωριστικών, γίνεται πάνω σε κείμενο Unicode που έχει "
+"αποκωδικοποιηθεί με την κωδικοποίηση πηγής. Οποιοδήποτε σημείο κώδικα "
+"Unicode, εκτός από τον χαρακτήρα ελέγχου NUL, μπορεί να εμφανιστεί σε πηγαίο "
+"κώδικα Python."
 
 #: reference/lexical_analysis.rst:203
 msgid "Explicit line joining"
-msgstr ""
+msgstr "Ρητή συνένωση γραμμών"
 
 #: reference/lexical_analysis.rst:207
 msgid ""
@@ -327,6 +387,12 @@ msgid ""
 "following forming a single logical line, deleting the backslash and the "
 "following end-of-line character.  For example::"
 msgstr ""
+"Δύο ή περισσότερες φυσικές γραμμές μπορούν να ενωθούν σε λογικές γραμμές "
+"χρησιμοποιώντας χαρακτήρες ανάστροφης καθέτου (``\\``), ως εξής: όταν μια "
+"φυσική γραμμή τελειώνει με ανάστροφη κάθετο που δεν αποτελεί μέρος λεκτικού "
+"συμβολοσειράς ή σχολίου, ενώνεται με την επόμενη σχηματίζοντας μία λογική "
+"γραμμή, διαγράφοντας την ανάστροφη κάθετο και τον ακόλουθο χαρακτήρα τέλους "
+"γραμμής. Για παράδειγμα::"
 
 #: reference/lexical_analysis.rst:213
 msgid ""
@@ -335,6 +401,10 @@ msgid ""
 "   and 0 <= minute < 60 and 0 <= second < 60:   # Looks like a valid date\n"
 "        return 1"
 msgstr ""
+"if 1900 < year < 2100 and 1 <= month <= 12 \\\n"
+"   and 1 <= day <= 31 and 0 <= hour < 24 \\\n"
+"   and 0 <= minute < 60 and 0 <= second < 60:   # Looks like a valid date\n"
+"        return 1"
 
 #: reference/lexical_analysis.rst:218
 msgid ""
@@ -344,16 +414,26 @@ msgid ""
 "physical lines using a backslash).  A backslash is illegal elsewhere on a "
 "line outside a string literal."
 msgstr ""
+"Μια γραμμή που τελειώνει με ανάστροφη κάθετο δεν μπορεί να περιέχει σχόλιο. "
+"Η ανάστροφη κάθετος δεν συνεχίζει ένα σχόλιο. Η ανάστροφη κάθετος δεν "
+"συνεχίζει ένα token, εκτός από λεκτικά συμβολοσειράς (δηλ. tokens "
+"διαφορετικά από λεκτικά συμβολοσειράς δεν μπορούν να «σπάσουν» σε "
+"περισσότερες φυσικές γραμμές με χρήση ανάστροφης καθέτου). Η ανάστροφη "
+"κάθετος είναι παράνομη οπουδήποτε αλλού σε μια γραμμή εκτός λεκτικού "
+"συμβολοσειράς."
 
 #: reference/lexical_analysis.rst:228
 msgid "Implicit line joining"
-msgstr ""
+msgstr "Έμμεση συνένωση γραμμών"
 
 #: reference/lexical_analysis.rst:230
 msgid ""
 "Expressions in parentheses, square brackets or curly braces can be split "
 "over more than one physical line without using backslashes. For example::"
 msgstr ""
+"Εκφράσεις μέσα σε παρενθέσεις, αγκύλες ή άγκιστρα μπορούν να χωριστούν σε "
+"περισσότερες από μία φυσικές γραμμές χωρίς χρήση ανάστροφων καθέτων. Για "
+"παράδειγμα::"
 
 #: reference/lexical_analysis.rst:233
 msgid ""
@@ -362,6 +442,10 @@ msgid ""
 "               'Juli',    'Augustus', 'September',  # for the months\n"
 "               'Oktober', 'November', 'December']   # of the year"
 msgstr ""
+"month_names = ['Januari', 'Februari', 'Maart',      # These are the\n"
+"               'April',   'Mei',      'Juni',       # Dutch names\n"
+"               'Juli',    'Augustus', 'September',  # for the months\n"
+"               'Oktober', 'November', 'December']   # of the year"
 
 #: reference/lexical_analysis.rst:238
 msgid ""
@@ -371,10 +455,16 @@ msgid ""
 "continued lines can also occur within triple-quoted strings (see below); in "
 "that case they cannot carry comments."
 msgstr ""
+"Οι έμμεσα συνεχόμενες γραμμές μπορούν να περιέχουν σχόλια. Η εσοχή των "
+"γραμμών συνέχισης δεν είναι σημαντική. Επιτρέπονται κενές γραμμές συνέχισης. "
+"Δεν υπάρχει token NEWLINE ανάμεσα σε έμμεσα συνεχόμενες γραμμές. Έμμεσα "
+"συνεχόμενες γραμμές μπορούν επίσης να εμφανιστούν μέσα σε συμβολοσειρές "
+"τριπλών εισαγωγικών (βλ. παρακάτω)· σε αυτή την περίπτωση δεν μπορούν να "
+"περιέχουν σχόλια."
 
 #: reference/lexical_analysis.rst:248
 msgid "Blank lines"
-msgstr ""
+msgstr "Κενές γραμμές"
 
 #: reference/lexical_analysis.rst:252
 msgid ""
@@ -386,10 +476,16 @@ msgid ""
 "containing not even whitespace or a comment) terminates a multi-line "
 "statement."
 msgstr ""
+"Μια λογική γραμμή που περιέχει μόνο κενά, tabs, αλλαγές σελίδας και πιθανόν "
+"σχόλιο, αγνοείται (δηλ. δεν παράγεται token :data:`~token.NEWLINE`). Κατά τη "
+"διαδραστική εισαγωγή εντολών, ο χειρισμός μιας κενής γραμμής μπορεί να "
+"διαφέρει ανάλογα με την υλοποίηση του read-eval-print loop. Στον τυπικό "
+"διαδραστικό διερμηνέα, μια εντελώς κενή λογική γραμμή (δηλ. που δεν περιέχει "
+"ούτε κενούς χαρακτήρες ούτε σχόλιο) τερματίζει μια εντολή πολλαπλών γραμμών."
 
 #: reference/lexical_analysis.rst:264
 msgid "Indentation"
-msgstr ""
+msgstr "Εσοχή"
 
 #: reference/lexical_analysis.rst:268
 msgid ""
@@ -397,6 +493,10 @@ msgid ""
 "used to compute the indentation level of the line, which in turn is used to "
 "determine the grouping of statements."
 msgstr ""
+"Οι αρχικοί κενοί χαρακτήρες (κενά και tabs) στην αρχή μιας λογικής γραμμής "
+"χρησιμοποιούνται για τον υπολογισμό του επιπέδου εσοχής της γραμμής, το "
+"οποίο με τη σειρά του χρησιμοποιείται για να καθοριστεί η ομαδοποίηση των "
+"εντολών."
 
 #: reference/lexical_analysis.rst:272
 msgid ""
@@ -408,6 +508,13 @@ msgid ""
 "lines using backslashes; the whitespace up to the first backslash determines "
 "the indentation."
 msgstr ""
+"Τα tabs αντικαθίστανται (από αριστερά προς τα δεξιά) από ένα έως οκτώ κενά "
+"έτσι ώστε το συνολικό πλήθος χαρακτήρων μέχρι και την αντικατάσταση να είναι "
+"πολλαπλάσιο του οκτώ (πρόκειται για τον ίδιο κανόνας που χρησιμοποιείται στο "
+"Unix). Το συνολικό πλήθος κενών πριν από τον πρώτο μη-κενό χαρακτήρα "
+"καθορίζει την εσοχή της γραμμής. Η εσοχή δεν μπορεί να «σπάσει» σε "
+"περισσότερες φυσικές γραμμές με χρήση ανάστροφων καθέτων· οι κενοί "
+"χαρακτήρες μέχρι την πρώτη ανάστροφη κάθετο καθορίζουν την εσοχή."
 
 #: reference/lexical_analysis.rst:280
 msgid ""
@@ -415,6 +522,10 @@ msgid ""
 "spaces in a way that makes the meaning dependent on the worth of a tab in "
 "spaces; a :exc:`TabError` is raised in that case."
 msgstr ""
+"Η εσοχή απορρίπτεται ως ασυνεπής αν ένα αρχείο πηγαίου κώδικα αναμειγνύει "
+"tabs και κενά με τρόπο που κάνει το νόημα να εξαρτάται από το πόσα κενά "
+"αντιστοιχούν σε ένα tab· σε αυτή την περίπτωση γίνεται raise ένα :exc:"
+"`TabError`."
 
 #: reference/lexical_analysis.rst:284
 msgid ""
@@ -423,6 +534,11 @@ msgid ""
 "the indentation in a single source file.  It should also be noted that "
 "different platforms may explicitly limit the maximum indentation level."
 msgstr ""
+"**Σημείωση συμβατότητας μεταξύ πλατφορμών:** λόγω της φύσης των επεξεργαστών "
+"κειμένου σε μη-UNIX πλατφόρμες, δεν είναι συνετό να χρησιμοποιείται μίξη "
+"κενών και tabs για την εσοχή μέσα στο ίδιο αρχείο πηγαίου κώδικα. Θα πρέπει "
+"επίσης να σημειωθεί ότι διαφορετικές πλατφόρμες ενδέχεται να περιορίζουν "
+"ρητά το μέγιστο επίπεδο εσοχής."
 
 #: reference/lexical_analysis.rst:289
 msgid ""
@@ -431,12 +547,19 @@ msgid ""
 "occurring elsewhere in the leading whitespace have an undefined effect (for "
 "instance, they may reset the space count to zero)."
 msgstr ""
+"Ένας χαρακτήρας νέας γραμμής μπορεί να υπάρχει στην αρχή της γραμμής· θα "
+"αγνοηθεί για τους παραπάνω υπολογισμούς εσοχής. Χαρακτήρες νέας γραμμής που "
+"εμφανίζονται αλλού μέσα στους αρχικούς κενούς χαρακτήρες έχουν απροσδιόριστη "
+"επίδραση (για παράδειγμα, μπορεί να μηδενίσουν την καταμέτρηση κενών)."
 
 #: reference/lexical_analysis.rst:296
 msgid ""
 "The indentation levels of consecutive lines are used to generate :data:"
 "`~token.INDENT` and :data:`~token.DEDENT` tokens, using a stack, as follows."
 msgstr ""
+"Τα επίπεδα εσοχής διαδοχικών γραμμών χρησιμοποιούνται για τη δημιουργία των "
+"tokens :data:`~token.INDENT` και :data:`~token.DEDENT`, χρησιμοποιώντας μια "
+"στοίβα, ως εξής."
 
 #: reference/lexical_analysis.rst:300
 msgid ""
@@ -452,12 +575,24 @@ msgid ""
 "token is generated for each number remaining on the stack that is larger "
 "than zero."
 msgstr ""
+"Πριν διαβαστεί η πρώτη γραμμή του αρχείου, ένα μοναδικό μηδενικό ωθείται στη "
+"στοίβα· αυτό δεν θα αφαιρεθεί ποτέ. Οι αριθμοί που ωθούνται στη στοίβα θα "
+"είναι πάντα αυστηρά αυξανόμενοι από κάτω προς τα πάνω. Στην αρχή κάθε "
+"λογικής γραμμής, το επίπεδο εσοχής της γραμμής συγκρίνεται με την κορυφή της "
+"στοίβας. Αν είναι ίσο, δεν συμβαίνει τίποτα. Αν είναι μεγαλύτερο, ωθείται "
+"στη στοίβα και παράγεται ένα token :data:`!INDENT`. Αν είναι μικρότερο, "
+"*πρέπει* να είναι ένας από τους αριθμούς που υπάρχουν στη στοίβα· όλοι οι "
+"μεγαλύτεροι αριθμοί αφαιρούνται (pop) και για κάθε αριθμό που αφαιρείται "
+"παράγεται ένα token :data:`!DEDENT`. Στο τέλος του αρχείου, παράγεται ένα "
+"token :data:`!DEDENT` για κάθε αριθμό που απομένει στη στοίβα και είναι "
+"μεγαλύτερος από το μηδέν."
 
 #: reference/lexical_analysis.rst:311
 msgid ""
 "Here is an example of a correctly (though confusingly) indented piece of "
 "Python code::"
 msgstr ""
+"Ακολουθεί ένα παράδειγμα (αν και μπερδεμένο) κώδικα Python με σωστή εσοχή::"
 
 #: reference/lexical_analysis.rst:314
 msgid ""
@@ -473,10 +608,21 @@ msgid ""
 "              r.append(l[i:i+1] + x)\n"
 "    return r"
 msgstr ""
+"def perm(l):\n"
+"        # Compute the list of all permutations of l\n"
+"    if len(l) <= 1:\n"
+"                  return [l]\n"
+"    r = []\n"
+"    for i in range(len(l)):\n"
+"             s = l[:i] + l[i+1:]\n"
+"             p = perm(s)\n"
+"             for x in p:\n"
+"              r.append(l[i:i+1] + x)\n"
+"    return r"
 
 #: reference/lexical_analysis.rst:326
 msgid "The following example shows various indentation errors::"
-msgstr ""
+msgstr "Το παρακάτω παράδειγμα δείχνει διάφορα σφάλματα εσοχής::"
 
 #: reference/lexical_analysis.rst:328
 msgid ""
@@ -488,6 +634,13 @@ msgid ""
 "                r.append(l[i:i+1] + x)\n"
 "            return r                # error: inconsistent dedent"
 msgstr ""
+" def perm(l):                       # error: first line indented\n"
+"for i in range(len(l)):             # error: not indented\n"
+"    s = l[:i] + l[i+1:]\n"
+"        p = perm(l[:i] + l[i+1:])   # error: unexpected indent\n"
+"        for x in p:\n"
+"                r.append(l[i:i+1] + x)\n"
+"            return r                # error: inconsistent dedent"
 
 #: reference/lexical_analysis.rst:336
 msgid ""
@@ -495,10 +648,13 @@ msgid ""
 "error is found by the lexical analyzer --- the indentation of ``return r`` "
 "does not match a level popped off the stack.)"
 msgstr ""
+"(Στην πραγματικότητα, τα τρία πρώτα σφάλματα εντοπίζονται από τον parser· "
+"μόνο το τελευταίο σφάλμα εντοπίζεται από τον λεξικό αναλυτή --- η εσοχή του "
+"``return r`` δεν ταιριάζει με επίπεδο που αφαιρέθηκε από τη στοίβα.)"
 
 #: reference/lexical_analysis.rst:344
 msgid "Whitespace between tokens"
-msgstr ""
+msgstr "Κενοί χαρακτήρες μεταξύ των tokens"
 
 #: reference/lexical_analysis.rst:346
 msgid ""
@@ -510,20 +666,29 @@ msgid ""
 "``+ a`` both produce two tokens, ``+`` and ``a``, as ``+a`` is not a valid "
 "token."
 msgstr ""
+"Εκτός από την αρχή μιας λογικής γραμμής ή μέσα σε λεκτικά συμβολοσειράς, οι "
+"κενοί χαρακτήρες (κενό, tab και νέα γραμμή) μπορούν να χρησιμοποιούνται "
+"εναλλακτικά για να διαχωρίζουν tokens. Κενός χαρακτήρας χρειάζεται μεταξύ "
+"δύο tokens μόνο αν η συνένωσή τους θα μπορούσε αλλιώς να ερμηνευτεί ως "
+"διαφορετικό token. Για παράδειγμα, το ``ab`` είναι ένα token, αλλά το ``a "
+"b`` είναι δύο tokens. Ωστόσο, τα ``+a`` και ``+ a`` παράγουν από δύο tokens, "
+"``+`` και ``a``, καθώς το ``+a`` δεν είναι έγκυρο token."
 
 #: reference/lexical_analysis.rst:357
 msgid "End marker"
-msgstr ""
+msgstr "Δείκτης τέλους"
 
 #: reference/lexical_analysis.rst:359
 msgid ""
 "At the end of non-interactive input, the lexical analyzer generates an :data:"
 "`~token.ENDMARKER` token."
 msgstr ""
+"Στο τέλος μη-διαδραστικής εισόδου, ο λεξικός αναλυτής παράγει ένα token :"
+"data:`~token.ENDMARKER`."
 
 #: reference/lexical_analysis.rst:366
 msgid "Other tokens"
-msgstr ""
+msgstr "Άλλα tokens"
 
 #: reference/lexical_analysis.rst:368
 msgid ""
@@ -536,59 +701,79 @@ msgid ""
 "tokens. Where ambiguity exists, a token comprises the longest possible "
 "string that forms a legal token, when read from left to right."
 msgstr ""
+"Εκτός από τα :data:`~token.NEWLINE`, :data:`~token.INDENT` και :data:`~token."
+"DEDENT`, υπάρχουν και οι εξής κατηγορίες tokens: *αναγνωριστικά* και *λέξεις-"
+"κλειδιά* (:data:`~token.NAME`), *λεκτικά* (όπως :data:`~token.NUMBER` και :"
+"data:`~token.STRING`) και άλλα σύμβολα (*τελεστές* και *οριοθέτες*, :data:"
+"`~token.OP`). Οι κενοί χαρακτήρες (εκτός από τους τερματιστές λογικής "
+"γραμμής που συζητήθηκαν νωρίτερα) δεν είναι tokens, αλλά χρησιμεύουν για τον "
+"διαχωρισμό των tokens. Όπου υπάρχει ασάφεια, ένα token αποτελείται από τη "
+"μεγαλύτερη δυνατή συμβολοσειρά που σχηματίζει έγκυρο token, όταν διαβάζεται "
+"από αριστερά προς τα δεξιά."
 
 #: reference/lexical_analysis.rst:382
 msgid "Names (identifiers and keywords)"
-msgstr ""
+msgstr "Ονόματα (αναγνωριστικά και λέξεις-κλειδιά)"
 
 #: reference/lexical_analysis.rst:386
 msgid ""
 ":data:`~token.NAME` tokens represent *identifiers*, *keywords*, and *soft "
 "keywords*."
 msgstr ""
+"Τα tokens :data:`~token.NAME` αναπαριστούν *αναγνωριστικά*, *λέξεις-κλειδιά* "
+"και *ήπιες λέξεις-κλειδιά*."
 
 #: reference/lexical_analysis.rst:389
 msgid "Names are composed of the following characters:"
-msgstr ""
+msgstr "Τα ονόματα αποτελούνται από τους παρακάτω χαρακτήρες:"
 
 #: reference/lexical_analysis.rst:391
 msgid "uppercase and lowercase letters (``A-Z`` and ``a-z``),"
-msgstr ""
+msgstr "κεφαλαία και πεζά γράμματα (``A-Z`` και ``a-z``),"
 
 #: reference/lexical_analysis.rst:392
 msgid "the underscore (``_``),"
-msgstr ""
+msgstr "την κάτω παύλα (``_``),"
 
 #: reference/lexical_analysis.rst:393
 msgid ""
 "digits (``0`` through ``9``), which cannot appear as the first character, and"
 msgstr ""
+"ψηφία (``0`` έως ``9``), που δεν μπορούν να εμφανιστούν ως πρώτος "
+"χαρακτήρας, και"
 
 #: reference/lexical_analysis.rst:394
 msgid ""
 "non-ASCII characters. Valid names may only contain \"letter-like\" and "
 "\"digit-like\" characters; see :ref:`lexical-names-nonascii` for details."
 msgstr ""
+"μη-ASCII χαρακτήρες. Έγκυρα ονόματα μπορούν να περιέχουν μόνο χαρακτήρες "
+"\"γραμμάτων” και \"ψηφίων”· δείτε :ref:`lexical-names-nonascii` για "
+"λεπτομέρειες."
 
 #: reference/lexical_analysis.rst:397
 msgid ""
 "Names must contain at least one character, but have no upper length limit. "
 "Case is significant."
 msgstr ""
+"Τα ονόματα πρέπει να περιέχουν τουλάχιστον έναν χαρακτήρα, αλλά δεν έχουν "
+"ανώτατο όριο μήκους. Τα κεφαλαία/πεζά έχουν σημασία."
 
 #: reference/lexical_analysis.rst:400
 msgid "Formally, names are described by the following lexical definitions:"
-msgstr ""
+msgstr "Τυπικά, τα ονόματα περιγράφονται από τους παρακάτω λεξικούς ορισμούς:"
 
 #: reference/lexical_analysis.rst:410
 msgid ""
 "Note that not all names matched by this grammar are valid; see :ref:`lexical-"
 "names-nonascii` for details."
 msgstr ""
+"Σημειώστε ότι δεν είναι έγκυρα όλα τα ονόματα που ταιριάζουν σε αυτή τη "
+"γραμματική· δείτε :ref:`lexical-names-nonascii` για λεπτομέρειες."
 
 #: reference/lexical_analysis.rst:417
 msgid "Keywords"
-msgstr ""
+msgstr "Λέξεις-κλειδιά"
 
 #: reference/lexical_analysis.rst:423
 msgid ""
@@ -596,6 +781,9 @@ msgid ""
 "language, and cannot be used as ordinary identifiers.  They must be spelled "
 "exactly as written here:"
 msgstr ""
+"Τα παρακάτω ονόματα χρησιμοποιούνται ως δεσμευμένες λέξεις, ή *λέξεις-"
+"κλειδιά* της γλώσσας, και δεν μπορούν να χρησιμοποιηθούν ως κοινά "
+"αναγνωριστικά. Πρέπει να γράφονται ακριβώς όπως εμφανίζονται εδώ:"
 
 #: reference/lexical_analysis.rst:427
 msgid ""
@@ -607,31 +795,45 @@ msgid ""
 "assert     del        global     not        with\n"
 "async      elif       if         or         yield"
 msgstr ""
+"False      await      else       import     pass\n"
+"None       break      except     in         raise\n"
+"True       class      finally    is         return\n"
+"and        continue   for        lambda     try\n"
+"as         def        from       nonlocal   while\n"
+"assert     del        global     not        with\n"
+"async      elif       if         or         yield"
 
 #: reference/lexical_analysis.rst:441
 msgid "Soft Keywords"
-msgstr ""
+msgstr "Ήπιες λέξεις-κλειδιά"
 
 #: reference/lexical_analysis.rst:447
 msgid ""
 "Some names are only reserved under specific contexts. These are known as "
 "*soft keywords*:"
 msgstr ""
+"Κάποια ονόματα είναι δεσμευμένα μόνο σε συγκεκριμένα συμφραζόμενα. Αυτά "
+"είναι γνωστά ως *ήπιες λέξεις-κλειδιά*:"
 
 #: reference/lexical_analysis.rst:450
 msgid ""
 "``match``, ``case``, and ``_``, when used in the :keyword:`match` statement."
 msgstr ""
+"``match``, ``case`` και ``_``, όταν χρησιμοποιούνται στην εντολή :keyword:"
+"`match`."
 
 #: reference/lexical_analysis.rst:451
 msgid "``type``, when used in the :keyword:`type` statement."
-msgstr ""
+msgstr "``type``, όταν χρησιμοποιείται στην εντολή :keyword:`type`."
 
 #: reference/lexical_analysis.rst:453
 msgid ""
 "These syntactically act as keywords in their specific contexts, but this "
 "distinction is done at the parser level, not when tokenizing."
 msgstr ""
+"Αυτά λειτουργούν συντακτικά ως λέξεις-κλειδιά στα συγκεκριμένα συμφραζόμενά "
+"τους, αλλά αυτή η διάκριση γίνεται στο επίπεδο του parser, όχι κατά το "
+"tokenizing."
 
 #: reference/lexical_analysis.rst:456
 msgid ""
@@ -639,14 +841,17 @@ msgid ""
 "preserving compatibility with existing code that uses these names as "
 "identifier names."
 msgstr ""
+"Ως ήπιες λέξεις-κλειδιά, η χρήση τους στη γραμματική είναι δυνατή, ενώ "
+"ταυτόχρονα διατηρείται η συμβατότητα με υπάρχον κώδικα που χρησιμοποιεί αυτά "
+"τα ονόματα ως ονόματα αναγνωριστικών."
 
 #: reference/lexical_analysis.rst:460
 msgid "``type`` is now a soft keyword."
-msgstr ""
+msgstr "Το ``type`` είναι πλέον ήπια λέξη-κλειδί."
 
 #: reference/lexical_analysis.rst:469
 msgid "Reserved classes of identifiers"
-msgstr ""
+msgstr "Δεσμευμένες κλάσεις αναγνωριστικών"
 
 #: reference/lexical_analysis.rst:471
 msgid ""
@@ -654,18 +859,21 @@ msgid ""
 "These classes are identified by the patterns of leading and trailing "
 "underscore characters:"
 msgstr ""
+"Ορισμένες κλάσεις αναγνωριστικών (πέρα από τις λέξεις-κλειδιά) έχουν ειδικές "
+"σημασίες. Αυτές οι κλάσεις αναγνωρίζονται από τα μοτίβα κάτω παύλων στην "
+"αρχή και/ή στο τέλος:"
 
 #: reference/lexical_analysis.rst:475
 msgid "``_*``"
-msgstr ""
+msgstr "``_*``"
 
 #: reference/lexical_analysis.rst:476
 msgid "Not imported by ``from module import *``."
-msgstr ""
+msgstr "Δεν εισάγεται με ``from module import *``."
 
 #: reference/lexical_analysis.rst:478
 msgid "``_``"
-msgstr ""
+msgstr "``_``"
 
 #: reference/lexical_analysis.rst:479
 msgid ""
@@ -673,6 +881,9 @@ msgid ""
 "`soft keyword <soft-keywords>` that denotes a :ref:`wildcard <wildcard-"
 "patterns>`."
 msgstr ""
+"Σε ένα μοτίβο ``case`` μέσα σε εντολή :keyword:`match`, το ``_`` είναι :ref:"
+"`ήπια λέξη-κλειδί <soft-keywords>` που δηλώνει ένα :ref:`μπαλαντέρ <wildcard-"
+"patterns>`."
 
 #: reference/lexical_analysis.rst:483
 msgid ""
@@ -680,12 +891,18 @@ msgid ""
 "evaluation available in the variable ``_``. (It is stored in the :mod:"
 "`builtins` module, alongside built-in functions like ``print``.)"
 msgstr ""
+"Ανεξάρτητα από αυτό, ο διαδραστικός διερμηνέας κάνει διαθέσιμο το αποτέλεσμα "
+"της τελευταίας αξιολόγησης στη μεταβλητή ``_``. (Αποθηκεύεται στο module :"
+"mod:`builtins`, δίπλα σε ενσωματωμένες συναρτήσεις όπως το ``print``.)"
 
 #: reference/lexical_analysis.rst:488
 msgid ""
 "Elsewhere, ``_`` is a regular identifier. It is often used to name "
 "\"special\" items, but it is not special to Python itself."
 msgstr ""
+"Αλλού, το ``_`` είναι ένα κανονικό αναγνωριστικό. Συχνά χρησιμοποιείται για "
+"να ονομάζει \"ειδικά\" αντικείμενα, αλλά δεν είναι ιδιαίτερο για την ίδια "
+"την Python."
 
 #: reference/lexical_analysis.rst:493
 msgid ""
@@ -693,14 +910,17 @@ msgid ""
 "to the documentation for the :mod:`gettext` module for more information on "
 "this convention."
 msgstr ""
+"Το όνομα ``_`` χρησιμοποιείται συχνά σε συνδυασμό με διεθνοποίηση· ανατρέξτε "
+"στην τεκμηρίωση του module :mod:`gettext` για περισσότερες πληροφορίες "
+"σχετικά με αυτή τη σύμβαση."
 
 #: reference/lexical_analysis.rst:497
 msgid "It is also commonly used for unused variables."
-msgstr ""
+msgstr "Χρησιμοποιείται επίσης συχνά για αχρησιμοποίητες μεταβλητές."
 
 #: reference/lexical_analysis.rst:499
 msgid "``__*__``"
-msgstr ""
+msgstr "``__*__``"
 
 #: reference/lexical_analysis.rst:500
 msgid ""
@@ -711,10 +931,17 @@ msgid ""
 "Python.  *Any* use of ``__*__`` names, in any context, that does not follow "
 "explicitly documented use, is subject to breakage without warning."
 msgstr ""
+"Ονόματα ορισμένα από το σύστημα, ατύπως γνωστά ως ονόματα \"dunder\". Αυτά "
+"τα ονόματα ορίζονται από τον διερμηνέα και την υλοποίησή του "
+"(συμπεριλαμβανομένης της τυπικής βιβλιοθήκης). Τα τρέχοντα ονόματα "
+"συστήματος συζητούνται στην ενότητα :ref:`specialnames` και αλλού. "
+"Πιθανότατα θα οριστούν περισσότερα σε μελλοντικές εκδόσεις της Python. "
+"*Κάθε* χρήση ονομάτων ``__*__``, σε οποιοδήποτε πλαίσιο, που δεν ακολουθεί "
+"ρητά τεκμηριωμένη χρήση, είναι πιθανό να «σπάσει» χωρίς προειδοποίηση."
 
 #: reference/lexical_analysis.rst:507
 msgid "``__*``"
-msgstr ""
+msgstr "``__*``"
 
 #: reference/lexical_analysis.rst:508
 msgid ""
@@ -723,10 +950,15 @@ msgid ""
 "name clashes between \"private\" attributes of base and derived classes. See "
 "section :ref:`atom-identifiers`."
 msgstr ""
+"Ιδιωτικά ονόματα σε κλάση. Τα ονόματα αυτής της κατηγορίας, όταν "
+"χρησιμοποιούνται μέσα στο πλαίσιο ενός ορισμού κλάσης, ξαναγράφονται σε "
+"«παραμορφωμένη» (mangled) μορφή ώστε να αποφεύγονται συγκρούσεις ονομάτων "
+"μεταξύ \"ιδιωτικών\" γνωρισμάτων βασικών και παραγόμενων κλάσεων. Δείτε την "
+"ενότητα :ref:`atom-identifiers`."
 
 #: reference/lexical_analysis.rst:517
 msgid "Non-ASCII characters in names"
-msgstr ""
+msgstr "Μη-ASCII χαρακτήρες στα ονόματα"
 
 #: reference/lexical_analysis.rst:519
 msgid ""
@@ -735,10 +967,14 @@ msgid ""
 "<identifiers>`. For example, ``ř_1``, ``蛇``, or ``साँप``  are valid names, "
 "but ``r〰2``, ``€``, or ``🐍`` are not."
 msgstr ""
+"Ονόματα που περιέχουν μη-ASCII χαρακτήρες χρειάζονται πρόσθετη "
+"κανονικοποίηση και επικύρωση πέρα από τους κανόνες και τη γραμματική που "
+"εξηγούνται :ref:`παραπάνω <identifiers>`. Για παράδειγμα, τα ``ř_1``, ``蛇`` "
+"ή ``साँप`` είναι έγκυρα ονόματα, αλλά τα ``r〰2``, ``€`` ή ``🐍`` δεν είναι."
 
 #: reference/lexical_analysis.rst:525
 msgid "This section explains the exact rules."
-msgstr ""
+msgstr "Αυτή η ενότητα εξηγεί τους ακριβείς κανόνες."
 
 #: reference/lexical_analysis.rst:527
 msgid ""
@@ -747,6 +983,11 @@ msgid ""
 "converted to their \"basic\" form. For example, ``ﬁⁿₐˡᵢᶻₐᵗᵢᵒₙ`` normalizes "
 "to ``finalization``, so Python treats them as the same name::"
 msgstr ""
+"Όλα τα ονόματα μετατρέπονται στη `normalization form`_ NFKC κατά την "
+"ανάλυση. Αυτό σημαίνει ότι, για παράδειγμα, ορισμένες τυπογραφικές "
+"παραλλαγές χαρακτήρων μετατρέπονται στη \"βασική\" τους μορφή. Για "
+"παράδειγμα, το ``ﬁⁿₐˡᵢᶻₐᵗᵢᵒₙ`` κανονικοποιείται σε ``finalization``, οπότε η "
+"Python τα αντιμετωπίζει ως το ίδιο όνομα::"
 
 #: reference/lexical_analysis.rst:532
 msgid ""
@@ -754,6 +995,9 @@ msgid ""
 ">>> finalization\n"
 "3"
 msgstr ""
+">>> ﬁⁿₐˡᵢᶻₐᵗᵢᵒₙ = 3\n"
+">>> finalization\n"
+"3"
 
 #: reference/lexical_analysis.rst:538
 msgid ""
@@ -763,6 +1007,11 @@ msgid ""
 "`globals` dictionary as ``globals()[\"finalization\"]`` but not ``globals()"
 "[\"ﬁⁿₐˡᵢᶻₐᵗᵢᵒₙ\"]``."
 msgstr ""
+"Η κανονικοποίηση γίνεται μόνο στο λεξικό επίπεδο. Συναρτήσεις χρόνου "
+"εκτέλεσης που δέχονται ονόματα ως *strings* γενικά δεν κανονικοποιούν τα "
+"ορίσματά τους. Για παράδειγμα, η μεταβλητή που ορίστηκε παραπάνω είναι "
+"προσβάσιμη κατά την εκτέλεση στο λεξικό :func:`globals` ως ``globals()"
+"[\"finalization\"]`` αλλά όχι ως ``globals()[\"ﬁⁿₐˡᵢᶻₐᵗᵢᵒₙ\"]``."
 
 #: reference/lexical_analysis.rst:545
 msgid ""
@@ -771,6 +1020,11 @@ msgid ""
 "character in the \"letter-like\" set ``xid_start``, and the remaining "
 "characters must be in the \"letter- and digit-like\" set ``xid_continue``."
 msgstr ""
+"Όπως ακριβώς τα ονόματα που αποτελούνται μόνο από ASCII πρέπει να περιέχουν "
+"μόνο γράμματα, ψηφία και κάτω παύλα και δεν μπορούν να ξεκινούν με ψηφίο, "
+"έτσι και ένα έγκυρο όνομα πρέπει να ξεκινά με χαρακτήρα από το "
+"σύνολο``xid_start`` τύπου γραμμάτων, και οι υπόλοιποι χαρακτήρες πρέπει να "
+"ανήκουν στο σύνολο ``xid_continue`` τύπου γραμμάτων και ψηφίων."
 
 #: reference/lexical_analysis.rst:551
 msgid ""
@@ -779,6 +1033,10 @@ msgid ""
 "includes the underscore (``_``). Note that Python does not necessarily "
 "conform to `UAX-31`_."
 msgstr ""
+"Αυτά τα σύνολα βασίζονται στα σύνολα *XID_Start* και *XID_Continue* όπως "
+"ορίζονται στο παράρτημα του προτύπου Unicode `UAX-31`_. Το ``xid_start`` της "
+"Python περιλαμβάνει επιπλέον και την κάτω παύλα (``_``). Σημειώστε ότι η "
+"Python δεν συμμορφώνεται απαραίτητα με το `UAX-31`_."
 
 #: reference/lexical_analysis.rst:556
 msgid ""
@@ -787,44 +1045,52 @@ msgid ""
 "file in the Unicode Character Database. For reference, the construction "
 "rules for the ``xid_*`` sets are given below."
 msgstr ""
+"Μια μη-κανονιστική λίστα χαρακτήρων των συνόλων *XID_Start* και "
+"*XID_Continue* όπως ορίζονται από το Unicode είναι διαθέσιμη στο αρχείο "
+"`DerivedCoreProperties.txt`_ της Unicode Character Database. Για αναφορά, οι "
+"κανόνες κατασκευής για τα σύνολα ``xid_*`` δίνονται παρακάτω."
 
 #: reference/lexical_analysis.rst:561
 msgid "The set ``id_start`` is defined as the union of:"
-msgstr ""
+msgstr "Το σύνολο ``id_start`` ορίζεται ως η ένωση των:"
 
 #: reference/lexical_analysis.rst:563
 msgid "Unicode category ``<Lu>`` - uppercase letters (includes ``A`` to ``Z``)"
 msgstr ""
+"Κατηγορία Unicode ``<Lu>`` - κεφαλαία γράμματα (περιλαμβάνει ``A`` έως ``Z``)"
 
 #: reference/lexical_analysis.rst:564
 msgid "Unicode category ``<Ll>`` - lowercase letters (includes ``a`` to ``z``)"
 msgstr ""
+"Κατηγορία Unicode ``<Ll>`` - πεζά γράμματα (περιλαμβάνει ``a`` έως ``z``)"
 
 #: reference/lexical_analysis.rst:565
 msgid "Unicode category ``<Lt>`` - titlecase letters"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Lt>`` - γράμματα τύπου titlecase"
 
 #: reference/lexical_analysis.rst:566
 msgid "Unicode category ``<Lm>`` - modifier letters"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Lm>`` - τροποποιητικά γράμματα"
 
 #: reference/lexical_analysis.rst:567
 msgid "Unicode category ``<Lo>`` - other letters"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Lo>`` - άλλα γράμματα"
 
 #: reference/lexical_analysis.rst:568
 msgid "Unicode category ``<Nl>`` - letter numbers"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Nl>`` - αριθμοί-γράμματα"
 
 #: reference/lexical_analysis.rst:569
 msgid "{``\"_\"``} - the underscore"
-msgstr ""
+msgstr "{``\"_\"``} - η κάτω παύλα"
 
 #: reference/lexical_analysis.rst:570
 msgid ""
 "``<Other_ID_Start>`` - an explicit set of characters in `PropList.txt`_ to "
 "support backwards compatibility"
 msgstr ""
+"``<Other_ID_Start>`` - ένα ρητό σύνολο χαρακτήρων στο `PropList.txt`_ για να "
+"υποστηρίζεται η συμβατότητα προς τα πίσω"
 
 #: reference/lexical_analysis.rst:573
 msgid ""
@@ -832,68 +1098,82 @@ msgid ""
 "removing all characters whose normalization is not of the form ``id_start "
 "id_continue*``."
 msgstr ""
+"Το σύνολο ``xid_start`` κατόπιν «κλείνει» αυτό το σύνολο υπό κανονικοποίηση "
+"NFKC, αφαιρώντας όλους τους χαρακτήρες των οποίων η κανονικοποίηση δεν είναι "
+"της μορφής ``id_start id_continue*``."
 
 #: reference/lexical_analysis.rst:577
 msgid "The set ``id_continue`` is defined as the union of:"
-msgstr ""
+msgstr "Το σύνολο ``id_continue`` ορίζεται ως η ένωση των:"
 
 #: reference/lexical_analysis.rst:579
 msgid "``id_start`` (see above)"
-msgstr ""
+msgstr "``id_start`` (βλ. παραπάνω)"
 
 #: reference/lexical_analysis.rst:580
 msgid "Unicode category ``<Nd>`` - decimal numbers (includes ``0`` to ``9``)"
 msgstr ""
+"Κατηγορία Unicode ``<Nd>`` - δεκαδικοί αριθμοί (περιλαμβάνει ``0`` έως ``9``)"
 
 #: reference/lexical_analysis.rst:581
 msgid "Unicode category ``<Pc>`` - connector punctuations"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Pc>`` - σημεία στίξης σύνδεσης"
 
 #: reference/lexical_analysis.rst:582
 msgid "Unicode category ``<Mn>`` - nonspacing marks"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Mn>`` - nonspacing marks"
 
 #: reference/lexical_analysis.rst:583
 msgid "Unicode category ``<Mc>`` - spacing combining marks"
-msgstr ""
+msgstr "Κατηγορία Unicode ``<Mc>`` - συνδυαστικά σημάδια με απόσταση"
 
 #: reference/lexical_analysis.rst:584
 msgid ""
 "``<Other_ID_Continue>`` - another explicit set of characters in `PropList."
 "txt`_ to support backwards compatibility"
 msgstr ""
+"``<Other_ID_Continue>`` - ένα ακόμη ρητό σύνολο χαρακτήρων στο `PropList."
+"txt`_ για να υποστηρίζεται η συμβατότητα προς τα πίσω"
 
 #: reference/lexical_analysis.rst:587
 msgid "Again, ``xid_continue`` closes this set under NFKC normalization."
 msgstr ""
+"Και πάλι, το ``xid_continue`` «κλείνει» αυτό το σύνολο υπό κανονικοποίηση "
+"NFKC."
 
 #: reference/lexical_analysis.rst:589
 msgid ""
 "Unicode categories use the version of the Unicode Character Database as "
 "included in the :mod:`unicodedata` module."
 msgstr ""
+"Οι κατηγορίες Unicode χρησιμοποιούν την έκδοση της Unicode Character "
+"Database όπως περιλαμβάνεται στο module :mod:`unicodedata`."
 
 #: reference/lexical_analysis.rst:599
 msgid ":pep:`3131` -- Supporting Non-ASCII Identifiers"
-msgstr ""
+msgstr ":pep:`3131` -- Υποστήριξη μη-ASCII αναγνωριστικών"
 
 #: reference/lexical_analysis.rst:600
 msgid ":pep:`672` -- Unicode-related Security Considerations for Python"
-msgstr ""
+msgstr ":pep:`672` -- Ζητήματα ασφάλειας σχετικά με το Unicode στην Python"
 
 #: reference/lexical_analysis.rst:606
 msgid "Literals"
-msgstr ""
+msgstr "Λεκτικά"
 
 #: reference/lexical_analysis.rst:610
 msgid "Literals are notations for constant values of some built-in types."
 msgstr ""
+"Τα λεκτικά είναι σημειογραφίες για σταθερές τιμές ορισμένων ενσωματωμένων "
+"τύπων."
 
 #: reference/lexical_analysis.rst:612
 msgid ""
 "In terms of lexical analysis, Python has :ref:`string, bytes <strings>` and :"
 "ref:`numeric <numbers>` literals."
 msgstr ""
+"Όσον αφορά τη λεξική ανάλυση, η Python έχει λεκτικά :ref:`συμβολοσειράς, "
+"bytes <strings>` και :ref:`αριθμητικά <numbers>`."
 
 #: reference/lexical_analysis.rst:615
 msgid ""
@@ -901,22 +1181,29 @@ msgid ""
 "(``None``, ``True``, ``False``) and the special :ref:`ellipsis token "
 "<lexical-ellipsis>` (``...``)."
 msgstr ""
+"Άλλα \"λεκτικά\" δηλώνονται λεξικά μέσω :ref:`λέξεων-κλειδιών <keywords>` "
+"(``None``, ``True``, ``False``) και του ειδικού :ref:`token έλλειψης "
+"<lexical-ellipsis>` (``...``)."
 
 #: reference/lexical_analysis.rst:626
 msgid "String and Bytes literals"
-msgstr ""
+msgstr "Λεκτικά συμβολοσειράς και Bytes"
 
 #: reference/lexical_analysis.rst:628
 msgid ""
 "String literals are text enclosed in single quotes (``'``) or double quotes "
 "(``\"``). For example:"
 msgstr ""
+"Τα λεκτικά συμβολοσειράς είναι κείμενο μέσα σε μονά εισαγωγικά (``'``) ή "
+"διπλά εισαγωγικά (``\"``). Για παράδειγμα:"
 
 #: reference/lexical_analysis.rst:631
 msgid ""
 "\"spam\"\n"
 "'eggs'"
 msgstr ""
+"\"spam\"\n"
+"'eggs'"
 
 #: reference/lexical_analysis.rst:636
 msgid ""
@@ -924,18 +1211,26 @@ msgid ""
 "can only contain the other quote (except with escape sequences, see below). "
 "For example:"
 msgstr ""
+"Το εισαγωγικό που χρησιμοποιείται για να ξεκινήσει το λεκτικό το τερματίζει, "
+"οπότε ένα λεκτικό συμβολοσειράς μπορεί να περιέχει μόνο το άλλο είδος "
+"εισαγωγικού (εκτός αν χρησιμοποιηθούν ακολουθίες διαφυγής, βλ. παρακάτω). "
+"Για παράδειγμα:"
 
 #: reference/lexical_analysis.rst:640
 msgid ""
 "'Say \"Hello\", please.'\n"
 "\"Don't do that!\""
 msgstr ""
+"'Say \"Hello\", please.'\n"
+"\"Don't do that!\""
 
 #: reference/lexical_analysis.rst:645
 msgid ""
 "Except for this limitation, the choice of quote character (``'`` or ``\"``) "
 "does not affect how the literal is parsed."
 msgstr ""
+"Πέρα από αυτόν τον περιορισμό, η επιλογή εισαγωγικού (``'`` ή ``\"``) δεν "
+"επηρεάζει το πώς αναλύεται το λεκτικό."
 
 #: reference/lexical_analysis.rst:648
 msgid ""
@@ -944,32 +1239,44 @@ msgid ""
 "after the backslash. For example, ``\\\"`` denotes the double quote "
 "character, and does *not* end the string:"
 msgstr ""
+"Μέσα σε ένα λεκτικό συμβολοσειράς, ο χαρακτήρας ανάστροφης καθέτου (``\\``) "
+"εισάγει μια :dfn:`ακολουθία διαφυγής`, η οποία έχει ειδική σημασία ανάλογα "
+"με τον χαρακτήρα που ακολουθεί την ανάστροφη κάθετο. Για παράδειγμα, το ``\\"
+"\"`` δηλώνει τον χαρακτήρα διπλού εισαγωγικού και *δεν* τερματίζει τη "
+"συμβολοσειρά:"
 
 #: reference/lexical_analysis.rst:654
 msgid ""
 ">>> print(\"Say \\\"Hello\\\" to everyone!\")\n"
 "Say \"Hello\" to everyone!"
 msgstr ""
+">>> print(\"Say \\\"Hello\\\" to everyone!\")\n"
+"Say \"Hello\" to everyone!"
 
 #: reference/lexical_analysis.rst:659
 msgid ""
 "See :ref:`escape sequences <escape-sequences>` below for a full list of such "
 "sequences, and more details."
 msgstr ""
+"Δείτε παρακάτω τις :ref:`ακολουθίες διαφυγής <escape-sequences>` για την "
+"πλήρη λίστα τέτοιων ακολουθιών και περισσότερες λεπτομέρειες."
 
 #: reference/lexical_analysis.rst:668
 msgid "Triple-quoted strings"
-msgstr ""
+msgstr "Συμβολοσειρές τριπλού εισαγωγικού"
 
 #: reference/lexical_analysis.rst:670
 msgid ""
 "Strings can also be enclosed in matching groups of three single or double "
 "quotes. These are generally referred to as :dfn:`triple-quoted strings`::"
 msgstr ""
+"Οι συμβολοσειρές μπορούν επίσης να περικλείονται σε αντίστοιχες ομάδες τριών "
+"μονών ή τριών διπλών εισαγωγικών. Αυτές συνήθως αναφέρονται ως :dfn:`triple-"
+"quoted strings`::"
 
 #: reference/lexical_analysis.rst:674
 msgid "\"\"\"This is a triple-quoted string.\"\"\""
-msgstr ""
+msgstr "\"\"\"This is a triple-quoted string.\"\"\""
 
 #: reference/lexical_analysis.rst:676
 msgid ""
@@ -977,64 +1284,76 @@ msgid ""
 "except that three unescaped quotes in a row terminate the literal, if they "
 "are of the same kind (``'`` or ``\"``) used at the start::"
 msgstr ""
+"Σε λεκτικά τριπλών εισαγωγικών, επιτρέπονται (και διατηρούνται) εισαγωγικά "
+"χωρίς διαφυγή, με εξαίρεση ότι τρία εισαγωγικά χωρίς διαφυγή στη σειρά "
+"τερματίζουν το λεκτικό, αν είναι του ίδιου είδους (``'`` ή ``\"``) με αυτό "
+"που χρησιμοποιήθηκε στην αρχή::"
 
 #: reference/lexical_analysis.rst:680
 msgid "\"\"\"This string has \"quotes\" inside.\"\"\""
-msgstr ""
+msgstr "\"\"\"This string has \"quotes\" inside.\"\"\""
 
 #: reference/lexical_analysis.rst:682
 msgid "Unescaped newlines are also allowed and retained::"
-msgstr ""
+msgstr "Επιτρέπονται επίσης (και διατηρούνται) νέες γραμμές χωρίς διαφυγή::"
 
 #: reference/lexical_analysis.rst:684
 msgid ""
 "'''This triple-quoted string\n"
 "continues on the next line.'''"
 msgstr ""
+"'''This triple-quoted string\n"
+"continues on the next line.'''"
 
 #: reference/lexical_analysis.rst:693
 msgid "String prefixes"
-msgstr ""
+msgstr "Προθέματα συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:695
 msgid ""
 "String literals can have an optional :dfn:`prefix` that influences how the "
 "content of the literal is parsed, for example:"
 msgstr ""
+"Τα λεκτικά συμβολοσειράς μπορούν να έχουν ένα προαιρετικό :dfn:`prefix` που "
+"επηρεάζει το πώς αναλύεται το περιεχόμενο του λεκτικού, για παράδειγμα:"
 
 #: reference/lexical_analysis.rst:698
 msgid ""
 "b\"data\"\n"
 "f'{result=}'"
 msgstr ""
+"b\"data\"\n"
+"f'{result=}'"
 
 #: reference/lexical_analysis.rst:703
 msgid "The allowed prefixes are:"
-msgstr ""
+msgstr "Τα επιτρεπόμενα προθέματα είναι:"
 
 #: reference/lexical_analysis.rst:705
 msgid "``b``: :ref:`Bytes literal <bytes-literal>`"
-msgstr ""
+msgstr "``b``: :ref:`Λεκτικό bytes <bytes-literal>`"
 
 #: reference/lexical_analysis.rst:706
 msgid "``r``: :ref:`Raw string <raw-strings>`"
-msgstr ""
+msgstr "``r``: :ref:`Ακατέργαστη συμβολοσειρά (raw string) <raw-strings>`"
 
 #: reference/lexical_analysis.rst:707
 msgid "``f``: :ref:`Formatted string literal <f-strings>` (\"f-string\")"
 msgstr ""
+"``f``: :ref:`Λεκτικό μορφοποιημένης συμβολοσειράς <f-strings>` (\"f-string\")"
 
 #: reference/lexical_analysis.rst:708
 msgid "``t``: :ref:`Template string literal <t-strings>` (\"t-string\")"
 msgstr ""
+"``t``: :ref:`Λεκτικό συμβολοσειράς προτύπου <t-strings>` (\"t-string\")"
 
 #: reference/lexical_analysis.rst:709
 msgid "``u``: No effect (allowed for backwards compatibility)"
-msgstr ""
+msgstr "``u``: Καμία επίδραση (επιτρέπεται για συμβατότητα προς τα πίσω)"
 
 #: reference/lexical_analysis.rst:711
 msgid "See the linked sections for details on each type."
-msgstr ""
+msgstr "Δείτε τις αντίστοιχες ενότητες για λεπτομέρειες σχετικά με κάθε τύπο."
 
 #: reference/lexical_analysis.rst:713
 msgid ""
@@ -1043,12 +1362,18 @@ msgid ""
 "'``b``', so '``fr``', '``rf``', '``tr``', '``rt``', '``br``', and '``rb``' "
 "are also valid prefixes."
 msgstr ""
+"Τα προθέματα δεν κάνουν διάκριση κεφαλαίων/πεζών (για παράδειγμα, το '``B``' "
+"λειτουργεί όπως το '``b``'). Το πρόθεμα '``r``' μπορεί να συνδυαστεί με "
+"'``f``', '``t``' ή '``b``', οπότε και τα '``fr``', '``rf``', '``tr``', "
+"'``rt``', '``br``' και '``rb``' είναι επίσης έγκυρα προθέματα."
 
 #: reference/lexical_analysis.rst:717
 msgid ""
 "The ``'rb'`` prefix of raw bytes literals has been added as a synonym of "
 "``'br'``."
 msgstr ""
+"Το πρόθεμα ``'rb'`` για raw bytes λεκτικά έχει προστεθεί ως συνώνυμο του "
+"``'br'``."
 
 #: reference/lexical_analysis.rst:721
 msgid ""
@@ -1056,22 +1381,31 @@ msgid ""
 "simplify the maintenance of dual Python 2.x and 3.x codebases. See :pep:"
 "`414` for more information."
 msgstr ""
+"Η υποστήριξη για το παλιό unicode λεκτικό (``u'value'``) επανεισήχθη για να "
+"απλοποιηθεί η συντήρηση κωδικών βάσεων που υποστηρίζουν ταυτόχρονα Python 2."
+"x και 3.x. Δείτε το :pep:`414` για περισσότερες πληροφορίες."
 
 #: reference/lexical_analysis.rst:727
 msgid "Formal grammar"
-msgstr ""
+msgstr "Τυπική γραμματική"
 
 #: reference/lexical_analysis.rst:729
 msgid ""
 "String literals, except :ref:`\"f-strings\" <f-strings>` and :ref:`\"t-"
 "strings\" <t-strings>`, are described by the following lexical definitions."
 msgstr ""
+"Τα λεκτικά συμβολοσειράς, εκτός από τα :ref:`\"f-strings\" <f-strings>` και :"
+"ref:`\"t-strings\" <t-strings>`, περιγράφονται από τους παρακάτω λεξικούς "
+"ορισμούς."
 
 #: reference/lexical_analysis.rst:733
 msgid ""
 "These definitions use :ref:`negative lookaheads <lexical-lookaheads>` (``!"
 "``) to indicate that an ending quote ends the literal."
 msgstr ""
+"Αυτοί οι ορισμοί χρησιμοποιούν :ref:`αρνητικά lookaheads <lexical-"
+"lookaheads>` (``!``) για να υποδείξουν ότι ένα τελικό εισαγωγικό τερματίζει "
+"το λεκτικό."
 
 #: reference/lexical_analysis.rst:751
 msgid ""
@@ -1079,10 +1413,13 @@ msgid ""
 "particular, the prefix (if any) must be immediately followed by the starting "
 "quote."
 msgstr ""
+"Σημειώστε ότι, όπως σε όλους τους λεξικούς ορισμούς, οι κενοί χαρακτήρες "
+"έχουν σημασία. Συγκεκριμένα, το πρόθεμα (αν υπάρχει) πρέπει να ακολουθείται "
+"αμέσως από το αρχικό εισαγωγικό."
 
 #: reference/lexical_analysis.rst:773
 msgid "Escape sequences"
-msgstr ""
+msgstr "Ακολουθίες διαφυγής"
 
 #: reference/lexical_analysis.rst:775
 msgid ""
@@ -1090,146 +1427,151 @@ msgid ""
 "and bytes literals are interpreted according to rules similar to those used "
 "by Standard C.  The recognized escape sequences are:"
 msgstr ""
+"Εκτός αν υπάρχει πρόθεμα '``r``' ή '``R``', οι ακολουθίες διαφυγής σε "
+"λεκτικά συμβολοσειράς και bytes ερμηνεύονται με κανόνες παρόμοιους με αυτούς "
+"της Standard C. Οι αναγνωριζόμενες ακολουθίες διαφυγής είναι:"
 
 #: reference/lexical_analysis.rst:783
 msgid "Escape Sequence"
-msgstr ""
+msgstr "Ακολουθία διαφυγής"
 
 #: reference/lexical_analysis.rst:784
 msgid "Meaning"
-msgstr ""
+msgstr "Σημασία"
 
 #: reference/lexical_analysis.rst:785
 msgid "``\\``\\ <newline>"
-msgstr ""
+msgstr "``\\``\\ <newline>"
 
 #: reference/lexical_analysis.rst:786
 msgid ":ref:`string-escape-ignore`"
-msgstr ""
+msgstr ":ref:`string-escape-ignore`"
 
 #: reference/lexical_analysis.rst:787
 msgid "``\\\\``"
-msgstr ""
+msgstr "``\\\\``"
 
 #: reference/lexical_analysis.rst:788
 msgid ":ref:`Backslash <string-escape-escaped-char>`"
-msgstr ""
+msgstr ":ref:`Ανάστροφη κάθετος <string-escape-escaped-char>`"
 
 #: reference/lexical_analysis.rst:789
 msgid "``\\'``"
-msgstr ""
+msgstr "``\\'``"
 
 #: reference/lexical_analysis.rst:790
 msgid ":ref:`Single quote <string-escape-escaped-char>`"
-msgstr ""
+msgstr ":ref:`Μονό εισαγωγικό <string-escape-escaped-char>`"
 
 #: reference/lexical_analysis.rst:791
 msgid "``\\\"``"
-msgstr ""
+msgstr "``\\\"``"
 
 #: reference/lexical_analysis.rst:792
 msgid ":ref:`Double quote <string-escape-escaped-char>`"
-msgstr ""
+msgstr ":ref:`Διπλό εισαγωγικό <string-escape-escaped-char>`"
 
 #: reference/lexical_analysis.rst:793
 msgid "``\\a``"
-msgstr ""
+msgstr "``\\a``"
 
 #: reference/lexical_analysis.rst:794
 msgid "ASCII Bell (BEL)"
-msgstr ""
+msgstr "ASCII Bell (BEL)"
 
 #: reference/lexical_analysis.rst:795
 msgid "``\\b``"
-msgstr ""
+msgstr "``\\b``"
 
 #: reference/lexical_analysis.rst:796
 msgid "ASCII Backspace (BS)"
-msgstr ""
+msgstr "ASCII Backspace (BS)"
 
 #: reference/lexical_analysis.rst:797
 msgid "``\\f``"
-msgstr ""
+msgstr "``\\f``"
 
 #: reference/lexical_analysis.rst:798
 msgid "ASCII Formfeed (FF)"
-msgstr ""
+msgstr "ASCII Formfeed (FF)"
 
 #: reference/lexical_analysis.rst:799
 msgid "``\\n``"
-msgstr ""
+msgstr "``\\n``"
 
 #: reference/lexical_analysis.rst:800
 msgid "ASCII Linefeed (LF)"
-msgstr ""
+msgstr "ASCII Linefeed (LF)"
 
 #: reference/lexical_analysis.rst:801
 msgid "``\\r``"
-msgstr ""
+msgstr "``\\r``"
 
 #: reference/lexical_analysis.rst:802
 msgid "ASCII Carriage Return (CR)"
-msgstr ""
+msgstr "ASCII Carriage Return (CR)"
 
 #: reference/lexical_analysis.rst:803
 msgid "``\\t``"
-msgstr ""
+msgstr "``\\t``"
 
 #: reference/lexical_analysis.rst:804
 msgid "ASCII Horizontal Tab (TAB)"
-msgstr ""
+msgstr "ASCII Horizontal Tab (TAB)"
 
 #: reference/lexical_analysis.rst:805
 msgid "``\\v``"
-msgstr ""
+msgstr "``\\v``"
 
 #: reference/lexical_analysis.rst:806
 msgid "ASCII Vertical Tab (VT)"
-msgstr ""
+msgstr "ASCII Vertical Tab (VT)"
 
 #: reference/lexical_analysis.rst:807
 msgid ":samp:`\\\\\\\\{ooo}`"
-msgstr ""
+msgstr ":samp:`\\\\\\\\{ooo}`"
 
 #: reference/lexical_analysis.rst:808
 msgid ":ref:`string-escape-oct`"
-msgstr ""
+msgstr ":ref:`string-escape-oct`"
 
 #: reference/lexical_analysis.rst:809
 msgid ":samp:`\\\\x{hh}`"
-msgstr ""
+msgstr ":samp:`\\\\x{hh}`"
 
 #: reference/lexical_analysis.rst:810
 msgid ":ref:`string-escape-hex`"
-msgstr ""
+msgstr ":ref:`string-escape-hex`"
 
 #: reference/lexical_analysis.rst:811
 msgid ":samp:`\\\\N\\\\{{name}\\\\}`"
-msgstr ""
+msgstr ":samp:`\\\\N\\\\{{name}\\\\}`"
 
 #: reference/lexical_analysis.rst:812
 msgid ":ref:`string-escape-named`"
-msgstr ""
+msgstr ":ref:`string-escape-named`"
 
 #: reference/lexical_analysis.rst:813
 msgid ":samp:`\\\\u{xxxx}`"
-msgstr ""
+msgstr ":samp:`\\\\u{xxxx}`"
 
 #: reference/lexical_analysis.rst:814 reference/lexical_analysis.rst:816
 msgid ":ref:`Hexadecimal Unicode character <string-escape-long-hex>`"
-msgstr ""
+msgstr ":ref:`Δεκαεξαδικός χαρακτήρας Unicode <string-escape-long-hex>`"
 
 #: reference/lexical_analysis.rst:815
 msgid ":samp:`\\\\U{xxxxxxxx}`"
-msgstr ""
+msgstr ":samp:`\\\\U{xxxxxxxx}`"
 
 #: reference/lexical_analysis.rst:821
 msgid "Ignored end of line"
-msgstr ""
+msgstr "Αγνοημένο τέλος γραμμής"
 
 #: reference/lexical_analysis.rst:823
 msgid "A backslash can be added at the end of a line to ignore the newline::"
 msgstr ""
+"Μπορεί να προστεθεί ανάστροφη κάθετος στο τέλος μιας γραμμής για να αγνοηθεί "
+"η νέα γραμμή::"
 
 #: reference/lexical_analysis.rst:825
 msgid ""
@@ -1237,6 +1579,9 @@ msgid ""
 "... backslashes or newline characters.'\n"
 "'This string will not include backslashes or newline characters.'"
 msgstr ""
+">>> 'This string will not include \\\n"
+"... backslashes or newline characters.'\n"
+"'This string will not include backslashes or newline characters.'"
 
 #: reference/lexical_analysis.rst:829
 msgid ""
@@ -1244,10 +1589,13 @@ msgid ""
 "<strings>`, or parentheses and :ref:`string literal concatenation <string-"
 "concatenation>`."
 msgstr ""
+"Το ίδιο αποτέλεσμα μπορεί να επιτευχθεί με :ref:`συμβολοσειρές τριπλού "
+"εισαγωγικού <strings>`, ή με παρενθέσεις και :ref:`συνένωση λεκτικών "
+"συμβολοσειράς <string-concatenation>`."
 
 #: reference/lexical_analysis.rst:835
 msgid "Escaped characters"
-msgstr ""
+msgstr "Χαρακτήρες με διαφυγή"
 
 #: reference/lexical_analysis.rst:837
 msgid ""
@@ -1255,56 +1603,73 @@ msgid ""
 "literal, it must be doubled. The ``\\\\`` escape sequence denotes a single "
 "backslash character::"
 msgstr ""
+"Για να συμπεριληφθεί μια ανάστροφη κάθετος σε λεκτικό συμβολοσειράς Python "
+"που δεν είναι :ref:`raw <raw-strings>`, πρέπει να διπλασιαστεί. Η ακολουθία "
+"διαφυγής ``\\\\`` δηλώνει έναν μοναδικό χαρακτήρα ανάστροφης καθέτου::"
 
 #: reference/lexical_analysis.rst:841
 msgid ""
 ">>> print('C:\\\\Program Files')\n"
 "C:\\Program Files"
 msgstr ""
+">>> print('C:\\\\Program Files')\n"
+"C:\\Program Files"
 
 #: reference/lexical_analysis.rst:844
 msgid ""
 "Similarly, the ``\\'`` and ``\\\"`` sequences denote the single and double "
 "quote character, respectively::"
 msgstr ""
+"Αντίστοιχα, οι ακολουθίες ``\\'`` και ``\\\"`` δηλώνουν τον χαρακτήρα μονών "
+"και διπλών εισαγωγικών, αντίστοιχα::"
 
 #: reference/lexical_analysis.rst:847
 msgid ""
 ">>> print('\\' and \\\"')\n"
 "' and \""
 msgstr ""
+">>> print('\\' and \\\"')\n"
+"' and \""
 
 #: reference/lexical_analysis.rst:853
 msgid "Octal character"
-msgstr ""
+msgstr "Οκταδικός χαρακτήρας"
 
 #: reference/lexical_analysis.rst:855
 msgid ""
 "The sequence :samp:`\\\\\\\\{ooo}` denotes a *character* with the octal "
 "(base 8) value *ooo*::"
 msgstr ""
+"Η ακολουθία :samp:`\\\\\\\\{ooo}` δηλώνει έναν *χαρακτήρα* με οκταδική (βάση "
+"8) τιμή *ooo*::"
 
 #: reference/lexical_analysis.rst:858
 msgid ""
 ">>> '\\120'\n"
 "'P'"
 msgstr ""
+">>> '\\120'\n"
+"'P'"
 
 #: reference/lexical_analysis.rst:861
 msgid "Up to three octal digits (0 through 7) are accepted."
-msgstr ""
+msgstr "Γίνονται δεκτά έως τρία οκταδικά ψηφία (0 έως 7)."
 
 #: reference/lexical_analysis.rst:863 reference/lexical_analysis.rst:888
 msgid ""
 "In a bytes literal, *character* means a *byte* with the given value. In a "
 "string literal, it means a Unicode character with the given value."
 msgstr ""
+"Σε λεκτικό bytes, *χαρακτήρας* σημαίνει ένα *byte* με τη δεδομένη τιμή. Σε "
+"λεκτικό συμβολοσειράς, σημαίνει χαρακτήρας Unicode με τη δεδομένη τιμή."
 
 #: reference/lexical_analysis.rst:866
 msgid ""
 "Octal escapes with value larger than ``0o377`` (255) produce a :exc:"
 "`DeprecationWarning`."
 msgstr ""
+"Οκταδικές διαφυγές με τιμή μεγαλύτερη από ``0o377`` (255) παράγουν ένα :exc:"
+"`DeprecationWarning`."
 
 #: reference/lexical_analysis.rst:870
 msgid ""
@@ -1312,36 +1677,46 @@ msgid ""
 "`SyntaxWarning`. In a future Python version they will raise a :exc:"
 "`SyntaxError`."
 msgstr ""
+"Οκταδικές διαφυγές με τιμή μεγαλύτερη από ``0o377`` (255) παράγουν ένα :exc:"
+"`SyntaxWarning`. Σε μελλοντική έκδοση της Python θα κάνουν raise :exc:"
+"`SyntaxError`."
 
 #: reference/lexical_analysis.rst:878
 msgid "Hexadecimal character"
-msgstr ""
+msgstr "Δεκαεξαδικός χαρακτήρας"
 
 #: reference/lexical_analysis.rst:880
 msgid ""
 "The sequence :samp:`\\\\x{hh}` denotes a *character* with the hex (base 16) "
 "value *hh*::"
 msgstr ""
+"Η ακολουθία :samp:`\\\\x{hh}` δηλώνει έναν *χαρακτήρα* με δεκαεξαδική (βάση "
+"16) τιμή *hh*::"
 
 #: reference/lexical_analysis.rst:883
 msgid ""
 ">>> '\\x50'\n"
 "'P'"
 msgstr ""
+">>> '\\x50'\n"
+"'P'"
 
 #: reference/lexical_analysis.rst:886
 msgid "Unlike in Standard C, exactly two hex digits are required."
 msgstr ""
+"Σε αντίθεση με την Standard C, απαιτούνται ακριβώς δύο δεκαεξαδικά ψηφία."
 
 #: reference/lexical_analysis.rst:894
 msgid "Named Unicode character"
-msgstr ""
+msgstr "Ονοματισμένος χαρακτήρας Unicode"
 
 #: reference/lexical_analysis.rst:896
 msgid ""
 "The sequence :samp:`\\\\N\\\\{{name}\\\\}` denotes a Unicode character with "
 "the given *name*::"
 msgstr ""
+"Η ακολουθία :samp:`\\\\N\\\\{{name}\\\\}` δηλώνει έναν χαρακτήρα Unicode με "
+"το δοσμένο *όνομα*::"
 
 #: reference/lexical_analysis.rst:899
 msgid ""
@@ -1350,20 +1725,28 @@ msgid ""
 ">>> '\\N{SNAKE}'\n"
 "'🐍'"
 msgstr ""
+">>> '\\N{LATIN CAPITAL LETTER P}'\n"
+"'P'\n"
+">>> '\\N{SNAKE}'\n"
+"'🐍'"
 
 #: reference/lexical_analysis.rst:904
 msgid "This sequence cannot appear in :ref:`bytes literals <bytes-literal>`."
 msgstr ""
+"Αυτή η ακολουθία δεν μπορεί να εμφανιστεί σε :ref:`λεκτικά bytes <bytes-"
+"literal>`."
 
 #: reference/lexical_analysis.rst:906
 msgid ""
 "Support for `name aliases <https://www.unicode.org/Public/16.0.0/ucd/"
 "NameAliases.txt>`__ has been added."
 msgstr ""
+"Έχει προστεθεί υποστήριξη για `ψευδώνυμα ονομάτων (name aliases) <https://"
+"www.unicode.org/Public/16.0.0/ucd/NameAliases.txt>`__."
 
 #: reference/lexical_analysis.rst:913
 msgid "Hexadecimal Unicode characters"
-msgstr ""
+msgstr "Δεκαεξαδικοί χαρακτήρες Unicode"
 
 #: reference/lexical_analysis.rst:915
 msgid ""
@@ -1372,6 +1755,10 @@ msgid ""
 "are required for ``\\u``; exactly eight digits are required for ``\\U``. The "
 "latter can encode any Unicode character."
 msgstr ""
+"Οι ακολουθίες :samp:`\\\\u{xxxx}` και :samp:`\\\\U{xxxxxxxx}` δηλώνουν τον "
+"χαρακτήρα Unicode με τη δεδομένη δεκαεξαδική (βάση 16) τιμή. Απαιτούνται "
+"ακριβώς τέσσερα ψηφία για το ``\\u`` και ακριβώς οκτώ ψηφία για το ``\\U``. "
+"Η δεύτερη μπορεί να κωδικοποιήσει οποιονδήποτε χαρακτήρα Unicode."
 
 #: reference/lexical_analysis.rst:921
 msgid ""
@@ -1380,20 +1767,29 @@ msgid ""
 ">>> '\\U0001f40d'\n"
 "'🐍'"
 msgstr ""
+">>> '\\u1234'\n"
+"'ሴ'\n"
+">>> '\\U0001f40d'\n"
+"'🐍'"
 
 #: reference/lexical_analysis.rst:928
 msgid "These sequences cannot appear in :ref:`bytes literals <bytes-literal>`."
 msgstr ""
+"Αυτές οι ακολουθίες δεν μπορούν να εμφανιστούν σε :ref:`λεκτικά bytes <bytes-"
+"literal>`."
 
 #: reference/lexical_analysis.rst:934
 msgid "Unrecognized escape sequences"
-msgstr ""
+msgstr "Μη αναγνωρισμένες ακολουθίες διαφυγής"
 
 #: reference/lexical_analysis.rst:936
 msgid ""
 "Unlike in Standard C, all unrecognized escape sequences are left in the "
 "string unchanged, that is, *the backslash is left in the result*::"
 msgstr ""
+"Σε αντίθεση με την Standard C, όλες οι μη αναγνωρισμένες ακολουθίες διαφυγής "
+"αφήνονται αμετάβλητες στη συμβολοσειρά, δηλαδή *η ανάστροφη κάθετος "
+"παραμένει στο αποτέλεσμα*::"
 
 #: reference/lexical_analysis.rst:939
 msgid ""
@@ -1402,6 +1798,10 @@ msgid ""
 ">>> list('\\q')\n"
 "['\\\\', 'q']"
 msgstr ""
+">>> print('\\q')\n"
+"\\q\n"
+">>> list('\\q')\n"
+"['\\\\', 'q']"
 
 #: reference/lexical_analysis.rst:944
 msgid ""
@@ -1409,20 +1809,27 @@ msgid ""
 "literals (``\\N...``, ``\\u...``, ``\\U...``) fall into the category of "
 "unrecognized escapes."
 msgstr ""
+"Σημειώστε ότι για λεκτικά bytes, οι ακολουθίες διαφυγής που αναγνωρίζονται "
+"μόνο σε λεκτικά συμβολοσειράς (``\\N...``, ``\\u...``, ``\\U...``) εμπίπτουν "
+"στην κατηγορία των μη αναγνωρισμένων διαφυγών."
 
 #: reference/lexical_analysis.rst:948
 msgid "Unrecognized escape sequences produce a :exc:`DeprecationWarning`."
 msgstr ""
+"Οι μη αναγνωρισμένες ακολουθίες διαφυγής παράγουν ένα :exc:"
+"`DeprecationWarning`."
 
 #: reference/lexical_analysis.rst:951
 msgid ""
 "Unrecognized escape sequences produce a :exc:`SyntaxWarning`. In a future "
 "Python version they will raise a :exc:`SyntaxError`."
 msgstr ""
+"Οι μη αναγνωρισμένες ακολουθίες διαφυγής παράγουν ένα :exc:`SyntaxWarning`. "
+"Σε μελλοντική έκδοση της Python θα κάνουν raise :exc:`SyntaxError`."
 
 #: reference/lexical_analysis.rst:964
 msgid "Bytes literals"
-msgstr ""
+msgstr "Λεκτικά bytes"
 
 #: reference/lexical_analysis.rst:966
 msgid ""
@@ -1432,6 +1839,11 @@ msgid ""
 "128 or greater must be expressed with escape sequences (typically :ref:"
 "`string-escape-hex` or :ref:`string-escape-oct`):"
 msgstr ""
+"Τα :dfn:`Bytes literals` έχουν πάντα πρόθεμα '``b``' ή '``B``'· παράγουν ένα "
+"αντικείμενο του τύπου :class:`bytes` αντί του :class:`str`. Μπορούν να "
+"περιέχουν μόνο χαρακτήρες ASCII· bytes με αριθμητική τιμή 128 ή μεγαλύτερη "
+"πρέπει να εκφράζονται με ακολουθίες διαφυγής (συνήθως :ref:`string-escape-"
+"hex` ή :ref:`string-escape-oct`):"
 
 #: reference/lexical_analysis.rst:972
 msgid ""
@@ -1440,16 +1852,22 @@ msgid ""
 ">>> list(b'\\x89PNG\\r\\n\\x1a\\n')\n"
 "[137, 80, 78, 71, 13, 10, 26, 10]"
 msgstr ""
+">>> b'\\x89PNG\\r\\n\\x1a\\n'\n"
+"b'\\x89PNG\\r\\n\\x1a\\n'\n"
+">>> list(b'\\x89PNG\\r\\n\\x1a\\n')\n"
+"[137, 80, 78, 71, 13, 10, 26, 10]"
 
 #: reference/lexical_analysis.rst:979
 msgid ""
 "Similarly, a zero byte must be expressed using an escape sequence (typically "
 "``\\0`` or ``\\x00``)."
 msgstr ""
+"Αντίστοιχα, ένα μηδενικό byte πρέπει να εκφράζεται με ακολουθία διαφυγής "
+"(συνήθως ``\\0`` ή ``\\x00``)."
 
 #: reference/lexical_analysis.rst:990
 msgid "Raw string literals"
-msgstr ""
+msgstr "Λεκτικά raw συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:992
 msgid ""
@@ -1459,12 +1877,20 @@ msgid ""
 "characters. As a result, in raw string literals, :ref:`escape sequences "
 "<escape-sequences>` are not treated specially:"
 msgstr ""
+"Τόσο τα λεκτικά συμβολοσειράς όσο και τα λεκτικά bytes μπορούν προαιρετικά "
+"να έχουν πρόθεμα το γράμμα '``r``' ή '``R``'· τέτοιες κατασκευές "
+"ονομάζονται :dfn:`raw string literals` και :dfn:`raw bytes literals` "
+"αντίστοιχα και αντιμετωπίζουν τις ανάστροφες καθέτους ως χαρακτήρες. Ως "
+"αποτέλεσμα, στα λεκτικά raw συμβολοσειράς, οι :ref:`ακολουθίες διαφυγής "
+"<escape-sequences>` δεν αντιμετωπίζονται ειδικά:"
 
 #: reference/lexical_analysis.rst:999
 msgid ""
 ">>> r'\\d{4}-\\d{2}-\\d{2}'\n"
 "'\\\\d{4}-\\\\d{2}-\\\\d{2}'"
 msgstr ""
+">>> r'\\d{4}-\\d{2}-\\d{2}'\n"
+"'\\\\d{4}-\\\\d{2}-\\\\d{2}'"
 
 #: reference/lexical_analysis.rst:1004
 msgid ""
@@ -1478,10 +1904,21 @@ msgid ""
 "interpreted as those two characters as part of the literal, *not* as a line "
 "continuation."
 msgstr ""
+"Ακόμη και σε ένα raw λεκτικό, τα εισαγωγικά μπορούν να «ξεφύγουν» (escape) "
+"με ανάστροφη κάθετο, αλλά η ανάστροφη κάθετος παραμένει στο αποτέλεσμα· για "
+"παράδειγμα, το ``r\"\\\"\"`` είναι έγκυρο λεκτικό συμβολοσειράς που "
+"αποτελείται από δύο χαρακτήρες: μια ανάστροφη κάθετο και ένα διπλό "
+"εισαγωγικό· το ``r\"\\\"`` δεν είναι έγκυρο λεκτικό συμβολοσειράς (ακόμη και "
+"μια raw συμβολοσειρά δεν μπορεί να τελειώνει με περιττό αριθμό ανάστροφων "
+"καθέτων). Συγκεκριμένα, *ένα raw λεκτικό δεν μπορεί να τελειώνει με μία μόνο "
+"ανάστροφη κάθετο* (αφού η ανάστροφη κάθετος θα διέφευγε τον επόμενο "
+"χαρακτήρα εισαγωγικού). Σημειώστε επίσης ότι μια μοναδική ανάστροφη κάθετος "
+"ακολουθούμενη από νέα γραμμή ερμηνεύονται ως μέρος του λεκτικού, *όχι* ως "
+"συνέχιση γραμμής."
 
 #: reference/lexical_analysis.rst:1032
 msgid "f-strings"
-msgstr ""
+msgstr "f-strings"
 
 #: reference/lexical_analysis.rst:1036
 msgid ""
@@ -1491,6 +1928,12 @@ msgid ""
 "While other string literals always have a constant value, formatted strings "
 "are really expressions evaluated at run time."
 msgstr ""
+"Ένα :dfn:`formatted string literal` ή ένα :dfn:`f-string` είναι ένα λεκτικό "
+"συμβολοσειράς με πρόθεμα '``f``' ή '``F``'. Αυτές οι συμβολοσειρές μπορεί να "
+"περιέχουν πεδία αντικατάστασης, που είναι εκφράσεις οριοθετημένες από "
+"άγκιστρα ``{}``. Ενώ τα άλλα λεκτικά συμβολοσειράς έχουν πάντα σταθερή τιμή, "
+"οι μορφοποιημένες συμβολοσειρές είναι στην πραγματικότητα εκφράσεις που "
+"αξιολογούνται κατά τον χρόνο εκτέλεσης."
 
 #: reference/lexical_analysis.rst:1042
 msgid ""
@@ -1498,6 +1941,10 @@ msgid ""
 "literal is also marked as a raw string).  After decoding, the grammar for "
 "the contents of the string is:"
 msgstr ""
+"Οι ακολουθίες διαφυγής αποκωδικοποιούνται όπως στα συνηθισμένα λεκτικά "
+"συμβολοσειράς (εκτός αν το λεκτικό είναι επίσης σημειωμένο ως raw string). "
+"Μετά την αποκωδικοποίηση, η γραμματική για το περιεχόμενο της συμβολοσειράς "
+"είναι:"
 
 #: reference/lexical_analysis.rst:1056
 msgid ""
@@ -1511,6 +1958,16 @@ msgid ""
 "format specifier may also be appended, introduced by a colon ``':'``. A "
 "replacement field ends with a closing curly bracket ``'}'``."
 msgstr ""
+"Τα τμήματα της συμβολοσειράς έξω από τα άγκιστρα αντιμετωπίζονται "
+"κυριολεκτικά, με εξαίρεση ότι τυχόν διπλά άγκιστρα ``'{{'`` ή ``'}}'`` "
+"αντικαθίστανται από το αντίστοιχο μονό άγκιστρο. Ένα μοναδικό ανοιχτό "
+"άγκιστρο ``'{'`` σηματοδοτεί ένα πεδίο αντικατάστασης, το οποίο ξεκινά με "
+"μια έκφραση της Python. Για να εμφανιστούν και το κείμενο της έκφρασης και η "
+"τιμή της μετά την αξιολόγηση (χρήσιμο στο debugging), μπορεί να προστεθεί "
+"ένα ίσον ``'='`` μετά την έκφραση. Μπορεί να ακολουθήσει ένα πεδίο "
+"μετατροπής, που εισάγεται με θαυμαστικό ``'!'``. Μπορεί επίσης να προστεθεί "
+"ένας προσδιοριστής μορφοποίησης, που εισάγεται με άνω-κάτω τελεία ``':'``. "
+"Ένα πεδίο αντικατάστασης τελειώνει με ένα κλειστό άγκιστρο ``'}'``."
 
 #: reference/lexical_analysis.rst:1066
 msgid ""
@@ -1525,6 +1982,18 @@ msgid ""
 "field is a comment (even closing braces and quotes). In that case, "
 "replacement fields must be closed in a different line."
 msgstr ""
+"Οι εκφράσεις σε λεκτικά μορφοποιημένης συμβολοσειράς αντιμετωπίζονται σαν "
+"κανονικές εκφράσεις της Python που περιβάλλονται από παρενθέσεις, με λίγες "
+"εξαιρέσεις. Δεν επιτρέπεται κενή έκφραση, και τόσο το :keyword:`lambda` όσο "
+"και οι εκφράσεις ανάθεσης ``:=`` πρέπει να περιβάλλονται από ρητές "
+"παρενθέσεις. Κάθε έκφραση αξιολογείται στο πλαίσιο όπου εμφανίζεται το "
+"λεκτικό μορφοποιημένης συμβολοσειράς, με σειρά από αριστερά προς τα δεξιά. "
+"Οι εκφράσεις αντικατάστασης μπορούν να περιέχουν νέες γραμμές τόσο σε f-"
+"strings με μονά εισαγωγικά όσο και σε αυτά με τα τριπλά εισαγωγικά, και "
+"μπορούν να περιέχουν σχόλια. Οτιδήποτε ακολουθεί μετά από ένα ``#`` μέσα σε "
+"πεδίο αντικατάστασης είναι σχόλιο (ακόμη και κλειστά άγκιστρα και "
+"εισαγωγικά). Σε αυτή την περίπτωση, τα πεδία αντικατάστασης πρέπει να "
+"κλείνονται σε διαφορετική γραμμή."
 
 #: reference/lexical_analysis.rst:1077
 msgid ""
@@ -1532,6 +2001,9 @@ msgid ""
 "... + 3}\"\n"
 "'abc5'"
 msgstr ""
+">>> f\"abc{a # This is a comment }\"\n"
+"... + 3}\"\n"
+"'abc5'"
 
 #: reference/lexical_analysis.rst:1083
 msgid ""
@@ -1539,12 +2011,18 @@ msgid ""
 "containing an :keyword:`async for` clause were illegal in the expressions in "
 "formatted string literals due to a problem with the implementation."
 msgstr ""
+"Πριν από την Python 3.7, μια έκφραση :keyword:`await` και οι συμπτύξεις "
+"(comprehensions) που περιείχαν ρήτρα :keyword:`async for` ήταν παράνομες "
+"στις εκφράσεις μέσα σε λεκτικά μορφοποιημένης συμβολοσειράς λόγω προβλήματος "
+"στην υλοποίηση."
 
 #: reference/lexical_analysis.rst:1088
 msgid ""
 "Prior to Python 3.12, comments were not allowed inside f-string replacement "
 "fields."
 msgstr ""
+"Πριν από την Python 3.12, δεν επιτρέπονταν σχόλια μέσα σε πεδία "
+"αντικατάστασης f-string."
 
 #: reference/lexical_analysis.rst:1092
 msgid ""
@@ -1556,10 +2034,17 @@ msgid ""
 "it defaults to the :func:`str` of the expression unless a conversion ``'!"
 "r'`` is declared."
 msgstr ""
+"Όταν παρέχεται το σημάδι ίσον ``'='``, η έξοδος θα περιέχει το κείμενο της "
+"έκφρασης, το ``'='`` και την αξιολογημένη τιμή. Τα κενά μετά το ανοιχτό "
+"άγκιστρο ``'{'``, μέσα στην έκφραση και μετά το ``'='`` διατηρούνται όλα "
+"στην έξοδο. Από προεπιλογή, το ``'='`` οδηγεί στο να εμφανιστεί το :func:"
+"`repr` της έκφρασης, εκτός αν έχει οριστεί μορφοποίηση. Όταν έχει οριστεί "
+"μορφοποίηση, προεπιλογή είναι το :func:`str` της έκφρασης, εκτός αν δηλωθεί "
+"μετατροπή ``'!r'``."
 
 #: reference/lexical_analysis.rst:1100
 msgid "The equal sign ``'='``."
-msgstr ""
+msgstr "Το σύμβολο ίσον ``'='``."
 
 #: reference/lexical_analysis.rst:1103
 msgid ""
@@ -1567,6 +2052,10 @@ msgid ""
 "converted before formatting.  Conversion ``'!s'`` calls :func:`str` on the "
 "result, ``'!r'`` calls :func:`repr`, and ``'!a'`` calls :func:`ascii`."
 msgstr ""
+"Αν οριστεί μετατροπή, το αποτέλεσμα της αξιολόγησης της έκφρασης "
+"μετατρέπεται πριν τη μορφοποίηση. Η μετατροπή ``'!s'`` καλεί τη :func:`str` "
+"στο αποτέλεσμα, η ``'!r'`` καλεί τη :func:`repr` και η ``'!a'`` καλεί τη :"
+"func:`ascii`."
 
 #: reference/lexical_analysis.rst:1107
 msgid ""
@@ -1576,6 +2065,12 @@ msgid ""
 "specifier is omitted.  The formatted result is then included in the final "
 "value of the whole string."
 msgstr ""
+"Το αποτέλεσμα μορφοποιείται στη συνέχεια χρησιμοποιώντας το πρωτόκολλο :func:"
+"`format`. Ο προσδιοριστής μορφοποίησης περνιέται στη μέθοδο :meth:`~object."
+"__format__` της έκφρασης ή του αποτελέσματος μετά τη μετατροπή. Αν "
+"παραλειφθεί ο προσδιοριστής μορφοποίησης, περνιέται κενή συμβολοσειρά. Το "
+"μορφοποιημένο αποτέλεσμα συμπεριλαμβάνεται έπειτα στην τελική τιμή ολόκληρης "
+"της συμβολοσειράς."
 
 #: reference/lexical_analysis.rst:1113
 msgid ""
@@ -1585,16 +2080,25 @@ msgid ""
 "fields. The :ref:`format specifier mini-language <formatspec>` is the same "
 "as that used by the :meth:`str.format` method."
 msgstr ""
+"Οι προσδιοριστές μορφοποίησης ανώτατου επιπέδου μπορεί να περιλαμβάνουν "
+"ένθετα πεδία αντικατάστασης. Αυτά τα ένθετα πεδία μπορεί να περιλαμβάνουν τα "
+"δικά τους πεδία μετατροπής και :ref:`προσδιοριστές μορφοποίησης "
+"<formatspec>`, αλλά δεν μπορεί να περιλαμβάνουν πιο βαθιά ένθετα πεδία "
+"αντικατάστασης. Η :ref:`μικρο-γλώσσα προσδιοριστών μορφοποίησης "
+"<formatspec>` είναι η ίδια με αυτή που χρησιμοποιεί η μέθοδος :meth:`str."
+"format`."
 
 #: reference/lexical_analysis.rst:1119
 msgid ""
 "Formatted string literals may be concatenated, but replacement fields cannot "
 "be split across literals."
 msgstr ""
+"Τα λεκτικά μορφοποιημένης συμβολοσειράς μπορούν να συνενωθούν, αλλά τα πεδία "
+"αντικατάστασης δεν μπορούν να «σπάσουν» ανάμεσα σε λεκτικά."
 
 #: reference/lexical_analysis.rst:1122
 msgid "Some examples of formatted string literals::"
-msgstr ""
+msgstr "Μερικά παραδείγματα λεκτικών μορφοποιημένης συμβολοσειράς::"
 
 #: reference/lexical_analysis.rst:1124
 msgid ""
@@ -1627,12 +2131,42 @@ msgid ""
 ">>> f\"{line = !r:20}\"\n"
 "'line = \"The mill\\'s closed\" '"
 msgstr ""
+">>> name = \"Fred\"\n"
+">>> f\"He said his name is {name!r}.\"\n"
+"\"He said his name is 'Fred'.\"\n"
+">>> f\"He said his name is {repr(name)}.\"  # repr() is equivalent to !r\n"
+"\"He said his name is 'Fred'.\"\n"
+">>> width = 10\n"
+">>> precision = 4\n"
+">>> value = decimal.Decimal(\"12.34567\")\n"
+">>> f\"result: {value:{width}.{precision}}\"  # nested fields\n"
+"'result:      12.35'\n"
+">>> today = datetime(year=2017, month=1, day=27)\n"
+">>> f\"{today:%B %d, %Y}\"  # using date format specifier\n"
+"'January 27, 2017'\n"
+">>> f\"{today=:%B %d, %Y}\" # using date format specifier and debugging\n"
+"'today=January 27, 2017'\n"
+">>> number = 1024\n"
+">>> f\"{number:#0x}\"  # using integer format specifier\n"
+"'0x400'\n"
+">>> foo = \"bar\"\n"
+">>> f\"{ foo = }\" # preserves whitespace\n"
+"\" foo = 'bar'\"\n"
+">>> line = \"The mill's closed\"\n"
+">>> f\"{line = }\"\n"
+"'line = \"The mill\\'s closed\"'\n"
+">>> f\"{line = :20}\"\n"
+"\"line = The mill's closed   \"\n"
+">>> f\"{line = !r:20}\"\n"
+"'line = \"The mill\\'s closed\" '"
 
 #: reference/lexical_analysis.rst:1154
 msgid ""
 "Reusing the outer f-string quoting type inside a replacement field is "
 "permitted::"
 msgstr ""
+"Επιτρέπεται να επαναχρησιμοποιείται ο τύπος εισαγωγικών του εξωτερικού f-"
+"string μέσα σε ένα πεδίο αντικατάστασης::"
 
 #: reference/lexical_analysis.rst:1157
 msgid ""
@@ -1640,18 +2174,25 @@ msgid ""
 ">>> f\"abc {a[\"x\"]} def\"\n"
 "'abc 2 def'"
 msgstr ""
+">>> a = dict(x=2)\n"
+">>> f\"abc {a[\"x\"]} def\"\n"
+"'abc 2 def'"
 
 #: reference/lexical_analysis.rst:1161
 msgid ""
 "Prior to Python 3.12, reuse of the same quoting type of the outer f-string "
 "inside a replacement field was not possible."
 msgstr ""
+"Πριν από την Python 3.12, δεν ήταν δυνατή η επαναχρησιμοποίηση του ίδιου "
+"τύπου εισαγωγικών του εξωτερικού f-string μέσα σε πεδίο αντικατάστασης."
 
 #: reference/lexical_analysis.rst:1165
 msgid ""
 "Backslashes are also allowed in replacement fields and are evaluated the "
 "same way as in any other context::"
 msgstr ""
+"Επιτρέπονται επίσης ανάστροφες καθέτοι μέσα σε πεδία αντικατάστασης και "
+"αξιολογούνται με τον ίδιο τρόπο όπως σε οποιοδήποτε άλλο πλαίσιο::"
 
 #: reference/lexical_analysis.rst:1168
 msgid ""
@@ -1662,18 +2203,28 @@ msgid ""
 "b\n"
 "c"
 msgstr ""
+">>> a = [\"a\", \"b\", \"c\"]\n"
+">>> print(f\"List a contains:\\n{\"\\n\".join(a)}\")\n"
+"List a contains:\n"
+"a\n"
+"b\n"
+"c"
 
 #: reference/lexical_analysis.rst:1175
 msgid ""
 "Prior to Python 3.12, backslashes were not permitted inside an f-string "
 "replacement field."
 msgstr ""
+"Πριν από την Python 3.12, δεν επιτρέπονταν ανάστροφες καθέτοι μέσα σε πεδίο "
+"αντικατάστασης f-string."
 
 #: reference/lexical_analysis.rst:1179
 msgid ""
 "Formatted string literals cannot be used as docstrings, even if they do not "
 "include expressions."
 msgstr ""
+"Τα λεκτικά μορφοποιημένης συμβολοσειράς δεν μπορούν να χρησιμοποιηθούν ως "
+"docstrings, ακόμη κι αν δεν περιέχουν εκφράσεις."
 
 #: reference/lexical_analysis.rst:1184
 msgid ""
@@ -1683,16 +2234,24 @@ msgid ""
 ">>> foo.__doc__ is None\n"
 "True"
 msgstr ""
+">>> def foo():\n"
+"...     f\"Not a docstring\"\n"
+"...\n"
+">>> foo.__doc__ is None\n"
+"True"
 
 #: reference/lexical_analysis.rst:1190
 msgid ""
 "See also :pep:`498` for the proposal that added formatted string literals, "
 "and :meth:`str.format`, which uses a related format string mechanism."
 msgstr ""
+"Δείτε επίσης το :pep:`498` για την πρόταση που πρόσθεσε τα λεκτικά "
+"μορφοποιημένης συμβολοσειράς, και τη :meth:`str.format`, που χρησιμοποιεί "
+"έναν σχετικό μηχανισμό μορφοποίησης συμβολοσειρών."
 
 #: reference/lexical_analysis.rst:1198
 msgid "t-strings"
-msgstr ""
+msgstr "t-strings"
 
 #: reference/lexical_analysis.rst:1202
 msgid ""
@@ -1701,12 +2260,18 @@ msgid ""
 "and evaluation rules as :ref:`formatted string literals <f-strings>`, with "
 "the following differences:"
 msgstr ""
+"Ένα :dfn:`template string literal` ή ένα :dfn:`t-string` είναι ένα λεκτικό "
+"συμβολοσειράς με πρόθεμα '``t``' ή '``T``'. Αυτές οι συμβολοσειρές "
+"ακολουθούν την ίδια σύνταξη και κανόνες αξιολόγησης με τα :ref:`λεκτικά "
+"μορφοποιημένης συμβολοσειράς <f-strings>`, με τις εξής διαφορές:"
 
 #: reference/lexical_analysis.rst:1207
 msgid ""
 "Rather than evaluating to a ``str`` object, template string literals "
 "evaluate to a :class:`string.templatelib.Template` object."
 msgstr ""
+"Αντί να αξιολογούνται σε αντικείμενο ``str``, τα λεκτικά συμβολοσειράς "
+"προτύπου αξιολογούνται σε αντικείμενο :class:`string.templatelib.Template`."
 
 #: reference/lexical_analysis.rst:1210
 msgid ""
@@ -1716,6 +2281,12 @@ msgid ""
 "up to code that processes the resulting :class:`~string.templatelib."
 "Template` object to decide how to handle format specifiers and conversions."
 msgstr ""
+"Δεν χρησιμοποιείται το πρωτόκολλο :func:`format`. Αντί αυτού, ο "
+"προσδιοριστής μορφοποίησης και οι μετατροπές (αν υπάρχουν) περνιούνται σε "
+"ένα νέο αντικείμενο :class:`~string.templatelib.Interpolation` που "
+"δημιουργείται για κάθε αξιολογημένη έκφραση. Εναπόκειται στον κώδικα που "
+"επεξεργάζεται το προκύπτον αντικείμενο :class:`~string.templatelib.Template` "
+"να αποφασίσει πώς θα χειριστεί προσδιοριστές μορφοποίησης και μετατροπές."
 
 #: reference/lexical_analysis.rst:1217
 msgid ""
@@ -1726,6 +2297,13 @@ msgid ""
 "determine the value of the ``format_spec`` attribute. If ``precision`` were "
 "to be ``2``, the resulting format specifier would be ``'.2f'``."
 msgstr ""
+"Οι προσδιοριστές μορφοποίησης που περιέχουν ένθετα πεδία αντικατάστασης "
+"αξιολογούνται άμεσα, πριν περαστούν στο αντικείμενο :class:`~string."
+"templatelib.Interpolation`. Για παράδειγμα, μια παρεμβολή (interpolation) "
+"της μορφής ``{amount:.{precision}f}`` θα αξιολογήσει την εσωτερική έκφραση "
+"``{precision}`` για να καθορίσει την τιμή του γνωρίσματος ``format_spec``. "
+"Αν το ``precision`` ήταν ``2``, ο προκύπτων προσδιοριστής μορφοποίησης θα "
+"ήταν ``'.2f'``."
 
 #: reference/lexical_analysis.rst:1225
 msgid ""
@@ -1738,16 +2316,27 @@ msgid ""
 "conversion or format specifier are provided, this will override the default "
 "behaviour."
 msgstr ""
+"Όταν παρέχεται το σύμβολο ίσον ``'='`` σε μια έκφραση παρεμβολής, το κείμενο "
+"της έκφρασης προσαρτάται στη λεκτική συμβολοσειρά που προηγείται της "
+"σχετικής παρεμβολής. Αυτό περιλαμβάνει το σύμβολο ίσον και τυχόν κενούς "
+"χαρακτήρες γύρω του. Το αντικείμενο :class:`!Interpolation` για την έκφραση "
+"δημιουργείται κανονικά, με εξαίρεση ότι το :attr:`~string.templatelib."
+"Interpolation.conversion` τίθεται από προεπιλογή σε '``r``' (:func:`repr`). "
+"Αν δοθεί ρητή μετατροπή ή προσδιοριστής μορφοποίησης, αυτό θα υπερκαλύψει "
+"την προεπιλεγμένη συμπεριφορά."
 
 #: reference/lexical_analysis.rst:1239
 msgid "Numeric literals"
-msgstr ""
+msgstr "Αριθμητικά λεκτικά"
 
 #: reference/lexical_analysis.rst:1245
 msgid ""
 ":data:`~token.NUMBER` tokens represent numeric literals, of which there are "
 "three types: integers, floating-point numbers, and imaginary numbers."
 msgstr ""
+"Τα tokens :data:`~token.NUMBER` αναπαριστούν αριθμητικά λεκτικά, τα οποία "
+"είναι τριών τύπων: ακέραιοι, αριθμοί κινητής υποδιαστολής και φανταστικοί "
+"αριθμοί."
 
 #: reference/lexical_analysis.rst:1253
 msgid ""
@@ -1756,20 +2345,27 @@ msgid ""
 "constructor, respectively. Note that not all valid inputs for those "
 "constructors are also valid literals."
 msgstr ""
+"Η αριθμητική τιμή ενός αριθμητικού λεκτικού είναι η ίδια σαν να περνιόταν ως "
+"string στον αντίστοιχο constructor των :class:`int`, :class:`float` ή :class:"
+"`complex`. Σημειώστε ότι δεν είναι όλες οι έγκυρες είσοδοι για αυτούς τους "
+"constructors και έγκυρα λεκτικά."
 
 #: reference/lexical_analysis.rst:1258
 msgid ""
 "Numeric literals do not include a sign; a phrase like ``-1`` is actually an "
 "expression composed of the unary operator '``-``' and the literal ``1``."
 msgstr ""
+"Τα αριθμητικά λεκτικά δεν περιλαμβάνουν πρόσημο· μια έκφραση όπως ``-1`` "
+"είναι στην πραγματικότητα μια έκφραση που αποτελείται από τον μοναδιαίο "
+"τελεστή '``-``' και το λεκτικό ``1``."
 
 #: reference/lexical_analysis.rst:1272
 msgid "Integer literals"
-msgstr ""
+msgstr "Λεκτικά ακεραίων"
 
 #: reference/lexical_analysis.rst:1274
 msgid "Integer literals denote whole numbers. For example::"
-msgstr ""
+msgstr "Τα λεκτικά ακεραίων δηλώνουν ακέραιους αριθμούς. Για παράδειγμα::"
 
 #: reference/lexical_analysis.rst:1276
 msgid ""
@@ -1777,16 +2373,21 @@ msgid ""
 "3\n"
 "2147483647"
 msgstr ""
+"7\n"
+"3\n"
+"2147483647"
 
 #: reference/lexical_analysis.rst:1280
 msgid ""
 "There is no limit for the length of integer literals apart from what can be "
 "stored in available memory::"
 msgstr ""
+"Δεν υπάρχει όριο στο μήκος των ακεραίων πέρα από αυτό που μπορεί να "
+"αποθηκευτεί στη διαθέσιμη μνήμη::"
 
 #: reference/lexical_analysis.rst:1283
 msgid "7922816251426433759354395033679228162514264337593543950336"
-msgstr ""
+msgstr "7922816251426433759354395033679228162514264337593543950336"
 
 #: reference/lexical_analysis.rst:1285
 msgid ""
@@ -1794,6 +2395,10 @@ msgid ""
 "ignored for determining the numeric value of the literal. For example, the "
 "following literals are equivalent::"
 msgstr ""
+"Οι κάτω παύλες μπορούν να χρησιμοποιηθούν για ομαδοποίηση ψηφίων ώστε να "
+"βελτιώνεται η αναγνωσιμότητα, και αγνοούνται κατά τον υπολογισμό της "
+"αριθμητικής τιμής του λεκτικού. Για παράδειγμα, τα παρακάτω λεκτικά είναι "
+"ισοδύναμα::"
 
 #: reference/lexical_analysis.rst:1289
 msgid ""
@@ -1801,12 +2406,18 @@ msgid ""
 "100000000000\n"
 "1_00_00_00_00_000"
 msgstr ""
+"100_000_000_000\n"
+"100000000000\n"
+"1_00_00_00_00_000"
 
 #: reference/lexical_analysis.rst:1293
 msgid ""
 "Underscores can only occur between digits. For example, ``_123``, ``321_``, "
 "and ``123__321`` are *not* valid literals."
 msgstr ""
+"Οι κάτω παύλες μπορούν να εμφανίζονται μόνο ανάμεσα σε ψηφία. Για "
+"παράδειγμα, τα ``_123``, ``321_`` και ``123__321`` *δεν* είναι έγκυρα "
+"λεκτικά."
 
 #: reference/lexical_analysis.rst:1296
 msgid ""
@@ -1815,6 +2426,10 @@ msgid ""
 "Hexadecimal digits 10 through 15 are represented by letters ``A``-``F``, "
 "case-insensitive.  For example::"
 msgstr ""
+"Οι ακέραιοι μπορούν να δηλωθούν ως δυαδικοί (βάση του 2), οκταδικοί (βάση "
+"του 8) ή δεκαεξαδικοί (βάση του 16) χρησιμοποιώντας τα προθέματα ``0b``, "
+"``0o`` και ``0x``, αντίστοιχα. Τα δεκαεξαδικά ψηφία 10 έως 15 αναπαριστώνται "
+"από τα γράμματα ``A``-``F``, χωρίς διάκριση κεφαλαίων/πεζών. Για παράδειγμα::"
 
 #: reference/lexical_analysis.rst:1301
 msgid ""
@@ -1825,12 +2440,21 @@ msgid ""
 "0xdeadbeef\n"
 "0xDead_Beef"
 msgstr ""
+"0b100110111\n"
+"0b_1110_0101\n"
+"0o177\n"
+"0o377\n"
+"0xdeadbeef\n"
+"0xDead_Beef"
 
 #: reference/lexical_analysis.rst:1308
 msgid ""
 "An underscore can follow the base specifier. For example, ``0x_1f`` is a "
 "valid literal, but ``0_x1f`` and ``0x__1f`` are not."
 msgstr ""
+"Μια κάτω παύλα μπορεί να ακολουθεί τον προσδιοριστή βάσης. Για παράδειγμα, "
+"το ``0x_1f`` είναι έγκυρο λεκτικό, αλλά τα ``0_x1f`` και ``0x__1f`` δεν "
+"είναι."
 
 #: reference/lexical_analysis.rst:1312
 msgid ""
@@ -1838,66 +2462,90 @@ msgid ""
 "``0123`` is not a valid literal. This is for disambiguation with C-style "
 "octal literals, which Python used before version 3.0."
 msgstr ""
+"Δεν επιτρέπονται μηδενικά στην αρχή σε μη-μηδενικό δεκαδικό αριθμό. Για "
+"παράδειγμα, το ``0123`` δεν είναι έγκυρο λεκτικό. Αυτό γίνεται για να "
+"αποσαφηνίζεται η διάκριση με οκταδικά λεκτικά τύπου C, τα οποία η Python "
+"χρησιμοποιούσε πριν την έκδοση 3.0."
 
 #: reference/lexical_analysis.rst:1317
 msgid ""
 "Formally, integer literals are described by the following lexical "
 "definitions:"
 msgstr ""
+"Τυπικά, τα λεκτικά ακεραίων περιγράφονται από τους παρακάτω λεξικούς "
+"ορισμούς:"
 
 #: reference/lexical_analysis.rst:1334 reference/lexical_analysis.rst:1398
 msgid "Underscores are now allowed for grouping purposes in literals."
 msgstr ""
+"Οι κάτω παύλες επιτρέπονται πλέον στα λεκτικά για σκοπούς ομαδοποίησης."
 
 #: reference/lexical_analysis.rst:1345
 msgid "Floating-point literals"
-msgstr ""
+msgstr "Λεκτικά κινητής υποδιαστολής"
 
 #: reference/lexical_analysis.rst:1347
 msgid ""
 "Floating-point (float) literals, such as ``3.14`` or ``1.5``, denote :ref:"
 "`approximations of real numbers <datamodel-float>`."
 msgstr ""
+"Τα λεκτικά κινητής υποδιαστολής (float), όπως ``3.14`` ή ``1.5``, δηλώνουν :"
+"ref:`προσεγγίσεις πραγματικών αριθμών <datamodel-float>`."
 
 #: reference/lexical_analysis.rst:1350
 msgid ""
 "They consist of *integer* and *fraction* parts, each composed of decimal "
 "digits. The parts are separated by a decimal point, ``.``::"
 msgstr ""
+"Αποτελούνται από *ακέραιο* και *κλασματικό* μέρος, το καθένα από δεκαδικά "
+"ψηφία. Τα μέρη χωρίζονται από τελεία, ``.``::"
 
 #: reference/lexical_analysis.rst:1353
 msgid ""
 "2.71828\n"
 "4.0"
 msgstr ""
+"2.71828\n"
+"4.0"
 
 #: reference/lexical_analysis.rst:1356
 msgid ""
 "Unlike in integer literals, leading zeros are allowed. For example, "
 "``077.010`` is legal, and denotes the same number as ``77.01``."
 msgstr ""
+"Σε αντίθεση με τα λεκτικά ακεραίων, επιτρέπονται μηδενικά στην αρχή. Για "
+"παράδειγμα, το ``077.010`` είναι νόμιμο και δηλώνει τον ίδιο αριθμό με το "
+"``77.01``."
 
 #: reference/lexical_analysis.rst:1359
 msgid ""
 "As in integer literals, single underscores may occur between digits to help "
 "readability::"
 msgstr ""
+"Όπως και στα λεκτικά ακεραίων, μονές κάτω παύλες μπορούν να εμφανίζονται "
+"ανάμεσα σε ψηφία για καλύτερη αναγνωσιμότητα::"
 
 #: reference/lexical_analysis.rst:1362
 msgid ""
 "96_485.332_123\n"
 "3.14_15_93"
 msgstr ""
+"96_485.332_123\n"
+"3.14_15_93"
 
 #: reference/lexical_analysis.rst:1365
 msgid "Either of these parts, but not both, can be empty. For example::"
 msgstr ""
+"Κάθε ένα από αυτά τα μέρη μπορεί να είναι κενό, αλλά όχι και τα δύο. Για "
+"παράδειγμα::"
 
 #: reference/lexical_analysis.rst:1367
 msgid ""
 "10.  # (equivalent to 10.0)\n"
 ".001  # (equivalent to 0.001)"
 msgstr ""
+"10.  # (ισοδύναμο με το 10.0)\n"
+".001  # (ισοδύναμο με το 0.001)"
 
 #: reference/lexical_analysis.rst:1370
 msgid ""
@@ -1906,6 +2554,10 @@ msgid ""
 "number in the same format as the integer and fraction parts. The ``e`` or "
 "``E`` represents \"times ten raised to the power of\"::"
 msgstr ""
+"Προαιρετικά, το ακέραιο και το κλασματικό μέρος μπορεί να ακολουθούνται από "
+"έναν *εκθέτη*: το γράμμα ``e`` ή ``E``, ακολουθούμενο από προαιρετικό "
+"πρόσημο, ``+`` ή ``-``, και έναν αριθμό στην ίδια μορφή με το ακέραιο και το "
+"κλασματικό μέρος. Το ``e`` ή ``E`` σημαίνει \"επί δέκα υψωμένο στη δύναμη\"::"
 
 #: reference/lexical_analysis.rst:1375
 msgid ""
@@ -1913,28 +2565,38 @@ msgid ""
 "1.166e-5  # (represents 1.166×10⁻⁵, or 0.00001166)\n"
 "6.02214076e+23  # (represents 6.02214076×10²³, or 602214076000000000000000.)"
 msgstr ""
+"1.0e3  # (αντιπροσωπεύει το 1.0×10³, ή το 1000.0)\n"
+"1.166e-5  # (αντιπροσωπεύει το 1.166×10⁻⁵, ή το 0.00001166)\n"
+"6.02214076e+23  # (αντιπροσωπεύει το 6.02214076×10²³, ή το "
+"602214076000000000000000.)"
 
 #: reference/lexical_analysis.rst:1379
 msgid ""
 "In floats with only integer and exponent parts, the decimal point may be "
 "omitted::"
 msgstr ""
+"Σε floats που έχουν μόνο ακέραιο μέρος και εκθέτη, η υποδιαστολή μπορεί να "
+"παραλειφθεί::"
 
 #: reference/lexical_analysis.rst:1382
 msgid ""
 "1e3  # (equivalent to 1.e3 and 1.0e3)\n"
 "0e0  # (equivalent to 0.)"
 msgstr ""
+"1e3  # (ισοδύναμο με το 1.e3 και το 1.0e3)\n"
+"0e0  # (ισοδύναμο με το 0.)"
 
 #: reference/lexical_analysis.rst:1385
 msgid ""
 "Formally, floating-point literals are described by the following lexical "
 "definitions:"
 msgstr ""
+"Τυπικά, τα λεκτικά κινητής υποδιαστολής περιγράφονται από τους παρακάτω "
+"λεξικούς ορισμούς:"
 
 #: reference/lexical_analysis.rst:1407
 msgid "Imaginary literals"
-msgstr ""
+msgstr "Λεκτικά φανταστικών"
 
 #: reference/lexical_analysis.rst:1409
 msgid ""
@@ -1942,6 +2604,9 @@ msgid ""
 "literals. Instead, *imaginary literals* denote complex numbers with a zero "
 "real part."
 msgstr ""
+"Η Python έχει αντικείμενα :ref:`μιγαδικών αριθμών <typesnumeric>`, αλλά δεν "
+"έχει λεκτικά μιγαδικών. Αντί αυτού, τα *λεκτικά φανταστικών* δηλώνουν "
+"μιγαδικούς αριθμούς με μηδενικό πραγματικό μέρος."
 
 #: reference/lexical_analysis.rst:1414
 msgid ""
@@ -1949,10 +2614,14 @@ msgid ""
 "number 3 added to the imaginary number 4.2\\ *i*. Python uses a similar "
 "syntax, except the imaginary unit is written as ``j`` rather than *i*::"
 msgstr ""
+"Για παράδειγμα, στα μαθηματικά, ο μιγαδικός αριθμός 3+4.2\\ *i* γράφεται ως "
+"ο πραγματικός αριθμός 3 συν ο φανταστικός αριθμός 4.2\\ *i*. Η Python "
+"χρησιμοποιεί παρόμοια σύνταξη, με τη διαφορά ότι η φανταστική μονάδα "
+"γράφεται ως ``j`` αντί για *i*::"
 
 #: reference/lexical_analysis.rst:1419
 msgid "3+4.2j"
-msgstr ""
+msgstr "3+4.2j"
 
 #: reference/lexical_analysis.rst:1421
 msgid ""
@@ -1961,22 +2630,30 @@ msgid ""
 "literal <imaginary>` ``4.2j``. Since these are three separate tokens, "
 "whitespace is allowed between them::"
 msgstr ""
+"Αυτή είναι μια έκφραση που αποτελείται από το :ref:`λεκτικό ακεραίου "
+"<integers>` ``3``, τον :ref:`τελεστή <operators>` '``+``' και το :ref:"
+"`λεκτικό φανταστικού <imaginary>` ``4.2j``. Εφόσον αυτά είναι τρία ξεχωριστά "
+"tokens, επιτρέπονται κενοί χαρακτήρες ανάμεσά τους::"
 
 #: reference/lexical_analysis.rst:1427
 msgid "3 + 4.2j"
-msgstr ""
+msgstr "3 + 4.2j"
 
 #: reference/lexical_analysis.rst:1429
 msgid ""
 "No whitespace is allowed *within* each token. In particular, the ``j`` "
 "suffix, may not be separated from the number before it."
 msgstr ""
+"Δεν επιτρέπονται κενοί χαρακτήρες *μέσα* σε κάθε token. Συγκεκριμένα, το "
+"επίθημα ``j`` δεν μπορεί να διαχωριστεί από τον αριθμό που προηγείται."
 
 #: reference/lexical_analysis.rst:1433
 msgid ""
 "The number before the ``j`` has the same syntax as a floating-point literal. "
 "Thus, the following are valid imaginary literals::"
 msgstr ""
+"Ο αριθμός πριν από το ``j`` έχει την ίδια σύνταξη με ένα λεκτικό κινητής "
+"υποδιαστολής. Άρα, τα παρακάτω είναι έγκυρα λεκτικά φανταστικών::"
 
 #: reference/lexical_analysis.rst:1436
 msgid ""
@@ -1988,6 +2665,13 @@ msgid ""
 "3.14e-10j\n"
 "3.14_15_93j"
 msgstr ""
+"4.2j\n"
+"3.14j\n"
+"10.j\n"
+".001j\n"
+"1e100j\n"
+"3.14e-10j\n"
+"3.14_15_93j"
 
 #: reference/lexical_analysis.rst:1444
 msgid ""
@@ -1995,6 +2679,10 @@ msgid ""
 "imaginary number only has an integer part. The number is still evaluated as "
 "a floating-point number, not an integer::"
 msgstr ""
+"Σε αντίθεση με ένα λεκτικό κινητής υποδιαστολής, η υποδιαστολή μπορεί να "
+"παραλειφθεί αν ο φανταστικός αριθμός έχει μόνο ακέραιο μέρος. Ο αριθμός "
+"εξακολουθεί να αξιολογείται ως αριθμός κινητής υποδιαστολής, όχι ως "
+"ακέραιος::"
 
 #: reference/lexical_analysis.rst:1448
 msgid ""
@@ -2002,25 +2690,31 @@ msgid ""
 "0j\n"
 "1000000000000000000000000j   # equivalent to 1e+24j"
 msgstr ""
+"10j\n"
+"0j\n"
+"1000000000000000000000000j   # ισοδύναμο με το 1e+24j"
 
 #: reference/lexical_analysis.rst:1452
 msgid ""
 "The ``j`` suffix is case-insensitive. That means you can use ``J`` instead::"
 msgstr ""
+"Το επίθημα ``j`` δεν κάνει διάκριση κεφαλαίων/πεζών. Αυτό σημαίνει ότι "
+"μπορείτε να χρησιμοποιήσετε ``J`` αντί αυτού::"
 
 #: reference/lexical_analysis.rst:1455
 msgid "3.14J   # equivalent to 3.14j"
-msgstr ""
+msgstr "3.14J   # ισοδύναμο με το 3.14j"
 
 #: reference/lexical_analysis.rst:1457
 msgid ""
 "Formally, imaginary literals are described by the following lexical "
 "definition:"
 msgstr ""
+"Τυπικά, τα λεκτικά φανταστικών περιγράφονται από τον παρακάτω λεξικό ορισμό:"
 
 #: reference/lexical_analysis.rst:1470
 msgid "Operators and delimiters"
-msgstr ""
+msgstr "Τελεστές και οριοθέτες"
 
 #: reference/lexical_analysis.rst:1476
 msgid ""
@@ -2029,6 +2723,10 @@ msgid ""
 "tokens and their names <token_operators_delimiters>` is also available in "
 "the :mod:`!token` module documentation."
 msgstr ""
+"Η παρακάτω γραμματική ορίζει tokens :dfn:`operator` και :dfn:`delimiter`, "
+"δηλαδή τον γενικό τύπο token :data:`~token.OP`. Μια :ref:`λίστα αυτών των "
+"tokens και των ονομάτων τους <token_operators_delimiters>` είναι επίσης "
+"διαθέσιμη στην τεκμηρίωση του module :mod:`!token`."
 
 #: reference/lexical_analysis.rst:1505
 msgid ""
@@ -2036,6 +2734,9 @@ msgid ""
 "while *delimiters* serve other purposes. However, there is no clear, formal "
 "distinction between the two categories."
 msgstr ""
+"Γενικά, οι *τελεστές* χρησιμοποιούνται για να συνδυάζουν :ref:`εκφράσεις "
+"<expressions>`, ενώ οι *οριοθέτες* εξυπηρετούν άλλους σκοπούς. Ωστόσο, δεν "
+"υπάρχει σαφής, τυπική διάκριση μεταξύ των δύο κατηγοριών."
 
 #: reference/lexical_analysis.rst:1509
 msgid ""
@@ -2044,6 +2745,11 @@ msgid ""
 "for sequence unpacking, and ``@`` is both the matrix multiplication and a "
 "delimiter that introduces decorators."
 msgstr ""
+"Κάποια tokens μπορούν να λειτουργούν είτε ως τελεστές είτε ως οριοθέτες, "
+"ανάλογα με τη χρήση. Για παράδειγμα, το ``*`` είναι και τελεστής "
+"πολλαπλασιασμού και οριοθέτης που χρησιμοποιείται για unpacking ακολουθιών, "
+"και το ``@`` είναι και πολλαπλασιασμός πινάκων και οριοθέτης που εισάγει "
+"decorators."
 
 #: reference/lexical_analysis.rst:1514
 msgid ""
@@ -2051,12 +2757,18 @@ msgid ""
 "consider ``.``, ``(``, and ``)`` to be delimiters, while others see the :py:"
 "func:`getattr` operator and the function call operator(s)."
 msgstr ""
+"Για ορισμένα tokens, η διάκριση δεν είναι ξεκάθαρη. Για παράδειγμα, κάποιοι "
+"θεωρούν τα ``.``, ``(`` και ``)`` ως οριοθέτες, ενώ άλλοι τα βλέπουν ως τον "
+"τελεστή :py:func:`getattr` και τον/τους τελεστή/τελεστές κλήσης συνάρτησης."
 
 #: reference/lexical_analysis.rst:1518
 msgid ""
 "Some of Python's operators, like ``and``, ``or``, and ``not in``, use :ref:"
 "`keyword <keywords>` tokens rather than \"symbols\" (operator tokens)."
 msgstr ""
+"Κάποιοι τελεστές της Python, όπως ``and``, ``or`` και ``not in``, "
+"χρησιμοποιούν tokens :ref:`λέξεων-κλειδιών <keywords>` αντί για "
+"\"σύμβολα\" (operator tokens)."
 
 #: reference/lexical_analysis.rst:1521
 msgid ""
@@ -2064,401 +2776,402 @@ msgid ""
 "an :py:data:`Ellipsis` literal."
 msgstr ""
 
+# --- Glossary / index terms at the end ---
 #: reference/lexical_analysis.rst:8
 msgid "lexical analysis"
-msgstr ""
+msgstr "λεξική ανάλυση"
 
 #: reference/lexical_analysis.rst:8
 msgid "parser"
-msgstr ""
+msgstr "αναλυτής (parser)"
 
 #: reference/lexical_analysis.rst:8
 msgid "token"
-msgstr ""
+msgstr "token"
 
 #: reference/lexical_analysis.rst:90
 msgid "line structure"
-msgstr ""
+msgstr "δομή γραμμών"
 
 #: reference/lexical_analysis.rst:100
 msgid "logical line"
-msgstr ""
+msgstr "λογική γραμμή"
 
 #: reference/lexical_analysis.rst:100 reference/lexical_analysis.rst:205
 #: reference/lexical_analysis.rst:755
 msgid "physical line"
-msgstr ""
+msgstr "φυσική γραμμή"
 
 #: reference/lexical_analysis.rst:100 reference/lexical_analysis.rst:205
 msgid "line joining"
-msgstr ""
+msgstr "συνένωση γραμμών"
 
 #: reference/lexical_analysis.rst:100
 msgid "NEWLINE token"
-msgstr ""
+msgstr "token NEWLINE"
 
 #: reference/lexical_analysis.rst:146
 msgid "comment"
-msgstr ""
+msgstr "σχόλιο"
 
 #: reference/lexical_analysis.rst:146
 msgid "hash character"
-msgstr ""
+msgstr "χαρακτήρας δίεσης"
 
 #: reference/lexical_analysis.rst:146 reference/lexical_analysis.rst:160
 msgid "# (hash)"
-msgstr ""
+msgstr "# (δίεση)"
 
 #: reference/lexical_analysis.rst:160
 msgid "source character set"
-msgstr ""
+msgstr "σύνολο χαρακτήρων πηγής"
 
 #: reference/lexical_analysis.rst:160
 msgid "encoding declarations (source file)"
-msgstr ""
+msgstr "δηλώσεις κωδικοποίησης (αρχείο πηγής)"
 
 #: reference/lexical_analysis.rst:160
 msgid "source encoding declaration"
-msgstr ""
+msgstr "δήλωση κωδικοποίησης πηγής"
 
 #: reference/lexical_analysis.rst:205
 msgid "line continuation"
-msgstr ""
+msgstr "συνέχιση γραμμής"
 
 #: reference/lexical_analysis.rst:205
 msgid "backslash character"
-msgstr ""
+msgstr "χαρακτήρας ανάστροφης καθέτου"
 
 #: reference/lexical_analysis.rst:250
 msgid "blank line"
-msgstr ""
+msgstr "κενή γραμμή"
 
 #: reference/lexical_analysis.rst:266
 msgid "indentation"
-msgstr ""
+msgstr "εσοχή"
 
 #: reference/lexical_analysis.rst:266
 msgid "leading whitespace"
-msgstr ""
+msgstr "αρχικοί κενοί χαρακτήρες"
 
 #: reference/lexical_analysis.rst:266
 msgid "grouping"
-msgstr ""
+msgstr "ομαδοποίηση"
 
 #: reference/lexical_analysis.rst:266
 msgid "statement grouping"
-msgstr ""
+msgstr "ομαδοποίηση εντολών"
 
 #: reference/lexical_analysis.rst:294
 msgid "INDENT token"
-msgstr ""
+msgstr "token INDENT"
 
 #: reference/lexical_analysis.rst:294
 msgid "DEDENT token"
-msgstr ""
+msgstr "token DEDENT"
 
 #: reference/lexical_analysis.rst:384
 msgid "identifier"
-msgstr ""
+msgstr "αναγνωριστικό"
 
 #: reference/lexical_analysis.rst:384
 msgid "name"
-msgstr ""
+msgstr "όνομα"
 
 #: reference/lexical_analysis.rst:419 reference/lexical_analysis.rst:443
 msgid "keyword"
-msgstr ""
+msgstr "λέξη-κλειδί"
 
 #: reference/lexical_analysis.rst:419
 msgid "reserved word"
-msgstr ""
+msgstr "δεσμευμένη λέξη"
 
 #: reference/lexical_analysis.rst:443
 msgid "soft keyword"
-msgstr ""
+msgstr "ήπια λέξη-κλειδί"
 
 #: reference/lexical_analysis.rst:463
 msgid "_, identifiers"
-msgstr ""
+msgstr "_, αναγνωριστικά"
 
 #: reference/lexical_analysis.rst:463
 msgid "__, identifiers"
-msgstr ""
+msgstr "__, αναγνωριστικά"
 
 #: reference/lexical_analysis.rst:608
 msgid "literal"
-msgstr ""
+msgstr "λεκτικό"
 
 #: reference/lexical_analysis.rst:608
 msgid "constant"
-msgstr ""
+msgstr "σταθερά"
 
 #: reference/lexical_analysis.rst:620 reference/lexical_analysis.rst:663
 #: reference/lexical_analysis.rst:688
 msgid "string literal"
-msgstr ""
+msgstr "λεκτικό συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:620 reference/lexical_analysis.rst:956
 msgid "bytes literal"
-msgstr ""
+msgstr "λεκτικό bytes"
 
 #: reference/lexical_analysis.rst:620
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: reference/lexical_analysis.rst:620
 msgid "' (single quote)"
-msgstr ""
+msgstr "' (μονό εισαγωγικό)"
 
 #: reference/lexical_analysis.rst:620
 msgid "\" (double quote)"
-msgstr ""
+msgstr "\" (διπλό εισαγωγικό)"
 
 #: reference/lexical_analysis.rst:663
 msgid "triple-quoted string"
-msgstr ""
+msgstr "συμβολοσειρά τριπλού εισαγωγικού"
 
 #: reference/lexical_analysis.rst:663
 msgid "\"\"\""
-msgstr ""
+msgstr "\"\"\""
 
 #: reference/lexical_analysis.rst:663
 msgid "'''"
-msgstr ""
+msgstr "'''"
 
 #: reference/lexical_analysis.rst:688
 msgid "u'"
-msgstr ""
+msgstr "u'"
 
 #: reference/lexical_analysis.rst:688
 msgid "u\""
-msgstr ""
+msgstr "u\""
 
 #: reference/lexical_analysis.rst:755
 msgid "escape sequence"
-msgstr ""
+msgstr "ακολουθία διαφυγής"
 
 #: reference/lexical_analysis.rst:755
 msgid "Standard C"
-msgstr ""
+msgstr "Standard C"
 
 #: reference/lexical_analysis.rst:755
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\ (backslash)"
-msgstr ""
+msgstr "\\ (ανάστροφη κάθετος)"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\\\"
-msgstr ""
+msgstr "\\\\"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\a"
-msgstr ""
+msgstr "\\a"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\b"
-msgstr ""
+msgstr "\\b"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\f"
-msgstr ""
+msgstr "\\f"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\n"
-msgstr ""
+msgstr "\\n"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\r"
-msgstr ""
+msgstr "\\r"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\t"
-msgstr ""
+msgstr "\\t"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\v"
-msgstr ""
+msgstr "\\v"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\x"
-msgstr ""
+msgstr "\\x"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\N"
-msgstr ""
+msgstr "\\N"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\u"
-msgstr ""
+msgstr "\\u"
 
 #: reference/lexical_analysis.rst:755
 msgid "\\U"
-msgstr ""
+msgstr "\\U"
 
 #: reference/lexical_analysis.rst:931
 msgid "unrecognized escape sequence"
-msgstr ""
+msgstr "μη αναγνωρισμένη ακολουθία διαφυγής"
 
 #: reference/lexical_analysis.rst:956
 msgid "b'"
-msgstr ""
+msgstr "b'"
 
 #: reference/lexical_analysis.rst:956
 msgid "b\""
-msgstr ""
+msgstr "b\""
 
 #: reference/lexical_analysis.rst:983
 msgid "r'"
-msgstr ""
+msgstr "r'"
 
 #: reference/lexical_analysis.rst:983
 msgid "raw string literal"
-msgstr ""
+msgstr "λεκτικό raw συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:983
 msgid "r\""
-msgstr ""
+msgstr "r\""
 
 #: reference/lexical_analysis.rst:1014
 msgid "formatted string literal"
-msgstr ""
+msgstr "λεκτικό μορφοποιημένης συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:1014
 msgid "interpolated string literal"
-msgstr ""
+msgstr "λεκτικό παρεμβαλλόμενης (interpolated) συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:1014
 msgid "string"
-msgstr ""
+msgstr "συμβολοσειρά"
 
 #: reference/lexical_analysis.rst:1014
 msgid "formatted literal"
-msgstr ""
+msgstr "μορφοποιημένο λεκτικό"
 
 #: reference/lexical_analysis.rst:1014
 msgid "interpolated literal"
-msgstr ""
+msgstr "παρεμβαλλόμενο (interpolated) λεκτικό"
 
 #: reference/lexical_analysis.rst:1014
 msgid "f-string"
-msgstr ""
+msgstr "f-string"
 
 #: reference/lexical_analysis.rst:1014
 msgid "fstring"
-msgstr ""
+msgstr "fstring"
 
 #: reference/lexical_analysis.rst:1014
 msgid "f'"
-msgstr ""
+msgstr "f'"
 
 #: reference/lexical_analysis.rst:1014
 msgid "f\""
-msgstr ""
+msgstr "f\""
 
 #: reference/lexical_analysis.rst:1014
 msgid "{} (curly brackets)"
-msgstr ""
+msgstr "{} (άγκιστρα)"
 
 #: reference/lexical_analysis.rst:1014
 msgid "in formatted string literal"
-msgstr ""
+msgstr "σε λεκτικό μορφοποιημένης συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:1014
 msgid "! (exclamation)"
-msgstr ""
+msgstr "! (θαυμαστικό)"
 
 #: reference/lexical_analysis.rst:1014
 msgid ": (colon)"
-msgstr ""
+msgstr ": (άνω-κάτω τελεία)"
 
 #: reference/lexical_analysis.rst:1014
 msgid "= (equals)"
-msgstr ""
+msgstr "= (ίσον)"
 
 #: reference/lexical_analysis.rst:1014
 msgid "for help in debugging using string literals"
-msgstr ""
+msgstr "για βοήθεια στο debugging με χρήση λεκτικών συμβολοσειράς"
 
 #: reference/lexical_analysis.rst:1241
 msgid "number"
-msgstr ""
+msgstr "αριθμός"
 
 #: reference/lexical_analysis.rst:1241
 msgid "numeric literal"
-msgstr ""
+msgstr "αριθμητικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1241 reference/lexical_analysis.rst:1263
 msgid "integer literal"
-msgstr ""
+msgstr "λεκτικό ακεραίου"
 
 #: reference/lexical_analysis.rst:1241
 msgid "floating-point literal"
-msgstr ""
+msgstr "λεκτικό κινητής υποδιαστολής"
 
 #: reference/lexical_analysis.rst:1241
 msgid "hexadecimal literal"
-msgstr ""
+msgstr "δεκαεξαδικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1241
 msgid "octal literal"
-msgstr ""
+msgstr "οκταδικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1241
 msgid "binary literal"
-msgstr ""
+msgstr "δυαδικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1241
 msgid "decimal literal"
-msgstr ""
+msgstr "δεκαδικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1241
 msgid "imaginary literal"
-msgstr ""
+msgstr "λεκτικό φανταστικού"
 
 #: reference/lexical_analysis.rst:1241
 msgid "complex literal"
-msgstr ""
+msgstr "λεκτικό μιγαδικού"
 
 #: reference/lexical_analysis.rst:1263
 msgid "0b"
-msgstr ""
+msgstr "0b"
 
 #: reference/lexical_analysis.rst:1263
 msgid "0o"
-msgstr ""
+msgstr "0o"
 
 #: reference/lexical_analysis.rst:1263
 msgid "0x"
-msgstr ""
+msgstr "0x"
 
 #: reference/lexical_analysis.rst:1263 reference/lexical_analysis.rst:1338
 msgid "_ (underscore)"
-msgstr ""
+msgstr "_ (κάτω παύλα)"
 
 #: reference/lexical_analysis.rst:1263 reference/lexical_analysis.rst:1338
 #: reference/lexical_analysis.rst:1402
 msgid "in numeric literal"
-msgstr ""
+msgstr "σε αριθμητικό λεκτικό"
 
 #: reference/lexical_analysis.rst:1338
 msgid ". (dot)"
-msgstr ""
+msgstr ". (τελεία)"
 
 #: reference/lexical_analysis.rst:1338
 msgid "e"
-msgstr ""
+msgstr "e"
 
 #: reference/lexical_analysis.rst:1402
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: reference/lexical_analysis.rst:1472
 msgid "operators"
-msgstr ""
+msgstr "τελεστές"
 
 #: reference/lexical_analysis.rst:1472
 msgid "delimiters"
-msgstr ""
+msgstr "οριοθέτες"
