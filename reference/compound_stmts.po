@@ -248,9 +248,9 @@ msgid ""
 msgstr ""
 "for i in range(10):\n"
 "    print(i)\n"
-"    i = 5             # αυτό δεν θα επηρεάσει τον βρόχο for\n"
-"                      # επειδή το i θα αντικατασταθεί με το επόμενο\n"
-"                      # ευρετήριο στο range"
+"    i = 5             # this will not affect the for-loop\n"
+"                      # because i will be overwritten with the next\n"
+"                      # index in the range"
 
 #: reference/compound_stmts.rst:193
 msgid ""
