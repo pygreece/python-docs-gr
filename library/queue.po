@@ -121,14 +121,16 @@ msgstr ""
 
 #: library/queue.rst:84
 msgid ""
-"Exception raised when non-blocking :meth:`~Queue.get` (or :meth:`~Queue."
-"get_nowait`) is called on a :class:`Queue` object which is empty."
+"Exception raised when non-blocking :meth:`~Queue.get` "
+"(or :meth:`~Queue.get_nowait`) is called on a :class:`Queue` object which is "
+"empty."
 msgstr ""
 
 #: library/queue.rst:91
 msgid ""
-"Exception raised when non-blocking :meth:`~Queue.put` (or :meth:`~Queue."
-"put_nowait`) is called on a :class:`Queue` object which is full."
+"Exception raised when non-blocking :meth:`~Queue.put` "
+"(or :meth:`~Queue.put_nowait`) is called on a :class:`Queue` object which is "
+"full."
 msgstr ""
 
 #: library/queue.rst:98
@@ -143,8 +145,8 @@ msgstr ""
 
 #: library/queue.rst:109
 msgid ""
-"Queue objects (:class:`Queue`, :class:`LifoQueue`, or :class:"
-"`PriorityQueue`) provide the public methods described below."
+"Queue objects (:class:`Queue`, :class:`LifoQueue`, "
+"or :class:`PriorityQueue`) provide the public methods described below."
 msgstr ""
 
 #: library/queue.rst:115
@@ -205,8 +207,8 @@ msgid ""
 "Prior to 3.0 on POSIX systems, and for all versions on Windows, if *block* "
 "is true and *timeout* is ``None``, this operation goes into an "
 "uninterruptible wait on an underlying lock.  This means that no exceptions "
-"can occur, and in particular a SIGINT will not trigger a :exc:"
-"`KeyboardInterrupt`."
+"can occur, and in particular a SIGINT will not trigger "
+"a :exc:`KeyboardInterrupt`."
 msgstr ""
 
 #: library/queue.rst:168
@@ -228,8 +230,9 @@ msgstr ""
 #: library/queue.rst:182
 msgid ""
 "Indicate that a formerly enqueued task is complete.  Used by queue consumer "
-"threads.  For each :meth:`get` used to fetch a task, a subsequent call to :"
-"meth:`task_done` tells the queue that the processing on the task is complete."
+"threads.  For each :meth:`get` used to fetch a task, a subsequent call "
+"to :meth:`task_done` tells the queue that the processing on the task is "
+"complete."
 msgstr ""
 
 #: library/queue.rst:186
@@ -252,10 +255,10 @@ msgstr ""
 #: library/queue.rst:198
 msgid ""
 "The count of unfinished tasks goes up whenever an item is added to the "
-"queue. The count goes down whenever a consumer thread calls :meth:"
-"`task_done` to indicate that the item was retrieved and all work on it is "
-"complete.  When the count of unfinished tasks drops to zero, :meth:`join` "
-"unblocks."
+"queue. The count goes down whenever a consumer thread "
+"calls :meth:`task_done` to indicate that the item was retrieved and all work "
+"on it is complete.  When the count of unfinished tasks drops to "
+"zero, :meth:`join` unblocks."
 msgstr ""
 
 #: library/queue.rst:205
@@ -308,9 +311,9 @@ msgstr ""
 
 #: library/queue.rst:243
 msgid ""
-"The queue can no longer grow. Future calls to :meth:`~Queue.put` raise :exc:"
-"`ShutDown`. Currently blocked callers of :meth:`~Queue.put` will be "
-"unblocked and will raise :exc:`ShutDown` in the formerly blocked thread."
+"The queue can no longer grow. Future calls to :meth:`~Queue.put` "
+"raise :exc:`ShutDown`. Currently blocked callers of :meth:`~Queue.put` will "
+"be unblocked and will raise :exc:`ShutDown` in the formerly blocked thread."
 msgstr ""
 
 #: library/queue.rst:248
@@ -327,17 +330,18 @@ msgstr ""
 
 #: library/queue.rst:255
 msgid ""
-"Once the queue is empty, future calls to :meth:`~Queue.get` will raise :exc:"
-"`ShutDown`."
+"Once the queue is empty, future calls to :meth:`~Queue.get` will "
+"raise :exc:`ShutDown`."
 msgstr ""
 
 #: library/queue.rst:258
 msgid ""
 "If *immediate* is true, the queue is terminated immediately. The queue is "
 "drained to be completely empty and the count of unfinished tasks is reduced "
-"by the number of tasks drained. If unfinished tasks is zero, callers of :"
-"meth:`~Queue.join` are unblocked.  Also, blocked callers of :meth:`~Queue."
-"get` are unblocked and will raise :exc:`ShutDown` because the queue is empty."
+"by the number of tasks drained. If unfinished tasks is zero, callers "
+"of :meth:`~Queue.join` are unblocked.  Also, blocked callers "
+"of :meth:`~Queue.get` are unblocked and will raise :exc:`ShutDown` because "
+"the queue is empty."
 msgstr ""
 
 #: library/queue.rst:266
@@ -388,8 +392,8 @@ msgstr ""
 
 #: library/queue.rst:308
 msgid ""
-"Equivalent to ``put(item, block=False)``, provided for compatibility with :"
-"meth:`Queue.put_nowait`."
+"Equivalent to ``put(item, block=False)``, provided for compatibility "
+"with :meth:`Queue.put_nowait`."
 msgstr ""
 
 #: library/queue.rst:329
@@ -405,7 +409,7 @@ msgstr ""
 #: library/queue.rst:333
 msgid ""
 ":class:`collections.deque` is an alternative implementation of unbounded "
-"queues with fast atomic :meth:`~collections.deque.append` and :meth:"
-"`~collections.deque.popleft` operations that do not require locking and also "
-"support indexing."
+"queues with fast atomic :meth:`~collections.deque.append` "
+"and :meth:`~collections.deque.popleft` operations that do not require "
+"locking and also support indexing."
 msgstr ""

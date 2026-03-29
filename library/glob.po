@@ -43,9 +43,9 @@ msgstr ""
 #: library/glob.rst:32
 msgid ""
 "Files beginning with a dot (``.``) can only be matched by patterns that also "
-"start with a dot, unlike :func:`fnmatch.fnmatch` or :func:`pathlib.Path."
-"glob`. For tilde and shell variable expansion, use :func:`os.path."
-"expanduser` and :func:`os.path.expandvars`."
+"start with a dot, unlike :func:`fnmatch.fnmatch` "
+"or :func:`pathlib.Path.glob`. For tilde and shell variable expansion, "
+"use :func:`os.path.expanduser` and :func:`os.path.expandvars`."
 msgstr ""
 
 #: library/glob.rst:38
@@ -62,19 +62,19 @@ msgstr ""
 msgid ""
 "Return a possibly empty list of path names that match *pathname*, which must "
 "be a string containing a path specification. *pathname* can be either "
-"absolute (like :file:`/usr/src/Python-1.5/Makefile`) or relative (like :file:"
-"`../../Tools/\\*/\\*.gif`), and can contain shell-style wildcards. Broken "
-"symlinks are included in the results (as in the shell). Whether or not the "
-"results are sorted depends on the file system.  If a file that satisfies "
-"conditions is removed or added during the call of this function, whether a "
-"path name for that file will be included is unspecified."
+"absolute (like :file:`/usr/src/Python-1.5/Makefile`) or relative "
+"(like :file:`../../Tools/\\*/\\*.gif`), and can contain shell-style "
+"wildcards. Broken symlinks are included in the results (as in the shell). "
+"Whether or not the results are sorted depends on the file system.  If a file "
+"that satisfies conditions is removed or added during the call of this "
+"function, whether a path name for that file will be included is unspecified."
 msgstr ""
 
 #: library/glob.rst:56
 msgid ""
 "If *root_dir* is not ``None``, it should be a :term:`path-like object` "
-"specifying the root directory for searching.  It has the same effect on :"
-"func:`!glob` as changing the current directory before calling it.  If "
+"specifying the root directory for searching.  It has the same effect "
+"on :func:`!glob` as changing the current directory before calling it.  If "
 "*pathname* is relative, the result will contain paths relative to *root_dir*."
 msgstr ""
 
@@ -151,8 +151,9 @@ msgstr ""
 
 #: library/glob.rst:132
 msgid ""
-"Convert the given path specification to a regular expression for use with :"
-"func:`re.match`. The path specification can contain shell-style wildcards."
+"Convert the given path specification to a regular expression for use "
+"with :func:`re.match`. The path specification can contain shell-style "
+"wildcards."
 msgstr ""
 
 #: library/glob.rst:135
@@ -161,9 +162,9 @@ msgstr ""
 
 #: library/glob.rst:146
 msgid ""
-"Path separators and segments are meaningful to this function, unlike :func:"
-"`fnmatch.translate`. By default wildcards do not match path separators, and "
-"``*`` pattern segments match precisely one path segment."
+"Path separators and segments are meaningful to this function, "
+"unlike :func:`fnmatch.translate`. By default wildcards do not match path "
+"separators, and ``*`` pattern segments match precisely one path segment."
 msgstr ""
 
 #: library/glob.rst:150
@@ -196,9 +197,10 @@ msgstr ""
 
 #: library/glob.rst:171
 msgid ""
-"Consider a directory containing the following files: :file:`1.gif`, :file:`2."
-"txt`, :file:`card.gif` and a subdirectory :file:`sub` which contains only "
-"the file :file:`3.txt`.  :func:`glob` will produce the following results.  "
+"Consider a directory containing the following "
+"files: :file:`1.gif`, :file:`2.txt`, :file:`card.gif` and a "
+"subdirectory :file:`sub` which contains only the "
+"file :file:`3.txt`.  :func:`glob` will produce the following results.  "
 "Notice how any leading components of the path are preserved. ::"
 msgstr ""
 
@@ -220,8 +222,8 @@ msgstr ""
 #: library/glob.rst:189
 msgid ""
 "If the directory contains files starting with ``.`` they won't be matched by "
-"default. For example, consider a directory containing :file:`card.gif` and :"
-"file:`.card.gif`::"
+"default. For example, consider a directory containing :file:`card.gif` "
+"and :file:`.card.gif`::"
 msgstr ""
 
 #: library/glob.rst:193

@@ -46,9 +46,9 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:28
 msgid ""
-"For any of methods of this class, a *resource* argument is expected to be a :"
-"term:`path-like object` which represents conceptually just a file name. This "
-"means that no subdirectory paths should be included in the *resource* "
+"For any of methods of this class, a *resource* argument is expected to be "
+"a :term:`path-like object` which represents conceptually just a file name. "
+"This means that no subdirectory paths should be included in the *resource* "
 "argument. This is because the location of the package the reader is for, "
 "acts as the \"directory\". Hence the metaphor for directories and file names "
 "is packages and resources, respectively. This is also why instances of this "
@@ -85,22 +85,22 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:63
 msgid ""
-"If the resource does not concretely exist on the file system, raise :exc:"
-"`FileNotFoundError`."
+"If the resource does not concretely exist on the file system, "
+"raise :exc:`FileNotFoundError`."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:69
 msgid ""
-"Returns ``True`` if the named *name* is considered a resource. :exc:"
-"`FileNotFoundError` is raised if *name* does not exist."
+"Returns ``True`` if the named *name* is considered a "
+"resource. :exc:`FileNotFoundError` is raised if *name* does not exist."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:75
 msgid ""
 "Returns an :term:`iterable` of strings over the contents of the package. Do "
 "note that it is not required that all names returned by the iterator be "
-"actual resources, e.g. it is acceptable to return names for which :meth:"
-"`is_resource` would be false."
+"actual resources, e.g. it is acceptable to return names for "
+"which :meth:`is_resource` would be false."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:81
@@ -124,8 +124,8 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:97
 msgid ""
-"For a representation of the object on the file-system, use :meth:`importlib."
-"resources.as_file`."
+"For a representation of the object on the file-system, "
+"use :meth:`importlib.resources.as_file`."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:102
@@ -146,8 +146,8 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:122
 msgid ""
-"Traverse directories according to *pathsegments* and return the result as :"
-"class:`!Traversable`."
+"Traverse directories according to *pathsegments* and return the result "
+"as :class:`!Traversable`."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:125
@@ -194,8 +194,8 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:157
 msgid ""
-"When opening as text, accepts encoding parameters such as those accepted by :"
-"class:`io.TextIOWrapper`."
+"When opening as text, accepts encoding parameters such as those accepted "
+"by :class:`io.TextIOWrapper`."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:162
@@ -208,11 +208,12 @@ msgstr ""
 
 #: library/importlib.resources.abc.rst:171
 msgid ""
-"An abstract base class for resource readers capable of serving the :meth:"
-"`importlib.resources.files` interface. Subclasses :class:`ResourceReader` "
-"and provides concrete implementations of the :class:`!ResourceReader`'s "
-"abstract methods. Therefore, any loader supplying :class:`!"
-"TraversableResources` also supplies :class:`!ResourceReader`."
+"An abstract base class for resource readers capable of serving "
+"the :meth:`importlib.resources.files` interface. "
+"Subclasses :class:`ResourceReader` and provides concrete implementations of "
+"the :class:`!ResourceReader`'s abstract methods. Therefore, any loader "
+"supplying :class:`!TraversableResources` also supplies :class:`!"
+"ResourceReader`."
 msgstr ""
 
 #: library/importlib.resources.abc.rst:178

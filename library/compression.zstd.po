@@ -62,14 +62,15 @@ msgstr ""
 
 #: library/compression.zstd.rst:31
 msgid ""
-"The :func:`train_dict` and :func:`finalize_dict` functions and the :class:"
-"`ZstdDict` class to train and manage Zstandard dictionaries."
+"The :func:`train_dict` and :func:`finalize_dict` functions and "
+"the :class:`ZstdDict` class to train and manage Zstandard dictionaries."
 msgstr ""
 
 #: library/compression.zstd.rst:33
 msgid ""
-"The :class:`CompressionParameter`, :class:`DecompressionParameter`, and :"
-"class:`Strategy` classes for setting advanced (de)compression parameters."
+"The :class:`CompressionParameter`, :class:`DecompressionParameter`, "
+"and :class:`Strategy` classes for setting advanced (de)compression "
+"parameters."
 msgstr ""
 
 #: includes/optional-module.rst:1
@@ -96,16 +97,16 @@ msgstr ""
 
 #: library/compression.zstd.rst:54
 msgid ""
-"Open a Zstandard-compressed file in binary or text mode, returning a :term:"
-"`file object`."
+"Open a Zstandard-compressed file in binary or text mode, returning "
+"a :term:`file object`."
 msgstr ""
 
 #: library/compression.zstd.rst:57
 msgid ""
-"The *file* argument can be either a file name (given as a :class:`str`, :"
-"class:`bytes` or :term:`path-like <path-like object>` object), in which case "
-"the named file is opened, or it can be an existing file object to read from "
-"or write to."
+"The *file* argument can be either a file name (given as "
+"a :class:`str`, :class:`bytes` or :term:`path-like <path-like object>` "
+"object), in which case the named file is opened, or it can be an existing "
+"file object to read from or write to."
 msgstr ""
 
 #: library/compression.zstd.rst:62
@@ -121,9 +122,9 @@ msgstr ""
 msgid ""
 "When reading, the *options* argument can be a dictionary providing advanced "
 "decompression parameters; see :class:`DecompressionParameter` for detailed "
-"information about supported parameters. The *zstd_dict* argument is a :class:"
-"`ZstdDict` instance to be used during decompression. When reading, if the "
-"*level* argument is not None, a :exc:`!TypeError` will be raised."
+"information about supported parameters. The *zstd_dict* argument is "
+"a :class:`ZstdDict` instance to be used during decompression. When reading, "
+"if the *level* argument is not None, a :exc:`!TypeError` will be raised."
 msgstr ""
 
 #: library/compression.zstd.rst:75
@@ -132,8 +133,8 @@ msgid ""
 "decompression parameters; see :class:`CompressionParameter` for detailed "
 "information about supported parameters. The *level* argument is the "
 "compression level to use when writing compressed data. Only one of *level* "
-"or *options* may be non-None. The *zstd_dict* argument is a :class:"
-"`ZstdDict` instance to be used during compression."
+"or *options* may be non-None. The *zstd_dict* argument is "
+"a :class:`ZstdDict` instance to be used during compression."
 msgstr ""
 
 #: library/compression.zstd.rst:83
@@ -145,8 +146,8 @@ msgstr ""
 
 #: library/compression.zstd.rst:87
 msgid ""
-"In text mode, a :class:`ZstdFile` object is created, and wrapped in an :"
-"class:`io.TextIOWrapper` instance with the specified encoding, error "
+"In text mode, a :class:`ZstdFile` object is created, and wrapped in "
+"an :class:`io.TextIOWrapper` instance with the specified encoding, error "
 "handling behavior, and line endings."
 msgstr ""
 
@@ -158,10 +159,10 @@ msgstr ""
 msgid ""
 "A :class:`ZstdFile` can wrap an already-open :term:`file object`, or operate "
 "directly on a named file. The *file* argument specifies either the file "
-"object to wrap, or the name of the file to open (as a :class:`str`, :class:"
-"`bytes` or :term:`path-like <path-like object>` object). If wrapping an "
-"existing file object, the wrapped file will not be closed when the :class:"
-"`ZstdFile` is closed."
+"object to wrap, or the name of the file to open (as "
+"a :class:`str`, :class:`bytes` or :term:`path-like <path-like object>` "
+"object). If wrapping an existing file object, the wrapped file will not be "
+"closed when the :class:`ZstdFile` is closed."
 msgstr ""
 
 #: library/compression.zstd.rst:104
@@ -190,9 +191,10 @@ msgstr ""
 
 #: library/compression.zstd.rst:127
 msgid ""
-":class:`!ZstdFile` supports all the members specified by :class:`io."
-"BufferedIOBase`, except for :meth:`~io.BufferedIOBase.detach` and :meth:`~io."
-"IOBase.truncate`. Iteration and the :keyword:`with` statement are supported."
+":class:`!ZstdFile` supports all the members specified "
+"by :class:`io.BufferedIOBase`, except for :meth:`~io.BufferedIOBase.detach` "
+"and :meth:`~io.IOBase.truncate`. Iteration and the :keyword:`with` statement "
+"are supported."
 msgstr ""
 
 #: library/compression.zstd.rst:132
@@ -208,10 +210,10 @@ msgstr ""
 
 #: library/compression.zstd.rst:140
 msgid ""
-"While calling :meth:`peek` does not change the file position of the :class:"
-"`ZstdFile`, it may change the position of the underlying file object (for "
-"example, if the :class:`ZstdFile` was constructed by passing a file object "
-"for *file*)."
+"While calling :meth:`peek` does not change the file position of "
+"the :class:`ZstdFile`, it may change the position of the underlying file "
+"object (for example, if the :class:`ZstdFile` was constructed by passing a "
+"file object for *file*)."
 msgstr ""
 
 #: library/compression.zstd.rst:147
@@ -237,8 +239,9 @@ msgstr ""
 #: library/compression.zstd.rst:163 library/compression.zstd.rst:207
 msgid ""
 "The *level* argument is an integer controlling the level of compression. "
-"*level* is an alternative to setting :attr:`CompressionParameter."
-"compression_level` in *options*. Use :meth:`~CompressionParameter.bounds` "
+"*level* is an alternative to "
+"setting :attr:`CompressionParameter.compression_level` in *options*. "
+"Use :meth:`~CompressionParameter.bounds` "
 "on :attr:`~CompressionParameter.compression_level` to get the values that "
 "can be passed for *level*. If advanced compression options are needed, the "
 "*level* argument must be omitted and in the *options* dictionary the :attr:`!"
@@ -255,8 +258,8 @@ msgstr ""
 #: library/compression.zstd.rst:176
 msgid ""
 "The *zstd_dict* argument is an instance of :class:`ZstdDict` containing "
-"trained data to improve compression efficiency. The function :func:"
-"`train_dict` can be used to generate a Zstandard dictionary."
+"trained data to improve compression efficiency. The "
+"function :func:`train_dict` can be used to generate a Zstandard dictionary."
 msgstr ""
 
 #: library/compression.zstd.rst:183
@@ -300,8 +303,8 @@ msgstr ""
 #: library/compression.zstd.rst:220
 msgid ""
 "The *zstd_dict* argument is an optional instance of :class:`ZstdDict` "
-"containing trained data to improve compression efficiency. The function :"
-"func:`train_dict` can be used to generate a Zstandard dictionary."
+"containing trained data to improve compression efficiency. The "
+"function :func:`train_dict` can be used to generate a Zstandard dictionary."
 msgstr ""
 
 #: library/compression.zstd.rst:227
@@ -315,8 +318,8 @@ msgstr ""
 
 #: library/compression.zstd.rst:234
 msgid ""
-"The *mode* argument is a :class:`ZstdCompressor` attribute, either :attr:`~."
-"CONTINUE`, :attr:`~.FLUSH_BLOCK`, or :attr:`~.FLUSH_FRAME`."
+"The *mode* argument is a :class:`ZstdCompressor` attribute, "
+"either :attr:`~.CONTINUE`, :attr:`~.FLUSH_BLOCK`, or :attr:`~.FLUSH_FRAME`."
 msgstr ""
 
 #: library/compression.zstd.rst:238
@@ -335,8 +338,8 @@ msgstr ""
 
 #: library/compression.zstd.rst:249
 msgid ""
-"The *mode* argument is a :class:`ZstdCompressor` attribute, either :attr:`~."
-"FLUSH_BLOCK`, or :attr:`~.FLUSH_FRAME`."
+"The *mode* argument is a :class:`ZstdCompressor` attribute, "
+"either :attr:`~.FLUSH_BLOCK`, or :attr:`~.FLUSH_FRAME`."
 msgstr ""
 
 #: library/compression.zstd.rst:254
@@ -361,9 +364,9 @@ msgstr ""
 
 #: library/compression.zstd.rst:269
 msgid ""
-"After :meth:`flush` or :meth:`.compress` are called with mode :attr:"
-"`FLUSH_FRAME`, the next frame will not include the frame size into the "
-"header unless :meth:`!set_pledged_input_size` is called again."
+"After :meth:`flush` or :meth:`.compress` are called with "
+"mode :attr:`FLUSH_FRAME`, the next frame will not include the frame size "
+"into the header unless :meth:`!set_pledged_input_size` is called again."
 msgstr ""
 
 #: library/compression.zstd.rst:275
@@ -389,9 +392,9 @@ msgstr ""
 #: library/compression.zstd.rst:294
 msgid ""
 "The last mode passed to either :meth:`~.compress` or :meth:`~.flush`. The "
-"value can be one of :attr:`~.CONTINUE`, :attr:`~.FLUSH_BLOCK`, or :attr:`~."
-"FLUSH_FRAME`. The initial value is :attr:`~.FLUSH_FRAME`, signifying that "
-"the compressor is at the start of a new frame."
+"value can be one of :attr:`~.CONTINUE`, :attr:`~.FLUSH_BLOCK`, "
+"or :attr:`~.FLUSH_FRAME`. The initial value is :attr:`~.FLUSH_FRAME`, "
+"signifying that the compressor is at the start of a new frame."
 msgstr ""
 
 #: library/compression.zstd.rst:302
@@ -409,10 +412,10 @@ msgstr ""
 #: library/compression.zstd.rst:318
 msgid ""
 "This class does not transparently handle inputs containing multiple "
-"compressed frames, unlike the :func:`decompress` function and :class:"
-"`ZstdFile` class. To decompress a multi-frame input, you should use :func:"
-"`decompress`, :class:`ZstdFile` if working with a :term:`file object`, or "
-"multiple :class:`!ZstdDecompressor` instances."
+"compressed frames, unlike the :func:`decompress` function "
+"and :class:`ZstdFile` class. To decompress a multi-frame input, you should "
+"use :func:`decompress`, :class:`ZstdFile` if working with a :term:`file "
+"object`, or multiple :class:`!ZstdDecompressor` instances."
 msgstr ""
 
 #: library/compression.zstd.rst:326
@@ -441,9 +444,9 @@ msgstr ""
 
 #: library/compression.zstd.rst:344
 msgid ""
-"Attempting to decompress data after the end of a frame will raise a :exc:"
-"`ZstdError`. Any data found after the end of the frame is ignored and saved "
-"in the :attr:`~.unused_data` attribute."
+"Attempting to decompress data after the end of a frame will raise "
+"a :exc:`ZstdError`. Any data found after the end of the frame is ignored and "
+"saved in the :attr:`~.unused_data` attribute."
 msgstr ""
 
 #: library/compression.zstd.rst:350
@@ -504,8 +507,8 @@ msgstr ""
 
 #: library/compression.zstd.rst:395
 msgid ""
-"The *zstd_dict* argument is a :class:`ZstdDict` instance with the :attr:"
-"`~ZstdDict.dict_content` containing the raw dictionary contents."
+"The *zstd_dict* argument is a :class:`ZstdDict` instance with "
+"the :attr:`~ZstdDict.dict_content` containing the raw dictionary contents."
 msgstr ""
 
 #: library/compression.zstd.rst:398
@@ -700,9 +703,9 @@ msgstr ""
 msgid ""
 "Return the tuple of int bounds, ``(lower, upper)``, of a compression "
 "parameter. This method should be called on the attribute you wish to "
-"retrieve the bounds of. For example, to get the valid values for :attr:`~."
-"compression_level`, one may check the result of ``CompressionParameter."
-"compression_level.bounds()``."
+"retrieve the bounds of. For example, to get the valid values "
+"for :attr:`~.compression_level`, one may check the result of "
+"``CompressionParameter.compression_level.bounds()``."
 msgstr ""
 
 #: library/compression.zstd.rst:523 library/compression.zstd.rst:751
@@ -756,9 +759,10 @@ msgstr ""
 msgid ""
 "Size of the multi-probe search table, as a power of two. The resulting "
 "memory usage is ``1 << (chain_log+2)`` bytes. Larger tables result in better "
-"and slower compression. This parameter has no effect for the :attr:"
-"`~Strategy.fast` strategy. It's still useful when using :attr:`~Strategy."
-"dfast` strategy, in which case it defines a secondary probe table."
+"and slower compression. This parameter has no effect for "
+"the :attr:`~Strategy.fast` strategy. It's still useful when "
+"using :attr:`~Strategy.dfast` strategy, in which case it defines a secondary "
+"probe table."
 msgstr ""
 
 #: library/compression.zstd.rst:568
@@ -784,10 +788,10 @@ msgstr ""
 
 #: library/compression.zstd.rst:589
 msgid ""
-"For strategies :attr:`~Strategy.btopt`, :attr:`~Strategy.btultra` and :attr:"
-"`~Strategy.btultra2`, the value is the length of a match considered \"good "
-"enough\" to stop searching. Larger values make compression ratios better, "
-"but compresses slower."
+"For strategies :attr:`~Strategy.btopt`, :attr:`~Strategy.btultra` "
+"and :attr:`~Strategy.btultra2`, the value is the length of a match "
+"considered \"good enough\" to stop searching. Larger values make compression "
+"ratios better, but compresses slower."
 msgstr ""
 
 #: library/compression.zstd.rst:594
@@ -823,10 +827,11 @@ msgstr ""
 
 #: library/compression.zstd.rst:617
 msgid ""
-"Enabling this parameter increases default :attr:`~CompressionParameter."
-"window_log` to 128 MiB except when expressly set to a different value. This "
-"setting is enabled by default if :attr:`!window_log` >= 128 MiB and the "
-"compression strategy >= :attr:`~Strategy.btopt` (compression level 16+)."
+"Enabling this parameter increases "
+"default :attr:`~CompressionParameter.window_log` to 128 MiB except when "
+"expressly set to a different value. This setting is enabled by default "
+"if :attr:`!window_log` >= 128 MiB and the compression strategy "
+">= :attr:`~Strategy.btopt` (compression level 16+)."
 msgstr ""
 
 #: library/compression.zstd.rst:625
@@ -872,17 +877,17 @@ msgstr ""
 
 #: library/compression.zstd.rst:662
 msgid ""
-"Providing all of the data to be compressed in the frame in a single :meth:"
-"`ZstdCompressor.compress` call, with the :attr:`ZstdCompressor.FLUSH_FRAME` "
-"mode."
+"Providing all of the data to be compressed in the frame in a "
+"single :meth:`ZstdCompressor.compress` call, with "
+"the :attr:`ZstdCompressor.FLUSH_FRAME` mode."
 msgstr ""
 
 #: library/compression.zstd.rst:665
 msgid ""
 "Calling :meth:`ZstdCompressor.set_pledged_input_size` with the exact amount "
-"of data that will be provided to the compressor prior to any calls to :meth:"
-"`ZstdCompressor.compress` for the current frame. :meth:`!ZstdCompressor."
-"set_pledged_input_size` must be called for each new frame."
+"of data that will be provided to the compressor prior to any calls "
+"to :meth:`ZstdCompressor.compress` for the current frame. :meth:`!"
+"ZstdCompressor.set_pledged_input_size` must be called for each new frame."
 msgstr ""
 
 #: library/compression.zstd.rst:671
@@ -924,10 +929,10 @@ msgstr ""
 
 #: library/compression.zstd.rst:697
 msgid ""
-"Select how many threads will be spawned to compress in parallel. When :attr:"
-"`!nb_workers` > 0, enables multi-threaded compression, a value of ``1`` "
-"means \"one-thread multi-threaded mode\". More workers improve speed, but "
-"also increase memory usage and slightly reduce compression ratio."
+"Select how many threads will be spawned to compress in parallel. "
+"When :attr:`!nb_workers` > 0, enables multi-threaded compression, a value of "
+"``1`` means \"one-thread multi-threaded mode\". More workers improve speed, "
+"but also increase memory usage and slightly reduce compression ratio."
 msgstr ""
 
 #: library/compression.zstd.rst:702
@@ -936,10 +941,10 @@ msgstr ""
 
 #: library/compression.zstd.rst:706
 msgid ""
-"Size of a compression job, in bytes. This value is enforced only when :attr:"
-"`~CompressionParameter.nb_workers` >= 1. Each compression job is completed "
-"in parallel, so this value can indirectly impact the number of active "
-"threads."
+"Size of a compression job, in bytes. This value is enforced only "
+"when :attr:`~CompressionParameter.nb_workers` >= 1. Each compression job is "
+"completed in parallel, so this value can indirectly impact the number of "
+"active threads."
 msgstr ""
 
 #: library/compression.zstd.rst:715

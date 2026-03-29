@@ -114,8 +114,8 @@ msgid ""
 "This module does not copy types like module, method, stack trace, stack "
 "frame, file, socket, window, or any similar types.  It does \"copy\" "
 "functions and classes (shallow and deeply), by returning the original object "
-"unchanged; this is compatible with the way these are treated by the :mod:"
-"`pickle` module."
+"unchanged; this is compatible with the way these are treated by "
+"the :mod:`pickle` module."
 msgstr ""
 
 #: library/copy.rst:75
@@ -156,10 +156,10 @@ msgstr ""
 
 #: library/copy.rst:114
 msgid ""
-"Function :func:`!copy.replace` is more limited than :func:`~copy.copy` and :"
-"func:`~copy.deepcopy`, and only supports named tuples created by :func:"
-"`~collections.namedtuple`, :mod:`dataclasses`, and other classes which "
-"define method :meth:`~object.__replace__`."
+"Function :func:`!copy.replace` is more limited than :func:`~copy.copy` "
+"and :func:`~copy.deepcopy`, and only supports named tuples created "
+"by :func:`~collections.namedtuple`, :mod:`dataclasses`, and other classes "
+"which define method :meth:`~object.__replace__`."
 msgstr ""
 
 #: library/copy.rst:122

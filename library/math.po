@@ -543,8 +543,8 @@ msgstr ""
 
 #: library/math.rst:112
 msgid ""
-"Natural logarithm of the absolute value of the `Gamma function <https://en."
-"wikipedia.org/wiki/Gamma_function>`_ at *x*"
+"Natural logarithm of the absolute value of the `Gamma function <https://"
+"en.wikipedia.org/wiki/Gamma_function>`_ at *x*"
 msgstr ""
 
 #: library/math.rst:114
@@ -615,8 +615,8 @@ msgstr ""
 
 #: library/math.rst:204
 msgid ""
-"Raises :exc:`TypeError` if either of the arguments are not integers. Raises :"
-"exc:`ValueError` if either of the arguments are negative."
+"Raises :exc:`TypeError` if either of the arguments are not integers. "
+"Raises :exc:`ValueError` if either of the arguments are negative."
 msgstr ""
 
 #: library/math.rst:147
@@ -691,8 +691,8 @@ msgstr ""
 #: library/math.rst:215
 msgid ""
 "Return the ceiling of *x*, the smallest integer greater than or equal to "
-"*x*. If *x* is not a float, delegates to :meth:`x.__ceil__ <object."
-"__ceil__>`, which should return an :class:`~numbers.Integral` value."
+"*x*. If *x* is not a float, delegates to :meth:`x.__ceil__ "
+"<object.__ceil__>`, which should return an :class:`~numbers.Integral` value."
 msgstr ""
 
 #: library/math.rst:222
@@ -782,8 +782,8 @@ msgid ""
 "Return *x* with the fractional part removed, leaving the integer part.  This "
 "rounds toward 0: ``trunc()`` is equivalent to :func:`floor` for positive "
 "*x*, and equivalent to :func:`ceil` for negative *x*. If *x* is not a float, "
-"delegates to :meth:`x.__trunc__ <object.__trunc__>`, which should return an :"
-"class:`~numbers.Integral` value."
+"delegates to :meth:`x.__trunc__ <object.__trunc__>`, which should return "
+"an :class:`~numbers.Integral` value."
 msgstr ""
 
 #: library/math.rst:305
@@ -885,8 +885,8 @@ msgstr ""
 
 #: library/math.rst:389
 msgid ""
-"Return ``x * (2**i)``.  This is essentially the inverse of function :func:"
-"`frexp`."
+"Return ``x * (2**i)``.  This is essentially the inverse of "
+"function :func:`frexp`."
 msgstr ""
 
 #: library/math.rst:395
@@ -944,8 +944,8 @@ msgstr ""
 #: library/math.rst:421
 msgid ""
 "If *x* is equal to zero, return the smallest positive *denormalized* "
-"representable float (smaller than the minimum positive *normalized* float, :"
-"data:`sys.float_info.min <sys.float_info>`)."
+"representable float (smaller than the minimum positive *normalized* "
+"float, :data:`sys.float_info.min <sys.float_info>`)."
 msgstr ""
 
 #: library/math.rst:424
@@ -968,8 +968,8 @@ msgstr ""
 
 #: library/math.rst:433
 msgid ""
-"See also :func:`math.nextafter` and :data:`sys.float_info.epsilon <sys."
-"float_info>`."
+"See also :func:`math.nextafter` and :data:`sys.float_info.epsilon "
+"<sys.float_info>`."
 msgstr ""
 
 #: library/math.rst:440
@@ -1098,9 +1098,9 @@ msgstr ""
 #: library/math.rst:564
 msgid ""
 "For further discussion and two alternative approaches, see the `ASPN "
-"cookbook recipes for accurate floating-point summation <https://code."
-"activestate.com/recipes/393090-binary-floating-point-summation-accurate-to-"
-"full-p/>`_\\."
+"cookbook recipes for accurate floating-point summation <https://"
+"code.activestate.com/recipes/393090-binary-floating-point-summation-accurate-"
+"to-full-p/>`_\\."
 msgstr ""
 
 #: library/math.rst:571
@@ -1201,8 +1201,8 @@ msgid ""
 "``pi``. The vector in the plane from the origin to point ``(x, y)`` makes "
 "this angle with the positive X axis. The point of :func:`atan2` is that the "
 "signs of both inputs are known to it, so it can compute the correct quadrant "
-"for the angle. For example, ``atan(1)`` and ``atan2(1, 1)`` are both "
-"``pi/4``, but ``atan2(-1, -1)`` is ``-3*pi/4``."
+"for the angle. For example, ``atan(1)`` and ``atan2(1, 1)`` are both ``pi/"
+"4``, but ``atan2(-1, -1)`` is ``-3*pi/4``."
 msgstr ""
 
 #: library/math.rst:663
@@ -1265,8 +1265,8 @@ msgstr ""
 #: library/math.rst:721
 msgid ""
 "The :func:`erf` function can be used to compute traditional statistical "
-"functions such as the `cumulative standard normal distribution <https://en."
-"wikipedia.org/wiki/Cumulative_distribution_function>`_::"
+"functions such as the `cumulative standard normal distribution <https://"
+"en.wikipedia.org/wiki/Cumulative_distribution_function>`_::"
 msgstr ""
 
 #: library/math.rst:725
@@ -1320,8 +1320,8 @@ msgstr ""
 
 #: library/math.rst:785
 msgid ""
-"A floating-point positive infinity.  (For negative infinity, use ``-math."
-"inf``.)  Equivalent to the output of ``float('inf')``."
+"A floating-point positive infinity.  (For negative infinity, use ``-"
+"math.inf``.)  Equivalent to the output of ``float('inf')``."
 msgstr ""
 
 #: library/math.rst:793
@@ -1342,15 +1342,15 @@ msgstr ""
 msgid ""
 "The :mod:`math` module consists mostly of thin wrappers around the platform "
 "C math library functions.  Behavior in exceptional cases follows Annex F of "
-"the C99 standard where appropriate.  The current implementation will raise :"
-"exc:`ValueError` for invalid operations like ``sqrt(-1.0)`` or ``log(0.0)`` "
-"(where C99 Annex F recommends signaling invalid operation or divide-by-"
-"zero), and :exc:`OverflowError` for results that overflow (for example, "
-"``exp(1000.0)``).  A NaN will not be returned from any of the functions "
-"above unless one or more of the input arguments was a NaN; in that case, "
-"most functions will return a NaN, but (again following C99 Annex F) there "
-"are some exceptions to this rule, for example ``pow(float('nan'), 0.0)`` or "
-"``hypot(float('nan'), float('inf'))``."
+"the C99 standard where appropriate.  The current implementation will "
+"raise :exc:`ValueError` for invalid operations like ``sqrt(-1.0)`` or "
+"``log(0.0)`` (where C99 Annex F recommends signaling invalid operation or "
+"divide-by-zero), and :exc:`OverflowError` for results that overflow (for "
+"example, ``exp(1000.0)``).  A NaN will not be returned from any of the "
+"functions above unless one or more of the input arguments was a NaN; in that "
+"case, most functions will return a NaN, but (again following C99 Annex F) "
+"there are some exceptions to this rule, for example ``pow(float('nan'), "
+"0.0)`` or ``hypot(float('nan'), float('inf'))``."
 msgstr ""
 
 #: library/math.rst:831

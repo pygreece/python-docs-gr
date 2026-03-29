@@ -138,8 +138,8 @@ msgstr ""
 
 #: library/enum.rst:77
 msgid ""
-"Base class for creating enumerated constants that are also subclasses of :"
-"class:`int`. (`Notes`_)"
+"Base class for creating enumerated constants that are also subclasses "
+"of :class:`int`. (`Notes`_)"
 msgstr ""
 
 #: library/enum.rst:80
@@ -148,8 +148,8 @@ msgstr ""
 
 #: library/enum.rst:82
 msgid ""
-"Base class for creating enumerated constants that are also subclasses of :"
-"class:`str`. (`Notes`_)"
+"Base class for creating enumerated constants that are also subclasses "
+"of :class:`str`. (`Notes`_)"
 msgstr ""
 
 #: library/enum.rst:85
@@ -169,8 +169,9 @@ msgstr ""
 #: library/enum.rst:92
 msgid ""
 "Base class for creating enumerated constants that can be combined using the "
-"bitwise operators without losing their :class:`IntFlag` membership. :class:"
-"`IntFlag` members are also subclasses of :class:`int`. (`Notes`_)"
+"bitwise operators without losing their :class:`IntFlag` "
+"membership. :class:`IntFlag` members are also subclasses of :class:`int`. "
+"(`Notes`_)"
 msgstr ""
 
 #: library/enum.rst:96
@@ -219,9 +220,9 @@ msgstr ""
 
 #: library/enum.rst:119
 msgid ""
-"Instances are replaced with an appropriate value for Enum members. :class:"
-"`StrEnum` defaults to the lower-cased version of the member name, while "
-"other Enums default to 1 and increase from there."
+"Instances are replaced with an appropriate value for Enum "
+"members. :class:`StrEnum` defaults to the lower-cased version of the member "
+"name, while other Enums default to 1 and increase from there."
 msgstr ""
 
 #: library/enum.rst:123
@@ -316,10 +317,10 @@ msgstr ""
 
 #: library/enum.rst:173
 msgid ""
-"``EnumType`` is responsible for setting the correct :meth:`!__repr__`, :meth:"
-"`!__str__`, :meth:`!__format__`, and :meth:`!__reduce__` methods on the "
-"final *enum*, as well as creating the enum members, properly handling "
-"duplicates, providing iteration over the enum class, etc."
+"``EnumType`` is responsible for setting the correct :meth:`!"
+"__repr__`, :meth:`!__str__`, :meth:`!__format__`, and :meth:`!__reduce__` "
+"methods on the final *enum*, as well as creating the enum members, properly "
+"handling duplicates, providing iteration over the enum class, etc."
 msgstr ""
 
 #: library/enum.rst:180
@@ -446,8 +447,8 @@ msgstr ""
 
 #: library/enum.rst:228
 msgid ""
-"Returns the Enum member in *cls* matching *name*, or raises a :exc:"
-"`KeyError`::"
+"Returns the Enum member in *cls* matching *name*, or raises "
+"a :exc:`KeyError`::"
 msgstr ""
 
 #: library/enum.rst:230
@@ -556,8 +557,8 @@ msgstr ""
 #: library/enum.rst:309
 msgid ""
 "``_ignore_`` is a list of names that will not become members, and whose "
-"names will also be removed from the completed enumeration.  See :ref:"
-"`TimePeriod <enum-time-period>` for an example."
+"names will also be removed from the completed enumeration.  "
+"See :ref:`TimePeriod <enum-time-period>` for an example."
 msgstr ""
 
 #: library/enum.rst:315
@@ -617,8 +618,8 @@ msgstr ""
 
 #: library/enum.rst:342
 msgid ""
-"A *staticmethod* that is used to determine the next value returned by :class:"
-"`auto`::"
+"A *staticmethod* that is used to determine the next value returned "
+"by :class:`auto`::"
 msgstr ""
 
 #: library/enum.rst:345
@@ -714,8 +715,8 @@ msgid ""
 "...         cls_name = self.__class__.__name__\n"
 "...         return f'{cls_name}.{self.name}'\n"
 "...\n"
-">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), f\"{OtherStyle."
-"ALTERNATE}\"\n"
+">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), "
+"f\"{OtherStyle.ALTERNATE}\"\n"
 "(OtherStyle.ALTERNATE, 'OtherStyle.ALTERNATE', 'OtherStyle.ALTERNATE')"
 msgstr ""
 
@@ -735,8 +736,8 @@ msgid ""
 "...     def __str__(self):\n"
 "...         return f'{self.name}'\n"
 "...\n"
-">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), f\"{OtherStyle."
-"ALTERNATE}\"\n"
+">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), "
+"f\"{OtherStyle.ALTERNATE}\"\n"
 "(<OtherStyle.ALTERNATE: 1>, 'ALTERNATE', 'ALTERNATE')"
 msgstr ""
 
@@ -756,8 +757,8 @@ msgid ""
 "...     def __format__(self, spec):\n"
 "...         return f'{self.name}'\n"
 "...\n"
-">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), f\"{OtherStyle."
-"ALTERNATE}\"\n"
+">>> OtherStyle.ALTERNATE, str(OtherStyle.ALTERNATE), "
+"f\"{OtherStyle.ALTERNATE}\"\n"
 "(<OtherStyle.ALTERNATE: 1>, 'OtherStyle.ALTERNATE', 'ALTERNATE')"
 msgstr ""
 
@@ -1017,8 +1018,8 @@ msgstr ""
 
 #: library/enum.rst:702
 msgid ""
-"the result is not a valid *IntFlag*: the result depends on the :class:"
-"`FlagBoundary` setting"
+"the result is not a valid *IntFlag*: the result depends on "
+"the :class:`FlagBoundary` setting"
 msgstr ""
 
 #: library/enum.rst:704
@@ -1067,9 +1068,9 @@ msgstr ""
 
 #: library/enum.rst:732
 msgid ""
-"Inherit from :class:`!ReprEnum` to keep the :class:`str() <str>` / :func:"
-"`format` of the mixed-in data type instead of using the :class:`Enum`-"
-"default :meth:`str() <Enum.__str__>`."
+"Inherit from :class:`!ReprEnum` to keep the :class:`str() "
+"<str>` / :func:`format` of the mixed-in data type instead of using "
+"the :class:`Enum`-default :meth:`str() <Enum.__str__>`."
 msgstr ""
 
 #: library/enum.rst:741
@@ -1144,8 +1145,8 @@ msgstr ""
 
 #: library/enum.rst:800
 msgid ""
-"``FlagBoundary`` controls how out-of-range values are handled in :class:"
-"`Flag` and its subclasses."
+"``FlagBoundary`` controls how out-of-range values are handled "
+"in :class:`Flag` and its subclasses."
 msgstr ""
 
 #: library/enum.rst:805
@@ -1172,8 +1173,8 @@ msgstr ""
 
 #: library/enum.rst:823
 msgid ""
-"Out-of-range values have invalid values removed, leaving a valid :class:"
-"`Flag` value::"
+"Out-of-range values have invalid values removed, leaving a "
+"valid :class:`Flag` value::"
 msgstr ""
 
 #: library/enum.rst:826
@@ -1190,8 +1191,8 @@ msgstr ""
 
 #: library/enum.rst:837
 msgid ""
-"Out-of-range values lose their :class:`Flag` membership and revert to :class:"
-"`int`."
+"Out-of-range values lose their :class:`Flag` membership and revert "
+"to :class:`int`."
 msgstr ""
 
 #: library/enum.rst:850
@@ -1224,10 +1225,10 @@ msgstr ""
 
 #: library/enum.rst:873
 msgid ""
-"Note that only the :class:`~collections.abc.MutableMapping` interface (:meth:"
-"`~object.__setitem__` and :meth:`~dict.update`) is overridden. It may be "
-"possible to bypass the checks using other :class:`!dict` operations like :"
-"meth:`|= <object.__ior__>`."
+"Note that only the :class:`~collections.abc.MutableMapping` interface "
+"(:meth:`~object.__setitem__` and :meth:`~dict.update`) is overridden. It may "
+"be possible to bypass the checks using other :class:`!dict` operations "
+"like :meth:`|= <object.__ior__>`."
 msgstr ""
 
 #: library/enum.rst:880
@@ -1271,9 +1272,9 @@ msgstr ""
 
 #: library/enum.rst:904
 msgid ""
-":attr:`~Enum._ignore_` -- a list of names, either as a :class:`list` or a :"
-"class:`str`, that will not be transformed into members, and will be removed "
-"from the final class"
+":attr:`~Enum._ignore_` -- a list of names, either as a :class:`list` or "
+"a :class:`str`, that will not be transformed into members, and will be "
+"removed from the final class"
 msgstr ""
 
 #: library/enum.rst:907
@@ -1344,10 +1345,11 @@ msgid ""
 "*auto* can be used in place of a value.  If used, the *Enum* machinery will "
 "call an :class:`Enum`'s :meth:`~Enum._generate_next_value_` to get an "
 "appropriate value. For :class:`Enum` and :class:`IntEnum` that appropriate "
-"value will be the last value plus one; for :class:`Flag` and :class:"
-"`IntFlag` it will be the first power-of-two greater than the highest value; "
-"for :class:`StrEnum` it will be the lower-cased version of the member's "
-"name.  Care must be taken if mixing *auto()* with manually specified values."
+"value will be the last value plus one; for :class:`Flag` "
+"and :class:`IntFlag` it will be the first power-of-two greater than the "
+"highest value; for :class:`StrEnum` it will be the lower-cased version of "
+"the member's name.  Care must be taken if mixing *auto()* with manually "
+"specified values."
 msgstr ""
 
 #: library/enum.rst:950
@@ -1429,9 +1431,9 @@ msgstr ""
 
 #: library/enum.rst:1003
 msgid ""
-"A :keyword:`class` decorator specifically for enumerations.  Members from :"
-"class:`EnumCheck` are used to specify which constraints should be checked on "
-"the decorated enumeration."
+"A :keyword:`class` decorator specifically for enumerations.  Members "
+"from :class:`EnumCheck` are used to specify which constraints should be "
+"checked on the decorated enumeration."
 msgstr ""
 
 #: library/enum.rst:1011

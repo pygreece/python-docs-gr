@@ -92,8 +92,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:59
 msgid ""
-"Should be called once a tool no longer requires *tool_id*. Will call :func:"
-"`clear_tool_id` before releasing *tool_id*."
+"Should be called once a tool no longer requires *tool_id*. Will "
+"call :func:`clear_tool_id` before releasing *tool_id*."
 msgstr ""
 
 #: library/sys.monitoring.rst:64
@@ -210,8 +210,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:149
 msgid ""
-"An exception is raised, except those that cause a :monitoring-event:"
-"`STOP_ITERATION` event."
+"An exception is raised, except those that cause a :monitoring-"
+"event:`STOP_ITERATION` event."
 msgstr ""
 
 #: library/sys.monitoring.rst:153
@@ -318,9 +318,9 @@ msgstr ""
 
 #: library/sys.monitoring.rst:203
 msgid ""
-"The ``BRANCH`` event is deprecated in 3.14. Using :monitoring-event:"
-"`BRANCH_LEFT` and :monitoring-event:`BRANCH_RIGHT` events will give much "
-"better performance as they can be disabled independently."
+"The ``BRANCH`` event is deprecated in 3.14. Using :monitoring-"
+"event:`BRANCH_LEFT` and :monitoring-event:`BRANCH_RIGHT` events will give "
+"much better performance as they can be disabled independently."
 msgstr ""
 
 #: library/sys.monitoring.rst:209
@@ -344,9 +344,9 @@ msgstr ""
 #: library/sys.monitoring.rst:217
 msgid ""
 "The :monitoring-event:`C_RETURN` and :monitoring-event:`C_RAISE` events are "
-"controlled by the :monitoring-event:`CALL` event. :monitoring-event:"
-"`C_RETURN` and :monitoring-event:`C_RAISE` events will only be seen if the "
-"corresponding :monitoring-event:`CALL` event is being monitored."
+"controlled by the :monitoring-event:`CALL` event. :monitoring-"
+"event:`C_RETURN` and :monitoring-event:`C_RAISE` events will only be seen if "
+"the corresponding :monitoring-event:`CALL` event is being monitored."
 msgstr ""
 
 #: library/sys.monitoring.rst:226
@@ -385,8 +385,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:242
 msgid ""
-":pep:`PEP 380 <380#use-of-stopiteration-to-return-values>` specifies that a :"
-"exc:`StopIteration` exception is raised when returning a value from a "
+":pep:`PEP 380 <380#use-of-stopiteration-to-return-values>` specifies that "
+"a :exc:`StopIteration` exception is raised when returning a value from a "
 "generator or coroutine. However, this is a very inefficient way to return a "
 "value, so some Python implementations, notably CPython 3.12+, do not raise "
 "an exception unless it would be visible to other code."
@@ -437,8 +437,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:280
 msgid ""
-"Activates all events which are set in *event_set*. Raises a :exc:"
-"`ValueError` if *tool_id* is not in use."
+"Activates all events which are set in *event_set*. Raises "
+"a :exc:`ValueError` if *tool_id* is not in use."
 msgstr ""
 
 #: library/sys.monitoring.rst:283
@@ -525,14 +525,14 @@ msgstr ""
 
 #: library/sys.monitoring.rst:346
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``sys.monitoring."
-"register_callback`` with argument ``func``."
+"Raises an :ref:`auditing event <auditing>` "
+"``sys.monitoring.register_callback`` with argument ``func``."
 msgstr ""
 
 #: library/sys.monitoring.rst:348
 msgid ""
-"Functions can be unregistered by calling ``sys.monitoring."
-"register_callback(tool_id, event, None)``."
+"Functions can be unregistered by calling "
+"``sys.monitoring.register_callback(tool_id, event, None)``."
 msgstr ""
 
 #: library/sys.monitoring.rst:351
@@ -583,8 +583,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:379
 msgid ""
-":monitoring-event:`CALL`, :monitoring-event:`C_RAISE` and :monitoring-event:"
-"`C_RETURN` (*arg0* can be :data:`MISSING` specifically)::"
+":monitoring-event:`CALL`, :monitoring-event:`C_RAISE` and :monitoring-"
+"event:`C_RETURN` (*arg0* can be :data:`MISSING` specifically)::"
 msgstr ""
 
 #: library/sys.monitoring.rst:382
@@ -597,8 +597,8 @@ msgstr ""
 msgid ""
 "*code* represents the code object where the call is being made, while "
 "*callable* is the object that is about to be called (and thus triggered the "
-"event). If there are no arguments, *arg0* is set to :data:`sys.monitoring."
-"MISSING`."
+"event). If there are no arguments, *arg0* is set "
+"to :data:`sys.monitoring.MISSING`."
 msgstr ""
 
 #: library/sys.monitoring.rst:389
@@ -610,9 +610,9 @@ msgstr ""
 
 #: library/sys.monitoring.rst:393
 msgid ""
-":monitoring-event:`RAISE`, :monitoring-event:`RERAISE`, :monitoring-event:"
-"`EXCEPTION_HANDLED`, :monitoring-event:`PY_UNWIND`, :monitoring-event:"
-"`PY_THROW` and :monitoring-event:`STOP_ITERATION`::"
+":monitoring-event:`RAISE`, :monitoring-event:`RERAISE`, :monitoring-"
+"event:`EXCEPTION_HANDLED`, :monitoring-event:`PY_UNWIND`, :monitoring-"
+"event:`PY_THROW` and :monitoring-event:`STOP_ITERATION`::"
 msgstr ""
 
 #: library/sys.monitoring.rst:396
@@ -631,8 +631,8 @@ msgstr ""
 
 #: library/sys.monitoring.rst:402
 msgid ""
-":monitoring-event:`BRANCH_LEFT`, :monitoring-event:`BRANCH_RIGHT` and :"
-"monitoring-event:`JUMP`::"
+":monitoring-event:`BRANCH_LEFT`, :monitoring-event:`BRANCH_RIGHT` "
+"and :monitoring-event:`JUMP`::"
 msgstr ""
 
 #: library/sys.monitoring.rst:404

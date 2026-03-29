@@ -30,15 +30,15 @@ msgid ""
 "This module provides immutable :class:`UUID` objects (the :class:`UUID` "
 "class) and :ref:`functions <uuid-factory-functions>` for generating UUIDs "
 "corresponding to a specific UUID version as specified in :rfc:`9562` (which "
-"supersedes :rfc:`4122`), for example, :func:`uuid1` for UUID version 1, :"
-"func:`uuid3` for UUID version 3, and so on. Note that UUID version 2 is "
+"supersedes :rfc:`4122`), for example, :func:`uuid1` for UUID version "
+"1, :func:`uuid3` for UUID version 3, and so on. Note that UUID version 2 is "
 "deliberately omitted as it is outside the scope of the RFC."
 msgstr ""
 
 #: library/uuid.rst:19
 msgid ""
-"If all you want is a unique ID, you should probably call :func:`uuid1` or :"
-"func:`uuid4`.  Note that :func:`uuid1` may compromise privacy since it "
+"If all you want is a unique ID, you should probably call :func:`uuid1` "
+"or :func:`uuid4`.  Note that :func:`uuid1` may compromise privacy since it "
 "creates a UUID containing the computer's network address.  :func:`uuid4` "
 "creates a random UUID."
 msgstr ""
@@ -101,9 +101,9 @@ msgstr ""
 
 #: library/uuid.rst:73
 msgid ""
-"Comparison of UUID objects are made by way of comparing their :attr:`UUID."
-"int` attributes.  Comparison with a non-UUID object raises a :exc:"
-"`TypeError`."
+"Comparison of UUID objects are made by way of comparing "
+"their :attr:`UUID.int` attributes.  Comparison with a non-UUID object raises "
+"a :exc:`TypeError`."
 msgstr ""
 
 #: library/uuid.rst:77
@@ -185,14 +185,15 @@ msgstr ""
 #: library/uuid.rst:150
 msgid ""
 "The UUID variant, which determines the internal layout of the UUID. This "
-"will be one of the constants :const:`RESERVED_NCS`, :const:`RFC_4122`, :"
-"const:`RESERVED_MICROSOFT`, or :const:`RESERVED_FUTURE`."
+"will be one of the "
+"constants :const:`RESERVED_NCS`, :const:`RFC_4122`, :const:`RESERVED_MICROSOFT`, "
+"or :const:`RESERVED_FUTURE`."
 msgstr ""
 
 #: library/uuid.rst:157
 msgid ""
-"The UUID version number (1 through 8, meaningful only when the variant is :"
-"const:`RFC_4122`)."
+"The UUID version number (1 through 8, meaningful only when the variant "
+"is :const:`RFC_4122`)."
 msgstr ""
 
 #: library/uuid.rst:160
@@ -257,8 +258,8 @@ msgstr ""
 
 #: library/uuid.rst:217
 msgid ""
-"Generate a random UUID in a cryptographically-secure method according to :"
-"rfc:`RFC 9562, §5.4 <9562#section-5.4>`."
+"Generate a random UUID in a cryptographically-secure method according "
+"to :rfc:`RFC 9562, §5.4 <9562#section-5.4>`."
 msgstr ""
 
 #: library/uuid.rst:223
@@ -271,8 +272,8 @@ msgstr ""
 
 #: library/uuid.rst:231
 msgid ""
-"Generate a UUID from a sequence number and the current time according to :"
-"rfc:`RFC 9562, §5.6 <9562#section-5.6>`."
+"Generate a UUID from a sequence number and the current time according "
+"to :rfc:`RFC 9562, §5.6 <9562#section-5.6>`."
 msgstr ""
 
 #: library/uuid.rst:234
@@ -352,8 +353,8 @@ msgstr ""
 #: library/uuid.rst:312
 msgid ""
 "Specifies the UUID layout given in :rfc:`4122`. This constant is kept for "
-"backward compatibility even though :rfc:`4122` has been superseded by :rfc:"
-"`9562`."
+"backward compatibility even though :rfc:`4122` has been superseded "
+"by :rfc:`9562`."
 msgstr ""
 
 #: library/uuid.rst:319
@@ -415,8 +416,8 @@ msgstr ""
 
 #: library/uuid.rst:377
 msgid ""
-"Specify the function name to use to generate the uuid. By default :func:"
-"`uuid4` is used."
+"Specify the function name to use to generate the uuid. By "
+"default :func:`uuid4` is used."
 msgstr ""
 
 #: library/uuid.rst:380
@@ -433,8 +434,8 @@ msgstr ""
 
 #: library/uuid.rst:393
 msgid ""
-"The name used as part of generating the uuid. Only required for :func:"
-"`uuid3` / :func:`uuid5` functions."
+"The name used as part of generating the uuid. Only required "
+"for :func:`uuid3` / :func:`uuid5` functions."
 msgstr ""
 
 #: library/uuid.rst:399
