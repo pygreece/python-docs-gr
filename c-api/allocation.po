@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: 2025-06-04 11:27+0300\n"
-"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"PO-Revision-Date: 2026-04-15 22:15+0300\n"
+"Last-Translator: Miltiadis Papavramidis <georgeppvr@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +59,6 @@ msgid ""
 msgstr ""
 
 #: c-api/allocation.rst:48
-#, fuzzy
 msgid ""
 "Allocates a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``) by calling :c:func:"
@@ -69,11 +67,10 @@ msgid ""
 "its reference count will be one)."
 msgstr ""
 "Δεσμεύει ένα νέο αντικείμενο Python χρησιμοποιώντας τον τύπο δομής C *TYPE* "
-"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``). Τα πεδία που "
-"δεν ορίζονται από την κεφαλίδα αντικειμένου Python δεν αρχικοποιούνται. Ο "
-"καλών θα έχει την μοναδική αναφορά στο αντικείμενο (δηλαδή, η μέτρηση "
-"αναφορών του θα είναι ένα). Το μέγεθος της δέσμευσης μνήμης καθορίζεται από "
-"το πεδίο :c:member:`~PyTypeObject.tp_basicsize` του αντικειμένου τύπου."
+"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``) καλώντας τη "
+":c:func:`PyObject_Malloc` για τη δέσμευση μνήμης και αρχικοποιώντας το όπως "
+"η :c:func:`PyObject_Init`. Ο καλών θα κατέχει τη μοναδική αναφορά στο "
+"αντικείμενο (δηλαδή, ο μετρητής αναφορών του θα είναι ένα)."
 
 #: c-api/allocation.rst:107
 msgid ""
@@ -96,14 +93,13 @@ msgid ""
 msgstr ""
 
 #: c-api/allocation.rst:65
-#, fuzzy
 msgid ""
 "This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
 "member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_New` instead."
 msgstr ""
-"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
-"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
-"c:func:`PyObject_GC_New` αντ' αυτού."
+"Αυτό δεν μπορεί να χρησιμοποιηθεί για αντικείμενα που έχουν το :c:macro:"
+"`Py_TPFLAGS_HAVE_GC` ορισμένο στο :c:member:`~PyTypeObject.tp_flags`· "
+"χρησιμοποιήστε το :c:macro:`PyObject_GC_New` αντ’ αυτού."
 
 #: c-api/allocation.rst:68
 msgid ""
@@ -130,9 +126,8 @@ msgid "PyObject *foo = PyObject_CallNoArgs((PyObject *)&PyFoo_Type);"
 msgstr ""
 
 #: c-api/allocation.rst:137 c-api/allocation.rst:184 c-api/allocation.rst:186
-#, fuzzy
 msgid ":c:func:`PyObject_Free`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Free`"
 
 #: c-api/allocation.rst:88
 msgid ":c:macro:`PyObject_GC_New`"
@@ -170,14 +165,13 @@ msgid ""
 msgstr ""
 
 #: c-api/allocation.rst:114
-#, fuzzy
 msgid ""
 "This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
 "member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_NewVar` instead."
 msgstr ""
-"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
-"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
-"c:func:`PyObject_GC_NewVar` αντ' αυτού."
+"Αυτό δεν μπορεί να χρησιμοποιηθεί για αντικείμενα που έχουν το :c:macro:"
+"`Py_TPFLAGS_HAVE_GC` ορισμένο στο :c:member:`~PyTypeObject.tp_flags`· "
+"χρησιμοποιήστε το :c:macro:`PyObject_GC_NewVar` αντ’ αυτού."
 
 #: c-api/allocation.rst:118
 msgid ""
@@ -231,34 +225,28 @@ msgid "Function"
 msgstr ""
 
 #: c-api/allocation.rst:170
-#, fuzzy
 msgid ":c:macro:`PyObject_New`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:macro:`PyObject_New`."
 
 #: c-api/allocation.rst:172
-#, fuzzy
 msgid ":c:macro:`PyObject_NewVar`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:macro:`PyObject_NewVar`."
 
 #: c-api/allocation.rst:174
-#, fuzzy
 msgid ":c:func:`PyObject_Init`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Init`."
 
 #: c-api/allocation.rst:176
-#, fuzzy
 msgid ":c:func:`PyObject_InitVar`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_InitVar`."
 
 #: c-api/allocation.rst:178
-#, fuzzy
 msgid ":c:func:`PyObject_Malloc`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Malloc`."
 
 #: c-api/allocation.rst:180
-#, fuzzy
 msgid ":c:func:`PyObject_Realloc`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Realloc`."
 
 #~ msgid "Same as :c:func:`PyObject_Free`."
 #~ msgstr "Ίδιο με την :c:func:`PyObject_Free`."
