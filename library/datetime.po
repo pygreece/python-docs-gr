@@ -348,11 +348,11 @@ msgstr ""
 
 #: library/datetime.rst:185
 msgid "``d.tzinfo`` is not ``None``"
-msgstr "``d.tzinfo`` δεν είναι ``None``"
+msgstr "το ``d.tzinfo`` δεν είναι ``None``"
 
 #: library/datetime.rst:186
 msgid "``d.tzinfo.utcoffset(d)`` does not return ``None``"
-msgstr "``d.tzinfo.utcoffset(d)`` δεν επιστρέφει ``None``"
+msgstr "το ``d.tzinfo.utcoffset(d)`` δεν επιστρέφει ``None``"
 
 #: library/datetime.rst:188
 msgid "Otherwise, ``d`` is naive."
@@ -366,11 +366,11 @@ msgstr ""
 
 #: library/datetime.rst:192
 msgid "``t.tzinfo`` is not ``None``"
-msgstr "``t.tzinfo`` δεν είναι ``None``"
+msgstr "το ``t.tzinfo`` δεν είναι ``None``"
 
 #: library/datetime.rst:193
 msgid "``t.tzinfo.utcoffset(None)`` does not return ``None``."
-msgstr "``t.tzinfo.utcoffset(None)`` δεν επιστρέφει ``None``."
+msgstr "το ``t.tzinfo.utcoffset(None)`` δεν επιστρέφει ``None``."
 
 #: library/datetime.rst:195
 msgid "Otherwise, ``t`` is naive."
@@ -434,8 +434,8 @@ msgid ""
 "and days, seconds and microseconds are then normalized so that the "
 "representation is unique, with"
 msgstr ""
-"και ημέρες, δευτερόλεπτα και μικροδευτερόλεπτα κανονικοποιούνται ώστε η "
-"αναπαράσταση είναι μοναδική με"
+"και οι ημέρες, τα δευτερόλεπτα και τα μικροδευτερόλεπτα κανονικοποιούνται ώστε η "
+"αναπαράσταση να είναι μοναδική με"
 
 #: library/datetime.rst:224
 msgid "``0 <= microseconds < 1000000``"
@@ -455,7 +455,7 @@ msgid ""
 "*seconds* and *microseconds* are \"merged\" and normalized into those three "
 "resulting attributes::"
 msgstr ""
-"Το παρακάτω παράδειγμα δείχνει πώς οποιαδήποτε ορίσματα εκτός από *days*, "
+"Το παρακάτω παράδειγμα δείχνει πώς οποιαδήποτε ορίσματα εκτός από τα *days*, "
 "*seconds* και *microseconds* \"συγχωνεύονται\" και κανονικοποιούνται σε αυτά "
 "τα τρία τελικά γνωρίσματα::"
 
@@ -600,7 +600,7 @@ msgid ""
 "`timedelta` object."
 msgstr ""
 "Σημειώστε ότι, λόγω της κανονικοποίησης, το ``timedelta.max``είναι "
-"μεγαλύτερο από το ``-timedelta.min``. ``-timedelta.max`` δεν μπορεί να "
+"μεγαλύτερο από το ``-timedelta.min``. Το ``-timedelta.max`` δεν μπορεί να "
 "αναπαρασταθεί ως ένα αντικείμενο :class:`timedelta`."
 
 #: library/datetime.rst:633 library/datetime.rst:1833
@@ -667,7 +667,7 @@ msgid ""
 "are true. (1)"
 msgstr ""
 "Το άθροισμα των ``t2`` και ``t3``. Στη συνέχεια το ``t1 - t2 == t3`` και το "
-"``t1 - t3 == t2`` είναι αληθές. (1)"
+"``t1 - t3 == t2`` είναι αληθή. (1)"
 
 #: library/datetime.rst:345
 msgid "``t1 = t2 - t3``"
@@ -679,7 +679,7 @@ msgid ""
 "t1 + t3`` are true. (1)(6)"
 msgstr ""
 "Η διαφορά του ``t2`` και ``t3``. Στη συνέχεια το ``t1 == t2 - t3`` και ``t2 "
-"== t1 + t3`` είναι αληθές. (1)(6)"
+"== t1 + t3`` είναι αληθή. (1)(6)"
 
 #: library/datetime.rst:349
 msgid "``t1 = t2 * i or t1 = i * t2``"
@@ -690,8 +690,8 @@ msgid ""
 "Delta multiplied by an integer. Afterwards ``t1 // i == t2`` is true, "
 "provided ``i != 0``."
 msgstr ""
-"Διπλασιασμός του διαστήματος με έναν ακέραιο. Στη συνέχεια το ``t1 // i == "
-"t2`` είναι αληθές, εφόσον ``i != 0``."
+"Πολλαπλασιασμός του διαστήματος με έναν ακέραιο. Στη συνέχεια το ``t1 // i == "
+"t2`` είναι αληθή, εφόσον ``i != 0``."
 
 #: library/datetime.rst:353
 msgid "In general, ``t1  * i == t1 * (i-1) + t1`` is true. (1)"
@@ -706,7 +706,7 @@ msgid ""
 "Delta multiplied by a float. The result is rounded to the nearest multiple "
 "of timedelta.resolution using round-half-to-even."
 msgstr ""
-"Διπλασιασμός του διαστήματος με έναν αριθμό κινητής υποδιαστολής. Το "
+"Πολλαπλασιασμός του διαστήματος με έναν αριθμό κινητής υποδιαστολής. Το "
 "αποτέλεσμα στρογγυλοποιείται στο πλησιέστερο πολλαπλάσιο της timedelta."
 "resolution χρησιμοποιώντας τον κανόνα σπασίματος ισοπαλίας \"round-half-to-"
 "even\"."
@@ -811,8 +811,8 @@ msgid ""
 "Returns a string in the form ``[D day[s], ][H]H:MM:SS[.UUUUUU]``, where D is "
 "negative for negative ``t``. (5)"
 msgstr ""
-"Επιστρέφει μια συμβολοσειρά στη φόρμα ``[D day[s], ][H]H:MM:SS[.UUUUUU]``, "
-"όπου D είναι αρνητικό για αρνητικό ``t``. (5)"
+"Επιστρέφει μια συμβολοσειρά στη μορφή ``[D day[s], ][H]H:MM:SS[.UUUUUU]``, "
+"όπου το D είναι αρνητικό για αρνητικό ``t``. (5)"
 
 #: library/datetime.rst:394
 msgid "``repr(t)``"
@@ -855,7 +855,7 @@ msgid ""
 "results for negative timedeltas. For example::"
 msgstr ""
 "Οι αναπαραστάσεις συμβολοσειράς :class:`timedelta` αντικειμένων είναι "
-"κανονικοποιημένα παρόμοια με την εσωτερική τους αναπαράσταση. Αυτό οδηγεί "
+"κανονικοποιημένες παρόμοια με την εσωτερική τους αναπαράσταση. Αυτό οδηγεί "
 "κάπως σε ασυνήθη αποτελέσματα για αρνητικά timedeltas. Για παράδειγμα::"
 
 #: library/datetime.rst:419
@@ -1023,7 +1023,7 @@ msgid ""
 "January 1 of year 1 is called day number 1, January 2 of year 1 is called "
 "day number 2, and so on. [#]_"
 msgstr ""
-"Η 1η Ιανουαρίου του έτους 1 ονομάζεται ημέρα 1, η 2η Ιανουαρίου του έτους 1 "
+"Η 1η Ιανουαρίου του 1ου έτους ονομάζεται ημέρα 1, η 2α Ιανουαρίου του 1ου έτους "
 "ονομάζεται ημέρα 2, και ούτω καθεξής. [#]_"
 
 #: library/datetime.rst:502
@@ -1050,7 +1050,7 @@ msgstr "``1 <= day <= number of days in the given month and year``"
 msgid ""
 "If an argument outside those ranges is given, :exc:`ValueError` is raised."
 msgstr ""
-"Εάν ένα όρισμα εκτός αυτών των εύρων δοθεί, γίνεται raise :exc:`ValueError`."
+"Εάν ένα όρισμα εκτός αυτών των ευρών δοθεί, γίνεται raise :exc:`ValueError`."
 
 #: library/datetime.rst:937
 msgid "Other constructors, all class methods:"
@@ -1070,7 +1070,7 @@ msgid ""
 "returned by :func:`time.time`."
 msgstr ""
 "Επιστρέφει την τοπική ημερομηνία που αντιστοιχεί στο POSIX timestamp, όπως "
-"επιστρέφεται από τη :func:`time.time`."
+"επιστρέφεται από την :func:`time.time`."
 
 #: library/datetime.rst:525
 msgid ""
@@ -1082,12 +1082,12 @@ msgid ""
 "ignored by :meth:`fromtimestamp`."
 msgstr ""
 "Αυτό μπορεί να κάνει raise :exc:`OverflowError`, εάν το timestamp είναι "
-"εκτός του εύρους τιμών που υποστηρίζεται από τη πλατφόρμα C :c:func:"
-"`localtime` συνάρτηση, και :exc:`OSError` σε περίπτωση αποτυχίας της :c:func:"
+"εκτός του εύρους τιμών που υποστηρίζει η συνάρτηση :c:func:`localtime`"
+"της πλατφόρμας C, καθώς και :exc:`OSError` σε περίπτωση αποτυχίας της :c:func:"
 "`localtime`. Είναι κοινό αυτό να περιορίζεται σε έτη από το 1970 έως το "
 "2038. Σημειώστε ότι σε μη POSIX συστήματα που περιλαμβάνουν δευτερόλεπτα "
 "διαλείμματος στην έννοια τους για ένα timestamp, τα δευτερόλεπτα "
-"διαλείμματος αγνοούνται από τη :meth:`fromtimestamp`."
+"διαλείμματος αγνοούνται από την :meth:`fromtimestamp`."
 
 #: library/datetime.rst:532
 msgid ""
@@ -1097,8 +1097,8 @@ msgid ""
 "`localtime` failure."
 msgstr ""
 "Κάνει raise :exc:`OverflowError` αντί για :exc:`ValueError` εάν το timestamp "
-"είναι εκτός του εύρους τιμών που υποστηρίζεται από τη πλατφόρμα C :c:func:"
-"`localtime` συνάρτηση. Κάνει raise :exc:`OSError` αντί για :exc:`ValueError` "
+"είναι εκτός του εύρους τιμών που υποστηρίζει η συνάρτηση :c:func:`localtime`"
+"της πλατφόρμας C. Κάνει raise :exc:`OSError` αντί για :exc:`ValueError` "
 "σε περίπτωση αποτυχίας της :c:func:`localtime`."
 
 #: library/datetime.rst:541
@@ -1107,7 +1107,7 @@ msgid ""
 "January 1 of year 1 has ordinal 1."
 msgstr ""
 "Επιστρέφει την ημερομηνία που αντιστοιχεί στο προληπτικό Γρηγοριανό αριθμό, "
-"όπου η 1η Ιανουαρίου του έτους 1 έχει αριθμό 1."
+"όπου η 1η Ιανουαρίου του 1ου έτους έχει αριθμό 1."
 
 #: library/datetime.rst:544
 msgid ""
@@ -1180,7 +1180,7 @@ msgid ""
 "isocalendar`."
 msgstr ""
 "Επιστρέφει ένα αντικείμενο :class:`date` που αντιστοιχεί στην ημερομηνία του "
-"ISO ημερολογίου που καθορίζεται από το έτος, την εβδομάδα και την ημέρα.Αυτό "
+"ISO ημερολογίου που καθορίζεται από το έτος, την εβδομάδα και την ημέρα. Αυτό "
 "είναι το αντίστροφο της συνάρτησης :meth:`date.isocalendar`."
 
 #: library/datetime.rst:583
@@ -1189,7 +1189,7 @@ msgid ""
 "*format*. This is equivalent to::"
 msgstr ""
 "Επιστρέφει ένα αντικείμενο :class:`.date` που αντιστοιχεί σε *date_string*, "
-"αναλυμένο σύμφωνα με *format*. Αυτό είναι ισοδύναμο με::"
+"αναλυμένο σύμφωνα με το *format*. Αυτό είναι ισοδύναμο με::"
 
 #: library/datetime.rst:586
 msgid "date(*(time.strptime(date_string, format)[0:3]))"
@@ -1202,8 +1202,8 @@ msgid ""
 "See also :ref:`strftime-strptime-behavior` and :meth:`date.fromisoformat`."
 msgstr ""
 "Η :exc:`ValueError` γίνεται raise εάν το date_string και το format δεν "
-"μπορούν να αναλυθούν από τη :func:`time.strptime` ή εάν επιστρέφει μια τιμή "
-"που δεν είναι τουλάχιστον μια πλειάδα χρόνου. Δείτε επίσης :ref:`strftime-"
+"μπορούν να αναλυθούν από την :func:`time.strptime` ή εάν επιστρέφει μια τιμή "
+"που δεν είναι τουλάχιστον μια πλειάδα χρόνου. Δείτε επίσης τα :ref:`strftime-"
 "strptime-behavior` και :meth:`date.fromisoformat`."
 
 #: library/datetime.rst:595
@@ -1221,8 +1221,8 @@ msgstr ""
 "τετραετούς δίσεκτου έτους στον κώδικα που προσπαθεί να αναλύσει μόνο έναν "
 "μήνα και μια ημέρα, καθώς το προεπιλεγμένο έτος που χρησιμοποιείται σε "
 "περίπτωση απουσίας του στη μορφή δεν είναι δίσεκτο έτος. Τέτοιες τιμές "
-"*format* μπορεί να προκαλέσουν σφάλμα από την έκδοση 3.15 του Python. Η λύση "
-"είναι να συμπεριλάβετε πάντα ένα έτος στη μορφή σας. Εάν αναλύετε τιμές "
+"*format* μπορεί να προκαλέσουν σφάλμα από την έκδοση 3.15 της Python και μετά. Η λύση "
+"είναι να συμπεριλαμβάνετε πάντα ένα έτος στη μορφή σας. Εάν αναλύετε τιμές "
 "*date_string* που δεν έχουν έτος, προσθέστε ρητά ένα έτος που είναι δίσεκτο "
 "πριν από την ανάλυση:"
 
@@ -1255,7 +1255,7 @@ msgid ""
 "The smallest possible difference between non-equal date objects, "
 "``timedelta(days=1)``."
 msgstr ""
-"Η μικρότερη δυνατή διαφορά μεταξύ μη-ίσως αντικειμένων ημέρα, "
+"Η μικρότερη δυνατή διαφορά μεταξύ μη-ίσων αντικειμένων ημέρας, "
 "``timedelta(days=1)``."
 
 #: library/datetime.rst:1199
@@ -1277,7 +1277,7 @@ msgstr "``date2 = date1 + timedelta``"
 
 #: library/datetime.rst:655
 msgid "``date2`` will be ``timedelta.days`` days after ``date1``. (1)"
-msgstr "``date2`` θα είναι ``timedelta.days`` ημέρες μετά το ``date1``. (1)"
+msgstr "Το ``date2`` θα είναι ``timedelta.days`` ημέρες μετά το ``date1``. (1)"
 
 #: library/datetime.rst:658
 msgid "``date2 = date1 - timedelta``"
@@ -1479,7 +1479,7 @@ msgid ""
 "toordinal()) == d``."
 msgstr ""
 "Επιστρέφει το προληπτικό Γρηγοριανό αριθμό της ημερομηνίας, όπου η 1η "
-"Ιανουαρίου του έτους 1 έχει αριθμό 1. Για οποιοδήποτε αντικείμενο :class:"
+"Ιανουαρίου του 1ου έτους έχει αριθμό 1. Για οποιοδήποτε αντικείμενο :class:"
 "`date` ``d``, ``date.fromordinal(d.toordinal()) == d``."
 
 #: library/datetime.rst:755
@@ -1537,7 +1537,7 @@ msgid ""
 "begins on Monday, 29 Dec 2003 and ends on Sunday, 4 Jan 2004::"
 msgstr ""
 "Για παράδειγμα, το 2004 ξεκινά με Πέμπτη, συνεπώς η πρώτη εβδομάδα του ISO "
-"έτους 2004 ξεκινάει την Δευτέρα 29 Δεκεμβρίου 200, και τελειώνει με Κυριακή, "
+"έτους 2004 ξεκινάει την Δευτέρα 29 Δεκεμβρίου 2003, και τελειώνει την Κυριακή, "
 "4 Ιανουαρίου 2004::"
 
 #: library/datetime.rst:782
@@ -1621,7 +1621,7 @@ msgid ""
 msgstr ""
 "Επιστρέφει μια συμβολοσειρά που αναπαριστά την ημερομηνία, ελεγχόμενη από "
 "μια ρητή συμβολοσειρά μορφοποίησης. Οι κωδικοί μορφοποίησης που αναφέρονται "
-"σε ώρες, λεπτά ή δευτερόλεπτα θα εμφανίζουν τιμές 0. Δείτε επίσης :ref:"
+"σε ώρες, λεπτά ή δευτερόλεπτα θα εμφανίζουν τιμές 0. Δείτε επίσης τα :ref:"
 "`strftime-strptime-behavior` και :meth:`date.isoformat`."
 
 #: library/datetime.rst:830
@@ -1634,7 +1634,7 @@ msgstr ""
 "Ίδιο με τη μέθοδο :meth:`.date.strftime`. Αυτό επιτρέπει να ορίσετε μια "
 "συμβολοσειρά μορφοποίησης για ένα αντικείμενο :class:`.date` σε :ref:"
 "`μορφοποιημένες συμβολοσειρές <f-strings>` και κατά τη χρήση της :meth:`str."
-"format`. Δείτε επίσης :ref:`strftime-strptime-behavior` και :meth:`date."
+"format`. Δείτε επίσης τα :ref:`strftime-strptime-behavior` και :meth:`date."
 "isoformat`."
 
 #: library/datetime.rst:836
@@ -1778,8 +1778,8 @@ msgid ""
 "A :class:`.datetime` object is a single object containing all the "
 "information from a :class:`date` object and a :class:`.time` object."
 msgstr ""
-"Ένα αντικείμενο :class:`.datetime` είναι ένα μόνο αντικείμενο που περιέχει "
-"όλες τις πληροφορίες από ένα αντικείμενο :class:`date` και ένα αντικείμενο :"
+"Ένα αντικείμενο :class:`.datetime` είναι ένα ενιαίο αντικείμενο που περιέχει "
+"όλες τις πληροφορίες ενός αντικειμένου :class:`date` και ενός αντικειμένου :"
 "class:`.time`."
 
 #: library/datetime.rst:911
@@ -1806,7 +1806,7 @@ msgid ""
 msgstr ""
 "Τα ορίσματα *year*, *month* και *day* είναι υποχρεωτικά. Το *tzinfo* μπορεί "
 "να είναι ``None``, ή ένα στιγμιότυπο μιας υποκλάσης :class:`tzinfo`. Οι "
-"υπόλοιπες παράμετροι θα πρέπει να είναι ακέραιοι με το παρακάτω εύροι:"
+"υπόλοιπες παράμετροι θα πρέπει να είναι ακέραιοι στα παρακάτω εύρη:"
 
 #: library/datetime.rst:923
 msgid "``MINYEAR <= year <= MAXYEAR``,"
@@ -1868,7 +1868,7 @@ msgid ""
 "parameter."
 msgstr ""
 "Αυτή η μέθοδος είναι λειτουργικά ισοδύναμη με την :meth:`now`, αλλά χωρίς "
-"παράμετρο ``tz``."
+"την παράμετρο ``tz``."
 
 #: library/datetime.rst:954
 msgid "Return the current local date and time."
@@ -1881,11 +1881,11 @@ msgid ""
 "going through a :func:`time.time` timestamp (for example, this may be "
 "possible on platforms supplying the C :c:func:`gettimeofday` function)."
 msgstr ""
-"Εάν το προαιρετικό όρισμα *tz* είναι ``None`` ή δεν έχει οριστεί, αυτό είναι "
+"Εάν το προαιρετικό όρισμα *tz* είναι ``None`` ή δεν έχει οριστεί, είναι "
 "σαν τη μέθοδο :meth:`today`, αλλά, αν είναι δυνατόν, παρέχει μεγαλύτερη "
-"ακρίβεια από αυτή που μπορεί να ληφθεί μέσω ενός timestamp από τη :func:"
+"ακρίβεια από αυτή που μπορεί να ληφθεί μέσω ενός timestamp από την :func:"
 "`time.time` (για παράδειγμα, αυτό μπορεί να είναι δυνατό σε πλατφόρμες που "
-"παρέχουν τη συνάρτηση C :c:func:`gettimeofday`)."
+"παρέχουν τη συνάρτηση :c:func:`gettimeofday` της C)."
 
 #: library/datetime.rst:962
 msgid ""
@@ -1924,7 +1924,7 @@ msgstr ""
 "Αυτό είναι σαν τη :meth:`now`, αλλά επιστρέφει την τρέχουσα ημερομηνία και "
 "ώρα UTC, ως ένα απλό αντικείμενο :class:`.datetime`. Μια ενημερωμένη "
 "τρέχουσα ημερομηνία/ ώρα UTC μπορεί να ληφθεί καλώντας το ``datetime."
-"now(timezone.utc)``. Δείτε επίσης :meth:`now`."
+"now(timezone.utc)``. Δείτε επίσης την :meth:`now`."
 
 #: library/datetime.rst:982
 msgid ""
@@ -1954,7 +1954,7 @@ msgstr ""
 "POSIX, όπως αυτή που επιστρέφεται από την :func:`time.time`. Εάν το "
 "προαιρετικό όρισμα *tz* είναι ``None`` ή δεν έχει καθοριστεί, η χρονική "
 "σήμανση μετατρέπεται στην τοπική ημερομηνία και ώρα της πλατφόρμας και το "
-"αντικείμενο :class:`.datetime` που επιστρέφεται ως αδαές."
+"αντικείμενο :class:`.datetime` που επιστρέφεται είναι αδαές."
 
 #: library/datetime.rst:999
 msgid ""
@@ -1976,9 +1976,9 @@ msgid ""
 "a second that yield identical :class:`.datetime` objects. This method is "
 "preferred over :meth:`utcfromtimestamp`."
 msgstr ""
-"Η :meth:`fromtimestamp` μπορείς να κάνει raise μια :exc:`OverflowError`, εάν "
+"Η :meth:`fromtimestamp` μπορεί να κάνει raise μια :exc:`OverflowError`, εάν "
 "η χρονική σήμανση είναι εκτός του εύρους τιμών που υποστηρίζονται από τις "
-"συναρτήσεις πλατφόρμας C :c:func:`localtime` ή :c:func:`gmtime`, και το "
+"συναρτήσεις :c:func:`localtime` ή :c:func:`gmtime` της πλατφόρμας C, και το "
 "σφάλμα :exc:`OSError` σε περίπτωση σφάλματος :c:func:`localtime` ή :c:func:"
 "`gmtime`. Είναι σύνηθες αυτό να περιορίζεται στα έτη από το 1970 έως το "
 "2038. Σημειώστε ότι σε συστήματα εκτός POSIX που περιλαμβάνουν δευτερόλεπτα "
@@ -1997,8 +1997,8 @@ msgid ""
 msgstr ""
 "Κάνει raise την :exc:`OverflowError` αντί για τη :exc:`ValueError` εάν η "
 "χρονική σήμανση είναι εκτός του εύρους τιμών που υποστηρίζονται από τις "
-"συναρτήσεις πλατφόρμας C :c:func:`localtime` ή :c:func:`gmtime`. Κάνει raise "
-"τη :exc:`OSError` αντί για τη :exc:`ValueError` σε περίπτωση σφάλματος των :"
+"συναρτήσεις :c:func:`localtime` ή :c:func:`gmtime` της πλατφόρμας C. Κάνει raise "
+"την :exc:`OSError` αντί για τη :exc:`ValueError` σε περίπτωση σφάλματος των :"
 "c:func:`localtime` ή :c:func:`gmtime`."
 
 #: library/datetime.rst:1020
