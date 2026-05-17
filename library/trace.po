@@ -3,27 +3,28 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2025-07-30 09:47+0300\n"
+"Last-Translator: Maximos Nikiforakis nikiforos@live.co.uk\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: library/trace.rst:2
 msgid ":mod:`!trace` --- Trace or track Python statement execution"
-msgstr ""
+msgstr ":mod:`!trace` --- Ιχνηλάτηση ή παρακολούθηση εκτέλεσης εντολών Python"
 
 #: library/trace.rst:7
 msgid "**Source code:** :source:`Lib/trace.py`"
-msgstr ""
+msgstr "**Source code:** :source:`Lib/trace.py`"
 
 #: library/trace.rst:11
 msgid ""
@@ -32,30 +33,39 @@ msgid ""
 "list functions executed during a program run.  It can be used in another "
 "program or from the command line."
 msgstr ""
+"Το module :mod:`trace` σας επιτρέπει να ιχνηλατήσετε την εκτέλεση ενός "
+"προγράμματος, να παράγετε αρχεία κάλυψης με σημειωμένες δηλώσεις , να "
+"εκτυπώσετε σχέσεις κλήσεων και να αριθμήσετε τις συναρτήσεις που καλούνται "
+"κατά την εκτέλεση ενός προγράμματος. Μπορεί να χρησιμοποιηθεί σε κάποιο "
+"πρόγραμμα ή μέσω της γραμμής εντολών."
 
 #: library/trace.rst:18
 msgid "`Coverage.py <https://coverage.readthedocs.io/>`_"
-msgstr ""
+msgstr "`Coverage.py <https://coverage.readthedocs.io/>`_"
 
 #: library/trace.rst:19
 msgid ""
 "A popular third-party coverage tool that provides HTML output along with "
 "advanced features such as branch coverage."
 msgstr ""
+"Ένα δημοφιλές εργαλείο (διανέμεται από τρίτους) που παράγει αποτελέσματα σε "
+"HTML και διαθέτει ανεπτυγμένες δυνατότητες όπως branch coverage."
 
 #: library/trace.rst:25
 msgid "Command-Line Usage"
-msgstr ""
+msgstr "Οδηγίες χρήσης γραμμής εντολών"
 
 #: library/trace.rst:27
 msgid ""
 "The :mod:`trace` module can be invoked from the command line.  It can be as "
 "simple as ::"
 msgstr ""
+"Το module :mod:`trace` μπορεί να κληθεί και από τη γραμμή εντολών , απλώς ως "
+"εξής ::"
 
 #: library/trace.rst:30
 msgid "python -m trace --count -C . somefile.py ..."
-msgstr ""
+msgstr "python -m trace --count -C . somefile.py ..."
 
 #: library/trace.rst:32
 msgid ""
@@ -63,22 +73,27 @@ msgid ""
 "of all Python modules imported during the execution into the current "
 "directory."
 msgstr ""
+"Το παραπάνω θα εκτελέσει το αρχείο :file:`somefile.py` και θα παράγει μια "
+"σημειωμένη λίστα με όλα τα Python modules που εισήχθησαν κατά την εκτέλεση "
+"στον τρέχων φάκελο."
 
 #: library/trace.rst:39
 msgid "Display usage and exit."
-msgstr ""
+msgstr "Εμφανίζει τις οδηγίες χρήσης και τερματίζει την εκτέλεση."
 
 #: library/trace.rst:43
 msgid "Display the version of the module and exit."
-msgstr ""
+msgstr "Εμφανίζει την έκδοση του module και τερματίζει την εκτέλεση."
 
 #: library/trace.rst:45
 msgid "Added ``--module`` option that allows to run an executable module."
 msgstr ""
+"Προσετέθη η επιλογή ``--module`` που επιτρέπει την εκτέλεση ενός εκτελέσιμου "
+"module."
 
 #: library/trace.rst:49
 msgid "Main options"
-msgstr ""
+msgstr "Κύριες επιλογές"
 
 #: library/trace.rst:51
 msgid ""
@@ -88,6 +103,12 @@ msgid ""
 "`--listfuncs <-l>` is provided, neither :option:`--count <-c>` nor :option:"
 "`--trace <-t>` are accepted, and vice versa."
 msgstr ""
+"Τουλάχιστον μία από τις ακόλουθες επιλογές πρέπει να προσδιορισθεί όταν "
+"καλείται η :mod:`trace`. Η επιλογή :option:`--listfunc <-l>` είναι αμοιβαίως "
+"αποκλειόμενη με την επιλογή :option:`--trace <-t>` και την επιλογή :option:"
+"`--count <-c>`.  Όταν δίνεται η επιλογή :option:`--listfuncs <-l>` δεν "
+"γίνονται αποδεκτές οι επιλογές :option:`--count <-c>` ή :option:`--trace <-"
+"t>` και το αντίστροφο."
 
 #: library/trace.rst:61
 msgid ""
@@ -95,14 +116,18 @@ msgid ""
 "how many times each statement was executed.  See also :option:`--coverdir <-"
 "C>`, :option:`--file <-f>` and :option:`--no-report <-R>` below."
 msgstr ""
+"Κατά την ολοκλήρωση του προγράμματος δημιουργεί ένα σύνολο από σημειωμένα "
+"αρχεία όπου φαίνεται πόσες φορές εκτελέσθηκε κάθε έκφραση. Βλέπε επίσης :"
+"option:`--coverdir <-C>`, :option:`--file <-f>` και :option:`--no-report <-"
+"R>` παρακάτω."
 
 #: library/trace.rst:68
 msgid "Display lines as they are executed."
-msgstr ""
+msgstr "Εμφανίζει τις γραμμές όπως εκτελούνται."
 
 #: library/trace.rst:72
 msgid "Display the functions executed by running the program."
-msgstr ""
+msgstr "Εμφανίζει τις συναρτήσεις που εκτελούνται τρέχοντας το πρόγραμμα."
 
 #: library/trace.rst:76
 msgid ""
@@ -110,38 +135,51 @@ msgid ""
 "`--count <-c>` and :option:`--file <-f>` option.  This does not execute any "
 "code."
 msgstr ""
+"Παράγει μία σημειωμένη λίστα από την πρότερη εκτέλεση ενός προγράμματος που "
+"χρησιμοποίησε την επιλογή :option:`--count<-c>` και :option:`--file <-f>`. "
+"Δεν εκτελείται κάποιος κώδικας με την παρούσα επιλογή."
 
 #: library/trace.rst:82
 msgid "Display the calling relationships exposed by running the program."
 msgstr ""
+"Εμφανίζει τις σχέσεις κλήσεων που δημιουργούνται εκτελώντας το πρόγραμμα."
 
 #: library/trace.rst:85
 msgid "Modifiers"
-msgstr ""
+msgstr "Τροποποιητές"
 
 #: library/trace.rst:91
 msgid ""
 "Name of a file to accumulate counts over several tracing runs.  Should be "
 "used with the :option:`--count <-c>` option."
 msgstr ""
+"Όνομα αρχείου όπου σωρεύονται οι μετρήσεις πολλαπλών ιχνηλατήσεων.  Πρέπει "
+"να χρησιμοποιείται με την επιλογή :option:`--count <-c>`."
 
 #: library/trace.rst:96
 msgid ""
 "Directory where the report files go.  The coverage report for ``package."
 "module`` is written to file :file:`{dir}/{package}/{module}.cover`."
 msgstr ""
+"Κατάλογος όπου αποθηκεύονται τα αρχεία αναφοράς. Η αναφορά κάλυψης (coverage "
+"report) για το ``package.module`` εγγράφεται στο αρχείο :file:`{dir}/"
+"{package}/{module}.cover`."
 
 #: library/trace.rst:101
 msgid ""
 "When generating annotated listings, mark lines which were not executed with "
 "``>>>>>>``."
 msgstr ""
+"Κατά την παραγωγή σημειωμένων λιστών, σημειώνει τις γραμμές που δεν "
+"εκτελέστηκαν με  ``>>>>>>``."
 
 #: library/trace.rst:106
 msgid ""
 "When using :option:`--count <-c>` or :option:`--report <-r>`, write a brief "
 "summary to stdout for each file processed."
 msgstr ""
+"Κατά την χρήση της επιλογής :option:`--count <-c>` ή της επιλογής :option:`--"
+"report <-r>`, γράφει μία σύντομη περίληψη για κάθε αρχείο που επεξεργάζεται."
 
 #: library/trace.rst:111
 msgid ""
@@ -149,36 +187,46 @@ msgid ""
 "several runs with :option:`--count <-c>`, and then produce a single set of "
 "annotated listings at the end."
 msgstr ""
+"Δεν δημιουργεί σημειωμένες λίστες. Αυτή η επιλογή είναι χρήσιμη εάν "
+"σκοπεύετε να κάνετε πολλές εκτελέσεις με την επιλογή :option:`--count <-c>` "
+"και τελικώς δημιουργήσετε ένα ενιαίο σύνολο σημειωμένων λιστών."
 
 #: library/trace.rst:117
 msgid ""
 "Prefix each line with the time since the program started.  Only used while "
 "tracing."
 msgstr ""
+"Προθεμάτιζει κάθε γραμμή με τον χρόνο που παρήλθε από την εκκίνηση του "
+"προγράμματος. Χρησιμοποιείται μόνο κατά την ιχνηλάτηση."
 
 #: library/trace.rst:121
 msgid "Filters"
-msgstr ""
+msgstr "Φίλτρα"
 
 #: library/trace.rst:123
 msgid "These options may be repeated multiple times."
-msgstr ""
+msgstr "Αυτές οι επιλογές μπορούν να επαναληφθούν πολλαπλές φορές."
 
 #: library/trace.rst:129
 msgid ""
 "Ignore each of the given module names and its submodules (if it is a "
 "package).  The argument can be a list of names separated by a comma."
 msgstr ""
+"Αγνόησε κάθε ένα από τα δεδομένα modules και submodules (εάν είναι πακέτο). "
+"Το όρισμα μπορεί να είναι μία λίστα από ονόματα διαχωρισμένα με κόμμα."
 
 #: library/trace.rst:134
 msgid ""
 "Ignore all modules and packages in the named directory and subdirectories. "
 "The argument can be a list of directories separated by :data:`os.pathsep`."
 msgstr ""
+"Αγνοεί όλα τα modules και πακέτα στους δεδομένους φακέλους και υποφακέλους. "
+"Το όρισμα μπορεί να είναι μία λίστα από φάκελους που χωρίζονται με :data:`os."
+"pathsep`."
 
 #: library/trace.rst:140
 msgid "Programmatic Interface"
-msgstr ""
+msgstr "Προγραμματιστική διεπαφή"
 
 #: library/trace.rst:145
 msgid ""
@@ -193,6 +241,18 @@ msgid ""
 "count information.  *timing* enables a timestamp relative to when tracing "
 "was started to be displayed."
 msgstr ""
+"Δημιουργεί ένα αντικείμενο για την ιχνηλάτηση της εκτέλεσης μίας μόνο "
+"εντολής ή έκφρασης. Όλες οι παράμετροι είναι προαιρετικές. Η *count* "
+"επιτρέπει την αρίθμηση των γραμμών. Η *trace* επιτρέπει την ιχνηλάτηση "
+"εκτελέσεων ανά γραμμή. Η *countfuncs* επιτρέπει την αρίθμηση των συναρτήσεων "
+"που εκλήθησαν κατά την εκτέλεση. Η *countcallers* επιτρέπει την ιχνηλάτηση "
+"συσχετισμένων κλήσεων. Η *ignoremods* είναι μία λίστα με modules ή πακέτα "
+"προς παράβλεψη. Η *ignoredirs* είναι μία λίστα φακέλων με προς παράβλεψη "
+"modules ή πακέτα. Η *infile* είναι το όνομα του αρχείου εκ του οποίου θα "
+"ληφθούν αποθηκευμένα αποτελέσματα ιχνηλατήσεων. Η *outfile* είναι το όνομα "
+"του αρχείου εις το οποίο θα εγγραφούν τα νεώτερα αποτελέσματα ιχνηλάτησης. Η "
+"*timing* ενεργοποιεί μία χρονοσφραγίδα σχετική με την έναρξη της εμφάνισης "
+"ιχνηλάτησης."
 
 #: library/trace.rst:158
 msgid ""
@@ -200,6 +260,9 @@ msgid ""
 "current tracing parameters.  *cmd* must be a string or code object, suitable "
 "for passing into :func:`exec`."
 msgstr ""
+"Εκτελεί την εντολή και συλλέγει στατιστικά από την εκτέλεση με τις τρέχουσες "
+"επιλογές ιχνηλάτησης. Η *cmd* πρέπει να είναι μία συμβολοσειρά ή αντικείμενο "
+"κώδικα, κατάλληλο για διαβίβαση στην συνάρτηση :func:`exec`."
 
 #: library/trace.rst:164
 msgid ""
@@ -207,12 +270,17 @@ msgid ""
 "current tracing parameters, in the defined global and local environments.  "
 "If not defined, *globals* and *locals* default to empty dictionaries."
 msgstr ""
+"Εκτελεί την εντολή και συλλέγει στατιστικά από την εκτέλεση με τις τρέχουσες "
+"επιλογές ιχνηλάτησης, στο ορισμένο καθολικό και τοπικό περιβάλλον. Εάν δεν "
+"ορισθούν, οι *globals* και *locals* λαμβάνουν την τιμή κενού dictionary."
 
 #: library/trace.rst:171
 msgid ""
 "Call *func* with the given arguments under control of the :class:`Trace` "
 "object with the current tracing parameters."
 msgstr ""
+"Καλεί την *func* με τα δεδομένα ορίσματα υπό τον έλεγχο του αντικειμένου :"
+"class:`Trace` με τις τρέχουσες επιλογές ιχνηλάτησης."
 
 #: library/trace.rst:176
 msgid ""
@@ -220,16 +288,23 @@ msgid ""
 "results of all previous calls to ``run``, ``runctx`` and ``runfunc`` for the "
 "given :class:`Trace` instance.  Does not reset the accumulated trace results."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο :class:`CoverageResults` που περιέχει τα "
+"σωρευτικά αποτελέσματα όλων των προηγούμενων κλήσεων στις ``run``, "
+"``runctx`` και ``runfunc`` για το δοθέν :class:`Trace` στιγμιότυπο. Δεν "
+"επαναφέρει τα συσσωρευμένα αποτελέσματα ιχνηλατήσεων."
 
 #: library/trace.rst:183
 msgid ""
 "A container for coverage results, created by :meth:`Trace.results`.  Should "
 "not be created directly by the user."
 msgstr ""
+"Ένας περιέκτης για αποτελέσματα κάλυψης (coverage results), που "
+"δημιουργείται από τη :meth:`Trace.results`. Δεν πρέπει να δημιουργείται "
+"απευθείας από τον χρήστη."
 
 #: library/trace.rst:188
 msgid "Merge in data from another :class:`CoverageResults` object."
-msgstr ""
+msgstr "Συγχωνεύει δεδομένα από ένα άλλο αντικείμενο :class:`CoverageResults`."
 
 #: library/trace.rst:193
 msgid ""
@@ -239,6 +314,12 @@ msgid ""
 "be output.  If ``None``, the results for each source file are placed in its "
 "directory."
 msgstr ""
+"Γράφει τα αποτελέσματα κάλυψης. Ορίστε την *show_missing* για να "
+"εμφανίζονται οι γραμμές που δεν εκτελέσθηκαν. Ορίστε την *summary* ώστε να "
+"συμπεριληφθεί στο αποτέλεσμα η περίληψη κάλυψης ανά module. Η *coverdir* "
+"προσδιορίζει τον φάκελο εις τον οποίο θα εγγραφούν τα αρχεία με τα "
+"αποτελέσματα. Εάν είναι ``None`` τα αποτελέσματα για κάθε αρχείο εγγράφονται "
+"στον φάκελο του αρχείου αυτού."
 
 #: library/trace.rst:199
 msgid ""
@@ -246,14 +327,18 @@ msgid ""
 "longer exist are silently ignored. Otherwise, a missing file will raise a :"
 "exc:`FileNotFoundError`."
 msgstr ""
+"Εάν η *ignore_missing_files* είναι ``True``, η κάλυψη για μη υπάρχοντα "
+"αρχεία  αγνοείται σιωπηρά. Ειδαλλιώς, ένα μη υπάρχον αρχείο θα εγείρει :exc:"
+"`FileNotFoundError`."
 
 #: library/trace.rst:203
 msgid "Added *ignore_missing_files* parameter."
-msgstr ""
+msgstr "Προστέθηκε η παράμετρος *ignore_missing_files*."
 
 #: library/trace.rst:206
 msgid "A simple example demonstrating the use of the programmatic interface::"
 msgstr ""
+"Ένα απλό παράδειγμα που υποδεικνύει τη χρήση της προγραμματιστικής διεπαφής::"
 
 #: library/trace.rst:208
 msgid ""
@@ -274,3 +359,19 @@ msgid ""
 "r = tracer.results()\n"
 "r.write_results(show_missing=True, coverdir=\".\")"
 msgstr ""
+"import sys\n"
+"import trace\n"
+"\n"
+"# δημιούργησε ένα αντικείμενο Trace λέγοντάς του τι να αγνοήσει και\n"
+"# εάν θα κάνει ιχνηλάτηση, αρίθμηση γραμμών ή και τα δύο.\n"
+"tracer = trace.Trace(\n"
+"    ignoredirs=[sys.prefix, sys.exec_prefix],\n"
+"    trace=0,\n"
+"    count=1)\n"
+"\n"
+"# τρέξε τη νέα εντολή χρησιμοποιώντας τον δεδομένο ιχνηλάτη\n"
+"tracer.run('main()')\n"
+"\n"
+"# φτιάξε μια αναφορά τοποθετώντας το αποτέλεσμα στον τρέχων φάκελο\n"
+"r = tracer.results()\n"
+"r.write_results(show_missing=True, coverdir=\".\")"

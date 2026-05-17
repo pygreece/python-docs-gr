@@ -50,7 +50,7 @@ cd python-docs-el/
 4. Προσθέστε το επίσημο repository ως upstream:
 
 ```bash
-git remote add upstream git@github.com:pygreece/python-docs-el.git
+git remote add upstream git@github.com:python/python-docs-el.git
 ```
 
 5. Προσθέστε το κατάλληλο URL για το upstream repository σας:
@@ -93,13 +93,13 @@ pip install -r requirements.txt
 
 ### Συνεισφορά
 
-Έχουμε [μια λίστα με issues στο GitHub](https://github.com/pygreece/python-docs-el/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation) όπου συντονίζουμε τη δουλειά που γίνεται ή που πρέπει να γίνει ώστε να γίνεται διαχωρισμός αρμοδιοτήτων και διαχείριση της δουλειάς και των απαιτούμενων ενεργειών.
+Έχουμε [μια λίστα με issues στο GitHub](https://github.com/python/python-docs-el/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation) όπου συντονίζουμε τη δουλειά που γίνεται ή που πρέπει να γίνει ώστε να γίνεται διαχωρισμός αρμοδιοτήτων και διαχείριση της δουλειάς και των απαιτούμενων ενεργειών.
 
 Οι τρόποι συνεισφοράς στο έργο είναι δύο:
 
 ### Μετάφραση Αρχείου
 
-Μπορείτε να συνεισφέρετε στη μετάφραση ενός αρχείου από αυτά που θα βρείτε στα [issues](https://github.com/pygreece/python-docs-el/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation).
+Μπορείτε να συνεισφέρετε στη μετάφραση ενός αρχείου από αυτά που θα βρείτε στα [issues](https://github.com/python/python-docs-el/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation).
 
 Η διαδικασία μετάφρασης ενός αρχείου είναι η εξής:
 
@@ -113,15 +113,15 @@ pip install -r requirements.txt
 
 Τα **Issues** είναι χωρισμένα σε milestones:
 
-To milestone που μπορείτε να συνεισφέρετε είναι το [translate_3.12_additional](https://github.com/pygreece/python-docs-el/milestone/3). Άμα είναι η πρώτη σας φορά σε αυτό το έργο ή γενικότερα σε έργο ανοιχτού κώδικα είναι προτιμότερο να αναλάβετε ένα **Issue** με **label** [_good first issue_](https://github.com/pygreece/python-docs-el/labels/good%20first%20issue).
+To milestone που μπορείτε να συνεισφέρετε είναι το [translate_3.12_additional](https://github.com/python/python-docs-el/milestone/3). Άν είναι η πρώτη σας φορά σε αυτό το έργο ή γενικότερα σε έργο ανοιχτού κώδικα είναι προτιμότερο να αναλάβετε ένα **Issue** με **label** [_good first issue_](https://github.com/python/python-docs-el/labels/good%20first%20issue).
 
 Επίσης, για διευκόλυνση, έχουμε κάνει μια κατηγοριοποίηση των **Issues** με βάση το μέγεθος (γραμμές κώδικα προς μετάφραση). Πιο αναλυτικά:
 
-- [small](https://github.com/pygreece/python-docs-el/labels/small) για αρχεία με λιγότερες από _200_ γραμμές
-- [medium](https://github.com/pygreece/python-docs-el/labels/medium) για αρχεία με λιγότερες από _500_ γραμμές
-- [large](https://github.com/pygreece/python-docs-el/labels/large) για αρχεία με λιγότερες από _1000_ γραμμές
-- [xlarge](https://github.com/pygreece/python-docs-el/labels/xlarge) για αρχεία με λιγότερες από _2500_ γραμμές
-- [god](https://github.com/pygreece/python-docs-el/labels/small) (για τους τολμηρούς) για αρχεία με περισσότερες από _2500_ γραμμές
+- [small](https://github.com/python/python-docs-el/labels/small) για αρχεία με λιγότερες από _200_ γραμμές
+- [medium](https://github.com/python/python-docs-el/labels/medium) για αρχεία με λιγότερες από _500_ γραμμές
+- [large](https://github.com/python/python-docs-el/labels/large) για αρχεία με λιγότερες από _1000_ γραμμές
+- [xlarge](https://github.com/python/python-docs-el/labels/xlarge) για αρχεία με λιγότερες από _2500_ γραμμές
+- [god](https://github.com/python/python-docs-el/labels/small) (για τους τολμηρούς) για αρχεία με περισσότερες από _2500_ γραμμές
 
 ### Αξιολόγηση Μετάφρασης
 
@@ -200,6 +200,14 @@ git push origin translate-library-ast
 ## Εργαλεία Ελέγχου & Προεπισκόπηση Αλλαγών [Προαιρετικό]
 
 Εφόσον έχετε ολοκληρώσει τη μετάφρασή σας ενδείκνυται να χρησιμοποιήσετε την παρακάτω εντολή προκειμένου να γίνει μορφοποίηση του αρχείου για να έχει μια σωστή δομή καθώς και να γίνει ορθογραφικός έλεγχος.
+
+Για να λειτουργήσει ο ορθογραφικός έλεγχος, θα πρέπει να έχετε εγκατεστημένο το `hunspell` για τα Ελληνικά. Σε συστήματα που βασίζονται σε Debian/Ubuntu, μπορείτε να το εγκαταστήσετε με την παρακάτω εντολή:
+
+```bash
+sudo apt install hunspell hunspell-el
+```
+
+Μετά την εγκατάσταση, μπορείτε να εκτελέσετε:
 
 ```bash
 make lint

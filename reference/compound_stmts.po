@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2026-03-07 00:50+0200\n"
+"Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: reference/compound_stmts.rst:5
 msgid "Compound statements"
-msgstr ""
+msgstr "Σύνθετες εντολές"
 
 #: reference/compound_stmts.rst:9
 msgid ""
@@ -28,6 +28,10 @@ msgid ""
 "compound statements span multiple lines, although in simple incarnations a "
 "whole compound statement may be contained in one line."
 msgstr ""
+"Οι σύνθετες εντολές περιέχουν (ομάδες από) άλλες εντολές· επηρεάζουν ή "
+"ελέγχουν την εκτέλεση αυτών των άλλων εντολών με κάποιο τρόπο. Γενικά, οι "
+"σύνθετες εντολές εκτείνονται σε πολλαπλές γραμμές, αν και σε απλές μορφές "
+"μια ολόκληρη σύνθετη δήλωση μπορεί να περιέχεται σε μία γραμμή."
 
 #: reference/compound_stmts.rst:14
 msgid ""
@@ -38,6 +42,12 @@ msgid ""
 "code around a block of code.  Function and class definitions are also "
 "syntactically compound statements."
 msgstr ""
+"Οι εντολές :keyword:`if`, :keyword:`while` και :keyword:`for` υλοποιούν "
+"παραδοσιακές δομές ροής ελέγχου. Η :keyword:`try` καθορίζει χειριστές "
+"εξαιρέσεων ή/και κώδικα εκκαθάρισης για μια ομάδα εντολών, ενώ η δήλωση :"
+"keyword:`with` επιτρέπει την εκτέλεση κώδικα αρχικοποίησης και "
+"οριστικοποίησης γύρω από ένα μπλοκ κώδικα. Οι ορισμοί συναρτήσεων και "
+"κλάσεων είναι επίσης συντακτικά σύνθετες εντολές."
 
 #: reference/compound_stmts.rst:26
 msgid ""
@@ -53,10 +63,22 @@ msgid ""
 "clear to which :keyword:`if` clause a following :keyword:`else` clause would "
 "belong::"
 msgstr ""
+"Μια σύνθετη δήλωση αποτελείται από μία ή περισσότερες ‘ρήτρες’. Μία ρήτρα "
+"αποτελείται από μια κεφαλίδα και μία ‘σουίτα’. Οι κεφαλίδες των ρητρών μιας "
+"συγκεκριμένης σύνθετης εντολής βρίσκονται όλες στο ίδιο επίπεδο εσοχής. Κάθε "
+"κεφαλίδα της ρήτρας ξεκινά με μια μοναδική λέξη-κλειδί αναγνώρισης και "
+"καταλήγει σε άνω και κάτω τελεία. Μία σουίτα είναι μια ομάδα εντολών που "
+"ελέγχονται από μία ρήτρα. Μία σουίτα μπορεί να είναι μία ή περισσότερες "
+"απλές εντολές χωρισμένες με ερωτηματικό στην ίδια γραμμή με την κεφαλίδα, "
+"ακολουθώντας την άνω και κάτω τελεία της κεφαλίδας, ή μπορεί να είναι μία ή "
+"περισσότερες εντολές με εσοχή σε επόμενες γραμμές. Μόνο η δεύτερη μορφή μιας "
+"σουίτας μπορεί να περιέχει εμφωλευμένες σύνθετες εντολές· το ακόλουθο δεν "
+"είναι έγκυρο, κυρίως επειδή δεν θα ήταν σαφές σε ποια ρήτρα :keyword:`if` θα "
+"ανήκε μία ακόλουθη ρήτρα :keyword:`else`::"
 
 #: reference/compound_stmts.rst:37
 msgid "if test1: if test2: print(x)"
-msgstr ""
+msgstr "if test1: if test2: print(x)"
 
 #: reference/compound_stmts.rst:39
 msgid ""
@@ -64,14 +86,17 @@ msgid ""
 "so that in the following example, either all or none of the :func:`print` "
 "calls are executed::"
 msgstr ""
+"Σημειώστε επίσης ότι το ερωτηματικό έχει ισχυρότερη προτεραιότητα από την "
+"άνω και κάτω τελεία σε αυτό το πλαίσιο, οπότε στο ακόλουθο παράδειγμα, "
+"εκτελούνται είτε όλες είτε καμία από τις κλήσεις της :func:`print`::"
 
 #: reference/compound_stmts.rst:43
 msgid "if x < y < z: print(x); print(y); print(z)"
-msgstr ""
+msgstr "if x < y < z: print(x); print(y); print(z)"
 
 #: reference/compound_stmts.rst:45
 msgid "Summarizing:"
-msgstr ""
+msgstr "Συνοψίζοντας:"
 
 #: reference/compound_stmts.rst:69
 msgid ""
@@ -81,20 +106,28 @@ msgid ""
 "'dangling :keyword:`else`' problem is solved in Python by requiring nested :"
 "keyword:`if` statements to be indented)."
 msgstr ""
+"Σημειώστε ότι οι εντολές τελειώνουν πάντα με ένα ``NEWLINE`` πιθανώς "
+"ακολουθούμενο από ένα ``DEDENT``. Σημειώστε επίσης ότι οι προαιρετικές "
+"ρήτρες συνέχειας ξεκινούν πάντα με μια λέξη-κλειδί που δεν μπορεί να "
+"ξεκινήσει μια δήλωση, επομένως δεν υπάρχουν ασάφειες (το πρόβλημα του "
+"'εκκρεμούς :keyword:`else`' λύνεται στην Python απαιτώντας οι εμφωλευμένες "
+"εντολές :keyword:`if` να έχουν εσοχή)."
 
 #: reference/compound_stmts.rst:75
 msgid ""
 "The formatting of the grammar rules in the following sections places each "
 "clause on a separate line for clarity."
 msgstr ""
+"Η μορφοποίηση των γραμματικών κανόνων στις ακόλουθες ενότητες τοποθετεί κάθε "
+"ρήτρα σε ξεχωριστή γραμμή για λόγους σαφήνειας."
 
 #: reference/compound_stmts.rst:84
 msgid "The :keyword:`!if` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!if`"
 
 #: reference/compound_stmts.rst:92
 msgid "The :keyword:`if` statement is used for conditional execution:"
-msgstr ""
+msgstr "Η δήλωση :keyword:`if` χρησιμοποιείται για εκτέλεση υπό συνθήκη:"
 
 #: reference/compound_stmts.rst:99
 msgid ""
@@ -105,16 +138,24 @@ msgid ""
 "expressions are false, the suite of the :keyword:`else` clause, if present, "
 "is executed."
 msgstr ""
+"Επιλέγει ακριβώς μία από τις σουίτες αξιολογώντας τις εκφράσεις μία προς μία "
+"μέχρι να βρεθεί μία που να είναι αληθής (δείτε την ενότητα :ref:`booleans` "
+"για τον ορισμό του αληθούς και του ψευδούς)· στη συνέχεια εκτελείται αυτή η "
+"σουίτα (και κανένα άλλο μέρος της εντολής :keyword:`if` δεν εκτελείται ή "
+"αξιολογείται). Εάν όλες οι εκφράσεις είναι ψευδείς, εκτελείται η σουίτα της "
+"ρήτρας :keyword:`else`, εάν υπάρχει."
 
 #: reference/compound_stmts.rst:109
 msgid "The :keyword:`!while` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!while`"
 
 #: reference/compound_stmts.rst:117
 msgid ""
 "The :keyword:`while` statement is used for repeated execution as long as an "
 "expression is true:"
 msgstr ""
+"Η δήλωση :keyword:`while` χρησιμοποιείται για επαναλαμβανόμενη εκτέλεση "
+"εφόσον μια έκφραση είναι αληθής:"
 
 #: reference/compound_stmts.rst:124
 msgid ""
@@ -123,6 +164,10 @@ msgid ""
 "the suite of the :keyword:`!else` clause, if present, is executed and the "
 "loop terminates."
 msgstr ""
+"Ελέγχει επανειλημμένα την έκφραση και, εάν είναι αληθής, εκτελεί την πρώτη "
+"σουίτα· εάν η έκφραση είναι ψευδής (το οποίο μπορεί να συμβεί την πρώτη φορά "
+"που ελέγχεται) εκτελείται η σουίτα της ρήτρας :keyword:`!else`, εάν υπάρχει, "
+"και ο βρόχος τερματίζεται."
 
 #: reference/compound_stmts.rst:133
 msgid ""
@@ -131,16 +176,23 @@ msgid ""
 "`continue` statement executed in the first suite skips the rest of the suite "
 "and goes back to testing the expression."
 msgstr ""
+"Μια δήλωση :keyword:`break` που εκτελείται στην πρώτη σουίτα τερματίζει τον "
+"βρόχο χωρίς να εκτελέσει τη σουίτα της ρήτρας :keyword:`!else`. Μια δήλωση :"
+"keyword:`continue` που εκτελείται στην πρώτη σουίτα παραλείπει το υπόλοιπο "
+"της σουίτας και επιστρέφει στον έλεγχο της έκφρασης."
 
 #: reference/compound_stmts.rst:142
 msgid "The :keyword:`!for` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!for`"
 
 #: reference/compound_stmts.rst:153
 msgid ""
 "The :keyword:`for` statement is used to iterate over the elements of a "
 "sequence (such as a string, tuple or list) or other iterable object:"
 msgstr ""
+"Η δήλωση :keyword:`for` χρησιμοποιείται για την επανάληψη στα στοιχεία μιας "
+"ακολουθίας (όπως ένα αλφαριθμητικό, μία πλειάδα ή μία λίστα) ή άλλου "
+"iterable αντικειμένου:"
 
 #: reference/compound_stmts.rst:160
 msgid ""
@@ -152,6 +204,15 @@ msgid ""
 "provided by the iterator. When the iterator is exhausted, the suite in the :"
 "keyword:`!else` clause, if present, is executed, and the loop terminates."
 msgstr ""
+"Η έκφραση :token:`~python-grammar:starred_expression_list` αξιολογείται μία "
+"φορά· θα πρέπει να αποφέρει ένα αντικείμενο :term:`iterable`. Ένας :term:"
+"`iterator` δημιουργείται για αυτό το iterable. Το πρώτο στοιχείο που "
+"παρέχεται από τον iterator ανατίθεται στη συνέχεια στη λίστα-στόχο "
+"χρησιμοποιώντας τους τυπικούς κανόνες για αναθέσεις (δείτε το :ref:"
+"`assignment`), και η σουίτα εκτελείται. Αυτό επαναλαμβάνεται για κάθε "
+"στοιχείο που παρέχεται από τον iterator. Όταν ο iterator εξαντληθεί, "
+"εκτελείται η σουίτα στη ρήτρα :keyword:`!else`, εάν υπάρχει, και ο βρόχος "
+"τερματίζεται."
 
 #: reference/compound_stmts.rst:173
 msgid ""
@@ -161,6 +222,11 @@ msgid ""
 "and continues with the next item, or with the :keyword:`!else` clause if "
 "there is no next item."
 msgstr ""
+"Μια δήλωση :keyword:`break` που εκτελείται στην πρώτη σουίτα τερματίζει τον "
+"βρόχο χωρίς να εκτελέσει τη σουίτα της ρήτρας :keyword:`!else`. Μια δήλωση :"
+"keyword:`continue` που εκτελείται στην πρώτη σουίτα παραλείπει το υπόλοιπο "
+"της σουίτας και συνεχίζει με το επόμενο στοιχείο, ή με τη ρήτρα :keyword:`!"
+"else` εάν δεν υπάρχει επόμενο στοιχείο."
 
 #: reference/compound_stmts.rst:179
 msgid ""
@@ -168,6 +234,9 @@ msgid ""
 "overwrites all previous assignments to those variables including those made "
 "in the suite of the for-loop::"
 msgstr ""
+"Ο βρόχος for κάνει αναθέσεις στις μεταβλητές της λίστας στόχου. Αυτό "
+"αντικαθιστά όλες τις προηγούμενες αναθέσεις σε αυτές τις μεταβλητές "
+"συμπεριλαμβανομένων αυτών που έγιναν στη σουίτα του βρόχου for::"
 
 #: reference/compound_stmts.rst:183
 msgid ""
@@ -177,6 +246,11 @@ msgid ""
 "                      # because i will be overwritten with the next\n"
 "                      # index in the range"
 msgstr ""
+"for i in range(10):\n"
+"    print(i)\n"
+"    i = 5             # this will not affect the for-loop\n"
+"                      # because i will be overwritten with the next\n"
+"                      # index in the range"
 
 #: reference/compound_stmts.rst:193
 msgid ""
@@ -186,20 +260,27 @@ msgid ""
 "sequences of integers. For instance, iterating ``range(3)`` successively "
 "yields 0, 1, and then 2."
 msgstr ""
+"Τα ονόματα στη λίστα-στόχο δεν διαγράφονται όταν τελειώσει ο βρόχος, αλλά "
+"εάν η ακολουθία είναι κενή, δεν θα τους έχει γίνει καμία ανάθεση από τον "
+"βρόχο. Υπόδειξη: ο ενσωματωμένος τύπος :func:`range` αναπαριστά αμετάβλητες "
+"αριθμητικές ακολουθίες ακεραίων. Για παράδειγμα, η επανάληψη του "
+"``range(3)`` διαδοχικά αποφέρει 0, 1, και έπειτα 2."
 
 #: reference/compound_stmts.rst:198
 msgid "Starred elements are now allowed in the expression list."
-msgstr ""
+msgstr "Τα στοιχεία με αστερίσκο επιτρέπονται πλέον στη λίστα εκφράσεων."
 
 #: reference/compound_stmts.rst:205
 msgid "The :keyword:`!try` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!try`"
 
 #: reference/compound_stmts.rst:215
 msgid ""
 "The :keyword:`!try` statement specifies exception handlers and/or cleanup "
 "code for a group of statements:"
 msgstr ""
+"Η δήλωση :keyword:`!try` καθορίζει χειριστές εξαιρέσεων ή/και κώδικα "
+"εκκαθάρισης για μια ομάδα εντολών:"
 
 #: reference/compound_stmts.rst:231
 msgid ""
@@ -207,16 +288,22 @@ msgid ""
 "`exceptions`, and information on using the :keyword:`raise` statement to "
 "generate exceptions may be found in section :ref:`raise`."
 msgstr ""
+"Πρόσθετες πληροφορίες σχετικά με τις εξαιρέσεις μπορούν να βρεθούν στην "
+"ενότητα :ref:`exceptions`, και πληροφορίες σχετικά με τη χρήση της εντολής :"
+"keyword:`raise` για τη δημιουργία εξαιρέσεων μπορούν να βρεθούν στην "
+"ενότητα :ref:`raise`."
 
 #: reference/compound_stmts.rst:235
 msgid ""
 "Support for optionally dropping grouping parentheses when using multiple "
 "exception types. See :pep:`758`."
 msgstr ""
+"Υποστήριξη για προαιρετική αφαίρεση των παρενθέσεων ομαδοποίησης όταν "
+"χρησιμοποιούνται πολλαπλοί τύποι εξαιρέσεων. Δείτε το :pep:`758`."
 
 #: reference/compound_stmts.rst:241
 msgid ":keyword:`!except` clause"
-msgstr ""
+msgstr "ρήτρα :keyword:`!except`"
 
 #: reference/compound_stmts.rst:243
 msgid ""
@@ -228,6 +315,14 @@ msgid ""
 "expression-less :keyword:`!except` clause, if present, must be last; it "
 "matches any exception."
 msgstr ""
+"Οι ρήτρες :keyword:`!except` καθορίζουν έναν ή περισσότερους χειριστές "
+"εξαιρέσεων. Όταν δεν προκύπτει καμία εξαίρεση στη ρήτρα :keyword:`try`, "
+"κανένας χειριστής εξαίρεσης δεν εκτελείται. Όταν προκύψει μια εξαίρεση στη "
+"σουίτα του :keyword:`!try`, ξεκινά μια αναζήτηση για χειριστή εξαίρεσης. "
+"Αυτή η αναζήτηση εξετάζει τις ρήτρες :keyword:`!except` με τη σειρά μέχρι να "
+"βρεθεί μία που ταιριάζει με την εξαίρεση. Μία ρήτρα :keyword:`!except` χωρίς "
+"έκφραση, εάν υπάρχει, πρέπει να είναι τελευταία· ταιριάζει με οποιαδήποτε "
+"εξαίρεση."
 
 #: reference/compound_stmts.rst:251
 msgid ""
@@ -239,6 +334,14 @@ msgid ""
 "<abstract base class>` of the exception object, or to a tuple that contains "
 "such a class."
 msgstr ""
+"Για μία ρήτρα :keyword:`!except` με μια έκφραση, η έκφραση πρέπει να "
+"αξιολογείται σε έναν τύπο εξαίρεσης ή σε μία πλειάδα τύπων εξαιρέσεων. Οι "
+"παρενθέσεις μπορούν να παραλειφθούν εάν παρέχονται πολλαπλοί τύποι "
+"εξαιρέσεων και η ρήτρα ``as`` δεν χρησιμοποιείται. Η εξαίρεση που έγινε "
+"raise ταιριάζει με μία ρήτρα :keyword:`!except` του οποίου η έκφραση "
+"αξιολογείται στην κλάση ή σε μια :term:`μη εικονική βασική κλάση <abstract "
+"base class>` του αντικειμένου εξαίρεσης, ή σε μία πλειάδα που περιέχει μια "
+"τέτοια κλάση."
 
 #: reference/compound_stmts.rst:258
 msgid ""
@@ -246,6 +349,9 @@ msgid ""
 "exception handler continues in the surrounding code and on the invocation "
 "stack.  [#]_"
 msgstr ""
+"Εάν καμία ρήτρα :keyword:`!except` δεν ταιριάζει με την εξαίρεση, η "
+"αναζήτηση για έναν χειριστή εξαίρεσης συνεχίζεται στον περιβάλλοντα κώδικα "
+"και στη στοίβα κλήσεων.  [#]_"
 
 #: reference/compound_stmts.rst:262
 msgid ""
@@ -255,6 +361,11 @@ msgid ""
 "call stack (it is treated as if the entire :keyword:`try` statement raised "
 "the exception)."
 msgstr ""
+"Εάν η αξιολόγηση μιας έκφρασης στην κεφαλίδα μιας ρήτρας :keyword:`!except` "
+"κάνει raise μια εξαίρεση, η αρχική αναζήτηση για χειριστή ακυρώνεται και μια "
+"αναζήτηση ξεκινά για τη νέα εξαίρεση στον περιβάλλοντα κώδικα και στη στοίβα "
+"κλήσεων (αντιμετωπίζεται σαν να έκανε raise την εξαίρεση ολόκληρη η δήλωση :"
+"keyword:`try`)."
 
 #: reference/compound_stmts.rst:270
 msgid ""
@@ -268,22 +379,35 @@ msgid ""
 "keyword:`!try` clause of the inner handler, the outer handler will not "
 "handle the exception.)"
 msgstr ""
+"Όταν βρεθεί μία ρήτρα :keyword:`!except` που να ταιριάζει, η εξαίρεση "
+"ανατίθεται στον στόχο που καθορίζεται μετά τη λέξη-κλειδί :keyword:`!as` σε "
+"αυτή τη ρήτρα :keyword:`!except`, εάν υπάρχει, και η σουίτα της ρήτρας :"
+"keyword:`!except` εκτελείται. Όλες οι ρήτρες :keyword:`!except` πρέπει να "
+"έχουν ένα εκτελέσιμο μπλοκ. Όταν επιτευχθεί το τέλος αυτού του μπλοκ, η "
+"εκτέλεση συνεχίζεται κανονικά μετά από ολόκληρη την δήλωση :keyword:`try`. "
+"(Αυτό σημαίνει ότι εάν υπάρχουν δύο εμφωλευμένοι χειριστές για την ίδια "
+"εξαίρεση, και η εξαίρεση συμβεί στη ρήτρα :keyword:`!try` του εσωτερικού "
+"χειριστή, ο εξωτερικός χειριστής δεν θα χειριστεί την εξαίρεση.)"
 
 #: reference/compound_stmts.rst:281
 msgid ""
 "When an exception has been assigned using ``as target``, it is cleared at "
 "the end of the :keyword:`!except` clause.  This is as if ::"
 msgstr ""
+"Όταν μια εξαίρεση έχει ανατεθεί χρησιμοποιώντας το ``as target``, "
+"καθαρίζεται στο τέλος της ρήτρας :keyword:`!except`. Αυτό είναι σαν το ::"
 
 #: reference/compound_stmts.rst:284
 msgid ""
 "except E as N:\n"
 "    foo"
 msgstr ""
+"except E as N:\n"
+"    foo"
 
 #: reference/compound_stmts.rst:287
 msgid "was translated to ::"
-msgstr ""
+msgstr "να είχε μεταφραστεί σε ::"
 
 #: reference/compound_stmts.rst:289
 msgid ""
@@ -293,6 +417,11 @@ msgid ""
 "    finally:\n"
 "        del N"
 msgstr ""
+"except E as N:\n"
+"    try:\n"
+"        foo\n"
+"    finally:\n"
+"        del N"
 
 #: reference/compound_stmts.rst:295
 msgid ""
@@ -302,6 +431,12 @@ msgid ""
 "with the stack frame, keeping all locals in that frame alive until the next "
 "garbage collection occurs."
 msgstr ""
+"Αυτό σημαίνει ότι η εξαίρεση πρέπει να ανατεθεί σε διαφορετικό όνομα για να "
+"μπορείτε να αναφερθείτε σε αυτήν μετά τη ρήτρα :keyword:`!except`. Οι "
+"εξαιρέσεις καθαρίζονται επειδή με την ανίχνευση επισυναπτόμενη σε αυτές, "
+"σχηματίζουν έναν κύκλο αναφοράς με το πλαίσιο στοίβας, διατηρώντας όλες τις "
+"τοπικές μεταβλητές σε αυτό το πλαίσιο ζωντανές μέχρι να συμβεί η επόμενη "
+"συλλογή απορριμμάτων."
 
 #: reference/compound_stmts.rst:305
 msgid ""
@@ -311,6 +446,11 @@ msgid ""
 "leaving an exception handler, the exception stored in the :mod:`sys` module "
 "is reset to its previous value::"
 msgstr ""
+"Πριν εκτελεστεί η σουίτα μιας ρήτρας :keyword:`!except`, η εξαίρεση "
+"αποθηκεύεται στο module :mod:`sys`, όπου είναι προσβάσιμη μέσα από το σώμα "
+"της ρήτρας :keyword:`!except` καλώντας την :func:`sys.exception`. Όταν "
+"κλείνει ένας χειριστής εξαίρεσης, η εξαίρεση που αποθηκεύτηκε στο module :"
+"mod:`sys` επαναφέρεται στην προηγούμενη τιμή της::"
 
 #: reference/compound_stmts.rst:311
 msgid ""
@@ -332,25 +472,87 @@ msgid ""
 ">>> print(sys.exception())\n"
 "None"
 msgstr ""
+">>> print(sys.exception())\n"
+"None\n"
+">>> try:\n"
+"...     raise TypeError\n"
+"... except:\n"
+"...     print(repr(sys.exception()))\n"
+"...     try:\n"
+"...          raise ValueError\n"
+"...     except:\n"
+"...         print(repr(sys.exception()))\n"
+"...     print(repr(sys.exception()))\n"
+"...\n"
+"TypeError()\n"
+"ValueError()\n"
+"TypeError()\n"
+">>> print(sys.exception())\n"
+"None"
 
 #: reference/compound_stmts.rst:336
 msgid ":keyword:`!except*` clause"
-msgstr ""
+msgstr "ρήτρα :keyword:`!except*`"
 
 #: reference/compound_stmts.rst:338
 msgid ""
-"The :keyword:`!except*` clause(s) are used for handling :exc:"
-"`ExceptionGroup`\\s. The exception type for matching is interpreted as in "
-"the case of :keyword:`except`, but in the case of exception groups we can "
-"have partial matches when the type matches some of the exceptions in the "
-"group. This means that multiple :keyword:`!except*` clauses can execute, "
-"each handling part of the exception group. Each clause executes at most once "
-"and handles an exception group of all matching exceptions.  Each exception "
-"in the group is handled by at most one :keyword:`!except*` clause, the first "
-"that matches it. ::"
+"The :keyword:`!except*` clause(s) specify one or more handlers for groups of "
+"exceptions (:exc:`BaseExceptionGroup` instances). A :keyword:`try` statement "
+"can have either :keyword:`except` or :keyword:`!except*` clauses, but not "
+"both. The exception type for matching is mandatory in the case of :keyword:`!"
+"except*`, so ``except*:`` is a syntax error. The type is interpreted as in "
+"the case of :keyword:`!except`, but matching is performed on the exceptions "
+"contained in the group that is being handled. An :exc:`TypeError` is raised "
+"if a matching type is a subclass of :exc:`!BaseExceptionGroup`, because that "
+"would have ambiguous semantics."
 msgstr ""
+"Οι ρήτρες :keyword:`!except*` καθορίζουν έναν ή περισσότερους χειριστές για "
+"ομάδες εξαιρέσεων (στιγμιότυπα της :exc:`BaseExceptionGroup`). Μια δήλωση :"
+"keyword:`try` μπορεί να έχει είτε ρήτρες :keyword:`except` είτε ρήτρες :"
+"keyword:`!except*`, αλλά όχι και τα δύο. Ο τύπος εξαίρεσης για το ταίριασμα "
+"είναι υποχρεωτικός στην περίπτωση του :keyword:`!except*`, επομένως το "
+"``except*:`` είναι συντακτικό σφάλμα. Ο τύπος ερμηνεύεται όπως και στην "
+"περίπτωση του :keyword:`!except`, αλλά το ταίριασμα εκτελείται στις "
+"εξαιρέσεις που περιέχονται στην ομάδα που τυγχάνει χειρισμού. Μια :exc:"
+"`TypeError` γίνεται raise εάν ένας τύπος που ταιριάζει είναι υποκλάση του :"
+"exc:`!BaseExceptionGroup`, επειδή αυτό θα είχε διφορούμενη σημασιολογία."
 
 #: reference/compound_stmts.rst:348
+msgid ""
+"When an exception group is raised in the try block, each :keyword:`!except*` "
+"clause splits (see :meth:`~BaseExceptionGroup.split`) it into the subgroups "
+"of matching and non-matching exceptions. If the matching subgroup is not "
+"empty, it becomes the handled exception (the value returned from :func:`sys."
+"exception`) and assigned to the target of the :keyword:`!except*` clause (if "
+"there is one). Then, the body of the :keyword:`!except*` clause executes. If "
+"the non-matching subgroup is not empty, it is processed by the next :keyword:"
+"`!except*` in the same manner. This continues until all exceptions in the "
+"group have been matched, or the last :keyword:`!except*` clause has run."
+msgstr ""
+"Όταν μια ομάδα εξαιρέσεων γίνει raise στο μπλοκ try, κάθε ρήτρα :keyword:`!"
+"except*` τη διαχωρίζει (δείτε τη :meth:`~BaseExceptionGroup.split`) στις υπο-"
+"ομάδες ταιριαστών και μη ταιριαστών εξαιρέσεων. Εάν η ταιριαστή υπο-ομάδα "
+"δεν είναι κενή, γίνεται η εξαίρεση υπό χειρισμό (η τιμή που επιστρέφεται από "
+"την :func:`sys.exception`) και ανατίθεται στον στόχο της ρήτρας :keyword:`!"
+"except*` (εάν υπάρχει). Έπειτα, εκτελείται το σώμα της ρήτρας :keyword:`!"
+"except*`. Εάν η μη ταιριαστή υπο-ομάδα δεν είναι κενή, επεξεργάζεται από το "
+"επόμενο :keyword:`!except*` με τον ίδιο τρόπο. Αυτό συνεχίζεται μέχρι να "
+"ταιριάξουν όλες οι εξαιρέσεις στην ομάδα, ή να εκτελεστεί η τελευταία ρήτρα :"
+"keyword:`!except*`."
+
+#: reference/compound_stmts.rst:358
+msgid ""
+"After all :keyword:`!except*` clauses execute, the group of unhandled "
+"exceptions is merged with any exceptions that were raised or re-raised from "
+"within :keyword:`!except*` clauses. This merged exception group propagates "
+"on.::"
+msgstr ""
+"Αφού εκτελεστούν όλες οι ρήτρες :keyword:`!except*`, η ομάδα των μη "
+"χειριζόμενων εξαιρέσεων συγχωνεύεται με τυχόν εξαιρέσεις που έγιναν raise ή "
+"re-raise μέσα από ρήτρες :keyword:`!except*`. Αυτή η συγχωνευμένη ομάδα "
+"εξαιρέσεων συνεχίζει να διαδίδεται.::"
+
+#: reference/compound_stmts.rst:362
 msgid ""
 ">>> try:\n"
 "...     raise ExceptionGroup(\"eg\",\n"
@@ -363,29 +565,48 @@ msgid ""
 "caught <class 'ExceptionGroup'> with nested (TypeError(2),)\n"
 "caught <class 'ExceptionGroup'> with nested (OSError(3), OSError(4))\n"
 "  + Exception Group Traceback (most recent call last):\n"
-"  |   File \"<stdin>\", line 2, in <module>\n"
-"  | ExceptionGroup: eg\n"
+"  |   File \"<doctest default[0]>\", line 2, in <module>\n"
+"  |     raise ExceptionGroup(\"eg\",\n"
+"  |         [ValueError(1), TypeError(2), OSError(3), OSError(4)])\n"
+"  | ExceptionGroup: eg (1 sub-exception)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | ValueError: 1\n"
 "    +------------------------------------"
 msgstr ""
+">>> try:\n"
+"...     raise ExceptionGroup(\"eg\",\n"
+"...         [ValueError(1), TypeError(2), OSError(3), OSError(4)])\n"
+"... except* TypeError as e:\n"
+"...     print(f'caught {type(e)} with nested {e.exceptions}')\n"
+"... except* OSError as e:\n"
+"...     print(f'caught {type(e)} with nested {e.exceptions}')\n"
+"...\n"
+"caught <class 'ExceptionGroup'> with nested (TypeError(2),)\n"
+"caught <class 'ExceptionGroup'> with nested (OSError(3), OSError(4))\n"
+"  + Exception Group Traceback (most recent call last):\n"
+"  |   File \"<doctest default[0]>\", line 2, in <module>\n"
+"  |     raise ExceptionGroup(\"eg\",\n"
+"  |         [ValueError(1), TypeError(2), OSError(3), OSError(4)])\n"
+"  | ExceptionGroup: eg (1 sub-exception)\n"
+"  +-+---------------- 1 ----------------\n"
+"    | ValueError: 1\n"
+"    +------------------------------------"
 
-#: reference/compound_stmts.rst:366
+#: reference/compound_stmts.rst:381
 msgid ""
-"Any remaining exceptions that were not handled by any :keyword:`!except*` "
-"clause are re-raised at the end, along with all exceptions that were raised "
-"from within the :keyword:`!except*` clauses. If this list contains more than "
-"one exception to reraise, they are combined into an exception group."
+"If the exception raised from the :keyword:`try` block is not an exception "
+"group and its type matches one of the :keyword:`!except*` clauses, it is "
+"caught and wrapped by an exception group with an empty message string. This "
+"ensures that the type of the target ``e`` is consistently :exc:"
+"`BaseExceptionGroup`::"
 msgstr ""
+"Εάν η εξαίρεση που έγινε raise από το μπλοκ :keyword:`try` δεν είναι ομάδα "
+"εξαιρέσεων και ο τύπος της ταιριάζει με μία από τις ρήτρες :keyword:`!"
+"except*`, τότε πιάνεται και περιτυλίγεται από μια ομάδα εξαιρέσεων με μία "
+"κενή συμβολοσειρά μηνύματος. Αυτό διασφαλίζει ότι ο τύπος του στόχου ``e`` "
+"είναι συνεπώς :exc:`BaseExceptionGroup`::"
 
-#: reference/compound_stmts.rst:372
-msgid ""
-"If the raised exception is not an exception group and its type matches one "
-"of the :keyword:`!except*` clauses, it is caught and wrapped by an exception "
-"group with an empty message string. ::"
-msgstr ""
-
-#: reference/compound_stmts.rst:376
+#: reference/compound_stmts.rst:386
 msgid ""
 ">>> try:\n"
 "...     raise BlockingIOError\n"
@@ -394,26 +615,26 @@ msgid ""
 "...\n"
 "ExceptionGroup('', (BlockingIOError()))"
 msgstr ""
+">>> try:\n"
+"...     raise BlockingIOError\n"
+"... except* BlockingIOError as e:\n"
+"...     print(repr(e))\n"
+"...\n"
+"ExceptionGroup('', (BlockingIOError()))"
 
-#: reference/compound_stmts.rst:383
+#: reference/compound_stmts.rst:393
 msgid ""
-"An :keyword:`!except*` clause must have a matching expression; it cannot be "
-"``except*:``. Furthermore, this expression cannot contain exception group "
-"types, because that would have ambiguous semantics."
+":keyword:`break`, :keyword:`continue` and :keyword:`return` cannot appear in "
+"an :keyword:`!except*` clause."
 msgstr ""
+"Τα :keyword:`break`, :keyword:`continue` και :keyword:`return` δεν μπορούν "
+"να εμφανιστούν σε μία ρήτρα :keyword:`!except*`."
 
-#: reference/compound_stmts.rst:387
-msgid ""
-"It is not possible to mix :keyword:`except` and :keyword:`!except*` in the "
-"same :keyword:`try`. :keyword:`break`, :keyword:`continue` and :keyword:"
-"`return` cannot appear in an :keyword:`!except*` clause."
-msgstr ""
-
-#: reference/compound_stmts.rst:402
+#: reference/compound_stmts.rst:406
 msgid ":keyword:`!else` clause"
-msgstr ""
+msgstr "ρήτρα :keyword:`!else`"
 
-#: reference/compound_stmts.rst:404
+#: reference/compound_stmts.rst:408
 msgid ""
 "The optional :keyword:`!else` clause is executed if the control flow leaves "
 "the :keyword:`try` suite, no exception was raised, and no :keyword:"
@@ -421,26 +642,42 @@ msgid ""
 "Exceptions in the :keyword:`!else` clause are not handled by the preceding :"
 "keyword:`except` clauses."
 msgstr ""
+"Η προαιρετική ρήτρα :keyword:`!else` εκτελείται εάν η ροή ελέγχου αφήσει τη "
+"σουίτα :keyword:`try`, δεν έγινε raise καμία εξαίρεση, και δεν εκτελέστηκε "
+"καμία δήλωση :keyword:`return`, :keyword:`continue`, ή :keyword:`break`. Οι "
+"εξαιρέσεις στη ρήτρα :keyword:`!else` δεν χειρίζονται από τις προηγούμενες "
+"ρήτρες :keyword:`except`."
 
-#: reference/compound_stmts.rst:416
+#: reference/compound_stmts.rst:420
 msgid ":keyword:`!finally` clause"
-msgstr ""
+msgstr "ρήτρα :keyword:`!finally`"
 
-#: reference/compound_stmts.rst:418
+#: reference/compound_stmts.rst:422
 msgid ""
 "If :keyword:`!finally` is present, it specifies a 'cleanup' handler.  The :"
 "keyword:`try` clause is executed, including any :keyword:`except` and :"
-"keyword:`else` clauses.  If an exception occurs in any of the clauses and is "
-"not handled, the exception is temporarily saved. The :keyword:`!finally` "
-"clause is executed.  If there is a saved exception it is re-raised at the "
-"end of the :keyword:`!finally` clause.  If the :keyword:`!finally` clause "
-"raises another exception, the saved exception is set as the context of the "
-"new exception. If the :keyword:`!finally` clause executes a :keyword:"
-"`return`, :keyword:`break` or :keyword:`continue` statement, the saved "
-"exception is discarded. For example, this function returns 42."
+"keyword:`else <except_else>` clauses. If an exception occurs in any of the "
+"clauses and is not handled, the exception is temporarily saved. The :keyword:"
+"`!finally` clause is executed.  If there is a saved exception it is re-"
+"raised at the end of the :keyword:`!finally` clause. If the :keyword:`!"
+"finally` clause raises another exception, the saved exception is set as the "
+"context of the new exception. If the :keyword:`!finally` clause executes a :"
+"keyword:`return`, :keyword:`break` or :keyword:`continue` statement, the "
+"saved exception is discarded. For example, this function returns 42."
 msgstr ""
+"Εάν το :keyword:`!finally` υπάρχει, καθορίζει έναν χειριστή 'εκκαθάρισης'. Η "
+"ρήτρα :keyword:`try` εκτελείται, συμπεριλαμβανομένων τυχόν ρητρών :keyword:"
+"`except` και :keyword:`else <except_else>`. Εάν προκύψει εξαίρεση σε κάποια "
+"από τις ρήτρες και δεν υπάρξει χειρισμός, η εξαίρεση αποθηκεύεται προσωρινά. "
+"Η ρήτρα :keyword:`!finally` εκτελείται. Εάν υπάρχει μια αποθηκευμένη "
+"εξαίρεση, γίνεται re-raise στο τέλος της ρήτρας :keyword:`!finally`. Εάν η "
+"ρήτρα :keyword:`!finally` κάνει raise μια άλλη εξαίρεση, η αποθηκευμένη "
+"εξαίρεση ορίζεται ως το πλαίσιο της νέας εξαίρεσης. Εάν η ρήτρα :keyword:`!"
+"finally` εκτελεί μια δήλωση :keyword:`return`, :keyword:`break` ή :keyword:"
+"`continue`, η αποθηκευμένη εξαίρεση απορρίπτεται. Για παράδειγμα, αυτή η "
+"συνάρτηση επιστρέφει 42."
 
-#: reference/compound_stmts.rst:429
+#: reference/compound_stmts.rst:435
 msgid ""
 "def f():\n"
 "    try:\n"
@@ -448,22 +685,33 @@ msgid ""
 "    finally:\n"
 "        return 42"
 msgstr ""
+"def f():\n"
+"    try:\n"
+"        1/0\n"
+"    finally:\n"
+"        return 42"
 
-#: reference/compound_stmts.rst:437
+#: reference/compound_stmts.rst:443
 msgid ""
 "The exception information is not available to the program during execution "
 "of the :keyword:`!finally` clause."
 msgstr ""
+"Οι πληροφορίες εξαίρεσης δεν είναι διαθέσιμες στο πρόγραμμα κατά την "
+"εκτέλεση της ρήτρας :keyword:`!finally`."
 
-#: reference/compound_stmts.rst:445
+#: reference/compound_stmts.rst:451
 msgid ""
 "When a :keyword:`return`, :keyword:`break` or :keyword:`continue` statement "
 "is executed in the :keyword:`try` suite of a :keyword:`!try`...\\ :keyword:`!"
 "finally` statement, the :keyword:`!finally` clause is also executed 'on the "
 "way out.'"
 msgstr ""
+"Όταν μια δήλωση :keyword:`return`, :keyword:`break` ή :keyword:`continue` "
+"εκτελείται στη σουίτα :keyword:`try` μιας εντολής :keyword:`!try`...\\ :"
+"keyword:`!finally`, η ρήτρα :keyword:`!finally` εκτελείται επίσης 'κατά την "
+"έξοδο'."
 
-#: reference/compound_stmts.rst:449
+#: reference/compound_stmts.rst:455
 msgid ""
 "The return value of a function is determined by the last :keyword:`return` "
 "statement executed.  Since the :keyword:`!finally` clause always executes, "
@@ -471,8 +719,13 @@ msgid ""
 "will always be the last one executed. The following function returns "
 "'finally'."
 msgstr ""
+"Η τιμή επιστροφής μιας συνάρτησης καθορίζεται από την τελευταία δήλωση :"
+"keyword:`return` που εκτελέστηκε. Εφόσον η ρήτρα :keyword:`!finally` "
+"εκτελείται πάντα, μια δήλωση :keyword:`!return` που εκτελείται στη ρήτρα :"
+"keyword:`!finally` θα είναι πάντα η τελευταία που θα εκτελεστεί. Η ακόλουθη "
+"συνάρτηση επιστρέφει 'finally'."
 
-#: reference/compound_stmts.rst:454
+#: reference/compound_stmts.rst:460
 msgid ""
 "def foo():\n"
 "    try:\n"
@@ -480,64 +733,89 @@ msgid ""
 "    finally:\n"
 "        return 'finally'"
 msgstr ""
+"def foo():\n"
+"    try:\n"
+"        return 'try'\n"
+"    finally:\n"
+"        return 'finally'"
 
-#: reference/compound_stmts.rst:462
+#: reference/compound_stmts.rst:468
 msgid ""
 "Prior to Python 3.8, a :keyword:`continue` statement was illegal in the :"
 "keyword:`!finally` clause due to a problem with the implementation."
 msgstr ""
+"Πριν από την Python 3.8, μια δήλωση :keyword:`continue` ήταν μη έγκυρη στη "
+"ρήτρα :keyword:`!finally` λόγω ενός προβλήματος με την υλοποίηση."
 
-#: reference/compound_stmts.rst:466
+#: reference/compound_stmts.rst:472
 msgid ""
 "The compiler emits a :exc:`SyntaxWarning` when a :keyword:`return`, :keyword:"
 "`break` or :keyword:`continue` appears in a :keyword:`!finally` block (see :"
 "pep:`765`)."
 msgstr ""
+"Ο compiler εκπέμπει ένα :exc:`SyntaxWarning` όταν εμφανίζεται ένα :keyword:"
+"`return`, :keyword:`break` ή :keyword:`continue` σε ένα μπλοκ :keyword:`!"
+"finally` (δείτε :pep:`765`)."
 
-#: reference/compound_stmts.rst:476
+#: reference/compound_stmts.rst:482
 msgid "The :keyword:`!with` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!with`"
 
-#: reference/compound_stmts.rst:485
+#: reference/compound_stmts.rst:491
 msgid ""
 "The :keyword:`with` statement is used to wrap the execution of a block with "
 "methods defined by a context manager (see section :ref:`context-managers`). "
 "This allows common :keyword:`try`...\\ :keyword:`except`...\\ :keyword:"
 "`finally` usage patterns to be encapsulated for convenient reuse."
 msgstr ""
+"Η δήλωση :keyword:`with` χρησιμοποιείται για να περιτυλίξει την εκτέλεση "
+"ενός μπλοκ με μεθόδους ορισμένες από έναν διαχειριστή πλαισίου (δείτε την "
+"ενότητα :ref:`context-managers`). Αυτό επιτρέπει την ενθυλάκωση κοινών "
+"μοτίβων χρήσης :keyword:`try`...\\ :keyword:`except`...\\ :keyword:`finally` "
+"για βολική επαναχρησιμοποίηση."
 
-#: reference/compound_stmts.rst:495
+#: reference/compound_stmts.rst:501
 msgid ""
 "The execution of the :keyword:`with` statement with one \"item\" proceeds as "
 "follows:"
 msgstr ""
+"Η εκτέλεση της εντολής :keyword:`with` με ένα \"αντικείμενο\" προχωρά ως "
+"εξής:"
 
-#: reference/compound_stmts.rst:497
+#: reference/compound_stmts.rst:503
 msgid ""
 "The context expression (the expression given in the :token:`~python-grammar:"
 "with_item`) is evaluated to obtain a context manager."
 msgstr ""
+"Η έκφραση πλαισίου (η έκφραση που δίνεται στο :token:`~python-grammar:"
+"with_item`) αξιολογείται για να ληφθεί ένας διαχειριστής πλαισίου."
 
-#: reference/compound_stmts.rst:500
+#: reference/compound_stmts.rst:506
 msgid ""
 "The context manager's :meth:`~object.__enter__` is loaded for later use."
 msgstr ""
+"Φορτώνεται η :meth:`~object.__enter__` του διαχειριστή πλαισίου για "
+"μελλοντική χρήση."
 
-#: reference/compound_stmts.rst:502
+#: reference/compound_stmts.rst:508
 msgid "The context manager's :meth:`~object.__exit__` is loaded for later use."
 msgstr ""
+"Φορτώνεται η :meth:`~object.__exit__` του διαχειριστή πλαισίου για "
+"μελλοντική χρήση."
 
-#: reference/compound_stmts.rst:504
+#: reference/compound_stmts.rst:510
 msgid "The context manager's :meth:`~object.__enter__` method is invoked."
-msgstr ""
+msgstr "Καλείται η μέθοδος :meth:`~object.__enter__` του διαχειριστή πλαισίου."
 
-#: reference/compound_stmts.rst:506
+#: reference/compound_stmts.rst:512
 msgid ""
 "If a target was included in the :keyword:`with` statement, the return value "
 "from :meth:`~object.__enter__` is assigned to it."
 msgstr ""
+"Εάν συμπεριλήφθηκε ένας στόχος στην δήλωση :keyword:`with`, η τιμή "
+"επιστροφής της :meth:`~object.__enter__` του ανατίθεται."
 
-#: reference/compound_stmts.rst:511
+#: reference/compound_stmts.rst:517
 msgid ""
 "The :keyword:`with` statement guarantees that if the :meth:`~object."
 "__enter__` method returns without an error, then :meth:`~object.__exit__` "
@@ -545,51 +823,69 @@ msgid ""
 "target list, it will be treated the same as an error occurring within the "
 "suite would be. See step 7 below."
 msgstr ""
+"Η δήλωση :keyword:`with` εγγυάται ότι εάν η μέθοδος :meth:`~object."
+"__enter__` επιστρέψει το αποτέλεσμα χωρίς σφάλμα, τότε η :meth:`~object."
+"__exit__` θα κληθεί πάντα. Επομένως, εάν προκύψει σφάλμα κατά την ανάθεση "
+"στη λίστα-στόχο, θα αντιμετωπιστεί με τον ίδιο τρόπο όπως ένα σφάλμα που "
+"προκύπτει μέσα στη σουίτα. Δείτε το βήμα 7 παρακάτω."
 
-#: reference/compound_stmts.rst:517
+#: reference/compound_stmts.rst:523
 msgid "The suite is executed."
-msgstr ""
+msgstr "Η σουίτα εκτελείται."
 
-#: reference/compound_stmts.rst:519
+#: reference/compound_stmts.rst:525
 msgid ""
 "The context manager's :meth:`~object.__exit__` method is invoked.  If an "
 "exception caused the suite to be exited, its type, value, and traceback are "
 "passed as arguments to :meth:`~object.__exit__`. Otherwise, three :const:"
 "`None` arguments are supplied."
 msgstr ""
+"Καλείται η μέθοδος :meth:`~object.__exit__` του διαχειριστή πλαισίου. Εάν "
+"μια εξαίρεση προκάλεσε την έξοδο από τη σουίτα, ο τύπος, η τιμή και η "
+"ιχνηλάτησή της περνούν ως ορίσματα στην :meth:`~object.__exit__`. "
+"Διαφορετικά, παρέχονται τρία ορίσματα :const:`None`."
 
-#: reference/compound_stmts.rst:524
+#: reference/compound_stmts.rst:530
 msgid ""
 "If the suite was exited due to an exception, and the return value from the :"
 "meth:`~object.__exit__` method was false, the exception is reraised.  If the "
 "return value was true, the exception is suppressed, and execution continues "
 "with the statement following the :keyword:`with` statement."
 msgstr ""
+"Εάν υπήρξε έξοδος από τη σουίτα λόγω εξαίρεσης, και η τιμή επιστροφής από τη "
+"μέθοδο :meth:`~object.__exit__` ήταν false, η εξαίρεση γίνεται re-raise. Εάν "
+"η τιμή επιστροφής ήταν true, η εξαίρεση καταστέλλεται, και η εκτέλεση "
+"συνεχίζεται με την δήλωση που ακολουθεί την δήλωση :keyword:`with`."
 
-#: reference/compound_stmts.rst:529
+#: reference/compound_stmts.rst:535
 msgid ""
 "If the suite was exited for any reason other than an exception, the return "
 "value from :meth:`~object.__exit__` is ignored, and execution proceeds at "
 "the normal location for the kind of exit that was taken."
 msgstr ""
+"Εάν υπήρξε έξοδος από τη σουίτα για οποιονδήποτε λόγο εκτός από εξαίρεση, η "
+"τιμή επιστροφής από την :meth:`~object.__exit__` αγνοείται, και η εκτέλεση "
+"προχωρά στην κανονική θέση για το είδος της εξόδου που πραγματοποιήθηκε."
 
-#: reference/compound_stmts.rst:533 reference/compound_stmts.rst:1550
-#: reference/compound_stmts.rst:1591
+#: reference/compound_stmts.rst:539 reference/compound_stmts.rst:1557
+#: reference/compound_stmts.rst:1598
 msgid "The following code::"
-msgstr ""
+msgstr "Ο ακόλουθος κώδικας::"
 
-#: reference/compound_stmts.rst:535
+#: reference/compound_stmts.rst:541
 msgid ""
 "with EXPRESSION as TARGET:\n"
 "    SUITE"
 msgstr ""
+"with EXPRESSION as TARGET:\n"
+"    SUITE"
 
-#: reference/compound_stmts.rst:538 reference/compound_stmts.rst:563
-#: reference/compound_stmts.rst:1596
+#: reference/compound_stmts.rst:544 reference/compound_stmts.rst:569
+#: reference/compound_stmts.rst:1603
 msgid "is semantically equivalent to::"
-msgstr ""
+msgstr "είναι σημασιολογικά ισοδύναμος με::"
 
-#: reference/compound_stmts.rst:540
+#: reference/compound_stmts.rst:546
 msgid ""
 "manager = (EXPRESSION)\n"
 "enter = type(manager).__enter__\n"
@@ -608,33 +904,58 @@ msgid ""
 "    if not hit_except:\n"
 "        exit(manager, None, None, None)"
 msgstr ""
+"manager = (EXPRESSION)\n"
+"enter = type(manager).__enter__\n"
+"exit = type(manager).__exit__\n"
+"value = enter(manager)\n"
+"hit_except = False\n"
+"\n"
+"try:\n"
+"    TARGET = value\n"
+"    SUITE\n"
+"except:\n"
+"    hit_except = True\n"
+"    if not exit(manager, *sys.exc_info()):\n"
+"        raise\n"
+"finally:\n"
+"    if not hit_except:\n"
+"        exit(manager, None, None, None)"
 
-#: reference/compound_stmts.rst:557
+#: reference/compound_stmts.rst:563
 msgid ""
 "With more than one item, the context managers are processed as if multiple :"
 "keyword:`with` statements were nested::"
 msgstr ""
+"Με περισσότερα από ένα στοιχεία, οι διαχειριστές πλαισίου επεξεργάζονται σαν "
+"να είχαν εμφωλευτεί πολλαπλές εντολές :keyword:`with`::"
 
-#: reference/compound_stmts.rst:560
+#: reference/compound_stmts.rst:566
 msgid ""
 "with A() as a, B() as b:\n"
 "    SUITE"
 msgstr ""
+"with A() as a, B() as b:\n"
+"    SUITE"
 
-#: reference/compound_stmts.rst:565
+#: reference/compound_stmts.rst:571
 msgid ""
 "with A() as a:\n"
 "    with B() as b:\n"
 "        SUITE"
 msgstr ""
+"with A() as a:\n"
+"    with B() as b:\n"
+"        SUITE"
 
-#: reference/compound_stmts.rst:569
+#: reference/compound_stmts.rst:575
 msgid ""
 "You can also write multi-item context managers in multiple lines if the "
 "items are surrounded by parentheses. For example::"
 msgstr ""
+"Μπορείτε επίσης να γράψετε διαχειριστές πλαισίου πολλαπλών στοιχείων σε "
+"πολλές γραμμές, αν τα στοιχεία περικλείονται σε παρενθέσεις. Για παράδειγμα::"
 
-#: reference/compound_stmts.rst:572
+#: reference/compound_stmts.rst:578
 msgid ""
 "with (\n"
 "    A() as a,\n"
@@ -642,87 +963,110 @@ msgid ""
 "):\n"
 "    SUITE"
 msgstr ""
+"with (\n"
+"    A() as a,\n"
+"    B() as b,\n"
+"):\n"
+"    SUITE"
 
-#: reference/compound_stmts.rst:578
+#: reference/compound_stmts.rst:584
 msgid "Support for multiple context expressions."
-msgstr ""
+msgstr "Υποστήριξη για πολλαπλές εκφράσεις πλαισίου."
 
-#: reference/compound_stmts.rst:581
+#: reference/compound_stmts.rst:587
 msgid ""
 "Support for using grouping parentheses to break the statement in multiple "
 "lines."
 msgstr ""
+"Υποστήριξη για χρήση παρενθέσεων ομαδοποίησης ώστε να διασπαστεί η δήλωση σε "
+"πολλές γραμμές."
 
-#: reference/compound_stmts.rst:586
+#: reference/compound_stmts.rst:592
 msgid ":pep:`343` - The \"with\" statement"
-msgstr ""
+msgstr ":pep:`343` - Η δήλωση \"with\""
 
-#: reference/compound_stmts.rst:587
+#: reference/compound_stmts.rst:593
 msgid ""
 "The specification, background, and examples for the Python :keyword:`with` "
 "statement."
 msgstr ""
+"Οι προδιαγραφές, το υπόβαθρο και τα παραδείγματα για την δήλωση :keyword:"
+"`with` της Python."
 
-#: reference/compound_stmts.rst:593
+#: reference/compound_stmts.rst:600
 msgid "The :keyword:`!match` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!match`"
 
-#: reference/compound_stmts.rst:607
+#: reference/compound_stmts.rst:614
 msgid "The match statement is used for pattern matching.  Syntax:"
-msgstr ""
+msgstr "Η δήλωση match χρησιμοποιείται για ταίριασμα προτύπων. Σύνταξη:"
 
-#: reference/compound_stmts.rst:616
+#: reference/compound_stmts.rst:623
 msgid ""
 "This section uses single quotes to denote :ref:`soft keywords <soft-"
 "keywords>`."
 msgstr ""
+"Αυτή η ενότητα χρησιμοποιεί μονά εισαγωγικά για να υποδηλώσει τα :ref:`soft "
+"keywords <soft-keywords>`."
 
-#: reference/compound_stmts.rst:619
+#: reference/compound_stmts.rst:626
 msgid ""
 "Pattern matching takes a pattern as input (following ``case``) and a subject "
 "value (following ``match``).  The pattern (which may contain subpatterns) is "
 "matched against the subject value.  The outcomes are:"
 msgstr ""
+"Το ταίριασμα προτύπων παίρνει ένα πρότυπο ως είσοδο (μετά το ``case``) και "
+"μια τιμή θέματος (μετά το ``match``). Το πρότυπο (το οποίο μπορεί να "
+"περιέχει υπο-πρότυπα) ταιριάζεται με την τιμή θέματος. Τα αποτελέσματα είναι:"
 
-#: reference/compound_stmts.rst:623
+#: reference/compound_stmts.rst:630
 msgid "A match success or failure (also termed a pattern success or failure)."
 msgstr ""
+"Μια επιτυχία ή αποτυχία ταιριάσματος (επίσης ονομάζεται επιτυχία ή αποτυχία "
+"προτύπου)."
 
-#: reference/compound_stmts.rst:625
+#: reference/compound_stmts.rst:632
 msgid ""
 "Possible binding of matched values to a name.  The prerequisites for this "
 "are further discussed below."
 msgstr ""
+"Πιθανή δέσμευση ταιριασμένων τιμών σε ένα όνομα. Οι προϋποθέσεις για αυτό "
+"συζητούνται περαιτέρω παρακάτω."
 
-#: reference/compound_stmts.rst:628
+#: reference/compound_stmts.rst:635
 msgid ""
 "The ``match`` and ``case`` keywords are :ref:`soft keywords <soft-keywords>`."
 msgstr ""
+"Οι λέξεις-κλειδιά ``match`` και ``case`` είναι :ref:`soft keywords <soft-"
+"keywords>`."
 
-#: reference/compound_stmts.rst:632 reference/compound_stmts.rst:1189
+#: reference/compound_stmts.rst:639 reference/compound_stmts.rst:1196
 msgid ":pep:`634` -- Structural Pattern Matching: Specification"
-msgstr ""
+msgstr ":pep:`634` -- Ταίριασμα Δομικών Προτύπων: Προδιαγραφή"
 
-#: reference/compound_stmts.rst:633 reference/compound_stmts.rst:1190
+#: reference/compound_stmts.rst:640 reference/compound_stmts.rst:1197
 msgid ":pep:`636` -- Structural Pattern Matching: Tutorial"
-msgstr ""
+msgstr ":pep:`636` -- Ταίριασμα Δομικών Προτύπων: Εγχειρίδιο"
 
-#: reference/compound_stmts.rst:637
+#: reference/compound_stmts.rst:644
 msgid "Overview"
-msgstr ""
+msgstr "Επισκόπηση"
 
-#: reference/compound_stmts.rst:639
+#: reference/compound_stmts.rst:646
 msgid "Here's an overview of the logical flow of a match statement:"
-msgstr ""
+msgstr "Ακολουθεί μια επισκόπηση της λογικής ροής μιας εντολής match:"
 
-#: reference/compound_stmts.rst:642
+#: reference/compound_stmts.rst:649
 msgid ""
 "The subject expression ``subject_expr`` is evaluated and a resulting subject "
 "value obtained. If the subject expression contains a comma, a tuple is "
 "constructed using :ref:`the standard rules <typesseq-tuple>`."
 msgstr ""
+"Η έκφραση θέματος ``subject_expr`` αξιολογείται και λαμβάνεται η προκύπτουσα "
+"τιμή θέματος. Εάν η έκφραση θέματος περιέχει κόμμα, κατασκευάζεται μία "
+"πλειάδα χρησιμοποιώντας :ref:`τους τυπικούς κανόνες <typesseq-tuple>`."
 
-#: reference/compound_stmts.rst:646
+#: reference/compound_stmts.rst:653
 msgid ""
 "Each pattern in a ``case_block`` is attempted to match with the subject "
 "value. The specific rules for success or failure are described below. The "
@@ -731,8 +1075,16 @@ msgid ""
 "specified below.  **Name bindings made during a successful pattern match "
 "outlive the executed block and can be used after the match statement**."
 msgstr ""
+"Κάθε πρότυπο σε ένα ``case_block`` προσπαθεί να ταιριάξει με την τιμή του "
+"θέματος. Οι συγκεκριμένοι κανόνες για επιτυχία ή αποτυχία περιγράφονται "
+"παρακάτω. Η προσπάθεια ταιριάσματος μπορεί επίσης να δεσμεύσει κάποια ή όλα "
+"τα αυτόνομα ονόματα εντός του προτύπου. Οι ακριβείς κανόνες δέσμευσης "
+"προτύπων διαφέρουν ανά τύπο προτύπου και καθορίζονται παρακάτω. **Οι "
+"δεσμεύσεις ονομάτων, που γίνονται κατά τη διάρκεια ενός επιτυχημένου "
+"ταιριάσματος προτύπου, επιβιώνουν από το εκτελεσμένο μπλοκ και μπορούν να "
+"χρησιμοποιηθούν μετά την δήλωση match**."
 
-#: reference/compound_stmts.rst:655
+#: reference/compound_stmts.rst:662
 msgid ""
 "During failed pattern matches, some subpatterns may succeed.  Do not rely on "
 "bindings being made for a failed match.  Conversely, do not rely on "
@@ -740,39 +1092,57 @@ msgid ""
 "dependent on implementation and may vary.  This is an intentional decision "
 "made to allow different implementations to add optimizations."
 msgstr ""
+"Κατά τη διάρκεια αποτυχημένων ταιριασμάτων προτύπων, ορισμένα υπο-πρότυπα "
+"μπορεί να πετύχουν. Μην βασίζεστε στο ότι θα πραγματοποιηθούν δεσμεύσεις για "
+"ένα αποτυχημένο ταίριασμα. Αντίστροφα, μην βασίζεστε στο ότι οι μεταβλητές "
+"θα παραμείνουν αμετάβλητες μετά από ένα αποτυχημένο ταίριασμα. Η ακριβής "
+"συμπεριφορά εξαρτάται από την υλοποίηση και μπορεί να διαφέρει. Πρόκειται "
+"για μια σκόπιμη απόφαση ώστε να επιτραπεί σε διαφορετικές υλοποιήσεις να "
+"προσθέσουν βελτιστοποιήσεις."
 
-#: reference/compound_stmts.rst:662
+#: reference/compound_stmts.rst:669
 msgid ""
 "If the pattern succeeds, the corresponding guard (if present) is evaluated. "
 "In this case all name bindings are guaranteed to have happened."
 msgstr ""
+"Εάν το πρότυπο επιτύχει, αξιολογείται ο αντίστοιχος guard (εάν υπάρχει). Σε "
+"αυτήν την περίπτωση είναι εγγυημένο ότι έχουν πραγματοποιηθεί όλες οι "
+"δεσμεύσεις ονομάτων."
 
-#: reference/compound_stmts.rst:665
+#: reference/compound_stmts.rst:672
 msgid ""
 "If the guard evaluates as true or is missing, the ``block`` inside "
 "``case_block`` is executed."
 msgstr ""
+"Εάν ο guard αξιολογηθεί ως αληθής ή λείπει, εκτελείται το ``block`` μέσα στο "
+"``case_block``."
 
-#: reference/compound_stmts.rst:668
+#: reference/compound_stmts.rst:675
 msgid "Otherwise, the next ``case_block`` is attempted as described above."
 msgstr ""
+"Διαφορετικά, δοκιμάζεται το επόμενο ``case_block`` όπως περιγράφεται "
+"παραπάνω."
 
-#: reference/compound_stmts.rst:670
+#: reference/compound_stmts.rst:677
 msgid "If there are no further case blocks, the match statement is completed."
-msgstr ""
+msgstr "Εάν δεν υπάρχουν περαιτέρω case μπλοκ, η δήλωση match ολοκληρώνεται."
 
-#: reference/compound_stmts.rst:674
+#: reference/compound_stmts.rst:681
 msgid ""
 "Users should generally never rely on a pattern being evaluated.  Depending "
 "on implementation, the interpreter may cache values or use other "
 "optimizations which skip repeated evaluations."
 msgstr ""
+"Οι χρήστες γενικά δεν θα πρέπει ποτέ να βασίζονται στο ότι ένα πρότυπο "
+"αξιολογείται. Ανάλογα με την υλοποίηση, ο διερμηνέας μπορεί να αποθηκεύσει "
+"τιμές στην προσωρινή μνήμη ή να χρησιμοποιήσει άλλες βελτιστοποιήσεις που "
+"παραλείπουν επαναλαμβανόμενες αξιολογήσεις."
 
-#: reference/compound_stmts.rst:678
+#: reference/compound_stmts.rst:685
 msgid "A sample match statement::"
-msgstr ""
+msgstr "Ένα παράδειγμα εντολής match::"
 
-#: reference/compound_stmts.rst:680
+#: reference/compound_stmts.rst:687
 msgid ""
 ">>> flag = False\n"
 ">>> match (100, 200):\n"
@@ -787,57 +1157,81 @@ msgid ""
 "...\n"
 "Case 3, y: 200"
 msgstr ""
+">>> flag = False\n"
+">>> match (100, 200):\n"
+"...    case (100, 300):  # Mismatch: 200 != 300\n"
+"...        print('Case 1')\n"
+"...    case (100, 200) if flag:  # Successful match, but guard fails\n"
+"...        print('Case 2')\n"
+"...    case (100, y):  # Matches and binds y to 200\n"
+"...        print(f'Case 3, y: {y}')\n"
+"...    case _:  # Pattern not attempted\n"
+"...        print('Case 4, I match anything!')\n"
+"...\n"
+"Case 3, y: 200"
 
-#: reference/compound_stmts.rst:694
+#: reference/compound_stmts.rst:701
 msgid ""
 "In this case, ``if flag`` is a guard.  Read more about that in the next "
 "section."
 msgstr ""
-
-#: reference/compound_stmts.rst:697
-msgid "Guards"
-msgstr ""
+"Σε αυτήν την περίπτωση, το ``if flag`` είναι ένας guard. Διαβάστε "
+"περισσότερα για αυτό στην επόμενη ενότητα."
 
 #: reference/compound_stmts.rst:704
+msgid "Guards"
+msgstr "Guards"
+
+#: reference/compound_stmts.rst:711
 msgid ""
 "A ``guard`` (which is part of the ``case``) must succeed for code inside the "
 "``case`` block to execute.  It takes the form: :keyword:`if` followed by an "
 "expression."
 msgstr ""
+"Ένας ``guard`` (που αποτελεί μέρος του ``case``) πρέπει να επιτύχει "
+"προκειμένου να εκτελεστεί ο κώδικας μέσα στο μπλοκ ``case``. Παίρνει τη "
+"μορφή: :keyword:`if` ακολουθούμενο από μια έκφραση."
 
-#: reference/compound_stmts.rst:709
+#: reference/compound_stmts.rst:716
 msgid "The logical flow of a ``case`` block with a ``guard`` follows:"
-msgstr ""
+msgstr "Η λογική ροή ενός μπλοκ ``case`` με έναν ``guard`` έχει ως εξής:"
 
-#: reference/compound_stmts.rst:711
+#: reference/compound_stmts.rst:718
 msgid ""
 "Check that the pattern in the ``case`` block succeeded.  If the pattern "
 "failed, the ``guard`` is not evaluated and the next ``case`` block is "
 "checked."
 msgstr ""
+"Ελέγχει ότι το πρότυπο στο μπλοκ ``case`` επέτυχε. Εάν το πρότυπο απέτυχε, ο "
+"``guard`` δεν αξιολογείται και ελέγχεται το επόμενο μπλοκ ``case``."
 
-#: reference/compound_stmts.rst:715
+#: reference/compound_stmts.rst:722
 msgid "If the pattern succeeded, evaluate the ``guard``."
-msgstr ""
+msgstr "Εάν το πρότυπο επέτυχε, αξιολογείται ο ``guard``."
 
-#: reference/compound_stmts.rst:717
+#: reference/compound_stmts.rst:724
 msgid ""
 "If the ``guard`` condition evaluates as true, the case block is selected."
 msgstr ""
+"Εάν η συνθήκη του ``guard`` αξιολογηθεί ως αληθής, επιλέγεται το μπλοκ case."
 
-#: reference/compound_stmts.rst:720
+#: reference/compound_stmts.rst:727
 msgid ""
 "If the ``guard`` condition evaluates as false, the case block is not "
 "selected."
 msgstr ""
+"Εάν η συνθήκη του ``guard`` αξιολογηθεί ως ψευδής, το μπλοκ case δεν "
+"επιλέγεται."
 
-#: reference/compound_stmts.rst:723
+#: reference/compound_stmts.rst:730
 msgid ""
 "If the ``guard`` raises an exception during evaluation, the exception "
 "bubbles up."
 msgstr ""
+"Εάν ο ``guard`` κάνει raise μια εξαίρεση κατά την αξιολόγηση, η εξαίρεση "
+"ανεβαίνει προς τα πάνω."
 
-#: reference/compound_stmts.rst:726
+#: reference/compound_stmts.rst:733
 msgid ""
 "Guards are allowed to have side effects as they are expressions.  Guard "
 "evaluation must proceed from the first to the last case block, one at a "
@@ -845,66 +1239,84 @@ msgid ""
 "evaluation must happen in order.) Guard evaluation must stop once a case "
 "block is selected."
 msgstr ""
+"Οι guards επιτρέπεται να έχουν παρενέργειες καθώς είναι εκφράσεις. Η "
+"αξιολόγηση των guards πρέπει να προχωρά από το πρώτο έως το τελευταίο case "
+"μπλοκ, ένα προς ένα, παραλείποντας τα case μπλοκ των οποίων τα πρότυπα δεν "
+"επιτυγχάνουν όλα. (Δηλαδή, η αξιολόγηση των guards πρέπει να γίνει με τη "
+"σειρά.) Η αξιολόγηση των guards πρέπει να σταματήσει μόλις επιλεγεί ένα case "
+"μπλοκ."
 
-#: reference/compound_stmts.rst:736
+#: reference/compound_stmts.rst:743
 msgid "Irrefutable Case Blocks"
-msgstr ""
+msgstr "Αδιάσειστα Case Blocks"
 
-#: reference/compound_stmts.rst:740
+#: reference/compound_stmts.rst:747
 msgid ""
 "An irrefutable case block is a match-all case block.  A match statement may "
 "have at most one irrefutable case block, and it must be last."
 msgstr ""
+"Ένα αδιάσειστο case μπλοκ είναι ένα case μπλοκ που ταιριάζει με τα πάντα. "
+"Μια δήλωση match μπορεί να έχει το πολύ ένα αδιάσειστο case μπλοκ, και "
+"πρέπει να είναι το τελευταίο."
 
-#: reference/compound_stmts.rst:743
+#: reference/compound_stmts.rst:750
 msgid ""
 "A case block is considered irrefutable if it has no guard and its pattern is "
 "irrefutable.  A pattern is considered irrefutable if we can prove from its "
 "syntax alone that it will always succeed.  Only the following patterns are "
 "irrefutable:"
 msgstr ""
+"Ένα case μπλοκ θεωρείται αδιάσειστο εάν δεν έχει guard και το πρότυπό του "
+"είναι αδιάσειστο. Ένα πρότυπο θεωρείται αδιάσειστο εάν μπορούμε να "
+"αποδείξουμε μόνο από τη σύνταξή του ότι θα επιτυγχάνει πάντα. Μόνο τα "
+"ακόλουθα πρότυπα είναι αδιάσειστα:"
 
-#: reference/compound_stmts.rst:748
+#: reference/compound_stmts.rst:755
 msgid ":ref:`as-patterns` whose left-hand side is irrefutable"
-msgstr ""
+msgstr ":ref:`as-patterns` των οποίων η αριστερή πλευρά είναι αδιάσειστη"
 
-#: reference/compound_stmts.rst:750
+#: reference/compound_stmts.rst:757
 msgid ":ref:`or-patterns` containing at least one irrefutable pattern"
-msgstr ""
+msgstr ":ref:`or-patterns` που περιέχουν τουλάχιστον ένα αδιάσειστο πρότυπο"
 
-#: reference/compound_stmts.rst:752
+#: reference/compound_stmts.rst:759
 msgid ":ref:`capture-patterns`"
-msgstr ""
+msgstr ":ref:`capture-patterns`"
 
-#: reference/compound_stmts.rst:754
+#: reference/compound_stmts.rst:761
 msgid ":ref:`wildcard-patterns`"
-msgstr ""
+msgstr ":ref:`wildcard-patterns`"
 
-#: reference/compound_stmts.rst:756
+#: reference/compound_stmts.rst:763
 msgid "parenthesized irrefutable patterns"
-msgstr ""
-
-#: reference/compound_stmts.rst:760
-msgid "Patterns"
-msgstr ""
+msgstr "παρενθετικά αδιάσειστα πρότυπα"
 
 #: reference/compound_stmts.rst:767
-msgid "This section uses grammar notations beyond standard EBNF:"
-msgstr ""
-
-#: reference/compound_stmts.rst:769
-msgid "the notation ``SEP.RULE+`` is shorthand for ``RULE (SEP RULE)*``"
-msgstr ""
-
-#: reference/compound_stmts.rst:771
-msgid "the notation ``!RULE`` is shorthand for a negative lookahead assertion"
-msgstr ""
+msgid "Patterns"
+msgstr "Πρότυπα"
 
 #: reference/compound_stmts.rst:774
-msgid "The top-level syntax for ``patterns`` is:"
+msgid "This section uses grammar notations beyond standard EBNF:"
 msgstr ""
+"Αυτή η ενότητα χρησιμοποιεί σημειογραφίες γραμματικής πέρα από το τυπικό "
+"EBNF:"
 
-#: reference/compound_stmts.rst:788
+#: reference/compound_stmts.rst:776
+msgid "the notation ``SEP.RULE+`` is shorthand for ``RULE (SEP RULE)*``"
+msgstr ""
+"η σημειογραφία ``SEP.RULE+`` είναι συντομογραφία για το ``RULE (SEP RULE)*``"
+
+#: reference/compound_stmts.rst:778
+msgid "the notation ``!RULE`` is shorthand for a negative lookahead assertion"
+msgstr ""
+"η σημειογραφία ``!RULE`` είναι συντομογραφία για έναν αρνητικό ισχυρισμό "
+"lookahead"
+
+#: reference/compound_stmts.rst:781
+msgid "The top-level syntax for ``patterns`` is:"
+msgstr "Η σύνταξη ανωτέρου επιπέδου για τα ``patterns`` είναι:"
+
+#: reference/compound_stmts.rst:795
 msgid ""
 "The descriptions below will include a description \"in simple terms\" of "
 "what a pattern does for illustration purposes (credits to Raymond Hettinger "
@@ -913,630 +1325,825 @@ msgid ""
 "the underlying implementation.  Furthermore, they do not cover all valid "
 "forms."
 msgstr ""
+"Οι παρακάτω περιγραφές θα περιλαμβάνουν μια περιγραφή \"με απλά λόγια\" του "
+"τι κάνει ένα πρότυπο για σκοπούς επεξήγησης (ευχαριστίες στον Raymond "
+"Hettinger για ένα έγγραφο που ενέπνευσε τις περισσότερες περιγραφές). "
+"Σημειώστε ότι αυτές οι περιγραφές προορίζονται καθαρά για σκοπούς επεξήγησης "
+"και **ενδέχεται να μην** αντανακλούν την υποκείμενη υλοποίηση. Επιπλέον, δεν "
+"καλύπτουν όλες τις έγκυρες μορφές."
 
-#: reference/compound_stmts.rst:798
+#: reference/compound_stmts.rst:805
 msgid "OR Patterns"
-msgstr ""
+msgstr "OR Πρότυπα"
 
-#: reference/compound_stmts.rst:800
+#: reference/compound_stmts.rst:807
 msgid ""
 "An OR pattern is two or more patterns separated by vertical bars ``|``.  "
 "Syntax:"
 msgstr ""
+"Ένα OR πρότυπο αποτελείται από δύο ή περισσότερα πρότυπα χωρισμένα με "
+"κάθετες γραμμές ``|``. Σύνταξη:"
 
-#: reference/compound_stmts.rst:806
+#: reference/compound_stmts.rst:813
 msgid ""
 "Only the final subpattern may be :ref:`irrefutable <irrefutable_case>`, and "
 "each subpattern must bind the same set of names to avoid ambiguity."
 msgstr ""
+"Μόνο το τελικό υπο-πρότυπο μπορεί να είναι :ref:`αδιάσειστο "
+"<irrefutable_case>`, και κάθε υπο-πρότυπο πρέπει να δεσμεύει το ίδιο σύνολο "
+"ονομάτων για να αποφευχθεί η ασάφεια."
 
-#: reference/compound_stmts.rst:809
+#: reference/compound_stmts.rst:816
 msgid ""
 "An OR pattern matches each of its subpatterns in turn to the subject value, "
 "until one succeeds.  The OR pattern is then considered successful.  "
 "Otherwise, if none of the subpatterns succeed, the OR pattern fails."
 msgstr ""
+"Ένα OR πρότυπο ταιριάζει με καθένα από τα υπο-πρότυπά του διαδοχικά με την "
+"τιμή του θέματος, μέχρι κάποιο να επιτύχει. Το OR πρότυπο θεωρείται τότε "
+"επιτυχημένο. Διαφορετικά, εάν κανένα από τα υπο-μοτίβα δεν επιτύχει, το OR "
+"πρότυπο αποτυγχάνει."
 
-#: reference/compound_stmts.rst:813
+#: reference/compound_stmts.rst:820
 msgid ""
 "In simple terms, ``P1 | P2 | ...`` will try to match ``P1``, if it fails it "
 "will try to match ``P2``, succeeding immediately if any succeeds, failing "
 "otherwise."
 msgstr ""
+"Με απλά λόγια, το ``P1 | P2 | ...`` θα προσπαθήσει να ταιριάξει το ``P1``, "
+"εάν αποτύχει θα προσπαθήσει να ταιριάξει το ``P2``, επιτυγχάνοντας αμέσως "
+"εάν οποιοδήποτε πετύχει, αποτυγχάνοντας διαφορετικά."
 
-#: reference/compound_stmts.rst:819
+#: reference/compound_stmts.rst:826
 msgid "AS Patterns"
-msgstr ""
+msgstr "AS Πρότυπα"
 
-#: reference/compound_stmts.rst:821
+#: reference/compound_stmts.rst:828
 msgid ""
 "An AS pattern matches an OR pattern on the left of the :keyword:`as` keyword "
 "against a subject.  Syntax:"
 msgstr ""
+"Ένα AS πρότυπο ταιριάζει με ένα OR πρότυπο στα αριστερά της λέξης-κλειδιού :"
+"keyword:`as` έναντι ενός θέματος. Σύνταξη:"
 
-#: reference/compound_stmts.rst:827
+#: reference/compound_stmts.rst:834
 msgid ""
 "If the OR pattern fails, the AS pattern fails.  Otherwise, the AS pattern "
 "binds the subject to the name on the right of the as keyword and succeeds. "
 "``capture_pattern`` cannot be a ``_``."
 msgstr ""
+"Εάν το OR πρότυπο αποτύχει, το AS πρότυπο αποτυγχάνει. Διαφορετικά, το AS "
+"πρότυπο δεσμεύει το θέμα στο όνομα στα δεξιά της λέξης-κλειδιού as και "
+"επιτυγχάνει. Το ``capture_pattern`` δεν μπορεί να είναι ``_``."
 
-#: reference/compound_stmts.rst:831
+#: reference/compound_stmts.rst:838
 msgid ""
 "In simple terms ``P as NAME`` will match with ``P``, and on success it will "
 "set ``NAME = <subject>``."
 msgstr ""
+"Με απλά λόγια, το ``P as NAME`` θα ταιριάξει με το ``P``, και σε περίπτωση "
+"επιτυχίας θα ορίσει ``NAME = <subject>``."
 
-#: reference/compound_stmts.rst:838
+#: reference/compound_stmts.rst:845
 msgid "Literal Patterns"
-msgstr ""
+msgstr "Πρότυπα Λεκτικών Σταθερών"
 
-#: reference/compound_stmts.rst:840
+#: reference/compound_stmts.rst:847
 msgid ""
 "A literal pattern corresponds to most :ref:`literals <literals>` in Python.  "
 "Syntax:"
 msgstr ""
+"Ένα πρότυπο λεκτικής σταθεράς αντιστοιχεί στα περισσότερα :ref:`literals "
+"<literals>` στην Python. Σύνταξη:"
 
-#: reference/compound_stmts.rst:853
+#: reference/compound_stmts.rst:860
 msgid ""
 "The rule ``strings`` and the token ``NUMBER`` are defined in the :doc:"
 "`standard Python grammar <./grammar>`.  Triple-quoted strings are "
 "supported.  Raw strings and byte strings are supported.  :ref:`f-strings` "
-"are not supported."
+"and :ref:`t-strings` are not supported."
 msgstr ""
+"Ο κανόνας ``strings`` και το token ``NUMBER`` ορίζονται στο :doc:`standard "
+"Python grammar <./grammar>`. Υποστηρίζονται συμβολοσειρές με τριπλά "
+"εισαγωγικά. Υποστηρίζονται ακατέργαστες συμβολοσειρές και byte "
+"συμβολοσειρές. Τα :ref:`f-strings` και τα :ref:`t-strings` δεν "
+"υποστηρίζονται."
 
-#: reference/compound_stmts.rst:858
+#: reference/compound_stmts.rst:865
 msgid ""
 "The forms ``signed_number '+' NUMBER`` and ``signed_number '-' NUMBER`` are "
 "for expressing :ref:`complex numbers <imaginary>`; they require a real "
 "number on the left and an imaginary number on the right. E.g. ``3 + 4j``."
 msgstr ""
+"Οι μορφές ``signed_number '+' NUMBER`` και ``signed_number '-' NUMBER`` "
+"είναι για την έκφραση :ref:`μιγαδικών αριθμών <imaginary>`· απαιτούν έναν "
+"πραγματικό αριθμό αριστερά και έναν φανταστικό αριθμό δεξιά. Π.χ. ``3 + 4j``."
 
-#: reference/compound_stmts.rst:862
+#: reference/compound_stmts.rst:869
 msgid ""
 "In simple terms, ``LITERAL`` will succeed only if ``<subject> == LITERAL``. "
 "For the singletons ``None``, ``True`` and ``False``, the :keyword:`is` "
 "operator is used."
 msgstr ""
+"Με απλά λόγια, το ``LITERAL`` θα πετύχει μόνο εάν ``<subject> == LITERAL``. "
+"Για τα singletons ``None``, ``True`` και ``False``, χρησιμοποιείται ο "
+"τελεστής :keyword:`is`."
 
-#: reference/compound_stmts.rst:868
+#: reference/compound_stmts.rst:875
 msgid "Capture Patterns"
-msgstr ""
+msgstr "Μοτίβα Δέσμευσης"
 
-#: reference/compound_stmts.rst:870
+#: reference/compound_stmts.rst:877
 msgid "A capture pattern binds the subject value to a name. Syntax:"
 msgstr ""
+"Ένα μοτίβο δέσμευσης δεσμεύει την τιμή του θέματος σε ένα όνομα. Σύνταξη:"
 
-#: reference/compound_stmts.rst:876
+#: reference/compound_stmts.rst:883
 msgid ""
 "A single underscore ``_`` is not a capture pattern (this is what ``!'_'`` "
 "expresses). It is instead treated as a :token:`~python-grammar:"
 "wildcard_pattern`."
 msgstr ""
+"Μία μόνο κάτω παύλα ``_`` δεν μοτίβο δέσμευσης (αυτό εκφράζει το ``!'_'``). "
+"Αντιθέτως, αντιμετωπίζεται ως :token:`~python-grammar:wildcard_pattern`."
 
-#: reference/compound_stmts.rst:880
+#: reference/compound_stmts.rst:887
 msgid ""
 "In a given pattern, a given name can only be bound once.  E.g. ``case x, "
 "x: ...`` is invalid while ``case [x] | x: ...`` is allowed."
 msgstr ""
+"Σε ένα δεδομένο μοτίβο, ένα δεδομένο όνομα μπορεί να δεσμευτεί μόνο μία "
+"φορά. Π.χ. το ``case x, x: ...`` είναι μη έγκυρο, ενώ το ``case [x] | x: ..."
+"`` επιτρέπεται."
 
-#: reference/compound_stmts.rst:883
+#: reference/compound_stmts.rst:890
 msgid ""
 "Capture patterns always succeed.  The binding follows scoping rules "
 "established by the assignment expression operator in :pep:`572`; the name "
 "becomes a local variable in the closest containing function scope unless "
 "there's an applicable :keyword:`global` or :keyword:`nonlocal` statement."
 msgstr ""
+"Τα μοτίβα δέσμευσης επιτυγχάνουν πάντα. Η δέσμευση ακολουθεί τους κανόνες "
+"εύρους που καθιερώθηκαν από τον τελεστή έκφρασης ανάθεσης στο :pep:`572`· το "
+"όνομα γίνεται μια τοπική μεταβλητή στο πλησιέστερο περιέχουν εύρος "
+"συνάρτησης, εκτός εάν υπάρχει μια εφαρμόσιμη δήλωση :keyword:`global` ή :"
+"keyword:`nonlocal`."
 
-#: reference/compound_stmts.rst:888
+#: reference/compound_stmts.rst:895
 msgid ""
 "In simple terms ``NAME`` will always succeed and it will set ``NAME = "
 "<subject>``."
 msgstr ""
+"Με απλά λόγια, το ``NAME`` θα πετυχαίνει πάντα και θα ορίζει το ``NAME = "
+"<subject>``."
 
-#: reference/compound_stmts.rst:893
+#: reference/compound_stmts.rst:900
 msgid "Wildcard Patterns"
-msgstr ""
+msgstr "Μοτίβα Μπαλαντέρ"
 
-#: reference/compound_stmts.rst:895
+#: reference/compound_stmts.rst:902
 msgid ""
 "A wildcard pattern always succeeds (matches anything) and binds no name.  "
 "Syntax:"
 msgstr ""
+"Ένα μοτίβο μπαλαντέρ επιτυγχάνει πάντα (ταιριάζει με τα πάντα) και δεν "
+"δεσμεύει κανένα όνομα. Σύνταξη:"
 
-#: reference/compound_stmts.rst:901
+#: reference/compound_stmts.rst:908
 msgid ""
 "``_`` is a :ref:`soft keyword <soft-keywords>` within any pattern, but only "
 "within patterns.  It is an identifier, as usual, even within ``match`` "
 "subject expressions, ``guard``\\ s, and ``case`` blocks."
 msgstr ""
-
-#: reference/compound_stmts.rst:905
-msgid "In simple terms, ``_`` will always succeed."
-msgstr ""
-
-#: reference/compound_stmts.rst:910
-msgid "Value Patterns"
-msgstr ""
+"Το ``_`` είναι ένα :ref:`soft keyword <soft-keywords>` εντός οποιουδήποτε "
+"μοτίβου, αλλά μόνο εντός μοτίβων. Είναι ένα αναγνωριστικό, ως συνήθως, ακόμη "
+"και εντός των εκφράσεων θέματος στο ``match``, στα ``guard``, και στα μπλοκ "
+"``case``."
 
 #: reference/compound_stmts.rst:912
-msgid "A value pattern represents a named value in Python. Syntax:"
-msgstr ""
+msgid "In simple terms, ``_`` will always succeed."
+msgstr "Με απλά λόγια, το ``_`` θα επιτυγχάνει πάντα."
 
-#: reference/compound_stmts.rst:920
+#: reference/compound_stmts.rst:917
+msgid "Value Patterns"
+msgstr "Μοτίβα Τιμής"
+
+#: reference/compound_stmts.rst:919
+msgid "A value pattern represents a named value in Python. Syntax:"
+msgstr "Ένα μοτίβο τιμής αναπαριστά μια ονομασμένη τιμή στην Python. Σύνταξη:"
+
+#: reference/compound_stmts.rst:927
 msgid ""
 "The dotted name in the pattern is looked up using standard Python :ref:`name "
 "resolution rules <resolve_names>`.  The pattern succeeds if the value found "
 "compares equal to the subject value (using the ``==`` equality operator)."
 msgstr ""
+"Το όνομα με τελείες στο μοτίβο αναζητείται χρησιμοποιώντας τους τυπικούς :"
+"ref:`κανόνες ανάλυσης ονομάτων <resolve_names>` της Python. Το πρότυπο "
+"επιτυγχάνει εάν η τιμή που βρέθηκε συγκρίνεται ως ίση με την τιμή του "
+"θέματος (χρησιμοποιώντας τον τελεστή ισότητας ``==``)."
 
-#: reference/compound_stmts.rst:925
+#: reference/compound_stmts.rst:932
 msgid ""
 "In simple terms ``NAME1.NAME2`` will succeed only if ``<subject> == NAME1."
 "NAME2``"
 msgstr ""
+"Με απλά λόγια, το ``NAME1.NAME2`` θα πετύχει μόνο εάν ``<subject> == NAME1."
+"NAME2``"
 
-#: reference/compound_stmts.rst:929
+#: reference/compound_stmts.rst:936
 msgid ""
 "If the same value occurs multiple times in the same match statement, the "
 "interpreter may cache the first value found and reuse it rather than repeat "
 "the same lookup.  This cache is strictly tied to a given execution of a "
 "given match statement."
 msgstr ""
+"Εάν η ίδια τιμή εμφανίζεται πολλές φορές στην ίδια δήλωση match, ο "
+"διερμηνέας μπορεί να αποθηκεύσει στην προσωρινή μνήμη την πρώτη τιμή που "
+"βρέθηκε και να την επαναχρησιμοποιήσει αντί να επαναλάβει την ίδια "
+"αναζήτηση. Αυτή η προσωρινή μνήμη είναι αυστηρά συνδεδεμένη με μια δεδομένη "
+"εκτέλεση μιας δεδομένης εντολής match."
 
-#: reference/compound_stmts.rst:937
+#: reference/compound_stmts.rst:944
 msgid "Group Patterns"
-msgstr ""
+msgstr "Μοτίβα Ομαδοποίησης"
 
-#: reference/compound_stmts.rst:939
+#: reference/compound_stmts.rst:946
 msgid ""
 "A group pattern allows users to add parentheses around patterns to emphasize "
 "the intended grouping.  Otherwise, it has no additional syntax. Syntax:"
 msgstr ""
-
-#: reference/compound_stmts.rst:946
-msgid "In simple terms ``(P)`` has the same effect as ``P``."
-msgstr ""
-
-#: reference/compound_stmts.rst:951
-msgid "Sequence Patterns"
-msgstr ""
+"Ένα μοτίβο ομαδοποίησης επιτρέπει στους χρήστες να προσθέτουν παρενθέσεις "
+"γύρω από τα μοτίβα για να τονίσουν την επιδιωκόμενη ομαδοποίηση. "
+"Διαφορετικά, δεν έχει πρόσθετη σύνταξη. Σύνταξη:"
 
 #: reference/compound_stmts.rst:953
+msgid "In simple terms ``(P)`` has the same effect as ``P``."
+msgstr "Με απλά λόγια, το ``(P)`` έχει το ίδιο αποτέλεσμα με το ``P``."
+
+#: reference/compound_stmts.rst:958
+msgid "Sequence Patterns"
+msgstr "Μοτίβα Ακολουθίας"
+
+#: reference/compound_stmts.rst:960
 msgid ""
 "A sequence pattern contains several subpatterns to be matched against "
 "sequence elements. The syntax is similar to the unpacking of a list or tuple."
 msgstr ""
+"Ένα μοτίβο ακολουθίας περιέχει πολλά υπο-πρότυπα που θα ταιριάξουν με τα "
+"στοιχεία μιας ακολουθίας. Η σύνταξη είναι παρόμοια με την αποσυμπίεση μιας "
+"λίστας ή μιας πλειάδας."
 
-#: reference/compound_stmts.rst:964
+#: reference/compound_stmts.rst:971
 msgid ""
 "There is no difference if parentheses  or square brackets are used for "
 "sequence patterns (i.e. ``(...)`` vs ``[...]`` )."
 msgstr ""
+"Δεν υπάρχει διαφορά, εάν χρησιμοποιούνται παρενθέσεις ή αγκύλες για τα "
+"μοτίβα ακολουθίας (δηλαδή ``(...)`` έναντι ``[...]``)."
 
-#: reference/compound_stmts.rst:968
+#: reference/compound_stmts.rst:975
 msgid ""
 "A single pattern enclosed in parentheses without a trailing comma (e.g. ``(3 "
 "| 4)``) is a :ref:`group pattern <group-patterns>`. While a single pattern "
 "enclosed in square brackets (e.g. ``[3 | 4]``) is still a sequence pattern."
 msgstr ""
+"Ένα μεμονωμένο μοτίβο περικλειόμενο σε παρενθέσεις χωρίς τελικό κόμμα (π.χ. "
+"``(3 | 4)``) είναι ένα :ref:`μοτίβο ομαδοποίησης <group-patterns>`. Ενώ ένα "
+"μεμονωμένο μοτίβο περικλειόμενο σε αγκύλες (π.χ. ``[3 | 4]``) εξακολουθεί να "
+"είναι ένα μοτίβο ακολουθίας."
 
-#: reference/compound_stmts.rst:973
+#: reference/compound_stmts.rst:980
 msgid ""
 "At most one star subpattern may be in a sequence pattern.  The star "
 "subpattern may occur in any position. If no star subpattern is present, the "
 "sequence pattern is a fixed-length sequence pattern; otherwise it is a "
 "variable-length sequence pattern."
 msgstr ""
+"Μπορεί να υπάρχει το πολύ ένα υπο-μοτίβο με αστερίσκο σε ένα μοτίβο "
+"ακολουθίας. Το υπο-μοτίβο με αστερίσκο μπορεί να εμφανιστεί σε οποιαδήποτε "
+"θέση. Εάν δεν υπάρχει υπο-μοτίβο με αστερίσκο, το μοτίβο ακολουθίας είναι "
+"σταθερού μήκους· διαφορετικά είναι μεταβλητού μήκους."
 
-#: reference/compound_stmts.rst:978
+#: reference/compound_stmts.rst:985
 msgid ""
 "The following is the logical flow for matching a sequence pattern against a "
 "subject value:"
 msgstr ""
+"Ακολουθεί η λογική ροή για το ταίριασμα ενός μοτίβου ακολουθίας έναντι μιας "
+"τιμής θέματος:"
 
-#: reference/compound_stmts.rst:981
+#: reference/compound_stmts.rst:988
 msgid ""
 "If the subject value is not a sequence [#]_, the sequence pattern fails."
 msgstr ""
+"Εάν η τιμή του θέματος δεν είναι μια ακολουθία [#]_, το μοτίβο ακολουθίας "
+"αποτυγχάνει."
 
-#: reference/compound_stmts.rst:984
+#: reference/compound_stmts.rst:991
 msgid ""
 "If the subject value is an instance of ``str``, ``bytes`` or ``bytearray`` "
 "the sequence pattern fails."
 msgstr ""
+"Εάν η τιμή του θέματος είναι στιγμιότυπο των ``str``, ``bytes`` ή "
+"``bytearray`` το μοτίβο ακολουθίας αποτυγχάνει."
 
-#: reference/compound_stmts.rst:987
+#: reference/compound_stmts.rst:994
 msgid ""
 "The subsequent steps depend on whether the sequence pattern is fixed or "
 "variable-length."
 msgstr ""
+"Τα επόμενα βήματα εξαρτώνται από το αν το μοτίβο ακολουθίας είναι σταθερού ή "
+"μεταβλητού μήκους."
 
-#: reference/compound_stmts.rst:990
+#: reference/compound_stmts.rst:997
 msgid "If the sequence pattern is fixed-length:"
-msgstr ""
+msgstr "Εάν το μοτίβο ακολουθίας είναι σταθερού μήκους:"
 
-#: reference/compound_stmts.rst:992
+#: reference/compound_stmts.rst:999
 msgid ""
 "If the length of the subject sequence is not equal to the number of "
 "subpatterns, the sequence pattern fails"
 msgstr ""
+"Εάν το μήκος της ακολουθίας θέματος δεν είναι ίσο με τον αριθμό των υπο-"
+"μοτίβων, το μοτίβο ακολουθίας αποτυγχάνει"
 
-#: reference/compound_stmts.rst:995
+#: reference/compound_stmts.rst:1002
 msgid ""
 "Subpatterns in the sequence pattern are matched to their corresponding items "
 "in the subject sequence from left to right.  Matching stops as soon as a "
 "subpattern fails.  If all subpatterns succeed in matching their "
 "corresponding item, the sequence pattern succeeds."
 msgstr ""
+"Τα υπο-μοτίβα στο μοτίβο ακολουθίας ταιριάζουν με τα αντίστοιχα στοιχεία "
+"τους στην ακολουθία θέματος από αριστερά προς τα δεξιά. Το ταίριασμα σταματά "
+"μόλις αποτύχει ένα υπο-μοτίβο. Εάν όλα τα υπο-μοτίβα επιτύχουν στο ταίριασμα "
+"του αντίστοιχου στοιχείου τους, το μοτίβο ακολουθίας επιτυγχάνει."
 
-#: reference/compound_stmts.rst:1000
+#: reference/compound_stmts.rst:1007
 msgid "Otherwise, if the sequence pattern is variable-length:"
-msgstr ""
+msgstr "Διαφορετικά, εάν το μοτίβο ακολουθίας είναι μεταβλητού μήκους:"
 
-#: reference/compound_stmts.rst:1002
+#: reference/compound_stmts.rst:1009
 msgid ""
 "If the length of the subject sequence is less than the number of non-star "
 "subpatterns, the sequence pattern fails."
 msgstr ""
+"Εάν το μήκος της ακολουθίας θέματος είναι μικρότερο από τον αριθμό των υπο-"
+"μοτίβων χωρίς αστερίσκο, το μοτίβο ακολουθίας αποτυγχάνει."
 
-#: reference/compound_stmts.rst:1005
+#: reference/compound_stmts.rst:1012
 msgid ""
 "The leading non-star subpatterns are matched to their corresponding items as "
 "for fixed-length sequences."
 msgstr ""
+"Τα αρχικά υπο-μοτίβα χωρίς αστερίσκο ταιριάζουν με τα αντίστοιχα στοιχεία "
+"τους όπως και για τις ακολουθίες σταθερού μήκους."
 
-#: reference/compound_stmts.rst:1008
+#: reference/compound_stmts.rst:1015
 msgid ""
 "If the previous step succeeds, the star subpattern matches a list formed of "
 "the remaining subject items, excluding the remaining items corresponding to "
 "non-star subpatterns following the star subpattern."
 msgstr ""
+"Εάν το προηγούμενο βήμα επιτύχει, το υπο-μοτίβο με αστερίσκο ταιριάζει με "
+"μια λίστα που σχηματίζεται από τα εναπομείναντα στοιχεία του θέματος, "
+"εξαιρουμένων των στοιχείων που αντιστοιχούν σε υπο-μοτίβα χωρίς αστερίσκο τα "
+"οποία ακολουθούν το υπο-μοτίβο με αστερίσκο."
 
-#: reference/compound_stmts.rst:1012
+#: reference/compound_stmts.rst:1019
 msgid ""
 "Remaining non-star subpatterns are matched to their corresponding subject "
 "items, as for a fixed-length sequence."
 msgstr ""
+"Τα εναπομείναντα υπο-μοτίβα χωρίς αστερίσκο ταιριάζουν με τα αντίστοιχα "
+"στοιχεία του θέματος, όπως και για μια ακολουθία σταθερού μήκους."
 
-#: reference/compound_stmts.rst:1015
+#: reference/compound_stmts.rst:1022
 msgid ""
 "The length of the subject sequence is obtained via :func:`len` (i.e. via "
-"the :meth:`__len__` protocol).  This length may be cached by the interpreter "
-"in a similar manner as :ref:`value patterns <value-patterns>`."
+"the :meth:`~object.__len__` protocol). This length may be cached by the "
+"interpreter in a similar manner as :ref:`value patterns <value-patterns>`."
 msgstr ""
+"Το μήκος της ακολουθίας θέματος λαμβάνεται μέσω της :func:`len` (δηλαδή μέσω "
+"του πρωτοκόλλου :meth:`~object.__len__`). Αυτό το μήκος μπορεί να "
+"αποθηκευτεί στην προσωρινή μνήμη από τον διερμηνέα με παρόμοιο τρόπο όπως "
+"τα :ref:`μοτίβα τιμής <value-patterns>`."
 
-#: reference/compound_stmts.rst:1021
+#: reference/compound_stmts.rst:1028
 msgid ""
 "In simple terms ``[P1, P2, P3,`` ... ``, P<N>]`` matches only if all the "
 "following happens:"
 msgstr ""
+"Με απλά λόγια, το ``[P1, P2, P3,`` ... ``, P<N>]`` ταιριάζει μόνο εάν "
+"συμβούν όλα τα ακόλουθα:"
 
-#: reference/compound_stmts.rst:1024
+#: reference/compound_stmts.rst:1031
 msgid "check ``<subject>`` is a sequence"
-msgstr ""
+msgstr "έλεγχος ότι το ``<subject>`` είναι μια ακολουθία"
 
-#: reference/compound_stmts.rst:1025
+#: reference/compound_stmts.rst:1032
 msgid "``len(subject) == <N>``"
-msgstr ""
+msgstr "``len(subject) == <N>``"
 
-#: reference/compound_stmts.rst:1026
+#: reference/compound_stmts.rst:1033
 msgid ""
 "``P1`` matches ``<subject>[0]`` (note that this match can also bind names)"
 msgstr ""
+"το ``P1`` ταιριάζει στο ``<subject>[0]`` (σημειώστε ότι αυτό το ταίριασμα "
+"μπορεί επίσης να δεσμεύσει ονόματα)"
 
-#: reference/compound_stmts.rst:1027
+#: reference/compound_stmts.rst:1034
 msgid ""
 "``P2`` matches ``<subject>[1]`` (note that this match can also bind names)"
 msgstr ""
-
-#: reference/compound_stmts.rst:1028
-msgid "... and so on for the corresponding pattern/element."
-msgstr ""
-
-#: reference/compound_stmts.rst:1033
-msgid "Mapping Patterns"
-msgstr ""
+"το ``P2`` ταιριάζει στο ``<subject>[1]`` (σημειώστε ότι αυτό το ταίριασμα "
+"μπορεί επίσης να δεσμεύσει ονόματα)"
 
 #: reference/compound_stmts.rst:1035
+msgid "... and so on for the corresponding pattern/element."
+msgstr "... και ούτω καθεξής για το αντίστοιχο ζεύγος μοτίβου/στοιχείου."
+
+#: reference/compound_stmts.rst:1040
+msgid "Mapping Patterns"
+msgstr "Μοτίβα Αντιστοίχισης"
+
+#: reference/compound_stmts.rst:1042
 msgid ""
 "A mapping pattern contains one or more key-value patterns.  The syntax is "
 "similar to the construction of a dictionary. Syntax:"
 msgstr ""
+"Ένα μοτίβο αντιστοίχισης περιέχει ένα ή περισσότερα μοτίβα κλειδιού-τιμής. Η "
+"σύνταξη είναι παρόμοια με την κατασκευή ενός λεξικού. Σύνταξη:"
 
-#: reference/compound_stmts.rst:1046
+#: reference/compound_stmts.rst:1053
 msgid ""
 "At most one double star pattern may be in a mapping pattern.  The double "
 "star pattern must be the last subpattern in the mapping pattern."
 msgstr ""
+"Μπορεί να υπάρχει το πολύ ένα μοτίβο με διπλό αστερίσκο σε ένα μοτίβο "
+"αντιστοίχισης. Το μοτίβο με διπλό αστερίσκο πρέπει να είναι το τελευταίο υπο-"
+"μοτίβο στο μοτίβο αντιστοίχισης."
 
-#: reference/compound_stmts.rst:1049
+#: reference/compound_stmts.rst:1056
 msgid ""
 "Duplicate keys in mapping patterns are disallowed. Duplicate literal keys "
 "will raise a :exc:`SyntaxError`. Two keys that otherwise have the same value "
 "will raise a :exc:`ValueError` at runtime."
 msgstr ""
+"Δεν επιτρέπονται διπλότυπα κλειδιά σε μοτίβα αντιστοίχισης. Τα διπλότυπα "
+"λεκτικά κλειδιά θα κάνουν raise ένα :exc:`SyntaxError`. Δύο κλειδιά που κατά "
+"τα άλλα έχουν την ίδια τιμή θα κάνουν raise ένα :exc:`ValueError` κατά τον "
+"χρόνο εκτέλεσης."
 
-#: reference/compound_stmts.rst:1053
+#: reference/compound_stmts.rst:1060
 msgid ""
 "The following is the logical flow for matching a mapping pattern against a "
 "subject value:"
 msgstr ""
+"Ακολουθεί η λογική ροή για το ταίριασμα ενός μοτίβου αντιστοίχισης έναντι "
+"μιας τιμής θέματος:"
 
-#: reference/compound_stmts.rst:1056
+#: reference/compound_stmts.rst:1063
 msgid "If the subject value is not a mapping [#]_,the mapping pattern fails."
 msgstr ""
+"Εάν η τιμή του θέματος δεν είναι μία αντιστοίχιση [#]_, το μοτίβο "
+"αντιστοίχισης αποτυγχάνει."
 
-#: reference/compound_stmts.rst:1058
+#: reference/compound_stmts.rst:1065
 msgid ""
 "If every key given in the mapping pattern is present in the subject mapping, "
 "and the pattern for each key matches the corresponding item of the subject "
 "mapping, the mapping pattern succeeds."
 msgstr ""
+"Εάν κάθε κλειδί που δίνεται στο μοτίβο αντιστοίχισης είναι παρόν στην "
+"αντιστοίχιση του θέματος, και το μοτίβο για κάθε κλειδί ταιριάζει με το "
+"αντίστοιχο στοιχείο της αντιστοίχισης του θέματος, το μοτίβο αντιστοίχισης "
+"επιτυγχάνει."
 
-#: reference/compound_stmts.rst:1062
+#: reference/compound_stmts.rst:1069
 msgid ""
 "If duplicate keys are detected in the mapping pattern, the pattern is "
 "considered invalid. A :exc:`SyntaxError` is raised for duplicate literal "
 "values; or a :exc:`ValueError` for named keys of the same value."
 msgstr ""
+"Εάν ανιχνευτούν διπλότυπα κλειδιά στο μοτίβο αντιστοίχισης, το μοτίβο "
+"θεωρείται μη έγκυρο. Γίνεται raise ένα :exc:`SyntaxError` για διπλότυπες "
+"λεκτικές τιμές· ή ένα :exc:`ValueError` για ονομασμένα κλειδιά με την ίδια "
+"τιμή."
 
-#: reference/compound_stmts.rst:1066
+#: reference/compound_stmts.rst:1073
 msgid ""
 "Key-value pairs are matched using the two-argument form of the mapping "
 "subject's ``get()`` method.  Matched key-value pairs must already be present "
-"in the mapping, and not created on-the-fly via :meth:`__missing__` or :meth:"
-"`~object.__getitem__`."
+"in the mapping, and not created on-the-fly via :meth:`~object.__missing__` "
+"or :meth:`~object.__getitem__`."
 msgstr ""
+"Τα ζεύγη κλειδιού-τιμής ταιριάζονται χρησιμοποιώντας τη μορφή των δύο "
+"ορισμάτων της μεθόδου ``get()`` της αντιστοίχισης του θέματος. Τα "
+"ταιριασμένα ζεύγη κλειδιού-τιμής πρέπει να είναι ήδη παρόντα στην "
+"αντιστοίχιση, και να μην δημιουργούνται δυναμικά μέσω της :meth:`~object."
+"__missing__` ή της :meth:`~object.__getitem__`."
 
-#: reference/compound_stmts.rst:1071
+#: reference/compound_stmts.rst:1078
 msgid ""
 "In simple terms ``{KEY1: P1, KEY2: P2, ... }`` matches only if all the "
 "following happens:"
 msgstr ""
+"Με απλά λόγια, το ``{KEY1: P1, KEY2: P2, ... }`` ταιριάζει μόνο εάν συμβούν "
+"όλα τα ακόλουθα:"
 
-#: reference/compound_stmts.rst:1074
+#: reference/compound_stmts.rst:1081
 msgid "check ``<subject>`` is a mapping"
-msgstr ""
+msgstr "έλεγχος ότι το ``<subject>`` είναι μία αντιστοίχιση"
 
-#: reference/compound_stmts.rst:1075
+#: reference/compound_stmts.rst:1082
 msgid "``KEY1 in <subject>``"
-msgstr ""
-
-#: reference/compound_stmts.rst:1076
-msgid "``P1`` matches ``<subject>[KEY1]``"
-msgstr ""
-
-#: reference/compound_stmts.rst:1077
-msgid "... and so on for the corresponding KEY/pattern pair."
-msgstr ""
+msgstr "``KEY1 in <subject>``"
 
 #: reference/compound_stmts.rst:1083
-msgid "Class Patterns"
-msgstr ""
+msgid "``P1`` matches ``<subject>[KEY1]``"
+msgstr "το ``P1`` ταιριάζει στο ``<subject>[KEY1]``"
 
-#: reference/compound_stmts.rst:1085
+#: reference/compound_stmts.rst:1084
+msgid "... and so on for the corresponding KEY/pattern pair."
+msgstr "... και ούτω καθεξής για το αντίστοιχο ζεύγος KEY/μοτίβου."
+
+#: reference/compound_stmts.rst:1090
+msgid "Class Patterns"
+msgstr "Μοτίβα Κλάσης"
+
+#: reference/compound_stmts.rst:1092
 msgid ""
 "A class pattern represents a class and its positional and keyword arguments "
 "(if any).  Syntax:"
 msgstr ""
+"Ένα μοτίβο κλάσης αναπαριστά μια κλάση και τα ορίσματα θέσης και λέξης "
+"κλειδιού της (εάν υπάρχουν). Σύνταξη:"
 
-#: reference/compound_stmts.rst:1096
+#: reference/compound_stmts.rst:1103
 msgid "The same keyword should not be repeated in class patterns."
-msgstr ""
+msgstr "Η ίδια λέξη-κλειδί δεν πρέπει να επαναλαμβάνεται στα μοτίβα κλάσης."
 
-#: reference/compound_stmts.rst:1098
+#: reference/compound_stmts.rst:1105
 msgid ""
 "The following is the logical flow for matching a class pattern against a "
 "subject value:"
 msgstr ""
+"Ακολουθεί η λογική ροή για το ταίριασμα ενός μοτίβου κλάσης έναντι μιας "
+"τιμής θέματος:"
 
-#: reference/compound_stmts.rst:1101
+#: reference/compound_stmts.rst:1108
 msgid ""
 "If ``name_or_attr`` is not an instance of the builtin :class:`type` , raise :"
 "exc:`TypeError`."
 msgstr ""
+"Εάν το ``name_or_attr`` δεν είναι στιγμιότυπο του ενσωματωμένου :class:"
+"`type`, γίνεται raise ένα :exc:`TypeError`."
 
-#: reference/compound_stmts.rst:1104
+#: reference/compound_stmts.rst:1111
 msgid ""
 "If the subject value is not an instance of ``name_or_attr`` (tested via :"
 "func:`isinstance`), the class pattern fails."
 msgstr ""
+"Εάν η τιμή του θέματος δεν είναι στιγμιότυπο του ``name_or_attr`` (ελέγχεται "
+"μέσω της :func:`isinstance`), το μοτίβο κλάσης αποτυγχάνει."
 
-#: reference/compound_stmts.rst:1107
+#: reference/compound_stmts.rst:1114
 msgid ""
 "If no pattern arguments are present, the pattern succeeds.  Otherwise, the "
 "subsequent steps depend on whether keyword or positional argument patterns "
 "are present."
 msgstr ""
+"Εάν δεν υπάρχουν ορίσματα μοτίβου, το μοτίβο επιτυγχάνει. Διαφορετικά, τα "
+"επόμενα βήματα εξαρτώνται από το αν υπάρχουν μοτίβα λέξης-κλειδιού ή "
+"ορισμάτων θέσης."
 
-#: reference/compound_stmts.rst:1111
+#: reference/compound_stmts.rst:1118
 msgid ""
 "For a number of built-in types (specified below), a single positional "
 "subpattern is accepted which will match the entire subject; for these types "
 "keyword patterns also work as for other types."
 msgstr ""
+"Για έναν αριθμό ενσωματωμένων τύπων (καθορίζονται παρακάτω), γίνεται "
+"αποδεκτό ένα μεμονωμένο υπο-μοτίβο θέσης το οποίο θα ταιριάξει με ολόκληρο "
+"το θέμα· για αυτούς τους τύπους, τα μοτίβα λέξης-κλειδιού λειτουργούν επίσης "
+"όπως και για άλλους τύπους."
 
-#: reference/compound_stmts.rst:1115
+#: reference/compound_stmts.rst:1122
 msgid ""
 "If only keyword patterns are present, they are processed as follows, one by "
 "one:"
 msgstr ""
+"Εάν υπάρχουν μόνο μοτίβα λέξης-κλειδιού, επεξεργάζονται ως εξής, ένα προς "
+"ένα:"
 
-#: reference/compound_stmts.rst:1118
-msgid "I. The keyword is looked up as an attribute on the subject."
-msgstr ""
+#: reference/compound_stmts.rst:1125
+msgid "The keyword is looked up as an attribute on the subject."
+msgstr "Η λέξη-κλειδί αναζητείται ως χαρακτηριστικό πάνω στο θέμα."
 
-#: reference/compound_stmts.rst:1120
+#: reference/compound_stmts.rst:1127
 msgid ""
 "If this raises an exception other than :exc:`AttributeError`, the exception "
 "bubbles up."
 msgstr ""
+"Εάν κάνει raise μια εξαίρεση διαφορετική από το :exc:`AttributeError`, η "
+"εξαίρεση ανεβαίνει προς τα πάνω."
 
-#: reference/compound_stmts.rst:1123
+#: reference/compound_stmts.rst:1130
 msgid "If this raises :exc:`AttributeError`, the class pattern has failed."
 msgstr ""
+"Εάν κάνει raise το :exc:`AttributeError`, το μοτίβο κλάσης έχει αποτύχει."
 
-#: reference/compound_stmts.rst:1125
+#: reference/compound_stmts.rst:1132
 msgid ""
 "Else, the subpattern associated with the keyword pattern is matched against "
 "the subject's attribute value.  If this fails, the class pattern fails; if "
 "this succeeds, the match proceeds to the next keyword."
 msgstr ""
+"Αλλιώς, το υπο-μοτίβο που σχετίζεται με το μοτίβο λέξης-κλειδιού ταιριάζεται "
+"με την τιμή του χαρακτηριστικού του θέματος. Εάν αυτό αποτύχει, το μοτίβο "
+"κλάσης αποτυγχάνει· εάν επιτύχει, το ταίριασμα προχωρά στην επόμενη λέξη-"
+"κλειδί."
 
-#: reference/compound_stmts.rst:1130
-msgid "II. If all keyword patterns succeed, the class pattern succeeds."
+#: reference/compound_stmts.rst:1137
+msgid "If all keyword patterns succeed, the class pattern succeeds."
 msgstr ""
+"Εάν όλα τα μοτίβα λέξης-κλειδιού επιτύχουν, το μοτίβο κλάσης επιτυγχάνει."
 
-#: reference/compound_stmts.rst:1132
+#: reference/compound_stmts.rst:1139
 msgid ""
 "If any positional patterns are present, they are converted to keyword "
 "patterns using the :data:`~object.__match_args__` attribute on the class "
 "``name_or_attr`` before matching:"
 msgstr ""
+"Εάν υπάρχουν οποιαδήποτε μοτίβα θέσης, μετατρέπονται σε μοτίβα λέξης-"
+"κλειδιού χρησιμοποιώντας το χαρακτηριστικό :data:`~object.__match_args__` "
+"πάνω στην κλάση ``name_or_attr`` πριν από το ταίριασμα:"
 
-#: reference/compound_stmts.rst:1136
-msgid ""
-"I. The equivalent of ``getattr(cls, \"__match_args__\", ())`` is called."
-msgstr ""
+#: reference/compound_stmts.rst:1143
+msgid "The equivalent of ``getattr(cls, \"__match_args__\", ())`` is called."
+msgstr "Καλείται το ισοδύναμο της ``getattr(cls, \"__match_args__\", ())``."
 
-#: reference/compound_stmts.rst:1138
+#: reference/compound_stmts.rst:1145
 msgid "If this raises an exception, the exception bubbles up."
-msgstr ""
+msgstr "Εάν κάνει raise μια εξαίρεση, η εξαίρεση ανεβαίνει προς τα πάνω."
 
-#: reference/compound_stmts.rst:1140
+#: reference/compound_stmts.rst:1147
 msgid ""
 "If the returned value is not a tuple, the conversion fails and :exc:"
 "`TypeError` is raised."
 msgstr ""
+"Εάν η επιστρεφόμενη τιμή δεν είναι πλειάδα, η μετατροπή αποτυγχάνει και "
+"γίνεται raise το :exc:`TypeError`."
 
-#: reference/compound_stmts.rst:1143
+#: reference/compound_stmts.rst:1150
 msgid ""
 "If there are more positional patterns than ``len(cls.__match_args__)``, :exc:"
 "`TypeError` is raised."
 msgstr ""
+"Εάν υπάρχουν περισσότερα μοτίβα θέσης από το ``len(cls.__match_args__)``, "
+"γίνεται raise το :exc:`TypeError`."
 
-#: reference/compound_stmts.rst:1146
+#: reference/compound_stmts.rst:1153
 msgid ""
 "Otherwise, positional pattern ``i`` is converted to a keyword pattern using "
 "``__match_args__[i]`` as the keyword.  ``__match_args__[i]`` must be a "
 "string; if not :exc:`TypeError` is raised."
 msgstr ""
-
-#: reference/compound_stmts.rst:1150
-msgid "If there are duplicate keywords, :exc:`TypeError` is raised."
-msgstr ""
-
-#: reference/compound_stmts.rst:1152
-msgid ":ref:`class-pattern-matching`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1154
-msgid ""
-"II. Once all positional patterns have been converted to keyword patterns,"
-msgstr ""
-
-#: reference/compound_stmts.rst:1155
-msgid "the match proceeds as if there were only keyword patterns."
-msgstr ""
+"Διαφορετικά, το μοτίβο θέσης ``i`` μετατρέπεται σε ένα μοτίβο λέξης-κλειδιού "
+"χρησιμοποιώντας το ``__match_args__[i]`` ως λέξη-κλειδί. Το "
+"``__match_args__[i]`` πρέπει να είναι συμβολοσειρά· εάν όχι, γίνεται raise "
+"το :exc:`TypeError`."
 
 #: reference/compound_stmts.rst:1157
+msgid "If there are duplicate keywords, :exc:`TypeError` is raised."
+msgstr ""
+"Εάν υπάρχουν διπλότυπες λέξεις-κλειδιά, γίνεται raise το :exc:`TypeError`."
+
+#: reference/compound_stmts.rst:1159
+msgid ":ref:`class-pattern-matching`"
+msgstr ":ref:`class-pattern-matching`"
+
+#: reference/compound_stmts.rst:1161
+msgid ""
+"Once all positional patterns have been converted to keyword patterns, the "
+"match proceeds as if there were only keyword patterns."
+msgstr ""
+"Μόλις όλα τα μοτίβα θέσης μετατραπούν σε μοτίβα λέξης-κλειδιού, το ταίριασμα "
+"προχωρά σαν να υπήρχαν μόνο μοτίβα λέξης-κλειδιού."
+
+#: reference/compound_stmts.rst:1164
 msgid ""
 "For the following built-in types the handling of positional subpatterns is "
 "different:"
 msgstr ""
+"Για τους ακόλουθους ενσωματωμένους τύπους, ο χειρισμός των υπο-μοτίβων θέσης "
+"είναι διαφορετικός:"
 
-#: reference/compound_stmts.rst:1160
+#: reference/compound_stmts.rst:1167
 msgid ":class:`bool`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1161
-msgid ":class:`bytearray`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1162
-msgid ":class:`bytes`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1163
-msgid ":class:`dict`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1164
-msgid ":class:`float`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1165
-msgid ":class:`frozenset`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1166
-msgid ":class:`int`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1167 reference/compound_stmts.rst:1925
-msgid ":class:`list`"
-msgstr ""
+msgstr ":class:`bool`"
 
 #: reference/compound_stmts.rst:1168
-msgid ":class:`set`"
-msgstr ""
+msgid ":class:`bytearray`"
+msgstr ":class:`bytearray`"
 
 #: reference/compound_stmts.rst:1169
-msgid ":class:`str`"
-msgstr ""
+msgid ":class:`bytes`"
+msgstr ":class:`bytes`"
 
-#: reference/compound_stmts.rst:1170 reference/compound_stmts.rst:1928
-msgid ":class:`tuple`"
-msgstr ""
+#: reference/compound_stmts.rst:1170
+msgid ":class:`dict`"
+msgstr ":class:`dict`"
+
+#: reference/compound_stmts.rst:1171
+msgid ":class:`float`"
+msgstr ":class:`float`"
 
 #: reference/compound_stmts.rst:1172
+msgid ":class:`frozenset`"
+msgstr ":class:`frozenset`"
+
+#: reference/compound_stmts.rst:1173
+msgid ":class:`int`"
+msgstr ":class:`int`"
+
+#: reference/compound_stmts.rst:1174 reference/compound_stmts.rst:1932
+msgid ":class:`list`"
+msgstr ":class:`list`"
+
+#: reference/compound_stmts.rst:1175
+msgid ":class:`set`"
+msgstr ":class:`set`"
+
+#: reference/compound_stmts.rst:1176
+msgid ":class:`str`"
+msgstr ":class:`str`"
+
+#: reference/compound_stmts.rst:1177 reference/compound_stmts.rst:1935
+msgid ":class:`tuple`"
+msgstr ":class:`tuple`"
+
+#: reference/compound_stmts.rst:1179
 msgid ""
 "These classes accept a single positional argument, and the pattern there is "
 "matched against the whole object rather than an attribute. For example "
 "``int(0|1)`` matches the value ``0``, but not the value ``0.0``."
 msgstr ""
+"Αυτές οι κλάσεις δέχονται ένα μόνο όρισμα θέσης, και το μοτίβο εκεί "
+"ταιριάζεται έναντι ολόκληρου του αντικειμένου αντί για ένα χαρακτηριστικό. "
+"Για παράδειγμα το ``int(0|1)`` ταιριάζει με την τιμή ``0``, αλλά όχι με την "
+"τιμή ``0.0``."
 
-#: reference/compound_stmts.rst:1176
+#: reference/compound_stmts.rst:1183
 msgid ""
 "In simple terms ``CLS(P1, attr=P2)`` matches only if the following happens:"
 msgstr ""
-
-#: reference/compound_stmts.rst:1178
-msgid "``isinstance(<subject>, CLS)``"
-msgstr ""
-
-#: reference/compound_stmts.rst:1179
-msgid "convert ``P1`` to a keyword pattern using ``CLS.__match_args__``"
-msgstr ""
-
-#: reference/compound_stmts.rst:1180
-msgid "For each keyword argument ``attr=P2``:"
-msgstr ""
-
-#: reference/compound_stmts.rst:1182
-msgid "``hasattr(<subject>, \"attr\")``"
-msgstr ""
-
-#: reference/compound_stmts.rst:1183
-msgid "``P2`` matches ``<subject>.attr``"
-msgstr ""
+"Με απλά λόγια, το ``CLS(P1, attr=P2)`` ταιριάζει μόνο εάν συμβαίνουν τα "
+"ακόλουθα:"
 
 #: reference/compound_stmts.rst:1185
+msgid "``isinstance(<subject>, CLS)``"
+msgstr "``isinstance(<subject>, CLS)``"
+
+#: reference/compound_stmts.rst:1186
+msgid "convert ``P1`` to a keyword pattern using ``CLS.__match_args__``"
+msgstr ""
+"μετατροπή του ``P1`` σε μοτίβο λέξης-κλειδιού χρησιμοποιώντας το ``CLS."
+"__match_args__``"
+
+#: reference/compound_stmts.rst:1187
+msgid "For each keyword argument ``attr=P2``:"
+msgstr "Για κάθε όρισμα λέξης-κλειδιού ``attr=P2``:"
+
+#: reference/compound_stmts.rst:1189
+msgid "``hasattr(<subject>, \"attr\")``"
+msgstr "``hasattr(<subject>, \"attr\")``"
+
+#: reference/compound_stmts.rst:1190
+msgid "``P2`` matches ``<subject>.attr``"
+msgstr "το ``P2`` ταιριάζει στο ``<subject>.attr``"
+
+#: reference/compound_stmts.rst:1192
 msgid "... and so on for the corresponding keyword argument/pattern pair."
 msgstr ""
+"... και ούτω καθεξής για το αντίστοιχο ζεύγος ορίσματος λέξης-κλειδιού/"
+"μοτίβου."
 
-#: reference/compound_stmts.rst:1200
+#: reference/compound_stmts.rst:1207
 msgid "Function definitions"
-msgstr ""
+msgstr "Ορισμοί συναρτήσεων"
 
-#: reference/compound_stmts.rst:1215
+#: reference/compound_stmts.rst:1222
 msgid ""
 "A function definition defines a user-defined function object (see section :"
 "ref:`types`):"
 msgstr ""
+"Ένας ορισμός συνάρτησης ορίζει ένα αντικείμενο συνάρτησης ορισμένο από τον "
+"χρήστη (δείτε την ενότητα :ref:`types`):"
 
-#: reference/compound_stmts.rst:1237
+#: reference/compound_stmts.rst:1244
 msgid ""
 "A function definition is an executable statement.  Its execution binds the "
 "function name in the current local namespace to a function object (a wrapper "
@@ -1544,14 +2151,22 @@ msgid ""
 "a reference to the current global namespace as the global namespace to be "
 "used when the function is called."
 msgstr ""
+"Ο ορισμός μιας συνάρτησης είναι μια εκτελέσιμη δήλωση. Η εκτέλεσή της "
+"δεσμεύει το όνομα της συνάρτησης στον τρέχοντα τοπικό χώρο ονομάτων σε ένα "
+"αντικείμενο συνάρτησης (ένας wrapper γύρω από τον εκτελέσιμο κώδικα της "
+"συνάρτησης). Αυτό το αντικείμενο συνάρτησης περιέχει μια αναφορά στον "
+"τρέχοντα καθολικό χώρο ονομάτων, ως τον καθολικό χώρο ονομάτων που θα "
+"χρησιμοποιηθεί όταν κληθεί η συνάρτηση."
 
-#: reference/compound_stmts.rst:1243
+#: reference/compound_stmts.rst:1250
 msgid ""
 "The function definition does not execute the function body; this gets "
 "executed only when the function is called. [#]_"
 msgstr ""
+"Ο ορισμός της συνάρτησης δεν εκτελεί το σώμα της συνάρτησης· αυτό εκτελείται "
+"μόνο όταν κληθεί η συνάρτηση. [#]_"
 
-#: reference/compound_stmts.rst:1249
+#: reference/compound_stmts.rst:1256
 msgid ""
 "A function definition may be wrapped by one or more :term:`decorator` "
 "expressions. Decorator expressions are evaluated when the function is "
@@ -1561,38 +2176,54 @@ msgid ""
 "function object.  Multiple decorators are applied in nested fashion. For "
 "example, the following code ::"
 msgstr ""
+"Ένας ορισμός συνάρτησης μπορεί να περιτυλιχθεί από μία ή περισσότερες "
+"εκφράσεις :term:`decorator`. Οι εκφράσεις decorator αξιολογούνται όταν "
+"ορίζεται η συνάρτηση, στο εύρος που περιέχει τον ορισμό της συνάρτησης. Το "
+"αποτέλεσμα πρέπει να είναι ένα callable, το οποίο καλείται με το αντικείμενο "
+"συνάρτησης ως το μοναδικό όρισμα. Η τιμή που επιστρέφεται δεσμεύεται στο "
+"όνομα της συνάρτησης αντί για το αντικείμενο συνάρτησης. Πολλοί decorators "
+"εφαρμόζονται με εμφωλευμένο τρόπο. Για παράδειγμα, ο ακόλουθος κώδικας ::"
 
-#: reference/compound_stmts.rst:1256
+#: reference/compound_stmts.rst:1263
 msgid ""
 "@f1(arg)\n"
 "@f2\n"
 "def func(): pass"
 msgstr ""
+"@f1(arg)\n"
+"@f2\n"
+"def func(): pass"
 
-#: reference/compound_stmts.rst:1260 reference/compound_stmts.rst:1449
+#: reference/compound_stmts.rst:1267 reference/compound_stmts.rst:1456
 msgid "is roughly equivalent to ::"
-msgstr ""
+msgstr "είναι κατά προσέγγιση ισοδύναμο με το ::"
 
-#: reference/compound_stmts.rst:1262
+#: reference/compound_stmts.rst:1269
 msgid ""
 "def func(): pass\n"
 "func = f1(arg)(f2(func))"
 msgstr ""
+"def func(): pass\n"
+"func = f1(arg)(f2(func))"
 
-#: reference/compound_stmts.rst:1265
+#: reference/compound_stmts.rst:1272
 msgid ""
 "except that the original function is not temporarily bound to the name "
 "``func``."
 msgstr ""
+"εκτός του ότι η αρχική συνάρτηση δεν δεσμεύεται προσωρινά στο όνομα ``func``."
 
-#: reference/compound_stmts.rst:1267
+#: reference/compound_stmts.rst:1274
 msgid ""
 "Functions may be decorated with any valid :token:`~python-grammar:"
 "assignment_expression`. Previously, the grammar was much more restrictive; "
 "see :pep:`614` for details."
 msgstr ""
+"Οι συναρτήσεις μπορούν να διακοσμηθούν με οποιοδήποτε έγκυρο :token:`~python-"
+"grammar:assignment_expression`. Προηγουμένως, η γραμματική ήταν πολύ πιο "
+"αυστηρή· δείτε το :pep:`614` για λεπτομέρειες."
 
-#: reference/compound_stmts.rst:1272
+#: reference/compound_stmts.rst:1279
 msgid ""
 "A list of :ref:`type parameters <type-params>` may be given in square "
 "brackets between the function's name and the opening parenthesis for its "
@@ -1601,12 +2232,19 @@ msgid ""
 "function's :attr:`~function.__type_params__` attribute. See :ref:`generic-"
 "functions` for more."
 msgstr ""
+"Μια λίστα από :ref:`παραμέτρους τύπου <type-params>` μπορεί να δοθεί μέσα σε "
+"αγκύλες μεταξύ του ονόματος της συνάρτησης και της παρένθεσης ανοίγματος για "
+"τη λίστα παραμέτρων της. Αυτό υποδεικνύει στους ελέγχους στατικού τύπου ότι "
+"η συνάρτηση είναι γενική. Κατά τον χρόνο εκτέλεσης, οι παράμετροι τύπου "
+"μπορούν να ανακτηθούν από το χαρακτηριστικό :attr:`~function."
+"__type_params__` της συνάρτησης. Δείτε το :ref:`generic-functions` για "
+"περισσότερα."
 
-#: reference/compound_stmts.rst:1279 reference/compound_stmts.rst:1468
+#: reference/compound_stmts.rst:1286 reference/compound_stmts.rst:1475
 msgid "Type parameter lists are new in Python 3.12."
-msgstr ""
+msgstr "Οι λίστες παραμέτρων τύπου είναι νέες στην Python 3.12."
 
-#: reference/compound_stmts.rst:1287
+#: reference/compound_stmts.rst:1294
 msgid ""
 "When one or more :term:`parameters <parameter>` have the form *parameter* "
 "``=`` *expression*, the function is said to have \"default parameter values."
@@ -1616,8 +2254,16 @@ msgid ""
 "up until the \"``*``\" must also have a default value --- this is a "
 "syntactic restriction that is not expressed by the grammar."
 msgstr ""
+"Όταν μία ή περισσότερες :term:`παράμετροι <parameter>` έχουν τη μορφή "
+"*parameter* ``=`` *expression*, η συνάρτηση λέγεται ότι έχει "
+"\"προεπιλεγμένες τιμές παραμέτρων.\" Για μια παράμετρο με προεπιλεγμένη "
+"τιμή, το αντίστοιχο :term:`argument` μπορεί να παραλειφθεί από μια κλήση, "
+"οπότε αντικαθίσταται η προεπιλεγμένη τιμή της παραμέτρου. Εάν μια παράμετρος "
+"έχει μια προεπιλεγμένη τιμή, όλες οι επόμενες παράμετροι μέχρι το \"``*``\" "
+"πρέπει επίσης να έχουν μια προεπιλεγμένη τιμή --- αυτός είναι ένας "
+"συντακτικός περιορισμός που δεν εκφράζεται από τη γραμματική."
 
-#: reference/compound_stmts.rst:1295
+#: reference/compound_stmts.rst:1302
 msgid ""
 "**Default parameter values are evaluated from left to right when the "
 "function definition is executed.** This means that the expression is "
@@ -1629,8 +2275,19 @@ msgid ""
 "is generally not what was intended.  A way around this is to use ``None`` as "
 "the default, and explicitly test for it in the body of the function, e.g.::"
 msgstr ""
+"**Οι προεπιλεγμένες τιμές παραμέτρων αξιολογούνται από αριστερά προς τα "
+"δεξιά όταν εκτελείται ο ορισμός της συνάρτησης.** Αυτό σημαίνει ότι η "
+"έκφραση αξιολογείται μία φορά, όταν ορίζεται η συνάρτηση, και "
+"χρησιμοποιείται η ίδια \"προ-υπολογισμένη\" τιμή για κάθε κλήση. Αυτό είναι "
+"ιδιαίτερα σημαντικό να κατανοηθεί, όταν μια προεπιλεγμένη τιμή παραμέτρου "
+"είναι ένα μεταβλητό αντικείμενο, όπως μια λίστα ή ένα λεξικό: εάν η "
+"συνάρτηση τροποποιήσει το αντικείμενο (π.χ. προσθέτοντας ένα στοιχείο σε μια "
+"λίστα), η προεπιλεγμένη τιμή παραμέτρου τροποποιείται στην πράξη. Αυτό "
+"συνήθως δεν είναι αυτό που επιδιωκόταν. Ένας τρόπος παράκαμψης είναι να "
+"χρησιμοποιήσετε το ``None`` ως προεπιλογή, και να το ελέγχετε ρητά στο σώμα "
+"της συνάρτησης, π.χ.::"
 
-#: reference/compound_stmts.rst:1305
+#: reference/compound_stmts.rst:1312
 msgid ""
 "def whats_on_the_telly(penguin=None):\n"
 "    if penguin is None:\n"
@@ -1638,8 +2295,13 @@ msgid ""
 "    penguin.append(\"property of the zoo\")\n"
 "    return penguin"
 msgstr ""
+"def whats_on_the_telly(penguin=None):\n"
+"    if penguin is None:\n"
+"        penguin = []\n"
+"    penguin.append(\"property of the zoo\")\n"
+"    return penguin"
 
-#: reference/compound_stmts.rst:1316
+#: reference/compound_stmts.rst:1323
 msgid ""
 "Function call semantics are described in more detail in section :ref:"
 "`calls`. A function call always assigns values to all parameters mentioned "
@@ -1654,14 +2316,29 @@ msgid ""
 "\"``/``\" are positional-only parameters and may only be passed by "
 "positional arguments."
 msgstr ""
+"Η σημασιολογία των κλήσεων συναρτήσεων περιγράφεται λεπτομερέστερα στην "
+"ενότητα :ref:`calls`. Μια κλήση συνάρτησης αναθέτει πάντα τιμές σε όλες τις "
+"παραμέτρους που αναφέρονται στη λίστα παραμέτρων, είτε από ορίσματα θέσης, "
+"από ορίσματα λέξης-κλειδιού, είτε από προεπιλεγμένες τιμές. Εάν η μορφή "
+"\"``*identifier``\" υπάρχει, αρχικοποιείται σε μία πλειάδα που λαμβάνει "
+"τυχόν επιπλέον παραμέτρους θέσης, έχοντας ως προεπιλογή την κενή πλειάδα. "
+"Εάν η μορφή \"``**identifier``\" υπάρχει, αρχικοποιείται σε μία νέα "
+"ταξινομημένη αντιστοίχιση που λαμβάνει τυχόν επιπλέον ορίσματα λέξης-"
+"κλειδιού, έχοντας ως προεπιλογή μία νέα κενή αντιστοίχιση του ίδιου τύπου. "
+"Οι παράμετροι μετά το \"``*``\" ή το \"``*identifier``\" είναι μόνο "
+"παράμετροι λέξης-κλειδιού και μπορούν να περαστούν μόνο από ορίσματα λέξης-"
+"κλειδιού. Οι παράμετροι πριν από το \"``/``\" είναι μόνο παράμετροι θέσης "
+"και μπορούν να περαστούν μόνο από ορίσματα θέσης."
 
-#: reference/compound_stmts.rst:1328
+#: reference/compound_stmts.rst:1335
 msgid ""
 "The ``/`` function parameter syntax may be used to indicate positional-only "
 "parameters. See :pep:`570` for details."
 msgstr ""
+"Η σύνταξη παραμέτρων συνάρτησης ``/`` μπορεί να χρησιμοποιηθεί για να "
+"υποδείξει μόνο παραμέτρους θέσης. Δείτε το :pep:`570` για λεπτομέρειες."
 
-#: reference/compound_stmts.rst:1337
+#: reference/compound_stmts.rst:1344
 msgid ""
 "Parameters may have an :term:`annotation <function annotation>` of the form "
 "\"``: expression``\" following the parameter name.  Any parameter may have "
@@ -1673,14 +2350,26 @@ msgid ""
 "does not change the semantics of a function. See :ref:`annotations` for more "
 "information on annotations."
 msgstr ""
+"Οι παράμετροι μπορεί να έχουν ένα :term:`annotation <function annotation>` "
+"της μορφής \"``: expression``\" μετά το όνομα της παραμέτρου. Οποιαδήποτε "
+"παράμετρος μπορεί να έχει ένα annotation, ακόμα και αυτές της μορφής "
+"``*identifier`` ή ``**identifier``. (Ως ειδική περίπτωση, οι παράμετροι της "
+"μορφής ``*identifier`` μπορεί να έχουν ένα annotation \"``: "
+"*expression``\".) Οι συναρτήσεις μπορεί να έχουν \"return\" annotation της "
+"μορφής \"``-> expression``\" μετά τη λίστα παραμέτρων. Αυτά τα annotations "
+"μπορούν να είναι οποιαδήποτε έγκυρη έκφραση της Python. Η παρουσία των "
+"annotations δεν αλλάζει τη σημασιολογία μιας συνάρτησης. Δείτε το :ref:"
+"`annotations` για περισσότερες πληροφορίες."
 
-#: reference/compound_stmts.rst:1345
+#: reference/compound_stmts.rst:1352
 msgid ""
 "Parameters of the form \"``*identifier``\" may have an annotation \"``: "
 "*expression``\". See :pep:`646`."
 msgstr ""
+"Οι παράμετροι της μορφής \"``*identifier``\" μπορεί να έχουν ένα annotation "
+"\"``: *expression``\". Δείτε το :pep:`646`."
 
-#: reference/compound_stmts.rst:1351
+#: reference/compound_stmts.rst:1358
 msgid ""
 "It is also possible to create anonymous functions (functions not bound to a "
 "name), for immediate use in expressions.  This uses lambda expressions, "
@@ -1691,8 +2380,17 @@ msgid ""
 "keyword:`!def`\" form is actually more powerful since it allows the "
 "execution of multiple statements and annotations."
 msgstr ""
+"Είναι επίσης δυνατό να δημιουργηθούν ανώνυμες συναρτήσεις (συναρτήσεις που "
+"δεν δεσμεύονται σε ένα όνομα), για άμεση χρήση σε εκφράσεις. Αυτό "
+"χρησιμοποιεί εκφράσεις lambda, που περιγράφονται στην ενότητα :ref:`lambda`. "
+"Σημειώστε ότι η έκφραση lambda είναι απλώς μια συντομογραφία για έναν "
+"απλοποιημένο ορισμό συνάρτησης· μια συνάρτηση που ορίζεται με την δήλωση \":"
+"keyword:`def`\" μπορεί να περαστεί ή να ανατεθεί σε ένα άλλο όνομα ακριβώς "
+"όπως μια συνάρτηση που ορίζεται με μια έκφραση lambda. Η μορφή \":keyword:`!"
+"def`\" είναι στην πραγματικότητα πιο ισχυρή αφού επιτρέπει την εκτέλεση "
+"πολλαπλών εντολών και annotations."
 
-#: reference/compound_stmts.rst:1359
+#: reference/compound_stmts.rst:1366
 msgid ""
 "**Programmer's note:** Functions are first-class objects.  A \"``def``\" "
 "statement executed inside a function definition defines a local function "
@@ -1700,62 +2398,78 @@ msgid ""
 "function can access the local variables of the function containing the def.  "
 "See section :ref:`naming` for details."
 msgstr ""
-
-#: reference/compound_stmts.rst:1367
-msgid ":pep:`3107` - Function Annotations"
-msgstr ""
-
-#: reference/compound_stmts.rst:1368
-msgid "The original specification for function annotations."
-msgstr ""
-
-#: reference/compound_stmts.rst:1370
-msgid ":pep:`484` - Type Hints"
-msgstr ""
-
-#: reference/compound_stmts.rst:1371
-msgid "Definition of a standard meaning for annotations: type hints."
-msgstr ""
-
-#: reference/compound_stmts.rst:1373
-msgid ":pep:`526` - Syntax for Variable Annotations"
-msgstr ""
+"**Σημείωση για προγραμματιστές/τριες:** Οι συναρτήσεις είναι first-class "
+"αντικείμενα. Μια δήλωση \"``def``\" που εκτελείται μέσα σε έναν ορισμό "
+"συνάρτησης ορίζει μια τοπική συνάρτηση που μπορεί να επιστραφεί ή να "
+"περαστεί αλλού. Οι ελεύθερες μεταβλητές που χρησιμοποιούνται στην "
+"εμφωλευμένη συνάρτηση έχουν πρόσβαση στις τοπικές μεταβλητές της συνάρτησης "
+"που περιέχει το def. Δείτε την ενότητα :ref:`naming` για λεπτομέρειες."
 
 #: reference/compound_stmts.rst:1374
+msgid ":pep:`3107` - Function Annotations"
+msgstr ":pep:`3107` - Annotations Συνάρτησης"
+
+#: reference/compound_stmts.rst:1375
+msgid "The original specification for function annotations."
+msgstr "Οι αρχικές προδιαγραφές για τα annotations συνάρτησης."
+
+#: reference/compound_stmts.rst:1377
+msgid ":pep:`484` - Type Hints"
+msgstr ":pep:`484` - Υποδείξεις Τύπου"
+
+#: reference/compound_stmts.rst:1378
+msgid "Definition of a standard meaning for annotations: type hints."
+msgstr ""
+"Ορισμός ενός τυποποιημένου νοήματος για τα annotations: υποδείξεις τύπου."
+
+#: reference/compound_stmts.rst:1380
+msgid ":pep:`526` - Syntax for Variable Annotations"
+msgstr ":pep:`526` - Σύνταξη για Annotations Μεταβλητών"
+
+#: reference/compound_stmts.rst:1381
 msgid ""
 "Ability to type hint variable declarations, including class variables and "
 "instance variables."
 msgstr ""
+"Δυνατότητα για υποδείξεις τύπου στις δηλώσεις μεταβλητών, "
+"συμπεριλαμβανομένων των μεταβλητών κλάσης και των μεταβλητών στιγμιοτύπου."
 
-#: reference/compound_stmts.rst:1377
+#: reference/compound_stmts.rst:1384
 msgid ":pep:`563` - Postponed Evaluation of Annotations"
-msgstr ""
+msgstr ":pep:`563` - Αναβαλλόμενη Αξιολόγηση των Annotations"
 
-#: reference/compound_stmts.rst:1378
+#: reference/compound_stmts.rst:1385
 msgid ""
 "Support for forward references within annotations by preserving annotations "
 "in a string form at runtime instead of eager evaluation."
 msgstr ""
+"Υποστήριξη για μελλοντική αναφορά μέσα στα annotations διατηρώντας τα "
+"annotations σε μορφή συμβολοσειράς κατά τον χρόνο εκτέλεσης αντί για άμεση "
+"αξιολόγηση."
 
-#: reference/compound_stmts.rst:1381
+#: reference/compound_stmts.rst:1388
 msgid ":pep:`318` - Decorators for Functions and Methods"
-msgstr ""
+msgstr ":pep:`318` - Decorators για Συναρτήσεις και Μεθόδους"
 
-#: reference/compound_stmts.rst:1382
+#: reference/compound_stmts.rst:1389
 msgid ""
 "Function and method decorators were introduced. Class decorators were "
 "introduced in :pep:`3129`."
 msgstr ""
+"Εισήχθησαν οι decorators συναρτήσεων και μεθόδων. Οι decorators κλάσεων "
+"εισήχθησαν στο :pep:`3129`."
 
-#: reference/compound_stmts.rst:1388
+#: reference/compound_stmts.rst:1395
 msgid "Class definitions"
-msgstr ""
-
-#: reference/compound_stmts.rst:1403
-msgid "A class definition defines a class object (see section :ref:`types`):"
-msgstr ""
+msgstr "Ορισμοί κλάσεων"
 
 #: reference/compound_stmts.rst:1410
+msgid "A class definition defines a class object (see section :ref:`types`):"
+msgstr ""
+"Ο ορισμός μιας κλάσης ορίζει ένα αντικείμενο κλάσης (δείτε την ενότητα :ref:"
+"`types`):"
+
+#: reference/compound_stmts.rst:1417
 msgid ""
 "A class definition is an executable statement.  The inheritance list usually "
 "gives a list of base classes (see :ref:`metaclasses` for more advanced "
@@ -1763,24 +2477,34 @@ msgid ""
 "allows subclassing.  Classes without an inheritance list inherit, by "
 "default, from the base class :class:`object`; hence, ::"
 msgstr ""
+"Ένας ορισμός κλάσης είναι μια εκτελέσιμη δήλωση. Η λίστα κληρονομικότητας "
+"συνήθως δίνει μια λίστα βασικών κλάσεων (δείτε το :ref:`metaclasses` για πιο "
+"προχωρημένες χρήσεις), επομένως κάθε στοιχείο στη λίστα θα πρέπει να "
+"αξιολογείται σε ένα αντικείμενο κλάσης που επιτρέπει τη δημιουργία υπο-"
+"κλάσεων. Οι κλάσεις χωρίς λίστα κληρονομικότητας κληρονομούν, εξ ορισμού, "
+"από τη βασική κλάση :class:`object`· επομένως, το ::"
 
-#: reference/compound_stmts.rst:1416
+#: reference/compound_stmts.rst:1423
 msgid ""
 "class Foo:\n"
 "    pass"
 msgstr ""
+"class Foo:\n"
+"    pass"
 
-#: reference/compound_stmts.rst:1419
+#: reference/compound_stmts.rst:1426
 msgid "is equivalent to ::"
-msgstr ""
+msgstr "είναι ισοδύναμο με το ::"
 
-#: reference/compound_stmts.rst:1421
+#: reference/compound_stmts.rst:1428
 msgid ""
 "class Foo(object):\n"
 "    pass"
 msgstr ""
+"class Foo(object):\n"
+"    pass"
 
-#: reference/compound_stmts.rst:1424
+#: reference/compound_stmts.rst:1431
 msgid ""
 "The class's suite is then executed in a new execution frame (see :ref:"
 "`naming`), using a newly created local namespace and the original global "
@@ -1791,52 +2515,81 @@ msgid ""
 "attribute dictionary.  The class name is bound to this class object in the "
 "original local namespace."
 msgstr ""
+"Η σουίτα της κλάσης στη συνέχεια εκτελείται σε ένα νέο πλαίσιο εκτέλεσης "
+"(δείτε το :ref:`naming`), χρησιμοποιώντας έναν νεοδημιουργηθέντα τοπικό χώρο "
+"ονομάτων και τον αρχικό καθολικό χώρο ονομάτων. (Συνήθως, η σουίτα περιέχει "
+"κυρίως ορισμούς συναρτήσεων.) Όταν η σουίτα της κλάσης ολοκληρώσει την "
+"εκτέλεσή της, το πλαίσιο εκτέλεσής της απορρίπτεται αλλά ο τοπικός χώρος "
+"ονομάτων της σώζεται. [#]_ Ένα αντικείμενο κλάσης δημιουργείται στη συνέχεια "
+"χρησιμοποιώντας τη λίστα κληρονομικότητας για τις βασικές κλάσεις και τον "
+"αποθηκευμένο τοπικό χώρο ονομάτων για το λεξικό των χαρακτηριστικών. Το "
+"όνομα της κλάσης δεσμεύεται σε αυτό το αντικείμενο κλάσης στον αρχικό τοπικό "
+"χώρο ονομάτων."
 
-#: reference/compound_stmts.rst:1433
+#: reference/compound_stmts.rst:1440
 msgid ""
 "The order in which attributes are defined in the class body is preserved in "
 "the new class's :attr:`~type.__dict__`.  Note that this is reliable only "
 "right after the class is created and only for classes that were defined "
 "using the definition syntax."
 msgstr ""
+"Η σειρά με την οποία ορίζονται τα χαρακτηριστικά στο σώμα της κλάσης "
+"διατηρείται στο :attr:`~type.__dict__` της νέας κλάσης. Σημειώστε ότι αυτή "
+"είναι αξιόπιστη μόνο αμέσως μετά τη δημιουργία της κλάσης και μόνο για "
+"κλάσεις που ορίστηκαν χρησιμοποιώντας τη σύνταξη ορισμού."
 
-#: reference/compound_stmts.rst:1438
+#: reference/compound_stmts.rst:1445
 msgid ""
 "Class creation can be customized heavily using :ref:`metaclasses "
 "<metaclasses>`."
 msgstr ""
+"Η δημιουργία κλάσεων μπορεί να προσαρμοστεί εκτενώς χρησιμοποιώντας :ref:"
+"`metaclasses <metaclasses>`."
 
-#: reference/compound_stmts.rst:1443
+#: reference/compound_stmts.rst:1450
 msgid "Classes can also be decorated: just like when decorating functions, ::"
 msgstr ""
+"Οι κλάσεις μπορούν επίσης να διακοσμηθούν: ακριβώς όπως με τους decorators "
+"συναρτήσεων, ::"
 
-#: reference/compound_stmts.rst:1445
+#: reference/compound_stmts.rst:1452
 msgid ""
 "@f1(arg)\n"
 "@f2\n"
 "class Foo: pass"
 msgstr ""
+"@f1(arg)\n"
+"@f2\n"
+"class Foo: pass"
 
-#: reference/compound_stmts.rst:1451
+#: reference/compound_stmts.rst:1458
 msgid ""
 "class Foo: pass\n"
 "Foo = f1(arg)(f2(Foo))"
 msgstr ""
+"class Foo: pass\n"
+"Foo = f1(arg)(f2(Foo))"
 
-#: reference/compound_stmts.rst:1454
+#: reference/compound_stmts.rst:1461
 msgid ""
 "The evaluation rules for the decorator expressions are the same as for "
 "function decorators.  The result is then bound to the class name."
 msgstr ""
+"Οι κανόνες αξιολόγησης για τις εκφράσεις decorators είναι οι ίδιοι με αυτούς "
+"των decorators συναρτήσεων. Το αποτέλεσμα στη συνέχεια δεσμεύεται στο όνομα "
+"της κλάσης."
 
-#: reference/compound_stmts.rst:1457
+#: reference/compound_stmts.rst:1464
 msgid ""
 "Classes may be decorated with any valid :token:`~python-grammar:"
 "assignment_expression`. Previously, the grammar was much more restrictive; "
 "see :pep:`614` for details."
 msgstr ""
+"Οι κλάσεις μπορούν να διακοσμηθούν με οποιοδήποτε έγκυρο :token:`~python-"
+"grammar:assignment_expression`. Προηγουμένως, η γραμματική ήταν πολύ πιο "
+"αυστηρή· δείτε το :pep:`614` για λεπτομέρειες."
 
-#: reference/compound_stmts.rst:1462
+#: reference/compound_stmts.rst:1469
 msgid ""
 "A list of :ref:`type parameters <type-params>` may be given in square "
 "brackets immediately after the class's name. This indicates to static type "
@@ -1844,8 +2597,13 @@ msgid ""
 "retrieved from the class's :attr:`~type.__type_params__` attribute. See :ref:"
 "`generic-classes` for more."
 msgstr ""
+"Μια λίστα από :ref:`παραμέτρους τύπου <type-params>` μπορεί να δοθεί σε "
+"αγκύλες αμέσως μετά το όνομα της κλάσης. Αυτό υποδεικνύει στους ελέγχους "
+"στατικού τύπου ότι η κλάση είναι γενική. Κατά τον χρόνο εκτέλεσης, οι "
+"παράμετροι τύπου μπορούν να ανακτηθούν από το χαρακτηριστικό :attr:`~type."
+"__type_params__` της κλάσης. Δείτε το :ref:`generic-classes` για περισσότερα."
 
-#: reference/compound_stmts.rst:1471
+#: reference/compound_stmts.rst:1478
 msgid ""
 "**Programmer's note:** Variables defined in the class definition are class "
 "attributes; they are shared by instances.  Instance attributes can be set in "
@@ -1857,102 +2615,140 @@ msgid ""
 "<descriptors>` can be used to create instance variables with different "
 "implementation details."
 msgstr ""
+"**Σημείωση για προγραμματιστές/τριες:** Οι μεταβλητές που ορίζονται στον "
+"ορισμό της κλάσης είναι χαρακτηριστικά κλάσης· μοιράζονται μεταξύ των "
+"στιγμιοτύπων. Τα χαρακτηριστικά στιγμιοτύπου μπορούν να οριστούν σε μια "
+"μέθοδο με ``self.name = value``. Τόσο χαρακτηριστικά κλάσης όσο και τα "
+"χαρακτηριστικά στιγμιοτύπου είναι προσβάσιμα μέσω της σημειογραφίας \"``self."
+"name``\", και ένα χαρακτηριστικό στιγμιοτύπου κρύβει ένα χαρακτηριστικό "
+"κλάσης με το ίδιο όνομα όταν η πρόσβαση γίνεται με αυτόν τον τρόπο. Τα "
+"χαρακτηριστικά κλάσης μπορούν να χρησιμοποιηθούν ως προεπιλογές για τα "
+"χαρακτηριστικά στιγμιοτύπου, αλλά η χρήση μεταβλητών τιμών μπορεί να "
+"οδηγήσει σε μη αναμενόμενα αποτελέσματα. Τα :ref:`Descriptors <descriptors>` "
+"μπορούν να χρησιμοποιηθούν για τη δημιουργία μεταβλητών στιγμιοτύπου με "
+"διαφορετικές λεπτομέρειες υλοποίησης."
 
-#: reference/compound_stmts.rst:1483
+#: reference/compound_stmts.rst:1490
 msgid ":pep:`3115` - Metaclasses in Python 3000"
-msgstr ""
+msgstr ":pep:`3115` - Metaclasses στην Python 3000"
 
-#: reference/compound_stmts.rst:1484
+#: reference/compound_stmts.rst:1491
 msgid ""
 "The proposal that changed the declaration of metaclasses to the current "
 "syntax, and the semantics for how classes with metaclasses are constructed."
 msgstr ""
+"Η πρόταση που άλλαξε τη δήλωση των metaclasses στην τρέχουσα σύνταξη, και τη "
+"σημασιολογία για τον τρόπο κατασκευής κλάσεων με metaclasses."
 
-#: reference/compound_stmts.rst:1488
+#: reference/compound_stmts.rst:1495
 msgid ":pep:`3129` - Class Decorators"
-msgstr ""
+msgstr ":pep:`3129` - Decorators Κλάσεων"
 
-#: reference/compound_stmts.rst:1489
+#: reference/compound_stmts.rst:1496
 msgid ""
 "The proposal that added class decorators.  Function and method decorators "
 "were introduced in :pep:`318`."
 msgstr ""
+"Η πρόταση που πρόσθεσε τους decorators κλάσεων. Οι decorators συναρτήσεων "
+"και μεθόδων είχαν εισαχθεί στο :pep:`318`."
 
-#: reference/compound_stmts.rst:1496
+#: reference/compound_stmts.rst:1503
 msgid "Coroutines"
-msgstr ""
+msgstr "Coroutines"
 
-#: reference/compound_stmts.rst:1504
+#: reference/compound_stmts.rst:1511
 msgid "Coroutine function definition"
-msgstr ""
+msgstr "Ορισμός συνάρτησης coroutine"
 
-#: reference/compound_stmts.rst:1514
+#: reference/compound_stmts.rst:1521
 msgid ""
 "Execution of Python coroutines can be suspended and resumed at many points "
 "(see :term:`coroutine`). :keyword:`await` expressions, :keyword:`async for` "
 "and :keyword:`async with` can only be used in the body of a coroutine "
 "function."
 msgstr ""
+"Η εκτέλεση των Python coroutines μπορεί να ανασταλεί και να συνεχιστεί σε "
+"πολλά σημεία (δείτε το :term:`coroutine`). Οι εκφράσεις :keyword:`await`, "
+"το :keyword:`async for` και το :keyword:`async with` μπορούν να "
+"χρησιμοποιηθούν μόνο στο σώμα μιας συνάρτησης coroutine."
 
-#: reference/compound_stmts.rst:1518
+#: reference/compound_stmts.rst:1525
 msgid ""
 "Functions defined with ``async def`` syntax are always coroutine functions, "
 "even if they do not contain ``await`` or ``async`` keywords."
 msgstr ""
+"Οι συναρτήσεις που ορίζονται με τη σύνταξη ``async def`` είναι πάντα "
+"συναρτήσεις coroutine, ακόμη και αν δεν περιέχουν τις λέξεις-κλειδιά "
+"``await`` ή ``async``."
 
-#: reference/compound_stmts.rst:1521
+#: reference/compound_stmts.rst:1528
 msgid ""
 "It is a :exc:`SyntaxError` to use a ``yield from`` expression inside the "
 "body of a coroutine function."
 msgstr ""
+"Προκαλείται :exc:`SyntaxError` αν χρησιμοποιηθεί μια έκφραση ``yield from`` "
+"μέσα στο σώμα μιας συνάρτησης coroutine."
 
-#: reference/compound_stmts.rst:1524
+#: reference/compound_stmts.rst:1531
 msgid "An example of a coroutine function::"
-msgstr ""
+msgstr "Ένα παράδειγμα συνάρτησης coroutine::"
 
-#: reference/compound_stmts.rst:1526
+#: reference/compound_stmts.rst:1533
 msgid ""
 "async def func(param1, param2):\n"
 "    do_stuff()\n"
 "    await some_coroutine()"
 msgstr ""
+"async def func(param1, param2):\n"
+"    do_stuff()\n"
+"    await some_coroutine()"
 
-#: reference/compound_stmts.rst:1530
+#: reference/compound_stmts.rst:1537
 msgid ""
 "``await`` and ``async`` are now keywords; previously they were only treated "
 "as such inside the body of a coroutine function."
 msgstr ""
+"Το ``await`` και το ``async`` είναι πλέον λέξεις-κλειδιά· προηγουμένως "
+"αντιμετωπίζονταν ως τέτοια μόνο εντός του σώματος μιας συνάρτησης coroutine."
 
-#: reference/compound_stmts.rst:1538
+#: reference/compound_stmts.rst:1545
 msgid "The :keyword:`!async for` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!async for`"
 
-#: reference/compound_stmts.rst:1543
+#: reference/compound_stmts.rst:1550
 msgid ""
 "An :term:`asynchronous iterable` provides an ``__aiter__`` method that "
 "directly returns an :term:`asynchronous iterator`, which can call "
 "asynchronous code in its ``__anext__`` method."
 msgstr ""
+"Ένα :term:`asynchronous iterable` παρέχει μια μέθοδο ``__aiter__`` η οποία "
+"επιστρέφει απευθείας έναν :term:`asynchronous iterator`, ο οποίος μπορεί να "
+"καλέσει ασύγχρονο κώδικα στη μέθοδο ``__anext__`` του."
 
-#: reference/compound_stmts.rst:1547
+#: reference/compound_stmts.rst:1554
 msgid ""
 "The ``async for`` statement allows convenient iteration over asynchronous "
 "iterables."
 msgstr ""
+"Η δήλωση ``async for`` επιτρέπει τη βολική επανάληψη σε ασύγχρονα iterables."
 
-#: reference/compound_stmts.rst:1552
+#: reference/compound_stmts.rst:1559
 msgid ""
 "async for TARGET in ITER:\n"
 "    SUITE\n"
 "else:\n"
 "    SUITE2"
 msgstr ""
+"async for TARGET in ITER:\n"
+"    SUITE\n"
+"else:\n"
+"    SUITE2"
 
-#: reference/compound_stmts.rst:1557
+#: reference/compound_stmts.rst:1564
 msgid "Is semantically equivalent to::"
-msgstr ""
+msgstr "Είναι σημασιολογικά ισοδύναμο με το::"
 
-#: reference/compound_stmts.rst:1559
+#: reference/compound_stmts.rst:1566
 msgid ""
 "iter = (ITER)\n"
 "iter = type(iter).__aiter__(iter)\n"
@@ -1968,35 +2764,57 @@ msgid ""
 "else:\n"
 "    SUITE2"
 msgstr ""
+"iter = (ITER)\n"
+"iter = type(iter).__aiter__(iter)\n"
+"running = True\n"
+"\n"
+"while running:\n"
+"    try:\n"
+"        TARGET = await type(iter).__anext__(iter)\n"
+"    except StopAsyncIteration:\n"
+"        running = False\n"
+"    else:\n"
+"        SUITE\n"
+"else:\n"
+"    SUITE2"
 
-#: reference/compound_stmts.rst:1573
+#: reference/compound_stmts.rst:1580
 msgid ""
 "See also :meth:`~object.__aiter__` and :meth:`~object.__anext__` for details."
 msgstr ""
+"Δείτε επίσης την :meth:`~object.__aiter__` και την :meth:`~object.__anext__` "
+"για λεπτομέρειες."
 
-#: reference/compound_stmts.rst:1575
+#: reference/compound_stmts.rst:1582
 msgid ""
 "It is a :exc:`SyntaxError` to use an ``async for`` statement outside the "
 "body of a coroutine function."
 msgstr ""
+"Προκαλείται :exc:`SyntaxError` αν χρησιμοποιηθεί μια δήλωση ``async for`` "
+"έξω από το σώμα μιας συνάρτησης coroutine."
 
-#: reference/compound_stmts.rst:1583
+#: reference/compound_stmts.rst:1590
 msgid "The :keyword:`!async with` statement"
-msgstr ""
+msgstr "Η δήλωση :keyword:`!async with`"
 
-#: reference/compound_stmts.rst:1588
+#: reference/compound_stmts.rst:1595
 msgid ""
 "An :term:`asynchronous context manager` is a :term:`context manager` that is "
 "able to suspend execution in its *enter* and *exit* methods."
 msgstr ""
+"Ένας :term:`asynchronous context manager` είναι ένας :term:`context manager` "
+"που είναι ικανός να αναστείλει την εκτέλεση στις μεθόδους του *enter* και "
+"*exit*."
 
-#: reference/compound_stmts.rst:1593
+#: reference/compound_stmts.rst:1600
 msgid ""
 "async with EXPRESSION as TARGET:\n"
 "    SUITE"
 msgstr ""
+"async with EXPRESSION as TARGET:\n"
+"    SUITE"
 
-#: reference/compound_stmts.rst:1598
+#: reference/compound_stmts.rst:1605
 msgid ""
 "manager = (EXPRESSION)\n"
 "aenter = type(manager).__aenter__\n"
@@ -2015,45 +2833,70 @@ msgid ""
 "    if not hit_except:\n"
 "        await aexit(manager, None, None, None)"
 msgstr ""
+"manager = (EXPRESSION)\n"
+"aenter = type(manager).__aenter__\n"
+"aexit = type(manager).__aexit__\n"
+"value = await aenter(manager)\n"
+"hit_except = False\n"
+"\n"
+"try:\n"
+"    TARGET = value\n"
+"    SUITE\n"
+"except:\n"
+"    hit_except = True\n"
+"    if not await aexit(manager, *sys.exc_info()):\n"
+"        raise\n"
+"finally:\n"
+"    if not hit_except:\n"
+"        await aexit(manager, None, None, None)"
 
-#: reference/compound_stmts.rst:1615
+#: reference/compound_stmts.rst:1622
 msgid ""
 "See also :meth:`~object.__aenter__` and :meth:`~object.__aexit__` for "
 "details."
 msgstr ""
+"Δείτε επίσης την :meth:`~object.__aenter__` και την :meth:`~object."
+"__aexit__` για λεπτομέρειες."
 
-#: reference/compound_stmts.rst:1617
+#: reference/compound_stmts.rst:1624
 msgid ""
 "It is a :exc:`SyntaxError` to use an ``async with`` statement outside the "
 "body of a coroutine function."
 msgstr ""
+"Προκαλείται :exc:`SyntaxError` αν χρησιμοποιηθεί μια δήλωση ``async with`` "
+"έξω από το σώμα μιας συνάρτησης coroutine."
 
-#: reference/compound_stmts.rst:1622
+#: reference/compound_stmts.rst:1629
 msgid ":pep:`492` - Coroutines with async and await syntax"
-msgstr ""
+msgstr ":pep:`492` - Coroutines με σύνταξη async και await"
 
-#: reference/compound_stmts.rst:1623
+#: reference/compound_stmts.rst:1630
 msgid ""
 "The proposal that made coroutines a proper standalone concept in Python, and "
 "added supporting syntax."
 msgstr ""
+"Η πρόταση που έκανε τις coroutines μια σωστή, ανεξάρτητη έννοια στην Python, "
+"και πρόσθεσε την υποστηρικτική σύνταξη."
 
-#: reference/compound_stmts.rst:1629
+#: reference/compound_stmts.rst:1636
 msgid "Type parameter lists"
-msgstr ""
+msgstr "Λίστες παραμέτρων τύπου"
 
-#: reference/compound_stmts.rst:1633
+#: reference/compound_stmts.rst:1640
 msgid "Support for default values was added (see :pep:`696`)."
-msgstr ""
+msgstr "Προστέθηκε υποστήριξη για προεπιλεγμένες τιμές (δείτε το :pep:`696`)."
 
-#: reference/compound_stmts.rst:1646
+#: reference/compound_stmts.rst:1653
 msgid ""
 ":ref:`Functions <def>` (including :ref:`coroutines <async def>`), :ref:"
 "`classes <class>` and :ref:`type aliases <type>` may contain a type "
 "parameter list::"
 msgstr ""
+"Οι :ref:`Συναρτήσεις <def>` (συμπεριλαμβανομένων των :ref:`coroutines <async "
+"def>`), οι :ref:`κλάσεις <class>` και τα :ref:`ψευδώνυμα τύπων <type>` "
+"μπορούν να περιέχουν μια λίστα παραμέτρων τύπου::"
 
-#: reference/compound_stmts.rst:1650
+#: reference/compound_stmts.rst:1657
 msgid ""
 "def max[T](args: list[T]) -> T:\n"
 "    ...\n"
@@ -2070,16 +2913,34 @@ msgid ""
 "\n"
 "type ListOrSet[T] = list[T] | set[T]"
 msgstr ""
+"def max[T](args: list[T]) -> T:\n"
+"    ...\n"
+"\n"
+"async def amax[T](args: list[T]) -> T:\n"
+"    ...\n"
+"\n"
+"class Bag[T]:\n"
+"    def __iter__(self) -> Iterator[T]:\n"
+"        ...\n"
+"\n"
+"    def add(self, arg: T) -> None:\n"
+"        ...\n"
+"\n"
+"type ListOrSet[T] = list[T] | set[T]"
 
-#: reference/compound_stmts.rst:1665
+#: reference/compound_stmts.rst:1672
 msgid ""
 "Semantically, this indicates that the function, class, or type alias is "
 "generic over a type variable. This information is primarily used by static "
 "type checkers, and at runtime, generic objects behave much like their non-"
 "generic counterparts."
 msgstr ""
+"Σημασιολογικά, αυτό υποδηλώνει ότι η συνάρτηση, η κλάση ή το ψευδώνυμο τύπου "
+"είναι γενικά ως προς μια μεταβλητή τύπου. Αυτή η πληροφορία χρησιμοποιείται "
+"κυρίως από τους ελεγκτές στατικού τύπου, και κατά τον χρόνο εκτέλεσης, τα "
+"γενικά αντικείμενα συμπεριφέρονται σχεδόν όπως τα αντίστοιχα μη γενικά."
 
-#: reference/compound_stmts.rst:1670
+#: reference/compound_stmts.rst:1677
 msgid ""
 "Type parameters are declared in square brackets (``[]``) immediately after "
 "the name of the function, class, or type alias. The type parameters are "
@@ -2090,37 +2951,57 @@ msgid ""
 "function (technically, an :ref:`annotation scope <annotation-scopes>`) that "
 "wraps the creation of the generic object."
 msgstr ""
+"Οι παράμετροι τύπου δηλώνονται μέσα σε αγκύλες (``[]``) αμέσως μετά το όνομα "
+"της συνάρτησης, κλάσης ή του ψευδωνύμου τύπου. Οι παράμετροι τύπου είναι "
+"προσβάσιμες εντός της εμβέλειας του γενικού αντικειμένου, αλλά όχι αλλού. "
+"Επομένως, μετά από μια δήλωση ``def func[T](): pass``, το όνομα ``T`` δεν "
+"είναι διαθέσιμο στο εύρος του module. Παρακάτω, η σημασιολογία των γενικών "
+"αντικειμένων περιγράφεται με μεγαλύτερη ακρίβεια. Το εύρος των παραμέτρων "
+"τύπου μοντελοποιείται με μια ειδική συνάρτηση (τεχνικά, ένα :ref:`annotation "
+"scope <annotation-scopes>`) η οποία περιτυλίγει τη δημιουργία του γενικού "
+"αντικειμένου."
 
-#: reference/compound_stmts.rst:1679
+#: reference/compound_stmts.rst:1686
 msgid ""
 "Generic functions, classes, and type aliases have a :attr:`~definition."
 "__type_params__` attribute listing their type parameters."
 msgstr ""
+"Οι γενικές συναρτήσεις, κλάσεις και τα ψευδώνυμα τύπων έχουν ένα "
+"χαρακτηριστικό :attr:`~definition.__type_params__` που παραθέτει τις "
+"παραμέτρους του τύπου τους."
 
-#: reference/compound_stmts.rst:1682
+#: reference/compound_stmts.rst:1689
 msgid "Type parameters come in three kinds:"
-msgstr ""
+msgstr "Οι παράμετροι τύπου διακρίνονται σε τρία είδη:"
 
-#: reference/compound_stmts.rst:1684
+#: reference/compound_stmts.rst:1691
 msgid ""
 ":data:`typing.TypeVar`, introduced by a plain name (e.g., ``T``). "
 "Semantically, this represents a single type to a type checker."
 msgstr ""
+"Το :data:`typing.TypeVar`, που εισάγεται από ένα απλό όνομα (π.χ. ``T``). "
+"Σημασιολογικά, αναπαριστά έναν μόνο τύπο σε έναν ελεγκτή τύπου."
 
-#: reference/compound_stmts.rst:1686
+#: reference/compound_stmts.rst:1693
 msgid ""
 ":data:`typing.TypeVarTuple`, introduced by a name prefixed with a single "
 "asterisk (e.g., ``*Ts``). Semantically, this stands for a tuple of any "
 "number of types."
 msgstr ""
+"Το :data:`typing.TypeVarTuple`, που εισάγεται από ένα όνομα με πρόθεμα έναν "
+"απλό αστερίσκο (π.χ. ``*Ts``). Σημασιολογικά, αντιπροσωπεύει μία πλειάδα "
+"οποιουδήποτε αριθμού τύπων."
 
-#: reference/compound_stmts.rst:1689
+#: reference/compound_stmts.rst:1696
 msgid ""
 ":data:`typing.ParamSpec`, introduced by a name prefixed with two asterisks "
 "(e.g., ``**P``). Semantically, this stands for the parameters of a callable."
 msgstr ""
+"Το :data:`typing.ParamSpec`, που εισάγεται από ένα όνομα με πρόθεμα δύο "
+"αστερίσκους (π.χ. ``**P``). Σημασιολογικά, αντιπροσωπεύει τις παραμέτρους "
+"ενός callable."
 
-#: reference/compound_stmts.rst:1692
+#: reference/compound_stmts.rst:1699
 msgid ""
 ":data:`typing.TypeVar` declarations can define *bounds* and *constraints* "
 "with a colon (``:``) followed by an expression. A single expression after "
@@ -2131,8 +3012,18 @@ msgid ""
 "should be a type (again, this is not enforced at runtime). Constrained type "
 "variables can only take on one of the types in the list of constraints."
 msgstr ""
+"Οι δηλώσεις του :data:`typing.TypeVar` μπορούν να ορίσουν *bounds* και "
+"*constraints* με άνω και κάτω τελεία (``:``) ακολουθούμενη από μια έκφραση. "
+"Μία μεμονωμένη έκφραση μετά την άνω και κάτω τελεία υποδεικνύει ένα bound (π."
+"χ. ``T: int``). Σημασιολογικά, αυτό σημαίνει ότι το :data:`!typing.TypeVar` "
+"μπορεί να αναπαριστά μόνο τύπους που είναι υπότυπος αυτού του bound. Μία "
+"παρενθετική πλειάδα εκφράσεων μετά την άνω και κάτω τελεία υποδεικνύει ένα "
+"σύνολο από constraints (π.χ. ``T: (str, bytes)``). Κάθε μέλος της πλειάδας "
+"θα πρέπει να είναι ένας τύπος (και πάλι, αυτό δεν επιβάλλεται κατά τον χρόνο "
+"εκτέλεσης). Οι constraint μεταβλητές τύπου μπορούν να λάβουν μόνο έναν από "
+"τους τύπους στη λίστα των constraints."
 
-#: reference/compound_stmts.rst:1701
+#: reference/compound_stmts.rst:1708
 msgid ""
 "For :data:`!typing.TypeVar`\\ s declared using the type parameter list "
 "syntax, the bound and constraints are not evaluated when the generic object "
@@ -2141,14 +3032,22 @@ msgid ""
 "bounds or constraints are evaluated in a separate :ref:`annotation scope "
 "<annotation-scopes>`."
 msgstr ""
+"Για τα :data:`!typing.TypeVar` που δηλώνονται χρησιμοποιώντας τη σύνταξη "
+"λίστας παραμέτρων τύπου, τα bound και constraints δεν αξιολογούνται όταν το "
+"γενικό αντικείμενο δημιουργείται, παρά μόνο όταν πραγματοποιείται ρητή "
+"πρόσβαση στην τιμή μέσω των χαρακτηριστικών ``__bound__`` και "
+"``__constraints__``. Για να επιτευχθεί αυτό, τα bounds ή constraints "
+"αξιολογούνται σε ένα ξεχωριστό :ref:`annotation scope <annotation-scopes>`."
 
-#: reference/compound_stmts.rst:1707
+#: reference/compound_stmts.rst:1714
 msgid ""
 ":data:`typing.TypeVarTuple`\\ s and :data:`typing.ParamSpec`\\ s cannot have "
 "bounds or constraints."
 msgstr ""
+"Τα :data:`typing.TypeVarTuple` και τα :data:`typing.ParamSpec` δεν μπορούν "
+"να έχουν bounds ή constraints."
 
-#: reference/compound_stmts.rst:1710
+#: reference/compound_stmts.rst:1717
 msgid ""
 "All three flavors of type parameters can also have a *default value*, which "
 "is used when the type parameter is not explicitly provided. This is added by "
@@ -2160,14 +3059,27 @@ msgid ""
 "default value is specified for a type parameter, the ``__default__`` "
 "attribute is set to the special sentinel object :data:`typing.NoDefault`."
 msgstr ""
+"Και τα τρία είδη παραμέτρων τύπου μπορούν επίσης να έχουν μια *προεπιλεγμένη "
+"τιμή*, η οποία χρησιμοποιείται όταν η παράμετρος τύπου δεν παρέχεται ρητά. "
+"Αυτό προστίθεται προσαρτώντας ένα απλό σύμβολο ίσον (``=``) ακολουθούμενο "
+"από μια έκφραση. Όπως τα bounds και τα constraints των μεταβλητών τύπου, η "
+"προεπιλεγμένη τιμή δεν αξιολογείται κατά τη δημιουργία του αντικειμένου, "
+"παρά μόνο κατά την πρόσβαση στο χαρακτηριστικό ``__default__`` της "
+"παραμέτρου τύπου. Για τον σκοπό αυτό, η προεπιλεγμένη τιμή αξιολογείται σε "
+"ένα ξεχωριστό :ref:`annotation scope <annotation-scopes>`. Εάν δεν "
+"καθοριστεί προεπιλεγμένη τιμή για μια παράμετρο τύπου, το χαρακτηριστικό "
+"``__default__`` ορίζεται στο ειδικό αντικείμενο φρουρό :data:`typing."
+"NoDefault`."
 
-#: reference/compound_stmts.rst:1720
+#: reference/compound_stmts.rst:1727
 msgid ""
 "The following example indicates the full set of allowed type parameter "
 "declarations::"
 msgstr ""
+"Το ακόλουθο παράδειγμα υποδεικνύει το πλήρες σύνολο των επιτρεπόμενων "
+"δηλώσεων παραμέτρων τύπου::"
 
-#: reference/compound_stmts.rst:1722
+#: reference/compound_stmts.rst:1729
 msgid ""
 "def overly_generic[\n"
 "   SimpleTypeVar,\n"
@@ -2184,24 +3096,38 @@ msgid ""
 "   *e: SimpleTypeVarTuple,\n"
 "): ..."
 msgstr ""
+"def overly_generic[\n"
+"   SimpleTypeVar,\n"
+"   TypeVarWithDefault = int,\n"
+"   TypeVarWithBound: int,\n"
+"   TypeVarWithConstraints: (str, bytes),\n"
+"   *SimpleTypeVarTuple = (int, float),\n"
+"   **SimpleParamSpec = (str, bytearray),\n"
+"](\n"
+"   a: SimpleTypeVar,\n"
+"   b: TypeVarWithDefault,\n"
+"   c: TypeVarWithBound,\n"
+"   d: Callable[SimpleParamSpec, TypeVarWithConstraints],\n"
+"   *e: SimpleTypeVarTuple,\n"
+"): ..."
 
-#: reference/compound_stmts.rst:1740
+#: reference/compound_stmts.rst:1747
 msgid "Generic functions"
-msgstr ""
+msgstr "Γενικές συναρτήσεις"
 
-#: reference/compound_stmts.rst:1742
+#: reference/compound_stmts.rst:1749
 msgid "Generic functions are declared as follows::"
-msgstr ""
+msgstr "Οι γενικές συναρτήσεις δηλώνονται ως εξής::"
 
-#: reference/compound_stmts.rst:1744
+#: reference/compound_stmts.rst:1751
 msgid "def func[T](arg: T): ..."
-msgstr ""
+msgstr "def func[T](arg: T): ..."
 
-#: reference/compound_stmts.rst:1746 reference/compound_stmts.rst:1806
+#: reference/compound_stmts.rst:1753 reference/compound_stmts.rst:1813
 msgid "This syntax is equivalent to::"
-msgstr ""
+msgstr "Αυτή η σύνταξη είναι ισοδύναμη με το::"
 
-#: reference/compound_stmts.rst:1748
+#: reference/compound_stmts.rst:1755
 msgid ""
 "annotation-def TYPE_PARAMS_OF_func():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2210,8 +3136,14 @@ msgid ""
 "    return func\n"
 "func = TYPE_PARAMS_OF_func()"
 msgstr ""
+"annotation-def TYPE_PARAMS_OF_func():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    def func(arg: T): ...\n"
+"    func.__type_params__ = (T,)\n"
+"    return func\n"
+"func = TYPE_PARAMS_OF_func()"
 
-#: reference/compound_stmts.rst:1755
+#: reference/compound_stmts.rst:1762
 msgid ""
 "Here ``annotation-def`` indicates an :ref:`annotation scope <annotation-"
 "scopes>`, which is not actually bound to any name at runtime. (One other "
@@ -2219,34 +3151,50 @@ msgid ""
 "attribute access on the :mod:`typing` module, but creates an instance of :"
 "data:`typing.TypeVar` directly.)"
 msgstr ""
+"Εδώ το ``annotation-def`` υποδηλώνει ένα :ref:`annotation scope <annotation-"
+"scopes>`, το οποίο δεν δεσμεύεται στην πραγματικότητα σε κανένα όνομα κατά "
+"τον χρόνο εκτέλεσης. (Έχει ληφθεί άλλη μία ελευθερία στη μετάφραση: η "
+"σύνταξη δεν περνά μέσω της πρόσβασης σε χαρακτηριστικό πάνω στο :mod:"
+"`typing` module, αλλά δημιουργεί απευθείας ένα στιγμιότυπο της :data:`typing."
+"TypeVar`.)"
 
-#: reference/compound_stmts.rst:1761
+#: reference/compound_stmts.rst:1768
 msgid ""
 "The annotations of generic functions are evaluated within the annotation "
 "scope used for declaring the type parameters, but the function's defaults "
 "and decorators are not."
 msgstr ""
+"Τα annotations των γενικών συναρτήσεων αξιολογούνται εντός του εύρους του "
+"annotation που χρησιμοποιείται για τη δήλωση των παραμέτρων τύπου, αλλά οι "
+"προεπιλογές και οι decorators της συνάρτησης όχι."
 
-#: reference/compound_stmts.rst:1765
+#: reference/compound_stmts.rst:1772
 msgid ""
 "The following example illustrates the scoping rules for these cases, as well "
 "as for additional flavors of type parameters::"
 msgstr ""
+"Το ακόλουθο παράδειγμα απεικονίζει τους κανόνες εμβέλειας για αυτές τις "
+"περιπτώσεις, καθώς και για επιπρόσθετα είδη παραμέτρων τύπου::"
 
-#: reference/compound_stmts.rst:1768
+#: reference/compound_stmts.rst:1775
 msgid ""
 "@decorator\n"
 "def func[T: int, *Ts, **P](*args: *Ts, arg: Callable[P, T] = some_default):\n"
 "    ..."
 msgstr ""
+"@decorator\n"
+"def func[T: int, *Ts, **P](*args: *Ts, arg: Callable[P, T] = some_default):\n"
+"    ..."
 
-#: reference/compound_stmts.rst:1772
+#: reference/compound_stmts.rst:1779
 msgid ""
 "Except for the :ref:`lazy evaluation <lazy-evaluation>` of the :class:"
 "`~typing.TypeVar` bound, this is equivalent to::"
 msgstr ""
+"Εκτός από το :ref:`lazy evaluation <lazy-evaluation>` του :class:`~typing."
+"TypeVar` bound, αυτό είναι ισοδύναμο με το::"
 
-#: reference/compound_stmts.rst:1775
+#: reference/compound_stmts.rst:1782
 msgid ""
 "DEFAULT_OF_arg = some_default\n"
 "\n"
@@ -2267,26 +3215,46 @@ msgid ""
 "    return func\n"
 "func = decorator(TYPE_PARAMS_OF_func())"
 msgstr ""
+"DEFAULT_OF_arg = some_default\n"
+"\n"
+"annotation-def TYPE_PARAMS_OF_func():\n"
+"\n"
+"    annotation-def BOUND_OF_T():\n"
+"        return int\n"
+"    # In reality, BOUND_OF_T() is evaluated only on demand.\n"
+"    T = typing.TypeVar(\"T\", bound=BOUND_OF_T())\n"
+"\n"
+"    Ts = typing.TypeVarTuple(\"Ts\")\n"
+"    P = typing.ParamSpec(\"P\")\n"
+"\n"
+"    def func(*args: *Ts, arg: Callable[P, T] = DEFAULT_OF_arg):\n"
+"        ...\n"
+"\n"
+"    func.__type_params__ = (T, Ts, P)\n"
+"    return func\n"
+"func = decorator(TYPE_PARAMS_OF_func())"
 
-#: reference/compound_stmts.rst:1794
+#: reference/compound_stmts.rst:1801
 msgid ""
 "The capitalized names like ``DEFAULT_OF_arg`` are not actually bound at "
 "runtime."
 msgstr ""
+"Τα κεφαλαιοποιημένα ονόματα όπως το ``DEFAULT_OF_arg`` δεν δεσμεύονται στην "
+"πραγματικότητα κατά τον χρόνο εκτέλεσης."
 
-#: reference/compound_stmts.rst:1800
+#: reference/compound_stmts.rst:1807
 msgid "Generic classes"
-msgstr ""
+msgstr "Γενικές κλάσεις"
 
-#: reference/compound_stmts.rst:1802
+#: reference/compound_stmts.rst:1809
 msgid "Generic classes are declared as follows::"
-msgstr ""
+msgstr "Οι γενικές κλάσεις δηλώνονται ως εξής::"
 
-#: reference/compound_stmts.rst:1804
+#: reference/compound_stmts.rst:1811
 msgid "class Bag[T]: ..."
-msgstr ""
+msgstr "class Bag[T]: ..."
 
-#: reference/compound_stmts.rst:1808
+#: reference/compound_stmts.rst:1815
 msgid ""
 "annotation-def TYPE_PARAMS_OF_Bag():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2296,33 +3264,51 @@ msgid ""
 "    return Bag\n"
 "Bag = TYPE_PARAMS_OF_Bag()"
 msgstr ""
+"annotation-def TYPE_PARAMS_OF_Bag():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    class Bag(typing.Generic[T]):\n"
+"        __type_params__ = (T,)\n"
+"        ...\n"
+"    return Bag\n"
+"Bag = TYPE_PARAMS_OF_Bag()"
 
-#: reference/compound_stmts.rst:1816
+#: reference/compound_stmts.rst:1823
 msgid ""
 "Here again ``annotation-def`` (not a real keyword) indicates an :ref:"
 "`annotation scope <annotation-scopes>`, and the name ``TYPE_PARAMS_OF_Bag`` "
 "is not actually bound at runtime."
 msgstr ""
+"Εδώ πάλι το ``annotation-def`` (δεν είναι πραγματική λέξη-κλειδί) "
+"υποδεικνύει ένα :ref:`annotation scope <annotation-scopes>`, και το όνομα "
+"``TYPE_PARAMS_OF_Bag`` δεν δεσμεύεται στην πραγματικότητα κατά τον χρόνο "
+"εκτέλεσης."
 
-#: reference/compound_stmts.rst:1820
+#: reference/compound_stmts.rst:1827
 msgid ""
 "Generic classes implicitly inherit from :data:`typing.Generic`. The base "
 "classes and keyword arguments of generic classes are evaluated within the "
 "type scope for the type parameters, and decorators are evaluated outside "
 "that scope. This is illustrated by this example::"
 msgstr ""
+"Οι γενικές κλάσεις κληρονομούν σιωπηρά την :data:`typing.Generic`. Οι "
+"βασικές κλάσεις και τα ορίσματα λέξης-κλειδιού των γενικών κλάσεων "
+"αξιολογούνται εντός του εύρους του τύπου για τις παραμέτρους τύπου, και οι "
+"decorators αξιολογούνται έξω από αυτό το εύρος. Αυτό απεικονίζεται από αυτό "
+"το παράδειγμα::"
 
-#: reference/compound_stmts.rst:1826
+#: reference/compound_stmts.rst:1833
 msgid ""
 "@decorator\n"
 "class Bag(Base[T], arg=T): ..."
 msgstr ""
+"@decorator\n"
+"class Bag(Base[T], arg=T): ..."
 
-#: reference/compound_stmts.rst:1829
+#: reference/compound_stmts.rst:1836
 msgid "This is equivalent to::"
-msgstr ""
+msgstr "Αυτό είναι ισοδύναμο με το::"
 
-#: reference/compound_stmts.rst:1831
+#: reference/compound_stmts.rst:1838
 msgid ""
 "annotation-def TYPE_PARAMS_OF_Bag():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2332,28 +3318,39 @@ msgid ""
 "    return Bag\n"
 "Bag = decorator(TYPE_PARAMS_OF_Bag())"
 msgstr ""
+"annotation-def TYPE_PARAMS_OF_Bag():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    class Bag(Base[T], typing.Generic[T], arg=T):\n"
+"        __type_params__ = (T,)\n"
+"        ...\n"
+"    return Bag\n"
+"Bag = decorator(TYPE_PARAMS_OF_Bag())"
 
-#: reference/compound_stmts.rst:1842
+#: reference/compound_stmts.rst:1849
 msgid "Generic type aliases"
-msgstr ""
+msgstr "Ψευδώνυμα γενικού τύπου"
 
-#: reference/compound_stmts.rst:1844
+#: reference/compound_stmts.rst:1851
 msgid ""
 "The :keyword:`type` statement can also be used to create a generic type "
 "alias::"
 msgstr ""
+"Η δήλωση :keyword:`type` μπορεί επίσης να χρησιμοποιηθεί για τη δημιουργία "
+"ενός ψευδωνύμου γενικού τύπου::"
 
-#: reference/compound_stmts.rst:1846
+#: reference/compound_stmts.rst:1853
 msgid "type ListOrSet[T] = list[T] | set[T]"
-msgstr ""
+msgstr "type ListOrSet[T] = list[T] | set[T]"
 
-#: reference/compound_stmts.rst:1848
+#: reference/compound_stmts.rst:1855
 msgid ""
 "Except for the :ref:`lazy evaluation <lazy-evaluation>` of the value, this "
 "is equivalent to::"
 msgstr ""
+"Με εξαίρεση το :ref:`lazy evaluation <lazy-evaluation>` της τιμής, αυτό "
+"είναι ισοδύναμο με το::"
 
-#: reference/compound_stmts.rst:1851
+#: reference/compound_stmts.rst:1858
 msgid ""
 "annotation-def TYPE_PARAMS_OF_ListOrSet():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2365,44 +3362,64 @@ msgid ""
 "type_params=(T,))\n"
 "ListOrSet = TYPE_PARAMS_OF_ListOrSet()"
 msgstr ""
+"annotation-def TYPE_PARAMS_OF_ListOrSet():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"\n"
+"    annotation-def VALUE_OF_ListOrSet():\n"
+"        return list[T] | set[T]\n"
+"    # In reality, the value is lazily evaluated\n"
+"    return typing.TypeAliasType(\"ListOrSet\", VALUE_OF_ListOrSet(), "
+"type_params=(T,))\n"
+"ListOrSet = TYPE_PARAMS_OF_ListOrSet()"
 
-#: reference/compound_stmts.rst:1860
+#: reference/compound_stmts.rst:1867
 msgid ""
 "Here, ``annotation-def`` (not a real keyword) indicates an :ref:`annotation "
 "scope <annotation-scopes>`. The capitalized names like "
 "``TYPE_PARAMS_OF_ListOrSet`` are not actually bound at runtime."
 msgstr ""
+"Εδώ, το ``annotation-def`` (δεν είναι πραγματική λέξη-κλειδί) υποδεικνύει "
+"ένα :ref:`annotation scope <annotation-scopes>`. Τα κεφαλαιοποιημένα ονόματα "
+"όπως το ``TYPE_PARAMS_OF_ListOrSet`` δεν δεσμεύονται στην πραγματικότητα "
+"κατά τον χρόνο εκτέλεσης."
 
-#: reference/compound_stmts.rst:1867
+#: reference/compound_stmts.rst:1874
 msgid "Annotations"
-msgstr ""
+msgstr "Annotations"
 
-#: reference/compound_stmts.rst:1869
+#: reference/compound_stmts.rst:1876
 msgid "Annotations are now lazily evaluated by default."
-msgstr ""
+msgstr "Τα annotations πλέον αξιολογούνται νωχελικά από προεπιλογή."
 
-#: reference/compound_stmts.rst:1872
+#: reference/compound_stmts.rst:1879
 msgid ""
 "Variables and function parameters may carry :term:`annotations "
 "<annotation>`, created by adding a colon after the name, followed by an "
 "expression::"
 msgstr ""
+"Οι μεταβλητές και οι παράμετροι συναρτήσεων μπορούν να φέρουν :term:"
+"`annotations <annotation>`, που δημιουργούνται προσθέτοντας άνω και κάτω "
+"τελεία μετά το όνομα, ακολουθούμενη από μια έκφραση::"
 
-#: reference/compound_stmts.rst:1875
+#: reference/compound_stmts.rst:1882
 msgid ""
 "x: annotation = 1\n"
 "def f(param: annotation): ..."
 msgstr ""
+"x: annotation = 1\n"
+"def f(param: annotation): ..."
 
-#: reference/compound_stmts.rst:1878
+#: reference/compound_stmts.rst:1885
 msgid "Functions may also carry a return annotation following an arrow::"
 msgstr ""
+"Οι συναρτήσεις μπορούν επίσης να φέρουν ένα annotation επιστροφής "
+"ακολουθώντας ένα βέλος::"
 
-#: reference/compound_stmts.rst:1880
+#: reference/compound_stmts.rst:1887
 msgid "def f() -> annotation: ..."
-msgstr ""
+msgstr "def f() -> annotation: ..."
 
-#: reference/compound_stmts.rst:1882
+#: reference/compound_stmts.rst:1889
 msgid ""
 "Annotations are conventionally used for :term:`type hints <type hint>`, but "
 "this is not enforced by the language, and in general annotations may contain "
@@ -2411,8 +3428,14 @@ msgid ""
 "introspects and uses the annotations (such as :mod:`dataclasses` or :func:"
 "`functools.singledispatch`)."
 msgstr ""
+"Τα annotations χρησιμοποιούνται συμβατικά για :term:`type hints <type "
+"hint>`, αλλά αυτό δεν επιβάλλεται από τη γλώσσα, και γενικά τα annotations "
+"μπορούν να περιέχουν αυθαίρετες εκφράσεις. Η παρουσία των annotations δεν "
+"αλλάζει τη σημασιολογία εκτέλεσης του κώδικα, εκτός εάν χρησιμοποιείται "
+"κάποιος μηχανισμός που επιθεωρεί και χρησιμοποιεί τα annotations (όπως οι :"
+"mod:`dataclasses` ή η :func:`functools.singledispatch`)."
 
-#: reference/compound_stmts.rst:1888
+#: reference/compound_stmts.rst:1895
 msgid ""
 "By default, annotations are lazily evaluated in an :ref:`annotation scope "
 "<annotation-scopes>`. This means that they are not evaluated when the code "
@@ -2420,22 +3443,35 @@ msgid ""
 "information that can be used to evaluate the annotation later if requested. "
 "The :mod:`annotationlib` module provides tools for evaluating annotations."
 msgstr ""
+"Από προεπιλογή, τα annotations αξιολογούνται νωχελικά σε ένα :ref:"
+"`annotation scope <annotation-scopes>`. Αυτό σημαίνει ότι δεν αξιολογούνται "
+"όταν αξιολογείται ο κώδικας που περιέχει το annotation. Αντίθετα, ο "
+"διερμηνέας αποθηκεύει πληροφορίες που μπορούν να χρησιμοποιηθούν για να "
+"αξιολογηθεί το annotation αργότερα, εάν ζητηθεί. Το module :mod:"
+"`annotationlib` παρέχει εργαλεία για την αξιολόγηση των annotations."
 
-#: reference/compound_stmts.rst:1893
+#: reference/compound_stmts.rst:1900
 msgid ""
 "If the :ref:`future statement <future>` ``from __future__ import "
 "annotations`` is present, all annotations are instead stored as strings::"
 msgstr ""
+"Εάν η :ref:`μελλοντική δήλωση <future>` ``from __future__ import "
+"annotations`` είναι παρούσα, όλα τα annotations αποθηκεύονται αντί αυτού ως "
+"συμβολοσειρές::"
 
-#: reference/compound_stmts.rst:1896
+#: reference/compound_stmts.rst:1903
 msgid ""
 ">>> from __future__ import annotations\n"
 ">>> def f(param: annotation): ...\n"
 ">>> f.__annotations__\n"
 "{'param': 'annotation'}"
 msgstr ""
+">>> from __future__ import annotations\n"
+">>> def f(param: annotation): ...\n"
+">>> f.__annotations__\n"
+"{'param': 'annotation'}"
 
-#: reference/compound_stmts.rst:1901
+#: reference/compound_stmts.rst:1908
 msgid ""
 "This future statement will be deprecated and removed in a future version of "
 "Python, but not before Python 3.13 reaches its end of life (see :pep:`749`). "
@@ -2443,463 +3479,488 @@ msgid ""
 "get_annotations` and :func:`typing.get_type_hints` are less likely to be "
 "able to resolve annotations at runtime."
 msgstr ""
+"Αυτή η μελλοντική δήλωση θα θεωρηθεί απαρχαιωμένη και θα αφαιρεθεί σε μια "
+"μελλοντική έκδοση της Python, αλλά όχι προτού η Python 3.13 φτάσει στο τέλος "
+"της ζωής της (δείτε το :pep:`749`). Όταν χρησιμοποιείται, τα εργαλεία "
+"ενδοσκόπησης όπως η :func:`annotationlib.get_annotations` και η :func:"
+"`typing.get_type_hints` είναι λιγότερο πιθανό να μπορούν να επιλύσουν "
+"annotations κατά τον χρόνο εκτέλεσης."
 
-#: reference/compound_stmts.rst:1909
+#: reference/compound_stmts.rst:1916
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
-#: reference/compound_stmts.rst:1910
+#: reference/compound_stmts.rst:1917
 msgid ""
 "The exception is propagated to the invocation stack unless there is a :"
 "keyword:`finally` clause which happens to raise another exception. That new "
 "exception causes the old one to be lost."
 msgstr ""
+"Η εξαίρεση διαδίδεται στη στοίβα κλήσεων εκτός εάν υπάρχει μία ρήτρα :"
+"keyword:`finally` η οποία τυχαίνει να κάνει raise μια άλλη εξαίρεση. Αυτή η "
+"νέα εξαίρεση προκαλεί την απώλεια της παλιάς."
 
-#: reference/compound_stmts.rst:1914
+#: reference/compound_stmts.rst:1921
 msgid "In pattern matching, a sequence is defined as one of the following:"
-msgstr ""
+msgstr "Στο ταίριασμα μοτίβων, μια ακολουθία ορίζεται ως ένα από τα ακόλουθα:"
 
-#: reference/compound_stmts.rst:1916
+#: reference/compound_stmts.rst:1923
 msgid "a class that inherits from :class:`collections.abc.Sequence`"
-msgstr ""
+msgstr "μια κλάση που κληρονομεί από την :class:`collections.abc.Sequence`"
 
-#: reference/compound_stmts.rst:1917
+#: reference/compound_stmts.rst:1924
 msgid ""
 "a Python class that has been registered as :class:`collections.abc.Sequence`"
 msgstr ""
+"μια Python κλάση που έχει εγγραφεί ως :class:`collections.abc.Sequence`"
 
-#: reference/compound_stmts.rst:1918
+#: reference/compound_stmts.rst:1925
 msgid ""
 "a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_SEQUENCE` bit set"
 msgstr ""
+"μια ενσωματωμένη κλάση που έχει το :c:macro:`Py_TPFLAGS_SEQUENCE` bit της "
+"ρυθμισμένο (στην CPython)"
 
-#: reference/compound_stmts.rst:1919 reference/compound_stmts.rst:1938
+#: reference/compound_stmts.rst:1926 reference/compound_stmts.rst:1945
 msgid "a class that inherits from any of the above"
-msgstr ""
+msgstr "μια κλάση που κληρονομεί οποιοδήποτε από τα παραπάνω"
 
-#: reference/compound_stmts.rst:1921
+#: reference/compound_stmts.rst:1928
 msgid "The following standard library classes are sequences:"
-msgstr ""
-
-#: reference/compound_stmts.rst:1923
-msgid ":class:`array.array`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1924
-msgid ":class:`collections.deque`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1926
-msgid ":class:`memoryview`"
-msgstr ""
-
-#: reference/compound_stmts.rst:1927
-msgid ":class:`range`"
-msgstr ""
+msgstr "Οι ακόλουθες κλάσεις της τυπικής βιβλιοθήκης είναι ακολουθίες:"
 
 #: reference/compound_stmts.rst:1930
+msgid ":class:`array.array`"
+msgstr ":class:`array.array`"
+
+#: reference/compound_stmts.rst:1931
+msgid ":class:`collections.deque`"
+msgstr ":class:`collections.deque`"
+
+#: reference/compound_stmts.rst:1933
+msgid ":class:`memoryview`"
+msgstr ":class:`memoryview`"
+
+#: reference/compound_stmts.rst:1934
+msgid ":class:`range`"
+msgstr ":class:`range`"
+
+#: reference/compound_stmts.rst:1937
 msgid ""
 "Subject values of type ``str``, ``bytes``, and ``bytearray`` do not match "
 "sequence patterns."
 msgstr ""
+"Τιμές θέματος τύπου ``str``, ``bytes``, και ``bytearray`` δεν ταιριάζουν με "
+"μοτίβα ακολουθίας."
 
-#: reference/compound_stmts.rst:1933
+#: reference/compound_stmts.rst:1940
 msgid "In pattern matching, a mapping is defined as one of the following:"
 msgstr ""
+"Στο ταίριασμα μοτίβων, μία αντιστοίχιση ορίζεται ως ένα από τα ακόλουθα:"
 
-#: reference/compound_stmts.rst:1935
+#: reference/compound_stmts.rst:1942
 msgid "a class that inherits from :class:`collections.abc.Mapping`"
-msgstr ""
+msgstr "μια κλάση που κληρονομεί την :class:`collections.abc.Mapping`"
 
-#: reference/compound_stmts.rst:1936
+#: reference/compound_stmts.rst:1943
 msgid ""
 "a Python class that has been registered as :class:`collections.abc.Mapping`"
-msgstr ""
+msgstr "μια Python κλάση που έχει εγγραφεί ως :class:`collections.abc.Mapping`"
 
-#: reference/compound_stmts.rst:1937
+#: reference/compound_stmts.rst:1944
 msgid ""
 "a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_MAPPING` bit set"
 msgstr ""
+"μια ενσωματωμένη κλάση που έχει το :c:macro:`Py_TPFLAGS_MAPPING` bit της "
+"ρυθμισμένο (στην CPython)"
 
-#: reference/compound_stmts.rst:1940
+#: reference/compound_stmts.rst:1947
 msgid ""
 "The standard library classes :class:`dict` and :class:`types."
 "MappingProxyType` are mappings."
 msgstr ""
+"Οι κλάσεις :class:`dict` και :class:`types.MappingProxyType` της τυπικής "
+"βιβλιοθήκης είναι αντιστοιχίσεις."
 
-#: reference/compound_stmts.rst:1943
+#: reference/compound_stmts.rst:1950
 msgid ""
 "A string literal appearing as the first statement in the function body is "
 "transformed into the function's :attr:`~function.__doc__` attribute and "
 "therefore the function's :term:`docstring`."
 msgstr ""
+"Ένα λεκτικό συμβολοσειράς που εμφανίζεται ως η πρώτη δήλωση στο σώμα μιας "
+"συνάρτησης μετατρέπεται στο χαρακτηριστικό :attr:`~function.__doc__` της "
+"συνάρτησης και κατά συνέπεια στο :term:`docstring` της συνάρτησης."
 
-#: reference/compound_stmts.rst:1947
+#: reference/compound_stmts.rst:1954
 msgid ""
 "A string literal appearing as the first statement in the class body is "
 "transformed into the namespace's :attr:`~type.__doc__` item and therefore "
 "the class's :term:`docstring`."
 msgstr ""
+"Ένα λεκτικό συμβολοσειράς που εμφανίζεται ως η πρώτη δήλωση στο σώμα μιας "
+"κλάσης μετατρέπεται στο στοιχείο :attr:`~type.__doc__` του χώρου ονομάτων "
+"και κατά συνέπεια στο :term:`docstring` της κλάσης."
 
 #: reference/compound_stmts.rst:7
 msgid "compound"
-msgstr ""
+msgstr "σύνθετο"
 
 #: reference/compound_stmts.rst:86 reference/compound_stmts.rst:111
 #: reference/compound_stmts.rst:129 reference/compound_stmts.rst:144
 #: reference/compound_stmts.rst:169 reference/compound_stmts.rst:207
-#: reference/compound_stmts.rst:393 reference/compound_stmts.rst:440
-#: reference/compound_stmts.rst:478 reference/compound_stmts.rst:595
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
-#: reference/compound_stmts.rst:1500 reference/compound_stmts.rst:1534
-#: reference/compound_stmts.rst:1579
+#: reference/compound_stmts.rst:397 reference/compound_stmts.rst:446
+#: reference/compound_stmts.rst:484 reference/compound_stmts.rst:602
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
+#: reference/compound_stmts.rst:1507 reference/compound_stmts.rst:1541
+#: reference/compound_stmts.rst:1586
 msgid "statement"
-msgstr ""
+msgstr "δήλωση"
 
 #: reference/compound_stmts.rst:21
 msgid "clause"
-msgstr ""
+msgstr "ρήτρα"
 
 #: reference/compound_stmts.rst:21
 msgid "suite"
-msgstr ""
+msgstr "σουίτα"
 
 #: reference/compound_stmts.rst:21
 msgid "; (semicolon)"
-msgstr ""
+msgstr "; (ερωτηματικό)"
 
 #: reference/compound_stmts.rst:64
 msgid "NEWLINE token"
-msgstr ""
+msgstr "NEWLINE token"
 
 #: reference/compound_stmts.rst:64
 msgid "DEDENT token"
-msgstr ""
+msgstr "DEDENT token"
 
 #: reference/compound_stmts.rst:64
 msgid "dangling"
-msgstr ""
+msgstr "εκκρεμές"
 
 #: reference/compound_stmts.rst:64 reference/compound_stmts.rst:86
 #: reference/compound_stmts.rst:111 reference/compound_stmts.rst:144
-#: reference/compound_stmts.rst:207 reference/compound_stmts.rst:393
+#: reference/compound_stmts.rst:207 reference/compound_stmts.rst:397
 msgid "else"
-msgstr ""
+msgstr "else"
 
-#: reference/compound_stmts.rst:86 reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:86 reference/compound_stmts.rst:602
 msgid "if"
-msgstr ""
+msgstr "if"
 
 #: reference/compound_stmts.rst:86 reference/compound_stmts.rst:111
 #: reference/compound_stmts.rst:144 reference/compound_stmts.rst:207
-#: reference/compound_stmts.rst:330 reference/compound_stmts.rst:393
-#: reference/compound_stmts.rst:411 reference/compound_stmts.rst:478
-#: reference/compound_stmts.rst:595 reference/compound_stmts.rst:1510
+#: reference/compound_stmts.rst:330 reference/compound_stmts.rst:397
+#: reference/compound_stmts.rst:415 reference/compound_stmts.rst:484
+#: reference/compound_stmts.rst:602 reference/compound_stmts.rst:1517
 msgid "keyword"
-msgstr ""
+msgstr "λέξη-κλειδί"
 
 #: reference/compound_stmts.rst:86
 msgid "elif"
-msgstr ""
+msgstr "elif"
 
 #: reference/compound_stmts.rst:86 reference/compound_stmts.rst:111
 #: reference/compound_stmts.rst:144 reference/compound_stmts.rst:207
-#: reference/compound_stmts.rst:478 reference/compound_stmts.rst:595
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1332
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:484 reference/compound_stmts.rst:602
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1339
+#: reference/compound_stmts.rst:1397
 msgid ": (colon)"
-msgstr ""
+msgstr ": (άνω και κάτω τελεία)"
 
 #: reference/compound_stmts.rst:86 reference/compound_stmts.rst:111
 #: reference/compound_stmts.rst:144 reference/compound_stmts.rst:207
-#: reference/compound_stmts.rst:478 reference/compound_stmts.rst:595
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:484 reference/compound_stmts.rst:602
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "compound statement"
-msgstr ""
+msgstr "σύνθετη δήλωση"
 
 #: reference/compound_stmts.rst:111
 msgid "while"
-msgstr ""
+msgstr "while"
 
 #: reference/compound_stmts.rst:111 reference/compound_stmts.rst:144
 msgid "loop"
-msgstr ""
+msgstr "βρόχος"
 
 #: reference/compound_stmts.rst:129 reference/compound_stmts.rst:169
-#: reference/compound_stmts.rst:393 reference/compound_stmts.rst:440
+#: reference/compound_stmts.rst:397 reference/compound_stmts.rst:446
 msgid "break"
-msgstr ""
+msgstr "break"
 
 #: reference/compound_stmts.rst:129 reference/compound_stmts.rst:169
-#: reference/compound_stmts.rst:393 reference/compound_stmts.rst:440
+#: reference/compound_stmts.rst:397 reference/compound_stmts.rst:446
 msgid "continue"
-msgstr ""
+msgstr "continue"
 
 #: reference/compound_stmts.rst:144
 msgid "for"
-msgstr ""
+msgstr "for"
 
 #: reference/compound_stmts.rst:144
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: reference/compound_stmts.rst:144
 msgid "target"
-msgstr ""
+msgstr "στόχος"
 
 #: reference/compound_stmts.rst:144
 msgid "list"
-msgstr ""
+msgstr "λίστα"
 
 #: reference/compound_stmts.rst:144 reference/compound_stmts.rst:301
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "object"
-msgstr ""
+msgstr "αντικείμενο"
 
 #: reference/compound_stmts.rst:144
 msgid "sequence"
-msgstr ""
+msgstr "ακολουθία"
 
 #: reference/compound_stmts.rst:190
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένη συνάρτηση"
 
 #: reference/compound_stmts.rst:190
 msgid "range"
-msgstr ""
+msgstr "εύρος"
 
 #: reference/compound_stmts.rst:207
 msgid "try"
-msgstr ""
+msgstr "try"
 
 #: reference/compound_stmts.rst:207
 msgid "except"
-msgstr ""
+msgstr "except"
 
-#: reference/compound_stmts.rst:207 reference/compound_stmts.rst:411
+#: reference/compound_stmts.rst:207 reference/compound_stmts.rst:415
 msgid "finally"
-msgstr ""
+msgstr "finally"
 
 #: reference/compound_stmts.rst:207 reference/compound_stmts.rst:268
-#: reference/compound_stmts.rst:478 reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:484 reference/compound_stmts.rst:602
 msgid "as"
-msgstr ""
+msgstr "as"
 
 #: reference/compound_stmts.rst:268
 msgid "except clause"
-msgstr ""
+msgstr "ρήτρα εξαίρεσης"
 
 #: reference/compound_stmts.rst:301
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: reference/compound_stmts.rst:301
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
 #: reference/compound_stmts.rst:301
 msgid "traceback"
-msgstr ""
+msgstr "ιχνηλάτηση"
 
 #: reference/compound_stmts.rst:330
 msgid "except_star"
-msgstr ""
+msgstr "except_star"
 
-#: reference/compound_stmts.rst:393 reference/compound_stmts.rst:440
+#: reference/compound_stmts.rst:397 reference/compound_stmts.rst:446
 msgid "return"
-msgstr ""
+msgstr "return"
 
-#: reference/compound_stmts.rst:478
+#: reference/compound_stmts.rst:484
 msgid "with"
-msgstr ""
+msgstr "with"
 
-#: reference/compound_stmts.rst:478
+#: reference/compound_stmts.rst:484
 msgid "with statement"
-msgstr ""
+msgstr "δήλωση with"
 
-#: reference/compound_stmts.rst:478 reference/compound_stmts.rst:1202
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:484 reference/compound_stmts.rst:1209
+#: reference/compound_stmts.rst:1397
 msgid ", (comma)"
-msgstr ""
+msgstr ", (κόμμα)"
 
-#: reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:602
 msgid "match"
-msgstr ""
+msgstr "ταίριασμα"
 
-#: reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:602
 msgid "case"
-msgstr ""
+msgstr "case"
 
-#: reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:602
 msgid "pattern matching"
-msgstr ""
+msgstr "ταίριασμα μοτίβου"
 
-#: reference/compound_stmts.rst:595
+#: reference/compound_stmts.rst:602
 msgid "match statement"
-msgstr ""
+msgstr "δήλωση match"
 
-#: reference/compound_stmts.rst:699
+#: reference/compound_stmts.rst:706
 msgid "guard"
-msgstr ""
+msgstr "guard"
 
-#: reference/compound_stmts.rst:738
+#: reference/compound_stmts.rst:745
 msgid "irrefutable case block"
-msgstr ""
+msgstr "αδιάσειστο case μπλοκ"
 
-#: reference/compound_stmts.rst:738
+#: reference/compound_stmts.rst:745
 msgid "case block"
-msgstr ""
+msgstr "case μπλοκ"
 
-#: reference/compound_stmts.rst:762
+#: reference/compound_stmts.rst:769
 msgid "! patterns"
-msgstr ""
+msgstr "! μοτίβα"
 
-#: reference/compound_stmts.rst:762
+#: reference/compound_stmts.rst:769
 msgid "AS pattern, OR pattern, capture pattern, wildcard pattern"
-msgstr ""
+msgstr "AS μοτίβο, OR μοτίβο, μοτίβο δέσμευσης, μοτίβο μπαλαντέρ"
 
-#: reference/compound_stmts.rst:1193 reference/compound_stmts.rst:1282
+#: reference/compound_stmts.rst:1200 reference/compound_stmts.rst:1289
 msgid "parameter"
-msgstr ""
+msgstr "παράμετρος"
 
-#: reference/compound_stmts.rst:1193 reference/compound_stmts.rst:1202
-#: reference/compound_stmts.rst:1246 reference/compound_stmts.rst:1282
-#: reference/compound_stmts.rst:1311
+#: reference/compound_stmts.rst:1200 reference/compound_stmts.rst:1209
+#: reference/compound_stmts.rst:1253 reference/compound_stmts.rst:1289
+#: reference/compound_stmts.rst:1318
 msgid "function definition"
-msgstr ""
+msgstr "ορισμός συνάρτησης"
 
-#: reference/compound_stmts.rst:1202
+#: reference/compound_stmts.rst:1209
 msgid "def"
-msgstr ""
+msgstr "def"
 
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1332
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1339
 msgid "function"
-msgstr ""
+msgstr "συνάρτηση"
 
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "definition"
-msgstr ""
+msgstr "ορισμός"
 
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "name"
-msgstr ""
+msgstr "όνομα"
 
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "binding"
-msgstr ""
+msgstr "δέσμευση"
 
-#: reference/compound_stmts.rst:1202
+#: reference/compound_stmts.rst:1209
 msgid "user-defined function"
-msgstr ""
+msgstr "συνάρτηση ορισμένη από τον χρήστη"
 
-#: reference/compound_stmts.rst:1202 reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1209 reference/compound_stmts.rst:1397
 msgid "() (parentheses)"
-msgstr ""
+msgstr "() (παρενθέσεις)"
 
-#: reference/compound_stmts.rst:1202
+#: reference/compound_stmts.rst:1209
 msgid "parameter list"
-msgstr ""
+msgstr "λίστα παραμέτρων"
 
-#: reference/compound_stmts.rst:1246 reference/compound_stmts.rst:1440
+#: reference/compound_stmts.rst:1253 reference/compound_stmts.rst:1447
 msgid "@ (at)"
-msgstr ""
+msgstr "@ (at)"
 
-#: reference/compound_stmts.rst:1282
+#: reference/compound_stmts.rst:1289
 msgid "default"
-msgstr ""
+msgstr "προεπιλογή"
 
-#: reference/compound_stmts.rst:1282
+#: reference/compound_stmts.rst:1289
 msgid "value"
-msgstr ""
+msgstr "τιμή"
 
-#: reference/compound_stmts.rst:1282
+#: reference/compound_stmts.rst:1289
 msgid "argument"
-msgstr ""
+msgstr "όρισμα"
 
-#: reference/compound_stmts.rst:1282
+#: reference/compound_stmts.rst:1289
 msgid "= (equals)"
-msgstr ""
+msgstr "= (ίσον)"
 
-#: reference/compound_stmts.rst:1311
+#: reference/compound_stmts.rst:1318
 msgid "/ (slash)"
-msgstr ""
+msgstr "/ (κάθετος)"
 
-#: reference/compound_stmts.rst:1311
+#: reference/compound_stmts.rst:1318
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (αστερίσκος)"
 
-#: reference/compound_stmts.rst:1311
+#: reference/compound_stmts.rst:1318
 msgid "**"
-msgstr ""
+msgstr "**"
 
-#: reference/compound_stmts.rst:1332
+#: reference/compound_stmts.rst:1339
 msgid "annotations"
-msgstr ""
+msgstr "annotations"
 
-#: reference/compound_stmts.rst:1332
+#: reference/compound_stmts.rst:1339
 msgid "->"
-msgstr ""
+msgstr "->"
 
-#: reference/compound_stmts.rst:1332
+#: reference/compound_stmts.rst:1339
 msgid "function annotations"
-msgstr ""
+msgstr "annotations συνάρτησης"
 
-#: reference/compound_stmts.rst:1349
+#: reference/compound_stmts.rst:1356
 msgid "lambda"
-msgstr ""
+msgstr "lambda"
 
-#: reference/compound_stmts.rst:1349
+#: reference/compound_stmts.rst:1356
 msgid "expression"
-msgstr ""
+msgstr "έκφραση"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "class"
-msgstr ""
+msgstr "κλάση"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "execution"
-msgstr ""
+msgstr "εκτέλεση"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "frame"
-msgstr ""
+msgstr "πλαίσιο"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "inheritance"
-msgstr ""
+msgstr "κληρονομικότητα"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "docstring"
-msgstr ""
+msgstr "docstring"
 
-#: reference/compound_stmts.rst:1390 reference/compound_stmts.rst:1440
+#: reference/compound_stmts.rst:1397 reference/compound_stmts.rst:1447
 msgid "class definition"
-msgstr ""
+msgstr "ορισμός κλάσης"
 
-#: reference/compound_stmts.rst:1390
+#: reference/compound_stmts.rst:1397
 msgid "expression list"
-msgstr ""
+msgstr "λίστα εκφράσεων"
 
-#: reference/compound_stmts.rst:1500
+#: reference/compound_stmts.rst:1507
 msgid "async def"
-msgstr ""
+msgstr "async def"
 
-#: reference/compound_stmts.rst:1510
+#: reference/compound_stmts.rst:1517
 msgid "async"
-msgstr ""
+msgstr "async"
 
-#: reference/compound_stmts.rst:1510
+#: reference/compound_stmts.rst:1517
 msgid "await"
-msgstr ""
+msgstr "await"
 
-#: reference/compound_stmts.rst:1534
+#: reference/compound_stmts.rst:1541
 msgid "async for"
-msgstr ""
+msgstr "async for"
 
-#: reference/compound_stmts.rst:1579
+#: reference/compound_stmts.rst:1586
 msgid "async with"
-msgstr ""
+msgstr "async with"
 
-#: reference/compound_stmts.rst:1636
+#: reference/compound_stmts.rst:1643
 msgid "type parameters"
-msgstr ""
+msgstr "παράμετροι τύπου"

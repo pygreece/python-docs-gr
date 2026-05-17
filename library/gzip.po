@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
-"PO-Revision-Date: 2025-05-10 22:33+0200\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
+"PO-Revision-Date: 2025-11-29 09:18+0200\n"
 "Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.g>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
@@ -34,11 +34,23 @@ msgstr ""
 "αρχείων όπως ακριβώς θα έκαναν τα προγράμματα της GNU :program:`gzip` και :"
 "program:`gunzip`."
 
-#: library/gzip.rst:14
+#: includes/optional-module.rst:1
+msgid ""
+"This is an :term:`optional module`. If it is missing from your copy of "
+"CPython, look for documentation from your distributor (that is, whoever "
+"provided Python to you). If you are the distributor, see :ref:`optional-"
+"module-requirements`."
+msgstr ""
+"Αυτό είναι ένα :term:`optional module`. Εάν λείπει από το αντίγραφο του "
+"CPython σας, αναζητήστε την τεκμηρίωση από τον διανομέα σας (δηλαδή, όποιος "
+"σας παρείχε την Python). Εάν είστε ο διανομέας, δείτε :ref:`optional-module-"
+"requirements`."
+
+#: library/gzip.rst:16
 msgid "The data compression is provided by the :mod:`zlib` module."
 msgstr "Η συμπίεση δεδομένων παρέχεται από το :mod:`zlib` module."
 
-#: library/gzip.rst:16
+#: library/gzip.rst:18
 msgid ""
 "The :mod:`gzip` module provides the :class:`GzipFile` class, as well as the :"
 "func:`.open`, :func:`compress` and :func:`decompress` convenience functions. "
@@ -52,7 +64,7 @@ msgstr ""
 "program:`gzip`, συμπιέζοντας ή αποσυμπιέζοντας αυτόματα τα δεδομένα, ώστε να "
 "φαίνεται σαν ένα συνηθισμένο :term:`file object`."
 
-#: library/gzip.rst:22
+#: library/gzip.rst:24
 msgid ""
 "Note that additional file formats which can be decompressed by the :program:"
 "`gzip` and :program:`gunzip` programs, such  as those produced by :program:"
@@ -63,11 +75,11 @@ msgstr ""
 "από τα :program:`compress` και :program:`pack`, δεν υποστηρίζονται από αυτό "
 "το module."
 
-#: library/gzip.rst:26
+#: library/gzip.rst:28
 msgid "The module defines the following items:"
 msgstr "Το module ορίζει τα ακόλουθα στοιχεία:"
 
-#: library/gzip.rst:31
+#: library/gzip.rst:33
 msgid ""
 "Open a gzip-compressed file in binary or text mode, returning a :term:`file "
 "object`."
@@ -75,7 +87,7 @@ msgstr ""
 "Ανοίγει ένα gzip-συμπιεσμένο αρχείο σε δυαδική ή σε λειτουργία κειμένου, "
 "επιστρέφοντας ένα :term:`file object`."
 
-#: library/gzip.rst:34
+#: library/gzip.rst:36
 msgid ""
 "The *filename* argument can be an actual filename (a :class:`str` or :class:"
 "`bytes` object), or an existing file object to read from or write to."
@@ -84,7 +96,7 @@ msgstr ""
 "αντικείμενο :class:`str` ή :class:`bytes`), ή ένα υπάρχον αντικείμενο "
 "αρχείου για ανάγνωση και εγγραφή."
 
-#: library/gzip.rst:37
+#: library/gzip.rst:39
 msgid ""
 "The *mode* argument can be any of ``'r'``, ``'rb'``, ``'a'``, ``'ab'``, "
 "``'w'``, ``'wb'``, ``'x'`` or ``'xb'`` for binary mode, or ``'rt'``, "
@@ -95,7 +107,7 @@ msgstr ""
 "λειτουργία, ή ``'rt'``, ``'at'``, ``'wt'`` ή ``'xt'`` για λειτουργία "
 "κειμένου. Η προεπιλογή είναι το ``'rb'``."
 
-#: library/gzip.rst:41
+#: library/gzip.rst:43
 msgid ""
 "The *compresslevel* argument is an integer from 0 to 9, as for the :class:"
 "`GzipFile` constructor."
@@ -103,7 +115,7 @@ msgstr ""
 "Η παράμετρος *compresslevel* είναι ένας ακέραιος από 0 έως 9, όπως και για "
 "τον constructor της κλάσης :class:`GzipFile`."
 
-#: library/gzip.rst:44
+#: library/gzip.rst:46
 msgid ""
 "For binary mode, this function is equivalent to the :class:`GzipFile` "
 "constructor: ``GzipFile(filename, mode, compresslevel)``. In this case, the "
@@ -114,7 +126,7 @@ msgstr ""
 "Σε αυτή την περίπτωση, οι παράμετροι *encoding*, *errors* και *newline* δεν "
 "πρέπει να παρέχονται."
 
-#: library/gzip.rst:48
+#: library/gzip.rst:50
 msgid ""
 "For text mode, a :class:`GzipFile` object is created, and wrapped in an :"
 "class:`io.TextIOWrapper` instance with the specified encoding, error "
@@ -125,7 +137,7 @@ msgstr ""
 "την καθορισμένη κωδικοποίηση, τη συμπεριφορά διαχείρισης σφαλμάτων και το(α) "
 "τέλος(η) γραμμής."
 
-#: library/gzip.rst:52
+#: library/gzip.rst:54
 msgid ""
 "Added support for *filename* being a file object, support for text mode, and "
 "the *encoding*, *errors* and *newline* arguments."
@@ -134,16 +146,16 @@ msgstr ""
 "υποστήριξη για τη λειτουργία κειμένου, καθώς και οι παράμετροι *encoding*, "
 "*errors* και *newline*."
 
-#: library/gzip.rst:56
+#: library/gzip.rst:58
 msgid "Added support for the ``'x'``, ``'xb'`` and ``'xt'`` modes."
 msgstr ""
 "Προστέθηκε υποστήριξη για τις λειτουργίες ``'x'``, ``'xb'`` και ``'xt'``."
 
-#: library/gzip.rst:173
+#: library/gzip.rst:175
 msgid "Accepts a :term:`path-like object`."
 msgstr "Δέχεται ένα :term:`path-like object`."
 
-#: library/gzip.rst:64
+#: library/gzip.rst:66
 msgid ""
 "An exception raised for invalid gzip files.  It inherits from :exc:"
 "`OSError`. :exc:`EOFError` and :exc:`zlib.error` can also be raised for "
@@ -153,7 +165,7 @@ msgstr ""
 "exc:`OSError`. Οι εξαιρέσεις :exc:`EOFError` και :exc:`zlib.error` μπορούν "
 "επίσης να γίνουν raise για μη έγκυρα αρχεία gzip."
 
-#: library/gzip.rst:72
+#: library/gzip.rst:74
 msgid ""
 "Constructor for the :class:`GzipFile` class, which simulates most of the "
 "methods of a :term:`file object`, with the exception of the :meth:`~io."
@@ -165,7 +177,7 @@ msgstr ""
 "`~io.IOBase.truncate`. Τουλάχιστον μια από τις παραμέτρους *fileobj* και "
 "*filename* πρέπει να έχει μια μη τετριμμένη τιμή."
 
-#: library/gzip.rst:77
+#: library/gzip.rst:79
 msgid ""
 "The new class instance is based on *fileobj*, which can be a regular file, "
 "an :class:`io.BytesIO` object, or any other object which simulates a file.  "
@@ -178,7 +190,7 @@ msgstr ""
 "``None``, οπότε στην περίπτωση αυτή το *filename* ανοίγεται για να παρέχει "
 "ένα αντικείμενο αρχείου."
 
-#: library/gzip.rst:82
+#: library/gzip.rst:84
 msgid ""
 "When *fileobj* is not ``None``, the *filename* argument is only used to be "
 "included in the :program:`gzip` file header, which may include the original "
@@ -194,7 +206,7 @@ msgstr ""
 "συμβολοσειρά, και σε αυτή την περίπτωση το αρχικό όνομα αρχείου δεν "
 "περιλαμβάνεται στην επικεφαλίδα."
 
-#: library/gzip.rst:88
+#: library/gzip.rst:90
 msgid ""
 "The *mode* argument can be any of ``'r'``, ``'rb'``, ``'a'``, ``'ab'``, "
 "``'w'``, ``'wb'``, ``'x'``, or ``'xb'``, depending on whether the file will "
@@ -211,7 +223,7 @@ msgstr ""
 "θα χρησιμοποιείται. Είναι καλύτερο να καθορίζεται πάντα η παράμετρος *mode* "
 "κατά την εγγραφή."
 
-#: library/gzip.rst:94
+#: library/gzip.rst:96
 msgid ""
 "Note that the file is always opened in binary mode. To open a compressed "
 "file in text mode, use :func:`.open` (or wrap your :class:`GzipFile` with "
@@ -220,9 +232,9 @@ msgstr ""
 "Σημειώστε ότι το αρχείο ανοίγει πάντα σε δυαδική λειτουργία. Για να ανοίξετε "
 "ένα συμπιεσμένο αρχείο σε λειτουργία κειμένου, χρησιμοποιήστε τη συνάρτηση :"
 "func:`.open` (ή κάντε wrap το :class:`GzipFile` με ένα :class:`io."
-"TextIOWrapper`). "
+"TextIOWrapper`)."
 
-#: library/gzip.rst:98
+#: library/gzip.rst:100
 msgid ""
 "The *compresslevel* argument is an integer from ``0`` to ``9`` controlling "
 "the level of compression; ``1`` is fastest and produces the least "
@@ -234,7 +246,7 @@ msgstr ""
 "μικρότερη συμπίεση, ενώ το ``9`` είναι το πιο αργό και παράγει τη μεγαλύτερη "
 "συμπίεση. Το ``0`` σημαίνει καθόλου συμπίεση. Η προεπιλογή είναι το ``9``."
 
-#: library/gzip.rst:103
+#: library/gzip.rst:105
 msgid ""
 "The optional *mtime* argument is the timestamp requested by gzip. The time "
 "is in Unix format, i.e., seconds since 00:00:00 UTC, January 1, 1970. If "
@@ -247,14 +259,14 @@ msgstr ""
 "τρέχουσα ώρα. Χρησιμοποιήστε *mtime* = 0 για να δημιουργήσετε μια "
 "συμπιεσμένη ροή που δεν εξαρτάται από το χρόνο δημιουργίας."
 
-#: library/gzip.rst:108
+#: library/gzip.rst:110
 msgid ""
 "See below for the :attr:`mtime` attribute that is set when decompressing."
 msgstr ""
 "Δείτε παρακάτω για το χαρακτηριστικό :attr:`mtime` που ορίζεται κατά την "
 "αποσυμπίεση."
 
-#: library/gzip.rst:110
+#: library/gzip.rst:112
 msgid ""
 "Calling a :class:`GzipFile` object's :meth:`!close` method does not close "
 "*fileobj*, since you might wish to append more material after the compressed "
@@ -269,7 +281,7 @@ msgstr ""
 "ανακτήσετε τον τελικό buffer μνήμης χρησιμοποιώντας τη μέθοδο :meth:`~io."
 "BytesIO.getvalue` του αντικειμένου :class:`io.BytesIO`."
 
-#: library/gzip.rst:116
+#: library/gzip.rst:118
 msgid ""
 ":class:`GzipFile` supports the :class:`io.BufferedIOBase` interface, "
 "including iteration and the :keyword:`with` statement.  Only the :meth:`~io."
@@ -280,11 +292,11 @@ msgstr ""
 "keyword:`with`. Μόνο η μέθοδος :meth:`~io.IOBase.truncate` δεν είναι "
 "υλοποιημένη."
 
-#: library/gzip.rst:120
+#: library/gzip.rst:122
 msgid ":class:`GzipFile` also provides the following method and attribute:"
 msgstr "Η :class:`GzipFile` παρέχει επίσης την ακόλουθη μέθοδο και ιδιότητα:"
 
-#: library/gzip.rst:124
+#: library/gzip.rst:126
 msgid ""
 "Read *n* uncompressed bytes without advancing the file position. The number "
 "of bytes returned may be more or less than requested."
@@ -293,7 +305,7 @@ msgstr ""
 "αριθμός των bytes που επιστρέφονται μπορεί να είναι περισσότερα ή λιγότερα "
 "από τα ζητούμενα."
 
-#: library/gzip.rst:127
+#: library/gzip.rst:129
 msgid ""
 "While calling :meth:`peek` does not change the file position of the :class:"
 "`GzipFile`, it may change the position of the underlying file object (e.g. "
@@ -304,15 +316,15 @@ msgstr ""
 "αντικειμένου αρχείου (π.χ. αν το :class:`GzipFile` δημιουργήθηκε με την "
 "παράμετρο *fileobj*)."
 
-#: library/gzip.rst:136
+#: library/gzip.rst:138
 msgid "``'rb'`` for reading and ``'wb'`` for writing."
 msgstr "``'rb'`` για ανάγνωση και ``'wb'`` για εγγραφή."
 
-#: library/gzip.rst:138
+#: library/gzip.rst:140
 msgid "In previous versions it was an integer ``1`` or ``2``."
 msgstr "Σε προηγούμενες εκδόσεις αυτό ήταν ένα ακέραιος ``1`` ή ``2``."
 
-#: library/gzip.rst:143
+#: library/gzip.rst:145
 msgid ""
 "When decompressing, this attribute is set to the last timestamp in the most "
 "recently read header.  It is an integer, holding the number of seconds since "
@@ -325,7 +337,7 @@ msgstr ""
 "Ιανουαρίου, 1970). Η αρχική τιμή πριν από την ανάγνωση οποιωνδήποτε "
 "κεφαλίδων είναι ``None``."
 
-#: library/gzip.rst:150
+#: library/gzip.rst:152
 msgid ""
 "The path to the gzip file on disk, as a :class:`str` or :class:`bytes`. "
 "Equivalent to the output of :func:`os.fspath` on the original input path, "
@@ -335,7 +347,7 @@ msgstr ""
 "Ισοδυναμεί με την έξοδο της συνάρτησης :func:`os.fspath` για την αρχική "
 "διαδρομή εισόδου, χωρίς καμία άλλη κανονικοποίηση, επίλυση ή επέκταση."
 
-#: library/gzip.rst:154
+#: library/gzip.rst:156
 msgid ""
 "Support for the :keyword:`with` statement was added, along with the *mtime* "
 "constructor argument and :attr:`mtime` attribute."
@@ -343,21 +355,21 @@ msgstr ""
 "Προστέθηκε η υποστήριξη για τη δήλωση :keyword:`with`, μαζί με την παράμετρο "
 "*mtime* στον κατασκευαστή και την ιδιότητα :attr:`mtime`."
 
-#: library/gzip.rst:158
+#: library/gzip.rst:160
 msgid "Support for zero-padded and unseekable files was added."
 msgstr ""
 "Προστέθηκε υποστήριξη για αρχεία με μηδενική συμπλήρωση και μη αναζητήσιμα "
 "αρχεία."
 
-#: library/gzip.rst:161
+#: library/gzip.rst:163
 msgid "The :meth:`io.BufferedIOBase.read1` method is now implemented."
 msgstr "Η μέθοδος :meth:`io.BufferedIOBase.read1` έχει πλέον υλοποιηθεί."
 
-#: library/gzip.rst:164
+#: library/gzip.rst:166
 msgid "Added support for the ``'x'`` and ``'xb'`` modes."
 msgstr "Προστέθηκε υποστήριξη για τις λειτουργίες ``'x'`` και ``'xb'``."
 
-#: library/gzip.rst:167
+#: library/gzip.rst:169
 msgid ""
 "Added support for writing arbitrary :term:`bytes-like objects <bytes-like "
 "object>`. The :meth:`~io.BufferedIOBase.read` method now accepts an argument "
@@ -367,7 +379,7 @@ msgstr ""
 "<bytes-like object>`. Η μέθοδος :meth:`~io.BufferedIOBase.read` δέχεται "
 "πλέον ένα όρισμα ``None``."
 
-#: library/gzip.rst:176
+#: library/gzip.rst:178
 msgid ""
 "Opening :class:`GzipFile` for writing without specifying the *mode* argument "
 "is deprecated."
@@ -375,7 +387,7 @@ msgstr ""
 "Το άνοιγμα ενός :class:`GzipFile` για εγγραφή χωρίς να καθοριστεί η "
 "παράμετρος *mode* έχει καταργηθεί."
 
-#: library/gzip.rst:180
+#: library/gzip.rst:182
 msgid ""
 "Remove the ``filename`` attribute, use the :attr:`~GzipFile.name` attribute "
 "instead."
@@ -383,7 +395,7 @@ msgstr ""
 "Καταργήθηκε το χαρακτηριστικό ``filename``, χρησιμοποιήστε το "
 "χαρακτηριστικό :attr:`~GzipFile.name` αντ' αυτού."
 
-#: library/gzip.rst:187
+#: library/gzip.rst:189
 msgid ""
 "Compress the *data*, returning a :class:`bytes` object containing the "
 "compressed data.  *compresslevel* and *mtime* have the same meaning as in "
@@ -395,11 +407,11 @@ msgstr ""
 "έχουν την ίδια σημασία όπως στον κατασκευαστή της κλάσης :class:`GzipFile`, "
 "αλλά το *mtime* έχει προεπιλεγμένη τιμή 0 για αναπαραγώγιμη έξοδο."
 
-#: library/gzip.rst:193
+#: library/gzip.rst:195
 msgid "Added the *mtime* parameter for reproducible output."
 msgstr "Προστέθηκε η παράμετρος *mtime* για αναπαραγώγιμη έξοδο."
 
-#: library/gzip.rst:195
+#: library/gzip.rst:197
 msgid ""
 "Speed is improved by compressing all data at once instead of in a streamed "
 "fashion. Calls with *mtime* set to ``0`` are delegated to :func:`zlib."
@@ -413,7 +425,7 @@ msgstr ""
 "μπορεί να περιέχει μια τιμή byte \"OS\" στην κεφαλίδα gzip διαφορετική από "
 "255 \"unknown\", όπως καθορίζεται από την υποκείμενη υλοποίηση της zlib."
 
-#: library/gzip.rst:202
+#: library/gzip.rst:204
 msgid ""
 "The gzip header OS byte is guaranteed to be set to 255 when this function is "
 "used as was the case in 3.10 and earlier."
@@ -422,7 +434,7 @@ msgstr ""
 "ρυθμιστεί στο 255 όταν χρησιμοποιείται αυτή η συνάρτηση, όπως συνέβαινε στην "
 "έκδοση 3.10 και παλαιότερα."
 
-#: library/gzip.rst:205
+#: library/gzip.rst:207
 msgid ""
 "The *mtime* parameter now defaults to 0 for reproducible output. For the "
 "previous behaviour of using the current time, pass ``None`` to *mtime*."
@@ -431,7 +443,7 @@ msgstr ""
 "έξοδο. Για την προηγούμενη συμπεριφορά χρήστης της τρέχουσας ώρας, "
 "μεταβιβάστε στην παράμετρο *mtime* την τιμή ``None``."
 
-#: library/gzip.rst:212
+#: library/gzip.rst:214
 msgid ""
 "Decompress the *data*, returning a :class:`bytes` object containing the "
 "uncompressed data. This function is capable of decompressing multi-member "
@@ -445,7 +457,7 @@ msgstr ""
 "τους). Όταν τα δεδομένα είναι βέβαιο ότι περιέχουν μόνο ένα μέλος, η "
 "συνάρτηση :func:`zlib.decompress` με *wbits* ρυθμισμένο σε 31 είναι ταχύτερη."
 
-#: library/gzip.rst:219
+#: library/gzip.rst:221
 msgid ""
 "Speed is improved by decompressing members at once in memory instead of in a "
 "streamed fashion."
@@ -453,15 +465,15 @@ msgstr ""
 "Η ταχύτητα βελτιώνεται αποσυμπιέζοντας τα μέλη απευθείας στην μνήμη αντί να "
 "γίνεται αποσυμπίεση σε ροή."
 
-#: library/gzip.rst:226
+#: library/gzip.rst:228
 msgid "Examples of usage"
 msgstr "Παραδείγματα χρήσης"
 
-#: library/gzip.rst:228
+#: library/gzip.rst:230
 msgid "Example of how to read a compressed file::"
 msgstr "Παράδειγμα ανάγνωσης ενός συμπιεσμένου αρχείου::"
 
-#: library/gzip.rst:230
+#: library/gzip.rst:232
 msgid ""
 "import gzip\n"
 "with gzip.open('/home/joe/file.txt.gz', 'rb') as f:\n"
@@ -471,11 +483,11 @@ msgstr ""
 "with gzip.open('/home/joe/file.txt.gz', 'rb') as f:\n"
 "    file_content = f.read()"
 
-#: library/gzip.rst:234
+#: library/gzip.rst:236
 msgid "Example of how to create a compressed GZIP file::"
 msgstr "Παράδειγμα δημιουργίας ενός συμπιεσμένου αρχείου GZIP::"
 
-#: library/gzip.rst:236
+#: library/gzip.rst:238
 msgid ""
 "import gzip\n"
 "content = b\"Lots of content here\"\n"
@@ -487,11 +499,11 @@ msgstr ""
 "with gzip.open('/home/joe/file.txt.gz', 'wb') as f:\n"
 "    f.write(content)"
 
-#: library/gzip.rst:241
+#: library/gzip.rst:243
 msgid "Example of how to GZIP compress an existing file::"
 msgstr "Παράδειγμα συμπίεσης ενός υπάρχοντος αρχείου σε μορφή GZIP::"
 
-#: library/gzip.rst:243
+#: library/gzip.rst:245
 msgid ""
 "import gzip\n"
 "import shutil\n"
@@ -505,11 +517,11 @@ msgstr ""
 "    with gzip.open('/home/joe/file.txt.gz', 'wb') as f_out:\n"
 "        shutil.copyfileobj(f_in, f_out)"
 
-#: library/gzip.rst:249
+#: library/gzip.rst:251
 msgid "Example of how to GZIP compress a binary string::"
 msgstr "Παράδειγμα συμπίεσης μιας δυαδικής συμβολοσειράς σε μορφή GZIP::"
 
-#: library/gzip.rst:251
+#: library/gzip.rst:253
 msgid ""
 "import gzip\n"
 "s_in = b\"Lots of content here\"\n"
@@ -519,11 +531,11 @@ msgstr ""
 "s_in = b\"Lots of content here\"\n"
 "s_out = gzip.compress(s_in)"
 
-#: library/gzip.rst:257
+#: library/gzip.rst:259
 msgid "Module :mod:`zlib`"
 msgstr "Module :mod:`zlib`"
 
-#: library/gzip.rst:258
+#: library/gzip.rst:260
 msgid ""
 "The basic data compression module needed to support the :program:`gzip` file "
 "format."
@@ -531,7 +543,7 @@ msgstr ""
 "Το βασικό module συμπίεσης δεδομένων που απαιτείται για την υποστήριξη της "
 "μορφής αρχείου :program:`gzip`."
 
-#: library/gzip.rst:261
+#: library/gzip.rst:263
 msgid ""
 "In case gzip (de)compression is a bottleneck, the `python-isal`_ package "
 "speeds up (de)compression with a mostly compatible API."
@@ -540,11 +552,11 @@ msgstr ""
 "`python-isal`_ επιταχύνει την (από)συμπίεση με ένα ως επί το πλείστον "
 "συμβατό API."
 
-#: library/gzip.rst:271
-msgid "Command Line Interface"
+#: library/gzip.rst:273
+msgid "Command-line interface"
 msgstr "Διεπαφή Γραμμής Εντολών"
 
-#: library/gzip.rst:273
+#: library/gzip.rst:275
 msgid ""
 "The :mod:`gzip` module provides a simple command line interface to compress "
 "or decompress files."
@@ -552,12 +564,12 @@ msgstr ""
 "Το module :mod:`gzip` παρέχει μια απλή διεπαφή γραμμής εντολών για τη "
 "συμπίεση ή αποσυμπίεση αρχείων."
 
-#: library/gzip.rst:276
+#: library/gzip.rst:278
 msgid "Once executed the :mod:`gzip` module keeps the input file(s)."
 msgstr ""
 "Μόλις εκτελεστεί, το module :mod:`gzip` διατηρεί το(α) αρχείο(α) εισόδου."
 
-#: library/gzip.rst:280
+#: library/gzip.rst:282
 msgid ""
 "Add a new command line interface with a usage. By default, when you will "
 "execute the CLI, the default compression level is 6."
@@ -565,28 +577,28 @@ msgstr ""
 "Προστέθηκε νέα διεπαφή γραμμής εντολών με οδηγίες χρήσης. Από προεπιλογή, "
 "όταν εκτελείτε την CLI, το προεπιλεγμένο επίπεδο συμπίεσης είναι 6."
 
-#: library/gzip.rst:284
-msgid "Command line options"
+#: library/gzip.rst:286
+msgid "Command-line options"
 msgstr "Επιλογές γραμμής εντολών"
 
-#: library/gzip.rst:288
+#: library/gzip.rst:290
 msgid "If *file* is not specified, read from :data:`sys.stdin`."
 msgstr ""
 "Εάν δεν καθοριστεί το *file*, η ανάγνωση γίνεται από το :data:`sys.stdin`."
 
-#: library/gzip.rst:292
+#: library/gzip.rst:294
 msgid "Indicates the fastest compression method (less compression)."
 msgstr "Δηλώνει τη γρηγορότερη μέθοδο συμπίεσης (λιγότερη συμπίεση)."
 
-#: library/gzip.rst:296
+#: library/gzip.rst:298
 msgid "Indicates the slowest compression method (best compression)."
 msgstr "Δηλώνει την βραδύτερη μέθοδο συμπίεσης (καλύτερη συμπίεση)."
 
-#: library/gzip.rst:300
+#: library/gzip.rst:302
 msgid "Decompress the given file."
 msgstr "Αποσυμπιέζει το δοσμένο αρχείο."
 
-#: library/gzip.rst:304
+#: library/gzip.rst:306
 msgid "Show the help message."
 msgstr "Εμφανίζει το μήνυμα βοήθειας."
 
