@@ -9,22 +9,23 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-03-05 13:09+0200\n"
+"Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: reference/expressions.rst:6
 msgid "Expressions"
-msgstr ""
+msgstr "Εκφράσεις"
 
 #: reference/expressions.rst:10
 msgid ""
 "This chapter explains the meaning of the elements of expressions in Python."
 msgstr ""
+"Αυτό το κεφάλαιο εξηγεί τη σημασία των στοιχείων των εκφράσεων στην Python."
 
 #: reference/expressions.rst:12
 msgid ""
@@ -32,16 +33,21 @@ msgid ""
 "will be used to describe syntax, not lexical analysis.  When (one "
 "alternative of) a syntax rule has the form"
 msgstr ""
+"**Σημειώσεις Σύνταξης:** Σε αυτό και στα επόμενα κεφάλαια, θα χρησιμοποιηθεί "
+"η εκτεταμένη σημειογραφία BNF για την περιγραφή της σύνταξης και όχι της "
+"λεξικής ανάλυσης. Όταν ένας (εναλλακτικός) συντακτικός κανόνας έχει τη μορφή"
 
 #: reference/expressions.rst:19
 msgid ""
 "and no semantics are given, the semantics of this form of ``name`` are the "
 "same as for ``othername``."
 msgstr ""
+"και δεν δίνεται σημασιολογία, η σημασιολογία αυτής της μορφής του ``name`` "
+"είναι η ίδια με του ``othername``."
 
 #: reference/expressions.rst:26
 msgid "Arithmetic conversions"
-msgstr ""
+msgstr "Αριθμητικές μετατροπές"
 
 #: reference/expressions.rst:30
 msgid ""
@@ -49,20 +55,30 @@ msgid ""
 "numeric arguments are converted to a common real type\", this means that the "
 "operator implementation for built-in types works as follows:"
 msgstr ""
+"Όταν η περιγραφή ενός αριθμητικού τελεστή από τους παρακάτω χρησιμοποιεί τη "
+"φράση \"τα αριθμητικά ορίσματα μετατρέπονται σε έναν κοινό πραγματικό "
+"τύπο\", αυτό σημαίνει ότι η υλοποίηση του τελεστή για τους ενσωματωμένους "
+"τύπους λειτουργεί ως εξής:"
 
 #: reference/expressions.rst:34
 msgid "If both arguments are complex numbers, no conversion is performed;"
 msgstr ""
+"Αν και τα δύο ορίσματα είναι μιγαδικοί αριθμοί, δεν εκτελείται καμία "
+"μετατροπή·"
 
 #: reference/expressions.rst:36
 msgid ""
 "if either argument is a complex or a floating-point number, the other is "
 "converted to a floating-point number;"
 msgstr ""
+"αν οποιοδήποτε από τα ορίσματα είναι μιγαδικός αριθμός ή αριθμός κινητής "
+"υποδιαστολής, το άλλο μετατρέπεται σε αριθμό κινητής υποδιαστολής·"
 
 #: reference/expressions.rst:38
 msgid "otherwise, both must be integers and no conversion is necessary."
 msgstr ""
+"διαφορετικά, και τα δύο πρέπει να είναι ακέραιοι και δεν απαιτείται "
+"μετατροπή."
 
 #: reference/expressions.rst:40
 msgid ""
@@ -70,10 +86,13 @@ msgid ""
 "argument to the '%' operator).  Extensions must define their own conversion "
 "behavior."
 msgstr ""
+"Ορισμένοι πρόσθετοι κανόνες ισχύουν για συγκεκριμένους τελεστές (π.χ., ένα "
+"αλφαριθμητικό ως αριστερό όρισμα στον τελεστή '%'). Οι επεκτάσεις "
+"(extensions) πρέπει να ορίζουν τη δική τους συμπεριφορά μετατροπής."
 
 #: reference/expressions.rst:48
 msgid "Atoms"
-msgstr ""
+msgstr "Άτομα"
 
 #: reference/expressions.rst:52
 msgid ""
@@ -81,10 +100,14 @@ msgid ""
 "identifiers or literals.  Forms enclosed in parentheses, brackets or braces "
 "are also categorized syntactically as atoms.  The syntax for atoms is:"
 msgstr ""
+"Τα άτομα είναι τα πιο βασικά στοιχεία των εκφράσεων. Τα πιο απλά άτομα είναι "
+"τα αναγνωριστικά ή τα literals. Οι μορφές που περικλείονται σε παρενθέσεις, "
+"αγκύλες ή άγκιστρα κατηγοριοποιούνται επίσης συντακτικά ως άτομα. Η σύνταξη "
+"για τα άτομα είναι:"
 
 #: reference/expressions.rst:65
 msgid "Identifiers (Names)"
-msgstr ""
+msgstr "Αναγνωριστικά (Ονόματα)"
 
 #: reference/expressions.rst:69
 msgid ""
@@ -92,6 +115,9 @@ msgid ""
 "section :ref:`identifiers` for lexical definition and section :ref:`naming` "
 "for documentation of naming and binding."
 msgstr ""
+"Ένα αναγνωριστικό που εμφανίζεται ως άτομο είναι ένα όνομα. Δείτε την "
+"ενότητα :ref:`identifiers` για τον λεξικό ορισμό και την ενότητα :ref:"
+"`naming` για την τεκμηρίωση της ονοματοδοσίας και της σύνδεσης."
 
 #: reference/expressions.rst:75
 msgid ""
@@ -99,10 +125,13 @@ msgid ""
 "object. When a name is not bound, an attempt to evaluate it raises "
 "a :exc:`NameError` exception."
 msgstr ""
+"Όταν το όνομα είναι συνδεδεμένο με ένα αντικείμενο, η αποτίμηση του ατόμου "
+"αποδίδει αυτό το αντικείμενο. Όταν ένα όνομα δεν είναι συνδεδεμένο, η "
+"προσπάθεια αποτίμησής του κάνει raise μια εξαίρεση :exc:`NameError`."
 
 #: reference/expressions.rst:86
 msgid "Private name mangling"
-msgstr ""
+msgstr "Παραμόρφωση ιδιωτικών ονομάτων"
 
 #: reference/expressions.rst:88
 msgid ""
@@ -110,10 +139,14 @@ msgid ""
 "two or more underscore characters and does not end in two or more "
 "underscores, it is considered a :dfn:`private name` of that class."
 msgstr ""
+"Όταν ένα αναγνωριστικό που εμφανίζεται κειμενικά σε έναν ορισμό κλάσης "
+"ξεκινά με δύο ή περισσότερους χαρακτήρες υπογράμμισης (underscore) και δεν "
+"τελειώνει με δύο ή περισσότερες υπογραμμίσεις, θεωρείται :dfn:`ιδιωτικό "
+"όνομα` αυτής της κλάσης."
 
 #: reference/expressions.rst:94
 msgid "The :ref:`class specifications <class>`."
-msgstr ""
+msgstr "Οι :ref:`προδιαγραφές κλάσης <class>`."
 
 #: reference/expressions.rst:96
 msgid ""
@@ -121,24 +154,36 @@ msgid ""
 "is generated for them.  If the transformed name is longer than 255 "
 "characters, implementation-defined truncation may happen."
 msgstr ""
+"Πιο συγκεκριμένα, τα ιδιωτικά ονόματα μετασχηματίζονται σε μια μεγαλύτερη "
+"μορφή πριν παραχθεί κώδικας για αυτά. Εάν το μετασχηματισμένο όνομα είναι "
+"μεγαλύτερο από 255 χαρακτήρες, ενδέχεται να συμβεί περικοπή καθορισμένη από "
+"την υλοποίηση."
 
 #: reference/expressions.rst:100
 msgid ""
 "The transformation is independent of the syntactical context in which the "
 "identifier is used but only the following private identifiers are mangled:"
 msgstr ""
+"Ο μετασχηματισμός είναι ανεξάρτητος από το συντακτικό πλαίσιο στο οποίο "
+"χρησιμοποιείται το αναγνωριστικό, αλλά μόνο τα ακόλουθα ιδιωτικά "
+"αναγνωριστικά παραμορφώνονται:"
 
 #: reference/expressions.rst:103
 msgid ""
 "Any name used as the name of a variable that is assigned or read or any name "
 "of an attribute being accessed."
 msgstr ""
+"Κάθε όνομα που χρησιμοποιείται ως όνομα μιας μεταβλητής που της ανατίθεται "
+"τιμή ή διαβάζεται, ή οποιοδήποτε όνομα ενός χαρακτηριστικού στο οποίο "
+"γίνεται πρόσβαση."
 
 #: reference/expressions.rst:106
 msgid ""
 "The :attr:`~definition.__name__` attribute of nested functions, classes, and "
 "type aliases is however not mangled."
 msgstr ""
+"Το χαρακτηριστικό :attr:`~definition.__name__` των ένθετων συναρτήσεων, των "
+"κλάσεων και των ψευδώνυμων των τύπων παρόλα αυτά δεν παραμορφώνεται."
 
 #: reference/expressions.rst:109
 msgid ""
@@ -146,15 +191,20 @@ msgid ""
 "module is part of a package (i.e., its name contains a dot), the name is "
 "*not* mangled, e.g., the ``__foo`` in ``import __foo.bar`` is not mangled."
 msgstr ""
+"Το όνομα των εισαγόμενων modules, π.χ., ``__spam`` στο ``import __spam``. Αν "
+"το module είναι μέρος ενός πακέτου (δηλαδή, το όνομά της περιέχει τελεία), "
+"το όνομα *δεν* παραμορφώνεται, π.χ., το ``__foo`` στο ``import __foo.bar`` "
+"δεν παραμορφώνεται."
 
 #: reference/expressions.rst:114
 msgid ""
 "The name of an imported member, e.g., ``__f`` in ``from spam import __f``."
 msgstr ""
+"Το όνομα ενός εισαγόμενου μέλους, π.χ., ``__f`` στο ``from spam import __f``."
 
 #: reference/expressions.rst:116
 msgid "The transformation rule is defined as follows:"
-msgstr ""
+msgstr "Ο κανόνας μετασχηματισμού ορίζεται ως εξής:"
 
 #: reference/expressions.rst:118
 msgid ""
@@ -163,6 +213,10 @@ msgid ""
 "identifier ``__spam`` occurring in a class named ``Foo``, ``_Foo`` or "
 "``__Foo`` is transformed to ``_Foo__spam``."
 msgstr ""
+"Το όνομα της κλάσης, με τις αρχικές υπογραμμίσεις αφαιρεμένες και μια μονή "
+"αρχική υπογράμμιση εισαγμένη, τοποθετείται μπροστά από το αναγνωριστικό, π."
+"χ., το αναγνωριστικό ``__spam`` που εμφανίζεται σε μια κλάση με όνομα "
+"``Foo``, ``_Foo`` ή ``__Foo`` μετασχηματίζεται σε ``_Foo__spam``."
 
 #: reference/expressions.rst:123
 msgid ""
@@ -170,14 +224,19 @@ msgid ""
 "identity, e.g., the identifier ``__spam`` occurring in a class named ``_`` "
 "or ``__`` is left as is."
 msgstr ""
+"Αν το όνομα της κλάσης αποτελείται μόνο από υπογραμμίσεις, ο μετασχηματισμός "
+"είναι η ταυτότητα, π.χ., το αναγνωριστικό ``__spam`` που εμφανίζεται σε μια "
+"κλάση με όνομα ``_`` ή ``__`` παραμένει ως έχει."
 
 #: reference/expressions.rst:130
 msgid "Literals"
-msgstr ""
+msgstr "Λεκτικές Σταθερές (Literals)"
 
 #: reference/expressions.rst:134
 msgid "Python supports string and bytes literals and various numeric literals:"
 msgstr ""
+"Η Python υποστηρίζει λεκτικές σταθερές αλφαριθμητικών, bytes, και διάφορες "
+"αριθμητικές λεκτικές σταθερές:"
 
 #: reference/expressions.rst:141
 msgid ""
@@ -187,6 +246,12 @@ msgid ""
 "(complex) literals. See section :ref:`literals` for details. See "
 "section :ref:`string-concatenation` for details on ``strings``."
 msgstr ""
+"Η αποτίμηση μιας λεκτικής σταθεράς αποδίδει ένα αντικείμενο του δεδομένου "
+"τύπου (string, bytes, ακέραιος, αριθμός κινητής υποδιαστολής, μιγαδικός "
+"αριθμός) με τη δεδομένη τιμή. Η τιμή μπορεί να είναι κατά προσέγγιση στην "
+"περίπτωση λεκτικών κινητής υποδιαστολής και φανταστικών (μιγαδικών). Δείτε "
+"την ενότητα :ref:`literals` για λεπτομέρειες. Δείτε την ενότητα :ref:`string-"
+"concatenation` για λεπτομέρειες σχετικά με τα ``strings``."
 
 #: reference/expressions.rst:153
 msgid ""
@@ -196,10 +261,16 @@ msgid ""
 "different occurrence) may obtain the same object or a different object with "
 "the same value."
 msgstr ""
+"Όλες οι λεκτικές σταθερές αντιστοιχούν σε αμετάβλητους τύπους δεδομένων, και "
+"συνεπώς η ταυτότητα του αντικειμένου είναι λιγότερο σημαντική από την τιμή "
+"του. Πολλαπλές αποτιμήσεις λεκτικών με την ίδια τιμή (είτε είναι η ίδια "
+"εμφάνιση στο κείμενο του προγράμματος είτε μια διαφορετική) μπορεί να "
+"επιστρέψουν το ίδιο αντικείμενο ή ένα διαφορετικό αντικείμενο με την ίδια "
+"τιμή."
 
 #: reference/expressions.rst:163
 msgid "String literal concatenation"
-msgstr ""
+msgstr "Συνένωση λεκτικών αλφαριθμητικών σταθερών"
 
 #: reference/expressions.rst:165
 msgid ""
@@ -207,16 +278,21 @@ msgid ""
 "possibly using different quoting conventions, are allowed, and their meaning "
 "is the same as their concatenation::"
 msgstr ""
+"Επιτρέπονται πολλαπλές γειτονικές λεκτικές σταθερές συμβολοσειράς ή bytes "
+"(διαχωρισμένα με κενά), πιθανώς χρησιμοποιώντας διαφορετικές συμβάσεις "
+"εισαγωγικών, και η σημασία τους είναι η ίδια με τη συνένωσή τους::"
 
 #: reference/expressions.rst:169
 msgid ""
 ">>> \"hello\" 'world'\n"
 "\"helloworld\""
 msgstr ""
+">>> \"hello\" 'world'\n"
+"\"helloworld\""
 
 #: reference/expressions.rst:172
 msgid "Formally:"
-msgstr ""
+msgstr "Τυπικά:"
 
 #: reference/expressions.rst:179
 msgid ""
@@ -224,6 +300,9 @@ msgid ""
 "literals. To concatenate string expressions at run time, the '+' operator "
 "may be used::"
 msgstr ""
+"Αυτό το χαρακτηριστικό ορίζεται σε συντακτικό επίπεδο, επομένως λειτουργεί "
+"μόνο με λεκτικές σταθερές. Για τη συνένωση εκφράσεων αλφαριθμητικών κατά τον "
+"χρόνο εκτέλεσης, μπορεί να χρησιμοποιηθεί ο τελεστής '+'::"
 
 #: reference/expressions.rst:182
 msgid ""
@@ -233,18 +312,28 @@ msgid ""
 ">>> print(greeting + space + name)   # not: print(greeting space name)\n"
 "Hello Blaise"
 msgstr ""
+">>> greeting = \"Hello\"\n"
+">>> space = \" \"\n"
+">>> name = \"Blaise\"\n"
+">>> print(greeting + space + name)   # όχι: print(greeting space name)\n"
+"Hello Blaise"
 
 #: reference/expressions.rst:188
 msgid ""
 "Literal concatenation can freely mix raw strings, triple-quoted strings, and "
 "formatted string literals. For example::"
 msgstr ""
+"Η συνένωση λεκτικών σταθερών μπορεί να αναμιγνύει ελεύθερα ακατέργαστα "
+"αλφαριθμητικά, αλφαριθμητικά σε τριπλά εισαγωγικά, και μορφοποιημένα "
+"αλφαριθμητικά. Για παράδειγμα::"
 
 #: reference/expressions.rst:192
 msgid ""
 ">>> \"Hello\" r', ' f\"{name}!\"\n"
 "\"Hello, Blaise!\""
 msgstr ""
+">>> \"Hello\" r', ' f\"{name}!\"\n"
+"\"Hello, Blaise!\""
 
 #: reference/expressions.rst:195
 msgid ""
@@ -252,6 +341,10 @@ msgid ""
 "split long strings conveniently across long lines, or even to add comments "
 "to parts of strings. For example::"
 msgstr ""
+"Αυτό το χαρακτηριστικό μπορεί να χρησιμοποιηθεί για να μειωθεί ο αριθμός των "
+"backslashes που χρειάζονται, για να διαχωριστούν μακροσκελή αλφαριθμητικά "
+"βολικά σε πολλές γραμμές, ή ακόμα και για την προσθήκη σχολίων σε μέρη "
+"αλφαριθμητικών. Για παράδειγμα::"
 
 #: reference/expressions.rst:199
 msgid ""
@@ -259,6 +352,9 @@ msgid ""
 "           \"[A-Za-z0-9_]*\"   # letter, digit or underscore\n"
 "          )"
 msgstr ""
+"re.compile(\"[A-Za-z_]\"       # letter or underscore\n"
+"           \"[A-Za-z0-9_]*\"   # letter, digit or underscore\n"
+"          )"
 
 #: reference/expressions.rst:203
 msgid ""
@@ -266,21 +362,30 @@ msgid ""
 "with string literals of any kind. Also, template string literals may only be "
 "combined with other template string literals::"
 msgstr ""
+"Ωστόσο, οι λεκτικές σταθερές των bytes μπορούν να συνδυαστούν μόνο με άλλα "
+"λεκτικές σταθερές από bytes· όχι με λεκτικές αλφαριθμητικές σταθερές "
+"οποιουδήποτε είδους. Επίσης, οι λεκτικές σταθερές αλφαριθμητικών προτύπων "
+"μπορούν να συνδυαστούν μόνο με άλλες λεκτικές σταθερές αλφαριθμητικών "
+"προτύπων::"
 
 #: reference/expressions.rst:208
 msgid ""
 ">>> t\"Hello\" t\"{name}!\"\n"
 "Template(strings=('Hello', '!'), interpolations=(...))"
 msgstr ""
+">>> t\"Hello\" t\"{name}!\"\n"
+"Template(strings=('Hello', '!'), interpolations=(...))"
 
 #: reference/expressions.rst:215
 msgid "Parenthesized forms"
-msgstr ""
+msgstr "Μορφές σε παρενθέσεις"
 
 #: reference/expressions.rst:221
 msgid ""
 "A parenthesized form is an optional expression list enclosed in parentheses:"
 msgstr ""
+"Μια μορφή σε παρένθεση είναι μια προαιρετική λίστα εκφράσεων που "
+"περικλείεται σε παρενθέσεις:"
 
 #: reference/expressions.rst:226
 msgid ""
@@ -288,6 +393,10 @@ msgid ""
 "if the list contains at least one comma, it yields a tuple; otherwise, it "
 "yields the single expression that makes up the expression list."
 msgstr ""
+"Μια λίστα εκφράσεων σε παρένθεση αποδίδει ό,τι αποδίδει αυτή η λίστα "
+"εκφράσεων: αν η λίστα περιέχει τουλάχιστον ένα κόμμα, αποδίδει μια πλειάδα "
+"(tuple)· διαφορετικά, αποδίδει τη μοναδική έκφραση που απαρτίζει τη λίστα "
+"εκφράσεων."
 
 #: reference/expressions.rst:232
 msgid ""
@@ -295,6 +404,10 @@ msgid ""
 "immutable, the same rules as for literals apply (i.e., two occurrences of "
 "the empty tuple may or may not yield the same object)."
 msgstr ""
+"Ένα άδειο ζεύγος παρενθέσεων αποδίδει ένα άδειο αντικείμενο πλειάδας. Αφού "
+"οι πλειάδες είναι αμετάβλητες, ισχύουν οι ίδιοι κανόνες όπως και για τα "
+"λεκτικά (δηλαδή, δύο εμφανίσεις της άδειας πλειάδας μπορεί να αποδώσουν ή να "
+"μην αποδώσουν το ίδιο αντικείμενο)."
 
 #: reference/expressions.rst:240
 msgid ""
@@ -303,30 +416,39 @@ msgid ""
 "required --- allowing unparenthesized \"nothing\" in expressions would cause "
 "ambiguities and allow common typos to pass uncaught."
 msgstr ""
+"Σημειώστε ότι οι πλειάδες δεν σχηματίζονται από τις παρενθέσεις, αλλά κυρίως "
+"από τη χρήση του κόμματος. Η εξαίρεση είναι η άδεια πλειάδα, για την οποία "
+"οι παρενθέσεις *είναι* απαραίτητες --- το να επιτρεπόταν ένα \"τίποτα\" "
+"χωρίς παρενθέσεις στις εκφράσεις θα προκαλούσε ασάφειες και θα επέτρεπε σε "
+"κοινά τυπογραφικά λάθη να περάσουν απαρατήρητα."
 
 #: reference/expressions.rst:249
 msgid "Displays for lists, sets and dictionaries"
-msgstr ""
+msgstr "Απεικονίσεις για λίστες, σύνολα και λεξικά"
 
 #: reference/expressions.rst:253
 msgid ""
 "For constructing a list, a set or a dictionary Python provides special "
 "syntax called \"displays\", each of them in two flavors:"
 msgstr ""
+"Για την κατασκευή μιας λίστας, ενός συνόλου ή ενός λεξικού η Python παρέχει "
+"μια ειδική σύνταξη που ονομάζεται \"απεικονίσεις\", η κάθε μία σε δύο μορφές:"
 
 #: reference/expressions.rst:256
 msgid "either the container contents are listed explicitly, or"
-msgstr ""
+msgstr "είτε τα περιεχόμενα του υποδοχέα παρατίθενται ρητά, είτε"
 
 #: reference/expressions.rst:258
 msgid ""
 "they are computed via a set of looping and filtering instructions, called "
 "a :dfn:`comprehension`."
 msgstr ""
+"υπολογίζονται μέσω ενός συνόλου εντολών βρόχου και φιλτραρίσματος, που "
+"ονομάζεται :dfn:`comprehension`."
 
 #: reference/expressions.rst:266
 msgid "Common syntax elements for comprehensions are:"
-msgstr ""
+msgstr "Κοινά συντακτικά στοιχεία για τις συμπτύξεις είναι:"
 
 #: reference/expressions.rst:274
 msgid ""
@@ -337,6 +459,13 @@ msgid ""
 "if` clauses a block, nesting from left to right, and evaluating the "
 "expression to produce an element each time the innermost block is reached."
 msgstr ""
+"Η σύμπτυξη αποτελείται από μία μόνο έκφραση ακολουθούμενη από τουλάχιστον "
+"μία λέξη κλειδί :keyword:`!for` και μηδέν ή περισσότερες προτάσεις :keyword:"
+"`!for` ή :keyword:`!if`. Σε αυτή την περίπτωση, τα στοιχεία του νέου "
+"υποδοχέα είναι αυτά που θα παράγονταν αν θεωρούσαμε κάθε μία από τις "
+"προτάσεις :keyword:`!for` ή :keyword:`!if` ως ένα μπλοκ, φωλιασμένο από τα "
+"αριστερά προς τα δεξιά, αποτιμώντας την έκφραση για να παραχθεί ένα στοιχείο "
+"κάθε φορά που προσεγγίζεται το πιο εσωτερικό μπλοκ."
 
 #: reference/expressions.rst:281
 msgid ""
@@ -345,6 +474,10 @@ msgid ""
 "This ensures that names assigned to in the target list don't \"leak\" into "
 "the enclosing scope."
 msgstr ""
+"Ωστόσο, εκτός από την επαναλαμβανόμενη έκφραση στην πιο αριστερή πρόταση :"
+"keyword:`!for`, η σύμπτυξη εκτελείται σε ένα ξεχωριστό έμμεσα φωλιασμένο "
+"εύρος. Αυτό εξασφαλίζει ότι τα ονόματα στα οποία εκχωρούνται τιμές στη λίστα "
+"στόχο δεν \"διαρρέουν\" στο περιβάλλον εύρος."
 
 #: reference/expressions.rst:285
 msgid ""
@@ -355,6 +488,14 @@ msgid ""
 "enclosing scope as they may depend on the values obtained from the leftmost "
 "iterable. For example: ``[x*y for x in range(10) for y in range(x, x+10)]``."
 msgstr ""
+"Η επαναλαμβανόμενη έκφραση στην πιο αριστερή πρόταση :keyword:`!for` "
+"αποτιμάται απευθείας στην περιβάλλουσα εμβέλεια και στη συνέχεια περνάει ως "
+"όρισμα στo έμμεσα φωλιασμένo εύρος. Οι επόμενες προτάσεις :keyword:`!for` "
+"και οποιαδήποτε συνθήκη φίλτρου στην πιο αριστερή πρόταση :keyword:`!for` "
+"δεν μπορούν να αποτιμηθούν στο περιβάλλον εύρος, καθώς μπορεί να εξαρτώνται "
+"από τις τιμές που ελήφθησαν από το πιο αριστερό επαναλαμβανόμενο "
+"αντικείμενο. Για παράδειγμα: ``[x*y for x in range(10) for y in range(x, "
+"x+10)]``."
 
 #: reference/expressions.rst:292
 msgid ""
@@ -362,6 +503,9 @@ msgid ""
 "type, ``yield`` and ``yield from`` expressions are prohibited in the "
 "implicitly nested scope."
 msgstr ""
+"Για να διασφαλιστεί ότι η σύμπτυξη καταλήγει πάντα σε έναν υποδοχέα του "
+"κατάλληλου τύπου, οι εκφράσεις ``yield`` και ``yield from`` απαγορεύονται "
+"στο έμμεσα φωλιασμένο εύρος."
 
 #: reference/expressions.rst:299
 msgid ""
@@ -372,6 +516,13 @@ msgid ""
 "expression, may contain additional :keyword:`!for` or :keyword:`!async for` "
 "clauses, and may also use :keyword:`await` expressions."
 msgstr ""
+"Από την Python 3.6, σε μια συνάρτηση :keyword:`async def`, μπορεί να "
+"χρησιμοποιηθεί μια πρόταση :keyword:`!async for` για την επανάληψη πάνω από "
+"έναν :term:`asynchronous iterator`. Μια σύμπτυξη σε μια συνάρτηση :keyword:`!"
+"async def` μπορεί να αποτελείται είτε από μια πρόταση :keyword:`!for` είτε "
+"από μια πρόταση :keyword:`!async for` μετά την αρχική έκφραση, μπορεί να "
+"περιέχει πρόσθετες προτάσεις :keyword:`!for` ή :keyword:`!async for`, και "
+"μπορεί επίσης να χρησιμοποιεί εκφράσεις :keyword:`await`."
 
 #: reference/expressions.rst:306
 msgid ""
@@ -382,30 +533,41 @@ msgid ""
 "comprehension may suspend the execution of the coroutine function in which "
 "it appears. See also :pep:`530`."
 msgstr ""
+"Αν μια σύμπτυξη περιέχει προτάσεις :keyword:`!async for`, ή αν περιέχει "
+"εκφράσεις :keyword:`!await` ή άλλες ασύγχρονες συμπτύξεις οπουδήποτε αλλού "
+"πέρα από την επαναλαμβανόμενη έκφραση στην πιο αριστερή πρόταση :keyword:`!"
+"for`, ονομάζεται :dfn:`asynchronous comprehension`. Μια ασύγχρονη σύμπτυξη "
+"μπορεί να αναστείλει την εκτέλεση της συνάρτησης coroutine στην οποία "
+"εμφανίζεται. Δείτε επίσης το :pep:`530`."
 
 #: reference/expressions.rst:313
 msgid "Asynchronous comprehensions were introduced."
-msgstr ""
+msgstr "Εισήχθησαν οι ασύγχρονες συμπτύξεις."
 
 #: reference/expressions.rst:495
 msgid "``yield`` and ``yield from`` prohibited in the implicitly nested scope."
 msgstr ""
+"Τα ``yield`` και ``yield from`` απαγορεύονται στο έμμεσα φωλιασμένο εύρος."
 
 #: reference/expressions.rst:319
 msgid ""
 "Asynchronous comprehensions are now allowed inside comprehensions in "
 "asynchronous functions. Outer comprehensions implicitly become asynchronous."
 msgstr ""
+"Οι ασύγχρονες συμπτύξεις επιτρέπονται πλέον μέσα σε συμπτύξεις σε ασύγχρονες "
+"συναρτήσεις. Οι εξωτερικές συμπτύξεις γίνονται εμμέσως ασύγχρονες."
 
 #: reference/expressions.rst:328
 msgid "List displays"
-msgstr ""
+msgstr "Απεικονίσεις λίστας"
 
 #: reference/expressions.rst:338
 msgid ""
 "A list display is a possibly empty series of expressions enclosed in square "
 "brackets:"
 msgstr ""
+"Μια απεικόνιση λίστας είναι μια πιθανώς κενή σειρά εκφράσεων που "
+"περικλείεται σε αγκύλες:"
 
 #: reference/expressions.rst:344
 msgid ""
@@ -416,16 +578,25 @@ msgid ""
 "is supplied, the list is constructed from the elements resulting from the "
 "comprehension."
 msgstr ""
+"Μια απεικόνιση λίστας αποδίδει ένα νέο αντικείμενο λίστας, τα περιεχόμενα "
+"του οποίου καθορίζονται είτε από μια λίστα εκφράσεων είτε από μια σύμπτυξη. "
+"Όταν παρέχεται μια λίστα εκφράσεων διαχωρισμένων με κόμμα, τα στοιχεία της "
+"αποτιμώνται από αριστερά προς τα δεξιά και τοποθετούνται στο αντικείμενο "
+"λίστας με αυτή τη σειρά. Όταν παρέχεται μια σύμπτυξη, η λίστα κατασκευάζεται "
+"από τα στοιχεία που προκύπτουν από τη σύμπτυξη."
 
 #: reference/expressions.rst:354
 msgid "Set displays"
-msgstr ""
+msgstr "Απεικονίσεις συνόλου"
 
 #: reference/expressions.rst:363
 msgid ""
 "A set display is denoted by curly braces and distinguishable from dictionary "
 "displays by the lack of colons separating keys and values:"
 msgstr ""
+"Μια απεικόνιση συνόλου υποδηλώνεται με άγκιστρα και διακρίνεται από τις "
+"απεικονίσεις λεξικού από την απουσία άνω και κάτω τελείας που διαχωρίζουν τα "
+"κλειδιά και τις τιμές:"
 
 #: reference/expressions.rst:369
 msgid ""
@@ -436,26 +607,36 @@ msgid ""
 "supplied, the set is constructed from the elements resulting from the "
 "comprehension."
 msgstr ""
+"Μια απεικόνιση συνόλου αποδίδει ένα νέο μεταβλητό αντικείμενο συνόλου, τα "
+"περιεχόμενα του οποίου καθορίζονται είτε από μια ακολουθία εκφράσεων είτε "
+"από μια σύμπτυξη. Όταν παρέχεται μια λίστα εκφράσεων διαχωρισμένων με κόμμα, "
+"τα στοιχεία της αποτιμώνται από αριστερά προς τα δεξιά και προστίθενται στο "
+"αντικείμενο συνόλου. Όταν παρέχεται μια σύμπτυξη, το σύνολο κατασκευάζεται "
+"από τα στοιχεία που προκύπτουν από τη σύμπτυξη."
 
 #: reference/expressions.rst:375
 msgid ""
 "An empty set cannot be constructed with ``{}``; this literal constructs an "
 "empty dictionary."
 msgstr ""
+"Ένα κενό σύνολο δεν μπορεί να κατασκευαστεί με ``{}``· αυτό το λεκτικό "
+"κατασκευάζει ένα κενό λεξικό."
 
 #: reference/expressions.rst:382
 msgid "Dictionary displays"
-msgstr ""
+msgstr "Απεικονίσεις λεξικού"
 
 #: reference/expressions.rst:393
 msgid ""
 "A dictionary display is a possibly empty series of dict items (key/value "
 "pairs) enclosed in curly braces:"
 msgstr ""
+"Μια απεικόνιση λεξικού είναι μια πιθανώς κενή σειρά από στοιχεία λεξικού "
+"(ζεύγη κλειδιού/τιμής) που περικλείονται σε άγκιστρα:"
 
 #: reference/expressions.rst:402
 msgid "A dictionary display yields a new dictionary object."
-msgstr ""
+msgstr "Μια απεικόνιση λεξικού αποδίδει ένα νέο αντικείμενο λεξικού."
 
 #: reference/expressions.rst:404
 msgid ""
@@ -466,6 +647,12 @@ msgid ""
 "list, and the final dictionary's value for that key will be the last one "
 "given."
 msgstr ""
+"Αν δοθεί μια ακολουθία στοιχείων λεξικού διαχωρισμένη με κόμμα, αυτά "
+"αποτιμώνται από αριστερά προς τα δεξιά για να ορίσουν τις εγγραφές του "
+"λεξικού: κάθε αντικείμενο κλειδιού χρησιμοποιείται ως κλειδί στο λεξικό για "
+"την αποθήκευση της αντίστοιχης τιμής. Αυτό σημαίνει ότι μπορείτε να "
+"καθορίσετε το ίδιο κλειδί πολλές φορές στη λίστα στοιχείων του λεξικού, και "
+"η τελική τιμή του λεξικού για αυτό το κλειδί θα είναι η τελευταία που δόθηκε."
 
 #: reference/expressions.rst:414
 msgid ""
@@ -474,10 +661,17 @@ msgid ""
 "dictionary.  Later values replace values already set by earlier dict items "
 "and earlier dictionary unpackings."
 msgstr ""
+"Ένας διπλός αστερίσκος ``**`` υποδηλώνει :dfn:`dictionary unpacking`. Ο "
+"τελεστέος του πρέπει να είναι μια :term:`mapping`. Κάθε στοιχείο "
+"αντιστοίχισης προστίθεται στο νέο λεξικό. Οι μεταγενέστερες τιμές "
+"αντικαθιστούν τις τιμές που έχουν ήδη οριστεί από προηγούμενα στοιχεία "
+"λεξικού και προηγούμενες αποσυσκευασίες λεξικού."
 
 #: reference/expressions.rst:419
 msgid "Unpacking into dictionary displays, originally proposed by :pep:`448`."
 msgstr ""
+"Αποσυσκευασία σε απεικονίσεις λεξικού, που προτάθηκε αρχικά από το :pep:"
+"`448`."
 
 #: reference/expressions.rst:422
 msgid ""
@@ -486,6 +680,11 @@ msgid ""
 "clauses. When the comprehension is run, the resulting key and value elements "
 "are inserted in the new dictionary in the order they are produced."
 msgstr ""
+"Μια σύμπτυξη λεξικού, σε αντίθεση με τις συμπτύξεις λίστας και συνόλου, "
+"χρειάζεται δύο εκφράσεις διαχωρισμένες με άνω και κάτω τελεία ακολουθούμενες "
+"από τις συνήθεις προτάσεις \"for\" και \"if\". Όταν εκτελείται η σύμπτυξη, "
+"τα προκύπτοντα στοιχεία κλειδιού και τιμής εισάγονται στο νέο λεξικό με τη "
+"σειρά που παράγονται."
 
 #: reference/expressions.rst:430
 msgid ""
@@ -495,6 +694,12 @@ msgid ""
 "duplicate keys are not detected; the last value (textually rightmost in the "
 "display) stored for a given key value prevails."
 msgstr ""
+"Περιορισμοί στους τύπους των τιμών κλειδιού παρατίθενται νωρίτερα στην "
+"ενότητα :ref:`types`. (Συνοψίζοντας, ο τύπος κλειδιού θα πρέπει να είναι :"
+"term:`hashable`, πράγμα που αποκλείει όλα τα μεταβλητά αντικείμενα.) "
+"Συγκρούσεις μεταξύ διπλότυπων κλειδιών δεν ανιχνεύονται· η τελευταία τιμή "
+"(κειμενικά η πιο δεξιά στην απεικόνιση) που αποθηκεύτηκε για μια δεδομένη "
+"τιμή κλειδιού επικρατεί."
 
 #: reference/expressions.rst:436
 msgid ""
@@ -503,14 +708,20 @@ msgid ""
 "key.  Starting with 3.8, the key is evaluated before the value, as proposed "
 "by :pep:`572`."
 msgstr ""
+"Πριν από την Python 3.8, στις συμπτύξεις λεξικού, η σειρά αποτίμησης "
+"κλειδιού και τιμής δεν ήταν καλά ορισμένη. Στην CPython, η τιμή αποτιμούνταν "
+"πριν από το κλειδί. Ξεκινώντας με την 3.8, το κλειδί αποτιμάται πριν από την "
+"τιμή, όπως προτάθηκε από το :pep:`572`."
 
 #: reference/expressions.rst:446
 msgid "Generator expressions"
-msgstr ""
+msgstr "Εκφράσεις γεννήτριας"
 
 #: reference/expressions.rst:453
 msgid "A generator expression is a compact generator notation in parentheses:"
 msgstr ""
+"Μια έκφραση γεννήτριας είναι ένας συμπαγής συμβολισμός γεννήτριας σε "
+"παρενθέσεις:"
 
 #: reference/expressions.rst:458
 msgid ""
@@ -518,6 +729,9 @@ msgid ""
 "same as for comprehensions, except that it is enclosed in parentheses "
 "instead of brackets or curly braces."
 msgstr ""
+"Μια έκφραση γεννήτριας αποδίδει ένα νέο αντικείμενο γεννήτριας. Η σύνταξή "
+"της είναι η ίδια με αυτή των συμπτύξεων, με τη διαφορά ότι περικλείεται σε "
+"παρενθέσεις αντί για αγκύλες ή άγκιστρα."
 
 #: reference/expressions.rst:462
 msgid ""
@@ -534,12 +748,26 @@ msgid ""
 "leftmost iterable. For example: ``(x*y for x in range(10) for y in range(x, "
 "x+10))``."
 msgstr ""
+"Οι μεταβλητές που χρησιμοποιούνται στην έκφραση γεννήτριας αποτιμώνται "
+"νωχελικά όταν καλείται η μέθοδος :meth:`~generator.__next__` για το "
+"αντικείμενο γεννήτριας (με τον ίδιο τρόπο όπως οι κανονικές γεννήτριες). "
+"Ωστόσο, η επαναλαμβανόμενη έκφραση στην πιο αριστερή πρόταση :keyword:`!for` "
+"αποτιμάται αμέσως, και ο :term:`iterator` δημιουργείται αμέσως για αυτό το "
+"iterable, έτσι ώστε ένα σφάλμα που παράγεται κατά τη δημιουργία του "
+"επαναλήπτη να εκπέμπεται στο σημείο όπου ορίζεται η έκφραση γεννήτριας, αντί "
+"στο σημείο όπου ανακτάται η πρώτη τιμή. Οι επόμενες προτάσεις :keyword:`!"
+"for` και οποιαδήποτε συνθήκη φίλτρου στην πιο αριστερή πρόταση :keyword:`!"
+"for` δεν μπορούν να αποτιμηθούν στο περιβάλλον εύρος καθώς μπορεί να "
+"εξαρτώνται από τις τιμές που ελήφθησαν από το πιο αριστερό iterable. Για "
+"παράδειγμα: ``(x*y for x in range(10) for y in range(x, x+10))``."
 
 #: reference/expressions.rst:474
 msgid ""
 "The parentheses can be omitted on calls with only one argument.  See "
 "section :ref:`calls` for details."
 msgstr ""
+"Οι παρενθέσεις μπορούν να παραλειφθούν σε κλήσεις με μόνο ένα όρισμα. Δείτε "
+"την ενότητα :ref:`calls` για λεπτομέρειες."
 
 #: reference/expressions.rst:477
 msgid ""
@@ -547,6 +775,9 @@ msgid ""
 "itself, ``yield`` and ``yield from`` expressions are prohibited in the "
 "implicitly defined generator."
 msgstr ""
+"Για να αποφευχθεί η παρεμβολή στην αναμενόμενη λειτουργία της ίδιας της "
+"έκφρασης γεννήτριας, οι εκφράσεις ``yield`` και ``yield from`` απαγορεύονται "
+"στην εμμέσως ορισμένη γεννήτρια."
 
 #: reference/expressions.rst:481
 msgid ""
@@ -556,10 +787,15 @@ msgid ""
 "asynchronous generator object, which is an asynchronous iterator "
 "(see :ref:`async-iterators`)."
 msgstr ""
+"Αν μια έκφραση γεννήτριας περιέχει είτε προτάσεις :keyword:`!async for` είτε "
+"εκφράσεις :keyword:`await` ονομάζεται :dfn:`asynchronous generator "
+"expression`. Μια έκφραση ασύγχρονης γεννήτριας επιστρέφει ένα νέο "
+"αντικείμενο ασύγχρονης γεννήτριας, το οποίο είναι ένας ασύγχρονος iterator "
+"(δείτε :ref:`async-iterators`)."
 
 #: reference/expressions.rst:487
 msgid "Asynchronous generator expressions were introduced."
-msgstr ""
+msgstr "Εισήχθησαν οι εκφράσεις ασύγχρονης γεννήτριας."
 
 #: reference/expressions.rst:490
 msgid ""
@@ -567,10 +803,14 @@ msgid ""
 "in :keyword:`async def` coroutines.  Starting with 3.7, any function can use "
 "asynchronous generator expressions."
 msgstr ""
+"Πριν από την Python 3.7, οι εκφράσεις ασύγχρονης γεννήτριας μπορούσαν να "
+"εμφανιστούν μόνο σε :keyword:`async def` coroutines. Ξεκινώντας με την 3.7, "
+"οποιαδήποτε συνάρτηση μπορεί να χρησιμοποιήσει εκφράσεις ασύγχρονης "
+"γεννήτριας."
 
 #: reference/expressions.rst:502
 msgid "Yield expressions"
-msgstr ""
+msgstr "Εκφράσεις απόδοσης"
 
 #: reference/expressions.rst:515
 msgid ""
@@ -581,6 +821,13 @@ msgid ""
 "an :keyword:`async def` function's body causes that coroutine function to be "
 "an asynchronous generator function. For example::"
 msgstr ""
+"Η έκφραση απόδοσης χρησιμοποιείται κατά τον ορισμό μιας συνάρτησης :term:"
+"`generator` ή μιας συνάρτησης :term:`asynchronous generator` και συνεπώς "
+"μπορεί να χρησιμοποιηθεί μόνο στο σώμα ενός ορισμού συνάρτησης. Η χρήση μιας "
+"έκφρασης απόδοσης στο σώμα μιας συνάρτησης υποχρεώνει αυτή τη συνάρτηση να "
+"είναι συνάρτηση γεννήτριας, και η χρήση της στο σώμα μιας συνάρτησης :"
+"keyword:`async def` υποχρεώνει αυτή τη συνάρτηση coroutine να είναι "
+"συνάρτηση ασύγχρονης γεννήτριας. Για παράδειγμα::"
 
 #: reference/expressions.rst:522
 msgid ""
@@ -590,6 +837,11 @@ msgid ""
 "async def agen(): # defines an asynchronous generator function\n"
 "    yield 123"
 msgstr ""
+"def gen():  # ορίζει μια συνάρτηση γεννήτριας\n"
+"    yield 123\n"
+"\n"
+"async def agen(): # ορίζει μια συνάρτηση ασύγχρονης γεννήτριας\n"
+"    yield 123"
 
 #: reference/expressions.rst:528
 msgid ""
@@ -597,12 +849,17 @@ msgid ""
 "not permitted as part of the implicitly defined scopes used to implement "
 "comprehensions and generator expressions."
 msgstr ""
+"Λόγω των παρενεργειών τους στο περιέχον εύρος, οι εκφράσεις ``yield`` δεν "
+"επιτρέπονται ως μέρος των εμμέσως ορισμένων ευρών που χρησιμοποιούνται για "
+"την υλοποίηση συμπτύξεων και εκφράσεων γεννήτριας."
 
 #: reference/expressions.rst:532
 msgid ""
 "Yield expressions prohibited in the implicitly nested scopes used to "
 "implement comprehensions and generator expressions."
 msgstr ""
+"Οι εκφράσεις απόδοσης απαγορεύονται στα έμμεσα φωλιασμένα εύρη που "
+"χρησιμοποιούνται για την υλοποίηση συμπτύξεων και εκφράσεων γεννήτριας."
 
 #: reference/expressions.rst:536
 msgid ""
@@ -610,6 +867,9 @@ msgid ""
 "functions are described separately in section :ref:`asynchronous-generator-"
 "functions`."
 msgstr ""
+"Οι συναρτήσεις γεννήτριας περιγράφονται παρακάτω, ενώ οι συναρτήσεις "
+"ασύγχρονης γεννήτριας περιγράφονται ξεχωριστά στην ενότητα :ref:"
+"`asynchronous-generator-functions`."
 
 #: reference/expressions.rst:540
 msgid ""
@@ -631,6 +891,24 @@ msgid ""
 "is :const:`None`.  Otherwise, if :meth:`~generator.send` is used, then the "
 "result will be the value passed in to that method."
 msgstr ""
+"Όταν καλείται μια συνάρτηση γεννήτριας, επιστρέφει έναν iterator γνωστό ως "
+"γεννήτρια. Αυτή η γεννήτρια ελέγχει στη συνέχεια την εκτέλεση της συνάρτησης "
+"γεννήτριας. Η εκτέλεση ξεκινά όταν καλείται μία από τις μεθόδους της "
+"γεννήτριας. Εκείνη τη στιγμή, η εκτέλεση προχωρά στην πρώτη έκφραση "
+"απόδοσης, όπου αναστέλλεται ξανά, επιστρέφοντας την τιμή του :token:`~python-"
+"grammar:yield_list` σε αυτόν που κάλεσε τη γεννήτρια, ή ``None`` αν "
+"παραλειφθεί το :token:`~python-grammar:yield_list`. Με τον όρο αναστέλλεται, "
+"εννοούμε ότι διατηρείται όλη η τοπική κατάσταση, συμπεριλαμβανομένων των "
+"τρεχουσών συνδέσεων των τοπικών μεταβλητών, του δείκτη εντολών, της "
+"εσωτερικής στοίβας αποτίμησης και της κατάστασης οποιουδήποτε χειρισμού "
+"εξαιρέσεων. Όταν η εκτέλεση συνεχίζεται με την κλήση μιας από τις μεθόδους "
+"της γεννήτριας, η συνάρτηση μπορεί να προχωρήσει ακριβώς σαν η έκφραση "
+"απόδοσης να ήταν απλώς άλλη μια εξωτερική κλήση. Η τιμή της έκφρασης "
+"απόδοσης μετά τη συνέχιση εξαρτάται από τη μέθοδο που συνέχισε την εκτέλεση. "
+"Αν χρησιμοποιείται η :meth:`~generator.__next__` (συνήθως μέσω μιας :keyword:"
+"`for` ή της ενσωματωμένης :func:`next`) τότε το αποτέλεσμα είναι :const:"
+"`None`. Διαφορετικά, αν χρησιμοποιείται η :meth:`~generator.send`, τότε το "
+"αποτέλεσμα θα είναι η τιμή που περάστηκε σε αυτήν τη μέθοδο."
 
 #: reference/expressions.rst:560
 msgid ""
@@ -640,6 +918,12 @@ msgid ""
 "function cannot control where the execution should continue after it yields; "
 "the control is always transferred to the generator's caller."
 msgstr ""
+"Όλα αυτά κάνουν τις συναρτήσεις γεννήτριας αρκετά παρόμοιες με τις "
+"coroutines· αποδίδουν πολλές φορές, έχουν περισσότερα από ένα σημεία εισόδου "
+"και η εκτέλεσή τους μπορεί να ανασταλεί. Η μόνη διαφορά είναι ότι μια "
+"συνάρτηση γεννήτριας δεν μπορεί να ελέγξει πού πρέπει να συνεχιστεί η "
+"εκτέλεση αφού αποδώσει· ο έλεγχος μεταφέρεται πάντα σε αυτόν που κάλεσε τη "
+"γεννήτρια."
 
 #: reference/expressions.rst:566
 msgid ""
@@ -649,6 +933,11 @@ msgid ""
 "iterator's :meth:`~generator.close` method will be called, allowing any "
 "pending :keyword:`finally` clauses to execute."
 msgstr ""
+"Οι εκφράσεις απόδοσης επιτρέπονται οπουδήποτε σε μια δομή :keyword:`try`. Αν "
+"η γεννήτρια δεν συνεχιστεί πριν οριστικοποιηθεί (φτάνοντας σε μηδενικό "
+"αριθμό αναφορών ή συλλεγόμενη από τον συλλέκτη απορριμμάτων), θα κληθεί η "
+"μέθοδος :meth:`~generator.close` του επαναλήπτη - γεννήτρια, επιτρέποντας σε "
+"τυχόν εκκρεμείς προτάσεις :keyword:`finally` να εκτελεστούν."
 
 #: reference/expressions.rst:575
 msgid ""
@@ -662,6 +951,15 @@ msgid ""
 "or :exc:`TypeError`, while :meth:`~generator.throw` will just raise the "
 "passed in exception immediately."
 msgstr ""
+"Όταν χρησιμοποιείται το ``yield from <expr>``, η παρεχόμενη έκφραση πρέπει "
+"να είναι ένα iterable. Οι τιμές που παράγονται από την επανάληψη αυτού του "
+"iterable περνούν απευθείας σε αυτόν που καλεί τις μεθόδους της τρέχουσας "
+"γεννήτριας. Τυχόν τιμές που περνούν με την :meth:`~generator.send` και τυχόν "
+"εξαιρέσεις που περνούν με την :meth:`~generator.throw` περνούν στον "
+"υποκείμενο iterator αν διαθέτει τις κατάλληλες μεθόδους. Αν δεν συμβαίνει "
+"αυτό, τότε η :meth:`~generator.send` θα κάνει raise το :exc:`AttributeError` "
+"ή το :exc:`TypeError`, ενώ η :meth:`~generator.throw` απλώς θα κάνει raise "
+"άμεσα την εξαίρεση που της περάστηκε."
 
 #: reference/expressions.rst:584
 msgid ""
@@ -671,72 +969,93 @@ msgid ""
 "raising :exc:`StopIteration`, or automatically when the subiterator is a "
 "generator (by returning a value from the subgenerator)."
 msgstr ""
+"Όταν ο υποκείμενος iterator ολοκληρωθεί, η ιδιότητα :attr:`~StopIteration."
+"value` του στιγμιοτύπου :exc:`StopIteration` που κάνει raise γίνεται η τιμή "
+"της έκφρασης yield. Μπορεί είτε να οριστεί ρητά κατά την πρόκληση της :exc:"
+"`StopIteration`, είτε αυτόματα όταν ο subiterator είναι γεννήτρια "
+"(επιστρέφοντας μια τιμή από την υπογεννήτρια)."
 
 #: reference/expressions.rst:590
 msgid "Added ``yield from <expr>`` to delegate control flow to a subiterator."
 msgstr ""
+"Προστέθηκε το ``yield from <expr>`` για την ανάθεση της ροής ελέγχου σε έναν "
+"subiterator."
 
 #: reference/expressions.rst:593
 msgid ""
 "The parentheses may be omitted when the yield expression is the sole "
 "expression on the right hand side of an assignment statement."
 msgstr ""
+"Οι παρενθέσεις μπορούν να παραλειφθούν όταν η έκφραση απόδοσης είναι η "
+"μοναδική έκφραση στη δεξιά πλευρά μιας πρότασης ανάθεσης."
 
 #: reference/expressions.rst:598
 msgid ":pep:`255` - Simple Generators"
-msgstr ""
+msgstr ":pep:`255` - Απλές Γεννήτριες"
 
 #: reference/expressions.rst:599
 msgid ""
 "The proposal for adding generators and the :keyword:`yield` statement to "
 "Python."
 msgstr ""
+"Η πρόταση για την προσθήκη των γεννητριών και της πρότασης :keyword:`yield` "
+"στην Python."
 
 #: reference/expressions.rst:601
 msgid ":pep:`342` - Coroutines via Enhanced Generators"
-msgstr ""
+msgstr ":pep:`342` - Coroutines μέσω βελτιωμένων γεννητριών"
 
 #: reference/expressions.rst:602
 msgid ""
 "The proposal to enhance the API and syntax of generators, making them usable "
 "as simple coroutines."
 msgstr ""
+"Η πρόταση για τη βελτίωση του API και της σύνταξης των γεννητριών, "
+"καθιστώντας τες χρησιμοποιήσιμες ως απλές coroutines."
 
 #: reference/expressions.rst:605
 msgid ":pep:`380` - Syntax for Delegating to a Subgenerator"
-msgstr ""
+msgstr ":pep:`380` - Σύνταξη για ανάθεση σε μια υπογεννήτρια"
 
 #: reference/expressions.rst:606
 msgid ""
 "The proposal to introduce the :token:`~python-grammar:yield_from` syntax, "
 "making delegation to subgenerators easy."
 msgstr ""
+"Η πρόταση για την εισαγωγή της σύνταξης :token:`~python-grammar:yield_from`, "
+"κάνοντας την ανάθεση σε υπογεννήτριες εύκολη."
 
 #: reference/expressions.rst:609
 msgid ":pep:`525` - Asynchronous Generators"
-msgstr ""
+msgstr ":pep:`525` - Ασύγχρονες Γεννήτριες"
 
 #: reference/expressions.rst:610
 msgid ""
 "The proposal that expanded on :pep:`492` by adding generator capabilities to "
 "coroutine functions."
 msgstr ""
+"Η πρόταση που επέκτεινε το :pep:`492` προσθέτοντας δυνατότητες γεννήτριας "
+"στις coroutine συναρτήσεις."
 
 #: reference/expressions.rst:617
 msgid "Generator-iterator methods"
-msgstr ""
+msgstr "Μέθοδοι iterator - γεννήτριας"
 
 #: reference/expressions.rst:619
 msgid ""
 "This subsection describes the methods of a generator iterator.  They can be "
 "used to control the execution of a generator function."
 msgstr ""
+"Αυτή η υποενότητα περιγράφει τις μεθόδους ενός generator iterator. Μπορούν "
+"να χρησιμοποιηθούν για τον έλεγχο της εκτέλεσης μιας συνάρτησης γεννήτριας."
 
 #: reference/expressions.rst:622
 msgid ""
 "Note that calling any of the generator methods below when the generator is "
 "already executing raises a :exc:`ValueError` exception."
 msgstr ""
+"Σημειώστε ότι η κλήση οποιασδήποτε από τις παρακάτω μεθόδους γεννήτριας όταν "
+"η γεννήτρια ήδη εκτελείται, κάνει raise μια εξαίρεση :exc:`ValueError`."
 
 #: reference/expressions.rst:630
 msgid ""
@@ -749,12 +1068,22 @@ msgid ""
 "caller.  If the generator exits without yielding another value, "
 "a :exc:`StopIteration` exception is raised."
 msgstr ""
+"Ξεκινά την εκτέλεση μιας συνάρτησης γεννήτριας ή τη συνεχίζει στην τελευταία "
+"εκτελεσθείσα έκφραση απόδοσης. Όταν μια συνάρτηση γεννήτριας συνεχίζεται με "
+"μια μέθοδο :meth:`~generator.__next__`, η τρέχουσα έκφραση απόδοσης "
+"αποτιμάται πάντα σε :const:`None`. Η εκτέλεση στη συνέχεια συνεχίζεται στην "
+"επόμενη έκφραση απόδοσης, όπου η γεννήτρια αναστέλλεται ξανά, και η τιμή "
+"του :token:`~python-grammar:yield_list` επιστρέφεται σε αυτόν που κάλεσε "
+"την :meth:`__next__`. Αν η γεννήτρια τερματίσει χωρίς να αποδώσει άλλη τιμή, "
+"κάνει raise μια εξαίρεση :exc:`StopIteration`."
 
 #: reference/expressions.rst:639
 msgid ""
 "This method is normally called implicitly, e.g. by a :keyword:`for` loop, or "
 "by the built-in :func:`next` function."
 msgstr ""
+"Αυτή η μέθοδος συνήθως καλείται έμμεσα, π.χ. από έναν βρόχο :keyword:`for`, "
+"ή από την ενσωματωμένη συνάρτηση :func:`next`."
 
 #: reference/expressions.rst:645
 msgid ""
@@ -766,6 +1095,13 @@ msgid ""
 "called with :const:`None` as the argument, because there is no yield "
 "expression that could receive the value."
 msgstr ""
+"Συνεχίζει την εκτέλεση και \"στέλνει\" μια τιμή μέσα στη συνάρτηση "
+"γεννήτριας. Το όρισμα *value* γίνεται το αποτέλεσμα της τρέχουσας έκφρασης "
+"απόδοσης. Η μέθοδος :meth:`send` επιστρέφει την επόμενη τιμή που αποδίδεται "
+"από τη γεννήτρια, ή κάνει raise το :exc:`StopIteration` αν η γεννήτρια "
+"τερματίσει χωρίς να αποδώσει άλλη τιμή. Όταν η :meth:`send` καλείται για να "
+"ξεκινήσει τη γεννήτρια, πρέπει να κληθεί με όρισμα :const:`None`, επειδή δεν "
+"υπάρχει καμία έκφραση απόδοσης που θα μπορούσε να λάβει την τιμή."
 
 #: reference/expressions.rst:657
 msgid ""
@@ -775,12 +1111,20 @@ msgid ""
 "If the generator function does not catch the passed-in exception, or raises "
 "a different exception, then that exception propagates to the caller."
 msgstr ""
+"Κάνει raise μια εξαίρεση στο σημείο όπου η γεννήτρια είχε παύσει, και "
+"επιστρέφει την επόμενη τιμή που αποδίδεται από τη συνάρτηση γεννήτριας. Αν η "
+"γεννήτρια τερματίσει χωρίς να αποδώσει άλλη τιμή, κάνει raise μια εξαίρεση :"
+"exc:`StopIteration`. Αν η συνάρτηση γεννήτριας δεν πιάσει την εξαίρεση που "
+"της περάστηκε, ή αν κάνει raise μια διαφορετική εξαίρεση, τότε αυτή η "
+"εξαίρεση μεταβιβάζεται σε αυτόν που την κάλεσε."
 
 #: reference/expressions.rst:663
 msgid ""
 "In typical use, this is called with a single exception instance similar to "
 "the way the :keyword:`raise` keyword is used."
 msgstr ""
+"Σε τυπική χρήση, καλείται με ένα μόνο στιγμιότυπο εξαίρεσης, παρόμοια με τον "
+"τρόπο που χρησιμοποιείται η λέξη-κλειδί :keyword:`raise`."
 
 #: reference/expressions.rst:666
 msgid ""
@@ -792,12 +1136,23 @@ msgid ""
 "any existing :attr:`~BaseException.__traceback__` attribute stored in "
 "*value* may be cleared."
 msgstr ""
+"Για συμβατότητα προς τα πίσω, ωστόσο, υποστηρίζεται η δεύτερη υπογραφή, "
+"ακολουθώντας μια σύμβαση από παλαιότερες εκδόσεις της Python. Το όρισμα "
+"*type* θα πρέπει να είναι μια κλάση εξαίρεσης, και το *value* θα πρέπει να "
+"είναι ένα στιγμιότυπο εξαίρεσης. Αν δεν παρέχεται το *value*, καλείται ο "
+"κατασκευαστής του *type* για να ληφθεί ένα στιγμιότυπο. Αν παρέχεται το "
+"*traceback*, ορίζεται στην εξαίρεση, διαφορετικά οποιαδήποτε υπάρχον "
+"χαρακτηριστικό :attr:`~BaseException.__traceback__` αποθηκευμένο στο *value* "
+"μπορεί να καθαριστεί."
 
 #: reference/expressions.rst:863
 msgid ""
 "The second signature \\(type\\[, value\\[, traceback\\]\\]\\) is deprecated "
 "and may be removed in a future version of Python."
 msgstr ""
+"Η δεύτερη υπογραφή \\(type\\[, value\\[, traceback\\]\\]\\) έχει "
+"χαρακτηριστεί ως απαρχαιωμένη και ενδέχεται να αφαιρεθεί σε μελλοντική "
+"έκδοση της Python."
 
 #: reference/expressions.rst:685
 msgid ""
@@ -813,22 +1168,38 @@ msgid ""
 "exited due to an exception or normal exit, :meth:`close` "
 "returns :const:`None` and has no other effect."
 msgstr ""
+"Κάνει raise μια εξαίρεση :exc:`GeneratorExit` στο σημείο όπου η συνάρτηση "
+"γεννήτριας είχε παύσει (ισοδύναμο με την κλήση ``throw(GeneratorExit)``). Η "
+"εξαίρεση γίνεται raise από την έκφραση απόδοσης όπου η γεννήτρια είχε "
+"παύσει. Αν η συνάρτηση γεννήτριας πιάσει την εξαίρεση και επιστρέψει μια "
+"τιμή, αυτή η τιμή επιστρέφεται από την :meth:`close`. Αν η συνάρτηση "
+"γεννήτριας είναι ήδη κλειστή, ή κάνει raise το :exc:`GeneratorExit` (μη "
+"πιάνοντας την εξαίρεση), η :meth:`close` επιστρέφει :const:`None`. Αν η "
+"γεννήτρια αποδώσει μια τιμή, κάνει raise μια :exc:`RuntimeError`. Αν η "
+"γεννήτρια κάνει raise οποιαδήποτε άλλη εξαίρεση, μεταβιβάζεται σε αυτόν που "
+"την κάλεσε. Αν η γεννήτρια έχει ήδη τερματίσει λόγω εξαίρεσης ή κανονικού "
+"τερματισμού, η :meth:`close` επιστρέφει :const:`None` και δεν έχει κανένα "
+"άλλο αποτέλεσμα."
 
 #: reference/expressions.rst:699
 msgid ""
 "If a generator returns a value upon being closed, the value is returned "
 "by :meth:`close`."
 msgstr ""
+"Αν μια γεννήτρια επιστρέψει μια τιμή κατά το κλείσιμό της, η τιμή "
+"επιστρέφεται από την :meth:`close`."
 
 #: reference/expressions.rst:705
 msgid "Examples"
-msgstr ""
+msgstr "Παραδείγματα"
 
 #: reference/expressions.rst:707
 msgid ""
 "Here is a simple example that demonstrates the behavior of generators and "
 "generator functions::"
 msgstr ""
+"Εδώ είναι ένα απλό παράδειγμα που επιδεικνύει τη συμπεριφορά των γεννητριών "
+"και των συναρτήσεων γεννήτριας::"
 
 #: reference/expressions.rst:710
 msgid ""
@@ -857,16 +1228,42 @@ msgid ""
 ">>> generator.close()\n"
 "Don't forget to clean up when 'close()' is called."
 msgstr ""
+">>> def echo(value=None):\n"
+"...     print(\"Execution starts when 'next()' is called for the first time."
+"\")\n"
+"...     try:\n"
+"...         while True:\n"
+"...             try:\n"
+"...                 value = (yield value)\n"
+"...             except Exception as e:\n"
+"...                 value = e\n"
+"...     finally:\n"
+"...         print(\"Don't forget to clean up when 'close()' is called.\")\n"
+"...\n"
+">>> generator = echo(1)\n"
+">>> print(next(generator))\n"
+"Execution starts when 'next()' is called for the first time.\n"
+"1\n"
+">>> print(next(generator))\n"
+"None\n"
+">>> print(generator.send(2))\n"
+"2\n"
+">>> generator.throw(TypeError, \"spam\")\n"
+"TypeError('spam',)\n"
+">>> generator.close()\n"
+"Don't forget to clean up when 'close()' is called."
 
 #: reference/expressions.rst:734
 msgid ""
 "For examples using ``yield from``, see :ref:`pep-380` in \"What's New in "
 "Python.\""
 msgstr ""
+"Για παραδείγματα που χρησιμοποιούν ``yield from``, δείτε το :ref:`pep-380` "
+"στο \"What's New in Python.\""
 
 #: reference/expressions.rst:740
 msgid "Asynchronous generator functions"
-msgstr ""
+msgstr "Συναρτήσεις ασύγχρονης γεννήτριας"
 
 #: reference/expressions.rst:742
 msgid ""
@@ -874,6 +1271,9 @@ msgid ""
 "using :keyword:`async def` further defines the function as "
 "an :term:`asynchronous generator` function."
 msgstr ""
+"Η παρουσία μιας έκφρασης απόδοσης σε μια συνάρτηση ή μέθοδο που ορίζεται "
+"χρησιμοποιώντας :keyword:`async def` ορίζει περαιτέρω τη συνάρτηση ως "
+"συνάρτηση :term:`asynchronous generator`."
 
 #: reference/expressions.rst:746
 msgid ""
@@ -884,6 +1284,12 @@ msgid ""
 "coroutine function analogously to how a generator object would be used in "
 "a :keyword:`for` statement."
 msgstr ""
+"Όταν καλείται μια συνάρτηση ασύγχρονης γεννήτριας, επιστρέφει έναν ασύγχρονο "
+"iterator γνωστό ως αντικείμενο ασύγχρονης γεννήτριας. Αυτό το αντικείμενο "
+"στη συνέχεια ελέγχει την εκτέλεση της συνάρτησης γεννήτριας. Ένα αντικείμενο "
+"ασύγχρονης γεννήτριας χρησιμοποιείται τυπικά σε μια πρόταση :keyword:`async "
+"for` σε μια συνάρτηση coroutine, κατ' αναλογία με τον τρόπο που θα "
+"χρησιμοποιούνταν ένα αντικείμενο γεννήτριας σε μια πρόταση :keyword:`for`."
 
 #: reference/expressions.rst:753
 msgid ""
@@ -903,6 +1309,22 @@ msgid ""
 "is :const:`None`. Otherwise, if :meth:`~agen.asend` is used, then the result "
 "will be the value passed in to that method."
 msgstr ""
+"Η κλήση μίας από τις μεθόδους της ασύγχρονης γεννήτριας επιστρέφει ένα "
+"αντικείμενο :term:`awaitable`, και η εκτέλεση ξεκινά όταν αυτό το "
+"αντικείμενο αναμένεται. Εκείνη τη στιγμή, η εκτέλεση προχωρά στην πρώτη "
+"έκφραση απόδοσης, όπου αναστέλλεται ξανά, επιστρέφοντας την τιμή του :token:"
+"`~python-grammar:yield_list` στην coroutine που αναμένει. Όπως και με μια "
+"γεννήτρια, αναστολή σημαίνει ότι διατηρείται όλη η τοπική κατάσταση, "
+"συμπεριλαμβανομένων των τρεχουσών συνδέσεων των τοπικών μεταβλητών, του "
+"δείκτη εντολών, της εσωτερικής στοίβας αποτίμησης και της κατάστασης "
+"οποιουδήποτε χειρισμού εξαιρέσεων. Όταν η εκτέλεση συνεχίζεται αναμένοντας "
+"το επόμενο αντικείμενο που επιστρέφεται από τις μεθόδους της ασύγχρονης "
+"γεννήτριας, η συνάρτηση μπορεί να προχωρήσει ακριβώς σαν η έκφραση απόδοσης "
+"να ήταν απλώς άλλη μια εξωτερική κλήση. Η τιμή της έκφρασης απόδοσης μετά τη "
+"συνέχιση εξαρτάται από τη μέθοδο που συνέχισε την εκτέλεση. Αν "
+"χρησιμοποιείται η :meth:`~agen.__anext__` τότε το αποτέλεσμα είναι :const:"
+"`None`. Διαφορετικά, αν χρησιμοποιείται η :meth:`~agen.asend`, τότε το "
+"αποτέλεσμα θα είναι η τιμή που περάστηκε σε αυτήν τη μέθοδο."
 
 #: reference/expressions.rst:768
 msgid ""
@@ -915,6 +1337,16 @@ msgid ""
 "the async generator by calling :meth:`~agen.aclose` method to finalize the "
 "generator and ultimately detach it from the event loop."
 msgstr ""
+"Αν μια ασύγχρονη γεννήτρια τερματιστεί πρόωρα μέσω του :keyword:`break`, η "
+"εργασία που την κάλεσε ακυρωθεί, ή λόγω άλλων εξαιρέσεων, ο κώδικας "
+"ασύγχρονου καθαρισμού της γεννήτριας θα εκτελεστεί και πιθανώς θα κάνει "
+"raise εξαιρέσεις ή θα αποκτήσει πρόσβαση σε μεταβλητές περιβάλλοντος σε ένα "
+"μη αναμενόμενο περιβάλλον -- ίσως μετά τη διάρκεια ζωής των εργασιών από τις "
+"οποίες εξαρτάται, ή κατά τον τερματισμό του βρόχου συμβάντων όταν καλείται "
+"το hook συλλογής απορριμμάτων της ασύγχρονης γεννήτριας. Για να αποφευχθεί "
+"αυτό, αυτός που καλεί πρέπει να κλείσει ρητά την ασύγχρονη γεννήτρια "
+"καλώντας τη μέθοδο :meth:`~agen.aclose` για να οριστικοποιήσει τη γεννήτρια "
+"και τελικά να την αποσυνδέσει από τον βρόχο συμβάντων."
 
 #: reference/expressions.rst:778
 msgid ""
@@ -929,6 +1361,17 @@ msgid ""
 "the resulting coroutine object, thus allowing any pending :keyword:`!"
 "finally` clauses to execute."
 msgstr ""
+"Σε μια συνάρτηση ασύγχρονης γεννήτριας, οι εκφράσεις απόδοσης επιτρέπονται "
+"οπουδήποτε σε μια δομή :keyword:`try`. Ωστόσο, αν μια ασύγχρονη γεννήτρια "
+"δεν συνεχιστεί πριν οριστικοποιηθεί (φτάνοντας σε μηδενικό αριθμό αναφορών ή "
+"συλλεχθεί από τον συλλέκτη απορριμμάτων), τότε μια έκφραση απόδοσης μέσα σε "
+"μια δομή :keyword:`!try` θα μπορούσε να οδηγήσει σε αποτυχία εκτέλεσης "
+"εκκρεμών προτάσεων :keyword:`finally`. Σε αυτή την περίπτωση, είναι ευθύνη "
+"του βρόχου συμβάντων ή του χρονοπρογραμματιστή, που εκτελεί την ασύγχρονη "
+"γεννήτρια, να καλέσει τη μέθοδο :meth:`~agen.aclose` του iterator της "
+"ασύγχρονης γεννήτριας και να εκτελέσει το αντικείμενο coroutine που "
+"προκύπτει, επιτρέποντας έτσι σε τυχόν εκκρεμείς προτάσεις :keyword:`!"
+"finally` να εκτελεστούν."
 
 #: reference/expressions.rst:789
 msgid ""
@@ -942,22 +1385,37 @@ msgid ""
 "see the implementation of ``asyncio.Loop.shutdown_asyncgens`` "
 "in :source:`Lib/asyncio/base_events.py`."
 msgstr ""
+"Για να φροντίσει για την οριστικοποίηση κατά τον τερματισμό του βρόχου "
+"συμβάντων, ένας βρόχος συμβάντων θα πρέπει να ορίσει μια συνάρτηση "
+"*finalizer* η οποία δέχεται έναν iterator ασύγχρονης γεννήτριας και προφανώς "
+"καλεί την :meth:`~agen.aclose` και εκτελεί την coroutine. Αυτός ο "
+"*finalizer* μπορεί να καταχωρηθεί καλώντας την :func:`sys."
+"set_asyncgen_hooks`. Κατά την πρώτη επανάληψη, ένας iterator ασύγχρονης "
+"γεννήτριας θα αποθηκεύσει τον καταχωρημένο *finalizer* για να κληθεί κατά "
+"την οριστικοποίηση. Για ένα παράδειγμα αναφοράς μιας μεθόδου *finalizer* "
+"δείτε την υλοποίηση της ``asyncio.Loop.shutdown_asyncgens`` στο :source:`Lib/"
+"asyncio/base_events.py`."
 
 #: reference/expressions.rst:798
 msgid ""
 "The expression ``yield from <expr>`` is a syntax error when used in an "
 "asynchronous generator function."
 msgstr ""
+"Η έκφραση ``yield from <expr>`` αποτελεί συντακτικό σφάλμα όταν "
+"χρησιμοποιείται σε μια συνάρτηση ασύγχρονης γεννήτριας."
 
 #: reference/expressions.rst:805
 msgid "Asynchronous generator-iterator methods"
-msgstr ""
+msgstr "Μέθοδοι iterator ασύγχρονης γεννήτριας"
 
 #: reference/expressions.rst:807
 msgid ""
 "This subsection describes the methods of an asynchronous generator iterator, "
 "which are used to control the execution of a generator function."
 msgstr ""
+"Αυτή η υποενότητα περιγράφει τις μεθόδους ενός iterator ασύγχρονης "
+"γεννήτριας, οι οποίες χρησιμοποιούνται για τον έλεγχο της εκτέλεσης μιας "
+"συνάρτησης γεννήτριας."
 
 #: reference/expressions.rst:816
 msgid ""
@@ -973,11 +1431,23 @@ msgid ""
 "a :exc:`StopAsyncIteration` exception, signalling that the asynchronous "
 "iteration has completed."
 msgstr ""
+"Επιστρέφει ένα awaitable το οποίο όταν εκτελεστεί ξεκινά να εκτελεί την "
+"ασύγχρονη γεννήτρια ή τη συνεχίζει στην τελευταία εκτελεσθείσα έκφραση "
+"απόδοσης. Όταν μια συνάρτηση ασύγχρονης γεννήτριας συνεχίζεται με μια "
+"μέθοδο :meth:`~agen.__anext__`, η τρέχουσα έκφραση απόδοσης αποτιμάται πάντα "
+"σε :const:`None` στο επιστρεφόμενο awaitable, το οποίο όταν εκτελεστεί θα "
+"συνεχίσει στην επόμενη έκφραση απόδοσης. Η τιμή του :token:`~python-grammar:"
+"yield_list` της έκφρασης απόδοσης είναι η τιμή της εξαίρεσης :exc:"
+"`StopIteration` που γίνεται raise από την coroutine που ολοκληρώνεται. Αν η "
+"ασύγχρονη γεννήτρια τερματίσει χωρίς να αποδώσει άλλη τιμή, το awaitable "
+"αντίθετα κάνει raise μια εξαίρεση :exc:`StopAsyncIteration`, σηματοδοτώντας "
+"ότι η ασύγχρονη επανάληψη έχει ολοκληρωθεί."
 
 #: reference/expressions.rst:828
 msgid ""
 "This method is normally called implicitly by a :keyword:`async for` loop."
 msgstr ""
+"Αυτή η μέθοδος συνήθως καλείται έμμεσα από έναν βρόχο :keyword:`async for`."
 
 #: reference/expressions.rst:834
 msgid ""
@@ -993,6 +1463,17 @@ msgid ""
 "called with :const:`None` as the argument, because there is no yield "
 "expression that could receive the value."
 msgstr ""
+"Επιστρέφει ένα awaitable το οποίο όταν εκτελεστεί συνεχίζει την εκτέλεση της "
+"ασύγχρονης γεννήτριας. Όπως και με τη μέθοδο :meth:`~generator.send` για μια "
+"γεννήτρια, αυτό \"στέλνει\" μια τιμή μέσα στη συνάρτηση ασύγχρονης "
+"γεννήτριας, και το όρισμα *value* γίνεται το αποτέλεσμα της τρέχουσας "
+"έκφρασης απόδοσης. Το awaitable που επιστρέφεται από τη μέθοδο :meth:`asend` "
+"θα επιστρέψει την επόμενη τιμή που αποδίδεται από τη γεννήτρια ως την τιμή "
+"της :exc:`StopIteration` που γίνεται raise, ή κάνει raise το :exc:"
+"`StopAsyncIteration` αν η ασύγχρονη γεννήτρια τερματίσει χωρίς να αποδώσει "
+"άλλη τιμή. Όταν η :meth:`asend` καλείται για να ξεκινήσει την ασύγχρονη "
+"γεννήτρια, πρέπει να κληθεί με όρισμα :const:`None`, επειδή δεν υπάρχει "
+"καμία έκφραση απόδοσης που θα μπορούσε να λάβει την τιμή."
 
 #: reference/expressions.rst:851
 msgid ""
@@ -1005,6 +1486,15 @@ msgid ""
 "in exception, or raises a different exception, then when the awaitable is "
 "run that exception propagates to the caller of the awaitable."
 msgstr ""
+"Επιστρέφει ένα awaitable που κάνει raise μια εξαίρεση τύπου ``type`` στο "
+"σημείο όπου η ασύγχρονη γεννήτρια είχε παύσει, και επιστρέφει την επόμενη "
+"τιμή που αποδίδεται από τη συνάρτηση γεννήτριας ως την τιμή της εξαίρεσης :"
+"exc:`StopIteration` που γίνεται raise. Αν η ασύγχρονη γεννήτρια τερματίσει "
+"χωρίς να αποδώσει άλλη τιμή, γίνεται raise μια εξαίρεση :exc:"
+"`StopAsyncIteration` από το awaitable. Αν η συνάρτηση γεννήτριας δεν πιάσει "
+"την εξαίρεση που της περάστηκε, ή αν κάνει raise μια διαφορετική εξαίρεση, "
+"τότε όταν εκτελεστεί το awaitable αυτή η εξαίρεση μεταβιβάζεται σε αυτόν που "
+"κάλεσε το awaitable."
 
 #: reference/expressions.rst:872
 msgid ""
@@ -1021,24 +1511,41 @@ msgid ""
 "due to an exception or normal exit, then further calls to :meth:`aclose` "
 "will return an awaitable that does nothing."
 msgstr ""
+"Επιστρέφει ένα awaitable που όταν εκτελεστεί θα προκαλέσει μια :exc:"
+"`GeneratorExit` στη συνάρτηση ασύγχρονης γεννήτριας στο σημείο όπου είχε "
+"παύσει. Αν η συνάρτηση ασύγχρονης γεννήτριας στη συνέχεια τερματιστεί ομαλά, "
+"είναι ήδη κλειστή, ή κάνει raise το :exc:`GeneratorExit` (μη πιάνοντας την "
+"εξαίρεση), τότε το επιστρεφόμενο awaitable θα κάνει raise μια εξαίρεση :exc:"
+"`StopIteration`. Τυχόν περαιτέρω awaitables που επιστρέφονται από επόμενες "
+"κλήσεις στην ασύγχρονη γεννήτρια θα κάνουν raise μια εξαίρεση :exc:"
+"`StopAsyncIteration`. Αν η ασύγχρονη γεννήτρια αποδώσει μια τιμή, γίνεται "
+"raise μια :exc:`RuntimeError` από το awaitable. Αν η ασύγχρονη γεννήτρια "
+"κάνει raise οποιαδήποτε άλλη εξαίρεση, μεταβιβάζεται σε αυτόν που κάλεσε το "
+"awaitable. Αν η ασύγχρονη γεννήτρια έχει ήδη τερματίσει λόγω εξαίρεσης ή "
+"κανονικού τερματισμού, τότε περαιτέρω κλήσεις στην :meth:`aclose` θα "
+"επιστρέψουν ένα awaitable που δεν κάνει τίποτα."
 
 #: reference/expressions.rst:888
 msgid "Primaries"
-msgstr ""
+msgstr "Πρωτεύοντα"
 
 #: reference/expressions.rst:892
 msgid ""
 "Primaries represent the most tightly bound operations of the language. Their "
 "syntax is:"
 msgstr ""
+"Τα πρωτεύοντα αντιπροσωπεύουν τις πιο στενά συνδεδεμένες λειτουργίες της "
+"γλώσσας. Η σύνταξή τους είναι:"
 
 #: reference/expressions.rst:902
 msgid "Attribute references"
-msgstr ""
+msgstr "Αναφορές χαρακτηριστικών"
 
 #: reference/expressions.rst:908
 msgid "An attribute reference is a primary followed by a period and a name:"
 msgstr ""
+"Μια αναφορά χαρακτηριστικού είναι ένα πρωτεύον που ακολουθείται από μια "
+"τελεία και ένα όνομα:"
 
 #: reference/expressions.rst:918
 msgid ""
@@ -1048,6 +1555,13 @@ msgid ""
 "determined by the object.  Multiple evaluations of the same attribute "
 "reference may yield different objects."
 msgstr ""
+"Το πρωτεύον πρέπει να αποτιμάται σε ένα αντικείμενο ενός τύπου που "
+"υποστηρίζει αναφορές χαρακτηριστικών, κάτι που κάνουν τα περισσότερα "
+"αντικείμενα. Στη συνέχεια ζητείται από αυτό το αντικείμενο να παράγει το "
+"χαρακτηριστικό της οποίας το όνομα είναι το αναγνωριστικό. Ο τύπος και η "
+"τιμή που παράγεται καθορίζονται από το αντικείμενο. Πολλαπλές αποτιμήσεις "
+"της ίδιας αναφοράς χαρακτηριστικού μπορεί να αποδώσουν διαφορετικά "
+"αντικείμενα."
 
 #: reference/expressions.rst:924
 msgid ""
@@ -1057,16 +1571,23 @@ msgid ""
 "method is called first and either returns a value or "
 "raises :exc:`AttributeError` if the attribute is not available."
 msgstr ""
+"Αυτή η παραγωγή μπορεί να προσαρμοστεί υπερκαλύπτοντας τη μέθοδο :meth:"
+"`~object.__getattribute__` ή τη μέθοδο :meth:`~object.__getattr__`. Η "
+"μέθοδος :meth:`!__getattribute__` καλείται πρώτη και είτε επιστρέφει μια "
+"τιμή είτε κάνει raise το :exc:`AttributeError`, αν η ιδιότητα δεν είναι "
+"διαθέσιμη."
 
 #: reference/expressions.rst:930
 msgid ""
 "If an :exc:`AttributeError` is raised and the object has a :meth:`!"
 "__getattr__` method, that method is called as a fallback."
 msgstr ""
+"Αν γίνει raise το :exc:`AttributeError` και το αντικείμενο έχει μια μέθοδο :"
+"meth:`!__getattr__`, αυτή η μέθοδος καλείται ως εναλλακτική."
 
 #: reference/expressions.rst:936
 msgid "Subscriptions"
-msgstr ""
+msgstr "Δεικτοδοτήσεις"
 
 #: reference/expressions.rst:951
 msgid ""
@@ -1075,12 +1596,18 @@ msgid ""
 "a :term:`generic class <generic type>` will generally return "
 "a :ref:`GenericAlias <types-genericalias>` object."
 msgstr ""
+"Η συνδρομή ενός στιγμιότυπου μιας :ref:`κλάσης υποδοχέα <sequence-types>` θα "
+"επιλέξει γενικά ένα στοιχείο από τον υποδοχέα. Η συνδρομή μιας :term:"
+"`generic class <generic type>` θα επιστρέψει γενικά ένα αντικείμενο :ref:"
+"`GenericAlias <types-genericalias>`."
 
 #: reference/expressions.rst:959
 msgid ""
 "When an object is subscripted, the interpreter will evaluate the primary and "
 "the expression list."
 msgstr ""
+"Όταν ένα αντικείμενο δεικτοδοτείται, ο διερμηνέας θα αποτιμήσει το πρωτεύον "
+"και τη λίστα εκφράσεων."
 
 #: reference/expressions.rst:962
 msgid ""
@@ -1092,6 +1619,14 @@ msgid ""
 "``__class_getitem__`` is called instead of ``__getitem__``, "
 "see :ref:`classgetitem-versus-getitem`."
 msgstr ""
+"Το πρωτεύον πρέπει να αποτιμάται σε ένα αντικείμενο που υποστηρίζει "
+"δεικτοδότηση. Ένα αντικείμενο μπορεί να υποστηρίζει δεικτοδότηση ορίζοντας "
+"τη μία ή και τις δύο από τις :meth:`~object.__getitem__` και :meth:`~object."
+"__class_getitem__`. Όταν το πρωτεύον δεικτοδοτείται, το αποτέλεσμα "
+"αποτίμησης της λίστας εκφράσεων θα περαστεί σε μία από αυτές τις μεθόδους. "
+"Για περισσότερες λεπτομέρειες σχετικά με το πότε καλείται η "
+"``__class_getitem__`` αντί της ``__getitem__``, δείτε το :ref:`classgetitem-"
+"versus-getitem`."
 
 #: reference/expressions.rst:969
 msgid ""
@@ -1100,16 +1635,24 @@ msgid ""
 "a :class:`tuple` containing the items of the expression list. Otherwise, the "
 "expression list will evaluate to the value of the list's sole member."
 msgstr ""
+"Αν η λίστα εκφράσεων περιέχει τουλάχιστον ένα κόμμα, ή αν οποιαδήποτε από "
+"τις εκφράσεις έχει αστερίσκο, η λίστα εκφράσεων θα αποτιμηθεί σε ένα :class:"
+"`tuple` που περιέχει τα στοιχεία της λίστας εκφράσεων. Διαφορετικά, η λίστα "
+"εκφράσεων θα αποτιμηθεί στην τιμή του μοναδικού μέλους της λίστας."
 
 #: reference/expressions.rst:974
 msgid "Expressions in an expression list may be starred. See :pep:`646`."
 msgstr ""
+"Οι εκφράσεις σε μια λίστα εκφράσεων μπορεί να φέρουν αστερίσκο. Δείτε το :"
+"pep:`646`."
 
 #: reference/expressions.rst:977
 msgid ""
 "For built-in objects, there are two types of objects that support "
 "subscription via :meth:`~object.__getitem__`:"
 msgstr ""
+"Για ενσωματωμένα αντικείμενα, υπάρχουν δύο τύποι αντικειμένων που "
+"υποστηρίζουν δεικτοδότηση μέσω της :meth:`~object.__getitem__`:"
 
 #: reference/expressions.rst:980
 msgid ""
@@ -1118,6 +1661,11 @@ msgid ""
 "subscription selects the value in the mapping that corresponds to that key. "
 "An example of a builtin mapping class is the :class:`dict` class."
 msgstr ""
+"Αντιστοιχίσεις. Αν το πρωτεύον είναι μια :term:`mapping`, η λίστα εκφράσεων "
+"πρέπει να αποτιμάται σε ένα αντικείμενο του οποίου η τιμή είναι ένα από τα "
+"κλειδιά της αντιστοίχισης, και η δεικτοδότηση επιλέγει την τιμή στην "
+"αντιστοίχιση που αντιστοιχεί σε αυτό το κλειδί. Ένα παράδειγμα μιας "
+"ενσωματωμένης κλάσης αντιστοίχισης είναι η κλάση :class:`dict`."
 
 #: reference/expressions.rst:984
 msgid ""
@@ -1126,6 +1674,11 @@ msgid ""
 "following section). Examples of builtin sequence classes include "
 "the :class:`str`, :class:`list` and :class:`tuple` classes."
 msgstr ""
+"Ακολουθίες. Αν το πρωτεύον είναι μια :term:`sequence`, η λίστα εκφράσεων "
+"πρέπει να αποτιμάται σε έναν ακέραιο :class:`int` ή ένα τεμάχιο :class:"
+"`slice` (όπως αναφέρεται στην επόμενη ενότητα). Παραδείγματα ενσωματωμένων "
+"κλάσεων ακολουθίας περιλαμβάνουν τις κλάσεις :class:`str`, :class:`list` "
+"και :class:`tuple`."
 
 #: reference/expressions.rst:989
 msgid ""
@@ -1140,6 +1693,18 @@ msgid ""
 "object's :meth:`~object.__getitem__` method, subclasses overriding this "
 "method will need to explicitly add that support."
 msgstr ""
+"Η τυπική σύνταξη δεν κάνει καμία ειδική πρόβλεψη για αρνητικούς δείκτες "
+"στις :term:`ακολουθίες <sequence>`. Ωστόσο, όλες οι ενσωματωμένες ακολουθίες "
+"παρέχουν μια μέθοδο :meth:`~object.__getitem__` η οποία ερμηνεύει τους "
+"αρνητικούς δείκτες προσθέτοντας το μήκος της ακολουθίας στον δείκτη, έτσι "
+"ώστε, για παράδειγμα, το ``x[-1]`` να επιλέγει το τελευταίο στοιχείο του "
+"``x``. Η τιμή που προκύπτει πρέπει να είναι ένας μη αρνητικός ακέραιος "
+"μικρότερος από τον αριθμό των στοιχείων στην ακολουθία, και η δεικτοδότηση "
+"επιλέγει το στοιχείο του οποίου ο δείκτης είναι αυτή η τιμή (μετρώντας από "
+"το μηδέν). Εφόσον η υποστήριξη για αρνητικούς δείκτες και τεμαχισμό λαμβάνει "
+"χώρα στη μέθοδο :meth:`~object.__getitem__` του αντικειμένου, οι υποκλάσεις "
+"που παρακάμπτουν αυτήν τη μέθοδο θα χρειαστεί να προσθέσουν ρητά αυτήν την "
+"υποστήριξη."
 
 #: reference/expressions.rst:1003
 msgid ""
@@ -1147,10 +1712,13 @@ msgid ""
 "*characters*. A character is not a separate data type but a string of "
 "exactly one character."
 msgstr ""
+"Ένα :class:`string <str>` είναι ένα ειδικό είδος ακολουθίας της οποίας τα "
+"στοιχεία είναι *χαρακτήρες*. Ο χαρακτήρας δεν είναι ξεχωριστός τύπος "
+"δεδομένων αλλά ένα αλφαριθμητικό με ακριβώς έναν χαρακτήρα."
 
 #: reference/expressions.rst:1011
 msgid "Slicings"
-msgstr ""
+msgstr "Τεμαχισμοί"
 
 #: reference/expressions.rst:1025
 msgid ""
@@ -1158,6 +1726,10 @@ msgid ""
 "tuple or list).  Slicings may be used as expressions or as targets in "
 "assignment or :keyword:`del` statements.  The syntax for a slicing:"
 msgstr ""
+"Ένας τεμαχισμός επιλέγει ένα εύρος στοιχείων σε ένα αντικείμενο ακολουθίας "
+"(π.χ., ένα αλφαριθμητικό, μια πλειάδα ή μια λίστα). Οι τεμαχισμοί μπορούν να "
+"χρησιμοποιηθούν ως εκφράσεις ή ως στόχοι σε προτάσεις ανάθεσης ή :keyword:"
+"`del`. Η σύνταξη για έναν τεμαχισμό:"
 
 #: reference/expressions.rst:1038
 msgid ""
@@ -1168,6 +1740,13 @@ msgid ""
 "subscription takes priority over the interpretation as a slicing (this is "
 "the case if the slice list contains no proper slice)."
 msgstr ""
+"Υπάρχει ασάφεια στην τυπική σύνταξη εδώ: οτιδήποτε μοιάζει με λίστα "
+"εκφράσεων μοιάζει επίσης με λίστα τμημάτων, επομένως οποιαδήποτε "
+"δεικτοδότηση μπορεί να ερμηνευτεί ως τεμαχισμός. Αντί να περιπλέξουμε "
+"περαιτέρω τη σύνταξη, αυτό αποσαφηνίζεται ορίζοντας ότι σε αυτήν την "
+"περίπτωση η ερμηνεία ως δεικτοδότηση έχει προτεραιότητα έναντι της ερμηνείας "
+"ως τεμαχισμού (αυτό ισχύει αν η λίστα τμημάτων δεν περιέχει κανένα κανονικό "
+"τμήμα)."
 
 #: reference/expressions.rst:1050
 msgid ""
@@ -1183,22 +1762,38 @@ msgid ""
 "as lower bound, upper bound and stride, respectively, substituting ``None`` "
 "for missing expressions."
 msgstr ""
+"Η σημασιολογία για έναν τεμαχισμό είναι η εξής. Το πρωτεύον δεικτοδοτείται "
+"(χρησιμοποιώντας την ίδια μέθοδο :meth:`~object.__getitem__` όπως στην "
+"κανονική δεικτοδότηση) με ένα κλειδί που κατασκευάζεται από τη λίστα "
+"τμημάτων, ως εξής. Αν η λίστα τμημάτων περιέχει τουλάχιστον ένα κόμμα, το "
+"κλειδί είναι μια πλειάδα που περιέχει τη μετατροπή των στοιχείων του "
+"τμήματος· διαφορετικά, η μετατροπή του μοναδικού στοιχείου τμήματος είναι το "
+"κλειδί. Η μετατροπή ενός στοιχείου τμήματος, που είναι έκφραση, είναι η ίδια "
+"η έκφραση. Η μετατροπή ενός κανονικού τμήματος είναι ένα αντικείμενο "
+"τμήματος (δείτε την ενότητα :ref:`types`) του οποίου οι ιδιότητες :attr:"
+"`~slice.start`, :attr:`~slice.stop` και :attr:`~slice.step` είναι οι τιμές "
+"των εκφράσεων που δίνονται ως κάτω όριο, άνω όριο και βήμα, αντίστοιχα, "
+"αντικαθιστώντας το ``None`` για τις εκφράσεις που λείπουν."
 
 #: reference/expressions.rst:1074
 msgid "Calls"
-msgstr ""
+msgstr "Κλήσεις"
 
 #: reference/expressions.rst:1076
 msgid ""
 "A call calls a callable object (e.g., a :term:`function`) with a possibly "
 "empty series of :term:`arguments <argument>`:"
 msgstr ""
+"Μια κλήση καλεί ένα καλέσιμο αντικείμενο (π.χ., ένα :term:`function`) με μια "
+"πιθανώς κενή σειρά :term:`ορισμάτων <argument>`:"
 
 #: reference/expressions.rst:1093
 msgid ""
 "An optional trailing comma may be present after the positional and keyword "
 "arguments but does not affect the semantics."
 msgstr ""
+"Ένα προαιρετικό κόμμα στο τέλος μπορεί να υπάρχει μετά τα ορίσματα θέσης και "
+"λέξης-κλειδιού αλλά δεν επηρεάζει τη σημασιολογία."
 
 #: reference/expressions.rst:1099
 msgid ""
@@ -1209,6 +1804,13 @@ msgid ""
 "attempted.  Please refer to section :ref:`function` for the syntax of "
 "formal :term:`parameter` lists."
 msgstr ""
+"Το πρωτεύον πρέπει να αποτιμάται σε ένα καλέσιμο αντικείμενο (συναρτήσεις "
+"ορισμένες από τον χρήστη, ενσωματωμένες συναρτήσεις, μέθοδοι ενσωματωμένων "
+"αντικειμένων, αντικείμενα κλάσεων, μέθοδοι στιγμιοτύπων κλάσεων, και όλα τα "
+"αντικείμενα που έχουν μια μέθοδο :meth:`~object.__call__` είναι καλέσιμα). "
+"Όλες οι εκφράσεις ορισμάτων αποτιμώνται πριν επιχειρηθεί η κλήση. Παρακαλώ "
+"ανατρέξτε στην ενότητα :ref:`function` για τη σύνταξη των τυπικών λιστών :"
+"term:`parameter`."
 
 #: reference/expressions.rst:1107
 msgid ""
@@ -1230,6 +1832,25 @@ msgid ""
 "specified, a :exc:`TypeError` exception is raised.  Otherwise, the list of "
 "filled slots is used as the argument list for the call."
 msgstr ""
+"Αν υπάρχουν ορίσματα λέξης-κλειδιού, μετατρέπονται πρώτα σε ορίσματα θέσης, "
+"ως εξής. Αρχικά, δημιουργείται μια λίστα από μη συμπληρωμένες θέσεις για τις "
+"τυπικές παραμέτρους. Αν υπάρχουν N ορίσματα θέσης, τοποθετούνται στις πρώτες "
+"N θέσεις. Στη συνέχεια, για κάθε όρισμα λέξης-κλειδιού, το αναγνωριστικό "
+"χρησιμοποιείται για να καθοριστεί η αντίστοιχη θέση (αν το αναγνωριστικό "
+"είναι το ίδιο με το όνομα της πρώτης τυπικής παραμέτρου, χρησιμοποιείται η "
+"πρώτη θέση, και ούτω καθεξής). Αν η θέση είναι ήδη συμπληρωμένη, γίνεται "
+"raise μια εξαίρεση :exc:`TypeError`. Διαφορετικά, το όρισμα τοποθετείται στη "
+"θέση, συμπληρώνοντάς την (ακόμα και αν η έκφραση είναι ``None``, συμπληρώνει "
+"τη θέση). Όταν έχουν υποστεί επεξεργασία όλα τα ορίσματα, οι θέσεις που "
+"είναι ακόμα μη συμπληρωμένες συμπληρώνονται με την αντίστοιχη προεπιλεγμένη "
+"τιμή από τον ορισμό της συνάρτησης. (Οι προεπιλεγμένες τιμές υπολογίζονται, "
+"μία φορά, όταν ορίζεται η συνάρτηση· επομένως, ένα μεταβλητό αντικείμενο "
+"όπως μια λίστα ή ένα λεξικό που χρησιμοποιείται ως προεπιλεγμένη τιμή θα "
+"μοιράζεται από όλες τις κλήσεις που δεν καθορίζουν μια τιμή ορίσματος για "
+"την αντίστοιχη θέση· αυτό θα πρέπει συνήθως να αποφεύγεται.) Αν υπάρχουν "
+"τυχόν μη συμπληρωμένες θέσεις για τις οποίες δεν καθορίζεται προεπιλεγμένη "
+"τιμή, γίνεται raise μια εξαίρεση :exc:`TypeError`. Διαφορετικά, η λίστα των "
+"συμπληρωμένων θέσεων χρησιμοποιείται ως η λίστα ορισμάτων για την κλήση."
 
 #: reference/expressions.rst:1127
 msgid ""
@@ -1239,6 +1860,12 @@ msgid ""
 "CPython, this is the case for functions implemented in C that "
 "use :c:func:`PyArg_ParseTuple` to parse their arguments."
 msgstr ""
+"Μια υλοποίηση μπορεί να παρέχει ενσωματωμένες συναρτήσεις των οποίων οι "
+"παράμετροι θέσης δεν έχουν ονόματα, ακόμα και αν είναι 'επώνυμες' για τους "
+"σκοπούς της τεκμηρίωσης, και οι οποίες επομένως δεν μπορούν να παρασχεθούν "
+"μέσω λέξης-κλειδιού. Στην CPython, αυτό συμβαίνει για συναρτήσεις "
+"υλοποιημένες σε C που χρησιμοποιούν την :c:func:`PyArg_ParseTuple` για την "
+"ανάλυση των ορισμάτων τους."
 
 #: reference/expressions.rst:1133
 msgid ""
@@ -1248,6 +1875,12 @@ msgid ""
 "parameter receives a tuple containing the excess positional arguments (or an "
 "empty tuple if there were no excess positional arguments)."
 msgstr ""
+"Αν υπάρχουν περισσότερα ορίσματα θέσης από ό,τι θέσεις τυπικών παραμέτρων, "
+"γίνεται raise μια εξαίρεση :exc:`TypeError`, εκτός αν υπάρχει μια τυπική "
+"παράμετρος που χρησιμοποιεί τη σύνταξη ``*identifier``· σε αυτή την "
+"περίπτωση, αυτή η τυπική παράμετρος λαμβάνει μια πλειάδα που περιέχει τα "
+"πλεονάζοντα ορίσματα θέσης (ή μια άδεια πλειάδα αν δεν υπάρχουν πλεονάζοντα "
+"ορίσματα θέσης)."
 
 #: reference/expressions.rst:1139
 msgid ""
@@ -1258,6 +1891,13 @@ msgid ""
 "keywords as keys and the argument values as corresponding values), or a "
 "(new) empty dictionary if there were no excess keyword arguments."
 msgstr ""
+"Αν οποιοδήποτε όρισμα λέξης-κλειδιού δεν αντιστοιχεί σε όνομα τυπικής "
+"παραμέτρου, γίνεται raise μια εξαίρεση :exc:`TypeError`, εκτός αν υπάρχει "
+"μια τυπική παράμετρος που χρησιμοποιεί τη σύνταξη ``**identifier``· σε αυτή "
+"την περίπτωση, αυτή η τυπική παράμετρος λαμβάνει ένα λεξικό που περιέχει τα "
+"πλεονάζοντα ορίσματα λέξης-κλειδιού (χρησιμοποιώντας τις λέξεις-κλειδιά ως "
+"κλειδιά και τις τιμές των ορισμάτων ως αντίστοιχες τιμές), ή ένα (νέο) άδειο "
+"λεξικό αν δεν υπάρχουν πλεονάζοντα ορίσματα λέξης-κλειδιού."
 
 #: reference/expressions.rst:1150
 msgid ""
@@ -1268,6 +1908,12 @@ msgid ""
 "this is equivalent to a call with M+4 positional arguments *x1*, *x2*, "
 "*y1*, ..., *yM*, *x3*, *x4*."
 msgstr ""
+"Αν η σύνταξη ``*expression`` εμφανίζεται στην κλήση της συνάρτησης, η "
+"``expression`` πρέπει να αποτιμάται σε ένα :term:`iterable`. Τα στοιχεία των "
+"iterables αντιμετωπίζονται σαν να είναι πρόσθετα ορίσματα θέσης. Για την "
+"κλήση ``f(x1, x2, *y, x3, x4)``, αν το *y* αποτιμάται σε μια ακολουθία "
+"*y1*, ..., *yM*, αυτό είναι ισοδύναμο με μια κλήση με M+4 ορίσματα θέσης "
+"*x1*, *x2*, *y1*, ..., *yM*, *x3*, *x4*."
 
 #: reference/expressions.rst:1157
 msgid ""
@@ -1275,6 +1921,10 @@ msgid ""
 "*after* explicit keyword arguments, it is processed *before* the keyword "
 "arguments (and any ``**expression`` arguments -- see below).  So::"
 msgstr ""
+"Μια συνέπεια αυτού είναι ότι παρόλο που η σύνταξη ``*expression`` μπορεί να "
+"εμφανιστεί *μετά* από ρητά ορίσματα λέξης-κλειδιού, επεξεργάζεται *πριν* από "
+"τα ορίσματα λέξης-κλειδιού (και τυχόν ορίσματα ``**expression`` -- δείτε "
+"παρακάτω). Έτσι::"
 
 #: reference/expressions.rst:1161
 msgid ""
@@ -1290,12 +1940,26 @@ msgid ""
 ">>> f(1, *(2,))\n"
 "1 2"
 msgstr ""
+">>> def f(a, b):\n"
+"...     print(a, b)\n"
+"...\n"
+">>> f(b=1, *(2,))\n"
+"2 1\n"
+">>> f(a=1, *(2,))\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: f() got multiple values for keyword argument 'a'\n"
+">>> f(1, *(2,))\n"
+"1 2"
 
 #: reference/expressions.rst:1173
 msgid ""
 "It is unusual for both keyword arguments and the ``*expression`` syntax to "
 "be used in the same call, so in practice this confusion does not often arise."
 msgstr ""
+"Είναι ασυνήθιστο να χρησιμοποιούνται τόσο ορίσματα λέξης-κλειδιού όσο και η "
+"σύνταξη ``*expression`` στην ίδια κλήση, οπότε στην πράξη αυτή η σύγχυση δεν "
+"προκύπτει συχνά."
 
 #: reference/expressions.rst:1179
 msgid ""
@@ -1305,6 +1969,12 @@ msgid ""
 "given a value (by an explicit keyword argument, or from another unpacking), "
 "a :exc:`TypeError` exception is raised."
 msgstr ""
+"Αν η σύνταξη ``**expression`` εμφανίζεται στην κλήση της συνάρτησης, η "
+"``expression`` πρέπει να αποτιμάται σε ένα :term:`mapping`, τα περιεχόμενα "
+"της οποίας αντιμετωπίζονται ως πρόσθετα ορίσματα λέξης-κλειδιού. Αν σε μια "
+"παράμετρο που ταιριάζει με ένα κλειδί έχει ήδη δοθεί μια τιμή (από ένα ρητό "
+"όρισμα λέξης-κλειδιού, ή από άλλη αποσυσκευασία), γίνεται raise μια "
+"εξαίρεση :exc:`TypeError`."
 
 #: reference/expressions.rst:1185
 msgid ""
@@ -1317,12 +1987,24 @@ msgid ""
 "parameter, if there is one, or if there is not, a :exc:`TypeError` exception "
 "is raised."
 msgstr ""
+"Όταν χρησιμοποιείται η ``**expression``, κάθε κλειδί σε αυτή την "
+"αντιστοίχιση πρέπει να είναι ένα αλφαριθμητικό. Κάθε τιμή από την "
+"αντιστοίχιση ανατίθεται στην πρώτη τυπική παράμετρο που είναι επιλέξιμη για "
+"ανάθεση μέσω λέξης-κλειδιού και της οποίας το όνομα είναι ίσο με το κλειδί. "
+"Ένα κλειδί δεν χρειάζεται να είναι αναγνωριστικό της Python (π.χ. το ``\"max-"
+"temp °F\"`` είναι αποδεκτό, αν και δεν θα ταιριάξει με καμία τυπική "
+"παράμετρο που θα μπορούσε να δηλωθεί). Αν δεν υπάρχει αντιστοιχία σε τυπική "
+"παράμετρο, το ζεύγος κλειδιού-τιμής συλλέγεται από την παράμετρο ``**``, αν "
+"υπάρχει, ή αν δεν υπάρχει, γίνεται raise μια εξαίρεση :exc:`TypeError`."
 
 #: reference/expressions.rst:1195
 msgid ""
 "Formal parameters using the syntax ``*identifier`` or ``**identifier`` "
 "cannot be used as positional argument slots or as keyword argument names."
 msgstr ""
+"Τυπικές παράμετροι που χρησιμοποιούν τη σύνταξη ``*identifier`` ή "
+"``**identifier`` δεν μπορούν να χρησιμοποιηθούν ως θέσεις ορισμάτων ή ως "
+"ονόματα ορισμάτων λέξης-κλειδιού."
 
 #: reference/expressions.rst:1198
 msgid ""
@@ -1330,6 +2012,10 @@ msgid ""
 "arguments may follow iterable unpackings (``*``), and keyword arguments may "
 "follow dictionary unpackings (``**``). Originally proposed by :pep:`448`."
 msgstr ""
+"Οι κλήσεις συναρτήσεων δέχονται οποιονδήποτε αριθμό αποσυσκευασιών ``*`` και "
+"``**``, τα ορίσματα θέσης μπορούν να ακολουθούν αποσυσκευασίες iterable "
+"(``*``), και τα ορίσματα λέξης-κλειδιού μπορούν να ακολουθούν αποσυσκευασίες "
+"λεξικού (``**``). Προτάθηκε αρχικά από το :pep:`448`."
 
 #: reference/expressions.rst:1204
 msgid ""
@@ -1337,14 +2023,17 @@ msgid ""
 "exception.  How this value is computed depends on the type of the callable "
 "object."
 msgstr ""
+"Μια κλήση επιστρέφει πάντα κάποια τιμή, πιθανώς ``None``, εκτός αν κάνει "
+"raise μια εξαίρεση. Το πώς υπολογίζεται αυτή η τιμή εξαρτάται από τον τύπο "
+"του καλέσιμου αντικειμένου."
 
 #: reference/expressions.rst:1208
 msgid "If it is---"
-msgstr ""
+msgstr "Αν είναι---"
 
 #: reference/expressions.rst:1210
 msgid "a user-defined function:"
-msgstr ""
+msgstr "μια ορισμένη από τον χρήστη συνάρτηση:"
 
 #: reference/expressions.rst:1217
 msgid ""
@@ -1356,28 +2045,37 @@ msgid ""
 "without executing a :keyword:`return` statement, the return value is "
 "``None``."
 msgstr ""
+"Το μπλοκ κώδικα της συνάρτησης εκτελείται, περνώντας του τη λίστα ορισμάτων. "
+"Το πρώτο πράγμα που θα κάνει το μπλοκ κώδικα είναι να συνδέσει τις τυπικές "
+"παραμέτρους με τα ορίσματα· αυτό περιγράφεται στην ενότητα :ref:`function`. "
+"Όταν το μπλοκ κώδικα εκτελεί μια πρόταση :keyword:`return`, αυτή καθορίζει "
+"την τιμή επιστροφής της κλήσης της συνάρτησης. Αν η εκτέλεση φτάσει στο "
+"τέλος του μπλοκ κώδικα χωρίς να εκτελέσει μια πρόταση :keyword:`return`, η "
+"τιμή επιστροφής είναι ``None``."
 
 #: reference/expressions.rst:1224
 msgid "a built-in function or method:"
-msgstr ""
+msgstr "μια ενσωματωμένη συνάρτηση ή μέθοδος:"
 
 #: reference/expressions.rst:1235
 msgid ""
 "The result is up to the interpreter; see :ref:`built-in-funcs` for the "
 "descriptions of built-in functions and methods."
 msgstr ""
+"Το αποτέλεσμα εξαρτάται από τον διερμηνέα· δείτε το :ref:`built-in-funcs` "
+"για τις περιγραφές των ενσωματωμένων συναρτήσεων και μεθόδων."
 
 #: reference/expressions.rst:1238
 msgid "a class object:"
-msgstr ""
+msgstr "ένα αντικείμενο κλάσης:"
 
 #: reference/expressions.rst:1243
 msgid "A new instance of that class is returned."
-msgstr ""
+msgstr "Επιστρέφεται ένα νέο στιγμιότυπο αυτής της κλάσης."
 
 #: reference/expressions.rst:1245
 msgid "a class instance method:"
-msgstr ""
+msgstr "μια μέθοδος στιγμιoτύπου κλάσης:"
 
 #: reference/expressions.rst:1251
 msgid ""
@@ -1385,36 +2083,47 @@ msgid ""
 "that is one longer than the argument list of the call: the instance becomes "
 "the first argument."
 msgstr ""
+"Η αντίστοιχη ορισμένη από τον χρήστη συνάρτηση καλείται, με μια λίστα "
+"ορισμάτων που είναι κατά ένα μεγαλύτερη από τη λίστα ορισμάτων της κλήσης: "
+"το στιγμιότυπο γίνεται το πρώτο όρισμα."
 
 #: reference/expressions.rst:1255
 msgid "a class instance:"
-msgstr ""
+msgstr "ένα στιγμιότυπο κλάσης:"
 
 #: reference/expressions.rst:1260
 msgid ""
 "The class must define a :meth:`~object.__call__` method; the effect is then "
 "the same as if that method was called."
 msgstr ""
+"Η κλάση πρέπει να ορίζει μια μέθοδο :meth:`~object.__call__`· το αποτέλεσμα "
+"είναι τότε το ίδιο σαν να είχε κληθεί αυτή η μέθοδος."
 
 #: reference/expressions.rst:2082
 msgid "Await expression"
-msgstr ""
+msgstr "Έκφραση await"
 
 #: reference/expressions.rst:1270
 msgid ""
 "Suspend the execution of :term:`coroutine` on an :term:`awaitable` object. "
 "Can only be used inside a :term:`coroutine function`."
 msgstr ""
+"Αναστέλλει την εκτέλεση της :term:`coroutine` πάνω σε ένα αντικείμενο :term:"
+"`awaitable`. Μπορεί να χρησιμοποιηθεί μόνο μέσα σε μια :term:`coroutine "
+"function`."
 
 #: reference/expressions.rst:1282
 msgid "The power operator"
-msgstr ""
+msgstr "Ο τελεστής δύναμης"
 
 #: reference/expressions.rst:1288
 msgid ""
 "The power operator binds more tightly than unary operators on its left; it "
 "binds less tightly than unary operators on its right.  The syntax is:"
 msgstr ""
+"Ο τελεστής δύναμης δεσμεύει πιο σφιχτά από τους μοναδιαίους τελεστές στα "
+"αριστερά του· δεσμεύει λιγότερο σφιχτά από τους μοναδιαίους τελεστές στα "
+"δεξιά του. Η σύνταξη είναι:"
 
 #: reference/expressions.rst:1294
 msgid ""
@@ -1422,6 +2131,10 @@ msgid ""
 "operators are evaluated from right to left (this does not constrain the "
 "evaluation order for the operands): ``-1**2`` results in ``-1``."
 msgstr ""
+"Έτσι, σε μια ακολουθία τελεστών δύναμης και μοναδιαίων τελεστών χωρίς "
+"παρενθέσεις, οι τελεστές αποτιμώνται από τα δεξιά προς τα αριστερά (αυτό δεν "
+"περιορίζει τη σειρά αποτίμησης για τους τελεστέους): το ``-1**2`` έχει ως "
+"αποτέλεσμα ``-1``."
 
 #: reference/expressions.rst:1298
 msgid ""
@@ -1430,6 +2143,11 @@ msgid ""
 "to the power of its right argument.  The numeric arguments are first "
 "converted to a common type, and the result is of that type."
 msgstr ""
+"Ο τελεστής δύναμης έχει την ίδια σημασιολογία με την ενσωματωμένη συνάρτηση :"
+"func:`pow`, όταν καλείται με δύο ορίσματα: αποδίδει το αριστερό του όρισμα "
+"υψωμένο στη δύναμη του δεξιού του ορίσματος. Τα αριθμητικά ορίσματα "
+"μετατρέπονται πρώτα σε έναν κοινό τύπο, και το αποτέλεσμα είναι αυτού του "
+"τύπου."
 
 #: reference/expressions.rst:1303
 msgid ""
@@ -1438,6 +2156,11 @@ msgid ""
 "float and a float result is delivered. For example, ``10**2`` returns "
 "``100``, but ``10**-2`` returns ``0.01``."
 msgstr ""
+"Για ακέραιους τελεστέους, το αποτέλεσμα έχει τον ίδιο τύπο με τους "
+"τελεστέους, εκτός αν το δεύτερο όρισμα είναι αρνητικό· σε αυτή την "
+"περίπτωση, όλα τα ορίσματα μετατρέπονται σε float και παραδίδεται ένα "
+"αποτέλεσμα float. Για παράδειγμα, το ``10**2`` επιστρέφει ``100``, αλλά το "
+"``10**-2`` επιστρέφει ``0.01``."
 
 #: reference/expressions.rst:1308
 msgid ""
@@ -1446,20 +2169,28 @@ msgid ""
 "a :class:`complex` number. (In earlier versions it raised "
 "a :exc:`ValueError`.)"
 msgstr ""
+"Η ύψωση του ``0.0`` σε αρνητική δύναμη έχει ως αποτέλεσμα να γίνει raise το :"
+"exc:`ZeroDivisionError`. Η ύψωση ενός αρνητικού αριθμού σε κλασματική δύναμη "
+"έχει ως αποτέλεσμα έναν :class:`complex` αριθμό. (Σε παλαιότερες εκδόσεις "
+"γινόταν raise το :exc:`ValueError`.)"
 
 #: reference/expressions.rst:1312
 msgid ""
 "This operation can be customized using the special :meth:`~object.__pow__` "
 "and :meth:`~object.__rpow__` methods."
 msgstr ""
+"Αυτή η λειτουργία μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__pow__` και :meth:`~object.__rpow__`."
 
 #: reference/expressions.rst:1318
 msgid "Unary arithmetic and bitwise operations"
-msgstr ""
+msgstr "Μοναδιαίες αριθμητικές και bitwise λειτουργίες"
 
 #: reference/expressions.rst:1324
 msgid "All unary arithmetic and bitwise operations have the same priority:"
 msgstr ""
+"Όλες οι μοναδιαίες αριθμητικές και bitwise λειτουργίες έχουν την ίδια "
+"προτεραιότητα:"
 
 #: reference/expressions.rst:1335
 msgid ""
@@ -1467,12 +2198,18 @@ msgid ""
 "argument; the operation can be overridden with the :meth:`~object.__neg__` "
 "special method."
 msgstr ""
+"Ο μοναδιαίος τελεστής ``-`` (μείον) αποδίδει την αρνητικότητα του "
+"αριθμητικού του ορίσματος· η λειτουργία μπορεί να υπερκαλυφθεί με την ειδική "
+"μέθοδο :meth:`~object.__neg__`."
 
 #: reference/expressions.rst:1343
 msgid ""
 "The unary ``+`` (plus) operator yields its numeric argument unchanged; the "
 "operation can be overridden with the :meth:`~object.__pos__` special method."
 msgstr ""
+"Ο μοναδιαίος τελεστής ``+`` (συν) αποδίδει το αριθμητικό του όρισμα "
+"αμετάβλητο· η λειτουργία μπορεί να υπερκαλυφθεί με την ειδική μέθοδο :meth:"
+"`~object.__pos__`."
 
 #: reference/expressions.rst:1350
 msgid ""
@@ -1481,16 +2218,22 @@ msgid ""
 "It only applies to integral numbers or to custom objects that override "
 "the :meth:`~object.__invert__` special method."
 msgstr ""
+"Ο μοναδιαίος τελεστής ``~`` (αντιστροφή) αποδίδει την bitwise αντιστροφή του "
+"ακέραιου ορίσματός του. Η bitwise αντιστροφή του ``x`` ορίζεται ως ``-"
+"(x+1)``. Εφαρμόζεται μόνο σε ακέραιους αριθμούς ή σε προσαρμοσμένα "
+"αντικείμενα που υπερκαλύπτουν την ειδική μέθοδο :meth:`~object.__invert__`."
 
 #: reference/expressions.rst:1359
 msgid ""
 "In all three cases, if the argument does not have the proper type, "
 "a :exc:`TypeError` exception is raised."
 msgstr ""
+"Και στις τρεις περιπτώσεις, αν το όρισμα δεν έχει τον σωστό τύπο, γίνεται "
+"raise μια εξαίρεση :exc:`TypeError`."
 
 #: reference/expressions.rst:1366
 msgid "Binary arithmetic operations"
-msgstr ""
+msgstr "Δυαδικές αριθμητικές λειτουργίες"
 
 #: reference/expressions.rst:1370
 msgid ""
@@ -1499,6 +2242,11 @@ msgid ""
 "Apart from the power operator, there are only two levels, one for "
 "multiplicative operators and one for additive operators:"
 msgstr ""
+"Οι δυαδικές αριθμητικές λειτουργίες έχουν τα συμβατικά επίπεδα "
+"προτεραιότητας. Σημειώστε ότι ορισμένες από αυτές τις λειτουργίες "
+"εφαρμόζονται επίσης σε ορισμένους μη αριθμητικούς τύπους. Εκτός από τον "
+"τελεστή δύναμης, υπάρχουν μόνο δύο επίπεδα, ένα για τους τελεστές "
+"πολλαπλασιασμού και ένα για τους τελεστές πρόσθεσης:"
 
 #: reference/expressions.rst:1385
 msgid ""
@@ -1509,30 +2257,45 @@ msgid ""
 "latter case, sequence repetition is performed; a negative repetition factor "
 "yields an empty sequence."
 msgstr ""
+"Ο τελεστής ``*`` (πολλαπλασιασμός) αποδίδει το γινόμενο των ορισμάτων του. "
+"Τα ορίσματα πρέπει είτε και τα δύο να είναι αριθμοί, είτε το ένα όρισμα να "
+"είναι ακέραιος και το άλλο να είναι ακολουθία. Στην πρώτη περίπτωση, οι "
+"αριθμοί μετατρέπονται σε έναν κοινό πραγματικό τύπο και στη συνέχεια "
+"πολλαπλασιάζονται. Στη δεύτερη περίπτωση, εκτελείται επανάληψη ακολουθίας· "
+"ένας αρνητικός παράγοντας επανάληψης αποδίδει μια κενή ακολουθία."
 
 #: reference/expressions.rst:1391
 msgid ""
 "This operation can be customized using the special :meth:`~object.__mul__` "
 "and :meth:`~object.__rmul__` methods."
 msgstr ""
+"Αυτή η λειτουργία μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__mul__` και :meth:`~object.__rmul__`."
 
 #: reference/expressions.rst:1471 reference/expressions.rst:1486
 msgid ""
 "If only one operand is a complex number, the other operand is converted to a "
 "floating-point number."
 msgstr ""
+"Αν μόνο ένας τελεστέος είναι μιγαδικός αριθμός, ο άλλος τελεστέος "
+"μετατρέπεται σε αριθμό κινητής υποδιαστολής."
 
 #: reference/expressions.rst:1402
 msgid ""
 "The ``@`` (at) operator is intended to be used for matrix multiplication.  "
 "No builtin Python types implement this operator."
 msgstr ""
+"Ο τελεστής ``@`` (at) προορίζεται να χρησιμοποιηθεί για πολλαπλασιασμό "
+"πινάκων. Κανένας ενσωματωμένος τύπος της Python δεν υλοποιεί αυτόν τον "
+"τελεστή."
 
 #: reference/expressions.rst:1405
 msgid ""
 "This operation can be customized using the "
 "special :meth:`~object.__matmul__` and :meth:`~object.__rmatmul__` methods."
 msgstr ""
+"Αυτή η λειτουργία μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__matmul__` και :meth:`~object.__rmatmul__`."
 
 #: reference/expressions.rst:1416
 msgid ""
@@ -1543,6 +2306,13 @@ msgid ""
 "with the 'floor' function applied to the result.  Division by zero raises "
 "the :exc:`ZeroDivisionError` exception."
 msgstr ""
+"Οι τελεστές ``/`` (διαίρεση) και ``//`` (διαίρεση με στρογγυλοποίηση προς τα "
+"κάτω) αποδίδουν το πηλίκο των ορισμάτων τους. Τα αριθμητικά ορίσματα "
+"μετατρέπονται πρώτα σε έναν κοινό τύπο. Η διαίρεση ακεραίων αποδίδει ένα "
+"float, ενώ η διαίρεση ακέραιων με στρογγυλοποίηση προς τα κάτω έχει ως "
+"αποτέλεσμα έναν ακέραιο· το αποτέλεσμα είναι αυτό της μαθηματικής διαίρεσης "
+"με τη συνάρτηση 'floor' εφαρμοσμένη στο αποτέλεσμα. Η διαίρεση με το μηδέν "
+"κάνει raise την εξαίρεση :exc:`ZeroDivisionError`."
 
 #: reference/expressions.rst:1423
 msgid ""
@@ -1552,6 +2322,11 @@ msgid ""
 "special :meth:`~object.__floordiv__` and :meth:`~object.__rfloordiv__` "
 "methods."
 msgstr ""
+"Η λειτουργία της διαίρεσης μπορεί να προσαρμοστεί χρησιμοποιώντας τις "
+"ειδικές μεθόδους :meth:`~object.__truediv__` και :meth:`~object."
+"__rtruediv__`. Η λειτουργία της διαίρεσης με στρογγυλοποίηση προς τα κάτω "
+"μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές μεθόδους :meth:`~object."
+"__floordiv__` και :meth:`~object.__rfloordiv__`."
 
 #: reference/expressions.rst:1432
 msgid ""
@@ -1564,6 +2339,15 @@ msgid ""
 "zero); the absolute value of the result is strictly smaller than the "
 "absolute value of the second operand [#]_."
 msgstr ""
+"Ο τελεστής ``%`` (modulo) αποδίδει το υπόλοιπο από τη διαίρεση του πρώτου "
+"ορίσματος με το δεύτερο. Τα αριθμητικά ορίσματα μετατρέπονται πρώτα σε έναν "
+"κοινό τύπο. Ένα μηδενικό δεξιό όρισμα κάνει raise την εξαίρεση :exc:"
+"`ZeroDivisionError`. Τα ορίσματα μπορεί να είναι αριθμοί κινητής "
+"υποδιαστολής, π.χ., το ``3.14%0.7`` ισούται με ``0.34`` (εφόσον το ``3.14`` "
+"ισούται με ``4*0.7 + 0.34``.) Ο τελεστής modulo αποδίδει πάντα ένα "
+"αποτέλεσμα με το ίδιο πρόσημο με τον δεύτερο τελεστέο του (ή μηδέν)· η "
+"απόλυτη τιμή του αποτελέσματος είναι αυστηρά μικρότερη από την απόλυτη τιμή "
+"του δεύτερου τελεστέου [#]_."
 
 #: reference/expressions.rst:1441
 msgid ""
@@ -1572,6 +2356,10 @@ msgid ""
 "connected with the built-in function :func:`divmod`: ``divmod(x, y) == (x//"
 "y, x%y)``. [#]_."
 msgstr ""
+"Οι τελεστές διαίρεσης με στρογγυλοποίηση προς τα κάτω και modulo συνδέονται "
+"με την ακόλουθη ταυτότητα: ``x == (x//y)*y + (x%y)``. Η διαίρεση με "
+"στρογγυλοποίηση προς τα κάτω και το modulo συνδέονται επίσης με την "
+"ενσωματωμένη συνάρτηση :func:`divmod`: ``divmod(x, y) == (x//y, x%y)``. [#]_."
 
 #: reference/expressions.rst:1446
 msgid ""
@@ -1581,12 +2369,19 @@ msgid ""
 "is described in the Python Library Reference, section :ref:`old-string-"
 "formatting`."
 msgstr ""
+"Εκτός από την εκτέλεση της λειτουργίας modulo σε αριθμούς, ο τελεστής ``%`` "
+"υπερφορτώνεται επίσης από τα αντικείμενα αλφαριθμητικών για να εκτελεί "
+"μορφοποίηση αλφαριθμητικών παλαιού τύπου (γνωστή και ως παρεμβολή). Η "
+"σύνταξη για τη μορφοποίηση αλφαριθμητικών περιγράφεται στην Αναφορά "
+"Βιβλιοθήκης της Python, στην ενότητα :ref:`old-string-formatting`."
 
 #: reference/expressions.rst:1451
 msgid ""
 "The *modulo* operation can be customized using the "
 "special :meth:`~object.__mod__` and :meth:`~object.__rmod__` methods."
 msgstr ""
+"Η λειτουργία *modulo* μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__mod__` και :meth:`~object.__rmod__`."
 
 #: reference/expressions.rst:1454
 msgid ""
@@ -1594,6 +2389,10 @@ msgid ""
 "function are not defined for complex numbers.  Instead, convert to a "
 "floating-point number using the :func:`abs` function if appropriate."
 msgstr ""
+"Ο τελεστής διαίρεσης με στρογγυλοποίηση προς τα κάτω, ο τελεστής modulo και "
+"η συνάρτηση :func:`divmod` δεν ορίζονται για μιγαδικούς αριθμούς. Αντίθετα, "
+"μετατρέψτε σε αριθμό κινητής υποδιαστολής χρησιμοποιώντας τη συνάρτηση :func:"
+"`abs` αν χρειάζεται."
 
 #: reference/expressions.rst:1463
 msgid ""
@@ -1602,39 +2401,55 @@ msgid ""
 "type.  In the former case, the numbers are converted to a common real type "
 "and then added together. In the latter case, the sequences are concatenated."
 msgstr ""
+"Ο τελεστής ``+`` (πρόσθεση) αποδίδει το άθροισμα των ορισμάτων του. Τα "
+"ορίσματα πρέπει είτε και τα δύο να είναι αριθμοί είτε και τα δύο να είναι "
+"ακολουθίες του ίδιου τύπου. Στην πρώτη περίπτωση, οι αριθμοί μετατρέπονται "
+"σε έναν κοινό πραγματικό τύπο και στη συνέχεια προστίθενται. Στη δεύτερη "
+"περίπτωση, οι ακολουθίες συνενώνονται."
 
 #: reference/expressions.rst:1468
 msgid ""
 "This operation can be customized using the special :meth:`~object.__add__` "
 "and :meth:`~object.__radd__` methods."
 msgstr ""
+"Αυτή η λειτουργία μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__add__` και :meth:`~object.__radd__`."
 
 #: reference/expressions.rst:1480
 msgid ""
 "The ``-`` (subtraction) operator yields the difference of its arguments.  "
 "The numeric arguments are first converted to a common real type."
 msgstr ""
+"Ο τελεστής ``-`` (αφαίρεση) αποδίδει τη διαφορά των ορισμάτων του. Τα "
+"αριθμητικά ορίσματα μετατρέπονται πρώτα σε έναν κοινό πραγματικό τύπο."
 
 #: reference/expressions.rst:1483
 msgid ""
 "This operation can be customized using the special :meth:`~object.__sub__` "
 "and :meth:`~object.__rsub__` methods."
 msgstr ""
+"Αυτή η λειτουργία μπορεί να προσαρμοστεί χρησιμοποιώντας τις ειδικές "
+"μεθόδους :meth:`~object.__sub__` και :meth:`~object.__rsub__`."
 
 #: reference/expressions.rst:1494
 msgid "Shifting operations"
-msgstr ""
+msgstr "Λειτουργίες μετατόπισης"
 
 #: reference/expressions.rst:1501
 msgid ""
 "The shifting operations have lower priority than the arithmetic operations:"
 msgstr ""
+"Οι λειτουργίες μετατόπισης έχουν χαμηλότερη προτεραιότητα από τις "
+"αριθμητικές λειτουργίες:"
 
 #: reference/expressions.rst:1506
 msgid ""
 "These operators accept integers as arguments.  They shift the first argument "
 "to the left or right by the number of bits given by the second argument."
 msgstr ""
+"Αυτοί οι τελεστές δέχονται ακέραιους ως ορίσματα. Μετατοπίζουν το πρώτο "
+"όρισμα προς τα αριστερά ή προς τα δεξιά κατά τον αριθμό των bits που δίνεται "
+"από το δεύτερο όρισμα."
 
 #: reference/expressions.rst:1509
 msgid ""
@@ -1643,20 +2458,30 @@ msgid ""
 "The right shift operation can be customized using the "
 "special :meth:`~object.__rshift__` and :meth:`~object.__rrshift__` methods."
 msgstr ""
+"Η λειτουργία αριστερής μετατόπισης μπορεί να προσαρμοστεί χρησιμοποιώντας "
+"τις ειδικές μεθόδους :meth:`~object.__lshift__` και :meth:`~object."
+"__rlshift__`. Η λειτουργία δεξιάς μετατόπισης μπορεί να προσαρμοστεί "
+"χρησιμοποιώντας τις ειδικές μεθόδους :meth:`~object.__rshift__` και :meth:"
+"`~object.__rrshift__`."
 
 #: reference/expressions.rst:1516
 msgid ""
 "A right shift by *n* bits is defined as floor division by ``pow(2,n)``.  A "
 "left shift by *n* bits is defined as multiplication with ``pow(2,n)``."
 msgstr ""
+"Μια δεξιά μετατόπιση κατά *n* bits ορίζεται ως διαίρεση με στρογγυλοποίηση "
+"προς τα κάτω με το ``pow(2,n)``. Μια αριστερή μετατόπιση κατά *n* bits "
+"ορίζεται ως πολλαπλασιασμός με το ``pow(2,n)``."
 
 #: reference/expressions.rst:1523
 msgid "Binary bitwise operations"
-msgstr ""
+msgstr "Δυαδικές λειτουργίες bitwise"
 
 #: reference/expressions.rst:1527
 msgid "Each of the three bitwise operations has a different priority level:"
 msgstr ""
+"Κάθε μία από τις τρεις λειτουργίες bitwise έχει διαφορετικό επίπεδο "
+"προτεραιότητας:"
 
 #: reference/expressions.rst:1538
 msgid ""
@@ -1665,6 +2490,10 @@ msgid ""
 "overriding :meth:`~object.__and__` or :meth:`~object.__rand__` special "
 "methods."
 msgstr ""
+"Ο τελεστής ``&`` αποδίδει το bitwise AND των ορισμάτων του, τα οποία πρέπει "
+"να είναι ακέραιοι ή ένα από αυτά πρέπει να είναι ένα προσαρμοσμένο "
+"αντικείμενο που παρακάμπτει τις ειδικές μεθόδους :meth:`~object.__and__` ή :"
+"meth:`~object.__rand__`."
 
 #: reference/expressions.rst:1547
 msgid ""
@@ -1673,6 +2502,10 @@ msgid ""
 "overriding :meth:`~object.__xor__` or :meth:`~object.__rxor__` special "
 "methods."
 msgstr ""
+"Ο τελεστής ``^`` αποδίδει το bitwise XOR (αποκλειστικό OR) των ορισμάτων "
+"του, τα οποία πρέπει να είναι ακέραιοι ή ένα από αυτά πρέπει να είναι ένα "
+"προσαρμοσμένο αντικείμενο που παρακάμπτει τις ειδικές μεθόδους :meth:"
+"`~object.__xor__` ή :meth:`~object.__rxor__`."
 
 #: reference/expressions.rst:1556
 msgid ""
@@ -1680,10 +2513,14 @@ msgid ""
 "must be integers or one of them must be a custom object "
 "overriding :meth:`~object.__or__` or :meth:`~object.__ror__` special methods."
 msgstr ""
+"Ο τελεστής ``|`` αποδίδει το bitwise (συμπεριληπτικό) OR των ορισμάτων του, "
+"τα οποία πρέπει να είναι ακέραιοι ή ένα από αυτά πρέπει να είναι ένα "
+"προσαρμοσμένο αντικείμενο που παρακάμπτει τις ειδικές μεθόδους :meth:"
+"`~object.__or__` ή :meth:`~object.__ror__`."
 
 #: reference/expressions.rst:1564
 msgid "Comparisons"
-msgstr ""
+msgstr "Συγκρίσεις"
 
 #: reference/expressions.rst:1576
 msgid ""
@@ -1692,6 +2529,10 @@ msgid ""
 "unlike C, expressions like ``a < b < c`` have the interpretation that is "
 "conventional in mathematics:"
 msgstr ""
+"Σε αντίθεση με τη C, όλες οι λειτουργίες σύγκρισης στην Python έχουν την "
+"ίδια προτεραιότητα, η οποία είναι χαμηλότερη από οποιασδήποτε αριθμητικής, "
+"μετατόπισης ή bitwise λειτουργίας. Επίσης σε αντίθεση με τη C, εκφράσεις "
+"όπως το ``a < b < c`` έχουν την ερμηνεία που είναι συμβατική στα μαθηματικά:"
 
 #: reference/expressions.rst:1586
 msgid ""
@@ -1699,6 +2540,10 @@ msgid ""
 "comparison methods` may return non-boolean values. In this case Python will "
 "call :func:`bool` on such value in boolean contexts."
 msgstr ""
+"Οι συγκρίσεις αποδίδουν λογικές τιμές: ``True`` ή ``False``. Οι "
+"προσαρμοσμένες :dfn:`rich comparison methods` μπορεί να επιστρέψουν μη "
+"λογικές τιμές. Σε αυτή την περίπτωση, η Python θα καλέσει την :func:`bool` "
+"σε μια τέτοια τιμή σε λογικά πλαίσια."
 
 #: reference/expressions.rst:1592
 msgid ""
@@ -1707,6 +2552,10 @@ msgid ""
 "both cases ``z`` is not evaluated at all when ``x < y`` is found to be "
 "false)."
 msgstr ""
+"Οι συγκρίσεις μπορούν να είναι αυθαίρετα αλυσιδωτές, π.χ., το ``x < y <= z`` "
+"είναι ισοδύναμο με το ``x < y and y <= z``, με τη διαφορά ότι το ``y`` "
+"αποτιμάται μόνο μία φορά (αλλά και στις δύο περιπτώσεις το ``z`` δεν "
+"αποτιμάται καθόλου όταν το ``x < y`` βρεθεί να είναι ψευδές)."
 
 #: reference/expressions.rst:1596
 msgid ""
@@ -1715,6 +2564,10 @@ msgid ""
 "z`` is equivalent to ``a op1 b and b op2 c and ... y opN z``, except that "
 "each expression is evaluated at most once."
 msgstr ""
+"Τυπικά, αν *a*, *b*, *c*, ..., *y*, *z* είναι εκφράσεις και *op1*, "
+"*op2*, ..., *opN* είναι τελεστές σύγκρισης, τότε το ``a op1 b op2 c ... y "
+"opN z`` είναι ισοδύναμο με ``a op1 b and b op2 c and ... y opN z``, με τη "
+"διαφορά ότι κάθε έκφραση αποτιμάται το πολύ μία φορά."
 
 #: reference/expressions.rst:1601
 msgid ""
@@ -1722,16 +2575,21 @@ msgid ""
 "and *c*, so that, e.g., ``x < y > z`` is perfectly legal (though perhaps not "
 "pretty)."
 msgstr ""
+"Σημειώστε ότι το ``a op1 b op2 c`` δεν υπονοεί κανενός είδους σύγκριση "
+"μεταξύ του *a* και του *c*, έτσι ώστε, π.χ., το ``x < y > z`` να είναι "
+"απολύτως έγκυρο (αν και ίσως όχι κομψό)."
 
 #: reference/expressions.rst:1608
 msgid "Value comparisons"
-msgstr ""
+msgstr "Συγκρίσεις τιμών"
 
 #: reference/expressions.rst:1610
 msgid ""
 "The operators ``<``, ``>``, ``==``, ``>=``, ``<=``, and ``!=`` compare the "
 "values of two objects.  The objects do not need to have the same type."
 msgstr ""
+"Οι τελεστές ``<``, ``>``, ``==``, ``>=``, ``<=``, και ``!=`` συγκρίνουν τις "
+"τιμές δύο αντικειμένων. Τα αντικείμενα δεν χρειάζεται να έχουν τον ίδιο τύπο."
 
 #: reference/expressions.rst:1613
 msgid ""
@@ -1744,6 +2602,15 @@ msgid ""
 "object is.  One can think of them as defining the value of an object "
 "indirectly, by means of their comparison implementation."
 msgstr ""
+"Το κεφάλαιο :ref:`objects` αναφέρει ότι τα αντικείμενα έχουν μια τιμή (εκτός "
+"από τύπο και ταυτότητα). Η τιμή ενός αντικειμένου είναι μια μάλλον αφηρημένη "
+"έννοια στην Python: Για παράδειγμα, δεν υπάρχει κανονική μέθοδος πρόσβασης "
+"για την τιμή ενός αντικειμένου. Επίσης, δεν υπάρχει απαίτηση η τιμή ενός "
+"αντικειμένου να κατασκευάζεται με συγκεκριμένο τρόπο, π.χ. να αποτελείται "
+"από όλες τις ιδιότητες δεδομένων του. Οι τελεστές σύγκρισης υλοποιούν μια "
+"συγκεκριμένη έννοια του τι είναι η τιμή ενός αντικειμένου. Μπορεί κανείς να "
+"σκεφτεί ότι ορίζουν την τιμή ενός αντικειμένου έμμεσα, μέσω της υλοποίησης "
+"της σύγκρισής τους."
 
 #: reference/expressions.rst:1622
 msgid ""
@@ -1752,6 +2619,11 @@ msgid ""
 "customize their comparison behavior by implementing :dfn:`rich comparison "
 "methods` like :meth:`~object.__lt__`, described in :ref:`customization`."
 msgstr ""
+"Επειδή όλοι οι τύποι είναι (άμεσοι ή έμμεσοι) υποτύποι του :class:`object`, "
+"κληρονομούν την προεπιλεγμένη συμπεριφορά σύγκρισης από το :class:`object`. "
+"Οι τύποι μπορούν να προσαρμόσουν τη συμπεριφορά σύγκρισής τους υλοποιώντας :"
+"dfn:`rich comparison methods` όπως η :meth:`~object.__lt__`, που "
+"περιγράφονται στο :ref:`customization`."
 
 #: reference/expressions.rst:1628
 msgid ""
@@ -1762,6 +2634,13 @@ msgid ""
 "default behavior is the desire that all objects should be reflexive (i.e. "
 "``x is y`` implies ``x == y``)."
 msgstr ""
+"Η προεπιλεγμένη συμπεριφορά για τη σύγκριση ισότητας (``==`` και ``!=``) "
+"βασίζεται στην ταυτότητα των αντικειμένων. Συνεπώς, η σύγκριση ισότητας "
+"στιγμιότυπων με την ίδια ταυτότητα καταλήγει σε ισότητα, και η σύγκριση "
+"ισότητας στιγμιότυπων με διαφορετικές ταυτότητες καταλήγει σε ανισότητα. Ένα "
+"κίνητρο για αυτή την προεπιλεγμένη συμπεριφορά είναι η επιθυμία όλα τα "
+"αντικείμενα να είναι ανακλαστικά (δηλαδή το ``x is y`` να συνεπάγεται το ``x "
+"== y``)."
 
 #: reference/expressions.rst:1635
 msgid ""
@@ -1769,6 +2648,10 @@ msgid ""
 "provided; an attempt raises :exc:`TypeError`.  A motivation for this default "
 "behavior is the lack of a similar invariant as for equality."
 msgstr ""
+"Δεν παρέχεται προεπιλεγμένη σύγκριση διάταξης (``<``, ``>``, ``<=``, και "
+"``>=``)· μια προσπάθεια κάνει raise το :exc:`TypeError`. Ένα κίνητρο για "
+"αυτή την προεπιλεγμένη συμπεριφορά είναι η έλλειψη ενός παρόμοιου "
+"αμετάβλητου όπως για την ισότητα."
 
 #: reference/expressions.rst:1639
 msgid ""
@@ -1778,12 +2661,20 @@ msgid ""
 "equality.  Such types will need to customize their comparison behavior, and "
 "in fact, a number of built-in types have done that."
 msgstr ""
+"Η συμπεριφορά της προεπιλεγμένης σύγκρισης ισότητας, ότι στιγμιότυπα με "
+"διαφορετικές ταυτότητες είναι πάντα άνισα, μπορεί να έρχεται σε αντίθεση με "
+"αυτό που θα χρειαστούν τύποι που έχουν έναν λογικό ορισμό τιμής αντικειμένου "
+"και ισότητας βασισμένης στην τιμή. Τέτοιοι τύποι θα χρειαστεί να "
+"προσαρμόσουν τη συμπεριφορά σύγκρισής τους, και πράγματι, διάφοροι "
+"ενσωματωμένοι τύποι το έχουν κάνει."
 
 #: reference/expressions.rst:1645
 msgid ""
 "The following list describes the comparison behavior of the most important "
 "built-in types."
 msgstr ""
+"Η ακόλουθη λίστα περιγράφει τη συμπεριφορά σύγκρισης των πιο σημαντικών "
+"ενσωματωμένων τύπων."
 
 #: reference/expressions.rst:1648
 msgid ""
@@ -1794,6 +2685,12 @@ msgid ""
 "involved, they compare mathematically (algorithmically) correct without loss "
 "of precision."
 msgstr ""
+"Οι αριθμοί των ενσωματωμένων αριθμητικών τύπων (:ref:`typesnumeric`) και των "
+"τύπων της τυπικής βιβλιοθήκης :class:`fractions.Fraction` και :class:"
+"`decimal.Decimal` μπορούν να συγκριθούν μεταξύ τους και με άλλους τύπους, με "
+"τον περιορισμό ότι οι μιγαδικοί αριθμοί δεν υποστηρίζουν σύγκριση διάταξης. "
+"Μέσα στα όρια των εμπλεκόμενων τύπων, συγκρίνονται μαθηματικά (αλγοριθμικά) "
+"σωστά χωρίς απώλεια ακρίβειας."
 
 #: reference/expressions.rst:1655
 msgid ""
@@ -1804,6 +2701,13 @@ msgid ""
 "3`` and ``x == x`` are all false, while ``x != x`` is true.  This behavior "
 "is compliant with IEEE 754."
 msgstr ""
+"Οι μη αριθμητικές τιμές ``float('NaN')`` και ``decimal.Decimal('NaN')`` "
+"είναι ειδικές. Οποιαδήποτε διατεταγμένη σύγκριση ενός αριθμού με μια μη "
+"αριθμητική τιμή είναι ψευδής. Μια αντισυμβατική συνέπεια είναι ότι οι μη "
+"αριθμητικές τιμές δεν είναι ίσες με τον εαυτό τους. Για παράδειγμα, αν ``x = "
+"float('NaN')``, τα ``3 < x``, ``x < 3`` και ``x == x`` είναι όλα ψευδή, ενώ "
+"το ``x != x`` είναι αληθές. Αυτή η συμπεριφορά συμμορφώνεται με το πρότυπο "
+"IEEE 754."
 
 #: reference/expressions.rst:1662
 msgid ""
@@ -1811,6 +2715,9 @@ msgid ""
 "comparisons for singletons should always be done with ``is`` or ``is not``, "
 "never the equality operators."
 msgstr ""
+"Το ``None`` και το :data:`NotImplemented` είναι singletons. Το :PEP:`8` "
+"συμβουλεύει ότι οι συγκρίσεις για τα singletons θα πρέπει πάντα να γίνονται "
+"με το ``is`` ή το ``is not``, ποτέ με τους τελεστές ισότητας."
 
 #: reference/expressions.rst:1666
 msgid ""
@@ -1818,6 +2725,10 @@ msgid ""
 "compared within and across their types.  They compare lexicographically "
 "using the numeric values of their elements."
 msgstr ""
+"Οι δυαδικές ακολουθίες (στιγμιότυπα της :class:`bytes` ή της :class:"
+"`bytearray`) μπορούν να συγκριθούν μεταξύ τους και με άλλους τύπους. "
+"Συγκρίνονται λεξικογραφικά χρησιμοποιώντας τις αριθμητικές τιμές των "
+"στοιχείων τους."
 
 #: reference/expressions.rst:1670
 msgid ""
@@ -1825,10 +2736,13 @@ msgid ""
 "numerical Unicode code points (the result of the built-in "
 "function :func:`ord`) of their characters. [#]_"
 msgstr ""
+"Τα αλφαριθμητικά (στιγμιότυπα της :class:`str`) συγκρίνονται λεξικογραφικά "
+"χρησιμοποιώντας τα αριθμητικά σημεία κώδικα Unicode (το αποτέλεσμα της "
+"ενσωματωμένης συνάρτησης :func:`ord`) των χαρακτήρων τους. [#]_"
 
 #: reference/expressions.rst:1674
 msgid "Strings and binary sequences cannot be directly compared."
-msgstr ""
+msgstr "Αλφαριθμητικά και δυαδικές ακολουθίες δεν μπορούν να συγκριθούν άμεσα."
 
 #: reference/expressions.rst:1676
 msgid ""
@@ -1838,6 +2752,11 @@ msgid ""
 "types results in inequality, and ordering comparison across these types "
 "raises :exc:`TypeError`."
 msgstr ""
+"Οι ακολουθίες (στιγμιότυπα της :class:`tuple`, :class:`list`, ή :class:"
+"`range`) μπορούν να συγκριθούν μόνο εντός του τύπου τους, με τον περιορισμό "
+"ότι τα εύρη δεν υποστηρίζουν σύγκριση διάταξης. Η σύγκριση ισότητας μεταξύ "
+"αυτών των τύπων καταλήγει σε ανισότητα, και η σύγκριση διάταξης μεταξύ αυτών "
+"των τύπων κάνει raise το :exc:`TypeError`."
 
 #: reference/expressions.rst:1682
 msgid ""
@@ -1846,11 +2765,17 @@ msgid ""
 "equal to themselves.  That lets them bypass equality tests for identical "
 "objects to improve performance and to maintain their internal invariants."
 msgstr ""
+"Οι ακολουθίες συγκρίνονται λεξικογραφικά χρησιμοποιώντας σύγκριση των "
+"αντίστοιχων στοιχείων. Οι ενσωματωμένοι υποδοχείς υποθέτουν τυπικά ότι τα "
+"πανομοιότυπα αντικείμενα είναι ίσα με τον εαυτό τους. Αυτό τους επιτρέπει να "
+"παρακάμπτουν τους ελέγχους ισότητας για πανομοιότυπα αντικείμενα ώστε να "
+"βελτιώσουν την απόδοση και να διατηρήσουν τα εσωτερικά τους αμετάβλητα."
 
 #: reference/expressions.rst:1687
 msgid ""
 "Lexicographical comparison between built-in collections works as follows:"
 msgstr ""
+"Η λεξικογραφική σύγκριση μεταξύ ενσωματωμένων συλλογών λειτουργεί ως εξής:"
 
 #: reference/expressions.rst:1689
 msgid ""
@@ -1858,6 +2783,10 @@ msgid ""
 "the same length, and each pair of corresponding elements must compare equal "
 "(for example, ``[1,2] == (1,2)`` is false because the type is not the same)."
 msgstr ""
+"Για να είναι δύο συλλογές ίσες, πρέπει να είναι του ίδιου τύπου, να έχουν το "
+"ίδιο μήκος, και κάθε ζεύγος αντίστοιχων στοιχείων πρέπει να είναι ίσο (για "
+"παράδειγμα, το ``[1,2] == (1,2)`` είναι ψευδές επειδή ο τύπος δεν είναι ο "
+"ίδιος)."
 
 #: reference/expressions.rst:1694
 msgid ""
@@ -1867,6 +2796,11 @@ msgid ""
 "shorter collection is ordered first (for example, ``[1,2] < [1,2,3]`` is "
 "true)."
 msgstr ""
+"Οι συλλογές που υποστηρίζουν σύγκριση διάταξης στοιχίζονται με τον ίδιο "
+"τρόπο όπως γίνεται με τα πρώτα άνισα στοιχεία τους (για παράδειγμα, το "
+"``[1,2,x] <= [1,2,y]`` έχει την ίδια τιμή με το ``x <= y``). Αν δεν υπάρχει "
+"αντίστοιχο στοιχείο, η συντομότερη συλλογή προηγείται (για παράδειγμα, το "
+"``[1,2] < [1,2,3]`` είναι αληθές)."
 
 #: reference/expressions.rst:1700
 msgid ""
@@ -1874,17 +2808,24 @@ msgid ""
 "equal ``(key, value)`` pairs. Equality comparison of the keys and values "
 "enforces reflexivity."
 msgstr ""
+"Οι αντιστοιχίσεις (στιγμιότυπα της :class:`dict`) είναι ίσες αν και μόνο αν "
+"έχουν ίσα ζεύγη ``(κλειδί, τιμή)``. Η σύγκριση ισότητας των κλειδιών και των "
+"τιμών επιβάλλει την ανακλαστικότητα."
 
 #: reference/expressions.rst:1704
 msgid ""
 "Order comparisons (``<``, ``>``, ``<=``, and ``>=``) raise :exc:`TypeError`."
 msgstr ""
+"Οι συγκρίσεις διάταξης (``<``, ``>``, ``<=``, και ``>=``) κάνουν raise το :"
+"exc:`TypeError`."
 
 #: reference/expressions.rst:1706
 msgid ""
 "Sets (instances of :class:`set` or :class:`frozenset`) can be compared "
 "within and across their types."
 msgstr ""
+"Τα σύνολα (στιγμιότυπα της :class:`set` ή της :class:`frozenset`) μπορούν να "
+"συγκριθούν μεταξύ τους και με άλλους τύπους συνόλων."
 
 #: reference/expressions.rst:1709
 msgid ""
@@ -1896,86 +2837,106 @@ msgid ""
 "example, :func:`min`, :func:`max`, and :func:`sorted` produce undefined "
 "results given a list of sets as inputs)."
 msgstr ""
+"Ορίζουν ότι οι τελεστές σύγκρισης διάταξης σημαίνουν ελέγχους υποσυνόλου και "
+"υπερσυνόλου. Αυτές οι σχέσεις δεν ορίζουν ολικές διατάξεις (για παράδειγμα, "
+"τα δύο σύνολα ``{1,2}`` και ``{2,3}`` δεν είναι ίσα, ούτε υποσύνολα το ένα "
+"του άλλου, ούτε υπερσύνολα το ένα του άλλου). Επομένως, τα σύνολα δεν είναι "
+"κατάλληλα ορίσματα για συναρτήσεις που εξαρτώνται από ολική διάταξη (για "
+"παράδειγμα, οι :func:`min`, :func:`max`, και :func:`sorted` παράγουν "
+"απροσδιόριστα αποτελέσματα αν τους δοθεί μια λίστα συνόλων ως είσοδος)."
 
 #: reference/expressions.rst:1717
 msgid "Comparison of sets enforces reflexivity of its elements."
-msgstr ""
+msgstr "Η σύγκριση συνόλων επιβάλλει την ανακλαστικότητα των στοιχείων τους."
 
 #: reference/expressions.rst:1719
 msgid ""
 "Most other built-in types have no comparison methods implemented, so they "
 "inherit the default comparison behavior."
 msgstr ""
+"Οι περισσότεροι άλλοι ενσωματωμένοι τύποι δεν έχουν υλοποιημένες μεθόδους "
+"σύγκρισης, οπότε κληρονομούν την προεπιλεγμένη συμπεριφορά σύγκρισης."
 
 #: reference/expressions.rst:1722
 msgid ""
 "User-defined classes that customize their comparison behavior should follow "
 "some consistency rules, if possible:"
 msgstr ""
+"Οι ορισμένες από τον χρήστη κλάσεις που προσαρμόζουν τη συμπεριφορά "
+"σύγκρισής τους θα πρέπει να ακολουθούν ορισμένους κανόνες συνέπειας, αν "
+"είναι δυνατόν:"
 
 #: reference/expressions.rst:1725
 msgid ""
 "Equality comparison should be reflexive. In other words, identical objects "
 "should compare equal:"
 msgstr ""
+"Η σύγκριση ισότητας θα πρέπει να είναι ανακλαστική. Με άλλα λόγια, "
+"πανομοιότυπα αντικείμενα θα πρέπει να συγκρίνονται ως ίσα:"
 
 #: reference/expressions.rst:1728
 msgid "``x is y`` implies ``x == y``"
-msgstr ""
+msgstr "Το ``x is y`` συνεπάγεται ``x == y``"
 
 #: reference/expressions.rst:1730
 msgid ""
 "Comparison should be symmetric. In other words, the following expressions "
 "should have the same result:"
 msgstr ""
+"Η σύγκριση θα πρέπει να είναι συμμετρική. Με άλλα λόγια, οι ακόλουθες "
+"εκφράσεις θα πρέπει να έχουν το ίδιο αποτέλεσμα:"
 
 #: reference/expressions.rst:1733
 msgid "``x == y`` and ``y == x``"
-msgstr ""
+msgstr "``x == y`` και ``y == x``"
 
 #: reference/expressions.rst:1735
 msgid "``x != y`` and ``y != x``"
-msgstr ""
+msgstr "``x != y`` και ``y != x``"
 
 #: reference/expressions.rst:1737
 msgid "``x < y`` and ``y > x``"
-msgstr ""
+msgstr "``x < y`` και ``y > x``"
 
 #: reference/expressions.rst:1739
 msgid "``x <= y`` and ``y >= x``"
-msgstr ""
+msgstr "``x <= y`` και ``y >= x``"
 
 #: reference/expressions.rst:1741
 msgid ""
 "Comparison should be transitive. The following (non-exhaustive) examples "
 "illustrate that:"
 msgstr ""
+"Η σύγκριση θα πρέπει να είναι μεταβατική. Τα ακόλουθα (μη εξαντλητικά) "
+"παραδείγματα το απεικονίζουν:"
 
 #: reference/expressions.rst:1744
 msgid "``x > y and y > z`` implies ``x > z``"
-msgstr ""
+msgstr "Το ``x > y and y > z`` συνεπάγεται ``x > z``"
 
 #: reference/expressions.rst:1746
 msgid "``x < y and y <= z`` implies ``x < z``"
-msgstr ""
+msgstr "Το ``x < y and y <= z`` συνεπάγεται ``x < z``"
 
 #: reference/expressions.rst:1748
 msgid ""
 "Inverse comparison should result in the boolean negation. In other words, "
 "the following expressions should have the same result:"
 msgstr ""
+"Η αντίστροφη σύγκριση θα πρέπει να καταλήγει στη λογική άρνηση. Με άλλα "
+"λόγια, οι ακόλουθες εκφράσεις θα πρέπει να έχουν το ίδιο αποτέλεσμα:"
 
 #: reference/expressions.rst:1751
 msgid "``x == y`` and ``not x != y``"
-msgstr ""
+msgstr "``x == y`` και ``not x != y``"
 
 #: reference/expressions.rst:1753
 msgid "``x < y`` and ``not x >= y`` (for total ordering)"
-msgstr ""
+msgstr "``x < y`` και ``not x >= y`` (για ολική διάταξη)"
 
 #: reference/expressions.rst:1755
 msgid "``x > y`` and ``not x <= y`` (for total ordering)"
-msgstr ""
+msgstr "``x > y`` και ``not x <= y`` (για ολική διάταξη)"
 
 #: reference/expressions.rst:1757
 msgid ""
@@ -1983,22 +2944,30 @@ msgid ""
 "sequences, but not to sets or mappings). See also "
 "the :func:`~functools.total_ordering` decorator."
 msgstr ""
+"Οι δύο τελευταίες εκφράσεις ισχύουν για πλήρως διατεταγμένες συλλογές (π.χ. "
+"σε ακολουθίες, αλλά όχι σε σύνολα ή αντιστοιχίσεις). Δείτε επίσης τον "
+"decorator :func:`~functools.total_ordering`."
 
 #: reference/expressions.rst:1761
 msgid ""
 "The :func:`hash` result should be consistent with equality. Objects that are "
 "equal should either have the same hash value, or be marked as unhashable."
 msgstr ""
+"Το αποτέλεσμα της :func:`hash` θα πρέπει να είναι συνεπές με την ισότητα. "
+"Αντικείμενα που είναι ίσα θα πρέπει είτε να έχουν την ίδια τιμή "
+"κατακερματισμού, είτε να επισημαίνονται ως μη κατακερματιστέα."
 
 #: reference/expressions.rst:1765
 msgid ""
 "Python does not enforce these consistency rules. In fact, the not-a-number "
 "values are an example for not following these rules."
 msgstr ""
+"Η Python δεν επιβάλλει αυτούς τους κανόνες συνέπειας. Στην πραγματικότητα, "
+"οι μη αριθμητικές τιμές αποτελούν παράδειγμα μη τήρησης αυτών των κανόνων."
 
 #: reference/expressions.rst:1774
 msgid "Membership test operations"
-msgstr ""
+msgstr "Λειτουργίες ελέγχου συμμετοχής"
 
 #: reference/expressions.rst:1776
 msgid ""
@@ -2011,6 +2980,14 @@ msgid ""
 "collections.deque, the expression ``x in y`` is equivalent to ``any(x is e "
 "or x == e for e in y)``."
 msgstr ""
+"Οι τελεστές :keyword:`in` και :keyword:`not in` ελέγχουν για τη συμμετοχή. "
+"Το ``x in s`` αποτιμάται σε ``True`` αν το *x* είναι μέλος του *s*, και "
+"``False`` διαφορετικά. Το ``x not in s`` επιστρέφει την άρνηση του ``x in "
+"s``. Όλες οι ενσωματωμένες ακολουθίες και οι τύποι συνόλων το υποστηρίζουν "
+"αυτό, καθώς και τα λεξικά, για τα οποία το :keyword:`!in` ελέγχει αν το "
+"λεξικό έχει ένα δεδομένο κλειδί. Για τύπους υποδοχέων όπως list, tuple, set, "
+"frozenset, dict, ή collections.deque, η έκφραση ``x in y`` είναι ισοδύναμη "
+"με ``any(x is e or x == e for e in y)``."
 
 #: reference/expressions.rst:1784
 msgid ""
@@ -2019,6 +2996,11 @@ msgid ""
 "strings are always considered to be a substring of any other string, so "
 "``\"\" in \"abc\"`` will return ``True``."
 msgstr ""
+"Για τους τύπους string και bytes, το ``x in y`` είναι ``True`` αν και μόνο "
+"αν το *x* είναι υπο-αλφαριθμητικό του *y*. Ένας ισοδύναμος έλεγχος είναι το "
+"``y.find(x) != -1``. Τα κενά αλφαριθμητικά θεωρούνται πάντα υπο-"
+"αλφαριθμητικά οποιουδήποτε άλλου αλφαριθμητικού, οπότε το ``\"\" in "
+"\"abc\"`` θα επιστρέψει ``True``."
 
 #: reference/expressions.rst:1789
 msgid ""
@@ -2026,6 +3008,9 @@ msgid ""
 "method, ``x in y`` returns ``True`` if ``y.__contains__(x)`` returns a true "
 "value, and ``False`` otherwise."
 msgstr ""
+"Για ορισμένες από τον χρήστη κλάσεις που ορίζουν τη μέθοδο :meth:`~object."
+"__contains__`, το ``x in y`` επιστρέφει ``True`` αν το ``y.__contains__(x)`` "
+"επιστρέψει μια αληθή τιμή, και ``False`` διαφορετικά."
 
 #: reference/expressions.rst:1793
 msgid ""
@@ -2035,6 +3020,12 @@ msgid ""
 "while iterating over ``y``. If an exception is raised during the iteration, "
 "it is as if :keyword:`in` raised that exception."
 msgstr ""
+"Για ορισμένες από τον χρήστη κλάσεις που δεν ορίζουν τη :meth:`~object."
+"__contains__` αλλά ορίζουν τη :meth:`~object.__iter__`, το ``x in y`` είναι "
+"``True`` αν κάποια τιμή ``z``, για την οποία η έκφραση ``x is z or x == z`` "
+"είναι αληθής, παραχθεί κατά την επανάληψη πάνω στο ``y``. Αν γίνει raise "
+"εξαίρεση κατά τη διάρκεια της επανάληψης, είναι σαν το :keyword:`in` να "
+"έκανε raise αυτήν την εξαίρεση."
 
 #: reference/expressions.rst:1799
 msgid ""
@@ -2045,16 +3036,24 @@ msgid ""
 "(If any other exception is raised, it is as if :keyword:`in` raised that "
 "exception)."
 msgstr ""
+"Τέλος, δοκιμάζεται το παλαιού τύπου πρωτόκολλο επανάληψης: αν μια κλάση "
+"ορίζει τη :meth:`~object.__getitem__`, το ``x in y`` είναι ``True`` αν και "
+"μόνο αν υπάρχει ένας μη αρνητικός ακέραιος δείκτης *i* τέτοιος ώστε ``x is "
+"y[i] or x == y[i]``, και κανένας μικρότερος ακέραιος δείκτης δεν κάνει raise "
+"την εξαίρεση :exc:`IndexError`. (Αν γίνει raise οποιαδήποτε άλλη εξαίρεση, "
+"είναι σαν το :keyword:`in` να έκανε raise αυτήν την εξαίρεση)."
 
 #: reference/expressions.rst:1811
 msgid ""
 "The operator :keyword:`not in` is defined to have the inverse truth value "
 "of :keyword:`in`."
 msgstr ""
+"Ο τελεστής :keyword:`not in` ορίζεται ώστε να έχει την αντίστροφη αληθή τιμή "
+"από το :keyword:`in`."
 
 #: reference/expressions.rst:1824
 msgid "Identity comparisons"
-msgstr ""
+msgstr "Συγκρίσεις ταυτότητας"
 
 #: reference/expressions.rst:1826
 msgid ""
@@ -2063,10 +3062,15 @@ msgid ""
 "object.  An Object's identity is determined using the :meth:`id` function.  "
 "``x is not y`` yields the inverse truth value. [#]_"
 msgstr ""
+"Οι τελεστές :keyword:`is` και :keyword:`is not` ελέγχουν την ταυτότητα ενός "
+"αντικειμένου: το ``x is y`` είναι αληθές αν και μόνο αν τα *x* και *y* είναι "
+"το ίδιο αντικείμενο. Η ταυτότητα ενός αντικειμένου προσδιορίζεται "
+"χρησιμοποιώντας τη συνάρτηση :meth:`id`. Το ``x is not y`` αποδίδει την "
+"αντίστροφη αληθή τιμή. [#]_"
 
 #: reference/expressions.rst:1838
 msgid "Boolean operations"
-msgstr ""
+msgstr "Λογικές λειτουργίες"
 
 #: reference/expressions.rst:1849
 msgid ""
@@ -2078,24 +3082,39 @@ msgid ""
 "objects can customize their truth value by providing "
 "a :meth:`~object.__bool__` method."
 msgstr ""
+"Στο πλαίσιο των λογικών λειτουργιών, και επίσης όταν οι εκφράσεις "
+"χρησιμοποιούνται από προτάσεις ροής ελέγχου, οι ακόλουθες τιμές ερμηνεύονται "
+"ως ψευδείς: ``False``, ``None``, το αριθμητικό μηδέν όλων των τύπων, και τα "
+"κενά αλφαριθμητικά και υποδοχείς (συμπεριλαμβανομένων των strings, tuples, "
+"lists, dictionaries, sets και frozensets). Όλες οι άλλες τιμές ερμηνεύονται "
+"ως αληθείς. Τα ορισμένα από τον χρήστη αντικείμενα μπορούν να προσαρμόσουν "
+"την αληθή τιμή τους παρέχοντας μια μέθοδο :meth:`~object.__bool__`."
 
 #: reference/expressions.rst:1858
 msgid ""
 "The operator :keyword:`not` yields ``True`` if its argument is false, "
 "``False`` otherwise."
 msgstr ""
+"Ο τελεστής :keyword:`not` αποδίδει ``True`` αν το όρισμά του είναι ψευδές, "
+"και ``False`` διαφορετικά."
 
 #: reference/expressions.rst:1863
 msgid ""
 "The expression ``x and y`` first evaluates *x*; if *x* is false, its value "
 "is returned; otherwise, *y* is evaluated and the resulting value is returned."
 msgstr ""
+"Η έκφραση ``x and y`` αποτιμά πρώτα το *x*· αν το *x* είναι ψευδές, "
+"επιστρέφεται η τιμή του· διαφορετικά, αποτιμάται το *y* και επιστρέφεται η "
+"τιμή που προκύπτει."
 
 #: reference/expressions.rst:1868
 msgid ""
 "The expression ``x or y`` first evaluates *x*; if *x* is true, its value is "
 "returned; otherwise, *y* is evaluated and the resulting value is returned."
 msgstr ""
+"Η έκφραση ``x or y`` αποτιμά πρώτα το *x*· αν το *x* είναι αληθές, "
+"επιστρέφεται η τιμή του· διαφορετικά, αποτιμάται το *y* και επιστρέφεται η "
+"τιμή που προκύπτει."
 
 #: reference/expressions.rst:1871
 msgid ""
@@ -2107,10 +3126,19 @@ msgid ""
 "create a new value, it returns a boolean value regardless of the type of its "
 "argument (for example, ``not 'foo'`` produces ``False`` rather than ``''``.)"
 msgstr ""
+"Σημειώστε ότι ούτε το :keyword:`and` ούτε το :keyword:`or` περιορίζουν την "
+"τιμή και τον τύπο που επιστρέφουν σε ``False`` και ``True``, αλλά αντίθετα "
+"επιστρέφουν το τελευταίο όρισμα που αποτιμήθηκε. Αυτό είναι μερικές φορές "
+"χρήσιμο, π.χ., αν το ``s`` είναι ένα αλφαριθμητικό που θα πρέπει να "
+"αντικατασταθεί από μια προεπιλεγμένη τιμή αν είναι κενό, η έκφραση ``s or "
+"'foo'`` αποδίδει την επιθυμητή τιμή. Επειδή το :keyword:`not` πρέπει να "
+"δημιουργήσει μια νέα τιμή, επιστρέφει μια λογική τιμή ανεξάρτητα από τον "
+"τύπο του ορίσματός του (για παράδειγμα, το ``not 'foo'`` παράγει ``False`` "
+"αντί για ``''``.)"
 
 #: reference/expressions.rst:1890
 msgid "Assignment expressions"
-msgstr ""
+msgstr "Εκφράσεις ανάθεσης"
 
 #: reference/expressions.rst:1895
 msgid ""
@@ -2119,26 +3147,36 @@ msgid ""
 "an :token:`~python-grammar:identifier`, while also returning the value of "
 "the :token:`~python-grammar:expression`."
 msgstr ""
+"Μια έκφραση ανάθεσης (μερικές φορές ονομάζεται επίσης \"επώνυμη έκφραση\" ή "
+"\"walrus\") αναθέτει μια :token:`~python-grammar:expression` σε ένα :token:"
+"`~python-grammar:identifier`, ενώ ταυτόχρονα επιστρέφει την τιμή της :token:"
+"`~python-grammar:expression`."
 
 #: reference/expressions.rst:1900
 msgid "One common use case is when handling matched regular expressions:"
 msgstr ""
+"Μια κοινή περίπτωση χρήσης είναι κατά τον χειρισμό ταιριασμένων regular "
+"expressions:"
 
 #: reference/expressions.rst:1902
 msgid ""
 "if matching := pattern.search(data):\n"
 "    do_something(matching)"
 msgstr ""
+"if matching := pattern.search(data):\n"
+"    do_something(matching)"
 
 #: reference/expressions.rst:1907
 msgid "Or, when processing a file stream in chunks:"
-msgstr ""
+msgstr "Ή, κατά την επεξεργασία μιας ροής αρχείου σε κομμάτια:"
 
 #: reference/expressions.rst:1909
 msgid ""
 "while chunk := file.read(9000):\n"
 "    process(chunk)"
 msgstr ""
+"while chunk := file.read(9000):\n"
+"    process(chunk)"
 
 #: reference/expressions.rst:1914
 msgid ""
@@ -2149,14 +3187,23 @@ msgid ""
 "where they can be used, parentheses are not required, including in ``if`` "
 "and ``while`` statements."
 msgstr ""
+"Οι εκφράσεις ανάθεσης πρέπει να περιβάλλονται από παρενθέσεις όταν "
+"χρησιμοποιούνται ως προτάσεις εκφράσεων και όταν χρησιμοποιούνται ως υπο-"
+"εκφράσεις σε τεμαχισμό, εκφράσεις υπό συνθήκη, lambda, ορίσματα λέξης-"
+"κλειδιού , και εκφράσεις comprehension-if, καθώς και σε προτάσεις "
+"``assert``, ``with``, και ``assignment``. Σε όλα τα άλλα σημεία όπου μπορούν "
+"να χρησιμοποιηθούν, οι παρενθέσεις δεν είναι απαραίτητες, "
+"συμπεριλαμβανομένων των προτάσεων ``if`` και ``while``."
 
 #: reference/expressions.rst:1922
 msgid "See :pep:`572` for more details about assignment expressions."
 msgstr ""
+"Δείτε το :pep:`572` για περισσότερες λεπτομέρειες σχετικά με τις εκφράσεις "
+"ανάθεσης."
 
 #: reference/expressions.rst:1929
 msgid "Conditional expressions"
-msgstr ""
+msgstr "Εκφράσεις υπό συνθήκη"
 
 #: reference/expressions.rst:1941
 msgid ""
@@ -2164,6 +3211,9 @@ msgid ""
 "alternative to the if-else statement. As it is an expression, it returns a "
 "value and can appear as a sub-expression."
 msgstr ""
+"Μια έκφραση υπό συνθήκη (μερικές φορές ονομάζεται \"τριαδικός τελεστής\") "
+"είναι μια εναλλακτική της πρότασης if-else. Επειδή είναι έκφραση, επιστρέφει "
+"μια τιμή και μπορεί να εμφανιστεί ως υπο-έκφραση."
 
 #: reference/expressions.rst:1945
 msgid ""
@@ -2171,14 +3221,19 @@ msgid ""
 "than *x*. If *C* is true, *x* is evaluated and its value is returned; "
 "otherwise, *y* is evaluated and its value is returned."
 msgstr ""
+"Η έκφραση ``x if C else y`` αποτιμά πρώτα τη συνθήκη, *C* αντί για το *x*. "
+"Αν το *C* είναι αληθές, το *x* αποτιμάται και η τιμή του επιστρέφεται· "
+"διαφορετικά, το *y* αποτιμάται και η τιμή του επιστρέφεται."
 
 #: reference/expressions.rst:1949
 msgid "See :pep:`308` for more details about conditional expressions."
 msgstr ""
+"Δείτε το :pep:`308` για περισσότερες λεπτομέρειες σχετικά με τις εκφράσεις "
+"υπό συνθήκη."
 
 #: reference/expressions.rst:1956
 msgid "Lambdas"
-msgstr ""
+msgstr "Εκφράσεις lambda"
 
 #: reference/expressions.rst:1967
 msgid ""
@@ -2187,12 +3242,19 @@ msgid ""
 "a function object.  The unnamed object behaves like a function object "
 "defined with:"
 msgstr ""
+"Οι εκφράσεις lambda (μερικές φορές ονομάζονται μορφές lambda) "
+"χρησιμοποιούνται για τη δημιουργία ανώνυμων συναρτήσεων. Η έκφραση ``lambda "
+"parameters: expression`` αποδίδει ένα αντικείμενο συνάρτησης. Το ανώνυμο "
+"αντικείμενο συμπεριφέρεται σαν ένα αντικείμενο συνάρτησης που έχει οριστεί "
+"με:"
 
 #: reference/expressions.rst:1971
 msgid ""
 "def <lambda>(parameters):\n"
 "    return expression"
 msgstr ""
+"def <lambda>(parameters):\n"
+"    return expression"
 
 #: reference/expressions.rst:1976
 msgid ""
@@ -2200,10 +3262,13 @@ msgid ""
 "functions created with lambda expressions cannot contain statements or "
 "annotations."
 msgstr ""
+"Δείτε την ενότητα :ref:`function` για τη σύνταξη των λιστών παραμέτρων. "
+"Σημειώστε ότι οι συναρτήσεις που δημιουργούνται με εκφράσεις lambda δεν "
+"μπορούν να περιέχουν προτάσεις ή σχολιασμούς."
 
 #: reference/expressions.rst:1984
 msgid "Expression lists"
-msgstr ""
+msgstr "Λίστες εκφράσεων"
 
 #: reference/expressions.rst:2000
 msgid ""
@@ -2211,6 +3276,10 @@ msgid ""
 "least one comma yields a tuple.  The length of the tuple is the number of "
 "expressions in the list.  The expressions are evaluated from left to right."
 msgstr ""
+"Εκτός αν αποτελεί μέρος μιας απεικόνισης λίστας ή συνόλου, μια λίστα "
+"εκφράσεων που περιέχει τουλάχιστον ένα κόμμα αποδίδει μια πλειάδα. Το μήκος "
+"της πλειάδας είναι ο αριθμός των εκφράσεων στη λίστα. Οι εκφράσεις "
+"αποτιμώνται από αριστερά προς τα δεξιά."
 
 #: reference/expressions.rst:2009
 msgid ""
@@ -2219,15 +3288,23 @@ msgid ""
 "which are included in the new tuple, list, or set, at the site of the "
 "unpacking."
 msgstr ""
+"Ένας αστερίσκος ``*`` υποδηλώνει :dfn:`iterable unpacking`. Ο τελεστέος του "
+"πρέπει να είναι ένα :term:`iterable`. Το iterable επεκτείνεται σε μια "
+"ακολουθία στοιχείων, τα οποία περιλαμβάνονται στη νέα πλειάδα, λίστα, ή "
+"σύνολο, στο σημείο της αποσυσκευασίας."
 
 #: reference/expressions.rst:2014
 msgid ""
 "Iterable unpacking in expression lists, originally proposed by :pep:`448`."
 msgstr ""
+"Η αποσυσκευασία του iterable σε λίστες εκφράσεων προτάθηκε αρχικά από το :"
+"pep:`448`."
 
 #: reference/expressions.rst:2017
 msgid "Any item in an expression list may be starred. See :pep:`646`."
 msgstr ""
+"Οποιοδήποτε στοιχείο σε μια λίστα εκφράσεων μπορεί να φέρει αστερίσκο. Δείτε "
+"το :pep:`646`."
 
 #: reference/expressions.rst:2022
 msgid ""
@@ -2237,10 +3314,15 @@ msgid ""
 "expression. (To create an empty tuple, use an empty pair of parentheses: "
 "``()``.)"
 msgstr ""
+"Ένα κόμμα στο τέλος απαιτείται μόνο για τη δημιουργία μιας πλειάδας με ένα "
+"στοιχείο, όπως ``1,``· είναι προαιρετικό σε όλες τις άλλες περιπτώσεις. Μια "
+"μοναδική έκφραση χωρίς τελικό κόμμα δεν δημιουργεί πλειάδα, αλλά αντίθετα "
+"αποδίδει την τιμή αυτής της έκφρασης. (Για να δημιουργήσετε μια άδεια "
+"πλειάδα, χρησιμοποιήστε ένα άδειο ζεύγος παρενθέσεων: ``()``.)"
 
 #: reference/expressions.rst:2033
 msgid "Evaluation order"
-msgstr ""
+msgstr "Αποτίμηση διάταξης"
 
 #: reference/expressions.rst:2037
 msgid ""
@@ -2248,12 +3330,17 @@ msgid ""
 "evaluating an assignment, the right-hand side is evaluated before the left-"
 "hand side."
 msgstr ""
+"Η Python αποτιμά τις εκφράσεις από αριστερά προς τα δεξιά. Παρατηρήστε ότι "
+"κατά την αποτίμηση μιας ανάθεσης, η δεξιά πλευρά αποτιμάται πριν από την "
+"αριστερή πλευρά."
 
 #: reference/expressions.rst:2040
 msgid ""
 "In the following lines, expressions will be evaluated in the arithmetic "
 "order of their suffixes::"
 msgstr ""
+"Στις ακόλουθες γραμμές, οι εκφράσεις θα αποτιμηθούν με την αριθμητική σειρά "
+"των καταλήξεών τους::"
 
 #: reference/expressions.rst:2043
 msgid ""
@@ -2264,10 +3351,16 @@ msgid ""
 "expr1(expr2, expr3, *expr4, **expr5)\n"
 "expr3, expr4 = expr1, expr2"
 msgstr ""
+"expr1, expr2, expr3, expr4\n"
+"(expr1, expr2, expr3, expr4)\n"
+"{expr1: expr2, expr3: expr4}\n"
+"expr1 + expr2 * (expr3 - expr4)\n"
+"expr1(expr2, expr3, *expr4, **expr5)\n"
+"expr3, expr4 = expr1, expr2"
 
 #: reference/expressions.rst:2054
 msgid "Operator precedence"
-msgstr ""
+msgstr "Προτεραιότητα τελεστών"
 
 #: reference/expressions.rst:2059
 msgid ""
@@ -2278,6 +3371,13 @@ msgid ""
 "left to right (except for exponentiation and conditional expressions, which "
 "group from right to left)."
 msgstr ""
+"Ο ακόλουθος πίνακας συνοψίζει την προτεραιότητα των τελεστών στην Python, "
+"από την υψηλότερη προτεραιότητα (πιο ισχυρή δέσμευση) στη χαμηλότερη "
+"προτεραιότητα (λιγότερο ισχυρή δέσμευση). Οι τελεστές στο ίδιο πλαίσιο έχουν "
+"την ίδια προτεραιότητα. Εκτός αν δίνεται ρητά η σύνταξη, οι τελεστές είναι "
+"δυαδικοί. Οι τελεστές στο ίδιο πλαίσιο ομαδοποιούνται από αριστερά προς τα "
+"δεξιά (εκτός από την ύψωση σε δύναμη και τις εκφράσεις υπό συνθήκη, που "
+"ομαδοποιούνται από δεξιά προς τα αριστερά)."
 
 #: reference/expressions.rst:2065
 msgid ""
@@ -2285,168 +3385,179 @@ msgid ""
 "same precedence and have a left-to-right chaining feature as described in "
 "the :ref:`comparisons` section."
 msgstr ""
+"Σημειώστε ότι οι συγκρίσεις, οι έλεγχοι συμμετοχής, και οι έλεγχοι "
+"ταυτότητας, έχουν όλοι την ίδια προτεραιότητα και διαθέτουν το "
+"χαρακτηριστικό της αλυσίδας από αριστερά προς τα δεξιά όπως περιγράφεται "
+"στην ενότητα :ref:`comparisons`."
 
 #: reference/expressions.rst:2071
 msgid "Operator"
-msgstr ""
+msgstr "Τελεστής"
 
 #: reference/expressions.rst:2071
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: reference/expressions.rst:2073
 msgid "``(expressions...)``,"
-msgstr ""
+msgstr "``(expressions...)``,"
 
 #: reference/expressions.rst:2075
 msgid "``[expressions...]``, ``{key: value...}``, ``{expressions...}``"
-msgstr ""
+msgstr "``[expressions...]``, ``{key: value...}``, ``{expressions...}``"
 
 #: reference/expressions.rst:2073
 msgid ""
 "Binding or parenthesized expression, list display, dictionary display, set "
 "display"
 msgstr ""
+"Δεσμευτική ή σε παρένθεση έκφραση, απεικόνιση λίστας, απεικόνιση λεξικού, "
+"απεικόνιση συνόλου"
 
 #: reference/expressions.rst:2079
 msgid "``x[index]``, ``x[index:index]``, ``x(arguments...)``, ``x.attribute``"
-msgstr ""
+msgstr "``x[index]``, ``x[index:index]``, ``x(arguments...)``, ``x.attribute``"
 
 #: reference/expressions.rst:2079
 msgid "Subscription, slicing, call, attribute reference"
-msgstr ""
+msgstr "Δεικτοδότηση, τεμαχισμός, κλήση, αναφορά σε ιδιότητα"
 
 #: reference/expressions.rst:2082
 msgid ":keyword:`await x <await>`"
-msgstr ""
+msgstr ":keyword:`await x <await>`"
 
 #: reference/expressions.rst:2084
 msgid "``**``"
-msgstr ""
+msgstr "``**``"
 
 #: reference/expressions.rst:2084
 msgid "Exponentiation [#]_"
-msgstr ""
+msgstr "Ύψωση σε δύναμη [#]_"
 
 #: reference/expressions.rst:2086
 msgid "``+x``, ``-x``, ``~x``"
-msgstr ""
+msgstr "``+x``, ``-x``, ``~x``"
 
 #: reference/expressions.rst:2086
 msgid "Positive, negative, bitwise NOT"
-msgstr ""
+msgstr "Θετικό, αρνητικό, bitwise NOT"
 
 #: reference/expressions.rst:2088
 msgid "``*``, ``@``, ``/``, ``//``, ``%``"
-msgstr ""
+msgstr "``*``, ``@``, ``/``, ``//``, ``%``"
 
 #: reference/expressions.rst:2088
 msgid ""
 "Multiplication, matrix multiplication, division, floor division, remainder "
 "[#]_"
 msgstr ""
+"Πολλαπλασιασμός, πολλαπλασιασμός πινάκων, διαίρεση, διαίρεση με "
+"στρογγυλοποίηση προς τα κάτω, υπόλοιπο [#]_"
 
 #: reference/expressions.rst:2092
 msgid "``+``, ``-``"
-msgstr ""
+msgstr "``+``, ``-``"
 
 #: reference/expressions.rst:2092
 msgid "Addition and subtraction"
-msgstr ""
+msgstr "Πρόσθεση και αφαίρεση"
 
 #: reference/expressions.rst:2094
 msgid "``<<``, ``>>``"
-msgstr ""
+msgstr "``<<``, ``>>``"
 
 #: reference/expressions.rst:2094
 msgid "Shifts"
-msgstr ""
+msgstr "Μετατοπίσεις"
 
 #: reference/expressions.rst:2096
 msgid "``&``"
-msgstr ""
+msgstr "``&``"
 
 #: reference/expressions.rst:2096
 msgid "Bitwise AND"
-msgstr ""
+msgstr "Bitwise AND"
 
 #: reference/expressions.rst:2098
 msgid "``^``"
-msgstr ""
+msgstr "``^``"
 
 #: reference/expressions.rst:2098
 msgid "Bitwise XOR"
-msgstr ""
+msgstr "Bitwise XOR"
 
 #: reference/expressions.rst:2100
 msgid "``|``"
-msgstr ""
+msgstr "``|``"
 
 #: reference/expressions.rst:2100
 msgid "Bitwise OR"
-msgstr ""
+msgstr "Bitwise OR"
 
 #: reference/expressions.rst:2102
 msgid ""
 ":keyword:`in`, :keyword:`not in`, :keyword:`is`, :keyword:`is not`, ``<``, "
 "``<=``, ``>``, ``>=``, ``!=``, ``==``"
 msgstr ""
+":keyword:`in`, :keyword:`not in`, :keyword:`is`, :keyword:`is not`, ``<``, "
+"``<=``, ``>``, ``>=``, ``!=``, ``==``"
 
 #: reference/expressions.rst:2102
 msgid "Comparisons, including membership tests and identity tests"
 msgstr ""
+"Συγκρίσεις, συμπεριλαμβανομένων ελέγχων συμμετοχής και ελέγχων ταυτότητας"
 
 #: reference/expressions.rst:2106
 msgid ":keyword:`not x <not>`"
-msgstr ""
+msgstr ":keyword:`not x <not>`"
 
 #: reference/expressions.rst:2106
 msgid "Boolean NOT"
-msgstr ""
+msgstr "Λογικό NOT"
 
 #: reference/expressions.rst:2108
 msgid ":keyword:`and`"
-msgstr ""
+msgstr ":keyword:`and`"
 
 #: reference/expressions.rst:2108
 msgid "Boolean AND"
-msgstr ""
+msgstr "Λογικό AND"
 
 #: reference/expressions.rst:2110
 msgid ":keyword:`or`"
-msgstr ""
+msgstr ":keyword:`or`"
 
 #: reference/expressions.rst:2110
 msgid "Boolean OR"
-msgstr ""
+msgstr "Λογικό OR"
 
 #: reference/expressions.rst:2112
 msgid ":keyword:`if <if_expr>` -- :keyword:`!else`"
-msgstr ""
+msgstr ":keyword:`if <if_expr>` -- :keyword:`!else`"
 
 #: reference/expressions.rst:2112
 msgid "Conditional expression"
-msgstr ""
+msgstr "Έκφραση υπό συνθήκη"
 
 #: reference/expressions.rst:2114
 msgid ":keyword:`lambda`"
-msgstr ""
+msgstr ":keyword:`lambda`"
 
 #: reference/expressions.rst:2114
 msgid "Lambda expression"
-msgstr ""
+msgstr "Έκφραση lambda"
 
 #: reference/expressions.rst:2116
 msgid "``:=``"
-msgstr ""
+msgstr "``:=``"
 
 #: reference/expressions.rst:2116
 msgid "Assignment expression"
-msgstr ""
+msgstr "Έκφραση ανάθεσης"
 
 #: reference/expressions.rst:2121
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: reference/expressions.rst:2122
 msgid ""
@@ -2459,6 +3570,16 @@ msgid ""
 "the first argument instead, and so returns ``-1e-100`` in this case. Which "
 "approach is more appropriate depends on the application."
 msgstr ""
+"Αν και το ``abs(x%y) < abs(y)`` είναι μαθηματικά αληθές, για τα floats "
+"μπορεί να μην είναι αριθμητικά αληθές λόγω σφαλμάτων στρογγυλοποίησης. Για "
+"παράδειγμα, και υποθέτοντας μια πλατφόρμα στην οποία το float της Python "
+"είναι αριθμός διπλής ακρίβειας κατά το IEEE 754, προκειμένου το ``-1e-100 % "
+"1e100`` να έχει το ίδιο πρόσημο με το ``1e100``, το υπολογισμένο αποτέλεσμα "
+"είναι ``-1e-100 + 1e100``, το οποίο είναι αριθμητικά ακριβώς ίσο με "
+"``1e100``. Η συνάρτηση :func:`math.fmod` επιστρέφει ένα αποτέλεσμα του "
+"οποίου το πρόσημο ταιριάζει με το πρόσημο του πρώτου ορίσματος, και έτσι "
+"επιστρέφει ``-1e-100`` σε αυτήν την περίπτωση. Το ποια προσέγγιση είναι πιο "
+"κατάλληλη εξαρτάται από την εφαρμογή."
 
 #: reference/expressions.rst:2131
 msgid ""
@@ -2467,6 +3588,11 @@ msgid ""
 "Python returns the latter result, in order to preserve that ``divmod(x,y)[0] "
 "* y + x % y`` be very close to ``x``."
 msgstr ""
+"Αν το x είναι πολύ κοντά σε ένα ακριβές ακέραιο πολλαπλάσιο του y, είναι "
+"πιθανό το ``x//y`` να είναι κατά ένα μεγαλύτερο από το ``(x-x%y)//y`` λόγω "
+"στρογγυλοποίησης. Σε τέτοιες περιπτώσεις, η Python επιστρέφει το δεύτερο "
+"αποτέλεσμα, προκειμένου να διατηρηθεί ότι το ``divmod(x,y)[0] * y + x % y`` "
+"είναι πολύ κοντά στο ``x``."
 
 #: reference/expressions.rst:2136
 msgid ""
@@ -2481,6 +3607,17 @@ msgid ""
 "LETTER C), followed by a :dfn:`combining character` at code position U+0327 "
 "(COMBINING CEDILLA)."
 msgstr ""
+"Το πρότυπο Unicode διακρίνει μεταξύ των :dfn:`code points` (π.χ. U+0041) και "
+"των :dfn:`abstract characters` (π.χ. \"ΛΑΤΙΝΙΚΟ ΚΕΦΑΛΑΙΟ ΓΡΑΜΜΑ A\"). Παρόλο "
+"που οι περισσότεροι αφηρημένοι χαρακτήρες στο Unicode αναπαρίστανται "
+"χρησιμοποιώντας μόνο ένα σημείο κώδικα, υπάρχει ένας αριθμός αφηρημένων "
+"χαρακτήρων που μπορούν επιπλέον να αναπαρασταθούν χρησιμοποιώντας μια "
+"ακολουθία περισσότερων από ένα σημείων κώδικα. Για παράδειγμα, ο αφηρημένος "
+"χαρακτήρας \"ΛΑΤΙΝΙΚΟ ΚΕΦΑΛΑΙΟ ΓΡΑΜΜΑ C ME CEDILLA\" μπορεί να αναπαρασταθεί "
+"ως ένας ενιαίος :dfn:`precomposed character` στη θέση toy κώδικα U+00C7, ή "
+"ως μια ακολουθία ενός :dfn:`base character` στη θέση του κώδικα U+0043 "
+"(ΛΑΤΙΝΙΚΟ ΚΕΦΑΛΑΙΟ ΓΡΑΜΜΑ C), ακολουθούμενου από έναν :dfn:`combining "
+"character` στη θέση του κώδικα U+0327 (COMBINING CEDILLA)."
 
 #: reference/expressions.rst:2147
 msgid ""
@@ -2489,12 +3626,20 @@ msgid ""
 "== \"\\u0043\\u0327\"`` is ``False``, even though both strings represent the "
 "same abstract character \"LATIN CAPITAL LETTER C WITH CEDILLA\"."
 msgstr ""
+"Οι τελεστές σύγκρισης στα αλφαριθμητικά συγκρίνουν στο επίπεδο των σημείων "
+"του κώδικα Unicode. Αυτό μπορεί να είναι αντισυμβατικό για τους ανθρώπους. "
+"Για παράδειγμα, το ``\"\\u00C7\" == \"\\u0043\\u0327\"`` είναι ``False``, "
+"παρόλο που και τα δύο αλφαριθμητικά αναπαριστούν τον ίδιο αφηρημένο "
+"χαρακτήρα \"ΛΑΤΙΝΙΚΟ ΚΕΦΑΛΑΙΟ ΓΡΑΜΜΑ C ME CEDILLA\"."
 
 #: reference/expressions.rst:2152
 msgid ""
 "To compare strings at the level of abstract characters (that is, in a way "
 "intuitive to humans), use :func:`unicodedata.normalize`."
 msgstr ""
+"Για να συγκρίνετε αλφαριθμητικά στο επίπεδο των αφηρημένων χαρακτήρων "
+"(δηλαδή, με τρόπο διαισθητικό για τους ανθρώπους), χρησιμοποιήστε την :func:"
+"`unicodedata.normalize`."
 
 #: reference/expressions.rst:2155
 msgid ""
@@ -2503,85 +3648,94 @@ msgid ""
 "the :keyword:`is` operator, like those involving comparisons between "
 "instance methods, or constants.  Check their documentation for more info."
 msgstr ""
+"Λόγω της αυτόματης συλλογής απορριμμάτων, των ελεύθερων λιστών, και της "
+"δυναμικής φύσης των περιγραφέων, μπορεί να παρατηρήσετε φαινομενικά "
+"ασυνήθιστη συμπεριφορά σε ορισμένες χρήσεις του τελεστή :keyword:`is`, όπως "
+"αυτές που περιλαμβάνουν συγκρίσεις μεταξύ μεθόδων στιγμιοτύπου ή σταθερών. "
+"Ελέγξτε την τεκμηρίωσή τους για περισσότερες πληροφορίες."
 
 #: reference/expressions.rst:2160
 msgid ""
 "The power operator ``**`` binds less tightly than an arithmetic or bitwise "
 "unary operator on its right, that is, ``2**-1`` is ``0.5``."
 msgstr ""
+"Ο τελεστής δύναμης ``**`` δεσμεύει λιγότερο σφιχτά από έναν αριθμητικό ή "
+"bitwise μοναδιαίο τελεστή στα δεξιά του, δηλαδή, το ``2**-1`` είναι ``0.5``."
 
 #: reference/expressions.rst:2163
 msgid ""
 "The ``%`` operator is also used for string formatting; the same precedence "
 "applies."
 msgstr ""
+"Ο τελεστής ``%`` χρησιμοποιείται επίσης για μορφοποίηση αλφαριθμητικών· "
+"ισχύει η ίδια προτεραιότητα."
 
 #: reference/expressions.rst:448 reference/expressions.rst:1840
 #: reference/expressions.rst:1931 reference/expressions.rst:1986
 msgid "expression"
-msgstr ""
+msgstr "έκφραση"
 
 #: reference/expressions.rst:8
 msgid "BNF"
-msgstr ""
+msgstr "BNF"
 
 #: reference/expressions.rst:1320 reference/expressions.rst:1368
 msgid "arithmetic"
-msgstr ""
+msgstr "αριθμητικό"
 
 #: reference/expressions.rst:28
 msgid "conversion"
-msgstr ""
+msgstr "μετατροπή"
 
 #: reference/expressions.rst:50
 msgid "atom"
-msgstr ""
+msgstr "άτομο"
 
 #: reference/expressions.rst:81
 msgid "name"
-msgstr ""
+msgstr "όνομα"
 
 #: reference/expressions.rst:67
 msgid "identifier"
-msgstr ""
+msgstr "αναγνωριστικό"
 
 #: reference/expressions.rst:625 reference/expressions.rst:811
 #: reference/expressions.rst:913 reference/expressions.rst:1410
 #: reference/expressions.rst:1514
 msgid "exception"
-msgstr ""
+msgstr "εξαίρεση"
 
 #: reference/expressions.rst:73
 msgid "NameError"
-msgstr ""
+msgstr "NameError"
 
 #: reference/expressions.rst:81
 msgid "mangling"
-msgstr ""
+msgstr "παραμόρφωση"
 
 #: reference/expressions.rst:81
 msgid "private"
-msgstr ""
+msgstr "ιδιωτικό"
 
 #: reference/expressions.rst:81
 msgid "names"
-msgstr ""
+msgstr "ονόματα"
 
 #: reference/expressions.rst:132
 msgid "literal"
-msgstr ""
+msgstr "λεκτικές σταθερές"
 
 #: reference/expressions.rst:427
 msgid "immutable"
-msgstr ""
+msgstr "αμετάβλητο"
 
 #: reference/expressions.rst:149
 msgid "data"
-msgstr ""
+msgstr "δεδομένα"
 
 #: reference/expressions.rst:149
 msgid "type"
-msgstr ""
+msgstr "τύπος"
 
 #: reference/expressions.rst:330 reference/expressions.rst:384
 #: reference/expressions.rst:448 reference/expressions.rst:801
@@ -2589,347 +3743,347 @@ msgstr ""
 #: reference/expressions.rst:1225 reference/expressions.rst:1246
 #: reference/expressions.rst:1998
 msgid "object"
-msgstr ""
+msgstr "αντικείμενο"
 
 #: reference/expressions.rst:217
 msgid "parenthesized form"
-msgstr ""
+msgstr "μορφή σε παρένθεση"
 
 #: reference/expressions.rst:448 reference/expressions.rst:1063
 msgid "() (parentheses)"
-msgstr ""
+msgstr "() (παρενθέσεις)"
 
 #: reference/expressions.rst:217
 msgid "tuple display"
-msgstr ""
+msgstr "απεικόνιση πλειάδας"
 
 #: reference/expressions.rst:330
 msgid "empty"
-msgstr ""
+msgstr "κενό"
 
 #: reference/expressions.rst:942 reference/expressions.rst:1998
 msgid "tuple"
-msgstr ""
+msgstr "πλειάδα"
 
 #: reference/expressions.rst:2020
 msgid "comma"
-msgstr ""
+msgstr "κόμμα"
 
 #: reference/expressions.rst:330 reference/expressions.rst:384
 #: reference/expressions.rst:1063 reference/expressions.rst:1986
 msgid ", (comma)"
-msgstr ""
+msgstr ", (κόμμα)"
 
 #: reference/expressions.rst:330 reference/expressions.rst:384
 msgid "comprehensions"
-msgstr ""
+msgstr "συμπτύξεις"
 
 #: reference/expressions.rst:261
 msgid "for"
-msgstr ""
+msgstr "for"
 
 #: reference/expressions.rst:296
 msgid "in comprehensions"
-msgstr ""
+msgstr "στις συμπτύξεις"
 
 #: reference/expressions.rst:1931
 msgid "if"
-msgstr ""
+msgstr "if"
 
 #: reference/expressions.rst:261
 msgid "async for"
-msgstr ""
+msgstr "async for"
 
 #: reference/expressions.rst:1264
 msgid "await"
-msgstr ""
+msgstr "await"
 
 #: reference/expressions.rst:913 reference/expressions.rst:1019
 #: reference/expressions.rst:1986
 msgid "list"
-msgstr ""
+msgstr "λίστα"
 
 #: reference/expressions.rst:356 reference/expressions.rst:384
 msgid "display"
-msgstr ""
+msgstr "απεικόνιση"
 
 #: reference/expressions.rst:938
 msgid "[] (square brackets)"
-msgstr ""
+msgstr "[] (αγκύλες)"
 
 #: reference/expressions.rst:330
 msgid "list expression"
-msgstr ""
+msgstr "έκφραση λίστας"
 
 #: reference/expressions.rst:356 reference/expressions.rst:1986
 msgid "expression list"
-msgstr ""
+msgstr "λίστα εκφράσεων"
 
 #: reference/expressions.rst:356
 msgid "set"
-msgstr ""
+msgstr "σύνολο"
 
 #: reference/expressions.rst:384
 msgid "{} (curly brackets)"
-msgstr ""
+msgstr "{} (άγκιστρα)"
 
 #: reference/expressions.rst:356
 msgid "set expression"
-msgstr ""
+msgstr "έκφραση συνόλου"
 
 #: reference/expressions.rst:410 reference/expressions.rst:942
 msgid "dictionary"
-msgstr ""
+msgstr "λεξικό"
 
 #: reference/expressions.rst:384
 msgid "key"
-msgstr ""
+msgstr "κλειδί"
 
 #: reference/expressions.rst:384
 msgid "value"
-msgstr ""
+msgstr "τιμή"
 
 #: reference/expressions.rst:384
 msgid "key/value pair"
-msgstr ""
+msgstr "ζεύγος κλειδιού/τιμής"
 
 #: reference/expressions.rst:384
 msgid "dictionary expression"
-msgstr ""
+msgstr "έκφραση λεξικού"
 
 #: reference/expressions.rst:1013 reference/expressions.rst:1958
 msgid ": (colon)"
-msgstr ""
+msgstr ": (άνω και κάτω τελεία)"
 
 #: reference/expressions.rst:384
 msgid "in dictionary expressions"
-msgstr ""
+msgstr "σε εκφράσεις λεξικού"
 
 #: reference/expressions.rst:410
 msgid "in dictionary displays"
-msgstr ""
+msgstr "σε απεικονίσεις λεξικού"
 
 #: reference/expressions.rst:1146 reference/expressions.rst:2005
 msgid "unpacking"
-msgstr ""
+msgstr "αποσυσκευασία"
 
 #: reference/expressions.rst:1176 reference/expressions.rst:1284
 msgid "**"
-msgstr ""
+msgstr "**"
 
 #: reference/expressions.rst:427
 msgid "hashable"
-msgstr ""
+msgstr "κατακερματίσιμο"
 
 #: reference/expressions.rst:504 reference/expressions.rst:613
 msgid "generator"
-msgstr ""
+msgstr "γεννήτρια"
 
 #: reference/expressions.rst:448
 msgid "generator expression"
-msgstr ""
+msgstr "έκφραση γεννήτριας"
 
 #: reference/expressions.rst:1264
 msgid "keyword"
-msgstr ""
+msgstr "λέξη-κλειδί"
 
 #: reference/expressions.rst:702
 msgid "yield"
-msgstr ""
+msgstr "yield"
 
 #: reference/expressions.rst:572
 msgid "from"
-msgstr ""
+msgstr "from"
 
 #: reference/expressions.rst:1211 reference/expressions.rst:1958
 msgid "function"
-msgstr ""
+msgstr "συνάρτηση"
 
 #: reference/expressions.rst:558
 msgid "coroutine"
-msgstr ""
+msgstr "coroutine"
 
 #: reference/expressions.rst:572
 msgid "yield from expression"
-msgstr ""
+msgstr "yield from expression"
 
 #: reference/expressions.rst:625
 msgid "StopIteration"
-msgstr ""
+msgstr "StopIteration"
 
 #: reference/expressions.rst:866
 msgid "GeneratorExit"
-msgstr ""
+msgstr "GeneratorExit"
 
 #: reference/expressions.rst:702
 msgid "examples"
-msgstr ""
+msgstr "παραδείγματα"
 
 #: reference/expressions.rst:801
 msgid "asynchronous-generator"
-msgstr ""
+msgstr "ασύγχρονη γεννήτρια"
 
 #: reference/expressions.rst:811
 msgid "StopAsyncIteration"
-msgstr ""
+msgstr "StopAsyncIteration"
 
 #: reference/expressions.rst:890
 msgid "primary"
-msgstr ""
+msgstr "πρωτεύον"
 
 #: reference/expressions.rst:904
 msgid "attribute"
-msgstr ""
+msgstr "χαρακτηριστικό"
 
 #: reference/expressions.rst:904
 msgid "reference"
-msgstr ""
+msgstr "αναφορά"
 
 #: reference/expressions.rst:904
 msgid ". (dot)"
-msgstr ""
+msgstr ". (τελεία)"
 
 #: reference/expressions.rst:904
 msgid "attribute reference"
-msgstr ""
+msgstr "αναφορά σε χαρακτηριστικό"
 
 #: reference/expressions.rst:913
 msgid "AttributeError"
-msgstr ""
+msgstr "AttributeError"
 
 #: reference/expressions.rst:913
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #: reference/expressions.rst:938
 msgid "subscription"
-msgstr ""
+msgstr "δεικτοδότηση"
 
 #: reference/expressions.rst:1019 reference/expressions.rst:1805
 msgid "sequence"
-msgstr ""
+msgstr "ακολουθία"
 
 #: reference/expressions.rst:942
 msgid "mapping"
-msgstr ""
+msgstr "αντιστοίχιση"
 
 #: reference/expressions.rst:999 reference/expressions.rst:1019
 msgid "string"
-msgstr ""
+msgstr "αλφαριθμητικό"
 
 #: reference/expressions.rst:999
 msgid "item"
-msgstr ""
+msgstr "στοιχείο"
 
 #: reference/expressions.rst:999
 msgid "character"
-msgstr ""
+msgstr "χαρακτήρας"
 
 #: reference/expressions.rst:1013
 msgid "slicing"
-msgstr ""
+msgstr "τεμαχισμός"
 
 #: reference/expressions.rst:1013
 msgid "slice"
-msgstr ""
+msgstr "τμήμα"
 
 #: reference/expressions.rst:1045
 msgid "start (slice object attribute)"
-msgstr ""
+msgstr "start (χαρακτηριστικό αντικειμένου τμήματος)"
 
 #: reference/expressions.rst:1045
 msgid "stop (slice object attribute)"
-msgstr ""
+msgstr "stop (χαρακτηριστικό αντικειμένου τμήματος)"
 
 #: reference/expressions.rst:1045
 msgid "step (slice object attribute)"
-msgstr ""
+msgstr "step (χαρακτηριστικό αντικειμένου τμήματος)"
 
 #: reference/expressions.rst:1063
 msgid "callable"
-msgstr ""
+msgstr "καλέσιμο"
 
 #: reference/expressions.rst:1211 reference/expressions.rst:1239
 #: reference/expressions.rst:1256
 msgid "call"
-msgstr ""
+msgstr "κλήση"
 
 #: reference/expressions.rst:1063
 msgid "argument"
-msgstr ""
+msgstr "όρισμα"
 
 #: reference/expressions.rst:1096
 msgid "call semantics"
-msgstr ""
+msgstr "σημασιολογία κλήσης"
 
 #: reference/expressions.rst:1063
 msgid "argument list"
-msgstr ""
+msgstr "λίστα ορισμάτων"
 
 #: reference/expressions.rst:1063
 msgid "= (equals)"
-msgstr ""
+msgstr "= (ίσον)"
 
 #: reference/expressions.rst:1146 reference/expressions.rst:1176
 msgid "in function calls"
-msgstr ""
+msgstr "σε κλήσεις συναρτήσεων"
 
 #: reference/expressions.rst:1096
 msgid "parameter"
-msgstr ""
+msgstr "παράμετρος"
 
 #: reference/expressions.rst:1381 reference/expressions.rst:2005
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (αστερίσκος)"
 
 #: reference/expressions.rst:1211
 msgid "user-defined"
-msgstr ""
+msgstr "ορισμένο από τον χρήστη"
 
 #: reference/expressions.rst:1211
 msgid "user-defined function"
-msgstr ""
+msgstr "ορισμένη από τον χρήστη συνάρτηση"
 
 #: reference/expressions.rst:1225
 msgid "built-in function"
-msgstr ""
+msgstr "ενσωματωμένη συνάρτηση"
 
 #: reference/expressions.rst:1225
 msgid "method"
-msgstr ""
+msgstr "μέθοδος"
 
 #: reference/expressions.rst:1225
 msgid "built-in method"
-msgstr ""
+msgstr "ενσωματωμένη μέθοδος"
 
 #: reference/expressions.rst:1239
 msgid "class"
-msgstr ""
+msgstr "κλάση"
 
 #: reference/expressions.rst:1239
 msgid "class object"
-msgstr ""
+msgstr "αντικείμενο κλάσης"
 
 #: reference/expressions.rst:1246
 msgid "class instance"
-msgstr ""
+msgstr "στιγμιότυπο κλάσης"
 
 #: reference/expressions.rst:1256
 msgid "instance"
-msgstr ""
+msgstr "στιγμιότυπο"
 
 #: reference/expressions.rst:1256
 msgid "__call__() (object method)"
-msgstr ""
+msgstr "__call__() (μέθοδος αντικειμένου)"
 
 #: reference/expressions.rst:1284
 msgid "power"
-msgstr ""
+msgstr "δύναμη"
 
 #: reference/expressions.rst:1320 reference/expressions.rst:1496
 #: reference/expressions.rst:1840
 msgid "operation"
-msgstr ""
+msgstr "λειτουργία"
 
 #: reference/expressions.rst:1329 reference/expressions.rst:1346
 #: reference/expressions.rst:1398 reference/expressions.rst:1428
@@ -2938,309 +4092,309 @@ msgstr ""
 #: reference/expressions.rst:1856 reference/expressions.rst:1866
 #: reference/expressions.rst:2056
 msgid "operator"
-msgstr ""
+msgstr "τελεστής"
 
 #: reference/expressions.rst:1320
 msgid "unary"
-msgstr ""
+msgstr "μοναδιαίο"
 
 #: reference/expressions.rst:1525 reference/expressions.rst:1542
 #: reference/expressions.rst:1551
 msgid "bitwise"
-msgstr ""
+msgstr "bitwise"
 
 #: reference/expressions.rst:1329
 msgid "negation"
-msgstr ""
+msgstr "αρνητικότητα"
 
 #: reference/expressions.rst:1329
 msgid "minus"
-msgstr ""
+msgstr "μείον"
 
 #: reference/expressions.rst:1475
 msgid "- (minus)"
-msgstr ""
+msgstr "- (μείον)"
 
 #: reference/expressions.rst:1338
 msgid "unary operator"
-msgstr ""
+msgstr "μοναδιαίος τελεστής"
 
 #: reference/expressions.rst:1338
 msgid "plus"
-msgstr ""
+msgstr "συν"
 
 #: reference/expressions.rst:1458
 msgid "+ (plus)"
-msgstr ""
+msgstr "+ (συν)"
 
 #: reference/expressions.rst:1346
 msgid "inversion"
-msgstr ""
+msgstr "αντιστροφή"
 
 #: reference/expressions.rst:1346
 msgid "~ (tilde)"
-msgstr ""
+msgstr "~ (περισπωμένη)"
 
 #: reference/expressions.rst:1357
 msgid "TypeError"
-msgstr ""
+msgstr "TypeError"
 
 #: reference/expressions.rst:1525
 msgid "binary"
-msgstr ""
+msgstr "δυαδικός"
 
 #: reference/expressions.rst:1381
 msgid "multiplication"
-msgstr ""
+msgstr "πολλαπλασιασμός"
 
 #: reference/expressions.rst:1398
 msgid "matrix multiplication"
-msgstr ""
+msgstr "πολλαπλασιασμός πινάκων"
 
 #: reference/expressions.rst:1398
 msgid "@ (at)"
-msgstr ""
+msgstr "@ (at)"
 
 #: reference/expressions.rst:1410
 msgid "ZeroDivisionError"
-msgstr ""
+msgstr "ZeroDivisionError"
 
 #: reference/expressions.rst:1410
 msgid "division"
-msgstr ""
+msgstr "διαίρεση"
 
 #: reference/expressions.rst:1410
 msgid "/ (slash)"
-msgstr ""
+msgstr "/ (κάθετος)"
 
 #: reference/expressions.rst:1410
 msgid "//"
-msgstr ""
+msgstr "//"
 
 #: reference/expressions.rst:1428
 msgid "modulo"
-msgstr ""
+msgstr "υπόλοιπο διαίρεσης"
 
 #: reference/expressions.rst:1428
 msgid "% (percent)"
-msgstr ""
+msgstr "% (τοις εκατό)"
 
 #: reference/expressions.rst:1458
 msgid "addition"
-msgstr ""
+msgstr "πρόσθεση"
 
 #: reference/expressions.rst:1475
 msgid "binary operator"
-msgstr ""
+msgstr "δυαδικός τελεστής"
 
 #: reference/expressions.rst:1475
 msgid "subtraction"
-msgstr ""
+msgstr "αφαίρεση"
 
 #: reference/expressions.rst:1496
 msgid "shifting"
-msgstr ""
+msgstr "μετατόπιση"
 
 #: reference/expressions.rst:1496
 msgid "<<"
-msgstr ""
+msgstr "<<"
 
 #: reference/expressions.rst:1496
 msgid ">>"
-msgstr ""
+msgstr ">>"
 
 #: reference/expressions.rst:1514
 msgid "ValueError"
-msgstr ""
+msgstr "ValueError"
 
 #: reference/expressions.rst:1861
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: reference/expressions.rst:1534
 msgid "& (ampersand)"
-msgstr ""
+msgstr "& (συμπλεκτικό)"
 
 #: reference/expressions.rst:1542
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: reference/expressions.rst:1542
 msgid "exclusive"
-msgstr ""
+msgstr "αποκλειστικό"
 
 #: reference/expressions.rst:1551 reference/expressions.rst:1866
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: reference/expressions.rst:1542
 msgid "^ (caret)"
-msgstr ""
+msgstr "^ (εκθέτης)"
 
 #: reference/expressions.rst:1551
 msgid "inclusive"
-msgstr ""
+msgstr "συμπεριληπτικό"
 
 #: reference/expressions.rst:1551
 msgid "| (vertical bar)"
-msgstr ""
+msgstr "| (κάθετη γραμμή)"
 
 #: reference/expressions.rst:1566
 msgid "comparison"
-msgstr ""
+msgstr "σύγκριση"
 
 #: reference/expressions.rst:1566
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #: reference/expressions.rst:1566
 msgid "language"
-msgstr ""
+msgstr "γλώσσα"
 
 #: reference/expressions.rst:1566
 msgid "< (less)"
-msgstr ""
+msgstr "< (μικρότερο)"
 
 #: reference/expressions.rst:1566
 msgid "> (greater)"
-msgstr ""
+msgstr "> (μεγαλύτερο)"
 
 #: reference/expressions.rst:1566
 msgid "<="
-msgstr ""
+msgstr "<="
 
 #: reference/expressions.rst:1566
 msgid ">="
-msgstr ""
+msgstr ">="
 
 #: reference/expressions.rst:1566
 msgid "=="
-msgstr ""
+msgstr "=="
 
 #: reference/expressions.rst:1566
 msgid "!="
-msgstr ""
+msgstr "!="
 
 #: reference/expressions.rst:1590
 msgid "chaining"
-msgstr ""
+msgstr "αλυσίδωση"
 
 #: reference/expressions.rst:1590
 msgid "comparisons"
-msgstr ""
+msgstr "συγκρίσεις"
 
 #: reference/expressions.rst:1805
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: reference/expressions.rst:1805
 msgid "not in"
-msgstr ""
+msgstr "not in"
 
 #: reference/expressions.rst:1805
 msgid "membership"
-msgstr ""
+msgstr "συμμετοχή"
 
 #: reference/expressions.rst:1814
 msgid "test"
-msgstr ""
+msgstr "έλεγχος"
 
 #: reference/expressions.rst:1814
 msgid "is"
-msgstr ""
+msgstr "is"
 
 #: reference/expressions.rst:1814
 msgid "is not"
-msgstr ""
+msgstr "is not"
 
 #: reference/expressions.rst:1814
 msgid "identity"
-msgstr ""
+msgstr "ταυτότητα"
 
 #: reference/expressions.rst:1840
 msgid "Conditional"
-msgstr ""
+msgstr "Υπό συνθήκη"
 
 #: reference/expressions.rst:1840
 msgid "Boolean"
-msgstr ""
+msgstr "Λογικό"
 
 #: reference/expressions.rst:1856
 msgid "not"
-msgstr ""
+msgstr "not"
 
 #: reference/expressions.rst:1880
 msgid ":= (colon equals)"
-msgstr ""
+msgstr ":= (άνω-κάτω τελεία ίσον)"
 
 #: reference/expressions.rst:1880
 msgid "assignment expression"
-msgstr ""
+msgstr "έκφραση ανάθεσης"
 
 #: reference/expressions.rst:1880
 msgid "walrus operator"
-msgstr ""
+msgstr "τελεστής walrus"
 
 #: reference/expressions.rst:1880
 msgid "named expression"
-msgstr ""
+msgstr "επώνυμη έκφραση"
 
 #: reference/expressions.rst:1880
 msgid "assignment"
-msgstr ""
+msgstr "ανάθεση"
 
 #: reference/expressions.rst:1931
 msgid "conditional"
-msgstr ""
+msgstr "υπό συνθήκη"
 
 #: reference/expressions.rst:1931
 msgid "ternary"
-msgstr ""
+msgstr "τριαδικός"
 
 #: reference/expressions.rst:1931
 msgid "conditional expression"
-msgstr ""
+msgstr "έκφραση υπό συνθήκη"
 
 #: reference/expressions.rst:1931
 msgid "else"
-msgstr ""
+msgstr "else"
 
 #: reference/expressions.rst:1958
 msgid "lambda"
-msgstr ""
+msgstr "lambda"
 
 #: reference/expressions.rst:1958
 msgid "form"
-msgstr ""
+msgstr "μορφή"
 
 #: reference/expressions.rst:1958
 msgid "anonymous"
-msgstr ""
+msgstr "ανώνυμος"
 
 #: reference/expressions.rst:1958
 msgid "lambda expression"
-msgstr ""
+msgstr "έκφραση lambda"
 
 #: reference/expressions.rst:2005
 msgid "iterable"
-msgstr ""
+msgstr "iterable"
 
 #: reference/expressions.rst:2005
 msgid "in expression lists"
-msgstr ""
+msgstr "σε λίστες εκφράσεων"
 
 #: reference/expressions.rst:2020
 msgid "trailing"
-msgstr ""
+msgstr "στο τέλος"
 
 #: reference/expressions.rst:2035
 msgid "evaluation"
-msgstr ""
+msgstr "αποτίμηση"
 
 #: reference/expressions.rst:2035
 msgid "order"
-msgstr ""
+msgstr "διάταξη"
 
 #: reference/expressions.rst:2056
 msgid "precedence"
-msgstr ""
+msgstr "προτεραιότητα"

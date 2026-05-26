@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-07-23 20:14+0300\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: library/timeit.rst:2
 msgid ":mod:`!timeit` --- Measure execution time of small code snippets"
-msgstr ""
+msgstr ":mod:`!timeit` --- Μέτρηση χρόνου εκτέλεσης μικρών αποσπασμάτων κώδικα"
 
 #: library/timeit.rst:7
 msgid "**Source code:** :source:`Lib/timeit.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/timeit.py`"
 
 #: library/timeit.rst:15
 msgid ""
@@ -33,16 +33,24 @@ msgid ""
 "execution times. See also Tim Peters' introduction to the \"Algorithms\" "
 "chapter in the second edition of *Python Cookbook*, published by O'Reilly."
 msgstr ""
+"Αυτό το module παρέχει έναν απλό τρόπο για να μετρήσετε τον χρόνο εκτέλεσης "
+"μικρών αποσπασμάτων κώδικα Python. Διαθέτει τόσο :ref:`timeit-command-line-"
+"interface` όσο και :ref:`callable <python-interface>`. Αποφεύγει αρκετές "
+"συνηθισμένες παγίδες στη μέτρηση χρόνου εκτέλεσης. Δείτε επίσης την εισαγωγή "
+"του Tim Peters στο κεφάλαιο \"Αλγόριθμοι\" της δεύτερης έκδοσης του *Python "
+"Cookbook*, που εκδόθηκε από την O'Reilly."
 
 #: library/timeit.rst:23
 msgid "Basic Examples"
-msgstr ""
+msgstr "Βασικά Παραδείγματα"
 
 #: library/timeit.rst:25
 msgid ""
 "The following example shows how the :ref:`timeit-command-line-interface` can "
 "be used to compare three different expressions:"
 msgstr ""
+"Το παρακάτω παράδειγμα δείχνει πώς η :ref:`timeit-command-line-interface` "
+"μπορεί να χρησιμοποιηθεί για να συγκρίνει τρεις διαφορετικές εκφράσεις:"
 
 #: library/timeit.rst:28
 msgid ""
@@ -53,10 +61,16 @@ msgid ""
 "$ python -m timeit \"'-'.join(map(str, range(100)))\"\n"
 "10000 loops, best of 5: 23.2 usec per loop"
 msgstr ""
+"$ python -m timeit \"'-'.join(str(n) for n in range(100))\"\n"
+"10000 loops, best of 5: 30.2 usec per loop\n"
+"$ python -m timeit \"'-'.join([str(n) for n in range(100)])\"\n"
+"10000 loops, best of 5: 27.5 usec per loop\n"
+"$ python -m timeit \"'-'.join(map(str, range(100)))\"\n"
+"10000 loops, best of 5: 23.2 usec per loop"
 
 #: library/timeit.rst:37
 msgid "This can be achieved from the :ref:`python-interface` with::"
-msgstr ""
+msgstr "Αυτό μπορεί να επιτευχθεί από το :ref:`python-interface` ως εξής::"
 
 #: library/timeit.rst:39
 msgid ""
@@ -68,16 +82,27 @@ msgid ""
 ">>> timeit.timeit('\"-\".join(map(str, range(100)))', number=10000)\n"
 "0.23702679807320237"
 msgstr ""
+">>> import timeit\n"
+">>> timeit.timeit('\"-\".join(str(n) for n in range(100))', number=10000)\n"
+"0.3018611848820001\n"
+">>> timeit.timeit('\"-\".join([str(n) for n in range(100)])', number=10000)\n"
+"0.2727368790656328\n"
+">>> timeit.timeit('\"-\".join(map(str, range(100)))', number=10000)\n"
+"0.23702679807320237"
 
 #: library/timeit.rst:47
 msgid "A callable can also be passed from the :ref:`python-interface`::"
 msgstr ""
+"Μπορεί επίσης να δοθεί μια καλέσιμη συνάρτηση από το :ref:`python-"
+"interface`::"
 
 #: library/timeit.rst:49
 msgid ""
 ">>> timeit.timeit(lambda: \"-\".join(map(str, range(100))), number=10000)\n"
 "0.19665591977536678"
 msgstr ""
+">>> timeit.timeit(lambda: \"-\".join(map(str, range(100))), number=10000)\n"
+"0.19665591977536678"
 
 #: library/timeit.rst:52
 msgid ""
@@ -85,14 +110,18 @@ msgid ""
 "repetitions only when the command-line interface is used.  In "
 "the :ref:`timeit-examples` section you can find more advanced examples."
 msgstr ""
+"Σημειώστε όμως ότι η :func:`.timeit` θα καθορίσει αυτόματα τον αριθμό των "
+"επαναλήψεων μόνο όταν χρησιμοποιείται η διεπαφή γραμμής εντολών. Στην "
+"ενότητα :ref:`timeit-examples` μπορείτε να βρείτε πιο προχωρημένα "
+"παραδείγματα."
 
 #: library/timeit.rst:60
 msgid "Python Interface"
-msgstr ""
+msgstr "Διεπαφή Python"
 
 #: library/timeit.rst:62
 msgid "The module defines three convenience functions and a public class:"
-msgstr ""
+msgstr "Το module ορίζει τρεις βοηθητικές συναρτήσεις και μία δημόσια κλάση:"
 
 #: library/timeit.rst:67
 msgid ""
@@ -101,10 +130,14 @@ msgid ""
 "executions. The optional *globals* argument specifies a namespace in which "
 "to execute the code."
 msgstr ""
+"Δημιουργεί ένα στιγμιότυπο της κλάσης :class:`Timer` με τη δοσμένη εντολή, "
+"τον κώδικα *setup* και τη συνάρτηση *timer* και εκτελεί τη μέθοδο :meth:`."
+"timeit` με *number* εκτελέσεις. Η προαιρετική παράμετρος *globals* καθορίζει "
+"το namespace στο οποίο θα εκτελεστεί ο κώδικας."
 
 #: library/timeit.rst:83 library/timeit.rst:122
 msgid "The optional *globals* parameter was added."
-msgstr ""
+msgstr "Προστέθηκε η προαιρετική παράμετρος *globals*."
 
 #: library/timeit.rst:78
 msgid ""
@@ -113,24 +146,34 @@ msgid ""
 "count and *number* executions.  The optional *globals* argument specifies a "
 "namespace in which to execute the code."
 msgstr ""
+"Δημιουργεί ένα στιγμιότυπο της κλάσης :class:`Timer` με τη δοσμένη εντολή, "
+"τον κώδικα *setup* και τη συνάρτηση *timer* και εκτελεί τη μέθοδο :meth:`."
+"repeat` με το δοσμένο πλήθος *repeat* και *number* εκτελέσεις. Η προαιρετική "
+"παράμετρος *globals* καθορίζει το namespace στο οποίο θα εκτελεστεί ο "
+"κώδικας."
 
 #: library/timeit.rst:183
 msgid "Default value of *repeat* changed from 3 to 5."
-msgstr ""
+msgstr "Η προεπιλεγμένη τιμή του *repeat* άλλαξε από 3 σε 5."
 
 #: library/timeit.rst:92
 msgid ""
 "The default timer, which is always time.perf_counter(), returns float "
 "seconds. An alternative, time.perf_counter_ns, returns integer nanoseconds."
 msgstr ""
+"Ο προεπιλεγμένος χρονομετρητής, που είναι πάντα το time.perf_counter(), "
+"επιστρέφει δευτερόλεπτα ως float. Εναλλακτικά, το time.perf_counter_ns "
+"επιστρέφει ακέραια νανοδευτερόλεπτα."
 
 #: library/timeit.rst:95
 msgid ":func:`time.perf_counter` is now the default timer."
 msgstr ""
+"Η :func:`time.perf_counter` είναι πλέον ο προεπιλεγμένος χρονομετρητής."
 
 #: library/timeit.rst:101
 msgid "Class for timing execution speed of small code snippets."
 msgstr ""
+"Κλάση για τη μέτρηση της ταχύτητας εκτέλεσης μικρών αποσπασμάτων κώδικα."
 
 #: library/timeit.rst:103
 msgid ""
@@ -139,9 +182,17 @@ msgid ""
 "timer function is platform-dependent (see the module doc string). *stmt* and "
 "*setup* may also contain multiple statements separated by ``;`` or newlines, "
 "as long as they don't contain multi-line string literals.  The statement "
-"will by default be executed within timeit's namespace; this behavior can be "
-"controlled by passing a namespace to *globals*."
+"will by default be executed withiπεριέχουνn timeit's namespace; this "
+"behavior can be controlled by passing a namespace to *globals*."
 msgstr ""
+"Ο κατασκευαστής δέχεται μια εντολή για χρονομέτρηση, μια επιπλέον εντολή για "
+"αρχικοποίηση (setup) και μια συνάρτηση χρονομέτρησης. Και οι δύο εντολές "
+"έχουν ως προεπιλογή το ``'pass'``· η συνάρτηση χρονομέτρησης εξαρτάται από "
+"την πλατφόρμα (δείτε το doc string του module). Τα *stmt* και *setup* "
+"μπορούν επίσης να περιέχουν πολλαπλές εντολές χωρισμένες με ``;`` ή νέες "
+"γραμμές, αρκεί να μην περιέχουν πολυγραμμικά λεκτικά συμβολοσειράς. Η εντολή "
+"εκτελείται εξ ορισμού στο namespace του timeit· αυτή η συμπεριφορά μπορεί να "
+"ελεγχθεί περνώντας ένα namespace στο *globals*."
 
 #: library/timeit.rst:111
 msgid ""
@@ -149,12 +200,17 @@ msgid ""
 "the :meth:`.timeit` method.  The :meth:`.repeat` and :meth:`.autorange` "
 "methods are convenience methods to call :meth:`.timeit` multiple times."
 msgstr ""
+"Για να μετρήσετε τον χρόνο εκτέλεσης της πρώτης εντολής, χρησιμοποιήστε τη "
+"μέθοδο :meth:`.timeit`. Οι μέθοδοι :meth:`.repeat` και :meth:`.autorange` "
+"είναι μέθοδοι ευκολίας για να καλέσετε τη :meth:`.timeit` πολλές φορές."
 
 #: library/timeit.rst:115
 msgid ""
 "The execution time of *setup* is excluded from the overall timed execution "
 "run."
 msgstr ""
+"Ο χρόνος εκτέλεσης του *setup* εξαιρείται από τη συνολική χρονομετρημένη "
+"εκτέλεση."
 
 #: library/timeit.rst:117
 msgid ""
@@ -163,6 +219,11 @@ msgid ""
 "will then be executed by :meth:`.timeit`.  Note that the timing overhead is "
 "a little larger in this case because of the extra function calls."
 msgstr ""
+"Οι παράμετροι *stmt* και *setup* μπορούν επίσης να πάρουν αντικείμενα που "
+"είναι καλέσιμα χωρίς ορίσματα. Αυτό θα ενσωματώσει κλήσεις σε αυτά σε μια "
+"συνάρτηση χρονομέτρησης που θα εκτελείται στη συνέχεια από τη :meth:`."
+"timeit`. Σημειώστε ότι το κόστος χρονομέτρησης είναι λίγο μεγαλύτερο σε αυτή "
+"την περίπτωση λόγω των επιπλέον κλήσεων των συναρτήσεων."
 
 #: library/timeit.rst:127
 msgid ""
@@ -173,6 +234,12 @@ msgid ""
 "million.  The main statement, the setup statement and the timer function to "
 "be used are passed to the constructor."
 msgstr ""
+"Χρονομετρεί *number* εκτελέσεις της κύριας εντολής. Αυτή εκτελεί την εντολή "
+"setup μία φορά και στη συνέχεια επιστρέφει το χρόνο που απαιτείται για να "
+"εκτελέσει την κύρια εντολή πολλές φορές. Ο προεπιλεγμένος χρονομετρητής "
+"επιστρέφει δευτερόλεπτα ως float. Το όρισμα είναι ο αριθμός των επαναλήψεων, "
+"με προεπιλογή το ένα εκατομμύριο. Η κύρια εντολή, η εντολή setup και η "
+"συνάρτηση χρονομέτρησης που θα χρησιμοποιηθούν περνιούνται στον κατασκευαστή."
 
 #: library/timeit.rst:136
 msgid ""
@@ -183,14 +250,21 @@ msgid ""
 "so, GC can be re-enabled as the first statement in the *setup* string.  For "
 "example::"
 msgstr ""
+"Από προεπιλογή, η :meth:`.timeit` απενεργοποιεί προσωρινά τον :term:`garbage "
+"collection` κατά τη διάρκεια της χρονομέτρησης. Το πλεονέκτημα αυτής της "
+"προσέγγισης είναι ότι καθιστά τις ανεξάρτητες χρονομετρήσεις πιο "
+"συγκρίσιμες. Το μειονέκτημα είναι ότι ο GC μπορεί να είναι σημαντικό "
+"συστατικό της απόδοσης της λειτουργίας που μετράται. Αν ισχύει αυτό, ο GC "
+"μπορεί να ενεργοποιηθεί ξανά ως η πρώτη εντολή στο *setup* string. Για "
+"παράδειγμα::"
 
 #: library/timeit.rst:143
 msgid "timeit.Timer('for i in range(10): oct(i)', 'gc.enable()').timeit()"
-msgstr ""
+msgstr "timeit.Timer('for i in range(10): oct(i)', 'gc.enable()').timeit()"
 
 #: library/timeit.rst:148
 msgid "Automatically determine how many times to call :meth:`.timeit`."
-msgstr ""
+msgstr "Καθορίζει αυτόματα πόσες φορές θα καλέσει τη :meth:`.timeit`."
 
 #: library/timeit.rst:150
 msgid ""
@@ -200,16 +274,24 @@ msgid ""
 "numbers from the sequence 1, 2, 5, 10, 20, 50, ... until the time taken is "
 "at least 0.2 seconds."
 msgstr ""
+"Αυτή είναι μια συνάρτηση ευκολίας που καλεί τη :meth:`.timeit` επανειλημμένα "
+"έτσι ώστε ο συνολικός χρόνος >= 0.2 δευτερόλεπτα, επιστρέφοντας το τελικό "
+"(αριθμό επαναλήψεων, χρόνος που απαιτείται για αυτόν τον αριθμό "
+"επαναλήψεων). Καλεί τη :meth:`.timeit` με αυξανόμενους αριθμούς από τη σειρά "
+"1, 2, 5, 10, 20, 50, ... μέχρι ο χρόνος που απαιτείται να είναι τουλάχιστον "
+"0.2 δευτερόλεπτα."
 
 #: library/timeit.rst:156
 msgid ""
 "If *callback* is given and is not ``None``, it will be called after each "
 "trial with two arguments: ``callback(number, time_taken)``."
 msgstr ""
+"Εάν το *callback* είναι δοσμένο και δεν είναι ``None``, θα κληθεί μετά από "
+"κάθε δοκιμή με δύο ορίσματα: ``callback(number, time_taken)``."
 
 #: library/timeit.rst:164
 msgid "Call :meth:`.timeit` a few times."
-msgstr ""
+msgstr "Καλέστε τη :meth:`.timeit` μερικές φορές."
 
 #: library/timeit.rst:166
 msgid ""
@@ -218,6 +300,10 @@ msgid ""
 "call :meth:`.timeit`.  The second argument specifies the *number* argument "
 "for :meth:`.timeit`."
 msgstr ""
+"Αυτή είναι μια συνάρτηση ευκολίας που καλεί τη :meth:`.timeit` "
+"επανειλημμένα, επιστρέφοντας μια λίστα αποτελεσμάτων.  Το πρώτο όρισμα "
+"καθορίζει πόσες φορές να καλέσει τη :meth:`.timeit`.  Το δεύτερο όρισμα "
+"καθορίζει το όρισμα *number* για τη :meth:`.timeit`."
 
 #: library/timeit.rst:173
 msgid ""
@@ -230,14 +316,24 @@ msgid ""
 "only number you should be interested in.  After that, you should look at the "
 "entire vector and apply common sense rather than statistics."
 msgstr ""
+"Είναι δελεαστικό να υπολογίσετε τον μέσο όρο και την τυπική απόκλιση από το "
+"αποτέλεσμα vector και να τα αναφέρετε. Ωστόσο, αυτό δεν είναι πολύ χρήσιμο. "
+"Σε μια τυπική περίπτωση, η χαμηλότερη τιμή δίνει ένα κατώτατο όριο για το "
+"πόσο γρήγορα μπορεί να εκτελέσει το μηχάνημα σας το συγκεκριμένο απόσπασμα "
+"κώδικα∙ οι υψηλότερες τιμές στο αποτέλεσμα vector συνήθως δεν προκαλούνται "
+"από μεταβλητότητα στην ταχύτητα της Python, αλλά από άλλες διεργασίες που "
+"παρεμβαίνουν στην ακρίβεια της χρονομέτρησής σας. Έτσι, η :func:`min` του "
+"αποτελέσματος είναι πιθανώς ο μόνος αριθμός που θα πρέπει να σας ενδιαφέρει. "
+"Μετά από αυτό, θα πρέπει να εξετάσετε ολόκληρο το vector και να εφαρμόσετε "
+"κοινή λογική αντί για στατιστικά."
 
 #: library/timeit.rst:189
 msgid "Helper to print a traceback from the timed code."
-msgstr ""
+msgstr "Βοηθός για την εκτύπωση μιας ανίχνευσης από τον χρονομετρημένο κώδικα."
 
 #: library/timeit.rst:191
 msgid "Typical use::"
-msgstr ""
+msgstr "Τυπική χρήση:"
 
 #: library/timeit.rst:193
 msgid ""
@@ -247,6 +343,11 @@ msgid ""
 "except Exception:\n"
 "    t.print_exc()"
 msgstr ""
+"t = Timer(...)       # outside the try/except\n"
+"try:\n"
+"    t.timeit(...)    # or t.repeat(...)\n"
+"except Exception:\n"
+"    t.print_exc()"
 
 #: library/timeit.rst:199
 msgid ""
@@ -254,56 +355,70 @@ msgid ""
 "compiled template will be displayed.  The optional *file* argument directs "
 "where the traceback is sent; it defaults to :data:`sys.stderr`."
 msgstr ""
+"Το πλεονέκτημα σε σχέση με την τυπική ανίχνευση είναι ότι οι γραμμές πηγαίου "
+"κώδικα στο μεταγλωττισμένο πρότυπο θα εμφανίζονται. Η προαιρετική παράμετρος "
+"*file* καθορίζει πού θα σταλεί η ανίχνευση· η προεπιλογή είναι :data:`sys."
+"stderr`."
 
 #: library/timeit.rst:207
 msgid "Command-Line Interface"
-msgstr ""
+msgstr "Διεπαφή Γραμμής Εντολών"
 
 #: library/timeit.rst:209
 msgid ""
 "When called as a program from the command line, the following form is used::"
 msgstr ""
+"Όταν καλείται ως πρόγραμμα από τη γραμμή εντολών, χρησιμοποιείται η εξής "
+"μορφή::"
 
 #: library/timeit.rst:211
 msgid ""
 "python -m timeit [-n N] [-r N] [-u U] [-s S] [-p] [-v] [-h] [statement ...]"
 msgstr ""
+"python -m timeit [-n N] [-r N] [-u U] [-s S] [-p] [-v] [-h] [statement ...]"
 
 #: library/timeit.rst:213
 msgid "Where the following options are understood:"
-msgstr ""
+msgstr "Όπου γίνονται κατανοητές οι εξής επιλογές:"
 
 #: library/timeit.rst:219
 msgid "how many times to execute 'statement'"
-msgstr ""
+msgstr "πόσες φορές να εκτελεστεί η 'statement'"
 
 #: library/timeit.rst:223
 msgid "how many times to repeat the timer (default 5)"
-msgstr ""
+msgstr "πόσες φορές να επαναληφθεί ο χρονομετρητής (προεπιλογή 5)"
 
 #: library/timeit.rst:227
 msgid "statement to be executed once initially (default ``pass``)"
-msgstr ""
+msgstr "δήλωση που θα εκτελείται μία φορά αρχικά (προεπιλογή ``pass``)"
 
 #: library/timeit.rst:231
 msgid ""
 "measure process time, not wallclock time, using :func:`time.process_time` "
 "instead of :func:`time.perf_counter`, which is the default"
 msgstr ""
+"μετράει τον χρόνο διεργασίας, όχι τον χρόνο ρολογιού, χρησιμοποιώντας την :"
+"func:`time.process_time` αντί της :func:`time.perf_counter`, που είναι η "
+"προεπιλογή"
 
 #: library/timeit.rst:238
 msgid ""
 "specify a time unit for timer output; can select ``nsec``, ``usec``, "
 "``msec``, or ``sec``"
 msgstr ""
+"καθορίζει μια μονάδα χρόνου για την έξοδο του χρονομέτρου· μπορεί να "
+"επιλέξει ``nsec``, ``usec``, ``msec`` ή ``sec``"
 
 #: library/timeit.rst:244
 msgid "print raw timing results; repeat for more digits precision"
 msgstr ""
+"τυπώνει τα ακατέργαστα αποτελέσματα χρονομέτρησης· επαναλάβετε για "
+"περισσότερη ακρίβεια ψηφίων"
 
 #: library/timeit.rst:248
 msgid "print a short usage message and exit"
-msgstr ""
+msgstr "τυπώνει ένα σύντομο μήνυμα χρήσης και εξέρχεται"
 
 #: library/timeit.rst:250
 msgid ""
@@ -312,6 +427,10 @@ msgid ""
 "quotes and using leading spaces.  Multiple :option:`-s` options are treated "
 "similarly."
 msgstr ""
+"Μια πολυγραμμική δήλωση μπορεί να δοθεί καθορίζοντας κάθε γραμμή ως "
+"ξεχωριστό όρισμα δήλωσης∙ οι εσοχές είναι δυνατές περικλείοντας ένα όρισμα "
+"σε εισαγωγικά και χρησιμοποιώντας αρχικά κενά.  Πολλαπλές επιλογές :option:`-"
+"s` θεωρούνται παρόμοιες."
 
 #: library/timeit.rst:255
 msgid ""
@@ -319,6 +438,9 @@ msgid ""
 "trying increasing numbers from the sequence 1, 2, 5, 10, 20, 50, ... until "
 "the total time is at least 0.2 seconds."
 msgstr ""
+"Εάν το :option:`-n` δεν δοθεί, ένας κατάλληλος αριθμός επαναλήψεων "
+"υπολογίζεται δοκιμάζοντας αυξανόμενους αριθμούς από τη σειρά 1, 2, 5, 10, "
+"20, 50, ... μέχρι ο συνολικός χρόνος να είναι τουλάχιστον 0.2 δευτερόλεπτα."
 
 #: library/timeit.rst:259
 msgid ""
@@ -329,6 +451,13 @@ msgid ""
 "probably enough in most cases.  You can use :func:`time.process_time` to "
 "measure CPU time."
 msgstr ""
+"Οι μετρήσεις της :func:`default_timer` μπορεί να επηρεαστούν από άλλα "
+"προγράμματα που εκτελούνται στο ίδιο μηχάνημα, οπότε το καλύτερο πράγμα που "
+"μπορείτε να κάνετε όταν απαιτείται ακριβής χρονομέτρηση είναι να επαναλάβετε "
+"τη χρονομέτρηση μερικές φορές και να χρησιμοποιήσετε τον καλύτερο χρόνο. Η "
+"επιλογή :option:`-r` είναι καλή γι' αυτό· η προεπιλογή των 5 επαναλήψεων "
+"είναι μάλλον αρκετή στις περισσότερες περιπτώσεις. Μπορείτε να "
+"χρησιμοποιήσετε την :func:`time.process_time` για να μετρήσετε τον χρόνο CPU."
 
 #: library/timeit.rst:267
 msgid ""
@@ -337,16 +466,23 @@ msgid ""
 "it.  The baseline overhead can be measured by invoking the program without "
 "arguments, and it might differ between Python versions."
 msgstr ""
+"Υπάρχει μια συγκεκριμένη βασική καθυστέρηση που σχετίζεται με την εκτέλεση "
+"μιας δήλωσης pass. Ο κώδικας εδώ δεν προσπαθεί να την αποκρύψει, αλλά θα "
+"πρέπει να είστε ενήμεροι γι' αυτήν.  Η βασική καθυστέρηση μπορεί να μετρηθεί "
+"καλώντας το πρόγραμμα χωρίς ορίσματα, και μπορεί να διαφέρει μεταξύ των "
+"εκδόσεων της Python."
 
 #: library/timeit.rst:276
 msgid "Examples"
-msgstr ""
+msgstr "Παραδείγματα"
 
 #: library/timeit.rst:278
 msgid ""
 "It is possible to provide a setup statement that is executed only once at "
 "the beginning:"
 msgstr ""
+"Είναι δυνατόν να δοθεί μια δήλωση setup που εκτελείται μόνο μία φορά στην "
+"αρχή:"
 
 #: library/timeit.rst:280
 msgid ""
@@ -357,6 +493,12 @@ msgid ""
 "\"text.find(char)\"\n"
 "1000000 loops, best of 5: 0.342 usec per loop"
 msgstr ""
+"$ python -m timeit -s \"text = 'sample string'; char = 'g'\" \"char in "
+"text\"\n"
+"5000000 loops, best of 5: 0.0877 usec per loop\n"
+"$ python -m timeit -s \"text = 'sample string'; char = 'g'\" \"text."
+"find(char)\"\n"
+"1000000 loops, best of 5: 0.342 usec per loop"
 
 #: library/timeit.rst:287
 msgid ""
@@ -367,6 +509,13 @@ msgid ""
 "within the best repetition of the timing loop. That is, the time the fastest "
 "repetition took divided by the loop count."
 msgstr ""
+"Στην έξοδο, υπάρχουν τρία πεδία. Ο αριθμός επαναλήψεων, που σας λέει πόσες "
+"φορές το σώμα της δήλωσης εκτελέστηκε ανά επανάληψη του χρονομετρημένου "
+"βρόχου. Ο αριθμός των επαναλήψεων ('best of 5') που σας λέει πόσες φορές η "
+"χρονομέτρηση επαναλήφθηκε, και τέλος ο χρόνος που χρειάστηκε το σώμα της "
+"δήλωσης κατά μέσο όρο μέσα στην καλύτερη επανάληψη του χρονομετρημένου "
+"βρόχου. Δηλαδή, ο χρόνος που χρειάστηκε η ταχύτερη επανάληψη διαιρούμενος με "
+"τον αριθμό επαναλήψεων."
 
 #: library/timeit.rst:296
 msgid ""
@@ -378,10 +527,19 @@ msgid ""
 "\"g\"')\n"
 "1.7246671520006203"
 msgstr ""
+">>> import timeit\n"
+">>> timeit.timeit('char in text', setup='text = \"sample string\"; char = "
+"\"g\"')\n"
+"0.41440500499993504\n"
+">>> timeit.timeit('text.find(char)', setup='text = \"sample string\"; char = "
+"\"g\"')\n"
+"1.7246671520006203"
 
 #: library/timeit.rst:302
 msgid "The same can be done using the :class:`Timer` class and its methods::"
 msgstr ""
+"Το ίδιο μπορεί να γίνει χρησιμοποιώντας την κλάση :class:`Timer` και τις "
+"μεθόδους της::"
 
 #: library/timeit.rst:304
 msgid ""
@@ -394,6 +552,14 @@ msgid ""
 "[0.40183617287970225, 0.37027556854118704, 0.38344867356679524, "
 "0.3712595970846668, 0.37866875250654886]"
 msgstr ""
+">>> import timeit\n"
+">>> t = timeit.Timer('char in text', setup='text = \"sample string\"; char = "
+"\"g\"')\n"
+">>> t.timeit()\n"
+"0.3955516149999312\n"
+">>> t.repeat()\n"
+"[0.40183617287970225, 0.37027556854118704, 0.38344867356679524, "
+"0.3712595970846668, 0.37866875250654886]"
 
 #: library/timeit.rst:312
 msgid ""
@@ -402,6 +568,10 @@ msgid ""
 "vs. :keyword:`try`/:keyword:`except` to test for missing and present object "
 "attributes:"
 msgstr ""
+"Τα παρακάτω παραδείγματα δείχνουν πως να χρονομετρήσετε εκφράσεις που "
+"περιέχουν πολλαπλές γραμμές. Εδώ συγκρίνουμε το κόστος της χρήσης της :func:"
+"`hasattr` σε σχέση με το :keyword:`try`/:keyword:`except` για να ελέγξουμε "
+"για απουσία και παρουσία χαρακτηριστικών αντικειμένων:"
 
 #: library/timeit.rst:316
 msgid ""
@@ -417,6 +587,17 @@ msgid ""
 "$ python -m timeit \"if hasattr(int, '__bool__'): pass\"\n"
 "100000 loops, best of 5: 2.23 usec per loop"
 msgstr ""
+"$ python -m timeit \"try:\" \"  str.__bool__\" \"except AttributeError:\" "
+"\"  pass\"\n"
+"20000 loops, best of 5: 15.7 usec per loop\n"
+"$ python -m timeit \"if hasattr(str, '__bool__'): pass\"\n"
+"50000 loops, best of 5: 4.26 usec per loop\n"
+"\n"
+"$ python -m timeit \"try:\" \"  int.__bool__\" \"except AttributeError:\" "
+"\"  pass\"\n"
+"200000 loops, best of 5: 1.43 usec per loop\n"
+"$ python -m timeit \"if hasattr(int, '__bool__'): pass\"\n"
+"100000 loops, best of 5: 2.23 usec per loop"
 
 #: library/timeit.rst:330
 msgid ""
@@ -447,12 +628,41 @@ msgid ""
 ">>> timeit.timeit(stmt=s, number=100000)\n"
 "0.08588060699912603"
 msgstr ""
+">>> import timeit\n"
+">>> # attribute is missing\n"
+">>> s = \"\"\"\\\n"
+"... try:\n"
+"...     str.__bool__\n"
+"... except AttributeError:\n"
+"...     pass\n"
+"... \"\"\"\n"
+">>> timeit.timeit(stmt=s, number=100000)\n"
+"0.9138244460009446\n"
+">>> s = \"if hasattr(str, '__bool__'): pass\"\n"
+">>> timeit.timeit(stmt=s, number=100000)\n"
+"0.5829014980008651\n"
+">>>\n"
+">>> # attribute is present\n"
+">>> s = \"\"\"\\\n"
+"... try:\n"
+"...     int.__bool__\n"
+"... except AttributeError:\n"
+"...     pass\n"
+"... \"\"\"\n"
+">>> timeit.timeit(stmt=s, number=100000)\n"
+"0.04215312199994514\n"
+">>> s = \"if hasattr(int, '__bool__'): pass\"\n"
+">>> timeit.timeit(stmt=s, number=100000)\n"
+"0.08588060699912603"
 
 #: library/timeit.rst:358
 msgid ""
 "To give the :mod:`timeit` module access to functions you define, you can "
 "pass a *setup* parameter which contains an import statement::"
 msgstr ""
+"Για να δώσετε στο module :mod:`timeit` πρόσβαση σε συναρτήσεις που ορίζετε, "
+"μπορείτε να περάσετε μια παράμετρο *setup* που περιέχει μια δήλωση εισαγωγής "
+"(import)::"
 
 #: library/timeit.rst:361
 msgid ""
@@ -464,6 +674,13 @@ msgid ""
 "    import timeit\n"
 "    print(timeit.timeit(\"test()\", setup=\"from __main__ import test\"))"
 msgstr ""
+"def test():\n"
+"    \"\"\"Stupid test function\"\"\"\n"
+"    L = [i for i in range(100)]\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    import timeit\n"
+"    print(timeit.timeit(\"test()\", setup=\"from __main__ import test\"))"
 
 #: library/timeit.rst:369
 msgid ""
@@ -471,6 +688,10 @@ msgid ""
 "will cause the code to be executed within your current global namespace.  "
 "This can be more convenient than individually specifying imports::"
 msgstr ""
+"Μια άλλη επιλογή είναι να περάσετε τη :func:`globals` στην παράμετρο "
+"*globals*, η οποία θα προκαλέσει την εκτέλεση του κώδικα στο τρέχον global "
+"namespace σας. Αυτό μπορεί να είναι πιο βολικό από το να καθορίσετε "
+"μεμονωμένα τις εισαγωγές (imports)::"
 
 #: library/timeit.rst:373
 msgid ""
@@ -484,11 +705,20 @@ msgid ""
 "import timeit\n"
 "print(timeit.timeit('[func(42) for func in (f,g,h)]', globals=globals()))"
 msgstr ""
+"def f(x):\n"
+"    return x**2\n"
+"def g(x):\n"
+"    return x**4\n"
+"def h(x):\n"
+"    return x**8\n"
+"\n"
+"import timeit\n"
+"print(timeit.timeit('[func(42) for func in (f,g,h)]', globals=globals()))"
 
 #: library/timeit.rst:9
 msgid "Benchmarking"
-msgstr ""
+msgstr "Δοκιμή απόδοσης"
 
 #: library/timeit.rst:9
 msgid "Performance"
-msgstr ""
+msgstr "Απόδοση"
