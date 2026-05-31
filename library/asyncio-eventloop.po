@@ -107,8 +107,8 @@ msgstr ""
 msgid ""
 "The :mod:`!asyncio` policy system is deprecated and will be removed in "
 "Python 3.16; from there on, this function will return the current running "
-"event loop if present else it will return the loop set by :func:"
-"`set_event_loop`."
+"event loop if present else it will return the loop set "
+"by :func:`set_event_loop`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:74
@@ -142,9 +142,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:92
 msgid ""
-"The `Callback Handles`_ section documents the :class:`Handle` and :class:"
-"`TimerHandle` instances which are returned from scheduling methods such as :"
-"meth:`loop.call_soon` and :meth:`loop.call_later`;"
+"The `Callback Handles`_ section documents the :class:`Handle` "
+"and :class:`TimerHandle` instances which are returned from scheduling "
+"methods such as :meth:`loop.call_soon` and :meth:`loop.call_later`;"
 msgstr ""
 
 #: library/asyncio-eventloop.rst:96
@@ -155,8 +155,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:99
 msgid ""
-"The `Event Loop Implementations`_ section documents the :class:"
-"`SelectorEventLoop` and :class:`ProactorEventLoop` classes;"
+"The `Event Loop Implementations`_ section documents "
+"the :class:`SelectorEventLoop` and :class:`ProactorEventLoop` classes;"
 msgstr ""
 
 #: library/asyncio-eventloop.rst:102
@@ -277,8 +277,8 @@ msgstr ""
 msgid ""
 "Schedule the closure of the default executor and wait for it to join all of "
 "the threads in the :class:`~concurrent.futures.ThreadPoolExecutor`. Once "
-"this method has been called, using the default executor with :meth:`loop."
-"run_in_executor` will raise a :exc:`RuntimeError`."
+"this method has been called, using the default executor "
+"with :meth:`loop.run_in_executor` will raise a :exc:`RuntimeError`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:202
@@ -329,9 +329,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:235
 msgid ""
-"The optional keyword-only *context* argument specifies a custom :class:"
-"`contextvars.Context` for the *callback* to run in. Callbacks use the "
-"current context when no *context* is provided."
+"The optional keyword-only *context* argument specifies a "
+"custom :class:`contextvars.Context` for the *callback* to run in. Callbacks "
+"use the current context when no *context* is provided."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:239
@@ -421,22 +421,22 @@ msgstr ""
 #: library/asyncio-eventloop.rst:299
 msgid ""
 "The optional positional *args* will be passed to the callback when it is "
-"called. If you want the callback to be called with keyword arguments use :"
-"func:`functools.partial`."
+"called. If you want the callback to be called with keyword arguments "
+"use :func:`functools.partial`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:303
 msgid ""
-"An optional keyword-only *context* argument allows specifying a custom :"
-"class:`contextvars.Context` for the *callback* to run in. The current "
-"context is used when no *context* is provided."
+"An optional keyword-only *context* argument allows specifying a "
+"custom :class:`contextvars.Context` for the *callback* to run in. The "
+"current context is used when no *context* is provided."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:309
 msgid ""
 "For performance, callbacks scheduled with :meth:`loop.call_later` may run up "
-"to one clock-resolution early (see ``time.get_clock_info('monotonic')."
-"resolution``)."
+"to one clock-resolution early (see "
+"``time.get_clock_info('monotonic').resolution``)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:317
@@ -458,8 +458,8 @@ msgstr ""
 #: library/asyncio-eventloop.rst:335
 msgid ""
 "For performance, callbacks scheduled with :meth:`loop.call_at` may run up to "
-"one clock-resolution early (see ``time.get_clock_info('monotonic')."
-"resolution``)."
+"one clock-resolution early (see "
+"``time.get_clock_info('monotonic').resolution``)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:343
@@ -502,15 +502,15 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:378
 msgid ""
-"Schedule the execution of :ref:`coroutine <coroutine>` *coro*. Return a :"
-"class:`Task` object."
+"Schedule the execution of :ref:`coroutine <coroutine>` *coro*. Return "
+"a :class:`Task` object."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:381
 msgid ""
 "Third-party event loops can use their own subclass of :class:`Task` for "
-"interoperability. In this case, the result type is a subclass of :class:"
-"`Task`."
+"interoperability. In this case, the result type is a subclass "
+"of :class:`Task`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:385
@@ -528,17 +528,17 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:392
 msgid ""
-"An optional keyword-only *context* argument allows specifying a custom :"
-"class:`contextvars.Context` for the *coro* to run in. The current context "
-"copy is created when no *context* is provided."
+"An optional keyword-only *context* argument allows specifying a "
+"custom :class:`contextvars.Context` for the *coro* to run in. The current "
+"context copy is created when no *context* is provided."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:396
 msgid ""
 "An optional keyword-only *eager_start* argument allows specifying if the "
 "task should execute eagerly during the call to create_task, or be scheduled "
-"later. If *eager_start* is not passed the mode set by :meth:`loop."
-"set_task_factory` will be used."
+"later. If *eager_start* is not passed the mode set "
+"by :meth:`loop.set_task_factory` will be used."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:401
@@ -613,9 +613,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:459
 msgid ""
-"The socket family can be either :py:const:`~socket.AF_INET` or :py:const:"
-"`~socket.AF_INET6` depending on *host* (or the *family* argument, if "
-"provided)."
+"The socket family can be either :py:const:`~socket.AF_INET` "
+"or :py:const:`~socket.AF_INET6` depending on *host* (or the *family* "
+"argument, if provided)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:463
@@ -647,14 +647,14 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:476
 msgid ""
-"*protocol_factory* is called without arguments and is expected to return a :"
-"ref:`protocol <asyncio-protocol>` instance."
+"*protocol_factory* is called without arguments and is expected to return "
+"a :ref:`protocol <asyncio-protocol>` instance."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:479
 msgid ""
-"The protocol instance is coupled with the transport by calling its :meth:"
-"`~BaseProtocol.connection_made` method."
+"The protocol instance is coupled with the transport by calling "
+"its :meth:`~BaseProtocol.connection_made` method."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:482
@@ -674,9 +674,9 @@ msgstr ""
 msgid ""
 "*ssl*: if given and not false, a SSL/TLS transport is created (by default a "
 "plain TCP transport is created).  If *ssl* is a :class:`ssl.SSLContext` "
-"object, this context is used to create the transport; if *ssl* is :const:"
-"`True`, a default context returned from :func:`ssl.create_default_context` "
-"is used."
+"object, this context is used to create the transport; if *ssl* "
+"is :const:`True`, a default context returned "
+"from :func:`ssl.create_default_context` is used."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:495
@@ -725,18 +725,18 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:527
 msgid ""
-"*sock*, if given, should be an existing, already connected :class:`socket."
-"socket` object to be used by the transport. If *sock* is given, none of "
-"*host*, *port*, *family*, *proto*, *flags*, *happy_eyeballs_delay*, "
-"*interleave* and *local_addr* should be specified."
+"*sock*, if given, should be an existing, already "
+"connected :class:`socket.socket` object to be used by the transport. If "
+"*sock* is given, none of *host*, *port*, *family*, *proto*, *flags*, "
+"*happy_eyeballs_delay*, *interleave* and *local_addr* should be specified."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:535 library/asyncio-eventloop.rst:657
 #: library/asyncio-eventloop.rst:905
 msgid ""
 "The *sock* argument transfers ownership of the socket to the transport "
-"created. To close the socket, call the transport's :meth:`~asyncio."
-"BaseTransport.close` method."
+"created. To close the socket, call the "
+"transport's :meth:`~asyncio.BaseTransport.close` method."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:539
@@ -827,9 +827,10 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:609
 msgid ""
-"The socket family can be either :py:const:`~socket.AF_INET`, :py:const:"
-"`~socket.AF_INET6`, or :py:const:`~socket.AF_UNIX`, depending on *host* (or "
-"the *family* argument, if provided)."
+"The socket family can be "
+"either :py:const:`~socket.AF_INET`, :py:const:`~socket.AF_INET6`, "
+"or :py:const:`~socket.AF_UNIX`, depending on *host* (or the *family* "
+"argument, if provided)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:613
@@ -850,14 +851,15 @@ msgstr ""
 #: library/asyncio-eventloop.rst:622
 msgid ""
 "*local_addr*, if given, is a ``(local_host, local_port)`` tuple used to bind "
-"the socket locally.  The *local_host* and *local_port* are looked up using :"
-"meth:`getaddrinfo`."
+"the socket locally.  The *local_host* and *local_port* are looked up "
+"using :meth:`getaddrinfo`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:628
 msgid ""
-"On Windows, when using the proactor event loop with ``local_addr=None``, an :"
-"exc:`OSError` with :attr:`!errno.WSAEINVAL` will be raised when running it."
+"On Windows, when using the proactor event loop with ``local_addr=None``, "
+"an :exc:`OSError` with :attr:`!errno.WSAEINVAL` will be raised when running "
+"it."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:632
@@ -894,14 +896,15 @@ msgstr ""
 msgid ""
 "*sock* can optionally be specified in order to use a preexisting, already "
 "connected, :class:`socket.socket` object to be used by the transport. If "
-"specified, *local_addr* and *remote_addr* should be omitted (must be :const:"
-"`None`)."
+"specified, *local_addr* and *remote_addr* should be omitted (must "
+"be :const:`None`)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:661
 msgid ""
-"See :ref:`UDP echo client protocol <asyncio-udp-echo-client-protocol>` and :"
-"ref:`UDP echo server protocol <asyncio-udp-echo-server-protocol>` examples."
+"See :ref:`UDP echo client protocol <asyncio-udp-echo-client-protocol>` "
+"and :ref:`UDP echo server protocol <asyncio-udp-echo-server-protocol>` "
+"examples."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:664
@@ -916,9 +919,10 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:671
 msgid ""
-"The *reuse_address* parameter is no longer supported, as using :ref:`socket."
-"SO_REUSEADDR <socket-unix-constants>` poses a significant security concern "
-"for UDP. Explicitly passing ``reuse_address=True`` will raise an exception."
+"The *reuse_address* parameter is no longer supported, as "
+"using :ref:`socket.SO_REUSEADDR <socket-unix-constants>` poses a significant "
+"security concern for UDP. Explicitly passing ``reuse_address=True`` will "
+"raise an exception."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:677
@@ -948,15 +952,16 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:700
 msgid ""
-"The socket family will be :py:const:`~socket.AF_UNIX`; socket type will be :"
-"py:const:`~socket.SOCK_STREAM`."
+"The socket family will be :py:const:`~socket.AF_UNIX`; socket type will "
+"be :py:const:`~socket.SOCK_STREAM`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:705
 msgid ""
 "*path* is the name of a Unix domain socket and is required, unless a *sock* "
-"parameter is specified.  Abstract Unix sockets, :class:`str`, :class:"
-"`bytes`, and :class:`~pathlib.Path` paths are supported."
+"parameter is specified.  Abstract Unix "
+"sockets, :class:`str`, :class:`bytes`, and :class:`~pathlib.Path` paths are "
+"supported."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:710
@@ -1030,9 +1035,10 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:769
 msgid ""
-"*family* can be set to either :const:`socket.AF_INET` or :const:`~socket."
-"AF_INET6` to force the socket to use IPv4 or IPv6. If not set, the *family* "
-"will be determined from host name (defaults to :const:`~socket.AF_UNSPEC`)."
+"*family* can be set to either :const:`socket.AF_INET` "
+"or :const:`~socket.AF_INET6` to force the socket to use IPv4 or IPv6. If not "
+"set, the *family* will be determined from host name (defaults "
+"to :const:`~socket.AF_UNSPEC`)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:774
@@ -1053,8 +1059,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:785
 msgid ""
-"*backlog* is the maximum number of queued connections passed to :meth:"
-"`~socket.socket.listen` (defaults to 100)."
+"*backlog* is the maximum number of queued connections passed "
+"to :meth:`~socket.socket.listen` (defaults to 100)."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:788
@@ -1122,8 +1128,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:854
 msgid ""
-"Similar to :meth:`loop.create_server` but works with the :py:const:`~socket."
-"AF_UNIX` socket family."
+"Similar to :meth:`loop.create_server` but works with "
+"the :py:const:`~socket.AF_UNIX` socket family."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:857
@@ -1263,8 +1269,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:989
 msgid ""
-"*transport* and *protocol* instances that methods like :meth:`~loop."
-"create_server` and :meth:`~loop.create_connection` return."
+"*transport* and *protocol* instances that methods "
+"like :meth:`~loop.create_server` and :meth:`~loop.create_connection` return."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:993
@@ -1335,17 +1341,17 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1058
 msgid ""
-"In general, protocol implementations that use transport-based APIs such as :"
-"meth:`loop.create_connection` and :meth:`loop.create_server` are faster than "
-"implementations that work with sockets directly. However, there are some use "
-"cases when performance is not critical, and working with :class:`~socket."
-"socket` objects directly is more convenient."
+"In general, protocol implementations that use transport-based APIs such "
+"as :meth:`loop.create_connection` and :meth:`loop.create_server` are faster "
+"than implementations that work with sockets directly. However, there are "
+"some use cases when performance is not critical, and working "
+"with :class:`~socket.socket` objects directly is more convenient."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1068
 msgid ""
-"Receive up to *nbytes* from *sock*.  Asynchronous version of :meth:`socket."
-"recv() <socket.socket.recv>`."
+"Receive up to *nbytes* from *sock*.  Asynchronous version "
+"of :meth:`socket.recv() <socket.socket.recv>`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1071
@@ -1369,8 +1375,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1083
 msgid ""
-"Receive data from *sock* into the *buf* buffer.  Modeled after the blocking :"
-"meth:`socket.recv_into() <socket.socket.recv_into>` method."
+"Receive data from *sock* into the *buf* buffer.  Modeled after the "
+"blocking :meth:`socket.recv_into() <socket.socket.recv_into>` method."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1086
@@ -1379,8 +1385,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1095
 msgid ""
-"Receive a datagram of up to *bufsize* from *sock*.  Asynchronous version of :"
-"meth:`socket.recvfrom() <socket.socket.recvfrom>`."
+"Receive a datagram of up to *bufsize* from *sock*.  Asynchronous version "
+"of :meth:`socket.recvfrom() <socket.socket.recvfrom>`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1098
@@ -1399,8 +1405,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1120
 msgid ""
-"Send *data* to the *sock* socket. Asynchronous version of :meth:`socket."
-"sendall() <socket.socket.sendall>`."
+"Send *data* to the *sock* socket. Asynchronous version "
+"of :meth:`socket.sendall() <socket.socket.sendall>`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1123
@@ -1421,8 +1427,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1139
 msgid ""
-"Send a datagram from *sock* to *address*. Asynchronous version of :meth:"
-"`socket.sendto() <socket.socket.sendto>`."
+"Send a datagram from *sock* to *address*. Asynchronous version "
+"of :meth:`socket.sendto() <socket.socket.sendto>`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1143
@@ -1441,9 +1447,9 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1158
 msgid ""
 "``address`` no longer needs to be resolved.  ``sock_connect`` will try to "
-"check if the *address* is already resolved by calling :func:`socket."
-"inet_pton`.  If not, :meth:`loop.getaddrinfo` will be used to resolve the "
-"*address*."
+"check if the *address* is already resolved by "
+"calling :func:`socket.inet_pton`.  If not, :meth:`loop.getaddrinfo` will be "
+"used to resolve the *address*."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1167
@@ -1483,8 +1489,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1203
 msgid ""
-"*sock* must be a non-blocking :const:`socket.SOCK_STREAM` :class:`~socket."
-"socket`."
+"*sock* must be a non-"
+"blocking :const:`socket.SOCK_STREAM` :class:`~socket.socket`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1206
@@ -1529,9 +1535,9 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1249
 msgid ""
 "Both *getaddrinfo* and *getnameinfo* methods were always documented to "
-"return a coroutine, but prior to Python 3.7 they were, in fact, returning :"
-"class:`asyncio.Future` objects.  Starting with Python 3.7 both methods are "
-"coroutines."
+"return a coroutine, but prior to Python 3.7 they were, in fact, "
+"returning :class:`asyncio.Future` objects.  Starting with Python 3.7 both "
+"methods are coroutines."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1257
@@ -1548,9 +1554,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1269
 msgid ""
-"Return pair ``(transport, protocol)``, where *transport* supports the :class:"
-"`ReadTransport` interface and *protocol* is an object instantiated by the "
-"*protocol_factory*."
+"Return pair ``(transport, protocol)``, where *transport* supports "
+"the :class:`ReadTransport` interface and *protocol* is an object "
+"instantiated by the *protocol_factory*."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1273 library/asyncio-eventloop.rst:1290
@@ -1569,9 +1575,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1286
 msgid ""
-"Return pair ``(transport, protocol)``, where *transport* supports :class:"
-"`WriteTransport` interface and *protocol* is an object instantiated by the "
-"*protocol_factory*."
+"Return pair ``(transport, protocol)``, where *transport* "
+"supports :class:`WriteTransport` interface and *protocol* is an object "
+"instantiated by the *protocol_factory*."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1295
@@ -1721,15 +1727,15 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1421
 msgid ""
 "Set *executor* as the default executor used by :meth:`run_in_executor`. "
-"*executor* must be an instance of :class:`~concurrent.futures."
-"ThreadPoolExecutor`, which includes :class:`~concurrent.futures."
-"InterpreterPoolExecutor`."
+"*executor* must be an instance "
+"of :class:`~concurrent.futures.ThreadPoolExecutor`, which "
+"includes :class:`~concurrent.futures.InterpreterPoolExecutor`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1426
 msgid ""
-"*executor* must be an instance of :class:`~concurrent.futures."
-"ThreadPoolExecutor`."
+"*executor* must be an instance "
+"of :class:`~concurrent.futures.ThreadPoolExecutor`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1432
@@ -1755,9 +1761,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1448
 msgid ""
-"If the handler is called on behalf of a :class:`~asyncio.Task` or :class:"
-"`~asyncio.Handle`, it is run in the :class:`contextvars.Context` of that "
-"task or callback handle."
+"If the handler is called on behalf of a :class:`~asyncio.Task` "
+"or :class:`~asyncio.Handle`, it is run in the :class:`contextvars.Context` "
+"of that task or callback handle."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1454
@@ -1785,8 +1791,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1472
 msgid ""
-"*context* parameter has the same meaning as in :meth:"
-"`call_exception_handler`."
+"*context* parameter has the same meaning as "
+"in :meth:`call_exception_handler`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1477
@@ -1863,8 +1869,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1508
 msgid ""
-"The default value is ``True`` if the environment variable :envvar:"
-"`PYTHONASYNCIODEBUG` is set to a non-empty string, ``False`` otherwise."
+"The default value is ``True`` if the environment "
+"variable :envvar:`PYTHONASYNCIODEBUG` is set to a non-empty string, "
+"``False`` otherwise."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1514
@@ -1906,8 +1913,9 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1544
 msgid ""
 "On Windows, the default event loop :class:`ProactorEventLoop` supports "
-"subprocesses, whereas :class:`SelectorEventLoop` does not. See :ref:"
-"`Subprocess Support on Windows <asyncio-windows-subprocess>` for details."
+"subprocesses, whereas :class:`SelectorEventLoop` does not. "
+"See :ref:`Subprocess Support on Windows <asyncio-windows-subprocess>` for "
+"details."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1556
@@ -1946,8 +1954,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1575
 msgid ""
-"The *protocol_factory* must be a callable returning a subclass of the :class:"
-"`asyncio.SubprocessProtocol` class."
+"The *protocol_factory* must be a callable returning a subclass of "
+"the :class:`asyncio.SubprocessProtocol` class."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1578
@@ -1986,8 +1994,8 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1588 library/asyncio-eventloop.rst:1598
 #: library/asyncio-eventloop.rst:1608
 msgid ""
-"the :const:`subprocess.DEVNULL` constant which indicates that the special :"
-"data:`os.devnull` file will be used"
+"the :const:`subprocess.DEVNULL` constant which indicates that the "
+"special :data:`os.devnull` file will be used"
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1591
@@ -2021,9 +2029,9 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1622
 msgid ""
 "If a file-like object passed as *stdin*, *stdout* or *stderr* represents a "
-"pipe, then the other side of this pipe should be registered with :meth:"
-"`~loop.connect_write_pipe` or :meth:`~loop.connect_read_pipe` for use with "
-"the event loop."
+"pipe, then the other side of this pipe should be registered "
+"with :meth:`~loop.connect_write_pipe` or :meth:`~loop.connect_read_pipe` for "
+"use with the event loop."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1627
@@ -2047,8 +2055,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1642
 msgid ""
-"Create a subprocess from *cmd*, which can be a :class:`str` or a :class:"
-"`bytes` string encoded to the :ref:`filesystem encoding <filesystem-"
+"Create a subprocess from *cmd*, which can be a :class:`str` or "
+"a :class:`bytes` string encoded to the :ref:`filesystem encoding <filesystem-"
 "encoding>`, using the platform's \"shell\" syntax."
 msgstr ""
 
@@ -2060,8 +2068,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1650
 msgid ""
-"The *protocol_factory* must be a callable returning a subclass of the :class:"
-"`SubprocessProtocol` class."
+"The *protocol_factory* must be a callable returning a subclass of "
+"the :class:`SubprocessProtocol` class."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1653
@@ -2093,8 +2101,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1677
 msgid ""
-"A callback wrapper object returned by :meth:`loop.call_soon`, :meth:`loop."
-"call_soon_threadsafe`."
+"A callback wrapper object returned "
+"by :meth:`loop.call_soon`, :meth:`loop.call_soon_threadsafe`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1682
@@ -2114,8 +2122,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1700
 msgid ""
-"A callback wrapper object returned by :meth:`loop.call_later`, and :meth:"
-"`loop.call_at`."
+"A callback wrapper object returned by :meth:`loop.call_later`, "
+"and :meth:`loop.call_at`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1703
@@ -2128,8 +2136,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1709
 msgid ""
-"The time is an absolute timestamp, using the same time reference as :meth:"
-"`loop.time`."
+"The time is an absolute timestamp, using the same time reference "
+"as :meth:`loop.time`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1716
@@ -2138,9 +2146,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1718
 msgid ""
-"Server objects are created by :meth:`loop.create_server`, :meth:`loop."
-"create_unix_server`, :func:`start_server`, and :func:`start_unix_server` "
-"functions."
+"Server objects are created "
+"by :meth:`loop.create_server`, :meth:`loop.create_unix_server`, :func:`start_server`, "
+"and :func:`start_unix_server` functions."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1722
@@ -2302,8 +2310,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1861
 msgid ""
-"asyncio ships with two different event loop implementations: :class:"
-"`SelectorEventLoop` and :class:`ProactorEventLoop`."
+"asyncio ships with two different event loop "
+"implementations: :class:`SelectorEventLoop` and :class:`ProactorEventLoop`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1864
@@ -2331,8 +2339,8 @@ msgid ""
 "async def main():\n"
 "   ...\n"
 "\n"
-"loop_factory = lambda: asyncio.SelectorEventLoop(selectors."
-"SelectSelector())\n"
+"loop_factory = lambda: "
+"asyncio.SelectorEventLoop(selectors.SelectSelector())\n"
 "asyncio.run(main(), loop_factory=loop_factory)"
 msgstr ""
 
@@ -2350,14 +2358,14 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:1902
 msgid ""
-"An alias to the most efficient available subclass of :class:"
-"`AbstractEventLoop` for the given platform."
+"An alias to the most efficient available subclass "
+"of :class:`AbstractEventLoop` for the given platform."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1905
 msgid ""
-"It is an alias to :class:`SelectorEventLoop` on Unix and :class:"
-"`ProactorEventLoop` on Windows."
+"It is an alias to :class:`SelectorEventLoop` on Unix "
+"and :class:`ProactorEventLoop` on Windows."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1911
@@ -2377,9 +2385,10 @@ msgstr ""
 #: library/asyncio-eventloop.rst:1921
 msgid ""
 "Note that all examples in this section **purposefully** show how to use the "
-"low-level event loop APIs, such as :meth:`loop.run_forever` and :meth:`loop."
-"call_soon`.  Modern asyncio applications rarely need to be written this way; "
-"consider using the high-level functions like :func:`asyncio.run`."
+"low-level event loop APIs, such as :meth:`loop.run_forever` "
+"and :meth:`loop.call_soon`.  Modern asyncio applications rarely need to be "
+"written this way; consider using the high-level functions "
+"like :func:`asyncio.run`."
 msgstr ""
 
 #: library/asyncio-eventloop.rst:1931
@@ -2467,8 +2476,8 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:2003
 msgid ""
-"Wait until a file descriptor received some data using the :meth:`loop."
-"add_reader` method and then close the event loop::"
+"Wait until a file descriptor received some data using "
+"the :meth:`loop.add_reader` method and then close the event loop::"
 msgstr ""
 
 #: library/asyncio-eventloop.rst:2006
@@ -2529,8 +2538,9 @@ msgstr ""
 
 #: library/asyncio-eventloop.rst:2057
 msgid ""
-"Register handlers for signals :const:`~signal.SIGINT` and :const:`~signal."
-"SIGTERM` using the :meth:`loop.add_signal_handler` method::"
+"Register handlers for signals :const:`~signal.SIGINT` "
+"and :const:`~signal.SIGTERM` using the :meth:`loop.add_signal_handler` "
+"method::"
 msgstr ""
 
 #: library/asyncio-eventloop.rst:2060

@@ -27,12 +27,12 @@ msgstr ""
 
 #: library/json.rst:14
 msgid ""
-"`JSON (JavaScript Object Notation) <https://json.org>`_, specified by :rfc:"
-"`7159` (which obsoletes :rfc:`4627`) and by `ECMA-404 <https://ecma-"
+"`JSON (JavaScript Object Notation) <https://json.org>`_, specified "
+"by :rfc:`7159` (which obsoletes :rfc:`4627`) and by `ECMA-404 <https://ecma-"
 "international.org/publications-and-standards/standards/ecma-404/>`_, is a "
-"lightweight data interchange format inspired by `JavaScript <https://en."
-"wikipedia.org/wiki/JavaScript>`_ object literal syntax (although it is not a "
-"strict subset of JavaScript [#rfc-errata]_ )."
+"lightweight data interchange format inspired by `JavaScript <https://"
+"en.wikipedia.org/wiki/JavaScript>`_ object literal syntax (although it is "
+"not a strict subset of JavaScript [#rfc-errata]_ )."
 msgstr ""
 
 #: library/json.rst:22
@@ -51,8 +51,8 @@ msgstr ""
 
 #: library/json.rst:31
 msgid ""
-"This module exposes an API familiar to users of the standard library :mod:"
-"`marshal` and :mod:`pickle` modules."
+"This module exposes an API familiar to users of the standard "
+"library :mod:`marshal` and :mod:`pickle` modules."
 msgstr ""
 
 #: library/json.rst:34
@@ -113,8 +113,8 @@ msgid ""
 ">>> import json\n"
 ">>> def custom_json(obj):\n"
 "...     if isinstance(obj, complex):\n"
-"...         return {'__complex__': True, 'real': obj.real, 'imag': obj."
-"imag}\n"
+"...         return {'__complex__': True, 'real': obj.real, 'imag': "
+"obj.imag}\n"
 "...     raise TypeError(f'Cannot serialize object of {type(obj)}')\n"
 "...\n"
 ">>> json.dumps(1 + 2j, default=custom_json)\n"
@@ -247,9 +247,9 @@ msgstr ""
 
 #: library/json.rst:178
 msgid ""
-"If ``True``, keys that are not of a basic type (:class:`str`, :class:`int`, :"
-"class:`float`, :class:`bool`, ``None``) will be skipped instead of raising "
-"a :exc:`TypeError`. Default ``False``."
+"If ``True``, keys that are not of a basic type "
+"(:class:`str`, :class:`int`, :class:`float`, :class:`bool`, ``None``) will "
+"be skipped instead of raising a :exc:`TypeError`. Default ``False``."
 msgstr ""
 
 #: library/json.rst:184
@@ -303,8 +303,8 @@ msgstr ""
 #: library/json.rst:229
 msgid ""
 "A function that is called for objects that can't otherwise be serialized. It "
-"should return a JSON encodable version of the object or raise a :exc:"
-"`TypeError`. If ``None`` (the default), :exc:`!TypeError` is raised."
+"should return a JSON encodable version of the object or raise "
+"a :exc:`TypeError`. If ``None`` (the default), :exc:`!TypeError` is raised."
 msgstr ""
 
 #: library/json.rst:236
@@ -328,8 +328,8 @@ msgstr ""
 #: library/json.rst:255
 msgid ""
 "Serialize *obj* to a JSON formatted :class:`str` using this :ref:`conversion "
-"table <py-to-json-table>`.  The arguments have the same meaning as in :func:"
-"`dump`."
+"table <py-to-json-table>`.  The arguments have the same meaning as "
+"in :func:`dump`."
 msgstr ""
 
 #: library/json.rst:261
@@ -356,8 +356,8 @@ msgstr ""
 #: library/json.rst:280
 msgid ""
 "If set, a custom JSON decoder. Additional keyword arguments to :func:`!load` "
-"will be passed to the constructor of *cls*. If ``None`` (the default), :"
-"class:`!JSONDecoder` is used."
+"will be passed to the constructor of *cls*. If ``None`` (the "
+"default), :class:`!JSONDecoder` is used."
 msgstr ""
 
 #: library/json.rst:287
@@ -382,16 +382,16 @@ msgstr ""
 msgid ""
 "If set, a function that is called with the string of every JSON float to be "
 "decoded. If ``None`` (the default), it is equivalent to ``float(num_str)``. "
-"This can be used to parse JSON floats into custom datatypes, for example :"
-"class:`decimal.Decimal`."
+"This can be used to parse JSON floats into custom datatypes, for "
+"example :class:`decimal.Decimal`."
 msgstr ""
 
 #: library/json.rst:315
 msgid ""
 "If set, a function that is called with the string of every JSON int to be "
 "decoded. If ``None`` (the default), it is equivalent to ``int(num_str)``. "
-"This can be used to parse JSON integers into custom datatypes, for example :"
-"class:`float`."
+"This can be used to parse JSON integers into custom datatypes, for "
+"example :class:`float`."
 msgstr ""
 
 #: library/json.rst:323
@@ -548,17 +548,17 @@ msgstr ""
 msgid ""
 "*object_hook* is an optional function that will be called with the result of "
 "every JSON object decoded and its return value will be used in place of the "
-"given :class:`dict`.  This can be used to provide custom deserializations (e."
-"g. to support `JSON-RPC <https://www.jsonrpc.org>`_ class hinting)."
+"given :class:`dict`.  This can be used to provide custom deserializations "
+"(e.g. to support `JSON-RPC <https://www.jsonrpc.org>`_ class hinting)."
 msgstr ""
 
 #: library/json.rst:409
 msgid ""
 "*object_pairs_hook* is an optional function that will be called with the "
 "result of every JSON object decoded with an ordered list of pairs.  The "
-"return value of *object_pairs_hook* will be used instead of the :class:"
-"`dict`.  This feature can be used to implement custom decoders.  If "
-"*object_hook* is also defined, the *object_pairs_hook* takes priority."
+"return value of *object_pairs_hook* will be used instead of "
+"the :class:`dict`.  This feature can be used to implement custom decoders.  "
+"If *object_hook* is also defined, the *object_pairs_hook* takes priority."
 msgstr ""
 
 #: library/json.rst:415
@@ -598,8 +598,8 @@ msgstr ""
 
 #: library/json.rst:437
 msgid ""
-"If the data being deserialized is not a valid JSON document, a :exc:"
-"`JSONDecodeError` will be raised."
+"If the data being deserialized is not a valid JSON document, "
+"a :exc:`JSONDecodeError` will be raised."
 msgstr ""
 
 #: library/json.rst:543
@@ -657,8 +657,8 @@ msgstr ""
 
 #: library/json.rst:490
 msgid ""
-"To extend this to recognize other objects, subclass and implement a :meth:"
-"`~JSONEncoder.default` method with another method that returns a "
+"To extend this to recognize other objects, subclass and implement "
+"a :meth:`~JSONEncoder.default` method with another method that returns a "
 "serializable object for ``o`` if possible, otherwise it should call the "
 "superclass implementation (to raise :exc:`TypeError`)."
 msgstr ""
@@ -666,9 +666,9 @@ msgstr ""
 #: library/json.rst:495
 msgid ""
 "If *skipkeys* is false (the default), a :exc:`TypeError` will be raised when "
-"trying to encode keys that are not :class:`str`, :class:`int`, :class:"
-"`float`, :class:`bool` or ``None``.  If *skipkeys* is true, such items are "
-"simply skipped."
+"trying to encode keys that are "
+"not :class:`str`, :class:`int`, :class:`float`, :class:`bool` or ``None``.  "
+"If *skipkeys* is true, such items are simply skipped."
 msgstr ""
 
 #: library/json.rst:499
@@ -725,21 +725,21 @@ msgstr ""
 msgid ""
 "If specified, *default* should be a function that gets called for objects "
 "that can't otherwise be serialized.  It should return a JSON encodable "
-"version of the object or raise a :exc:`TypeError`.  If not specified, :exc:"
-"`TypeError` is raised."
+"version of the object or raise a :exc:`TypeError`.  If not "
+"specified, :exc:`TypeError` is raised."
 msgstr ""
 
 #: library/json.rst:549
 msgid ""
 "Implement this method in a subclass such that it returns a serializable "
-"object for *o*, or calls the base implementation (to raise a :exc:"
-"`TypeError`)."
+"object for *o*, or calls the base implementation (to raise "
+"a :exc:`TypeError`)."
 msgstr ""
 
 #: library/json.rst:553
 msgid ""
-"For example, to support arbitrary iterators, you could implement :meth:"
-"`~JSONEncoder.default` like this::"
+"For example, to support arbitrary iterators, you could "
+"implement :meth:`~JSONEncoder.default` like this::"
 msgstr ""
 
 #: library/json.rst:556
@@ -883,8 +883,8 @@ msgid ""
 "The RFC does not explicitly forbid JSON strings which contain byte sequences "
 "that don't correspond to valid Unicode characters (e.g. unpaired UTF-16 "
 "surrogates), but it does note that they may cause interoperability problems. "
-"By default, this module accepts and outputs (when present in the original :"
-"class:`str`) code points for such sequences."
+"By default, this module accepts and outputs (when present in the "
+"original :class:`str`) code points for such sequences."
 msgstr ""
 
 #: library/json.rst:664
@@ -1021,8 +1021,9 @@ msgstr ""
 
 #: library/json.rst:754
 msgid ""
-"If the optional ``infile`` and ``outfile`` arguments are not specified, :"
-"data:`sys.stdin` and :data:`sys.stdout` will be used respectively:"
+"If the optional ``infile`` and ``outfile`` arguments are not "
+"specified, :data:`sys.stdin` and :data:`sys.stdout` will be used "
+"respectively:"
 msgstr ""
 
 #: library/json.rst:757

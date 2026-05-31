@@ -35,8 +35,9 @@ msgstr ""
 #: library/syslog.rst:16
 msgid ""
 "This module wraps the system ``syslog`` family of routines.  A pure Python "
-"library that can speak to a syslog server is available in the :mod:`logging."
-"handlers` module as :class:`~logging.handlers.SysLogHandler`."
+"library that can speak to a syslog server is available in "
+"the :mod:`logging.handlers` module "
+"as :class:`~logging.handlers.SysLogHandler`."
 msgstr ""
 
 #: library/syslog.rst:20
@@ -55,8 +56,8 @@ msgstr ""
 
 #: library/syslog.rst:33
 msgid ""
-"If :func:`openlog` has not been called prior to the call to :func:`syslog`, :"
-"func:`openlog` will be called with no arguments."
+"If :func:`openlog` has not been called prior to the call "
+"to :func:`syslog`, :func:`openlog` will be called with no arguments."
 msgstr ""
 
 #: library/syslog.rst:36
@@ -76,16 +77,16 @@ msgstr ""
 msgid ""
 "This function is restricted in subinterpreters. (Only code that runs in "
 "multiple interpreters is affected and the restriction is not relevant for "
-"most users.) :func:`openlog` must be called in the main interpreter before :"
-"func:`syslog` may be used in a subinterpreter.  Otherwise it will raise :exc:"
-"`RuntimeError`."
+"most users.) :func:`openlog` must be called in the main interpreter "
+"before :func:`syslog` may be used in a subinterpreter.  Otherwise it will "
+"raise :exc:`RuntimeError`."
 msgstr ""
 
 #: library/syslog.rst:53
 msgid ""
-"Logging options of subsequent :func:`syslog` calls can be set by calling :"
-"func:`openlog`.  :func:`syslog` will call :func:`openlog` with no arguments "
-"if the log is not currently open."
+"Logging options of subsequent :func:`syslog` calls can be set by "
+"calling :func:`openlog`.  :func:`syslog` will call :func:`openlog` with no "
+"arguments if the log is not currently open."
 msgstr ""
 
 #: library/syslog.rst:57
@@ -114,8 +115,8 @@ msgstr ""
 msgid ""
 "This function is restricted in subinterpreters. (Only code that runs in "
 "multiple interpreters is affected and the restriction is not relevant for "
-"most users.) This may only be called in the main interpreter. It will raise :"
-"exc:`RuntimeError` if called in a subinterpreter."
+"most users.) This may only be called in the main interpreter. It will "
+"raise :exc:`RuntimeError` if called in a subinterpreter."
 msgstr ""
 
 #: library/syslog.rst:80
@@ -127,8 +128,8 @@ msgstr ""
 msgid ""
 "This causes the module to behave as it does when initially imported.  For "
 "example, :func:`openlog` will be called on the first :func:`syslog` call "
-"(if :func:`openlog` hasn't already been called), and *ident* and other :func:"
-"`openlog` parameters are reset to defaults."
+"(if :func:`openlog` hasn't already been called), and *ident* and "
+"other :func:`openlog` parameters are reset to defaults."
 msgstr ""
 
 #: library/syslog.rst:87
@@ -163,21 +164,21 @@ msgstr ""
 
 #: library/syslog.rst:149
 msgid ""
-"Facilities, depending on availability in ``<syslog.h>`` for :const:"
-"`LOG_AUTHPRIV`, :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:"
-"`LOG_REMOTEAUTH`, :const:`LOG_INSTALL` and :const:`LOG_RAS`."
+"Facilities, depending on availability in ``<syslog.h>`` "
+"for :const:`LOG_AUTHPRIV`, :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:`LOG_REMOTEAUTH`, :const:`LOG_INSTALL` "
+"and :const:`LOG_RAS`."
 msgstr ""
 
 #: library/syslog.rst:153
 msgid ""
-"Added :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:`LOG_REMOTEAUTH`, :"
-"const:`LOG_INSTALL`, :const:`LOG_RAS`, and :const:`LOG_LAUNCHD`."
+"Added :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:`LOG_REMOTEAUTH`, :const:`LOG_INSTALL`, :const:`LOG_RAS`, "
+"and :const:`LOG_LAUNCHD`."
 msgstr ""
 
 #: library/syslog.rst:164
 msgid ""
-"Log options, depending on availability in ``<syslog.h>`` for :const:"
-"`LOG_ODELAY`, :const:`LOG_NOWAIT` and :const:`LOG_PERROR`."
+"Log options, depending on availability in ``<syslog.h>`` "
+"for :const:`LOG_ODELAY`, :const:`LOG_NOWAIT` and :const:`LOG_PERROR`."
 msgstr ""
 
 #: library/syslog.rst:169

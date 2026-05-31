@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: RyukuZero <t8220233@aueb.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,14 +19,17 @@ msgstr ""
 
 #: library/zlib.rst:2
 msgid ":mod:`!zlib` --- Compression compatible with :program:`gzip`"
-msgstr ""
+msgstr "mod:`!zlib` --- Συμπίεση συμβατή με :program:`gzip`"
 
 #: library/zlib.rst:10
 msgid ""
 "For applications that require data compression, the functions in this module "
-"allow compression and decompression, using the `zlib library <https://www."
-"zlib.net>`_."
+"allow compression and decompression, using the `zlib library <https://"
+"www.zlib.net>`_."
 msgstr ""
+"Για εφαρμογές που απαιτούν συμπίεση δεδομένων, οι λειτουργίες σε αυτήν την "
+"ενότηταεπιτρέπουν τη συμπίεση και την αποσυμπίεση, χρησιμοποιώντας τη "
+"βιβλιοθήκη `zlib<https://www.zlib.net>`_."
 
 #: includes/optional-module.rst:1
 msgid ""
@@ -35,6 +38,10 @@ msgid ""
 "provided Python to you). If you are the distributor, see :ref:`optional-"
 "module-requirements`."
 msgstr ""
+"Αυτή είναι μια :term:`προαιρετική ενότητα`. Εάν λείπει από το αντίγραφό σας "
+"τοCPython, αναζητήστε τεκμηρίωση από τον διανομέα σας (δηλαδή, όποιονσας "
+"παρείχε Python). Εάν είστε ο διανομέας, δείτε :ref:`optional-module-"
+"requirements"
 
 #: library/zlib.rst:15
 msgid ""
@@ -43,18 +50,24 @@ msgid ""
 "consult the `zlib manual <https://www.zlib.net/manual.html>`_ for "
 "authoritative information."
 msgstr ""
+"Οι συναρτήσεις του zlib έχουν πολλές επιλογές και συχνά πρέπει να "
+"χρησιμοποιούνται σε μια συγκεκριμένησειρά. Αυτή η τεκμηρίωση δεν επιχειρεί "
+"να καλύψει όλες τις μεταθέσεις.συμβουλευτείτε το εγχειρίδιο `zlib <https://"
+"www.zlib.net/manual.html>`_ για έγκυρες πληροφορίες. "
 
 #: library/zlib.rst:20
 msgid "For reading and writing ``.gz`` files see the :mod:`gzip` module."
 msgstr ""
+"Για την ανάγνωση και την εγγραφή αρχείων ``.gz``, ανατρέξτε στην "
+"ενότητα :mod:`gzip`."
 
 #: library/zlib.rst:22
 msgid "The available exception and functions in this module are:"
-msgstr ""
+msgstr "Οι διαθέσιμες εξαιρέσεις και συναρτήσεις σε αυτήν την ενότητα είναι:"
 
 #: library/zlib.rst:27
 msgid "Exception raised on compression and decompression errors."
-msgstr ""
+msgstr "Εξαίρεση που προέκυψε σχετικά με σφάλματα συμπίεσης και αποσυμπίεσης."
 
 #: library/zlib.rst:32
 msgid ""
@@ -68,20 +81,38 @@ msgid ""
 "Since the algorithm is designed for use as a checksum algorithm, it is not "
 "suitable for use as a general hash algorithm."
 msgstr ""
+"Υπολογίζει ένα άθροισμα ελέγχου Adler-32 των *δεδομένων*. (Ένα άθροισμα "
+"ελέγχου Adler-32 είναι σχεδόν τόσοαξιόπιστο ως CRC32 αλλά μπορεί να "
+"υπολογιστεί πολύ πιο γρήγορα.) Το αποτέλεσμα είναιένας μη πρόσημος ακέραιος "
+"αριθμός 32-bit. Εάν υπάρχει η τιμή *value*, χρησιμοποιείται ωςαρχική τιμή "
+"του αθροίσματος ελέγχου· διαφορετικά, χρησιμοποιείται η προεπιλεγμένη τιμή "
+"1Η εισαγωγή του *value* επιτρέπει τον υπολογισμό ενός τρέχοντος αθροίσματος "
+"ελέγχου (checksum) πάνω από τοσυνένωση αρκετών εισόδων. Ο αλγόριθμος δεν "
+"είναι κρυπτογραφικάσχυρό και δεν πρέπει να χρησιμοποιείται για έλεγχο "
+"ταυτότητας ή ψηφιακές υπογραφές.Δεδομένου ότι ο αλγόριθμος έχει σχεδιαστεί "
+"για χρήση ως αλγόριθμος αθροίσματος ελέγχου, δεν είναικατάλληλο για χρήση ως "
+"γενικός αλγόριθμος κατακερματισμού."
 
 #: library/zlib.rst:131
 msgid "The result is always unsigned."
-msgstr ""
+msgstr "Το αποτέλεσμα είναι πάντα ανυπόγραφο."
 
 #: library/zlib.rst:47
 msgid ""
 "Compresses the bytes in *data*, returning a bytes object containing "
 "compressed data. *level* is an integer from ``0`` to ``9`` or ``-1`` "
-"controlling the level of compression; See :const:`Z_BEST_SPEED` (``1``), :"
-"const:`Z_BEST_COMPRESSION` (``9``), :const:`Z_NO_COMPRESSION` (``0``), and "
-"the default, :const:`Z_DEFAULT_COMPRESSION` (``-1``) for more information "
-"about these values."
+"controlling the level of compression; See :const:`Z_BEST_SPEED` "
+"(``1``), :const:`Z_BEST_COMPRESSION` (``9``), :const:`Z_NO_COMPRESSION` "
+"(``0``), and the default, :const:`Z_DEFAULT_COMPRESSION` (``-1``) for more "
+"information about these values."
 msgstr ""
+"Συμπιέζει τα byte στα *data*, επιστρέφοντας ένα αντικείμενο bytes που "
+"περιέχεισυμπιεσμένα δεδομένα. Το *level* είναι ένας ακέραιος αριθμός από "
+"``0`` έως ``9`` ή ``-1``έλεγχος του επιπέδου συμπίεσης· "
+"Δείτε :const:`Z_BEST_SPEED` (``1``), :const:`Z_BEST_COMPRESSION` "
+"(``9``), :const:`Z_NO_COMPRESSION` (``0``), καιη "
+"προεπιλογή, :const:`Z_DEFAULT_COMPRESSION` (``-1``) για περισσότερες "
+"πληροφορίεςσχετικά με αυτές τις αξίες."
 
 #: library/zlib.rst:55
 msgid ""
@@ -90,6 +121,10 @@ msgid ""
 "trailer is included in the output.  It can take several ranges of values, "
 "defaulting to ``15`` (:const:`MAX_WBITS`):"
 msgstr ""
+"Το όρισμα *wbits* ελέγχει το μέγεθος του buffer ιστορικού (ή το\"window "
+"size\") που χρησιμοποιείται κατά τη συμπίεση δεδομένων και εάν υπάρχει "
+"κεφαλίδα καιτρέιλερ περιλαμβάνεται στην έξοδο. Μπορεί να λάβει πολλά εύρη "
+"τιμών,προεπιλογή σε ``15`` (:const:`MAX_WBITS`):"
 
 #: library/zlib.rst:60
 msgid ""
@@ -98,12 +133,19 @@ msgid ""
 "expense of greater memory usage.  The resulting output will include a zlib-"
 "specific header and trailer."
 msgstr ""
+"+9 έως +15: Ο λογάριθμος βάσης δύο του μεγέθους του παραθύρου, το οποίο "
+"επομένως κυμαίνεταιμεταξύ 512 και 32768. Μεγαλύτερες τιμές παράγουν καλύτερη "
+"συμπίεση στοκόστος μεγαλύτερης χρήσης μνήμης. Η προκύπτουσα έξοδος θα "
+"περιλαμβάνει ένα zlib-συγκεκριμένη κεφαλίδα και τρέιλερ"
 
 #: library/zlib.rst:65
 msgid ""
 "−9 to −15: Uses the absolute value of *wbits* as the window size logarithm, "
 "while producing a raw output stream with no header or trailing checksum."
 msgstr ""
+"−9 έως −15: Χρησιμοποιεί την απόλυτη τιμή του *wbits* ως λογάριθμο μεγέθους "
+"παραθύρου,ενώ παράγει μια ακατέργαστη ροή εξόδου χωρίς κεφαλίδα ή τελικό "
+"άθροισμα ελέγχου."
 
 #: library/zlib.rst:69
 msgid ""
@@ -111,40 +153,57 @@ msgid ""
 "size logarithm, while including a basic :program:`gzip` header and trailing "
 "checksum in the output."
 msgstr ""
+"+25 έως +31 = 16 + (9 έως 15): Χρησιμοποιεί τα 4 χαμηλότερα bit της τιμής ως "
+"παράθυρολογάριθμος μεγέθους, ενώ περιλαμβάνει μια βασική "
+"κεφαλίδα :program:`gzip` και ένα τελικόάθροισμα ελέγχου στην έξοδο."
 
 #: library/zlib.rst:73
 msgid "Raises the :exc:`error` exception if any error occurs."
 msgstr ""
+"Ενεργοποιεί την εξαίρεση :exc:`error` εάν παρουσιαστεί οποιοδήποτε σφάλμα."
 
 #: library/zlib.rst:75
 msgid "*level* can now be used as a keyword parameter."
 msgstr ""
+"Το *level* μπορεί πλέον να χρησιμοποιηθεί ως παράμετρος λέξης-κλειδιού."
 
 #: library/zlib.rst:78
 msgid ""
 "The *wbits* parameter is now available to set window bits and compression "
 "type."
 msgstr ""
+"Η παράμετρος *wbits* είναι πλέον διαθέσιμη για τον ορισμό των bit παραθύρου "
+"και τύπο συμπίεσης."
 
 #: library/zlib.rst:84
 msgid ""
 "Returns a compression object, to be used for compressing data streams that "
 "won't fit into memory at once."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο συμπίεσης, που θα χρησιμοποιηθεί για τη συμπίεση "
+"ροών δεδομένων πουδεν χωράει στη μνήμη αμέσως."
 
 #: library/zlib.rst:87
 msgid ""
 "*level* is the compression level -- an integer from ``0`` to ``9`` or "
 "``-1``. See :const:`Z_BEST_SPEED` (``1``), :const:`Z_BEST_COMPRESSION` "
-"(``9``), :const:`Z_NO_COMPRESSION` (``0``), and the default, :const:"
-"`Z_DEFAULT_COMPRESSION` (``-1``) for more information about these values."
+"(``9``), :const:`Z_NO_COMPRESSION` (``0``), and the "
+"default, :const:`Z_DEFAULT_COMPRESSION` (``-1``) for more information about "
+"these values."
 msgstr ""
+"*level* είναι το επίπεδο συμπίεσης -- ένας ακέραιος αριθμός από ``0`` έως "
+"``9`` ή``-1``. Δείτε :const:`Z_BEST_SPEED` "
+"(``1``), :const:`Z_BEST_COMPRESSION`(``9``), :const:`Z_NO_COMPRESSION` "
+"(``0``), και η προεπιλογή, :const:`Z_DEFAULT_COMPRESSION` (``-1``) για "
+"περισσότερες πληροφορίες σχετικά με αυτές τις τιμές."
 
 #: library/zlib.rst:92
 msgid ""
 "*method* is the compression algorithm. Currently, the only supported value "
 "is :const:`DEFLATED`."
 msgstr ""
+"*μέθοδος* είναι ο αλγόριθμος συμπίεσης. Προς το παρόν, η μόνη υποστηριζόμενη "
+"τιμήείναι :const:`DEFLATED`."
 
 #: library/zlib.rst:95
 msgid ""
@@ -152,6 +211,9 @@ msgid ""
 "\"window size\"), and what header and trailer format will be used. It has "
 "the same meaning as `described for compress() <#compress-wbits>`__."
 msgstr ""
+"Η παράμετρος *wbits* ελέγχει το μέγεθος του buffer ιστορικού (ή το\"window "
+"size\"), και ποια μορφή κεφαλίδας και τρέιλερ θα χρησιμοποιηθεί. Έχειέχει "
+"την ίδια σημασία με την `περιγράφεται για compress() <#compress-wbits>`__"
 
 #: library/zlib.rst:99
 msgid ""
@@ -159,13 +221,21 @@ msgid ""
 "compression state. Valid values range from ``1`` to ``9``. Higher values use "
 "more memory, but are faster and produce smaller output."
 msgstr ""
+"Το όρισμα *memLevel* ελέγχει την ποσότητα μνήμης που χρησιμοποιείται για την "
+"εσωτερικήκατάσταση συμπίεσης. Οι έγκυρες τιμές κυμαίνονται από ``1`` έως "
+"``9``. Χρησιμοποιούνται υψηλότερες τιμέςπερισσότερη μνήμη, αλλά είναι "
+"ταχύτερα και παράγουν μικρότερη έξοδο."
 
 #: library/zlib.rst:103
 msgid ""
-"*strategy* is used to tune the compression algorithm. Possible values are :"
-"const:`Z_DEFAULT_STRATEGY`, :const:`Z_FILTERED`, :const:`Z_HUFFMAN_ONLY`, :"
-"const:`Z_RLE` and :const:`Z_FIXED`."
+"*strategy* is used to tune the compression algorithm. Possible values "
+"are :const:`Z_DEFAULT_STRATEGY`, :const:`Z_FILTERED`, :const:`Z_HUFFMAN_ONLY`, :const:`Z_RLE` "
+"and :const:`Z_FIXED`."
 msgstr ""
+"Η *strategy* χρησιμοποιείται για τη ρύθμιση του αλγορίθμου συμπίεσης. "
+"Πιθανές τιμές "
+"είναι:const:`Z_DEFAULT_STRATEGY`, :const:`Z_FILTERED`, :const:`Z_HUFFMAN_ONLY`, :const:`Z_RLE` "
+"and :const:`Z_FIXED`."
 
 #: library/zlib.rst:107
 msgid ""
@@ -174,10 +244,16 @@ msgid ""
 "to occur frequently in the data that is to be compressed. Those subsequences "
 "that are expected to be most common should come at the end of the dictionary."
 msgstr ""
+"Το *zdict* είναι ένα προκαθορισμένο λεξικό συμπίεσης. Αυτή είναι μια "
+"ακολουθία byte.(όπως ένα αντικείμενο :class:`bytes`) που περιέχει "
+"υποακολουθίες που αναμένονταινα εμφανίζεται συχνά στα δεδομένα που πρόκειται "
+"να συμπιεστούν. Αυτές οι υποακολουθίεςπου αναμένεται να είναι οι πιο "
+"συνηθισμένες θα πρέπει να βρίσκονται στο τέλος του λεξικού."
 
 #: library/zlib.rst:112
 msgid "Added the *zdict* parameter and keyword argument support."
 msgstr ""
+"Προστέθηκε η παράμετρος *zdict* και η υποστήριξη ορίσματος λέξης-κλειδιού."
 
 #: library/zlib.rst:122
 msgid ""
@@ -190,6 +266,16 @@ msgid ""
 "Since the algorithm is designed for use as a checksum algorithm, it is not "
 "suitable for use as a general hash algorithm."
 msgstr ""
+"Υπολογίζει ένα άθροισμα ελέγχου CRC (Cyclic Redundancy Check) των "
+"*δεδομένων*. Το αποτέλεσμα είναιένας μη πρόσημος ακέραιος αριθμός 32-bit. "
+"Εάν υπάρχει η τιμή *value*, χρησιμοποιείται ωςαρχική τιμή του αθροίσματος "
+"ελέγχου. Διαφορετικά, χρησιμοποιείται η προεπιλεγμένη τιμή 0.Η εισαγωγή του "
+"*value* επιτρέπει τον υπολογισμό ενός τρέχοντος αθροίσματος ελέγχου "
+"(checksum) πάνω από τοσυνένωση αρκετών εισόδων. Ο αλγόριθμος δεν είναι "
+"κρυπτογραφικάισχυρό και δεν πρέπει να χρησιμοποιείται για έλεγχο ταυτότητας "
+"ή ψηφιακές υπογραφές.Δεδομένου ότι ο αλγόριθμος έχει σχεδιαστεί για χρήση ως "
+"αλγόριθμος αθροίσματος ελέγχου, δεν είναικατάλληλο για χρήση ως γενικός "
+"αλγόριθμος κατακερματισμού."
 
 #: library/zlib.rst:136
 msgid ""
@@ -199,6 +285,11 @@ msgid ""
 "initial size of the output buffer.  Raises the :exc:`error` exception if any "
 "error occurs."
 msgstr ""
+"Αποσυμπιέζει τα byte στα *data*, επιστρέφοντας ένα αντικείμενο bytes που "
+"περιέχει τομη συμπιεσμένα δεδομένα. Η παράμετρος *wbits* εξαρτάται από τη "
+"μορφή των *δεδομένων*,και συζητείται περαιτέρω παρακάτω. Εάν δίνεται το "
+"*bufsize*, χρησιμοποιείται ως τοαρχικό μέγεθος του buffer εξόδου. "
+"Ενεργοποιεί την εξαίρεση :exc:`error` εάν παρουσιαστείοποιοδήποτε σφάλμα."
 
 #: library/zlib.rst:144
 msgid ""
@@ -206,36 +297,52 @@ msgid ""
 "size\"), and what header and trailer format is expected. It is similar to "
 "the parameter for :func:`compressobj`, but accepts more ranges of values:"
 msgstr ""
+"Η παράμετρος *wbits* ελέγχει το μέγεθος του buffer ιστορικού (ή \"window "
+"size\"), και ποια αναμένεται η μορφή κεφαλίδας και τρέιλερ. Είναι παρόμοιο "
+"μεη παράμετρος για :func:`compressobj`, αλλά δέχεται περισσότερα εύρη τιμών:"
 
 #: library/zlib.rst:149
 msgid ""
 "+8 to +15: The base-two logarithm of the window size.  The input must "
 "include a zlib header and trailer."
 msgstr ""
+"+8 έως +15: Ο λογάριθμος βάσης δύο του μεγέθους του παραθύρου. Η είσοδος "
+"πρέπεινα συμπεριλάβετε μια κεφαλίδα zlib και ένα τρέιλερ."
 
 #: library/zlib.rst:152
 msgid ""
 "0: Automatically determine the window size from the zlib header. Only "
 "supported since zlib 1.2.3.5."
 msgstr ""
+"0: Προσδιορίζει αυτόματα το μέγεθος του παραθύρου από την κεφαλίδα zlib. "
+"ΜόνοΥποστηρίζεται από την έκδοση zlib 1.2.3.5."
 
 #: library/zlib.rst:155
 msgid ""
 "−8 to −15: Uses the absolute value of *wbits* as the window size logarithm.  "
 "The input must be a raw stream with no header or trailer."
 msgstr ""
+"−8 έως −15: Χρησιμοποιεί την απόλυτη τιμή του *wbits* ως λογάριθμο του "
+"μεγέθους του παραθύρου.Η είσοδος πρέπει να είναι μια ακατέργαστη ροή χωρίς "
+"κεφαλίδα ή τρέιλερ."
 
 #: library/zlib.rst:158
 msgid ""
 "+24 to +31 = 16 + (8 to 15): Uses the low 4 bits of the value as the window "
 "size logarithm.  The input must include a gzip header and trailer."
 msgstr ""
+"+24 έως +31 = 16 + (8 έως 15): Χρησιμοποιεί τα 4 χαμηλότερα bit της τιμής ως "
+"λογάριθμος μεγέθους παραθύρου. Η είσοδος πρέπει να περιλαμβάνει μια κεφαλίδα "
+"gzip και ένα trailer."
 
 #: library/zlib.rst:162
 msgid ""
 "+40 to +47 = 32 + (8 to 15): Uses the low 4 bits of the value as the window "
 "size logarithm, and automatically accepts either the zlib or gzip format."
 msgstr ""
+"+40 έως +47 = 32 + (8 έως 15): Χρησιμοποιεί τα 4 χαμηλότερα bit της τιμής ως "
+"λογάριθμος μεγέθους παραθύρου και δέχεται αυτόματα είτε τη μορφή zlib είτε "
+"τη μορφή gzip."
 
 #: library/zlib.rst:166
 msgid ""
@@ -245,6 +352,12 @@ msgid ""
 "to the largest window size and requires a zlib header and trailer to be "
 "included."
 msgstr ""
+"Κατά την αποσυμπίεση μιας ροής, το μέγεθος του παραθύρου δεν πρέπει να είναι "
+"μικρότερο από τομέγεθος που χρησιμοποιήθηκε αρχικά για τη συμπίεση της ροής. "
+"Η χρήση μιας πολύ μικρής τιμής μπορεί ναέχει ως αποτέλεσμα μια "
+"εξαίρεση :exc:`error`. Η προεπιλεγμένη τιμή *wbits* αντιστοιχείστο "
+"μεγαλύτερο μέγεθος παραθύρου και απαιτεί κεφαλίδα zlib και τρέιλερ που "
+"θασυμπεριληφθεί."
 
 #: library/zlib.rst:172
 msgid ""
@@ -253,16 +366,25 @@ msgid ""
 "you don't have to get this value exactly right; tuning it will only save a "
 "few calls to :c:func:`malloc`."
 msgstr ""
+"*bufsize* είναι το αρχικό μέγεθος του buffer που χρησιμοποιείται για τη "
+"διατήρηση αποσυμπιεσμένων δεδομένων.Εάν απαιτείται περισσότερος χώρος, το "
+"μέγεθος του buffer θα αυξηθεί ανάλογα με τις ανάγκες, έτσιδεν χρειάζεται να "
+"βρείτε αυτήν την τιμή ακριβώς σωστά. Η ρύθμισή της θα εξοικονομήσει μόνο "
+"λίγες κλήσεις προς :c:func:`malloc`."
 
 #: library/zlib.rst:177
 msgid "*wbits* and *bufsize* can be used as keyword arguments."
 msgstr ""
+"Τα *wbits* και *bufsize* μπορούν να χρησιμοποιηθούν ως ορίσματα λέξεων-"
+"κλειδιών."
 
 #: library/zlib.rst:182
 msgid ""
 "Returns a decompression object, to be used for decompressing data streams "
 "that won't fit into memory at once."
 msgstr ""
+"Επιστρέφει ένα αντικείμενο αποσυμπίεσης, που θα χρησιμοποιηθεί για την "
+"αποσυμπίεση ροών δεδομένωνπου δεν χωράνε στη μνήμη ταυτόχρονα."
 
 #: library/zlib.rst:185
 msgid ""
@@ -270,6 +392,9 @@ msgid ""
 "\"window size\"), and what header and trailer format is expected.  It has "
 "the same meaning as `described for decompress() <#decompress-wbits>`__."
 msgstr ""
+"Η παράμετρος *wbits* ελέγχει το μέγεθος του buffer ιστορικού (ή το\"window "
+"size\"), και ποια αναμένεται η μορφή κεφαλίδας και τρέιλερ. Έχειτην ίδια "
+"σημασία με την `περιγράφεται για decompress() <#decompress-wbits>`__."
 
 #: library/zlib.rst:189
 msgid ""
@@ -277,6 +402,9 @@ msgid ""
 "provided, this must be the same dictionary as was used by the compressor "
 "that produced the data that is to be decompressed."
 msgstr ""
+"Η παράμετρος *zdict* καθορίζει ένα προκαθορισμένο λεξικό συμπίεσης. Εάνυπό "
+"την προϋπόθεση ότι αυτό πρέπει να είναι το ίδιο λεξικό που χρησιμοποιήθηκε "
+"από τον συμπιεστήπου παρήγαγε τα δεδομένα που πρόκειται να αποσυμπιεστούν."
 
 #: library/zlib.rst:195
 msgid ""
@@ -284,14 +412,18 @@ msgid ""
 "modify its contents between the call to :func:`decompressobj` and the first "
 "call to the decompressor's ``decompress()`` method."
 msgstr ""
+"Εάν το *zdict* είναι ένα μεταβλητό αντικείμενο (όπως "
+"ένα :class:`bytearray`), δεν πρέπειτροποποιήστε τα περιεχόμενά του μεταξύ "
+"της κλήσης στο :func:`decompressobj` και η πρώτηκλήση της μεθόδου "
+"``decompress()`` του αποσυμπιεστή."
 
 #: library/zlib.rst:199
 msgid "Added the *zdict* parameter."
-msgstr ""
+msgstr "Προστέθηκε η παράμετρος *zdict*."
 
 #: library/zlib.rst:203
 msgid "Compression objects support the following methods:"
-msgstr ""
+msgstr "Τα αντικείμενα συμπίεσης υποστηρίζουν τις ακόλουθες μεθόδους:"
 
 #: library/zlib.rst:208
 msgid ""
@@ -304,13 +436,13 @@ msgstr ""
 #: library/zlib.rst:216
 msgid ""
 "All pending input is processed, and a bytes object containing the remaining "
-"compressed output is returned.  *mode* can be selected from the constants :"
-"const:`Z_NO_FLUSH`, :const:`Z_PARTIAL_FLUSH`, :const:`Z_SYNC_FLUSH`, :const:"
-"`Z_FULL_FLUSH`, :const:`Z_BLOCK`, or :const:`Z_FINISH`, defaulting to :const:"
-"`Z_FINISH`.  Except :const:`Z_FINISH`, all constants allow compressing "
-"further bytestrings of data, while :const:`Z_FINISH` finishes the compressed "
-"stream and prevents compressing any more data.  After calling :meth:`flush` "
-"with *mode* set to :const:`Z_FINISH`, the :meth:`compress` method cannot be "
+"compressed output is returned.  *mode* can be selected from the "
+"constants :const:`Z_NO_FLUSH`, :const:`Z_PARTIAL_FLUSH`, :const:`Z_SYNC_FLUSH`, :const:`Z_FULL_FLUSH`, :const:`Z_BLOCK`, "
+"or :const:`Z_FINISH`, defaulting to :const:`Z_FINISH`.  "
+"Except :const:`Z_FINISH`, all constants allow compressing further "
+"bytestrings of data, while :const:`Z_FINISH` finishes the compressed stream "
+"and prevents compressing any more data.  After calling :meth:`flush` with "
+"*mode* set to :const:`Z_FINISH`, the :meth:`compress` method cannot be "
 "called again; the only realistic action is to delete the object."
 msgstr ""
 
@@ -340,11 +472,12 @@ msgstr ""
 
 #: library/zlib.rst:251
 msgid ""
-"A bytes object that contains any data that was not consumed by the last :"
-"meth:`decompress` call because it exceeded the limit for the uncompressed "
-"data buffer.  This data has not yet been seen by the zlib machinery, so you "
-"must feed it (possibly with further data concatenated to it) back to a "
-"subsequent :meth:`decompress` method call in order to get correct output."
+"A bytes object that contains any data that was not consumed by the "
+"last :meth:`decompress` call because it exceeded the limit for the "
+"uncompressed data buffer.  This data has not yet been seen by the zlib "
+"machinery, so you must feed it (possibly with further data concatenated to "
+"it) back to a subsequent :meth:`decompress` method call in order to get "
+"correct output."
 msgstr ""
 
 #: library/zlib.rst:260
@@ -363,9 +496,9 @@ msgstr ""
 msgid ""
 "Decompress *data*, returning a bytes object containing the uncompressed data "
 "corresponding to at least part of the data in *string*.  This data should be "
-"concatenated to the output produced by any preceding calls to the :meth:"
-"`decompress` method.  Some of the input data may be preserved in internal "
-"buffers for later processing."
+"concatenated to the output produced by any preceding calls to "
+"the :meth:`decompress` method.  Some of the input data may be preserved in "
+"internal buffers for later processing."
 msgstr ""
 
 #: library/zlib.rst:277
@@ -375,8 +508,8 @@ msgid ""
 "compressed input can be processed; and unconsumed data will be stored in the "
 "attribute :attr:`unconsumed_tail`. This bytestring must be passed to a "
 "subsequent call to :meth:`decompress` if decompression is to continue.  If "
-"*max_length* is zero then the whole input is decompressed, and :attr:"
-"`unconsumed_tail` is empty."
+"*max_length* is zero then the whole input is decompressed, "
+"and :attr:`unconsumed_tail` is empty."
 msgstr ""
 
 #: library/zlib.rst:284
@@ -386,9 +519,9 @@ msgstr ""
 #: library/zlib.rst:290
 msgid ""
 "All pending input is processed, and a bytes object containing the remaining "
-"uncompressed output is returned.  After calling :meth:`flush`, the :meth:"
-"`decompress` method cannot be called again; the only realistic action is to "
-"delete the object."
+"uncompressed output is returned.  After calling :meth:`flush`, "
+"the :meth:`decompress` method cannot be called again; the only realistic "
+"action is to delete the object."
 msgstr ""
 
 #: library/zlib.rst:295
@@ -546,9 +679,9 @@ msgstr ""
 #: library/zlib.rst:461
 msgid ""
 "The version string of the zlib-ng library that was used for building the "
-"module if zlib-ng was used. When present, the :data:`ZLIB_VERSION` and :data:"
-"`ZLIB_RUNTIME_VERSION` constants reflect the version of the zlib API "
-"provided by zlib-ng."
+"module if zlib-ng was used. When present, the :data:`ZLIB_VERSION` "
+"and :data:`ZLIB_RUNTIME_VERSION` constants reflect the version of the zlib "
+"API provided by zlib-ng."
 msgstr ""
 
 #: library/zlib.rst:466

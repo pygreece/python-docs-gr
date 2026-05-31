@@ -36,8 +36,8 @@ msgstr ""
 
 #: c-api/hash.rst:24
 msgid ""
-"A numerical value indicating the algorithm for hashing of :class:`str`, :"
-"class:`bytes`, and :class:`memoryview`."
+"A numerical value indicating the algorithm for hashing "
+"of :class:`str`, :class:`bytes`, and :class:`memoryview`."
 msgstr ""
 
 #: c-api/hash.rst:27
@@ -172,15 +172,16 @@ msgstr ""
 #: c-api/hash.rst:157
 msgid ""
 "Compute and return the hash value of a buffer of *len* bytes starting at "
-"address *ptr*. The hash is guaranteed to match that of :class:`bytes`, :"
-"class:`memoryview`, and other built-in objects that implement the :ref:"
-"`buffer protocol <bufferobjects>`."
+"address *ptr*. The hash is guaranteed to match that "
+"of :class:`bytes`, :class:`memoryview`, and other built-in objects that "
+"implement the :ref:`buffer protocol <bufferobjects>`."
 msgstr ""
 
 #: c-api/hash.rst:162
 msgid ""
-"Use this function to implement hashing for immutable objects whose :c:member:"
-"`~PyTypeObject.tp_richcompare` function compares to another object's buffer."
+"Use this function to implement hashing for immutable objects "
+"whose :c:member:`~PyTypeObject.tp_richcompare` function compares to another "
+"object's buffer."
 msgstr ""
 
 #: c-api/hash.rst:166

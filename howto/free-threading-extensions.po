@@ -23,9 +23,9 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:9
 msgid ""
-"Starting with the 3.13 release, CPython has support for running with the :"
-"term:`global interpreter lock` (GIL) disabled in a configuration called :"
-"term:`free threading`.  This document describes how to adapt C API "
+"Starting with the 3.13 release, CPython has support for running with "
+"the :term:`global interpreter lock` (GIL) disabled in a configuration "
+"called :term:`free threading`.  This document describes how to adapt C API "
 "extensions to support free threading."
 msgstr ""
 
@@ -80,10 +80,10 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:48
 msgid ""
-"Extensions that use multi-phase initialization (i.e., :c:func:"
-"`PyModuleDef_Init`) should add a :c:data:`Py_mod_gil` slot in the module "
-"definition.  If your extension supports older versions of CPython, you "
-"should guard the slot with a :c:data:`PY_VERSION_HEX` check."
+"Extensions that use multi-phase initialization "
+"(i.e., :c:func:`PyModuleDef_Init`) should add a :c:data:`Py_mod_gil` slot in "
+"the module definition.  If your extension supports older versions of "
+"CPython, you should guard the slot with a :c:data:`PY_VERSION_HEX` check."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:55
@@ -109,11 +109,12 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:73
 msgid ""
-"Extensions that use single-phase initialization (i.e., :c:func:"
-"`PyModule_Create`) should call :c:func:`PyUnstable_Module_SetGIL` to "
-"indicate that they support running with the GIL disabled.  The function is "
-"only defined in the free-threaded build, so you should guard the call with "
-"``#ifdef Py_GIL_DISABLED`` to avoid compilation errors in the regular build."
+"Extensions that use single-phase initialization "
+"(i.e., :c:func:`PyModule_Create`) should "
+"call :c:func:`PyUnstable_Module_SetGIL` to indicate that they support "
+"running with the GIL disabled.  The function is only defined in the free-"
+"threaded build, so you should guard the call with ``#ifdef Py_GIL_DISABLED`` "
+"to avoid compilation errors in the regular build."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:81
@@ -153,11 +154,12 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:107
 msgid ""
-"**Macros**: Accessor macros like :c:macro:`PyList_GET_ITEM`, :c:macro:"
-"`PyList_SET_ITEM`, and macros like :c:macro:`PySequence_Fast_GET_SIZE` that "
-"use the object returned by :c:func:`PySequence_Fast` do not perform any "
-"error checking or locking. These macros are not thread-safe if the container "
-"object may be modified concurrently."
+"**Macros**: Accessor macros "
+"like :c:macro:`PyList_GET_ITEM`, :c:macro:`PyList_SET_ITEM`, and macros "
+"like :c:macro:`PySequence_Fast_GET_SIZE` that use the object returned "
+"by :c:func:`PySequence_Fast` do not perform any error checking or locking. "
+"These macros are not thread-safe if the container object may be modified "
+"concurrently."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:113
@@ -174,10 +176,10 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:122
 msgid ""
-"Containers like :c:struct:`PyListObject`, :c:struct:`PyDictObject`, and :c:"
-"struct:`PySetObject` perform internal locking in the free-threaded build.  "
-"For example, the :c:func:`PyList_Append` will lock the list before appending "
-"an item."
+"Containers like :c:struct:`PyListObject`, :c:struct:`PyDictObject`, "
+"and :c:struct:`PySetObject` perform internal locking in the free-threaded "
+"build.  For example, the :c:func:`PyList_Append` will lock the list before "
+"appending an item."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:130
@@ -211,8 +213,8 @@ msgstr ""
 msgid ""
 "Some C API functions return :term:`borrowed references <borrowed "
 "reference>`. These APIs are not thread-safe if the containing object is "
-"modified concurrently.  For example, it's not safe to use :c:func:"
-"`PyList_GetItem` if the list may be modified concurrently."
+"modified concurrently.  For example, it's not safe to "
+"use :c:func:`PyList_GetItem` if the list may be modified concurrently."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:156
@@ -310,13 +312,13 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:185
 msgid ""
-"Not all APIs that return borrowed references are problematic.  For example, :"
-"c:func:`PyTuple_GetItem` is safe because tuples are immutable. Similarly, "
-"not all uses of the above APIs are problematic.  For example, :c:func:"
-"`PyDict_GetItem` is often used for parsing keyword argument dictionaries in "
-"function calls; those keyword argument dictionaries are effectively private "
-"(not accessible by other threads), so using borrowed references in that "
-"context is safe."
+"Not all APIs that return borrowed references are problematic.  For "
+"example, :c:func:`PyTuple_GetItem` is safe because tuples are immutable. "
+"Similarly, not all uses of the above APIs are problematic.  For "
+"example, :c:func:`PyDict_GetItem` is often used for parsing keyword argument "
+"dictionaries in function calls; those keyword argument dictionaries are "
+"effectively private (not accessible by other threads), so using borrowed "
+"references in that context is safe."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:193
@@ -332,19 +334,21 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:203
 msgid ""
-"Python's memory management C API provides functions in three different :ref:"
-"`allocation domains <allocator-domains>`: \"raw\", \"mem\", and \"object\". "
-"For thread-safety, the free-threaded build requires that only Python objects "
-"are allocated using the object domain, and that all Python objects are "
-"allocated using that domain.  This differs from the prior Python versions, "
-"where this was only a best practice and not a hard requirement."
+"Python's memory management C API provides functions in three "
+"different :ref:`allocation domains <allocator-domains>`: \"raw\", \"mem\", "
+"and \"object\". For thread-safety, the free-threaded build requires that "
+"only Python objects are allocated using the object domain, and that all "
+"Python objects are allocated using that domain.  This differs from the prior "
+"Python versions, where this was only a best practice and not a hard "
+"requirement."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:212
 msgid ""
 "Search for uses of :c:func:`PyObject_Malloc` in your extension and check "
-"that the allocated memory is used for Python objects. Use :c:func:"
-"`PyMem_Malloc` to allocate buffers instead of :c:func:`PyObject_Malloc`."
+"that the allocated memory is used for Python objects. "
+"Use :c:func:`PyMem_Malloc` to allocate buffers instead "
+"of :c:func:`PyObject_Malloc`."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:219
@@ -380,10 +384,10 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:234
 msgid ""
-"You should continue to call :c:func:`PyEval_SaveThread` or :c:macro:"
-"`Py_BEGIN_ALLOW_THREADS` around blocking operations, such as I/O or lock "
-"acquisitions, to allow other threads to run the :term:`cyclic garbage "
-"collector <garbage collection>`."
+"You should continue to call :c:func:`PyEval_SaveThread` "
+"or :c:macro:`Py_BEGIN_ALLOW_THREADS` around blocking operations, such as I/O "
+"or lock acquisitions, to allow other threads to run the :term:`cyclic "
+"garbage collector <garbage collection>`."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:241
@@ -434,9 +438,9 @@ msgid ""
 "Conceptually, critical sections act as a deadlock avoidance layer built on "
 "top of simple mutexes. Each thread maintains a stack of active critical "
 "sections. When a thread needs to acquire a lock associated with a critical "
-"section (e.g., implicitly when calling a thread-safe C API function like :c:"
-"func:`PyDict_SetItem`, or explicitly using macros), it attempts to acquire "
-"the underlying mutex."
+"section (e.g., implicitly when calling a thread-safe C API function "
+"like :c:func:`PyDict_SetItem`, or explicitly using macros), it attempts to "
+"acquire the underlying mutex."
 msgstr ""
 
 #: howto/free-threading-extensions.rst:278
@@ -455,8 +459,9 @@ msgstr ""
 
 #: howto/free-threading-extensions.rst:285
 msgid ""
-":c:macro:`Py_BEGIN_CRITICAL_SECTION2` and :c:macro:"
-"`Py_END_CRITICAL_SECTION2` - For locking two objects simultaneously"
+":c:macro:`Py_BEGIN_CRITICAL_SECTION2` "
+"and :c:macro:`Py_END_CRITICAL_SECTION2` - For locking two objects "
+"simultaneously"
 msgstr ""
 
 #: howto/free-threading-extensions.rst:288

@@ -259,8 +259,8 @@ msgid ""
 "buffer is always null, regardless of whether there are any other null "
 "bytes.  The data must not be modified in any way, unless the object was just "
 "created using ``PyBytes_FromStringAndSize(NULL, size)``. It must not be "
-"deallocated.  If *o* is not a bytes object at all, :c:func:"
-"`PyBytes_AsString` returns ``NULL`` and raises :exc:`TypeError`."
+"deallocated.  If *o* is not a bytes object at "
+"all, :c:func:`PyBytes_AsString` returns ``NULL`` and raises :exc:`TypeError`."
 msgstr ""
 
 #: c-api/bytes.rst:151
@@ -318,15 +318,15 @@ msgstr ""
 
 #: c-api/bytes.rst:196
 msgid ""
-"*sep* must be Python :class:`bytes` object. (Note that :c:func:"
-"`PyUnicode_Join` accepts ``NULL`` separator and treats it as a space, "
-"whereas :c:func:`PyBytes_Join` doesn't accept ``NULL`` separator.)"
+"*sep* must be Python :class:`bytes` object. (Note "
+"that :c:func:`PyUnicode_Join` accepts ``NULL`` separator and treats it as a "
+"space, whereas :c:func:`PyBytes_Join` doesn't accept ``NULL`` separator.)"
 msgstr ""
 
 #: c-api/bytes.rst:201
 msgid ""
-"*iterable* must be an iterable object yielding objects that implement the :"
-"ref:`buffer protocol <bufferobjects>`."
+"*iterable* must be an iterable object yielding objects that implement "
+"the :ref:`buffer protocol <bufferobjects>`."
 msgstr ""
 
 #: c-api/bytes.rst:204
@@ -370,9 +370,9 @@ msgstr ""
 
 #: c-api/bytes.rst:238
 msgid ""
-"On success, this function returns a :term:`strong reference` to a :class:"
-"`str` object containing the representation. On failure, this returns "
-"``NULL`` with an exception set."
+"On success, this function returns a :term:`strong reference` to "
+"a :class:`str` object containing the representation. On failure, this "
+"returns ``NULL`` with an exception set."
 msgstr ""
 
 #: c-api/bytes.rst:245
@@ -389,9 +389,9 @@ msgstr ""
 
 #: c-api/bytes.rst:251
 msgid ""
-"On success, this function returns a :term:`strong reference` to a Python :"
-"class:`bytes` object containing the unescaped string. On failure, this "
-"function returns ``NULL`` with an exception set."
+"On success, this function returns a :term:`strong reference` to a "
+"Python :class:`bytes` object containing the unescaped string. On failure, "
+"this function returns ``NULL`` with an exception set."
 msgstr ""
 
 #: c-api/bytes.rst:255

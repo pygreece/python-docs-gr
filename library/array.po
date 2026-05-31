@@ -237,9 +237,9 @@ msgstr ""
 #: library/array.rst:84
 msgid ""
 "A new array whose items are restricted by *typecode*, and initialized from "
-"the optional *initializer* value, which must be a :class:`bytes` or :class:"
-"`bytearray` object, a Unicode string, or iterable over elements of the "
-"appropriate type."
+"the optional *initializer* value, which must be a :class:`bytes` "
+"or :class:`bytearray` object, a Unicode string, or iterable over elements of "
+"the appropriate type."
 msgstr ""
 
 #: library/array.rst:89
@@ -303,9 +303,9 @@ msgstr ""
 #: library/array.rst:141
 msgid ""
 "\"Byteswap\" all items of the array.  This is only supported for values "
-"which are 1, 2, 4, or 8 bytes in size; for other types of values, :exc:"
-"`RuntimeError` is raised.  It is useful when reading data from a file "
-"written on a machine with a different byte order."
+"which are 1, 2, 4, or 8 bytes in size; for other types of "
+"values, :exc:`RuntimeError` is raised.  It is useful when reading data from "
+"a file written on a machine with a different byte order."
 msgstr ""
 
 #: library/array.rst:149
@@ -315,16 +315,17 @@ msgstr ""
 #: library/array.rst:154
 msgid ""
 "Append items from *iterable* to the end of the array.  If *iterable* is "
-"another array, it must have *exactly* the same type code; if not, :exc:"
-"`TypeError` will be raised.  If *iterable* is not an array, it must be "
-"iterable and its elements must be the right type to be appended to the array."
+"another array, it must have *exactly* the same type code; if "
+"not, :exc:`TypeError` will be raised.  If *iterable* is not an array, it "
+"must be iterable and its elements must be the right type to be appended to "
+"the array."
 msgstr ""
 
 #: library/array.rst:162
 msgid ""
 "Appends items from the :term:`bytes-like object`, interpreting its content "
-"as an array of machine values (as if it had been read from a file using the :"
-"meth:`fromfile` method)."
+"as an array of machine values (as if it had been read from a file using "
+"the :meth:`fromfile` method)."
 msgstr ""
 
 #: library/array.rst:166
@@ -334,15 +335,15 @@ msgstr ""
 #: library/array.rst:172
 msgid ""
 "Read *n* items (as machine values) from the :term:`file object` *f* and "
-"append them to the end of the array.  If less than *n* items are available, :"
-"exc:`EOFError` is raised, but the items that were available are still "
-"inserted into the array."
+"append them to the end of the array.  If less than *n* items are "
+"available, :exc:`EOFError` is raised, but the items that were available are "
+"still inserted into the array."
 msgstr ""
 
 #: library/array.rst:180
 msgid ""
-"Append items from the list.  This is equivalent to ``for x in list: a."
-"append(x)`` except that if there is a type error, the array is unchanged."
+"Append items from the list.  This is equivalent to ``for x in list: "
+"a.append(x)`` except that if there is a type error, the array is unchanged."
 msgstr ""
 
 #: library/array.rst:186
@@ -357,8 +358,8 @@ msgstr ""
 msgid ""
 "Return the smallest *i* such that *i* is the index of the first occurrence "
 "of *x* in the array.  The optional arguments *start* and *stop* can be "
-"specified to search for *x* within a subsection of the array.  Raise :exc:"
-"`ValueError` if *x* is not found."
+"specified to search for *x* within a subsection of the array.  "
+"Raise :exc:`ValueError` if *x* is not found."
 msgstr ""
 
 #: library/array.rst:199
@@ -412,8 +413,9 @@ msgstr ""
 #: library/array.rst:255
 msgid ""
 "Convert the array to a Unicode string.  The array must have a type ``'u'`` "
-"or ``'w'``; otherwise a :exc:`ValueError` is raised. Use ``array.tobytes()."
-"decode(enc)`` to obtain a Unicode string from an array of some other type."
+"or ``'w'``; otherwise a :exc:`ValueError` is raised. Use "
+"``array.tobytes().decode(enc)`` to obtain a Unicode string from an array of "
+"some other type."
 msgstr ""
 
 #: library/array.rst:260
