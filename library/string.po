@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 17:36+0300\n"
+"POT-Creation-Date: 2025-12-04 09:48+0200\n"
 "PO-Revision-Date: 2025-08-20 11:51+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
@@ -22,7 +22,7 @@ msgid ":mod:`!string` --- Common string operations"
 msgstr ":mod:`!string` --- Κοινές λειτουργίες συμβολοσειρών"
 
 #: library/string.rst:7
-msgid "**Source code:** :source:`Lib/string.py`"
+msgid "**Source code:** :source:`Lib/string/__init__.py`"
 msgstr "**Πηγαίος κώδικας:** :source:`Lib/string.py`"
 
 #: library/string.rst:14
@@ -332,9 +332,9 @@ msgid ""
 "The :meth:`str.format` method and the :class:`Formatter` class share the "
 "same syntax for format strings (although in the case of :class:`Formatter`, "
 "subclasses can define their own format string syntax).  The syntax is "
-"related to that of :ref:`formatted string literals <f-strings>`, but it is "
-"less sophisticated and, in particular, does not support arbitrary "
-"expressions."
+"related to that of :ref:`formatted string literals <f-strings>` and :ref:"
+"`template string literals <t-strings>`, but it is less sophisticated and, in "
+"particular, does not support arbitrary expressions in interpolations."
 msgstr ""
 "Η μέθοδος :meth:`str.format` και η κλάση :class:`Formatter` μοιράζονται την "
 "ίδια σύνταξη για τις συμβολοσειρές μορφοποίησης (αν και στην περίπτωση της :"
@@ -343,7 +343,7 @@ msgstr ""
 "`formatted string literals <f-strings>`, αλλά είναι λιγότερο εξελιγμένη και, "
 "ειδικότερα, δεν υποστηρίζει αυθαίρετες εκφράσεις."
 
-#: library/string.rst:211
+#: library/string.rst:212
 msgid ""
 "Format strings contain \"replacement fields\" surrounded by curly braces ``{}"
 "``. Anything that is not contained in braces is considered literal text, "
@@ -358,11 +358,11 @@ msgstr ""
 "κυριολεκτικό κείμενο, μπορείτε να διαφύγετε τον χαρακτήρα βάζοντας τον εις "
 "διπλούν: ``{{`` και ``}}``."
 
-#: library/string.rst:216
+#: library/string.rst:217
 msgid "The grammar for a replacement field is as follows:"
 msgstr "Η γραμματική για μια περιοχή αντικατάστασης είναι η εξής:"
 
-#: library/string.rst:228
+#: library/string.rst:229
 msgid ""
 "In less formal terms, the replacement field can start with a *field_name* "
 "that specifies the object whose value is to be formatted and inserted into "
@@ -379,11 +379,11 @@ msgstr ""
 "άνω και κάτω τελεία ``':'``. Αυτά καθορίζουν μια μη προεπιλεγμένη μορφή για "
 "την τιμή αντικατάστασης."
 
-#: library/string.rst:235
+#: library/string.rst:236
 msgid "See also the :ref:`formatspec` section."
 msgstr "Δείτε επίσης την ενότητα :ref:`formatspec`."
 
-#: library/string.rst:237
+#: library/string.rst:238
 msgid ""
 "The *field_name* itself begins with an *arg_name* that is either a number or "
 "a keyword.  If it's a number, it refers to a positional argument, and if "
@@ -415,17 +415,23 @@ msgstr ""
 "μια έκφραση της μορφής ``'[index]'`` εκτελεί μια αναζήτηση ευρετηρίου "
 "χρησιμοποιώντας :meth:`~object.__getitem__`."
 
-#: library/string.rst:255
+#: library/string.rst:252
+msgid ""
+"The positional argument specifiers can be omitted for :meth:`str.format`, so "
+"``'{} {}'.format(a, b)`` is equivalent to ``'{0} {1}'.format(a, b)``."
+msgstr ""
+
+#: library/string.rst:256
 msgid ""
 "The positional argument specifiers can be omitted for :class:`Formatter`."
 msgstr ""
 "Οι προσδιοριστές θέσης μπορούν να παραλειφθούν για την :class:`Formatter`."
 
-#: library/string.rst:258
+#: library/string.rst:259
 msgid "Some simple format string examples::"
 msgstr "Μερικά απλά παραδείγματα συμβολοσειρών μορφοποίησης::"
 
-#: library/string.rst:260
+#: library/string.rst:261
 msgid ""
 "\"First, thou shalt count to {0}\"  # References first positional argument\n"
 "\"Bring me a {}\"                   # Implicitly references the first "
@@ -447,7 +453,7 @@ msgstr ""
 "\"Units destroyed: {players[0]}\"   # First element of keyword argument "
 "'players'."
 
-#: library/string.rst:267
+#: library/string.rst:270
 msgid ""
 "The *conversion* field causes a type coercion before formatting.  Normally, "
 "the job of formatting a value is done by the :meth:`~object.__format__` "
@@ -464,7 +470,7 @@ msgstr ""
 "σε συμβολοσειρά πριν καλέσετε τη :meth:`~object.__format__`, παρακάμπτεται η "
 "κανονική λογική μορφοποίησης."
 
-#: library/string.rst:274
+#: library/string.rst:277
 msgid ""
 "Three conversion flags are currently supported: ``'!s'`` which calls :func:"
 "`str` on the value, ``'!r'`` which calls :func:`repr` and ``'!a'`` which "
@@ -474,11 +480,11 @@ msgstr ""
 "την :func:`str` στην τιμή, ``'!r'`` που καλεί την :func:`repr` και ``'!a'`` "
 "που καλεί την :func:`ascii`."
 
-#: library/string.rst:278
+#: library/string.rst:281
 msgid "Some examples::"
 msgstr "Μερικά παραδείγματα::"
 
-#: library/string.rst:280
+#: library/string.rst:283
 msgid ""
 "\"Harold's a clever {0!s}\"        # Calls str() on the argument first\n"
 "\"Bring out the holy {name!r}\"    # Calls repr() on the argument first\n"
@@ -488,7 +494,7 @@ msgstr ""
 "\"Bring out the holy {name!r}\"    # Calls repr() on the argument first\n"
 "\"More {!a}\"                      # Calls ascii() on the argument first"
 
-#: library/string.rst:284
+#: library/string.rst:287
 msgid ""
 "The *format_spec* field contains a specification of how the value should be "
 "presented, including such details as field width, alignment, padding, "
@@ -501,7 +507,7 @@ msgstr ""
 "τιμής μπορεί να ορίσει τη δική του \"μίνι γλώσσα μορφοποίησης\" ή ερμηνεία "
 "του *format_spec*."
 
-#: library/string.rst:289
+#: library/string.rst:292
 msgid ""
 "Most built-in types support a common formatting mini-language, which is "
 "described in the next section."
@@ -509,7 +515,7 @@ msgstr ""
 "Οι περισσότεροι ενσωματωμένοι τύποι υποστηρίζουν μια κοινή μίνι γλώσσα "
 "μορφοποίησης, η οποία περιγράφεται στην επόμενη ενότητα."
 
-#: library/string.rst:292
+#: library/string.rst:295
 msgid ""
 "A *format_spec* field can also include nested replacement fields within it. "
 "These nested replacement fields may contain a field name, conversion flag "
@@ -526,21 +532,22 @@ msgstr ""
 "συμβολοσειρά. Αυτό επιτρέπει τη δυναμική προδιαγραφή της μορφοποίησης μιας "
 "τιμής."
 
-#: library/string.rst:299
+#: library/string.rst:302
 msgid "See the :ref:`formatexamples` section for some examples."
 msgstr "Δείτε την ενότητα :ref:`formatexamples` για μερικά παραδείγματα."
 
-#: library/string.rst:305
+#: library/string.rst:308
 msgid "Format Specification Mini-Language"
 msgstr "Μίνι Γλώσσα Προδιαγραφών Μορφοποίησης"
 
-#: library/string.rst:307
+#: library/string.rst:310
 msgid ""
 "\"Format specifications\" are used within replacement fields contained "
 "within a format string to define how individual values are presented (see :"
-"ref:`formatstrings` and :ref:`f-strings`). They can also be passed directly "
-"to the built-in :func:`format` function.  Each formattable type may define "
-"how the format specification is to be interpreted."
+"ref:`formatstrings`, :ref:`f-strings`, and :ref:`t-strings`). They can also "
+"be passed directly to the built-in :func:`format` function.  Each "
+"formattable type may define how the format specification is to be "
+"interpreted."
 msgstr ""
 "Οι \"προδιαγραφές μορφοποίησης\" χρησιμοποιούνται εντός πεδίων "
 "αντικατάστασης που περιέχονται σε μια συμβολοσειρά μορφοποίησης για να "
@@ -548,8 +555,9 @@ msgstr ""
 "και :ref:`f-strings`). Μπορούν επίσης να περαστούν απευθείας στην "
 "ενσωματωμένη συνάρτηση :func:`format`.  Κάθε μορφοποιήσιμος τύπος μπορεί να "
 "ορίσει πώς θα ερμηνευτεί η προδιαγραφή μορφοποίησης."
-
 #: library/string.rst:317
+
+#: library/string.rst:320
 msgid ""
 "A general convention is that an empty format specification produces the same "
 "result as if you had called :func:`str` on the value. A non-empty format "
@@ -559,11 +567,11 @@ msgstr ""
 "ίδιο αποτέλεσμα όπως αν καλούσατε την :func:`str` στη τιμή. Μια μη κενή "
 "προδιαγραφή μορφοποίησης συνήθως τροποποιεί το αποτέλεσμα."
 
-#: library/string.rst:321
+#: library/string.rst:324
 msgid "The general form of a *standard format specifier* is:"
 msgstr "Η γενική μορφή ενός *τυπικού specifier μορφοποίησης* είναι:"
 
-#: library/string.rst:338
+#: library/string.rst:341
 msgid ""
 "If a valid *align* value is specified, it can be preceded by a *fill* "
 "character that can be any character and defaults to a space if omitted. It "
@@ -582,23 +590,23 @@ msgstr ""
 "αντικατάστασης. Αυτός ο περιορισμός δεν επηρεάζει την :func:`format` "
 "συνάρτηση."
 
-#: library/string.rst:347
+#: library/string.rst:350
 msgid "The meaning of the various alignment options is as follows:"
 msgstr "Η σημασία των διαφόρων επιλογών ευθυγράμμισης είναι η εξής:"
 
-#: library/string.rst:388 library/string.rst:454
+#: library/string.rst:391 library/string.rst:457
 msgid "Option"
 msgstr "Επιλογή"
 
-#: library/string.rst:388 library/string.rst:488 library/string.rst:534
+#: library/string.rst:391 library/string.rst:491 library/string.rst:537
 msgid "Meaning"
 msgstr "Σημασία"
 
-#: library/string.rst:358
+#: library/string.rst:361
 msgid "``'<'``"
 msgstr "``'<'``"
 
-#: library/string.rst:358
+#: library/string.rst:361
 msgid ""
 "Forces the field to be left-aligned within the available space (this is the "
 "default for most objects)."
@@ -606,11 +614,11 @@ msgstr ""
 "Επιβάλλει το πεδίο να είναι αριστερά ευθυγραμμισμένο εντός του διαθέσιμου "
 "χώρου (αυτό είναι το προεπιλεγμένο για τα περισσότερα αντικείμενα)."
 
-#: library/string.rst:361
+#: library/string.rst:364
 msgid "``'>'``"
 msgstr "``'>'``"
 
-#: library/string.rst:361
+#: library/string.rst:364
 msgid ""
 "Forces the field to be right-aligned within the available space (this is the "
 "default for numbers)."
@@ -618,11 +626,11 @@ msgstr ""
 "Επιβάλλει το πεδίο να είναι δεξιά ευθυγραμμισμένο εντός του διαθέσιμου χώρου "
 "(αυτό είναι το προεπιλεγμένο για τους αριθμούς)."
 
-#: library/string.rst:364
+#: library/string.rst:367
 msgid "``'='``"
 msgstr "``'='``"
 
-#: library/string.rst:364
+#: library/string.rst:367
 msgid ""
 "Forces the padding to be placed after the sign (if any) but before the "
 "digits.  This is used for printing fields in the form '+000000120'. This "
@@ -636,15 +644,15 @@ msgstr ""
 "αριθμητικούς τύπους, εξαιρουμένης της :class:`complex`. Γίνεται η προεπιλογή "
 "για τους αριθμούς όταν το '0' προηγείται άμεσα του πλάτους του πεδίου."
 
-#: library/string.rst:371
+#: library/string.rst:374
 msgid "``'^'``"
 msgstr "``'^'``"
 
-#: library/string.rst:371
+#: library/string.rst:374
 msgid "Forces the field to be centered within the available space."
 msgstr "Επιβάλλει το πεδίο να είναι κεντραρισμένο εντός του διαθέσιμου χώρου."
 
-#: library/string.rst:375
+#: library/string.rst:378
 msgid ""
 "Note that unless a minimum field width is defined, the field width will "
 "always be the same size as the data to fill it, so that the alignment option "
@@ -655,7 +663,7 @@ msgstr ""
 "έτσι ώστε η επιλογή ευθυγράμμισης να μην έχει καμία σημασία σε αυτή την "
 "περίπτωση."
 
-#: library/string.rst:379
+#: library/string.rst:382
 msgid ""
 "The *sign* option is only valid for number types, and can be one of the "
 "following:"
@@ -663,11 +671,11 @@ msgstr ""
 "Η επιλογή *sign* είναι έγκυρη μόνο για αριθμητικούς τύπους και μπορεί να "
 "είναι μία από τις ακόλουθες:"
 
-#: library/string.rst:390
+#: library/string.rst:393
 msgid "``'+'``"
 msgstr "``'+'``"
 
-#: library/string.rst:390
+#: library/string.rst:393
 msgid ""
 "Indicates that a sign should be used for both positive as well as negative "
 "numbers."
@@ -675,11 +683,11 @@ msgstr ""
 "Υποδεικνύει ότι θα πρέπει να χρησιμοποιείται ένα πρόσημο τόσο για θετικούς "
 "όσο και για αρνητικούς αριθμούς."
 
-#: library/string.rst:393
+#: library/string.rst:396
 msgid "``'-'``"
 msgstr "``'-'``"
 
-#: library/string.rst:393
+#: library/string.rst:396
 msgid ""
 "Indicates that a sign should be used only for negative numbers (this is the "
 "default behavior)."
@@ -687,11 +695,11 @@ msgstr ""
 "Υποδεικνύει ότι ένα πρόσημο θα πρέπει να χρησιμοποιείται μόνο για αρνητικούς "
 "αριθμούς (αυτή είναι η προεπιλεγμένη συμπεριφορά)."
 
-#: library/string.rst:396
+#: library/string.rst:399
 msgid "space"
 msgstr "κενό"
 
-#: library/string.rst:396
+#: library/string.rst:399
 msgid ""
 "Indicates that a leading space should be used on positive numbers, and a "
 "minus sign on negative numbers."
@@ -699,7 +707,7 @@ msgstr ""
 "Υποδεικνύει ότι ένα κενό θα πρέπει να χρησιμοποιείται για θετικούς αριθμούς "
 "και ένα σημείο μείον για αρνητικούς αριθμούς."
 
-#: library/string.rst:403
+#: library/string.rst:406
 msgid ""
 "The ``'z'`` option coerces negative zero floating-point values to positive "
 "zero after rounding to the format precision.  This option is only valid for "
@@ -710,11 +718,11 @@ msgstr ""
 "ακρίβεια μορφοποίησης. Αυτή η επιλογή είναι έγκυρη μόνο για τύπους "
 "παρουσίασης κινητής υποδιαστολής."
 
-#: library/string.rst:407
+#: library/string.rst:410
 msgid "Added the ``'z'`` option (see also :pep:`682`)."
 msgstr "Προστέθηκε η επιλογή ``'z'`` (δείτε επίσης το :pep:`682`)."
 
-#: library/string.rst:412
+#: library/string.rst:415
 msgid ""
 "The ``'#'`` option causes the \"alternate form\" to be used for the "
 "conversion.  The alternate form is defined differently for different types.  "
@@ -740,7 +748,7 @@ msgstr ""
 "μετατροπών μόνο αν ακολουθείται από ψηφίο. Επιπλέον, για τις μετατροπές "
 "``'g'`` και ``'G'``, τα τελικά μηδενικά δεν αφαιρούνται από το αποτέλεσμα."
 
-#: library/string.rst:424
+#: library/string.rst:427
 msgid ""
 "The *width* is a decimal integer defining the minimum total field width, "
 "including any prefixes, separators, and other formatting characters. If not "
@@ -751,7 +759,7 @@ msgstr ""
 "χαρακτήρων μορφοποίησης. Εάν δεν καθοριστεί, το πλάτος πεδίου θα "
 "προσδιοριστεί από το περιεχόμενο."
 
-#: library/string.rst:428
+#: library/string.rst:431
 msgid ""
 "When no explicit alignment is given, preceding the *width* field by a zero "
 "(``'0'``) character enables sign-aware zero-padding for numeric types, "
@@ -764,7 +772,7 @@ msgstr ""
 "`complex`. Αυτό είναι ισοδύναμο με έναν χαρακτήρα *fill* ``'0'`` με τύπο "
 "*alignment* ``'='``."
 
-#: library/string.rst:433
+#: library/string.rst:436
 msgid ""
 "Preceding the *width* field by ``'0'`` no longer affects the default "
 "alignment for strings."
@@ -772,7 +780,7 @@ msgstr ""
 "Η προεξοχή του πεδίου *width* με ``'0'`` δεν επηρεάζει πλέον την "
 "προεπιλεγμένη ευθυγράμμιση για τις συμβολοσειρές."
 
-#: library/string.rst:437
+#: library/string.rst:440
 msgid ""
 "The *precision* is a decimal integer indicating how many digits should be "
 "displayed after the decimal point for presentation types ``'f'`` and "
@@ -789,12 +797,18 @@ msgstr ""
 "το πεδίο υποδεικνύει το μέγιστο μέγεθος πεδίου - με άλλα λόγια, πόσοι "
 "χαρακτήρες θα χρησιμοποιηθούν από το περιεχόμενο του πεδίου.  Το *precision* "
 "δεν επιτρέπεται για τους τύπους παρουσίασης ακεραίων."
+#: library/string.rst:448
+msgid ""
+"The *grouping* option after *width* and *precision* fields specifies a digit "
+"group separator for the integral and fractional parts of a number "
+"respectively. It can be one of the following:"
+msgstr ""
 
-#: library/string.rst:456
+#: library/string.rst:459
 msgid "``','``"
 msgstr "``','``"
 
-#: library/string.rst:456
+#: library/string.rst:459
 msgid ""
 "Inserts a comma every 3 digits for integer presentation type ``'d'`` and "
 "floating-point presentation types, excluding ``'n'``. For other presentation "
@@ -804,11 +818,11 @@ msgstr ""
 "για τύπους παρουσίασης κινητής υποδιαστολής, εξαιρουμένης της ``'n'``. Για "
 "άλλους τύπους παρουσίασης, αυτή η επιλογή δεν υποστηρίζεται."
 
-#: library/string.rst:462
+#: library/string.rst:465
 msgid "``'_'``"
 msgstr "``'_'``"
 
-#: library/string.rst:462
+#: library/string.rst:465
 msgid ""
 "Inserts an underscore every 3 digits for integer presentation type ``'d'`` "
 "and floating-point presentation types, excluding ``'n'``. For integer "
@@ -822,72 +836,72 @@ msgstr ""
 "``'X'`` κάτω παύλες εισάγονται κάθε 4 ψηφία. Για άλλους τύπους παρουσίασης, "
 "αυτή η επιλογή δεν υποστηρίζεται."
 
-#: library/string.rst:472
+#: library/string.rst:475
 msgid ""
 "For a locale aware separator, use the ``'n'`` presentation type instead."
 msgstr ""
 "Για έναν διαχωριστή που να λαμβάνει υπόψη την τοπική ρύθμιση, χρησιμοποιήστε "
 "τον τύπο παρουσίασης ``'n'``."
 
-#: library/string.rst:474
+#: library/string.rst:477
 msgid "Added the ``','`` option (see also :pep:`378`)."
 msgstr "Προστέθηκε η επιλογή ``','`` (δείτε επίσης το :pep:`378`)."
 
-#: library/string.rst:477
+#: library/string.rst:480
 msgid "Added the ``'_'`` option (see also :pep:`515`)."
 msgstr "Προστέθηκε η επιλογή ``'_'`` (δείτε επίσης το :pep:`515`)."
 
-#: library/string.rst:480
+#: library/string.rst:483
 msgid "Support the *grouping* option for the fractional part."
 msgstr "Υποστήριξη της επιλογής *grouping* για το κλασματικό μέρος."
 
-#: library/string.rst:483
+#: library/string.rst:486
 msgid "Finally, the *type* determines how the data should be presented."
 msgstr "Τέλος, ο *τύπος* καθορίζει πώς θα πρέπει να παρουσιαστούν τα δεδομένα."
 
-#: library/string.rst:485
+#: library/string.rst:488
 msgid "The available string presentation types are:"
 msgstr "Οι διαθέσιμοι τύποι παρουσίασης συμβολοσειρών είναι:"
 
-#: library/string.rst:499 library/string.rst:534
+#: library/string.rst:502 library/string.rst:537
 msgid "Type"
 msgstr "Τύπος"
 
-#: library/string.rst:490
+#: library/string.rst:493
 msgid "``'s'``"
 msgstr "``'s'``"
 
-#: library/string.rst:490
+#: library/string.rst:493
 msgid "String format. This is the default type for strings and may be omitted."
 msgstr ""
 "Μορφή συμβολοσειράς. Αυτός είναι ο προεπιλεγμένος τύπος για συμβολοσειρές "
 "και μπορεί να παραλειφθεί."
 
-#: library/string.rst:522 library/string.rst:608
+#: library/string.rst:525 library/string.rst:611
 msgid "None"
 msgstr "None"
 
-#: library/string.rst:493
+#: library/string.rst:496
 msgid "The same as ``'s'``."
 msgstr "Το ίδιο με το ``'s'``."
 
-#: library/string.rst:496
+#: library/string.rst:499
 msgid "The available integer presentation types are:"
 msgstr "Οι διαθέσιμοι τύποι παρουσίασης ακεραίων είναι:"
 
-#: library/string.rst:501
+#: library/string.rst:504
 msgid "``'b'``"
 msgstr "``'b'``"
 
-#: library/string.rst:501
+#: library/string.rst:504
 msgid "Binary format. Outputs the number in base 2."
 msgstr "Δυαδική μορφή. Εξάγει τον αριθμό σε βάση 2."
 
-#: library/string.rst:503
+#: library/string.rst:506
 msgid "``'c'``"
 msgstr "``'c'``"
 
-#: library/string.rst:503
+#: library/string.rst:506
 msgid ""
 "Character. Converts the integer to the corresponding unicode character "
 "before printing."
@@ -895,27 +909,27 @@ msgstr ""
 "Χαρακτήρας. Μετατρέπει τον ακέραιο στον αντίστοιχο χαρακτήρα unicode πριν "
 "την εκτύπωση."
 
-#: library/string.rst:506
+#: library/string.rst:509
 msgid "``'d'``"
 msgstr "``'d'``"
 
-#: library/string.rst:506
+#: library/string.rst:509
 msgid "Decimal Integer. Outputs the number in base 10."
 msgstr "Δεκαδικός ακέραιος. Εξάγει τον αριθμό σε βάση 10."
 
-#: library/string.rst:508
+#: library/string.rst:511
 msgid "``'o'``"
 msgstr "``'o'``"
 
-#: library/string.rst:508
+#: library/string.rst:511
 msgid "Octal format. Outputs the number in base 8."
 msgstr "Οκταδική μορφή. Εξάγει τον αριθμό σε βάση 8."
 
-#: library/string.rst:510
+#: library/string.rst:513
 msgid "``'x'``"
 msgstr "``'x'``"
 
-#: library/string.rst:510
+#: library/string.rst:513
 msgid ""
 "Hex format. Outputs the number in base 16, using lower-case letters for the "
 "digits above 9."
@@ -923,11 +937,11 @@ msgstr ""
 "Εξαδική μορφή. Εξάγει τον αριθμό σε βάση 16, χρησιμοποιώντας πεζά γράμματα "
 "για τα ψηφία πάνω από 9."
 
-#: library/string.rst:513
+#: library/string.rst:516
 msgid "``'X'``"
 msgstr "``'X'``"
 
-#: library/string.rst:513
+#: library/string.rst:516
 msgid ""
 "Hex format. Outputs the number in base 16, using upper-case letters for the "
 "digits above 9. In case ``'#'`` is specified, the prefix ``'0x'`` will be "
@@ -937,11 +951,11 @@ msgstr ""
 "γράμματα για τα ψηφία πάνω από 9. Σε περίπτωση που έχει καθοριστεί το "
 "``'#'``, το πρόθεμα ``'0x'`` θα μετατραπεί επίσης σε ``'0X'``."
 
-#: library/string.rst:600
+#: library/string.rst:603
 msgid "``'n'``"
 msgstr "``'n'``"
 
-#: library/string.rst:518
+#: library/string.rst:521
 msgid ""
 "Number. This is the same as ``'d'``, except that it uses the current locale "
 "setting to insert the appropriate digit group separators."
@@ -950,11 +964,11 @@ msgstr ""
 "τρέχουσα ρύθμιση τοπικής γλώσσας για να εισάγει τους κατάλληλους διαχωριστές "
 "ομάδων ψηφίων."
 
-#: library/string.rst:522
+#: library/string.rst:525
 msgid "The same as ``'d'``."
 msgstr "Το ίδιο με το ``'d'``."
 
-#: library/string.rst:525
+#: library/string.rst:528
 msgid ""
 "In addition to the above presentation types, integers can be formatted with "
 "the floating-point presentation types listed below (except ``'n'`` and "
@@ -967,7 +981,7 @@ msgstr ""
 "αυτό, χρησιμοποιείται η :func:`float` για να μετατραπεί ο ακέραιος σε αριθμό "
 "κινητής υποδιαστολής πριν από τη μορφοποίηση."
 
-#: library/string.rst:530
+#: library/string.rst:533
 msgid ""
 "The available presentation types for :class:`float` and :class:`~decimal."
 "Decimal` values are:"
@@ -975,11 +989,11 @@ msgstr ""
 "Οι διαθέσιμοι τύποι παρουσίασης για τις :class:`float` και :class:`~decimal."
 "Decimal` τιμές είναι:"
 
-#: library/string.rst:536
+#: library/string.rst:539
 msgid "``'e'``"
 msgstr "``'e'``"
 
-#: library/string.rst:536
+#: library/string.rst:539
 msgid ""
 "Scientific notation. For a given precision ``p``, formats the number in "
 "scientific notation with the letter 'e' separating the coefficient from the "
@@ -999,11 +1013,11 @@ msgstr ""
 "συντελεστή για :class:`~decimal.Decimal`. Αν ``p=0``, η δεκαδική υποδιαστολή "
 "παραλείπεται εκτός αν έχει καθοριστεί η επιλογή ``#``."
 
-#: library/string.rst:547
+#: library/string.rst:550
 msgid "``'E'``"
 msgstr "``'E'``"
 
-#: library/string.rst:547
+#: library/string.rst:550
 msgid ""
 "Scientific notation. Same as ``'e'`` except it uses an upper case 'E' as the "
 "separator character."
@@ -1011,11 +1025,11 @@ msgstr ""
 "Η επιστημονική σημειογραφία. Το ίδιο με το ``'e'`` εκτός από το ότι "
 "χρησιμοποιεί ένα κεφαλαίο 'E' ως χαρακτήρα διαχωρισμού."
 
-#: library/string.rst:550
+#: library/string.rst:553
 msgid "``'f'``"
 msgstr "``'f'``"
 
-#: library/string.rst:550
+#: library/string.rst:553
 msgid ""
 "Fixed-point notation. For a given precision ``p``, formats the number as a "
 "decimal number with exactly ``p`` digits following the decimal point. With "
@@ -1032,11 +1046,11 @@ msgstr ""
 "συντελεστή για :class:`~decimal.Decimal`. Αν ``p=0``, η δεκαδική υποδιαστολή "
 "παραλείπεται εκτός αν έχει καθοριστεί η επιλογή ``#``."
 
-#: library/string.rst:559
+#: library/string.rst:562
 msgid "``'F'``"
 msgstr "``'F'``"
 
-#: library/string.rst:559
+#: library/string.rst:562
 msgid ""
 "Fixed-point notation. Same as ``'f'``, but converts ``nan`` to  ``NAN`` and "
 "``inf`` to ``INF``."
@@ -1044,11 +1058,11 @@ msgstr ""
 "Η σημειογραφία σταθερής υποδιαστολής. Το ίδιο με το ``'f'``, αλλά μετατρέπει "
 "το ``nan`` σε  ``NAN`` και το ``inf`` σε ``INF``."
 
-#: library/string.rst:562
+#: library/string.rst:565
 msgid "``'g'``"
 msgstr "``'g'``"
 
-#: library/string.rst:562
+#: library/string.rst:565
 msgid ""
 "General format.  For a given precision ``p >= 1``, this rounds the number to "
 "``p`` significant digits and then formats the result in either fixed-point "
@@ -1061,7 +1075,7 @@ msgstr ""
 "ανάλογα με το μέγεθός του. Μια ακρίβεια ``0`` θεωρείται ισοδύναμη με μια "
 "ακρίβεια ``1``."
 
-#: library/string.rst:569
+#: library/string.rst:572
 msgid ""
 "The precise rules are as follows: suppose that the result formatted with "
 "presentation type ``'e'`` and precision ``p-1`` would have exponent "
@@ -1083,7 +1097,7 @@ msgstr ""
 "αριθμό, και η δεκαδική υποδιαστολή αφαιρείται επίσης αν δεν υπάρχουν "
 "υπόλοιπα ψηφία μετά από αυτήν, εκτός αν έχει καθοριστεί η επιλογή ``'#'``."
 
-#: library/string.rst:582
+#: library/string.rst:585
 msgid ""
 "With no precision given, uses a precision of ``6`` significant digits for :"
 "class:`float`. For :class:`~decimal.Decimal`, the coefficient of the result "
@@ -1100,7 +1114,7 @@ msgstr ""
 "μεγαλύτερη από 1, και η σημειογραφία σταθερής υποδιαστολής χρησιμοποιείται "
 "διαφορετικά."
 
-#: library/string.rst:591
+#: library/string.rst:594
 msgid ""
 "Positive and negative infinity, positive and negative zero, and nans, are "
 "formatted as ``inf``, ``-inf``, ``0``, ``-0`` and ``nan`` respectively, "
@@ -1110,11 +1124,11 @@ msgstr ""
 "μορφοποιούνται ως ``inf``, ``-inf``, ``0``, ``-0`` και ``nan`` αντίστοιχα, "
 "ανεξαρτήτως της ακρίβειας."
 
-#: library/string.rst:596
+#: library/string.rst:599
 msgid "``'G'``"
 msgstr "``'G'``"
 
-#: library/string.rst:596
+#: library/string.rst:599
 msgid ""
 "General format. Same as ``'g'`` except switches to ``'E'`` if the number "
 "gets too large. The representations of infinity and NaN are uppercased, too."
@@ -1123,7 +1137,7 @@ msgstr ""
 "ο αριθμός γίνει πολύ μεγάλος. Οι αναπαραστάσεις του απείρου και του NaN "
 "είναι επίσης κεφαλαία."
 
-#: library/string.rst:600
+#: library/string.rst:603
 msgid ""
 "Number. This is the same as ``'g'``, except that it uses the current locale "
 "setting to insert the appropriate digit group separators for the integral "
@@ -1133,11 +1147,11 @@ msgstr ""
 "τρέχουσα τοποθεσία ρύθμισης για να εισάγει τους κατάλληλους διαχωριστές "
 "ομάδων ψηφίων για το ακέραιο μέρος ενός αριθμού."
 
-#: library/string.rst:605
+#: library/string.rst:608
 msgid "``'%'``"
 msgstr "``'%'``"
 
-#: library/string.rst:605
+#: library/string.rst:608
 msgid ""
 "Percentage. Multiplies the number by 100 and displays in fixed (``'f'``) "
 "format, followed by a percent sign."
@@ -1145,7 +1159,7 @@ msgstr ""
 "Ποσοστό. Πολλαπλασιάζει τον αριθμό με το 100 και τον εμφανίζει σε σταθερή "
 "(``'f'``) μορφή, ακολουθούμενη από ένα σύμβολο ποσοστού."
 
-#: library/string.rst:608
+#: library/string.rst:611
 msgid ""
 "For :class:`float` this is like the ``'g'`` type, except that when fixed-"
 "point notation is used to format the result, it always includes at least one "
@@ -1160,7 +1174,7 @@ msgstr ""
 "ακρίβεια δεν έχει καθοριστεί, η τελευταία θα είναι τόσο μεγάλη όσο "
 "χρειάζεται για να αναπαραστήσει τη δεδομένη τιμή πιστά."
 
-#: library/string.rst:616
+#: library/string.rst:619
 msgid ""
 "For :class:`~decimal.Decimal`, this is the same as either ``'g'`` or ``'G'`` "
 "depending on the value of ``context.capitals`` for the current decimal "
@@ -1170,7 +1184,7 @@ msgstr ""
 "``'G'`` ανάλογα με την τιμή του ``context.capitals`` για το τρέχον δεκαδικό "
 "περιεχόμενο."
 
-#: library/string.rst:620
+#: library/string.rst:623
 msgid ""
 "The overall effect is to match the output of :func:`str` as altered by the "
 "other format modifiers."
@@ -1178,7 +1192,7 @@ msgstr ""
 "Η συνολική επίδραση είναι να ταιριάζει η έξοδος της :func:`str` όπως έχει "
 "τροποποιηθεί από τους άλλους τροποποιητές μορφής."
 
-#: library/string.rst:624
+#: library/string.rst:627
 msgid ""
 "The result should be correctly rounded to a given precision ``p`` of digits "
 "after the decimal point.  The rounding mode for :class:`float` matches that "
@@ -1191,7 +1205,7 @@ msgstr ""
 "`round`.  Για την :class:`~decimal.Decimal`, θα χρησιμοποιήσει τη "
 "στρογγυλοποίηση του τρέχοντος :ref:`context <decimal-context>`."
 
-#: library/string.rst:629
+#: library/string.rst:632
 msgid ""
 "The available presentation types for :class:`complex` are the same as those "
 "for :class:`float` (``'%'`` is not allowed).  Both the real and imaginary "
@@ -1212,11 +1226,11 @@ msgstr ""
 "μη μηδενικό πραγματικό μέρος περιβάλλονται επίσης από παρενθέσεις), πιθανώς "
 "τροποποιημένο από άλλους τροποποιητές μορφής."
 
-#: library/string.rst:642
+#: library/string.rst:645
 msgid "Format examples"
 msgstr "Παραδείγματα μορφοποίησης"
 
-#: library/string.rst:644
+#: library/string.rst:647
 msgid ""
 "This section contains examples of the :meth:`str.format` syntax and "
 "comparison with the old ``%``-formatting."
@@ -1224,7 +1238,7 @@ msgstr ""
 "Αυτή η ενότητα περιέχει παραδείγματα της σύνταξης :meth:`str.format` και "
 "σύγκριση με την παλιά μορφοποίηση ``%``."
 
-#: library/string.rst:647
+#: library/string.rst:650
 msgid ""
 "In most of the cases the syntax is similar to the old ``%``-formatting, with "
 "the addition of the ``{}`` and with ``:`` used instead of ``%``. For "
@@ -1235,7 +1249,7 @@ msgstr ""
 "χρησιμοποιείται αντί του ``%``. Για παράδειγμα, το ``'%03.2f'`` μπορεί να "
 "μεταφραστεί σε ``'{:03.2f}'``."
 
-#: library/string.rst:651
+#: library/string.rst:654
 msgid ""
 "The new format syntax also supports new and different options, shown in the "
 "following examples."
@@ -1243,11 +1257,11 @@ msgstr ""
 "Το νέο συντακτικό μορφοποίησης υποστηρίζει επίσης νέες και διαφορετικές "
 "επιλογές, οι οποίες εμφανίζονται στα παρακάτω παραδείγματα."
 
-#: library/string.rst:654
+#: library/string.rst:657
 msgid "Accessing arguments by position::"
 msgstr "Πρόσβαση σε ορίσματα κατά θέση::"
 
-#: library/string.rst:656
+#: library/string.rst:659
 msgid ""
 ">>> '{0}, {1}, {2}'.format('a', 'b', 'c')\n"
 "'a, b, c'\n"
@@ -1273,11 +1287,11 @@ msgstr ""
 "repeated\n"
 "'abracadabra'"
 
-#: library/string.rst:667
+#: library/string.rst:670
 msgid "Accessing arguments by name::"
 msgstr "Πρόσβαση σε ορίσματα κατά όνομα::"
 
-#: library/string.rst:669
+#: library/string.rst:672
 msgid ""
 ">>> 'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', "
 "longitude='-115.81W')\n"
@@ -1293,11 +1307,11 @@ msgstr ""
 ">>> 'Coordinates: {latitude}, {longitude}'.format(**coord)\n"
 "'Coordinates: 37.24N, -115.81W'"
 
-#: library/string.rst:675
+#: library/string.rst:678
 msgid "Accessing arguments' attributes::"
 msgstr "Πρόσβαση σε χαρακτηριστικά ορισμάτων::"
 
-#: library/string.rst:677
+#: library/string.rst:680
 msgid ""
 ">>> c = 3-5j\n"
 ">>> ('The complex number {0} is formed from the real part {0.real} '\n"
@@ -1327,11 +1341,11 @@ msgstr ""
 ">>> str(Point(4, 2))\n"
 "'Point(4, 2)'"
 
-#: library/string.rst:690
+#: library/string.rst:693
 msgid "Accessing arguments' items::"
 msgstr "Πρόσβαση σε στοιχεία ορισμάτων::"
 
-#: library/string.rst:692
+#: library/string.rst:695
 msgid ""
 ">>> coord = (3, 5)\n"
 ">>> 'X: {0[0]};  Y: {0[1]}'.format(coord)\n"
@@ -1341,11 +1355,11 @@ msgstr ""
 ">>> 'X: {0[0]};  Y: {0[1]}'.format(coord)\n"
 "'X: 3;  Y: 5'"
 
-#: library/string.rst:696
+#: library/string.rst:699
 msgid "Replacing ``%s`` and ``%r``::"
 msgstr "Αντικατάσταση του ``%s`` και ``%r``::"
 
-#: library/string.rst:698
+#: library/string.rst:701
 msgid ""
 ">>> \"repr() shows quotes: {!r}; str() doesn't: {!s}\".format('test1', "
 "'test2')\n"
@@ -1355,11 +1369,11 @@ msgstr ""
 "'test2')\n"
 "\"repr() shows quotes: 'test1'; str() doesn't: test2\""
 
-#: library/string.rst:701
+#: library/string.rst:704
 msgid "Aligning the text and specifying a width::"
 msgstr "Ευθυγράμμιση κειμένου και καθορισμός πλάτους::"
 
-#: library/string.rst:703
+#: library/string.rst:706
 msgid ""
 ">>> '{:<30}'.format('left aligned')\n"
 "'left aligned                  '\n"
@@ -1379,12 +1393,12 @@ msgstr ""
 ">>> '{:*^30}'.format('centered')  # use '*' as a fill char\n"
 "'***********centered***********'"
 
-#: library/string.rst:712
+#: library/string.rst:715
 msgid "Replacing ``%+f``, ``%-f``, and ``% f`` and specifying a sign::"
 msgstr ""
 "Αντικατάσταση των ``%+f``, ``%-f`` και ``% f`` και καθορισμός ενός προσήμου::"
 
-#: library/string.rst:714
+#: library/string.rst:717
 msgid ""
 ">>> '{:+f}; {:+f}'.format(3.14, -3.14)  # show it always\n"
 "'+3.140000; -3.140000'\n"
@@ -1402,14 +1416,14 @@ msgstr ""
 "f}; {:f}'\n"
 "'3.140000; -3.140000'"
 
-#: library/string.rst:721
+#: library/string.rst:724
 msgid ""
 "Replacing ``%x`` and ``%o`` and converting the value to different bases::"
 msgstr ""
 "Αντικατάσταση των ``%x`` και ``%o`` και μετατροπή της τιμής σε διαφορετικές "
 "βάσεις::"
 
-#: library/string.rst:723
+#: library/string.rst:726
 msgid ""
 ">>> # format also supports binary numbers\n"
 ">>> \"int: {0:d};  hex: {0:x};  oct: {0:o};  bin: {0:b}\".format(42)\n"
@@ -1425,11 +1439,11 @@ msgstr ""
 ">>> \"int: {0:d};  hex: {0:#x};  oct: {0:#o};  bin: {0:#b}\".format(42)\n"
 "'int: 42;  hex: 0x2a;  oct: 0o52;  bin: 0b101010'"
 
-#: library/string.rst:730
+#: library/string.rst:733
 msgid "Using the comma or the underscore as a digit group separator::"
 msgstr "Χρήση του κόμματος ή της κάτω παύλας ως διαχωριστικό ομάδας ψηφίων::"
 
-#: library/string.rst:732
+#: library/string.rst:735
 msgid ""
 ">>> '{:,}'.format(1234567890)\n"
 "'1,234,567,890'\n"
@@ -1461,11 +1475,11 @@ msgstr ""
 ">>> '{:,._}'.format(123456789.123456789)\n"
 "'123,456,789.123_456_79'"
 
-#: library/string.rst:747
+#: library/string.rst:750
 msgid "Expressing a percentage::"
 msgstr "Έκφραση ενός ποσοστού::"
 
-#: library/string.rst:749
+#: library/string.rst:752
 msgid ""
 ">>> points = 19\n"
 ">>> total = 22\n"
@@ -1477,11 +1491,11 @@ msgstr ""
 ">>> 'Correct answers: {:.2%}'.format(points/total)\n"
 "'Correct answers: 86.36%'"
 
-#: library/string.rst:754
+#: library/string.rst:757
 msgid "Using type-specific formatting::"
 msgstr "Χρήση ειδικής μορφοποίησης τύπου::"
 
-#: library/string.rst:756
+#: library/string.rst:759
 msgid ""
 ">>> import datetime\n"
 ">>> d = datetime.datetime(2010, 7, 4, 12, 15, 58)\n"
@@ -1493,11 +1507,11 @@ msgstr ""
 ">>> '{:%Y-%m-%d %H:%M:%S}'.format(d)\n"
 "'2010-07-04 12:15:58'"
 
-#: library/string.rst:761
+#: library/string.rst:764
 msgid "Nesting arguments and more complex examples::"
 msgstr "Εμφωλευμένα ορίσματα και πιο σύνθετα παραδείγματα::"
 
-#: library/string.rst:763
+#: library/string.rst:766
 msgid ""
 ">>> for align, text in zip('<^>', ['left', 'center', 'right']):\n"
 "...     '{0:{fill}{align}16}'.format(text, fill=align, align=align)\n"
@@ -1555,11 +1569,25 @@ msgstr ""
 "   10     A    12  1010\n"
 "   11     B    13  1011"
 
-#: library/string.rst:795
-msgid "Template strings"
-msgstr "Πρότυπα συμβολοσειρών"
+#: library/string.rst:798
+msgid "Template strings ($-strings)"
+msgstr ""
 
-#: library/string.rst:797
+#: library/string.rst:802
+msgid ""
+"The feature described here was introduced in Python 2.4; a simple templating "
+"method based upon regular expressions. It predates :meth:`str.format`, :ref:"
+"`formatted string literals <f-strings>`, and :ref:`template string literals "
+"<template-strings>`."
+msgstr ""
+
+#: library/string.rst:807
+msgid ""
+"It is unrelated to template string literals (t-strings), which were "
+"introduced in Python 3.14. These evaluate to  :class:`string.templatelib."
+"Template` objects, found in the :mod:`string.templatelib` module."
+
+#: library/string.rst:812
 msgid ""
 "Template strings provide simpler string substitutions as described in :pep:"
 "`292`.  A primary use case for template strings is for internationalization "
@@ -1577,7 +1605,7 @@ msgstr ""
 "για i18n, δείτε το πακέτο `flufl.i18n <https://flufli18n.readthedocs.io/en/"
 "latest/>`_."
 
-#: library/string.rst:807
+#: library/string.rst:822
 msgid ""
 "Template strings support ``$``-based substitutions, using the following "
 "rules:"
@@ -1585,11 +1613,11 @@ msgstr ""
 "Οι πρότυπες συμβολοσειρές υποστηρίζουν αντικαταστάσεις με βάση το ``$``, "
 "χρησιμοποιώντας τους εξής κανόνες:"
 
-#: library/string.rst:809
+#: library/string.rst:824
 msgid "``$$`` is an escape; it is replaced with a single ``$``."
 msgstr "``$$`` είναι μια διαφυγή; αντικαθίσταται με ένα μόνο ``$``."
 
-#: library/string.rst:811
+#: library/string.rst:826
 msgid ""
 "``$identifier`` names a substitution placeholder matching a mapping key of "
 "``\"identifier\"``.  By default, ``\"identifier\"`` is restricted to any "
@@ -1605,7 +1633,7 @@ msgstr ""
 "υπογράμμιση ή ASCII γράμμα.  Ο πρώτος μη αναγνωριστικός χαρακτήρας μετά τον "
 "χαρακτήρα ``$`` τερματίζει αυτήν την προδιαγραφή θέσης."
 
-#: library/string.rst:818
+#: library/string.rst:833
 msgid ""
 "``${identifier}`` is equivalent to ``$identifier``.  It is required when "
 "valid identifier characters follow the placeholder but are not part of the "
@@ -1615,7 +1643,7 @@ msgstr ""
 "οι έγκυροι χαρακτήρες αναγνωριστικού ακολουθούν τη θέση αλλά δεν είναι "
 "μέρος της θέσης, όπως στο ``\"${noun}ification\"``."
 
-#: library/string.rst:822
+#: library/string.rst:837
 msgid ""
 "Any other appearance of ``$`` in the string will result in a :exc:"
 "`ValueError` being raised."
@@ -1623,7 +1651,7 @@ msgstr ""
 "Η εμφάνιση οποιουδήποτε άλλου ``$`` στη συμβολοσειρά θα έχει ως αποτέλεσμα "
 "να γίνει raise η :exc:`ValueError`."
 
-#: library/string.rst:825
+#: library/string.rst:840
 msgid ""
 "The :mod:`string` module provides a :class:`Template` class that implements "
 "these rules.  The methods of :class:`Template` are:"
@@ -1631,13 +1659,13 @@ msgstr ""
 "Το module :mod:`string` παρέχει μια κλάση :class:`Template` που υλοποιεί "
 "αυτούς τους κανόνες.  Οι μέθοδοι της :class:`Template` είναι:"
 
-#: library/string.rst:831
+#: library/string.rst:846
 msgid "The constructor takes a single argument which is the template string."
 msgstr ""
 "Ο κατασκευαστής δέχεται ένα μόνο όρισμα, το οποίο είναι η πρότυπη "
 "συμβολοσειρά."
 
-#: library/string.rst:836
+#: library/string.rst:851
 msgid ""
 "Performs the template substitution, returning a new string.  *mapping* is "
 "any dictionary-like object with keys that match the placeholders in the "
@@ -1652,7 +1680,7 @@ msgstr ""
 "θέσεις.  Όταν δίνονται και τα δύο *mapping* και *kwds* και υπάρχουν "
 "διπλότυπα, οι θέσεις από το *kwds* έχουν προτεραιότητα."
 
-#: library/string.rst:845
+#: library/string.rst:860
 msgid ""
 "Like :meth:`substitute`, except that if placeholders are missing from "
 "*mapping* and *kwds*, instead of raising a :exc:`KeyError` exception, the "
@@ -1666,7 +1694,7 @@ msgstr ""
 "σε αντίθεση με την :meth:`substitute`, οποιεσδήποτε άλλες εμφανίσεις του "
 "``$`` θα επιστρέφουν απλώς ``$`` αντί να κάνουν raise την :exc:`ValueError`."
 
-#: library/string.rst:851
+#: library/string.rst:866
 msgid ""
 "While other exceptions may still occur, this method is called \"safe\" "
 "because it always tries to return a usable string instead of raising an "
@@ -1683,7 +1711,7 @@ msgstr ""
 "διαχωριστές, μη ταιριαστές αγκύλες ή θέσεις που δεν είναι έγκυροι Python "
 "αναγνωριστικοί χαρακτήρες."
 
-#: library/string.rst:861
+#: library/string.rst:876
 msgid ""
 "Returns ``False`` if the template has invalid placeholders that will cause :"
 "meth:`substitute` to raise :exc:`ValueError`."
@@ -1691,7 +1719,7 @@ msgstr ""
 "Επιστρέφει ``False`` εάν το πρότυπο έχει μη έγκυρα placeholders που θα "
 "προκαλέσουν την :meth:`substitute` να κάνει raise μια :exc:`ValueError`."
 
-#: library/string.rst:869
+#: library/string.rst:884
 msgid ""
 "Returns a list of the valid identifiers in the template, in the order they "
 "first appear, ignoring any invalid identifiers."
@@ -1699,13 +1727,13 @@ msgstr ""
 "Επιστρέφει μια λίστα με τα έγκυρα αναγνωριστικά στο πρότυπο, με τη σειρά που "
 "εμφανίζονται για πρώτη φορά, αγνοώντας τυχόν μη έγκυρα αναγνωριστικά."
 
-#: library/string.rst:874
+#: library/string.rst:889
 msgid ":class:`Template` instances also provide one public data attribute:"
 msgstr ""
 "Τα στιγμιότυπα της :class:`Template` παρέχουν επίσης ένα δημόσιο "
 "χαρακτηριστικό δεδομένων:"
 
-#: library/string.rst:878
+#: library/string.rst:893
 msgid ""
 "This is the object passed to the constructor's *template* argument.  In "
 "general, you shouldn't change it, but read-only access is not enforced."
@@ -1714,11 +1742,11 @@ msgstr ""
 "κατασκευαστή. Γενικά, δεν θα πρέπει να το αλλάξετε, αλλά η πρόσβαση μόνο για "
 "ανάγνωση δεν επιβάλλεται."
 
-#: library/string.rst:881
+#: library/string.rst:896
 msgid "Here is an example of how to use a Template::"
 msgstr "Ακολουθεί ένα παράδειγμα χρήσης ενός προτύπου Template::"
 
-#: library/string.rst:883
+#: library/string.rst:898
 msgid ""
 ">>> from string import Template\n"
 ">>> s = Template('$who likes $what')\n"
@@ -1752,7 +1780,7 @@ msgstr ""
 ">>> Template('$who likes $what').safe_substitute(d)\n"
 "'tim likes $what'"
 
-#: library/string.rst:899
+#: library/string.rst:914
 msgid ""
 "Advanced usage: you can derive subclasses of :class:`Template` to customize "
 "the placeholder syntax, delimiter character, or the entire regular "
@@ -1765,7 +1793,7 @@ msgstr ""
 "ανάλυση των συμβολοσειρών προτύπων. Για να το κάνετε αυτό, μπορείτε να "
 "υπερκαλύψετε αυτά τα χαρακτηριστικά της κλάσης:"
 
-#: library/string.rst:904
+#: library/string.rst:919
 msgid ""
 "*delimiter* -- This is the literal string describing a placeholder "
 "introducing delimiter.  The default value is ``$``.  Note that this should "
@@ -1782,7 +1810,7 @@ msgstr ""
 "δημιουργία της κλάσης (δηλαδή, ένας διαφορετικός διαχωριστής πρέπει να "
 "οριστεί στο namespace της υποκλάσης)."
 
-#: library/string.rst:911
+#: library/string.rst:926
 msgid ""
 "*idpattern* -- This is the regular expression describing the pattern for non-"
 "braced placeholders.  The default value is the regular expression ``(?a:[_a-"
@@ -1794,7 +1822,7 @@ msgstr ""
 "a:[_a-z][_a-z0-9]*)``.  Εάν αυτό δοθεί και το *braceidpattern* είναι "
 "``None`` αυτό το μοτίβο θα ισχύει επίσης για τα περιβλημένα placeholders."
 
-#: library/string.rst:918
+#: library/string.rst:933
 msgid ""
 "Since default *flags* is ``re.IGNORECASE``, pattern ``[a-z]`` can match with "
 "some non-ASCII characters. That's why we use the local ``a`` flag here."
@@ -1803,7 +1831,7 @@ msgstr ""
 "``[a-z]`` μπορεί να ταιριάζει με ορισμένους μη-ASCII χαρακτήρες. Γι' αυτό "
 "χρησιμοποιούμε την τοπική σημαία ``a`` εδώ."
 
-#: library/string.rst:922
+#: library/string.rst:937
 msgid ""
 "*braceidpattern* can be used to define separate patterns used inside and "
 "outside the braces."
@@ -1811,7 +1839,7 @@ msgstr ""
 "Το *braceidpattern* μπορεί να χρησιμοποιηθεί για να ορίσει ξεχωριστά μοτίβα "
 "που χρησιμοποιούνται μέσα και έξω από τις αγκύλες."
 
-#: library/string.rst:926
+#: library/string.rst:941
 msgid ""
 "*braceidpattern* -- This is like *idpattern* but describes the pattern for "
 "braced placeholders.  Defaults to ``None`` which means to fall back to "
@@ -1826,7 +1854,7 @@ msgstr ""
 "επιτρέπει να ορίσετε διαφορετικά μοτίβα για τα περιβλημένα και μη "
 "περιβλημένα placeholders."
 
-#: library/string.rst:934
+#: library/string.rst:949
 msgid ""
 "*flags* -- The regular expression flags that will be applied when compiling "
 "the regular expression used for recognizing substitutions.  The default "
@@ -1841,7 +1869,7 @@ msgstr ""
 "προσαρμοσμένες *idpattern*\\ s πρέπει να ακολουθούν τις συμβάσεις για την "
 "εκτενή κανονική έκφραση."
 
-#: library/string.rst:942
+#: library/string.rst:957
 msgid ""
 "Alternatively, you can provide the entire regular expression pattern by "
 "overriding the class attribute *pattern*.  If you do this, the value must be "
@@ -1855,7 +1883,7 @@ msgstr ""
 "ονομαστικές ομάδες καταγραφής.  Οι ομάδες καταγραφής αντιστοιχούν στους κανόνες "
 "που δίνονται παραπάνω, μαζί με τον κανόνα για τα μη έγκυρα placeholders:"
 
-#: library/string.rst:948
+#: library/string.rst:963
 msgid ""
 "*escaped* -- This group matches the escape sequence, e.g. ``$$``, in the "
 "default pattern."
@@ -1863,7 +1891,7 @@ msgstr ""
 "*escaped* --  Αυτή η ομάδα ταιριάζει με την ακολουθία διαφυγής, π.χ. ``$$``, "
 "στο προεπιλεγμένο μοτίβο."
 
-#: library/string.rst:951
+#: library/string.rst:966
 msgid ""
 "*named* -- This group matches the unbraced placeholder name; it should not "
 "include the delimiter in capturing group."
@@ -1872,7 +1900,7 @@ msgstr ""
 "περιβάλλεται από αγκύλες· δεν θα πρέπει να περιλαμβάνει τον διαχωριστή στην "
 "ομάδα καταγραφής."
 
-#: library/string.rst:954
+#: library/string.rst:969
 msgid ""
 "*braced* -- This group matches the brace enclosed placeholder name; it "
 "should not include either the delimiter or braces in the capturing group."
@@ -1881,7 +1909,7 @@ msgstr ""
 "περιβάλλεται από αγκύλες· δεν θα πρέπει να περιλαμβάνει ούτε τον διαχωριστή "
 "ούτε τις αγκύλες στην ομάδα καταγραφής."
 
-#: library/string.rst:957
+#: library/string.rst:972
 msgid ""
 "*invalid* -- This group matches any other delimiter pattern (usually a "
 "single delimiter), and it should appear last in the regular expression."
@@ -1890,7 +1918,7 @@ msgstr ""
 "(συνήθως ένα μοναδικό διαχωριστή), και θα πρέπει να εμφανίζεται τελευταίος "
 "στην κανονική έκφραση."
 
-#: library/string.rst:960
+#: library/string.rst:975
 msgid ""
 "The methods on this class will raise :exc:`ValueError` if the pattern "
 "matches the template without one of these named groups matching."
@@ -1899,11 +1927,11 @@ msgstr ""
 "μοτίβο ταιριάζει με το πρότυπο χωρίς να ταιριάζει με μία από αυτές τις "
 "ονομαστικές ομάδες."
 
-#: library/string.rst:965
+#: library/string.rst:980
 msgid "Helper functions"
 msgstr "Βοηθητικές συναρτήσεις"
 
-#: library/string.rst:969
+#: library/string.rst:984
 msgid ""
 "Split the argument into words using :meth:`str.split`, capitalize each word "
 "using :meth:`str.capitalize`, and join the capitalized words using :meth:"
@@ -1920,74 +1948,74 @@ msgstr ""
 "κενά αφαιρούνται, διαφορετικά χρησιμοποιείται το *sep* για να χωρίσει και να "
 "ενώσει τις λέξεις."
 
-#: library/string.rst:204
+#: library/string.rst:205
 msgid "{} (curly brackets)"
 msgstr "{} (άγκιστρα)"
 
-#: library/string.rst:349 library/string.rst:401 library/string.rst:449
+#: library/string.rst:352 library/string.rst:404 library/string.rst:452
 msgid "in string formatting"
 msgstr "στη μορφοποίηση συμβολοσειρών"
 
-#: library/string.rst:204
+#: library/string.rst:205
 msgid ". (dot)"
 msgstr ". (τελεία)"
 
-#: library/string.rst:204
+#: library/string.rst:205
 msgid "[] (square brackets)"
 msgstr "[] (αγκύλες)"
 
-#: library/string.rst:204
+#: library/string.rst:205
 msgid "! (exclamation)"
 msgstr "! (θαυμαστικό)"
 
-#: library/string.rst:204
+#: library/string.rst:205
 msgid ": (colon)"
 msgstr ": (άνω κάτω τελεία)"
 
-#: library/string.rst:349
+#: library/string.rst:352
 msgid "< (less)"
 msgstr "< (μικρότερο)"
 
-#: library/string.rst:349
+#: library/string.rst:352
 msgid "> (greater)"
 msgstr "> (μεγαλύτερο)"
 
-#: library/string.rst:349
+#: library/string.rst:352
 msgid "= (equals)"
 msgstr "= (ίσον)"
 
-#: library/string.rst:349
+#: library/string.rst:352
 msgid "^ (caret)"
 msgstr "^ (καπέλο)"
 
-#: library/string.rst:382
+#: library/string.rst:385
 msgid "+ (plus)"
 msgstr "+ (συν)"
 
-#: library/string.rst:382
+#: library/string.rst:385
 msgid "- (minus)"
 msgstr "- (μείον)"
 
-#: library/string.rst:401
+#: library/string.rst:404
 msgid "z"
 msgstr "z"
 
-#: library/string.rst:410
+#: library/string.rst:413
 msgid "# (hash)"
 msgstr "# (δίεση)"
 
-#: library/string.rst:449
+#: library/string.rst:452
 msgid ", (comma)"
 msgstr ", (κόμμα)"
 
-#: library/string.rst:449
+#: library/string.rst:452
 msgid "_ (underscore)"
 msgstr "_ (κάτω παύλα)"
 
-#: library/string.rst:805
+#: library/string.rst:820
 msgid "$ (dollar)"
 msgstr "$ (δολάριο)"
 
-#: library/string.rst:805
+#: library/string.rst:820
 msgid "in template strings"
 msgstr "στη μορφοποίηση συμβολοσειρών"
