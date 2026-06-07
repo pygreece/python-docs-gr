@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-02-24 17:44+0200\n"
+"Last-Translator: Vassiliki Dalakiari <vdalakiari@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: reference/import.rst:6
 msgid "The import system"
-msgstr ""
+msgstr "Το σύστημα εισαγωγής"
 
 #: reference/import.rst:10
 msgid ""
@@ -29,6 +29,12 @@ msgid ""
 "way.  Functions such as :func:`importlib.import_module` and built-in :func:"
 "`__import__` can also be used to invoke the import machinery."
 msgstr ""
+"Ο κώδικας Python σε ένα :term:`module` αποκτά πρόσβαση στον κώδικα ενός "
+"άλλου module μέσω της διαδικασίας του :term:`importing`. Η δήλωση :keyword:"
+"`import` είναι ο πιο συνηθισμένος τρόπος ενεργοποίησης του μηχανισμού "
+"import, αλλά δεν είναι ο μόνος. Συναρτήσεις όπως η :func:`importlib."
+"import_module` και η ενσωματωμένη :func:`__import__` μπορούν επίσης να "
+"χρησιμοποιηθούν για την ενεργοποίηση του μηχανισμού εισαγωγής."
 
 #: reference/import.rst:16
 msgid ""
@@ -41,6 +47,14 @@ msgid ""
 "keyword:`!import` statement for the exact details of that name binding "
 "operation."
 msgstr ""
+"Η δήλωση :keyword:`import` συνδυάζει δύο λειτουργίες· αναζητά το module με "
+"το συγκεκριμένο όνομα και στη συνέχεια συνδέει τα αποτελέσματα αυτής της "
+"αναζήτησης σε ένα όνομα στο τοπικό scope. Η λειτουργία αναζήτησης της "
+"δήλωσης :keyword:`!import` ορίζεται ως κλήση της συνάρτησης :func:"
+"`__import__`, με τα κατάλληλα ορίσματα. Η τιμή επιστροφής της :func:"
+"`__import__` χρησιμοποιείται για να εκτελεστεί η λειτουργία δέσμευσης "
+"ονόματος της δήλωσης :keyword:`!import`. Δείτε τη δήλωση :keyword:`!import` "
+"για τις ακριβείς λεπτομέρειες αυτής της λειτουργίας."
 
 #: reference/import.rst:25
 msgid ""
@@ -50,6 +64,11 @@ msgid ""
 "(including :data:`sys.modules`), only the :keyword:`import` statement "
 "performs a name binding operation."
 msgstr ""
+"Μια άμεση κλήση της :func:`__import__` εκτελεί μόνο την αναζήτηση του module "
+"και, αν βρεθεί, τη λειτουργία δημιουργίας του. Παρότι μπορεί να προκύψουν "
+"ορισμένες παρενέργειες, όπως η εισαγωγή των γονικών πακέτων και η ενημέρωση "
+"διάφορων προσωρινών μνημών (συμπεριλαμβανομένου του :data:`sys.modules`), "
+"μόνο η δήλωση :keyword:`import` εκτελεί λειτουργία δέσμευσης ονόματος."
 
 #: reference/import.rst:31
 msgid ""
@@ -58,6 +77,11 @@ msgid ""
 "system (such as :func:`importlib.import_module`) may choose to bypass :func:"
 "`__import__` and use their own solutions to implement import semantics."
 msgstr ""
+"Όταν εκτελείται μια δήλωση :keyword:`import`, καλείται η τυπική ενσωματωμένη "
+"συνάρτηση :func:`__import__`. Άλλοι μηχανισμοί ενεργοποίησης του συστήματος "
+"εισαγωγής (όπως η :func:`importlib.import_module`) μπορεί να επιλέξουν να "
+"παρακάμψουν τη :func:`__import__` και να χρησιμοποιήσουν δικές τους λύσεις "
+"για την υλοποίηση της σημασιολογίας της εισαγωγής."
 
 #: reference/import.rst:36
 msgid ""
@@ -68,6 +92,13 @@ msgid ""
 "machinery is invoked.  These strategies can be modified and extended by "
 "using various hooks described in the sections below."
 msgstr ""
+"Όταν εισάγεται ένα module για πρώτη φορά, η Python το αναζητά και, αν το "
+"βρει, δημιουργεί ένα αντικείμενο module [#fnmo]_, αρχικοποιώντας το. Αν το "
+"module με το συγκεκριμένο όνομα δεν μπορεί να βρεθεί, γίνεται raise η "
+"εξαίρεση :exc:`ModuleNotFoundError`. Η Python υλοποιεί διάφορες στρατηγικές "
+"αναζήτησης για το module όταν ενεργοποιείται ο μηχανισμός εισαγωγής. Αυτές "
+"οι στρατηγικές μπορούν να τροποποιηθούν και να επεκταθούν μέσω διάφορων "
+"hooks που περιγράφονται στις παρακάτω ενότητες."
 
 #: reference/import.rst:43
 msgid ""
@@ -76,10 +107,15 @@ msgid ""
 "import system is exposed through :data:`sys.meta_path`. In addition, native "
 "namespace package support has been implemented (see :pep:`420`)."
 msgstr ""
+"Το σύστημα εισαγωγής έχει ενημερωθεί ώστε να υλοποιεί πλήρως τη δεύτερη φάση "
+"του :pep:`302`. Δεν υπάρχει πλέον κανένας έμμεσος μηχανισμός εισαγωγής - ο "
+"πλήρης μηχανισμός εισαγωγής εκτίθεται μέσω του :data:`sys.meta_path`. "
+"Επιπλέον, έχει υλοποιηθεί εγγενής υποστήριξη για namespace packages (βλ. :"
+"pep:`420`)."
 
 #: reference/import.rst:51
 msgid ":mod:`importlib`"
-msgstr ""
+msgstr ":mod:`importlib`"
 
 #: reference/import.rst:53
 msgid ""
@@ -89,10 +125,15 @@ msgid ""
 "import machinery.  Refer to the :mod:`importlib` library documentation for "
 "additional detail."
 msgstr ""
+"Το module :mod:`importlib` παρέχει ένα πλούσιο API για αλληλεπίδραση με το "
+"σύστημα εισαγωγής. Για παράδειγμα, η :func:`importlib.import_module` παρέχει "
+"ένα προτεινόμενο, απλούστερο API από την ενσωματωμένη :func:`__import__` για "
+"την ενεργοποίηση του μηχανισμού εισαγωγής. Ανατρέξτε στην τεκμηρίωση της "
+"βιβλιοθήκης :mod:`importlib` για περισσότερες λεπτομέρειες."
 
 #: reference/import.rst:62
 msgid "Packages"
-msgstr ""
+msgstr "Πακέτα"
 
 #: reference/import.rst:67
 msgid ""
@@ -101,6 +142,11 @@ msgid ""
 "else.  To help organize modules and provide a naming hierarchy, Python has a "
 "concept of :term:`packages <package>`."
 msgstr ""
+"Η Python έχει μόνο έναν τύπο αντικειμένου module, και όλα τα modules είναι "
+"αυτού του τύπου, ανεξάρτητα από το αν το module υλοποιείται σε Python, C ή "
+"κάτι άλλο. Για να βοηθήσει στην οργάνωση των modules και να παρέχει μια "
+"ιεραρχία ονοματοδοσίας, η Python διαθέτει την έννοια των :term:`packages "
+"<package>`."
 
 #: reference/import.rst:72
 msgid ""
@@ -112,6 +158,13 @@ msgid ""
 "hierarchically, and packages may themselves contain subpackages, as well as "
 "regular modules."
 msgstr ""
+"Μπορείτε να σκεφτείτε τα packages ως φακέλους σε ένα σύστημα αρχείων και τα "
+"modules ως αρχεία μέσα σε φακέλους, αλλά μην πάρετε αυτή την αναλογία "
+"κυριολεκτικά, καθώς packages και modules δεν είναι απαραίτητο να προέρχονται "
+"από το σύστημα αρχείων. Για τους σκοπούς αυτής της τεκμηρίωσης, θα "
+"χρησιμοποιήσουμε αυτή τη βολική αναλογία φακέλων και αρχείων. Όπως οι "
+"φάκελοι του συστήματος αρχείων, τα packages οργανώνονται ιεραρχικά, και "
+"μπορούν να περιέχουν subpackages, καθώς και κανονικά modules."
 
 #: reference/import.rst:80
 msgid ""
@@ -120,6 +173,10 @@ msgid ""
 "of module.  Specifically, any module that contains a ``__path__`` attribute "
 "is considered a package."
 msgstr ""
+"Είναι σημαντικό να έχετε υπόψη ότι όλα τα packages είναι modules, αλλά δεν "
+"είναι όλα τα modules packages. Με άλλα λόγια, τα packages είναι απλώς ένας "
+"ειδικός τύπος module. Συγκεκριμένα, οποιοδήποτε module περιέχει το "
+"χαρακτηριστικό ``__path__`` θεωρείται package."
 
 #: reference/import.rst:85
 msgid ""
@@ -129,10 +186,16 @@ msgid ""
 "subpackage called :mod:`email.mime` and a module within that subpackage "
 "called :mod:`email.mime.text`."
 msgstr ""
+"Όλα τα modules έχουν ένα όνομα. Τα ονόματα των subpackages διαχωρίζονται από "
+"το όνομα του γονικού package με τελεία, αντίστοιχα με τη συνηθισμένη σύνταξη "
+"πρόσβασης σε χαρακτηριστικά στην Python. Έτσι, μπορεί να έχετε ένα package "
+"με όνομα :mod:`email`, το οποίο με τη σειρά του έχει ένα subpackage με "
+"όνομα :mod:`email.mime` και ένα module μέσα σε αυτό το subpackage με όνομα :"
+"mod:`email.mime.text`."
 
 #: reference/import.rst:93
 msgid "Regular packages"
-msgstr ""
+msgstr "Κανονικά πακέτα"
 
 #: reference/import.rst:98
 msgid ""
@@ -146,12 +209,24 @@ msgid ""
 "same Python code that any other module can contain, and Python will add some "
 "additional attributes to the module when it is imported."
 msgstr ""
+"Η Python ορίζει δύο τύπους packages: τα :term:`regular packages <regular "
+"package>` και τα :term:`namespace packages <namespace package>`. Τα regular "
+"packages είναι τα παραδοσιακά packages όπως υπήρχαν στην Python 3.2 και "
+"παλαιότερα. Ένα regular package υλοποιείται συνήθως ως φάκελος που περιέχει "
+"ένα αρχείο ``__init__.py``. Όταν εισάγεται ένα regular package, το αρχείο "
+"``__init__.py`` εκτελείται έμμεσα, και τα αντικείμενα που ορίζει δεσμεύονται "
+"σε ονόματα στο namespace του package. Το ``__init__.py`` μπορεί να περιέχει "
+"τον ίδιο κώδικα Python που μπορεί να περιέχει οποιοδήποτε άλλο module, και η "
+"Python θα προσθέσει ορισμένα επιπλέον χαρακτηριστικά στο module όταν "
+"εισάγεται."
 
 #: reference/import.rst:108
 msgid ""
 "For example, the following file system layout defines a top level ``parent`` "
 "package with three subpackages::"
 msgstr ""
+"Για παράδειγμα, η ακόλουθη διάταξη στο σύστημα αρχείων ορίζει ένα package "
+"ανωτέρου επιπέδου ``parent`` με τρία subpackages::"
 
 #: reference/import.rst:111
 msgid ""
@@ -164,6 +239,14 @@ msgid ""
 "    three/\n"
 "        __init__.py"
 msgstr ""
+"parent/\n"
+"    __init__.py\n"
+"    one/\n"
+"        __init__.py\n"
+"    two/\n"
+"        __init__.py\n"
+"    three/\n"
+"        __init__.py"
 
 #: reference/import.rst:120
 msgid ""
@@ -172,10 +255,14 @@ msgid ""
 "``parent.three`` will execute ``parent/two/__init__.py`` and ``parent/three/"
 "__init__.py`` respectively."
 msgstr ""
+"Η εισαγωγή του ``parent.one`` θα εκτελέσει έμμεσα τα ``parent/__init__.py`` "
+"και ``parent/one/__init__.py``. Μετέπειτα εισαγωγές του ``parent.two`` ή του "
+"``parent.three`` θα εκτελέσουν τα ``parent/two/__init__.py`` και ``parent/"
+"three/__init__.py`` αντίστοιχα."
 
 #: reference/import.rst:129
 msgid "Namespace packages"
-msgstr ""
+msgstr "Namespace πακέτα"
 
 #: reference/import.rst:135
 msgid ""
@@ -187,6 +274,14 @@ msgid ""
 "objects on the file system; they may be virtual modules that have no "
 "concrete representation."
 msgstr ""
+"Ένα namespace πακέτο είναι ένας συνδυασμός από διάφορα :term:`portions "
+"<portion>`, όπου κάθε portion συνεισφέρει ένα subpackage στο γονικό πακέτο. "
+"Τα portions μπορεί να βρίσκονται σε διαφορετικές τοποθεσίες στο σύστημα "
+"αρχείων. Μπορεί επίσης να βρίσκονται σε zip αρχεία, στο δίκτυο ή οπουδήποτε "
+"αλλού αναζητά η Python κατά την εισαγωγή. Τα namespace πακέτα μπορεί να "
+"αντιστοιχούν ή να μην αντιστοιχούν άμεσα σε αντικείμενα στο σύστημα αρχείων· "
+"μπορεί να είναι «εικονικά» modules που δεν έχουν συγκεκριμένη φυσική "
+"αναπαράσταση."
 
 #: reference/import.rst:143
 msgid ""
@@ -196,6 +291,12 @@ msgid ""
 "that package if the path of their parent package (or :data:`sys.path` for a "
 "top level package) changes."
 msgstr ""
+"Τα namespace πακέτα δεν χρησιμοποιούν μια συνηθισμένη λίστα για το "
+"χαρακτηριστικό ``__path__``. Αντί γι’ αυτό χρησιμοποιούν έναν προσαρμοσμένο "
+"iterable τύπο, ο οποίος θα εκτελέσει αυτόματα μία νέα αναζήτηση για portions "
+"του πακέτου στην επόμενη προσπάθεια εισαγωγής μέσα σε αυτό το πακέτο, αν "
+"αλλάξει το path του γονικού πακέτου (ή το :data:`sys.path` για πακέτο "
+"ανωτέρου επιπέδου)."
 
 #: reference/import.rst:149
 msgid ""
@@ -206,14 +307,21 @@ msgid ""
 "create a namespace package for the top-level ``parent`` package whenever it "
 "or one of its subpackages is imported."
 msgstr ""
+"Με τα namespace πακέτα, δεν υπάρχει αρχείο ``parent/__init__.py``. Στην "
+"πράξη, μπορεί να βρεθούν πολλοί φάκελοι ``parent`` κατά την αναζήτηση "
+"εισαγωγής, όπου ο καθένας παρέχεται από διαφορετικό portion. Έτσι, το "
+"``parent/one`` ενδέχεται να μην βρίσκεται φυσικά δίπλα στο ``parent/two``. "
+"Σε αυτή την περίπτωση, η Python θα δημιουργήσει ένα namespace πακέτο για το "
+"πακέτο ανωτέρου επιπέδου ``parent`` κάθε φορά που γίνεται εισαγωγή αυτού ή "
+"κάποιου από τα subpackages του."
 
 #: reference/import.rst:156
 msgid "See also :pep:`420` for the namespace package specification."
-msgstr ""
+msgstr "Δείτε επίσης το :pep:`420` για την προδιαγραφή των namespace πακέτων."
 
 #: reference/import.rst:160
 msgid "Searching"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: reference/import.rst:162
 msgid ""
@@ -224,6 +332,12 @@ msgid ""
 "parameters to the :func:`importlib.import_module` or :func:`__import__` "
 "functions."
 msgstr ""
+"Για να ξεκινήσει η αναζήτηση, η Python χρειάζεται το :term:`πλήρως "
+"αναγνωρισμένο <qualified name>` όνομα του module (ή του πακέτου, αλλά για "
+"τους σκοπούς αυτής της συζήτησης η διαφορά δεν έχει σημασία) που εισάγεται. "
+"Αυτό το όνομα μπορεί να προέρχεται από διάφορα ορίσματα της δήλωσης :keyword:"
+"`import` ή από τις παραμέτρους των συναρτήσεων :func:`importlib."
+"import_module` ή :func:`__import__`."
 
 #: reference/import.rst:168
 msgid ""
@@ -233,10 +347,16 @@ msgid ""
 "baz``. If any of the intermediate imports fail, a :exc:`ModuleNotFoundError` "
 "is raised."
 msgstr ""
+"Αυτό το όνομα θα χρησιμοποιηθεί σε διάφορες φάσεις της αναζήτησης import και "
+"μπορεί να είναι μια διαδρομή με τελείες προς ένα submodule, π.χ. ``foo.bar."
+"baz``. Σε αυτή την περίπτωση, η Python πρώτα προσπαθεί να εισάγει το "
+"``foo``, μετά το ``foo.bar`` και τέλος το ``foo.bar.baz``. Αν αποτύχει "
+"κάποιες από τις ενδιάμεσες εισαγωγές, γίνεται raise η :exc:"
+"`ModuleNotFoundError`."
 
 #: reference/import.rst:175
 msgid "The module cache"
-msgstr ""
+msgstr "Η προσωρινή μνήμη του module"
 
 #: reference/import.rst:180
 msgid ""
@@ -247,6 +367,12 @@ msgid ""
 "and ``foo.bar.baz``.  Each key will have as its value the corresponding "
 "module object."
 msgstr ""
+"Το πρώτο σημείο που ελέγχεται κατά την αναζήτηση εισαγωγής είναι το :data:"
+"`sys.modules`. Αυτή η αντιστοίχιση λειτουργεί ως προσωρινή μνήμη όλων των "
+"modules που έχουν εισαχθεί στο παρελθόν, συμπεριλαμβανομένων των ενδιάμεσων "
+"διαδρομών. Έτσι, αν το ``foo.bar.baz`` είχε εισαχθεί προηγουμένως, το :data:"
+"`sys.modules` θα περιέχει εγγραφές για τα ``foo``, ``foo.bar`` και ``foo.bar."
+"baz``. Κάθε κλειδί θα έχει ως τιμή το αντίστοιχο αντικείμενο module."
 
 #: reference/import.rst:187
 msgid ""
@@ -256,6 +382,11 @@ msgid ""
 "`ModuleNotFoundError` is raised.  If the module name is missing, Python will "
 "continue searching for the module."
 msgstr ""
+"Κατά την εισαγωγή, το όνομα του module αναζητείται στο :data:`sys.modules` "
+"και, αν υπάρχει, η συσχετισμένη τιμή είναι το module που ικανοποιεί την "
+"εισαγωγή και η διαδικασία ολοκληρώνεται. Ωστόσο, αν η τιμή είναι ``None``, "
+"τότε γίνεται raise το :exc:`ModuleNotFoundError`. Αν το όνομα του module "
+"λείπει, η Python θα συνεχίσει να αναζητά το module."
 
 #: reference/import.rst:193
 msgid ""
@@ -266,6 +397,13 @@ msgid ""
 "to ``None``, forcing the next import of the module to result in a :exc:"
 "`ModuleNotFoundError`."
 msgstr ""
+"Το :data:`sys.modules` είναι εγγράψιμο. Η διαγραφή ενός κλειδιού μπορεί να "
+"μην καταστρέψει το αντίστοιχο module (καθώς άλλα modules μπορεί να κρατούν "
+"αναφορές σε αυτό), αλλά θα ακυρώσει την εγγραφή της προσωρινής μνήμης για το "
+"module με το συγκεκριμένο όνομα, προκαλώντας την Python να το αναζητήσει "
+"ξανά στην επόμενο εισαγωγή. Το κλειδί μπορεί επίσης να οριστεί σε ``None``, "
+"αναγκάζοντας την επόμενο εισαγωγή του module να καταλήξει σε :exc:"
+"`ModuleNotFoundError`."
 
 #: reference/import.rst:200
 msgid ""
@@ -275,10 +413,16 @@ msgid ""
 "reload` will reuse the *same* module object, and simply reinitialise the "
 "module contents by rerunning the module's code."
 msgstr ""
+"Προσοχή όμως: αν κρατήσετε μια αναφορά στο αντικείμενο module, ακυρώσετε την "
+"εγγραφή του στην προσωρινή μνήμη του :data:`sys.modules` και μετά ξανακάνετε "
+"εισαγωγή το module με το ίδιο όνομα, τα δύο αντικείμενα module *δεν* θα "
+"είναι τα ίδια. Αντίθετα, η :func:`importlib.reload` θα επαναχρησιμοποιήσει "
+"το *ίδιο* αντικείμενο module και απλώς θα επαναρχικοποιήσει τα περιεχόμενά "
+"του εκτελώντας ξανά τον κώδικα του module."
 
 #: reference/import.rst:210
 msgid "Finders and loaders"
-msgstr ""
+msgstr "Finders και loaders"
 
 #: reference/import.rst:217
 msgid ""
@@ -291,6 +435,15 @@ msgid ""
 "they return themselves when they find that they can load the requested "
 "module."
 msgstr ""
+"Αν το module με το συγκεκριμένο όνομα δεν βρεθεί στο :data:`sys.modules`, "
+"τότε ενεργοποιείται το πρωτόκολλο εισαγωγής της Python για να βρεθεί και να "
+"φορτωθεί το module. Αυτό το πρωτόκολλο αποτελείται από δύο εννοιολογικά "
+"αντικείμενα: :term:`finders <finder>` και :term:`loaders <loader>`. Ο ρόλος "
+"ενός finder είναι να καθορίσει αν μπορεί να βρει το module με το "
+"συγκεκριμένο όνομα, χρησιμοποιώντας όποια στρατηγική γνωρίζει. Αντικείμενα "
+"που υλοποιούν και τις δύο αυτές διεπαφές αναφέρονται ως :term:`importers "
+"<importer>` - επιστρέφουν τον εαυτό τους όταν διαπιστώσουν ότι μπορούν να "
+"φορτώσουν το ζητούμενο module."
 
 #: reference/import.rst:225
 msgid ""
@@ -301,12 +454,22 @@ msgid ""
 "system paths or zip files.  It can also be extended to search for any "
 "locatable resource, such as those identified by URLs."
 msgstr ""
+"Η Python περιλαμβάνει αρκετούς προεπιλεγμένους finders και importers. Το "
+"πρώτο γνωρίζει πώς να εντοπίζει built-in modules, και το δεύτερο πώς να "
+"εντοπίζει παγωμένα (frozen) modules. Ένας τρίτος προεπιλεγμένος finder "
+"αναζητά modules σε ένα :term:`import path`. Το :term:`import path` είναι μια "
+"λίστα από τοποθεσίες που μπορεί να είναι διαδρομές του συστήματος αρχείων ή "
+"zip αρχεία. Μπορεί επίσης να επεκταθεί ώστε να αναζητά οποιονδήποτε "
+"εντοπίσιμο πόρο, όπως αυτούς που προσδιορίζονται από URLs."
 
 #: reference/import.rst:232
 msgid ""
 "The import machinery is extensible, so new finders can be added to extend "
 "the range and scope of module searching."
 msgstr ""
+"Ο μηχανισμός εισαγωγής είναι επεκτάσιμος, επομένως μπορούν να προστεθούν "
+"νέοι finders ώστε να επεκταθεί το εύρος και η κάλυψη της αναζήτησης των "
+"modules."
 
 #: reference/import.rst:235
 msgid ""
@@ -315,6 +478,11 @@ msgid ""
 "related information, which the import machinery then uses when loading the "
 "module."
 msgstr ""
+"Οι finders δεν φορτώνουν πραγματικά τα modules. Αν μπορούν να βρουν το "
+"module με το συγκεκριμένο όνομα, επιστρέφουν ένα :dfn:`module spec`, δηλαδή "
+"μια ενθυλάκωση της πληροφορίας που σχετίζεται με την εισαγωγή του module, "
+"την οποία ο μηχανισμός εισαγωγής χρησιμοποιεί στη συνέχεια για να φορτώσει "
+"το module."
 
 #: reference/import.rst:239
 msgid ""
@@ -322,6 +490,9 @@ msgid ""
 "detail, including how you can create and register new ones to extend the "
 "import machinery."
 msgstr ""
+"Οι ακόλουθες ενότητες περιγράφουν πιο αναλυτικά το πρωτόκολλο για finders "
+"και loaders, συμπεριλαμβανομένου του πώς μπορείτε να δημιουργήσετε και να "
+"καταχωρίσετε νέους, ώστε να επεκτείνετε τον μηχανισμό εισαγωγής."
 
 #: reference/import.rst:243
 msgid ""
@@ -329,10 +500,14 @@ msgid ""
 "directly, whereas now they return module specs which *contain* loaders. "
 "Loaders are still used during import but have fewer responsibilities."
 msgstr ""
+"Σε παλαιότερες εκδόσεις της Python, οι finders επέστρεφαν απευθείας :term:"
+"`loaders <loader>`, ενώ τώρα επιστρέφουν module specs που *περιέχουν* "
+"loaders. Οι loaders εξακολουθούν να χρησιμοποιούνται κατά την εισαγωγή, αλλά "
+"έχουν λιγότερες ευθύνες."
 
 #: reference/import.rst:249
 msgid "Import hooks"
-msgstr ""
+msgstr "Εισαγωγή hooks"
 
 #: reference/import.rst:259
 msgid ""
@@ -340,6 +515,9 @@ msgid ""
 "this are the *import hooks*.  There are two types of import hooks: *meta "
 "hooks* and *import path hooks*."
 msgstr ""
+"Ο μηχανισμός εισαγωγής είναι σχεδιασμένος ώστε να είναι επεκτάσιμος· ο "
+"βασικός μηχανισμός για αυτό είναι η *εισαγωγή hooks*. Υπάρχουν δύο τύποι "
+"εισαγωγής hooks: *meta hooks* και *import path hooks*."
 
 #: reference/import.rst:263
 msgid ""
@@ -349,6 +527,12 @@ msgid ""
 "modules, or even built-in modules.  Meta hooks are registered by adding new "
 "finder objects to :data:`sys.meta_path`, as described below."
 msgstr ""
+"Τα meta hooks καλούνται στην αρχή της επεξεργασίας εισαγωγής, πριν συμβεί "
+"οποιαδήποτε άλλη επεξεργασία εισαγωγής, εκτός από την αναζήτηση στην "
+"προσωρινή μνήμη του :data:`sys.modules`. Αυτό επιτρέπει στα meta hooks να "
+"υπερκαλύπτουν την επεξεργασία του :data:`sys.path`, τα παγωμένα modules ή "
+"ακόμη και τα built-in modules. Τα meta hooks καταχωρίζονται προσθέτοντας νέα "
+"αντικείμενα finder στο :data:`sys.meta_path`, όπως περιγράφεται παρακάτω."
 
 #: reference/import.rst:269
 msgid ""
@@ -357,10 +541,14 @@ msgid ""
 "encountered.  Import path hooks are registered by adding new callables to :"
 "data:`sys.path_hooks` as described below."
 msgstr ""
+"Τα import path hooks καλούνται ως μέρος της επεξεργασίας του :data:`sys."
+"path` (ή του ``package.__path__``), στο σημείο όπου συναντάται το αντίστοιχο "
+"στοιχείο διαδρομής. Τα import path hooks καταχωρίζονται προσθέτοντας νέα "
+"callables στο :data:`sys.path_hooks`, όπως περιγράφεται παρακάτω."
 
 #: reference/import.rst:276
 msgid "The meta path"
-msgstr ""
+msgstr "Το meta path"
 
 #: reference/import.rst:282
 msgid ""
@@ -373,6 +561,15 @@ msgid ""
 "finder can use any strategy it wants to determine whether it can handle the "
 "named module or not."
 msgstr ""
+"Όταν το module με το συγκεκριμένο όνομα δεν βρεθεί στο :data:`sys.modules`, "
+"η Python στη συνέχεια το αναζητά στο :data:`sys.meta_path`, το οποίο "
+"περιέχει μια λίστα από meta path finder αντικείμενα. Αυτοί οι finders "
+"ερωτώνται με τη σειρά για να διαπιστωθεί αν γνωρίζουν πώς να χειριστούν το "
+"module. Οι meta path finders πρέπει να υλοποιούν μια μέθοδο με όνομα :meth:"
+"`~importlib.abc.MetaPathFinder.find_spec`, η οποία λαμβάνει τρία ορίσματα: "
+"ένα όνομα, ένα import path και (προαιρετικά) ένα target module. Ο meta path "
+"finder μπορεί να χρησιμοποιήσει οποιαδήποτε στρατηγική θέλει για να "
+"καθορίσει αν μπορεί να χειριστεί το module ή όχι."
 
 #: reference/import.rst:291
 msgid ""
@@ -382,6 +579,12 @@ msgid ""
 "returning a spec, then a :exc:`ModuleNotFoundError` is raised.  Any other "
 "exceptions raised are simply propagated up, aborting the import process."
 msgstr ""
+"Αν ο meta path finder γνωρίζει πώς να χειριστεί το module, επιστρέφει ένα "
+"spec αντικείμενο. Αν δεν μπορεί να χειριστεί το module, επιστρέφει ``None``. "
+"Αν η επεξεργασία του :data:`sys.meta_path` φτάσει στο τέλος της λίστας χωρίς "
+"να επιστραφεί spec, τότε γίνεται raise το :exc:`ModuleNotFoundError`. "
+"Οποιεσδήποτε άλλες εξαιρέσεις γίνονται raise απλώς προωθούνται προς τα πάνω, "
+"τερματίζοντας τη διαδικασία εισαγωγής."
 
 #: reference/import.rst:297
 msgid ""
@@ -396,6 +599,17 @@ msgid ""
 "existing module object that will be the target of loading later. The import "
 "system passes in a target module only during reload."
 msgstr ""
+"Η μέθοδος :meth:`~importlib.abc.MetaPathFinder.find_spec` των meta path "
+"finders καλείται με δύο ή τρία ορίσματα. Το πρώτο είναι το πλήρως "
+"αναγνωρισμένο όνομα του module που εισάγεται, π.χ. ``foo.bar.baz``. Το "
+"δεύτερο όρισμα είναι οι καταχωρήσεις διαδρομής που θα χρησιμοποιηθούν για "
+"την αναζήτηση του module. Για modules ανωτέρου επιπέδου, το δεύτερο όρισμα "
+"είναι ``None``, αλλά για submodules ή subpackages, είναι η τιμή του "
+"χαρακτηριστικού ``__path__`` του γονικού πακέτου. Αν δεν είναι δυνατή η "
+"πρόσβαση στο κατάλληλο ``__path__``, γίνεται raise το :exc:"
+"`ModuleNotFoundError`. Το τρίτο όρισμα είναι ένα υπάρχον αντικείμενο module "
+"που θα αποτελέσει αργότερα τον στόχο της φόρτωσης. Το σύστημα εισαγωγής "
+"περνά target module μόνο κατά την επαναφόρτωση."
 
 #: reference/import.rst:308
 msgid ""
@@ -408,6 +622,15 @@ msgid ""
 "__path__, None)``. Once ``foo.bar`` has been imported, the final traversal "
 "will call ``mpf.find_spec(\"foo.bar.baz\", foo.bar.__path__, None)``."
 msgstr ""
+"Το meta path μπορεί να διασχιστεί πολλές φορές για ένα μόνο αίτημα "
+"εισαγωγής. Για παράδειγμα, υποθέτοντας ότι κανένα από τα εμπλεκόμενα modules "
+"δεν έχει ήδη προστεθεί στην προσωρινή μνήμη, η εισαγωγή του ``foo.bar.baz`` "
+"θα εκτελέσει πρώτα μία εισαγωγή ανωτέρου επιπέδου, καλώντας το ``mpf."
+"find_spec(\"foo\", None, None)`` σε κάθε meta path finder (``mpf``). Αφού "
+"εισαχθεί το ``foo``, το ``foo.bar`` θα εισαχθεί διασχίζοντας το meta path "
+"για δεύτερη φορά, καλώντας την ``mpf.find_spec(\"foo.bar\", foo.__path__, "
+"None)``. Μόλις γίνει η εισαγωγή του ``foo.bar``, η τελική διάσχιση θα "
+"καλέσει το ``mpf.find_spec(\"foo.bar.baz\", foo.bar.__path__, None)``."
 
 #: reference/import.rst:318
 msgid ""
@@ -415,6 +638,9 @@ msgid ""
 "always return ``None`` when anything other than ``None`` is passed as the "
 "second argument."
 msgstr ""
+"Ορισμένοι meta path finders υποστηρίζουν μόνο εισαγωγές ανωτέρου επιπέδου. "
+"Αυτοί οι importers θα επιστρέφουν πάντα ``None`` όταν ως δεύτερο όρισμα "
+"περάσει οτιδήποτε άλλο εκτός από ``None``."
 
 #: reference/import.rst:322
 msgid ""
@@ -423,6 +649,11 @@ msgid ""
 "modules, and one that knows how to import modules from an :term:`import "
 "path` (i.e. the :term:`path based finder`)."
 msgstr ""
+"Το προεπιλεγμένο :data:`sys.meta_path` της Python έχει τρεις meta path "
+"finders: έναν που γνωρίζει πώς να εισάγει ενσωματωμένα modules, έναν που "
+"γνωρίζει πώς να εισάγει παγωμένα modules, και έναν που γνωρίζει πώς να "
+"εισάγει modules από ένα :term:`import path` (δηλ. τον :term:`path based "
+"finder`)."
 
 #: reference/import.rst:327
 msgid ""
@@ -432,22 +663,31 @@ msgid ""
 "if the finder does not implement :meth:`~importlib.abc.MetaPathFinder."
 "find_spec`."
 msgstr ""
+"Η μέθοδος :meth:`~importlib.abc.MetaPathFinder.find_spec` των meta path "
+"finders αντικατέστησε τη :meth:`!find_module`, η οποία πλέον χαρακτηριστεί "
+"ως απαρχαιωμένη. Αν και θα συνεχίσει να λειτουργεί χωρίς αλλαγές, ο "
+"μηχανισμός εισαγωγής θα τη δοκιμάζει μόνο αν ο finder δεν υλοποιεί τη :meth:"
+"`~importlib.abc.MetaPathFinder.find_spec`."
 
 #: reference/import.rst:334
 msgid ""
 "Use of :meth:`!find_module` by the import system now raises :exc:"
 "`ImportWarning`."
 msgstr ""
+"Η χρήση της :meth:`!find_module` από το σύστημα εισαγωγής πλέον κάνει raise "
+"την :exc:`ImportWarning`."
 
 #: reference/import.rst:338
 msgid ""
 ":meth:`!find_module` has been removed. Use :meth:`~importlib.abc."
 "MetaPathFinder.find_spec` instead."
 msgstr ""
+"Η :meth:`!find_module` έχει αφαιρεθεί. Χρησιμοποιήστε την :meth:`~importlib."
+"abc.MetaPathFinder.find_spec` στη θέση της."
 
 #: reference/import.rst:344
 msgid "Loading"
-msgstr ""
+msgstr "Φόρτωση"
 
 #: reference/import.rst:346
 msgid ""
@@ -455,6 +695,9 @@ msgid ""
 "the loader it contains) when loading the module.  Here is an approximation "
 "of what happens during the loading portion of import::"
 msgstr ""
+"Αν και όταν βρεθεί ένα module spec, ο μηχανισμός εισαγωγής θα το "
+"χρησιμοποιήσει (και τον loader που περιέχει) για να φορτώσει το module. "
+"Ακολουθεί μια προσέγγιση του τι συμβαίνει στο στάδιο φόρτωσης του import::"
 
 #: reference/import.rst:350
 msgid ""
@@ -487,16 +730,46 @@ msgid ""
 "        raise\n"
 "return sys.modules[spec.name]"
 msgstr ""
+"module = None\n"
+"if spec.loader is not None and hasattr(spec.loader, 'create_module'):\n"
+"    # It is assumed 'exec_module' will also be defined on the loader.\n"
+"    module = spec.loader.create_module(spec)\n"
+"if module is None:\n"
+"    module = ModuleType(spec.name)\n"
+"# The import-related module attributes get set here:\n"
+"_init_module_attrs(spec, module)\n"
+"\n"
+"if spec.loader is None:\n"
+"    # unsupported\n"
+"    raise ImportError\n"
+"if spec.origin is None and spec.submodule_search_locations is not None:\n"
+"    # namespace package\n"
+"    sys.modules[spec.name] = module\n"
+"elif not hasattr(spec.loader, 'exec_module'):\n"
+"    module = spec.loader.load_module(spec.name)\n"
+"else:\n"
+"    sys.modules[spec.name] = module\n"
+"    try:\n"
+"        spec.loader.exec_module(module)\n"
+"    except BaseException:\n"
+"        try:\n"
+"            del sys.modules[spec.name]\n"
+"        except KeyError:\n"
+"            pass\n"
+"        raise\n"
+"return sys.modules[spec.name]"
 
 #: reference/import.rst:379
 msgid "Note the following details:"
-msgstr ""
+msgstr "Σημειώστε τις ακόλουθες λεπτομέρειες:"
 
 #: reference/import.rst:381
 msgid ""
 "If there is an existing module object with the given name in :data:`sys."
 "modules`, import will have already returned it."
 msgstr ""
+"Αν υπάρχει ήδη ένα αντικείμενο module με το συγκεκριμένο όνομα στο :data:"
+"`sys.modules`, το import θα το έχει ήδη επιστρέψει."
 
 #: reference/import.rst:384
 msgid ""
@@ -506,6 +779,11 @@ msgid ""
 "prevents unbounded recursion in the worst case and multiple loading in the "
 "best."
 msgstr ""
+"Το module θα υπάρχει στο :data:`sys.modules` πριν ο loader εκτελέσει τον "
+"κώδικα του module. Αυτό είναι κρίσιμο, επειδή ο κώδικας του module μπορεί "
+"(άμεσα ή έμμεσα) να εισάγει τον εαυτό του· η προσθήκη του στο :data:`sys."
+"modules` εκ των προτέρων αποτρέπει ατέρμονη αναδρομή στη χειρότερη περίπτωση "
+"και πολλαπλή φόρτωση στην καλύτερη."
 
 #: reference/import.rst:390
 msgid ""
@@ -515,6 +793,12 @@ msgid ""
 "effect, must remain in the cache.  This contrasts with reloading where even "
 "the failing module is left in :data:`sys.modules`."
 msgstr ""
+"Αν η φόρτωση αποτύχει, το module που απέτυχε -- και μόνο αυτό -- αφαιρείται "
+"από το :data:`sys.modules`. Οποιοδήποτε module βρίσκεται ήδη στην προσωρινή "
+"μνήμη του :data:`sys.modules`, καθώς και οποιοδήποτε module φορτώθηκε "
+"επιτυχώς ως παρενέργεια, πρέπει να παραμείνει στην προσωρινή μνήμη. Αυτό "
+"έρχεται σε αντίθεση με την επαναφόρτωση, όπου ακόμη και το module που "
+"αποτυγχάνει παραμένει στο :data:`sys.modules`."
 
 #: reference/import.rst:396
 msgid ""
@@ -523,6 +807,10 @@ msgid ""
 "code example above), as summarized in a :ref:`later section <import-mod-"
 "attrs>`."
 msgstr ""
+"Αφού δημιουργηθεί το module αλλά πριν την εκτέλεση, ο μηχανισμός εισαγωγής "
+"ορίζει τα χαρακτηριστικά του module που σχετίζονται με την εισαγωγή "
+"(\"_init_module_attrs\" στο παραπάνω παράδειγμα ψευδοκώδικα), όπως "
+"συνοψίζεται σε μια :ref:`μεταγενέστερη ενότητα <import-mod-attrs>`."
 
 #: reference/import.rst:401
 msgid ""
@@ -530,12 +818,17 @@ msgid ""
 "namespace gets populated.  Execution is entirely delegated to the loader, "
 "which gets to decide what gets populated and how."
 msgstr ""
+"Η εκτέλεση του module είναι η κρίσιμη στιγμή της φόρτωσης κατά την οποία "
+"γεμίζει το namespace του module. Η εκτέλεση ανατίθεται εξ ολοκλήρου στον "
+"loader, ο οποίος αποφασίζει τι θα συμπληρωθεί και με ποιον τρόπο."
 
 #: reference/import.rst:405
 msgid ""
 "The module created during loading and passed to exec_module() may not be the "
 "one returned at the end of import [#fnlo]_."
 msgstr ""
+"Το module που δημιουργείται κατά τη φόρτωση και περνά στη exec_module() "
+"ενδέχεται να μην είναι αυτό που επιστρέφεται στο τέλος του import [#fnlo]_."
 
 #: reference/import.rst:408
 msgid ""
@@ -543,10 +836,13 @@ msgid ""
 "loaders.  These were previously performed by the :meth:`importlib.abc.Loader."
 "load_module` method."
 msgstr ""
+"Το σύστημα εισαγωγής έχει αναλάβει τις τυποποιημένες ευθύνες των loaders. "
+"Αυτές εκτελούνταν παλαιότερα από τη μέθοδο :meth:`importlib.abc.Loader."
+"load_module`."
 
 #: reference/import.rst:414
 msgid "Loaders"
-msgstr ""
+msgstr "Loaders"
 
 #: reference/import.rst:416
 msgid ""
@@ -555,10 +851,15 @@ msgid ""
 "method with a single argument, the module object to execute.  Any value "
 "returned from :meth:`~importlib.abc.Loader.exec_module` is ignored."
 msgstr ""
+"Οι module loaders παρέχουν την κρίσιμη λειτουργία της φόρτωσης: την εκτέλεση "
+"του module. Ο μηχανισμός εισαγωγής καλεί τη μέθοδο :meth:`importlib.abc."
+"Loader.exec_module` με ένα μόνο όρισμα, το αντικείμενο module που θα "
+"εκτελεστεί. Οποιαδήποτε τιμή επιστρέφει η :meth:`~importlib.abc.Loader."
+"exec_module` αγνοείται."
 
 #: reference/import.rst:421
 msgid "Loaders must satisfy the following requirements:"
-msgstr ""
+msgstr "Οι loaders πρέπει να ικανοποιούν τις ακόλουθες απαιτήσεις:"
 
 #: reference/import.rst:423
 msgid ""
@@ -566,6 +867,9 @@ msgid ""
 "dynamically loaded extension), the loader should execute the module's code "
 "in the module's global name space (``module.__dict__``)."
 msgstr ""
+"Αν το module είναι Python module (σε αντίθεση με ένα ενσωματωμένο module ή "
+"δυναμικά φορτωμένη επέκταση), ο loader θα πρέπει να εκτελέσει τον κώδικα του "
+"module στο καθολικό namespace του module (``module.__dict__``)."
 
 #: reference/import.rst:427
 msgid ""
@@ -573,6 +877,9 @@ msgid ""
 "`ImportError`, although any other exception raised during :meth:`~importlib."
 "abc.Loader.exec_module` will be propagated."
 msgstr ""
+"Αν ο loader δεν μπορεί να εκτελέσει το module, θα πρέπει να κάνει raise το :"
+"exc:`ImportError`, αν και οποιαδήποτε άλλη εξαίρεση γίνει raise κατά τη :"
+"meth:`~importlib.abc.Loader.exec_module` θα προωθηθεί προς τα πάνω."
 
 #: reference/import.rst:431
 msgid ""
@@ -580,6 +887,10 @@ msgid ""
 "the :meth:`~importlib.abc.MetaPathFinder.find_spec` method would just return "
 "a spec with the loader set to ``self``."
 msgstr ""
+"Σε πολλές περιπτώσεις, ο finder και ο loader μπορεί να είναι το ίδιο "
+"αντικείμενο· σε αυτές τις περιπτώσεις, η μέθοδος :meth:`~importlib.abc."
+"MetaPathFinder.find_spec` απλώς θα επιστρέψει ένα spec με τον loader "
+"ορισμένο σε ``self``."
 
 #: reference/import.rst:435
 msgid ""
@@ -590,10 +901,17 @@ msgid ""
 "the module object.  If the method returns ``None``, the import machinery "
 "will create the new module itself."
 msgstr ""
+"Οι module loaders μπορούν, προαιρετικά, να δημιουργούν το αντικείμενο module "
+"κατά τη φόρτωση υλοποιώντας μια μέθοδο :meth:`~importlib.abc.Loader."
+"create_module`. Παίρνει ένα όρισμα, το module spec, και επιστρέφει το νέο "
+"αντικείμενο module που θα χρησιμοποιηθεί κατά τη φόρτωση. Η "
+"``create_module()`` δεν χρειάζεται να ορίσει χαρακτηριστικά στο αντικείμενο "
+"module. Αν η μέθοδος επιστρέψει ``None``, ο μηχανισμός εισαγωγής θα "
+"δημιουργήσει ο ίδιος το νέο module."
 
 #: reference/import.rst:442
 msgid "The :meth:`~importlib.abc.Loader.create_module` method of loaders."
-msgstr ""
+msgstr "Η μέθοδος :meth:`~importlib.abc.Loader.create_module` των loaders."
 
 #: reference/import.rst:445
 msgid ""
@@ -601,6 +919,9 @@ msgid ""
 "`~importlib.abc.Loader.exec_module` and the import machinery assumed all the "
 "boilerplate responsibilities of loading."
 msgstr ""
+"Η μέθοδος :meth:`~importlib.abc.Loader.load_module` αντικαταστάθηκε από την :"
+"meth:`~importlib.abc.Loader.exec_module` και ο μηχανισμός εισαγωγής ανέλαβε "
+"όλες τις τυποποιημένες ευθύνες της φόρτωσης."
 
 #: reference/import.rst:450
 msgid ""
@@ -609,6 +930,10 @@ msgid ""
 "also implement ``exec_module()``.  However, ``load_module()`` has been "
 "deprecated and loaders should implement ``exec_module()`` instead."
 msgstr ""
+"Για συμβατότητα με υπάρχοντες loaders, ο μηχανισμός εισαγωγής θα "
+"χρησιμοποιήσει τη μέθοδο ``load_module()`` αν υπάρχει και ο loader δεν "
+"υλοποιεί την ``exec_module()``. Ωστόσο, η ``load_module()`` είναι "
+"απαρχαιωμένη και οι loaders θα πρέπει να υλοποιούν την ``exec_module()``."
 
 #: reference/import.rst:455
 msgid ""
@@ -616,6 +941,9 @@ msgid ""
 "functionality described above in addition to executing the module.  All the "
 "same constraints apply, with some additional clarification:"
 msgstr ""
+"Η μέθοδος ``load_module()`` πρέπει να υλοποιεί όλη την τυποποιημένη "
+"λειτουργικότητα φόρτωσης που περιγράφεται παραπάνω, επιπλέον της εκτέλεσης "
+"του module. Ισχύουν οι ίδιοι περιορισμοί, με κάποιες επιπλέον διευκρινίσεις:"
 
 #: reference/import.rst:459
 msgid ""
@@ -625,12 +953,21 @@ msgid ""
 "exist in :data:`sys.modules`, the loader must create a new module object and "
 "add it to :data:`sys.modules`."
 msgstr ""
+"Αν υπάρχει ήδη αντικείμενο module με το συγκεκριμένο όνομα στο :data:`sys."
+"modules`, ο loader πρέπει να χρησιμοποιήσει αυτό το υπάρχον module. "
+"(Διαφορετικά, η :func:`importlib.reload` δεν θα λειτουργεί σωστά.) Αν το "
+"module με το συγκεκριμένο όνομα δεν υπάρχει στο :data:`sys.modules`, ο "
+"loader πρέπει να δημιουργήσει νέο αντικείμενο module και να το προσθέσει "
+"στο :data:`sys.modules`."
 
 #: reference/import.rst:465
 msgid ""
 "The module *must* exist in :data:`sys.modules` before the loader executes "
 "the module code, to prevent unbounded recursion or multiple loading."
 msgstr ""
+"Το module *πρέπει* να υπάρχει στο :data:`sys.modules` πριν ο loader "
+"εκτελέσει τον κώδικα του module, ώστε να αποτραπεί ατέρμονη αναδρομή ή "
+"πολλαπλή φόρτωση."
 
 #: reference/import.rst:469
 msgid ""
@@ -638,26 +975,34 @@ msgid ""
 "data:`sys.modules`, but it must remove **only** the failing module(s), and "
 "only if the loader itself has loaded the module(s) explicitly."
 msgstr ""
+"Αν η φόρτωση αποτύχει, ο loader πρέπει να αφαιρέσει οποιαδήποτε modules έχει "
+"εισάγει στο :data:`sys.modules`, αλλά πρέπει να αφαιρέσει **μόνο** το/τα "
+"module(s) που απέτυχαν, και μόνο αν ο loader έχει φορτώσει τα module(s) αυτά "
+"ρητά."
 
 #: reference/import.rst:474
 msgid ""
 "A :exc:`DeprecationWarning` is raised when ``exec_module()`` is defined but "
 "``create_module()`` is not."
 msgstr ""
+"Γίνεται raise η :exc:`DeprecationWarning` όταν ορίζεται η ``exec_module()`` "
+"αλλά δεν ορίζεται η ``create_module()``."
 
 #: reference/import.rst:478
 msgid ""
 "An :exc:`ImportError` is raised when ``exec_module()`` is defined but "
 "``create_module()`` is not."
 msgstr ""
+"Γίνεται raise το :exc:`ImportError` όταν ορίζεται η ``exec_module()`` αλλά "
+"δεν ορίζεται η ``create_module()``."
 
 #: reference/import.rst:482
 msgid "Use of ``load_module()`` will raise :exc:`ImportWarning`."
-msgstr ""
+msgstr "Η χρήση της ``load_module()`` θα κάνει raise την :exc:`ImportWarning`."
 
 #: reference/import.rst:486
 msgid "Submodules"
-msgstr ""
+msgstr "Submodules"
 
 #: reference/import.rst:488
 msgid ""
@@ -668,6 +1013,13 @@ msgid ""
 "``spam.foo``, ``spam`` will have an attribute ``foo`` which is bound to the "
 "submodule.  Let's say you have the following directory structure::"
 msgstr ""
+"Όταν ένα submodule φορτώνεται με οποιονδήποτε μηχανισμό (π.χ. ``importlib`` "
+"APIs, τις δηλώσεις ``import`` ή ``import-from``, ή την ενσωματωμένη "
+"``__import__()``), δημιουργείται μια δέσμευση στο namespace του γονικού "
+"module προς το αντικείμενο του submodule. Για παράδειγμα, αν το πακέτο "
+"``spam`` έχει submodule ``foo``, μετά την εισαγωγή του ``spam.foo``, το "
+"``spam`` θα έχει ένα χαρακτηριστικό ``foo`` που είναι δεσμευμένο στο "
+"submodule. Ας πούμε ότι έχετε την ακόλουθη δομή φακέλων::"
 
 #: reference/import.rst:495
 msgid ""
@@ -675,20 +1027,25 @@ msgid ""
 "    __init__.py\n"
 "    foo.py"
 msgstr ""
+"spam/\n"
+"    __init__.py\n"
+"    foo.py"
 
 #: reference/import.rst:499
 msgid "and ``spam/__init__.py`` has the following line in it::"
-msgstr ""
+msgstr "και το ``spam/__init__.py`` περιέχει την ακόλουθη γραμμή::"
 
 #: reference/import.rst:501
 msgid "from .foo import Foo"
-msgstr ""
+msgstr "from .foo import Foo"
 
 #: reference/import.rst:503
 msgid ""
 "then executing the following puts name bindings for ``foo`` and ``Foo`` in "
 "the ``spam`` module::"
 msgstr ""
+"τότε, η εκτέλεση των παρακάτω δημιουργεί δεσμεύσεις ονομάτων για τα ``foo`` "
+"και ``Foo`` στο module ``spam``::"
 
 #: reference/import.rst:506
 msgid ""
@@ -698,6 +1055,11 @@ msgid ""
 ">>> spam.Foo\n"
 "<class 'spam.foo.Foo'>"
 msgstr ""
+">>> import spam\n"
+">>> spam.foo\n"
+"<module 'spam.foo' from '/tmp/imports/spam/foo.py'>\n"
+">>> spam.Foo\n"
+"<class 'spam.foo.Foo'>"
 
 #: reference/import.rst:512
 msgid ""
@@ -707,10 +1069,16 @@ msgid ""
 "foo']`` (as you would after the above import), the latter must appear as the "
 "``foo`` attribute of the former."
 msgstr ""
+"Με δεδομένους τους γνώριμους κανόνες δέσμευσης ονομάτων της Python, αυτό "
+"μπορεί να φαίνεται παράξενο, αλλά στην πραγματικότητα είναι θεμελιώδες "
+"χαρακτηριστικό του συστήματος εισαγωγής. Η αμετάβλητη συνθήκη είναι ότι, αν "
+"έχετε ``sys.modules['spam']`` και ``sys.modules['spam.foo']`` (όπως θα "
+"είχατε μετά την παραπάνω εισαγωγή), το δεύτερο πρέπει να εμφανίζεται ως το "
+"χαρακτηριστικό ``foo`` του πρώτου."
 
 #: reference/import.rst:521
 msgid "Module specs"
-msgstr ""
+msgstr "Module specs"
 
 #: reference/import.rst:523
 msgid ""
@@ -719,6 +1087,11 @@ msgid ""
 "modules.  The purpose of a module's spec is to encapsulate this import-"
 "related information on a per-module basis."
 msgstr ""
+"Ο μηχανισμός εισαγωγής χρησιμοποιεί ποικιλία πληροφοριών για κάθε module "
+"κατά την εισαγωγή, ειδικά πριν τη φόρτωση. Οι περισσότερες από αυτές τις "
+"πληροφορίες είναι κοινές για όλα τα modules. Ο σκοπός του spec ενός module "
+"είναι να ενθυλακώσει αυτή την πληροφορία που σχετίζεται με την εισαγωγή, σε "
+"βάση ανά module."
 
 #: reference/import.rst:528
 msgid ""
@@ -728,6 +1101,11 @@ msgid ""
 "machinery to perform the boilerplate operations of loading, whereas without "
 "a module spec the loader had that responsibility."
 msgstr ""
+"Η χρήση ενός spec κατά την εισαγωγή επιτρέπει τη μεταφορά κατάστασης μεταξύ "
+"των συστατικών του συστήματος εισαγωγής, π.χ. μεταξύ του finder που "
+"δημιουργεί το module spec και του loader που το εκτελεί. Το σημαντικότερο "
+"είναι ότι επιτρέπει στον μηχανισμό εισαγωγής να εκτελεί τις τυποποιημένες "
+"λειτουργίες φόρτωσης, ενώ χωρίς module spec αυτή η ευθύνη ανήκε στον loader."
 
 #: reference/import.rst:534
 msgid ""
@@ -736,16 +1114,23 @@ msgid ""
 "interpreter startup <programs>`. The one exception is ``__main__``, where :"
 "attr:`!__spec__` is :ref:`set to None in some cases <main_spec>`."
 msgstr ""
+"Το spec του module εκτίθεται ως :attr:`module.__spec__`. Η κατάλληλη ρύθμιση "
+"του :attr:`!__spec__` ισχύει εξίσου για :ref:`modules που αρχικοποιούνται "
+"κατά την εκκίνηση του διερμηνέα <programs>`. Η μόνη εξαίρεση είναι το "
+"``__main__``, όπου το :attr:`!__spec__` :ref:`τίθεται σε None σε ορισμένες "
+"περιπτώσεις <main_spec>`."
 
 #: reference/import.rst:540
 msgid ""
 "See :class:`~importlib.machinery.ModuleSpec` for details on the contents of "
 "the module spec."
 msgstr ""
+"Δείτε την :class:`~importlib.machinery.ModuleSpec` για λεπτομέρειες σχετικά "
+"με τα περιεχόμενα του module spec."
 
 #: reference/import.rst:548
 msgid "__path__ attributes on modules"
-msgstr ""
+msgstr "Χαρακτηριστικά __path__ στα modules"
 
 #: reference/import.rst:550
 msgid ""
@@ -754,6 +1139,10 @@ msgid ""
 "submodules will be found. By definition, if a module has a :attr:`!__path__` "
 "attribute, it is a :term:`package`."
 msgstr ""
+"Το χαρακτηριστικό :attr:`~module.__path__` θα πρέπει να είναι μια "
+"(ενδεχομένως κενή) :term:`sequence` από συμβολοσειρές που απαριθμούν τις "
+"τοποθεσίες όπου θα βρεθούν τα submodules του πακέτου. Εξ ορισμού, αν ένα "
+"module έχει χαρακτηριστικό :attr:`!__path__`, τότε είναι :term:`package`."
 
 #: reference/import.rst:555
 msgid ""
@@ -763,6 +1152,11 @@ msgid ""
 "during import. However, :attr:`!__path__` is typically much more constrained "
 "than :data:`!sys.path`."
 msgstr ""
+"Το χαρακτηριστικό :attr:`~module.__path__` ενός πακέτου χρησιμοποιείται κατά "
+"την εισαγωγή των subpackages του. Μέσα στον μηχανισμό εισαγωγής, λειτουργεί "
+"παρόμοια με το :data:`sys.path`, δηλαδή παρέχει μια λίστα τοποθεσιών στις "
+"οποίες αναζητούνται modules κατά την εισαγωγή. Ωστόσο, το :attr:`!__path__` "
+"είναι συνήθως πολύ πιο περιορισμένο από το :data:`!sys.path`."
 
 #: reference/import.rst:562
 msgid ""
@@ -770,6 +1164,10 @@ msgid ""
 "__path__`. :data:`sys.path_hooks` (described below) are consulted when "
 "traversing a package's :attr:`!__path__`."
 msgstr ""
+"Οι ίδιοι κανόνες που ισχύουν για το :data:`sys.path` ισχύουν επίσης και για "
+"το :attr:`!__path__` ενός πακέτου. Τα :data:`sys.path_hooks` (που "
+"περιγράφονται παρακάτω) λαμβάνονται υπόψη κατά τη διάσχιση του :attr:`!"
+"__path__` ενός πακέτου."
 
 #: reference/import.rst:566
 msgid ""
@@ -780,10 +1178,17 @@ msgid ""
 "containing only :attr:`!__path__` manipulation code; the import machinery "
 "automatically sets :attr:`!__path__` correctly for the namespace package."
 msgstr ""
+"Το αρχείο ``__init__.py`` ενός πακέτου μπορεί να ορίζει ή να τροποποιεί το "
+"χαρακτηριστικό :attr:`~module.__path__` του πακέτου, και αυτός ήταν συνήθως "
+"ο τρόπος με τον οποίο υλοποιούνταν τα namespace πακέτα πριν το :pep:`420`. "
+"Με την υιοθέτηση του :pep:`420`, τα namespace πακέτα δεν χρειάζεται πλέον να "
+"παρέχουν αρχεία ``__init__.py`` που περιέχουν μόνο κώδικα χειρισμού του :"
+"attr:`!__path__`· ο μηχανισμός εισαγωγής ορίζει αυτόματα σωστά το :attr:`!"
+"__path__` για το namespace πακέτο."
 
 #: reference/import.rst:575
 msgid "Module reprs"
-msgstr ""
+msgstr "Reprs των modules"
 
 #: reference/import.rst:577
 msgid ""
@@ -791,6 +1196,9 @@ msgid ""
 "attributes set above, and in the module's spec, you can more explicitly "
 "control the repr of module objects."
 msgstr ""
+"Από προεπιλογή, όλα τα modules έχουν ένα χρησιμοποιήσιμο repr· ωστόσο, "
+"ανάλογα με τα χαρακτηριστικά που ορίζονται παραπάνω και στο spec του module, "
+"μπορείτε να ελέγχετε πιο ρητά το repr των αντικειμένων module."
 
 #: reference/import.rst:581
 msgid ""
@@ -801,10 +1209,16 @@ msgid ""
 "__file__``, and ``module.__loader__`` as input into the repr, with defaults "
 "for whatever information is missing."
 msgstr ""
+"Αν το module έχει spec (``__spec__``), ο μηχανισμός εισαγωγής θα προσπαθήσει "
+"να παράγει repr από αυτό. Αν αυτό αποτύχει ή δεν υπάρχει spec, το σύστημα "
+"εισαγωγής θα δημιουργήσει ένα προεπιλεγμένο repr χρησιμοποιώντας όποια "
+"πληροφορία είναι διαθέσιμη στο module. Θα προσπαθήσει να χρησιμοποιήσει τα "
+"``module.__name__``, ``module.__file__`` και ``module.__loader__`` ως είσοδο "
+"για το repr, με προεπιλογές για οποιαδήποτε πληροφορία λείπει."
 
 #: reference/import.rst:588
 msgid "Here are the exact rules used:"
-msgstr ""
+msgstr "Ακολουθούν οι ακριβείς κανόνες που χρησιμοποιούνται:"
 
 #: reference/import.rst:590
 msgid ""
@@ -812,22 +1226,31 @@ msgid ""
 "used to generate the repr.  The \"name\", \"loader\", \"origin\", and "
 "\"has_location\" attributes are consulted."
 msgstr ""
+"Αν το module έχει χαρακτηριστικό ``__spec__``, οι πληροφορίες στο spec "
+"χρησιμοποιούνται για να παραχθεί το repr. Λαμβάνονται υπόψη τα "
+"χαρακτηριστικά \"name\", \"loader\", \"origin\" και \"has_location\"."
 
 #: reference/import.rst:594
 msgid ""
 "If the module has a ``__file__`` attribute, this is used as part of the "
 "module's repr."
 msgstr ""
+"Αν το module έχει χαρακτηριστικό ``__file__``, αυτό χρησιμοποιείται ως μέρος "
+"του repr του module."
 
 #: reference/import.rst:597
 msgid ""
 "If the module has no ``__file__`` but does have a ``__loader__`` that is not "
 "``None``, then the loader's repr is used as part of the module's repr."
 msgstr ""
+"Αν το module δεν έχει ``__file__`` αλλά έχει ``__loader__`` που δεν είναι "
+"``None``, τότε το repr του loader χρησιμοποιείται ως μέρος του repr του "
+"module."
 
 #: reference/import.rst:600
 msgid "Otherwise, just use the module's ``__name__`` in the repr."
 msgstr ""
+"Διαφορετικά, χρησιμοποιείται απλώς το ``__name__`` του module στο repr."
 
 #: reference/import.rst:602
 msgid ""
@@ -835,10 +1258,13 @@ msgid ""
 "removed in Python 3.12 and is no longer called during the resolution of a "
 "module's repr."
 msgstr ""
+"Η χρήση της :meth:`!module_repr`, η οποία ήταν δηλωμένη ως απαρχαιωμένη από "
+"την Python 3.4, αφαιρέθηκε στην Python 3.12 και δεν καλείται πλέον κατά την "
+"επίλυση του repr ενός module."
 
 #: reference/import.rst:610
 msgid "Cached bytecode invalidation"
-msgstr ""
+msgstr "Ακύρωση cached bytecode"
 
 #: reference/import.rst:612
 msgid ""
@@ -849,6 +1275,14 @@ msgid ""
 "cache file by checking the stored metadata in the cache file against the "
 "source's metadata."
 msgstr ""
+"Πριν η Python φορτώσει cached bytecode από ένα αρχείο ``.pyc``, ελέγχει αν η "
+"προσωρινή μνήμη είναι ενημερωμένη σε σχέση με το πηγαίο αρχείο ``.py``. Από "
+"προεπιλογή, η Python το κάνει αυτό αποθηκεύοντας τη χρονική σήμανση της "
+"τελευταίας τροποποίησης και το μέγεθος του πηγαίου αρχείου στο αρχείο "
+"προσωρινής μνήμης κατά την εγγραφή του. Κατά το χρόνο εκτέλεσης, το σύστημα "
+"εισαγωγής επικυρώνει το αρχείο προσωρινής μνήμης ελέγχοντας τα αποθηκευμένα "
+"μεταδεδομένα του αρχείου προσωρινής μνήμης σε σχέση με τα μεταδεδομένα του "
+"πηγαίου αρχείου."
 
 #: reference/import.rst:619
 msgid ""
@@ -863,16 +1297,31 @@ msgid ""
 "Hash-based ``.pyc`` files validation behavior may be overridden with the :"
 "option:`--check-hash-based-pycs` flag."
 msgstr ""
+"Η Python υποστηρίζει επίσης αρχεία προσωρινής μνήμης βασισμένα σε hash, τα "
+"οποία αποθηκεύουν ένα hash του περιεχομένου του πηγαίου αρχείου αντί για τα "
+"μεταδεδομένα του. Υπάρχουν δύο παραλλαγές των ``.pyc`` αρχείων βασισμένων σε "
+"hash: checked και unchecked. Για τα checked ``.pyc`` αρχεία που βασίζονται "
+"σε hash, η Python επικυρώνει το αρχείο προσωρινής μνήμης δημιουργώντας hash "
+"του πηγαίου αρχείου και συγκρίνοντας το αποτέλεσμα με το hash στο αρχείο "
+"προσωρινής μνήμης. Αν ένα checked αρχείο προσωρινής μνήμης βασισμένο σε hash "
+"βρεθεί μη έγκυρο, η Python το αναδημιουργεί και γράφει ένα νέο checked "
+"αρχείο προσωρινής μνήμης βασισμένο σε hash. Για τα unchecked ``.pyc`` αρχεία "
+"βασισμένα σε hash, η Python απλώς θεωρεί ότι το αρχείο προσωρινής μνήμης "
+"είναι έγκυρο αν υπάρχει. Η συμπεριφορά επικύρωσης των  ``.pyc`` αρχείων "
+"βασισμένων σε hash μπορεί να υπερκαλυφθεί με τη σημαία :option:`--check-hash-"
+"based-pycs`."
 
 #: reference/import.rst:630
 msgid ""
 "Added hash-based ``.pyc`` files. Previously, Python only supported timestamp-"
 "based invalidation of bytecode caches."
 msgstr ""
+"Προστέθηκαν``.pyc`` αρχεία βασισμένα σε hash. Προηγουμένως, η Python "
+"υποστήριζε μόνο ακύρωση των bytecode caches με βάση χρονικές σημάνσεις."
 
 #: reference/import.rst:636
 msgid "The Path Based Finder"
-msgstr ""
+msgstr "Finder βασισμένος στη διαδρομή"
 
 #: reference/import.rst:641
 msgid ""
@@ -882,6 +1331,12 @@ msgid ""
 "contains a list of :term:`path entries <path entry>`.  Each path entry names "
 "a location to search for modules."
 msgstr ""
+"Όπως αναφέρθηκε προηγουμένως, η Python συνοδεύεται από αρκετούς "
+"προεπιλεγμένους meta path finders. Ένας από αυτούς, που ονομάζεται :term:"
+"`path based finder` (:class:`~importlib.machinery.PathFinder`), αναζητά σε "
+"ένα :term:`import path`, το οποίο περιέχει μια λίστα από :term:`path entries "
+"<path entry>`. Κάθε path entry ονομάζει μια τοποθεσία όπου θα αναζητηθούν "
+"modules."
 
 #: reference/import.rst:647
 msgid ""
@@ -889,6 +1344,10 @@ msgid ""
 "it traverses the individual path entries, associating each of them with a "
 "path entry finder that knows how to handle that particular kind of path."
 msgstr ""
+"Ο ίδιος ο path based finder δεν «γνωρίζει» πώς να εισάγει οτιδήποτε. Αντ’ "
+"αυτού, διασχίζει τις επιμέρους καταχωρήσεις διαδρομής, συσχετίζοντας το "
+"καθένα με έναν finder καταχώρησης διαδρομής που γνωρίζει πώς να χειριστεί "
+"αυτόν τον συγκεκριμένο τύπο διαδρομής."
 
 #: reference/import.rst:651
 msgid ""
@@ -900,6 +1359,14 @@ msgid ""
 "also handle loading all of these file types (other than shared libraries) "
 "from zipfiles."
 msgstr ""
+"Το προεπιλεγμένο σύνολο finders καταχώρησης διαδρομής υλοποιεί όλη τη "
+"σημασιολογία για την εύρεση των modules στο σύστημα αρχείων, χειριζόμενο "
+"ειδικούς τύπους αρχείων όπως πηγαίο κώδικα Python (αρχεία ``.py``), byte "
+"code Python (αρχεία ``.pyc``) και κοινόχρηστες βιβλιοθήκες (π.χ. αρχεία ``."
+"so``). Όταν υποστηρίζεται από το module :mod:`zipimport` της τυπικής "
+"βιβλιοθήκης, οι προεπιλεγμένοι finders καταχώρησης διαδρομής χειρίζονται "
+"επίσης τη φόρτωση όλων αυτών των τύπων αρχείων (εκτός από κοινόχρηστες "
+"βιβλιοθήκες) από zipfiles."
 
 #: reference/import.rst:658
 msgid ""
@@ -907,6 +1374,10 @@ msgid ""
 "to URLs, database queries, or any other location that can be specified as a "
 "string."
 msgstr ""
+"Οι καταχωρήσεις διαδρομής δεν χρειάζεται να περιορίζονται σε τοποθεσίες του "
+"συστήματος αρχείων. Μπορούν να αναφέρονται σε URLs, σε ερωτήματα βάσεων "
+"δεδομένων ή σε οποιαδήποτε άλλη τοποθεσία που μπορεί να εκφραστεί ως "
+"συμβολοσειρά."
 
 #: reference/import.rst:662
 msgid ""
@@ -918,6 +1389,14 @@ msgid ""
 "protocol described below, which was then used to get a loader for the module "
 "from the web."
 msgstr ""
+"Ο path based finder παρέχει επιπλέον hooks και πρωτόκολλα ώστε να μπορείτε "
+"να επεκτείνετε και να προσαρμόσετε τους τύπους των καταχωρήσεων διαδρομής "
+"που μπορούν να αναζητηθούν. Για παράδειγμα, αν θέλατε να υποστηρίξετε "
+"καταχωρήσεις διαδρομής ως δικτυακά URLs, θα μπορούσατε να γράψετε ένα hook "
+"που υλοποιεί HTTP σημασιολογία για να βρίσκει modules στο διαδίκτυο. Αυτό το "
+"hook (ένα callable) θα επέστρεφε έναν :term:`path entry finder` που "
+"υποστηρίζει το πρωτόκολλο που περιγράφεται παρακάτω, και στη συνέχεια θα "
+"χρησιμοποιούνταν για να ληφθεί ένας loader για το module από το διαδίκτυο."
 
 #: reference/import.rst:670
 msgid ""
@@ -929,6 +1408,14 @@ msgid ""
 "In particular, meta path finders operate at the beginning of the import "
 "process, as keyed off the :data:`sys.meta_path` traversal."
 msgstr ""
+"Μια προειδοποίηση: αυτή η ενότητα και η προηγούμενη χρησιμοποιούν και οι δύο "
+"τον όρο *finder*, διακρίνοντάς τους με τους όρους :term:`meta path finder` "
+"και :term:`path entry finder`. Αυτοί οι δύο τύποι finders είναι πολύ "
+"παρόμοιοι, υποστηρίζουν παρόμοια πρωτόκολλα και λειτουργούν με παρόμοιο "
+"τρόπο κατά τη διαδικασία εισαγωγής, αλλά είναι σημαντικό να θυμάστε ότι "
+"έχουν λεπτές διαφορές. Συγκεκριμένα, οι meta path finders λειτουργούν στην "
+"αρχή της διαδικασίας εισαγωγής, όπως καθορίζεται από τη διάσχιση του :data:"
+"`sys.meta_path`."
 
 #: reference/import.rst:678
 msgid ""
@@ -937,10 +1424,14 @@ msgid ""
 "removed from :data:`sys.meta_path`, none of the path entry finder semantics "
 "would be invoked."
 msgstr ""
+"Αντίθετα, οι path entry finders είναι κατά κάποιον τρόπο μια λεπτομέρεια "
+"υλοποίησης του path based finder και, στην πραγματικότητα, αν ο path based "
+"finder αφαιρούνταν από το :data:`sys.meta_path`, δεν θα ενεργοποιούνταν "
+"καθόλου η σημασιολογία των finders καταχώρησης διαδρομής."
 
 #: reference/import.rst:685
 msgid "Path entry finders"
-msgstr ""
+msgstr "Finders καταχώρησης διαδρομής (Path entry finders)"
 
 #: reference/import.rst:693
 msgid ""
@@ -949,6 +1440,11 @@ msgid ""
 "entry`.  Most path entries name locations in the file system, but they need "
 "not be limited to this."
 msgstr ""
+"Ο :term:`path based finder` είναι υπεύθυνος για την εύρεση και φόρτωση "
+"Python modules και πακέτων των οποίων η τοποθεσία καθορίζεται με μία "
+"συμβολοσειρά :term:`path entry`. Οι περισσότερες καταχωρήσεις διαδρομής "
+"(path entries) δηλώνουν τοποθεσίες στο σύστημα αρχείων, αλλά δεν "
+"περιορίζονται απαραίτητα σε αυτό."
 
 #: reference/import.rst:698
 msgid ""
@@ -957,6 +1453,11 @@ msgid ""
 "however it exposes additional hooks that can be used to customize how "
 "modules are found and loaded from the :term:`import path`."
 msgstr ""
+"Ως ένα meta path finder, ο :term:`path based finder` υλοποιεί το πρωτόκολλο :"
+"meth:`~importlib.abc.MetaPathFinder.find_spec` που περιγράφηκε προηγουμένως, "
+"ωστόσο εκθέτει επιπλέον hooks που μπορούν να χρησιμοποιηθούν για να "
+"προσαρμόσετε το πώς βρίσκονται και φορτώνονται τα modules από το :term:"
+"`import path`."
 
 #: reference/import.rst:703
 msgid ""
@@ -965,6 +1466,11 @@ msgid ""
 "``__path__`` attributes on package objects are also used.  These provide "
 "additional ways that the import machinery can be customized."
 msgstr ""
+"Τρεις μεταβλητές χρησιμοποιούνται από τον :term:`path based finder`: :data:"
+"`sys.path`, :data:`sys.path_hooks` και :data:`sys.path_importer_cache`. "
+"Επίσης χρησιμοποιούνται τα χαρακτηριστικά ``__path__`` σε αντικείμενα "
+"πακέτου. Αυτά παρέχουν επιπλέον τρόπους παραμετροποίησης του μηχανισμού "
+"εισαγωγής."
 
 #: reference/import.rst:708
 msgid ""
@@ -977,6 +1483,15 @@ msgid ""
 "database queries.  Only strings should be present on :data:`sys.path`; all "
 "other data types are ignored."
 msgstr ""
+"Το :data:`sys.path` περιέχει μια λίστα από συμβολοσειρές που παρέχουν "
+"τοποθεσίες αναζήτησης για modules και πακέτα. Αρχικοποιείται από τη "
+"μεταβλητή περιβάλλοντος :envvar:`PYTHONPATH` και από διάφορες άλλες "
+"προεπιλογές που εξαρτώνται από την εγκατάσταση και την υλοποίηση. Οι "
+"εγγραφές στο :data:`sys.path` μπορεί να είναι φάκελοι στο σύστημα αρχείων, "
+"zip αρχεία και ενδεχομένως άλλες «τοποθεσίες» (βλ. το module :mod:`site`) "
+"στις οποίες πρέπει να γίνει αναζήτηση για modules, όπως URLs ή ερωτήματα "
+"βάσεων δεδομένων. Στο :data:`sys.path` θα πρέπει να υπάρχουν μόνο "
+"συμβολοσειρές· όλοι οι άλλοι τύποι δεδομένων αγνοούνται."
 
 #: reference/import.rst:717
 msgid ""
@@ -989,6 +1504,15 @@ msgid ""
 "within that package.  If the ``path`` argument is ``None``, this indicates a "
 "top level import and :data:`sys.path` is used."
 msgstr ""
+"Ο :term:`path based finder` είναι :term:`meta path finder`, επομένως ο "
+"μηχανισμός εισαγωγής ξεκινά την αναζήτηση στο :term:`import path` καλώντας "
+"τη μέθοδο :meth:`~importlib.machinery.PathFinder.find_spec` του path based "
+"finder, όπως περιγράφηκε προηγουμένως. Όταν δοθεί το όρισμα ``path`` στη :"
+"meth:`~importlib.machinery.PathFinder.find_spec`, αυτό θα είναι μια λίστα "
+"από συμβολοσειρές διαδρομής προς διάσχιση - συνήθως το χαρακτηριστικό "
+"``__path__`` ενός πακέτου για εισαγωγή μέσα σε εκείνο το πακέτο. Αν το "
+"όρισμα ``path`` είναι ``None``, αυτό υποδηλώνει εισαγωγή ανωτέρου επιπέδου "
+"και χρησιμοποιείται το :data:`sys.path`."
 
 #: reference/import.rst:726
 msgid ""
@@ -1005,6 +1529,20 @@ msgid ""
 "cache entries from :data:`sys.path_importer_cache` forcing the path based "
 "finder to perform the path entry search again."
 msgstr ""
+"Ο path based finder επαναλαμβάνεται πάνω σε κάθε εγγραφή στη διαδρομή "
+"αναζήτησης και, για καθεμία, αναζητά έναν κατάλληλο :term:`path entry "
+"finder` (:class:`~importlib.abc.PathEntryFinder`) για τη συγκεκριμένη "
+"καταχώρηση διαδρομής. Επειδή αυτό μπορεί να είναι δαπανηρή λειτουργία (π.χ. "
+"μπορεί να υπάρχει overhead από κλήσεις ``stat()`` για αυτή την αναζήτηση), ο "
+"path based finder διατηρεί μια προσωρινή μνήμη που αντιστοιχίζει "
+"καταχωρήσεις διαδρομής σε path entry finders. Αυτή η προσωρινή μνήμη "
+"διατηρείται στο :data:`sys.path_importer_cache` (παρά το όνομα, αυτή η "
+"προσωρινή μνήμη αποθηκεύει αντικείμενα finder και όχι μόνο :term:`importer` "
+"αντικείμενα). Με αυτόν τον τρόπο, η ακριβή αναζήτηση για τον :term:`path "
+"entry` μιας συγκεκριμένης τοποθεσίας :term:`path entry finder` χρειάζεται να "
+"γίνει μόνο μία φορά. Ο κώδικας του χρήστη μπορεί να αφαιρεί εγγραφές από το :"
+"data:`sys.path_importer_cache`, αναγκάζοντας τον path based finder να "
+"εκτελέσει ξανά την αναζήτηση."
 
 #: reference/import.rst:739
 msgid ""
@@ -1021,6 +1559,20 @@ msgid ""
 "file system encoding, UTF-8, or something else), and if the hook cannot "
 "decode the argument, it should raise :exc:`ImportError`."
 msgstr ""
+"Αν η καταχώρηση διαδρομής δεν υπάρχει στην προσωρινή μνήμη, ο path based "
+"finder επαναλαμβάνεται πάνω σε κάθε callable στο :data:`sys.path_hooks`. "
+"Κάθε :term:`path entry hook <path entry hook>` σε αυτή τη λίστα καλείται με "
+"ένα μόνο όρισμα: την καταχώρηση διαδρομής που θα αναζητηθεί. Αυτό το "
+"callable μπορεί είτε να επιστρέψει έναν :term:`path entry finder` που μπορεί "
+"να χειριστεί την καταχώρηση διαδρομής, είτε να κάνει raise ένα :exc:"
+"`ImportError`. Το :exc:`ImportError` χρησιμοποιείται από τον path based "
+"finder για να δηλώσει ότι το hook δεν μπορεί να βρει :term:`path entry "
+"finder` για το συγκεκριμένο :term:`path entry`. Η εξαίρεση αγνοείται και η "
+"επανάληψη στο :term:`import path` συνεχίζεται. Το hook θα πρέπει να αναμένει "
+"είτε συμβολοσειρά είτε αντικείμενο bytes· η κωδικοποίηση των bytes "
+"αντικειμένων επαφίεται στο hook (π.χ. μπορεί να είναι μία κωδικοποίηση του "
+"συστήματος αρχείων, UTF-8 ή κάτι άλλο), και αν το hook δεν μπορεί να κάνει "
+"αποκωδικοποίηση το όρισμα, θα πρέπει να κάνει raise ένα :exc:`ImportError`."
 
 #: reference/import.rst:753
 msgid ""
@@ -1031,6 +1583,12 @@ msgid ""
 "entry) and return ``None``, indicating that this :term:`meta path finder` "
 "could not find the module."
 msgstr ""
+"Αν η επανάληψη στο :data:`sys.path_hooks` ολοκληρωθεί χωρίς να επιστραφεί :"
+"term:`path entry finder`, τότε η μέθοδος :meth:`~importlib.machinery."
+"PathFinder.find_spec` του path based finder θα αποθηκεύσει ``None`` στο :"
+"data:`sys.path_importer_cache` (για να δηλώσει ότι δεν υπάρχει finder για "
+"αυτή την καταχώρηση διαδρομής) και θα επιστρέψει ``None``, δηλώνοντας ότι "
+"αυτός ο :term:`meta path finder` δεν μπόρεσε να βρει το module."
 
 #: reference/import.rst:760
 msgid ""
@@ -1039,6 +1597,10 @@ msgid ""
 "used to ask the finder for a module spec, which is then used when loading "
 "the module."
 msgstr ""
+"Αν *επιστραφεί* ένας :term:`path entry finder` από κάποιο από τα :term:`path "
+"entry hook` callables στο :data:`sys.path_hooks`, τότε χρησιμοποιείται το "
+"ακόλουθο πρωτόκολλο για να ζητηθεί από τον finder ένα module spec, το οποίο "
+"στη συνέχεια χρησιμοποιείται κατά τη φόρτωση του module."
 
 #: reference/import.rst:765
 msgid ""
@@ -1051,10 +1613,19 @@ msgid ""
 "meth:`importlib.machinery.PathFinder.find_spec` will be the actual current "
 "working directory and not the empty string."
 msgstr ""
+"Ο τρέχων κατάλογος εργασίας -- που δηλώνεται με κενή συμβολοσειρά -- "
+"αντιμετωπίζεται λίγο διαφορετικά από τις άλλες εγγραφές στο :data:`sys."
+"path`. Πρώτον, αν δεν μπορεί να προσδιοριστεί ή αν διαπιστωθεί ότι δεν "
+"υπάρχει, δεν αποθηκεύεται τιμή στο :data:`sys.path_importer_cache`. "
+"Δεύτερον, η τιμή για τον τρέχοντα κατάλογο εργασίας αναζητείται εκ νέου για "
+"κάθε αναζήτηση module. Τρίτον, η διαδρομή που χρησιμοποιείται για το :data:"
+"`sys.path_importer_cache` και επιστρέφεται από τη :meth:`importlib.machinery."
+"PathFinder.find_spec` θα είναι ο πραγματικός τρέχων κατάλογος εργασίας και "
+"όχι η κενή συμβολοσειρά."
 
 #: reference/import.rst:775
 msgid "Path entry finder protocol"
-msgstr ""
+msgstr "Πρωτόκολλο path entry finder"
 
 #: reference/import.rst:777
 msgid ""
@@ -1062,6 +1633,10 @@ msgid ""
 "contribute portions to namespace packages, path entry finders must implement "
 "the :meth:`~importlib.abc.PathEntryFinder.find_spec` method."
 msgstr ""
+"Για να υποστηρίζεται η εισαγωγή των modules και των αρχικοποιημένων πακέτων, "
+"καθώς και για τη συνεισφορά portions σε namespace πακέτα, οι path entry "
+"finders πρέπει να υλοποιούν τη μέθοδο :meth:`~importlib.abc.PathEntryFinder."
+"find_spec`."
 
 #: reference/import.rst:781
 msgid ""
@@ -1070,6 +1645,11 @@ msgid ""
 "module.  ``find_spec()`` returns a fully populated spec for the module. This "
 "spec will always have \"loader\" set (with one exception)."
 msgstr ""
+"Η :meth:`~importlib.abc.PathEntryFinder.find_spec` παίρνει δύο ορίσματα: το "
+"πλήρως αναγνωρισμένο όνομα του module που εισάγεται και το (προαιρετικό) "
+"target module. Η ``find_spec()`` επιστρέφει ένα πλήρως συμπληρωμένο spec για "
+"το module. Αυτό το spec θα έχει πάντα ορισμένο το \"loader\" (με μία "
+"εξαίρεση)."
 
 #: reference/import.rst:786
 msgid ""
@@ -1077,6 +1657,9 @@ msgid ""
 "term:`portion`, the path entry finder sets ``submodule_search_locations`` to "
 "a list containing the portion."
 msgstr ""
+"Για να δηλώσει στον μηχανισμό εισαγωγής ότι το spec αναπαριστά ένα "
+"namespace :term:`portion`, ο path entry finder ορίζει το "
+"``submodule_search_locations`` σε μια λίστα που περιέχει το portion."
 
 #: reference/import.rst:790
 msgid ""
@@ -1084,6 +1667,9 @@ msgid ""
 "find_loader` and :meth:`!find_module`, both of which are now deprecated, but "
 "will be used if ``find_spec()`` is not defined."
 msgstr ""
+"Η :meth:`~importlib.abc.PathEntryFinder.find_spec` αντικατέστησε τις :meth:`!"
+"find_loader` και :meth:`!find_module`, οι οποίες έχουν πλέον χαρακτηριστεί "
+"ως απαρχαιωμένες, αλλά θα χρησιμοποιηθούν αν δεν ορίζεται η ``find_spec()``."
 
 #: reference/import.rst:796
 msgid ""
@@ -1092,6 +1678,11 @@ msgid ""
 "backward compatibility.  However, if ``find_spec()`` is implemented on the "
 "path entry finder, the legacy methods are ignored."
 msgstr ""
+"Παλαιότεροι path entry finders μπορεί να υλοποιούν μία από αυτές τις δύο "
+"απαρχαιωμένες μεθόδους αντί για την ``find_spec()``. Οι μέθοδοι αυτές "
+"εξακολουθούν να γίνονται δεκτές για λόγους συμβατότητας προς τα πίσω. "
+"Ωστόσο, αν ο path entry finder υλοποιεί ``find_spec()``, οι παλιές μέθοδοι "
+"αγνοούνται."
 
 #: reference/import.rst:801
 msgid ""
@@ -1099,6 +1690,10 @@ msgid ""
 "module being imported.  ``find_loader()`` returns a 2-tuple where the first "
 "item is the loader and the second item is a namespace :term:`portion`."
 msgstr ""
+"Η :meth:`!find_loader` παίρνει ένα όρισμα, το πλήρως αναγνωρισμένο όνομα του "
+"module που εισάγεται. Η ``find_loader()`` επιστρέφει ένα tuple όπου το πρώτο "
+"στοιχείο είναι ο loader και το δεύτερο στοιχείο είναι ένα namespace :term:"
+"`portion`."
 
 #: reference/import.rst:806
 msgid ""
@@ -1109,6 +1704,12 @@ msgid ""
 "(they are expected to record the appropriate path information from the "
 "initial call to the path hook)."
 msgstr ""
+"Για συμβατότητα προς τα πίσω με άλλες υλοποιήσεις του πρωτοκόλλου εισαγωγής, "
+"πολλοί path entry finders υποστηρίζουν επίσης την ίδια παραδοσιακή μέθοδο "
+"``find_module()`` που υποστηρίζουν και οι meta path finders. Ωστόσο, οι "
+"μέθοδοι ``find_module()`` των path entry finders δεν καλούνται ποτέ με "
+"όρισμα ``path`` (αναμένεται να έχουν καταγράψει την κατάλληλη πληροφορία "
+"διαδρομής από την αρχική κλήση του path hook)."
 
 #: reference/import.rst:813
 msgid ""
@@ -1118,20 +1719,27 @@ msgid ""
 "entry finder, the import system will always call ``find_loader()`` in "
 "preference to ``find_module()``."
 msgstr ""
+"Η μέθοδος ``find_module()`` στους path entry finders έχει χαρακτηριστεί ως "
+"απαρχαιωμένη, καθώς δεν επιτρέπει στον path entry finder να συνεισφέρει "
+"portions σε namespace πακέτα. Αν ένας path entry finder διαθέτει και "
+"``find_loader()`` και ``find_module()``, το σύστημα εισαγωγής θα καλεί πάντα "
+"την ``find_loader()`` αντί για την ``find_module()``."
 
 #: reference/import.rst:819
 msgid ""
 "Calls to :meth:`!find_module` and :meth:`!find_loader` by the import system "
 "will raise :exc:`ImportWarning`."
 msgstr ""
+"Οι κλήσεις των :meth:`!find_module` και :meth:`!find_loader` από το σύστημα "
+"εισαγωγής θα κάνουν raise μία :exc:`ImportWarning`."
 
 #: reference/import.rst:824
 msgid "``find_module()`` and ``find_loader()`` have been removed."
-msgstr ""
+msgstr "Οι ``find_module()`` και ``find_loader()`` έχουν αφαιρεθεί."
 
 #: reference/import.rst:829
 msgid "Replacing the standard import system"
-msgstr ""
+msgstr "Αντικατάσταση του τυπικού συστήματος εισαγωγής"
 
 #: reference/import.rst:831
 msgid ""
@@ -1139,6 +1747,10 @@ msgid ""
 "delete the default contents of :data:`sys.meta_path`, replacing them "
 "entirely with a custom meta path hook."
 msgstr ""
+"Ο πιο αξιόπιστος μηχανισμός για την αντικατάσταση ολόκληρου του συστήματος "
+"εισαγωγής είναι η διαγραφή των προεπιλεγμένων περιεχομένων του :data:`sys."
+"meta_path`, αντικαθιστώντας τα πλήρως με ένα προσαρμοσμένο hook μετά-"
+"διαδρομής."
 
 #: reference/import.rst:835
 msgid ""
@@ -1148,6 +1760,11 @@ msgid ""
 "also be employed at the module level to only alter the behaviour of import "
 "statements within that module."
 msgstr ""
+"Αν είναι αποδεκτό να αλλάξει μόνο η συμπεριφορά των δηλώσεων εισαγωγής χωρίς "
+"να επηρεαστούν άλλα APIs που προσπελαύνουν το σύστημα εισαγωγής, τότε η "
+"αντικατάσταση της ενσωματωμένης :func:`__import__` μπορεί να είναι αρκετή. "
+"Αυτή η τεχνική μπορεί επίσης να εφαρμοστεί σε επίπεδο module ώστε να αλλάξει "
+"μόνο η συμπεριφορά των δηλώσεων εισαγωγής μέσα σε εκείνο το module."
 
 #: reference/import.rst:841
 msgid ""
@@ -1158,10 +1775,16 @@ msgid ""
 "latter indicates that the meta path search should continue, while raising an "
 "exception terminates it immediately."
 msgstr ""
+"Για να αποτρέψετε επιλεκτικά την εισαγωγή ορισμένων modules από ένα hook "
+"νωρίς στη μεταδιαδρομή (αντί να απενεργοποιήσετε πλήρως το τυπικό σύστημα "
+"εισαγωγής), αρκεί να κάνετε raise το :exc:`ModuleNotFoundError` απευθείας "
+"από τη :meth:`~importlib.abc.MetaPathFinder.find_spec` αντί να επιστρέψετε "
+"``None``. Το ``None`` δηλώνει ότι η αναζήτηση στη μεταδιαδρομή πρέπει να "
+"συνεχιστεί, ενώ η υποβολή αιτήματος εξαίρεσης την τερματίζει άμεσα."
 
 #: reference/import.rst:851
 msgid "Package Relative Imports"
-msgstr ""
+msgstr "Σχετικές εισαγωγές σε πακέτα"
 
 #: reference/import.rst:853
 msgid ""
@@ -1170,6 +1793,11 @@ msgid ""
 "a relative import to the parent(s) of the current package, one level per dot "
 "after the first. For example, given the following package layout::"
 msgstr ""
+"Οι σχετικές εισαγωγές χρησιμοποιούν τελείες στην αρχή. Μια και μόνο τελεία "
+"στην αρχή δηλώνει σχετική εισαγωγή που ξεκινά από το τρέχον πακέτο. Δύο ή "
+"περισσότερες τελείες δηλώνουν σχετική εισαγωγή προς το/τα γονικό/ά του "
+"τρέχοντος πακέτου, ένα επίπεδο ανά τελεία μετά την πρώτη. Για παράδειγμα, με "
+"την ακόλουθη διάταξη πακέτου::"
 
 #: reference/import.rst:858
 msgid ""
@@ -1184,12 +1812,24 @@ msgid ""
 "        moduleZ.py\n"
 "    moduleA.py"
 msgstr ""
+"package/\n"
+"    __init__.py\n"
+"    subpackage1/\n"
+"        __init__.py\n"
+"        moduleX.py\n"
+"        moduleY.py\n"
+"    subpackage2/\n"
+"        __init__.py\n"
+"        moduleZ.py\n"
+"    moduleA.py"
 
 #: reference/import.rst:869
 msgid ""
 "In either ``subpackage1/moduleX.py`` or ``subpackage1/__init__.py``, the "
 "following are valid relative imports::"
 msgstr ""
+"Είτε στο ``subpackage1/moduleX.py`` είτε στο ``subpackage1/__init__.py``, τα "
+"παρακάτω είναι έγκυρες σχετικές εισαγωγές::"
 
 #: reference/import.rst:872
 msgid ""
@@ -1200,6 +1840,12 @@ msgid ""
 "from ..subpackage2.moduleZ import eggs\n"
 "from ..moduleA import foo"
 msgstr ""
+"from .moduleY import spam\n"
+"from .moduleY import spam as ham\n"
+"from . import moduleY\n"
+"from ..subpackage1 import moduleY\n"
+"from ..subpackage2.moduleZ import eggs\n"
+"from ..moduleA import foo"
 
 #: reference/import.rst:879
 msgid ""
@@ -1207,20 +1853,25 @@ msgid ""
 "syntax, but relative imports may only use the second form; the reason for "
 "this is that::"
 msgstr ""
+"Οι απόλυτες εισαγωγές μπορούν να χρησιμοποιούν είτε τη σύνταξη ``import <>`` "
+"είτε τη ``from <> import <>``, αλλά οι σχετικές εισαγωγές μπορούν να "
+"χρησιμοποιούν μόνο τη δεύτερη μορφή· ο λόγος είναι ότι::"
 
 #: reference/import.rst:883
 msgid "import XXX.YYY.ZZZ"
-msgstr ""
+msgstr "import XXX.YYY.ZZZ"
 
 #: reference/import.rst:885
 msgid ""
 "should expose ``XXX.YYY.ZZZ`` as a usable expression, but .moduleY is not a "
 "valid expression."
 msgstr ""
+"θα πρέπει να εκθέτει το ``XXX.YYY.ZZZ`` ως χρησιμοποιήσιμη έκφραση, αλλά το ."
+"moduleY δεν είναι έγκυρη έκφραση."
 
 #: reference/import.rst:892
 msgid "Special considerations for __main__"
-msgstr ""
+msgstr "Ειδικές περιπτώσεις για το __main__"
 
 #: reference/import.rst:894
 msgid ""
@@ -1232,16 +1883,25 @@ msgid ""
 "initialized depends on the flags and other options with which the "
 "interpreter is invoked."
 msgstr ""
+"Το module :mod:`__main__` είναι μια ειδική περίπτωση σε σχέση με το σύστημα "
+"εισαγωγής της Python. Όπως σημειώνεται :ref:`αλλού <programs>`, το "
+"``__main__`` αρχικοποιείται απευθείας κατά την εκκίνηση του διερμηνέα, όπως "
+"και τα :mod:`sys` και :mod:`builtins`. Ωστόσο, σε αντίθεση με αυτά τα δύο, "
+"δεν χαρακτηρίζεται αυστηρά ως ενσωματωμένο module. Αυτό συμβαίνει επειδή ο "
+"τρόπος με τον οποίο αρχικοποιείται το ``__main__`` εξαρτάται από τις σημαίες "
+"και άλλες επιλογές με τις οποίες καλείται ο διερμηνέας."
 
 #: reference/import.rst:905
 msgid "__main__.__spec__"
-msgstr ""
+msgstr "__main__.__spec__"
 
 #: reference/import.rst:907
 msgid ""
 "Depending on how :mod:`__main__` is initialized, ``__main__.__spec__`` gets "
 "set appropriately or to ``None``."
 msgstr ""
+"Ανάλογα με το πώς αρχικοποιείται το :mod:`__main__`, το ``__main__."
+"__spec__`` ορίζεται κατάλληλα ή σε ``None``."
 
 #: reference/import.rst:910
 msgid ""
@@ -1250,6 +1910,10 @@ msgid ""
 "populated when the ``__main__`` module is loaded as part of executing a "
 "directory, zipfile or other :data:`sys.path` entry."
 msgstr ""
+"Όταν η Python ξεκινά με την επιλογή :option:`-m`, το ``__spec__`` ορίζεται "
+"στο module spec του αντίστοιχου module ή πακέτου. Το ``__spec__`` "
+"συμπληρώνεται επίσης όταν το module ``__main__`` φορτώνεται ως μέρος της "
+"εκτέλεσης ενός καταλόγου, zipfile ή άλλης εγγραφής του :data:`sys.path`."
 
 #: reference/import.rst:915
 msgid ""
@@ -1257,22 +1921,25 @@ msgid ""
 "__spec__`` is set to ``None``, as the code used to populate the :mod:"
 "`__main__` does not correspond directly with an importable module:"
 msgstr ""
+"Στις :ref:`υπόλοιπες περιπτώσεις <using-on-interface-options>` το ``__main__."
+"__spec__`` ορίζεται σε ``None``, καθώς ο κώδικας που χρησιμοποιείται για να "
+"γεμίσει το :mod:`__main__` δεν αντιστοιχεί άμεσα σε εισαγόμενο module:"
 
 #: reference/import.rst:919
 msgid "interactive prompt"
-msgstr ""
+msgstr "διαδραστική προτροπή"
 
 #: reference/import.rst:920
 msgid ":option:`-c` option"
-msgstr ""
+msgstr "επιλογή :option:`-c`"
 
 #: reference/import.rst:921
 msgid "running from stdin"
-msgstr ""
+msgstr "εκτέλεση από stdin"
 
 #: reference/import.rst:922
 msgid "running directly from a source or bytecode file"
-msgstr ""
+msgstr "εκτέλεση απευθείας από το αρχείο πηγαίου κώδικα ή bytecode"
 
 #: reference/import.rst:924
 msgid ""
@@ -1281,6 +1948,10 @@ msgid ""
 "the :option:`-m` switch if valid module metadata is desired in :mod:"
 "`__main__`."
 msgstr ""
+"Σημειώστε ότι στην τελευταία περίπτωση το ``__main__.__spec__`` είναι πάντα "
+"``None``, *ακόμη κι αν* το αρχείο θα μπορούσε τεχνικά να εισαχθεί απευθείας "
+"ως module. Χρησιμοποιήστε το switch :option:`-m` αν χρειάζεστε έγκυρα module "
+"μεταδεδομένων στο :mod:`__main__`."
 
 #: reference/import.rst:929
 msgid ""
@@ -1290,10 +1961,16 @@ msgid ""
 "__name__ == \"__main__\":`` checks only execute when the module is used to "
 "populate the ``__main__`` namespace, and not during normal import."
 msgstr ""
+"Σημειώστε επίσης ότι ακόμη κι όταν το ``__main__`` αντιστοιχεί σε εισαγόμενα "
+"module και το ``__main__.__spec__`` ορίζεται ανάλογα, εξακολουθούν να "
+"θεωρούνται *διακριτά* modules. Αυτό οφείλεται στο ότι μπλοκ κώδικα που "
+"προστατεύονται από ελέγχους ``if __name__ == \"__main__\":`` εκτελούνται "
+"μόνο όταν το module χρησιμοποιείται για να γεμίσει το namespace του "
+"``__main__``, και όχι κατά την κανονική εισαγωγή."
 
 #: reference/import.rst:937
 msgid "References"
-msgstr ""
+msgstr "Αναφορές"
 
 #: reference/import.rst:939
 msgid ""
@@ -1302,12 +1979,18 @@ msgid ""
 "packages/>`_ is still available to read, although some details have changed "
 "since the writing of that document."
 msgstr ""
+"Ο μηχανισμός εισαγωγής έχει εξελιχθεί σημαντικά από τα πρώτα χρόνια της "
+"Python. Η αρχική `προδιαγραφή για πακέτα <https://www.python.org/doc/essays/"
+"packages/>`_ είναι ακόμη διαθέσιμη προς ανάγνωση, αν και ορισμένες "
+"λεπτομέρειες έχουν αλλάξει από τότε που γράφτηκε αυτό το κείμενο."
 
 #: reference/import.rst:944
 msgid ""
 "The original specification for :data:`sys.meta_path` was :pep:`302`, with "
 "subsequent extension in :pep:`420`."
 msgstr ""
+"Η αρχική προδιαγραφή για το :data:`sys.meta_path` ήταν το :pep:`302`, με "
+"μεταγενέστερη επέκταση στο :pep:`420`."
 
 #: reference/import.rst:947
 msgid ""
@@ -1315,12 +1998,17 @@ msgid ""
 "Python 3.3.  :pep:`420` also introduced the :meth:`!find_loader` protocol as "
 "an alternative to :meth:`!find_module`."
 msgstr ""
+"Το :pep:`420` εισήγαγε τα :term:`namespace πακέτα <namespace package>` στην "
+"Python 3.3. Το :pep:`420` εισήγαγε επίσης το πρωτόκολλο :meth:`!find_loader` "
+"ως εναλλακτική της :meth:`!find_module`."
 
 #: reference/import.rst:951
 msgid ""
 ":pep:`366` describes the addition of the ``__package__`` attribute for "
 "explicit relative imports in main modules."
 msgstr ""
+"Το :pep:`366` περιγράφει την προσθήκη του χαρακτηριστικού ``__package__`` "
+"για ρητές σχετικές εισαγωγές σε κύρια modules."
 
 #: reference/import.rst:954
 msgid ""
@@ -1328,10 +2016,13 @@ msgid ""
 "proposed ``__name__`` for semantics :pep:`366` would eventually specify for "
 "``__package__``."
 msgstr ""
+"Το :pep:`328` εισήγαγε απόλυτες και ρητές σχετικές εισαγωγές και αρχικά "
+"πρότεινε το ``__name__`` για τη σημασιολογία που το :pep:`366` τελικά όρισε "
+"για το ``__package__``."
 
 #: reference/import.rst:958
 msgid ":pep:`338` defines executing modules as scripts."
-msgstr ""
+msgstr "Το :pep:`338` ορίζει την εκτέλεση modules ως scripts."
 
 #: reference/import.rst:960
 msgid ""
@@ -1341,14 +2032,19 @@ msgid ""
 "of several APIs in the import system and also addition of new methods to "
 "finders and loaders."
 msgstr ""
+"Το :pep:`451` προσθέτει την ενθυλάκωση της κατάστασης εισαγωγής ανά module "
+"σε spec αντικείμενα. Επίσης μεταφέρει το μεγαλύτερο μέρος των τυποποιημένων "
+"ευθυνών των loaders πίσω στον μηχανισμό εισαγωγής. Αυτές οι αλλαγές "
+"επιτρέπουν την απόσυρση αρκετών APIs στο σύστημα εισαγωγής και επίσης την "
+"προσθήκη νέων μεθόδων σε finders και loaders."
 
 #: reference/import.rst:967
 msgid "Footnotes"
-msgstr ""
+msgstr "Υποσημειώσεις"
 
 #: reference/import.rst:968
 msgid "See :class:`types.ModuleType`."
-msgstr ""
+msgstr "Δείτε την :class:`types.ModuleType`."
 
 #: reference/import.rst:970
 msgid ""
@@ -1358,95 +2054,101 @@ msgid ""
 "replace itself in :data:`sys.modules`.  This is implementation-specific "
 "behavior that is not guaranteed to work in other Python implementations."
 msgstr ""
+"Η υλοποίηση του importlib αποφεύγει να χρησιμοποιεί απευθείας την τιμή "
+"επιστροφής. Αντ’ αυτού, λαμβάνει το αντικείμενο module αναζητώντας το όνομα "
+"του module στο :data:`sys.modules`. Έμμεση συνέπεια αυτού είναι ότι ένα "
+"εισηγμένο module μπορεί να αντικαταστήσει τον εαυτό του στο :data:`sys."
+"modules`. Αυτή είναι μία ειδική συμπεριφορά της συγκεκριμένης υλοποίησης και "
+"δεν είναι εγγυημένο ότι λειτουργεί σε άλλες υλοποιήσεις της Python."
 
 #: reference/import.rst:8
 msgid "import machinery"
-msgstr ""
+msgstr "μηχανισμός εισαγωγής"
 
 #: reference/import.rst:95 reference/import.rst:131
 msgid "package"
-msgstr ""
+msgstr "πακέτο"
 
 #: reference/import.rst:95
 msgid "regular"
-msgstr ""
+msgstr "κανονικό"
 
 #: reference/import.rst:131
 msgid "namespace"
-msgstr ""
+msgstr "namespace"
 
 #: reference/import.rst:131
 msgid "portion"
-msgstr ""
+msgstr "τμήμα (portion)"
 
 #: reference/import.rst:177
 msgid "sys.modules"
-msgstr ""
+msgstr "sys.modules"
 
 #: reference/import.rst:278
 msgid "finder"
-msgstr ""
+msgstr "finder"
 
 #: reference/import.rst:212
 msgid "loader"
-msgstr ""
+msgstr "loader"
 
 #: reference/import.rst:212
 msgid "module spec"
-msgstr ""
+msgstr "module spec"
 
 #: reference/import.rst:251
 msgid "import hooks"
-msgstr ""
+msgstr "hooks εισαγωγής"
 
 #: reference/import.rst:251
 msgid "meta hooks"
-msgstr ""
+msgstr "meta hooks"
 
 #: reference/import.rst:251
 msgid "path hooks"
-msgstr ""
+msgstr "hooks διαδρομής"
 
 #: reference/import.rst:251
 msgid "hooks"
-msgstr ""
+msgstr "hooks"
 
 #: reference/import.rst:251
 msgid "import"
-msgstr ""
+msgstr "εισαγωγή"
 
 #: reference/import.rst:251
 msgid "meta"
-msgstr ""
+msgstr "meta"
 
 #: reference/import.rst:251
 msgid "path"
-msgstr ""
+msgstr "διαδρομή"
 
 #: reference/import.rst:278
 msgid "sys.meta_path"
-msgstr ""
+msgstr "sys.meta_path"
 
 #: reference/import.rst:278
 msgid "find_spec"
-msgstr ""
+msgstr "find_spec"
 
 #: reference/import.rst:638
 msgid "path based finder"
-msgstr ""
+msgstr "path based finder"
 
 #: reference/import.rst:687
 msgid "sys.path"
-msgstr ""
+msgstr "sys.path"
 
 #: reference/import.rst:687
 msgid "sys.path_hooks"
-msgstr ""
+msgstr "sys.path_hooks"
 
 #: reference/import.rst:687
 msgid "sys.path_importer_cache"
-msgstr ""
+msgstr "sys.path_importer_cache"
 
 #: reference/import.rst:687
 msgid "PYTHONPATH"
-msgstr ""
+msgstr "PYTHONPATH"
