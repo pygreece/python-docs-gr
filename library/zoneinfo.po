@@ -9,21 +9,21 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-12-22 17:07+0200\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/zoneinfo.rst:2
 msgid ":mod:`!zoneinfo` --- IANA time zone support"
-msgstr ""
+msgstr ":mod:`!zoneinfo` --- Υποστήριξη ζωνών ώρας IANA"
 
 #: library/zoneinfo.rst:12
 msgid "**Source code:** :source:`Lib/zoneinfo`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/zoneinfo`"
 
 #: library/zoneinfo.rst:16
 msgid ""
@@ -33,40 +33,52 @@ msgid ""
 "if no system time zone data is available, the library will fall back to "
 "using the first-party :pypi:`tzdata` package available on PyPI."
 msgstr ""
+"Το module :mod:`zoneinfo` παρέχει μια συγκεκριμένη υλοποίηση ζώνης ώρας για "
+"την υποστήριξη της βάσης δεδομένων ζωνών ώρας IANA όπως αρχικά ορίστηκε στο :"
+"pep:`615`. Από προεπιλογή, το :mod:`zoneinfo` χρησιμοποιεί τα δεδομένα ζώνης "
+"ώρας του συστήματος αν είναι διαθέσιμα· αν δεν υπάρχουν διαθέσιμα δεδομένα "
+"ζώνης ώρας συστήματος, η βιβλιοθήκη θα χρησιμοποιήσει ως εναλλακτική το "
+"πακέτο πρώτου μέρους :pypi:`tzdata` που είναι διαθέσιμο στο PyPI."
 
 #: library/zoneinfo.rst:24
 msgid "Module: :mod:`datetime`"
-msgstr ""
+msgstr "Module: :mod:`datetime`"
 
 #: library/zoneinfo.rst:25
 msgid ""
 "Provides the :class:`~datetime.time` and :class:`~datetime.datetime` types "
 "with which the :class:`ZoneInfo` class is designed to be used."
 msgstr ""
+"Παρέχει τους τύπους :class:`~datetime.time` και :class:`~datetime.datetime` "
+"με τους οποίους έχει σχεδιαστεί να χρησιμοποιείται η κλάση :class:`ZoneInfo`."
 
 #: library/zoneinfo.rst:28
 msgid "Package :pypi:`tzdata`"
-msgstr ""
+msgstr "Πακέτο :pypi:`tzdata`"
 
 #: library/zoneinfo.rst:29
 msgid ""
 "First-party package maintained by the CPython core developers to supply time "
 "zone data via PyPI."
 msgstr ""
+"Το πακέτο πρώτου μέρους που διατηρείται από τους βασικούς προγραμματιστές "
+"της CPython για την παροχή δεδομένων ζώνης ώρας μέσω του PyPI."
 
 #: includes/wasm-notavail.rst:3
 msgid "Availability"
-msgstr ""
+msgstr "Διαθεσιμότητα"
 
 #: includes/wasm-notavail.rst:5
 msgid ""
 "This module does not work or is not available on WebAssembly. See :ref:`wasm-"
 "availability` for more information."
 msgstr ""
+"Αυτό το module δεν λειτουργεί ή δεν είναι διαθέσιμο στο WebAssembly. Δείτε "
+"το :ref:`wasm-availability` για περισσότερες πληροφορίες."
 
 #: library/zoneinfo.rst:35
 msgid "Using ``ZoneInfo``"
-msgstr ""
+msgstr "Χρήση του ``ZoneInfo``"
 
 #: library/zoneinfo.rst:37
 msgid ""
@@ -76,6 +88,11 @@ msgid ""
 "replace>` method or :meth:`datetime.astimezone <datetime.datetime."
 "astimezone>`::"
 msgstr ""
+"Το :class:`ZoneInfo` είναι μια συγκεκριμένη υλοποίηση της αφηρημένης βασικής "
+"κλάσης :class:`datetime.tzinfo`, και προορίζεται να συνδεθεί με το "
+"``tzinfo``, είτε μέσω του κατασκευαστή, της μεθόδου :meth:`datetime.replace "
+"<datetime.datetime.replace>` ή της :meth:`datetime.astimezone <datetime."
+"datetime.astimezone>`::"
 
 #: library/zoneinfo.rst:42
 msgid ""
@@ -90,12 +107,25 @@ msgid ""
 ">>> dt.tzname()\n"
 "'PDT'"
 msgstr ""
+">>> from zoneinfo import ZoneInfo\n"
+">>> from datetime import datetime, timedelta\n"
+"\n"
+">>> dt = datetime(2020, 10, 31, 12, tzinfo=ZoneInfo(\"America/"
+"Los_Angeles\"))\n"
+">>> print(dt)\n"
+"2020-10-31 12:00:00-07:00\n"
+"\n"
+">>> dt.tzname()\n"
+"'PDT'"
 
 #: library/zoneinfo.rst:52
 msgid ""
 "Datetimes constructed in this way are compatible with datetime arithmetic "
 "and handle daylight saving time transitions with no further intervention::"
 msgstr ""
+"Οι ημερομηνίες και ώρες που κατασκευάζονται με αυτόν τον τρόπο είναι "
+"συμβατές με αριθμητικές πράξεις ημερομηνίας και ώρας και χειρίζονται τις "
+"μεταβάσεις θερινής ώρας χωρίς περαιτέρω παρέμβαση::"
 
 #: library/zoneinfo.rst:55
 msgid ""
@@ -107,6 +137,13 @@ msgid ""
 ">>> dt_add.tzname()\n"
 "'PST'"
 msgstr ""
+">>> dt_add = dt + timedelta(days=1)\n"
+"\n"
+">>> print(dt_add)\n"
+"2020-11-01 12:00:00-08:00\n"
+"\n"
+">>> dt_add.tzname()\n"
+"'PST'"
 
 #: library/zoneinfo.rst:63
 msgid ""
@@ -116,6 +153,12 @@ msgid ""
 "offset from *before* the transition is used when ``fold=0``, and the offset "
 "*after* the transition is used when ``fold=1``, for example::"
 msgstr ""
+"Αυτές οι ζώνες ώρας υποστηρίζουν επίσης το χαρακτηριστικό :attr:`~datetime."
+"datetime.fold` που εισήχθη στο :pep:`495`. Κατά τις μεταβάσεις μετατόπισης "
+"που προκαλούν αμφίσημες ώρες (όπως μια μετάβαση από τη θερινή ώρα στη "
+"χειμερινή ώρα), η μετατόπιση από *πριν* τη μετάβαση χρησιμοποιείται όταν "
+"``fold=0``, και η μετατόπιση *μετά* τη μετάβαση χρησιμοποιείται όταν "
+"``fold=1``, για παράδειγμα::"
 
 #: library/zoneinfo.rst:69
 msgid ""
@@ -126,12 +169,19 @@ msgid ""
 ">>> print(dt.replace(fold=1))\n"
 "2020-11-01 01:00:00-08:00"
 msgstr ""
+">>> dt = datetime(2020, 11, 1, 1, tzinfo=ZoneInfo(\"America/Los_Angeles\"))\n"
+">>> print(dt)\n"
+"2020-11-01 01:00:00-07:00\n"
+"\n"
+">>> print(dt.replace(fold=1))\n"
+"2020-11-01 01:00:00-08:00"
 
 #: library/zoneinfo.rst:76
 msgid ""
 "When converting from another time zone, the fold will be set to the correct "
 "value::"
 msgstr ""
+"Κατά τη μετατροπή από άλλη ζώνη ώρας, το fold θα οριστεί στην σωστή τιμή::"
 
 #: library/zoneinfo.rst:79
 msgid ""
@@ -147,10 +197,21 @@ msgid ""
 ">>> print((dt_utc + timedelta(hours=1)).astimezone(LOS_ANGELES))\n"
 "2020-11-01 01:00:00-08:00"
 msgstr ""
+">>> from datetime import timezone\n"
+">>> LOS_ANGELES = ZoneInfo(\"America/Los_Angeles\")\n"
+">>> dt_utc = datetime(2020, 11, 1, 8, tzinfo=timezone.utc)\n"
+"\n"
+">>> # Before the PDT -> PST transition\n"
+">>> print(dt_utc.astimezone(LOS_ANGELES))\n"
+"2020-11-01 01:00:00-07:00\n"
+"\n"
+">>> # After the PDT -> PST transition\n"
+">>> print((dt_utc + timedelta(hours=1)).astimezone(LOS_ANGELES))\n"
+"2020-11-01 01:00:00-08:00"
 
 #: library/zoneinfo.rst:92
 msgid "Data sources"
-msgstr ""
+msgstr "Πηγές δεδομένων"
 
 #: library/zoneinfo.rst:94
 msgid ""
@@ -163,10 +224,19 @@ msgid ""
 "system data nor tzdata are available, all calls to :class:`ZoneInfo` will "
 "raise :exc:`ZoneInfoNotFoundError`."
 msgstr ""
+"Το module ``zoneinfo`` δεν παρέχει άμεσα δεδομένα ζώνης ώρας, και αντ' αυτού "
+"αντλεί πληροφορίες ζώνης ώρας από τη βάση δεδομένων ζώνης ώρας του "
+"συστήματος ή από το πακέτο πρώτου μέρους του PyPI :pypi:`tzdata`, αν είναι "
+"διαθέσιμο. Ορισμένα συστήματα, συμπεριλαμβανομένων ενδεικτικά των συστημάτων "
+"Windows, δεν διαθέτουν βάση δεδομένων IANA, και έτσι για έργα που στοχεύουν "
+"στη διαλειτουργικότητα μεταξύ πλατφορμών και απαιτούν δεδομένα ζώνης ώρας, "
+"συνιστάται να δηλωθεί μια εξάρτηση στο tzdata. Εάν δεν είναι διαθέσιμα ούτε "
+"τα δεδομένα συστήματος ούτε το tzdata, όλες οι κλήσεις στο :class:`ZoneInfo` "
+"θα κάνουν raise το :exc:`ZoneInfoNotFoundError`."
 
 #: library/zoneinfo.rst:106
 msgid "Configuring the data sources"
-msgstr ""
+msgstr "Διαμόρφωση των πηγών δεδομένων"
 
 #: library/zoneinfo.rst:108
 msgid ""
@@ -175,28 +245,38 @@ msgid ""
 "failure looks for a match in the tzdata package. This behavior can be "
 "configured in three ways:"
 msgstr ""
+"Όταν καλείται το ``ZoneInfo(key)``, ο κατασκευαστής αναζητά πρώτα στους "
+"καταλόγους που καθορίζονται στο :data:`TZPATH` για ένα αρχείο που ταιριάζει "
+"με το ``key``, και σε περίπτωση αποτυχίας αναζητά μια αντιστοιχία στο πακέτο "
+"tzdata. Αυτή η συμπεριφορά μπορεί να διαμορφωθεί με τρεις τρόπους:"
 
 #: library/zoneinfo.rst:113
 msgid ""
 "The default :data:`TZPATH` when not otherwise specified can be configured "
 "at :ref:`compile time <zoneinfo_data_compile_time_config>`."
 msgstr ""
+"Όταν η προεπιλεγμένη :data:`TZPATH` δεν καθορίζεται διαφορετικά, μπορεί να "
+"διαμορφωθεί κατά το :ref:`compile time <zoneinfo_data_compile_time_config>`."
 
 #: library/zoneinfo.rst:115
 msgid ""
 ":data:`TZPATH` can be configured using :ref:`an environment variable "
 "<zoneinfo_data_environment_var>`."
 msgstr ""
+"Το :data:`TZPATH` μπορεί να διαμορφωθεί χρησιμοποιώντας :ref:`μια μεταβλητή "
+"περιβάλλοντος <zoneinfo_data_environment_var>`."
 
 #: library/zoneinfo.rst:117
 msgid ""
 "At :ref:`runtime <zoneinfo_data_runtime_config>`, the search path can be "
 "manipulated using the :func:`reset_tzpath` function."
 msgstr ""
+"Κατά το :ref:`runtime <zoneinfo_data_runtime_config>`, η διαδρομή αναζήτησης "
+"μπορεί να χειριστεί χρησιμοποιώντας τη συνάρτηση :func:`reset_tzpath`."
 
 #: library/zoneinfo.rst:123
 msgid "Compile-time configuration"
-msgstr ""
+msgstr "Διαμόρφωση κατά το compile-time"
 
 #: library/zoneinfo.rst:125
 msgid ""
@@ -209,16 +289,27 @@ msgid ""
 "tzpath <--with-tzpath>`), which should be a string delimited by :data:`os."
 "pathsep`."
 msgstr ""
+"Η προεπιλεγμένη :data:`TZPATH` περιλαμβάνει αρκετές κοινές τοποθεσίες "
+"ανάπτυξης για τη βάση δεδομένων ζώνης ώρας (εκτός από τα Windows, όπου δεν "
+"υπάρχουν «γνωστές» τοποθεσίες για δεδομένα ζώνης ώρας). Σε συστήματα POSIX, "
+"οι διανομείς κατεβάσματος και αυτοί που γράφουν Python από πηγαίο κώδικα που "
+"γνωρίζουν πού είναι αναπτυγμένα τα δεδομένα ζώνης ώρας του συστήματός τους "
+"μπορούν να αλλάξουν την προεπιλεγμένη διαδρομή ζώνης ώρας καθορίζοντας την "
+"επιλογή κατά το compile-time ``TZPATH`` (ή, πιο πιθανώς, το :option:"
+"`configure flag --with-tzpath <--with-tzpath>`), το οποίο πρέπει να είναι "
+"μια συμβολοσειρά διαχωρισμένη από :data:`os.pathsep`."
 
 #: library/zoneinfo.rst:134
 msgid ""
 "On all platforms, the configured value is available as the ``TZPATH`` key "
 "in :func:`sysconfig.get_config_var`."
 msgstr ""
+"Σε όλες τις πλατφόρμες, η διαμορφωμένη τιμή είναι διαθέσιμη ως το κλειδί "
+"``TZPATH`` στη :func:`sysconfig.get_config_var`."
 
 #: library/zoneinfo.rst:140
 msgid "Environment configuration"
-msgstr ""
+msgstr "Διαμόρφωση περιβάλλοντος"
 
 #: library/zoneinfo.rst:142
 msgid ""
@@ -227,6 +318,10 @@ msgid ""
 "use the environment variable ``PYTHONTZPATH``, if it exists, to set the "
 "search path."
 msgstr ""
+"Κατά την αρχικοποίηση του :data:`TZPATH` (είτε κατά το χρόνο εισαγωγής είτε "
+"όποτε καλείται η :func:`reset_tzpath` χωρίς ορίσματα), το module "
+"``zoneinfo`` θα χρησιμοποιήσει τη μεταβλητή περιβάλλοντος ``PYTHONTZPATH``, "
+"αν υπάρχει, για να ορίσει τη διαδρομή αναζήτησης."
 
 #: library/zoneinfo.rst:149
 msgid ""
@@ -238,16 +333,26 @@ msgid ""
 "other implementations are free to silently ignore the erroneous component or "
 "raise an exception."
 msgstr ""
+"Αυτή είναι μια συμβολοσειρά διαχωρισμένη από το :data:`os.pathsep` που "
+"περιέχει τη διαδρομή αναζήτησης ζώνης ώρας προς χρήση. Πρέπει να αποτελείται "
+"μόνο από απόλυτες και όχι σχετικές διαδρομές. Σχετικά στοιχεία που "
+"καθορίζονται στο ``PYTHONTZPATH`` δεν θα χρησιμοποιηθούν, αλλά διαφορετικά η "
+"συμπεριφορά όταν καθορίζεται μια σχετική διαδρομή είναι ορισμένη από την "
+"υλοποίηση· η CPython θα κάνει raise την :exc:`InvalidTZPathWarning`, αλλά "
+"άλλες υλοποιήσεις είναι ελεύθερες να αγνοήσουν σιωπηλά το λανθασμένο "
+"στοιχείο ή να κάνουν raise μια εξαίρεση."
 
 #: library/zoneinfo.rst:157
 msgid ""
 "To set the system to ignore the system data and use the tzdata package "
 "instead, set ``PYTHONTZPATH=\"\"``."
 msgstr ""
+"Για να ρυθμίσετε το σύστημα να αγνοεί τα δεδομένα συστήματος και να "
+"χρησιμοποιεί αντ' αυτού το πακέτο tzdata, ορίστε ``PYTHONTZPATH=\"\"``."
 
 #: library/zoneinfo.rst:163
 msgid "Runtime configuration"
-msgstr ""
+msgstr "Διαμόρφωση κατά το runtime"
 
 #: library/zoneinfo.rst:165
 msgid ""
@@ -257,10 +362,16 @@ msgid ""
 "a specific time zone path (or require disabling access to the system time "
 "zones)."
 msgstr ""
+"Η διαδρομή αναζήτησης TZ μπορεί επίσης να διαμορφωθεί κατά το runtime "
+"χρησιμοποιώντας τη συνάρτηση :func:`reset_tzpath`. Αυτή δεν είναι γενικά μια "
+"συνιστώμενη λειτουργία, αν και είναι λογικό να τη χρησιμοποιήσετε σε "
+"συναρτήσεις δοκιμών που απαιτούν τη χρήση μιας συγκεκριμένης διαδρομής ζώνης "
+"ώρας (ή απαιτούν την απενεργοποίηση της πρόσβασης στις ζώνες ώρας "
+"συστήματος)."
 
 #: library/zoneinfo.rst:172
 msgid "The ``ZoneInfo`` class"
-msgstr ""
+msgstr "Η κλάση ``ZoneInfo``"
 
 #: library/zoneinfo.rst:176
 msgid ""
@@ -270,6 +381,12 @@ msgid ""
 "cache invalidation via :meth:`ZoneInfo.clear_cache`, for all values of "
 "``key``, the following assertion will always be true:"
 msgstr ""
+"Μια συγκεκριμένη υποκλάση της :class:`datetime.tzinfo` που αντιπροσωπεύει "
+"μια ζώνη ώρας IANA που καθορίζεται από τη συμβολοσειρά ``key``. Οι κλήσεις "
+"στον κύριο κατασκευαστή θα επιστρέφουν πάντα αντικείμενα που συγκρίνονται "
+"ταυτόσημα· με άλλα λόγια, εκτός από την ακύρωση της προσωρινής μνήμης μέσω "
+"της :meth:`ZoneInfo.clear_cache`, για όλες τις τιμές του ``key``, η ακόλουθη "
+"δήλωση θα είναι πάντα αληθής:"
 
 #: library/zoneinfo.rst:182
 msgid ""
@@ -277,6 +394,9 @@ msgid ""
 "b = ZoneInfo(key)\n"
 "assert a is b"
 msgstr ""
+"a = ZoneInfo(key)\n"
+"b = ZoneInfo(key)\n"
+"assert a is b"
 
 #: library/zoneinfo.rst:188
 msgid ""
@@ -284,16 +404,21 @@ msgid ""
 "level references. The constructor will raise :exc:`ValueError` if a non-"
 "conforming key is passed."
 msgstr ""
+"Το ``key`` πρέπει να έχει τη μορφή σχετικής, κανονικοποιημένης διαδρομής "
+"POSIX, χωρίς αναφορές σε ανώτερα επίπεδα. Ο κατασκευαστής θα κάνει raise το :"
+"exc:`ValueError` αν περαστεί μη συμμορφούμενο κλειδί."
 
 #: library/zoneinfo.rst:192
 msgid ""
 "If no file matching ``key`` is found, the constructor will raise :exc:"
 "`ZoneInfoNotFoundError`."
 msgstr ""
+"Αν δεν βρεθεί αρχείο που να ταιριάζει με το ``key``, ο κατασκευαστής θα "
+"κάνει raise το :exc:`ZoneInfoNotFoundError`."
 
 #: library/zoneinfo.rst:196
 msgid "The ``ZoneInfo`` class has two alternate constructors:"
-msgstr ""
+msgstr "Τη κλάση ``ZoneInfo`` έχει δύο εναλλακτικούς κατασκευαστές:"
 
 #: library/zoneinfo.rst:200
 msgid ""
@@ -301,17 +426,25 @@ msgid ""
 "g. a file opened in binary mode or an :class:`io.BytesIO` object). Unlike "
 "the primary constructor, this always constructs a new object."
 msgstr ""
+"Κατασκευάζει ένα αντικείμενο ``ZoneInfo`` από ένα αντικείμενο παρόμοιο με "
+"αρχείο που επιστρέφει bytes (π.χ. ένα αρχείο ανοιγμένο σε δυαδική λειτουργία "
+"ή ένα αντικείμενο :class:`io.BytesIO`). Σε αντίθεση με τον κύριο "
+"κατασκευαστή, αυτό πάντα κατασκευάζει ένα νέο αντικείμενο."
 
 #: library/zoneinfo.rst:204
 msgid ""
 "The ``key`` parameter sets the name of the zone for the purposes of :py:meth:"
 "`~object.__str__` and :py:meth:`~object.__repr__`."
 msgstr ""
+"Η παράμετρος ``key`` ορίζει το όνομα της ζώνης για τους σκοπούς των :py:meth:"
+"`~object.__str__` και :py:meth:`~object.__repr__`."
 
 #: library/zoneinfo.rst:207
 msgid ""
 "Objects created via this constructor cannot be pickled (see `pickling`_)."
 msgstr ""
+"Τα αντικείμενα που δημιουργούνται μέσω αυτού του κατασκευαστή δεν μπορούν να "
+"σειριοποιηθούν (δείτε `pickling`_)."
 
 #: library/zoneinfo.rst:211
 msgid ""
@@ -321,22 +454,34 @@ msgid ""
 "it can also be used to create a system with a different cache invalidation "
 "strategy."
 msgstr ""
+"Ένας εναλλακτικός κατασκευαστής που παρακάμπτει την προσωρινή μνήμη του "
+"κατασκευαστή. Είναι πανομοιότυπος με τον κύριο κατασκευαστή, αλλά επιστρέφει "
+"ένα νέο αντικείμενο σε κάθε κλήση. Αυτό είναι πιο πιθανό να είναι χρήσιμο "
+"για σκοπούς δοκιμών ή επίδειξης, αλλά μπορεί επίσης να χρησιμοποιηθεί για τη "
+"δημιουργία ενός συστήματος με διαφορετική στρατηγική ακύρωσης της προσωρινής "
+"μνήμης."
 
 #: library/zoneinfo.rst:217
 msgid ""
 "Objects created via this constructor will also bypass the cache of a "
 "deserializing process when unpickled."
 msgstr ""
+"Τα αντικείμενα που δημιουργούνται μέσω αυτού του κατασκευαστή θα "
+"παρακάμπτουν επίσης την προσωρινή μνήμη μιας διαδικασίας αποσειριοποίησης "
+"όταν αποσειριοποιούνται."
 
 #: library/zoneinfo.rst:224
 msgid ""
 "Using this constructor may change the semantics of your datetimes in "
 "surprising ways, only use it if you know that you need to."
 msgstr ""
+"Η χρήση αυτού του κατασκευαστή μπορεί να αλλάξει τα νοήματα των ημερομηνιών "
+"και ωρών σας με εκπληκτικούς τρόπους, χρησιμοποιήστε τον μόνο αν γνωρίζετε "
+"ότι το χρειάζεστε."
 
 #: library/zoneinfo.rst:227
 msgid "The following class methods are also available:"
-msgstr ""
+msgstr "Οι ακόλουθες μέθοδοι κλάσης είναι επίσης διαθέσιμες:"
 
 #: library/zoneinfo.rst:231
 msgid ""
@@ -344,6 +489,10 @@ msgid ""
 "arguments are passed, all caches are invalidated and the next call to the "
 "primary constructor for each key will return a new instance."
 msgstr ""
+"Μια μέθοδος για την ακύρωση της προσωρινής μνήμης στην κλάση ``ZoneInfo``. "
+"Αν δεν περαστούν τα ορίσματα, όλες οι προσωρινές μνήμες ακυρώνονται και η "
+"επόμενη κλήση στον κύριο κατασκευαστή για κάθε κλειδί θα επιστρέψει ένα νέο "
+"στιγμιότυπο."
 
 #: library/zoneinfo.rst:235
 msgid ""
@@ -351,6 +500,10 @@ msgid ""
 "the specified keys will be removed from the cache. Keys passed to "
 "``only_keys`` but not found in the cache are ignored."
 msgstr ""
+"Αν περαστεί μια iterable συλλογή ονομάτων κλειδιών στην παράμετρο "
+"``only_keys``, μόνο τα καθορισμένα κλειδιά θα αφαιρεθούν από την προσωρινή "
+"μνήμη. Τα κλειδιά που περάστηκαν στο ``only_keys`` αλλά δεν βρέθηκαν στην "
+"προσωρινή μνήμη αγνοούνται."
 
 #: library/zoneinfo.rst:243
 msgid ""
@@ -358,10 +511,14 @@ msgid ""
 "``ZoneInfo`` in surprising ways; this modifies module state and thus may "
 "have wide-ranging effects. Only use it if you know that you need to."
 msgstr ""
+"Η κλήση αυτής της συνάρτησης μπορεί να αλλάξει τα νοήματα των ημερομηνιών "
+"και ωρών που χρησιμοποιούν το ``ZoneInfo`` με εκπληκτικούς τρόπους· αυτό "
+"τροποποιεί την κατάσταση του module και έτσι μπορεί να έχει ευρείες "
+"επιπτώσεις. Χρησιμοποιήστε το μόνο αν γνωρίζετε ότι το χρειάζεστε."
 
 #: library/zoneinfo.rst:248
 msgid "The class has one attribute:"
-msgstr ""
+msgstr "Η κλάση έχει ένα χαρακτηριστικό:"
 
 #: library/zoneinfo.rst:252
 msgid ""
@@ -370,12 +527,18 @@ msgid ""
 "zone database (e.g. ``America/New_York``, ``Europe/Paris`` or ``Asia/"
 "Tokyo``)."
 msgstr ""
+"Αυτό είναι ένα :term:`attribute` μόνο για ανάγνωση που επιστρέφει την τιμή "
+"του ``key`` που περάστηκε στον κατασκευαστή, το οποίο θα πρέπει να είναι ένα "
+"κλειδί αναζήτησης στη βάση δεδομένων ζώνης ώρας IANA (π.χ. ``America/"
+"New_York``, ``Europe/Paris`` ή ``Asia/Tokyo``)."
 
 #: library/zoneinfo.rst:257
 msgid ""
 "For zones constructed from file without specifying a ``key`` parameter, this "
 "will be set to ``None``."
 msgstr ""
+"Για ζώνες που κατασκευάζονται από αρχείο χωρίς να καθοριστεί μια παράμετρος "
+"``key``, θα οριστεί σε ``None``."
 
 #: library/zoneinfo.rst:262
 msgid ""
@@ -385,10 +548,16 @@ msgid ""
 "Unicode Common Locale Data Repository) can be used to get more user-friendly "
 "strings from these keys."
 msgstr ""
+"Αν και είναι μια κάπως κοινή πρακτική να τις εκθέτουν στους τελικούς "
+"χρήστες, αυτές οι τιμές έχουν σχεδιαστεί για να είναι πρωτεύοντα κλειδιά για "
+"την αναπαράσταση των σχετικών ζωνών και όχι απαραίτητα στοιχεία που "
+"απευθύνονται στον χρήστη. Έργα όπως το CLDR (το Unicode Common Locale Data "
+"Repository) μπορούν να χρησιμοποιηθούν για να λάβουν πιο φιλικές προς τον "
+"χρήστη συμβολοσειρές από αυτά τα κλειδιά."
 
 #: library/zoneinfo.rst:269
 msgid "String representations"
-msgstr ""
+msgstr "Αναπαραστάσεις συμβολοσειρών"
 
 #: library/zoneinfo.rst:271
 msgid ""
@@ -396,6 +565,10 @@ msgid ""
 "`ZoneInfo` object defaults to using the :attr:`ZoneInfo.key` attribute (see "
 "the note on usage in the attribute documentation)::"
 msgstr ""
+"Η αναπαράσταση συμβολοσειράς που επιστρέφεται κατά την κλήση της :py:class:"
+"`str` σε ένα αντικείμενο :class:`ZoneInfo` προεπιλέγεται να χρησιμοποιεί το "
+"χαρακτηριστικό :attr:`ZoneInfo.key` (δείτε τη σημείωση σχετικά με τη χρήση "
+"στην τεκμηρίωση χαρακτηριστικών)::"
 
 #: library/zoneinfo.rst:275
 msgid ""
@@ -407,6 +580,13 @@ msgid ""
 ">>> f\"{dt.isoformat()} [{dt.tzinfo}]\"\n"
 "'2020-04-01T03:15:00+12:00 [Pacific/Kwajalein]'"
 msgstr ""
+">>> zone = ZoneInfo(\"Pacific/Kwajalein\")\n"
+">>> str(zone)\n"
+"'Pacific/Kwajalein'\n"
+"\n"
+">>> dt = datetime(2020, 4, 1, 3, 15, tzinfo=zone)\n"
+">>> f\"{dt.isoformat()} [{dt.tzinfo}]\"\n"
+"'2020-04-01T03:15:00+12:00 [Pacific/Kwajalein]'"
 
 #: library/zoneinfo.rst:283
 msgid ""
@@ -415,10 +595,15 @@ msgid ""
 "implementation-defined and not necessarily stable between versions, but it "
 "is guaranteed not to be a valid ``ZoneInfo`` key."
 msgstr ""
+"Για αντικείμενα που κατασκευάζονται από ένα αρχείο χωρίς να καθοριστεί μια "
+"παράμετρος ``key``, το ``str`` επιστρέφει στην κλήση της :func:`repr`. Το "
+"``repr`` του ``ZoneInfo`` είναι ορισμένο από την υλοποίηση και δεν είναι "
+"απαραίτητα σταθερό μεταξύ των εκδόσεων, αλλά εγγυάται ότι δεν θα είναι ένα "
+"έγκυρο κλειδί ``ZoneInfo``."
 
 #: library/zoneinfo.rst:291
 msgid "Pickle serialization"
-msgstr ""
+msgstr "Σειριοποίηση με pickle"
 
 #: library/zoneinfo.rst:293
 msgid ""
@@ -426,10 +611,16 @@ msgid ""
 "serialized by key, and ``ZoneInfo`` objects constructed from files (even "
 "those with a value for ``key`` specified) cannot be pickled."
 msgstr ""
+"Αντί να σειριοποιούν όλα τα δεδομένα μετάβασης, τα αντικείμενα ``ZoneInfo`` "
+"σειριοποιούνται κατά κλειδί, και τα αντικείμενα ``ZoneInfo`` που "
+"κατασκευάζονται από αρχεία (ακόμα και αυτά με μια καθορισμένη τιμή για το "
+"``key``) δεν μπορούν να σειριοποιηθούν με pickle."
 
 #: library/zoneinfo.rst:297
 msgid "The behavior of a ``ZoneInfo`` file depends on how it was constructed:"
 msgstr ""
+"Η συμπεριφορά ενός αρχείου ``ZoneInfo`` εξαρτάται από τον τρόπο με τον οποίο "
+"κατασκευάστηκε:"
 
 #: library/zoneinfo.rst:299
 msgid ""
@@ -440,6 +631,13 @@ msgid ""
 "if ``europe_berlin_pkl`` is a string containing a pickle constructed from "
 "``ZoneInfo(\"Europe/Berlin\")``, one would expect the following behavior:"
 msgstr ""
+"``ZoneInfo(key)``: Όταν κατασκευάζεται με τον κύριο κατασκευαστή, ένα "
+"αντικείμενο ``ZoneInfo`` σειριοποιείται κατά κλειδί, και όταν "
+"αποσειριοποιείται, η διαδικασία αποσειριοποίησης χρησιμοποιεί τον κύριο "
+"κατασκευαστή και έτσι αναμένεται ότι αυτά είναι το ίδιο αντικείμενο με άλλες "
+"αναφορές στην ίδια ζώνη ώρας. Για παράδειγμα, αν το ``europe_berlin_pkl`` "
+"είναι μια συμβολοσειρά που περιέχει ένα pickle κατασκευασμένο από "
+"``ZoneInfo(\"Europe/Berlin\")``, θα περίμενε κανείς την ακόλουθη συμπεριφορά:"
 
 #: library/zoneinfo.rst:307
 msgid ""
@@ -448,6 +646,10 @@ msgid ""
 ">>> a is b\n"
 "True"
 msgstr ""
+">>> a = ZoneInfo(\"Europe/Berlin\")\n"
+">>> b = pickle.loads(europe_berlin_pkl)\n"
+">>> a is b\n"
+"True"
 
 #: library/zoneinfo.rst:314
 msgid ""
@@ -458,6 +660,13 @@ msgid ""
 "constructed from ``ZoneInfo.no_cache(\"Europe/Berlin\")``, one would expect "
 "the following behavior:"
 msgstr ""
+"``ZoneInfo.no_cache(key)``: Όταν κατασκευάζεται από τον κατασκευαστή που "
+"παρακάμπτει την προσωρινή μνήμη, το αντικείμενο ``ZoneInfo`` σειριοποιείται "
+"επίσης κατά κλειδί, αλλά όταν αποσειριοποιείται, η διαδικασία "
+"αποσειριοποίησης χρησιμοποιεί τον κατασκευαστή που παρακάμπτει την προσωρινή "
+"μνήμη. Αν το ``europe_berlin_pkl_nc`` είναι μια συμβολοσειρά που περιέχει "
+"ένα pickle κατασκευασμένο από το ``ZoneInfo.no_cache(\"Europe/Berlin\")``, "
+"θα περίμενε κανείς την ακόλουθη συμπεριφορά:"
 
 #: library/zoneinfo.rst:321
 msgid ""
@@ -466,6 +675,10 @@ msgid ""
 ">>> a is b\n"
 "False"
 msgstr ""
+">>> a = ZoneInfo(\"Europe/Berlin\")\n"
+">>> b = pickle.loads(europe_berlin_pkl_nc)\n"
+">>> a is b\n"
+"False"
 
 #: library/zoneinfo.rst:328
 msgid ""
@@ -476,6 +689,13 @@ msgid ""
 "serializing by key or storing the contents of the file object and "
 "serializing that."
 msgstr ""
+"``ZoneInfo.from_file(file_obj, /, key=None)``: Όταν κατασκευάζεται από ένα "
+"αρχείο, το αντικείμενο ``ZoneInfo`` κάνει raise μια εξαίρεση κατά τη "
+"σειριοποίηση με pickle. Αν ένας τελικός χρήστης θέλει να σειριοποιήσει με "
+"pickle ένα ``ZoneInfo`` που κατασκευάζεται από ένα αρχείο, συνιστάται να "
+"χρησιμοποιήσει έναν τύπο περιτύλιξης ή μια προσαρμοσμένη συνάρτηση "
+"σειριοποίησης: είτε σειριοποιώντας κατά κλειδί, είτε αποθηκεύοντας τα "
+"περιεχόμενα του αντικειμένου του αρχείου και σειριοποιώντας αυτά."
 
 #: library/zoneinfo.rst:334
 msgid ""
@@ -487,10 +707,18 @@ msgid ""
 "a ``ZoneInfo`` pickled in an environment with a different version of the "
 "time zone data."
 msgstr ""
+"Αυτή η μέθοδος σειριοποίησης απαιτεί τα δεδομένα ζώνης ώρας για το "
+"απαιτούμενο κλειδί να είναι διαθέσιμα τόσο στην πλευρά σειριοποίησης όσο και "
+"στην πλευρά αποσειριοποίησης, παρόμοια με τον τρόπο που αναμένεται να "
+"υπάρχουν αναφορές σε κλάσεις και συναρτήσεις, και στα περιβάλλοντα "
+"σειριοποίησης και αποσειριοποίησης. Σημαίνει επίσης ότι δεν δίνονται "
+"εγγυήσεις σχετικά με τη συνέπεια των αποτελεσμάτων κατά την αποσειριοποίηση "
+"ενός ``ZoneInfo`` που έχει σειριοποιηθεί με pickle σε ένα περιβάλλον με "
+"διαφορετική έκδοση των δεδομένων ζώνης ώρας."
 
 #: library/zoneinfo.rst:342
 msgid "Functions"
-msgstr ""
+msgstr "Συναρτήσεις"
 
 #: library/zoneinfo.rst:346
 msgid ""
@@ -498,6 +726,9 @@ msgid ""
 "anywhere on the time zone path. This is recalculated on every call to the "
 "function."
 msgstr ""
+"Λάβετε υπόψη σας ένα σύνολο που περιέχει όλα τα έγκυρα κλειδιά για τις ζώνες "
+"ώρας IANA που είναι διαθέσιμες οπουδήποτε στη διαδρομή ζώνης ώρας. Αυτό "
+"επαναϋπολογίζεται σε κάθε κλήση της συνάρτησης."
 
 #: library/zoneinfo.rst:350
 msgid ""
@@ -505,6 +736,9 @@ msgid ""
 "\"special\" zones such as those under the ``posix/`` and ``right/`` "
 "directories, or the ``posixrules`` zone."
 msgstr ""
+"Αυτή η συνάρτηση περιλαμβάνει μόνο κανονικά ονόματα ζώνης και δεν "
+"περιλαμβάνει «ειδικές» ζώνες όπως αυτές κάτω από τους καταλόγους ``posix/`` "
+"και ``right/``, ή τη ζώνη ``posixrules``."
 
 #: library/zoneinfo.rst:356
 msgid ""
@@ -512,6 +746,9 @@ msgid ""
 "if a file on the time zone path is a valid time zone is to read the \"magic "
 "string\" at the beginning."
 msgstr ""
+"Αυτή η συνάρτηση μπορεί να ανοίξει μεγάλο αριθμό αρχείων, καθώς ο καλύτερος "
+"τρόπος για να προσδιοριστεί, αν ένα αρχείο στη διαδρομή ζώνης ώρας είναι μια "
+"έγκυρη ζώνη ώρας, είναι να διαβαστεί η «μαγική συμβολοσειρά» στην αρχή."
 
 #: library/zoneinfo.rst:362
 msgid ""
@@ -520,12 +757,20 @@ msgid ""
 "Locale Data Repository) to get more user-friendly strings. See also the "
 "cautionary note on :attr:`ZoneInfo.key`."
 msgstr ""
+"Αυτές οι τιμές δεν έχουν σχεδιαστεί για να εκτίθενται στους τελικούς "
+"χρήστες· για στοιχεία που απευθύνονται στον χρήστη, οι εφαρμογές θα πρέπει "
+"να χρησιμοποιούν κάτι σαν το CLDR (το Unicode Common Locale Data Repository) "
+"για να λάβουν πιο φιλικές προς τον χρήστη συμβολοσειρές. Δείτε επίσης τη "
+"σημείωση προσοχής στο :attr:`ZoneInfo.key`."
 
 #: library/zoneinfo.rst:369
 msgid ""
 "Sets or resets the time zone search path (:data:`TZPATH`) for the module. "
 "When called with no arguments, :data:`TZPATH` is set to the default value."
 msgstr ""
+"Ορίζει ή επαναφέρει τη διαδρομή αναζήτησης ζώνης ώρας (:data:`TZPATH`) για "
+"το module. Όταν καλείται χωρίς ορίσματα, το :data:`TZPATH` ορίζεται στην "
+"προεπιλεγμένη τιμή."
 
 #: library/zoneinfo.rst:372
 msgid ""
@@ -533,6 +778,10 @@ msgid ""
 "and so calls to the primary ``ZoneInfo`` constructor will only use the new "
 "``TZPATH`` in the case of a cache miss."
 msgstr ""
+"Η κλήση του ``reset_tzpath`` δεν θα ακυρώσει την προσωρινή μνήμη της :class:"
+"`ZoneInfo`, και έτσι οι κλήσεις στον κύριο κατασκευαστή ``ZoneInfo`` θα "
+"χρησιμοποιούν τη νέα ``TZPATH`` μόνο σε περίπτωση απώλειας στην προσωρινή "
+"μνήμη."
 
 #: library/zoneinfo.rst:376
 msgid ""
@@ -541,10 +790,14 @@ msgid ""
 "`ValueError` will be raised if something other than an absolute path is "
 "passed."
 msgstr ""
+"Η παράμετρος ``to`` πρέπει να είναι μια :term:`sequence` από συμβολοσειρές "
+"ή :class:`os.PathLike` και όχι μια συμβολοσειρά, όπου όλα πρέπει να είναι "
+"απόλυτες διαδρομές. Θα γίνει raise το :exc:`ValueError` αν περαστεί κάτι "
+"άλλο εκτός από μια απόλυτη διαδρομή."
 
 #: library/zoneinfo.rst:382
 msgid "Globals"
-msgstr ""
+msgstr "Καθολικές μεταβλητές"
 
 #: library/zoneinfo.rst:386
 msgid ""
@@ -552,12 +805,18 @@ msgid ""
 "constructing a ``ZoneInfo`` from a key, the key is joined to each entry in "
 "the ``TZPATH``, and the first file found is used."
 msgstr ""
+"Μια ακολουθία μόνο για ανάγνωση που αντιπροσωπεύει τη διαδρομή αναζήτησης "
+"ζώνης ώρας -- κατά την κατασκευή ενός ``ZoneInfo`` από ένα κλειδί, το κλειδί "
+"συνδέεται με κάθε καταχώριση στο ``TZPATH``, και χρησιμοποιείται το πρώτο "
+"αρχείο που βρέθηκε."
 
 #: library/zoneinfo.rst:390
 msgid ""
 "``TZPATH`` may contain only absolute paths, never relative paths, regardless "
 "of how it is configured."
 msgstr ""
+"Το ``TZPATH`` μπορεί να περιέχει μόνο απόλυτες διαδρομές, ποτέ σχετικές "
+"διαδρομές, ανεξάρτητα από το πώς διαμορφώνεται."
 
 #: library/zoneinfo.rst:393
 msgid ""
@@ -566,16 +825,23 @@ msgid ""
 "TZPATH`` rather than importing ``TZPATH`` from ``zoneinfo`` or assigning a "
 "long-lived variable to ``zoneinfo.TZPATH``."
 msgstr ""
+"Το αντικείμενο στο οποίο δείχνει το ``zoneinfo.TZPATH`` μπορεί να αλλάξει σε "
+"απόκριση σε μια κλήση στη :func:`reset_tzpath`, οπότε συνιστάται να "
+"χρησιμοποιείτε το ``zoneinfo.TZPATH`` αντί να εισάγετε το ``TZPATH`` από το "
+"``zoneinfo`` ή να αναθέτετε μια μακροχρόνια μεταβλητή στο ``zoneinfo."
+"TZPATH``."
 
 #: library/zoneinfo.rst:398
 msgid ""
 "For more information on configuring the time zone search path, see :ref:"
 "`zoneinfo_data_configuration`."
 msgstr ""
+"Για περισσότερες πληροφορίες σχετικά με τη διαμόρφωση της διαδρομής "
+"αναζήτησης ζώνης ώρας, δείτε :ref:`zoneinfo_data_configuration`."
 
 #: library/zoneinfo.rst:402
 msgid "Exceptions and warnings"
-msgstr ""
+msgstr "Εξαιρέσεις και προειδοποιήσεις"
 
 #: library/zoneinfo.rst:406
 msgid ""
@@ -583,9 +849,14 @@ msgid ""
 "specified key could not be found on the system. This is a subclass of :exc:"
 "`KeyError`."
 msgstr ""
+"Γίνεται raise όταν η κατασκευή ενός αντικειμένου :class:`ZoneInfo` "
+"αποτυγχάνει επειδή το καθορισμένο κλειδί δεν βρέθηκε στο σύστημα. Αυτή είναι "
+"μια υποκλάση της :exc:`KeyError`."
 
 #: library/zoneinfo.rst:412
 msgid ""
 "Raised when :envvar:`PYTHONTZPATH` contains an invalid component that will "
 "be filtered out, such as a relative path."
 msgstr ""
+"Γίνεται raise όταν η :envvar:`PYTHONTZPATH` περιέχει ένα μη έγκυρο στοιχείο "
+"που θα φιλτραριστεί, όπως μια σχετική διαδρομή."
