@@ -9,33 +9,38 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-12-24 17:00+0200\n"
+"Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/__main__.rst:2
 msgid ":mod:`!__main__` --- Top-level code environment"
-msgstr ""
+msgstr ":mod:`!__main__` --- Περιβάλλον κώδικα ανωτέρου επιπέδου"
 
 #: library/__main__.rst:10
 msgid ""
 "In Python, the special name ``__main__`` is used for two important "
 "constructs:"
 msgstr ""
+"Στην Python, το ειδικό όνομα ``__main__`` χρησιμοποιείται για δύο σημαντικές "
+"κατασκευές:"
 
 #: library/__main__.rst:12
 msgid ""
 "the name of the top-level environment of the program, which can be checked "
 "using the ``__name__ == '__main__'`` expression; and"
 msgstr ""
+"το όνομα του πεδίου ονομάτων ανωτέρου επιπέδου του προγράμματος, το οποίο "
+"μπορεί να ελεγχθεί χρησιμοποιώντας την έκφραση ``__name__ == '__main__'``· "
+"και"
 
 #: library/__main__.rst:14
 msgid "the ``__main__.py`` file in Python packages."
-msgstr ""
+msgstr "το αρχείο ``__main__.py`` στα πακέτα της Python."
 
 #: library/__main__.rst:16
 msgid ""
@@ -44,10 +49,15 @@ msgid ""
 "detail below.  If you're new to Python modules, see the tutorial section :"
 "ref:`tut-modules` for an introduction."
 msgstr ""
+"Και οι δύο αυτοί μηχανισμοί σχετίζονται με τα modules της Python· τον τρόπο "
+"με τον οποίο οι χρήστες αλληλεπιδρούν με αυτά και τον τρόπο με τον οποίο "
+"αλληλεπιδρούν μεταξύ τους.  Εξηγούνται λεπτομερώς παρακάτω.  Εάν είστε νέος/"
+"α στα Python modules, δείτε την ενότητα του σεμιναρίου :ref:`tut-modules` "
+"για μια εισαγωγή."
 
 #: library/__main__.rst:25
 msgid "``__name__ == '__main__'``"
-msgstr ""
+msgstr "``__name__ == '__main__'``"
 
 #: library/__main__.rst:27
 msgid ""
@@ -55,6 +65,9 @@ msgid ""
 "module's name.  Usually, this is the name of the Python file itself without "
 "the ``.py`` extension::"
 msgstr ""
+"Όταν ένα Python module ή πακέτο εισάγεται, το ``__name__`` ορίζεται στο "
+"όνομα του module.  Συνήθως, αυτό είναι το όνομα του αρχείου Python χωρίς την "
+"επέκταση ``.py``::"
 
 #: library/__main__.rst:31
 msgid ""
@@ -62,12 +75,17 @@ msgid ""
 ">>> configparser.__name__\n"
 "'configparser'"
 msgstr ""
+">>> import configparser\n"
+">>> configparser.__name__\n"
+"'configparser'"
 
 #: library/__main__.rst:35
 msgid ""
 "If the file is part of a package, ``__name__`` will also include the parent "
 "package's path::"
 msgstr ""
+"Εάν το αρχείο είναι μέρος ενός πακέτου, το ``__name__`` θα περιλαμβάνει "
+"επίσης τη διαδρομή του γονικού πακέτου::"
 
 #: library/__main__.rst:38
 msgid ""
@@ -75,16 +93,21 @@ msgid ""
 ">>> process.__name__\n"
 "'concurrent.futures.process'"
 msgstr ""
+">>> from concurrent.futures import process\n"
+">>> process.__name__\n"
+"'concurrent.futures.process'"
 
 #: library/__main__.rst:42
 msgid ""
 "However, if the module is executed in the top-level code environment, its "
 "``__name__`` is set to the string ``'__main__'``."
 msgstr ""
+"Ωστόσο, εάν το module εκτελείται στο περιβάλλον κώδικα ανωτέρου επιπέδου, το "
+"``__name__`` ορίζεται στη συμβολοσειρά ``'__main__'``."
 
 #: library/__main__.rst:46
 msgid "What is the \"top-level code environment\"?"
-msgstr ""
+msgstr "Τι είναι το \"πεδίο ονομάτων ανωτέρου επιπέδου\";"
 
 #: library/__main__.rst:48
 msgid ""
@@ -94,46 +117,61 @@ msgid ""
 "program needs. Sometimes \"top-level code\" is called an *entry point* to "
 "the application."
 msgstr ""
+"Το ``__main__`` είναι το όνομα του πεδίου ονομάτων όπου εκτελείται ο κώδικας "
+"ανωτέρου επιπέδου. Ο \"κώδικας ανωτέρου επιπέδου\" είναι η πρώτη μονάδα "
+"Python που καθορίζεται από τον χρήστη και αρχίζει να εκτελείται. Είναι "
+"\"ανωτέρου επιπέδου\" επειδή εισάγει όλα τα άλλα modules που χρειάζεται το "
+"πρόγραμμα. Μερικές φορές ο \"κώδικας ανωτέρου επιπέδου\" ονομάζεται *σημείο "
+"εισόδου* στην εφαρμογή."
 
 #: library/__main__.rst:53
 msgid "The top-level code environment can be:"
-msgstr ""
+msgstr "Το πεδίο ονομάτων ανωτέρου επιπέδου μπορεί να είναι:"
 
 #: library/__main__.rst:55
 msgid "the scope of an interactive prompt::"
-msgstr ""
+msgstr "το πεδίο ονομάτων μιας διαδραστικής γραμμής εντολών::"
 
 #: library/__main__.rst:57
 msgid ""
 ">>> __name__\n"
 "'__main__'"
 msgstr ""
+">>> __name__\n"
+"'__main__'"
 
 #: library/__main__.rst:60
 msgid "the Python module passed to the Python interpreter as a file argument:"
-msgstr ""
+msgstr "το Python module που δόθηκε στον διερμηνέα Python ως όρισμα αρχείου:"
 
 #: library/__main__.rst:62
 msgid ""
 "$ python helloworld.py\n"
 "Hello, world!"
 msgstr ""
+"$ python helloworld.py\n"
+"Hello, world!"
 
 #: library/__main__.rst:67
 msgid ""
 "the Python module or package passed to the Python interpreter with the :"
 "option:`-m` argument:"
 msgstr ""
+"το Python module ή πακέτο που δόθηκε στον διερμηνέα Python με το όρισμα :"
+"option:`-m`:"
 
 #: library/__main__.rst:70
 msgid ""
 "$ python -m tarfile\n"
 "usage: tarfile.py [-h] [-v] (...)"
 msgstr ""
+"$ python -m tarfile\n"
+"usage: tarfile.py [-h] [-v] (...)"
 
 #: library/__main__.rst:75
 msgid "Python code read by the Python interpreter from standard input:"
 msgstr ""
+"Κώδικας Python που διαβάζεται από τον διερμηνέα Python από την τυπική είσοδο:"
 
 #: library/__main__.rst:77
 msgid ""
@@ -144,11 +182,18 @@ msgid ""
 "Explicit is better than implicit.\n"
 "..."
 msgstr ""
+"$ echo \"import this\" | python\n"
+"The Zen of Python, by Tim Peters\n"
+"\n"
+"Beautiful is better than ugly.\n"
+"Explicit is better than implicit.\n"
+"..."
 
 #: library/__main__.rst:86
 msgid ""
 "Python code passed to the Python interpreter with the :option:`-c` argument:"
 msgstr ""
+"Κώδικας Python που δόθηκε στον διερμηνέα Python με το όρισμα :option:`-c`:"
 
 #: library/__main__.rst:88
 msgid ""
@@ -159,12 +204,20 @@ msgid ""
 "Explicit is better than implicit.\n"
 "..."
 msgstr ""
+"$ python -c \"import this\"\n"
+"The Zen of Python, by Tim Peters\n"
+"\n"
+"Beautiful is better than ugly.\n"
+"Explicit is better than implicit.\n"
+"..."
 
 #: library/__main__.rst:97
 msgid ""
 "In each of these situations, the top-level module's ``__name__`` is set to "
 "``'__main__'``."
 msgstr ""
+"Σε κάθε μία από αυτές τις περιπτώσεις, το ``__name__`` του module ανωτέρου "
+"επιπέδου ορίζεται σε ``'__main__'``."
 
 #: library/__main__.rst:100
 msgid ""
@@ -173,6 +226,10 @@ msgid ""
 "idiom for conditionally executing code when the module is not initialized "
 "from an import statement::"
 msgstr ""
+"Ως αποτέλεσμα, ένα module μπορεί να ανακαλύψει εάν εκτελείται στο πεδίο "
+"ονομάτων ανωτέρου επιπέδου ελέγχοντας το δικό του ``__name__``, το οποίο "
+"επιτρέπει μια κοινή ιδιωματική έκφραση για την εκτέλεση κώδικα υπό όρους "
+"όταν το module δεν έχει αρχικοποιηθεί από μια δήλωση εισαγωγής::"
 
 #: library/__main__.rst:105
 msgid ""
@@ -180,16 +237,21 @@ msgid ""
 "    # Execute when the module is not initialized from an import statement.\n"
 "    ..."
 msgstr ""
+"if __name__ == '__main__':\n"
+"    # Execute when the module is not initialized from an import statement.\n"
+"    ..."
 
 #: library/__main__.rst:111
 msgid ""
 "For a more detailed look at how ``__name__`` is set in all situations, see "
 "the tutorial section :ref:`tut-modules`."
 msgstr ""
+"Για μια πιο λεπτομερή ματιά στο πώς ορίζεται το ``__name__`` σε όλες τις "
+"περιπτώσεις, δείτε την ενότητα του εγχειριδίου :ref:`tut-modules`."
 
 #: library/__main__.rst:239
 msgid "Idiomatic Usage"
-msgstr ""
+msgstr "Χρήσεις με ιδιωματισμό"
 
 #: library/__main__.rst:118
 msgid ""
@@ -198,6 +260,11 @@ msgid ""
 "like this was imported from a different module, for example to unit test it, "
 "the script code would unintentionally execute as well."
 msgstr ""
+"Ορισμένα modules περιέχουν κώδικα που προορίζεται μόνο για χρήση ως σενάριο, "
+"όπως η ανάλυση ορισμάτων γραμμής εντολών ή η λήψη δεδομένων από την τυπική "
+"είσοδο. Εάν ένα τέτοιο module εισαχθεί από ένα διαφορετικό module, για "
+"παράδειγμα για να ελεγχθεί με unit tests, ο κώδικας του σεναρίου θα "
+"εκτελούνταν επίσης κατά λάθος."
 
 #: library/__main__.rst:123
 msgid ""
@@ -205,6 +272,9 @@ msgid ""
 "handy. Code within this block won't run unless the module is executed in the "
 "top-level environment."
 msgstr ""
+"Εδώ είναι που γίνεται χρήσιμο το μπλοκ κώδικα ``if __name__ == '__main__'``. "
+"Ο κώδικας μέσα σε αυτό το μπλοκ δεν θα εκτελεστεί εκτός εάν το module "
+"εκτελεστεί στο πεδίο ονομάτων ανωτέρου επιπέδου."
 
 #: library/__main__.rst:127
 msgid ""
@@ -212,6 +282,10 @@ msgid ""
 "'__main__'`` can improve code clarity and correctness. Most often, a "
 "function named ``main`` encapsulates the program's primary behavior::"
 msgstr ""
+"Η τοποθέτηση όσο το δυνατόν λιγότερων δηλώσεων στο μπλοκ κάτω από το ``if "
+"__name__ == '__main__'`` μπορεί να βελτιώσει την σαφήνεια και την ορθότητα "
+"του κώδικα. Στις περισσότερες περιπτώσεις, μια συνάρτηση με το όνομα "
+"``main`` περικλείει την κύρια συμπεριφορά του προγράμματος::"
 
 #: library/__main__.rst:131
 msgid ""
@@ -235,6 +309,25 @@ msgid ""
 "if __name__ == '__main__':\n"
 "    sys.exit(main())  # next section explains the use of sys.exit"
 msgstr ""
+"# echo.py\n"
+"\n"
+"import shlex\n"
+"import sys\n"
+"\n"
+"def echo(phrase: str) -> None:\n"
+"   \"\"\"A dummy wrapper around print.\"\"\"\n"
+"   # for demonstration purposes, you can imagine that there is some\n"
+"   # valuable and reusable logic inside this function\n"
+"   print(phrase)\n"
+"\n"
+"def main() -> int:\n"
+"    \"\"\"Echo the input arguments to standard output\"\"\"\n"
+"    phrase = shlex.join(sys.argv)\n"
+"    echo(phrase)\n"
+"    return 0\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    sys.exit(main())  # next section explains the use of sys.exit"
 
 #: library/__main__.rst:151
 msgid ""
@@ -245,6 +338,12 @@ msgid ""
 "the global variable instead of a local name.  A ``main`` function solves "
 "this problem."
 msgstr ""
+"Σημειώστε ότι εάν το module δεν περικλείει τον κώδικα μέσα στη συνάρτηση "
+"``main`` αλλά τον τοποθετεί απευθείας μέσα στο μπλοκ ``if __name__ == "
+"'__main__'``, η μεταβλητή ``phrase`` θα είναι παγκόσμια για ολόκληρο το "
+"module.  Αυτό είναι ευαίσθητο σε σφάλματα καθώς άλλες συναρτήσεις μέσα στο "
+"module θα μπορούσαν να χρησιμοποιούν κατά λάθος την καθολική μεταβλητή αντί "
+"για ένα τοπικό όνομα.  Μια συνάρτηση ``main`` λύνει αυτό το πρόβλημα."
 
 #: library/__main__.rst:158
 msgid ""
@@ -253,10 +352,14 @@ msgid ""
 "imported, the ``echo`` and ``main`` functions will be defined, but neither "
 "of them will be called, because ``__name__ != '__main__'``."
 msgstr ""
+"Χρησιμοποιώντας μια συνάρτηση ``main`` έχει το πρόσθετο όφελος ότι η "
+"συνάρτηση ``echo`` είναι απομονωμένη και μπορεί να εισαχθεί αλλού. Όταν το "
+"``echo.py`` εισάγεται, οι συναρτήσεις ``echo`` και ``main`` θα οριστούν, "
+"αλλά καμία από αυτές δεν θα κληθεί, επειδή ``__name__ != '__main__'``."
 
 #: library/__main__.rst:165
 msgid "Packaging Considerations"
-msgstr ""
+msgstr "Παρατηρήσεις συσκευασίας"
 
 #: library/__main__.rst:167
 msgid ""
@@ -265,10 +368,15 @@ msgid ""
 "pip.pypa.io/>`_ inserts the function call into a template script, where the "
 "return value of ``main`` is passed into :func:`sys.exit`. For example::"
 msgstr ""
+"Οι συναρτήσεις ``main`` χρησιμοποιούνται συχνά για τη δημιουργία εργαλείων "
+"γραμμής εντολών καθορίζοντάς τες ως σημεία εισόδου για σενάρια κονσόλας.  "
+"Όταν γίνεται αυτό, το `pip <https://pip.pypa.io/>`_ εισάγει την κλήση της "
+"συνάρτησης σε ένα πρότυπο σενάριο, όπου η τιμή επιστροφής της ``main`` "
+"περνάει στη :func:`sys.exit`. Για παράδειγμα::"
 
 #: library/__main__.rst:173
 msgid "sys.exit(main())"
-msgstr ""
+msgstr "sys.exit(main())"
 
 #: library/__main__.rst:175
 msgid ""
@@ -277,6 +385,11 @@ msgid ""
 "`sys.exit`; typically, an integer or ``None`` (which is implicitly returned "
 "if your function does not have a return statement)."
 msgstr ""
+"Εφόσον η κλήση της ``main`` είναι περιτυλιγμένη στη :func:`sys.exit`, η "
+"προσδοκία είναι ότι η συνάρτησή σας θα επιστρέψει κάποια τιμή αποδεκτή ως "
+"είσοδο στη :func:`sys.exit`· συνήθως, έναν ακέραιο ή ``None`` (που "
+"επιστρέφεται αυτοματοποιημένα εάν η συνάρτησή σας δεν έχει δήλωση "
+"επιστροφής)."
 
 #: library/__main__.rst:180
 msgid ""
@@ -285,6 +398,10 @@ msgid ""
 "we later package it as a console script entry-point in a pip-installable "
 "package."
 msgstr ""
+"Ακολουθώντας προληπτικά αυτή τη σύμβαση, το module μας θα έχει την ίδια "
+"συμπεριφορά όταν εκτελείται απευθείας (δηλαδή ``python echo.py``) όπως θα "
+"έχει εάν αργότερα το συσκευάσουμε ως σημείο εισόδου σε σενάριο κονσόλας σε "
+"ένα πακέτο που μπορεί να εγκατασταθεί με pip."
 
 #: library/__main__.rst:185
 msgid ""
@@ -295,6 +412,12 @@ msgid ""
 "py`` example from earlier exemplifies using the ``sys.exit(main())`` "
 "convention."
 msgstr ""
+"Ιδιαίτερα, να είστε προσεκτικοί/ές σχετικά με την επιστροφή συμβολοσειρών "
+"από τη δική σας συνάρτηση ``main``. Το :func:`sys.exit` θα ερμηνεύσει ένα "
+"όρισμα συμβολοσειράς ως μήνυμα αποτυχίας, οπότε το πρόγραμμά σας θα έχει "
+"κωδικό εξόδου ``1``, που υποδεικνύει αποτυχία, και η συμβολοσειρά θα γραφεί "
+"στο :data:`sys.stderr`.  Το παράδειγμα ``echo.py`` από νωρίτερα αποτελεί "
+"παράδειγμα χρήσης της σύμβασης ``sys.exit(main())``."
 
 #: library/__main__.rst:193
 msgid ""
@@ -302,10 +425,13 @@ msgid ""
 "collection of tutorials and references on how to distribute and install "
 "Python packages with modern tools."
 msgstr ""
+"Το `Python Packaging User Guide <https://packaging.python.org/>`_ περιέχει "
+"μια συλλογή εγχειριδίων και αναφορών σχετικά με το πώς να διανείμετε και να "
+"εγκαθιστάτε πακέτα Python με σύγχρονα εργαλεία."
 
 #: library/__main__.rst:199
 msgid "``__main__.py`` in Python Packages"
-msgstr ""
+msgstr "``__main__.py`` στα πακέτα της Python"
 
 #: library/__main__.rst:201
 msgid ""
@@ -314,6 +440,10 @@ msgid ""
 "to provide a command-line interface for a package. Consider the following "
 "hypothetical package, \"bandclass\":"
 msgstr ""
+"Εάν δεν είστε εξοικειωμένοι με τα πακέτα της Python, δείτε την ενότητα :ref:"
+"`tut-packages` του εγχειριδίου.  Συνήθως, το αρχείο ``__main__.py`` "
+"χρησιμοποιείται για να παρέχει μια διεπαφή γραμμής εντολών για ένα πακέτο. "
+"Σκεφτείτε το ακόλουθο υποθετικό πακέτο, \"bandclass\":"
 
 #: library/__main__.rst:206
 msgid ""
@@ -322,16 +452,22 @@ msgid ""
 "  ├── __main__.py\n"
 "  └── student.py"
 msgstr ""
+"bandclass\n"
+"  ├── __init__.py\n"
+"  ├── __main__.py\n"
+"  └── student.py"
 
 #: library/__main__.rst:213
 msgid ""
 "``__main__.py`` will be executed when the package itself is invoked directly "
 "from the command line using the :option:`-m` flag. For example:"
 msgstr ""
+"Το ``__main__.py`` θα εκτελεστεί όταν το πακέτο αυτό εκκινηθεί απευθείας από "
+"τη γραμμή εντολών χρησιμοποιώντας τη σημαία :option:`-m`. Για παράδειγμα:"
 
 #: library/__main__.rst:216
 msgid "$ python -m bandclass"
-msgstr ""
+msgstr "$ python -m bandclass"
 
 #: library/__main__.rst:220
 msgid ""
@@ -340,6 +476,10 @@ msgid ""
 "this hypothetical case, it might make sense to allow the teacher to search "
 "for students::"
 msgstr ""
+"Αυτή η εντολή θα προκαλέσει την εκτέλεση του ``__main__.py``. Ο τρόπος με "
+"τον οποίο θα χρησιμοποιήσετε αυτόν τον μηχανισμό θα εξαρτηθεί από τη φύση "
+"του πακέτου που γράφετε, αλλά σε αυτή την υποθετική περίπτωση, θα είχε νόημα "
+"να επιτρέψετε στον δάσκαλο να αναζητήσει μαθητές::"
 
 #: library/__main__.rst:225
 msgid ""
@@ -351,6 +491,13 @@ msgid ""
 "student_name = sys.argv[1] if len(sys.argv) >= 2 else ''\n"
 "print(f'Found student: {search_students(student_name)}')"
 msgstr ""
+"# bandclass/__main__.py\n"
+"\n"
+"import sys\n"
+"from .student import search_students\n"
+"\n"
+"student_name = sys.argv[1] if len(sys.argv) >= 2 else ''\n"
+"print(f'Found student: {search_students(student_name)}')"
 
 #: library/__main__.rst:233
 msgid ""
@@ -359,6 +506,11 @@ msgid ""
 "within a package.  For more details, see :ref:`intra-package-references` in "
 "the :ref:`tut-modules` section of the tutorial."
 msgstr ""
+"Σημειώστε ότι το ``from .student import search_students`` είναι ένα "
+"παράδειγμα σχετικής εισαγωγής. Αυτό το στυλ εισαγωγής μπορεί να "
+"χρησιμοποιηθεί όταν αναφέρεστε σε modules εντός ενός πακέτου. Για "
+"περισσότερες λεπτομέρειες, δείτε το :ref:`intra-package-references` στην "
+"ενότητα :ref:`tut-modules` του εγχειριδίου."
 
 #: library/__main__.rst:241
 msgid ""
@@ -367,6 +519,11 @@ msgid ""
 "functions to execute from other modules.  Those other modules can then be "
 "easily unit-tested and are properly reusable."
 msgstr ""
+"Το περιεχόμενο του ``__main__.py`` συνήθως δεν περικλείεται με ένα μπλοκ "
+"``if __name__ == '__main__'``.  Αντίθετα, αυτά τα αρχεία διατηρούνται "
+"σύντομα και εισάγουν συναρτήσεις για εκτέλεση από άλλα modules.  Αυτά τα "
+"άλλα αρχεία μονάδων μπορούν στη συνέχεια να ελεγχθούν εύκολα με unit tests "
+"και είναι κατάλληλα επαναχρησιμοποιήσιμα."
 
 #: library/__main__.rst:246
 msgid ""
@@ -374,6 +531,10 @@ msgid ""
 "for a ``__main__.py`` file within a package, because its ``__name__`` "
 "attribute will include the package's path if imported::"
 msgstr ""
+"Εάν χρησιμοποιηθεί, ένα μπλοκ ``if __name__ == '__main__'`` θα λειτουργήσει "
+"όπως αναμένεται για ένα αρχείο ``__main__.py`` μέσα σε ένα πακέτο, επειδή το "
+"χαρακτηριστικό του ``__name__`` θα περιλαμβάνει τη διαδρομή του πακέτου εάν "
+"εισαχθεί::"
 
 #: library/__main__.rst:250
 msgid ""
@@ -381,6 +542,9 @@ msgid ""
 ">>> asyncio.__main__.__name__\n"
 "'asyncio.__main__'"
 msgstr ""
+">>> import asyncio.__main__\n"
+">>> asyncio.__main__.__name__\n"
+"'asyncio.__main__'"
 
 #: library/__main__.rst:254
 msgid ""
@@ -388,6 +552,9 @@ msgid ""
 "zip`` file though.  Hence, for consistency, a minimal ``__main__.py`` "
 "without a ``__name__`` check is preferred."
 msgstr ""
+"Αυτό δεν θα λειτουργήσει όμως για αρχεία ``__main__.py`` στον ριζικό "
+"κατάλογο ενός αρχείου ``.zip``.  Επομένως, για συνέπεια, προτιμάται ένα "
+"ελάχιστο ``__main__.py`` χωρίς έλεγχο ``__name__``."
 
 #: library/__main__.rst:260
 msgid ""
@@ -395,12 +562,17 @@ msgid ""
 "in the standard library. It doesn't contain a ``if __name__ == '__main__'`` "
 "block. You can invoke it with ``python -m venv [directory]``."
 msgstr ""
+"Δείτε το :mod:`venv` για ένα παράδειγμα πακέτου με ένα ελάχιστο ``__main__."
+"py`` στη βιβλιοθήκη προτύπων. Δεν περιέχει μπλοκ ``if __name__ == "
+"'__main__'``. Μπορείτε να το εκκινήσετε με ``python -m venv [directory]``."
 
 #: library/__main__.rst:264
 msgid ""
 "See :mod:`runpy` for more details on the :option:`-m` flag to the "
 "interpreter executable."
 msgstr ""
+"Δείτε το :mod:`runpy` για περισσότερες λεπτομέρειες σχετικά με τη σημαία :"
+"option:`-m` για το εκτελέσιμο του διερμηνέα."
 
 #: library/__main__.rst:267
 msgid ""
@@ -408,10 +580,13 @@ msgid ""
 "this case Python looks for a ``__main__.py`` file in the root directory of "
 "the archive."
 msgstr ""
+"Δείτε το :mod:`zipapp` για το πώς να εκτελέσετε εφαρμογές που συσκευάζονται "
+"ως αρχεία *.zip*. Σε αυτή την περίπτωση, η Python αναζητά ένα αρχείο "
+"``__main__.py`` στον ριζικό κατάλογο του αρχείου."
 
 #: library/__main__.rst:274
 msgid "``import __main__``"
-msgstr ""
+msgstr "``import __main__``"
 
 #: library/__main__.rst:276
 msgid ""
@@ -421,10 +596,17 @@ msgid ""
 "doesn't import a ``__main__.py`` file but rather whichever module that "
 "received the special name ``'__main__'``."
 msgstr ""
+"Ανεξάρτητα από το ποιο module ξεκίνησε ένα πρόγραμμα Python, άλλα modules "
+"που εκτελούνται μέσα σε αυτό το ίδιο πρόγραμμα μπορούν να εισάγουν το πεδίο "
+"ονομάτων ανωτέρου επιπέδου (:term:`namespace`) εισάγοντας το module "
+"``__main__``.  Αυτό δεν εισάγει ένα αρχείο ``__main__.py`` αλλά μάλλον όποιο "
+"module έλαβε το ειδικό όνομα ``'__main__'``."
 
 #: library/__main__.rst:282
 msgid "Here is an example module that consumes the ``__main__`` namespace::"
 msgstr ""
+"Εδώ είναι ένα παράδειγμα module που χρησιμοποιεί το πεδίο ονομάτων "
+"``__main__``::"
 
 #: library/__main__.rst:284
 msgid ""
@@ -441,10 +623,22 @@ msgid ""
 "\n"
 "    print(__main__.my_name)"
 msgstr ""
+"# namely.py\n"
+"\n"
+"import __main__\n"
+"\n"
+"def did_user_define_their_name():\n"
+"    return 'my_name' in dir(__main__)\n"
+"\n"
+"def print_user_name():\n"
+"    if not did_user_define_their_name():\n"
+"        raise ValueError('Define the variable `my_name`!')\n"
+"\n"
+"    print(__main__.my_name)"
 
 #: library/__main__.rst:297
 msgid "Example usage of this module could be as follows::"
-msgstr ""
+msgstr "Ένα παράδειγμα χρήσης αυτού του module θα μπορούσε να είναι το εξής::"
 
 #: library/__main__.rst:299
 msgid ""
@@ -465,16 +659,35 @@ msgid ""
 "if __name__ == \"__main__\":\n"
 "    sys.exit(main())"
 msgstr ""
+"# start.py\n"
+"\n"
+"import sys\n"
+"\n"
+"from namely import print_user_name\n"
+"\n"
+"# my_name = \"Dinsdale\"\n"
+"\n"
+"def main():\n"
+"    try:\n"
+"        print_user_name()\n"
+"    except ValueError as ve:\n"
+"        return str(ve)\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    sys.exit(main())"
 
 #: library/__main__.rst:316
 msgid "Now, if we started our program, the result would look like this:"
 msgstr ""
+"Τώρα, εάν ξεκινήσουμε το πρόγραμμά μας, το αποτέλεσμα θα μοιάζει με αυτό:"
 
 #: library/__main__.rst:318
 msgid ""
 "$ python start.py\n"
 "Define the variable `my_name`!"
 msgstr ""
+"$ python start.py\n"
+"Define the variable `my_name`!"
 
 #: library/__main__.rst:323
 msgid ""
@@ -482,12 +695,18 @@ msgid ""
 "the line with ``my_name = \"Dinsdale\"`` fixes the program and now it exits "
 "with status code 0, indicating success:"
 msgstr ""
+"Ο κωδικός εξόδου του προγράμματος θα ήταν 1, υποδεικνύοντας ένα σφάλμα. "
+"Αποσχολιάζοντας τη γραμμή ``my_name = \"Dinsdale\"`` διορθώνεται το "
+"πρόγραμμα και τώρα τερματίζει με κωδικό κατάστασης 0, υποδεικνύοντας "
+"επιτυχία:"
 
 #: library/__main__.rst:327
 msgid ""
 "$ python start.py\n"
 "Dinsdale"
 msgstr ""
+"$ python start.py\n"
+"Dinsdale"
 
 #: library/__main__.rst:332
 msgid ""
@@ -496,6 +715,10 @@ msgid ""
 "the ``if __name__ == \"__main__\"`` block of the ``start`` module. Why does "
 "this work?"
 msgstr ""
+"Σημειώστε ότι η εισαγωγή του ``__main__`` δεν προκαλεί κανένα πρόβλημα με "
+"την ακούσια εκτέλεση κώδικα ανωτέρου επιπέδου που προορίζεται για χρήση σε "
+"σενάριο και τοποθετείται στο μπλοκ ``if __name__ == \"__main__\"`` του "
+"module ``start``. Γιατί λειτουργεί αυτό;"
 
 #: library/__main__.rst:336
 msgid ""
@@ -509,12 +732,25 @@ msgid ""
 "<import-dunder-main>` in the import system's reference for details on how "
 "this works."
 msgstr ""
+"Η Python εισάγει ένα κενό module ``__main__`` στο :data:`sys.modules` κατά "
+"την εκκίνηση του διερμηνέα και το γεμίζει εκτελώντας κώδικα ανωτέρου "
+"επιπέδου. Στο παράδειγμά μας, αυτό είναι το module ``start`` που εκτελείται "
+"γραμμή-γραμμή και εισάγει το ``namely``. Με τη σειρά του, το ``namely`` "
+"εισάγει το ``__main__`` (που είναι πραγματικά το ``start``). Αυτό είναι ένας "
+"κύκλος εισαγωγής! Ευτυχώς, επειδή το μερικώς γεμάτο module ``__main__`` "
+"είναι παρόν στο :data:`sys.modules`, η Python το περνάει στο ``namely``. "
+"Δείτε :ref:`Special considerations for __main__ <import-dunder-main>` στην "
+"αναφορά του συστήματος εισαγωγής για λεπτομέρειες σχετικά με το πώς "
+"λειτουργεί."
 
 #: library/__main__.rst:345
 msgid ""
 "The Python REPL is another example of a \"top-level environment\", so "
 "anything defined in the REPL becomes part of the ``__main__`` scope::"
 msgstr ""
+"Το REPL της Python είναι ένα ακόμη παράδειγμα \"πεδίου ονομάτων ανωτέρου "
+"επιπέδου\", οπότε οτιδήποτε οριστεί στο REPL γίνεται μέρος του πεδίου "
+"ονομάτων ``__main__``::"
 
 #: library/__main__.rst:348
 msgid ""
@@ -531,9 +767,23 @@ msgid ""
 ">>> namely.print_user_name()\n"
 "Jabberwocky"
 msgstr ""
+">>> import namely\n"
+">>> namely.did_user_define_their_name()\n"
+"False\n"
+">>> namely.print_user_name()\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"ValueError: Define the variable `my_name`!\n"
+">>> my_name = 'Jabberwocky'\n"
+">>> namely.did_user_define_their_name()\n"
+"True\n"
+">>> namely.print_user_name()\n"
+"Jabberwocky"
 
 #: library/__main__.rst:361
 msgid ""
 "The ``__main__`` scope is used in the implementation of :mod:`pdb` and :mod:"
 "`rlcompleter`."
 msgstr ""
+"Το πεδίο ονομάτων ``__main__`` χρησιμοποιείται στην υλοποίηση των :mod:`pdb` "
+"και :mod:`rlcompleter`."
