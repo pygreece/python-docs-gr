@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-06-04 23:56+0300\n"
+"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: library/unicodedata.rst:2
 msgid ":mod:`!unicodedata` --- Unicode Database"
-msgstr ""
+msgstr ":mod:`!unicodedata` --- Βάση Δεδομένων Unicode"
 
 #: library/unicodedata.rst:18
 msgid ""
@@ -28,6 +28,10 @@ msgid ""
 "in this database is compiled from the `UCD version 16.0.0 <https://www."
 "unicode.org/Public/16.0.0/ucd>`_."
 msgstr ""
+"Αυτή η ενότητα παρέχει πρόσβαση στη βάση δεδομένων χαρακτήρων Unicode (UCD) "
+"η οποία ορίζει τις ιδιότητες χαρακτήρων για όλους τους χαρακτήρες Unicode. "
+"Τα δεδομένα που περιέχονται σε αυτή τη βάση δεδομένων έχει συνταχθεί από το "
+"`UCD version 16.0.0 <https://www.unicode.org/Public/16.0.0/ucd>`_."
 
 #: library/unicodedata.rst:23
 msgid ""
@@ -35,12 +39,17 @@ msgid ""
 "Annex #44, `\"Unicode Character Database\" <https://www.unicode.org/reports/"
 "tr44/>`_.  It defines the following functions:"
 msgstr ""
+"Η ενότητα χρησιμοποιεί τα ίδια ονόματα και σύμβολα όπως ορίζονται από το "
+"πρότυπο Unicode Παράρτημα #44, `\"Unicode Character Database\" <https://www."
+"unicode.org/reports/tr44/>`_.  Ορίζει τις ακόλουθες λειτουργίες:"
 
 #: library/unicodedata.rst:30
 msgid ""
 "The :ref:`unicode-howto` for more information about Unicode and how to use "
 "this module."
 msgstr ""
+"Το: ref:`unicode-howto` για περισσότερες πληροφορίες σχετικά με το Unicode "
+"και τον τρόπο χρήσης αυτής της ενότητας."
 
 #: library/unicodedata.rst:36
 msgid ""
@@ -48,28 +57,40 @@ msgid ""
 "return the corresponding character.  If not found, :exc:`KeyError` is "
 "raised. For example::"
 msgstr ""
+"Αναζητήστε χαρακτήρα με το όνομα.  Εάν βρεθεί ένας χαρακτήρας με το δεδομένο "
+"όνομα, επιστρέφει τον αντίστοιχο χαρακτήρα.  Εάν δεν βρεθεί, γίνεται raise :"
+"exc:`KeyError`. Για παράδειγμα::"
 
 #: library/unicodedata.rst:40
 msgid ""
 ">>> unicodedata.lookup('LEFT CURLY BRACKET')\n"
 "'{'"
 msgstr ""
+">>> unicodedata.lookup('LEFT CURLY BRACKET')\n"
+"'{'"
 
 #: library/unicodedata.rst:43
 msgid ""
 "The characters returned by this function are the same as those produced by "
 "``\\N`` escape sequence in string literals. For example::"
 msgstr ""
+"Οι χαρακτήρες που επιστρέφονται από αυτή τη συνάρτηση είναι οι ίδιοι με "
+"αυτούς που παράγονται από την ακολουθία διαφυγής ``\\N`` σε κυριολεκτικά "
+"συμβολοσειράς. Για παράδειγμα::"
 
 #: library/unicodedata.rst:46
 msgid ""
 ">>> unicodedata.lookup('MIDDLE DOT') == '\\N{MIDDLE DOT}'\n"
 "True"
 msgstr ""
+">>> unicodedata.lookup('MIDDLE DOT') == '\\N{MIDDLE DOT}'\n"
+"True"
 
 #: library/unicodedata.rst:49
 msgid "Support for name aliases [#]_ and named sequences [#]_ has been added."
 msgstr ""
+"Έχει προστεθεί υποστήριξη για ψευδώνυμα ονομάτων [#]_ και ονοματισμένες "
+"ακολουθίες [#]_."
 
 #: library/unicodedata.rst:55
 msgid ""
@@ -77,6 +98,9 @@ msgid ""
 "defined, *default* is returned, or, if not given, :exc:`ValueError` is "
 "raised. For example::"
 msgstr ""
+"Επιστρέφει το όνομα που έχει ανατεθεί στον χαρακτήρα *chr* ως συμβολοσειρά. "
+"Αν δεν έχει οριστεί κανένα όνομα, επιστρέφεται το *default*, ή, αν δεν έχει "
+"δοθεί, γίνεται raise :exc:`ValueError`. Για παράδειγμα::"
 
 #: library/unicodedata.rst:59
 msgid ""
@@ -85,6 +109,10 @@ msgid ""
 ">>> unicodedata.name('\\uFFFF', 'fallback')\n"
 "'fallback'"
 msgstr ""
+">>> unicodedata.name('½')\n"
+"'VULGAR FRACTION ONE HALF'\n"
+">>> unicodedata.name('\\uFFFF', 'fallback')\n"
+"'fallback'"
 
 #: library/unicodedata.rst:67
 msgid ""
@@ -92,6 +120,9 @@ msgid ""
 "such value is defined, *default* is returned, or, if not given, :exc:"
 "`ValueError` is raised. For example::"
 msgstr ""
+"Επιστρέφει τη δεκαδική τιμή που έχει ανατεθεί στον χαρακτήρα *chr* ως "
+"ακέραιο. Αν δεν έχει οριστεί τέτοια τιμή, επιστρέφεται το *default*, ή, αν "
+"δεν έχει δοθεί, γίνεται raise :exc:`ValueError`. Για παράδειγμα::"
 
 #: library/unicodedata.rst:71
 msgid ""
@@ -100,6 +131,10 @@ msgid ""
 ">>> unicodedata.decimal('\\N{SUPERSCRIPT NINE}', -1)\n"
 "-1"
 msgstr ""
+">>> unicodedata.decimal('\\N{ARABIC-INDIC DIGIT NINE}')\n"
+"9\n"
+">>> unicodedata.decimal('\\N{SUPERSCRIPT NINE}', -1)\n"
+"-1"
 
 #: library/unicodedata.rst:79
 msgid ""
@@ -107,12 +142,17 @@ msgid ""
 "such value is defined, *default* is returned, or, if not given, :exc:"
 "`ValueError` is raised::"
 msgstr ""
+"Επιστρέφει την τιμή ψηφίου που έχει ανατεθεί στον χαρακτήρα *chr* ως "
+"ακέραιο. Αν δεν έχει οριστεί τέτοια τιμή, επιστρέφεται το *default*, ή, αν "
+"δεν έχει δοθεί, γίνεται raise :exc:`ValueError`::"
 
 #: library/unicodedata.rst:83
 msgid ""
 ">>> unicodedata.digit('\\N{SUPERSCRIPT NINE}')\n"
 "9"
 msgstr ""
+">>> unicodedata.digit('\\N{SUPERSCRIPT NINE}')\n"
+"9"
 
 #: library/unicodedata.rst:89
 msgid ""
@@ -120,12 +160,17 @@ msgid ""
 "such value is defined, *default* is returned, or, if not given, :exc:"
 "`ValueError` is raised::"
 msgstr ""
+"Επιστρέφει την αριθμητική τιμή που έχει ανατεθεί στον χαρακτήρα *chr* ως "
+"αριθμό κινητής υποδιαστολής. Αν δεν έχει οριστεί τέτοια τιμή, επιστρέφεται "
+"το *default*, ή, αν δεν έχει δοθεί, γίνεται raise :exc:`ValueError`::"
 
 #: library/unicodedata.rst:93
 msgid ""
 ">>> unicodedata.numeric('½')\n"
 "0.5"
 msgstr ""
+">>> unicodedata.numeric('½')\n"
+"0.5"
 
 #: library/unicodedata.rst:99
 msgid ""
@@ -135,12 +180,20 @@ msgid ""
 "unicode.org/reports/tr44/tr44-34.html#General_Category_Values>`_ for a list "
 "of category codes. For example::"
 msgstr ""
+"Επιστρέφει τη γενική κατηγορία που έχει ανατεθεί στον χαρακτήρα *chr* ως "
+"συμβολοσειρά. Τα ονόματα των γενικών κατηγοριών αποτελούνται από δύο "
+"γράμματα. Δείτε την `General Category Values section of the Unicode "
+"Character Database documentation <https://www.unicode.org/reports/tr44/"
+"tr44-34.html#General_Category_Values>`_ για μια λίστα κωδικών κατηγορίας. "
+"Για παράδειγμα::"
 
 #: library/unicodedata.rst:105
 msgid ""
 ">>> unicodedata.category('A')  # 'L'etter, 'u'ppercase\n"
 "'Lu'"
 msgstr ""
+">>> unicodedata.category('A')  # 'L'etter, 'u'ppercase\n"
+"'Lu'"
 
 #: library/unicodedata.rst:111
 msgid ""
@@ -150,6 +203,12 @@ msgid ""
 "<https://www.unicode.org/reports/tr44/tr44-34.html#Bidi_Class_Values>`_ "
 "documentation for a list of bidirectional codes. For example::"
 msgstr ""
+"Επιστρέφει την αμφίδρομη κλάση που έχει ανατεθεί στον χαρακτήρα *chr* ως "
+"συμβολοσειρά. Αν δεν έχει οριστεί τέτοια τιμή, επιστρέφεται μια κενή "
+"συμβολοσειρά. Δείτε την τεκμηρίωση για την `Bidirectional Class Values "
+"section of the Unicode Character Database <https://www.unicode.org/reports/"
+"tr44/tr44-34.html#Bidi_Class_Values>`_ για μια λίστα αμφίδρομων κωδικών. Για "
+"παράδειγμα::"
 
 #: library/unicodedata.rst:117
 msgid ""
@@ -157,6 +216,9 @@ msgid ""
 "'N'umber\n"
 "'AN'"
 msgstr ""
+">>> unicodedata.bidirectional('\\N{ARABIC-INDIC DIGIT SEVEN}') # 'A'rabic, "
+"'N'umber\n"
+"'AN'"
 
 #: library/unicodedata.rst:123
 msgid ""
@@ -166,6 +228,11 @@ msgid ""
 "www.unicode.org/reports/tr44/tr44-34."
 "html#Canonical_Combining_Class_Values>`_ for more information."
 msgstr ""
+"Επιστρέφει την κανονική κλάση συνδυασμού που έχει ανατεθεί στον χαρακτήρα "
+"*chr* ως ακέραιο. Επιστρέφει ``0`` αν δεν έχει οριστεί κλάση συνδυασμού. "
+"Δείτε την `ενότητα Canonical Combining Class Values section of the Unicode "
+"Character Database <https://www.unicode.org/reports/tr44/tr44-34."
+"html#Canonical_Combining_Class_Values>`_ για περισσότερες πληροφορίες."
 
 #: library/unicodedata.rst:132
 msgid ""
@@ -173,6 +240,10 @@ msgid ""
 "a list of widths and or more information, see the `Unicode Standard Annex "
 "#11 <https://www.unicode.org/reports/tr11/tr11-43.html>`_."
 msgstr ""
+"Επιστρέφει το ανατολικο-ασιατικό πλάτος που έχει ανατεθεί στον χαρακτήρα "
+"*chr* ως συμβολοσειρά. Για μια λίστα με πλάτη ή/και περισσότερες "
+"πληροφορίες, δείτε το `Unicode Standard Annex #11 <https://www.unicode.org/"
+"reports/tr11/tr11-43.html>`_."
 
 #: library/unicodedata.rst:139
 msgid ""
@@ -180,12 +251,18 @@ msgid ""
 "Returns ``1`` if the character has been identified as a \"mirrored\" "
 "character in bidirectional text, ``0`` otherwise. For example::"
 msgstr ""
+"Επιστρέφει την ιδιότητα κατοπτρισμού που έχει ανατεθεί στον χαρακτήρα *chr* "
+"ως ακέραιο. Επιστρέφει ``1`` αν ο χαρακτήρας έχει αναγνωριστεί ως "
+"\"κατοπτρικός\" χαρακτήρας σε αμφίδρομο κείμενο, ``0`` διαφορετικά. Για "
+"παράδειγμα::"
 
 #: library/unicodedata.rst:143
 msgid ""
 ">>> unicodedata.mirrored('>')\n"
 "1"
 msgstr ""
+">>> unicodedata.mirrored('>')\n"
+"1"
 
 #: library/unicodedata.rst:149
 msgid ""
@@ -193,18 +270,25 @@ msgid ""
 "as string. An empty string is returned in case no such mapping is defined. "
 "For example::"
 msgstr ""
+"Επιστρέφει την αντιστοίχιση διάσπασης χαρακτήρα που έχει ανατεθεί στον "
+"χαρακτήρα *chr* ως συμβολοσειρά. Επιστρέφεται μια κενή συμβολοσειρά σε "
+"περίπτωση που δεν έχει οριστεί τέτοια αντιστοίχιση. Για παράδειγμα::"
 
 #: library/unicodedata.rst:153
 msgid ""
 ">>> unicodedata.decomposition('Ã')\n"
 "'0041 0303'"
 msgstr ""
+">>> unicodedata.decomposition('Ã')\n"
+"'0041 0303'"
 
 #: library/unicodedata.rst:159
 msgid ""
 "Return the normal form *form* for the Unicode string *unistr*. Valid values "
 "for *form* are 'NFC', 'NFKC', 'NFD', and 'NFKD'."
 msgstr ""
+"Επιστρέφει την κανονική μορφή *form* για τη συμβολοσειρά Unicode *unistr*. "
+"Οι έγκυρες τιμές για το *form* είναι 'NFC', 'NFKC', 'NFD' και 'NFKD'."
 
 #: library/unicodedata.rst:162
 msgid ""
@@ -215,6 +299,12 @@ msgid ""
 "also be expressed as the sequence U+0043 (LATIN CAPITAL LETTER C) U+0327 "
 "(COMBINING CEDILLA)."
 msgstr ""
+"Το πρότυπο Unicode ορίζει διάφορες μορφές κανονικοποίησης μιας συμβολοσειράς "
+"Unicode, με βάση τον ορισμό της κανονικής ισοδυναμίας και της ισοδυναμίας "
+"συμβατότητας. Στο Unicode, αρκετοί χαρακτήρες μπορούν να εκφραστούν με "
+"διάφορους τρόπους. Για παράδειγμα, ο χαρακτήρας U+00C7 (LATIN CAPITAL LETTER "
+"C WITH CEDILLA) μπορεί επίσης να εκφραστεί ως η ακολουθία U+0043 (LATIN "
+"CAPITAL LETTER C) U+0327 (COMBINING CEDILLA)."
 
 #: library/unicodedata.rst:168
 msgid ""
@@ -224,6 +314,11 @@ msgid ""
 "first applies a canonical decomposition, then composes pre-combined "
 "characters again."
 msgstr ""
+"Για κάθε χαρακτήρα, υπάρχουν δύο κανονικές μορφές: η κανονική μορφή C και η "
+"κανονική μορφή D. Η κανονική μορφή D (NFD) είναι επίσης γνωστή ως κανονική "
+"διάσπαση, και μετατρέπει κάθε χαρακτήρα στη διασπασμένη του μορφή. Η "
+"κανονική μορφή C (NFC) εφαρμόζει πρώτα μια κανονική διάσπαση, στη συνέχεια "
+"συνθέτει ξανά τους προ-συνδυασμένους χαρακτήρες."
 
 #: library/unicodedata.rst:173
 msgid ""
@@ -234,6 +329,13 @@ msgid ""
 "I). However, it is supported in Unicode for compatibility with existing "
 "character sets (for example, gb2312)."
 msgstr ""
+"Επιπλέον αυτών των δύο μορφών, υπάρχουν δύο επιπλέον κανονικές μορφές που "
+"βασίζονται στην ισοδυναμία συμβατότητας. Στο Unicode, υποστηρίζονται "
+"ορισμένοι χαρακτήρες οι οποίοι κανονικά θα ενοποιούνταν με άλλους "
+"χαρακτήρες. Για παράδειγμα, ο U+2160 (ROMAN NUMERAL ONE) είναι στην "
+"πραγματικότητα το ίδιο πράγμα με τον U+0049 (LATIN CAPITAL LETTER I). "
+"Ωστόσο, υποστηρίζεται στο Unicode για συμβατότητα με υπάρχοντα σύνολα "
+"χαρακτήρων (για παράδειγμα, gb2312)."
 
 #: library/unicodedata.rst:180
 msgid ""
@@ -242,6 +344,10 @@ msgid ""
 "form KC (NFKC) first applies the compatibility decomposition, followed by "
 "the canonical composition."
 msgstr ""
+"Η κανονική μορφή KD (NFKD) θα εφαρμόσει τη διάσπαση συμβατότητας, δηλαδή, θα "
+"αντικαταστήσει όλους τους χαρακτήρες συμβατότητας με τους ισοδύναμούς τους. "
+"Η κανονική μορφή KC (NFKC) εφαρμόζει πρώτα τη διάσπαση συμβατότητας, "
+"ακολουθούμενη από την κανονική σύνθεση."
 
 #: library/unicodedata.rst:185
 msgid ""
@@ -249,20 +355,26 @@ msgid ""
 "reader, if one has combining characters and the other doesn't, they may not "
 "compare equal."
 msgstr ""
+"Ακόμα και αν δύο συμβολοσειρές Unicode είναι κανονικοποιημένες και φαίνονται "
+"ίδιες σε έναν ανθρώπινο αναγνώστη, αν η μία έχει χαρακτήρες συνδυασμού και η "
+"άλλη όχι, ενδέχεται να μη συγκρίνονται ως ίσες."
 
 #: library/unicodedata.rst:192
 msgid ""
 "Return whether the Unicode string *unistr* is in the normal form *form*. "
 "Valid values for *form* are 'NFC', 'NFKC', 'NFD', and 'NFKD'."
 msgstr ""
+"Επιστρέφει αν η συμβολοσειρά Unicode *unistr* είναι στην κανονική μορφή "
+"*form*. Οι έγκυρες τιμές για το *form* είναι 'NFC', 'NFKC', 'NFD' και 'NFKD'."
 
 #: library/unicodedata.rst:198
 msgid "In addition, the module exposes the following constant:"
-msgstr ""
+msgstr "Επιπλέον, το module εκθέτει την ακόλουθη σταθερά:"
 
 #: library/unicodedata.rst:202
 msgid "The version of the Unicode database used in this module."
 msgstr ""
+"Η έκδοση της βάσης δεδομένων Unicode που χρησιμοποιείται σε αυτό το module."
 
 #: library/unicodedata.rst:207
 msgid ""
@@ -270,27 +382,31 @@ msgid ""
 "the Unicode database version 3.2 instead, for applications that require this "
 "specific version of the Unicode database (such as IDNA)."
 msgstr ""
+"Αυτό είναι ένα αντικείμενο που έχει τις ίδιες μεθόδους με ολόκληρο το "
+"module, αλλά χρησιμοποιεί αντ' αυτού την έκδοση 3.2 της βάσης δεδομένων "
+"Unicode, για εφαρμογές που απαιτούν αυτή τη συγκεκριμένη έκδοση της βάσης "
+"δεδομένων Unicode (όπως το IDNA)."
 
 #: library/unicodedata.rst:213
 msgid "Footnotes"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: library/unicodedata.rst:214
 msgid "https://www.unicode.org/Public/16.0.0/ucd/NameAliases.txt"
-msgstr ""
+msgstr "https://www.unicode.org/Public/16.0.0/ucd/NameAliases.txt"
 
 #: library/unicodedata.rst:216
 msgid "https://www.unicode.org/Public/16.0.0/ucd/NamedSequences.txt"
-msgstr ""
+msgstr "https://www.unicode.org/Public/16.0.0/ucd/NamedSequences.txt"
 
 #: library/unicodedata.rst:11
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: library/unicodedata.rst:11
 msgid "character"
-msgstr ""
+msgstr "χαρακτήρας"
 
 #: library/unicodedata.rst:11
 msgid "database"
-msgstr ""
+msgstr "βάση δεδομένων"
