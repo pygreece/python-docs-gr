@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-02-21 00:23+0200\n"
+"Last-Translator: Lefteris Katsinelos <left.katsinelos@gmail.com>\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,10 +20,12 @@ msgstr ""
 #: library/__future__.rst:2
 msgid ":mod:`!__future__` --- Future statement definitions"
 msgstr ""
+":mod:`!__future__` --- Ορισμοί δηλώσεων μελλοντικών χαρακτηριστικών (Future "
+"statements)"
 
 #: library/__future__.rst:7
 msgid "**Source code:** :source:`Lib/__future__.py`"
-msgstr ""
+msgstr "**Πηγαίος κώδικας:** :source:`Lib/__future__.py`"
 
 #: library/__future__.rst:11
 msgid ""
@@ -32,6 +34,12 @@ msgid ""
 "to allow the use of new Python features in modules containing the future "
 "statement before the release in which the feature becomes standard."
 msgstr ""
+"Οι εισαγωγές της μορφής ``from __future__ import feature`` ονομάζονται :ref:"
+"`δηλώσεις μελλοντικών χαρακτηριστικών (future statements) <future>`. Αυτές "
+"αποτελούν ειδικές περιπτώσεις για τον μεταγλωττιστή (compiler) της Python "
+"ώστε να επιτρέπεται η χρήση νέων χαρακτηριστικών της Python σε ενότητες "
+"(modules) που περιέχουν τη δήλωση πριν από την έκδοση στην οποία το "
+"χαρακτηριστικό γίνεται πρότυπο."
 
 #: library/__future__.rst:16
 msgid ""
@@ -40,12 +48,19 @@ msgid ""
 "the :mod:`__future__` exists and is handled by the import system the same "
 "way any other Python module would be. This design serves three purposes:"
 msgstr ""
+"Αν και ο μεταγλωττιστής της Python δίνει σε αυτές τις δηλώσεις επιπλέον "
+"ειδική σημασία, εξακολουθούν να εκτελούνται όπως κάθε άλλη δήλωση εισαγωγής "
+"(import) και το :mod:`__future__` υπάρχει και τυγχάνει χειρισμού από το "
+"σύστημα εισαγωγής με τον ίδιο τρόπο που θα γινόταν για οποιαδήποτε άλλη "
+"ενότητα Python. Αυτός ο σχεδιασμός εξυπηρετεί τρεις σκοπούς:"
 
 #: library/__future__.rst:21
 msgid ""
 "To avoid confusing existing tools that analyze import statements and expect "
 "to find the modules they're importing."
 msgstr ""
+"Για την αποφυγή σύγχυσης υπαρχόντων εργαλείων που αναλύουν δηλώσεις "
+"εισαγωγής και αναμένουν να βρουν τις ενότητες που εισάγουν."
 
 #: library/__future__.rst:24
 msgid ""
@@ -54,6 +69,10 @@ msgid ""
 "and can be inspected programmatically via importing :mod:`__future__` and "
 "examining its contents."
 msgstr ""
+"Για την τεκμηρίωση του πότε εισήχθησαν μη συμβατές αλλαγές και πότε θα "
+"γίνουν --- ή έγιναν --- υποχρεωτικές. Αυτή είναι μια μορφή εκτελέσιμης "
+"τεκμηρίωσης και μπορεί να εξεταστεί προγραμματιστικά μέσω της εισαγωγής του :"
+"mod:`__future__` και της εξέτασης των περιεχομένων του."
 
 #: library/__future__.rst:29
 msgid ""
@@ -62,10 +81,15 @@ msgid ""
 "`__future__` will fail, because there was no module of that name prior to "
 "2.1)."
 msgstr ""
+"Για να διασφαλιστεί ότι οι :ref:`δηλώσεις μελλοντικών χαρακτηριστικών "
+"<future>` που εκτελούνται σε εκδόσεις πριν από την Python 2.1 θα παράγουν "
+"τουλάχιστον εξαιρέσεις χρόνου εκτέλεσης (η εισαγωγή του :mod:`__future__` θα "
+"αποτύχει, επειδή δεν υπήρχε ενότητα με αυτό το όνομα πριν από την έκδοση "
+"2.1)."
 
 #: library/__future__.rst:34
 msgid "Module Contents"
-msgstr ""
+msgstr "Περιεχόμενα Ενότητας"
 
 #: library/__future__.rst:36
 msgid ""
@@ -73,128 +97,139 @@ msgid ""
 "its introduction in Python 2.1 the following features have found their way "
 "into the language using this mechanism:"
 msgstr ""
+"Καμία περιγραφή χαρακτηριστικού δεν θα διαγραφεί ποτέ από το :mod:"
+"`__future__`. Από την εισαγωγή του στην Python 2.1, τα ακόλουθα "
+"χαρακτηριστικά έχουν ενσωματωθεί στη γλώσσα χρησιμοποιώντας αυτόν τον "
+"μηχανισμό:"
 
 #: library/__future__.rst:45
 msgid "feature"
-msgstr ""
+msgstr "χαρακτηριστικό"
 
 #: library/__future__.rst:46
 msgid "optional in"
-msgstr ""
+msgstr "προαιρετικό στην"
 
 #: library/__future__.rst:47
 msgid "mandatory in"
-msgstr ""
+msgstr "υποχρεωτικό στην"
 
 #: library/__future__.rst:48
 msgid "effect"
-msgstr ""
+msgstr "αποτέλεσμα"
 
 #: library/__future__.rst:50
 msgid "2.1.0b1"
-msgstr ""
+msgstr "2.1.0b1"
 
 #: library/__future__.rst:51
 msgid "2.2"
-msgstr ""
+msgstr "2.2"
 
 #: library/__future__.rst:52
 msgid ":pep:`227`: *Statically Nested Scopes*"
-msgstr ""
+msgstr ":pep:`227`: *Στατικά Εμφωλευμένα Πεδία*"
 
 #: library/__future__.rst:54
 msgid "2.2.0a1"
-msgstr ""
+msgstr "2.2.0a1"
 
 #: library/__future__.rst:55
 msgid "2.3"
-msgstr ""
+msgstr "2.3"
 
 #: library/__future__.rst:56
 msgid ":pep:`255`: *Simple Generators*"
-msgstr ""
+msgstr ":pep:`255`: *Απλές Γεννήτριες*"
 
 #: library/__future__.rst:58
 msgid "2.2.0a2"
-msgstr ""
+msgstr "2.2.0a2"
 
 #: library/__future__.rst:63 library/__future__.rst:75
 msgid "3.0"
-msgstr ""
+msgstr "3.0"
 
 #: library/__future__.rst:60
 msgid ":pep:`238`: *Changing the Division Operator*"
-msgstr ""
+msgstr ":pep:`238`: *Αλλαγή του Τελεστή Διαίρεσης*"
 
 #: library/__future__.rst:66
 msgid "2.5.0a1"
-msgstr ""
+msgstr "2.5.0a1"
 
 #: library/__future__.rst:64
 msgid ":pep:`328`: *Imports: Multi-Line and Absolute/Relative*"
-msgstr ""
+msgstr ":pep:`328`: *Εισαγωγές: Πολλαπλών Γραμμών και Απόλυτες/Σχετικές*"
 
 #: library/__future__.rst:67
 msgid "2.6"
-msgstr ""
+msgstr "2.6"
 
 #: library/__future__.rst:68
 msgid ":pep:`343`: *The “with” Statement*"
-msgstr ""
+msgstr ":pep:`343`: *Η Δήλωση “with”*"
 
 #: library/__future__.rst:74
 msgid "2.6.0a2"
-msgstr ""
+msgstr "2.6.0a2"
 
 #: library/__future__.rst:72
 msgid ":pep:`3105`: *Make print a function*"
-msgstr ""
+msgstr ":pep:`3105`: *Μετατροπή της print σε συνάρτηση*"
 
 #: library/__future__.rst:76
 msgid ":pep:`3112`: *Bytes literals in Python 3000*"
-msgstr ""
+msgstr ":pep:`3112`: *Λεκτικές Σταθερές Bytes στην Python 3000*"
 
 #: library/__future__.rst:78
 msgid "3.5.0b1"
-msgstr ""
+msgstr "3.5.0b1"
 
 #: library/__future__.rst:79
 msgid "3.7"
-msgstr ""
+msgstr "3.7"
 
 #: library/__future__.rst:80
 msgid ":pep:`479`: *StopIteration handling inside generators*"
-msgstr ""
+msgstr ":pep:`479`: *Χειρισμός του StopIteration μέσα σε γεννήτριες*"
 
 #: library/__future__.rst:82
 msgid "3.7.0b1"
-msgstr ""
+msgstr "3.7.0b1"
 
 #: library/__future__.rst:83
 msgid "Never [1]_"
-msgstr ""
+msgstr "Never [1]_"
 
 #: library/__future__.rst:84
 msgid ""
 ":pep:`563`: *Postponed evaluation of annotations*, :pep:`649`: *Deferred "
 "evaluation of annotations using descriptors*"
 msgstr ""
+":pep:`563`: *Αναβαλλόμενη αξιολόγηση σχολιασμών *, :pep:`649`: "
+"*Καθυστερημένη αξιολόγηση σχολιασμών με χρήση περιγραφέων*"
 
 #: library/__future__.rst:93
 msgid "Each statement in :file:`__future__.py` is of the form::"
-msgstr ""
+msgstr "Κάθε δήλωση στο αρχείο :file:`__future__.py` έχει τη μορφή::"
 
 #: library/__future__.rst:95
 msgid ""
 "FeatureName = _Feature(OptionalRelease, MandatoryRelease,\n"
 "                       CompilerFlag)"
 msgstr ""
+"FeatureName = _Feature(OptionalRelease, MandatoryRelease,\n"
+"                       CompilerFlag)"
 
 #: library/__future__.rst:98
 msgid ""
 "where, normally, *OptionalRelease* is less than *MandatoryRelease*, and both "
 "are 5-tuples of the same form as :data:`sys.version_info`::"
 msgstr ""
+"όπου, κανονικά, το *OptionalRelease* είναι μικρότερο από το "
+"*MandatoryRelease*, και τα δύο είναι πλειάδες 5 στοιχείων (5-tuples) της "
+"ίδιας μορφής με το :data:`sys.version_info`::"
 
 #: library/__future__.rst:101
 msgid ""
@@ -206,12 +241,21 @@ msgid ""
 " PY_RELEASE_SERIAL # the 3; an int\n"
 ")"
 msgstr ""
+"(PY_MAJOR_VERSION, # το 2 στο 2.1.0a3· ένας ακέραιος (int)\n"
+" PY_MINOR_VERSION, # το 1· ένας ακέραιος (int)\n"
+" PY_MICRO_VERSION, # το 0· ένας ακέραιος (int)\n"
+" PY_RELEASE_LEVEL, # \"alpha\", \"beta\", \"candidate\" ή \"final\"· "
+"συμβολοσειρά (string)\n"
+" PY_RELEASE_SERIAL # το 3· ένας ακέραιος (int)\n"
+")"
 
 #: library/__future__.rst:110
 msgid ""
 "*OptionalRelease* records the first release in which the feature was "
 "accepted."
 msgstr ""
+"Το *OptionalRelease* καταγράφει την πρώτη έκδοση στην οποία έγινε δεκτό το "
+"χαρακτηριστικό."
 
 #: library/__future__.rst:114
 msgid ""
@@ -219,6 +263,9 @@ msgid ""
 "*MandatoryRelease* predicts the release in which the feature will become "
 "part of the language."
 msgstr ""
+"Στην περίπτωση ενός *MandatoryRelease* που δεν έχει συμβεί ακόμα, το "
+"*MandatoryRelease* προβλέπει την έκδοση στην οποία το χαρακτηριστικό θα "
+"γίνει μέρος της γλώσσας."
 
 #: library/__future__.rst:118
 msgid ""
@@ -227,12 +274,19 @@ msgid ""
 "statement to use the feature in question, but may continue to use such "
 "imports."
 msgstr ""
+"Ειδάλλως, το *MandatoryRelease* καταγράφει πότε το χαρακτηριστικό έγινε "
+"μέρος της γλώσσας· σε εκδόσεις κατά ή μετά από αυτήν, οι ενότητες δεν "
+"χρειάζονται πλέον μια δήλωση μελλοντικού χαρακτηριστικού για να "
+"χρησιμοποιήσουν το εν λόγω χαρακτηριστικό, αλλά μπορούν να συνεχίσουν να "
+"χρησιμοποιούν τέτοιες εισαγωγές."
 
 #: library/__future__.rst:122
 msgid ""
 "*MandatoryRelease* may also be ``None``, meaning that a planned feature got "
 "dropped or that it is not yet decided."
 msgstr ""
+"Το *MandatoryRelease* μπορεί επίσης να είναι ``None``, που σημαίνει ότι ένα "
+"προγραμματισμένο χαρακτηριστικό απορρίφθηκε ή ότι δεν έχει αποφασιστεί ακόμη."
 
 #: library/__future__.rst:127
 msgid ""
@@ -241,6 +295,11 @@ msgid ""
 "dynamically compiled code.  This flag is stored in the :attr:`_Feature."
 "compiler_flag` attribute on :class:`_Feature` instances."
 msgstr ""
+"Το *CompilerFlag* είναι το flag (bitfield) που πρέπει να μεταβιβαστεί στο "
+"τέταρτο όρισμα της ενσωματωμένης συνάρτησης :func:`compile` για να "
+"ενεργοποιηθεί το χαρακτηριστικό σε δυναμικά μεταγλωττισμένο κώδικα. Αυτή η "
+"σημαία αποθηκεύεται στο γνώρισμα (attribute) :attr:`_Feature.compiler_flag` "
+"των στιγμιότυπων (instances) της κλάσης :class:`_Feature`."
 
 #: library/__future__.rst:133
 msgid ""
@@ -249,19 +308,24 @@ msgid ""
 "canceled. This feature will eventually be deprecated and removed. See :pep:"
 "`649` and :pep:`749`."
 msgstr ""
+"Η δήλωση ``from __future__ import annotations`` είχε αρχικά προγραμματιστεί "
+"να γίνει υποχρεωτική στην Python 3.10, αλλά η αλλαγή καθυστέρησε και τελικά "
+"ακυρώθηκε. Αυτό το χαρακτηριστικό θα καταργηθεί σταδιακά και θα αφαιρεθεί "
+"στο μέλλον. Δείτε τα :pep:`649` και :pep:`749`."
 
 #: library/__future__.rst:141
 msgid ":ref:`future`"
-msgstr ""
+msgstr ":ref:`future`"
 
 #: library/__future__.rst:142
 msgid "How the compiler treats future imports."
 msgstr ""
+"Πώς ο μεταγλωττιστής χειρίζεται τις μελλοντικές εισαγωγές (future imports)."
 
 #: library/__future__.rst:144
 msgid ":pep:`236` - Back to the __future__"
-msgstr ""
+msgstr ":pep:`236` - Επιστροφή στο __future__"
 
 #: library/__future__.rst:145
 msgid "The original proposal for the __future__ mechanism."
-msgstr ""
+msgstr "Η αρχική πρόταση για τον μηχανισμό του __future__."
