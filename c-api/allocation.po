@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-04 09:48+0200\n"
-"PO-Revision-Date: 2025-06-04 11:27+0300\n"
-"Last-Translator: Marios Giannopoulos <mariosgian_2002@yahoo.gr>\n"
+"PO-Revision-Date: 2026-04-15 22:15+0300\n"
+"Last-Translator: Miltiadis Papavramidis <georgeppvr@gmail.com>\n"
 "Language-Team: PyGreece <organizers@pygreece.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,12 @@ msgid ""
 "slot).  Specifically, this function does **not** call the object's :meth:`!"
 "__init__` method."
 msgstr ""
+"Αρχικοποιεί ένα νεοδεσμευμένο αντικείμενο *op* με τον τύπο του και την "
+"αρχική αναφορά του. Επιστρέφει το αρχικοποιημένο αντικείμενο. Άλλα"
+"πεδία του αντικειμένου δεν αρχικοποιούνται. Παρά το όνομα της, αυτή η συνάρτηση δεν σχετίζεται με τη μέθοδο  :meth:`~object.__init__` του αντικειμένου"
+"(υποδοχή :c:member:`~PyTypeObject.tp_init`). Συγκεκριμένα, η συνάρτηση αυτή **δεν** καλεί τη μέθοδο :meth:`!"
+"__init__` του αντικειμένου."
+
 
 #: c-api/allocation.rst:24
 msgid ""
@@ -38,12 +44,18 @@ msgid ""
 "tp_alloc` for your type, prefer :c:func:`PyType_GenericAlloc` or :c:func:"
 "`PyObject_New`."
 msgstr ""
+"Γενικά, θεωρήστε αυτή τη συνάρτηση ως ρουτίνα χαμηλού επιπέδου. Χρησιμοποιήστε την :c:member:"
+"`~PyTypeObject.tp_alloc` όπου είναι δυνατόν. Για την υλοποίηση της :c:member:`!"
+"tp_alloc` για τον τύπο σας, προτιμήστε τη :c:func:`PyType_GenericAlloc` ή τη :c:func:"
+"`PyObject_New`."
 
 #: c-api/allocation.rst:31
 msgid ""
 "This function only initializes the object's memory corresponding to the "
 "initial :c:type:`PyObject` structure.  It does not zero the rest."
 msgstr ""
+"Αυτή η συνάρτηση αρχικοποιεί μόνο τη μνήμη του αντικειμένου που αντιστοιχεί"
+"στην αρχική :c:type:`PyObject` δομή. Δεν μηδενίζει το υπόλοιπο τμήμα της μνήμης."
 
 #: c-api/allocation.rst:37
 msgid ""
@@ -58,9 +70,10 @@ msgid ""
 "This function only initializes some of the object's memory.  It does not "
 "zero the rest."
 msgstr ""
+"Αυτή η συνάρτηση αρχικοποιεί μόνο ένα  μέρος της μνήμης του αντικειμένου. Δεν"
+"μηδενίζει το υπόλοιπο."
 
 #: c-api/allocation.rst:48
-#, fuzzy
 msgid ""
 "Allocates a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``) by calling :c:func:"
@@ -69,17 +82,18 @@ msgid ""
 "its reference count will be one)."
 msgstr ""
 "Δεσμεύει ένα νέο αντικείμενο Python χρησιμοποιώντας τον τύπο δομής C *TYPE* "
-"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``). Τα πεδία που "
-"δεν ορίζονται από την κεφαλίδα αντικειμένου Python δεν αρχικοποιούνται. Ο "
-"καλών θα έχει την μοναδική αναφορά στο αντικείμενο (δηλαδή, η μέτρηση "
-"αναφορών του θα είναι ένα). Το μέγεθος της δέσμευσης μνήμης καθορίζεται από "
-"το πεδίο :c:member:`~PyTypeObject.tp_basicsize` του αντικειμένου τύπου."
+"και το αντικείμενο τύπου Python *typeobj* (``PyTypeObject*``) καλώντας τη "
+":c:func:`PyObject_Malloc` για τη δέσμευση μνήμης και αρχικοποιώντας το όπως "
+"η :c:func:`PyObject_Init`. Ο καλών θα κατέχει τη μοναδική αναφορά στο "
+"αντικείμενο (δηλαδή, ο μετρητής αναφορών του θα είναι ένα)."
 
 #: c-api/allocation.rst:107
 msgid ""
 "Avoid calling this directly to allocate memory for an object; call the "
 "type's :c:member:`~PyTypeObject.tp_alloc` slot instead."
 msgstr ""
+"Αποφύγετε να την καλείτε απευθείας για να δεσμεύσετε μνήμη για ένα αντικείμενο; καλέστε "
+"την υποδοχή :c:member:`~PyTypeObject.tp_alloc` αντ’ αυτού του τύπου."
 
 #: c-api/allocation.rst:110
 msgid ""
@@ -87,6 +101,9 @@ msgid ""
 "`PyType_GenericAlloc` is preferred over a custom function that simply calls "
 "this macro."
 msgstr ""
+"Κατά τη συμπλήρωση της υποδοχής :c:member:`~PyTypeObject.tp_alloc` ενός τύπου, προτιμάται η :c:func:"
+"`PyType_GenericAlloc` αντί μιας προσαρμοσμένης συνάρτησης που απλώς καλεί αυτή τη μακροεντολή."
+
 
 #: c-api/allocation.rst:61
 msgid ""
@@ -94,28 +111,34 @@ msgid ""
 "`~PyTypeObject.tp_new` (:meth:`~object.__new__`), or :c:member:"
 "`~PyTypeObject.tp_init` (:meth:`~object.__init__`)."
 msgstr ""
+"Αυτή η μακροεντολή δεν καλεί τις :c:member:`~PyTypeObject.tp_alloc`, :c:member: "
+":c:member:`~PyTypeObject.tp_new` (:meth:`~object.__new__`), ή :c:member: "
+"`~PyTypeObject.tp_init` (:meth:`~object.__init__`)."
 
 #: c-api/allocation.rst:65
-#, fuzzy
 msgid ""
 "This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
 "member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_New` instead."
 msgstr ""
-"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
-"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
-"c:func:`PyObject_GC_New` αντ' αυτού."
+"Αυτό δεν μπορεί να χρησιμοποιηθεί για αντικείμενα που έχουν το :c:macro:"
+"`Py_TPFLAGS_HAVE_GC` ορισμένο στο :c:member:`~PyTypeObject.tp_flags`· "
+"χρησιμοποιήστε το :c:macro:`PyObject_GC_New` αντ’ αυτού."
 
 #: c-api/allocation.rst:68
 msgid ""
 "Memory allocated by this macro must be freed with :c:func:`PyObject_Free` "
 "(usually called via the object's :c:member:`~PyTypeObject.tp_free` slot)."
 msgstr ""
+"Η μνήμη που δεσμεύεται από αυτή τη μακροεντολή πρέπει να αποδεσμεύεται με τη :c:func:`PyObject_Free` "
+"(συνήθως μέσω της υποδοχής :c:member:`~PyTypeObject.tp_free` του αντικειμένου)."
 
 #: c-api/allocation.rst:123
 msgid ""
 "The returned memory is not guaranteed to have been completely zeroed before "
 "it was initialized."
 msgstr ""
+"Η επιστραφείσα μνήμη δεν είναι εγγυημένο το ότι έχει μηδενιστεί πλήρως πριν "
+"αρχικοποιηθεί."
 
 #: c-api/allocation.rst:128
 msgid ""
@@ -124,31 +147,34 @@ msgid ""
 "member:`~PyTypeObject.tp_init`.  To construct a fully initialized object, "
 "call *typeobj* instead.  For example::"
 msgstr ""
+"Αυτή η μακροεντολή δεν κατασκευάζει ένα πλήρως αρχικοποιημένο αντικείμενο του δεδομένου τύπου· "
+"απλώς δεσμεύει μνήμη και το προετοιμάζει για περαιτέρω αρχικοποίηση από την :c: "
+"member:`~PyTypeObject.tp_init`. Για να κατασκευάσετε ένα πλήρως αρχικοποιημένο αντικείμενο,"
+"καλέστε το *typeobj* αντ’ αυτού. Για παράδειγμα::"
 
 #: c-api/allocation.rst:83
 msgid "PyObject *foo = PyObject_CallNoArgs((PyObject *)&PyFoo_Type);"
-msgstr ""
+msgstr "PyObject *foo = PyObject_CallNoArgs((PyObject *)&PyFoo_Type);"
 
 #: c-api/allocation.rst:137 c-api/allocation.rst:184 c-api/allocation.rst:186
-#, fuzzy
 msgid ":c:func:`PyObject_Free`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Free`"
 
 #: c-api/allocation.rst:88
 msgid ":c:macro:`PyObject_GC_New`"
-msgstr ""
+msgstr ":c:macro:`PyObject_GC_New`"
 
 #: c-api/allocation.rst:139
 msgid ":c:func:`PyType_GenericAlloc`"
-msgstr ""
+msgstr ":c:func:`PyType_GenericAlloc`"
 
 #: c-api/allocation.rst:140
 msgid ":c:member:`~PyTypeObject.tp_alloc`"
-msgstr ""
+msgstr ":c:member:`~PyTypeObject.tp_alloc`"
 
 #: c-api/allocation.rst:95
 msgid "Like :c:macro:`PyObject_New` except:"
-msgstr ""
+msgstr "Παρόμοια με τη :c:macro:`PyObject_New`, εκτός από τα εξής:"
 
 #: c-api/allocation.rst:97
 msgid ""
@@ -156,10 +182,13 @@ msgid ""
 "(``Py_ssize_t``) fields of the size given by the :c:member:`~PyTypeObject."
 "tp_itemsize` field of *typeobj*."
 msgstr ""
+"Δεσμεύει αρκετή μνήμη για τη δομή *TYPE* καθώς και για *size* πεδία "
+"(``Py_ssize_t``) μεγέθους που καθορίζεται από το πεδίο :c:member:`~PyTypeObject."
+"tp_itemsize` του *typeobj*."
 
 #: c-api/allocation.rst:100
 msgid "The memory is initialized like :c:func:`PyObject_InitVar`."
-msgstr ""
+msgstr "Η μνήμη αρχικοποιείται όπως με τη :c:func:`PyObject_InitVar`."
 
 #: c-api/allocation.rst:102
 msgid ""
@@ -168,31 +197,36 @@ msgid ""
 "into the same allocation decreases the number of allocations, improving the "
 "memory management efficiency."
 msgstr ""
+"Αυτό είναι χρήσιμο για την υλοποίηση αντικειμένων όπως οι πλειάδες(tuples), οι οποίες μπορούν να "
+"καθορίσουν το μέγεθός τους κατά τη δημιουργία τους. Η ενσωμάτωση του πίνακα πεδίων "
+"στην ίδια δέσμευση μνήμης μειώνει τον αριθμό των δεσμεύσεων, βελτιώνοντας την "
+"αποδοτικότητα της διαχείρισης μνήμης."
 
 #: c-api/allocation.rst:114
-#, fuzzy
 msgid ""
 "This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
 "member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_NewVar` instead."
 msgstr ""
-"Σημειώστε ότι αυτή η συνάρτηση δεν είναι κατάλληλη αν το *typeobj* έχει :c:"
-"macro:`Py_TPFLAGS_HAVE_GC` ορισμένο. Για τέτοια αντικείμενα, χρησιμοποιήστε :"
-"c:func:`PyObject_GC_NewVar` αντ' αυτού."
+"Αυτό δεν μπορεί να χρησιμοποιηθεί για αντικείμενα που έχουν το :c:macro:"
+"`Py_TPFLAGS_HAVE_GC` ορισμένο στο :c:member:`~PyTypeObject.tp_flags`· "
+"χρησιμοποιήστε το :c:macro:`PyObject_GC_NewVar` αντ’ αυτού."
 
 #: c-api/allocation.rst:118
 msgid ""
 "Memory allocated by this function must be freed with :c:func:`PyObject_Free` "
 "(usually called via the object's :c:member:`~PyTypeObject.tp_free` slot)."
 msgstr ""
+"Η μνήμη που δεσμεύεται από αυτή τη συνάρτηση πρέπει να αποδεσμεύεται με τη :c:func:`PyObject_Free`"
+"(η οποία συνήθως καλείται μέσω της υποδοχής :c:member:`~PyTypeObject.tp_free` του αντικειμένου)."
 
 #: c-api/allocation.rst:133
 msgid ""
 "PyObject *list_instance = PyObject_CallNoArgs((PyObject *)&PyList_Type);"
-msgstr ""
+msgstr "PyObject *list_instance = PyObject_CallNoArgs((PyObject *)&PyList_Type);"
 
 #: c-api/allocation.rst:138
 msgid ":c:macro:`PyObject_GC_NewVar`"
-msgstr ""
+msgstr ":c:macro:`PyObject_GC_NewVar`"
 
 #: c-api/allocation.rst:145
 msgid ""
@@ -206,7 +240,7 @@ msgstr ""
 
 #: c-api/allocation.rst:152
 msgid ":ref:`moduleobjects`"
-msgstr ""
+msgstr ":ref:`moduleobjects`"
 
 #: c-api/allocation.rst:153
 msgid "To allocate and create extension modules."
@@ -214,51 +248,48 @@ msgstr "Για να δεσμεύσετε και να δημιουργήσετε 
 
 #: c-api/allocation.rst:157
 msgid "Deprecated aliases"
-msgstr ""
+msgstr "Παρωχημένα ψευδώνυμα"
 
 #: c-api/allocation.rst:159
 msgid ""
 "These are :term:`soft deprecated` aliases to existing functions and macros. "
 "They exist solely for backwards compatibility."
 msgstr ""
+"Αυτά είναι :term:`ήπια αποσυρμένα <soft deprecated>` ψευδώνυμα υπαρχουσών  συναρτήσεων και μακροεντολών."
+"Υπάρχουν αποκλειστικά για λόγους συμβατότητας προς τα πίσω."
+
 
 #: c-api/allocation.rst:167
 msgid "Deprecated alias"
-msgstr ""
+msgstr "Παρωχημένο ψευδώνυμο"
 
 #: c-api/allocation.rst:168
 msgid "Function"
-msgstr ""
+msgstr "Συνάρτηση"
 
 #: c-api/allocation.rst:170
-#, fuzzy
 msgid ":c:macro:`PyObject_New`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:macro:`PyObject_New`"
 
 #: c-api/allocation.rst:172
-#, fuzzy
 msgid ":c:macro:`PyObject_NewVar`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:macro:`PyObject_NewVar`"
 
 #: c-api/allocation.rst:174
-#, fuzzy
 msgid ":c:func:`PyObject_Init`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Init`"
 
 #: c-api/allocation.rst:176
-#, fuzzy
 msgid ":c:func:`PyObject_InitVar`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_InitVar`"
 
 #: c-api/allocation.rst:178
-#, fuzzy
 msgid ":c:func:`PyObject_Malloc`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Malloc`"
 
 #: c-api/allocation.rst:180
-#, fuzzy
 msgid ":c:func:`PyObject_Realloc`"
-msgstr "Ίδιο με την :c:func:`PyObject_Free`."
+msgstr ":c:func:`PyObject_Realloc`"
 
 #~ msgid "Same as :c:func:`PyObject_Free`."
 #~ msgstr "Ίδιο με την :c:func:`PyObject_Free`."
