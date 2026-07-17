@@ -116,7 +116,7 @@ progress:
 
 .PHONY: spellcheck
 spellcheck:
-	$(PYTHON) scripts/check_spelling.py $(filter-out $@, $(MAKECMDGOALS))
+	$(PYTHON) scripts/check_spelling.py --print-errors $(filter-out $@, $(MAKECMDGOALS))
 
 .PHONY: lint
 lint:
