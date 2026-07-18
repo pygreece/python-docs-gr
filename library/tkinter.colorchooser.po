@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid ":mod:`!tkinter.colorchooser` --- Color choosing dialog"
 msgstr ""
 
-#: library/tkinter.colorchooser.rst:8
+#: library/tkinter.colorchooser.rst:7
 msgid "**Source code:** :source:`Lib/tkinter/colorchooser.py`"
 msgstr ""
 
-#: library/tkinter.colorchooser.rst:12
+#: library/tkinter.colorchooser.rst:11
 msgid ""
 "The :mod:`tkinter.colorchooser` module provides the :class:`Chooser` class "
 "as an interface to the native color picker dialog. ``Chooser`` implements a "
@@ -33,17 +33,33 @@ msgid ""
 "class:`~tkinter.commondialog.Dialog` class."
 msgstr ""
 
-#: library/tkinter.colorchooser.rst:21
+#: library/tkinter.colorchooser.rst:18
 msgid ""
-"Create a color choosing dialog. A call to this method will show the window, "
-"wait for the user to make a selection, and return the selected color (or "
-"``None``) to the caller."
+"The class implementing the modal color-choosing dialog. Most applications "
+"use the :func:`askcolor` convenience function rather than instantiating this "
+"class directly."
 msgstr ""
 
-#: library/tkinter.colorchooser.rst:28
+#: library/tkinter.colorchooser.rst:24
+msgid ""
+"Show a modal color-choosing dialog and return the chosen color. *color* is "
+"the color selected when the dialog opens. The return value is a tuple ``((r, "
+"g, b), hexstr)``, where ``r``, ``g`` and ``b`` are the red, green and blue "
+"components as integers in the range 0–255 and *hexstr* is the equivalent Tk "
+"color string, such as ``'#ff8000'``. If the user cancels the dialog, "
+"``(None, None)`` is returned."
+msgstr ""
+
+#: library/tkinter.colorchooser.rst:31
+msgid ""
+"The RGB values in the returned color are now integers in the range 0–255 "
+"instead of floats."
+msgstr ""
+
+#: library/tkinter.colorchooser.rst:38
 msgid "Module :mod:`tkinter.commondialog`"
 msgstr ""
 
-#: library/tkinter.colorchooser.rst:29
+#: library/tkinter.colorchooser.rst:39
 msgid "Tkinter standard dialog module"
 msgstr ""

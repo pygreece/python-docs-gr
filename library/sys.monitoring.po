@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,9 +23,10 @@ msgstr ""
 
 #: library/sys.monitoring.rst:13
 msgid ""
-":mod:`sys.monitoring` is a namespace within the :mod:`sys` module, not an "
-"independent module, so there is no need to ``import sys.monitoring``, simply "
-"``import sys`` and then use ``sys.monitoring``."
+":mod:`!sys.monitoring` is a namespace within the :mod:`sys` module, not an "
+"independent module, and ``import sys.monitoring`` would fail with a :exc:"
+"`ModuleNotFoundError`. Instead, simply ``import sys`` and then use ``sys."
+"monitoring``."
 msgstr ""
 
 #: library/sys.monitoring.rst:19

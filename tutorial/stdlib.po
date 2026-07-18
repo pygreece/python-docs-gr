@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: 2025-05-04 22:10+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -19,11 +19,13 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #: tutorial/stdlib.rst:5
-msgid "Brief Tour of the Standard Library"
+#, fuzzy
+msgid "Brief tour of the standard library"
 msgstr "Σύντομη ξενάγηση στην Standard Βιβλιοθήκη"
 
 #: tutorial/stdlib.rst:11
-msgid "Operating System Interface"
+#, fuzzy
+msgid "Operating system interface"
 msgstr "Διεπαφή Λειτουργικού Συστήματος"
 
 #: tutorial/stdlib.rst:13
@@ -107,7 +109,8 @@ msgstr ""
 "'installdir'"
 
 #: tutorial/stdlib.rst:51
-msgid "File Wildcards"
+#, fuzzy
+msgid "File wildcards"
 msgstr "Wildcard Αρχεία"
 
 #: tutorial/stdlib.rst:53
@@ -129,7 +132,8 @@ msgstr ""
 "['primes.py', 'random.py', 'quote.py']"
 
 #: tutorial/stdlib.rst:64
-msgid "Command Line Arguments"
+#, fuzzy
+msgid "Command-line arguments"
 msgstr "Ορίσματα γραμμής εντολών"
 
 #: tutorial/stdlib.rst:66
@@ -209,7 +213,8 @@ msgstr ""
 "filenames`` σε ``['alpha.txt', 'beta.txt']``."
 
 #: tutorial/stdlib.rst:101
-msgid "Error Output Redirection and Program Termination"
+#, fuzzy
+msgid "Error output redirection and program termination"
 msgstr "Ανακατεύθυνση εξόδου σφάλματος και τερματισμός προγράμματος"
 
 #: tutorial/stdlib.rst:103
@@ -238,7 +243,8 @@ msgstr ""
 "το ``sys.exit()``."
 
 #: tutorial/stdlib.rst:116
-msgid "String Pattern Matching"
+#, fuzzy
+msgid "String pattern matching"
 msgstr "Ταίριασμα μοτίβων συμβολοσειρών"
 
 #: tutorial/stdlib.rst:118
@@ -372,7 +378,8 @@ msgstr ""
 "αριθμητικούς υπολογισμούς."
 
 #: tutorial/stdlib.rst:179
-msgid "Internet Access"
+#, fuzzy
+msgid "Internet access"
 msgstr "Πρόσβαση στο Διαδίκτυο"
 
 #: tutorial/stdlib.rst:181
@@ -433,7 +440,8 @@ msgstr ""
 "εκτελείται σε localhost.)"
 
 #: tutorial/stdlib.rst:210
-msgid "Dates and Times"
+#, fuzzy
+msgid "Dates and times"
 msgstr "Ημερομηνίες και ώρες"
 
 #: tutorial/stdlib.rst:212
@@ -451,17 +459,18 @@ msgstr ""
 "που έχουν επίγνωση ζώνης ώρας. ::"
 
 #: tutorial/stdlib.rst:218
+#, fuzzy
 msgid ""
 ">>> # dates are easily constructed and formatted\n"
-">>> from datetime import date\n"
-">>> now = date.today()\n"
+">>> import datetime as dt\n"
+">>> now = dt.date.today()\n"
 ">>> now\n"
 "datetime.date(2003, 12, 2)\n"
 ">>> now.strftime(\"%m-%d-%y. %d %b %Y is a %A on the %d day of %B.\")\n"
 "'12-02-03. 02 Dec 2003 is a Tuesday on the 02 day of December.'\n"
 "\n"
 ">>> # dates support calendar arithmetic\n"
-">>> birthday = date(1964, 7, 31)\n"
+">>> birthday = dt.date(1964, 7, 31)\n"
 ">>> age = now - birthday\n"
 ">>> age.days\n"
 "14368"
@@ -481,7 +490,8 @@ msgstr ""
 "14368"
 
 #: tutorial/stdlib.rst:236
-msgid "Data Compression"
+#, fuzzy
+msgid "Data compression"
 msgstr "Συμπίεση Δεδομένων"
 
 #: tutorial/stdlib.rst:238
@@ -521,7 +531,8 @@ msgstr ""
 "226805979"
 
 #: tutorial/stdlib.rst:258
-msgid "Performance Measurement"
+#, fuzzy
+msgid "Performance measurement"
 msgstr "Μέτρηση επίδοσης"
 
 #: tutorial/stdlib.rst:260
@@ -570,7 +581,8 @@ msgstr ""
 "χρονικών τμημάτων σε μεγαλύτερα μπλοκ κώδικα."
 
 #: tutorial/stdlib.rst:282
-msgid "Quality Control"
+#, fuzzy
+msgid "Quality control"
 msgstr "Έλεγχος ποιότητας"
 
 #: tutorial/stdlib.rst:284
@@ -665,7 +677,8 @@ msgstr ""
 "unittest.main()  # Calling from the command line invokes all tests"
 
 #: tutorial/stdlib.rst:328
-msgid "Batteries Included"
+#, fuzzy
+msgid "Batteries included"
 msgstr "Batteries Included"
 
 #: tutorial/stdlib.rst:330

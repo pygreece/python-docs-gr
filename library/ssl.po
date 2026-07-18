@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,7 +108,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:73
-msgid "Functions, Constants, and Exceptions"
+msgid "Functions, constants, and exceptions"
 msgstr ""
 
 #: library/ssl.rst:77
@@ -437,7 +437,7 @@ msgstr ""
 
 #: library/ssl.rst:361
 msgid ""
-"Return the time in seconds since the Epoch, given the ``cert_time`` string "
+"Return the time in seconds since the epoch, given the ``cert_time`` string "
 "representing the \"notBefore\" or \"notAfter\" date from a certificate in "
 "``\"%b %d %H:%M:%S %Y %Z\"`` strptime format (C locale)."
 msgstr ""
@@ -449,12 +449,12 @@ msgstr ""
 #: library/ssl.rst:368
 msgid ""
 ">>> import ssl\n"
+">>> import datetime as dt\n"
 ">>> timestamp = ssl.cert_time_to_seconds(\"Jan  5 09:34:43 2018 GMT\")\n"
 ">>> timestamp\n"
 "1515144883\n"
-">>> from datetime import datetime\n"
-">>> print(datetime.utcfromtimestamp(timestamp))\n"
-"2018-01-05 09:34:43"
+">>> print(dt.datetime.fromtimestamp(timestamp, dt.UTC))\n"
+"2018-01-05 09:34:43+00:00"
 msgstr ""
 
 #: library/ssl.rst:378
@@ -1121,7 +1121,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:1047
-msgid "SSL Sockets"
+msgid "SSL sockets"
 msgstr ""
 
 #: library/ssl.rst:1051
@@ -1229,7 +1229,7 @@ msgstr ""
 
 #: library/ssl.rst:1093
 msgid ""
-":class:`SSLSocket` instances must to created with :meth:`~SSLContext."
+":class:`SSLSocket` instances must be created with :meth:`~SSLContext."
 "wrap_socket`. In earlier versions, it was possible to create instances "
 "directly. This was never documented or officially supported."
 msgstr ""
@@ -1606,7 +1606,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:1408
-msgid "SSL Contexts"
+msgid "SSL contexts"
 msgstr ""
 
 #: library/ssl.rst:1412
@@ -2318,7 +2318,7 @@ msgid ""
 "The attributes :attr:`~SSLContext.maximum_version`, :attr:`~SSLContext."
 "minimum_version` and :attr:`SSLContext.options` all affect the supported SSL "
 "and TLS versions of the context. The implementation does not prevent invalid "
-"combination. For example a context with :attr:`OP_NO_TLSv1_2` in :attr:"
+"combinations. For example a context with :attr:`OP_NO_TLSv1_2` in :attr:"
 "`~SSLContext.options` and :attr:`~SSLContext.maximum_version` set to :attr:"
 "`TLSVersion.TLSv1_2` will not be able to establish a TLS 1.2 connection."
 msgstr ""
@@ -3042,7 +3042,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:2524
-msgid "Memory BIO Support"
+msgid "Memory BIO support"
 msgstr ""
 
 #: library/ssl.rst:2528
@@ -3405,13 +3405,13 @@ msgstr ""
 #: library/ssl.rst:2748
 msgid ""
 ">>> client_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n"
-">>> client_context.minimum_version = ssl.TLSVersion.TLSv1_3\n"
+">>> client_context.minimum_version = ssl.TLSVersion.TLSv1_2\n"
 ">>> client_context.maximum_version = ssl.TLSVersion.TLSv1_3"
 msgstr ""
 
 #: library/ssl.rst:2753
 msgid ""
-"The SSL context created above will only allow TLSv1.3 and later (if "
+"The SSL client context created above will only allow TLSv1.2 and TLSv1.3 (if "
 "supported by your system) connections to a server. :const:"
 "`PROTOCOL_TLS_CLIENT` implies certificate validation and hostname checks by "
 "default. You have to load certificates into the context."
@@ -3521,7 +3521,7 @@ msgid ":rfc:`RFC 4086: Randomness Requirements for Security <4086>`"
 msgstr ""
 
 #: library/ssl.rst:2821
-msgid "Donald E., Jeffrey I. Schiller"
+msgid "Donald E. Eastlake, Jeffrey I. Schiller, Steve Crocker"
 msgstr ""
 
 #: library/ssl.rst:2823
@@ -3531,7 +3531,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:2824
-msgid "D. Cooper"
+msgid "David Cooper et al."
 msgstr ""
 
 #: library/ssl.rst:2826
@@ -3541,7 +3541,7 @@ msgid ""
 msgstr ""
 
 #: library/ssl.rst:2827
-msgid "T. Dierks et. al."
+msgid "Tim Dierks and Eric Rescorla."
 msgstr ""
 
 #: library/ssl.rst:2829
@@ -3549,7 +3549,7 @@ msgid ":rfc:`RFC 6066: Transport Layer Security (TLS) Extensions <6066>`"
 msgstr ""
 
 #: library/ssl.rst:2830
-msgid "D. Eastlake"
+msgid "Donald E. Eastlake"
 msgstr ""
 
 #: library/ssl.rst:2832

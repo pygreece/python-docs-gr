@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,11 +35,11 @@ msgstr ""
 
 #: library/zipfile.rst:19
 msgid ""
-"This module does not currently handle multi-disk ZIP files. It can handle "
-"ZIP files that use the ZIP64 extensions (that is ZIP files that are more "
-"than 4 GiB in size).  It supports decryption of encrypted files in ZIP "
-"archives, but it currently cannot create an encrypted file.  Decryption is "
-"extremely slow as it is implemented in native Python rather than C."
+"This module does not handle multipart ZIP files. It can handle ZIP files "
+"that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in "
+"size).  It supports decryption of encrypted files in ZIP archives, but it "
+"cannot create an encrypted file.  Decryption is extremely slow as it is "
+"implemented in native Python rather than C."
 msgstr ""
 
 #: library/zipfile.rst:26
@@ -160,7 +160,7 @@ msgid ""
 msgstr ""
 
 #: library/zipfile.rst:144
-msgid "ZipFile Objects"
+msgid "ZipFile objects"
 msgstr ""
 
 #: library/zipfile.rst:151
@@ -250,7 +250,7 @@ msgstr ""
 #: library/zipfile.rst:210
 msgid ""
 "*metadata_encoding* is an instance-wide setting for the ZipFile. It is not "
-"currently possible to set this on a per-member basis."
+"possible to set this on a per-member basis."
 msgstr ""
 
 #: library/zipfile.rst:213
@@ -461,9 +461,9 @@ msgstr ""
 #: library/zipfile.rst:376
 msgid ""
 "Never extract archives from untrusted sources without prior inspection. It "
-"is possible that files are created outside of *path*, e.g. members that have "
-"absolute filenames starting with ``\"/\"`` or filenames with two dots ``\".."
-"\"``.  This module attempts to prevent that. See :meth:`extract` note."
+"is possible that files are created outside of *path*, for example, members "
+"that have absolute filenames or filenames with \"..\" components. This "
+"module attempts to prevent that. See :meth:`extract` note."
 msgstr ""
 
 #: library/zipfile.rst:382
@@ -634,7 +634,7 @@ msgid ""
 msgstr ""
 
 #: library/zipfile.rst:534
-msgid "Path Objects"
+msgid "Path objects"
 msgstr ""
 
 #: library/zipfile.rst:538
@@ -655,10 +655,10 @@ msgid ""
 "The :class:`Path` class does not sanitize filenames within the ZIP archive. "
 "Unlike the :meth:`ZipFile.extract` and :meth:`ZipFile.extractall` methods, "
 "it is the caller's responsibility to validate or sanitize filenames to "
-"prevent path traversal vulnerabilities (e.g., filenames containing \"..\" or "
-"absolute paths). When handling untrusted archives, consider resolving "
-"filenames using :func:`os.path.abspath` and checking against the target "
-"directory with :func:`os.path.commonpath`."
+"prevent path traversal vulnerabilities (for example, absolute paths or paths "
+"with \"..\" components). When handling untrusted archives, consider "
+"resolving filenames using :func:`os.path.abspath` and checking against the "
+"target directory with :func:`os.path.commonpath`."
 msgstr ""
 
 #: library/zipfile.rst:554
@@ -786,7 +786,7 @@ msgid ""
 msgstr ""
 
 #: library/zipfile.rst:670
-msgid "PyZipFile Objects"
+msgid "PyZipFile objects"
 msgstr ""
 
 #: library/zipfile.rst:672
@@ -887,7 +887,7 @@ msgid "Recursion sorts directory entries."
 msgstr ""
 
 #: library/zipfile.rst:747
-msgid "ZipInfo Objects"
+msgid "ZipInfo objects"
 msgstr ""
 
 #: library/zipfile.rst:749
@@ -1092,7 +1092,7 @@ msgid "Size of the uncompressed file."
 msgstr ""
 
 #: library/zipfile.rst:917
-msgid "Command-Line Interface"
+msgid "Command-line interface"
 msgstr ""
 
 #: library/zipfile.rst:919
@@ -1184,7 +1184,7 @@ msgid ""
 msgstr ""
 
 #: library/zipfile.rst:992
-msgid "File System limitations"
+msgid "File system limitations"
 msgstr ""
 
 #: library/zipfile.rst:994

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: 2025-05-04 22:11+0300\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -19,7 +19,8 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: tutorial/stdlib2.rst:5
-msgid "Brief Tour of the Standard Library --- Part II"
+#, fuzzy
+msgid "Brief tour of the standard library --- part II"
 msgstr "Σύντομη περιήγηση στην Πρότυπη Βιβλιοθήκη --- Μέρος II"
 
 #: tutorial/stdlib2.rst:7
@@ -32,7 +33,8 @@ msgstr ""
 "σε μικρά scripts."
 
 #: tutorial/stdlib2.rst:14
-msgid "Output Formatting"
+#, fuzzy
+msgid "Output formatting"
 msgstr "Μορφοποίηση εξόδου"
 
 #: tutorial/stdlib2.rst:16
@@ -301,7 +303,8 @@ msgstr ""
 "απλού κειμένου και αναφορές ιστού HTML."
 
 #: tutorial/stdlib2.rst:134
-msgid "Working with Binary Data Record Layouts"
+#, fuzzy
+msgid "Working with binary data record layouts"
 msgstr "Εργασία με δυαδικές διατάξεις εγγραφής δεδομένων"
 
 #: tutorial/stdlib2.rst:136
@@ -390,19 +393,19 @@ msgstr ""
 "να εκτελείται::"
 
 #: tutorial/stdlib2.rst:177
+#, fuzzy
 msgid ""
 "import threading, zipfile\n"
 "\n"
 "class AsyncZip(threading.Thread):\n"
 "    def __init__(self, infile, outfile):\n"
-"        threading.Thread.__init__(self)\n"
+"        super().__init__()\n"
 "        self.infile = infile\n"
 "        self.outfile = outfile\n"
 "\n"
 "    def run(self):\n"
-"        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)\n"
-"        f.write(self.infile)\n"
-"        f.close()\n"
+"        with zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED) as f:\n"
+"            f.write(self.infile)\n"
 "        print('Finished background zip of:', self.infile)\n"
 "\n"
 "background = AsyncZip('mydata.txt', 'myarchive.zip')\n"
@@ -433,7 +436,7 @@ msgstr ""
 "background.join()    # Wait for the background task to finish\n"
 "print('Main program waited until background was done.')"
 
-#: tutorial/stdlib2.rst:198
+#: tutorial/stdlib2.rst:197
 msgid ""
 "The principal challenge of multi-threaded applications is coordinating "
 "threads that share data or other resources.  To that end, the threading "
@@ -445,7 +448,7 @@ msgstr ""
 "module παρέχει έναν αριθμό πρωτόγονων συγχρονισμού, συμπεριλαμβανομένων "
 "locks, events, μεταβλητών συνθηκών, και semaphores."
 
-#: tutorial/stdlib2.rst:203
+#: tutorial/stdlib2.rst:202
 msgid ""
 "While those tools are powerful, minor design errors can result in problems "
 "that are difficult to reproduce.  So, the preferred approach to task "
@@ -464,11 +467,11 @@ msgstr ""
 "επικοινωνία και συντονισμό μεταξύ νημάτων είναι πιο εύκολο να σχεδιαστούν, "
 "είναι πιο ευανάγνωστες και πιο αξιόπιστες."
 
-#: tutorial/stdlib2.rst:214
+#: tutorial/stdlib2.rst:213
 msgid "Logging"
 msgstr "Logging"
 
-#: tutorial/stdlib2.rst:216
+#: tutorial/stdlib2.rst:215
 msgid ""
 "The :mod:`logging` module offers a full featured and flexible logging "
 "system. At its simplest, log messages are sent to a file or to ``sys."
@@ -478,7 +481,7 @@ msgstr ""
 "σύστημα καταγραφής. Στην απλούστερη μορφή του, τα μηνύματα καταγραφής "
 "αποστέλλονται σε ένα αρχείο ή στο ``sys.stderr``::"
 
-#: tutorial/stdlib2.rst:219
+#: tutorial/stdlib2.rst:218
 msgid ""
 "import logging\n"
 "logging.debug('Debugging information')\n"
@@ -494,11 +497,11 @@ msgstr ""
 "logging.error('Error occurred')\n"
 "logging.critical('Critical error -- shutting down')"
 
-#: tutorial/stdlib2.rst:226
+#: tutorial/stdlib2.rst:225
 msgid "This produces the following output:"
 msgstr "Αυτό παράγει την ακόλουθη έξοδο:"
 
-#: tutorial/stdlib2.rst:228
+#: tutorial/stdlib2.rst:227
 msgid ""
 "WARNING:root:Warning:config file server.conf not found\n"
 "ERROR:root:Error occurred\n"
@@ -508,7 +511,7 @@ msgstr ""
 "ERROR:root:Error occurred\n"
 "CRITICAL:root:Critical error -- shutting down"
 
-#: tutorial/stdlib2.rst:234
+#: tutorial/stdlib2.rst:233
 msgid ""
 "By default, informational and debugging messages are suppressed and the "
 "output is sent to standard error.  Other output options include routing "
@@ -525,7 +528,7 @@ msgstr ""
 "const:`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :"
 "const:`~logging.ERROR`, και :const:`~logging.CRITICAL`."
 
-#: tutorial/stdlib2.rst:241
+#: tutorial/stdlib2.rst:240
 msgid ""
 "The logging system can be configured directly from Python or can be loaded "
 "from a user editable configuration file for customized logging without "
@@ -535,11 +538,12 @@ msgstr ""
 "να φορτωθεί από ένα επεξεργάσιμο αρχείο διαμόρφωσης για προσαρμοσμένη "
 "καταγραφή χωρίς την τροποποίηση της εφαρμογής."
 
-#: tutorial/stdlib2.rst:249
-msgid "Weak References"
+#: tutorial/stdlib2.rst:248
+#, fuzzy
+msgid "Weak references"
 msgstr "Αδύναμες αναφορές"
 
-#: tutorial/stdlib2.rst:251
+#: tutorial/stdlib2.rst:250
 msgid ""
 "Python does automatic memory management (reference counting for most objects "
 "and :term:`garbage collection` to eliminate cycles).  The memory is freed "
@@ -550,7 +554,7 @@ msgstr ""
 "κύκλων).  Η μνήμη ελευθερώνεται λίγο μετά την κατάργηση της τελευταίας "
 "αναφοράς σε αυτήν."
 
-#: tutorial/stdlib2.rst:255
+#: tutorial/stdlib2.rst:254
 msgid ""
 "This approach works fine for most applications but occasionally there is a "
 "need to track objects only as long as they are being used by something else. "
@@ -570,7 +574,7 @@ msgstr ""
 "ασθενούς αναφοράς και ενεργοποιείται μια επιστροφή κλήσης για αντικείμενα "
 "ασθενούς αναφοράς::"
 
-#: tutorial/stdlib2.rst:263
+#: tutorial/stdlib2.rst:262
 msgid ""
 ">>> import weakref, gc\n"
 ">>> class A:\n"
@@ -618,11 +622,12 @@ msgstr ""
 "    o = self.data[key]()\n"
 "KeyError: 'primary'"
 
-#: tutorial/stdlib2.rst:290
-msgid "Tools for Working with Lists"
+#: tutorial/stdlib2.rst:289
+#, fuzzy
+msgid "Tools for working with lists"
 msgstr "Εργαλεία για εργασία με λίστες"
 
-#: tutorial/stdlib2.rst:292
+#: tutorial/stdlib2.rst:291
 msgid ""
 "Many data structure needs can be met with the built-in list type. However, "
 "sometimes there is a need for alternative implementations with different "
@@ -632,7 +637,7 @@ msgstr ""
 "λίστας. Ωστόσο, μερικές φορές υπάρχει ανάγκη για εναλλακτικές υλοποιήσεις με "
 "διαφορετικούς συμβιβασμούς απόδοσης."
 
-#: tutorial/stdlib2.rst:296
+#: tutorial/stdlib2.rst:295
 msgid ""
 "The :mod:`array` module provides an :class:`~array.array` object that is "
 "like a list that stores only homogeneous data and stores it more compactly.  "
@@ -647,7 +652,7 @@ msgstr ""
 "αριθμών (κωδικός τύπου ``\"H\"``) αντί για τα συνηθισμένα 16 byte ανά "
 "καταχώρηση για κανονικές λίστες αντικειμένων τύπου Python int::"
 
-#: tutorial/stdlib2.rst:302
+#: tutorial/stdlib2.rst:301
 msgid ""
 ">>> from array import array\n"
 ">>> a = array('H', [4000, 10, 700, 22222])\n"
@@ -663,7 +668,7 @@ msgstr ""
 ">>> a[1:3]\n"
 "array('H', [10, 700])"
 
-#: tutorial/stdlib2.rst:309
+#: tutorial/stdlib2.rst:308
 msgid ""
 "The :mod:`collections` module provides a :class:`~collections.deque` object "
 "that is like a list with faster appends and pops from the left side but "
@@ -675,7 +680,7 @@ msgstr ""
 "αριστερή πλευρά αλλά με πιο αργές αναζητήσεις στη μέση. Αυτά τα αντικείμενα "
 "είναι κατάλληλα για υλοποίηση ουρών και αναζητήσεων σε πρώτο δέντρο εύρους::"
 
-#: tutorial/stdlib2.rst:314
+#: tutorial/stdlib2.rst:313
 msgid ""
 ">>> from collections import deque\n"
 ">>> d = deque([\"task1\", \"task2\", \"task3\"])\n"
@@ -689,7 +694,7 @@ msgstr ""
 ">>> print(\"Handling\", d.popleft())\n"
 "Handling task1"
 
-#: tutorial/stdlib2.rst:322
+#: tutorial/stdlib2.rst:321
 msgid ""
 "unsearched = deque([starting_node])\n"
 "def breadth_first_search(unsearched):\n"
@@ -707,7 +712,7 @@ msgstr ""
 "            return m\n"
 "        unsearched.append(m)"
 
-#: tutorial/stdlib2.rst:330
+#: tutorial/stdlib2.rst:329
 msgid ""
 "In addition to alternative list implementations, the library also offers "
 "other tools such as the :mod:`bisect` module with functions for manipulating "
@@ -717,7 +722,7 @@ msgstr ""
 "και άλλα εργαλεία όπως το module :mod:`bisect` με συναρτήσεις για τον "
 "χειρισμό ταξινομημένων λιστών::"
 
-#: tutorial/stdlib2.rst:334
+#: tutorial/stdlib2.rst:333
 msgid ""
 ">>> import bisect\n"
 ">>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n"
@@ -731,7 +736,7 @@ msgstr ""
 ">>> scores\n"
 "[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]"
 
-#: tutorial/stdlib2.rst:340
+#: tutorial/stdlib2.rst:339
 msgid ""
 "The :mod:`heapq` module provides functions for implementing heaps based on "
 "regular lists.  The lowest valued entry is always kept at position zero.  "
@@ -744,7 +749,7 @@ msgstr ""
 "έχουν επανειλημμένα πρόσβαση στο μικρότερο στοιχείο αλλά δεν θέλουν να "
 "εκτελέσουν μια πλήρη ταξινόμηση λίστας::"
 
-#: tutorial/stdlib2.rst:345
+#: tutorial/stdlib2.rst:344
 msgid ""
 ">>> from heapq import heapify, heappop, heappush\n"
 ">>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n"
@@ -760,11 +765,12 @@ msgstr ""
 ">>> [heappop(data) for i in range(3)]  # fetch the three smallest entries\n"
 "[-5, 0, 1]"
 
-#: tutorial/stdlib2.rst:356
-msgid "Decimal Floating-Point Arithmetic"
+#: tutorial/stdlib2.rst:355
+#, fuzzy
+msgid "Decimal floating-point arithmetic"
 msgstr "Δεκαδική Αριθμητικής Κινητής Υποδιαστολής"
 
-#: tutorial/stdlib2.rst:358
+#: tutorial/stdlib2.rst:357
 msgid ""
 "The :mod:`decimal` module offers a :class:`~decimal.Decimal` datatype for "
 "decimal floating-point arithmetic.  Compared to the built-in :class:`float` "
@@ -775,7 +781,7 @@ msgstr ""
 "ενσωματωμένη (built-in) εφαρμογή :class:`float` του δυαδικού κινητής "
 "υποδιαστολής, η κλάση είναι ιδιαίτερα χρήσιμη για"
 
-#: tutorial/stdlib2.rst:362
+#: tutorial/stdlib2.rst:361
 msgid ""
 "financial applications and other uses which require exact decimal "
 "representation,"
@@ -783,21 +789,21 @@ msgstr ""
 "οικονομικές εφαρμογές και άλλες χρήσεις που απαιτούν ακριβή δεκαδική "
 "αναπαράσταση,"
 
-#: tutorial/stdlib2.rst:364
+#: tutorial/stdlib2.rst:363
 msgid "control over precision,"
 msgstr "έλεγχος για την ακρίβεια,"
 
-#: tutorial/stdlib2.rst:365
+#: tutorial/stdlib2.rst:364
 msgid "control over rounding to meet legal or regulatory requirements,"
 msgstr ""
 "έλεγχος της στρογγυλοποίησης για την εκπλήρωση νομικών ή κανονιστικών "
 "απαιτήσεων,"
 
-#: tutorial/stdlib2.rst:366
+#: tutorial/stdlib2.rst:365
 msgid "tracking of significant decimal places, or"
 msgstr "παρακολούθηση σημαντικών δεκαδικών ψηφίων, ή"
 
-#: tutorial/stdlib2.rst:367
+#: tutorial/stdlib2.rst:366
 msgid ""
 "applications where the user expects the results to match calculations done "
 "by hand."
@@ -805,7 +811,7 @@ msgstr ""
 "εφαρμογές όπου ο χρήστης αναμένει ότι τα αποτελέσματα ταιριάζουν με "
 "υπολογισμούς που έγιναν με το χέρι."
 
-#: tutorial/stdlib2.rst:370
+#: tutorial/stdlib2.rst:369
 msgid ""
 "For example, calculating a 5% tax on a 70 cent phone charge gives different "
 "results in decimal floating point and binary floating point. The difference "
@@ -816,7 +822,7 @@ msgstr ""
 "(binary) κινητή υποδιαστολή. Η διαφορά γίνεται σημαντική εάν τα αποτελέσματα "
 "στρογγυλοποιηθούν στο πλησιέστερο λεπτό::"
 
-#: tutorial/stdlib2.rst:374
+#: tutorial/stdlib2.rst:373
 msgid ""
 ">>> from decimal import *\n"
 ">>> round(Decimal('0.70') * Decimal('1.05'), 2)\n"
@@ -830,7 +836,7 @@ msgstr ""
 ">>> round(.70 * 1.05, 2)\n"
 "0.73"
 
-#: tutorial/stdlib2.rst:380
+#: tutorial/stdlib2.rst:379
 msgid ""
 "The :class:`~decimal.Decimal` result keeps a trailing zero, automatically "
 "inferring four place significance from multiplicands with two place "
@@ -844,7 +850,7 @@ msgstr ""
 "και αποφεύγει ζητήματα που μπορεί να προκύψουν όταν η δυαδική κινητή "
 "υποδιαστολή δεν μπορεί να αντιπροσωπεύει ακριβώς τις δεκαδικές ποσότητες."
 
-#: tutorial/stdlib2.rst:386
+#: tutorial/stdlib2.rst:385
 msgid ""
 "Exact representation enables the :class:`~decimal.Decimal` class to perform "
 "modulo calculations and equality tests that are unsuitable for binary "
@@ -854,7 +860,7 @@ msgstr ""
 "εκτελεί υπολογισμούς modulo και δοκιμές ισότητας που είναι ακατάλληλες για "
 "δυαδική κινητή υποδιαστολή::"
 
-#: tutorial/stdlib2.rst:390
+#: tutorial/stdlib2.rst:389
 msgid ""
 ">>> Decimal('1.00') % Decimal('.10')\n"
 "Decimal('0.00')\n"
@@ -876,14 +882,14 @@ msgstr ""
 ">>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0\n"
 "False"
 
-#: tutorial/stdlib2.rst:400
+#: tutorial/stdlib2.rst:399
 msgid ""
 "The :mod:`decimal` module provides arithmetic with as much precision as "
 "needed::"
 msgstr ""
 "Το module :mod:`decimal` παρέχει αριθμητική με όση ακρίβεια χρειάζεται::"
 
-#: tutorial/stdlib2.rst:402
+#: tutorial/stdlib2.rst:401
 msgid ""
 ">>> getcontext().prec = 36\n"
 ">>> Decimal(1) / Decimal(7)\n"

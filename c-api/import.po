@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -371,6 +371,13 @@ msgid ""
 "If Python is initialized multiple times, :c:func:`PyImport_AppendInittab` "
 "or :c:func:`PyImport_ExtendInittab` must be called before each Python "
 "initialization."
+msgstr ""
+
+#: c-api/import.rst:332
+msgid ""
+"The table of built-in modules used by Python initialization. Do not use this "
+"directly; use :c:func:`PyImport_AppendInittab` and :c:func:"
+"`PyImport_ExtendInittab` instead."
 msgstr ""
 
 #: c-api/import.rst:11

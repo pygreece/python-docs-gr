@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -786,10 +786,17 @@ msgid ""
 msgstr ""
 
 #: library/email.policy.rst:667
+msgid ""
+"The :const:`compat32` policy should not be used as a policy for :class:"
+"`~email.message.EmailMessage` objects, and should only be used to serialize "
+"messages that were created using the :const:`compat32` policy."
+msgstr ""
+
+#: library/email.policy.rst:674
 msgid "Footnotes"
 msgstr ""
 
-#: library/email.policy.rst:668
+#: library/email.policy.rst:675
 msgid ""
 "Originally added in 3.3 as a :term:`provisional feature <provisional "
 "package>`."
