@@ -1004,7 +1004,6 @@ msgstr ""
 "ακολουθήσουν αυτόματα."
 
 #: library/collections.abc.rst:459
-#, fuzzy
 msgid ""
 "The :class:`Set` mixin provides a :meth:`!_hash` method to compute a hash "
 "value for the set; however, :meth:`~object.__hash__` is not defined because "
@@ -1016,8 +1015,8 @@ msgstr ""
 "τιμή κατακερματισμού για το σύνολο. Ωστόσο, η μέθοδος :meth:`~object."
 "__hash__` δεν είναι ορισμένη, επειδή δεν είναι όλα τα σύνολα :term:"
 "`hashable` ή αμετάβλητα. Για να προσθέσετε hashability σε ένα σύνολο "
-"χρησιμοποιώντας mixins, κληρονομήστε τόσο από τις κλάσεις :meth:`Set` όσο "
-"και :meth:`Hashable`, και στη συνέχεια ορίστε ``__hash__ = Set._hash``."
+"χρησιμοποιώντας mixins, κληρονομήστε τόσο από τις κλάσεις :class:`Set` όσο "
+"και :class:`Hashable`, και στη συνέχεια ορίστε ``__hash__ = Set._hash``."
 
 #: library/collections.abc.rst:467
 msgid ""

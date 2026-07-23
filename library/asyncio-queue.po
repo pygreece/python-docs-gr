@@ -129,10 +129,11 @@ msgstr ""
 "exc:`QueueEmpty`."
 
 #: library/asyncio-queue.rst:74
-#, fuzzy
 msgid ""
 "Raises :exc:`QueueShutDown` if the queue has been shut down and is empty."
-msgstr "Κάνει raise μια :exc:`QueueShutDown` αν η ουρά έχει τερματιστεί."
+msgstr ""
+"Κάνει raise μια :exc:`QueueShutDown` αν η ουρά έχει τερματιστεί και είναι "
+"κενή."
 
 #: library/asyncio-queue.rst:79
 msgid "Block until all items in the queue have been received and processed."
@@ -185,7 +186,6 @@ msgid "Put a :class:`Queue` instance into a shutdown mode."
 msgstr "Τοποθετεί μια παρουσία της :class:`Queue` σε λειτουργία τερματισμού."
 
 #: library/asyncio-queue.rst:111
-#, fuzzy
 msgid ""
 "The queue can no longer grow. Future calls to :meth:`~Queue.put` raise :exc:"
 "`QueueShutDown`. Currently blocked callers of :meth:`~Queue.put` will be "
@@ -194,7 +194,7 @@ msgstr ""
 "Η ουρά δεν μπορεί πλέον να μεγαλώσει. Μελλοντικές κλήσεις της :meth:`~Queue."
 "put` κάνουν raise την :exc:`QueueShutDown`. Οι τρέχοντες αποκλεισμένοι "
 "καλούντες της :meth:`~Queue.put` θα αποδεσμευτούν και θα κάνουν raise την :"
-"exc:`QueueShutDown` στο νήμα που ήταν προηγουμένως αποκλεισμένο."
+"exc:`QueueShutDown` στην διεργασία που προηγουμένως βρισκόταν σε αναμονή."
 
 #: library/asyncio-queue.rst:116
 msgid ""
@@ -332,14 +332,14 @@ msgstr ""
 "σε μια ουρά που έχει φτάσει στο *maxsize* της."
 
 #: library/asyncio-queue.rst:195
-#, fuzzy
 msgid ""
 "Exception raised when :meth:`~Queue.put`, :meth:`~Queue.put_nowait`, :meth:"
 "`~Queue.get` or :meth:`~Queue.get_nowait` is called on a queue which has "
 "been shut down."
 msgstr ""
-"Εξαίρεση που γίνεται raise όταν η μέθοδος :meth:`~Queue.put` ή :meth:`~Queue."
-"get` καλείται σε μια ουρά που έχει τερματιστεί."
+"Εξαίρεση που γίνεται raised όταν καλείται μία από τις μεθόδους :meth:`~Queue."
+"put`, :meth:`~Queue.put_nowait`, :meth:`~Queue.get` ή :meth:`~Queue."
+"get_nowait` σε μια ουρά που έχει τερματιστεί."
 
 #: library/asyncio-queue.rst:203
 msgid "Examples"

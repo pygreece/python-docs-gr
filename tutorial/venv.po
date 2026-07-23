@@ -211,6 +211,12 @@ msgid ""
 "version the virtual environment is using. The best practice is to ``unset "
 "PYTHONPATH`` in bash or the equivalent for the shell you are using."
 msgstr ""
+"Σημειώστε ότι το ενεργοποιημένο εικονικό περιβάλλον δεν τροποποιεί τη "
+"μεταβλητή ``PYTHONPATH`` με κανέναν τρόπο. Αυτό μπορεί να οδηγήσει σε "
+"απροσδόκητα αποτελέσματα εάν η διαδρομή περιλαμβάνει αναφορές σε κώδικα που "
+"είναι ασύμβατος με την έκδοση Python που χρησιμοποιεί το εικονικό "
+"περιβάλλον. Η καλύτερη πρακτική είναι να ``unset PYTHONPATH`` στο bash ή το "
+"αντίστοιχο για το shell που χρησιμοποιείτε."
 
 #: tutorial/venv.rst:96
 msgid "To deactivate a virtual environment, type::"

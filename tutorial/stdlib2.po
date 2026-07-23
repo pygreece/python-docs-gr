@@ -19,9 +19,8 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: tutorial/stdlib2.rst:5
-#, fuzzy
 msgid "Brief tour of the standard library --- part II"
-msgstr "Σύντομη περιήγηση στην Πρότυπη Βιβλιοθήκη --- Μέρος II"
+msgstr "Σύντομη περιήγηση στην πρότυπη βιβλιοθήκη --- Μέρος II"
 
 #: tutorial/stdlib2.rst:7
 msgid ""
@@ -33,7 +32,6 @@ msgstr ""
 "σε μικρά scripts."
 
 #: tutorial/stdlib2.rst:14
-#, fuzzy
 msgid "Output formatting"
 msgstr "Μορφοποίηση εξόδου"
 
@@ -303,9 +301,8 @@ msgstr ""
 "απλού κειμένου και αναφορές ιστού HTML."
 
 #: tutorial/stdlib2.rst:134
-#, fuzzy
 msgid "Working with binary data record layouts"
-msgstr "Εργασία με δυαδικές διατάξεις εγγραφής δεδομένων"
+msgstr "Εργασία με δυαδικά (binary) δεδομένα και διατάξεις εγγραφών"
 
 #: tutorial/stdlib2.rst:136
 msgid ""
@@ -393,7 +390,6 @@ msgstr ""
 "να εκτελείται::"
 
 #: tutorial/stdlib2.rst:177
-#, fuzzy
 msgid ""
 "import threading, zipfile\n"
 "\n"
@@ -419,14 +415,13 @@ msgstr ""
 "\n"
 "class AsyncZip(threading.Thread):\n"
 "    def __init__(self, infile, outfile):\n"
-"        threading.Thread.__init__(self)\n"
+"        super().__init__()\n"
 "        self.infile = infile\n"
 "        self.outfile = outfile\n"
 "\n"
 "    def run(self):\n"
-"        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)\n"
-"        f.write(self.infile)\n"
-"        f.close()\n"
+"        with zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED) as f:\n"
+"            f.write(self.infile)\n"
 "        print('Finished background zip of:', self.infile)\n"
 "\n"
 "background = AsyncZip('mydata.txt', 'myarchive.zip')\n"
@@ -539,7 +534,6 @@ msgstr ""
 "καταγραφή χωρίς την τροποποίηση της εφαρμογής."
 
 #: tutorial/stdlib2.rst:248
-#, fuzzy
 msgid "Weak references"
 msgstr "Αδύναμες αναφορές"
 
@@ -623,7 +617,6 @@ msgstr ""
 "KeyError: 'primary'"
 
 #: tutorial/stdlib2.rst:289
-#, fuzzy
 msgid "Tools for working with lists"
 msgstr "Εργαλεία για εργασία με λίστες"
 
@@ -766,9 +759,8 @@ msgstr ""
 "[-5, 0, 1]"
 
 #: tutorial/stdlib2.rst:355
-#, fuzzy
 msgid "Decimal floating-point arithmetic"
-msgstr "Δεκαδική Αριθμητικής Κινητής Υποδιαστολής"
+msgstr "Δεκαδική αριθμητική κινητής υποδιαστολής"
 
 #: tutorial/stdlib2.rst:357
 msgid ""

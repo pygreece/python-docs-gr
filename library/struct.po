@@ -112,7 +112,6 @@ msgstr ""
 "μορφοποίησης."
 
 #: library/struct.rst:68
-#, fuzzy
 msgid ""
 "Pack the values *v1*, *v2*, ... according to the format string *format* and "
 "write the packed bytes into the writable buffer *buffer* starting at "
@@ -122,7 +121,7 @@ msgstr ""
 "Πακετάρει τις τιμές *v1*, *v2*, ... σύμφωνα με τη συμβολοσειρά μορφοποίησης "
 "*format* και γράφει τα πακεταρισμένα bytes στον εγγράψιμο buffer *buffer* "
 "ξεκινώντας από τη θέση *offset*. Σημειώστε ότι το *offset* είναι υποχρεωτικό "
-"όρισμα."
+"όρισμα. Μια αρνητική τιμή του *offset* μετράει από το τέλος του *buffer*."
 
 #: library/struct.rst:76
 msgid ""
@@ -139,7 +138,6 @@ msgstr ""
 "func:`calcsize`."
 
 #: library/struct.rst:84
-#, fuzzy
 msgid ""
 "Unpack from *buffer* starting at position *offset*, according to the format "
 "string *format*.  The result is a tuple even if it contains exactly one "
@@ -151,7 +149,8 @@ msgstr ""
 "συμβολοσειρά μορφοποίησης *format*.  Το αποτέλεσμα είναι μια πλειάδα, ακόμα "
 "κι αν περιέχει μόνο ένα στοιχείο. Το μέγεθος του buffer σε bytes, ξεκινώντας "
 "από τη θέση *offset*, πρέπει να είναι τουλάχιστον το μέγεθος που απαιτείται "
-"από τη μορφή, όπως καθορίζεται από τη συνάρτηση :func:`calcsize`."
+"από τη μορφή, όπως καθορίζεται από τη συνάρτηση :func:`calcsize`. Μια "
+"αρνητική τιμή του *offset* μετράει από το τέλος του *buffer*."
 
 #: library/struct.rst:93
 msgid ""
@@ -492,9 +491,8 @@ msgstr ":c:expr:`signed char`"
 #: library/struct.rst:234 library/struct.rst:240 library/struct.rst:244
 #: library/struct.rst:248 library/struct.rst:252 library/struct.rst:257
 #: library/struct.rst:269
-#, fuzzy
 msgid "int"
-msgstr "integer"
+msgstr "int"
 
 #: library/struct.rst:234 library/struct.rst:240 library/struct.rst:244
 #: library/struct.rst:248 library/struct.rst:252
@@ -610,9 +608,8 @@ msgid ":c:type:`ssize_t`"
 msgstr ":c:type:`ssize_t`"
 
 #: library/struct.rst:257
-#, fuzzy
 msgid "\\(2), \\(3)"
-msgstr "\\(1), \\(2)"
+msgstr "\\(2), \\(3)"
 
 #: library/struct.rst:257
 msgid "``N``"
@@ -627,18 +624,16 @@ msgid "``e``"
 msgstr "``e``"
 
 #: library/struct.rst:259
-#, fuzzy
 msgid ":c:expr:`_Float16`"
-msgstr ":c:expr:`float`"
+msgstr ":c:expr:`_Float16`"
 
 #: library/struct.rst:261 library/struct.rst:263
 msgid "float"
 msgstr "float"
 
 #: library/struct.rst:259
-#, fuzzy
 msgid "\\(4), \\(6)"
-msgstr "\\(1), \\(2)"
+msgstr "\\(4), \\(6)"
 
 #: library/struct.rst:261
 msgid "``f``"
@@ -693,9 +688,8 @@ msgid ":c:expr:`void \\*`"
 msgstr ":c:expr:`void \\*`"
 
 #: library/struct.rst:269
-#, fuzzy
 msgid "\\(2), \\(5)"
-msgstr "\\(1), \\(2)"
+msgstr "\\(2), \\(5)"
 
 #: library/struct.rst:272
 msgid "Added support for the ``'n'`` and ``'N'`` formats."
@@ -770,7 +764,6 @@ msgstr ""
 "επομένως η μορφή ``'P'`` δεν είναι διαθέσιμη."
 
 #: library/struct.rst:316
-#, fuzzy
 msgid ""
 "The IEEE 754 binary16 \"half precision\" type was introduced in the 2008 "
 "revision of the `IEEE 754 standard <ieee 754 standard_>`_. It has a sign "
@@ -798,7 +791,6 @@ msgid "When packing, ``'x'`` inserts one NUL byte."
 msgstr "Κατά τη συσκευασία, το ``'x'`` εισάγει ένα NUL byte."
 
 #: library/struct.rst:331
-#, fuzzy
 msgid ""
 "The ``'p'`` format character encodes a \"Pascal string\", meaning a short "
 "variable-length string stored in a *fixed number of bytes*, given by the "
@@ -823,10 +815,10 @@ msgstr ""
 "τόσα byte όσα καθορίζει ο μετρητής. Σημειώστε ότι για τη :func:`unpack`, ο "
 "χαρακτήρας μορφοποίησης ``'p'`` καταναλώνει ``count`` byte, αλλά η "
 "συμβολοσειρά που επιστρέφεται δεν μπορεί ποτέ να περιέχει περισσότερα από "
-"255 byte."
+"255 byte. Κατά τη συσκευασία, γίνονται δεκτά ορίσματα τύπων :class:`bytes` "
+"και :class:`bytearray`."
 
 #: library/struct.rst:345
-#, fuzzy
 msgid ""
 "For the ``'s'`` format character, the count is interpreted as the length of "
 "the byte string, not a repeat count like for the other format characters; "
@@ -855,7 +847,8 @@ msgstr ""
 "καθορισμένο μήκος. Κατά την αποσυσκευασία (unpacking), το αποτέλεσμα είναι "
 "πάντα ένα αντικείμενο bytes με ακριβώς το καθορισμένο μήκος. Ως ειδική "
 "περίπτωση, το ``'0s'`` σημαίνει μια μοναδική, κενή συμβολοσειρά (ενώ το "
-"``'0c'`` σημαίνει 0 χαρακτήρες)."
+"``'0c'`` σημαίνει 0 χαρακτήρες). Κατά τη συσκευασία, γίνονται δεκτά ορίσματα "
+"τύπων :class:`bytes` και :class:`bytearray`."
 
 #: library/struct.rst:360
 msgid ""

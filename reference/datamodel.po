@@ -892,14 +892,12 @@ msgid "Meaning"
 msgstr "Έννοια"
 
 #: reference/datamodel.rst:556
-#, fuzzy
 msgid ""
 "A reference to the :class:`dictionary <dict>` that holds the function's "
 "builtins namespace."
 msgstr ""
-"Μια αναφορά στη :class:`dictionary <dict>` που περιέχει τις :ref:`global "
-"variables <naming>` -- τον καθολικό χώρο ονομάτων του module στην οποία "
-"ορίστηκε η συνάρτηση."
+"Μια αναφορά στη :class:`dictionary <dict>` που περιέχει τον χώρο ονομάτων "
+"builtins της συνάρτησης."
 
 #: reference/datamodel.rst:562
 msgid ""
@@ -2017,7 +2015,6 @@ msgstr ""
 "ανατίθενται μέσω του ``self.X`` από οποιαδήποτε συνάρτηση στο σώμα της."
 
 #: reference/datamodel.rst:1236
-#, fuzzy
 msgid ""
 "The line number of the first line of the class definition, including "
 "decorators. Setting the :attr:`~type.__module__` attribute removes the :attr:"
@@ -2025,7 +2022,8 @@ msgid ""
 msgstr ""
 "Ο αριθμός γραμμής της πρώτης γραμμής του ορισμού της κλάσης, "
 "συμπεριλαμβανομένων των διακοσμητών. Ο ορισμός του χαρακτηριστικού :attr:"
-"`__module__` αφαιρεί το :attr:`!__firstlineno__` από το λεξικό του τύπου."
+"`~type.__module__` αφαιρεί το :attr:`!__firstlineno__` από το λεξικό του "
+"τύπου."
 
 #: reference/datamodel.rst:1244
 msgid ""
@@ -2178,6 +2176,9 @@ msgid ""
 "File objects implement common methods, listed below, to simplify usage in "
 "generic code. They are expected to be :ref:`context-managers`."
 msgstr ""
+"Τα αντικείμενα αρχείου υλοποιούν κοινές μεθόδους, που παρατίθενται παρακάτω, "
+"για να απλοποιήσουν τη χρήση σε γενικό κώδικα. Αναμένεται να είναι :ref:"
+"`context-managers`."
 
 #: reference/datamodel.rst:1354
 msgid ""
@@ -2197,14 +2198,16 @@ msgid ""
 "Retrieve up to *size* data from the file. As a convenience if *size* is "
 "unspecified or -1 retrieve all data available."
 msgstr ""
+"Ανακτήστε έως *size* δεδομένα από το αρχείο. Ως διευκόλυνση, εάν το *size* "
+"δεν καθορίζεται ή είναι -1, ανακτήστε όλα τα διαθέσιμα δεδομένα."
 
 #: reference/datamodel.rst:1367
 msgid "Store *data* to the file."
-msgstr ""
+msgstr "Αποθηκεύστε τα *data* στο αρχείο."
 
 #: reference/datamodel.rst:1371
 msgid "Flush any buffers and close the underlying file."
-msgstr ""
+msgstr "Αποστραγγίστε τυχόν buffers και κλείστε το υποκείμενο αρχείο."
 
 #: reference/datamodel.rst:1375
 msgid "Internal types"
@@ -3011,7 +3014,6 @@ msgstr ""
 "(χωρίς να επιστρέψουμε στο :meth:`~object.__getitem__`). [#]_"
 
 #: reference/datamodel.rst:1874
-#, fuzzy
 msgid ""
 "When implementing a class that emulates any built-in type, it is important "
 "that the emulation only be implemented to the degree that it makes sense for "
@@ -3025,8 +3027,8 @@ msgstr ""
 "νόημα για το αντικείμενο που μοντελοποιείται.  Για παράδειγμα, ορισμένες "
 "ακολουθίες μπορεί να λειτουργούν καλά με την ανάκτηση μεμονωμένων στοιχείων, "
 "αλλά η εξαγωγή ενός τμήματος μπορεί να μην έχει νόημα.  (Ένα παράδειγμα "
-"αυτού είναι η διεπαφή :class:`~xml.dom.NodeList` στο Μοντέλο Αντικειμένου "
-"Εγγράφου του W3C.)"
+"αυτού είναι η διεπαφή :ref:`NodeList <dom-nodelist-objects>` στο Μοντέλο "
+"Αντικειμένου Εγγράφου του W3C.)"
 
 #: reference/datamodel.rst:1885
 msgid "Basic customization"
@@ -3622,7 +3624,6 @@ msgstr ""
 "μεταξύ επαναλαμβανόμενων κλήσεων της Python."
 
 #: reference/datamodel.rst:2205
-#, fuzzy
 msgid ""
 "This is intended to provide protection against a denial-of-service caused by "
 "carefully chosen inputs that exploit the worst case performance of a dict "
@@ -3631,7 +3632,7 @@ msgid ""
 msgstr ""
 "Αυτό έχει ως στόχο να παρέχει προστασία από άρνηση υπηρεσίας που προκαλείται "
 "από προσεκτικά επιλεγμένες εισόδους που εκμεταλλεύονται τη χειρότερη "
-"περίπτωση απόδοσης μιας εισαγωγής ψηφίου, πολυπλοκότητας *O*\\ (*n*\\ :sup:"
+"περίπτωση απόδοσης μιας εισαγωγής λεξικού, πολυπλοκότητας *O*\\ (*n*\\ :sup:"
 "`2`).  Δείτε http://ocert.org/advisories/ocert-2011-003.html για "
 "λεπτομέρειες."
 
@@ -4472,12 +4473,11 @@ msgstr ""
 "``type(cls)``."
 
 #: reference/datamodel.rst:2671
-#, fuzzy
 msgid ""
 "When a class is created, :meth:`!type.__new__` scans the class variables and "
 "makes callbacks to those with a :meth:`~object.__set_name__` hook."
 msgstr ""
-"Όταν δημιουργείται μια κλάση, η :meth:`type.__new__` σαρώνει τις μεταβλητές "
+"Όταν δημιουργείται μια κλάση, η :meth:`!type.__new__` σαρώνει τις μεταβλητές "
 "κλάσης και πραγματοποιεί επανάκληση σε εκείνες με ένα :meth:`~object."
 "__set_name__` hook."
 
@@ -5315,7 +5315,6 @@ msgid "Emulating container types"
 msgstr "Εξομοίωση τύπων κοντέινερ"
 
 #: reference/datamodel.rst:3096
-#, fuzzy
 msgid ""
 "The following methods can be defined to implement container objects. None of "
 "them are provided by the :class:`object` class itself. Containers usually "
@@ -5353,26 +5352,7 @@ msgstr ""
 "Το module :mod:`collections.abc` παρέχει μια :class:`~collections.abc."
 "MutableMapping` :term:`abstract base class` για να βοηθήσει στη δημιουργία "
 "αυτών των μεθόδων από ένα βασικό σύνολο :meth:`~object.__getitem__`, :meth:"
-"`~object.__setitem__`, :meth:`~object.__delitem__`, και :meth:`!keys`. Οι "
-"μεταβλητές ακολουθίες θα πρέπει να παρέχουν μεθόδους :meth:`~sequence."
-"append`, :meth:`~sequence.count`, :meth:`~sequence.index`, :meth:`~sequence."
-"extend`, :meth:`~sequence.insert`, :meth:`~sequence.pop`, :meth:`~sequence."
-"remove`, :meth:`~sequence.reverse` και :meth:`~sequence.sort`, όπως τα "
-"πρότυπα Python :class:`list` αντικείμενα. Τέλος, οι τύποι ακολουθιών θα "
-"πρέπει να υλοποιούν πρόσθεση (που σημαίνει συνένωση) και πολλαπλασιασμό "
-"(δηλαδή επανάληψη) ορίζοντας τις μεθόδους :meth:`~object.__add__`, :meth:"
-"`~object.__radd__`, :meth:`~object.__iadd__`, :meth:`~object.__mul__`, :meth:"
-"`~object.__rmul__` και :meth:`~object.__imul__` που περιγράφονται παρακάτω∙ "
-"δεν θα πρέπει να ορίζουν άλλους αριθμητικούς τελεστές. Συνίσταται τόσο οι "
-"αντιστοιχίσεις όσο και οι ακολουθίες να εφαρμόζουν τη μέθοδο :meth:`~object."
-"__contains__` για να επιτρέπεται η αποτελεσματική χρήση του τελεστή ``in`` ∙ "
-"για αντιστοιχίσεις, το ``in`` θα πρέπει να αναζητήσει τα κλειδιά της "
-"αντιστοίχισης∙ για ακολουθίες θα πρέπει να αναζητήσει τις τιμές.  Συνίσταται "
-"περαιτέρω τόσο οι αντιστοιχίσεις όσο και οι ακολουθίες να εφαρμόζουν τη "
-"μέθοδο :meth:`~object.__iter__` για να επιτρέπεται η αποτελεσματική "
-"επανάληψη μέσω του κοντέινερ∙ για αντιστοιχίσεις, η :meth:`!__iter__` θα "
-"πρέπει να επαναλαμβάνεται μέσω των κλειδιών του αντικειμένου∙ για "
-"ακολουθίες, θα πρέπει να επαναλαμβάνεται μέσω των τιμών."
+"`~object.__setitem__`, :meth:`~object.__delitem__`, και :meth:`!keys`."
 
 #: reference/datamodel.rst:3115
 msgid ""
@@ -5387,6 +5367,16 @@ msgid ""
 "meth:`~object.__imul__` described below; they should not define other "
 "numerical operators."
 msgstr ""
+"Οι μεταβλητές ακολουθίες θα πρέπει να παρέχουν μεθόδους :meth:`~sequence."
+"append`, :meth:`~sequence.count`, :meth:`~sequence.index`, :meth:`~sequence."
+"extend`, :meth:`~sequence.insert`, :meth:`~sequence.pop`, :meth:`~sequence."
+"remove`, :meth:`~sequence.reverse` και :meth:`~sequence.sort`, όπως τα "
+"πρότυπα Python :class:`list` αντικείμενα. Τέλος, οι τύποι ακολουθιών θα "
+"πρέπει να υλοποιούν πρόσθεση (που σημαίνει συνένωση) και πολλαπλασιασμό "
+"(δηλαδή επανάληψη) ορίζοντας τις μεθόδους :meth:`~object.__add__`, :meth:"
+"`~object.__radd__`, :meth:`~object.__iadd__`, :meth:`~object.__mul__`, :meth:"
+"`~object.__rmul__` και :meth:`~object.__imul__` που περιγράφονται παρακάτω∙ "
+"δεν θα πρέπει να ορίζουν άλλους αριθμητικούς τελεστές."
 
 #: reference/datamodel.rst:3127
 msgid ""
@@ -5399,6 +5389,16 @@ msgid ""
 "__iter__` should iterate through the object's keys; for sequences, it should "
 "iterate through the values."
 msgstr ""
+"Συνίσταται τόσο οι αντιστοιχίσεις όσο και οι ακολουθίες να εφαρμόζουν τη "
+"μέθοδο :meth:`~object.__contains__` για να επιτρέπεται η αποτελεσματική "
+"χρήση του τελεστή ``in`` ∙ για αντιστοιχίσεις, το ``in`` θα πρέπει να "
+"αναζητήσει τα κλειδιά της αντιστοίχισης∙ για ακολουθίες θα πρέπει να "
+"αναζητήσει τις τιμές.  Συνίσταται περαιτέρω τόσο οι αντιστοιχίσεις όσο και "
+"οι ακολουθίες να εφαρμόζουν τη μέθοδο :meth:`~object.__iter__` για να "
+"επιτρέπεται η αποτελεσματική επανάληψη μέσω του κοντέινερ∙ για "
+"αντιστοιχίσεις, η :meth:`!__iter__` θα πρέπει να επαναλαμβάνεται μέσω των "
+"κλειδιών του αντικειμένου∙ για ακολουθίες, θα πρέπει να επαναλαμβάνεται μέσω "
+"των τιμών."
 
 #: reference/datamodel.rst:3142
 msgid ""
@@ -6301,6 +6301,8 @@ msgid ""
 "Coroutines are :ref:`generic <generics>` over the types of their yield, "
 "send, and return values, respectively."
 msgstr ""
+"Οι coroutines είναι :ref:`generic <generics>` ως προς τους τύπους των τιμών "
+"που επιστρέφουν με yield, στέλνουν, και επιστρέφουν, αντίστοιχα."
 
 #: reference/datamodel.rst:3708
 msgid "It is a :exc:`RuntimeError` to await on a coroutine more than once."
@@ -6893,9 +6895,8 @@ msgid "user-defined function"
 msgstr "συνάρτηση ορισμένη από τον χρήστη"
 
 #: reference/datamodel.rst:543
-#, fuzzy
 msgid "__builtins__ (function attribute)"
-msgstr "__defaults__ (χαρακτηριστικό συνάρτησης)"
+msgstr "__builtins__ (χαρακτηριστικό συνάρτησης)"
 
 #: reference/datamodel.rst:543
 msgid "__closure__ (function attribute)"

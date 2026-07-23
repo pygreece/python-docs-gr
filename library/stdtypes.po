@@ -310,7 +310,6 @@ msgid "negated object identity"
 msgstr "αρνητική ταυτότητα αντικειμένου"
 
 #: library/stdtypes.rst:167
-#, fuzzy
 msgid ""
 "Unless stated otherwise, objects of different types never compare equal. The "
 "``==`` operator is always defined but for some object types (for example, "
@@ -319,8 +318,8 @@ msgid ""
 "raise a :exc:`TypeError` exception when one of the arguments is a complex "
 "number."
 msgstr ""
-"Αντικείμενα διαφορετικών τύπων, εκτός από διαφορετικούς αριθμητικούς τύπους, "
-"δεν συγκρίνονται ποτέ ως ίσα. Ο τελεστής ``==`` ορίζεται πάντα αλλά για "
+"Εκτός αν ορίζεται διαφορετικά, αντικείμενα διαφορετικών τύπων δεν "
+"συγκρίνονται ποτέ ως ίσα. Ο τελεστής ``==`` ορίζεται πάντα αλλά για "
 "ορισμένους τύπους αντικειμένων (για παράδειγμα, αντικείμενα κλάσης) "
 "ισοδυναμεί με :keyword:`is`. Οι τελεστές ``<``, ``<=``, ``>`` και ``>=`` "
 "ορίζονται μόνο όπου έχουν νόημα· για παράδειγμα, δημιουργούν μια εξαίρεση :"
@@ -2004,35 +2003,36 @@ msgstr ""
 "Σημειώστε όμως ότι το ``-0`` εξακολουθεί να είναι ``0``."
 
 #: library/stdtypes.rst:1052
-#, fuzzy
 msgid ""
 "The slice of *s* from *i* to *j* is defined as the sequence of items with "
 "index *k* such that ``i <= k < j``."
 msgstr ""
-"το υποσύνολο (slice) του *s* από το *i* έως το *j* αντικαθίσταται από τα "
-"περιεχόμενα του iterable *t*"
+"το υποσύνολο (slice) του *s* από το *i* έως το *j* ορίζεται ως η ακολουθία "
+"των στοιχείων με δείκτη *k* τέτοιο ώστε ``i <= k < j``."
 
 #: library/stdtypes.rst:1055
 msgid "If *i* is omitted or ``None``, use ``0``."
-msgstr ""
+msgstr "Αν το *i* παραλειφθεί ή είναι ``None``, χρησιμοποιήστε ``0``."
 
 #: library/stdtypes.rst:1056
 msgid "If *j* is omitted or ``None``, use ``len(s)``."
-msgstr ""
+msgstr "Αν το *j* παραλειφθεί ή είναι ``None``, χρησιμοποιήστε ``len(s)``."
 
 #: library/stdtypes.rst:1057
-#, fuzzy
 msgid "If *i* or *j* is less than ``-len(s)``, use ``0``."
-msgstr "if *x* είναι false, τότε ``True``, αλλιώς ``False``"
+msgstr ""
+"Αν το *i* ή το *j* είναι μικρότερο από ``-len(s)``, χρησιμοποιήστε ``0``."
 
 #: library/stdtypes.rst:1058
-#, fuzzy
 msgid "If *i* or *j* is greater than ``len(s)``, use ``len(s)``."
-msgstr "if *x* είναι false, τότε ``True``, αλλιώς ``False``"
+msgstr ""
+"Αν το *i* ή το *j* είναι μεγαλύτερο από ``len(s)``, χρησιμοποιήστε "
+"``len(s)``."
 
 #: library/stdtypes.rst:1059
 msgid "If *i* is greater than or equal to *j*, the slice is empty."
 msgstr ""
+"Αν το *i* είναι μεγαλύτερο από ή ίσο με το *j*, το υποσύνολο είναι κενό."
 
 #: library/stdtypes.rst:1062
 msgid ""
@@ -2326,7 +2326,6 @@ msgstr ""
 "Οι τύποι μεταβλητών ακολουθιών υποστηρίζουν επίσης τις παρακάτω μεθόδους:"
 
 #: library/stdtypes.rst:1237
-#, fuzzy
 msgid ""
 "Append *value* to the end of the sequence. This is equivalent to writing "
 "``seq[len(seq):len(seq)] = [value]``."
@@ -2472,6 +2471,8 @@ msgstr ""
 #: library/stdtypes.rst:1354
 msgid "Lists are :ref:`generic <generics>` over the types of their items."
 msgstr ""
+"Οι λίστες είναι :ref:`generic <generics>` ως προς τον τύπο των στοιχείων που "
+"περιέχουν."
 
 #: library/stdtypes.rst:1356
 msgid ""
@@ -2672,6 +2673,9 @@ msgid ""
 "more information, refer to :ref:`the typing documentation on annotating "
 "tuples <annotating-tuples>`."
 msgstr ""
+"Οι πλειάδες είναι :ref:`generic <generics>` ως προς τον τύπο των "
+"περιεχομένων τους. Για περισσότερες πληροφορίες, ανατρέξτε στη :ref:"
+"`τεκμηρίωση typing σχετικά με την επισήμανση πλειάδων <annotating-tuples>`."
 
 #: library/stdtypes.rst:1446
 msgid ""
@@ -3142,7 +3146,6 @@ msgstr ""
 "casefolded συμβολοσειρές μπορούν να χρησιμοποιηθούν για caseless matching."
 
 #: library/stdtypes.rst:1713
-#, fuzzy
 msgid ""
 "Casefolding is similar to lowercasing but more aggressive because it is "
 "intended to remove all case distinctions in a string. For example, the "
@@ -3154,7 +3157,8 @@ msgstr ""
 "έχει ως στόχο να αφαιρέσει όλες τις διακρίσεις της πεζότητας σε μια "
 "συμβολοσειρά (string). Για παράδειγμα, το γερμανικό πεζό γράμμα ``'ß'`` "
 "ισοδυναμεί με ``\"ss\"``. Αφού είναι ήδη πεζό, η :meth:`lower` δεν θα έκανε "
-"τίποτα στο ``'ß'``· η :meth:`casefold` το μετατρέπει σε ``\"ss\"``."
+"τίποτα στο ``'ß'``· η :meth:`casefold` το μετατρέπει σε ``\"ss\"``. Για "
+"παράδειγμα:"
 
 #: library/stdtypes.rst:1720
 msgid ""
@@ -3163,6 +3167,10 @@ msgid ""
 ">>> 'straße'.casefold()\n"
 "'strasse'"
 msgstr ""
+">>> 'straße'.lower()\n"
+"'straße'\n"
+">>> 'straße'.casefold()\n"
+"'strasse'"
 
 #: library/stdtypes.rst:1727
 msgid ""
@@ -3520,13 +3528,12 @@ msgstr ""
 "είναι χρήσιμο αν για παράδειγμα το ``mapping`` είναι μια υποκλάση του dict:"
 
 #: library/stdtypes.rst:1926
-#, fuzzy
 msgid ""
 "Like :meth:`~str.find`, but raise :exc:`ValueError` when the substring is "
 "not found. For example:"
 msgstr ""
 "Όπως η :meth:`~str.find`, αλλά κάνει raise :exc:`ValueError` όταν η υπό-"
-"συμβολοσειρά (substring) δεν έχει βρεθεί."
+"συμβολοσειρά (substring) δεν έχει βρεθεί. Για παράδειγμα:"
 
 #: library/stdtypes.rst:1929
 msgid ""
@@ -3539,14 +3546,20 @@ msgid ""
 "    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n"
 "ValueError: substring not found"
 msgstr ""
+">>> 'spam, spam, spam'.index('spam')\n"
+"0\n"
+">>> 'spam, spam, spam'.index('eggs')\n"
+"Traceback (most recent call last):\n"
+"  File \"<python-input-0>\", line 1, in <module>\n"
+"    'spam, spam, spam'.index('eggs')\n"
+"    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n"
+"ValueError: substring not found"
 
 #: library/stdtypes.rst:1940
-#, fuzzy
 msgid "See also :meth:`rindex`."
-msgstr "Δείτε επίσης τη :meth:`join`."
+msgstr "Δείτε επίσης τη :meth:`rindex`."
 
 #: library/stdtypes.rst:1945
-#, fuzzy
 msgid ""
 "Return ``True`` if all characters in the string are alphanumeric and there "
 "is at least one character, ``False`` otherwise.  A character ``c`` is "
@@ -3557,10 +3570,9 @@ msgstr ""
 "αλφαριθμητικοί και υπάρχει τουλάχιστον ένας χαρακτήρας, διαφορετικά "
 "``False``.  Ένας χαρακτήρας ``c`` είναι αλφαριθμητικό εάν ένα από τα "
 "ακόλουθα επιστρέφει ``True``: ``c.isalpha()``, ``c.isdecimal()``, ``c."
-"isdigit()``, ή ``c.isnumeric()``."
+"isdigit()``, ή ``c.isnumeric()``. Για παράδειγμα:"
 
 #: library/stdtypes.rst:1950
-#, fuzzy
 msgid ""
 ">>> 'abc123'.isalnum()\n"
 "True\n"
@@ -3571,9 +3583,13 @@ msgid ""
 ">>> ' '.isalnum()\n"
 "False"
 msgstr ""
-">>> b'ABCabc1'.isalnum()\n"
+">>> 'abc123'.isalnum()\n"
 "True\n"
-">>> b'ABC abc1'.isalnum()\n"
+">>> 'abc123!@#'.isalnum()\n"
+"False\n"
+">>> ''.isalnum()\n"
+"False\n"
+">>> ' '.isalnum()\n"
 "False"
 
 #: library/stdtypes.rst:1964
@@ -3672,7 +3688,6 @@ msgstr ""
 "False"
 
 #: library/stdtypes.rst:2022
-#, fuzzy
 msgid ""
 "Return ``True`` if all characters in the string are digits and there is at "
 "least one character, ``False`` otherwise.  Digits include decimal characters "
@@ -3687,8 +3702,9 @@ msgstr ""
 "περιλαμβάνουν δεκαδικούς χαρακτήρες και ψηφία που χρειάζονται ειδικό "
 "χειρισμό, όπως τα compatibility superscript ψηφία. Αυτό καλύπτει τα ψηφία "
 "που δεν μπορούν να χρησιμοποιηθούν για το σχηματισμό αριθμών στη βάση 10, "
-"όπως οι αριθμοί Kharosthi.  Τυπικά, ένα ψηφίο είναι ένας χαρακτήρας που έχει "
-"την τιμή της ιδιότητας Numeric_Type=Digit ή Numeric_Type=Decimal."
+"όπως οι `αριθμοί Kharosthi <https://en.wikipedia.org/wiki/"
+"Kharosthi#Numerals>`__. Τυπικά, ένα ψηφίο είναι ένας χαρακτήρας που έχει την "
+"τιμή της ιδιότητας Numeric_Type=Digit ή Numeric_Type=Decimal."
 
 #: library/stdtypes.rst:2111 library/stdtypes.rst:2155
 #: library/stdtypes.rst:2283 library/stdtypes.rst:2415
@@ -3698,7 +3714,6 @@ msgid "For example:"
 msgstr "Για παράδειγμα:"
 
 #: library/stdtypes.rst:2032
-#, fuzzy
 msgid ""
 ">>> '0123456789'.isdigit()\n"
 "True\n"
@@ -3709,17 +3724,18 @@ msgid ""
 ">>> '²'.isdecimal(), '²'.isdigit(),  '²'.isnumeric()\n"
 "(False, True, True)"
 msgstr ""
-">>> '0123456789'.isdecimal()\n"
+">>> '0123456789'.isdigit()\n"
 "True\n"
-">>> '٠١٢٣٤٥٦٧٨٩'.isdecimal()  # Arabic-Indic digits zero to nine\n"
+">>> '٠١٢٣٤٥٦٧٨٩'.isdigit()  # Arabic-Indic digits zero to nine\n"
 "True\n"
-">>> 'alphabetic'.isdecimal()\n"
-"False"
+">>> '⅕'.isdigit()  # Vulgar fraction one fifth\n"
+"False\n"
+">>> '²'.isdecimal(), '²'.isdigit(),  '²'.isnumeric()\n"
+"(False, True, True)"
 
 #: library/stdtypes.rst:2043
-#, fuzzy
 msgid "See also :meth:`isdecimal` and :meth:`isnumeric`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`isdecimal` και :meth:`isnumeric`."
 
 #: library/stdtypes.rst:2048
 msgid ""
@@ -3767,7 +3783,6 @@ msgstr ""
 "είναι πεζοί και υπάρχει τουλάχιστον ένας cased χαρακτήρας, αλλιώς ``False``."
 
 #: library/stdtypes.rst:2073
-#, fuzzy
 msgid ""
 "Return ``True`` if all characters in the string are numeric characters, and "
 "there is at least one character, ``False`` otherwise. Numeric characters "
@@ -3782,10 +3797,9 @@ msgstr ""
 "όλους τους χαρακτήρες που έχουν την αριθμητική τιμή, π.χ. U+2155, VULGAR "
 "FRACTION ONE FIFTH.  Τυπικά, οι αριθμητικοί χαρακτήρες είναι εκείνοι με την "
 "τιμή της ιδιότητας Numeric_Type=Digit, Numeric_Type=Decimal ή "
-"Numeric_Type=Numeric."
+"Numeric_Type=Numeric. Για παράδειγμα"
 
 #: library/stdtypes.rst:2081
-#, fuzzy
 msgid ""
 ">>> '0123456789'.isnumeric()\n"
 "True\n"
@@ -3796,17 +3810,18 @@ msgid ""
 ">>> '²'.isdecimal(), '²'.isdigit(),  '²'.isnumeric()\n"
 "(False, True, True)"
 msgstr ""
-">>> '0123456789'.isdecimal()\n"
+">>> '0123456789'.isnumeric()\n"
 "True\n"
-">>> '٠١٢٣٤٥٦٧٨٩'.isdecimal()  # Arabic-Indic digits zero to nine\n"
+">>> '٠١٢٣٤٥٦٧٨٩'.isnumeric()  # Arabic-Indic digits zero to nine\n"
 "True\n"
-">>> 'alphabetic'.isdecimal()\n"
-"False"
+">>> '⅕'.isnumeric()  # Vulgar fraction one fifth\n"
+"True\n"
+">>> '²'.isdecimal(), '²'.isdigit(),  '²'.isnumeric()\n"
+"(False, True, True)"
 
 #: library/stdtypes.rst:2092
-#, fuzzy
 msgid "See also :meth:`isdecimal` and :meth:`isdigit`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`isdecimal` και :meth:`isdigit`."
 
 #: library/stdtypes.rst:2097
 msgid ""
@@ -3850,11 +3865,14 @@ msgid ""
 ">>> '\\t'.isprintable(), '\\n'.isprintable()\n"
 "(False, False)"
 msgstr ""
+">>> ''.isprintable(), ' '.isprintable()\n"
+"(True, True)\n"
+">>> '\\t'.isprintable(), '\\n'.isprintable()\n"
+"(False, False)"
 
 #: library/stdtypes.rst:2120
-#, fuzzy
 msgid "See also :meth:`isspace`."
-msgstr "Δείτε επίσης τη :meth:`istitle`."
+msgstr "Δείτε επίσης τη :meth:`isspace`."
 
 #: library/stdtypes.rst:2125
 msgid ""
@@ -3876,6 +3894,14 @@ msgid ""
 ">>> '\\u3000'.isspace() # IDEOGRAPHIC SPACE\n"
 "True"
 msgstr ""
+">>> ''.isspace()\n"
+"False\n"
+">>> ' '.isspace()\n"
+"True\n"
+">>> '\\t\\n'.isspace() # TAB and BREAK LINE\n"
+"True\n"
+">>> '\\u3000'.isspace() # IDEOGRAPHIC SPACE\n"
+"True"
 
 #: library/stdtypes.rst:2141
 msgid ""
@@ -3889,9 +3915,8 @@ msgstr ""
 "κατηγορίες ``WS``, ``B``, ή ``S``."
 
 #: library/stdtypes.rst:2146
-#, fuzzy
 msgid "See also :meth:`isprintable`."
-msgstr "Δείτε επίσης τη :meth:`istitle`."
+msgstr "Δείτε επίσης τη :meth:`isprintable`."
 
 #: library/stdtypes.rst:2151
 msgid ""
@@ -3976,7 +4001,6 @@ msgstr ""
 "επιστρέφεται εάν το *width* είναι μικρότερο ή ίσο με το ``len(s)``."
 
 #: library/stdtypes.rst:2212
-#, fuzzy
 msgid ""
 ">>> 'Python'.ljust(10)\n"
 "'Python    '\n"
@@ -3985,32 +4009,32 @@ msgid ""
 ">>> 'Monty Python'.ljust(10, '.')\n"
 "'Monty Python'"
 msgstr ""
-">>> 'Python'.center(10)\n"
-"'  Python  '\n"
-">>> 'Python'.center(10, '-')\n"
-"'--Python--'\n"
-">>> 'Python'.center(4)\n"
-"'Python'"
+">>> 'Python'.ljust(10)\n"
+"'Python    '\n"
+">>> 'Python'.ljust(10, '.')\n"
+"'Python....'\n"
+">>> 'Monty Python'.ljust(10, '.')\n"
+"'Monty Python'"
 
 #: library/stdtypes.rst:2754
-#, fuzzy
 msgid "See also :meth:`rjust`."
-msgstr "Δείτε επίσης :meth:`split`."
+msgstr "Δείτε επίσης :meth:`rjust`."
 
 #: library/stdtypes.rst:2226
-#, fuzzy
 msgid ""
 "Return a copy of the string with all the cased characters [4]_ converted to "
 "lowercase. For example:"
 msgstr ""
 "Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με όλους τους cased "
-"χαρακτήρες [4]_ να έχουν μετατραπεί σε πεζούς."
+"χαρακτήρες [4]_ να έχουν μετατραπεί σε πεζούς. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2229
 msgid ""
 ">>> 'Lower Method Example'.lower()\n"
 "'lower method example'"
 msgstr ""
+">>> 'Lower Method Example'.lower()\n"
+"'lower method example'"
 
 #: library/stdtypes.rst:2234
 msgid ""
@@ -4125,21 +4149,25 @@ msgid ""
 ">>> 'Monty Python'.partition('-')\n"
 "('Monty Python', '', '')"
 msgstr ""
+">>> 'Monty Python'.partition(' ')\n"
+"('Monty', ' ', 'Python')\n"
+">>> \"Monty Python's Flying Circus\".partition(' ')\n"
+"('Monty', ' ', \"Python's Flying Circus\")\n"
+">>> 'Monty Python'.partition('-')\n"
+"('Monty Python', '', '')"
 
 #: library/stdtypes.rst:2294
-#, fuzzy
 msgid "See also :meth:`rpartition`."
-msgstr "Δείτε επίσης :meth:`title`."
+msgstr "Δείτε επίσης :meth:`rpartition`."
 
 #: library/stdtypes.rst:2299
-#, fuzzy
 msgid ""
 "If the string starts with the *prefix* string, return "
 "``string[len(prefix):]``. Otherwise, return a copy of the original string:"
 msgstr ""
 "Εάν η συμβολοσειρά (string) ξεκινά με το *prefix*, επιστρέφει "
 "``string[len(prefix):]``. Διαφορετικά, επιστρέφει ένα αντίγραφο της αρχικής "
-"συμβολοσειράς::"
+"συμβολοσειράς:"
 
 #: library/stdtypes.rst:2303
 msgid ""
@@ -4154,12 +4182,10 @@ msgstr ""
 "'BaseTestCase'"
 
 #: library/stdtypes.rst:2312
-#, fuzzy
 msgid "See also :meth:`removesuffix` and :meth:`startswith`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`removesuffix` και :meth:`startswith`."
 
 #: library/stdtypes.rst:2317
-#, fuzzy
 msgid ""
 "If the string ends with the *suffix* string and that *suffix* is not empty, "
 "return ``string[:-len(suffix)]``. Otherwise, return a copy of the original "
@@ -4167,7 +4193,7 @@ msgid ""
 msgstr ""
 "Αν η συμβολοσειρά τελειώνει με το *suffix* και το *suffix* δεν είναι κενό, "
 "επιστρέφει ``string[:-len(suffix)]``. Διαφορετικά, επιστρέφει ένα αντίγραφο "
-"της αρχικής συμβολοσειράς::"
+"της αρχικής συμβολοσειράς:"
 
 #: library/stdtypes.rst:2321
 msgid ""
@@ -4182,12 +4208,10 @@ msgstr ""
 "'TmpDirMixin'"
 
 #: library/stdtypes.rst:2330
-#, fuzzy
 msgid "See also :meth:`removeprefix` and :meth:`endswith`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`removeprefix` και :meth:`endswith`."
 
 #: library/stdtypes.rst:2335
-#, fuzzy
 msgid ""
 "Return a copy of the string with all occurrences of substring *old* replaced "
 "by *new*.  If *count* is given, only the first *count* occurrences are "
@@ -4196,28 +4220,27 @@ msgid ""
 msgstr ""
 "Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με όλες τις εμφανίσεις "
 "της υπό-συμβολοσειράς *old* αντικατεστημένες από την *new*.  Εάν δοθεί η "
-"παράμετρος *count*, μόνο οι πρώτες *count* εμφανίσεις. Αν δεν έχει οριστεί ή "
-"είναι -1, τότε αντικαθίστανται όλες οι εμφανίσεις."
+"παράμετρος *count*, μόνο οι πρώτες *count* εμφανίσεις αντικαθίστανται. Εάν "
+"το *count* δεν έχει καθοριστεί ή είναι ``-1``, τότε όλες οι εμφανίσεις τους "
+"αντικαθίστανται. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2340
-#, fuzzy
 msgid ""
 ">>> 'spam, spam, spam'.replace('spam', 'eggs')\n"
 "'eggs, eggs, eggs'\n"
 ">>> 'spam, spam, spam'.replace('spam', 'eggs', 1)\n"
 "'eggs, spam, spam'"
 msgstr ""
-">>> 'spam, spam, spam'.find('sp')\n"
-"0\n"
-">>> 'spam, spam, spam'.find('sp', 5)\n"
-"6"
+">>> 'spam, spam, spam'.replace('spam', 'eggs')\n"
+"'eggs, eggs, eggs'\n"
+">>> 'spam, spam, spam'.replace('spam', 'eggs', 1)\n"
+"'eggs, spam, spam'"
 
 #: library/stdtypes.rst:2347
 msgid "*count* is now supported as a keyword argument."
 msgstr "Το *count* υποστηρίζεται πλέον ως όρισμα λέξης-κλειδιού."
 
 #: library/stdtypes.rst:2353
-#, fuzzy
 msgid ""
 "Return the highest index in the string where substring *sub* is found, such "
 "that *sub* is contained within ``s[start:end]``.  Optional arguments *start* "
@@ -4226,35 +4249,32 @@ msgid ""
 msgstr ""
 "Επιστρέφει το υψηλότερο index στη συμβολοσειρά (string) όπου βρίσκεται η υπό-"
 "συμβολοσειρά *sub*, έτσι ώστε το *sub* περιέχεται στο ``s[start:end]``.  Τα "
-"προαιρετικά ορίσματα *start* και *end* ερμηνεύονται ως slice notation.  "
-"Επιστρέφει ``-1`` σε περίπτωση αποτυχίας."
+"προαιρετικά ορίσματα *start* και *end* ερμηνεύονται ως slice notation. "
+"Επιστρέφει ``-1`` σε περίπτωση αποτυχίας. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2358
-#, fuzzy
 msgid ""
 ">>> 'spam, spam, spam'.rfind('sp')\n"
 "12\n"
 ">>> 'spam, spam, spam'.rfind('sp', 0, 10)\n"
 "6"
 msgstr ""
-">>> 'spam, spam, spam'.find('sp')\n"
-"0\n"
-">>> 'spam, spam, spam'.find('sp', 5)\n"
+">>> 'spam, spam, spam'.rfind('sp')\n"
+"12\n"
+">>> 'spam, spam, spam'.rfind('sp', 0, 10)\n"
 "6"
 
 #: library/stdtypes.rst:2365
-#, fuzzy
 msgid "See also :meth:`find` and :meth:`rindex`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`find` και :meth:`rindex`."
 
 #: library/stdtypes.rst:2370
-#, fuzzy
 msgid ""
 "Like :meth:`rfind` but raises :exc:`ValueError` when the substring *sub* is "
 "not found. For example:"
 msgstr ""
 "Όπως η :meth:`rfind`, αλλά κάνει raise :exc:`ValueError` όταν η υπό-"
-"συμβολοσειρά (sub-string) *sub* δεν βρέθηκε."
+"συμβολοσειρά (sub-string) *sub* δεν βρέθηκε. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2374
 msgid ""
@@ -4267,11 +4287,18 @@ msgid ""
 "    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n"
 "ValueError: substring not found"
 msgstr ""
+">>> 'spam, spam, spam'.rindex('spam')\n"
+"12\n"
+">>> 'spam, spam, spam'.rindex('eggs')\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin-0>\", line 1, in <module>\n"
+"    'spam, spam, spam'.rindex('eggs')\n"
+"    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n"
+"ValueError: substring not found"
 
 #: library/stdtypes.rst:2385
-#, fuzzy
 msgid "See also :meth:`index` and :meth:`find`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`index` και :meth:`find`."
 
 #: library/stdtypes.rst:2390
 msgid ""
@@ -4285,7 +4312,6 @@ msgstr ""
 "συμβολοσειρά επιστρέφεται εάν το *width* είναι μικρότερο ή ίσο με ``len(s)``."
 
 #: library/stdtypes.rst:2396
-#, fuzzy
 msgid ""
 ">>> 'Python'.rjust(10)\n"
 "'    Python'\n"
@@ -4294,17 +4320,16 @@ msgid ""
 ">>> 'Monty Python'.rjust(10, '.')\n"
 "'Monty Python'"
 msgstr ""
-">>> 'Python'.center(10)\n"
-"'  Python  '\n"
-">>> 'Python'.center(10, '-')\n"
-"'--Python--'\n"
-">>> 'Python'.center(4)\n"
-"'Python'"
+">>> 'Python'.rjust(10)\n"
+"'    Python'\n"
+">>> 'Python'.rjust(10, '.')\n"
+"'....Python'\n"
+">>> 'Monty Python'.rjust(10, '.')\n"
+"'Monty Python'"
 
 #: library/stdtypes.rst:2405
-#, fuzzy
 msgid "See also :meth:`ljust` and :meth:`zfill`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`ljust` και :meth:`zfill`."
 
 #: library/stdtypes.rst:2410
 msgid ""
@@ -4328,11 +4353,16 @@ msgid ""
 ">>> 'Monty Python'.rpartition('-')\n"
 "('', '', 'Monty Python')"
 msgstr ""
+">>> 'Monty Python'.rpartition(' ')\n"
+"('Monty', ' ', 'Python')\n"
+">>> \"Monty Python's Flying Circus\".rpartition(' ')\n"
+"(\"Monty Python's Flying\", ' ', 'Circus')\n"
+">>> 'Monty Python'.rpartition('-')\n"
+"('', '', 'Monty Python')"
 
 #: library/stdtypes.rst:2426
-#, fuzzy
 msgid "See also :meth:`partition`."
-msgstr "Δείτε επίσης :meth:`title`."
+msgstr "Δείτε επίσης :meth:`partition`."
 
 #: library/stdtypes.rst:2431
 msgid ""
@@ -4350,7 +4380,6 @@ msgstr ""
 "η :meth:`split` που περιγράφεται λεπτομερώς παρακάτω."
 
 #: library/stdtypes.rst:2440
-#, fuzzy
 msgid ""
 "Return a copy of the string with trailing characters removed.  The *chars* "
 "argument is a string specifying the set of characters to be removed.  If "
@@ -4363,7 +4392,7 @@ msgstr ""
 "σύνολο των χαρακτήρων που πρέπει να αφαιρεθούν.  Εάν παραληφθεί ή είναι "
 "``None``, το όρισμα *chars* έχει ως προεπιλογή την αφαίρεση των κενών "
 "διαστημάτων.  Το όρισμα *chars* δεν είναι suffix, αλλά όλοι οι συνδυασμοί "
-"των τιμών του αφαιρούνται::"
+"των τιμών του αφαιρούνται. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2446
 msgid ""
@@ -4378,12 +4407,11 @@ msgstr ""
 "'mississ'"
 
 #: library/stdtypes.rst:2453
-#, fuzzy
 msgid ""
 "See :meth:`removesuffix` for a method that will remove a single suffix "
 "string rather than all of a set of characters.  For example::"
 msgstr ""
-"Δείτε τη :meth:`str.removesuffix` για μια μέθοδο που θα αφαιρέσει ένα απλό "
+"Δείτε τη :meth:`removesuffix` για μια μέθοδο που θα αφαιρέσει ένα απλό "
 "suffix αντί για όλο το σύνολο των χαρακτήρων.  Για παράδειγμα::"
 
 #: library/stdtypes.rst:2456
@@ -4399,9 +4427,8 @@ msgstr ""
 "'Monty'"
 
 #: library/stdtypes.rst:2461
-#, fuzzy
 msgid "See also :meth:`strip`."
-msgstr "Δείτε επίσης τη :meth:`istitle`."
+msgstr "Δείτε επίσης τη :meth:`strip`."
 
 #: library/stdtypes.rst:2466
 msgid ""
@@ -4513,9 +4540,8 @@ msgstr ""
 "['foo   ']"
 
 #: library/stdtypes.rst:2524
-#, fuzzy
 msgid "See also :meth:`join` and :meth:`rsplit`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`join` και :meth:`rsplit`."
 
 #: library/stdtypes.rst:2532
 msgid ""
@@ -4707,7 +4733,6 @@ msgstr ""
 "*end*, σταματά η σύγκριση της συμβολοσειράς σε αυτή τη θέση."
 
 #: library/stdtypes.rst:2602
-#, fuzzy
 msgid ""
 ">>> 'Python'.startswith('Py')\n"
 "True\n"
@@ -4716,22 +4741,18 @@ msgid ""
 ">>> 'Python is amazing'.startswith('is', 7)\n"
 "True"
 msgstr ""
-">>> 'Python'.endswith('on')\n"
+">>> 'Python'.startswith('Py')\n"
 "True\n"
-">>> 'a tuple of suffixes'.endswith(('at', 'in'))\n"
-"False\n"
-">>> 'a tuple of suffixes'.endswith(('at', 'es'))\n"
+">>> 'a tuple of prefixes'.startswith(('at', 'a'))\n"
 "True\n"
-">>> 'Python is amazing'.endswith('is', 0, 9)\n"
+">>> 'Python is amazing'.startswith('is', 7)\n"
 "True"
 
 #: library/stdtypes.rst:2611
-#, fuzzy
 msgid "See also :meth:`endswith` and :meth:`removeprefix`."
-msgstr "Δείτε επίσης τις :meth:`startswith` και :meth:`removesuffix`."
+msgstr "Δείτε επίσης τις :meth:`endswith` και :meth:`removeprefix`."
 
 #: library/stdtypes.rst:2616
-#, fuzzy
 msgid ""
 "Return a copy of the string with the leading and trailing characters "
 "removed. The *chars* argument is a string specifying the set of characters "
@@ -4744,11 +4765,11 @@ msgstr ""
 "συμβολοσειρά που καθορίζει το σύνολο των χαρακτήρων που πρέπει να "
 "αφαιρεθούν. Εάν παραλειφθεί ή είναι ``None``, το όρισμα *chars* έχει ως "
 "default την αφαίρεση των κενών διαστημάτων. Το όρισμα *chars* δεν είναι "
-"prefix ή suffix· μάλλον, όλοι οι συνδυασμοί των τιμών του αφαιρούνται::"
+"prefix ή suffix· μάλλον, όλοι οι συνδυασμοί των τιμών του αφαιρούνται."
 
 #: library/stdtypes.rst:2622
 msgid "Whitespace characters are defined by :meth:`str.isspace`."
-msgstr ""
+msgstr "Οι χαρακτήρες κενούς ορίζονται από την :meth:`str.isspace`."
 
 #: library/stdtypes.rst:2626
 msgid ""
@@ -4763,7 +4784,6 @@ msgstr ""
 "'example'"
 
 #: library/stdtypes.rst:2633
-#, fuzzy
 msgid ""
 "The outermost leading and trailing *chars* argument values are stripped from "
 "the string. Characters are removed from the leading end until reaching a "
@@ -4774,7 +4794,7 @@ msgstr ""
 "τη συμβολοσειρά (string). Οι χαρακτήρες αφαιρούνται από το μπροστινό άκρο "
 "μέχρι να φτάσουν στο χαρακτήρα της συμβολοσειράς (string) που δεν περιέχεται "
 "στο σύνολο χαρακτήρων του *chars*. Μια παρόμοια ενέργεια λαμβάνει χώρα στο "
-"τέλος της ουράς. Για παράδειγμα:"
+"τέλος της ουράς."
 
 #: library/stdtypes.rst:2640
 msgid ""
@@ -4787,44 +4807,44 @@ msgstr ""
 "'Section 3.2.1 Issue #32'"
 
 #: library/stdtypes.rst:2646
-#, fuzzy
 msgid "See also :meth:`rstrip`."
-msgstr "Δείτε επίσης τη :meth:`istitle`."
+msgstr "Δείτε επίσης τη :meth:`rstrip`."
 
 #: library/stdtypes.rst:2651
-#, fuzzy
 msgid ""
 "Return a copy of the string with uppercase characters converted to lowercase "
 "and vice versa. For example:"
 msgstr ""
-"Επιστρέφει ένα αντίγραφο της συμβολοσειράς (string) με όλους τους cased "
-"χαρακτήρες [4]_ να έχουν μετατραπεί σε πεζούς."
+"Επιστρέφει ένα αντίγραφο της συμβολοσειρά με τους κεφαλαίους χαρακτήρες να "
+"έχουν μετατραπεί σε πεζούς και το αντίστροφο. Για παράδειγμα:"
 
 #: library/stdtypes.rst:2654
-#, fuzzy
 msgid ""
 ">>> 'Hello World'.swapcase()\n"
 "'hELLO wORLD'"
 msgstr ""
-">>> b'Hello World'.swapcase()\n"
-"b'hELLO wORLD'"
+">>> 'Hello World'.swapcase()\n"
+"'hELLO wORLD'"
 
 #: library/stdtypes.rst:2659
 msgid ""
 "Note that it is not necessarily true that ``s.swapcase().swapcase() == s``. "
 "For example:"
 msgstr ""
+"Σημειώστε ότι δεν ισχύει απαραίτητα πως ``s.swapcase().swapcase() == s``. "
+"Για παράδειγμα:"
 
 #: library/stdtypes.rst:2662
 msgid ""
 ">>> 'straße'.swapcase().swapcase()\n"
 "'strasse'"
 msgstr ""
+">>> 'straße'.swapcase().swapcase()\n"
+"'strasse'"
 
 #: library/stdtypes.rst:2667
-#, fuzzy
 msgid "See also :meth:`str.lower` and :meth:`str.upper`."
-msgstr "Δείτε επίσης τις :meth:`rfind` και :meth:`index`."
+msgstr "Δείτε επίσης τις :meth:`str.lower` και :meth:`str.upper`."
 
 #: library/stdtypes.rst:2672
 msgid ""
@@ -5618,6 +5638,10 @@ msgid ""
 "given precision ``p`` of digits after the decimal point.  The rounding mode "
 "matches that of the :func:`round` builtin."
 msgstr ""
+"Για μορφές κινητής υποδιαστολής, το αποτέλεσμα πρέπει να στρογγυλοποιείται "
+"σωστά σε μια δεδομένη ακρίβεια ``p`` ψηφίων μετά την υποδιαστολή. Ο τρόπος "
+"στρογγυλοποίησης ταιριάζει με αυτόν της ενσωματωμένης συνάρτησης :func:"
+"`round`."
 
 #: library/stdtypes.rst:4289
 msgid ""
@@ -8468,7 +8492,6 @@ msgid "Return a shallow copy of the set."
 msgstr "Επιστρέφει ένα ρηχό αντίγραφο του συνόλου."
 
 #: library/stdtypes.rst:4936
-#, fuzzy
 msgid ""
 "Note, the non-operator versions of :meth:`~frozenset.union`, :meth:"
 "`~frozenset.intersection`, :meth:`~frozenset.difference`, :meth:`~frozenset."
@@ -8478,13 +8501,14 @@ msgid ""
 "precludes error-prone constructions like ``set('abc') & 'cbs'`` in favor of "
 "the more readable ``set('abc').intersection('cbs')``."
 msgstr ""
-"Σημείωση, οι εκδόσεις μη τελεστών των μεθόδων :meth:`union`, :meth:"
-"`intersection`, :meth:`difference`, :meth:`symmetric_difference`, :meth:"
-"`issubset`, και :meth:`issuperset` θα δεχτούν οποιοδήποτε iterable ως "
-"όρισμα.  Αντίθετα, οι αντίστοιχοι τελεστές απαιτούν να οριστούν τα ορίσματά "
-"τους για να γίνουν σύνολα.  Αυτό αποκλείει κατασκευαστές επιρρεπείς σε "
-"σφάλματα όπως ``set('abc') & 'cbs'`` υπέρ του πιο ευανάγνωστου ``set('abc')."
-"intersection('cbs')``."
+"Σημείωση, οι εκδόσεις μη τελεστών των μεθόδων :meth:`~frozenset.union`, :"
+"meth:`~frozenset.intersection`, :meth:`~frozenset.difference`, :meth:"
+"`~frozenset.symmetric_difference`, :meth:`~frozenset.issubset`, και :meth:"
+"`~frozenset.issuperset` θα δεχτούν οποιοδήποτε iterable ως όρισμα.  "
+"Αντίθετα, οι αντίστοιχες εκδόσεις που βασίζονται σε τελεστές απαιτούν τα "
+"ορίσματά τους να είναι σύνολα. τους για να γίνουν σύνολα.  Αυτό αποκλείει "
+"κατασκευαστές επιρρεπείς σε σφάλματα όπως ``set('abc') & 'cbs'`` υπέρ του "
+"πιο ευανάγνωστου ``set('abc').intersection('cbs')``."
 
 #: library/stdtypes.rst:4943
 msgid ""
@@ -8610,19 +8634,17 @@ msgid "Remove all elements from the set."
 msgstr "Αφαιρεί όλα τα στοιχεία από το σύνολο (set)."
 
 #: library/stdtypes.rst:5014
-#, fuzzy
 msgid ""
 "Note, the non-operator versions of the :meth:`~set.update`, :meth:`~set."
 "intersection_update`, :meth:`~set.difference_update`, and :meth:`~set."
 "symmetric_difference_update` methods will accept any iterable as an argument."
 msgstr ""
-"Σημείωση, οι εκδόσεις μη-τελεστή μεθόδων :meth:`update`, :meth:"
-"`intersection_update`, :meth:`difference_update`, και :meth:"
-"`symmetric_difference_update` θα δέχονται οποιοδήποτε επαναλαμβανόμενο "
+"Σημείωση, οι εκδόσεις μη-τελεστή μεθόδων :meth:`~set.update`, :meth:`~set."
+"intersection_update`, :meth:`~set.difference_update`, και :meth:`~set."
+"symmetric_difference_update` θα δέχονται οποιοδήποτε επαναλαμβανόμενο "
 "στοιχείο ως όρισμα."
 
 #: library/stdtypes.rst:5019
-#, fuzzy
 msgid ""
 "Note, the *elem* argument to the :meth:`~object.__contains__`, :meth:`~set."
 "remove`, and :meth:`~set.discard` methods may be a set.  To support "
@@ -8630,15 +8652,17 @@ msgid ""
 "*elem*."
 msgstr ""
 "Σημείωση, το όρισμα *elem* για τις μεθόδους :meth:`~object.__contains__`, :"
-"meth:`remove`, και :meth:`discard` μπορεί να είναι ένα σύνολο.  Για την "
-"υποστήριξη της αναζήτησης για ένα ισοδύναμο παγωμένο σύνολο (frozenset), ένα "
-"προσωρινό δημιουργείται από το *elem*."
+"meth:`~set.remove`, and :meth:`~set.discard` μπορεί να είναι ένα σύνολο.  "
+"Για την υποστήριξη της αναζήτησης για ένα ισοδύναμο παγωμένο σύνολο "
+"(frozenset), ένα προσωρινό δημιουργείται από το *elem*."
 
 #: library/stdtypes.rst:5024
 msgid ""
 "Sets and frozensets are :ref:`generic <generics>` over the type of their "
 "elements."
 msgstr ""
+"Τα σύνολα και τα παγωμένα σύνολα (frozensets) είναι :ref:`generic "
+"<generics>` ως προς τον τύπο των στοιχείων τους."
 
 #: library/stdtypes.rst:5029
 msgid "Mapping Types --- :class:`dict`"
@@ -8840,6 +8864,8 @@ msgid ""
 "Dictionaries are :ref:`generic <generics>` over two types, signifying "
 "(respectively) the types of the dictionary's keys and values."
 msgstr ""
+"Τα λεξικά είναι :ref:`generic <generics>` ως προς δύο τύπους, υποδηλώνοντας "
+"(αντίστοιχα) τους τύπους των κλειδιών και των τιμών του λεξικού."
 
 #: library/stdtypes.rst:5125
 msgid ""
@@ -8867,7 +8893,6 @@ msgstr ""
 "`KeyError` εάν το *key* δεν υπάρχει για να αντιστοιχηθεί."
 
 #: library/stdtypes.rst:5143
-#, fuzzy
 msgid ""
 "If a subclass of dict defines a method :meth:`~object.__missing__` and *key* "
 "is not present, the ``d[key]`` operation calls that method with the key "
@@ -8877,14 +8902,14 @@ msgid ""
 "__missing__` is not defined, :exc:`KeyError` is raised. :meth:`~object."
 "__missing__` must be a method; it cannot be an instance variable::"
 msgstr ""
-"Εάν μια υποκλάση ενός λεξικού ορίζει μια μέθοδο :meth:`__missing__` και το "
-"*key* δεν υπάρχει, η λειτουργία ``d[key]`` καλεί αυτήν την μέθοδο με το "
-"κλειδί *key* ως όρισμα. Στη συνέχεια, η λειτουργία ``d[key]`` επιστρέφει ή "
-"κάνει raise ό, τι επιστρέφεται ή γίνεται raise από την κλήση "
+"Εάν μια υποκλάση ενός λεξικού ορίζει μια μέθοδο :meth:`~object.__missing__` "
+"και το *key* δεν υπάρχει, η λειτουργία ``d[key]`` καλεί αυτήν την μέθοδο με "
+"το κλειδί *key* ως όρισμα. Στη συνέχεια, η λειτουργία ``d[key]`` επιστρέφει "
+"ή κάνει raise ό, τι επιστρέφεται ή γίνεται raise από την κλήση "
 "``__missing__(key)``. Καμία άλλη λειτουργία ή μέθοδος δεν επικαλεί την :meth:"
-"`__missing__`. Εάν το :meth:`__missing__` δεν έχει οριστεί, γίνεται raise :"
-"exc:`KeyError`. To :meth:`__missing__` πρέπει να είναι μέθοδος∙ δεν μπορεί "
-"να είναι ένα στιγμιότυπο μεταβλητής::"
+"`~object.__missing__`. Εάν το :meth:`~object.__missing__` δεν έχει οριστεί, "
+"γίνεται raise :exc:`KeyError`. To :meth:`~object.__missing__` πρέπει να "
+"είναι μέθοδος∙ δεν μπορεί να είναι ένα στιγμιότυπο μεταβλητής::"
 
 #: library/stdtypes.rst:5151
 msgid ""
@@ -8911,15 +8936,14 @@ msgstr ""
 "1"
 
 #: library/stdtypes.rst:5162
-#, fuzzy
 msgid ""
 "The example above shows part of the implementation of :class:`collections."
 "Counter`. A different :meth:`!__missing__` method is used by :class:"
 "`collections.defaultdict`."
 msgstr ""
 "Το παραπάνω παράδειγμα δείχνει μέρος της υλοποίησης του :class:`collections."
-"Counter`.  Μια διαφορετική μέθοδος ``__missing__`` χρησιμοποιείται από την :"
-"class:`collections.defaultdict`."
+"Counter`.  Μια διαφορετική μέθοδος :meth:`!__missing__` χρησιμοποιείται από "
+"την :class:`collections.defaultdict`."
 
 #: library/stdtypes.rst:5169
 msgid "Set ``d[key]`` to *value*."
@@ -9443,7 +9467,6 @@ msgstr ""
 "``None``."
 
 #: library/stdtypes.rst:5467
-#, fuzzy
 msgid ""
 "Returning a true value from this method will cause the :keyword:`with` "
 "statement to suppress the exception and continue execution with the "
@@ -9454,9 +9477,7 @@ msgstr ""
 "αποτέλεσμα η δήλωση :keyword:`with` να καταργήσει την εξαίρεση και να "
 "συνεχίσει την εκτέλεση με τη δήλωση αμέσως μετά τη δήλωση :keyword:`!with`. "
 "Διαφορετικά, η εξαίρεση θα συνεχίσει να διαδίδεται μετά την ολοκλήρωση αυτής "
-"της μεθόδου. Οι εξαιρέσεις που προκύπτουν κατά την εκτέλεση αυτής της "
-"μεθόδου θα αντικαταστήσουν κάθε εξαίρεση που προέκυψε στο σώμα της δήλωσης :"
-"keyword:`!with`."
+"της μεθόδου."
 
 #: library/stdtypes.rst:5472
 msgid ""
@@ -9464,6 +9485,10 @@ msgid ""
 "the :keyword:`with` block, the new exception is raised, and the original "
 "exception is stored in its :attr:`~BaseException.__context__` attribute."
 msgstr ""
+"Αν αυτή η μέθοδος κάνει raise μια εξαίρεση ενώ χειρίζεται μια προηγούμενη "
+"εξαίρεση από το μπλοκ :keyword:`with`, η νέα εξαίρεση γίνεται raise, και η "
+"αρχική εξαίρεση αποθηκεύεται στο :attr:`~BaseException.__context__` "
+"χαρακτηριστικό της."
 
 #: library/stdtypes.rst:5476
 msgid ""
@@ -9640,7 +9665,6 @@ msgstr ""
 "Match[bytes]``."
 
 #: library/stdtypes.rst:5561
-#, fuzzy
 msgid ""
 "``GenericAlias`` objects are instances of the class :class:`types."
 "GenericAlias`, which can also be used to create ``GenericAlias`` objects "
@@ -9650,7 +9674,9 @@ msgid ""
 msgstr ""
 "Τα αντικείμενα ``GenericAlias`` είναι στιγμιότυπα της κλάσης :class:`types."
 "GenericAlias`, τα οποία μπορούν επίσης να χρησιμοποιηθούν για την δημιουργία "
-"αντικειμένων ``GenericAlias`` απευθείας."
+"αντικειμένων ``GenericAlias`` απευθείας. Οι εξειδικεύσεις γενικών κλάσεων "
+"που ορίζει ο χρήστης ενδέχεται να μην είναι στιγμιότυπα της :class:`types."
+"GenericAlias`, αλλά παρέχουν παρόμοια λειτουργικότητα."
 
 #: library/stdtypes.rst:5568
 msgid ""
@@ -9769,6 +9795,9 @@ msgid ""
 "Instances of ``GenericAlias`` are not classes at runtime, even though they "
 "behave like classes (they can be instantiated and subclassed)::"
 msgstr ""
+"Τα στιγμιότυπα του ``GenericAlias`` δεν είναι κλάσεις κατά το χρόνο "
+"εκτέλεσης, αν και συμπεριφέρονται σαν κλάσεις (μπορούν να δημιουργηθούν και "
+"να υποκατηγοριοποιηθούν)::"
 
 #: library/stdtypes.rst:5616
 msgid ""
@@ -9776,14 +9805,16 @@ msgid ""
 ">>> inspect.isclass(list[int])\n"
 "False"
 msgstr ""
+">>> import inspect\n"
+">>> inspect.isclass(list[int])\n"
+"False"
 
 #: library/stdtypes.rst:5620
-#, fuzzy
 msgid ""
 "This is true for :ref:`user-defined generics <user-defined-generics>` also."
 msgstr ""
-"Τα :ref:`Generics`, :ref:`user-defined generics <user-defined-generics>` "
-"και :class:`typing.Generic`"
+"Αυτό είναι επίσης αληθές για :ref:`user-defined generics <user-defined-"
+"generics>`."
 
 #: library/stdtypes.rst:5622
 msgid ""

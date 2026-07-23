@@ -531,6 +531,8 @@ msgstr ""
 msgid ""
 "See also :func:`enum.bin` to represent negative values as twos-complement."
 msgstr ""
+"Δείτε επίσης τη :func:`enum.bin` για να αναπαραστήσετε αρνητικές τιμές ως "
+"twos-complement."
 
 #: library/functions.rst:944 library/functions.rst:1325
 msgid "See also :func:`format` for more information."
@@ -921,14 +923,12 @@ msgstr ""
 "συμβολοσειρές εγγραφών καταργήθηκαν επίσης)."
 
 #: library/functions.rst:339
-#, fuzzy
 msgid ""
 "This function raises :exc:`SyntaxError` or :exc:`ValueError` if the compiled "
 "source is invalid."
 msgstr ""
-"Αυτή η συνάρτηση κάνει raise :exc:`SyntaxError` εάν ο μεταγλωττισμένος "
-"κώδικας είναι άκυρος, και το :exc:`ValueError` εάν ο κώδικας περιλαμβάνει "
-"null bytes."
+"Αυτή η συνάρτηση κάνει raise :exc:`SyntaxError` ή :exc:`ValueError` εάν ο "
+"μεταγλωττισμένος κώδικας είναι άκυρος."
 
 #: library/functions.rst:342
 msgid ""
@@ -1146,14 +1146,13 @@ msgstr ""
 "func:`setattr`)."
 
 #: library/functions.rst:470
-#, fuzzy
 msgid ""
 "Create a new dictionary.  The :class:`dict` object is the dictionary class. "
 "See also :ref:`typesmapping` for documentation about this class."
 msgstr ""
 "Δημιουργεί ένα νέο λεξικό.  Το αντικείμενο :class:`dict` είναι η κλάση "
-"λεξικού. Δείτε το :class:`dict` και το :ref:`typesmapping` για τεκμηρίωση "
-"σχετικά με αυτή την κατηγορία."
+"λεξικού. Δείτε το :ref:`typesmapping` για τεκμηρίωση σχετικά με αυτή την "
+"κλάση."
 
 #: library/functions.rst:473
 msgid ""
@@ -1347,16 +1346,14 @@ msgid "Syntax errors are reported as exceptions."
 msgstr "Τα συντακτικά σφάλματα αναφέρονται ως εξαιρέσεις"
 
 #: library/functions.rst:655
-#, fuzzy
 msgid ""
 "This function executes arbitrary code. Calling it with untrusted user-"
 "supplied input will lead to security vulnerabilities."
 msgstr ""
-"Αυτή η συνάρτηση εκτελεί αυθαίρετο κώδικα. Η κλήση της με είσοδο που "
-"παρέχεται από το χρήστη μπορεί να οδηγήσει σε ευπάθειες ασφαλείας."
+"Αυτή η συνάρτηση εκτελεί αυθαίρετο κώδικα. Η κλήση της με μη αξιόπιστη "
+"είσοδο που παρέχεται από το χρήστη μπορεί να οδηγήσει σε ευπάθειες ασφαλείας."
 
 #: library/functions.rst:596
-#, fuzzy
 msgid ""
 "The *source* argument is parsed and evaluated as a Python expression "
 "(technically speaking, a condition list) using the *globals* and *locals* "
@@ -1374,22 +1371,22 @@ msgid ""
 "referenced in the scope that is calling :func:`eval` (e.g. via a :keyword:"
 "`nonlocal` statement)."
 msgstr ""
-"Το όρισμα *expression* αναλύεται και αξιολογείται ως μια έκφραση της Python "
-"(από τεχνικής άποψης, μια λίστα συνθηκών) χρησιμοποιώντας τις αντιστοιχίσεις "
+"Το όρισμα *source* αναλύεται και αξιολογείται ως μια έκφραση της Python (από "
+"τεχνικής άποψης, μια λίστα συνθηκών) χρησιμοποιώντας τις αντιστοιχίσεις "
 "*globals* και *locals* ως global και local namespace.  Εάν το λεξικό "
 "*globals* υπάρχει και δεν περιέχει μια τιμή για το κλειδί ``__builtins__``, "
 "μια αναφορά στο λεξικό του ενσωματωμένου module :mod:`builtins` εισάγεται "
-"κάτω από αυτό το κλειδί πριν αναλυθεί το *expression*.  Με αυτόν τον τρόπο "
-"μπορείτε να ελέγξετε ποια από τα ενσωματωμένα στοιχεία είναι διαθέσιμα για "
-"τον εκτελέσιμο κώδικα, εισάγοντας το δικό σας λεξικό ``__builtins__`` στο "
-"*globals* πριν διαβαστεί στη :func:`eval`.  Εάν το λεξικό *locals* "
-"παραλειφθεί, ορίζεται από προεπιλογή στο λεξικό *globals*.  Εάν παραληφθούν "
-"και οι δύο αντιστοιχίσεις, η έκφραση εκτελείται με τα *globals* και *locals* "
-"στο περιβάλλον όπου καλείται η :func:`eval`.  Σημείωση, το *eval()* θα έχει "
-"πρόσβαση στο :term:`nested scopes <nested scope>` (μη τοπικούς) του "
-"περιβάλλοντος που την περικλείει μόνο εάν αυτοί έχουν ήδη αναφερθεί στον "
-"χώρο ονομάτων που καλεί τη :func:`eval` (π.χ. μέσω μιας δήλωσης :keyword:"
-"`nonlocal`)."
+"κάτω από αυτό το κλειδί πριν αναλυθεί το *source*. Η αντικατάσταση του "
+"``__builtins__`` μπορεί να χρησιμοποιηθεί για να περιορίσει ή να αλλάξει τα "
+"διαθέσιμα ονόματα, αλλά αυτό **δεν** είναι ένας μηχανισμός ασφαλείας: ο "
+"εκτελούμενος κώδικας μπορεί ακόμα να έχει πρόσβαση σε όλα τα builtins. Εάν η "
+"αντιστοίχιση *locals* παραλείπεται, ορίζεται από προεπιλογή στο λεξικό "
+"*globals*.  Εάν παραληφθούν και οι δύο αντιστοιχίσεις, το *source* "
+"εκτελείται με τα *globals* και *locals* στο περιβάλλον όπου καλείται η :func:"
+"`eval`.  Σημείωση, το *eval()* θα έχει πρόσβαση στο :term:`nested scopes "
+"<nested scope>` (μη τοπικούς) του περιβάλλοντος που την περικλείει μόνο εάν "
+"αυτοί έχουν ήδη αναφερθεί στον χώρο ονομάτων που καλεί τη :func:`eval` (π.χ. "
+"μέσω μιας δήλωσης :keyword:`nonlocal`)."
 
 #: library/functions.rst:613
 msgid "Example:"
@@ -1430,13 +1427,13 @@ msgstr ""
 "tabs που προηγούνται ή έπονται."
 
 #: library/functions.rst:632
-#, fuzzy
 msgid ""
 "See :func:`ast.literal_eval` for a function to evaluate strings with "
 "expressions containing only literals."
 msgstr ""
 "Βλ. τη :func:`ast.literal_eval` για μια συνάρτηση που μπορεί με ασφάλεια να "
-"αξιολογήσει τις συμβολοσειρές με εκφράσεις που περιέχουν μόνο literals."
+"αξιολογήσει τις συμβολοσειρές με εκφράσεις που περιέχουν μόνο λεκτικές "
+"σταθερές."
 
 #: library/functions.rst:637 library/functions.rst:700
 msgid ""
@@ -1517,7 +1514,6 @@ msgstr ""
 "μεταβλητές κλάσης, όπως συμβαίνει μέσα σε έναν ορισμό κλάσης)."
 
 #: library/functions.rst:685
-#, fuzzy
 msgid ""
 "If the *globals* dictionary does not contain a value for the key "
 "``__builtins__``, a reference to the dictionary of the built-in module :mod:"
@@ -1527,10 +1523,10 @@ msgid ""
 msgstr ""
 "Εάν το λεξικό *globals* δεν περιέχει τιμή για το κλειδί ``__builtins__``, "
 "μια αναφορά στο λεξικό του ενσωματωμένου module :mod:`builtins` εισάγεται "
-"κάτω από αυτό το κλειδί.  Με αυτόν τον τρόπο μπορεί να ελέγξετε τι "
-"ενσωματωμένα (built-ins) είναι διαθέσιμα στον εκτελέσιμο κώδικα εισάγοντας "
-"το δικό σας ``__builtins__`` λεξικό στο *globals* πριν το διαβάσετε στο :"
-"func:`exec`."
+"κάτω από αυτό το κλειδί. Η αντικατάσταση του ``__builtins__`` μπορεί να "
+"χρησιμοποιηθεί για να περιορίσετε ή να αλλάξετε τα διαθέσιμα ονόματα, αλλά "
+"αυτό **δεν** είναι μηχανισμός ασφάλειας: ο εκτελούμενος κώδικας μπορεί ακόμα "
+"να έχει πρόσβαση σε όλα τα ενσωματωμένα."
 
 #: library/functions.rst:692
 msgid ""
@@ -1746,16 +1742,15 @@ msgstr ""
 "το *format_spec* δεν είναι κενή συμβολοσειρά."
 
 #: library/functions.rst:846
-#, fuzzy
 msgid ""
 "Return a new :class:`frozenset` object, optionally with elements taken from "
 "*iterable*.  :class:`frozenset` is a built-in class.  See also :ref:`types-"
 "set` for documentation about this class."
 msgstr ""
 "Επιστρέφει ένα νέο αντικείμενο :class:`frozenset`, προαιρετικά με στοιχεία "
-"που λαμβάνονται από το *iterable*.  Το ``frozenset`` είναι μια ενσωματωμένη "
-"κλάση.  Δείτε το :class:`frozenset` και το :ref:`types-set` για τεκμηρίωση "
-"αυτής της κλάσης."
+"που λαμβάνονται από το *iterable*.  Το :class:`frozenset` είναι μια "
+"ενσωματωμένη κλάση.  Δείτε το :ref:`types-set` για τεκμηρίωση αυτής της "
+"κλάσης."
 
 #: library/functions.rst:850
 msgid ""
@@ -3540,15 +3535,14 @@ msgstr ""
 "float.  Δείτε το :ref:`tut-fp-issues` για περισσότερες πληροφορίες."
 
 #: library/functions.rst:1799
-#, fuzzy
 msgid ""
 "Return a new :class:`set` object, optionally with elements taken from "
 "*iterable*.  :class:`set` is a built-in class.  See also :ref:`types-set` "
 "for documentation about this class."
 msgstr ""
 "Επιστρέφει ένα νέο αντικείμενο :class:`set`, προαιρετικά με στοιχεία που "
-"λαμβάνονται από το *iterable*.  Το ``set`` είναι μια ενσωματωμένη κλάση.  "
-"Δείτε :class:`set` και :ref:`types-set` για τεκμηρίωση αυτής της κλάσης."
+"λαμβάνονται από το *iterable*.  Το :class:`set` είναι μια ενσωματωμένη "
+"κλάση.  Δείτε το :ref:`types-set` για τεκμηρίωση αυτής της κλάσης."
 
 #: library/functions.rst:1803
 msgid ""

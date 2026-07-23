@@ -229,14 +229,17 @@ msgid ""
 "generator iterator` are uncommon in practice; \"asynchronous generator\" "
 "alone is almost always sufficient."
 msgstr ""
+"Χρησιμοποιείται ανεπίσημα για να σημαίνει είτε μια :term:`asynchronous "
+"generator function` ή μια :term:`asynchronous generator iterator`, ανάλογα "
+"με το πλαίσιο. Οι επίσημοι όροι :term:`asynchronous generator function` και :"
+"term:`asynchronous generator iterator` είναι ασυνήθιστοι στην πράξη∙  "
+"\"ασύγχρονος generator\" από μόνος του είναι σχεδόν πάντα επαρκής."
 
 #: glossary.rst:98
-#, fuzzy
 msgid "asynchronous generator function"
-msgstr "ασύγχρονος generator"
+msgstr "συνάρτηση ασύγχρονου generator"
 
 #: glossary.rst:100
-#, fuzzy
 msgid ""
 "A function which returns an :term:`asynchronous generator iterator`. It "
 "looks like a coroutine function defined with :keyword:`async def` except "
@@ -247,7 +250,7 @@ msgstr ""
 "Μοιάζει με μια συνάρτηση coroutine που ορίζεται με :keyword:`async def` "
 "εκτός από ότι περιέχει εκφράσεις :keyword:`yield` για την παραγωγή μιας "
 "σειράς τιμών που μπορούν να χρησιμοποιηθούν σε έναν :keyword:`async for` "
-"βρόχο."
+"βρόχο.  Δείτε το :pep:`525`."
 
 #: glossary.rst:105
 msgid ""
@@ -262,11 +265,10 @@ msgid "asynchronous generator iterator"
 msgstr "ασύγχρονος generator iterator"
 
 #: glossary.rst:110
-#, fuzzy
 msgid "An object created by an :term:`asynchronous generator function`."
 msgstr ""
 "Ένα αντικείμενο που δημιουργήθηκε από μια συνάρτηση :term:`asynchronous "
-"generator`."
+"generator function`."
 
 #: glossary.rst:112
 msgid ""
@@ -330,7 +332,7 @@ msgstr ""
 
 #: glossary.rst:134
 msgid "atomic operation"
-msgstr ""
+msgstr "ατομική λειτουργία"
 
 #: glossary.rst:136
 msgid ""
@@ -341,6 +343,13 @@ msgid ""
 "atomic).  Atomicity is only guaranteed where explicitly documented.  See "
 "also :term:`race condition` and :term:`data race`."
 msgstr ""
+"Μια λειτουργία που φαίνεται να εκτελείται ως ένα μόνο, αδιαίρετο βήμα: "
+"κανένα άλλο νήμα δεν μπορεί να το παρατηρήσει μισοτελειωμένο, και οι "
+"επιδράσεις του γίνονται ορατές όλα ταυτόχρονα. Η Python δεν εγγυάται ότι οι "
+"υψηλού επιπέδου δηλώσεις είναι ατομικές (για παράδειγμα, ``x += 1`` εκτελεί "
+"πολλαπλές λειτουργίες bytecode και δεν είναι ατομική). Η ατομικότητα "
+"εγγυάται μόνο όπου έχει τεκμηριωθεί ρητά. Βλ. επίσης :term:`race condition` "
+"και :term:`data race`."
 
 #: glossary.rst:142
 msgid "attribute"
@@ -685,7 +694,7 @@ msgstr ""
 
 #: glossary.rst:275
 msgid "concurrency"
-msgstr ""
+msgstr "ταυτόχρονη εκτέλεση"
 
 #: glossary.rst:277
 msgid ""
@@ -697,10 +706,18 @@ msgid ""
 "processes. Multi-core processors can execute threads and processes on "
 "different CPU cores at the same time (see :term:`parallelism`)."
 msgstr ""
+"Η ικανότητα ενός προγράμματος υπολογιστή να εκτελεί πολλαπλές εργασίες "
+"ταυτόχρονα. Η Python παρέχει βιβλιοθήκες για τη συγγραφή προγραμμάτων που "
+"κάνουν χρήση διαφορετικών μορφών ταυτόχρονης εκτέλεσης. Το :mod:`asyncio` "
+"είναι μια βιβλιοθήκη για την αντιμετώπιση ασύγχρονων εργασιών και "
+"coroutines. Το :mod:`threading` παρέχει πρόσβαση σε νήματα λειτουργικού "
+"συστήματος και το :mod:`multiprocessing` σε διεργασίες λειτουργικού "
+"συστήματος. Οι πολυπύρηνοι επεξεργαστές μπορούν να εκτελούν νήματα και "
+"διεργασίες σε διαφορετικούς πυρήνες CPU ταυτόχρονα (βλ. :term:`parallelism`)."
 
 #: glossary.rst:285
 msgid "concurrent modification"
-msgstr ""
+msgstr "ταυτόχρονη τροποποίηση"
 
 #: glossary.rst:287
 msgid ""
@@ -709,6 +726,10 @@ msgid ""
 "<race condition>`, and might also trigger a :term:`data race <data race>`, "
 "data corruption, or both."
 msgstr ""
+"Όταν πολλαπλά νήματα τροποποιούν κοινά δεδομένα ταυτόχρονα. Η ταυτόχρονη "
+"τροποποίηση χωρίς κατάλληλο συγχρονισμό μπορεί να προκαλέσει :term:`race "
+"conditions <race condition>`, και μπορεί επίσης να ενεργοποιήσει ένα :term:"
+"`data race <data race>`, διαφθορά δεδομένων ή και τα δύο."
 
 #: glossary.rst:291
 msgid "context"
@@ -886,7 +907,7 @@ msgstr ""
 
 #: glossary.rst:359
 msgid "data race"
-msgstr ""
+msgstr "data race"
 
 #: glossary.rst:361
 msgid ""
@@ -899,10 +920,20 @@ msgid ""
 "only happen in native code, but that :term:`native code` might be exposed in "
 "a Python API.  See also :term:`race condition` and :term:`thread-safe`."
 msgstr ""
+"Μια κατάσταση όπου πολλαπλά νήματα προσπελάζουν την ίδια θέση μνήμης "
+"ταυτόχρονα, τουλάχιστον μία από τις προσβάσεις είναι εγγραφή, και τα νήματα "
+"δεν χρησιμοποιούν κανένα συγχρονισμό για να ελέγξουν την πρόσβασή τους. Οι "
+"data races οδηγούν σε :term:`μη-καθορισμένη <non-deterministic>` συμπεριφορά "
+"και μπορεί να προκαλέσουν διαφθορά δεδομένων. Η σωστή χρήση των :term:`locks "
+"<lock>` και άλλων :term:`συγχρονιστικών πρωτοτύπων <synchronization "
+"primitive>` αποτρέπει τις data races. Σημειώστε ότι οι data races μπορούν να "
+"συμβούν μόνο σε εγγενή κώδικα, αλλά ότι ο :term:`native code` μπορεί να "
+"εκτεθεί σε ένα Python API. Βλ. επίσης :term:`race condition` και :term:"
+"`thread-safe`."
 
 #: glossary.rst:370
 msgid "deadlock"
-msgstr ""
+msgstr "deadlock"
 
 #: glossary.rst:372
 msgid ""
@@ -916,6 +947,16 @@ msgid ""
 "`locks <lock>` in a consistent order.  See also :term:`lock` and :term:"
 "`reentrant`."
 msgstr ""
+"Μια κατάσταση στην οποία δύο ή περισσότερες εργασίες (νήματα, διεργασίες ή "
+"coroutines) περιμένουν επ' αόριστον η μία την άλλη να απελευθερώσουν πόρους "
+"ή να ολοκληρώσουν ενέργειες, εμποδίζοντας οποιαδήποτε από αυτές να "
+"προχωρήσει. Για παράδειγμα, εάν το νήμα A κρατάει το lock 1 και περιμένει "
+"για το lock 2, ενώ το νήμα B κρατάει το lock 2 και περιμένει για το lock 1, "
+"και τα δύο νήματα θα περιμένουν επ' αόριστον. Στην Python αυτό συχνά "
+"προκύπτει από την απόκτηση πολλαπλών locks με αντικρουόμενες σειρές ή από "
+"κυκλικές join/await εξαρτήσεις. Οι deadlocks μπορούν να αποφευχθούν με το να "
+"αποκτά κανείς πάντα πολλαπλά :term:`locks <lock>` με συνεπή σειρά. Δείτε "
+"επίσης :term:`lock` και :term:`reentrant`."
 
 #: glossary.rst:381
 msgid "decorator"
@@ -1480,39 +1521,42 @@ msgid ""
 "`generator function` and :term:`generator iterator` are uncommon in "
 "practice; \"generator\" alone is almost always sufficient."
 msgstr ""
+"Χωρίς τυπικότητα χρησιμοποιείται για να σημαίνει είτε μια :term:`generator "
+"function` ή μια :term:`generator iterator`, ανάλογα με το πλαίσιο. Οι "
+"τυπικοί όροι :term:`generator function` και :term:`generator iterator` είναι "
+"ασυνήθιστοι στην πράξη. Ο όρος \"generator\" μόνος του είναι σχεδόν πάντα "
+"επαρκής."
 
 #: glossary.rst:606
-#, fuzzy
 msgid "generator function"
-msgstr "γενική συνάρτηση"
+msgstr "συνάρτηση generator"
 
 #: glossary.rst:608
-#, fuzzy
 msgid ""
 "A function which returns a :term:`generator` object.  It looks like a normal "
 "function except that it contains :keyword:`yield` expressions for producing "
 "a series of values usable in a :keyword:`for`\\-loop or that can be "
 "retrieved one at a time with the :func:`next` function. See :ref:`yieldexpr`."
 msgstr ""
-"Μια συνάρτηση που επιστρέφει ένα :term:`generator iterator`.  Μοιάζει με μια "
-"κανονική συνάρτηση εκτός από το ότι περιέχει εκφράσεις :keyword:`yield` για "
-"την παραγωγή μιας σειράς τιμών που μπορούν να χρησιμοποιηθούν σε έναν βρόχο "
-"*for* ή που μπορούν να ανακτηθούν μία τη φορά με την συνάρτηση :func:`next` "
-"function."
+"Μια συνάρτηση που επιστρέφει ένα :term:`generator` αντικείμενο.  Μοιάζει με "
+"μια κανονική συνάρτηση εκτός από το ότι περιέχει εκφράσεις :keyword:`yield` "
+"για την παραγωγή μιας σειράς τιμών που μπορούν να χρησιμοποιηθούν σε έναν :"
+"keyword:`for`\\-βρόχο ή που μπορούν να ανακτηθούν μία τη φορά με την "
+"συνάρτηση :func:`next` function. Δείτε το :ref:`yieldexpr`."
 
 #: glossary.rst:613
 msgid "generator iterator"
 msgstr "generator iterator"
 
 #: glossary.rst:615
-#, fuzzy
 msgid ""
 "An object created by a :term:`generator function` or a :term:`generator "
 "expression`."
-msgstr "Ένα αντικείμενο που δημιουργείται από μια συνάρτηση :term:`generator`."
+msgstr ""
+"Ένα αντικείμενο που δημιουργείται από μια :term:`generator function` ή μια :"
+"term:`generator expression`."
 
 #: glossary.rst:618
-#, fuzzy
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "execution state (including local variables and pending try-statements). When "
@@ -1532,6 +1576,10 @@ msgid ""
 "method to raise an exception at the point where the generator was paused.  "
 "See :ref:`generator-methods`."
 msgstr ""
+"Οι generator iterators υλοποιούν επίσης τη μέθοδο :meth:`~generator.send` "
+"για να στείλουν μια τιμή στον ανασταλμένο generator, και τη μέθοδο :meth:"
+"`~generator.throw` για να εγείρουν μια εξαίρεση στο σημείο όπου ο generator "
+"είχε σταματήσει.  Δείτε. :ref:`generator-methods`."
 
 #: glossary.rst:629
 msgid "generator expression"
@@ -1667,7 +1715,7 @@ msgstr ""
 
 #: glossary.rst:680
 msgid "global state"
-msgstr ""
+msgstr "global state"
 
 #: glossary.rst:682
 msgid ""
@@ -1677,6 +1725,12 @@ msgid ""
 "shared between threads typically requires synchronization to avoid :term:"
 "`race conditions <race condition>` and :term:`data races <data race>`."
 msgstr ""
+"Δεδομένα που είναι προσβάσιμα σε όλο το πρόγραμμα, όπως μεταβλητές σε "
+"επίπεδο module, μεταβλητές κλάσης ή στατικές μεταβλητές C σε :term:"
+"`extension modules <extension module>`. Σε προγράμματα πολλαπλών νημάτων, η "
+"κοινή χρήση της παγκόσμιας κατάστασης μεταξύ των νημάτων συνήθως απαιτεί "
+"συγχρονισμό για να αποφευχθούν :term:`race conditions <race condition>` και :"
+"term:`data races <data race>`."
 
 #: glossary.rst:688
 msgid "hash-based pyc"
@@ -1777,7 +1831,6 @@ msgid "immutable"
 msgstr "immutable"
 
 #: glossary.rst:726
-#, fuzzy
 msgid ""
 "An object with a fixed value.  Immutable objects include numbers, strings "
 "and tuples.  Such an object cannot be altered.  A new object has to be "
@@ -1791,7 +1844,10 @@ msgstr ""
 "αριθμούς , συμβολοσειρές και πλειάδες. Ένα τέτοιο αντικείμενο δεν μπορεί να "
 "αλλάξει. Ένα νέο αντικείμενο πρέπει να δημιουργηθεί εάν πρέπει να "
 "αποθηκευτεί μια διαφορετική τιμή. Παίζουν σημαντικό ρόλο σε μέρη όπου μια "
-"σταθερά απαιτείται, για παράδειγμα ως κλειδί σε ένα λεξικό."
+"σταθερά απαιτείται, για παράδειγμα ως κλειδί σε ένα λεξικό.  Αμετάβλητα "
+"αντικείμενα είναι εγγενώς :term:`thread-safe` επειδή η κατάστασή τους δεν "
+"μπορεί να τροποποιηθεί μετά τη δημιουργία, εξαλείφοντας τις ανησυχίες "
+"σχετικά με μη σωστά συγχρονισμένες :term:`concurrent modification`."
 
 #: glossary.rst:733
 msgid "import path"
@@ -1999,7 +2055,6 @@ msgid "More information can be found in :ref:`typeiter`."
 msgstr "Περισσότερες πληροφορίες μπορούν να βρεθούν στο :ref:`typeiter`."
 
 #: glossary.rst:820
-#, fuzzy
 msgid ""
 "CPython does not consistently apply the requirement that an iterator define :"
 "meth:`~iterator.__iter__`. And also please note that :term:`free-threaded "
@@ -2007,9 +2062,9 @@ msgid ""
 "iterator operations."
 msgstr ""
 "Το CPython δεν εφαρμόζει με συνέπεια την απαίτηση να ορίζει ένας iterator :"
-"meth:`~iterator.__iter__`. Επίσης σημειώστε ότι η έκδοση CPython με ελεύθερη "
-"υποστήριξη νημάτων δεν εγγυάται την ασφάλεια νημάτων για διαδικασίες με "
-"iterators."
+"meth:`~iterator.__iter__`. Επίσης σημειώστε ότι το :term:`free-threaded "
+"<free threading>` CPython δεν εγγυάται :term:`thread-safe` συμπεριφορά των "
+"λειτουργιών του iterator."
 
 #: glossary.rst:826
 msgid "key function"
@@ -2041,7 +2096,6 @@ msgstr ""
 "`itertools.groupby`."
 
 #: glossary.rst:839
-#, fuzzy
 msgid ""
 "There are several ways to create a key function.  For example. the :meth:"
 "`str.casefold` method can serve as a key function for case insensitive "
@@ -2052,13 +2106,13 @@ msgid ""
 "<sortinghowto>` for examples of how to create and use key functions."
 msgstr ""
 "Υπάρχουν διάφοροι τρόποι για να δημιουργήσετε μια συνάρτηση κλειδιού. Για "
-"παράδειγμα. η μέθοδος :meth:`str.lower` μπορεί να χρησιμεύσει ως συνάρτηση "
-"κλειδί για την περίπτωση μη διάκρισης πεζών-κεφαλαίων. Εναλλακτικά, μια "
-"συνάρτηση κλειδιού μπορεί να δημιουργηθεί από μια :keyword:`lambda` έκφραση "
-"όπως ``lambda r: (r[0], r[2])``.  Επίσης, :func:`operator.attrgetter`, :func:"
-"`operator.itemgetter` και :func:`operator.methodcaller` είναι τρεις "
-"κατασκευαστές βασικών συναρτήσεων. Βλ. το :ref:`Ταξινόμηση HOW "
-"TO<sortinghowto>` για παραδείγματα δημιουργίας και χρήσης βασικών "
+"παράδειγμα. η μέθοδος :meth:`str.casefold` μπορεί να χρησιμεύσει ως "
+"συνάρτηση κλειδί για την περίπτωση μη διάκρισης πεζών-κεφαλαίων. "
+"Εναλλακτικά, μια συνάρτηση κλειδιού μπορεί να δημιουργηθεί από μια :keyword:"
+"`lambda` έκφραση όπως ``lambda r: (r[0], r[2])``.  Επίσης, :func:`operator."
+"attrgetter`, :func:`operator.itemgetter` και :func:`operator.methodcaller` "
+"είναι τρεις κατασκευαστές βασικών συναρτήσεων. Βλ. το :ref:`Ταξινόμηση HOW "
+"TO <sortinghowto>` για παραδείγματα δημιουργίας και χρήσης βασικών "
 "συναρτήσεων."
 
 #: glossary.rst:846
@@ -2101,7 +2155,6 @@ msgstr ""
 "την παρουσία πολλών δηλώσεων :keyword:`if`."
 
 #: glossary.rst:861
-#, fuzzy
 msgid ""
 "In a multi-threaded environment, the LBYL approach can risk introducing a :"
 "term:`race condition` between \"the looking\" and \"the leaping\".  For "
@@ -2111,11 +2164,12 @@ msgid ""
 "term:`EAFP` approach.  See also :term:`thread-safe`."
 msgstr ""
 "Σε ένα περιβάλλον πολλαπλών νημάτων, η προσέγγιση LBYL μπορεί να "
-"διακινδυνεύσει να εισάγει μια συνθήκη αγώνα μεταξύ \"the Looking\" και \"the "
+"διακινδυνεύσει να εισάγει μια συνθήκη αγώνα μεταξύ \"the looking\" και \"the "
 "leaping\". Για παράδειγμα ο κώδικας, ``if key in mapping: return "
 "mapping[key]`` μπορεί να αποτύχει εάν ένα άλλο νήμα αφαιρέσει το *key* από "
 "το *mapping* μετά τη δοκιμή, αλλά πριν από την αναζήτηση. Αυτό το πρόβλημα "
-"μπορεί να λυθεί με κλειδώματα ή χρησιμοποιώντας την προσέγγιση EAFP."
+"μπορεί να λυθεί με κλειδώματα ή χρησιμοποιώντας την προσέγγιση EAFP. Δείτε "
+"επίσης :term:`thread-safe`."
 
 #: glossary.rst:867
 msgid "lexical analyzer"
@@ -2160,7 +2214,7 @@ msgstr ""
 
 #: glossary.rst:884
 msgid "lock"
-msgstr ""
+msgstr "κλείδωμα"
 
 #: glossary.rst:886
 msgid ""
@@ -2176,10 +2230,23 @@ msgid ""
 "patterns, and thread-local state. See also :term:`deadlock`, and :term:"
 "`reentrant`."
 msgstr ""
+"Ένα :term:`synchronization primitive` που επιτρέπει μόνο σε ένα νήμα κάθε "
+"φορά να έχει πρόσβαση σε έναν κοινόχρηστο πόρο. Ένα νήμα πρέπει να αποκτήσει "
+"ένα κλείδωμα πριν αποκτήσει πρόσβαση στον προστατευόμενο πόρο και να το "
+"απελευθερώσει μετά. Εάν ένα νήμα προσπαθήσει να αποκτήσει ένα κλείδωμα που "
+"κατέχεται ήδη από άλλο νήμα, θα μπλοκαριστεί μέχρι να γίνει διαθέσιμο το "
+"κλείδωμα. Το module :mod:`threading` της Python παρέχει :class:`~threading."
+"Lock` (ένα βασικό κλείδωμα) και :class:`~threading.RLock` (ένα :term:"
+"`reentrant` κλείδωμα). Τα κλειδώματα χρησιμοποιούνται για την αποτροπή :term:"
+"`race conditions <race condition>` και για να εξασφαλιστεί η :term:`thread-"
+"safe` πρόσβαση σε κοινά δεδομένα. Υπάρχουν εναλλακτικά πρότυπα σχεδίασης "
+"αντί για τα κλειδώματα, όπως ουρές, πρότυπα παραγωγού/καταναλωτή και "
+"κατάσταση τοπική στο νήμα. Βλ. επίσης :term:`deadlock`, και :term:"
+"`reentrant`."
 
 #: glossary.rst:897
 msgid "lock-free"
-msgstr ""
+msgstr "χωρίς κλείδωμα"
 
 #: glossary.rst:899
 msgid ""
@@ -2192,6 +2259,16 @@ msgid ""
 "multi-step modifications even when those modifications hold the :term:`per-"
 "object lock`."
 msgstr ""
+"Μια λειτουργία που δεν αποκτά κανένα :term:`lock` και χρησιμοποιεί ατομικές "
+"εντολές CPU για να εξασφαλίσει τη σωστή λειτουργία. Οι λειτουργίες χωρίς "
+"κλείδωμα μπορούν να εκτελούνται ταυτόχρονα χωρίς να μπλοκάρουν η μία την "
+"άλλη και δεν μπορούν να μπλοκαριστούν από λειτουργίες που κατέχουν "
+"κλειδώματα. Στην :term:`free-threaded <free threading>` Python, οι "
+"ενσωματωμένοι τύποι όπως :class:`dict` και :class:`list` παρέχουν "
+"λειτουργίες ανάγνωσης χωρίς κλείδωμα, πράγμα που σημαίνει ότι άλλα νήματα "
+"μπορεί να παρατηρήσουν ενδιάμεσα στάδια κατά τη διάρκεια τροποποιήσεων "
+"πολλών βημάτων ακόμη και όταν αυτές οι τροποποιήσεις κατέχουν το :term:`per-"
+"object lock`."
 
 #: glossary.rst:907
 msgid "loader"
@@ -2424,6 +2501,11 @@ msgid ""
 "conditions <race condition>`.  See also :term:`immutable`, :term:`thread-"
 "safe`, and :term:`concurrent modification`."
 msgstr ""
+"Ένα :term:`object` με κατάσταση που επιτρέπεται να αλλάξει κατά τη διάρκεια "
+"του προγράμματος. Σε πολυνηματικά προγράμματα, τα mutable αντικείμενα που "
+"μοιράζονται μεταξύ νημάτων απαιτούν προσεκτικό συγχρονισμό για να "
+"αποφευχθούν :term:`race conditions <race condition>`. Δείτε επίσης :term:"
+"`immutable`, :term:`thread-safe`, και :term:`concurrent modification`."
 
 #: glossary.rst:998
 msgid "named tuple"
@@ -2548,9 +2630,8 @@ msgid "See also :term:`module`."
 msgstr "Βλ. επίσης :term:`module`."
 
 #: glossary.rst:1048
-#, fuzzy
 msgid "native code"
-msgstr "bytecode"
+msgstr "native κώδικας"
 
 #: glossary.rst:1050
 msgid ""
@@ -2560,6 +2641,12 @@ msgid ""
 "Rust or Fortran code in :term:`extension modules <extension module>` that "
 "can be called from Python.  See also :term:`extension module`."
 msgstr ""
+"Κώδικας που μεταγλωττίζεται σε εντολές μηχανής και εκτελείται απευθείας στον "
+"επεξεργαστή, σε αντίθεση με τον κώδικα που διερμηνεύεται ή εκτελείται σε μια "
+"εικονική μηχανή. Στο πλαίσιο της Python, ο native κώδικας αναφέρεται συνήθως "
+"σε κώδικα C, C++, Rust ή Fortran σε :term:`extension modules <extension "
+"module>` που μπορεί να κληθεί από την Python. Βλ. επίσης :term:`extension "
+"module`."
 
 #: glossary.rst:1055
 msgid "nested scope"
@@ -2601,7 +2688,7 @@ msgstr ""
 
 #: glossary.rst:1071
 msgid "non-deterministic"
-msgstr ""
+msgstr "μη καθοριστική"
 
 #: glossary.rst:1073
 msgid ""
@@ -2612,6 +2699,13 @@ msgid ""
 "using :term:`locks <lock>` and other :term:`synchronization primitives "
 "<synchronization primitive>` helps ensure deterministic behavior."
 msgstr ""
+"Συμπεριφορά όπου το αποτέλεσμα ενός προγράμματος μπορεί να διαφέρει μεταξύ "
+"εκτελέσεων με τις ίδιες εισόδους. Σε πολυνηματικά προγράμματα, η μη "
+"καθοριστική συμπεριφορά συχνά προκύπτει από :term:`race conditions <race "
+"condition>` όπου η σχετική χρονική στιγμή ή η εναλλαγή των νημάτων επηρεάζει "
+"το αποτέλεσμα. Ο σωστός συγχρονισμός χρησιμοποιώντας :term:`locks <lock>` "
+"και άλλα :term:`synchronization primitives <synchronization primitive>` "
+"βοηθά στη διασφάλιση καθοριστικής συμπεριφοράς."
 
 #: glossary.rst:1080
 msgid "object"
@@ -2670,7 +2764,7 @@ msgstr "Βλ. επίσης :term:`regular package` και :term:`namespace packa
 
 #: glossary.rst:1101
 msgid "parallelism"
-msgstr ""
+msgstr "παράλληλη εκτέλεση"
 
 #: glossary.rst:1103
 msgid ""
@@ -2682,6 +2776,13 @@ msgid ""
 "the GIL. In :term:`free-threaded <free threading>` Python, multiple Python "
 "threads can run Python code simultaneously on different cores."
 msgstr ""
+"Εκτέλεση πολλαπλών λειτουργιών ταυτόχρονα (π.χ. σε πολλούς πυρήνες CPU). Σε "
+"εκδόσεις της Python με το :term:`global interpreter lock (GIL) <global "
+"interpreter lock>`, μόνο ένα νήμα εκτελεί Python bytecode κάθε φορά, οπότε η "
+"αξιοποίηση πολλαπλών πυρήνων CPU συνήθως περιλαμβάνει πολλαπλές διαδικασίες "
+"(π.χ. :mod:`multiprocessing`) ή εγγενείς επεκτάσεις που απελευθερώνουν το "
+"GIL. Σε :term:`free-threaded <free threading>` Python, πολλαπλά νήματα "
+"Python μπορούν να εκτελούν Python κώδικα ταυτόχρονα σε διαφορετικούς πυρήνες."
 
 #: glossary.rst:1111
 msgid "parameter"
@@ -2801,7 +2902,7 @@ msgstr ""
 
 #: glossary.rst:1164
 msgid "per-object lock"
-msgstr ""
+msgstr "per-object lock"
 
 #: glossary.rst:1166
 msgid ""
@@ -2813,6 +2914,15 @@ msgid ""
 "object lock prevent other locking operations on the same object from "
 "proceeding, but do not block :term:`lock-free` operations."
 msgstr ""
+"Ένα :term:`lock` που σχετίζεται με μια μεμονωμένη περίπτωση αντικειμένου "
+"αντί για ένα παγκόσμιο κλείδωμα που μοιράζεται σε όλα τα αντικείμενα. Στην :"
+"term:`free-threaded <free threading>` Python, οι ενσωματωμένοι τύποι όπως :"
+"class:`dict` και :class:`list` χρησιμοποιούν pre-object locks για να "
+"επιτρέπουν ταυτόχρονες λειτουργίες σε διαφορετικά αντικείμενα ενώ "
+"σειριοποιούν τις λειτουργίες στο ίδιο αντικείμενο. Οι λειτουργίες που "
+"κρατούν το per-object lock εμποδίζουν άλλες λειτουργίες κλειδώματος στο ίδιο "
+"αντικείμενο να προχωρήσουν, αλλά δεν εμποδίζουν τις :term:`lock-free` "
+"λειτουργίες."
 
 #: glossary.rst:1174
 msgid "path entry"
@@ -3121,9 +3231,8 @@ msgstr ""
 "'email.mime.text'"
 
 #: glossary.rst:1295
-#, fuzzy
 msgid "race condition"
-msgstr "συλλογή απορριμάτων"
+msgstr "κατάσταση race"
 
 #: glossary.rst:1297
 msgid ""
@@ -3136,6 +3245,16 @@ msgid ""
 "threaded code.  Using :term:`locks <lock>` and other :term:`synchronization "
 "primitives <synchronization primitive>` helps prevent race conditions."
 msgstr ""
+"Μια κατάσταση ενός προγράμματος όπου η συμπεριφορά εξαρτάται από τη σχετική "
+"χρονική στιγμή ή την παραγγελία των γεγονότων, ιδιαίτερα σε πολυνηματικά "
+"προγράμματα. Οι καταστάσεις race μπορούν να οδηγήσουν σε :term:`μη-"
+"καθορισμένη` συμπεριφορά και σφάλματα που είναι δύσκολο να αναπαραχθούν. "
+"Ένα :term:`data race` είναι ένας συγκεκριμένος τύπος κατάστασης race που "
+"περιλαμβάνει μη συγχρονισμένη πρόσβαση σε κοινή μνήμη. Το στυλ "
+"κωδικοποίησης :term:`LBYL` είναι ιδιαίτερα ευάλωτο σε καταστάσεις race σε "
+"πολυνηματικό κώδικα. Η χρήση :term:`κλειδώματα <lock>` και άλλων :term:"
+"`συγχρονιστικών πρωτοτύπων <synchronization primitive>` βοηθά στην πρόληψη "
+"καταστάσεων race."
 
 #: glossary.rst:1307
 msgid "reference count"
@@ -3189,7 +3308,7 @@ msgstr "Βλ. επίσης :term:`namespace package`."
 
 #: glossary.rst:1328
 msgid "reentrant"
-msgstr ""
+msgstr "επανεισαγωγικό"
 
 #: glossary.rst:1330
 msgid ""
@@ -3197,6 +3316,9 @@ msgid ""
 "acquired multiple times by the same thread without causing errors or a :term:"
 "`deadlock`."
 msgstr ""
+"Μια ιδιότητα μιας συνάρτησης ή :term:`lock` που της επιτρέπει να καλείται ή "
+"να αποκτάται πολλές φορές από το ίδιο νήμα χωρίς να προκαλεί σφάλματα ή :"
+"term:`deadlock`."
 
 #: glossary.rst:1334
 msgid ""
@@ -3206,6 +3328,12 @@ msgid ""
 "functions may be :term:`non-deterministic` if they're called reentrantly in "
 "a multithreaded program."
 msgstr ""
+"Για συναρτήσεις, η επανεισαγωγικότητα σημαίνει ότι η συνάρτηση μπορεί να "
+"καλείται ξανά με ασφάλεια πριν ολοκληρωθεί μια προηγούμενη κλήση, κάτι που "
+"είναι σημαντικό όταν οι συναρτήσεις μπορεί να καλούνται αναδρομικά ή από "
+"χειριστές σημάτων. Οι συναρτήσεις που δεν είναι ασφαλείς για νήματα μπορεί "
+"να είναι :term:`μη-καθορισμένες` εάν καλούνται επανεισαγωγικά σε ένα "
+"πολυνηματικό πρόγραμμα."
 
 #: glossary.rst:1340
 msgid ""
@@ -3214,11 +3342,15 @@ msgid ""
 "blocking.  In contrast, :class:`threading.Lock` is not reentrant - "
 "attempting to acquire it twice from the same thread will cause a deadlock."
 msgstr ""
+"Για κλειδώματα, το :class:`threading.RLock` της Python (επανεισαγωγικό "
+"κλείδωμα) είναι επανεισαγωγικό, που σημαίνει ότι ένα νήμα που ήδη κατέχει το "
+"κλείδωμα μπορεί να το αποκτήσει ξανά χωρίς να μπλοκάρει. Αντίθετα, το :class:"
+"`threading.Lock` δεν είναι επανεισαγωγικό - η προσπάθεια να αποκτηθεί δύο "
+"φορές από το ίδιο νήμα θα προκαλέσει αδιέξοδο."
 
 #: glossary.rst:1346
-#, fuzzy
 msgid "See also :term:`lock` and :term:`deadlock`."
-msgstr "Βλ. επίσης :term:`regular package` και :term:`namespace package`."
+msgstr "Δείτε επίσης :term:`lock` και :term:`deadlock`."
 
 #: glossary.rst:1347
 msgid "REPL"
@@ -3449,7 +3581,7 @@ msgstr "Μια συντομογραφία του :term:`standard library`."
 
 #: glossary.rst:1437
 msgid "steal"
-msgstr ""
+msgstr "steal"
 
 #: glossary.rst:1439
 msgid ""
@@ -3458,10 +3590,14 @@ msgid ""
 "reference after the call. Generally, functions that \"steal\" an argument do "
 "so even if they fail."
 msgstr ""
+"Στο C API της Python, το \"*stealing*\" ενός ορίσματος σημαίνει ότι η "
+"ιδιοκτησία του ορίσματος μεταφέρεται στη συνάρτηση που καλείται. Ο καλών δεν "
+"πρέπει να χρησιμοποιεί αυτήν την αναφορά μετά την κλήση. Γενικά, οι "
+"συναρτήσεις που \"steal\" ένα όρισμα το κάνουν ακόμη και αν αποτύχουν."
 
 #: glossary.rst:1444
 msgid "See :ref:`api-refcountdetails` for a full explanation."
-msgstr ""
+msgstr "Δείτε :ref:`api-refcountdetails` για μια πλήρη εξήγηση."
 
 #: glossary.rst:1445
 msgid "strong reference"
@@ -3498,7 +3634,7 @@ msgstr "Βλ. επίσης :term:`borrowed reference`."
 
 #: glossary.rst:1459
 msgid "synchronization primitive"
-msgstr ""
+msgstr "synchronization primitive"
 
 #: glossary.rst:1461
 msgid ""
@@ -3513,6 +3649,16 @@ msgid ""
 "conditions <race condition>` and coordinate thread execution.  See also :"
 "term:`lock`."
 msgstr ""
+"Ένα βασικό δομικό στοιχείο για το συντονισμό (συγχρονισμό) της εκτέλεσης "
+"πολλαπλών νημάτων για να εξασφαλιστεί η :term:`thread-safe` πρόσβαση σε "
+"κοινόχρηστους πόρους. Το :mod:`threading` της Python παρέχει αρκετά "
+"συγχρονιστικά πρωτότυπα, όπως :class:`~threading.Lock`, :class:`~threading."
+"RLock`, :class:`~threading.Semaphore`, :class:`~threading.Condition`, :class:"
+"`~threading.Event`, και :class:` ~threading.Barrier`. Επιπλέον, το :mod:"
+"`queue` παρέχει ουρές πολλαπλών παραγωγών και πολλαπλών καταναλωτών που "
+"είναι ιδιαίτερα χρήσιμες σε πολυνηματικά προγράμματα. Αυτά τα πρωτότυπα "
+"βοηθούν στην πρόληψη :term:`race conditions <race condition>` και στον "
+"συντονισμό της εκτέλεσης των νημάτων. Δείτε επίσης :term:`lock`."
 
 #: glossary.rst:1471
 msgid "text encoding"
@@ -3575,7 +3721,7 @@ msgstr ""
 
 #: glossary.rst:1494
 msgid "thread-safe"
-msgstr ""
+msgstr "ασφαλές για νήματα"
 
 #: glossary.rst:1496
 msgid ""
@@ -3590,6 +3736,18 @@ msgid ""
 "experience :term:`race conditions <race condition>` and :term:`data races "
 "<data race>` when used in multi-threaded programs."
 msgstr ""
+"Ένα module, συνάρτηση ή κλάση που συμπεριφέρεται σωστά όταν χρησιμοποιείται "
+"από πολλαπλά νήματα ταυτόχρονα. Ο κώδικας ασφαλής για νήματα χρησιμοποιεί "
+"κατάλληλα :term:`συγχρονιστικά πρωτότυπα <synchronization primitive>` όπως :"
+"term:`κλειδώματα <lock>` για να προστατεύσει κοινόχρηστη μεταβλητή "
+"κατάσταση, ή έχει σχεδιαστεί για να αποφύγει εντελώς την κοινόχρηστη "
+"μεταβλητή κατάσταση. Στην :term:`free-threaded <free threading>` έκδοση, οι "
+"ενσωματωμένοι τύποι όπως οι :class:`dict`, :class:`list` και :class:`set` "
+"χρησιμοποιούν εσωτερικό κλείδωμα για να κάνουν πολλές λειτουργίες ασφαλείς "
+"για νήματα, αν και η ασφάλεια για νήματα δεν είναι απαραίτητα εγγυημένη. Ο "
+"κώδικας που δεν είναι ασφαλής για νήματα μπορεί να αντιμετωπίσει :term:`race "
+"conditions <race condition>` και :term:`data races <data race>` όταν "
+"χρησιμοποιείται σε πολυνηματικά προγράμματα."
 
 #: glossary.rst:1507
 msgid "token"

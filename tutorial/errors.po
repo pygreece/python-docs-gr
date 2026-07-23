@@ -1169,7 +1169,6 @@ msgstr ""
 "από μόνη της, επομένως μπορεί να συλληφθεί όπως κάθε άλλη εξαίρεση. ::"
 
 #: tutorial/errors.rst:528
-#, fuzzy
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -1216,9 +1215,9 @@ msgstr ""
 ">>> try:\n"
 "...     f()\n"
 "... except Exception as e:\n"
-"...     print(f'caught {type(e)}: e')\n"
+"...     print(f'caught {type(e)}: {e}')\n"
 "...\n"
-"caught <class 'ExceptionGroup'>: e\n"
+"caught <class 'ExceptionGroup'>: there were problems (2 sub-exceptions)\n"
 ">>>"
 
 #: tutorial/errors.rst:553
