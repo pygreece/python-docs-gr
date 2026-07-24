@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,8 +95,8 @@ msgstr ""
 
 #: using/cmdline.rst:53
 msgid ""
-"When called with ``-m module-name``, the given module is located on the "
-"Python module path and executed as a script."
+"When called with ``-m module-name``, the given module is located using the "
+"standard import mechanism and executed as a script."
 msgstr ""
 
 #: using/cmdline.rst:56
@@ -135,8 +135,8 @@ msgstr ""
 
 #: using/cmdline.rst:78
 msgid ""
-"Search :data:`sys.path` for the named module and execute its contents as "
-"the :mod:`__main__` module."
+"Locate the module using the standard import mechanism and execute its "
+"contents as the :mod:`__main__` module."
 msgstr ""
 
 #: using/cmdline.rst:81
@@ -526,7 +526,7 @@ msgid ""
 "Hash randomization is intended to provide protection against a denial-of-"
 "service caused by carefully chosen inputs that exploit the worst case "
 "performance of a dict construction, *O*\\ (*n*\\ :sup:`2`) complexity.  See "
-"http://ocert.org/advisories/ocert-2011-003.html for details."
+"https://ocert.org/advisories/ocert-2011-003.html for details."
 msgstr ""
 
 #: using/cmdline.rst:383

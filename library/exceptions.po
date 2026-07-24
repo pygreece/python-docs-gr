@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -271,8 +271,8 @@ msgstr ""
 #: library/exceptions.rst:223
 msgid ""
 "Raised when the :func:`input` function hits an end-of-file condition (EOF) "
-"without reading any data. (Note: the :meth:`!io.IOBase.read` and :meth:`io."
-"IOBase.readline` methods return an empty string when they hit EOF.)"
+"without reading any data. (Note: the :meth:`io.TextIOBase.read` and :meth:"
+"`io.IOBase.readline` methods return an empty string when they hit EOF.)"
 msgstr ""
 
 #: library/exceptions.rst:230
@@ -841,8 +841,8 @@ msgstr ""
 
 #: library/exceptions.rst:728
 msgid ""
-"An integer containing the number of characters written to the stream before "
-"it blocked.  This attribute is available when using the buffered I/O classes "
+"An integer containing the number of **bytes** written to the stream before "
+"it blocked. This attribute is available when using the buffered I/O classes "
 "from the :mod:`io` module."
 msgstr ""
 
@@ -1096,23 +1096,36 @@ msgid ""
 "`TypeError` if any contained exception is not an :exc:`Exception` subclass."
 msgstr ""
 
-#: library/exceptions.rst:966
+#: library/exceptions.rst:964
+msgid ""
+"Exception groups are :ref:`generic <generics>` over the type of their "
+"contained exceptions."
+msgstr ""
+
+#: library/exceptions.rst:969
+msgid ""
+"The ``excs`` parameter may be any sequence, but lists and tuples are "
+"specifically processed more efficiently here. For optimal performance, pass "
+"a tuple as ``excs``."
+msgstr ""
+
+#: library/exceptions.rst:975
 msgid "The ``msg`` argument to the constructor. This is a read-only attribute."
 msgstr ""
 
-#: library/exceptions.rst:970
+#: library/exceptions.rst:979
 msgid ""
 "A tuple of the exceptions in the ``excs`` sequence given to the constructor. "
 "This is a read-only attribute."
 msgstr ""
 
-#: library/exceptions.rst:975
+#: library/exceptions.rst:984
 msgid ""
 "Returns an exception group that contains only the exceptions from the "
 "current group that match *condition*, or ``None`` if the result is empty."
 msgstr ""
 
-#: library/exceptions.rst:978
+#: library/exceptions.rst:987
 msgid ""
 "The condition can be an exception type or tuple of exception types, in which "
 "case each exception is checked for a match using the same check that is used "
@@ -1121,7 +1134,7 @@ msgid ""
 "true for the exceptions that should be in the subgroup."
 msgstr ""
 
-#: library/exceptions.rst:984
+#: library/exceptions.rst:993
 msgid ""
 "The nesting structure of the current exception is preserved in the result, "
 "as are the values of its :attr:`message`, :attr:`~BaseException."
@@ -1130,31 +1143,31 @@ msgid ""
 "groups are omitted from the result."
 msgstr ""
 
-#: library/exceptions.rst:991
+#: library/exceptions.rst:1000
 msgid ""
 "The condition is checked for all exceptions in the nested exception group, "
 "including the top-level and any nested exception groups. If the condition is "
 "true for such an exception group, it is included in the result in full."
 msgstr ""
 
-#: library/exceptions.rst:995
+#: library/exceptions.rst:1004
 msgid "``condition`` can be any callable which is not a type object."
 msgstr ""
 
-#: library/exceptions.rst:1000
+#: library/exceptions.rst:1009
 msgid ""
 "Like :meth:`subgroup`, but returns the pair ``(match, rest)`` where "
 "``match`` is ``subgroup(condition)`` and ``rest`` is the remaining non-"
 "matching part."
 msgstr ""
 
-#: library/exceptions.rst:1006
+#: library/exceptions.rst:1015
 msgid ""
 "Returns an exception group with the same :attr:`message`, but which wraps "
 "the exceptions in ``excs``."
 msgstr ""
 
-#: library/exceptions.rst:1009
+#: library/exceptions.rst:1018
 msgid ""
 "This method is used by :meth:`subgroup` and :meth:`split`, which are used in "
 "various contexts to break up an exception group. A subclass needs to "
@@ -1162,7 +1175,7 @@ msgid ""
 "instances of the subclass rather than :exc:`ExceptionGroup`."
 msgstr ""
 
-#: library/exceptions.rst:1015
+#: library/exceptions.rst:1024
 msgid ""
 ":meth:`subgroup` and :meth:`split` copy the :attr:`~BaseException."
 "__traceback__`, :attr:`~BaseException.__cause__`, :attr:`~BaseException."
@@ -1171,7 +1184,7 @@ msgid ""
 "not need to be updated by :meth:`derive`."
 msgstr ""
 
-#: library/exceptions.rst:1022
+#: library/exceptions.rst:1031
 msgid ""
 ">>> class MyGroup(ExceptionGroup):\n"
 "...     def derive(self, excs):\n"
@@ -1200,7 +1213,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: library/exceptions.rst:1048
+#: library/exceptions.rst:1057
 msgid ""
 "Note that :exc:`BaseExceptionGroup` defines :meth:`~object.__new__`, so "
 "subclasses that need a different constructor signature need to override that "
@@ -1209,7 +1222,7 @@ msgid ""
 "group's message from it. ::"
 msgstr ""
 
-#: library/exceptions.rst:1054
+#: library/exceptions.rst:1063
 msgid ""
 "class Errors(ExceptionGroup):\n"
 "   def __new__(cls, errors, exit_code):\n"
@@ -1221,22 +1234,22 @@ msgid ""
 "      return Errors(excs, self.exit_code)"
 msgstr ""
 
-#: library/exceptions.rst:1063
+#: library/exceptions.rst:1072
 msgid ""
 "Like :exc:`ExceptionGroup`, any subclass of :exc:`BaseExceptionGroup` which "
 "is also a subclass of :exc:`Exception` can only wrap instances of :exc:"
 "`Exception`."
 msgstr ""
 
-#: library/exceptions.rst:1071
+#: library/exceptions.rst:1080
 msgid "Exception hierarchy"
 msgstr ""
 
-#: library/exceptions.rst:1073
+#: library/exceptions.rst:1082
 msgid "The class hierarchy for built-in exceptions is:"
 msgstr ""
 
-#: library/exceptions.rst:1075
+#: library/exceptions.rst:1084
 msgid ""
 "BaseException\n"
 " ├── BaseExceptionGroup\n"

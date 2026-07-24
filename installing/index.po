@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: installing/index.rst:7
-msgid "Installing Python Modules"
-msgstr ""
-
-#: installing/index.rst:0
-msgid "Email"
+msgid "Installing Python modules"
 msgstr ""
 
 #: installing/index.rst:9
-msgid "distutils-sig@python.org"
-msgstr ""
-
-#: installing/index.rst:11
 msgid ""
 "As a popular open source development project, Python has an active "
 "supporting community of contributors and users that also make their software "
-"available for other Python developers to use under open source license terms."
+"available for other Python developers to use under open-source license terms."
 msgstr ""
 
-#: installing/index.rst:15
+#: installing/index.rst:13
 msgid ""
 "This allows Python users to share and collaborate effectively, benefiting "
 "from the solutions others have already created to common (and sometimes even "
@@ -44,14 +36,14 @@ msgid ""
 "the common pool."
 msgstr ""
 
-#: installing/index.rst:20
+#: installing/index.rst:18
 msgid ""
 "This guide covers the installation part of the process. For a guide to "
 "creating and sharing your own Python projects, refer to the `Python "
 "packaging user guide`_."
 msgstr ""
 
-#: installing/index.rst:28
+#: installing/index.rst:26
 msgid ""
 "For corporate and other institutional users, be aware that many "
 "organisations have their own policies around using and contributing to open "
@@ -59,108 +51,95 @@ msgid ""
 "the distribution and installation tools provided with Python."
 msgstr ""
 
-#: installing/index.rst:35
+#: installing/index.rst:33
 msgid "Key terms"
 msgstr ""
 
-#: installing/index.rst:37
+#: installing/index.rst:35
 msgid ""
-"``pip`` is the preferred installer program. Starting with Python 3.4, it is "
-"included by default with the Python binary installers."
+":program:`pip` is the preferred installer program. It is included by default "
+"with the Python binary installers."
 msgstr ""
 
-#: installing/index.rst:39
+#: installing/index.rst:37
 msgid ""
 "A *virtual environment* is a semi-isolated Python environment that allows "
 "packages to be installed for use by a particular application, rather than "
 "being installed system wide."
 msgstr ""
 
+#: installing/index.rst:40
+msgid ""
+"``venv`` is the standard tool for creating virtual environments. It defaults "
+"to installing :program:`pip` into all created virtual environments."
+msgstr ""
+
 #: installing/index.rst:42
 msgid ""
-"``venv`` is the standard tool for creating virtual environments, and has "
-"been part of Python since Python 3.3. Starting with Python 3.4, it defaults "
-"to installing ``pip`` into all created virtual environments."
+"``virtualenv`` is a third-party alternative (and predecessor) to ``venv``."
 msgstr ""
 
-#: installing/index.rst:45
+#: installing/index.rst:44
 msgid ""
-"``virtualenv`` is a third party alternative (and predecessor) to ``venv``. "
-"It allows virtual environments to be used on versions of Python prior to "
-"3.4, which either don't provide ``venv`` at all, or aren't able to "
-"automatically install ``pip`` into created environments."
+"The `Python Package Index (PyPI) <https://pypi.org>`__ is a public "
+"repository of open source licensed packages made available for use by other "
+"Python users."
 msgstr ""
 
-#: installing/index.rst:49
+#: installing/index.rst:47
 msgid ""
-"The `Python Package Index <https://pypi.org>`__ is a public repository of "
-"open source licensed packages made available for use by other Python users."
-msgstr ""
-
-#: installing/index.rst:52
-msgid ""
-"the `Python Packaging Authority <https://www.pypa.io/>`__ is the group of "
+"The `Python Packaging Authority <https://www.pypa.io/>`__ is the group of "
 "developers and documentation authors responsible for the maintenance and "
 "evolution of the standard packaging tools and the associated metadata and "
 "file format standards. They maintain a variety of tools, documentation, and "
 "issue trackers on `GitHub <https://github.com/pypa>`__."
 msgstr ""
 
-#: installing/index.rst:58
-msgid ""
-"``distutils`` is the original build and distribution system first added to "
-"the Python standard library in 1998. While direct use of ``distutils`` is "
-"being phased out, it still laid the foundation for the current packaging and "
-"distribution infrastructure, and it not only remains part of the standard "
-"library, but its name lives on in other ways (such as the name of the "
-"mailing list used to coordinate Python packaging standards development)."
-msgstr ""
-
-#: installing/index.rst:66
+#: installing/index.rst:54
 msgid ""
 "The use of ``venv`` is now recommended for creating virtual environments."
 msgstr ""
 
-#: installing/index.rst:71
+#: installing/index.rst:59
 msgid ""
 "`Python Packaging User Guide: Creating and using virtual environments "
 "<https://packaging.python.org/installing/#creating-virtual-environments>`__"
 msgstr ""
 
-#: installing/index.rst:76
+#: installing/index.rst:64
 msgid "Basic usage"
 msgstr ""
 
-#: installing/index.rst:78
+#: installing/index.rst:66
 msgid ""
 "The standard packaging tools are all designed to be used from the command "
 "line."
 msgstr ""
 
-#: installing/index.rst:81
+#: installing/index.rst:69
 msgid ""
 "The following command will install the latest version of a module and its "
-"dependencies from the Python Package Index::"
+"dependencies from PyPI::"
 msgstr ""
 
-#: installing/index.rst:84
+#: installing/index.rst:72
 msgid "python -m pip install SomePackage"
 msgstr ""
 
-#: installing/index.rst:88
+#: installing/index.rst:76
 msgid ""
 "For POSIX users (including macOS and Linux users), the examples in this "
 "guide assume the use of a :term:`virtual environment`."
 msgstr ""
 
-#: installing/index.rst:91
+#: installing/index.rst:79
 msgid ""
 "For Windows users, the examples in this guide assume that the option to "
 "adjust the system PATH environment variable was selected when installing "
 "Python."
 msgstr ""
 
-#: installing/index.rst:95
+#: installing/index.rst:83
 msgid ""
 "It's also possible to specify an exact or minimum version directly on the "
 "command line. When using comparator operators such as ``>``, ``<`` or some "
@@ -168,206 +147,185 @@ msgid ""
 "the version should be enclosed within double quotes::"
 msgstr ""
 
-#: installing/index.rst:100
+#: installing/index.rst:88
 msgid ""
 "python -m pip install SomePackage==1.0.4    # specific version\n"
 "python -m pip install \"SomePackage>=1.0.4\"  # minimum version"
 msgstr ""
 
-#: installing/index.rst:103
+#: installing/index.rst:91
 msgid ""
 "Normally, if a suitable module is already installed, attempting to install "
 "it again will have no effect. Upgrading existing modules must be requested "
 "explicitly::"
 msgstr ""
 
-#: installing/index.rst:107
+#: installing/index.rst:95
 msgid "python -m pip install --upgrade SomePackage"
 msgstr ""
 
-#: installing/index.rst:109
+#: installing/index.rst:97
 msgid ""
-"More information and resources regarding ``pip`` and its capabilities can be "
-"found in the `Python Packaging User Guide <https://packaging.python.org>`__."
+"More information and resources regarding :program:`pip` and its capabilities "
+"can be found in the `Python Packaging User Guide <https://packaging.python."
+"org>`__."
 msgstr ""
 
-#: installing/index.rst:112
+#: installing/index.rst:100
 msgid ""
 "Creation of virtual environments is done through the :mod:`venv` module. "
 "Installing packages into an active virtual environment uses the commands "
 "shown above."
 msgstr ""
 
-#: installing/index.rst:118
+#: installing/index.rst:106
 msgid ""
 "`Python Packaging User Guide: Installing Python Distribution Packages "
 "<https://packaging.python.org/installing/>`__"
 msgstr ""
 
-#: installing/index.rst:123
+#: installing/index.rst:111
 msgid "How do I ...?"
 msgstr ""
 
-#: installing/index.rst:125
+#: installing/index.rst:113
 msgid "These are quick answers or links for some common tasks."
 msgstr ""
 
-#: installing/index.rst:128
-msgid "... install ``pip`` in versions of Python prior to Python 3.4?"
-msgstr ""
-
-#: installing/index.rst:130
-msgid ""
-"Python only started bundling ``pip`` with Python 3.4. For earlier versions, "
-"``pip`` needs to be \"bootstrapped\" as described in the Python Packaging "
-"User Guide."
-msgstr ""
-
-#: installing/index.rst:136
-msgid ""
-"`Python Packaging User Guide: Requirements for Installing Packages <https://"
-"packaging.python.org/installing/#requirements-for-installing-packages>`__"
-msgstr ""
-
-#: installing/index.rst:143
+#: installing/index.rst:118
 msgid "... install packages just for the current user?"
 msgstr ""
 
-#: installing/index.rst:145
+#: installing/index.rst:120
 msgid ""
 "Passing the ``--user`` option to ``python -m pip install`` will install a "
 "package just for the current user, rather than for all users of the system."
 msgstr ""
 
-#: installing/index.rst:150
+#: installing/index.rst:125
 msgid "... install scientific Python packages?"
 msgstr ""
 
-#: installing/index.rst:152
+#: installing/index.rst:127
 msgid ""
 "A number of scientific Python packages have complex binary dependencies, and "
-"aren't currently easy to install using ``pip`` directly. At this point in "
-"time, it will often be easier for users to install these packages by `other "
-"means <https://packaging.python.org/science/>`__ rather than attempting to "
-"install them with ``pip``."
+"aren't currently easy to install using :program:`pip` directly. It will "
+"often be easier for users to install these packages by `other means <https://"
+"packaging.python.org/science/>`__ rather than attempting to install them "
+"with :program:`pip`."
 msgstr ""
 
-#: installing/index.rst:160
+#: installing/index.rst:135
 msgid ""
 "`Python Packaging User Guide: Installing Scientific Packages <https://"
 "packaging.python.org/science/>`__"
 msgstr ""
 
-#: installing/index.rst:165
+#: installing/index.rst:140
 msgid "... work with multiple versions of Python installed in parallel?"
 msgstr ""
 
-#: installing/index.rst:167
+#: installing/index.rst:142
 msgid ""
 "On Linux, macOS, and other POSIX systems, use the versioned Python commands "
-"in combination with the ``-m`` switch to run the appropriate copy of "
-"``pip``::"
+"in combination with the ``-m`` switch to run the appropriate copy of :"
+"program:`pip`::"
 msgstr ""
 
-#: installing/index.rst:171
+#: installing/index.rst:146
 msgid ""
-"python2   -m pip install SomePackage  # default Python 2\n"
-"python2.7 -m pip install SomePackage  # specifically Python 2.7\n"
-"python3   -m pip install SomePackage  # default Python 3\n"
-"python3.4 -m pip install SomePackage  # specifically Python 3.4"
+"python3    -m pip install SomePackage  # default Python 3\n"
+"python3.14 -m pip install SomePackage  # specifically Python 3.14"
 msgstr ""
 
-#: installing/index.rst:176
-msgid "Appropriately versioned ``pip`` commands may also be available."
+#: installing/index.rst:149
+msgid "Appropriately versioned :program:`pip` commands may also be available."
 msgstr ""
 
-#: installing/index.rst:178
+#: installing/index.rst:151
 msgid ""
-"On Windows, use the ``py`` Python launcher in combination with the ``-m`` "
-"switch::"
+"On Windows, use the :program:`py` Python launcher in combination with the ``-"
+"m`` switch::"
 msgstr ""
 
-#: installing/index.rst:181
+#: installing/index.rst:154
 msgid ""
-"py -2   -m pip install SomePackage  # default Python 2\n"
-"py -2.7 -m pip install SomePackage  # specifically Python 2.7\n"
-"py -3   -m pip install SomePackage  # default Python 3\n"
-"py -3.4 -m pip install SomePackage  # specifically Python 3.4"
+"py -3    -m pip install SomePackage  # default Python 3\n"
+"py -3.14 -m pip install SomePackage  # specifically Python 3.14"
 msgstr ""
 
-#: installing/index.rst:195
+#: installing/index.rst:166
 msgid "Common installation issues"
 msgstr ""
 
-#: installing/index.rst:198
+#: installing/index.rst:169
 msgid "Installing into the system Python on Linux"
 msgstr ""
 
-#: installing/index.rst:200
+#: installing/index.rst:171
 msgid ""
 "On Linux systems, a Python installation will typically be included as part "
 "of the distribution. Installing into this Python installation requires root "
 "access to the system, and may interfere with the operation of the system "
 "package manager and other components of the system if a component is "
-"unexpectedly upgraded using ``pip``."
+"unexpectedly upgraded using :program:`pip`."
 msgstr ""
 
-#: installing/index.rst:206
+#: installing/index.rst:177
 msgid ""
 "On such systems, it is often better to use a virtual environment or a per-"
-"user installation when installing packages with ``pip``."
+"user installation when installing packages with :program:`pip`."
 msgstr ""
 
-#: installing/index.rst:211
+#: installing/index.rst:182
 msgid "Pip not installed"
 msgstr ""
 
-#: installing/index.rst:213
+#: installing/index.rst:184
 msgid ""
-"It is possible that ``pip`` does not get installed by default. One potential "
-"fix is::"
+"It is possible that :program:`pip` does not get installed by default. One "
+"potential fix is::"
 msgstr ""
 
-#: installing/index.rst:215
+#: installing/index.rst:186
 msgid "python -m ensurepip --default-pip"
 msgstr ""
 
-#: installing/index.rst:217
+#: installing/index.rst:188
 msgid ""
-"There are also additional resources for `installing pip. <https://packaging."
+"There are also additional resources for `installing pip <https://packaging."
 "python.org/en/latest/tutorials/installing-packages/#ensure-pip-setuptools-"
-"and-wheel-are-up-to-date>`__"
+"and-wheel-are-up-to-date>`__."
 msgstr ""
 
-#: installing/index.rst:222
+#: installing/index.rst:193
 msgid "Installing binary extensions"
 msgstr ""
 
-#: installing/index.rst:224
+#: installing/index.rst:195
 msgid ""
-"Python has typically relied heavily on source based distribution, with end "
-"users being expected to compile extension modules from source as part of the "
+"Python once relied heavily on source-based distribution, with end users "
+"being expected to compile extension modules from source as part of the "
 "installation process."
 msgstr ""
 
-#: installing/index.rst:228
+#: installing/index.rst:199
 msgid ""
-"With the introduction of support for the binary ``wheel`` format, and the "
-"ability to publish wheels for at least Windows and macOS through the Python "
-"Package Index, this problem is expected to diminish over time, as users are "
-"more regularly able to install pre-built extensions rather than needing to "
-"build them themselves."
+"With the introduction of the binary wheel format, and the ability to publish "
+"wheels through PyPI, this problem is diminishing, as users are more "
+"regularly able to install pre-built extensions rather than needing to build "
+"them themselves."
 msgstr ""
 
-#: installing/index.rst:234
+#: installing/index.rst:204
 msgid ""
 "Some of the solutions for installing `scientific software <https://packaging."
-"python.org/science/>`__ that are not yet available as pre-built ``wheel`` "
-"files may also help with obtaining other binary extensions without needing "
-"to build them locally."
+"python.org/science/>`__ that are not yet available as pre-built wheel files "
+"may also help with obtaining other binary extensions without needing to "
+"build them locally."
 msgstr ""
 
-#: installing/index.rst:241
+#: installing/index.rst:211
 msgid ""
 "`Python Packaging User Guide: Binary Extensions <https://packaging.python."
 "org/extensions/>`__"

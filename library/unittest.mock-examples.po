@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Using Mock"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:30
-msgid "Mock Patching Methods"
+msgid "Mock patching methods"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:32
@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:76
-msgid "Mock for Method Calls on an Object"
+msgid "Mock for method calls on an object"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:78
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:106
-msgid "Mocking Classes"
+msgid "Mocking classes"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:108
@@ -152,7 +152,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:144
-msgid "Tracking all Calls"
+msgid "Tracking all calls"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:146
@@ -184,7 +184,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:181
-msgid "Setting Return Values and Attributes"
+msgid "Setting return values and attributes"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:183
@@ -279,7 +279,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:322
-msgid "Creating a Mock from an Existing Object"
+msgid "Creating a mock from an existing object"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:324
@@ -364,7 +364,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:389
-msgid "Patch Decorators"
+msgid "Patch decorators"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:393
@@ -499,7 +499,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:523
-msgid "Further Examples"
+msgid "Further examples"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:526
@@ -640,13 +640,13 @@ msgstr ""
 
 #: library/unittest.mock-examples.rst:618
 msgid ""
-">>> from datetime import date\n"
+">>> import datetime as dt\n"
 ">>> with patch('mymodule.date') as mock_date:\n"
-"...     mock_date.today.return_value = date(2010, 10, 8)\n"
-"...     mock_date.side_effect = lambda *args, **kw: date(*args, **kw)\n"
+"...     mock_date.today.return_value = dt.date(2010, 10, 8)\n"
+"...     mock_date.side_effect = lambda *args, **kw: dt.date(*args, **kw)\n"
 "...\n"
-"...     assert mymodule.date.today() == date(2010, 10, 8)\n"
-"...     assert mymodule.date(2009, 6, 8) == date(2009, 6, 8)"
+"...     assert mymodule.date.today() == dt.date(2010, 10, 8)\n"
+"...     assert mymodule.date(2009, 6, 8) == dt.date(2009, 6, 8)"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:626
@@ -677,7 +677,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:643
-msgid "Mocking a Generator Method"
+msgid "Mocking a generator method"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:645
@@ -799,7 +799,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:744
-msgid "Mocking Unbound Methods"
+msgid "Mocking unbound methods"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:746
@@ -990,7 +990,7 @@ msgid ""
 msgstr ""
 
 #: library/unittest.mock-examples.rst:942
-msgid "Nesting Patches"
+msgid "Nesting patches"
 msgstr ""
 
 #: library/unittest.mock-examples.rst:944

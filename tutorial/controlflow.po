@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -335,8 +335,8 @@ msgstr ""
 #: tutorial/controlflow.rst:157
 msgid ""
 "Later we will see more functions that return iterables and take iterables as "
-"arguments.  In chapter :ref:`tut-structures`, we will discuss in more detail "
-"about :func:`list`."
+"arguments.  In chapter :ref:`tut-structures`, we will discuss :func:`list` "
+"in more detail."
 msgstr ""
 "Αργότερα θα δούμε περισσότερες συναρτήσεις που επιστρέφουν iterables και "
 "λαμβάνουν τους iterables ως ορίσματα.  Στο κεφάλαιο :ref:`tut-structures`, "
@@ -989,7 +989,7 @@ msgstr ""
 #: tutorial/controlflow.rst:442
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
-"them from being interpreted as capture variable::"
+"them from being interpreted as capture variables::"
 msgstr ""
 "Τα μοτίβα μπορούν να χρησιμοποιούν ονομασμένες σταθερές.  Αυτά πρέπει να "
 "είναι ονόματα με κουκκίδες για να μην ερμηνεύονται ως capture μεταβλητή::"
@@ -2297,67 +2297,59 @@ msgstr ""
 
 #: tutorial/controlflow.rst:1041
 msgid ""
-"The Python parser does not strip indentation from multi-line string literals "
-"in Python, so tools that process documentation have to strip indentation if "
-"desired.  This is done using the following convention. The first non-blank "
-"line *after* the first line of the string determines the amount of "
-"indentation for the entire documentation string.  (We can't use the first "
-"line since it is generally adjacent to the string's opening quotes so its "
-"indentation is not apparent in the string literal.)  Whitespace "
-"\"equivalent\" to this indentation is then stripped from the start of all "
-"lines of the string.  Lines that are indented less should not occur, but if "
-"they occur all their leading whitespace should be stripped.  Equivalence of "
-"whitespace should be tested after expansion of tabs (to 8 spaces, normally)."
+"The Python parser strips indentation from multi-line string literals when "
+"they serve as module, class, or function docstrings."
 msgstr ""
-"Ο parser της Python δεν αφαιρεί την εσοχή από τα literals της συμβολοσειράς "
-"πολλών γραμμών στην Python, επομένως τα εργαλεία που επεξεργάζονται την "
-"τεκμηρίωση πρέπει να αφαιρέσουν την εσοχή εάν είναι επιθυμητό.  Αυτό γίνεται "
-"χρησιμοποιώντας την ακόλουθη σύμβαση. Η πρώτη μη κενή γραμμή *μετά* την "
-"πρώτη γραμμή της συμβολοσειράς καθορίζει το μέγεθος της εσοχής για ολόκληρη "
-"τη συμβολοσειρά τεκμηρίωσης.  (Δεν μπορούμε να χρησιμοποιήσουμε την πρώτη "
-"γραμμή αφού είναι γενικά δίπλα στα εισαγωγικά της συμβολοσειράς, επομένως η "
-"εσοχή της δεν είναι εμφανής στο literal της συμβολοσειράς.) Το κενό διάστημα "
-"\"ισοδύναμο\" σε αυτήν την εσοχή αφαιρείται στη συνέχεια από την αρχή όλων "
-"των γραμμών της συμβολοσειράς.  Οι γραμμές που έχουν μικρότερη εσοχή δεν θα "
-"πρέπει να εμφανίζονται, αλλά αν εμφανιστούν θα πρέπει να αφαιρεθεί όλο το "
-"αρχικό κενό τους.  Η ισοδυναμία των κενών διαστημάτων θα πρέπει να ελέγχεται "
-"μετά την επέκταση των καρτελών (σε 8 κενά, κανονικά)."
+"Ο parser της Python αφαιρεί την εσοχή από τις λεκτικές σταθερές πολλαπλών "
+"γραμμών όταν χρησιμεύουν ως docstrings για module, class ή function."
 
-#: tutorial/controlflow.rst:1053
+#: tutorial/controlflow.rst:1044
 msgid "Here is an example of a multi-line docstring::"
 msgstr "Ακολουθεί ένα παράδειγμα ενός πολλαπλών γραμμών docstring::"
 
-#: tutorial/controlflow.rst:1055
+#: tutorial/controlflow.rst:1046
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
 "...\n"
-"...     No, really, it doesn't do anything.\n"
+"...     No, really, it doesn't do anything:\n"
+"...\n"
+"...         >>> my_function()\n"
+"...         >>>\n"
 "...     \"\"\"\n"
 "...     pass\n"
 "...\n"
 ">>> print(my_function.__doc__)\n"
 "Do nothing, but document it.\n"
 "\n"
-"No, really, it doesn't do anything."
+"No, really, it doesn't do anything:\n"
+"\n"
+"    >>> my_function()\n"
+"    >>>"
 msgstr ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
 "...\n"
-"...     No, really, it doesn't do anything.\n"
+"...     No, really, it doesn't do anything:\n"
+"...\n"
+"...         >>> my_function()\n"
+"...         >>>\n"
 "...     \"\"\"\n"
 "...     pass\n"
 "...\n"
 ">>> print(my_function.__doc__)\n"
 "Do nothing, but document it.\n"
 "\n"
-"No, really, it doesn't do anything."
+"No, really, it doesn't do anything:\n"
+"\n"
+"    >>> my_function()\n"
+"    >>>"
 
-#: tutorial/controlflow.rst:1071
+#: tutorial/controlflow.rst:1068
 msgid "Function Annotations"
 msgstr "Annotations Συναρτήσεων"
 
-#: tutorial/controlflow.rst:1079
+#: tutorial/controlflow.rst:1076
 msgid ""
 ":ref:`Function annotations <function>` are completely optional metadata "
 "information about the types used by user-defined functions (see :pep:`3107` "
@@ -2368,7 +2360,7 @@ msgstr ""
 "συναρτήσεις που καθορίζονται από το χρήστη (δείτε :pep:`3107` και :pep:`484` "
 "για περισσότερες πληροφορίες)."
 
-#: tutorial/controlflow.rst:1083
+#: tutorial/controlflow.rst:1080
 msgid ""
 ":term:`Annotations <function annotation>` are stored in the :attr:`!"
 "__annotations__` attribute of the function as a dictionary and have no "
@@ -2390,7 +2382,7 @@ msgstr ""
 "ένα απαιτούμενο όρισμα, ένα προαιρετικό όρισμα και την επιστρεφόμενη τιμή σε "
 "annotations::"
 
-#: tutorial/controlflow.rst:1092
+#: tutorial/controlflow.rst:1089
 msgid ""
 ">>> def f(ham: str, eggs: str = 'eggs') -> str:\n"
 "...     print(\"Annotations:\", f.__annotations__)\n"
@@ -2414,27 +2406,27 @@ msgstr ""
 "Arguments: spam eggs\n"
 "'spam and eggs'"
 
-#: tutorial/controlflow.rst:1105
+#: tutorial/controlflow.rst:1102
 msgid "Intermezzo: Coding Style"
 msgstr "Intermezzo: Στυλ Κώδικα"
 
-#: tutorial/controlflow.rst:1110
+#: tutorial/controlflow.rst:1107
 msgid ""
 "Now that you are about to write longer, more complex pieces of Python, it is "
 "a good time to talk about *coding style*.  Most languages can be written (or "
-"more concise, *formatted*) in different styles; some are more readable than "
-"others. Making it easy for others to read your code is always a good idea, "
-"and adopting a nice coding style helps tremendously for that."
+"more concisely, *formatted*) in different styles; some are more readable "
+"than others. Making it easy for others to read your code is always a good "
+"idea, and adopting a nice coding style helps tremendously for that."
 msgstr ""
 "Τώρα που πρόκειται να γράψετε μεγαλύτερα, και πιο σύνθετα κομμάτια της "
-"Python, είναι η κατάλληλη στιγμή να μιλήσετε για *στυλ κώδικα*.  Οι "
+"Python, είναι η κατάλληλη στιγμή να μιλήσουμε για *στυλ κώδικα*.  Οι "
 "περισσότερες γλώσσες μπορούν να γραφτούν (ή πιο συνοπτικές, "
 "*μοροφοποιημένες*) σε διαφορετικά στυλ· μερικές είναι πιο ευανάγνωστες από "
 "άλλες. Το να διευκολύνετε τους άλλους να διαβάσουν τον κώδικα σας είναι "
 "πάντα μια καλή ιδέα και η υιοθέτηση ενός ωραίου στυλ κώδικα βοηθάει πάρα "
 "πολύ σε αυτό."
 
-#: tutorial/controlflow.rst:1116
+#: tutorial/controlflow.rst:1113
 msgid ""
 "For Python, :pep:`8` has emerged as the style guide that most projects "
 "adhere to; it promotes a very readable and eye-pleasing coding style.  Every "
@@ -2446,11 +2438,11 @@ msgstr ""
 "κώδικα.  Κάθε προγραμματιστής Python θα πρέπει να το διαβάσει κάποια στιγμή· "
 "εδώ είναι τα πιο σημαντικό σημεία που εξάγονται για εσάς:"
 
-#: tutorial/controlflow.rst:1121
+#: tutorial/controlflow.rst:1118
 msgid "Use 4-space indentation, and no tabs."
 msgstr "Χρησιμοποιήστε εσοχή 4 διαστημάτων και όχι tabs."
 
-#: tutorial/controlflow.rst:1123
+#: tutorial/controlflow.rst:1120
 msgid ""
 "4 spaces are a good compromise between small indentation (allows greater "
 "nesting depth) and large indentation (easier to read).  Tabs introduce "
@@ -2461,11 +2453,11 @@ msgstr ""
 "ανάγνωση).  Τα tabs δημιουργούν σύγχυση, και είναι καλύτερο να παραμείνουν "
 "απέξω."
 
-#: tutorial/controlflow.rst:1127
+#: tutorial/controlflow.rst:1124
 msgid "Wrap lines so that they don't exceed 79 characters."
 msgstr "Τυλίξτε τις γραμμές έτσι ώστε να μην υπερβαίνουν τους 79 χαρακτήρες."
 
-#: tutorial/controlflow.rst:1129
+#: tutorial/controlflow.rst:1126
 msgid ""
 "This helps users with small displays and makes it possible to have several "
 "code files side-by-side on larger displays."
@@ -2473,7 +2465,7 @@ msgstr ""
 "Αυτό βοηθά του χρήστες με μικρές οθόνες και καθιστά δυνατή την ύπαρξη πολλών "
 "αρχείων κώδικα δίπλα-δίπλα σε μεγαλύτερες οθόνες."
 
-#: tutorial/controlflow.rst:1132
+#: tutorial/controlflow.rst:1129
 msgid ""
 "Use blank lines to separate functions and classes, and larger blocks of code "
 "inside functions."
@@ -2481,15 +2473,15 @@ msgstr ""
 "Χρησιμοποιείστε κενές γραμμές για να διαχωρίσετε συναρτήσεις και κλάσεις και "
 "μεγαλύτερα μπλοκ κώδικα μέσα συναρτήσεις."
 
-#: tutorial/controlflow.rst:1135
+#: tutorial/controlflow.rst:1132
 msgid "When possible, put comments on a line of their own."
 msgstr "Όταν είναι δυνατόν, βάλτε σχόλια σε μια δική τους γραμμή."
 
-#: tutorial/controlflow.rst:1137
+#: tutorial/controlflow.rst:1134
 msgid "Use docstrings."
 msgstr "Χρησιμοποιήστε docstrings."
 
-#: tutorial/controlflow.rst:1139
+#: tutorial/controlflow.rst:1136
 msgid ""
 "Use spaces around operators and after commas, but not directly inside "
 "bracketing constructs: ``a = f(1, 2) + g(3, 4)``."
@@ -2497,7 +2489,7 @@ msgstr ""
 "Χρησιμοποιήστε κενά γύρω από τελεστές και μετά από κόμματα, αλλά όχι "
 "απευθείας μέσα δε δομές αγκύλων: ``a = f(1, 2) + g(3, 4)``."
 
-#: tutorial/controlflow.rst:1142
+#: tutorial/controlflow.rst:1139
 msgid ""
 "Name your classes and functions consistently; the convention is to use "
 "``UpperCamelCase`` for classes and ``lowercase_with_underscores`` for "
@@ -2511,7 +2503,7 @@ msgstr ""
 "(δείτε :ref:`tut-firstclasses` για περισσότερα σχετικά με τις κλάσεις και "
 "τις μεθόδους)."
 
-#: tutorial/controlflow.rst:1147
+#: tutorial/controlflow.rst:1144
 msgid ""
 "Don't use fancy encodings if your code is meant to be used in international "
 "environments.  Python's default, UTF-8, or even plain ASCII work best in any "
@@ -2521,7 +2513,7 @@ msgstr ""
 "να χρησιμοποιηθεί σε διεθνή περιβάλλοντα.  Η προεπιλογή της Python, UTF-8, ή "
 "ακόμα και το απλό ASCII λειτουργούν καλύτερα σε κάθε περίπτωση."
 
-#: tutorial/controlflow.rst:1151
+#: tutorial/controlflow.rst:1148
 msgid ""
 "Likewise, don't use non-ASCII characters in identifiers if there is only the "
 "slightest chance people speaking a different language will read or maintain "
@@ -2531,11 +2523,11 @@ msgstr ""
 "εάν υπάρχει μόνο η παραμικρή πιθανότητα οι άνθρωποι που μιλούν διαφορετική "
 "γλώσσα να διαβάσουν ή να διατηρήσουν τον κώδικα."
 
-#: tutorial/controlflow.rst:1157
+#: tutorial/controlflow.rst:1154
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/controlflow.rst:1158
+#: tutorial/controlflow.rst:1155
 msgid ""
 "Actually, *call by object reference* would be a better description, since if "
 "a mutable object is passed, the caller will see any changes the callee makes "
@@ -2586,33 +2578,62 @@ msgstr "in function calls"
 msgid "**"
 msgstr "**"
 
-#: tutorial/controlflow.rst:1074
+#: tutorial/controlflow.rst:1071
 msgid "function"
 msgstr "function"
 
-#: tutorial/controlflow.rst:1074
+#: tutorial/controlflow.rst:1071
 msgid "annotations"
 msgstr "annotations"
 
-#: tutorial/controlflow.rst:1074
+#: tutorial/controlflow.rst:1071
 msgid "->"
 msgstr "->"
 
-#: tutorial/controlflow.rst:1074
+#: tutorial/controlflow.rst:1071
 msgid "function annotations"
 msgstr "function annotations"
 
-#: tutorial/controlflow.rst:1074
+#: tutorial/controlflow.rst:1071
 msgid ": (colon)"
 msgstr ": (colon)"
 
-#: tutorial/controlflow.rst:1108
+#: tutorial/controlflow.rst:1105
 msgid "coding"
 msgstr "coding"
 
-#: tutorial/controlflow.rst:1108
+#: tutorial/controlflow.rst:1105
 msgid "style"
 msgstr "style"
+
+#~ msgid ""
+#~ "The Python parser does not strip indentation from multi-line string "
+#~ "literals in Python, so tools that process documentation have to strip "
+#~ "indentation if desired.  This is done using the following convention. The "
+#~ "first non-blank line *after* the first line of the string determines the "
+#~ "amount of indentation for the entire documentation string.  (We can't use "
+#~ "the first line since it is generally adjacent to the string's opening "
+#~ "quotes so its indentation is not apparent in the string literal.)  "
+#~ "Whitespace \"equivalent\" to this indentation is then stripped from the "
+#~ "start of all lines of the string.  Lines that are indented less should "
+#~ "not occur, but if they occur all their leading whitespace should be "
+#~ "stripped.  Equivalence of whitespace should be tested after expansion of "
+#~ "tabs (to 8 spaces, normally)."
+#~ msgstr ""
+#~ "Ο parser της Python δεν αφαιρεί την εσοχή από τα literals της "
+#~ "συμβολοσειράς πολλών γραμμών στην Python, επομένως τα εργαλεία που "
+#~ "επεξεργάζονται την τεκμηρίωση πρέπει να αφαιρέσουν την εσοχή εάν είναι "
+#~ "επιθυμητό.  Αυτό γίνεται χρησιμοποιώντας την ακόλουθη σύμβαση. Η πρώτη μη "
+#~ "κενή γραμμή *μετά* την πρώτη γραμμή της συμβολοσειράς καθορίζει το "
+#~ "μέγεθος της εσοχής για ολόκληρη τη συμβολοσειρά τεκμηρίωσης.  (Δεν "
+#~ "μπορούμε να χρησιμοποιήσουμε την πρώτη γραμμή αφού είναι γενικά δίπλα στα "
+#~ "εισαγωγικά της συμβολοσειράς, επομένως η εσοχή της δεν είναι εμφανής στο "
+#~ "literal της συμβολοσειράς.) Το κενό διάστημα \"ισοδύναμο\" σε αυτήν την "
+#~ "εσοχή αφαιρείται στη συνέχεια από την αρχή όλων των γραμμών της "
+#~ "συμβολοσειράς.  Οι γραμμές που έχουν μικρότερη εσοχή δεν θα πρέπει να "
+#~ "εμφανίζονται, αλλά αν εμφανιστούν θα πρέπει να αφαιρεθεί όλο το αρχικό "
+#~ "κενό τους.  Η ισοδυναμία των κενών διαστημάτων θα πρέπει να ελέγχεται "
+#~ "μετά την επέκταση των καρτελών (σε 8 κενά, κανονικά)."
 
 #~ msgid ""
 #~ "A :keyword:`!for` or :keyword:`!while` loop can include an :keyword:`!"

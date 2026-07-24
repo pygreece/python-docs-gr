@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 msgid ":mod:`!posix` --- The most common POSIX system calls"
 msgstr ""
 
-#: library/posix.rst:10
+#: library/posix.rst:9
 msgid ""
 "This module provides access to operating system functionality that is "
 "standardized by the C Standard and the POSIX standard (a thinly disguised "
 "Unix interface)."
 msgstr ""
 
-#: library/posix.rst:14
+#: library/posix.rst:13
 msgid "Availability"
 msgstr ""
 
-#: library/posix.rst:18
+#: library/posix.rst:17
 msgid ""
 "**Do not import this module directly.**  Instead, import the module :mod:"
 "`os`, which provides a *portable* version of this interface.  On Unix, the :"
@@ -45,17 +45,17 @@ msgid ""
 "environ`` is changed."
 msgstr ""
 
-#: library/posix.rst:27
+#: library/posix.rst:26
 msgid ""
 "Errors are reported as exceptions; the usual exceptions are given for type "
 "errors, while errors reported by the system calls raise :exc:`OSError`."
 msgstr ""
 
-#: library/posix.rst:34
+#: library/posix.rst:33
 msgid "Large File Support"
 msgstr ""
 
-#: library/posix.rst:42
+#: library/posix.rst:41
 msgid ""
 "Several operating systems (including AIX and Solaris) provide support for "
 "files that are larger than 2 GiB from a C programming model where :c:expr:"
@@ -64,7 +64,7 @@ msgid ""
 "are sometimes referred to as :dfn:`large files`."
 msgstr ""
 
-#: library/posix.rst:48
+#: library/posix.rst:47
 msgid ""
 "Large file support is enabled in Python when the size of an :c:type:`off_t` "
 "is larger than a :c:expr:`long` and the :c:expr:`long long` is at least as "
@@ -73,34 +73,34 @@ msgid ""
 "Solaris 2.6 and 2.7 you need to do something like::"
 msgstr ""
 
-#: library/posix.rst:55
+#: library/posix.rst:54
 msgid ""
 "CFLAGS=\"`getconf LFS_CFLAGS`\" OPT=\"-g -O2 $CFLAGS\" \\\n"
 "        ./configure"
 msgstr ""
 
-#: library/posix.rst:58
+#: library/posix.rst:57
 msgid "On large-file-capable Linux systems, this might work::"
 msgstr ""
 
-#: library/posix.rst:60
+#: library/posix.rst:59
 msgid ""
 "CFLAGS='-D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64' OPT=\"-g -O2 $CFLAGS\" "
 "\\\n"
 "        ./configure"
 msgstr ""
 
-#: library/posix.rst:67
+#: library/posix.rst:66
 msgid "Notable Module Contents"
 msgstr ""
 
-#: library/posix.rst:69
+#: library/posix.rst:68
 msgid ""
 "In addition to many functions described in the :mod:`os` module "
 "documentation, :mod:`posix` defines the following data item:"
 msgstr ""
 
-#: library/posix.rst:74
+#: library/posix.rst:73
 msgid ""
 "A dictionary representing the string environment at the time the interpreter "
 "was started. Keys and values are bytes on Unix and str on Windows. For "
@@ -108,7 +108,7 @@ msgid ""
 "pathname of your home directory, equivalent to ``getenv(\"HOME\")`` in C."
 msgstr ""
 
-#: library/posix.rst:79
+#: library/posix.rst:78
 msgid ""
 "Modifying this dictionary does not affect the string environment passed on "
 "by :func:`~os.execv`, :func:`~os.popen` or :func:`~os.system`; if you need "
@@ -117,11 +117,11 @@ msgid ""
 "`~os.system` or :func:`~os.popen`."
 msgstr ""
 
-#: library/posix.rst:85
+#: library/posix.rst:84
 msgid "On Unix, keys and values are bytes."
 msgstr ""
 
-#: library/posix.rst:90
+#: library/posix.rst:89
 msgid ""
 "The :mod:`os` module provides an alternate implementation of ``environ`` "
 "which updates the environment on modification. Note also that updating :data:"
@@ -130,18 +130,18 @@ msgid ""
 "module."
 msgstr ""
 
-#: library/posix.rst:16
+#: library/posix.rst:15
 msgid "module"
 msgstr ""
 
-#: library/posix.rst:16
+#: library/posix.rst:15
 msgid "os"
 msgstr ""
 
-#: library/posix.rst:36
+#: library/posix.rst:35
 msgid "large files"
 msgstr ""
 
-#: library/posix.rst:36
+#: library/posix.rst:35
 msgid "file"
 msgstr ""

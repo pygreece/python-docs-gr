@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,10 +25,10 @@ msgstr ""
 msgid ""
 "This module defines an object type which can compactly represent an array of "
 "basic values: characters, integers, floating-point numbers.  Arrays are "
-"sequence types and behave very much like lists, except that the type of "
-"objects stored in them is constrained.  The type is specified at object "
-"creation time by using a :dfn:`type code`, which is a single character.  The "
-"following type codes are defined:"
+"mutable :term:`sequence` types and behave very much like lists, except that "
+"the type of objects stored in them is constrained.  The type is specified at "
+"object creation time by using a :dfn:`type code`, which is a single "
+"character.  The following type codes are defined:"
 msgstr ""
 
 #: library/array.rst:19
@@ -253,33 +253,37 @@ msgstr ""
 
 #: library/array.rst:96
 msgid ""
-"Array objects support the ordinary sequence operations of indexing, slicing, "
-"concatenation, and multiplication.  When using slice assignment, the "
-"assigned value must be an array object with the same type code; in all other "
-"cases, :exc:`TypeError` is raised. Array objects also implement the buffer "
-"interface, and may be used wherever :term:`bytes-like objects <bytes-like "
-"object>` are supported."
+"Array objects support the ordinary :ref:`mutable <typesseq-mutable>` :term:"
+"`sequence` operations of indexing, slicing, concatenation, and "
+"multiplication.  When using slice assignment, the assigned value must be an "
+"array object with the same type code; in all other cases, :exc:`TypeError` "
+"is raised. Array objects also implement the buffer interface, and may be "
+"used wherever :term:`bytes-like objects <bytes-like object>` are supported."
 msgstr ""
 
 #: library/array.rst:102
+msgid "Arrays are :ref:`generic <generics>` over the type of their contents."
+msgstr ""
+
+#: library/array.rst:104
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``array.__new__`` with arguments "
 "``typecode``, ``initializer``."
 msgstr ""
 
-#: library/array.rst:107
+#: library/array.rst:109
 msgid "The typecode character used to create the array."
 msgstr ""
 
-#: library/array.rst:112
+#: library/array.rst:114
 msgid "The length in bytes of one array item in the internal representation."
 msgstr ""
 
-#: library/array.rst:117
-msgid "Append a new item with value *x* to the end of the array."
+#: library/array.rst:119
+msgid "Append a new item with the specified value to the end of the array."
 msgstr ""
 
-#: library/array.rst:122
+#: library/array.rst:124
 msgid ""
 "Return a tuple ``(address, length)`` giving the current memory address and "
 "the length in elements of the buffer used to hold array's contents.  The "
@@ -291,7 +295,7 @@ msgid ""
 "it."
 msgstr ""
 
-#: library/array.rst:132
+#: library/array.rst:134
 msgid ""
 "When using array objects from code written in C or C++ (the only way to "
 "effectively make use of this information), it makes more sense to use the "
@@ -300,7 +304,7 @@ msgid ""
 "interface is documented in :ref:`bufferobjects`."
 msgstr ""
 
-#: library/array.rst:141
+#: library/array.rst:143
 msgid ""
 "\"Byteswap\" all items of the array.  This is only supported for values "
 "which are 1, 2, 4, or 8 bytes in size; for other types of values, :exc:"
@@ -308,11 +312,11 @@ msgid ""
 "written on a machine with a different byte order."
 msgstr ""
 
-#: library/array.rst:149
-msgid "Return the number of occurrences of *x* in the array."
+#: library/array.rst:151
+msgid "Return the number of occurrences of *value* in the array."
 msgstr ""
 
-#: library/array.rst:154
+#: library/array.rst:156
 msgid ""
 "Append items from *iterable* to the end of the array.  If *iterable* is "
 "another array, it must have *exactly* the same type code; if not, :exc:"
@@ -320,18 +324,18 @@ msgid ""
 "iterable and its elements must be the right type to be appended to the array."
 msgstr ""
 
-#: library/array.rst:162
+#: library/array.rst:164
 msgid ""
 "Appends items from the :term:`bytes-like object`, interpreting its content "
 "as an array of machine values (as if it had been read from a file using the :"
 "meth:`fromfile` method)."
 msgstr ""
 
-#: library/array.rst:166
+#: library/array.rst:168
 msgid ":meth:`!fromstring` is renamed to :meth:`frombytes` for clarity."
 msgstr ""
 
-#: library/array.rst:172
+#: library/array.rst:174
 msgid ""
 "Read *n* items (as machine values) from the :term:`file object` *f* and "
 "append them to the end of the array.  If less than *n* items are available, :"
@@ -339,13 +343,13 @@ msgid ""
 "inserted into the array."
 msgstr ""
 
-#: library/array.rst:180
+#: library/array.rst:182
 msgid ""
 "Append items from the list.  This is equivalent to ``for x in list: a."
 "append(x)`` except that if there is a type error, the array is unchanged."
 msgstr ""
 
-#: library/array.rst:186
+#: library/array.rst:188
 msgid ""
 "Extends this array with data from the given Unicode string. The array must "
 "have type code ``'u'`` or ``'w'``; otherwise a :exc:`ValueError` is raised. "
@@ -353,70 +357,70 @@ msgid ""
 "an array of some other type."
 msgstr ""
 
-#: library/array.rst:194
+#: library/array.rst:196
 msgid ""
 "Return the smallest *i* such that *i* is the index of the first occurrence "
-"of *x* in the array.  The optional arguments *start* and *stop* can be "
-"specified to search for *x* within a subsection of the array.  Raise :exc:"
-"`ValueError` if *x* is not found."
+"of *value* in the array.  The optional arguments *start* and *stop* can be "
+"specified to search for *value* within a subsection of the array.  Raise :"
+"exc:`ValueError` if *value* is not found."
 msgstr ""
 
-#: library/array.rst:199
+#: library/array.rst:201
 msgid "Added optional *start* and *stop* parameters."
 msgstr ""
 
-#: library/array.rst:205
+#: library/array.rst:207
 msgid ""
-"Insert a new item with value *x* in the array before position *i*. Negative "
+"Insert a new item *value* in the array before position *index*. Negative "
 "values are treated as being relative to the end of the array."
 msgstr ""
 
-#: library/array.rst:211
+#: library/array.rst:213
 msgid ""
 "Removes the item with the index *i* from the array and returns it. The "
 "optional argument defaults to ``-1``, so that by default the last item is "
 "removed and returned."
 msgstr ""
 
-#: library/array.rst:218
-msgid "Remove the first occurrence of *x* from the array."
+#: library/array.rst:220
+msgid "Remove the first occurrence of *value* from the array."
 msgstr ""
 
-#: library/array.rst:223
+#: library/array.rst:225
 msgid "Remove all elements from the array."
 msgstr ""
 
-#: library/array.rst:230
+#: library/array.rst:232
 msgid "Reverse the order of the items in the array."
 msgstr ""
 
-#: library/array.rst:235
+#: library/array.rst:237
 msgid ""
 "Convert the array to an array of machine values and return the bytes "
 "representation (the same sequence of bytes that would be written to a file "
 "by the :meth:`tofile` method.)"
 msgstr ""
 
-#: library/array.rst:239
+#: library/array.rst:241
 msgid ":meth:`!tostring` is renamed to :meth:`tobytes` for clarity."
 msgstr ""
 
-#: library/array.rst:245
+#: library/array.rst:247
 msgid "Write all items (as machine values) to the :term:`file object` *f*."
 msgstr ""
 
-#: library/array.rst:250
+#: library/array.rst:252
 msgid "Convert the array to an ordinary list with the same items."
 msgstr ""
 
-#: library/array.rst:255
+#: library/array.rst:257
 msgid ""
 "Convert the array to a Unicode string.  The array must have a type ``'u'`` "
 "or ``'w'``; otherwise a :exc:`ValueError` is raised. Use ``array.tobytes()."
 "decode(enc)`` to obtain a Unicode string from an array of some other type."
 msgstr ""
 
-#: library/array.rst:260
+#: library/array.rst:262
 msgid ""
 "The string representation of array objects has the form ``array(typecode, "
 "initializer)``. The *initializer* is omitted if the array is empty, "
@@ -429,7 +433,7 @@ msgid ""
 "Examples::"
 msgstr ""
 
-#: library/array.rst:272
+#: library/array.rst:274
 msgid ""
 "array('l')\n"
 "array('w', 'hello \\u2641')\n"
@@ -437,19 +441,19 @@ msgid ""
 "array('d', [1.0, 2.0, 3.14, -inf, nan])"
 msgstr ""
 
-#: library/array.rst:280
+#: library/array.rst:282
 msgid "Module :mod:`struct`"
 msgstr ""
 
-#: library/array.rst:281
+#: library/array.rst:283
 msgid "Packing and unpacking of heterogeneous binary data."
 msgstr ""
 
-#: library/array.rst:283
+#: library/array.rst:285
 msgid "`NumPy <https://numpy.org/>`_"
 msgstr ""
 
-#: library/array.rst:284
+#: library/array.rst:286
 msgid "The NumPy package defines another array type."
 msgstr ""
 

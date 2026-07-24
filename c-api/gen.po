@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,16 +52,16 @@ msgstr ""
 #: c-api/gen.rst:37
 msgid ""
 "Create and return a new generator object based on the *frame* object. A "
-"reference to *frame* is stolen by this function. The argument must not be "
-"``NULL``."
+"reference to *frame* is \":term:`stolen <steal>`\" by this function (even on "
+"error). The argument must not be ``NULL``."
 msgstr ""
 
 #: c-api/gen.rst:43
 msgid ""
 "Create and return a new generator object based on the *frame* object, with "
 "``__name__`` and ``__qualname__`` set to *name* and *qualname*. A reference "
-"to *frame* is stolen by this function.  The *frame* argument must not be "
-"``NULL``."
+"to *frame* is \":term:`stolen <steal>`\" by this function (even on error).  "
+"The *frame* argument must not be ``NULL``."
 msgstr ""
 
 #: c-api/gen.rst:50
@@ -87,18 +87,18 @@ msgstr ""
 #: c-api/gen.rst:69
 msgid ""
 "Create a new asynchronous generator wrapping *frame*, with ``__name__`` and "
-"``__qualname__`` set to *name* and *qualname*. *frame* is stolen by this "
-"function and must not be ``NULL``."
+"``__qualname__`` set to *name* and *qualname*. *frame* is \":term:`stolen "
+"<steal>`\" by this function (even on error) and must not be ``NULL``."
 msgstr ""
 
-#: c-api/gen.rst:73
+#: c-api/gen.rst:74
 msgid ""
 "On success, this function returns a :term:`strong reference` to the new "
 "asynchronous generator. On failure, this function returns ``NULL`` with an "
 "exception set."
 msgstr ""
 
-#: c-api/gen.rst:81
+#: c-api/gen.rst:82
 msgid ""
 "Return true if *op* is an asynchronous generator object, false otherwise. "
 "This function always succeeds."

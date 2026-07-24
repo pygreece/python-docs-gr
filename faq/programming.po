@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -27,18 +27,17 @@ msgid "Contents"
 msgstr "Περιεχόμενα"
 
 #: faq/programming.rst:12
-msgid "General Questions"
-msgstr "Γενικές Ερωτήσεις"
+msgid "General questions"
+msgstr "Γενικές ερωτήσεις"
 
 #: faq/programming.rst:15
 msgid ""
-"Is there a source code level debugger with breakpoints, single-stepping, "
-"etc.?"
+"Is there a source code-level debugger with breakpoints and single-stepping?"
 msgstr ""
 "Υπάρχει πρόγραμμα εντοπισμού σφαλμάτων σε επίπεδο πηγαίου κώδικα με σημεία "
-"διακοπής , με ένα βήμα κλπ.;"
+"διακοπής και εκτέλεση βήμα προς βήμα;"
 
-#: faq/programming.rst:58
+#: faq/programming.rst:56
 msgid "Yes."
 msgstr "Ναι."
 
@@ -67,16 +66,14 @@ msgstr ""
 #: faq/programming.rst:27
 msgid ""
 "The IDLE interactive development environment, which is part of the standard "
-"Python distribution (normally available as `Tools/scripts/idle3 <https://"
-"github.com/python/cpython/blob/main/Tools/scripts/idle3>`_), includes a "
+"Python distribution (normally available as :mod:`idlelib`), includes a "
 "graphical debugger."
 msgstr ""
-"Το διαδραστικό περιβάλλον ανάπτυξης IDLE, το οποίο αποτελεί μέρος της "
-"τυπικής διανομής Python (συνήθως διαθέσιμο ως `Tools/scripts/idle3 <https://"
-"github.com/python/cpython/blob/main/Tools/scripts/idle3>`_), που "
-"περιλαμβάνει ένα γραφικό πρόγραμμα εντοπισμού σφαλμάτων."
+"Το IDLE interactive development environment, το οποίο είναι μέρος της "
+"τυπικής διανομής Python (συνήθως διαθέσιμο ως :mod:`idlelib`), περιλαμβάνει "
+"ένα γραφικό πρόγραμμα εντοπισμού σφαλμάτων."
 
-#: faq/programming.rst:32
+#: faq/programming.rst:31
 msgid ""
 "PythonWin is a Python IDE that includes a GUI debugger based on pdb.  The "
 "PythonWin debugger colors breakpoints and has quite a few cool features such "
@@ -93,7 +90,7 @@ msgstr ""
 "github.com/mhammond/pywin32>`_ έργου και ως μέρος της διανομής `ActivePython "
 "<https://www.activestate.com/products/python/>`_ ."
 
-#: faq/programming.rst:39
+#: faq/programming.rst:38
 msgid ""
 "`Eric <https://eric-ide.python-projects.org/>`_ is an IDE built on PyQt and "
 "the Scintilla editing component."
@@ -101,7 +98,7 @@ msgstr ""
 "Το `Eric <https://eric-ide.python-projects.org/>`_ είναι ένα IDE που "
 "βασίζεται στο PyQt και το component επεξεργασίας Scintilla."
 
-#: faq/programming.rst:42
+#: faq/programming.rst:41
 msgid ""
 "`trepan3k <https://github.com/rocky/python3-trepan/>`_ is a gdb-like "
 "debugger."
@@ -109,7 +106,7 @@ msgstr ""
 "Το `trepan3k <https://github.com/rocky/python3-trepan/>`_ είναι ένα "
 "πρόγραμμα εντοπισμού σφαλμάτων παρόμοιο με το gdb."
 
-#: faq/programming.rst:44
+#: faq/programming.rst:43
 msgid ""
 "`Visual Studio Code <https://code.visualstudio.com/>`_ is an IDE with "
 "debugging tools that integrates with version-control software."
@@ -117,7 +114,7 @@ msgstr ""
 "Το `Visual Studio Code <https://code.visualstudio.com/>`_ είναι ένας IDE με "
 "εργαλεία εντοπισμού σφαλμάτων που ενσωματώνεται με λογισμικό ελέγχου έκδοσης."
 
-#: faq/programming.rst:47
+#: faq/programming.rst:46
 msgid ""
 "There are a number of commercial Python IDEs that include graphical "
 "debuggers. They include:"
@@ -125,43 +122,41 @@ msgstr ""
 "Υπάρχει ένας αριθμός εμπορικών Python IDEs που περιλαμβάνουν γραφικούς "
 "εντοπισμούς σφαλμάτων. Αυτά περιλαμβάνουν:"
 
-#: faq/programming.rst:50
+#: faq/programming.rst:49
 msgid "`Wing IDE <https://wingware.com/>`_"
 msgstr "`Wing IDE <https://wingware.com/>`_"
 
-#: faq/programming.rst:51
-msgid "`Komodo IDE <https://www.activestate.com/products/komodo-ide/>`_"
-msgstr "`Komodo IDE <https://www.activestate.com/products/komodo-ide/>`_"
-
-#: faq/programming.rst:52
+#: faq/programming.rst:50
 msgid "`PyCharm <https://www.jetbrains.com/pycharm/>`_"
 msgstr "`PyCharm <https://www.jetbrains.com/pycharm/>`_"
 
-#: faq/programming.rst:56
+#: faq/programming.rst:54
 msgid "Are there tools to help find bugs or perform static analysis?"
 msgstr ""
 "Υπάρχουν εργαλεία που βοηθούν στην εύρεση σφαλμάτων ή στην εκτέλεση στατικής "
 "ανάλυσης;"
 
-#: faq/programming.rst:60
+#: faq/programming.rst:58
 msgid ""
-"`Pylint <https://pylint.pycqa.org/en/latest/index.html>`_ and `Pyflakes "
-"<https://github.com/PyCQA/pyflakes>`_ do basic checking that will help you "
-"catch bugs sooner."
+"`Ruff <https://docs.astral.sh/ruff/>`__, `Pylint <https://pylint.readthedocs."
+"io/>`__ and `Pyflakes <https://github.com/PyCQA/pyflakes>`__ do basic "
+"checking that will help you catch bugs sooner."
 msgstr ""
-"`Pylint <https://pylint.pycqa.org/en/latest/index.html>`_ και `Pyflakes "
-"<https://github.com/PyCQA/pyflakes>`_ κάνουν βασικό έλεγχο που θα σας "
-"βοηθήσει να εντοπίσετε τα σφάλματα νωρίτερα."
+"`Ruff <https://docs.astral.sh/ruff/>`__, `Pylint <https://pylint.readthedocs."
+"io/>`__ και `Pyflakes <https://github.com/PyCQA/pyflakes>`__ κάνουν βασικό "
+"έλεγχο που θα σας βοηθήσει να εντοπίσετε τα σφάλματα νωρίτερα."
 
-#: faq/programming.rst:64
+#: faq/programming.rst:63
 msgid ""
-"Static type checkers such as `Mypy <https://mypy-lang.org/>`_, `Pyre "
-"<https://pyre-check.org/>`_, and `Pytype <https://github.com/google/"
-"pytype>`_ can check type hints in Python source code."
+"Static type checkers such as `mypy <https://mypy-lang.org/>`__, `ty <https://"
+"docs.astral.sh/ty/>`__, `Pyrefly <https://pyrefly.org/>`__, and `pytype "
+"<https://github.com/google/pytype>`__ can check type hints in Python source "
+"code."
 msgstr ""
-"Έλεγχοι στατικού τύπου όπως `Mypy <https://mypy-lang.org/>`_, `Pyre <https://"
-"pyre-check.org/>`_, και `Pytype <https://github.com/google/pytype>`_ μπορεί "
-"να ελέγξει υποδείξεις τύπου στον πηγαίο κώδικα της Python."
+"Έλεγχοι στατικού τύπου όπως `mypy <https://mypy-lang.org/>`__, `ty <https://"
+"docs.astral.sh/ty/>`__, `Pyrefly <https://pyrefly.org/>`__, και `pytype "
+"<https://github.com/google/pytype>`__ μπορούν να ελέγξουν υποδείξεις τύπου "
+"στον πηγαίο κώδικα της Python."
 
 #: faq/programming.rst:73
 msgid "How can I create a stand-alone binary from a Python script?"
@@ -185,17 +180,15 @@ msgstr ""
 #: faq/programming.rst:81
 msgid ""
 "One is to use the freeze tool, which is included in the Python source tree "
-"as `Tools/freeze <https://github.com/python/cpython/tree/main/Tools/"
-"freeze>`_. It converts Python byte code to C arrays; with a C compiler you "
-"can embed all your modules into a new program, which is then linked with the "
-"standard Python modules."
+"as :source:`Tools/freeze`. It converts Python byte code to C arrays; with a "
+"C compiler you can embed all your modules into a new program, which is then "
+"linked with the standard Python modules."
 msgstr ""
 "Το ένα είναι να χρησιμοποιήσετε το εργαλείο παγώματος, το οποίο "
-"περιλαμβάνεται στο δέντρο πηγαίου της Python ως `Tools/freeze <https://"
-"github.com/python/cpython/tree/main/Tools/freeze>`_. Μετατρέπει δυαδικό "
-"κώδικα Python σε C πίνακες∙ με έναν C μεταγλωττιστή μπορείτε να ενσωματώσετε "
-"όλα τα modules σας σε ένα νέο πρόγραμμα, το οποίο στη συνέχεια συνδέεται με "
-"τα τυπικά Python modules."
+"περιλαμβάνεται στο δέντρο πηγαίου της Python ως :source:`Tools/freeze`. "
+"Μετατρέπει δυαδικό κώδικα Python σε C πίνακες∙ με έναν C μεταγλωττιστή "
+"μπορείτε να ενσωματώσετε όλα τα modules σας σε ένα νέο πρόγραμμα, το οποίο "
+"στη συνέχεια συνδέεται με τα τυπικά Python modules."
 
 #: faq/programming.rst:87
 msgid ""
@@ -256,11 +249,11 @@ msgstr "`py2app <https://github.com/ronaldoussoren/py2app>`_ (macOS μόνο)"
 msgid "`py2exe <https://www.py2exe.org/>`_ (Windows only)"
 msgstr "`py2exe <https://www.py2exe.org/>`_ (Windows μόνο)"
 
-#: faq/programming.rst:107
+#: faq/programming.rst:108
 msgid "Are there coding standards or a style guide for Python programs?"
 msgstr "Υπάρχουν πρότυπα κωδικοποίησης ή οδηγός στυλ για προγράμματα Python;"
 
-#: faq/programming.rst:109
+#: faq/programming.rst:110
 msgid ""
 "Yes.  The coding style required for standard library modules is documented "
 "as :pep:`8`."
@@ -268,15 +261,15 @@ msgstr ""
 "Ναι. Το στυλ κωδικοποίησης που απαιτείται για τα τυπικά modules βιβλιοθήκης "
 "τεκμηριώνεται ως :pep:`8`."
 
-#: faq/programming.rst:114
-msgid "Core Language"
-msgstr "Βασική Γλώσσα"
+#: faq/programming.rst:115
+msgid "Core language"
+msgstr "Βασική γλώσσα"
 
-#: faq/programming.rst:119
+#: faq/programming.rst:120
 msgid "Why am I getting an UnboundLocalError when the variable has a value?"
 msgstr "Γιατί λαμβάνω ένα UnboundLocalError όταν η μεταβλητή έχει μια τιμή;"
 
-#: faq/programming.rst:121
+#: faq/programming.rst:122
 msgid ""
 "It can be a surprise to get the :exc:`UnboundLocalError` in previously "
 "working code when it is modified by adding an assignment statement somewhere "
@@ -286,19 +279,19 @@ msgstr ""
 "λειτουργούσε προηγουμένως όταν τροποποιείται προσθέτοντας μια δήλωση "
 "εκχώρησης κάπου στο σώμα μιας συνάρτησης."
 
-#: faq/programming.rst:125
+#: faq/programming.rst:126
 msgid "This code:"
 msgstr "Αυτό ο κώδικας:"
 
-#: faq/programming.rst:134
+#: faq/programming.rst:135
 msgid "works, but this code:"
 msgstr "δουλεύει, αλλά αυτός ο κώδικας:"
 
-#: faq/programming.rst:141
+#: faq/programming.rst:142
 msgid "results in an :exc:`!UnboundLocalError`:"
 msgstr "καταλήγει σε ένα :exc:`!UnboundLocalError`:"
 
-#: faq/programming.rst:148
+#: faq/programming.rst:149
 msgid ""
 "This is because when you make an assignment to a variable in a scope, that "
 "variable becomes local to that scope and shadows any similarly named "
@@ -314,7 +307,7 @@ msgstr ""
 "τοπική μεταβλητή. Κατά συνέπεια όταν η προηγούμενη ``print(x)`` επιχειρεί να "
 "εκτυπώσει την uninitialized τοπική μεταβλητή και προκύπτει σφάλμα."
 
-#: faq/programming.rst:155
+#: faq/programming.rst:156
 msgid ""
 "In the example above you can access the outer scope variable by declaring it "
 "global:"
@@ -322,7 +315,7 @@ msgstr ""
 "Στο παραπάνω παράδειγμα, μπορείτε να αποκτήσετε πρόσβαση στη μεταβλητή "
 "εξωτερικού εύρους δηλώνοντας την ως καθολική::"
 
-#: faq/programming.rst:167
+#: faq/programming.rst:168
 msgid ""
 "This explicit declaration is required in order to remind you that (unlike "
 "the superficially analogous situation with class and instance variables) you "
@@ -333,7 +326,7 @@ msgstr ""
 "στην πραγματικότητα τροποποιείτε την τιμή της μεταβλητής στο εξωτερικό "
 "πεδίο::"
 
-#: faq/programming.rst:174
+#: faq/programming.rst:175
 msgid ""
 "You can do a similar thing in a nested scope using the :keyword:`nonlocal` "
 "keyword:"
@@ -341,13 +334,13 @@ msgstr ""
 "Μπορείτε να κάνετε κάτι παρόμοιο σε ένα ένθετο πεδίο χρησιμοποιώντας τη λέξη "
 "κλειδί :keyword:`nonlocal`:"
 
-#: faq/programming.rst:192
+#: faq/programming.rst:193
 msgid "What are the rules for local and global variables in Python?"
 msgstr ""
 "Ποιοι είναι οι κανόνες για τις τοπικές και τις καθολικές μεταβλητές στην "
 "Python;"
 
-#: faq/programming.rst:194
+#: faq/programming.rst:195
 msgid ""
 "In Python, variables that are only referenced inside a function are "
 "implicitly global.  If a variable is assigned a value anywhere within the "
@@ -359,7 +352,7 @@ msgstr ""
 "στο σώμα της συνάρτησης, θεωρείται ότι είναι τοπική, εκτός αν δηλωθεί ρητά "
 "ως καθολική."
 
-#: faq/programming.rst:198
+#: faq/programming.rst:199
 msgid ""
 "Though a bit surprising at first, a moment's consideration explains this.  "
 "On one hand, requiring :keyword:`global` for assigned variables provides a "
@@ -378,7 +371,7 @@ msgstr ""
 "ακαταστασία θα νικήσει την χρησιμότητα της δήλωσης ``global`` για τον "
 "εντοπισμό παρενεργειών."
 
-#: faq/programming.rst:208
+#: faq/programming.rst:209
 msgid ""
 "Why do lambdas defined in a loop with different values all return the same "
 "result?"
@@ -386,15 +379,15 @@ msgstr ""
 "Γιατί τα lambdas που ορίζονται σε έναν βρόχο με διαφορετικές τιμές "
 "επιστρέφουν όλα το ίδιο αποτέλεσμα;"
 
-#: faq/programming.rst:210
+#: faq/programming.rst:211
 msgid ""
 "Assume you use a for loop to define a few different lambdas (or even plain "
-"functions), e.g.::"
+"functions), for example::"
 msgstr ""
 "Ας υποθέσουμε ότι χρησιμοποιείτε έναν βρόχο for για να ορίσετε μερικά "
-"διαφορετικά lambdas (ή ακόμα και απλές συναρτήσεις), π.χ.::"
+"διαφορετικά lambdas (ή ακόμα και απλές συναρτήσεις), για παράδειγμα::"
 
-#: faq/programming.rst:213
+#: faq/programming.rst:214
 msgid ""
 ">>> squares = []\n"
 ">>> for x in range(5):\n"
@@ -404,7 +397,7 @@ msgstr ""
 ">>> for x in range(5):\n"
 "...     squares.append(lambda: x**2)"
 
-#: faq/programming.rst:217
+#: faq/programming.rst:218
 msgid ""
 "This gives you a list that contains 5 lambdas that calculate ``x**2``.  You "
 "might expect that, when called, they would return, respectively, ``0``, "
@@ -416,7 +409,7 @@ msgstr ""
 "αντίστοιχα, ``0``, ``1``, ``4``, ``9`` και ``16``. Ωστόσο, όταν δοκιμάσετε "
 "πραγματικά θα δείτε ότι όλα επιστρέφουν ``16``::"
 
-#: faq/programming.rst:222
+#: faq/programming.rst:223
 msgid ""
 ">>> squares[2]()\n"
 "16\n"
@@ -428,22 +421,23 @@ msgstr ""
 ">>> squares[4]()\n"
 "16"
 
-#: faq/programming.rst:227
+#: faq/programming.rst:228
 msgid ""
 "This happens because ``x`` is not local to the lambdas, but is defined in "
 "the outer scope, and it is accessed when the lambda is called --- not when "
 "it is defined.  At the end of the loop, the value of ``x`` is ``4``, so all "
-"the functions now return ``4**2``, i.e. ``16``.  You can also verify this by "
-"changing the value of ``x`` and see how the results of the lambdas change::"
+"the functions now return ``4**2``, that is ``16``.  You can also verify this "
+"by changing the value of ``x`` and see how the results of the lambdas "
+"change::"
 msgstr ""
 "Αυτό συμβαίνει επειδή το ``x`` δεν είναι τοπικό για τα lambdas, αλλά "
 "ορίζεται στο εξωτερικό εύρος και είναι προσβάσιμο όταν το lambda καλείται "
 "--- όχι όταν ορίζεται.  Στο τέλος του βρόχου, η τιμή του ``x`` είναι ``4``, "
 "επομένως όλες οι συναρτήσεις επιστρέφουν τώρα ``4**2``, δηλαδή ``16``.  "
 "Μπορείτε επίσης να το επαληθεύσετε αλλάζοντας την τιμή του ``x`` και δείτε "
-"πως αλλάζουν τα αποτελέσματα του lambda::"
+"πως αλλάζουν τα αποτελέσματα των αλλαγών lambdas::"
 
-#: faq/programming.rst:233
+#: faq/programming.rst:234
 msgid ""
 ">>> x = 8\n"
 ">>> squares[2]()\n"
@@ -453,7 +447,7 @@ msgstr ""
 ">>> squares[2]()\n"
 "64"
 
-#: faq/programming.rst:237
+#: faq/programming.rst:238
 msgid ""
 "In order to avoid this, you need to save the values in variables local to "
 "the lambdas, so that they don't rely on the value of the global ``x``::"
@@ -462,7 +456,7 @@ msgstr ""
 "τοπικές στο lambda, έτσι ώστε να μην βασίζονται στην τιμή του καθολικού "
 "``x``::"
 
-#: faq/programming.rst:240
+#: faq/programming.rst:241
 msgid ""
 ">>> squares = []\n"
 ">>> for x in range(5):\n"
@@ -472,7 +466,7 @@ msgstr ""
 ">>> for x in range(5):\n"
 "...     squares.append(lambda n=x: n**2)"
 
-#: faq/programming.rst:244
+#: faq/programming.rst:245
 msgid ""
 "Here, ``n=x`` creates a new variable ``n`` local to the lambda and computed "
 "when the lambda is defined so that it has the same value that ``x`` had at "
@@ -486,7 +480,7 @@ msgstr ""
 "θα είναι ``0`` στο πρώτο lambda, ``1`` στο δεύτερο , ``2`` στο τρίτο και "
 "ούτω καθεξής. Επομένως κάθε lambda θα επιστρέψει τώρα το σωστό αποτέλεσμα::"
 
-#: faq/programming.rst:250
+#: faq/programming.rst:251
 msgid ""
 ">>> squares[2]()\n"
 "4\n"
@@ -498,7 +492,7 @@ msgstr ""
 ">>> squares[4]()\n"
 "16"
 
-#: faq/programming.rst:255
+#: faq/programming.rst:256
 msgid ""
 "Note that this behaviour is not peculiar to lambdas, but applies to regular "
 "functions too."
@@ -506,11 +500,11 @@ msgstr ""
 "Σημειώστε ότι αυτή η συμπεριφορά δεν είναι ιδιόμορφη για το lambdas, αλλά "
 "ισχύει και για κανονικές λειτουργίες."
 
-#: faq/programming.rst:260
+#: faq/programming.rst:261
 msgid "How do I share global variables across modules?"
 msgstr "Πως μοιράζομαι καθολικές μεταβλητές σε modules;"
 
-#: faq/programming.rst:262
+#: faq/programming.rst:263
 msgid ""
 "The canonical way to share information across modules within a single "
 "program is to create a special module (often called config or cfg).  Just "
@@ -527,19 +521,19 @@ msgstr ""
 "αλλαγές που γίνονται στο αντικείμενο του module αντικατοπτρίζονται παντού.  "
 "Για παράδειγμα:"
 
-#: faq/programming.rst:268
+#: faq/programming.rst:269
 msgid "config.py::"
 msgstr "config.py::"
 
-#: faq/programming.rst:270
+#: faq/programming.rst:271
 msgid "x = 0   # Default value of the 'x' configuration setting"
 msgstr "x = 0   # Default value of the 'x' configuration setting"
 
-#: faq/programming.rst:272
+#: faq/programming.rst:273
 msgid "mod.py::"
 msgstr "mod.py::"
 
-#: faq/programming.rst:274
+#: faq/programming.rst:275
 msgid ""
 "import config\n"
 "config.x = 1"
@@ -547,11 +541,11 @@ msgstr ""
 "import config\n"
 "config.x = 1"
 
-#: faq/programming.rst:277
+#: faq/programming.rst:278
 msgid "main.py::"
 msgstr "main.py::"
 
-#: faq/programming.rst:279
+#: faq/programming.rst:280
 msgid ""
 "import config\n"
 "import mod\n"
@@ -561,7 +555,7 @@ msgstr ""
 "import mod\n"
 "print(config.x)"
 
-#: faq/programming.rst:283
+#: faq/programming.rst:284
 msgid ""
 "Note that using a module is also the basis for implementing the singleton "
 "design pattern, for the same reason."
@@ -569,12 +563,12 @@ msgstr ""
 "Λάβετε υπόψη ότι η χρήση ενός module είναι επίσης η βάση για την εφαρμογή "
 "του μοτίβου σχεδιασμού singleton, για τον ίδιο λόγο."
 
-#: faq/programming.rst:288
+#: faq/programming.rst:289
 msgid "What are the \"best practices\" for using import in a module?"
 msgstr ""
 "Ποιες είναι οι \"βέλτιστες πρακτικές\" για τη χρήση import σε ένα module;"
 
-#: faq/programming.rst:290
+#: faq/programming.rst:291
 msgid ""
 "In general, don't use ``from modulename import *``.  Doing so clutters the "
 "importer's namespace, and makes it much harder for linters to detect "
@@ -584,7 +578,7 @@ msgstr ""
 "δημιουργεί μια ακαταστασία στο importer's namespace, και καθιστά πιο δύσκολο "
 "για τα linters να εντοπίσουν απροσδιόριστα ονόματα."
 
-#: faq/programming.rst:294
+#: faq/programming.rst:295
 msgid ""
 "Import modules at the top of a file.  Doing so makes it clear what other "
 "modules your code requires and avoids questions of whether the module name "
@@ -598,32 +592,32 @@ msgstr ""
 "χρησιμοποιώντας πολλαπλά imports ανά γραμμής καταναλώνεται λιγότερος χώρος "
 "στην οθόνη."
 
-#: faq/programming.rst:299
+#: faq/programming.rst:300
 msgid "It's good practice if you import modules in the following order:"
 msgstr "Είναι καλή πρακτική εάν εισάγετε module με την ακόλουθη σειρά:"
 
-#: faq/programming.rst:301
-msgid ""
-"standard library modules -- e.g. :mod:`sys`, :mod:`os`, :mod:`argparse`, :"
-"mod:`re`"
-msgstr ""
-"τυπικά module βιβλιοθήκης -- π.χ. :mod:`sys`, :mod:`os`, :mod:`argparse`, :"
-"mod:`re`"
-
 #: faq/programming.rst:302
 msgid ""
+"standard library modules -- such as :mod:`sys`, :mod:`os`, :mod:`argparse`, :"
+"mod:`re`"
+msgstr ""
+"module τυπικής βιβλιοθήκης -- όπως :mod:`sys`, :mod:`os`, :mod:`argparse`, :"
+"mod:`re`"
+
+#: faq/programming.rst:303
+msgid ""
 "third-party library modules (anything installed in Python's site-packages "
-"directory) -- e.g. :mod:`!dateutil`, :mod:`!requests`, :mod:`!PIL.Image`"
+"directory) -- such as :pypi:`dateutil`, :pypi:`requests`, :pypi:`tzdata`"
 msgstr ""
 "module βιβλιοθήκης τρίτων (ό, τι είναι εγκατεστημένο στο κατάλογο site-"
-"packages της Python) -- π.χ. :mod:`!dateutil`, :mod:`! requests`, :mod:`!PIL."
-"Image`"
+"packages της Python) -- όπως :pypi:`dateutil`, :pypi:`requests`, :pypi:"
+"`tzdata`Image`"
 
-#: faq/programming.rst:304
+#: faq/programming.rst:305
 msgid "locally developed modules"
 msgstr "τοπικά αναπτυγμένα modules"
 
-#: faq/programming.rst:306
+#: faq/programming.rst:307
 msgid ""
 "It is sometimes necessary to move imports to a function or class to avoid "
 "problems with circular imports.  Gordon McMillan says:"
@@ -632,7 +626,7 @@ msgstr ""
 "ή κλάση για να αποφευχθούν προβλήματα με τις κυκλικές εισαγωγές. Ο Gordon "
 "McMillan λέει:"
 
-#: faq/programming.rst:309
+#: faq/programming.rst:310
 msgid ""
 "Circular imports are fine where both modules use the \"import <module>\" "
 "form of import.  They fail when the 2nd module wants to grab a name out of "
@@ -646,7 +640,7 @@ msgstr ""
 "είναι στο κορυφαίο επίπεδο.  Αυτό συμβαίνει επειδή το πρώτο module είναι "
 "απασχολημένο με την εισαγωγή του 2ου."
 
-#: faq/programming.rst:315
+#: faq/programming.rst:316
 msgid ""
 "In this case, if the second module is only used in one function, then the "
 "import can easily be moved into that function.  By the time the import is "
@@ -659,7 +653,7 @@ msgstr ""
 "ολοκληρώσει την αρχικοποίηση, και το δεύτερο module μπορεί να κάνει την "
 "εισαγωγή του."
 
-#: faq/programming.rst:320
+#: faq/programming.rst:321
 msgid ""
 "It may also be necessary to move imports out of the top level of code if "
 "some of the modules are platform-specific.  In that case, it may not even be "
@@ -674,7 +668,7 @@ msgstr ""
 "περίπτωση, η εισαγωγή των σωστών modules στον αντίστοιχο κώδικα για "
 "συγκεκριμένη πλατφόρμα είναι μια καλή επιλογή."
 
-#: faq/programming.rst:325
+#: faq/programming.rst:326
 msgid ""
 "Only move imports into a local scope, such as inside a function definition, "
 "if it's necessary to solve a problem such as avoiding a circular import or "
@@ -701,11 +695,11 @@ msgstr ""
 "ξεφύγει από το πεδίο εφαρμογής του, το module είναι πιθανώς διαθέσιμο στο :"
 "data:`sys.modules`."
 
-#: faq/programming.rst:338
+#: faq/programming.rst:339
 msgid "Why are default values shared between objects?"
 msgstr "Γιατί μοιράζονται οι προεπιλεγμένες τιμές μεταξύ των αντικειμένων;"
 
-#: faq/programming.rst:340
+#: faq/programming.rst:341
 msgid ""
 "This type of bug commonly bites neophyte programmers.  Consider this "
 "function::"
@@ -713,7 +707,7 @@ msgstr ""
 "Αυτός ο τύπος σφάλματος συνήθως δαγκώνει νεοφυείς προγραμματιστές. Σκεφτείτε "
 "αυτήν τη συνάρτηση::"
 
-#: faq/programming.rst:342
+#: faq/programming.rst:343
 msgid ""
 "def foo(mydict={}):  # Danger: shared reference to one dict for all calls\n"
 "    ... compute something ...\n"
@@ -725,7 +719,7 @@ msgstr ""
 "    mydict[key] = value\n"
 "    return mydict"
 
-#: faq/programming.rst:347
+#: faq/programming.rst:348
 msgid ""
 "The first time you call this function, ``mydict`` contains a single item.  "
 "The second time, ``mydict`` contains two items because when ``foo()`` begins "
@@ -736,7 +730,7 @@ msgstr ""
 "γιατί όταν το ``foo()`` ξεκινά την εκτέλεση, το ``mydict`` ξεκινά με ένα "
 "αντικείμενο ήδη μέσα."
 
-#: faq/programming.rst:351
+#: faq/programming.rst:352
 msgid ""
 "It is often expected that a function call creates new objects for default "
 "values. This is not what happens. Default values are created exactly once, "
@@ -750,7 +744,7 @@ msgstr ""
 "αντικείμενο αλλάξει, όπως το λεξικό σε αυτό το παράδειγμα, επόμενες κλήσεις "
 "στην συνάρτηση θα αναφέρονται σε αυτό το αλλαγμένο αντικείμενο."
 
-#: faq/programming.rst:356
+#: faq/programming.rst:357
 msgid ""
 "By definition, immutable objects such as numbers, strings, tuples, and "
 "``None``, are safe from change. Changes to mutable objects such as "
@@ -760,7 +754,7 @@ msgstr ""
 "``None`` , είναι ασφαλή από αλλαγές. Οι αλλαγές σε μεταβλητά αντικείμενα "
 "όπως λεξικά, λίστες και παρουσίες κλάσεων μπορεί να οδηγήσουν σε σύγχυση."
 
-#: faq/programming.rst:360
+#: faq/programming.rst:361
 msgid ""
 "Because of this feature, it is good programming practice to not use mutable "
 "objects as default values.  Instead, use ``None`` as the default value and "
@@ -773,7 +767,7 @@ msgstr ""
 "ελέγξτε εάν η παράμετρος είναι ``None`` και δημιουργήστε μια νέα λίστα/"
 "λεξικά/ό,τι και αν είναι. Για παράδειγμα μην γράψετε::"
 
-#: faq/programming.rst:365
+#: faq/programming.rst:366
 msgid ""
 "def foo(mydict={}):\n"
 "    ..."
@@ -781,11 +775,11 @@ msgstr ""
 "def foo(mydict={}):\n"
 "    ..."
 
-#: faq/programming.rst:368
+#: faq/programming.rst:369
 msgid "but::"
 msgstr "αλλά::"
 
-#: faq/programming.rst:370
+#: faq/programming.rst:371
 msgid ""
 "def foo(mydict=None):\n"
 "    if mydict is None:\n"
@@ -795,7 +789,7 @@ msgstr ""
 "    if mydict is None:\n"
 "        mydict = {}  # create a new dict for local namespace"
 
-#: faq/programming.rst:374
+#: faq/programming.rst:375
 msgid ""
 "This feature can be useful.  When you have a function that's time-consuming "
 "to compute, a common technique is to cache the parameters and the resulting "
@@ -810,7 +804,7 @@ msgstr ""
 "ξανά η ίδια τιμή. Αυτό ονομάζεται \"memoizing\", και μπορεί να εφαρμοστεί ως "
 "εξής:"
 
-#: faq/programming.rst:379
+#: faq/programming.rst:380
 msgid ""
 "# Callers can only provide two parameters and optionally pass _cache by "
 "keyword\n"
@@ -834,7 +828,7 @@ msgstr ""
 "    _cache[(arg1, arg2)] = result           # Store result in the cache\n"
 "    return result"
 
-#: faq/programming.rst:389
+#: faq/programming.rst:390
 msgid ""
 "You could use a global variable containing a dictionary instead of the "
 "default value; it's a matter of taste."
@@ -842,14 +836,14 @@ msgstr ""
 "Θα μπορούσατε να χρησιμοποιήσετε μια καθολική μεταβλητή που περιέχει ένα "
 "λεξικό αντί για την προεπιλεγμένη τιμή∙ Είναι θέμα γούστου."
 
-#: faq/programming.rst:394
+#: faq/programming.rst:395
 msgid ""
 "How can I pass optional or keyword parameters from one function to another?"
 msgstr ""
 "Πώς μπορώ να μεταβιβάσω προαιρετικές παραμέτρους ή παραμέτρους λέξεων-"
 "κλειδιών από τη μια συνάρτηση στην άλλη;"
 
-#: faq/programming.rst:396
+#: faq/programming.rst:397
 msgid ""
 "Collect the arguments using the ``*`` and ``**`` specifiers in the "
 "function's parameter list; this gives you the positional arguments as a "
@@ -862,7 +856,7 @@ msgstr ""
 "μεταβιβάσετε αυτά τα ορίσματα κατά την κλήση άλλης συνάρτησης με τη χρήση "
 "των ``*`` και ``**``::"
 
-#: faq/programming.rst:401
+#: faq/programming.rst:402
 msgid ""
 "def f(x, *args, **kwargs):\n"
 "    ...\n"
@@ -876,11 +870,11 @@ msgstr ""
 "    ...\n"
 "    g(x, *args, **kwargs)"
 
-#: faq/programming.rst:415
+#: faq/programming.rst:416
 msgid "What is the difference between arguments and parameters?"
 msgstr "Ποια είναι η διαφορά μεταξύ ορισμάτων και παραμέτρων;"
 
-#: faq/programming.rst:417
+#: faq/programming.rst:418
 msgid ""
 ":term:`Parameters <parameter>` are defined by the names that appear in a "
 "function definition, whereas :term:`arguments <argument>` are the values "
@@ -894,7 +888,7 @@ msgstr ""
 "παράμετροι ορίζουν τι :term:`kind of arguments <parameter>` μπορεί να δεχτεί "
 "μια συνάρτηση.  Για παράδειγμα δεδομένου του ορισμού της συνάρτησης::"
 
-#: faq/programming.rst:423
+#: faq/programming.rst:424
 msgid ""
 "def func(foo, bar=None, **kwargs):\n"
 "    pass"
@@ -902,7 +896,7 @@ msgstr ""
 "def func(foo, bar=None, **kwargs):\n"
 "    pass"
 
-#: faq/programming.rst:426
+#: faq/programming.rst:427
 msgid ""
 "*foo*, *bar* and *kwargs* are parameters of ``func``.  However, when calling "
 "``func``, for example::"
@@ -910,23 +904,23 @@ msgstr ""
 "*foo*, *bar* και *kwargs* είναι παράμετροι της ``func``.  Ωστόσο, όταν "
 "καλείται η ``func``, για παράδειγμα::"
 
-#: faq/programming.rst:429
+#: faq/programming.rst:430
 msgid "func(42, bar=314, extra=somevar)"
 msgstr "func(42, bar=314, extra=somevar)"
 
-#: faq/programming.rst:431
+#: faq/programming.rst:432
 msgid "the values ``42``, ``314``, and ``somevar`` are arguments."
 msgstr "οι τιμές ``42``, ``314``, και ``somevar`` είναι ορίσματα."
 
-#: faq/programming.rst:435
+#: faq/programming.rst:436
 msgid "Why did changing list 'y' also change list 'x'?"
 msgstr "Γιατί η αλλαγή της λίστας 'y' αλλάζει επίσης και τη λίστα 'x';"
 
-#: faq/programming.rst:437
+#: faq/programming.rst:438
 msgid "If you wrote code like::"
 msgstr "Αν γράψατε κώδικα όπως::"
 
-#: faq/programming.rst:439
+#: faq/programming.rst:440
 msgid ""
 ">>> x = []\n"
 ">>> y = x\n"
@@ -944,18 +938,18 @@ msgstr ""
 ">>> x\n"
 "[10]"
 
-#: faq/programming.rst:447
+#: faq/programming.rst:448
 msgid ""
 "you might be wondering why appending an element to ``y`` changed ``x`` too."
 msgstr ""
 "μπορεί να αναρωτιέστε γιατί η προσθήκη ενός στοιχείου στο ``y`` άλλαξε "
 "επίσης το ``x``."
 
-#: faq/programming.rst:449
+#: faq/programming.rst:450
 msgid "There are two factors that produce this result:"
 msgstr "Υπάρχουν δύο παράγοντες που παράγουν αυτό το αποτέλεσμα:"
 
-#: faq/programming.rst:451
+#: faq/programming.rst:452
 msgid ""
 "Variables are simply names that refer to objects.  Doing ``y = x`` doesn't "
 "create a copy of the list -- it creates a new variable ``y`` that refers to "
@@ -968,14 +962,14 @@ msgstr ""
 "``x``.  Αυτό σημαίνει ότι υπάρχει μόνο ένα αντικείμενο  (η λίστα), και το "
 "``x`` και το ``y`` αναφέρονται σε αυτό."
 
-#: faq/programming.rst:455
+#: faq/programming.rst:456
 msgid ""
 "Lists are :term:`mutable`, which means that you can change their content."
 msgstr ""
 "Οι λίστες είναι :term:`mutable`, που σημαίνει ότι μπορείτε να αλλάξετε το "
 "περιεχόμενό τους."
 
-#: faq/programming.rst:457
+#: faq/programming.rst:458
 msgid ""
 "After the call to :meth:`~sequence.append`, the content of the mutable "
 "object has changed from ``[]`` to ``[10]``.  Since both the variables refer "
@@ -986,11 +980,11 @@ msgstr ""
 "μεταβλητές αναφέρονται στο ίδιο αντικείμενο, χρησιμοποιώντας οποιοδήποτε "
 "όνομα αποκτά πρόσβαση στην τροποποιημένη τιμή ``[10]``."
 
-#: faq/programming.rst:461
+#: faq/programming.rst:462
 msgid "If we instead assign an immutable object to ``x``::"
 msgstr "Αν αντιστοιχίσουμε ένα αμετάβλητο αντικείμενο σε ``x``::"
 
-#: faq/programming.rst:463
+#: faq/programming.rst:464
 msgid ""
 ">>> x = 5  # ints are immutable\n"
 ">>> y = x\n"
@@ -1008,7 +1002,7 @@ msgstr ""
 ">>> y\n"
 "5"
 
-#: faq/programming.rst:471
+#: faq/programming.rst:472
 msgid ""
 "we can see that in this case ``x`` and ``y`` are not equal anymore.  This is "
 "because integers are :term:`immutable`, and when we do ``x = x + 1`` we are "
@@ -1027,7 +1021,7 @@ msgstr ""
 "and ``5``) και δύο μεταβλητές που αναφέρονται σε αυτά (``x`` τώρα αναφέρεται "
 "σε ``6`` αλλά ``y`` ακόμα αναφέρεται στο ``5``)."
 
-#: faq/programming.rst:479
+#: faq/programming.rst:480
 msgid ""
 "Some operations (for example ``y.append(10)`` and ``y.sort()``) mutate the "
 "object, whereas superficially similar operations (for example ``y = y + "
@@ -1049,7 +1043,7 @@ msgstr ""
 "προκαλέσει το πρόγραμμά σας να δημιουργήσει ένα λάθος το οποίο "
 "διαγιγνώσκεται εύκολα."
 
-#: faq/programming.rst:488
+#: faq/programming.rst:489
 msgid ""
 "However, there is one class of operations where the same operation sometimes "
 "has different behaviors with different types:  the augmented assignment "
@@ -1065,34 +1059,34 @@ msgstr ""
 "extend([1, 2, 3])`` και μεταλλάσσει ``a_list``, ενώ το ``some_tuple += (1, "
 "2, 3)`` και ``some_int += 1`` δημιουργεί νέα αντικείμενα)."
 
-#: faq/programming.rst:495
+#: faq/programming.rst:496
 msgid "In other words:"
 msgstr "Με άλλα λόγια:"
 
-#: faq/programming.rst:497
+#: faq/programming.rst:498
 msgid ""
-"If we have a mutable object (:class:`list`, :class:`dict`, :class:`set`, "
-"etc.), we can use some specific operations to mutate it and all the "
+"If we have a mutable object (such as :class:`list`, :class:`dict`, :class:"
+"`set`), we can use some specific operations to mutate it and all the "
 "variables that refer to it will see the change."
 msgstr ""
-"Εάν έχουμε ένα μεταβλητό αντικείμενο (:class:`list`, :class:`dict`, :class:"
-"`set`, κλπ.), μπορούμε να χρησιμοποιήσουμε ορισμένες συγκεκριμένες "
+"Εάν έχουμε ένα μεταβλητό αντικείμενο (όπως :class:`list`, :class:`dict`, :"
+"class:`set`), μπορούμε να χρησιμοποιήσουμε ορισμένες συγκεκριμένες "
 "λειτουργίες για να το μεταλλάξουμε και όλες τις μεταβλητές που αναφέρονται "
 "σε αυτό θα δουν την αλλαγή."
 
-#: faq/programming.rst:500
+#: faq/programming.rst:501
 msgid ""
-"If we have an immutable object (:class:`str`, :class:`int`, :class:`tuple`, "
-"etc.), all the variables that refer to it will always see the same value, "
+"If we have an immutable object (such as :class:`str`, :class:`int`, :class:"
+"`tuple`), all the variables that refer to it will always see the same value, "
 "but operations that transform that value into a new value always return a "
 "new object."
 msgstr ""
-"Εάν έχουμε ένα αμετάβλητο αντικείμενο (:class:`str`, :class:`int`, :class:"
-"`tuple`, κλπ.), όλες οι μεταβλητές που αναφέρονται σε αυτό θα βλέπουν πάντα "
+"Εάν έχουμε ένα αμετάβλητο αντικείμενο (όπως :class:`str`, :class:`int`, :"
+"class:`tuple`), όλες οι μεταβλητές που αναφέρονται σε αυτό θα βλέπουν πάντα "
 "την ίδια τιμή, αλλά οι λειτουργίες που θα μετατρέπουν αυτήν την τιμή σε μια "
 "νέα τιμή επιστρέφουν πάντα ένα νέο αντικείμενο."
 
-#: faq/programming.rst:505
+#: faq/programming.rst:506
 msgid ""
 "If you want to know if two variables refer to the same object or not, you "
 "can use the :keyword:`is` operator, or the built-in function :func:`id`."
@@ -1101,17 +1095,17 @@ msgstr ""
 "ή όχι, μπορείτε να χρησιμοποιήσετε τον :keyword:`is` operator, ή την "
 "ενσωματωμένη συνάρτηση :func:`id`."
 
-#: faq/programming.rst:510
+#: faq/programming.rst:511
 msgid "How do I write a function with output parameters (call by reference)?"
 msgstr ""
 "Πως μπορώ να γράψω μια συνάρτηση με παραμέτρους εξόδου (κλήση με αναφορά);"
 
-#: faq/programming.rst:512
+#: faq/programming.rst:513
 msgid ""
 "Remember that arguments are passed by assignment in Python.  Since "
 "assignment just creates references to objects, there's no alias between an "
-"argument name in the caller and callee, and so no call-by-reference per se.  "
-"You can achieve the desired effect in a number of ways."
+"argument name in the caller and callee, and consequently no call-by-"
+"reference.  You can achieve the desired effect in a number of ways."
 msgstr ""
 "Να θυμάστε ότι τα ορίσματα μεταβιβάζονται με ανάθεση στην Python.  Εφόσον η "
 "εκχώρηση δημιουργεί απλώς αναφορές σε αντικείμενα, δεν υπάρχει ψευδώνυμο "
@@ -1119,11 +1113,11 @@ msgstr ""
 "και επομένως δεν υπάρχει κλήση προς αναφορά από μόνη της. Μπορείτε να "
 "επιτύχετε το επιθυμητό αποτέλεσμα με διάφορους τρόπους."
 
-#: faq/programming.rst:517
+#: faq/programming.rst:518
 msgid "By returning a tuple of the results::"
 msgstr "Επιστρέφοντας μια πλειάδα των αποτελεσμάτων::"
 
-#: faq/programming.rst:519
+#: faq/programming.rst:520
 msgid ""
 ">>> def func1(a, b):\n"
 "...     a = 'new-value'        # a and b are local names\n"
@@ -1143,23 +1137,23 @@ msgstr ""
 ">>> func1(x, y)\n"
 "('new-value', 100)"
 
-#: faq/programming.rst:528
+#: faq/programming.rst:529
 msgid "This is almost always the clearest solution."
 msgstr "Αυτή είναι σχεδόν πάντα η πιο ξεκάθαρη λύση."
 
-#: faq/programming.rst:530
+#: faq/programming.rst:531
 msgid ""
 "By using global variables.  This isn't thread-safe, and is not recommended."
 msgstr ""
 "Χρησιμοποιώντας καθολικές μεταβλητές.  Αυτό δεν είναι ασφαλές για νήμα και "
 "δεν συνίσταται."
 
-#: faq/programming.rst:532
+#: faq/programming.rst:533
 msgid "By passing a mutable (changeable in-place) object::"
 msgstr ""
 "Περνώντας ένα μεταβλητό (με δυνατότητα αλλαγής επί τόπου) αντικείμενο::"
 
-#: faq/programming.rst:534
+#: faq/programming.rst:535
 msgid ""
 ">>> def func2(a):\n"
 "...     a[0] = 'new-value'     # 'a' references a mutable list\n"
@@ -1179,11 +1173,11 @@ msgstr ""
 ">>> args\n"
 "['new-value', 100]"
 
-#: faq/programming.rst:543
+#: faq/programming.rst:544
 msgid "By passing in a dictionary that gets mutated::"
 msgstr "Περνώντας σε ένα λεξικό που μεταλλάσσεται::"
 
-#: faq/programming.rst:545
+#: faq/programming.rst:546
 msgid ""
 ">>> def func3(args):\n"
 "...     args['a'] = 'new-value'     # args is a mutable dictionary\n"
@@ -1203,11 +1197,11 @@ msgstr ""
 ">>> args\n"
 "{'a': 'new-value', 'b': 100}"
 
-#: faq/programming.rst:554
+#: faq/programming.rst:555
 msgid "Or bundle up values in a class instance::"
 msgstr "Ή ομαδοποιήστε τιμές σε μια παρουσία κλάσης::"
 
-#: faq/programming.rst:556
+#: faq/programming.rst:557
 msgid ""
 ">>> class Namespace:\n"
 "...     def __init__(self, /, **args):\n"
@@ -1237,21 +1231,21 @@ msgstr ""
 ">>> vars(args)\n"
 "{'a': 'new-value', 'b': 100}"
 
-#: faq/programming.rst:571
+#: faq/programming.rst:572
 msgid "There's almost never a good reason to get this complicated."
 msgstr "Δεν υπάρχει σχεδόν ποτέ καλός λόγος να γίνει αυτό περίπλοκο."
 
-#: faq/programming.rst:573
+#: faq/programming.rst:574
 msgid "Your best choice is to return a tuple containing the multiple results."
 msgstr ""
 "Η καλύτερη επιλογή σας είναι να επιστρέψετε μια πλειάδα που περιέχει "
 "πολλαπλά αποτελέσματα."
 
-#: faq/programming.rst:577
+#: faq/programming.rst:578
 msgid "How do you make a higher order function in Python?"
 msgstr "Πως δημιουργείτε μια συνάρτηση υψηλότερης τάξης στην Python;"
 
-#: faq/programming.rst:579
+#: faq/programming.rst:580
 msgid ""
 "You have two choices: you can use nested scopes or you can use callable "
 "objects. For example, suppose you wanted to define ``linear(a,b)`` which "
@@ -1263,7 +1257,7 @@ msgstr ""
 "θέλετε να ορίσετε το ``linear(a,b)`` που επιστρέφει μια συνάρτηση ``f(x)`` "
 "που υπολογίζει την τιμή ``a*x+b``.  Χρησιμοποιώντας ένθετα πεδία::"
 
-#: faq/programming.rst:583
+#: faq/programming.rst:584
 msgid ""
 "def linear(a, b):\n"
 "    def result(x):\n"
@@ -1275,11 +1269,11 @@ msgstr ""
 "        return a * x + b\n"
 "    return result"
 
-#: faq/programming.rst:588
+#: faq/programming.rst:589
 msgid "Or using a callable object::"
 msgstr "Ή χρησιμοποιώντας ένα callable αντικείμενο::"
 
-#: faq/programming.rst:590
+#: faq/programming.rst:591
 msgid ""
 "class linear:\n"
 "\n"
@@ -1297,19 +1291,19 @@ msgstr ""
 "    def __call__(self, x):\n"
 "        return self.a * x + self.b"
 
-#: faq/programming.rst:598
+#: faq/programming.rst:599
 msgid "In both cases, ::"
 msgstr "Και στις δύο περιπτώσεις::"
 
-#: faq/programming.rst:600
+#: faq/programming.rst:601
 msgid "taxes = linear(0.3, 2)"
 msgstr "taxes = linear(0.3, 2)"
 
-#: faq/programming.rst:602
+#: faq/programming.rst:603
 msgid "gives a callable object where ``taxes(10e6) == 0.3 * 10e6 + 2``."
 msgstr "δίνει ένα callable αντικείμενο όπου ``taxes(10e6) == 0.3 * 10e6 + 2``."
 
-#: faq/programming.rst:604
+#: faq/programming.rst:605
 msgid ""
 "The callable object approach has the disadvantage that it is a bit slower "
 "and results in slightly longer code.  However, note that a collection of "
@@ -1320,7 +1314,7 @@ msgstr ""
 "συλλογή από callables μπορεί να μοιραστεί την υπογραφή τους μέσω "
 "κληρονομικότητας::"
 
-#: faq/programming.rst:608
+#: faq/programming.rst:609
 msgid ""
 "class exponential(linear):\n"
 "    # __init__ inherited\n"
@@ -1332,12 +1326,12 @@ msgstr ""
 "    def __call__(self, x):\n"
 "        return self.a * (x ** self.b)"
 
-#: faq/programming.rst:613
+#: faq/programming.rst:614
 msgid "Object can encapsulate state for several methods::"
 msgstr ""
 "Το αντικείμενο μπορεί να ενθυλακώσει την κατάσταση για πολλές μεθόδους::"
 
-#: faq/programming.rst:615
+#: faq/programming.rst:616
 msgid ""
 "class counter:\n"
 "\n"
@@ -1371,7 +1365,7 @@ msgstr ""
 "count = counter()\n"
 "inc, dec, reset = count.up, count.down, count.set"
 
-#: faq/programming.rst:631
+#: faq/programming.rst:632
 msgid ""
 "Here ``inc()``, ``dec()`` and ``reset()`` act like functions which share the "
 "same counting variable."
@@ -1379,11 +1373,11 @@ msgstr ""
 "Εδώ ``inc()``, ``dec()`` και ``reset()`` λειτουργούν σαν συναρτήσεις που "
 "μοιράζονται την ίδια μεταβλητή μέτρησης."
 
-#: faq/programming.rst:636
+#: faq/programming.rst:637
 msgid "How do I copy an object in Python?"
 msgstr "Πως μπορώ να αντιγράψω ένα αντικείμενο στην Python;"
 
-#: faq/programming.rst:638
+#: faq/programming.rst:639
 msgid ""
 "In general, try :func:`copy.copy` or :func:`copy.deepcopy` for the general "
 "case. Not all objects can be copied, but most can."
@@ -1392,7 +1386,7 @@ msgstr ""
 "περίπτωση. Δεν μπορούν να αντιγραφούν όλα τα αντικείμενα, αλλά τα "
 "περισσότερα μπορούν."
 
-#: faq/programming.rst:641
+#: faq/programming.rst:642
 msgid ""
 "Some objects can be copied more easily.  Dictionaries have a :meth:`~dict."
 "copy` method::"
@@ -1400,23 +1394,23 @@ msgstr ""
 "Ορισμένα αντικείμενα μπορούν να αντιγραφούν πιο εύκολα.  Τα λεξικά έχουν μία "
 "μέθοδο :meth:`~dict.copy`::"
 
-#: faq/programming.rst:644
+#: faq/programming.rst:645
 msgid "newdict = olddict.copy()"
 msgstr "newdict = olddict.copy()"
 
-#: faq/programming.rst:646
+#: faq/programming.rst:647
 msgid "Sequences can be copied by slicing::"
 msgstr "Οι ακολουθίες μπορούν να αντιγραφούν με τεμαχισμό::"
 
-#: faq/programming.rst:648
+#: faq/programming.rst:649
 msgid "new_l = l[:]"
 msgstr "new_l = l[:]"
 
-#: faq/programming.rst:652
+#: faq/programming.rst:653
 msgid "How can I find the methods or attributes of an object?"
 msgstr "Πως μπορώ να βρω τις μεθόδους ή τα χαρακτηριστικά ενός αντικειμένου;"
 
-#: faq/programming.rst:654
+#: faq/programming.rst:655
 msgid ""
 "For an instance ``x`` of a user-defined class, :func:`dir(x) <dir>` returns "
 "an alphabetized list of the names containing the instance attributes and "
@@ -1427,11 +1421,11 @@ msgstr ""
 "χαρακτηριστικά της οντότητας και τις μεθόδους και τα χαρακτηριστικά που "
 "ορίζονται από την κλάση του."
 
-#: faq/programming.rst:660
+#: faq/programming.rst:661
 msgid "How can my code discover the name of an object?"
 msgstr "Πως μπορεί ο κώδικας μου να ανακαλύψει το όνομα ενός αντικειμένου;"
 
-#: faq/programming.rst:662
+#: faq/programming.rst:663
 msgid ""
 "Generally speaking, it can't, because objects don't really have names. "
 "Essentially, assignment always binds a name to a value; the same is true of "
@@ -1443,7 +1437,7 @@ msgstr ""
 "ίδιο ισχύει για τις δηλώσεις ``def`` και ``class``, αλλά σε αυτή την "
 "περίπτωση η τιμή είναι callable. Λάβετε υπόψη τον ακόλουθο κώδικα::"
 
-#: faq/programming.rst:667
+#: faq/programming.rst:668
 msgid ""
 ">>> class A:\n"
 "...     pass\n"
@@ -1467,7 +1461,7 @@ msgstr ""
 ">>> print(a)\n"
 "<__main__.A object at 0x16D07CC>"
 
-#: faq/programming.rst:678
+#: faq/programming.rst:679
 msgid ""
 "Arguably the class has a name: even though it is bound to two names and "
 "invoked through the name ``B`` the created instance is still reported as an "
@@ -1481,7 +1475,7 @@ msgstr ""
 "αδύνατο να πούμε είτε το όνομα της οντότητας είναι ``a`` ή ``b``, καθώς και "
 "τα δύο  ονόματα συνδέονται με την ίδια τιμή."
 
-#: faq/programming.rst:683
+#: faq/programming.rst:684
 msgid ""
 "Generally speaking it should not be necessary for your code to \"know the "
 "names\" of particular values. Unless you are deliberately writing "
@@ -1493,7 +1487,7 @@ msgstr ""
 "ενδοσκοπικά (introspective) προγράμματα, αυτό είναι συνήθως μια ένδειξη ότι "
 "μια αλλαγή προσέγγισης μπορεί να είναι επωφελής."
 
-#: faq/programming.rst:688
+#: faq/programming.rst:689
 msgid ""
 "In comp.lang.python, Fredrik Lundh once gave an excellent analogy in answer "
 "to this question:"
@@ -1501,7 +1495,7 @@ msgstr ""
 "Στο comp.lang.python, ο Fredrik Lundh έδωσε μια εξαιρετική αναλογία ως "
 "απάντηση σε αυτήν την ερώτηση:"
 
-#: faq/programming.rst:691
+#: faq/programming.rst:692
 msgid ""
 "The same way as you get the name of that cat you found on your porch: the "
 "cat (object) itself cannot tell you its name, and it doesn't really care -- "
@@ -1514,7 +1508,7 @@ msgstr ""
 "λέγεται είναι να ρωτήσετε όλους τους γείτονές σας (namespaces) αν είναι η "
 "γάτα τους (αντικείμενο)..."
 
-#: faq/programming.rst:696
+#: faq/programming.rst:697
 msgid ""
 "....and don't be surprised if you'll find that it's known by many names, or "
 "no name at all!"
@@ -1522,16 +1516,16 @@ msgstr ""
 "....και μην εκπλαγείτε αν διαπιστώσετε ότι είναι γνωστό με πολλά ονόματα, ή "
 "κανένα όνομα!"
 
-#: faq/programming.rst:701
+#: faq/programming.rst:702
 msgid "What's up with the comma operator's precedence?"
 msgstr "Τι συμβαίνει με την προτεραιότητα του τελεστή κόμματος;"
 
-#: faq/programming.rst:703
+#: faq/programming.rst:704
 msgid "Comma is not an operator in Python.  Consider this session::"
 msgstr ""
 "Το κόμμα δεν είναι τελεστής στην Python.  Σκεφτείτε αυτήν την συνεδρία::"
 
-#: faq/programming.rst:705
+#: faq/programming.rst:706
 msgid ""
 ">>> \"a\" in \"b\", \"a\"\n"
 "(False, 'a')"
@@ -1539,7 +1533,7 @@ msgstr ""
 ">>> \"a\" in \"b\", \"a\"\n"
 "(False, 'a')"
 
-#: faq/programming.rst:708
+#: faq/programming.rst:709
 msgid ""
 "Since the comma is not an operator, but a separator between expressions the "
 "above is evaluated as if you had entered::"
@@ -1547,37 +1541,37 @@ msgstr ""
 "Δεδομένου ότι το κόμμα δεν είναι τελεστής, αλλά διαχωριστικό μεταξύ των "
 "εκφράσεων, τα παραπάνω αξιολογούνται σαν να είχατε εισαγάγει::"
 
-#: faq/programming.rst:711
+#: faq/programming.rst:712
 msgid "(\"a\" in \"b\"), \"a\""
 msgstr "(\"a\" in \"b\"), \"a\""
 
-#: faq/programming.rst:713
+#: faq/programming.rst:714
 msgid "not::"
 msgstr "δεν::"
 
-#: faq/programming.rst:715
+#: faq/programming.rst:716
 msgid "\"a\" in (\"b\", \"a\")"
 msgstr "\"a\" in (\"b\", \"a\")"
 
-#: faq/programming.rst:717
+#: faq/programming.rst:718
 msgid ""
-"The same is true of the various assignment operators (``=``, ``+=`` etc).  "
-"They are not truly operators but syntactic delimiters in assignment "
+"The same is true of the various assignment operators (``=``, ``+=``, and so "
+"on). They are not truly operators but syntactic delimiters in assignment "
 "statements."
 msgstr ""
 "Το ίδιο ισχύει για τους διάφορους τελεστές εκχώρησης (``=``, ``+=`` κλπ). "
 "Δεν είναι πραγματικά τελεστές αλλά συντακτικοί delimiters σε δηλώσεις "
 "εκχώρησης."
 
-#: faq/programming.rst:722
+#: faq/programming.rst:723
 msgid "Is there an equivalent of C's \"?:\" ternary operator?"
 msgstr "Υπάρχει ισοδύναμο του τριαδικού τελεστή \"?:\" της C;"
 
-#: faq/programming.rst:724
+#: faq/programming.rst:725
 msgid "Yes, there is. The syntax is as follows::"
 msgstr "Ναι υπάρχει, Η σύνταξη έχει ως εξής::"
 
-#: faq/programming.rst:726
+#: faq/programming.rst:727
 msgid ""
 "[on_true] if [expression] else [on_false]\n"
 "\n"
@@ -1589,7 +1583,7 @@ msgstr ""
 "x, y = 50, 25\n"
 "small = x if x < y else y"
 
-#: faq/programming.rst:731
+#: faq/programming.rst:732
 msgid ""
 "Before this syntax was introduced in Python 2.5, a common idiom was to use "
 "logical operators::"
@@ -1597,11 +1591,11 @@ msgstr ""
 "Πριν εισαχθεί αυτή η σύνταξη στην Python 2.5, ένα κοινό ιδίωμα ήταν η χρήση "
 "λογικών τελεστών::"
 
-#: faq/programming.rst:734
+#: faq/programming.rst:735
 msgid "[expression] and [on_true] or [on_false]"
 msgstr "[έκφραση] and [αληθές] or [ψευδές]"
 
-#: faq/programming.rst:736
+#: faq/programming.rst:737
 msgid ""
 "However, this idiom is unsafe, as it can give wrong results when *on_true* "
 "has a false boolean value.  Therefore, it is always better to use the ``... "
@@ -1611,11 +1605,11 @@ msgstr ""
 "αποτελέσματα όταν το *on_true* έχει ψευδή δυαδική τιμή. Επομένως, είναι "
 "πάντα καλύτερο να χρησιμοποιήσετε τη φόρμα ``... if ... else ...``."
 
-#: faq/programming.rst:742
+#: faq/programming.rst:743
 msgid "Is it possible to write obfuscated one-liners in Python?"
 msgstr "Είναι δυνατόν να γράψουμε ασαφή one-liners στην Python;"
 
-#: faq/programming.rst:744
+#: faq/programming.rst:745
 msgid ""
 "Yes.  Usually this is done by nesting :keyword:`lambda` within :keyword:`!"
 "lambda`.  See the following three examples, slightly adapted from Ulf "
@@ -1625,7 +1619,7 @@ msgstr ""
 "keyword:`!lambda`.  Δείτε τα ακόλουθα τρία παραδείγματα, ελαφρώς "
 "προσαρμοσμένα από τον Ulf Bartelt::"
 
-#: faq/programming.rst:747
+#: faq/programming.rst:748
 msgid ""
 "from functools import reduce\n"
 "\n"
@@ -1677,15 +1671,15 @@ msgstr ""
 "#        |          |_________________ range on y axis\n"
 "#        |____________________________ range on x axis"
 
-#: faq/programming.rst:771
+#: faq/programming.rst:772
 msgid "Don't try this at home, kids!"
 msgstr "Μην το δοκιμάσετε στο σπίτι, παιδιά!"
 
-#: faq/programming.rst:777
+#: faq/programming.rst:778
 msgid "What does the slash(/) in the parameter list of a function mean?"
 msgstr "Τι σημαίνει η κάθετος(/) στη λίστα παραμέτρων μιας συνάρτησης;"
 
-#: faq/programming.rst:779
+#: faq/programming.rst:780
 msgid ""
 "A slash in the argument list of a function denotes that the parameters prior "
 "to it are positional-only.  Positional-only parameters are the ones without "
@@ -1702,7 +1696,7 @@ msgstr ""
 "είναι μια συνάρτηση που δέχεται μόνο παραμέτρους θέσης. Η τεκμηρίωσή τους "
 "μοιάζει με αυτό::"
 
-#: faq/programming.rst:786
+#: faq/programming.rst:787
 msgid ""
 ">>> help(divmod)\n"
 "Help on built-in function divmod in module builtins:\n"
@@ -1716,7 +1710,7 @@ msgstr ""
 "divmod(x, y, /)\n"
 "    Return the tuple (x//y, x%y).  Invariant: div*y + mod == x."
 
-#: faq/programming.rst:792
+#: faq/programming.rst:793
 msgid ""
 "The slash at the end of the parameter list means that both parameters are "
 "positional-only. Thus, calling :func:`divmod` with keyword arguments would "
@@ -1726,7 +1720,7 @@ msgstr ""
 "είναι μόνο θέσης. Επομένως, η κλήση της :func:`divmod` με ορίσματα λέξεων "
 "κλειδιών θα οδηγούσε σε σφάλμα::"
 
-#: faq/programming.rst:796
+#: faq/programming.rst:797
 msgid ""
 ">>> divmod(x=3, y=4)\n"
 "Traceback (most recent call last):\n"
@@ -1738,15 +1732,15 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: divmod() takes no keyword arguments"
 
-#: faq/programming.rst:803
+#: faq/programming.rst:804
 msgid "Numbers and strings"
 msgstr "Αριθμοί και συμβολοσειρές"
 
-#: faq/programming.rst:806
+#: faq/programming.rst:807
 msgid "How do I specify hexadecimal and octal integers?"
 msgstr "Πώς προσδιορίζω δεκαεξαδικούς ή οκταδικούς ακέραιους αριθμούς;"
 
-#: faq/programming.rst:808
+#: faq/programming.rst:809
 msgid ""
 "To specify an octal digit, precede the octal value with a zero, and then a "
 "lower or uppercase \"o\".  For example, to set the variable \"a\" to the "
@@ -1757,7 +1751,7 @@ msgstr ""
 "τη μεταβλητή \"a\" στην οκταδική τιμή \"10\" (8 σε δεκαδικό), "
 "πληκτρολογήστε::"
 
-#: faq/programming.rst:812
+#: faq/programming.rst:813
 msgid ""
 ">>> a = 0o10\n"
 ">>> a\n"
@@ -1767,7 +1761,7 @@ msgstr ""
 ">>> a\n"
 "8"
 
-#: faq/programming.rst:816
+#: faq/programming.rst:817
 msgid ""
 "Hexadecimal is just as easy.  Simply precede the hexadecimal number with a "
 "zero, and then a lower or uppercase \"x\".  Hexadecimal digits can be "
@@ -1778,7 +1772,7 @@ msgstr ""
 "ψηφία μπορούν να καθοριστούν με πεζά ή κεφαλαία. Για παράδειγμα, στον "
 "διερμηνέα Python::"
 
-#: faq/programming.rst:820
+#: faq/programming.rst:821
 msgid ""
 ">>> a = 0xa5\n"
 ">>> a\n"
@@ -1794,11 +1788,11 @@ msgstr ""
 ">>> b\n"
 "178"
 
-#: faq/programming.rst:829
+#: faq/programming.rst:830
 msgid "Why does -22 // 10 return -3?"
 msgstr "Γιατί το -22 // 10 επιστρέφει -3;"
 
-#: faq/programming.rst:831
+#: faq/programming.rst:832
 msgid ""
 "It's primarily driven by the desire that ``i % j`` have the same sign as "
 "``j``. If you want that, and also want::"
@@ -1806,11 +1800,11 @@ msgstr ""
 "Οφείλεται κυρίως στην επιθυμία που το ``i % j`` να έχει το ίδιο πρόσημο με "
 "το ``j``. Εάν το θέλετε αυτό, και θέλετε επίσης::"
 
-#: faq/programming.rst:834
+#: faq/programming.rst:835
 msgid "i == (i // j) * j + (i % j)"
 msgstr "i == (i // j) * j + (i % j)"
 
-#: faq/programming.rst:836
+#: faq/programming.rst:837
 msgid ""
 "then integer division has to return the floor.  C also requires that "
 "identity to hold, and then compilers that truncate ``i // j`` need to make "
@@ -1821,7 +1815,7 @@ msgstr ""
 "μεταγλωττιστές που περικόπτουν το ``i // j`` πρέπει να κάνουν το ``i % j`` "
 "να έχει το ίδιο πρόσημο με το ``i``."
 
-#: faq/programming.rst:840
+#: faq/programming.rst:841
 msgid ""
 "There are few real use cases for ``i % j`` when ``j`` is negative.  When "
 "``j`` is positive, there are many, and in virtually all of them it's more "
@@ -1835,12 +1829,12 @@ msgstr ""
 "10 τι έλεγε πριν από 200 ώρες; ``-190 % 12 == 2`` είναι χρήσιμο∙ το ``-190 % "
 "12 == -10`` είναι ένα σφάλμα που περιμένει να δαγκώσει."
 
-#: faq/programming.rst:848
+#: faq/programming.rst:849
 msgid "How do I get int literal attribute instead of SyntaxError?"
 msgstr ""
 "Πώς μπορώ να πάρω το literal χαρακτηριστικό int αντί για το SyntaxError;"
 
-#: faq/programming.rst:850
+#: faq/programming.rst:851
 msgid ""
 "Trying to lookup an ``int`` literal attribute in the normal manner gives a :"
 "exc:`SyntaxError` because the period is seen as a decimal point::"
@@ -1849,7 +1843,7 @@ msgstr ""
 "τρόπο δίνει ένα :exc:`SyntaxError` επειδή η περίοδος θεωρείται ως "
 "υποδιαστολή::"
 
-#: faq/programming.rst:853
+#: faq/programming.rst:854
 msgid ""
 ">>> 1.__class__\n"
 "  File \"<stdin>\", line 1\n"
@@ -1863,7 +1857,7 @@ msgstr ""
 "   ^\n"
 "SyntaxError: invalid decimal literal"
 
-#: faq/programming.rst:859
+#: faq/programming.rst:860
 msgid ""
 "The solution is to separate the literal from the period with either a space "
 "or parentheses."
@@ -1871,22 +1865,22 @@ msgstr ""
 "Η λύση είναι να διαχωριστεί το literal από την τελεία είτε με κενό είτε με "
 "παρένθεση."
 
-#: faq/programming.rst:869
+#: faq/programming.rst:870
 msgid "How do I convert a string to a number?"
 msgstr "Πως μετατρέπω μια συμβολοσειρά σε έναν αριθμό;"
 
-#: faq/programming.rst:871
+#: faq/programming.rst:872
 msgid ""
-"For integers, use the built-in :func:`int` type constructor, e.g. "
+"For integers, use the built-in :func:`int` type constructor, for example, "
 "``int('144') == 144``.  Similarly, :func:`float` converts to a floating-"
-"point number, e.g. ``float('144') == 144.0``."
+"point number, for example, ``float('144') == 144.0``."
 msgstr ""
 "Για ακέραιους αριθμούς, χρησιμοποιήστε τον ενσωματωμένο κατασκευαστή τύπου :"
 "func:`int` , π.χ. ``int('144') == 144``.  Ομοίως, το :func:`float` "
 "μετατρέπει σε έναν αριθμός κινητής υποδιαστολής π.χ. ``float('144') == "
 "144.0``."
 
-#: faq/programming.rst:875
+#: faq/programming.rst:876
 msgid ""
 "By default, these interpret the number as decimal, so that ``int('0144') == "
 "144`` holds true, and ``int('0x144')`` raises :exc:`ValueError`. "
@@ -1903,7 +1897,7 @@ msgstr ""
 "Python: ένα αρχικό '0o' υποδηλώνει οκταδικό , και το '0x' δείχνει έναν "
 "δεκαεξαδικό αριθμό."
 
-#: faq/programming.rst:882
+#: faq/programming.rst:883
 msgid ""
 "Do not use the built-in function :func:`eval` if all you need is to convert "
 "strings to numbers.  :func:`eval` will be significantly slower and it "
@@ -1920,48 +1914,48 @@ msgstr ""
 "``__import__('os').system(\"rm -rf $HOME\")`` το οποίο θα διαγράψει το home "
 "φάκελο."
 
-#: faq/programming.rst:889
+#: faq/programming.rst:890
 msgid ""
 ":func:`eval` also has the effect of interpreting numbers as Python "
-"expressions, so that e.g. ``eval('09')`` gives a syntax error because Python "
-"does not allow leading '0' in a decimal number (except '0')."
+"expressions, so that, for example, ``eval('09')`` gives a syntax error "
+"because Python does not allow leading '0' in a decimal number (except '0')."
 msgstr ""
-":func:`eval` έχει επίσης ως αποτέλεσμα την ερμηνεία των αριθμών ως εκφράσεις "
-"Python, έτσι ώστε π.χ. το ``eval('09')`` δίνει ένα συντακτικό σφάλμα επειδή "
-"η Python δεν επιτρέπει την εισαγωγή του '0' σε έναν δεκαδικό αριθμό (εκτός "
-"'0')."
+"Το :func:`eval` έχει επίσης ως αποτέλεσμα την διερμηνεία των αριθμών ως "
+"εκφράσεις Python, έτσι ώστε π.χ. το ``eval('09')`` δίνει ένα συντακτικό "
+"σφάλμα επειδή η Python δεν επιτρέπει την εισαγωγή του '0' σε έναν δεκαδικό "
+"αριθμό (εκτός '0')."
 
-#: faq/programming.rst:895
+#: faq/programming.rst:896
 msgid "How do I convert a number to a string?"
 msgstr "Πως μετατρέπω έναν αριθμό σε συμβολοσειρά;"
 
-#: faq/programming.rst:897
+#: faq/programming.rst:898
 msgid ""
-"To convert, e.g., the number ``144`` to the string ``'144'``, use the built-"
-"in type constructor :func:`str`.  If you want a hexadecimal or octal "
+"For example, to convert the number ``144`` to the string ``'144'``, use the "
+"built-in type constructor :func:`str`.  If you want a hexadecimal or octal "
 "representation, use the built-in functions :func:`hex` or :func:`oct`.  For "
 "fancy formatting, see the :ref:`f-strings` and :ref:`formatstrings` "
-"sections, e.g. ``\"{:04d}\".format(144)`` yields ``'0144'`` and ``\"{:.3f}\"."
-"format(1.0/3.0)`` yields ``'0.333'``."
+"sections. For example, ``\"{:04d}\".format(144)`` yields ``'0144'`` and "
+"``\"{:.3f}\".format(1.0/3.0)`` yields ``'0.333'``."
 msgstr ""
-"Για να μετατρέψετε, πχ τον αριθμό ``144`` στη συμβολοσειρά ``'144'``, "
-"χρησιμοποιείστε τον ενσωματωμένο τύπο κατασκευής :func:`str`.  Εάν θέλετε "
-"μια δεκαεξαδική ή οκταδική αναπαράσταση, χρησιμοποιήστε τις ενσωματωμένες "
-"συναρτήσεις :func:`hex` ή :func:`oct`.  Για φανταχτερή μορφοποίηση, βλ. τις "
-"ενότητες :ref:`f-strings` και :ref:`formatstrings` π.χ. ``\"{:04d}\"."
-"format(144)`` αποδίδει ``'0144'`` και ``\"{:.3f}\".format(1.0/3.0)`` "
-"αποδίδει ``'0.333'``."
+"Για παράδειγμα, για να μετατρέψετε πχ τον αριθμό ``144`` στη συμβολοσειρά "
+"``'144'``, χρησιμοποιείστε τον ενσωματωμένο τύπο κατασκευής :func:`str`.  "
+"Εάν θέλετε μια δεκαεξαδική ή οκταδική αναπαράσταση, χρησιμοποιήστε τις "
+"ενσωματωμένες συναρτήσεις :func:`hex` ή :func:`oct`.  Για φανταχτερή "
+"μορφοποίηση, βλ. τις ενότητες :ref:`f-strings` και :ref:`formatstrings` π.χ. "
+"``\"{:04d}\".format(144)`` αποδίδει ``'0144'`` και ``\"{:.3f}\"."
+"format(1.0/3.0)`` αποδίδει ``'0.333'``."
 
-#: faq/programming.rst:906
+#: faq/programming.rst:907
 msgid "How do I modify a string in place?"
 msgstr "Πώς μπορώ να τροποποιήσω μια συμβολοσειρά στη θέση της;"
 
-#: faq/programming.rst:908
+#: faq/programming.rst:909
 msgid ""
 "You can't, because strings are immutable.  In most situations, you should "
 "simply construct a new string from the various parts you want to assemble it "
 "from.  However, if you need an object with the ability to modify in-place "
-"unicode data, try using an :class:`io.StringIO` object or the :mod:`array` "
+"Unicode data, try using an :class:`io.StringIO` object or the :mod:`array` "
 "module::"
 msgstr ""
 "Δεν μπορείτε, γιατί οι συμβολοσειρές είναι αμετάβλητες. Στις περισσότερες "
@@ -1971,7 +1965,7 @@ msgstr ""
 "δοκιμάστε να χρησιμοποιήσετε ένα αντικείμενο :class:`io.StringIO` ή το "
 "module :mod:`array`::"
 
-#: faq/programming.rst:914
+#: faq/programming.rst:915
 msgid ""
 ">>> import io\n"
 ">>> s = \"Hello, world\"\n"
@@ -2017,16 +2011,16 @@ msgstr ""
 ">>> a.tounicode()\n"
 "'yello, world'"
 
-#: faq/programming.rst:938
+#: faq/programming.rst:939
 msgid "How do I use strings to call functions/methods?"
 msgstr ""
 "Πως μπορώ να χρησιμοποιήσω συμβολοσειρές για να καλέσω συναρτήσεις/μεθόδους;"
 
-#: faq/programming.rst:940
+#: faq/programming.rst:941
 msgid "There are various techniques."
 msgstr "Υπάρχουν διάφορες τεχνικές."
 
-#: faq/programming.rst:942
+#: faq/programming.rst:943
 msgid ""
 "The best is to use a dictionary that maps strings to functions.  The primary "
 "advantage of this technique is that the strings do not need to match the "
@@ -2039,7 +2033,7 @@ msgstr ""
 "συναρτήσεων.  Αυτή είναι επίσης η κύρια τεχνική που χρησιμοποιείται για την "
 "εξομοίωση μιας κατασκευής πεζών-κεφαλαίων::"
 
-#: faq/programming.rst:947
+#: faq/programming.rst:948
 msgid ""
 "def a():\n"
 "    pass\n"
@@ -2061,11 +2055,11 @@ msgstr ""
 "\n"
 "dispatch[get_input()]()  # Note trailing parens to call function"
 
-#: faq/programming.rst:957
+#: faq/programming.rst:958
 msgid "Use the built-in function :func:`getattr`::"
 msgstr "Χρησιμοποιείστε την ενσωματωμένη συνάρτηση :func:`getattr`::"
 
-#: faq/programming.rst:959
+#: faq/programming.rst:960
 msgid ""
 "import foo\n"
 "getattr(foo, 'bar')()"
@@ -2073,7 +2067,7 @@ msgstr ""
 "import foo\n"
 "getattr(foo, 'bar')()"
 
-#: faq/programming.rst:962
+#: faq/programming.rst:963
 msgid ""
 "Note that :func:`getattr` works on any object, including classes, class "
 "instances, modules, and so on."
@@ -2081,12 +2075,12 @@ msgstr ""
 "Σημειώστε ότι το :func:`getattr` λειτουργεί σε οποιοδήποτε αντικείμενο, "
 "συμπεριλαμβανομένων κλάσεων, οντοτήτων κλάσεων, modules, και ούτω καθεξής."
 
-#: faq/programming.rst:965
+#: faq/programming.rst:966
 msgid "This is used in several places in the standard library, like this::"
 msgstr ""
 "Αυτό χρησιμοποιείται σε πολλά σημεία της τυπικής βιβλιοθήκης, όπως αυτό::"
 
-#: faq/programming.rst:967
+#: faq/programming.rst:968
 msgid ""
 "class Foo:\n"
 "    def do_foo(self):\n"
@@ -2108,12 +2102,12 @@ msgstr ""
 "f = getattr(foo_instance, 'do_' + opname)\n"
 "f()"
 
-#: faq/programming.rst:978
+#: faq/programming.rst:979
 msgid "Use :func:`locals` to resolve the function name::"
 msgstr ""
 "Χρησιμοποιήστε το :func:`locals` για να επιλύσετε το όνομα της συνάρτησης::"
 
-#: faq/programming.rst:980
+#: faq/programming.rst:981
 msgid ""
 "def myFunc():\n"
 "    print(\"hello\")\n"
@@ -2131,7 +2125,7 @@ msgstr ""
 "f = locals()[fname]\n"
 "f()"
 
-#: faq/programming.rst:990
+#: faq/programming.rst:991
 msgid ""
 "Is there an equivalent to Perl's ``chomp()`` for removing trailing newlines "
 "from strings?"
@@ -2139,7 +2133,7 @@ msgstr ""
 "Υπάρχει ισοδύναμο με το Perl's ``chomp()`` για την αφαίρεση των νέων γραμμών "
 "από τις συμβολοσειρές;"
 
-#: faq/programming.rst:992
+#: faq/programming.rst:993
 msgid ""
 "You can use ``S.rstrip(\"\\r\\n\")`` to remove all occurrences of any line "
 "terminator from the end of the string ``S`` without removing other trailing "
@@ -2153,7 +2147,7 @@ msgstr ""
 "αντιπροσωπεύει περισσότερες από μία γραμμές στο τέλος, οι terminators "
 "γραμμής για όλες τις κενές γραμμές θα αφαιρεθούν::"
 
-#: faq/programming.rst:998
+#: faq/programming.rst:999
 msgid ""
 ">>> lines = (\"line 1 \\r\\n\"\n"
 "...          \"\\r\\n\"\n"
@@ -2167,7 +2161,7 @@ msgstr ""
 ">>> lines.rstrip(\"\\n\\r\")\n"
 "'line 1 '"
 
-#: faq/programming.rst:1004
+#: faq/programming.rst:1005
 msgid ""
 "Since this is typically only desired when reading text one line at a time, "
 "using ``S.rstrip()`` this way works well."
@@ -2175,15 +2169,15 @@ msgstr ""
 "Δεδομένου ότι αυτό είναι συνήθως επιθυμητό μόνο κατά την ανάγνωση κειμένου "
 "μία γραμμή τη φορά, η χρήση του ``S.rstrip()`` λειτουργεί καλά."
 
-#: faq/programming.rst:1009
+#: faq/programming.rst:1010
 msgid "Is there a ``scanf()`` or ``sscanf()`` equivalent?"
 msgstr "Υπάρχει αντίστοιχο ``scanf()`` ή ``sscanf()``;"
 
-#: faq/programming.rst:1011
+#: faq/programming.rst:1012
 msgid "Not as such."
 msgstr "Όχι ως τέτοιο."
 
-#: faq/programming.rst:1013
+#: faq/programming.rst:1014
 msgid ""
 "For simple input parsing, the easiest approach is usually to split the line "
 "into whitespace-delimited words using the :meth:`~str.split` method of "
@@ -2200,7 +2194,7 @@ msgstr ""
 "προαιρετική παράμετρο \"sep\" που είναι χρήσιμη εάν η γραμμή χρησιμοποιεί "
 "κάτι διαφορετικό από κενό διάστημα ως διαχωριστικό."
 
-#: faq/programming.rst:1019
+#: faq/programming.rst:1020
 msgid ""
 "For more complicated input parsing, regular expressions are more powerful "
 "than C's ``sscanf`` and better suited for the task."
@@ -2208,21 +2202,21 @@ msgstr ""
 "Για πιο περίπλοκη ανάλυση εισόδου, τα regular expressions είναι πιο ισχυρά "
 "από τις ``sscanf`` της C και είναι πιο κατάλληλες για την εργασία."
 
-#: faq/programming.rst:1024
+#: faq/programming.rst:1025
 msgid "What does ``UnicodeDecodeError`` or ``UnicodeEncodeError`` error mean?"
 msgstr "Τι σημαίνει το σφάλμα ``UnicodeDecodeError`` ή ``UnicodeEncodeError``;"
 
-#: faq/programming.rst:1026
+#: faq/programming.rst:1027
 msgid "See the :ref:`unicode-howto`."
 msgstr "Βλ το :ref:`unicode-howto`."
 
-#: faq/programming.rst:1032
+#: faq/programming.rst:1033
 msgid "Can I end a raw string with an odd number of backslashes?"
 msgstr ""
 "Μπορώ να τερματίσω μια ακατέργαστη συμβολοσειρά με περιττό αριθμό "
 "backslashes;"
 
-#: faq/programming.rst:1034
+#: faq/programming.rst:1035
 msgid ""
 "A raw string ending with an odd number of backslashes will escape the "
 "string's quote::"
@@ -2230,7 +2224,7 @@ msgstr ""
 "Μια ακατέργαστη συμβολοσειρά που τελειώνει με περιττό αριθμό backslashes θα "
 "ξεφύγει από το απόσπασμα της συμβολοσειράς::"
 
-#: faq/programming.rst:1036
+#: faq/programming.rst:1037
 msgid ""
 ">>> r'C:\\this\\will\\not\\work\\'\n"
 "  File \"<stdin>\", line 1\n"
@@ -2244,7 +2238,7 @@ msgstr ""
 "    ^\n"
 "SyntaxError: unterminated string literal (detected at line 1)"
 
-#: faq/programming.rst:1042
+#: faq/programming.rst:1043
 msgid ""
 "There are several workarounds for this. One is to use regular strings and "
 "double the backslashes::"
@@ -2252,7 +2246,7 @@ msgstr ""
 "Υπάρχουν αρκετές λύσεις για αυτό.  Ο ένας είναι να χρησιμοποιήσετε κανονικές "
 "συμβολοσειρές και να διπλασιάσετε τα backslashes::"
 
-#: faq/programming.rst:1045
+#: faq/programming.rst:1046
 msgid ""
 ">>> 'C:\\\\this\\\\will\\\\work\\\\'\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
@@ -2260,7 +2254,7 @@ msgstr ""
 ">>> 'C:\\\\this\\\\will\\\\work\\\\'\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
 
-#: faq/programming.rst:1048
+#: faq/programming.rst:1049
 msgid ""
 "Another is to concatenate a regular string containing an escaped backslash "
 "to the raw string::"
@@ -2268,7 +2262,7 @@ msgstr ""
 "Ένα άλλο είναι να συνδέσετε μια κανονική συμβολοσειρά που περιέχει ένα "
 "escaped backslash στην ακατέργαστη συμβολοσειρά::"
 
-#: faq/programming.rst:1051
+#: faq/programming.rst:1052
 msgid ""
 ">>> r'C:\\this\\will\\work' '\\\\'\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
@@ -2276,7 +2270,7 @@ msgstr ""
 ">>> r'C:\\this\\will\\work' '\\\\'\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
 
-#: faq/programming.rst:1054
+#: faq/programming.rst:1055
 msgid ""
 "It is also possible to use :func:`os.path.join` to append a backslash on "
 "Windows::"
@@ -2284,7 +2278,7 @@ msgstr ""
 "Είναι επίσης δυνατό να χρησιμοποιήσετε το :func:`os.path.join` για να "
 "προσθέσετε ένα backslash στα Windows::"
 
-#: faq/programming.rst:1056
+#: faq/programming.rst:1057
 msgid ""
 ">>> os.path.join(r'C:\\this\\will\\work', '')\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
@@ -2292,7 +2286,7 @@ msgstr ""
 ">>> os.path.join(r'C:\\this\\will\\work', '')\n"
 "'C:\\\\this\\\\will\\\\work\\\\'"
 
-#: faq/programming.rst:1059
+#: faq/programming.rst:1060
 msgid ""
 "Note that while a backslash will \"escape\" a quote for the purposes of "
 "determining where the raw string ends, no escaping occurs when interpreting "
@@ -2305,7 +2299,7 @@ msgstr ""
 "Δηλαδή, το backslash παραμένει παρόν στην τιμή της ακατέργαστης "
 "συμβολοσειράς::"
 
-#: faq/programming.rst:1064
+#: faq/programming.rst:1065
 msgid ""
 ">>> r'backslash\\'preserved'\n"
 "\"backslash\\\\'preserved\""
@@ -2313,27 +2307,27 @@ msgstr ""
 ">>> r'backslash\\'preserved'\n"
 "\"backslash\\\\'preserved\""
 
-#: faq/programming.rst:1067
+#: faq/programming.rst:1068
 msgid "Also see the specification in the :ref:`language reference <strings>`."
 msgstr "Δείτε επίσης την προδιαγραφή στην :ref:`language reference <strings>`."
 
-#: faq/programming.rst:1070
+#: faq/programming.rst:1072
 msgid "Performance"
 msgstr "Απόδοση"
 
-#: faq/programming.rst:1073
+#: faq/programming.rst:1075
 msgid "My program is too slow. How do I speed it up?"
 msgstr "Το πρόγραμμα μου είναι πολύ αργό. Πως μπορώ να το επιταχύνω;"
 
-#: faq/programming.rst:1075
+#: faq/programming.rst:1077
 msgid ""
-"That's a tough one, in general.  First, here are a list of things to "
-"remember before diving further:"
+"That's a tough one, in general.  First, here is a list of things to remember "
+"before diving further:"
 msgstr ""
 "Αυτό είναι δύσκολο, γενικά. Πρώτον, εδώ είναι μια λίστα με πράγματα που "
-"πρέπει να θυμάστε πριν βουτήξετε περαιτέρω::"
+"πρέπει να θυμάστε πριν βουτήξετε περαιτέρω:"
 
-#: faq/programming.rst:1078
+#: faq/programming.rst:1080
 msgid ""
 "Performance characteristics vary across Python implementations.  This FAQ "
 "focuses on :term:`CPython`."
@@ -2341,7 +2335,7 @@ msgstr ""
 "Τα χαρακτηριστικά απόδοσης διαφέρουν μεταξύ των υλοποιήσεων Python.  Αυτή η "
 "FAQ εστιάζει στο :term:`CPython`."
 
-#: faq/programming.rst:1080
+#: faq/programming.rst:1082
 msgid ""
 "Behaviour can vary across operating systems, especially when talking about I/"
 "O or multi-threading."
@@ -2349,7 +2343,7 @@ msgstr ""
 "Η συμπεριφορά μπορεί να διαφέρει μεταξύ των λειτουργικών συστημάτων, ειδικά "
 "όταν μιλάμε για I/O ή multi-threading."
 
-#: faq/programming.rst:1082
+#: faq/programming.rst:1084
 msgid ""
 "You should always find the hot spots in your program *before* attempting to "
 "optimize any code (see the :mod:`profile` module)."
@@ -2358,7 +2352,7 @@ msgstr ""
 "επιχειρήσετε να βελτιστοποιήσετε οποιονδήποτε κώδικα (βλ. το module :mod:"
 "`profile`)."
 
-#: faq/programming.rst:1084
+#: faq/programming.rst:1086
 msgid ""
 "Writing benchmark scripts will allow you to iterate quickly when searching "
 "for improvements (see the :mod:`timeit` module)."
@@ -2366,7 +2360,7 @@ msgstr ""
 "Η σύνταξη σεναρίων συγκριτικής αξιολόγησης θα σας επιτρέψει να κάνετε "
 "iterate γρήγορα κατά την αναζήτηση βελτιώσεων (βλ. το module :mod:`timeit`)."
 
-#: faq/programming.rst:1086
+#: faq/programming.rst:1088
 msgid ""
 "It is highly recommended to have good code coverage (through unit testing or "
 "any other technique) before potentially introducing regressions hidden in "
@@ -2376,7 +2370,7 @@ msgstr ""
 "οποιασδήποτε άλλης τεχνικής) πριν από την πιθανή εισαγωγή κρυμμένων "
 "παλινδρομήσεων (regressions) σε εξελιγμένες βελτιστοποιήσεις."
 
-#: faq/programming.rst:1090
+#: faq/programming.rst:1092
 msgid ""
 "That being said, there are many tricks to speed up Python code.  Here are "
 "some general principles which go a long way towards reaching acceptable "
@@ -2386,7 +2380,7 @@ msgstr ""
 "Python.  Ακολουθούν ορισμένες γενικές αρχές που βοηθούν πολύ στην επίτευξη "
 "αποδεκτών επιπέδων απόδοσης:"
 
-#: faq/programming.rst:1094
+#: faq/programming.rst:1096
 msgid ""
 "Making your algorithms faster (or changing to faster ones) can yield much "
 "larger benefits than trying to sprinkle micro-optimization tricks all over "
@@ -2396,7 +2390,7 @@ msgstr ""
 "ταχύτερους) μπορεί να αποφέρει πολύ μεγαλύτερα οφέλη από το να προσπαθείτε "
 "να σκορπίσετε κόλπα μικρό βελτιστοποίησης σε όλο τον κώδικά σας."
 
-#: faq/programming.rst:1098
+#: faq/programming.rst:1100
 msgid ""
 "Use the right data structures.  Study documentation for the :ref:`bltin-"
 "types` and the :mod:`collections` module."
@@ -2404,7 +2398,7 @@ msgstr ""
 "Χρησιμοποιήστε τις σωστές δομές δεδομένων. Μελετήστε την τεκμηρίωση για το :"
 "ref:`bltin-types` και το module :mod:`collections`."
 
-#: faq/programming.rst:1101
+#: faq/programming.rst:1103
 msgid ""
 "When the standard library provides a primitive for doing something, it is "
 "likely (although not guaranteed) to be faster than any alternative you may "
@@ -2423,7 +2417,7 @@ msgstr ""
 "ταξινόμηση (και δείτε το :ref:`sortinghowto` για παραδείγματα μέτριος "
 "προηγμένης χρήσης)."
 
-#: faq/programming.rst:1109
+#: faq/programming.rst:1111
 msgid ""
 "Abstractions tend to create indirections and force the interpreter to work "
 "more.  If the levels of indirection outweigh the amount of useful work done, "
@@ -2438,7 +2432,7 @@ msgstr ""
 "μορφή μικροσκοπικών συναρτήσεων ή μεθόδων (που είναι επίσης συχνά επιζήμια "
 "για την αναγνωσιμότητα)."
 
-#: faq/programming.rst:1115
+#: faq/programming.rst:1117
 msgid ""
 "If you have reached the limit of what pure Python can allow, there are tools "
 "to take you further away.  For example, `Cython <https://cython.org>`_ can "
@@ -2459,7 +2453,7 @@ msgstr ""
 "δεξιότητές σας στον προγραμματισμό C, μπορείτε επίσης να :ref:`write a C "
 "extension module <extending-index>` μόνοι σας."
 
-#: faq/programming.rst:1125
+#: faq/programming.rst:1127
 msgid ""
 "The wiki page devoted to `performance tips <https://wiki.python.org/moin/"
 "PythonSpeed/PerformanceTips>`_."
@@ -2467,13 +2461,13 @@ msgstr ""
 "Η σελίδα wiki που είναι αφιερωμένη σε `συμβουλές απόδοσης <https://wiki."
 "python.org/moin/PythonSpeed/PerformanceTips>`_."
 
-#: faq/programming.rst:1131
+#: faq/programming.rst:1134
 msgid "What is the most efficient way to concatenate many strings together?"
 msgstr ""
 "Ποιος είναι ο πιο αποτελεσματικός τρόπος για να συνδέσετε πολλές "
 "συμβολοσειρές μεταξύ τους;"
 
-#: faq/programming.rst:1133
+#: faq/programming.rst:1136
 msgid ""
 ":class:`str` and :class:`bytes` objects are immutable, therefore "
 "concatenating many strings together is inefficient as each concatenation "
@@ -2485,7 +2479,7 @@ msgstr ""
 "συνένωση δημιουργεί ένα νέο αντικείμενο.  Στη γενική περίπτωση, το συνολικό "
 "κόστος χρόνου εκτέλεσης είναι τετραγωνικό στο συνολικό μήκος συμβολοσειράς."
 
-#: faq/programming.rst:1138
+#: faq/programming.rst:1141
 msgid ""
 "To accumulate many :class:`str` objects, the recommended idiom is to place "
 "them into a list and call :meth:`str.join` at the end::"
@@ -2494,7 +2488,7 @@ msgstr ""
 "είναι να τα τοποθετήσετε σε μια λίστα και να καλέσετε το στο :meth:`str."
 "join` τέλος::"
 
-#: faq/programming.rst:1141
+#: faq/programming.rst:1144
 msgid ""
 "chunks = []\n"
 "for s in my_strings:\n"
@@ -2506,13 +2500,13 @@ msgstr ""
 "    chunks.append(s)\n"
 "result = ''.join(chunks)"
 
-#: faq/programming.rst:1146
-msgid "(another reasonably efficient idiom is to use :class:`io.StringIO`)"
+#: faq/programming.rst:1149
+msgid "(Another reasonably efficient idiom is to use :class:`io.StringIO`.)"
 msgstr ""
-"(ένα άλλο λογικά αποτελεσματικό ιδίωμα είναι να χρησιμοποιήσετε το :class:"
+"(Ένα άλλο λογικά αποτελεσματικό ιδίωμα είναι να χρησιμοποιήσετε το :class:"
 "`io.StringIO`)"
 
-#: faq/programming.rst:1148
+#: faq/programming.rst:1151
 msgid ""
 "To accumulate many :class:`bytes` objects, the recommended idiom is to "
 "extend a :class:`bytearray` object using in-place concatenation (the ``+=`` "
@@ -2522,7 +2516,7 @@ msgstr ""
 "είναι η επέκταση ενός αντικειμένου :class:`bytearray` χρησιμοποιώντας "
 "επιτόπια συνένωση (ο τελεστής ``+=``)::"
 
-#: faq/programming.rst:1151
+#: faq/programming.rst:1154
 msgid ""
 "result = bytearray()\n"
 "for b in my_bytes_objects:\n"
@@ -2532,15 +2526,15 @@ msgstr ""
 "for b in my_bytes_objects:\n"
 "    result += b"
 
-#: faq/programming.rst:1157
-msgid "Sequences (Tuples/Lists)"
-msgstr "Ακολουθίες (Πλειάδες/Λίστες)"
-
 #: faq/programming.rst:1160
+msgid "Sequences (tuples/lists)"
+msgstr "Ακολουθίες (πλειάδες/λίστες)"
+
+#: faq/programming.rst:1163
 msgid "How do I convert between tuples and lists?"
 msgstr "Πως μπορώ να κάνω μετατροπή μεταξύ πλειάδων και λιστών;"
 
-#: faq/programming.rst:1162
+#: faq/programming.rst:1165
 msgid ""
 "The type constructor ``tuple(seq)`` converts any sequence (actually, any "
 "iterable) into a tuple with the same items in the same order."
@@ -2549,7 +2543,7 @@ msgstr ""
 "πραγματικότητα οποιοδήποτε iterable) σε πλειάδα με τα ίδια στοιχεία στην "
 "ίδια σειρά."
 
-#: faq/programming.rst:1165
+#: faq/programming.rst:1168
 msgid ""
 "For example, ``tuple([1, 2, 3])`` yields ``(1, 2, 3)`` and ``tuple('abc')`` "
 "yields ``('a', 'b', 'c')``.  If the argument is a tuple, it does not make a "
@@ -2562,7 +2556,7 @@ msgstr ""
 "φτηνό να καλέσετε το :func:`tuple` όταν δεν είστε σίγουροι ότι ένα "
 "αντικείμενο είναι ήδη πλειάδα."
 
-#: faq/programming.rst:1170
+#: faq/programming.rst:1173
 msgid ""
 "The type constructor ``list(seq)`` converts any sequence or iterable into a "
 "list with the same items in the same order.  For example, ``list((1, 2, "
@@ -2575,11 +2569,11 @@ msgstr ""
 "``['a', 'b', 'c']``.  Αν το όρισμα είναι λίστα, δημιουργεί απλώς ένα "
 "αντίγραφο όπως θα έκανε το ``seq[:]``."
 
-#: faq/programming.rst:1177
+#: faq/programming.rst:1180
 msgid "What's a negative index?"
 msgstr "Τι είναι αρνητικός δείκτης;"
 
-#: faq/programming.rst:1179
+#: faq/programming.rst:1182
 msgid ""
 "Python sequences are indexed with positive numbers and negative numbers.  "
 "For positive numbers 0 is the first index 1 is the second index and so "
@@ -2593,7 +2587,7 @@ msgstr ""
 "και το -2 είναι ο προτελευταίος (δίπλα στο τελευταίο) δείκτης και ούτω "
 "καθεξής.  Σκεφτείτε το ``seq[-n]`` ως το ίδιο με το ``seq[len(seq)-n]``."
 
-#: faq/programming.rst:1184
+#: faq/programming.rst:1187
 msgid ""
 "Using negative indices can be very convenient.  For example ``S[:-1]`` is "
 "all of the string except for its last character, which is useful for "
@@ -2604,15 +2598,15 @@ msgstr ""
 "οποίος είναι χρήσιμος για την αφαίρεση της νέας γραμμής που ακολουθεί μια "
 "συμβολοσειρά."
 
-#: faq/programming.rst:1190
+#: faq/programming.rst:1193
 msgid "How do I iterate over a sequence in reverse order?"
 msgstr "Πώς μπορώ να επαναλάβω μια ακολουθία με αντίστροφη σειρά;"
 
-#: faq/programming.rst:1192
+#: faq/programming.rst:1195
 msgid "Use the :func:`reversed` built-in function::"
 msgstr "Χρησιμοποιείστε την ενσωματωμένη συνάρτηση :func:`reversed`::"
 
-#: faq/programming.rst:1194
+#: faq/programming.rst:1197
 msgid ""
 "for x in reversed(sequence):\n"
 "    ...  # do something with x ..."
@@ -2620,7 +2614,7 @@ msgstr ""
 "for x in reversed(sequence):\n"
 "    ...  # do something with x ..."
 
-#: faq/programming.rst:1197
+#: faq/programming.rst:1200
 msgid ""
 "This won't touch your original sequence, but build a new copy with reversed "
 "order to iterate over."
@@ -2628,21 +2622,21 @@ msgstr ""
 "Αυτό δεν θα επηρεάσει την αρχική σας ακολουθία, αλλά δημιουργήστε ένα νέο "
 "αντίγραφο με αντίστροφη σειρά για επανάληψη."
 
-#: faq/programming.rst:1202
+#: faq/programming.rst:1205
 msgid "How do you remove duplicates from a list?"
 msgstr "Πως αφαιρείτε διπλότυπα από μια λίστα;"
 
-#: faq/programming.rst:1204
+#: faq/programming.rst:1207
 msgid "See the Python Cookbook for a long discussion of many ways to do this:"
 msgstr ""
 "Δείτε το Python Cookbook για μια μακρά συζήτηση σχετικά με πολλούς τρόπους "
 "για να το κάνετε αυτό:"
 
-#: faq/programming.rst:1206
+#: faq/programming.rst:1209
 msgid "https://code.activestate.com/recipes/52560/"
 msgstr "https://code.activestate.com/recipes/52560/"
 
-#: faq/programming.rst:1208
+#: faq/programming.rst:1211
 msgid ""
 "If you don't mind reordering the list, sort it and then scan from the end of "
 "the list, deleting duplicates as you go::"
@@ -2650,7 +2644,7 @@ msgstr ""
 "Εάν δεν σας πειράζει να αναδιατάξετε τη λίστα, ταξινομήστε την και μετά "
 "σαρώστε από το τέλος της λίστας, διαγράφοντας τα διπλότυπα καθώς προχωράτε::"
 
-#: faq/programming.rst:1211
+#: faq/programming.rst:1214
 msgid ""
 "if mylist:\n"
 "    mylist.sort()\n"
@@ -2670,19 +2664,19 @@ msgstr ""
 "        else:\n"
 "            last = mylist[i]"
 
-#: faq/programming.rst:1220
+#: faq/programming.rst:1223
 msgid ""
-"If all elements of the list may be used as set keys (i.e. they are all :term:"
-"`hashable`) this is often faster ::"
+"If all elements of the list may be used as set keys (that is, they are all :"
+"term:`hashable`) this is often faster::"
 msgstr ""
 "Εάν όλα τα στοιχεία της λίστας μπορούν να χρησιμοποιηθούν ως κλειδιά συνόλου "
 "(δηλαδή είναι όλα τα :term:`hashable`) αυτό είναι συχνά πιο γρήγορο::"
 
-#: faq/programming.rst:1223
+#: faq/programming.rst:1226
 msgid "mylist = list(set(mylist))"
 msgstr "mylist = list(set(mylist))"
 
-#: faq/programming.rst:1225
+#: faq/programming.rst:1228
 msgid ""
 "This converts the list into a set, thereby removing duplicates, and then "
 "back into a list."
@@ -2690,23 +2684,23 @@ msgstr ""
 "Αυτό μετατρέπει τη λίστα σε ένα σύνολο, αφαιρώντας έτσι τα διπλότυπα και στη "
 "συνέχεια ξανά σε λίστα."
 
-#: faq/programming.rst:1230
-msgid "How do you remove multiple items from a list"
-msgstr "Πως αφαιρείτε πολλαπλά στοιχεία από μία λίστα"
+#: faq/programming.rst:1233
+msgid "How do you remove multiple items from a list?"
+msgstr "Πως αφαιρείτε πολλαπλά στοιχεία από μία λίστα;"
 
-#: faq/programming.rst:1232
+#: faq/programming.rst:1235
 msgid ""
 "As with removing duplicates, explicitly iterating in reverse with a delete "
 "condition is one possibility.  However, it is easier and faster to use slice "
 "replacement with an implicit or explicit forward iteration. Here are three "
-"variations.::"
+"variations::"
 msgstr ""
 "Όπως και με την κατάργηση των διπλότυπων, το ρητό iterating αντίστροφα με "
 "μια συνθήκη διαγραφής είναι μια πιθανότητα.  Ωστόσο, είναι ευκολότερο και "
 "πιο γρήγορο να χρησιμοποιήσετε την αντικατάσταση τμημάτων με ένα έμμεσο ή "
 "ρητώς προς τα εμπρός iteration.  Ακολουθούν τρεις παραλλαγές::"
 
-#: faq/programming.rst:1237
+#: faq/programming.rst:1240
 msgid ""
 "mylist[:] = filter(keep_function, mylist)\n"
 "mylist[:] = (x for x in mylist if keep_condition)\n"
@@ -2716,23 +2710,23 @@ msgstr ""
 "mylist[:] = (x for x in mylist if keep_condition)\n"
 "mylist[:] = [x for x in mylist if keep_condition]"
 
-#: faq/programming.rst:1241
+#: faq/programming.rst:1244
 msgid "The list comprehension may be fastest."
 msgstr "Το comprehension της λίστας μπορεί να είναι ταχύτερο."
 
-#: faq/programming.rst:1245
+#: faq/programming.rst:1248
 msgid "How do you make an array in Python?"
 msgstr "Πως μπορείτε να φτιάξετε έναν πίνακα στην Python;"
 
-#: faq/programming.rst:1247
+#: faq/programming.rst:1250
 msgid "Use a list::"
 msgstr "Χρησιμοποιήστε μια λίστα::"
 
-#: faq/programming.rst:1249
+#: faq/programming.rst:1252
 msgid "[\"this\", 1, \"is\", \"an\", \"array\"]"
 msgstr "[\"αυτή\", 1, \"είναι\", \"μια\", \"λίστα\"]"
 
-#: faq/programming.rst:1251
+#: faq/programming.rst:1254
 msgid ""
 "Lists are equivalent to C or Pascal arrays in their time complexity; the "
 "primary difference is that a Python list can contain objects of many "
@@ -2742,31 +2736,31 @@ msgstr ""
 "πολυπλοκότητα∙ η κύρια διαφορά είναι ότι μια λίστα Python μπορεί να περιέχει "
 "αντικείμενα πολλών διαφορετικών τύπων."
 
-#: faq/programming.rst:1254
+#: faq/programming.rst:1257
 msgid ""
 "The ``array`` module also provides methods for creating arrays of fixed "
 "types with compact representations, but they are slower to index than "
-"lists.  Also note that `NumPy <https://numpy.org/>`_ and other third party "
+"lists.  Also note that `NumPy <https://numpy.org/>`_ and other third-party "
 "packages define array-like structures with various characteristics as well."
 msgstr ""
 "Το module ``array`` παρέχει επίσης μεθόδους για τη δημιουργία πινάκων "
 "σταθερών τύπων με συμπαγείς αναπαραστάσεις, αλλά είναι πιο αργές στην "
 "ευρετηρίαση από τις λίστες.  Σημειώστε επίσης ότι το `NumPy <https://numpy."
-"org/>`_ και άλλο πακέτα τρίτων, ορίζουν δομές τύπους array με διάφορα "
-"χαρακτηριστικά επίσης."
+"org/>`_ και άλλα πακέτα τρίτων, ορίζουν δομές τύπου array με διάφορα "
+"χαρακτηριστικά, επίσης."
 
-#: faq/programming.rst:1260
+#: faq/programming.rst:1263
 msgid ""
 "To get Lisp-style linked lists, you can emulate *cons cells* using tuples::"
 msgstr ""
 "Για να λάβετε συνδεδεμένες λίστες τύπου Lisp, μπορείτε να εξομοιώσετε *cons "
 "κελιά* χρησιμοποιώντας πλειάδες::"
 
-#: faq/programming.rst:1262
+#: faq/programming.rst:1265
 msgid "lisp_list = (\"like\",  (\"this\",  (\"example\", None) ) )"
 msgstr "lisp_list = (\"όπως\",  (\"αυτό\",  (\"το παράδειγμα\", None) ) )"
 
-#: faq/programming.rst:1264
+#: faq/programming.rst:1267
 msgid ""
 "If mutability is desired, you could use lists instead of tuples.  Here the "
 "analogue of a Lisp *car* is ``lisp_list[0]`` and the analogue of *cdr* is "
@@ -2779,23 +2773,23 @@ msgstr ""
 "ότι πραγματικά χρειάζεται, γιατί είναι συνήθως πιο αργό και από τη χρήση "
 "λιστών Python."
 
-#: faq/programming.rst:1273
+#: faq/programming.rst:1276
 msgid "How do I create a multidimensional list?"
 msgstr "Πως φτιάχνω μια πολυδιάστατη λίστα;"
 
-#: faq/programming.rst:1275
+#: faq/programming.rst:1278
 msgid "You probably tried to make a multidimensional array like this::"
 msgstr "Μάλλον προσπαθήσατε να φτιάξετε έναν πολυδιάστατο πίνακα σαν αυτόν::"
 
-#: faq/programming.rst:1277
+#: faq/programming.rst:1280
 msgid ">>> A = [[None] * 2] * 3"
 msgstr ">>> A = [[None] * 2] * 3"
 
-#: faq/programming.rst:1279
+#: faq/programming.rst:1282
 msgid "This looks correct if you print it:"
 msgstr "Αυτό φαίνεται σωστό αν το εκτυπώσετε:"
 
-#: faq/programming.rst:1285
+#: faq/programming.rst:1288
 msgid ""
 ">>> A\n"
 "[[None, None], [None, None], [None, None]]"
@@ -2803,11 +2797,11 @@ msgstr ""
 ">>> A\n"
 "[[None, None], [None, None], [None, None]]"
 
-#: faq/programming.rst:1290
+#: faq/programming.rst:1293
 msgid "But when you assign a value, it shows up in multiple places:"
 msgstr "Αλλά όταν εκχωρείτε μια τιμή, εμφανίζεται σε πολλά σημεία:"
 
-#: faq/programming.rst:1296
+#: faq/programming.rst:1299
 msgid ""
 ">>> A[0][0] = 5\n"
 ">>> A\n"
@@ -2817,7 +2811,7 @@ msgstr ""
 ">>> A\n"
 "[[5, None], [5, None], [5, None]]"
 
-#: faq/programming.rst:1302
+#: faq/programming.rst:1305
 msgid ""
 "The reason is that replicating a list with ``*`` doesn't create copies, it "
 "only creates references to the existing objects.  The ``*3`` creates a list "
@@ -2830,7 +2824,7 @@ msgstr ""
 "αλλαγές σε μία σειρά θα εμφανίζονται σε όλες τις σειρές, κάτι που σχεδόν "
 "σίγουρα δεν είναι αυτό που θέλετε."
 
-#: faq/programming.rst:1307
+#: faq/programming.rst:1310
 msgid ""
 "The suggested approach is to create a list of the desired length first and "
 "then fill in each element with a newly created list::"
@@ -2839,7 +2833,7 @@ msgstr ""
 "επιθυμητό μήκος και στη συνέχεια να συμπληρώσετε κάθε στοιχείο με μια νέα "
 "λίστα::"
 
-#: faq/programming.rst:1310
+#: faq/programming.rst:1313
 msgid ""
 "A = [None] * 3\n"
 "for i in range(3):\n"
@@ -2849,7 +2843,7 @@ msgstr ""
 "for i in range(3):\n"
 "    A[i] = [None] * 2"
 
-#: faq/programming.rst:1314
+#: faq/programming.rst:1317
 msgid ""
 "This generates a list containing 3 different lists of length two.  You can "
 "also use a list comprehension::"
@@ -2857,7 +2851,7 @@ msgstr ""
 "Αυτό δημιουργεί μια λίστα που περιέχει 3 διαφορετικές λίστες με μήκος δύο.  "
 "Μπορείτε επίσης να χρησιμοποιήσετε ένα comprehension λίστας::"
 
-#: faq/programming.rst:1317
+#: faq/programming.rst:1320
 msgid ""
 "w, h = 2, 3\n"
 "A = [[None] * w for i in range(h)]"
@@ -2865,7 +2859,7 @@ msgstr ""
 "w, h = 2, 3\n"
 "A = [[None] * w for i in range(h)]"
 
-#: faq/programming.rst:1320
+#: faq/programming.rst:1323
 msgid ""
 "Or, you can use an extension that provides a matrix datatype; `NumPy "
 "<https://numpy.org/>`_ is the best known."
@@ -2874,23 +2868,23 @@ msgstr ""
 "δεδομένων μήτρας (matrix)∙ Το `NumPy <https://numpy.org/>`_ είναι το πιο "
 "γνωστό."
 
-#: faq/programming.rst:1325
+#: faq/programming.rst:1328
 msgid "How do I apply a method or function to a sequence of objects?"
 msgstr ""
 "Πώς μπορώ να εφαρμόσω μια μέθοδο ή μια συνάρτηση σε μια ακολουθία "
 "αντικειμένων;"
 
-#: faq/programming.rst:1327
-msgid ""
-"To call a method or function and accumulate the return values is a list, a :"
-"term:`list comprehension` is an elegant solution::"
-msgstr ""
-"Για να καλέστε μια μέθοδο ή μια συνάρτηση και να συγκεντρώσετε τις "
-"επιστρεφόμενες τιμές είναι μια λίστα, ένα :term:`list comprehension` είναι "
-"μια κομψή λύση::"
-
 #: faq/programming.rst:1330
 msgid ""
+"To call a method or function and accumulate the return values in a list, a :"
+"term:`list comprehension` is an elegant solution::"
+msgstr ""
+"Για να καλέσετε μια μέθοδο ή μια συνάρτηση και να συγκεντρώσετε τις "
+"επιστρεφόμενες τιμές σε μια λίστα, ένα :term:`list comprehension` είναι μια "
+"κομψή λύση::"
+
+#: faq/programming.rst:1333
+msgid ""
 "result = [obj.method() for obj in mylist]\n"
 "\n"
 "result = [function(obj) for obj in mylist]"
@@ -2899,7 +2893,7 @@ msgstr ""
 "\n"
 "result = [function(obj) for obj in mylist]"
 
-#: faq/programming.rst:1334
+#: faq/programming.rst:1337
 msgid ""
 "To just run the method or function without saving the return values, a "
 "plain :keyword:`for` loop will suffice::"
@@ -2907,7 +2901,7 @@ msgstr ""
 "Για να εκτελέσετε απλώς τη μέθοδο ή τη συνάρτηση χωρίς να αποθηκεύσετε τις "
 "επιστρεφόμενες τιμές, αρκεί ένας απλός βρόχος :keyword:`for`::"
 
-#: faq/programming.rst:1337
+#: faq/programming.rst:1340
 msgid ""
 "for obj in mylist:\n"
 "    obj.method()\n"
@@ -2921,14 +2915,14 @@ msgstr ""
 "for obj in mylist:\n"
 "    function(obj)"
 
-#: faq/programming.rst:1346
+#: faq/programming.rst:1350
 msgid ""
 "Why does a_tuple[i] += ['item'] raise an exception when the addition works?"
 msgstr ""
 "Γιατί το a_tuple[i] += ['item'] δημιουργεί μια εξαίρεση όταν λειτουργεί η "
 "προσθήκη;"
 
-#: faq/programming.rst:1348
+#: faq/programming.rst:1352
 msgid ""
 "This is because of a combination of the fact that augmented assignment "
 "operators are *assignment* operators, and the difference between mutable and "
@@ -2938,7 +2932,7 @@ msgstr ""
 "εκχώρησης είναι τελεστές *εκχώρησης* και της διαφοράς μεταξύ μεταβλητών και "
 "αμετάβλητων αντικειμένων στην Python."
 
-#: faq/programming.rst:1352
+#: faq/programming.rst:1356
 msgid ""
 "This discussion applies in general when augmented assignment operators are "
 "applied to elements of a tuple that point to mutable objects, but we'll use "
@@ -2948,11 +2942,11 @@ msgstr ""
 "εφαρμόζονται σε στοιχεία μιας πλειάδας που δείχνουν σε μεταβλητά "
 "αντικείμενα, αλλά θα χρησιμοποιήσουμε ``list`` και ``+=`` ως υπόδειγμά μας."
 
-#: faq/programming.rst:1356
+#: faq/programming.rst:1360
 msgid "If you wrote::"
 msgstr "Εάν γράψετε::"
 
-#: faq/programming.rst:1358
+#: faq/programming.rst:1362
 msgid ""
 ">>> a_tuple = (1, 2)\n"
 ">>> a_tuple[0] += 1\n"
@@ -2966,7 +2960,7 @@ msgstr ""
 "   ...\n"
 "TypeError: 'tuple' object does not support item assignment"
 
-#: faq/programming.rst:1364
+#: faq/programming.rst:1368
 msgid ""
 "The reason for the exception should be immediately clear: ``1`` is added to "
 "the object ``a_tuple[0]`` points to (``1``), producing the result object, "
@@ -2981,7 +2975,7 @@ msgstr ""
 "πλειάδας, λαμβάνουμε ένα σφάλμα επειδή δεν μπορούμε να αλλάξουμε αυτό που "
 "δείχνει ένα στοιχείο μιας πλειάδας."
 
-#: faq/programming.rst:1370
+#: faq/programming.rst:1374
 msgid ""
 "Under the covers, what this augmented assignment statement is doing is "
 "approximately this::"
@@ -2989,7 +2983,7 @@ msgstr ""
 "Κάτω από τα καλύμματα, αυτό που κάνει αυτή η επαυξημένη δήλωση ανάθεσης "
 "είναι περίπου το εξής::"
 
-#: faq/programming.rst:1373
+#: faq/programming.rst:1377
 msgid ""
 ">>> result = a_tuple[0] + 1\n"
 ">>> a_tuple[0] = result\n"
@@ -3003,7 +2997,7 @@ msgstr ""
 "  ...\n"
 "TypeError: 'tuple' object does not support item assignment"
 
-#: faq/programming.rst:1379
+#: faq/programming.rst:1383
 msgid ""
 "It is the assignment part of the operation that produces the error, since a "
 "tuple is immutable."
@@ -3011,11 +3005,11 @@ msgstr ""
 "Είναι το τμήμα ανάθεσης της λειτουργίας που παράγει το σφάλμα, αφού μια "
 "πλειάδα είναι αμετάβλητη."
 
-#: faq/programming.rst:1382
+#: faq/programming.rst:1386
 msgid "When you write something like::"
 msgstr "Όταν γράφετε κάτι σαν::"
 
-#: faq/programming.rst:1384
+#: faq/programming.rst:1388
 msgid ""
 ">>> a_tuple = (['foo'], 'bar')\n"
 ">>> a_tuple[0] += ['item']\n"
@@ -3029,7 +3023,7 @@ msgstr ""
 "  ...\n"
 "TypeError: 'tuple' object does not support item assignment"
 
-#: faq/programming.rst:1390
+#: faq/programming.rst:1394
 msgid ""
 "The exception is a bit more surprising, and even more surprising is the fact "
 "that even though there was an error, the append worked::"
@@ -3037,7 +3031,7 @@ msgstr ""
 "Η εξαίρεση είναι λίγο πιο εκπληκτική, και ακόμη πιο εκπληκτικό είναι το "
 "γεγονός ότι παρόλο που υπήρχε ένα σφάλμα, το παράρτημα λειτούργησε::"
 
-#: faq/programming.rst:1393
+#: faq/programming.rst:1397
 msgid ""
 ">>> a_tuple[0]\n"
 "['foo', 'item']"
@@ -3045,7 +3039,7 @@ msgstr ""
 ">>> a_tuple[0]\n"
 "['foo', 'item']"
 
-#: faq/programming.rst:1396
+#: faq/programming.rst:1400
 msgid ""
 "To see why this happens, you need to know that (a) if an object implements "
 "an :meth:`~object.__iadd__` magic method, it gets called when the ``+=`` "
@@ -3063,7 +3057,7 @@ msgstr ""
 "λίστα και επιστρέφει τη λίστα.  Για αυτό λέμε ότι για λίστες ``+=`` είναι "
 "μια \"συντομογραφία\" για :meth:`list.extend`::"
 
-#: faq/programming.rst:1404
+#: faq/programming.rst:1408
 msgid ""
 ">>> a_list = []\n"
 ">>> a_list += [1]\n"
@@ -3075,11 +3069,11 @@ msgstr ""
 ">>> a_list\n"
 "[1]"
 
-#: faq/programming.rst:1409
+#: faq/programming.rst:1413
 msgid "This is equivalent to::"
 msgstr "Αυτό ισοδυναμεί με::"
 
-#: faq/programming.rst:1411
+#: faq/programming.rst:1415
 msgid ""
 ">>> result = a_list.__iadd__([1])\n"
 ">>> a_list = result"
@@ -3087,7 +3081,7 @@ msgstr ""
 ">>> result = a_list.__iadd__([1])\n"
 ">>> a_list = result"
 
-#: faq/programming.rst:1414
+#: faq/programming.rst:1418
 msgid ""
 "The object pointed to by a_list has been mutated, and the pointer to the "
 "mutated object is assigned back to ``a_list``.  The end result of the "
@@ -3100,11 +3094,11 @@ msgstr ""
 "ίδιο αντικείμενο που το ``a_list`` έδειχνε προηγουμένως, αλλά η ανάθεση "
 "εξακολουθεί να γίνεται."
 
-#: faq/programming.rst:1419
+#: faq/programming.rst:1423
 msgid "Thus, in our tuple example what is happening is equivalent to::"
 msgstr "Έτσι, στο παράδειγμά μας, αυτό που συμβαίνει είναι ισοδύναμο με::"
 
-#: faq/programming.rst:1421
+#: faq/programming.rst:1425
 msgid ""
 ">>> result = a_tuple[0].__iadd__(['item'])\n"
 ">>> a_tuple[0] = result\n"
@@ -3118,7 +3112,7 @@ msgstr ""
 "  ...\n"
 "TypeError: 'tuple' object does not support item assignment"
 
-#: faq/programming.rst:1427
+#: faq/programming.rst:1431
 msgid ""
 "The :meth:`!__iadd__` succeeds, and thus the list is extended, but even "
 "though ``result`` points to the same object that ``a_tuple[0]`` already "
@@ -3130,7 +3124,7 @@ msgstr ""
 "``a_tuple[0]``, αυτή η τελική ανάθεση εξακολουθεί να έχει ως αποτέλεσμα ένα "
 "λάθος, γιατί οι πλειάδες είναι αμετάβλητες."
 
-#: faq/programming.rst:1433
+#: faq/programming.rst:1437
 msgid ""
 "I want to do a complicated sort: can you do a Schwartzian Transform in "
 "Python?"
@@ -3138,7 +3132,7 @@ msgstr ""
 "Θέλω να κάνω μια περίπλοκη ταξινόμηση: μπορείτε να κάνετε ένα Schwartzian "
 "Transform στην Python;"
 
-#: faq/programming.rst:1435
+#: faq/programming.rst:1439
 msgid ""
 "The technique, attributed to Randal Schwartz of the Perl community, sorts "
 "the elements of a list by a metric which maps each element to its \"sort "
@@ -3150,7 +3144,7 @@ msgstr ""
 "στοιχείο στην \" τιμή ταξινόμησης\" του.  Στην Python, χρησιμοποιήστε το "
 "όρισμα ``key`` για τη μέθοδο :meth:`list.sort`::"
 
-#: faq/programming.rst:1439
+#: faq/programming.rst:1443
 msgid ""
 "Isorted = L[:]\n"
 "Isorted.sort(key=lambda s: int(s[10:15]))"
@@ -3158,52 +3152,28 @@ msgstr ""
 "Isorted = L[:]\n"
 "Isorted.sort(key=lambda s: int(s[10:15]))"
 
-#: faq/programming.rst:1444
+#: faq/programming.rst:1448
 msgid "How can I sort one list by values from another list?"
 msgstr ""
 "Πως μπορώ να ταξινομήσω μια λίστα με βάση τις τιμές από μια άλλη λίστα;"
 
-#: faq/programming.rst:1446
+#: faq/programming.rst:1450
 msgid ""
 "Merge them into an iterator of tuples, sort the resulting list, and then "
-"pick out the element you want. ::"
+"pick out the element you want."
 msgstr ""
 "Συγχωνεύστε τα σε έναν iterator πλειάδων, ταξινομήστε τη λίστα που προκύπτει "
 "και, στην συνέχεια επιλέξτε το στοιχείο που θέλετε. ::"
 
-#: faq/programming.rst:1449
-msgid ""
-">>> list1 = [\"what\", \"I'm\", \"sorting\", \"by\"]\n"
-">>> list2 = [\"something\", \"else\", \"to\", \"sort\"]\n"
-">>> pairs = zip(list1, list2)\n"
-">>> pairs = sorted(pairs)\n"
-">>> pairs\n"
-"[(\"I'm\", 'else'), ('by', 'sort'), ('sorting', 'to'), ('what', "
-"'something')]\n"
-">>> result = [x[1] for x in pairs]\n"
-">>> result\n"
-"['else', 'sort', 'to', 'something']"
-msgstr ""
-">>> list1 = [\"τι\", \"κάνω\", \"ταξινόμηση\", \"με\"]\n"
-">>> list2 = [\"κάτι\", \"διαφορετικό\", \"του\", \"ταξινομώ\"]\n"
-">>> pairs = zip(list1, list2)\n"
-">>> pairs = sorted(pairs)\n"
-">>> pairs\n"
-"[(\"Εγώ\", 'διαφορετικά'), ('από', 'ταξινομώ'), ('ταξινόμηση', 'σε'), ('τι', "
-"'κάτι')]\n"
-">>> result = [x[1] for x in pairs]\n"
-">>> result\n"
-"['διαφορετικά', 'ταξινομώ', 'με', 'κάτι']"
-
-#: faq/programming.rst:1461
+#: faq/programming.rst:1465
 msgid "Objects"
 msgstr "Αντικείμενα"
 
-#: faq/programming.rst:1464
+#: faq/programming.rst:1468
 msgid "What is a class?"
 msgstr "Τι είναι μια κλάση;"
 
-#: faq/programming.rst:1466
+#: faq/programming.rst:1470
 msgid ""
 "A class is the particular object type created by executing a class "
 "statement. Class objects are used as templates to create instance objects, "
@@ -3216,7 +3186,7 @@ msgstr ""
 "τα δεδομένα (χαρακτηριστικά) όσο και τον κώδικα (μεθόδους) ειδικά για έναν "
 "τύπο δεδομένων."
 
-#: faq/programming.rst:1470
+#: faq/programming.rst:1474
 msgid ""
 "A class can be based on one or more other classes, called its base "
 "class(es). It then inherits the attributes and methods of its base classes. "
@@ -3234,11 +3204,11 @@ msgstr ""
 "``OutlookMailbox`` που χειρίζονται διάφορες συγκεκριμένες μορφές "
 "γραμματοκιβωτίου."
 
-#: faq/programming.rst:1479
+#: faq/programming.rst:1483
 msgid "What is a method?"
 msgstr "Τι είναι μια μέθοδος;"
 
-#: faq/programming.rst:1481
+#: faq/programming.rst:1485
 msgid ""
 "A method is a function on some object ``x`` that you normally call as ``x."
 "name(arguments...)``.  Methods are defined as functions inside the class "
@@ -3248,7 +3218,7 @@ msgstr ""
 "καλείτε ως ``x.name(ορίσματα...)``. Οι μέθοδοι ορίζονται ως συναρτήσεις "
 "εντός του ορισμού κλάσης::"
 
-#: faq/programming.rst:1485
+#: faq/programming.rst:1489
 msgid ""
 "class C:\n"
 "    def meth(self, arg):\n"
@@ -3258,11 +3228,11 @@ msgstr ""
 "    def meth(self, arg):\n"
 "        return arg * 2 + self.attribute"
 
-#: faq/programming.rst:1491
+#: faq/programming.rst:1495
 msgid "What is self?"
 msgstr "Τι είναι το self;"
 
-#: faq/programming.rst:1493
+#: faq/programming.rst:1497
 msgid ""
 "Self is merely a conventional name for the first argument of a method.  A "
 "method defined as ``meth(self, a, b, c)`` should be called as ``x.meth(a, b, "
@@ -3275,11 +3245,11 @@ msgstr ""
 "εμφανίζεται ο ορισμός∙ η καλούμενη μέθοδος θα ονομάζεται ``meth(x, a, b, "
 "c)``."
 
-#: faq/programming.rst:1498
+#: faq/programming.rst:1502
 msgid "See also :ref:`why-self`."
 msgstr "Βλ. επίσης :ref:`why-self`."
 
-#: faq/programming.rst:1502
+#: faq/programming.rst:1506
 msgid ""
 "How do I check if an object is an instance of a given class or of a subclass "
 "of it?"
@@ -3287,37 +3257,39 @@ msgstr ""
 "Πώς μπορώ να ελέγξω εάν ένα αντικείμενο είναι μια οντότητα μιας δεδομένης "
 "κλάσης ή μιας υποκλάσης της;"
 
-#: faq/programming.rst:1504
+#: faq/programming.rst:1508
 msgid ""
 "Use the built-in function :func:`isinstance(obj, cls) <isinstance>`.  You "
 "can check if an object is an instance of any of a number of classes by "
-"providing a tuple instead of a single class, e.g. ``isinstance(obj, (class1, "
-"class2, ...))``, and can also check whether an object is one of Python's "
-"built-in types, e.g. ``isinstance(obj, str)`` or ``isinstance(obj, (int, "
-"float, complex))``."
+"providing a tuple instead of a single class, for example, ``isinstance(obj, "
+"(class1, class2, ...))``, and can also check whether an object is one of "
+"Python's built-in types, for example, ``isinstance(obj, str)`` or "
+"``isinstance(obj, (int, float, complex))``."
 msgstr ""
 "Χρησιμοποιήστε την ενσωματωμένη συνάρτηση :func:`isinstance(obj, cls) "
-"<isinstance>`.  Μπορείτε να ελέγξετε εάν ένα αντικείμενο είναι μια παρουσία "
-"οποιασδήποτε από έναν αριθμό κλάσεων παρέχοντας μια πλειάδα αντί για μια "
-"μεμονωμένη κλάση, π.χ. ``isinstance(obj, (class1, class2, ...))``, και "
-"μπορεί επίσης να ελέγξει εάν ένα αντικείμενο είναι ένας από τους "
+"<isinstance>`.  Μπορείτε να ελέγξετε εάν ένα αντικείμενο είναι ένα "
+"στιγμιότυπο οποιουδήποτε από έναν αριθμό κλάσεων παρέχοντας μια πλειάδα αντί "
+"για μια μεμονωμένη κλάση, π.χ. ``isinstance(obj, (class1, class2, ...))``, "
+"και μπορείτε επίσης να ελέγξετε εάν ένα αντικείμενο είναι ένας από τους "
 "ενσωματωμένους τύπους της Python, π.χ. ``isinstance(obj, str)`` ή "
 "``isinstance(obj, (int, float, complex))``."
 
-#: faq/programming.rst:1511
+#: faq/programming.rst:1515
 msgid ""
 "Note that :func:`isinstance` also checks for virtual inheritance from an :"
 "term:`abstract base class`.  So, the test will return ``True`` for a "
 "registered class even if hasn't directly or indirectly inherited from it.  "
-"To test for \"true inheritance\", scan the :term:`MRO` of the class:"
+"To test for \"true inheritance\", scan the :term:`method resolution order` "
+"(MRO) of the class:"
 msgstr ""
 "Λάβετε υπόψη ότι το :func:`isinstance` ελέγχει επίσης για εικονική "
 "κληρονομικότητα από μια :term:`abstract base class`.  Έτσι, η δοκιμή θα "
 "επιστρέψει ``True`` για μια εγγεγραμμένη κλάση ακόμα κι αν δεν έχει "
 "κληρονομήσει άμεσα ή έμμεσα από αυτό.  Για να ελέγξετε μια \"αληθινή "
-"κληρονομικότητα\", σαρώστε το :term:`MRO` της κλάσης::"
+"κληρονομικότητα\", σαρώστε το :term:`method resolution order` (MRO) της "
+"κλάσης::"
 
-#: faq/programming.rst:1516
+#: faq/programming.rst:1521
 msgid ""
 "from collections.abc import Mapping\n"
 "\n"
@@ -3339,7 +3311,7 @@ msgstr ""
 "\n"
 "Mapping.register(P)"
 
-#: faq/programming.rst:1528
+#: faq/programming.rst:1533
 msgid ""
 ">>> c = C()\n"
 ">>> isinstance(c, C)        # direct\n"
@@ -3372,7 +3344,7 @@ msgstr ""
 "# Test for \"true inheritance\"\n"
 ">>> Mapping in type(c).__mro__\n"
 
-#: faq/programming.rst:1546
+#: faq/programming.rst:1551
 msgid ""
 "Note that most programs do not use :func:`isinstance` on user-defined "
 "classes very often.  If you are developing the classes yourself, a more "
@@ -3389,7 +3361,7 @@ msgstr ""
 "διαφορετικό με βάση την κλάση που είναι, για παράδειγμα, εάν έχετε μια "
 "συνάρτηση που κάνει κάτι::"
 
-#: faq/programming.rst:1553
+#: faq/programming.rst:1558
 msgid ""
 "def search(obj):\n"
 "    if isinstance(obj, Mailbox):\n"
@@ -3405,7 +3377,7 @@ msgstr ""
 "        ...  # code to search a document\n"
 "    elif ..."
 
-#: faq/programming.rst:1560
+#: faq/programming.rst:1565
 msgid ""
 "A better approach is to define a ``search()`` method on all the classes and "
 "just call it::"
@@ -3413,7 +3385,7 @@ msgstr ""
 "Μια καλύτερη προσέγγιση είναι να ορίσετε μια μέθοδο ``search()`` σε όλες τις "
 "κλάσεις και απλώς να την καλέσετε::"
 
-#: faq/programming.rst:1563
+#: faq/programming.rst:1568
 msgid ""
 "class Mailbox:\n"
 "    def search(self):\n"
@@ -3435,13 +3407,13 @@ msgstr ""
 "\n"
 "obj.search()"
 
-#: faq/programming.rst:1575
+#: faq/programming.rst:1580
 msgid "What is delegation?"
 msgstr "Τι είναι το delegation;"
 
-#: faq/programming.rst:1577
+#: faq/programming.rst:1582
 msgid ""
-"Delegation is an object oriented technique (also called a design pattern). "
+"Delegation is an object-oriented technique (also called a design pattern). "
 "Let's say you have an object ``x`` and want to change the behaviour of just "
 "one of its methods.  You can create a new class that provides a new "
 "implementation of the method you're interested in changing and delegates all "
@@ -3454,7 +3426,7 @@ msgstr ""
 "σας ενδιαφέρει να αλλάξετε και εκχωρεί όλες τις άλλες μεθόδους στην "
 "αντίστοιχη μέθοδο του ``x``."
 
-#: faq/programming.rst:1583
+#: faq/programming.rst:1588
 msgid ""
 "Python programmers can easily implement delegation.  For example, the "
 "following class implements a class that behaves like a file but converts all "
@@ -3464,7 +3436,7 @@ msgstr ""
 "παράδειγμα, η ακόλουθη κλάση υλοποιεί μια κλάση που συμπεριφέρεται σαν "
 "αρχείο αλλά μετατρέπει όλα τα γραπτά δεδομένα σε κεφαλαία::"
 
-#: faq/programming.rst:1587
+#: faq/programming.rst:1592
 msgid ""
 "class UpperOut:\n"
 "\n"
@@ -3488,7 +3460,7 @@ msgstr ""
 "    def __getattr__(self, name):\n"
 "        return getattr(self._outfile, name)"
 
-#: faq/programming.rst:1598
+#: faq/programming.rst:1603
 msgid ""
 "Here the ``UpperOut`` class redefines the ``write()`` method to convert the "
 "argument string to uppercase before calling the underlying ``self._outfile."
@@ -3505,7 +3477,7 @@ msgstr ""
 "language reference <attribute-access>` για περισσότερες πληροφορίες σχετικά "
 "με τον έλεγχο της πρόσβασης."
 
-#: faq/programming.rst:1605
+#: faq/programming.rst:1610
 msgid ""
 "Note that for more general cases delegation can get trickier. When "
 "attributes must be set as well as retrieved, the class must define a :meth:"
@@ -3519,7 +3491,7 @@ msgstr ""
 "πρέπει να το κάνει προσεκτικά.  Η βασική υλοποίηση του :meth:`!__setattr__` "
 "είναι περίπου ισοδύναμο με το εξής::"
 
-#: faq/programming.rst:1610
+#: faq/programming.rst:1615
 msgid ""
 "class X:\n"
 "    ...\n"
@@ -3533,7 +3505,7 @@ msgstr ""
 "        self.__dict__[name] = value\n"
 "    ..."
 
-#: faq/programming.rst:1616
+#: faq/programming.rst:1621
 msgid ""
 "Many :meth:`~object.__setattr__` implementations call :meth:`!object."
 "__setattr__` to set an attribute on self without causing infinite recursion::"
@@ -3542,7 +3514,7 @@ msgstr ""
 "__setattr__` για να θέσουν μια μεταβλητή  στον εαυτό τους χωρίς να προκαλούν "
 "άπειρη αναδρομή."
 
-#: faq/programming.rst:1619
+#: faq/programming.rst:1624
 msgid ""
 "class X:\n"
 "    def __setattr__(self, name, value):\n"
@@ -3554,7 +3526,7 @@ msgstr ""
 "        # Custom logic here...\n"
 "        object.__setattr__(self, name, value)"
 
-#: faq/programming.rst:1624
+#: faq/programming.rst:1629
 msgid ""
 "Alternatively, it is possible to set attributes by inserting entries into :"
 "attr:`self.__dict__ <object.__dict__>` directly."
@@ -3562,7 +3534,7 @@ msgstr ""
 "Εναλλακτικά, είναι δυνατό να ορίσετε χαρακτηριστικά εισάγοντας καταχωρήσεις "
 "στο :attr:`self.__dict__ <object.__dict__>` απευθείας."
 
-#: faq/programming.rst:1629
+#: faq/programming.rst:1634
 msgid ""
 "How do I call a method defined in a base class from a derived class that "
 "extends it?"
@@ -3570,11 +3542,11 @@ msgstr ""
 "Πώς μπορώ να καλέσω μια μέθοδο που ορίζεται σε μια βασική κλάση από μια "
 "παράγωγη κλάση που την επεκτείνει;"
 
-#: faq/programming.rst:1631
+#: faq/programming.rst:1636
 msgid "Use the built-in :func:`super` function::"
 msgstr "Χρησιμοποιήστε την ενσωματωμένη συνάρτηση :func:`super`::"
 
-#: faq/programming.rst:1633
+#: faq/programming.rst:1638
 msgid ""
 "class Derived(Base):\n"
 "    def meth(self):\n"
@@ -3584,7 +3556,7 @@ msgstr ""
 "    def meth(self):\n"
 "        super().meth()  # calls Base.meth"
 
-#: faq/programming.rst:1637
+#: faq/programming.rst:1642
 msgid ""
 "In the example, :func:`super` will automatically determine the instance from "
 "which it was called (the ``self`` value), look up the :term:`method "
@@ -3596,26 +3568,27 @@ msgstr ""
 "order` (MRO) με ``type(self).__mro__``, και επιστρέψτε το επόμενο στη σειρά "
 "μετά το ``Derived`` στο MRO: ``Base``."
 
-#: faq/programming.rst:1644
+#: faq/programming.rst:1649
 msgid "How can I organize my code to make it easier to change the base class?"
 msgstr ""
 "Πως μπορώ να οργανώσω τον κώδικα μου προκειμένου να διευκολύνω την αλλαγή "
 "της βασικής κλάσης;"
 
-#: faq/programming.rst:1646
+#: faq/programming.rst:1651
 msgid ""
 "You could assign the base class to an alias and derive from the alias.  Then "
 "all you have to change is the value assigned to the alias.  Incidentally, "
-"this trick is also handy if you want to decide dynamically (e.g. depending "
-"on availability of resources) which base class to use.  Example::"
+"this trick is also handy if you want to decide dynamically (such as "
+"depending on availability of resources) which base class to use.  Example::"
 msgstr ""
-"Θα μπορούσατε να αντιστοιχίσετε τη βασική κλάση σε ένα ψευδώνυμο και να "
-"προκύψει το ψευδώνυμο.  Στην συνέχεια, το μόνο που πρέπει να αλλάξετε είναι "
-"η τιμή που έχει εκχωρηθεί ψευδώνυμο.  Παρεμπιπτόντως, αυτό το κόλπο είναι "
-"επίσης χρήσιμο εάν θέλετε να αποφασίσετε δυναμικά (π.χ. ανάλογα με την "
-"διαθεσιμότητα των πόρων) ποια βασική κλάση να χρησιμοποιήσετε  Παράδειγμα::"
+"Θα μπορούσατε να αντιστοιχίσετε τη βασική κλάση σε ένα ψευδώνυμο και να και "
+"να προκύψει το ψευδώνυμο.  Στην συνέχεια, το μόνο που πρέπει να αλλάξετε "
+"είναι η τιμή που έχει εκχωρηθεί στο ψευδώνυμο.  Παρεμπιπτόντως, αυτό το "
+"κόλπο είναι επίσης χρήσιμο εάν θέλετε να αποφασίσετε δυναμικά (π.χ. ανάλογα "
+"με την διαθεσιμότητα των πόρων) ποια βασική κλάση να χρησιμοποιήσετε.  "
+"Παράδειγμα::"
 
-#: faq/programming.rst:1651
+#: faq/programming.rst:1656
 msgid ""
 "class Base:\n"
 "    ...\n"
@@ -3633,11 +3606,11 @@ msgstr ""
 "class Derived(BaseAlias):\n"
 "    ..."
 
-#: faq/programming.rst:1661
+#: faq/programming.rst:1666
 msgid "How do I create static class data and static class methods?"
 msgstr "Πως δημιουργώ δεδομένα στατικής κλάσης και μεθόδους στατικής κλάσης;"
 
-#: faq/programming.rst:1663
+#: faq/programming.rst:1668
 msgid ""
 "Both static data and static methods (in the sense of C++ or Java) are "
 "supported in Python."
@@ -3645,7 +3618,7 @@ msgstr ""
 "Τόσο τα στατιστικά δεδομένα όσο και οι στατικές μέθοδοι (με την έννοια της C+"
 "+ ή της Java) υποστηρίζονται στην Python."
 
-#: faq/programming.rst:1666
+#: faq/programming.rst:1671
 msgid ""
 "For static data, simply define a class attribute.  To assign a new value to "
 "the attribute, you have to explicitly use the class name in the assignment::"
@@ -3654,7 +3627,7 @@ msgstr ""
 "εκχωρήσετε μια νέα τιμή στο χαρακτηριστικό, πρέπει να χρησιμοποιήσετε ρητά "
 "το όνομα κλάσης στην εκχώρηση::"
 
-#: faq/programming.rst:1669
+#: faq/programming.rst:1674
 msgid ""
 "class C:\n"
 "    count = 0   # number of times C.__init__ called\n"
@@ -3674,7 +3647,7 @@ msgstr ""
 "    def getcount(self):\n"
 "        return C.count  # or return self.count"
 
-#: faq/programming.rst:1678
+#: faq/programming.rst:1683
 msgid ""
 "``c.count`` also refers to ``C.count`` for any ``c`` such that "
 "``isinstance(c, C)`` holds, unless overridden by ``c`` itself or by some "
@@ -3685,7 +3658,7 @@ msgstr ""
 "``c`` ή από κάποια κλάση στη διαδρομή αναζήτησης της βασικής κλάσης από το "
 "``c.__class__`` πίσω στο ``C``."
 
-#: faq/programming.rst:1682
+#: faq/programming.rst:1687
 msgid ""
 "Caution: within a method of C, an assignment like ``self.count = 42`` "
 "creates a new and unrelated instance named \"count\" in ``self``'s own "
@@ -3697,15 +3670,15 @@ msgstr ""
 "dict του ``self``.  Επανασύνδεση μιας κλάσης-στατικής όνομα δεδομένων πρέπει "
 "πάντα να προσδιορίζει την κλάση είτε βρίσκεται μέσα σε μια μέθοδο είτε όχι::"
 
-#: faq/programming.rst:1687
+#: faq/programming.rst:1692
 msgid "C.count = 314"
 msgstr "C.count = 314"
 
-#: faq/programming.rst:1689
+#: faq/programming.rst:1694
 msgid "Static methods are possible::"
 msgstr "Οι στατικές μέθοδοι είναι δυνατές::"
 
-#: faq/programming.rst:1691
+#: faq/programming.rst:1696
 msgid ""
 "class C:\n"
 "    @staticmethod\n"
@@ -3719,7 +3692,7 @@ msgstr ""
 "        # No 'self' parameter!\n"
 "        ..."
 
-#: faq/programming.rst:1697
+#: faq/programming.rst:1702
 msgid ""
 "However, a far more straightforward way to get the effect of a static method "
 "is via a simple module-level function::"
@@ -3727,7 +3700,7 @@ msgstr ""
 "Ωστόσο, ένας πολύ πιο απλός τρόπος για να λάβετε το αποτέλεσμα μιας στατικής "
 "μεθόδου είναι μέσω μιας απλής συνάρτησης σε επίπεδο μονάδας::"
 
-#: faq/programming.rst:1700
+#: faq/programming.rst:1705
 msgid ""
 "def getcount():\n"
 "    return C.count"
@@ -3735,7 +3708,7 @@ msgstr ""
 "def getcount():\n"
 "    return C.count"
 
-#: faq/programming.rst:1703
+#: faq/programming.rst:1708
 msgid ""
 "If your code is structured so as to define one class (or tightly related "
 "class hierarchy) per module, this supplies the desired encapsulation."
@@ -3744,11 +3717,11 @@ msgstr ""
 "συνδεδεμένη ιεραρχίας κλάσεων) ανά module, αυτό παρέχει την επιθυμητή "
 "ενθυλάκωση."
 
-#: faq/programming.rst:1708
+#: faq/programming.rst:1713
 msgid "How can I overload constructors (or methods) in Python?"
 msgstr "Πως μπορώ να υπερφορτώσω κατασκευαστές (ή μεθόδους) στην Python;"
 
-#: faq/programming.rst:1710
+#: faq/programming.rst:1715
 msgid ""
 "This answer actually applies to all methods, but the question usually comes "
 "up first in the context of constructors."
@@ -3756,11 +3729,11 @@ msgstr ""
 "Αυτή η απάντηση ισχύει στην πραγματικότητα για όλες τις μεθόδους, αλλά η "
 "ερώτηση συνήθως εμφανίζεται πρώτη στο πλαίσιο των κατασκευαστών."
 
-#: faq/programming.rst:1713
-msgid "In C++ you'd write"
-msgstr "Στην C++ θα γράφατε"
+#: faq/programming.rst:1718
+msgid "In C++ you'd write:"
+msgstr "Στην C++ θα γράφατε:"
 
-#: faq/programming.rst:1715
+#: faq/programming.rst:1720
 msgid ""
 "class C {\n"
 "    C() { cout << \"No arguments\\n\"; }\n"
@@ -3772,7 +3745,7 @@ msgstr ""
 "    C(int i) { cout << \"Argument is \" << i << \"\\n\"; }\n"
 "}"
 
-#: faq/programming.rst:1722
+#: faq/programming.rst:1727
 msgid ""
 "In Python you have to write a single constructor that catches all cases "
 "using default arguments.  For example::"
@@ -3780,7 +3753,7 @@ msgstr ""
 "Στην Python πρέπει να γράψετε έναν μοναδικό κατασκευαστή που να πιάνει όλες "
 "τις περιπτώσεις χρησιμοποιώντας προεπιλεγμένα ορίσματα.  Για παράδειγμα::"
 
-#: faq/programming.rst:1725
+#: faq/programming.rst:1730
 msgid ""
 "class C:\n"
 "    def __init__(self, i=None):\n"
@@ -3796,17 +3769,17 @@ msgstr ""
 "        else:\n"
 "            print(\"Argument is\", i)"
 
-#: faq/programming.rst:1732
+#: faq/programming.rst:1737
 msgid "This is not entirely equivalent, but close enough in practice."
 msgstr "Αυτό δεν είναι εντελώς ισοδύναμο, αλλά αρκετά κοντά στην πράξη."
 
-#: faq/programming.rst:1734
-msgid "You could also try a variable-length argument list, e.g. ::"
+#: faq/programming.rst:1739
+msgid "You could also try a variable-length argument list, for example::"
 msgstr ""
-"Θα μπορούσατε επίσης να δοκιμάσετε μια λίστα ορισμάτων μεταβλητού μήκους, π."
-"χ. ::"
+"Θα μπορούσατε επίσης να δοκιμάσετε μια λίστα ορισμάτων μεταβλητού μήκους, "
+"για παράδειγμα::"
 
-#: faq/programming.rst:1736
+#: faq/programming.rst:1741
 msgid ""
 "def __init__(self, *args):\n"
 "    ..."
@@ -3814,17 +3787,17 @@ msgstr ""
 "def __init__(self, *args):\n"
 "    ..."
 
-#: faq/programming.rst:1739
+#: faq/programming.rst:1744
 msgid "The same approach works for all method definitions."
 msgstr "Η ίδια προσέγγιση λειτουργεί για όλους τους ορισμούς μεθόδων."
 
-#: faq/programming.rst:1743
+#: faq/programming.rst:1748
 msgid "I try to use __spam and I get an error about _SomeClassName__spam."
 msgstr ""
 "Προσπαθώ να χρησιμοποιήσω __spam και λαμβάνω ένα σφάλμα σχετικά με το "
 "_SomeClassName__spam."
 
-#: faq/programming.rst:1745
+#: faq/programming.rst:1750
 msgid ""
 "Variable names with double leading underscores are \"mangled\" to provide a "
 "simple but effective way to define class private variables.  Any identifier "
@@ -3840,7 +3813,7 @@ msgstr ""
 "αντικαθίσταται μέσω κειμένου το ``_classname__spam``, όπου το ``classname`` "
 "είναι το τρέχον όνομα κλάσης με απογυμνωμένες τυχόν προηγούμενες παύλες."
 
-#: faq/programming.rst:1751
+#: faq/programming.rst:1756
 msgid ""
 "The identifier can be used unchanged within the class, but to access it "
 "outside the class, the mangled name must be used:"
@@ -3849,7 +3822,7 @@ msgstr ""
 "για πρόσβαση σε αυτό εκτός της κλάσης, πρέπει να χρησιμοποιηθεί το "
 "παραμορφωμένο όνομα:"
 
-#: faq/programming.rst:1754
+#: faq/programming.rst:1759
 msgid ""
 "class A:\n"
 "    def __one(self):\n"
@@ -3875,7 +3848,7 @@ msgstr ""
 "\n"
 "four = 4 * A()._A__one()"
 
-#: faq/programming.rst:1768
+#: faq/programming.rst:1773
 msgid ""
 "In particular, this does not guarantee privacy since an outside user can "
 "still deliberately access the private attribute; many Python programmers "
@@ -3886,7 +3859,7 @@ msgstr ""
 "προγραμματιστές Python δεν μπαίνουν ποτέ στον κόπο να χρησιμοποιήσουν "
 "ονόματα μεταβλητών."
 
-#: faq/programming.rst:1774
+#: faq/programming.rst:1779
 msgid ""
 "The :ref:`private name mangling specifications <private-name-mangling>` for "
 "details and special cases."
@@ -3894,16 +3867,16 @@ msgstr ""
 "Οι :ref:`προδιαφραφές παραποίησης ιδιωτικού ονόματος <private-name-"
 "mangling>` για λεπτομέρειες και ειδικές περιπτώσεις.'"
 
-#: faq/programming.rst:1778
+#: faq/programming.rst:1784
 msgid "My class defines __del__ but it is not called when I delete the object."
 msgstr ""
 "Η κλάση μου ορίζει __del__ αλλά δεν καλείται όταν διαγράφω το αντικείμενο."
 
-#: faq/programming.rst:1780
+#: faq/programming.rst:1786
 msgid "There are several possible reasons for this."
 msgstr "Υπάρχουν διάφοροι πιθανοί λόγοι για αυτό."
 
-#: faq/programming.rst:1782
+#: faq/programming.rst:1788
 msgid ""
 "The :keyword:`del` statement does not necessarily call :meth:`~object."
 "__del__` -- it simply decrements the object's reference count, and if this "
@@ -3913,33 +3886,33 @@ msgstr ""
 "απλώς μειώνει τον αριθμό αναφοράς του αντικειμένου, και αν αυτό φτάσει στο "
 "μηδέν καλείται το :meth:`!__del__`."
 
-#: faq/programming.rst:1786
+#: faq/programming.rst:1792
 msgid ""
-"If your data structures contain circular links (e.g. a tree where each child "
-"has a parent reference and each parent has a list of children) the reference "
-"counts will never go back to zero.  Once in a while Python runs an algorithm "
-"to detect such cycles, but the garbage collector might run some time after "
-"the last reference to your data structure vanishes, so your :meth:`!__del__` "
-"method may be called at an inconvenient and random time. This is "
-"inconvenient if you're trying to reproduce a problem. Worse, the order in "
-"which object's :meth:`!__del__` methods are executed is arbitrary.  You can "
-"run :func:`gc.collect` to force a collection, but there *are* pathological "
-"cases where objects will never be collected."
+"If your data structures contain circular links (for example, a tree where "
+"each child has a parent reference and each parent has a list of children) "
+"the reference counts will never go back to zero.  Once in a while Python "
+"runs an algorithm to detect such cycles, but the garbage collector might run "
+"some time after the last reference to your data structure vanishes, so your :"
+"meth:`!__del__` method may be called at an inconvenient and random time. "
+"This is inconvenient if you're trying to reproduce a problem. Worse, the "
+"order in which object's :meth:`!__del__` methods are executed is arbitrary.  "
+"You can run :func:`gc.collect` to force a collection, but there *are* "
+"pathological cases where objects will never be collected."
 msgstr ""
-"Εάν οι δομές δεδομένων σας περιέχουν κυκλικούς συνδέσμους (π.χ. ένα δέντρο "
-"όπου κάθε παιδί έχει μια αναφορά γονέα και κάθε γονέας έχει μια λίστα "
-"παιδιών), οι μετρήσεις δεν θα επανέλθουν ποτέ στο μηδέν.  Κάθε τόσο η Python "
-"εκτελεί έναν αλγόριθμο για να ανιχνεύσει τέτοιους κύκλους, αλλά ο συλλέκτης "
-"σκουπιδιών μπορεί να εκτελεστεί κάποια στιγμή μετά την εξαφάνιση της "
-"τελευταίας αναφοράς στη δομή δεδομένων σας, επομένως η μέθοδος :meth:`!"
-"__del__` μπορεί να κληθεί σε μια άβολη και τυχαία στιγμή. Αυτό δεν είναι "
-"βολικό εάν προσπαθείτε να αναπαράξετε ένα πρόβλημα. Ακόμη χειρότερα, η σειρά "
-"με την οποία εκτελούνται μέθοδοι :meth:`!__del__` του αντικειμένου είναι "
-"αυθαίρετη.  Μπορείτε να εκτελέσετε το :func:`gc.collect` για να αναγκάσετε "
-"μια συλλογή, αλλά *υπάρχουν* παθολογικές περιπτώσεις όπου τα αντικείμενα δεν "
-"θα συλλεχθούν ποτέ."
+"Εάν οι δομές δεδομένων σας περιέχουν κυκλικούς συνδέσμους (για παράδειγμα, "
+"ένα δέντρο όπου κάθε παιδί έχει μια αναφορά γονέα και κάθε γονέας έχει μια "
+"λίστα παιδιών), οι μετρήσεις αναφορών δεν θα επανέλθουν ποτέ στο μηδέν.  "
+"Κάθε τόσο η Python εκτελεί έναν αλγόριθμο για να ανιχνεύσει τέτοιους "
+"κύκλους, αλλά ο συλλέκτης σκουπιδιών μπορεί να εκτελεστεί κάποια στιγμή μετά "
+"την εξαφάνιση της τελευταίας αναφοράς στη δομή δεδομένων σας, επομένως η "
+"μέθοδος :meth:`!__del__` μπορεί να κληθεί σε μια άβολη και τυχαία στιγμή. "
+"Αυτό δεν είναι βολικό εάν προσπαθείτε να αναπαράξετε ένα πρόβλημα. Ακόμη "
+"χειρότερα, η σειρά με την οποία εκτελούνται μέθοδοι :meth:`!__del__` του "
+"αντικειμένου είναι αυθαίρετη.  Μπορείτε να εκτελέσετε το :func:`gc.collect` "
+"για να αναγκάσετε μια συλλογή, αλλά *υπάρχουν* παθολογικές περιπτώσεις όπου "
+"τα αντικείμενα δεν θα συλλεχθούν ποτέ."
 
-#: faq/programming.rst:1797
+#: faq/programming.rst:1803
 msgid ""
 "Despite the cycle collector, it's still a good idea to define an explicit "
 "``close()`` method on objects to be called whenever you're done with them.  "
@@ -3956,7 +3929,7 @@ msgstr ""
 "και το ``close()`` θα πρέπει να βεβαιωθεί ότι μπορεί να κληθεί περισσότερες "
 "από μία φορές για το ίδιο αντικείμενο."
 
-#: faq/programming.rst:1804
+#: faq/programming.rst:1810
 msgid ""
 "Another way to avoid cyclical references is to use the :mod:`weakref` "
 "module, which allows you to point to objects without incrementing their "
@@ -3964,12 +3937,12 @@ msgid ""
 "references for their parent and sibling references (if they need them!)."
 msgstr ""
 "Ένα άλλος τρόπος για να αποφύγετε τις κυκλικές αναφορές είναι να "
-"χρησιμοποιήσετε το module :mod:`weakref`, το οποίο σας επιτρέπει να αυξάνετε "
-"τον αριθμό των αναφορών τους.  Οι δομές δεδομένων δέντρων, για παράδειγμα, "
-"θα πρέπει να χρησιμοποιούν αδύναμες αναφορές για τις αναφορές γονέων και "
-"αδελφών ( αν τα χρειαστούν!)."
+"χρησιμοποιήσετε το module :mod:`weakref`, το οποίο σας επιτρέπει να "
+"αναφέρεστε σε αντικείμενα χωρίς να αυξάνετε τον αριθμό των αναφορών τους. Οι "
+"δομές δεδομένων δέντρων, για παράδειγμα, θα πρέπει να χρησιμοποιούν αδύναμες "
+"αναφορές για τις αναφορές γονέων και αδελφών (αν τα χρειαστούν!)."
 
-#: faq/programming.rst:1817
+#: faq/programming.rst:1823
 msgid ""
 "Finally, if your :meth:`!__del__` method raises an exception, a warning "
 "message is printed to :data:`sys.stderr`."
@@ -3977,12 +3950,12 @@ msgstr ""
 "Τέλος, εάν η μέθοδος :meth:`!__del__` εγείρει μια εξαίρεση, εκτυπώνεται ένα "
 "προειδοποιητικό μήνυμα στη διεύθυνση :data:`sys.stderr`."
 
-#: faq/programming.rst:1822
+#: faq/programming.rst:1828
 msgid "How do I get a list of all instances of a given class?"
 msgstr ""
 "Πως μπορώ να λάβω μια λίστα με όλες τις οντότητες μιας δεδομένης κλάσης;"
 
-#: faq/programming.rst:1824
+#: faq/programming.rst:1830
 msgid ""
 "Python does not keep track of all instances of a class (or of a built-in "
 "type). You can program the class's constructor to keep track of all "
@@ -3993,11 +3966,11 @@ msgstr ""
 "κλάσης να παρακολουθεί όλες τις οντότητες διατηρώντας μια λίστα αδύναμων "
 "αναφορών σε κάθε παρουσία."
 
-#: faq/programming.rst:1830
+#: faq/programming.rst:1836
 msgid "Why does the result of ``id()`` appear to be not unique?"
 msgstr "Γιατί το αποτέλεσμα του ``id()`` φαίνεται να μην είναι μοναδικό;"
 
-#: faq/programming.rst:1832
+#: faq/programming.rst:1838
 msgid ""
 "The :func:`id` builtin returns an integer that is guaranteed to be unique "
 "during the lifetime of the object.  Since in CPython, this is the object's "
@@ -4012,7 +3985,7 @@ msgstr ""
 "αντικείμενο εκχωρείται στην ίδια θέση στη μνήμη.  Αυτό φαίνεται από αυτό το "
 "παράδειγμα:"
 
-#: faq/programming.rst:1843
+#: faq/programming.rst:1849
 msgid ""
 "The two ids belong to different integer objects that are created before, and "
 "deleted immediately after execution of the ``id()`` call.  To be sure that "
@@ -4025,11 +3998,11 @@ msgstr ""
 "θέλετε να εξετάσετε είναι ακόμα ζωντανά, δημιουργήστε μια άλλη αναφορά στο "
 "αντικείμενο:"
 
-#: faq/programming.rst:1856
+#: faq/programming.rst:1862
 msgid "When can I rely on identity tests with the *is* operator?"
 msgstr "Πότε μπορώ να βασιστώ σε δοκιμές ταυτότητας με τον τελεστή *is*;"
 
-#: faq/programming.rst:1858
+#: faq/programming.rst:1864
 msgid ""
 "The ``is`` operator tests for object identity.  The test ``a is b`` is "
 "equivalent to ``id(a) == id(b)``."
@@ -4037,7 +4010,7 @@ msgstr ""
 "Ο τελεστής ``is`` ελέγχει την ταυτότητα του αντικειμένου.  Η δοκιμή ``a is "
 "b`` ισοδυναμεί με ``id(a) == id(b)``."
 
-#: faq/programming.rst:1861
+#: faq/programming.rst:1867
 msgid ""
 "The most important property of an identity test is that an object is always "
 "identical to itself, ``a is a`` always returns ``True``.  Identity tests are "
@@ -4050,7 +4023,7 @@ msgstr ""
 "Και σε αντίθεση με τα τεστ ισότητας, τα τεστ ταυτότητας είναι εγγυημένα ότι "
 "θα επιστρέψουν ένα boolean ``True`` ή ``False``."
 
-#: faq/programming.rst:1866
+#: faq/programming.rst:1872
 msgid ""
 "However, identity tests can *only* be substituted for equality tests when "
 "object identity is assured.  Generally, there are three circumstances where "
@@ -4060,7 +4033,7 @@ msgstr ""
 "όταν είναι εξασφαλισμένη η ταυτότητα αντικειμένου. Γενικά, υπάρχουν τρεις "
 "περιπτώσεις όπου η ταυτότητα είναι εγγυημένη:"
 
-#: faq/programming.rst:1870
+#: faq/programming.rst:1876
 msgid ""
 "Assignments create new names but do not change object identity.  After the "
 "assignment ``new = old``, it is guaranteed that ``new is old``."
@@ -4069,7 +4042,7 @@ msgstr ""
 "αντικειμένου.  Μετά την ανάθεση ``new = old``, είναι εγγυημένο ότι το ``new "
 "is old``."
 
-#: faq/programming.rst:1873
+#: faq/programming.rst:1879
 msgid ""
 "Putting an object in a container that stores object references does not "
 "change object identity.  After the list assignment ``s[0] = x``, it is "
@@ -4079,7 +4052,7 @@ msgstr ""
 "αντικειμένων δεν αλλάζει την ταυτότητα αντικειμένου.  Μετά την ανάθεση "
 "λίστας ``s[0] = x``, είναι εγγυημένο ότι το ``s[0] is x``."
 
-#: faq/programming.rst:1877
+#: faq/programming.rst:1883
 msgid ""
 "If an object is a singleton, it means that only one instance of that object "
 "can exist.  After the assignments ``a = None`` and ``b = None``, it is "
@@ -4090,7 +4063,7 @@ msgstr ""
 "``b = None``, είναι εγγυημένο ότι το ``a is b`` επειδή το ``None`` είναι "
 "singleton."
 
-#: faq/programming.rst:1881
+#: faq/programming.rst:1887
 msgid ""
 "In most other circumstances, identity tests are inadvisable and equality "
 "tests are preferred.  In particular, identity tests should not be used to "
@@ -4102,11 +4075,11 @@ msgstr ""
 "να χρησιμοποιούνται για τον έλεγχο σταθερών όπως :class:`int` και :class:"
 "`str` που δεν είναι εγγυημένα singletons::"
 
-#: faq/programming.rst:1886
+#: faq/programming.rst:1892
 msgid ""
-">>> a = 1000\n"
-">>> b = 500\n"
-">>> c = b + 500\n"
+">>> a = 10_000_000\n"
+">>> b = 5_000_000\n"
+">>> c = b + 5_000_000\n"
 ">>> a is c\n"
 "False\n"
 "\n"
@@ -4116,9 +4089,9 @@ msgid ""
 ">>> a is c\n"
 "False"
 msgstr ""
-">>> a = 1000\n"
-">>> b = 500\n"
-">>> c = b + 500\n"
+">>> a = 10_000_000\n"
+">>> b = 5_000_000\n"
+">>> c = b + 5_000_000\n"
 ">>> a is c\n"
 "False\n"
 "\n"
@@ -4128,12 +4101,12 @@ msgstr ""
 ">>> a is c\n"
 "False"
 
-#: faq/programming.rst:1898
+#: faq/programming.rst:1904
 msgid "Likewise, new instances of mutable containers are never identical::"
 msgstr ""
 "Ομοίως, τα νέα στιγμιότυπα μεταβλητών κοντέινερ δεν είναι ποτέ πανομοιότυπα::"
 
-#: faq/programming.rst:1900
+#: faq/programming.rst:1906
 msgid ""
 ">>> a = []\n"
 ">>> b = []\n"
@@ -4145,7 +4118,7 @@ msgstr ""
 ">>> a is b\n"
 "False"
 
-#: faq/programming.rst:1905
+#: faq/programming.rst:1911
 msgid ""
 "In the standard library code, you will see several common patterns for "
 "correctly using identity tests:"
@@ -4153,7 +4126,7 @@ msgstr ""
 "Στον τυπικό κώδικα βιβλιοθήκης, θα δείτε πολλά κοινά μοτίβα για τη σωστή "
 "χρήση των δοκιμών ταυτότητας:"
 
-#: faq/programming.rst:1908
+#: faq/programming.rst:1914
 msgid ""
 "As recommended by :pep:`8`, an identity test is the preferred way to check "
 "for ``None``.  This reads like plain English in code and avoids confusion "
@@ -4164,7 +4137,7 @@ msgstr ""
 "αγγλικά στον κώδικα και αποφεύγεται η σύγχυση με άλλα αντικείμενα που μπορεί "
 "να έχουν τιμές boolean που αξιολογούνται ως ψευδείς."
 
-#: faq/programming.rst:1912
+#: faq/programming.rst:1918
 msgid ""
 "Detecting optional arguments can be tricky when ``None`` is a valid input "
 "value.  In those situations, you can create a singleton sentinel object "
@@ -4177,7 +4150,7 @@ msgstr ""
 "θα διαφέρει από άλλα αντικείμενα.  Για παράδειγμα, δείτε πως μπορείτε να "
 "εφαρμόσετε μια μέθοδο που συμπεριφέρεται σαν :meth:`dict.pop`:"
 
-#: faq/programming.rst:1917
+#: faq/programming.rst:1923
 msgid ""
 "_sentinel = object()\n"
 "\n"
@@ -4201,7 +4174,7 @@ msgstr ""
 "        raise KeyError(key)\n"
 "    return default"
 
-#: faq/programming.rst:1930
+#: faq/programming.rst:1936
 msgid ""
 "Container implementations sometimes need to augment equality tests with "
 "identity tests.  This prevents the code from being confused by objects such "
@@ -4211,7 +4184,7 @@ msgstr ""
 "ισότητας με δοκιμές ταυτότητας.  Αυτό αποτρέπει τη σύγχυση του κώδικα από "
 "αντικείμενα όπως το ``float('NaN')`` που είναι ίσα με τα ίδια."
 
-#: faq/programming.rst:1934
+#: faq/programming.rst:1940
 msgid ""
 "For example, here is the implementation of :meth:`!collections.abc.Sequence."
 "__contains__`::"
@@ -4219,7 +4192,7 @@ msgstr ""
 "Για παράδειγμα, εδώ είναι η υλοποίηση του :meth:`!collections.abc.Sequence."
 "__contains__`::"
 
-#: faq/programming.rst:1937
+#: faq/programming.rst:1943
 msgid ""
 "def __contains__(self, value):\n"
 "    for v in self:\n"
@@ -4233,14 +4206,14 @@ msgstr ""
 "            return True\n"
 "    return False"
 
-#: faq/programming.rst:1945
+#: faq/programming.rst:1951
 msgid ""
 "How can a subclass control what data is stored in an immutable instance?"
 msgstr ""
 "Πώς μπορεί μια υποκλάση να ελέγξει ποια δεδομένα αποθηκεύονται σε μια "
 "αμετάβλητη παρουσία;"
 
-#: faq/programming.rst:1947
+#: faq/programming.rst:1953
 msgid ""
 "When subclassing an immutable type, override the :meth:`~object.__new__` "
 "method instead of the :meth:`~object.__init__` method.  The latter only runs "
@@ -4252,7 +4225,7 @@ msgstr ""
 "εκτελείται μόνο αφού δημιουργηθεί μια παρουσία, η οποία είναι πολύ αργά για "
 "να αλλάζει δεδομένα σε μια αμετάβλητη περίπτωση."
 
-#: faq/programming.rst:1952
+#: faq/programming.rst:1958
 msgid ""
 "All of these immutable classes have a different signature than their parent "
 "class:"
@@ -4260,11 +4233,11 @@ msgstr ""
 "Όλες αυτές οι αμετάβλητες κλάσεις έχουν διαφορετική υπογραφή από τη μητρική "
 "τους κλάση:"
 
-#: faq/programming.rst:1955
+#: faq/programming.rst:1961
 msgid ""
-"from datetime import date\n"
+"import datetime as dt\n"
 "\n"
-"class FirstOfMonthDate(date):\n"
+"class FirstOfMonthDate(dt.date):\n"
 "    \"Always choose the first day of the month\"\n"
 "    def __new__(cls, year, month, day):\n"
 "        return super().__new__(cls, year, month, 1)\n"
@@ -4283,9 +4256,9 @@ msgid ""
 "        s = ''.join([c for c in s if c.isalnum() or c == '-'])\n"
 "        return super().__new__(cls, s)"
 msgstr ""
-"from datetime import date\n"
+"import datetime as dt\n"
 "\n"
-"class FirstOfMonthDate(date):\n"
+"class FirstOfMonthDate(dt.date):\n"
 "    \"Always choose the first day of the month\"\n"
 "    def __new__(cls, year, month, day):\n"
 "        return super().__new__(cls, year, month, 1)\n"
@@ -4304,11 +4277,11 @@ msgstr ""
 "        s = ''.join([c for c in s if c.isalnum() or c == '-'])\n"
 "        return super().__new__(cls, s)"
 
-#: faq/programming.rst:1978
+#: faq/programming.rst:1984
 msgid "The classes can be used like this:"
 msgstr "Οι κλάσεις μπορούν να χρησιμοποιηθούν έτσι:"
 
-#: faq/programming.rst:1980
+#: faq/programming.rst:1986
 msgid ""
 ">>> FirstOfMonthDate(2012, 2, 14)\n"
 "FirstOfMonthDate(2012, 2, 1)\n"
@@ -4328,11 +4301,11 @@ msgstr ""
 ">>> TitleStr('Blog: Why Python Rocks')\n"
 "'blog-why-python-rocks'"
 
-#: faq/programming.rst:1995
+#: faq/programming.rst:2001
 msgid "How do I cache method calls?"
 msgstr "Πώς μπορώ να αποθηκεύσω τις κλήσεις μεθόδου στην κρυφή μνήμη;"
 
-#: faq/programming.rst:1997
+#: faq/programming.rst:2003
 msgid ""
 "The two principal tools for caching methods are :func:`functools."
 "cached_property` and :func:`functools.lru_cache`.  The former stores results "
@@ -4343,17 +4316,17 @@ msgstr ""
 "Το πρώτο αποθηκεύει τα αποτελέσματα σε επίπεδο παρουσίας και το δεύτερο σε "
 "επίπεδο κλάσης."
 
-#: faq/programming.rst:2002
+#: faq/programming.rst:2008
 msgid ""
-"The *cached_property* approach only works with methods that do not take any "
-"arguments.  It does not create a reference to the instance.  The cached "
+"The ``cached_property`` approach only works with methods that do not take "
+"any arguments.  It does not create a reference to the instance.  The cached "
 "method result will be kept only as long as the instance is alive."
 msgstr ""
-"Η προσέγγιση *cached_property* λειτουργεί μόνο με μεθόδους που δεν λαμβάνουν "
-"ορίσματα.  Δεν δημιουργεί αναφορά στο στιγμιότυπο.  Το αποτέλεσμα της cached "
-"μεθόδους θα διατηρηθεί μόνο όσο το στιγμιότυπο είναι ζωντανό."
+"Η προσέγγιση ``cached_property`` λειτουργεί μόνο με μεθόδους που δεν "
+"λαμβάνουν ορίσματα.  Δεν δημιουργεί αναφορά στο στιγμιότυπο.  Το αποτέλεσμα "
+"της cached μεθόδους θα διατηρηθεί μόνο όσο το στιγμιότυπο είναι ζωντανό."
 
-#: faq/programming.rst:2006
+#: faq/programming.rst:2012
 msgid ""
 "The advantage is that when an instance is no longer used, the cached method "
 "result will be released right away.  The disadvantage is that if instances "
@@ -4366,17 +4339,17 @@ msgstr ""
 "αποτελέσματα της συσσωρευμένης μεθόδου.  Μπορούν να αναπτυχθούν χωρίς "
 "περιορισμούς."
 
-#: faq/programming.rst:2011
+#: faq/programming.rst:2017
 msgid ""
-"The *lru_cache* approach works with methods that have :term:`hashable` "
+"The ``lru_cache`` approach works with methods that have :term:`hashable` "
 "arguments.  It creates a reference to the instance unless special efforts "
 "are made to pass in weak references."
 msgstr ""
-"Η προσέγγιση *lru_cache* λειτουργεί με μεθόδους που έχουν ορίσματα :term:"
+"Η προσέγγιση ``lru_cache`` λειτουργεί με μεθόδους που έχουν ορίσματα :term:"
 "`hashable`.  Δημιουργεί μια αναφορά στο στιγμιότυπο, εκτός εάν καταβληθούν "
 "ειδικές προσπάθειες για να περάσει σε αδύναμες αναφορές."
 
-#: faq/programming.rst:2015
+#: faq/programming.rst:2021
 msgid ""
 "The advantage of the least recently used algorithm is that the cache is "
 "bounded by the specified *maxsize*.  The disadvantage is that instances are "
@@ -4387,11 +4360,11 @@ msgstr ""
 "είναι ότι τα στιγμιότυπα διατηρούνται ζωντανά έως ότου παλαιώσουν από την "
 "κρυφή μνήμη ή μέχρι να διαγραφεί η κρυφή μνήμη."
 
-#: faq/programming.rst:2020
+#: faq/programming.rst:2026
 msgid "This example shows the various techniques::"
 msgstr "Αυτό το παράδειγμα δείχνει τις διάφορες τεχνικές::"
 
-#: faq/programming.rst:2022
+#: faq/programming.rst:2028
 msgid ""
 "class Weather:\n"
 "    \"Lookup weather information on a government website\"\n"
@@ -4437,29 +4410,29 @@ msgstr ""
 "        \"Rainfall on a given date\"\n"
 "        # Depends on the station_id, date, and units."
 
-#: faq/programming.rst:2044
+#: faq/programming.rst:2050
 msgid ""
 "The above example assumes that the *station_id* never changes.  If the "
-"relevant instance attributes are mutable, the *cached_property* approach "
+"relevant instance attributes are mutable, the ``cached_property`` approach "
 "can't be made to work because it cannot detect changes to the attributes."
 msgstr ""
 "Το παραπάνω παράδειγμα προϋποθέτει ότι το *station_id* δεν αλλάζει ποτέ.  "
 "Εάν τα σχετικά χαρακτηριστικά παρουσίας είναι μεταβλητά, η προσέγγιση "
-"*cached_property* δεν μπορεί να λειτουργήσει επειδή δεν μπορεί να εντοπίσει "
-"αλλαγές στα χαρακτηριστικά."
+"``cached_property`` δεν μπορεί να λειτουργήσει επειδή δεν μπορεί να "
+"εντοπίσει αλλαγές στα χαρακτηριστικά."
 
-#: faq/programming.rst:2049
+#: faq/programming.rst:2055
 msgid ""
-"To make the *lru_cache* approach work when the *station_id* is mutable, the "
-"class needs to define the :meth:`~object.__eq__` and :meth:`~object."
+"To make the ``lru_cache`` approach work when the *station_id* is mutable, "
+"the class needs to define the :meth:`~object.__eq__` and :meth:`~object."
 "__hash__` methods so that the cache can detect relevant attribute updates::"
 msgstr ""
-"Για να λειτουργήσει η προσέγγιση *lru_cache* όταν το *station_id* είναι "
+"Για να λειτουργήσει η προσέγγιση ``lru_cache`` όταν το *station_id* είναι "
 "μεταβλητό, η κλάση πρέπει να ορίσει τις μεθόδους :meth:`~object.__eq__` και :"
 "meth:`~object.__hash__` ώστε η κρυφή μνήμη να μπορεί να εντοπίσει σχετικές "
 "ενημερώσεις χαρακτηριστικών::"
 
-#: faq/programming.rst:2053
+#: faq/programming.rst:2059
 msgid ""
 "class Weather:\n"
 "    \"Example with a mutable station identifier\"\n"
@@ -4501,15 +4474,15 @@ msgstr ""
 "        'Rainfall on a given date'\n"
 "        # Depends on the station_id, date, and units."
 
-#: faq/programming.rst:2075
+#: faq/programming.rst:2081
 msgid "Modules"
 msgstr "Modules"
 
-#: faq/programming.rst:2078
+#: faq/programming.rst:2084
 msgid "How do I create a .pyc file?"
 msgstr "Πως δημιουργώ ένα .pyc αρχείο;"
 
-#: faq/programming.rst:2080
+#: faq/programming.rst:2086
 msgid ""
 "When a module is imported for the first time (or when the source file has "
 "changed since the current compiled file was created) a ``.pyc`` file "
@@ -4528,7 +4501,7 @@ msgstr ""
 "που εξαρτάται από το συγκεκριμένο δυαδικό αρχείο ``python`` που το "
 "δημιούργησε.  (Βλ. :pep:`3147` για λεπτομέρειες.)"
 
-#: faq/programming.rst:2088
+#: faq/programming.rst:2094
 msgid ""
 "One reason that a ``.pyc`` file may not be created is a permissions problem "
 "with the directory containing the source file, meaning that the "
@@ -4543,38 +4516,38 @@ msgstr ""
 "ένας χρήστης αλλά εκτελείται ως άλλος, όπως εάν δοκιμάζετε με έναν "
 "διακομιστή ιστού."
 
-#: faq/programming.rst:2093
+#: faq/programming.rst:2099
 msgid ""
 "Unless the :envvar:`PYTHONDONTWRITEBYTECODE` environment variable is set, "
 "creation of a .pyc file is automatic if you're importing a module and Python "
-"has the ability (permissions, free space, etc...) to create a "
+"has the ability (permissions, free space, and so on) to create a "
 "``__pycache__`` subdirectory and write the compiled module to that "
 "subdirectory."
 msgstr ""
 "Εκτός και αν έχει οριστεί η μεταβλητή περιβάλλοντος :envvar:"
 "`PYTHONDONTWRITEBYTECODE`, η δημιουργία ενός αρχείου .pyc είναι αυτόματη εάν "
 "εισάγετε ένα module και η Python έχει τη δυνατότητα (δικαιώματα, ελεύθερος "
-"χώρος, κ.λπ...) να δημιουργήσει ένα  ``__pycache__`` υποκατάλογο και γράψτε "
-"το μεταγλωττισμένο module σε αυτόν τον υποκατάλογο."
+"χώρος, κ.λπ...) να δημιουργήσει ένα  ``__pycache__`` υποκατάλογο και να "
+"γράψει το μεταγλωττισμένο module σε αυτόν τον υποκατάλογο."
 
-#: faq/programming.rst:2098
+#: faq/programming.rst:2104
 msgid ""
-"Running Python on a top level script is not considered an import and no ``."
+"Running Python on a top-level script is not considered an import and no ``."
 "pyc`` will be created.  For example, if you have a top-level module ``foo."
 "py`` that imports another module ``xyz.py``, when you run ``foo`` (by typing "
 "``python foo.py`` as a shell command), a ``.pyc`` will be created for "
 "``xyz`` because ``xyz`` is imported, but no ``.pyc`` file will be created "
 "for ``foo`` since ``foo.py`` isn't being imported."
 msgstr ""
-"Η εκτέλεση της Python σε ένα σενάριο ανώτατου επιπέδου δεν θεωρείται "
-"εισαγωγή και δεν θα δημιουργηθεί ``.pyc``. Για παράδειγμα, εάν έχετε ένα "
-"module ανωτάτου επιπέδου ``foo.py`` που εισάγει ένα άλλο module ``xyz.py``, "
-"όταν εκτελείτε το ``foo`` (πληκτρολογώντας ``python foo.py`` ως εντολή "
+"Η εκτέλεση της Python σε ένα script ανώτατου επιπέδου δεν θεωρείται εισαγωγή "
+"και δεν θα δημιουργηθεί ``.pyc``. Για παράδειγμα, εάν έχετε ένα module "
+"ανωτάτου επιπέδου ``foo.py`` που εισάγει ένα άλλο module ``xyz.py``, όταν "
+"εκτελείτε το ``foo`` (πληκτρολογώντας ``python foo.py`` ως μια εντολή "
 "κελύφους), θα δημιουργηθεί ένα ``.pyc`` για το ``xyz`` επειδή το ``xyz`` "
 "έχει εισαχθεί, αλλά δεν θα δημιουργηθεί αρχείο ``.pyc`` για το ``foo`` καθώς "
 "το ``foo.py`` δεν εισάγεται."
 
-#: faq/programming.rst:2105
+#: faq/programming.rst:2111
 msgid ""
 "If you need to create a ``.pyc`` file for ``foo`` -- that is, to create a ``."
 "pyc`` file for a module that is not imported -- you can, using the :mod:"
@@ -4585,7 +4558,7 @@ msgstr ""
 "εισαχθεί -- μπορείτε, χρησιμοποιώντας τα modules :mod:`py_compile` και :mod:"
 "`compileall`."
 
-#: faq/programming.rst:2109
+#: faq/programming.rst:2115
 msgid ""
 "The :mod:`py_compile` module can manually compile any module.  One way is to "
 "use the ``compile()`` function in that module interactively::"
@@ -4594,7 +4567,7 @@ msgstr ""
 "module.  Ένας τρόπος είναι να χρησιμοποιήσετε τη συνάρτηση ``compile()`` σε "
 "αυτήν την ενότητα διαδραστικά::"
 
-#: faq/programming.rst:2112
+#: faq/programming.rst:2118
 msgid ""
 ">>> import py_compile\n"
 ">>> py_compile.compile('foo.py')"
@@ -4602,17 +4575,17 @@ msgstr ""
 ">>> import py_compile\n"
 ">>> py_compile.compile('foo.py')"
 
-#: faq/programming.rst:2115
+#: faq/programming.rst:2121
 msgid ""
 "This will write the ``.pyc`` to a ``__pycache__`` subdirectory in the same "
 "location as ``foo.py`` (or you can override that with the optional parameter "
-"``cfile``)."
+"*cfile*)."
 msgstr ""
 "Αυτό θα γράψει το ``.pyc`` σε έναν υποκατάλογο ``__pycache__`` στην ίδια "
 "θέση με το ``foo.py`` (ή μπορείτε να το παρακάμψετε με την προαιρετική "
-"παράμετρο ``cfile``)."
+"παράμετρο *cfile*)."
 
-#: faq/programming.rst:2119
+#: faq/programming.rst:2125
 msgid ""
 "You can also automatically compile all files in a directory or directories "
 "using the :mod:`compileall` module.  You can do it from the shell prompt by "
@@ -4624,15 +4597,15 @@ msgstr ""
 "από το shell prompt εκτελώντας το ``compileall.py`` και παρέχοντας τη "
 "διαδρομή ενός καταλόγου που περιέχει αρχεία Python για μεταγλώττιση::"
 
-#: faq/programming.rst:2124
+#: faq/programming.rst:2130
 msgid "python -m compileall ."
 msgstr "python -m compileall ."
 
-#: faq/programming.rst:2128
+#: faq/programming.rst:2134
 msgid "How do I find the current module name?"
 msgstr "Πως μπορώ να βρω το όνομα του τρέχοντος module;"
 
-#: faq/programming.rst:2130
+#: faq/programming.rst:2136
 msgid ""
 "A module can find out its own module name by looking at the predefined "
 "global variable ``__name__``.  If this has the value ``'__main__'``, the "
@@ -4647,7 +4620,7 @@ msgstr ""
 "γραμμής εντολών ή έναν αυτοέλεγχο και εκτελέστε αυτόν τον κώδικα μόνο αφού "
 "ελέγξετε το ``__name__``::"
 
-#: faq/programming.rst:2136
+#: faq/programming.rst:2142
 msgid ""
 "def main():\n"
 "    print('Running test...')\n"
@@ -4663,19 +4636,19 @@ msgstr ""
 "if __name__ == '__main__':\n"
 "    main()"
 
-#: faq/programming.rst:2145
+#: faq/programming.rst:2151
 msgid "How can I have modules that mutually import each other?"
 msgstr "Πως μπορώ να έχω modules που εισάγουν αμοιβαία το ένα το άλλο;"
 
-#: faq/programming.rst:2147
+#: faq/programming.rst:2153
 msgid "Suppose you have the following modules:"
 msgstr "Υποθέστε ότι έχετε τα ακόλουθα modules::"
 
-#: faq/programming.rst:2149
+#: faq/programming.rst:2155
 msgid ":file:`foo.py`::"
 msgstr ":file:`foo.py`::"
 
-#: faq/programming.rst:2151
+#: faq/programming.rst:2157
 msgid ""
 "from bar import bar_var\n"
 "foo_var = 1"
@@ -4683,11 +4656,11 @@ msgstr ""
 "from bar import bar_var\n"
 "foo_var = 1"
 
-#: faq/programming.rst:2154
+#: faq/programming.rst:2160
 msgid ":file:`bar.py`::"
 msgstr ":file:`bar.py`::"
 
-#: faq/programming.rst:2156
+#: faq/programming.rst:2162
 msgid ""
 "from foo import foo_var\n"
 "bar_var = 2"
@@ -4695,35 +4668,35 @@ msgstr ""
 "from foo import foo_var\n"
 "bar_var = 2"
 
-#: faq/programming.rst:2159
+#: faq/programming.rst:2165
 msgid "The problem is that the interpreter will perform the following steps:"
 msgstr "Το πρόβλημα είναι ότι ο διερμηνέας θα εκτελέσει τα ακόλουθα βήματα:"
 
-#: faq/programming.rst:2161
+#: faq/programming.rst:2167
 msgid "main imports ``foo``"
 msgstr "main εισάγει ``foo``"
 
-#: faq/programming.rst:2162
+#: faq/programming.rst:2168
 msgid "Empty globals for ``foo`` are created"
 msgstr "Δημιουργούνται κενά καθολικά για το ``foo``"
 
-#: faq/programming.rst:2163
+#: faq/programming.rst:2169
 msgid "``foo`` is compiled and starts executing"
 msgstr "Το ``foo`` μεταγλωττίζεται και ξεκινά η εκτέλεση"
 
-#: faq/programming.rst:2164
+#: faq/programming.rst:2170
 msgid "``foo`` imports ``bar``"
 msgstr "``foo`` εισάγει ``bar``"
 
-#: faq/programming.rst:2165
+#: faq/programming.rst:2171
 msgid "Empty globals for ``bar`` are created"
 msgstr "Δημιουργούνται κενά καθολικά για ``bar``"
 
-#: faq/programming.rst:2166
+#: faq/programming.rst:2172
 msgid "``bar`` is compiled and starts executing"
 msgstr "Το ``bar`` μεταγλωττίζεται και αρχίζει να εκτελείται"
 
-#: faq/programming.rst:2167
+#: faq/programming.rst:2173
 msgid ""
 "``bar`` imports ``foo`` (which is a no-op since there already is a module "
 "named ``foo``)"
@@ -4731,7 +4704,7 @@ msgstr ""
 "Το ``bar`` εισάγει το ``foo`` (το οποίο είναι απαγορευτικό, καθώς υπάρχει "
 "ήδη ένα module με το όνομα ``foo``)"
 
-#: faq/programming.rst:2168
+#: faq/programming.rst:2174
 msgid ""
 "The import mechanism tries to read ``foo_var`` from ``foo`` globals, to set "
 "``bar.foo_var = foo.foo_var``"
@@ -4739,7 +4712,7 @@ msgstr ""
 "Ο μηχανισμός εισαγωγής προσπαθεί να διαβάσει το ``foo_var`` από τα παγκόσμια "
 "``foo``, για να ορίσει το ``bar.foo_var = foo.foo_var``"
 
-#: faq/programming.rst:2170
+#: faq/programming.rst:2176
 msgid ""
 "The last step fails, because Python isn't done with interpreting ``foo`` yet "
 "and the global symbol dictionary for ``foo`` is still empty."
@@ -4748,7 +4721,7 @@ msgstr ""
 "την ερμηνεία του ``foo`` και το global λεξικό συμβόλων για το ``foo`` είναι "
 "ακόμα κενό."
 
-#: faq/programming.rst:2173
+#: faq/programming.rst:2179
 msgid ""
 "The same thing happens when you use ``import foo``, and then try to access "
 "``foo.foo_var`` in global code."
@@ -4756,13 +4729,13 @@ msgstr ""
 "Το ίδιο συμβαίνει όταν χρησιμοποιείτε το ``import foo`` και, στη συνέχεια, "
 "προσπαθείτε να αποκτήσετε πρόσβαση στο ``foo.foo_var`` σε καθολικό κώδικα."
 
-#: faq/programming.rst:2176
+#: faq/programming.rst:2182
 msgid "There are (at least) three possible workarounds for this problem."
 msgstr ""
 "Υπάρχουν (τουλάχιστον) τρεις πιθανοί τρόποι αντιμετώπισης αυτού του "
 "προβλήματος."
 
-#: faq/programming.rst:2178
+#: faq/programming.rst:2184
 msgid ""
 "Guido van Rossum recommends avoiding all uses of ``from <module> import ..."
 "``, and placing all code inside functions.  Initializations of global "
@@ -4776,14 +4749,14 @@ msgstr ""
 "χρησιμοποιηθούν μόνο σταθερές ή ενσωματωμένες συναρτήσεις.  Αυτό σημαίνει "
 "ότι ένα εισαγόμενο module αναφέρεται ως ``<module>.<name>``."
 
-#: faq/programming.rst:2183
+#: faq/programming.rst:2189
 msgid ""
 "Jim Roskind suggests performing steps in the following order in each module:"
 msgstr ""
 "Ο Jim Roskind προτείνει να εκτελέσετε τα βήματα με την ακόλουθη σειρά σε "
 "κάθε module:"
 
-#: faq/programming.rst:2185
+#: faq/programming.rst:2191
 msgid ""
 "exports (globals, functions, and classes that don't need imported base "
 "classes)"
@@ -4791,18 +4764,18 @@ msgstr ""
 "εξαγωγές (globals, συναρτήσεις, και κλάσεις που δεν χρειάζονται εισαγόμενες "
 "βασικές κλάσεις)"
 
-#: faq/programming.rst:2187
+#: faq/programming.rst:2193
 msgid "``import`` statements"
 msgstr "δηλώσεις ``import``"
 
-#: faq/programming.rst:2188
+#: faq/programming.rst:2194
 msgid ""
 "active code (including globals that are initialized from imported values)."
 msgstr ""
 "ενεργός κώδικας (συμπεριλαμβανομένων των καθολικών που αρχικοποιούνται από "
 "εισαγόμενες τιμές)."
 
-#: faq/programming.rst:2190
+#: faq/programming.rst:2196
 msgid ""
 "Van Rossum doesn't like this approach much because the imports appear in a "
 "strange place, but it does work."
@@ -4810,7 +4783,7 @@ msgstr ""
 "Ο Van Rossum δεν αρέσει πολύ αυτή η προσέγγιση επειδή οι εισαγωγές "
 "εμφανίζονται σε ένα περίεργο μέρος, αλλά λειτουργεί."
 
-#: faq/programming.rst:2193
+#: faq/programming.rst:2199
 msgid ""
 "Matthias Urlichs recommends restructuring your code so that the recursive "
 "import is not necessary in the first place."
@@ -4818,15 +4791,15 @@ msgstr ""
 "Ο Matthias Urlichs συνιστά την αναδιάρθρωση του κώδικά σας έτσι ώστε η "
 "αναδρομική εισαγωγή να μην είναι απαραίτητη εξαρχής."
 
-#: faq/programming.rst:2196
+#: faq/programming.rst:2202
 msgid "These solutions are not mutually exclusive."
 msgstr "Αυτές οι λύσεις δεν αλληλοαποκλείονται."
 
-#: faq/programming.rst:2200
+#: faq/programming.rst:2206
 msgid "__import__('x.y.z') returns <module 'x'>; how do I get z?"
 msgstr "__import__('x.y.z') επιστρέφει <module 'x'>∙ πως μπορώ να πάρω το z?"
 
-#: faq/programming.rst:2202
+#: faq/programming.rst:2208
 msgid ""
 "Consider using the convenience function :func:`~importlib.import_module` "
 "from :mod:`importlib` instead::"
@@ -4834,11 +4807,11 @@ msgstr ""
 "Σκεφτείτε να χρησιμοποιήσετε τη συνάρτηση ευκολίας :func:`~importlib."
 "import_module` από το :mod:`importlib` αντί::"
 
-#: faq/programming.rst:2205
+#: faq/programming.rst:2211
 msgid "z = importlib.import_module('x.y.z')"
 msgstr "z = importlib.import_module('x.y.z')"
 
-#: faq/programming.rst:2209
+#: faq/programming.rst:2215
 msgid ""
 "When I edit an imported module and reimport it, the changes don't show up.  "
 "Why does this happen?"
@@ -4846,7 +4819,7 @@ msgstr ""
 "Όταν επεξεργάζομαι ένα module που έχει εισαχθεί και την επανεισάγω, οι "
 "αλλαγές δεν εμφανίζονται. Γιατί συμβαίνει αυτό;"
 
-#: faq/programming.rst:2211
+#: faq/programming.rst:2217
 msgid ""
 "For reasons of efficiency as well as consistency, Python only reads the "
 "module file on the first time a module is imported.  If it didn't, in a "
@@ -4861,7 +4834,7 @@ msgstr ""
 "αναλυθεί και θα αναλυθεί ξανά πολλές φορές.  Για να αναγκάσετε τη εκ νέου "
 "ανάγνωση μιας αλλαγμένης ενότητας , κάντε το εξής::"
 
-#: faq/programming.rst:2217
+#: faq/programming.rst:2223
 msgid ""
 "import importlib\n"
 "import modname\n"
@@ -4871,19 +4844,19 @@ msgstr ""
 "import modname\n"
 "importlib.reload(modname)"
 
-#: faq/programming.rst:2221
+#: faq/programming.rst:2227
 msgid ""
 "Warning: this technique is not 100% fool-proof.  In particular, modules "
-"containing statements like ::"
+"containing statements like::"
 msgstr ""
 "Προειδοποίηση: αυτή η τεχνική δεν είναι 100% ασφαλής. Ειδικότερα, modules "
-"που περιέχουν δηλώσεις όπως ::"
+"που περιέχουν δηλώσεις όπως::"
 
-#: faq/programming.rst:2224
+#: faq/programming.rst:2230
 msgid "from modname import some_objects"
 msgstr "from modname import some_objects"
 
-#: faq/programming.rst:2226
+#: faq/programming.rst:2232
 msgid ""
 "will continue to work with the old version of the imported objects.  If the "
 "module contains class definitions, existing class instances will *not* be "
@@ -4896,7 +4869,7 @@ msgstr ""
 "ορισμό της νέας κλάσης.  Αυτό μπορεί να οδηγήσει στην ακόλουθη παράδοξη "
 "συμπεριφορά::"
 
-#: faq/programming.rst:2231
+#: faq/programming.rst:2237
 msgid ""
 ">>> import importlib\n"
 ">>> import cls\n"
@@ -4914,7 +4887,7 @@ msgstr ""
 ">>> isinstance(c, cls.C)       # isinstance is false?!?\n"
 "False"
 
-#: faq/programming.rst:2239
+#: faq/programming.rst:2245
 msgid ""
 "The nature of the problem is made clear if you print out the \"identity\" of "
 "the class objects::"
@@ -4922,7 +4895,7 @@ msgstr ""
 "Η φύση του προβλήματος καθίσταται σαφής εάν εκτυπώσετε την \"ταυτότητα\" των "
 "αντικειμένων κλάσης::"
 
-#: faq/programming.rst:2242
+#: faq/programming.rst:2248
 msgid ""
 ">>> hex(id(c.__class__))\n"
 "'0x7352a0'\n"
@@ -4934,18 +4907,44 @@ msgstr ""
 ">>> hex(id(cls.C))\n"
 "'0x4198d0'"
 
-#: faq/programming.rst:408
+#: faq/programming.rst:409
 msgid "argument"
 msgstr "όρισμα"
 
-#: faq/programming.rst:408
+#: faq/programming.rst:409
 msgid "difference from parameter"
 msgstr "διαφορά από παράμετρο"
 
-#: faq/programming.rst:408
+#: faq/programming.rst:409
 msgid "parameter"
 msgstr "παράμετρος"
 
-#: faq/programming.rst:408
+#: faq/programming.rst:409
 msgid "difference from argument"
 msgstr "διαφορά από όρισμα"
+
+#~ msgid "`Komodo IDE <https://www.activestate.com/products/komodo-ide/>`_"
+#~ msgstr "`Komodo IDE <https://www.activestate.com/products/komodo-ide/>`_"
+
+#~ msgid ""
+#~ ">>> list1 = [\"what\", \"I'm\", \"sorting\", \"by\"]\n"
+#~ ">>> list2 = [\"something\", \"else\", \"to\", \"sort\"]\n"
+#~ ">>> pairs = zip(list1, list2)\n"
+#~ ">>> pairs = sorted(pairs)\n"
+#~ ">>> pairs\n"
+#~ "[(\"I'm\", 'else'), ('by', 'sort'), ('sorting', 'to'), ('what', "
+#~ "'something')]\n"
+#~ ">>> result = [x[1] for x in pairs]\n"
+#~ ">>> result\n"
+#~ "['else', 'sort', 'to', 'something']"
+#~ msgstr ""
+#~ ">>> list1 = [\"τι\", \"κάνω\", \"ταξινόμηση\", \"με\"]\n"
+#~ ">>> list2 = [\"κάτι\", \"διαφορετικό\", \"του\", \"ταξινομώ\"]\n"
+#~ ">>> pairs = zip(list1, list2)\n"
+#~ ">>> pairs = sorted(pairs)\n"
+#~ ">>> pairs\n"
+#~ "[(\"Εγώ\", 'διαφορετικά'), ('από', 'ταξινομώ'), ('ταξινόμηση', 'σε'), "
+#~ "('τι', 'κάτι')]\n"
+#~ ">>> result = [x[1] for x in pairs]\n"
+#~ ">>> result\n"
+#~ "['διαφορετικά', 'ταξινομώ', 'με', 'κάτι']"

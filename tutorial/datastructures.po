@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: 2025-11-27 09:00+0200\n"
 "Last-Translator: Panagiotis Skias <panagiotis.skias@gmail.com>\n"
 "Language-Team: PyGreece <pygreece@gmail.com>\n"
@@ -69,11 +69,11 @@ msgstr ""
 
 #: tutorial/datastructures.rst:42
 msgid ""
-"Remove the first item from the list whose value is equal to *x*.  It raises "
-"a :exc:`ValueError` if there is no such item."
+"Remove the first item from the list whose value is equal to *value*.  It "
+"raises a :exc:`ValueError` if there is no such item."
 msgstr ""
-"Καταργεί το πρώτο στοιχείο από τη λίστα του οποίου η τιμή είναι ίση με *x*.  "
-"Κάνει raise ένα :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
+"Καταργεί το πρώτο στοιχείο από τη λίστα του οποίου η τιμή είναι ίση με "
+"*value*.  Κάνει raise ένα :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
 
 #: tutorial/datastructures.rst:49
 msgid ""
@@ -93,11 +93,11 @@ msgstr "Αφαιρεί όλα τα στοιχεία από τη λίστα.  Π�
 
 #: tutorial/datastructures.rst:64
 msgid ""
-"Return zero-based index of the first occurrence of *x* in the list. Raises "
-"a :exc:`ValueError` if there is no such item."
+"Return zero-based index of the first occurrence of *value* in the list. "
+"Raises a :exc:`ValueError` if there is no such item."
 msgstr ""
-"Επιστρέφει τον μηδενικό δείκτη της πρώτης εμφάνισης του *x* στη λίστα. Κάνει "
-"raise ένα :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
+"Επιστρέφει τον μηδενικό δείκτη της πρώτης εμφάνισης του *value* στη λίστα. "
+"Κάνει raise ένα :exc:`ValueError` εάν δεν υπάρχει τέτοιο στοιχείο."
 
 #: tutorial/datastructures.rst:67
 msgid ""
@@ -112,8 +112,8 @@ msgstr ""
 "σε σχέση με την αρχή της πλήρους ακολουθίας αντί για το όρισμα *start*."
 
 #: tutorial/datastructures.rst:76
-msgid "Return the number of times *x* appears in the list."
-msgstr "Επιστρέφει τον αριθμό των φορών που εμφανίζεται το *x* στη λίστα."
+msgid "Return the number of times *value* appears in the list."
+msgstr "Επιστρέφει τον αριθμό των φορών που εμφανίζεται το *value* στη λίστα."
 
 #: tutorial/datastructures.rst:82
 msgid ""
@@ -907,10 +907,19 @@ msgstr ""
 "κενό λεξικό, μια δομή δεδομένων που θα συζητήσουμε στην επόμενη ενότητα."
 
 #: tutorial/datastructures.rst:457
+msgid ""
+"Because sets are unordered, iterating over them or printing them can produce "
+"the elements in a different order than you expect."
+msgstr ""
+"Δεδομένου ότι τα σύνολα είναι μη ταξινομημένα, η επανάληψη σε αυτά ή η "
+"εκτύπωσή τους μπορεί να παράγει τα στοιχεία σε διαφορετική σειρά από αυτήν "
+"που περιμένετε."
+
+#: tutorial/datastructures.rst:460
 msgid "Here is a brief demonstration::"
 msgstr "Ακολουθεί μια σύντομη επίδειξη::"
 
-#: tutorial/datastructures.rst:459
+#: tutorial/datastructures.rst:462
 msgid ""
 ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n"
 ">>> print(basket)                      # show that duplicates have been "
@@ -960,7 +969,7 @@ msgstr ""
 ">>> a ^ b                              # letters in a or b but not both\n"
 "{'r', 'd', 'b', 'm', 'z', 'l'}"
 
-#: tutorial/datastructures.rst:482
+#: tutorial/datastructures.rst:485
 msgid ""
 "Similarly to :ref:`list comprehensions <tut-listcomps>`, set comprehensions "
 "are also supported::"
@@ -968,7 +977,7 @@ msgstr ""
 "Ομοίως με :ref:`list comprehensions <tut-listcomps>`, υποστηρίζονται επίσης "
 "τα comprehensions των συνόλων::"
 
-#: tutorial/datastructures.rst:485
+#: tutorial/datastructures.rst:488
 msgid ""
 ">>> a = {x for x in 'abracadabra' if x not in 'abc'}\n"
 ">>> a\n"
@@ -978,11 +987,11 @@ msgstr ""
 ">>> a\n"
 "{'r', 'd'}"
 
-#: tutorial/datastructures.rst:493
+#: tutorial/datastructures.rst:496
 msgid "Dictionaries"
 msgstr "Λεξικά (Dictionaries)"
 
-#: tutorial/datastructures.rst:495
+#: tutorial/datastructures.rst:498
 msgid ""
 "Another useful data type built into Python is the *dictionary* (see :ref:"
 "`typesmapping`). Dictionaries are sometimes found in other languages as "
@@ -1009,7 +1018,7 @@ msgstr ""
 "επιτόπου χρησιμοποιώντας αναθέσεις index, αναθέσεις slice, ή μεθόδους όπως :"
 "meth:`~list.append` και :meth:`~list.extend`."
 
-#: tutorial/datastructures.rst:506
+#: tutorial/datastructures.rst:509
 msgid ""
 "It is best to think of a dictionary as a set of *key: value* pairs, with the "
 "requirement that the keys are unique (within one dictionary). A pair of "
@@ -1023,7 +1032,7 @@ msgstr ""
 "key:value στο λεξικό, αυτός είναι επίσης ο τρόπος με τον οποίο γράφονται τα "
 "λεξικά στην έξοδο."
 
-#: tutorial/datastructures.rst:512
+#: tutorial/datastructures.rst:515
 msgid ""
 "The main operations on a dictionary are storing a value with some key and "
 "extracting the value given the key.  It is also possible to delete a key:"
@@ -1036,7 +1045,7 @@ msgstr ""
 "χρησιμοποιώντας ένα κλειδί που βρίσκεται ήδη σε χρήση, η παλιά τιμή που "
 "σχετίζεται με αυτό το κλειδί έχει ξεχαστεί."
 
-#: tutorial/datastructures.rst:517
+#: tutorial/datastructures.rst:520
 msgid ""
 "Extracting a value for a non-existent key by subscripting (``d[key]``) "
 "raises a :exc:`KeyError`. To avoid getting this error when trying to access "
@@ -1050,7 +1059,7 @@ msgstr ""
 "μέθοδο :meth:`~dict.get` αντί για αυτό, η οποία επιστρέφει ``None`` (ή μια "
 "καθορισμένη προεπιλεγμένη τιμή) εάν το κλειδί δεν βρίσκεται στο λεξικό."
 
-#: tutorial/datastructures.rst:522
+#: tutorial/datastructures.rst:525
 msgid ""
 "Performing ``list(d)`` on a dictionary returns a list of all the keys used "
 "in the dictionary, in insertion order (if you want it sorted, just use "
@@ -1063,11 +1072,11 @@ msgstr ""
 "υπάρχει ένα μεμονωμένο κλειδί στο λεξικό, χρησιμοποιήστε τη λέξη-κλειδί :"
 "keyword:`in`."
 
-#: tutorial/datastructures.rst:527
+#: tutorial/datastructures.rst:530
 msgid "Here is a small example using a dictionary::"
 msgstr "Ακολουθεί ένα μικρό παράδειγμα χρησιμοποιώντας ένα λεξικό::"
 
-#: tutorial/datastructures.rst:529
+#: tutorial/datastructures.rst:532
 msgid ""
 ">>> tel = {'jack': 4098, 'sape': 4139}\n"
 ">>> tel['guido'] = 4127\n"
@@ -1119,7 +1128,7 @@ msgstr ""
 ">>> 'jack' not in tel\n"
 "False"
 
-#: tutorial/datastructures.rst:554
+#: tutorial/datastructures.rst:557
 msgid ""
 "The :func:`dict` constructor builds dictionaries directly from sequences of "
 "key-value pairs::"
@@ -1127,7 +1136,7 @@ msgstr ""
 "Ο constructor :func:`dict` δημιουργεί λεξικά απευθείας από ακολουθίες ζευγών "
 "key-value::"
 
-#: tutorial/datastructures.rst:557
+#: tutorial/datastructures.rst:560
 msgid ""
 ">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
@@ -1135,7 +1144,7 @@ msgstr ""
 ">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
-#: tutorial/datastructures.rst:560
+#: tutorial/datastructures.rst:563
 msgid ""
 "In addition, dict comprehensions can be used to create dictionaries from "
 "arbitrary key and value expressions::"
@@ -1143,7 +1152,7 @@ msgstr ""
 "Επιπλέον, τα comprehensions λεξικών μπορούν να χρησιμοποιηθούν για τη "
 "δημιουργία λεξικών από αυθαίρετες εκφράσεις κλειδιού και τιμών::"
 
-#: tutorial/datastructures.rst:563
+#: tutorial/datastructures.rst:566
 msgid ""
 ">>> {x: x**2 for x in (2, 4, 6)}\n"
 "{2: 4, 4: 16, 6: 36}"
@@ -1151,7 +1160,7 @@ msgstr ""
 ">>> {x: x**2 for x in (2, 4, 6)}\n"
 "{2: 4, 4: 16, 6: 36}"
 
-#: tutorial/datastructures.rst:566
+#: tutorial/datastructures.rst:569
 msgid ""
 "When the keys are simple strings, it is sometimes easier to specify pairs "
 "using keyword arguments::"
@@ -1159,7 +1168,7 @@ msgstr ""
 "Όταν τα κλειδιά είναι απλές συμβολοσειρές, μερικές φορές είναι πιο εύκολο να "
 "ορίσετε ζεύγη χρησιμοποιώντας ορίσματα λέξεων-κλειδιών::"
 
-#: tutorial/datastructures.rst:569
+#: tutorial/datastructures.rst:572
 msgid ""
 ">>> dict(sape=4139, guido=4127, jack=4098)\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
@@ -1167,11 +1176,11 @@ msgstr ""
 ">>> dict(sape=4139, guido=4127, jack=4098)\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
-#: tutorial/datastructures.rst:576
+#: tutorial/datastructures.rst:579
 msgid "Looping Techniques"
 msgstr "Τεχνικές Looping"
 
-#: tutorial/datastructures.rst:578
+#: tutorial/datastructures.rst:581
 msgid ""
 "When looping through dictionaries, the key and corresponding value can be "
 "retrieved at the same time using the :meth:`~dict.items` method. ::"
@@ -1179,7 +1188,7 @@ msgstr ""
 "Κατά το looping μέσω λεξικών, το κλειδί και η αντίστοιχη τιμή μπορούν να "
 "ανακτηθούν ταυτόχρονα χρησιμοποιώντας τη μέθοδο :meth:`~dict.items`. ::"
 
-#: tutorial/datastructures.rst:581
+#: tutorial/datastructures.rst:584
 msgid ""
 ">>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}\n"
 ">>> for k, v in knights.items():\n"
@@ -1195,7 +1204,7 @@ msgstr ""
 "gallahad the pure\n"
 "robin the brave"
 
-#: tutorial/datastructures.rst:588
+#: tutorial/datastructures.rst:591
 msgid ""
 "When looping through a sequence, the position index and corresponding value "
 "can be retrieved at the same time using the :func:`enumerate` function. ::"
@@ -1204,7 +1213,7 @@ msgstr ""
 "μπορούν να ανακτηθούν ταυτόχρονα χρησιμοποιώντας τη συνάρτηση :func:"
 "`enumerate`. ::"
 
-#: tutorial/datastructures.rst:591
+#: tutorial/datastructures.rst:594
 msgid ""
 ">>> for i, v in enumerate(['tic', 'tac', 'toe']):\n"
 "...     print(i, v)\n"
@@ -1220,7 +1229,7 @@ msgstr ""
 "1 tac\n"
 "2 toe"
 
-#: tutorial/datastructures.rst:598
+#: tutorial/datastructures.rst:601
 msgid ""
 "To loop over two or more sequences at the same time, the entries can be "
 "paired with the :func:`zip` function. ::"
@@ -1228,7 +1237,7 @@ msgstr ""
 "Για να κάνετε loop σε δύο ή περισσότερες ακολουθίες ταυτόχρονα, οι "
 "καταχωρίσεις μπορούν να αντιστοιχιστούν με τη συνάρτηση :func:`zip`. ::"
 
-#: tutorial/datastructures.rst:601
+#: tutorial/datastructures.rst:604
 msgid ""
 ">>> questions = ['name', 'quest', 'favorite color']\n"
 ">>> answers = ['lancelot', 'the holy grail', 'blue']\n"
@@ -1248,7 +1257,7 @@ msgstr ""
 "What is your quest?  It is the holy grail.\n"
 "What is your favorite color?  It is blue."
 
-#: tutorial/datastructures.rst:610
+#: tutorial/datastructures.rst:613
 msgid ""
 "To loop over a sequence in reverse, first specify the sequence in a forward "
 "direction and then call the :func:`reversed` function. ::"
@@ -1256,7 +1265,7 @@ msgstr ""
 "Για να κάνετε loop σε μια ακολουθία αντίστροφα, καθορίστε πρώτα την "
 "ακολουθία προς τα εμπρός και μετά καλέστε τη συνάρτηση :func:`reversed`. ::"
 
-#: tutorial/datastructures.rst:613
+#: tutorial/datastructures.rst:616
 msgid ""
 ">>> for i in reversed(range(1, 10, 2)):\n"
 "...     print(i)\n"
@@ -1276,7 +1285,7 @@ msgstr ""
 "3\n"
 "1"
 
-#: tutorial/datastructures.rst:622
+#: tutorial/datastructures.rst:625
 msgid ""
 "To loop over a sequence in sorted order, use the :func:`sorted` function "
 "which returns a new sorted list while leaving the source unaltered. ::"
@@ -1285,7 +1294,7 @@ msgstr ""
 "συνάρτηση :func:`sorted`, η οποία επιστρέφει μια νέα ταξινομημένη λίστα "
 "αφήνοντας την πηγή αναλλοίωτη. ::"
 
-#: tutorial/datastructures.rst:625
+#: tutorial/datastructures.rst:628
 msgid ""
 ">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
 ">>> for i in sorted(basket):\n"
@@ -1309,7 +1318,7 @@ msgstr ""
 "orange\n"
 "pear"
 
-#: tutorial/datastructures.rst:636
+#: tutorial/datastructures.rst:639
 msgid ""
 "Using :func:`set` on a sequence eliminates duplicate elements. The use of :"
 "func:`sorted` in combination with :func:`set` over a sequence is an "
@@ -1321,7 +1330,7 @@ msgstr ""
 "είναι ένας ιδιωματικός τρόπος για να κάνετε loop πάνω από μοναδικά στοιχεία "
 "της ακολουθίας σε ταξινομημένη σειρά. ::"
 
-#: tutorial/datastructures.rst:640
+#: tutorial/datastructures.rst:643
 msgid ""
 ">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
 ">>> for f in sorted(set(basket)):\n"
@@ -1341,7 +1350,7 @@ msgstr ""
 "orange\n"
 "pear"
 
-#: tutorial/datastructures.rst:649
+#: tutorial/datastructures.rst:652
 msgid ""
 "It is sometimes tempting to change a list while you are looping over it; "
 "however, it is often simpler and safer to create a new list instead. ::"
@@ -1349,7 +1358,7 @@ msgstr ""
 "Μερικές φορές είναι δελεαστικό να αλλάζετε μια λίστα ενώ την περιηγείστε∙ "
 "ωστόσο, είναι συχνά πιο απλό και ασφαλές να δημιουργήσετε μια νέα λίστα. ::"
 
-#: tutorial/datastructures.rst:652
+#: tutorial/datastructures.rst:655
 msgid ""
 ">>> import math\n"
 ">>> raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]\n"
@@ -1371,11 +1380,11 @@ msgstr ""
 ">>> filtered_data\n"
 "[56.2, 51.7, 55.3, 52.5, 47.8]"
 
-#: tutorial/datastructures.rst:666
+#: tutorial/datastructures.rst:669
 msgid "More on Conditions"
 msgstr "Περισσότερα για τις συνθήκες"
 
-#: tutorial/datastructures.rst:668
+#: tutorial/datastructures.rst:671
 msgid ""
 "The conditions used in ``while`` and ``if`` statements can contain any "
 "operators, not just comparisons."
@@ -1383,7 +1392,7 @@ msgstr ""
 "Οι συνθήκες που χρησιμοποιούνται στις δηλώσεις ``while`` και ``if`` μπορούν "
 "να περιέχουν οποιουσδήποτε τελεστές, όχι μόνο συγκρίσεις."
 
-#: tutorial/datastructures.rst:672
+#: tutorial/datastructures.rst:675
 msgid ""
 "The comparison operators ``in`` and ``not in`` are membership tests that "
 "determine whether a value is in (or not in) a container.  The operators "
@@ -1397,7 +1406,7 @@ msgstr ""
 "ίδιο αντικείμενο.  Όλοι οι τελεστές σύγκρισης έχουν την ίδια προτεραιότητα, "
 "η οποία είναι χαμηλότερη από αυτή όλων των αριθμητικών τελεστών."
 
-#: tutorial/datastructures.rst:678
+#: tutorial/datastructures.rst:681
 msgid ""
 "Comparisons can be chained.  For example, ``a < b == c`` tests whether ``a`` "
 "is less than ``b`` and moreover ``b`` equals ``c``."
@@ -1406,7 +1415,7 @@ msgstr ""
 "ελέγχει εάν το ``a`` είναι μικρότερο από ``b`` και επιπλέον το ``b`` ισούται "
 "με ``c``."
 
-#: tutorial/datastructures.rst:681
+#: tutorial/datastructures.rst:684
 msgid ""
 "Comparisons may be combined using the Boolean operators ``and`` and ``or``, "
 "and the outcome of a comparison (or of any other Boolean expression) may be "
@@ -1423,7 +1432,7 @@ msgstr ""
 "ισοδυναμεί με ``(A and (not B)) or C``. Όπως πάντα, οι παρενθέσεις μπορούν "
 "να χρησιμοποιηθούν για να εκφράσουν την επιθυμητή σύνθεση."
 
-#: tutorial/datastructures.rst:688
+#: tutorial/datastructures.rst:691
 msgid ""
 "The Boolean operators ``and`` and ``or`` are so-called *short-circuit* "
 "operators: their arguments are evaluated from left to right, and evaluation "
@@ -1440,7 +1449,7 @@ msgstr ""
 "και όχι ως λογική, η τιμή επιστροφής ενός short-circuit τελεστή είναι το "
 "τελευταίο αξιολογημένο όρισμα."
 
-#: tutorial/datastructures.rst:695
+#: tutorial/datastructures.rst:698
 msgid ""
 "It is possible to assign the result of a comparison or other Boolean "
 "expression to a variable.  For example, ::"
@@ -1448,7 +1457,7 @@ msgstr ""
 "Είναι δυνατό να αντιστοιχίσετε το αποτέλεσμα μιας σύγκρισης ή άλλη δυαδική "
 "έκφρασης σε μια μεταβλητή.  Για παράδειγμα, ::"
 
-#: tutorial/datastructures.rst:698
+#: tutorial/datastructures.rst:701
 msgid ""
 ">>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'\n"
 ">>> non_null = string1 or string2 or string3\n"
@@ -1460,7 +1469,7 @@ msgstr ""
 ">>> non_null\n"
 "'Trondheim'"
 
-#: tutorial/datastructures.rst:703
+#: tutorial/datastructures.rst:706
 msgid ""
 "Note that in Python, unlike C, assignment inside expressions must be done "
 "explicitly with the :ref:`walrus operator <why-can-t-i-use-an-assignment-in-"
@@ -1473,11 +1482,11 @@ msgstr ""
 "κοινή κατηγορία προβλημάτων που συναντώνται στα προγράμματα C: "
 "πληκτρολογώντας ``=`` σε μια έκφραση όταν προοριζόταν το ``==``."
 
-#: tutorial/datastructures.rst:713
+#: tutorial/datastructures.rst:716
 msgid "Comparing Sequences and Other Types"
 msgstr "Σύγκριση ακολουθιών και άλλων τύπων"
 
-#: tutorial/datastructures.rst:714
+#: tutorial/datastructures.rst:717
 msgid ""
 "Sequence objects typically may be compared to other objects with the same "
 "sequence type. The comparison uses *lexicographical* ordering: first the "
@@ -1506,7 +1515,7 @@ msgstr ""
 "ταξινομήσει μεμονωμένους χαρακτήρες. Μερικά παραδείγματα συγκρίσεων μεταξύ "
 "ακολουθιών του ίδιου τύπου::"
 
-#: tutorial/datastructures.rst:726
+#: tutorial/datastructures.rst:729
 msgid ""
 "(1, 2, 3)              < (1, 2, 4)\n"
 "[1, 2, 3]              < [1, 2, 4]\n"
@@ -1524,7 +1533,7 @@ msgstr ""
 "(1, 2, 3)             == (1.0, 2.0, 3.0)\n"
 "(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)"
 
-#: tutorial/datastructures.rst:734
+#: tutorial/datastructures.rst:737
 msgid ""
 "Note that comparing objects of different types with ``<`` or ``>`` is legal "
 "provided that the objects have appropriate comparison methods.  For example, "
@@ -1539,11 +1548,11 @@ msgstr ""
 "αντί να παρέχει μια αυθαίρετη παραγγελία, ο διερμηνέας θα κάνει raise μια "
 "εξαίρεση :exc:`TypeError`."
 
-#: tutorial/datastructures.rst:742
+#: tutorial/datastructures.rst:745
 msgid "Footnotes"
 msgstr "Υποσημειώσεις"
 
-#: tutorial/datastructures.rst:743
+#: tutorial/datastructures.rst:746
 msgid ""
 "Other languages may return the mutated object, which allows method chaining, "
 "such as ``d->insert(\"a\")->remove(\"b\")->sort();``."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-27 09:00+0200\n"
+"POT-Creation-Date: 2026-07-18 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,13 @@ msgid ""
 "arbitrary unused port."
 msgstr ""
 
-#: library/pydoc.rst:74
+#: library/pydoc.rst:76
+msgid ""
+"The :mod:`!pydoc` HTTP server is intended for local use during development "
+"and is not suitable for production use."
+msgstr ""
+
+#: library/pydoc.rst:79
 msgid ""
 ":program:`python -m pydoc -n <hostname>` will start the server listening at "
 "the given hostname.  By default the hostname is 'localhost' but if you want "
@@ -118,7 +124,7 @@ msgid ""
 "especially useful if you want to run pydoc from within a container."
 msgstr ""
 
-#: library/pydoc.rst:80
+#: library/pydoc.rst:85
 msgid ""
 ":program:`python -m pydoc -b` will start the server and additionally open a "
 "web browser to a module index page.  Each served page has a navigation bar "
@@ -127,7 +133,7 @@ msgid ""
 "*Topics* and *Keywords* pages."
 msgstr ""
 
-#: library/pydoc.rst:86
+#: library/pydoc.rst:91
 msgid ""
 "When :program:`pydoc` generates documentation, it uses the current "
 "environment and path to locate modules.  Thus, invoking :program:`pydoc "
@@ -135,7 +141,7 @@ msgid ""
 "started the Python interpreter and typed ``import spam``."
 msgstr ""
 
-#: library/pydoc.rst:91
+#: library/pydoc.rst:96
 msgid ""
 "Module docs for core modules are assumed to reside in ``https://docs.python."
 "org/X.Y/library/`` where ``X`` and ``Y`` are the major and minor version "
@@ -144,21 +150,21 @@ msgid ""
 "directory containing the Library Reference Manual pages."
 msgstr ""
 
-#: library/pydoc.rst:98
+#: library/pydoc.rst:103
 msgid "Added the ``-b`` option."
 msgstr ""
 
-#: library/pydoc.rst:101
+#: library/pydoc.rst:106
 msgid "The ``-g`` command line option was removed."
 msgstr ""
 
-#: library/pydoc.rst:104
+#: library/pydoc.rst:109
 msgid ""
 ":mod:`!pydoc` now uses :func:`inspect.signature` rather than :func:`inspect."
 "getfullargspec` to extract signature information from callables."
 msgstr ""
 
-#: library/pydoc.rst:109
+#: library/pydoc.rst:114
 msgid "Added the ``-n`` option."
 msgstr ""
 
